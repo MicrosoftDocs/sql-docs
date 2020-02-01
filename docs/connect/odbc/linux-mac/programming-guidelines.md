@@ -68,6 +68,11 @@ For ODBC Driver 13 and 13.1, SQLCHAR data must be UTF-8. No other encodings are 
 
 For ODBC Driver 17, SQLCHAR data in one of the following character sets/encodings is supported:
 
+> [!NOTE]  
+> Due to `iconv` differences in `musl` and `glibc` many of these locales are not supported on Alpine Linux.
+>
+> For more information, see [Functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
+
 |Name|Description|
 |-|-|
 |UTF-8|Unicode|
@@ -116,6 +121,9 @@ Starting with version 17.4, the driver loads OpenSSL dynamically, which allows i
 
 > [!NOTE]  
 > A potential conflict may occur if the application that uses the driver (or one of its components) is linked with or dynamically loads a different version of OpenSSL. If several versions of OpenSSL are present on the system and the application uses it, it is highly recommended that one be extra careful in making sure that the version loaded by the application and the driver do not mismatch, as the errors could corrupt memory and thus will not necessarily manifest in obvious or consistent ways.
+
+## <a name="bkmk-alpine"></a>Alpine Linux
+At the time of this writing the default stack size in MUSL is 128K, which is enough for basic ODBC driver functionality, however depending on what the application does it is not difficult to exceed this limit, especially when calling the driver from multiple threads. It is recommended that an ODBC application on Alpine Linux is compiled with `-Wl,-z,stack-size=<VALUE IN BYTES>` to increase the stack size. For reference the default stack size on most GLIBC systems is 2MB.
 
 ## Additional Notes  
 

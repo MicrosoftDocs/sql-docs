@@ -33,7 +33,7 @@ For more information about package location and installation paths, see [Get Pyt
 
 ### Other considerations
 
-+ Packages must be Python 3.5-compliant and run on Windows.
++ Packages must be compliant with the version of Python you have. For more information on which version of Python is included with each SQL Server version, see the [Python and R versions in What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md#versions)
 
 + The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 

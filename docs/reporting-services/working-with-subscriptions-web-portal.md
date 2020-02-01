@@ -37,7 +37,7 @@ Use the New Subscription or Edit Subscription page to create a new subscription 
 Subscriptions are supported for reports that can run unattended. At a minimum, the report must use stored or no credentials. If the report uses parameters, a default value must be specified. Subscriptions may become inactive if you change report execution settings or remove the default values used by parameter properties. For more information, see [Create and Manage Subscriptions for Native Mode Report Servers](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
 .  
   
-## Type of Subscription  
+## Type of subscription  
 You can select between a **Standard subscription** and a **Data-driven subscription**.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
@@ -61,7 +61,7 @@ Depending on the delivery extension you select, the following settings appear:
   
 -   File share subscriptions provide fields that allow you to specify a target location. You can deliver any report to a file share. However, reports that support interactive features (including matrix reports that support drill-down to supporting rows and columns) are rendered as static files. You cannot view drill-down rows and columns in a static file. The file share name must be specified in Uniform Naming Convention (UNC) format (for example, \mycomputer\public\myreportfiles). Do not include a trailing backslash in the path name. The report file will be delivered in a file format that is based on the render format (for example, if you choose Excel, the report is delivered as an .xlsx file).  See [Create a file share subscription](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md#bkmk_create_fileshare_subscription) for details.
   
-## Data-Driven subscription Dataset  
+## Data-driven subscription dataset  
 For a data-driven subscription, you will need to define the dataset used for the subscription. Select **Edit Dataset** to supply that information.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  

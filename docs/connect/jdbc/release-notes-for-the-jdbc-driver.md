@@ -26,7 +26,7 @@ January 29, 2020
 | Compliance change | Details |
 | :---------------- | :------ |
 | Download the latest updates for JDBC Driver 8.2. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=PLACEHOLDER)<br/>&bull; &nbsp; [GitHub, 8.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| Fully compliant with JDBC API Specification 4.2. | The jars in the 8.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.2.0.jre11.jar file from the 8.2 package should be used with Java 11. |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 8.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.2.0.jre13.jar file from the 8.2 package should be used with Java 13. |
 | Compatible with Java Development Kit (JDK) version 13.0, 11.0, and 1.8. | Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development Kit (JDK) version 13.0 in addition to JDK 11.0 and 1.8. |
 | &nbsp; | &nbsp; |
 
@@ -38,26 +38,26 @@ Microsoft JDBC Driver 8.2.0 for SQL Server is now compatible with Java Developme
 
 | Always Encrypted change | Details |
 | :--------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server now supports Always Encrypted with secure enclaves. |
+| Microsoft JDBC Driver 8.2.0 for SQL Server now supports Always Encrypted with secure enclaves. The details can be found here: Always Encrypted with secure enclaves. |
 | More details and sample code. | See [Always Encrypted with Secure Enclaves](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
 | &nbsp; | &nbsp; |
 
-### Performance improvement when retrieving temporal data types from SQL Server
+### Performance Improvement when Retrieving Temporal Datatypes from SQL Server
 
-| Temporal data types change | Details |
+| Temporal Datatypes change | Details |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server has improved performance when retrieving temporal data types from SQL Server. | This change eliminates unnecessary temporal datatype conversions by eliminating the use of java.util.Calendar wherever possible. |
-| The following is a list of the temporal data types that have been affected by this performance improvement; in format SQL Server data type followed by the respective Java mapping. | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp), and time (java.sql.Time). |
+| Microsoft JDBC Driver 8.2.0 for SQL Server has improved performance when retrieving temporal datatypes from SQL Server. | This change eliminates unnecessary temporal datatype conversions by eliminating the use of java.util.Calendar wherever possible. |
+| The following is a list of the temporal datatypes that have been affected by this performance improvement; in format SQL Server datatype followed by the respective Java mapping. | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp), and time (java.sql.Time). |
 | &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Due to the differences in how time zones are handled between java.util.Calendar and java.time.LocalDateTime API, temporal datatypes with a user provided java.util.Calendar object associated with it or microsoft.sql.DateTimeOffset datatypes do not benefit from this improvement.
 
-### Deployment of mssql-jdbc_auth-<version>.<arch>.dll (previously sqljdbc_auth.dll) to Maven Repository
+### Deployment of mssql-jdbc_auth.dll (previously mssql-jdbc_auth-<version>-<arch>.dll) to Maven Repository
 
-| sqljdbc_auth.dll change | Details |
+| auth.dll change | Details |
 | :------------------- | :------ |
-| Starting from Microsoft JDBC Driver 8.2.0 for SQL Server, the driver relies on mssql-jdbc_auth-<version>.<arch>.dll instead of sqljdbc_auth.dll to use Azure Active Directory Authentication feature. | &nbsp; |
+| Starting from Microsoft JDBC Driver 8.2.0 for SQL Server, the driver relies on mssql-jdbc_auth.dll instead of mssql-jdbc_auth-<version>-<arch>.dll to use Azure Active Directory Authentication feature. | &nbsp; |
 | The DLL has also been uploaded to Maven repository for easier access. | See [this page](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 
@@ -295,7 +295,7 @@ The JDBC Driver has implemented prepared statement metadata caching for performa
 
 ### Added support for Azure AD Integrated Authentication on Linux/Mac
 
-The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with sqljdbc_auth.dll.
+The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with mssql-jdbc_auth-<version>-<arch>.dll.
 
 ### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.4.0
 

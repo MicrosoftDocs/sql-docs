@@ -105,7 +105,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sampling of dat
   
  For most workloads, a full scan is not required, and default sampling is adequate.  
 However, certain workloads that are sensitive to widely varying data distributions may require an increased sample size, or even a full scan.  
-For more information, see  the [CSS SQL Escalation Services blog](https://docs.microsoft.com/en-us/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
+For more information, see  the [CSS SQL Escalation Services blog](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
   
  RESAMPLE  
  Update each statistic using its most recent sample rate.  

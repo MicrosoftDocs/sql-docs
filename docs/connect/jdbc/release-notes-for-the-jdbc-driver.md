@@ -26,7 +26,7 @@ January 29, 2020
 | Compliance change | Details |
 | :---------------- | :------ |
 | Download the latest updates for JDBC Driver 8.2. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=PLACEHOLDER)<br/>&bull; &nbsp; [GitHub, 8.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| Fully compliant with JDBC API Specification 4.2. | The jars in the 8.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.4.1.jre11.jar file from the 7.4 package should be used with Java 11. |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 8.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.2.0.jre13.jar file from the 8.2 package should be used with Java 13. |
 | Compatible with Java Development Kit (JDK) version 13.0, 11.0, and 1.8. | Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development Kit (JDK) version 13.0 in addition to JDK 11.0 and 1.8. |
 | &nbsp; | &nbsp; |
 
@@ -53,11 +53,11 @@ Microsoft JDBC Driver 8.2.0 for SQL Server is now compatible with Java Developme
 > [!NOTE]
 > Due to the differences in how time zones are handled between java.util.Calendar and java.time.LocalDateTime API, temporal datatypes with a user provided java.util.Calendar object associated with it or microsoft.sql.DateTimeOffset datatypes do not benefit from this improvement.
 
-### Deployment of mssql-jdbc_auth.dll (previously sqljdbc_auth.dll) to Maven Repository
+### Deployment of mssql-jdbc_auth.dll (previously mssql-jdbc_auth-<version>-<arch>.dll) to Maven Repository
 
 | auth.dll change | Details |
 | :------------------- | :------ |
-| Starting from Microsoft JDBC Driver 8.2.0 for SQL Server, the driver relies on mssql-jdbc_auth.dll instead of sqljdbc_auth.dll to use Azure Active Directory Authentication feature. | &nbsp; |
+| Starting from Microsoft JDBC Driver 8.2.0 for SQL Server, the driver relies on mssql-jdbc_auth.dll instead of mssql-jdbc_auth-<version>-<arch>.dll to use Azure Active Directory Authentication feature. | &nbsp; |
 | The DLL has also been uploaded to Maven repository for easier access. | See [this page](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 
@@ -295,7 +295,7 @@ The JDBC Driver has implemented prepared statement metadata caching for performa
 
 ### Added support for Azure AD Integrated Authentication on Linux/Mac
 
-The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with sqljdbc_auth.dll.
+The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with mssql-jdbc_auth-<version>-<arch>.dll.
 
 ### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.4.0
 

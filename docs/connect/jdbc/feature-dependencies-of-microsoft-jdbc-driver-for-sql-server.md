@@ -102,7 +102,7 @@ Specific projects that require either of the preceding features need to explicit
 
 ### Working with Azure Active Directory authentication:
 
-- JDBC Driver version 8.2.0 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies. In this version of the driver, 'sqljdbc_auth.dll' has been renamed to 'mssql-jdbc_auth-<version>-<arch>.dll'.
+- JDBC Driver version 8.2.0 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies. In this version of the driver, 'mssql-jdbc_auth-<version>-<arch>.dll' has been renamed to 'mssql-jdbc_auth-<version>-<arch>.dll'.
 - JDBC Driver version 7.4.1 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies
 - JDBC Driver version 7.2.2 - Dependency versions: Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies
 - JDBC Driver version 7.0.0 - Dependency versions: Adal4j (version 1.6.0) and its dependencies
@@ -112,7 +112,7 @@ Specific projects that require either of the preceding features need to explicit
 
 From driver version 6.4.0 onward, applications don't necessarily require using ADALSQL.DLL on Windows operating systems. For *non-Windows operating systems*, the driver requires a Kerberos ticket to work with ActiveDirectoryIntegrated Authentication. For more information about how to connect to Active Directory by using Kerberos, see [Set Kerberos ticket on Windows, Linux, and Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
 
-For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by default and doesn't require Kerberos ticket setup or Azure library dependencies. If sqljdbc_auth.dll isn't available, the driver looks for the Kerberos ticket for authenticating to Active Directory as on other operating systems.
+For *Windows operating systems*, the driver looks for mssql-jdbc_auth-<version>-<arch>.dll by default and doesn't require Kerberos ticket setup or Azure library dependencies. If sqljdbc_auth.dll isn't available, the driver looks for the Kerberos ticket for authenticating to Active Directory as on other operating systems.
 
 From driver version 8.2.0 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-<version>-<arch>.dll'. E.g. 'mssql-jdbc_auth-8.2.0.x64.dll'.
 

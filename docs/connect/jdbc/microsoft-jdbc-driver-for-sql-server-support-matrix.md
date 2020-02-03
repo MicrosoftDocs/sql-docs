@@ -18,7 +18,7 @@ manager: jroth
   This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.  
   
 ## Microsoft JDBC Driver support lifecycle matrix and policy  
- The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x, 6.x, and 7.x have five-year Mainstream support from the driver release date. Mainstream support is defined on the Microsoft support lifecycle website.  
+ The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x, 6.x, 7.x, and 8.x have five-year Mainstream support from the driver release date. Mainstream support is defined on the Microsoft support lifecycle website.  
   
  Extended and custom support options are not available for the Microsoft JDBC Driver.  
     

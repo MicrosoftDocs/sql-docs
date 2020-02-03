@@ -49,8 +49,8 @@ ms.author: genemi
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 7.4 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
-|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 7.4 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
+|mssql-jdbc-8.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
+|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
 |mssql-jdbc-8.2.0.jre13.jar|4.3|13|Requires a Java Runtime Environment (JRE) 13.0. Using JRE 11.0 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
 
 

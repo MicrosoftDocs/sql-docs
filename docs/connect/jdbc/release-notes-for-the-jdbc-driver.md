@@ -53,7 +53,7 @@ Microsoft JDBC Driver 8.2.0 for SQL Server is now compatible with Java Developme
 > [!NOTE]
 > Due to the differences in how time zones are handled between java.util.Calendar and java.time.LocalDateTime API, temporal datatypes with a user provided java.util.Calendar object associated with it or microsoft.sql.DateTimeOffset datatypes do not benefit from this improvement.
 
-### Deployment of mssql-jdbc_auth.dll (previously sqljdbc_auth.dll) to Maven Repository
+### Deployment of mssql-jdbc_auth-\<version>-\<arch>.dll (previously sqljdbc_auth.dll) to Maven Repository
 
 | sqljdbc_auth.dll change | Details |
 | :------------------- | :------ |

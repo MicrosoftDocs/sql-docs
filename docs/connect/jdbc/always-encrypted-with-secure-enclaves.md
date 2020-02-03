@@ -34,7 +34,7 @@ Follow this [tutorial](../../relational-databases/security/tutorial-getting-star
 
 **enclaveAttestationProtocol:** the protocol of the attestation service. Currently, the only supported value is **HGS**(Host Guardian Service).
 
-Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties in order to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion].
+Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties in order to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 ## Working with secure enclaves
 When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries which trigger enclave computations. You can find the database and table setup at [getting started with always encrypted enclaves](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md).
@@ -72,7 +72,7 @@ try (Connection c = DriverManager.getConnection(URL);Statement s = c.createState
 ```
 
 ## Java 8 Users
-This feature requires the RSASSA-PSA signature algorithm. This algorithm was added in JDK 11, but not back-ported to JDK 8. Users who wish to use this feature with the JDK 8 version of the [!INCLUDE[jdbcNoVersion] must either load their own provider, which supports the RSASSA-PSA signature algorithm, or include the BouncyCastleProvider optional dependency. The dependency will be removed at a later date if JDK 8 backports the signature algorithm or if the support lifecycle of JDK 8 ends.
+This feature requires the RSASSA-PSA signature algorithm. This algorithm was added in JDK 11, but not back-ported to JDK 8. Users who wish to use this feature with the JDK 8 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] must either load their own provider, which supports the RSASSA-PSA signature algorithm, or include the BouncyCastleProvider optional dependency. The dependency will be removed at a later date if JDK 8 backports the signature algorithm or if the support lifecycle of JDK 8 ends.
 
 ## See also
 [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  

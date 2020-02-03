@@ -1,7 +1,7 @@
 ---
 title: "Using Always Encrypted with the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/05/2020"
+ms.date: "01/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

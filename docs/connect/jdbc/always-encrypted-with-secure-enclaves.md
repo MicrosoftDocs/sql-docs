@@ -16,7 +16,7 @@ ms.author: v-reye
 
 This page provides information on how to develop Java applications using [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the Microsoft JDBC Driver 8.2 (or higher) for SQL Server.
 
-Secure enclaves is an addition to the existing [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. The purpose of secure enclaves is to address limitations when working with Always Encrypted data. Currently, users can only perform equality comparisons on Always Encrypted data, and must retrieve and decrypt the data in order to perform other operations. Secure enclaves address this limitation by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.
+Secure enclaves is an addition to the existing [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. The purpose of secure enclaves is to address limitations when working with Always Encrypted data. Previously, users could only perform equality comparisons on Always Encrypted data, and had to retrieve and decrypt the data in order to perform other operations. Secure enclaves address this limitation by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.
 
 ## Prerequisites
 - Make sure Microsoft JDBC Driver 8.2 (or higher) for SQL Server is installed on your development machine. 
@@ -30,7 +30,7 @@ Secure enclaves is an addition to the existing [Always Encrypted](../../relation
 Follow this [tutorial](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Connection String properties
-**enclaveAttestationUrl:** the endpoint url of the attestation service.
+**enclaveAttestationUrl:** the endpoint URL of the attestation service.
 
 **enclaveAttestationProtocol:** the protocol of the attestation service. Currently, the only supported value is **HGS**(Host Guardian Service).
 
@@ -41,7 +41,7 @@ When the enclave connection properties are set properly, the feature will work t
 
 Rich queries will trigger enclave computations:
 ```java
-private static final String URL = "jdbc:sqlserver://{server}:{port};user={username};password={password};databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl={attestation-url};enclaveAttestationProtocol={attestation-protocol};";
+private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL)) {
 	try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SSN LIKE ?")) {
 		p.setString(1, "%6818");
@@ -65,7 +65,7 @@ try (Connection c = DriverManager.getConnection(URL)) {
 
 Toggling encryption on a column will also trigger enclave computations:
 ```java
-private static final String URL = "jdbc:sqlserver://{server}:{port};user={username};password={password};databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl={attestation-url};enclaveAttestationProtocol={attestation-protocol};";
+private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL);Statement s = c.createStatement()) {
 	s.executeUpdate("ALTER TABLE Employees ALTER COLUMN SSN CHAR(11) NULL WITH (ONLINE = ON)");
 }

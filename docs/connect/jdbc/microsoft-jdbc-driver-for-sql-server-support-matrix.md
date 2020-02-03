@@ -105,8 +105,7 @@ manager: jroth
 ## Supported operating systems  
  The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX, MacOS, and others.  
   
- The JDBC product team tests our driver on Windows, Sun Solaris, SUSE Linux, and RedHat Linux.  Customer Support is available to customers on all platforms, however we may ask you to reproduce the issue on a platform such as Windows.  
-  
+ The JDBC product team tests our driver on Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, and macOS.
 ## Application server support  
  The Microsoft JDBC Driver for SQL Server is tested with various application servers.  Consult your application server vendor for additional details on which driver version is compatible with their product.
  

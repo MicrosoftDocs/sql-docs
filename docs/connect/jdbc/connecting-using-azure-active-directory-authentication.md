@@ -1,7 +1,7 @@
 ---
 title: "Connecting using Azure Active Directory authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "01/29/2020"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity

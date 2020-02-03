@@ -30,7 +30,7 @@ manager: craigg
 #### maxscans Parameter  
  The *maxscans* parameter specifies the maximum number of scan cycles that are attempted to drain the log before either returning (continuous = 0) or executing a waitfor (continuous = 1).  
   
-#### continous Parameter  
+#### continuous Parameter  
  The *continuous* parameter controls whether `sp_cdc_scan` relinquishes control in after either draining the log or executing the maximum number of scan cycles (one shot mode). It also controles whether `sp_cdc_scan` continues to run until explicitly stopped (continuous mode).  
   
 ##### One Shot Mode  

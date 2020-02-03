@@ -1,10 +1,9 @@
 ---
 title: "Quickstart: Train a model in Python"
-description: Create a simple predictive model in Python using SQL Server Machine Learning Services, then predict a result using new data.
+description: In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 10/14/2019  
+ms.date: 01/27/2020  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -16,7 +15,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you'll create and train a predictive model using Python, save the model to a table in your SQL Server instance, then use the model to predict values from new data using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
 You'll create and execute two stored procedures running in SQL. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing Python code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
 
@@ -170,7 +169,7 @@ Now that you have created, trained, and saved a model, move on to the next step:
 
 In this exercise, you learned how to create stored procedures dedicated to different tasks, where each stored procedure used the system stored procedure `sp_execute_external_script` to start a Python process. Inputs to the Python process are passed to `sp_execute_external` as parameters. Both the Python script itself and data variables in a SQL Server database are passed as inputs.
 
-Generally, you should only plan on using SSMS with polished Python code, or simple Python code that returns row-based output. As a tool, SSMS supports query languages like T-SQL and returns flattened rowsets. If your code generates visual output like a scatterplot or histogram, you need a tool or end-user application that can render the image.
+Generally, you should only plan on using SSMS with polished Python code, or simple Python code that returns row-based output. As a tool, SSMS supports query languages like T-SQL and returns flattened rowsets. If your code generates visual output like a scatterplot or histogram, you need a separate tool or end-user application that can render the image outside of the stored procedure.
 
 For some Python developers who are used to writing all-inclusive script handling a range of operations, organizing tasks into separate procedures might seem unnecessary. But training and scoring have different use cases. By separating them, you can put each task on a different schedule and scope permissions to each operation.
 

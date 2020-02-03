@@ -61,7 +61,7 @@ manager: craigg
   
 -   Minute range is 0 through 59.  
   
--   Seconds range from 0 through 59. This allows up to two leap seconds to maintain synchronization with sideral time.  
+-   Seconds range from 0 through 59. This allows up to two leap seconds to maintain synchronization with sidereal time.  
   
  Implementations for the following existing OLE DB structs have been modified to support the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types. The definitions, however, have not changed.  
   

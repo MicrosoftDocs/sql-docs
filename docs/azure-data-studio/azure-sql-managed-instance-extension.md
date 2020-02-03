@@ -12,6 +12,7 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: alanyu
 ---
+
 # Azure SQL Database managed instance dashboard for Azure Data Studio (preview)
 
 The Azure SQL Database managed instance extension provides a dashboard for working with an [Azure SQL Database managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:

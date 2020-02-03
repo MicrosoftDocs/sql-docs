@@ -127,12 +127,25 @@ SSIS Deploy Task doesn’t support the following scenarios currently:
 
 ## Release notes
 
+### Version 0.1.3 Preview
+
+Release Date: January 19, 2020
+
+- Fixed an issue that prevented ispac from being deployed if its original file name was changed.
+
+### Version 0.1.2 Preview
+
+Release Date: January 13, 2020
+
+- Added more detailed exception information in the SSIS Deploy task log when the destination type is SSISDB.
+- Fixed the example destination path in the help text of the property Destination path of SSIS Deploy task.
+
 ### Version 0.1.1 Preview
 
 Release Date: January 6, 2020
 
-- Added restriction of minimal agent version requirement. Currently the minimal agent version of this product is 2.144.0.
-- Fixed some incorrect display text for SSIS Deploy Task.
+- Added a restriction of minimal agent version requirement. Currently the minimal agent version of this product is 2.144.0.
+- Fixed some incorrect display text for SSIS Deploy task.
 - Refined some error messages.
 
 ### Version 0.1.0 Preview

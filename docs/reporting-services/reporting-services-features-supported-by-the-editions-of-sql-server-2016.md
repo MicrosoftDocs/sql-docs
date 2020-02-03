@@ -84,7 +84,6 @@ The following software client applications are available on the Microsoft Downlo
 |Tool name|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
 |---------------|----------------|--------------|------------------------|-------------|---------------| 
 | Power BI Desktop optimized for Power BI Report Server, **.pbix** | Yes, with Software Assurance | | | | Yes |
-
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** and **.rds**|Yes|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Yes||||Yes|  
 |Power BI apps for mobile devices (iOS, Windows 10, and Android), **.rsmobile**|Yes||||Yes|  

@@ -39,7 +39,7 @@ SSMS is free!
 
 **[![download](media/download-icon.png) Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.4 upgrades it to 18.4. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.4.
+SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.4 upgrades it to 18.4.
 
 ### Version information
 
@@ -49,7 +49,7 @@ SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).
 
-The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
+The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use. However, if you have a ***preview*** version of SSMS 18.x installed, you must **uninstall** it before installing SSMS 18.4.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
@@ -125,7 +125,8 @@ For details about this release, see [the SSMS release notes](release-notes-ssms.
 
 - [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)
-- [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [Latest updates](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Azure Data Architecture Guide](https://docs.microsoft.com/azure/architecture/data-guide/)
 

@@ -2,7 +2,7 @@
 title: "Scalar UDF Inlining in Microsoft SQL databases | Microsoft Docs"
 description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019), and Azure SQL Database."
 ms.custom: ""
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -148,6 +148,7 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - The UDF does not reference user-defined types.
 - There are no signatures added to the UDF.
 - The UDF is not a partition function.
+- The UDF does not contain references to Common Table Expressions (CTEs)
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) is not supported for inlining.
 

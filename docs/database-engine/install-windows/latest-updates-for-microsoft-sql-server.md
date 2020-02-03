@@ -19,13 +19,13 @@ Find and manage updates in one place for your SQL Server Products. Follow the [S
 
 This page tracks the latest updates to all supported versions of SQL Server. For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](https://support.microsoft.com/lifecycle/).
 
-### Latest updates
+## Latest updates
 
 Each of the following links provides information for all of the applicable products and technologies listed in the **Applies To** section of this page.
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|N/A|N/A|[SQL Server 2019 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 1 [(KB 4527376)](https://support.microsoft.com/help/4527376)|1/7/2019|[SQL Server 2019 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 18 [(KB 4527377)](https://support.microsoft.com/help/4527377)|12/9/2019|[SQL Server 2017 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4505220](https://support.microsoft.com/help/4505220)|CU 11 [(KB 4527378)](https://support.microsoft.com/kb/4527378)|12/9/2019|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|7/9/2019|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|

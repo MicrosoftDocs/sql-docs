@@ -4,12 +4,12 @@ description: Learn how to use Python pip to install new Python packages on an in
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/22/2019
+ms.date: 01/30/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
 # Install Python packages with sqlmlutils
@@ -21,7 +21,7 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
 > [!NOTE]
-> The standard Python `pip install` command is not recommended for adding Python packages on SQL Server. Instead, use **sqlmlutils** as described in this article.
+> The standard Python `pip install` command is not recommended for adding Python packages on SQL Server 2019. Instead, use **sqlmlutils** as described in this article.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ For more information about package location and installation paths, see [Get Pyt
 
 ### Other considerations
 
-+ Packages must be Python 3.5-compliant and run on Windows.
++ Packages must be compliant with the version of Python you have. For more information on which version of Python is included with each SQL Server version, see the [Python and R versions in What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md#versions)
 
 + The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 

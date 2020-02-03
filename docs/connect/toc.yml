@@ -5606,6 +5606,10 @@
       href: ../connect/php/logging-activity.md
     - name: Using Always Encrypted with the PHP Drivers for SQL Server
       href: ../connect/php/using-always-encrypted-php-drivers.md
+    - name: Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server
+      href: ../connect/php/always-encrypted-secure-enclaves.md
+    - name: Non-System Locale Settings
+      href: ../connect/php/non-system-locale-settings.md
     - name: Constants (Microsoft Drivers for PHP for SQL Server)
       href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
     - name: SQLSRV Driver API Reference

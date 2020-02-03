@@ -391,7 +391,7 @@ Guidance on the number of files is outlined in the table below. Once the recomme
 There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256MB or larger for best performance. 
 
 ### When will the COPY command be generally available?
-The COPY command will be generally available early next calendar year (2020). 
+The COPY command will be generally available by the end of this calendar year (2020). 
 
 ### Are there any known issues with the COPY command?
 

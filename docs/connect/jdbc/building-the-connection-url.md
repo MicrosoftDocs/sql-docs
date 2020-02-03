@@ -86,18 +86,18 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 >  White space inside the braces is literal and not trimmed.  
   
 ##  <a name="Connectingintegrated"></a> Connecting with integrated authentication On Windows  
- The JDBC driver supports the use of Type 2 integrated authentication on Windows operating systems through the integratedSecurity connection string property. To use integrated authentication, copy the mssql-jdbc_auth-&ltversion&gt-&ltarch&gt.dll file to a directory on the Windows system path on the computer where the JDBC driver is installed.  
+ The JDBC driver supports the use of Type 2 integrated authentication on Windows operating systems through the integratedSecurity connection string property. To use integrated authentication, copy the mssql-jdbc_auth-\<version>-\<arch>.dll file to a directory on the Windows system path on the computer where the JDBC driver is installed.  
   
- The mssql-jdbc_auth-&ltversion&gt-&ltarch&gt.dll files are installed in the following location:  
+ The mssql-jdbc_auth-\<version>-\<arch>.dll files are installed in the following location:  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
  For any operating system supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Using Kerberos Integrated Authentication to Connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) for a description of a feature added in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] that allows an application to connect to a database using integrated authentication with Type 4 Kerberos.  
   
 > [!NOTE]  
->  If you are running a 32-bit Java Virtual Machine (JVM), use the mssql-jdbc_auth-&ltversion&gt-&ltarch&gt.dll file in the x86 folder, even if the operating system is the x64 version. If you are running a 64-bit JVM on a x64 processor, use the mssql-jdbc_auth-&ltversion&gt-&ltarch&gt.dll file in the x64 folder.  
+>  If you are running a 32-bit Java Virtual Machine (JVM), use the mssql-jdbc_auth-\<version>-\<arch>.dll file in the x86 folder, even if the operating system is the x64 version. If you are running a 64-bit JVM on a x64 processor, use the mssql-jdbc_auth-\<version>-\<arch>.dll file in the x64 folder.  
   
- Alternatively you can set the java.library.path system property to specify the directory of the mssql-jdbc_auth-&ltversion&gt-&ltarch&gt.dll. For example, if the JDBC driver is installed in the default directory, you can specify the location of the DLL by using the following virtual machine (VM) argument when the Java application is started:  
+ Alternatively you can set the java.library.path system property to specify the directory of the mssql-jdbc_auth-\<version>-\<arch>.dll. For example, if the JDBC driver is installed in the default directory, you can specify the location of the DLL by using the following virtual machine (VM) argument when the Java application is started:  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

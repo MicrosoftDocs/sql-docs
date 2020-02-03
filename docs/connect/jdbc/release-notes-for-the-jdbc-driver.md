@@ -53,11 +53,11 @@ Microsoft JDBC Driver 8.2.0 for SQL Server is now compatible with Java Developme
 > [!NOTE]
 > Due to the differences in how time zones are handled between java.util.Calendar and java.time.LocalDateTime API, temporal datatypes with a user provided java.util.Calendar object associated with it or microsoft.sql.DateTimeOffset datatypes do not benefit from this improvement.
 
-### Deployment of mssql-jdbc_auth.dll (previously mssql-jdbc_auth-<version>-<arch>.dll) to Maven Repository
+### Deployment of mssql-jdbc_auth.dll (previously mssql-jdbc_auth-\<version>-\<arch>.dll) to Maven Repository
 
 | auth.dll change | Details |
 | :------------------- | :------ |
-| Starting from Microsoft JDBC Driver 8.2.0 for SQL Server, the driver relies on mssql-jdbc_auth.dll instead of mssql-jdbc_auth-<version>-<arch>.dll to use Azure Active Directory Authentication feature. | &nbsp; |
+| Starting from Microsoft JDBC Driver 8.2.0 for SQL Server, the driver relies on mssql-jdbc_auth.dll instead of mssql-jdbc_auth-\<version>-\<arch>.dll to use Azure Active Directory Authentication feature. | &nbsp; |
 | The DLL has also been uploaded to Maven repository for easier access. | See [this page](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 
@@ -295,7 +295,7 @@ The JDBC Driver has implemented prepared statement metadata caching for performa
 
 ### Added support for Azure AD Integrated Authentication on Linux/Mac
 
-The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with mssql-jdbc_auth-<version>-<arch>.dll.
+The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with mssql-jdbc_auth-\<version>-\<arch>.dll.
 
 ### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.4.0
 

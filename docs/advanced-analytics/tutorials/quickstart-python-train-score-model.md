@@ -169,7 +169,7 @@ Now that you have created, trained, and saved a model, move on to the next step:
 
 In this exercise, you learned how to create stored procedures dedicated to different tasks, where each stored procedure used the system stored procedure `sp_execute_external_script` to start a Python process. Inputs to the Python process are passed to `sp_execute_external` as parameters. Both the Python script itself and data variables in a SQL Server database are passed as inputs.
 
-Generally, you should only plan on using SSMS with polished Python code, or simple Python code that returns row-based output. As a tool, SSMS supports query languages like T-SQL and returns flattened rowsets. If your code generates visual output like a scatterplot or histogram, you need a tool or end-user application that can render the image.
+Generally, you should only plan on using SSMS with polished Python code, or simple Python code that returns row-based output. As a tool, SSMS supports query languages like T-SQL and returns flattened rowsets. If your code generates visual output like a scatterplot or histogram, you need a separate tool or end-user application that can render the image outside of the stored procedure.
 
 For some Python developers who are used to writing all-inclusive script handling a range of operations, organizing tasks into separate procedures might seem unnecessary. But training and scoring have different use cases. By separating them, you can put each task on a different schedule and scope permissions to each operation.
 

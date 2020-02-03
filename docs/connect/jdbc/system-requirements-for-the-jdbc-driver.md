@@ -49,8 +49,8 @@ ms.author: genemi
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 7.4 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
-|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 7.4 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
+|mssql-jdbc-8.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
+|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
 |mssql-jdbc-8.2.0.jre13.jar|4.3|13|Requires a Java Runtime Environment (JRE) 13.0. Using JRE 11.0 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
 
 
@@ -60,7 +60,7 @@ ms.author: genemi
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre13</version>
+    <version>8.2.0.jre11</version>
 </dependency>
 ```
 
@@ -217,7 +217,7 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
  The JDBC driver supports connections to Azure SQL database and SQL Server. For Microsoft JDBC Driver 4.2 and 4.1 for SQL Server, support begins with SQL Server 2008.
   
 ## Operating System requirements  
- The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, and Windows operating systems have officially been tested.  
+ The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, macOS and Windows operating systems have officially been tested.  
   
 ## Supported languages  
  The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International features of the JDBC driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  

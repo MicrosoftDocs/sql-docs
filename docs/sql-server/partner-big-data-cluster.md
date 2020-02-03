@@ -1,4 +1,4 @@
-    ---
+---
 title: SQL Server Big Data Clusters partners
 description: Lists of third-party partners for implementing SQL Server Big Data Clusters.
 ms.topic: conceptual

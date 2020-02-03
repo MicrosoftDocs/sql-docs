@@ -25,7 +25,8 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
  - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
  - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
  - `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
- - `com.google.code.gson`: JSON parser for Always Encrypted with Secure Enclaves. (optional)
+ - `com.google.code.gson`: JSON parser for Always Encrypted with secure enclaves feature. (optional)
+ - `org.bouncycastle.bcprov-jdk15on`: Bouncy Castle Provider for Always Encrypted with secure enclaves feature when using JAVA 8 only. (optional)
 
 ## Test time
 
@@ -37,7 +38,7 @@ Specific projects that require either of the preceding features need to explicit
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.1.jre11</version>
+    <version>8.2.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -50,7 +51,7 @@ Specific projects that require either of the preceding features need to explicit
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.10</version>
+    <version>1.7.0</version>
 </dependency>
 ```
 

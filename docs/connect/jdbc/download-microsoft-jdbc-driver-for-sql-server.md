@@ -29,7 +29,6 @@ Use the links in the following table to download the latest Microsoft JDBC Drive
 | [Microsoft JDBC Driver 6.2](https://go.microsoft.com/fwlink/?linkid=852460) | 2/12/2018 | JRE 7, 8 |
 | [Microsoft JDBC Driver 6.0](https://go.microsoft.com/fwlink/?LinkId=245496) | 2/27/2018 | JRE 7, 8 |
 | [Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) | 2/26/2018 | JRE 7, 8 |
-| [Microsoft JDBC Driver 4.1](https://go.microsoft.com/fwlink/?linkid=841533) | 2/27/2018 | JRE 7 |
 
 When you download the driver, there are multiple JAR files. The name of the JAR file indicates the version of Java that it supports. For more information about each release, see the [Release notes](release-notes-for-the-jdbc-driver.md) and [System requirements](system-requirements-for-the-jdbc-driver.md).
 

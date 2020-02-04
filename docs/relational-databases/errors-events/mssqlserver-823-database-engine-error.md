@@ -28,40 +28,26 @@ ms.author: mathoma
 |Message Text|The operating system returned error %ls to SQL Server during a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and system event log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.|  
   
 ## Explanation  
-SQL Server uses Windows APIs (for example,  [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [ReadFileScatter](/windows/win32/api/fileapi/nf-fileapi-readfilescatter), [WriteFileGather](/windows/win32/api/fileapi/nf-fileapi-writefilegather)) to perform file I/O operations. After performing these I/O operations, SQL Server checks for any error conditions associated with these API calls. If the API calls fail with an Operating System error or if a logical I/O check failure occurs, then SQL Server reports Error 823.
+SQL Server uses Windows APIs (for example,  [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [ReadFileScatter](/windows/win32/api/fileapi/nf-fileapi-readfilescatter), [WriteFileGather](/windows/win32/api/fileapi/nf-fileapi-writefilegather)) to perform file I/O operations. After performing these I/O operations, SQL Server checks for any error conditions associated with these API calls. If the API calls fail with an Operating System error, then SQL Server reports Error 823.
 
  The 823 error message contains the following information:
  - The database file against which the I/O operation was performed
  - The offset within the file where the I/O operation was attempted. This is the physical byte offset from the start of the file. Dividing this number by 8192 will give you the logical page number that is affected by the error.
  - Whether the I/O operation is a read or write request
- - The Operating System error code and error description
+ - The Operating System error code and error description in parentheses
  
 
 **Operating system error:** A read or write Windows API call is not successful, and SQL Server encounters an operating system error that is related to the Windows API call. The following message is an example of an 823 error:
 
 ```
-Error: 823, Severity: 24, State: 2
-2003-07-28 09:01:27.38 spid75 I/O error 1117 (The request could not be performed because of an I/O device error.) detected during read at offset 0x0000002d460000 in file 'e:\program files\Microsoft SQL Server\mssql\data\mydb.MDF'
+Error: 823, Severity: 24, State: 2.
+2010-03-06 22:41:19.55 spid58 The operating system returned error 1117 (The request could not be performed because of an I/O device error.) to SQL Server during a read at offset 0x0000002d460000 in file 'e:\program files\Microsoft SQL Server\mssql\data\mydb.MDF'. Additional messages in the SQL Server error log and system event log may provide more detail. This is a severe, system-level error condition that threatens database integrity and must be corrected immediately. It is recommended to complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.
 ```
 
 You may or may not see errors from the DBCC CHECKDB statement on the database that is associated with the file in the error message. You can run the DBCC CHECKDB statement when you see an 823 error. If the DBCC CHECKDB statement does not report any errors, you probably have an intermittent system problem or a disk problem.
 
-**I/O logical check failure:** If a read or write Windows API call for a database file is successful, but specific logical checks on the data are not successful, an 823 error is raised. For a logical I/O check failure, the failure message is inside parentheses and can be one of the following:
-
- - (torn page): A torn page occurs when SQL Server tries to access a page that was previously written to disk incorrectly. This can happen if there's a power failure, or a failure of the I/O subsystem when the disk was being written to. 
- - (bad page ID): This message means that the pageID on the page header is not the expected page that was read from the disk. For example, if SQL Server provides a file offset for database file 1 that is for logical page 100, the pageID on the page header for that 8-KB page should be 1:100. If not, the bad page ID is included in the logical I/O check failure message.
- - (insufficient bytes transferred): This problem indicates that the Windows API call was successful, but the bytes that were transferred were not what was expected.
-
-The following error message is an example of an 823 error for an I/O logical check failure:
-
-```
-Error: 823, Severity: 24, State: 2
-2003-09-05 16:51:18.90 spid17 I/O error (torn page) detected during read at offset 0x00000094004000 in file 'F:\SQLData\mydb.MDF'..
-```
-
 Additional diagnostic information for 823 errors may be written to the SQL Server error log file when you use trace flag 818.
 For more information, see [KB 826433: Additional SQL Server diagnostics added to detect unreported I/O problems](https://support.microsoft.com/help/826433/sql-server-diagnostics-added-to-detect-unreported-i-o-problems-due-to)
-
 
 
 ## Cause

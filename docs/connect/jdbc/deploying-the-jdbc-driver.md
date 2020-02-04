@@ -1,7 +1,7 @@
 ---
 title: "Deploying the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -24,15 +24,8 @@ ms.author: genemi
 >  For information about deploying Java applications in general, see the Java website.  
   
 ## Deploying the JDBC driver on Windows systems  
- When you deploy the JDBC driver on Windows operating systems, you must use the executable zip file version of the installation package, which is typically named `sqljdbc_<version>_<language>.exe`.  
-  
- To run the executable zip file silently, you must use the `/auto` command-line option on the command line or in a batch file as in the following:  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  When you use the `/auto` option it is not a truly silent installation, as a WinZip dialog box still appears on the user's screen. However, you will not need to interact with it and it closes as soon as the unzip operation is complete.  
-  
+ When you deploy the JDBC driver on Windows operating systems, you must unpack the zipped installation package, which is typically named `sqljdbc_<version>_<language>.zip`.
+
 ## Deploying the driver on UNIX systems 
  When you deploy the JDBC driver on UNIX operating systems, you must use the gzip file version of the installation package, which is typically named `sqljdbc_<version>_<language>.tar.gz`.  
   
@@ -48,7 +41,7 @@ ms.author: genemi
 
 ## Legalities of driver redistribution
 
-The JDBC Driver versions 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the _Distributable Code_ clause in the license agreements.
+The JDBC Driver versions 6.0, 6.2, 6.4, 7.0, 7.2, 7.4, and 8.2 are redistributable. Review the _Distributable Code_ clause in the license agreements.
 
 The JDBC Driver versions 4.x are old and obsolete. Support for 4.x expired before 2018.
 

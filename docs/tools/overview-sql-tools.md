@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 12/06/2019
+ms.date: 02/04/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -57,9 +57,10 @@ These tools are used to migrate, configure, and provide other features for SQL d
 | Tool | Description |
 |:--|:--|
 | **[Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | Use SQL Server Configuration Manager to configure SQL Server services and configure network connectivity. Configuration Manager runs on Windows|
-| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | Use SQL Server Migration Assistant to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and Sybase.|
 | **[Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md)** | Use Database Experimentation Assistant to evaluate a targeted version of SQL for a given workload. |
+| **[Data Migration Assistant](../dma/dma-overview.md)** | The Data Migration Assistant tool helps you upgrade to a modern data platform by detecting compatibility issues that can impact database functionality in your new version of SQL Server or Azure SQL Database. |
 | **[Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)** | Use the Distributed Replay feature to help you assess the impact of future SQL Server upgrades. Also use Distributed Replay to help assess the impact of hardware and operating system upgrades, and SQL Server tuning. |
 | **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services. |
+| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | Use SQL Server Migration Assistant to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and Sybase.|
 
-If you're looking for additional tools that aren't mentioned on this page, see [SQL Command Prompt Utilities](command-prompt-utility-reference-database-engine.md).
+If you're looking for additional tools that aren't mentioned on this page, see [SQL Command Prompt Utilities](command-prompt-utility-reference-database-engine.md) and [Download SQL Server extended features and tools](download-sql-feature-packs.md)

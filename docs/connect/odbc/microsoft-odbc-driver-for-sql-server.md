@@ -13,6 +13,8 @@ ms.author: genemi
 ---
 # Microsoft ODBC Driver for SQL Server
 
+[!INCLUDE[ODBC_Current_Version](../../includes/odbc-latest-release.md)]
+
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC is the primary native data access API for applications written in C and C++ for SQL Server. There is an ODBC driver for most data sources. Other languages that can use ODBC include COBOL, Perl, PHP, and Python. ODBC is widely used in data integration scenarios.

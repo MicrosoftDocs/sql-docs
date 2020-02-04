@@ -1,6 +1,6 @@
 ---
 title: "Configure threshold values for cleansing and matching"
-description: Learn how to configure threshold values that will be used during the computer-assisted cleansing and matching activites in SQL Server Data Quality Services (DQS). 
+description: Learn how to configure threshold values that will be used during the computer-assisted cleansing and matching activities in SQL Server Data Quality Services (DQS). 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

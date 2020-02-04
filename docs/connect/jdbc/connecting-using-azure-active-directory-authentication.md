@@ -277,7 +277,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	6. We don't need SIGN-ON URL. Just provide anything: "https://mytokentest".
 	7. Click "Create" at the bottom.
 	9. While still in the Azure portal, click the "Settings" tab of your application, and open the "Properties" tab.
-	10. Find the "Application ID" (AKA Client ID) value and copy it aside, you need this later when configuring your application (for example, 1846943b-ad04-4808-aa13-4702d908b5c1). See the following snapshot.
+	10. Find the "Application ID" (also known as Client ID) value and copy it aside, you need this later when configuring your application (for example, 1846943b-ad04-4808-aa13-4702d908b5c1). See the following snapshot.
 	11. Under section "Keys", create a key by filling in the name field, selecting the duration of the key, and saving the configuration (leave the value field empty). After saving, the value field should be filled automatically, copy the generated value. This is the client Secret.
 	12. Click Azure Active Directory on the left side panel. Under "App Registrations", find the "End points" tab. Copy the URL under "OATH 2.0 TOKEN ENDPOINT", this is your STS URL.
 	

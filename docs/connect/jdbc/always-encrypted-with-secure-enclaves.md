@@ -71,7 +71,7 @@ try (Connection c = DriverManager.getConnection(URL);Statement s = c.createState
 }
 ```
 
-## Java 8 Users
+## Java 8 users
 This feature requires the RSASSA-PSA signature algorithm. This algorithm was added in JDK 11, but not back-ported to JDK 8. Users who wish to use this feature with the JDK 8 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] must either load their own provider, which supports the RSASSA-PSA signature algorithm, or include the BouncyCastleProvider optional dependency. The dependency will be removed at a later date if JDK 8 backports the signature algorithm or if the support lifecycle of JDK 8 ends.
 
 ## See also

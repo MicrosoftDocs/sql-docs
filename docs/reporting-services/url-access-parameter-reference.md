@@ -20,17 +20,17 @@ ms.author: maggies
   You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix *rs:* if directed to the report server and *rc:* if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify device information settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).
   
 > [!IMPORTANT]  
->  For a SharePoint mode report server it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access Report Server items using URL access](../reporting-services/access-report-server-items-using-url-access.md).
->   
->  For information about including report parameters in a URL, and examples, see [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).
+>  For a SharePoint mode report server it's important that the URL includes the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that's required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access report server items using URL access](../reporting-services/access-report-server-items-using-url-access.md).
+> 
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
 ##  <a name="bkmk_top"></a> In this topic
   
 -   [HTML Viewer commands (rc:)](#bkmk_htmlviewer)
--   [Report Server commands (rs:)](#bkmk_reportserver)
+-   [Report server commands (rs:)](#bkmk_reportserver)
 -   [Report Viewer web part commands (rv:)](#bkmk_webpart)
   
-##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (rc:
+##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (rc:)
  - HTML Viewer commands are used to target the HTML Viewer and are prefixed with *rc:*:
   
 -   **Toolbar**: Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.
@@ -40,7 +40,7 @@ ms.author: maggies
   
 -   **Parameters**: Shows or hides the parameters area of the toolbar. If you set this parameter to **true**, the parameters area of the toolbar is displayed. If you set this parameter to **false**, the parameters area isn't displayed and can't be displayed by the user. If you set this parameter to a value of **Collapsed**, the parameters area won't be displayed but can be toggled by the user. The default value of this parameter is **true**.  
   
-     For example, in Native mode:
+     For example, in native mode:
   
     ```  
     https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
@@ -54,7 +54,7 @@ ms.author: maggies
   
 -   **Zoom**: Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. This parameter is ignored by versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers. The default value of this parameter is **100**.
   
-     For example, in Native mode:
+     For example, in native mode:
   
     ```  
     https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
@@ -68,7 +68,7 @@ ms.author: maggies
   
 -   **Section**: Sets which page in the report to display. Any value that's greater than the number of pages in the report displays the last page. Any value that's less than **0** displays page 1 of the report. The default value of this parameter is **1**.
   
-     For an example in Native mode, to display page 2 of the report:
+     For an example in native mode, to display page 2 of the report:
   
     ```  
     https://myrshost/reportserver?/Sales&rc:Section=2  
@@ -82,7 +82,7 @@ ms.author: maggies
   
 -   **FindString**: Search a report for a specific set of text.
   
-     For example, in Native mode:
+     For example, in native mode:
   
     ```  
     https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
@@ -96,7 +96,7 @@ ms.author: maggies
   
 -   **StartFind**: Specifies the last section to search. The default value of this parameter is the last page of the report.  
   
-     For an example in Native mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page 1 and ending with page 5:
+     For an example in native mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page 1 and ending with page 5:
   
     ```  
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
@@ -114,20 +114,20 @@ ms.author: maggies
   
 -   **Device Information Setting**: Specifies a device information setting in the form of `rc:tag=value`, where *tag* is the name of a device information setting specific to the rendering extension that's currently used. (See the description for the *Format* parameter.) For example, you can use the *OutputFormat* device information setting for the IMAGE rendering extension to render the report to a JPEG image by using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device information settings for rendering extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   
-##  <a name="bkmk_reportserver"></a> Report Server commands (rs:)
+##  <a name="bkmk_reportserver"></a> Report server commands (rs:)
  Report server commands are prefixed with *rs:* and are used to target the report server:
   
 -   **Command**: Performs an action on a catalog item, depending on its item type. The default value is determined by the type of the catalog item referenced in the URL access string. Valid values are:
   
     -   **ListChildren** and **GetChildren**: Displays the contents of a folder. The folder items are displayed within a generic item-navigation page.
   
-         For example, in Native mode:
+         For example, in native mode:
   
         ```  
         https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
         ```  
   
-         For example, a named instance in Native mode:
+         For example, a named instance in native mode:
   
         ```  
         https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
@@ -141,7 +141,7 @@ ms.author: maggies
   
     -   **Render**: The report is rendered in the browser so that you can view it.
   
-         For example, in Native mode:
+         For example, in native mode:
   
         ```  
         https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
@@ -155,7 +155,7 @@ ms.author: maggies
   
     -   **GetSharedDatasetDefinition**: Displays the XML definition associated with a shared dataset. Shared dataset properties, including the query, dataset parameters, default values, dataset filters, and data options such as collation and case sensitivity, are saved in the definition. You must have **Read Report Definition** permission on a shared dataset to use this value.
   
-         For example, in Native mode:
+         For example, in native mode:
   
         ```  
         https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
@@ -163,7 +163,7 @@ ms.author: maggies
   
     -   **GetDataSourceContents**: Displays the properties of a given shared data source as XML. If your browser supports XML and if you're an authenticated user with **Read Contents** permission on the data source, the data source definition is displayed.
   
-         For example, in Native mode:
+         For example, in native mode:
   
         ```  
         https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
@@ -177,7 +177,7 @@ ms.author: maggies
   
     -   **GetResourceContents**: Renders a resource and displays it in an HTML page if the resource is compatible with the browser. Otherwise, you're prompted to open or save the file or resource to disk.  
   
-         For example, in Native mode:
+         For example, in native mode:
   
         ```  
         https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
@@ -223,7 +223,7 @@ ms.author: maggies
   
      For a complete list, see the **\<Render>** extension section of the report server rsreportserver.config file. For information on where to find the file, see [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md).
   
-     For example, to get a PDF copy of a report directly from a Native mode report server:
+     For example, to get a PDF copy of a report directly from a native mode report server:
   
     ```  
     https://myrshost/ReportServer?/myreport&rs:Format=PDF  
@@ -237,7 +237,7 @@ ms.author: maggies
   
 -   **ParameterLanguage**: Provides a language for parameters passed in a URL that's independent of the browser language. The default value is the browser language. The value can be a culture value, such as **en-us** or **de-de.**
   
-     For example, in Native mode, to override the browser language and specify a culture value of de-DE:
+     For example, in native mode, to override the browser language and specify a culture value of de-DE:
   
     ```  
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
@@ -245,7 +245,7 @@ ms.author: maggies
   
 -   **Snapshot**: Renders a report based on a report history snapshot. For more information, see [Render a report history snapshot using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md).
   
-     For example, in Native mode, retrieve a report history snapshot dated 2003-04-07 with a time stamp of 13:40:02:
+     For example, in native mode, retrieve a report history snapshot dated 2003-04-07 with a time stamp of 13:40:02:
   
     ```  
     https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  

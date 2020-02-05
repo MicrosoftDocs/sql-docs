@@ -77,14 +77,14 @@ Provides the connectivity protocol and path to the external data source.
 
 | External Data Source    | Location prefix | Location path                                         | Supported locations by product / service |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera or Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | Starting with SQL Server (2016+)                       |
-| Azure Blob Storage      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+)                       |
-| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                       |
-| Oracle                  | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                       |
-| Teradata                | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                       |
-| MongoDB or CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                       |
-| ODBC                    | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019+) - Windows only        |
-| Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                       |
+| Cloudera or Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]                       |
+| Azure Blob Storage      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]                       |
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
+| Oracle                  | `oracle`        | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
+| MongoDB or CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] - Windows only        |
+| Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 
 Location path:
 

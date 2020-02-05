@@ -30,6 +30,9 @@ February 5, 2019 &nbsp; / &nbsp; version: 1.15.0
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22). |
 | &nbsp; | &nbsp; |
 
+### Known Issue
+- Users on macOS Catalina will need to right-click Azure Data Studio and then click open.
+
 ## December 2019 (hotfix)
 
 December 26, 2019 &nbsp; / &nbsp; version: 1.14.1

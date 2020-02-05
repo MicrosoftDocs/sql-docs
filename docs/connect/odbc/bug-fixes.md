@@ -10,13 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "driver"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-author: "v-makouz"
+author: "v-chojas"
 ms.author: v-jizho2
 manager: kenvh
 ---
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix AKV CMK metadata hash computation on Linux/Mac
+- Fix error when loading OpenSSL 1.0.0
+- Fix conversion issues when using ISO-8859-1 and ISO-8859-2 codepages
+- Fix internal library name on Mac to include version number
+- Fix setting of null indicator when separate length and indicator bindings are used
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

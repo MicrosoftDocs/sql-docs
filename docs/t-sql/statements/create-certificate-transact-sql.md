@@ -177,7 +177,7 @@ CREATE CERTIFICATE certificate_name
   
  A binary description of a certificate can be created by using the [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) and [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) functions. For an example that uses **CERTPRIVATEKEY** and **CERTENCODED** to copy a certificate to another database, see example B in the article [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
 
-The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a self-signed certificate uses SHA1 by default. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], a self-signed certificate is created using SHA2_256 by default.
+The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a self-signed certificate is created using SHA1. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], a self-signed certificate is created using SHA2_256.
 
 ## Permissions  
  Requires `CREATE CERTIFICATE` permission on the database. Only Windows logins, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, and application roles can own certificates. Groups and roles cannot own certificates.  

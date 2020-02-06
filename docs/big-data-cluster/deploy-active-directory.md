@@ -220,7 +220,7 @@ You can find an example script here for [deploying a SQL Server big data cluster
 
 You should now have set all the required parameters for a deployment of BDC with Active Directory integration.
 
-For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [official documentation](deployment-guidance.md).
+You can now deploy the BDC cluster integrated with Active Directory using the `azdata` command and the kubeadm-prod deployment profile. For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md).
 
 ## Verify reverse DNS entry for domain controller
 

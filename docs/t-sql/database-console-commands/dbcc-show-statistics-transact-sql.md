@@ -161,6 +161,7 @@ Note that the following requirements exist for SELECT permissions to be sufficie
 -   If any of the columns within a statistics object is masked with Dynamic Data Masking rules, in addition to the SELECT permission, the user must have the UNMASK permission
 
 In versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
+[!NOTE]
 To change the behavior back to the pre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 behavior, use traceflag 9485.
   
 ## Permissions for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

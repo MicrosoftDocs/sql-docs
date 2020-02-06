@@ -1,5 +1,5 @@
 ---
-title: "Report Server Command Prompt Utilities (SSRS) | Microsoft Docs"
+title: "Report Server Command Prompt Utilities | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

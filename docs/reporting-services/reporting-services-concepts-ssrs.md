@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services Concepts (SSRS) | Microsoft Docs"
+title: "Reporting Services Concepts | Microsoft Docs"
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

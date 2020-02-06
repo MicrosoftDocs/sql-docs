@@ -1,5 +1,5 @@
 ---
-title: "SAP NetWeaver BI Connection Type (SSRS) | Microsoft Docs"
+title: "SAP NetWeaver BI Connection Type | Microsoft Docs"
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

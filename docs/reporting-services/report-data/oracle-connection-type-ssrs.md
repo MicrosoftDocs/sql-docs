@@ -11,7 +11,7 @@ ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Oracle Connection Type (SSRS, Power BI Report Server, and Report Builder)
+# Oracle Connection Type ((Report Builder & Power BI Report Server) | Microsoft Docs)
 
 To use data from an Oracle database in your report, you must have a dataset that's based on a report data source of type Oracle. This built-in data source type uses the Oracle Data Provider directly and requires an Oracle client software component. This article explains how to download and install drivers for Reporting Services, Power BI Report Server, and Report Builder.
 

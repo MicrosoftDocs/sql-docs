@@ -136,6 +136,9 @@ Indicates whether the My Reports feature is enabled. A value of **true** indicat
 ### EnablePowerBIReportExportData 
 (Power BI Report Server only) Enable Power BI Report Server data export from Power BI visuals. Values are True, False.  Default is True. 
 
+### EnablePowerBIReportExportUnderlyingData 
+(Power BI Report Server only) Indicates whether or not a customer can export underlying data from Power BI visuals on Power BI Report Server. A value of True indicates that the feature is enabled.
+
 ### EnableRemoteErrors
 Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 

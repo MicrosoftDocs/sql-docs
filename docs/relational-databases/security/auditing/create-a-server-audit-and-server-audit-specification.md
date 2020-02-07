@@ -158,14 +158,17 @@ ms.author: vanto
   
 2.  On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3.  Copy and paste the following example into the query window and click **Execute**. 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> You are able to use a UNC path for the filepath, however if there is network latency to that fileshare you may experience performance degradation in SQL as threads would be waiting for an auditing write to complete before proceeding. You may see error 17894 in the SQL Errorlog such as: 2020-02-07 12:21:35.100 Server Dispatcher (0x7954) from dispatcher pool 'XE Engine main dispatcher pool' Worker 0x00000058E7300000 appears to be non-yielding on Node 0.
+
+
 #### To create a server audit specification  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  

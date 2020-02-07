@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
-ms.date: 01/10/2020
+ms.date: 02/07/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -320,7 +320,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
+  | EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
   | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) }
@@ -336,7 +336,7 @@ ALTER DATABASE { database_name | CURRENT }
        }
    }
 
-<service-objective> ::={ 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+<service-objective> ::={ 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -393,14 +393,14 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
+MODIFY (EDITION **=** ['Basic' | 'Standard' | 'Premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
 Changes the service tier of the database.
 
-The following example changes edition to `premium`:
+The following example changes edition to `Premium`:
 
 ```sql
 ALTER DATABASE current
-    MODIFY (EDITION = 'premium');
+    MODIFY (EDITION = 'Premium');
 ```
 
 > [!IMPORTANT]
@@ -524,7 +524,7 @@ The following rules apply to MAXSIZE and EDITION arguments:
 - If neither MAXSIZE nor EDITION is specified, the EDITION is set to General Purpose, and MAXSIZE is set to 32 GB.
 
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>)
-Specifies the performance level. The following example changes service objective of a premium database to `P6`:
+Specifies the performance level. The following example changes service objective of a Premium database to `P6`:
 
 ```sql
 ALTER DATABASE current
@@ -681,9 +681,9 @@ Forces a secondary database db1 on server `secondaryserver` to become the new pr
 ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 ```
 
-### G. Update a single database to service tier S0 (standard edition, performance level 0)
+### G. Update a single database to service tier S0 (Standard edition, performance level 0)
 
-Updates a single database to the standard edition (service tier) with a performance level of S0 and a maximum size of 250 GB.
+Updates a single database to the Standard edition (service tier) with a performance level of S0 and a maximum size of 250 GB.
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');

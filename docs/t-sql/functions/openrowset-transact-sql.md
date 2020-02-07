@@ -81,6 +81,15 @@ Is a string constant that is the user name passed to the specified OLE DB provid
 '*password*'
 Is a string constant that is the user password to be passed to the OLE DB provider. *password* is passed in as the DBPROP_AUTH_PASSWORD property when initializing the provider. *password* cannot be a Microsoft Windows password.
 
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
+
 '*provider_string*'
 Is a provider-specific connection string that is passed in as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *provider_string* typically encapsulates all the connection information required to initialize the provider. For a list of keywords that are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, see [Initialization and Authorization Properties](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
@@ -95,8 +104,8 @@ Is the object name that uniquely identifies the object to work with.
 
 ```sql
 SELECT a.*
-   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
-                   'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb'; 'admin'; '', Customers) AS a;
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
 ```
 
 '*query*'
@@ -105,7 +114,8 @@ Is a string constant sent to and executed by the provider. The local instance of
 ```sql
 SELECT a.*
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
-     'SELECT TOP 10 GroupName, Name FROM AdventureWorks2012.HumanResources.Department') AS a;
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
 ```
 
 ### BULK
@@ -209,11 +219,24 @@ By reading *data_file* as ASCII, returns the contents as a single-row, single-co
 SINGLE_NCLOB
 By reading *data_file* as UNICODE, returns the contents as a single-row, single-column rowset of type **nvarchar(max)**, using the collation of the current database.
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### Input file format options
 
 FORMAT **=** 'CSV'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ='*format_file_path*'
 Specifies the full path of a format file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two types of format files: XML and non-XML.

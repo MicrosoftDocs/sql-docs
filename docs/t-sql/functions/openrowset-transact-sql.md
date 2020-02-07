@@ -69,7 +69,7 @@ OPENROWSET
 
 ## Arguments
 
-'*provider_name*'
+### '*provider_name*'
 Is a character string that represents the friendly name (or PROGID) of the OLE DB provider as specified in the registry. *provider_name* has no default value.
 
 '*datasource*'
@@ -93,10 +93,22 @@ Is the name of the schema or object owner for the specified object.
 *object*
 Is the object name that uniquely identifies the object to work with.
 
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb'; 'admin'; '', Customers) AS a;
+```
+
 '*query*'
 Is a string constant sent to and executed by the provider. The local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not process this query, but processes query results returned by the provider, a pass-through query. Pass-through queries are useful when used on providers that do not make available their tabular data through table names, but only through a command language. Pass-through queries are supported on the remote server, as long as the query provider supports the OLE DB Command object and its mandatory interfaces. For more information, see [SQL Server Native Client &#40;OLE DB&#41; Reference](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
-BULK
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### BULK
 Uses the BULK rowset provider for OPENROWSET to read data from a file. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET can read from a data file without loading the data into a target table. This lets you use OPENROWSET with a simple SELECT statement.
 
 > [!IMPORTANT]

@@ -96,7 +96,10 @@ Is the object name that uniquely identifies the object to work with.
 ```sql
 SELECT a.*
    FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
-                   'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb'; 'admin'; '', Customers) AS a;
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
 ```
 
 '*query*'
@@ -105,7 +108,8 @@ Is a string constant sent to and executed by the provider. The local instance of
 ```sql
 SELECT a.*
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
-     'SELECT TOP 10 GroupName, Name FROM AdventureWorks2012.HumanResources.Department') AS a;
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
 ```
 
 ### BULK

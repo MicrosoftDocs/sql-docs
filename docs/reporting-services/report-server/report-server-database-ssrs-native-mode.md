@@ -1,5 +1,5 @@
 ---
-title: "Report Server Database (SSRS Native Mode) | Microsoft Docs"
+title: "Report Server Database (Native Mode) | Microsoft Docs"
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

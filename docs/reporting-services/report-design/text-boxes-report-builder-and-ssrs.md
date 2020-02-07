@@ -1,5 +1,5 @@
 ---
-title: "Text Boxes (Report Builder and SSRS) | Microsoft Docs"
+title: "Text Boxes (Report Builder) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

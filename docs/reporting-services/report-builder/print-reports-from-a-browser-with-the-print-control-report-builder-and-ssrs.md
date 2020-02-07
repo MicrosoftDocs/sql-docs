@@ -1,5 +1,5 @@
 ---
-title: "Print Reports from a Browser with the Print Control (Report Builder and SSRS) | Microsoft Docs"
+title: "Print Reports from a Browser with the Print Control (Report Builder) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

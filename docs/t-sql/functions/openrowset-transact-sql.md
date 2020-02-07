@@ -219,7 +219,7 @@ By reading *data_file* as ASCII, returns the contents as a single-row, single-co
 SINGLE_NCLOB
 By reading *data_file* as UNICODE, returns the contents as a single-row, single-column rowset of type **nvarchar(max)**, using the collation of the current database.
 
-``sql
+```sql
 SELECT *
    FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
 ```

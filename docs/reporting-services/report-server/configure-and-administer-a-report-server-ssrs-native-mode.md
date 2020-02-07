@@ -1,5 +1,5 @@
 ---
-title: "Configure and Administer a Report Server (SSRS Native Mode) | Microsoft Docs"
+title: "Configure and Administer a Report Server (Native Mode) | Microsoft Docs"
 ms.date: 05/15/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

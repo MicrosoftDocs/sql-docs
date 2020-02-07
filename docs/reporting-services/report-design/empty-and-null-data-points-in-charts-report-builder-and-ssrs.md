@@ -1,5 +1,5 @@
 ---
-title: "Empty and Null Data Points in Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Empty and Null Data Points in Charts (Report Builder) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

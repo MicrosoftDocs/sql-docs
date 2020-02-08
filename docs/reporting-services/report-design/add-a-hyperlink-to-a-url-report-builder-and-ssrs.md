@@ -1,5 +1,5 @@
 ---
-title: "Add a Hyperlink to a URL (Report Builder and SSRS) | Microsoft Docs"
+title: "Add a Hyperlink to a URL (Report Builder) | Microsoft Docs"
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

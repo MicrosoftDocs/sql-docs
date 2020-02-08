@@ -1,5 +1,5 @@
 ---
-title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
+title: "What's new in Reporting Services | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services

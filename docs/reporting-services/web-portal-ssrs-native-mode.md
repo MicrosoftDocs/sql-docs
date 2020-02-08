@@ -1,5 +1,5 @@
 ---
-title: "The web portal of a report server (SSRS Native Mode) | Microsoft Docs"
+title: "The web portal of a report server (Native Mode) | Microsoft Docs"
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

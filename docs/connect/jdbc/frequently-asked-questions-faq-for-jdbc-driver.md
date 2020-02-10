@@ -1,7 +1,7 @@
 ---
 title: "Frequently asked questions (FAQ) for JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/29/2020"
+ms.date: "02/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -33,9 +33,9 @@ The Microsoft JDBC Driver 8.2 supports the JDBC 4.2, and 4.3 (partially) specifi
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3 (partially), and 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (partially), and 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 The Microsoft JDBC Driver 7.4 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:

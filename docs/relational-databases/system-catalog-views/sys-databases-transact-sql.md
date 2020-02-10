@@ -112,6 +112,8 @@ If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database i
 |**catalog_collation_type**|**int**|The catalog collation setting:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|The catalog collation setting:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**Applies to**: Azure SQL Data Warehouse Gen2. While this features is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.|
+|**catalog_collation_type_desc**|**nvarchar(60)**|The catalog collation setting:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_memory_optimized_enabled**|**int**|Database level configuration for in-memory database is enabled</br>**Applies to**: Azure SQL Data Warehouse Gen2. Indicates in-memory features with a database scoped configuration are enabled. This applies to Hybrid buffer pool only but could be expanded to include more in a future release. For configuration of the [Hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Does not control the In-Memory OLTP feature at this time.|
   
 ## Permissions
 

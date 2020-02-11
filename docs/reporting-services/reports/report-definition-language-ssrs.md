@@ -1,5 +1,5 @@
 ---
-title: "Report Definition Language (SSRS) | Microsoft Docs"
+title: "Report Definition Language | Microsoft Docs"
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

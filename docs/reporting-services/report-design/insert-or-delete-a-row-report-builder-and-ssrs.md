@@ -1,5 +1,5 @@
 ---
-title: "Insert or Delete a Row (Report Builder and SSRS) | Microsoft Docs"
+title: "Insert or Delete a Row (Report Builder) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

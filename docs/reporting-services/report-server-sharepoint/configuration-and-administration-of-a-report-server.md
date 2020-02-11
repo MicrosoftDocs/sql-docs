@@ -1,5 +1,5 @@
 ---
-title: "Configuration and administration of a report server (SSRS) | Microsoft Docs"
+title: "Configuration and administration of a report server | Microsoft Docs"
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

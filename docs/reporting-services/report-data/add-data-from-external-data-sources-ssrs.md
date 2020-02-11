@@ -1,5 +1,5 @@
 ---
-title: "Add Data from External Data Sources (SSRS) | Microsoft Docs"
+title: "Add Data from External Data Sources | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data

@@ -1,5 +1,5 @@
 ---
-title: "Report Datasets (SSRS) | Microsoft Docs"
+title: "Report Datasets | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

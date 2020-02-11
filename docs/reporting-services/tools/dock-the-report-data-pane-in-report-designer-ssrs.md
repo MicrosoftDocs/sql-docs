@@ -1,5 +1,5 @@
 ---
-title: "Dock the Report Data Pane in Report Designer (SSRS) | Microsoft Docs"
+title: "Dock the Report Data Pane in Report Designer | Microsoft Docs"
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

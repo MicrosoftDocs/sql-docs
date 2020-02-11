@@ -237,11 +237,6 @@ Instructs the Query Optimizer to use statistical data instead of the initial val
   
 If you use OPTIMIZE FOR @variable_name = _literal\_constant_ and OPTIMIZE FOR UNKNOWN in the same query hint, the Query Optimizer will use the _literal\_constant_ specified for a specific value. The Query Optimizer will use UNKNOWN for the rest of the variable values. The values are used only during query optimization, and not during query execution.  
 
-QUERYTRACEON trace_flag 
-This option lets you to enable a plan-affecting trace flag only during single-query compilation. Like other query-level options, you can use it together with plan guides to match the text of a query being executed from any session, and automatically apply a plan-affecting trace flag when this query is being compiled. The QUERYTRACEON option is only supported for Query Optimizer trace flags that are documented in the table of "More information" section and in [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). However, this option will not return any error or warning if an unsupported trace flag number is used. If the specified trace flag is not one that affects a query execution plan, the option will be silently ignored.
-
-More than one trace flag can be specified in the OPTION clause if QUERYTRACEON trace_flag_number is duplicated with different trace flag numbers.
-
 PARAMETERIZATION { SIMPLE | FORCED }     
 Specifies the parameterization rules that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer applies to the query when it's compiled.  
   
@@ -250,6 +245,11 @@ Specifies the parameterization rules that the [!INCLUDE[ssNoVersion](../../inclu
 > For more information, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
 SIMPLE instructs the Query Optimizer to attempt simple parameterization. FORCED instructs the Query Optimizer to attempt forced parameterization. For more information, see [Forced Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), and [Simple Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+
+QUERYTRACEON trace_flag    
+This option lets you to enable a plan-affecting trace flag only during single-query compilation. Like other query-level options, you can use it together with plan guides to match the text of a query being executed from any session, and automatically apply a plan-affecting trace flag when this query is being compiled. The QUERYTRACEON option is only supported for Query Optimizer trace flags that are documented in the table of "More information" section and in [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). However, this option will not return any error or warning if an unsupported trace flag number is used. If the specified trace flag is not one that affects a query execution plan, the option will be silently ignored.
+
+More than one trace flag can be specified in the OPTION clause if QUERYTRACEON trace_flag_number is duplicated with different trace flag numbers.
 
 RECOMPILE  
 Instructs the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to generate a new, temporary plan for the query and immediately discard that plan after the query completes execution. The generated query plan doesn't replace a plan stored in cache when the same query runs without the RECOMPILE hint. Without specifying RECOMPILE, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] caches query plans and reuses them. When compiling query plans, the RECOMPILE query hint uses the current values of any local variables in the query. If the query is inside a stored procedure, the current values passed to any parameters.  

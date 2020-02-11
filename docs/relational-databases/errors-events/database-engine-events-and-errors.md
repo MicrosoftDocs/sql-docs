@@ -1,7 +1,7 @@
 ---
 title: "Database engine events and errors"
 ms.custom: ""
-ms.date: 01/11/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -13,6 +13,17 @@ ms.author: mathoma
 # Database engine errors
 
 The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view. Where applicable, the error number is a link to further information.
+
+This list is not exhaustive. For a full list of all errors, query the sys.messages catalog view with the following query:
+
+```sql
+SELECT message_id AS Error, severity AS Severity,  
+[Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
+text AS [Description]
+FROM sys.messages
+WHERE language_id = <desired language, such as 1033 for US English>
+ORDER BY message_id
+```
 
 ## Errors -2 to 999
 
@@ -568,7 +579,31 @@ The table contains error message numbers and the description, which is the text 
 |	971	|	10	|	No	|	The resource database has been detected in two different locations. Attaching the resource database in the same directory as sqlservr.exe at '%.*ls' instead of the currently attached resource database at '%.*ls'.	|
 |	972	|	17	|	No	|	Could not use database '%d' during procedure execution.	|
 |	973	|	10	|	Yes	|	Database %ls was started . However, FILESTREAM is not compatible with the READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION options. Either remove the FILESTREAM files and the FILESTREAM filegroups, or set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF.	|
+|974 | 10  | No  |  Attaching the resource database in the same directory as sqlservr.exe at '%.*ls' failed as the database files do not exist.|
+|975 | 10  | Yes |  System objects could not be updated in database '%.*ls' because it is read-only. |
+|976 | 14  | No  |  The target database, '%.*ls', is participating in an availability group and is currently not accessible for queries. Either data movement is suspended or the availability replica is not enabled for read access. To allow read-only access to this and other d |
+|977 | 10 |  No  |  Warning: Could not find associated index for the constraint '%.*ls' on object_id '%d' in database '%.*ls'.|
+|978 | 14 |  No  |  The target database ('%.*ls') is in an availability group and is currently accessible for connections when the application intent is set to read only. For more information about application intent, see SQL Server Books Online. |
+|979  | 14 | No  |  The target database ('%.*ls') is in an availability group and currently does not allow read only connections. For more information about application intent, see SQL Server Books Online.|
+|980 |  21 |  Yes |  SQL Server cannot load database '%.*ls' because it contains a columnstore index. The currently installed edition of SQL Server |does not support columnstore indexes. Either disable the columnstore index in the database by using a supported edition of SQL Se|
+|981  |  10 | No | Database manager will be using %d target database version. |
+|982  |  14 | No | Unable to access the '%.*ls' database because no online secondary replicas are enabled for read-only access. Check the availability group configuration to verify that at least one secondary replica is configured for read-only access. Wait for an enabled re|
+|983 |  14  | No | Unable to access availability database '%.*ls' because the database replica is not in the PRIMARY or SECONDARY role. Connections to an availability database is permitted only when the database replica is in the PRIMARY or SECONDARY role. Try the operation |
+|984 | 21  | Yes | Failed to perform a versioned copy of sqlscriptdowngrade.dll from Binn to Binn\Cache folder. VerInstallFile API failed with error code %d.|
+|985 |  10 | Yes  |      Successfully installed the file '%ls' into folder '%ls'. |
+|986 |  10 | No   |     Couldn't get a clean bootpage for database  '%.*ls' after %d tries. This is an informational message only. No user action is required. |
+|987 |  23  |    Yes | A duplicate key insert was hit when updating system objects in database '%.*ls'.|
+|988 |  14  |    No  | Unable to access database '%.*ls' because it lacks a quorum of nodes for high availability. Try the operation again later.|
+|989 |  16  |    No  | Failed to take the host database with ID %d offline when one or more of its partition databases is marked as suspect.|
+|990 |  16  |    No  | Taking the host database with ID %d offline because one or more of its partition databases is marked as suspect.|
+|991 |  16  |    No  | Failed to take the host database '%.*ls' offline when one or more of its partition databases is marked as suspect.|
+|992 |  16  |    No  | Failed to get the shared lock on database '%.*ls'.|
+|993 |  10  |    No  | Redo for database '%.*ls' applied version upgrade step from %d to %d.|
+|994 |  10  |    No  | Warning: Index "%.*ls" on "%.*ls"."%.*ls" is disabled because it contains a computed column.|
+|995 |  10  |    No  | Warning: Index "%.*ls" on "%.*ls"."%.*ls" is disabled. It cannot be upgraded as it resides on a read-only filegroup.|
+|996 |  10  |    No  | Warning: Index "%.*ls" on "%.*ls"."%.*ls" is disabled. This columnstore index cannot be upgraded, likely because it exceeds the row size limit of '%d' bytes.|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
 
 ## Errors 1000 to 1999
 
@@ -2152,11 +2187,12 @@ The table contains error message numbers and the description, which is the text 
 |	4863	|	16	|	No	|	Bulk load data conversion error (truncation) for row %d, column %d (%ls).	|
 |	4864	|	16	|	No	|	Bulk load data conversion error (type mismatch or invalid character for the specified codepage) for row %d, column %d (%ls).	|
 |	4865	|	16	|	No	|	Cannot bulk load because the maximum number of errors (%d) was exceeded.	|
-|	4866	|	16	|	No	|	The bulk load failed. The column is too long in the data file for row %d, column %d. Verify that the field terminator and row terminator are specified correctly.	|
+|	4866	|	16	|	No	|	The bulk load failed. The column is too long in the data file for row %d, column %d. Verify that the field terminator and row terminator are specified correctly.	| Bulk load failed due to invalid column value in CSV data file %ls in row %d, column %d | 
 |	4867	|	16	|	No	|	Bulk load data conversion error (overflow) for row %d, column %d (%ls).	|
 |	4868	|	16	|	No	|	The bulk load failed. The codepage "%d" is not installed. Install the codepage and run the command again.	|
 |	4869	|	16	|	No	|	The bulk load failed. Unexpected NULL value in data file row %d, column %d. The destination column (%ls) is defined as NOT NULL.	|
 |	4870	|	16	|	No	|	Cannot bulk load because of an error writing file "%ls". Operating system error code %ls.	|
+|   4879    |   16  |   No  | 
 |	4871	|	16	|	No	|	Bulk load error while attempting to log errors.	|
 |	4872	|	16	|	No	|	Line %d in format file "%ls": duplicate element id "%ls".	|
 |	4873	|	16	|	No	|	Line %d in format file "%ls": referencing non-existing element id "%ls".	|

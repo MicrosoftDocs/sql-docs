@@ -14,3 +14,10 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 Learn how to run Python scripts in a notebooks in [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) with [SQL Server Machine Learning Services](../what-s-new-in-sql-server-machine-learning-services.md).
 
+## Prerequisites
+
+## SQL notebook
+
+## Example
+
+## Next steps

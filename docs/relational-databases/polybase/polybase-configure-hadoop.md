@@ -149,15 +149,15 @@ To query the data in your Hadoop data source, you must define an external table 
 
 There are three functions that PolyBase is suited for:  
   
-- Ad-hoc queries against external tables.  
+- Ad hoc queries against external tables.  
 - Importing data.  
 - Exporting data.  
 
 The following queries provide example with fictional car sensor data.
 
-### Ad-hoc queries  
+### Ad hoc queries  
 
-The following ad-hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
+The following ad hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,

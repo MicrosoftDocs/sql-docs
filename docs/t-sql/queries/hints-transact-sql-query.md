@@ -99,6 +99,7 @@ Query hints specify that the indicated hints should be used throughout the query
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -235,7 +236,12 @@ OPTIMIZE FOR UNKNOWN
 Instructs the Query Optimizer to use statistical data instead of the initial values for all local variables when the query is compiled and optimized. This optimization includes parameters created with forced parameterization.  
   
 If you use OPTIMIZE FOR @variable_name = _literal\_constant_ and OPTIMIZE FOR UNKNOWN in the same query hint, the Query Optimizer will use the _literal\_constant_ specified for a specific value. The Query Optimizer will use UNKNOWN for the rest of the variable values. The values are used only during query optimization, and not during query execution.  
-  
+
+QUERYTRACEON trace_flag 
+This option lets you to enable a plan-affecting trace flag only during single-query compilation. Like other query-level options, you can use it together with plan guides to match the text of a query being executed from any session, and automatically apply a plan-affecting trace flag when this query is being compiled. The QUERYTRACEON option is only supported for Query Optimizer trace flags that are documented in the table of "More information" section and in [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). However, this option will not return any error or warning if an unsupported trace flag number is used. If the specified trace flag is not one that affects a query execution plan, the option will be silently ignored.
+
+More than one trace flag can be specified in the OPTION clause if QUERYTRACEON trace_flag_number is duplicated with different trace flag numbers.
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 Specifies the parameterization rules that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer applies to the query when it's compiled.  
   
@@ -596,7 +602,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### M. Using QUERYTRACEON HINT  
+ The following example uses the QUERYTRACEON query hints. The example uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. You can enable all plan-affecting hotfixes controlled by trace flag 4199 for a particular query using the following query:
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ You can use multiple trace flags as well as in teh following query:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## See Also  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

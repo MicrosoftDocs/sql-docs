@@ -4,10 +4,10 @@ ms.custom: ""
 ms.date: "06/30/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: "MightyPen"
+ms.reviewer: "v-jizho2"
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-makouz
+author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
 ---
@@ -29,6 +29,17 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 17.5, January 2020
+
+| Feature added | Details |
+| :------------ | :------ |
+| SQL_COPT_SS_SPID connection attribute to retrieve SPID without round-trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Support for indicating EULA acceptance via `debconf` on Debian and Ubuntu | See [Installing the Driver](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
+| New distributions supported. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.4.2, October 2019
 
 | Feature added | Details |

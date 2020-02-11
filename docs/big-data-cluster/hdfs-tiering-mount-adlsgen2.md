@@ -5,7 +5,7 @@ description: This article explains how to configure HDFS tiering to mount an ext
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/01/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -71,18 +71,15 @@ Open a command-prompt on a client machine that can access your big data cluster.
 	fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
 	fs.azure.account.oauth2.client.endpoint=[token endpoint],
 	fs.azure.account.oauth2.client.id=[Application client ID],
-	fs.azure.account.oauth2.client.secret=[client secret],
-	fs.abfs.impl.disable.cache=true
+	fs.azure.account.oauth2.client.secret=[client secret]
    ```
-   
-The default behaviour in the ADLS driver is to cache the credentials. This means that incorrect credentials will also be cached, and can result in issues if your first attempt to mount enters the wrong credentials. The last part (fs.abfs.impl.disable.cache=true) of the credential above disables this caching.
 
 ## Use Access keys to mount
 
 You can also mount using access keys which you can get for your ADLS account on the Azure portal.
 
  > [!TIP]
-   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View account keys and connection string](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
+   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View account keys and connection string](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string).
 
 ### Set environment variable for access key credentials
 
@@ -94,11 +91,8 @@ You can also mount using access keys which you can get for your ADLS account on 
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
-   fs.abfs.impl.disable.cache=true
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
-   
-The default behaviour in the ADLS driver is to cache the credentials. This means that incorrect credentials will also be cached, and can result in issues if your first attempt to mount enters the wrong credentials. The last part (fs.abfs.impl.disable.cache=true) of the credential above disables this caching.
 
 ## <a id="mount"></a> Mount the remote HDFS storage
 
@@ -144,7 +138,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## Refresh a mount
 
-The following example refreshes the mount. THis refresh will also clear the mount cache.
+The following example refreshes the mount. This refresh will also clear the mount cache.
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>

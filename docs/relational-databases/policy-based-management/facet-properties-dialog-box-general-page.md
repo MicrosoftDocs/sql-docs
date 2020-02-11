@@ -1,6 +1,7 @@
 ---
-title: "Facet Properties Dialog Box, General Page | Microsoft Docs"
-ms.custom: ""
+title: "Facet Properties dialog box, General Page"
+description: Describes the 'General Page' of the 'Facet Properties' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

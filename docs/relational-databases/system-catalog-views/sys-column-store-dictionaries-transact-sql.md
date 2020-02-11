@@ -34,7 +34,7 @@ ms.author: carlrab
 |**type**|**int**|Dictionary type:<br /><br /> 1 - Hash dictionary containing **int** values<br /><br /> 2 - Not used<br /><br /> 3 - Hash dictionary containing string values<br /><br /> 4 - Hash dictionary containing **float** values<br /><br /> For more information about dictionaries, see [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|The last data ID in the dictionary.|  
 |**entry_count**|**bigint**|Number of entries in the dictionary.|  
-|**on_disc_size**|**bigint**|Size of dictionary in bytes.|  
+|**on_disk_size**|**bigint**|Size of dictionary in bytes.|  
 |**partition_id**|**bigint**|Indicates the partition ID. Is unique within a database.|  
   
 ## Permissions  

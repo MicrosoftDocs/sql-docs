@@ -49,7 +49,7 @@ LOG ( float_expression )
  *base*  
  Optional integer argument that sets the base for the logarithm.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
   
 ## Return Types  
  **float**  

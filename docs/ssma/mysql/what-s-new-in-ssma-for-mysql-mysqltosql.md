@@ -2,7 +2,7 @@
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "09/06/2019"
+ms.date: "01/22/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,12 +14,30 @@ ms.author: "Shamikg"
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
 
+## SSMA v8.6
+
+In addition to a targeted set of fixes designed to improve usability and performance, the v8.6 release of SSMA for MySQL has been enhanced by adding a setting that enables users to omit SSMA extended properties in the converted code.
+
+To leverage this setting, in SSMA for MySQL, navigate to **Tools** > **Project Settings** > **General** > **Conversion**, and then under **Misc**, update the value of the **Omit Extended Properties** setting to **Yes**.
+
+![Omit Extended Properties setting](../mysql/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> With SSMA v8.5 and later, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+
+## SSMA v8.5
+
+The v8.5 release of SSMA for MySQL is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+
+> [!IMPORTANT]
+> With SSMA v8.5, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+
 ## SSMA v8.4
 
 The v8.4 release of SSMA for MySQL is enhanced with targeted fixes that are designed to address accessibility issues and fix a bug related to max index columns (to allow 32 instead of 16) for SQL Server 2016 and later versions.
 
 > [!IMPORTANT]
-> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+> With SSMA versions 7.4 though 8.4, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v8.3
 
@@ -142,7 +160,7 @@ The v7.1 release of SSMA for MySQL contains the following changes:
 
 * SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
 * SSMA now supports automatic updates to download the latest version of SSMA as soon as it's available.
-* SSMA installable binaries are now delivered through Windows installer package files (.msi).
+* SSMA installable binaries are now delivered through Windows Installer package files (.msi).
 
 ## May 2016  
 The May 2016 release of SSMA for MySQL contains  the following changes:
@@ -188,7 +206,7 @@ The July 2014 release of SSMA for MySQL contains the following changes:
 The April 2014 release of SSMA for MySQL contains the following changes:  
   
 * Added support of MS SQL Server 2014.  
-* Fixed bugs regarding conversion to Azure  
+* Fixed bugs regarding conversion to Azure.
 * Fixed bugs regarding invisible report pages in IE 10.  
   
 ## July 2011

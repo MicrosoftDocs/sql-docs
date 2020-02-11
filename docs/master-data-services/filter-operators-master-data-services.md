@@ -1,5 +1,5 @@
 ---
-title: "Filter Operators (Master Data Services) | Microsoft Docs"
+title: Filter Operators
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

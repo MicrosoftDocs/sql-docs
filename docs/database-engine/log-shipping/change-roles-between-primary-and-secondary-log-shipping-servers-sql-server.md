@@ -1,6 +1,7 @@
 ---
-title: "Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Change primary & secondary log shipping roles"
+description: Learn how to configure your secondary database to act as the primary for your SQL Server log shipping solution. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

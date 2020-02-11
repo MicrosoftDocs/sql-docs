@@ -1,5 +1,5 @@
 ---
-title: "Updating an Application to SQL Server Native Client from MDAC | Microsoft Docs"
+title: "Native Client, update app SQL from MDAC"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,7 +19,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Updating an Application to SQL Server Native Client from MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   There are a number of differences between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and Microsoft Data Access Components (MDAC; starting with Windows Vista, the data access components are now called Windows Data Access Components, or Windows DAC). Although both provide native data access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client has been specifically designed to expose the new features of [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], while at the same time maintaining backward compatibility with earlier versions.  
   

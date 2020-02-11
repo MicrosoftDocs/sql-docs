@@ -1,5 +1,5 @@
 ---
-title: "Add Custom Locations to a Map (Report Builder and SSRS) | Microsoft Docs"
+title: "Add Custom Locations to a Map (Report Builder) | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

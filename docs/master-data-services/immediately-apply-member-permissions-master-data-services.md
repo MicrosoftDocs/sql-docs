@@ -1,5 +1,5 @@
 ---
-title: "Immediately Apply Member Permissions (Master Data Services) | Microsoft Docs"
+title: Immediately Apply Member Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

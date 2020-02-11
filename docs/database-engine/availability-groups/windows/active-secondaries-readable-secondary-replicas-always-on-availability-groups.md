@@ -1,7 +1,7 @@
 ---
-title: "Offload read-only workload to secondary replica of an availability group"
+title: "Offload workload to secondary availability group replica"
 description: "Learn about offloading read-only queries and reports to a secondary replica of an Always On availability group on SQL Server."
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "06/06/2016"
 ms.prod: sql
 ms.reviewer: ""

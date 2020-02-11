@@ -203,7 +203,7 @@ Execute a character string
  A module that has been created in another database can be executed if the user running the module owns the module or has the appropriate permission to execute it in that database. A module can be executed on another server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if the user running the module has the appropriate permission to use that server (remote access) and to execute the module in that database. If a server name is specified but no database name is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] looks for the module in the default database of the user.  
   
  ;*number*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Is an optional integer that is used to group procedures of the same name. This parameter is not used for extended stored procedures.  
   
@@ -262,7 +262,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  Specifies the context in which the statement is executed.  
   
  LOGIN  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies the context to be impersonated is a login. The scope of impersonation is the server.  
   
@@ -286,7 +286,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  Indicates parameters for which values are supplied in the \<arg-list> of pass-through commands that are used in an EXEC('...', \<arg-list>) AT \<linkedsrv> statement.  
   
  AT *linked_server_name*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies that *command_string* is executed against *linked_server_name* and results, if any, are returned to the client. *linked_server_name* must refer to an existing linked server definition in the local server. Linked servers are defined by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
@@ -296,12 +296,12 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
 |Term|Definition|  
 |----------|----------------|  
 |RECOMPILE|Forces a new plan to be compiled, used, and discarded after the module is executed. If there is an existing query plan for the module, this plan remains in the cache.<br /><br /> Use this option if the parameter you are supplying is atypical or if the data has significantly changed. This option is not used for extended stored procedures. We recommend that you use this option sparingly because it is expensive.<br /><br /> **Note:** You can not use WITH RECOMPILE when calling a stored procedure that uses OPENDATASOURCE syntax. The WITH RECOMPILE option is ignored when a four-part object name is specified.<br /><br /> **Note:** RECOMPILE is not supported with natively compiled, scalar user-defined functions. If you need to recompile, use [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
-|**RESULT SETS UNDEFINED**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> This option provides no guarantee of what results, if any, will be returned, and no definition is provided. The statement executes without error if any results are returned or no results are returned. RESULT SETS UNDEFINED is the default behavior if a result_sets_option is not provided.<br /><br /> For interpreted scalar user-defined functions, and natively compiled scalar user-defined functions, this option is not operational because the functions never return a result set.|  
-|RESULT SETS NONE|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Guarantees that the execute statement will not return any results. If any results are returned the batch is aborted.<br /><br /> For interpreted scalar user-defined functions, and natively compiled scalar user-defined functions, this option is not operational because the functions never return a result set.|  
-|*\<result_sets_definition>*|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Provides a guarantee that the result will come back as specified in the result_sets_definition. For statements that return multiple result sets, provide multiple *result_sets_definition* sections. Enclose each *result_sets_definition* in parentheses, separated by commas. For more information, see \<result_sets_definition> later in this topic.<br /><br /> This option always results in an error for natively compiled, scalar user-defined functions because the functions never return a result set.|
+|**RESULT SETS UNDEFINED**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> This option provides no guarantee of what results, if any, will be returned, and no definition is provided. The statement executes without error if any results are returned or no results are returned. RESULT SETS UNDEFINED is the default behavior if a result_sets_option is not provided.<br /><br /> For interpreted scalar user-defined functions, and natively compiled scalar user-defined functions, this option is not operational because the functions never return a result set.|  
+|RESULT SETS NONE|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Guarantees that the execute statement will not return any results. If any results are returned the batch is aborted.<br /><br /> For interpreted scalar user-defined functions, and natively compiled scalar user-defined functions, this option is not operational because the functions never return a result set.|  
+|*\<result_sets_definition>*|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Provides a guarantee that the result will come back as specified in the result_sets_definition. For statements that return multiple result sets, provide multiple *result_sets_definition* sections. Enclose each *result_sets_definition* in parentheses, separated by commas. For more information, see \<result_sets_definition> later in this topic.<br /><br /> This option always results in an error for natively compiled, scalar user-defined functions because the functions never return a result set.|
   
 \<result_sets_definition>
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Describes the result sets returned by the executed statements. The clauses of the result_sets_definition have the following meaning  
   
@@ -451,7 +451,7 @@ GO
 ### D. Using EXECUTE with a remote stored procedure  
  The following example executes the `uspGetEmployeeManagers` stored procedure on the remote server `SQLSERVER1` and stores the return status that indicates success or failure in `@retstat`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 ```  
 DECLARE @retstat int;  
@@ -510,7 +510,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### G. Using EXECUTE with AT linked_server_name  
  The following example passes a command string to a remote server. It creates a linked server `SeattleSales` that points to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and executes a DDL statement (`CREATE TABLE`) against that linked server.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -542,7 +542,7 @@ GO
 ### J. Using EXECUTE to query an Oracle database on a linked server  
  The following example executes several `SELECT` statements at the remote Oracle server. The example begins by adding the Oracle server as a linked server and creating linked server login.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 ```  
 -- Setup the linked server.  
@@ -585,7 +585,7 @@ GO
 ### L. Using a parameter with EXECUTE and AT linked_server_name  
  The following example passes a command string to a remote server by using a question mark (`?`) placeholder for a parameter. The example creates a linked server `SeattleSales` that points to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and executes a `SELECT` statement against that linked server. The `SELECT` statement uses the question mark as a place holder for the `ProductID` parameter (`952`), which is provided after the statement.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 ```  
 -- Setup the linked server.  
@@ -601,7 +601,7 @@ GO
 ### M. Using EXECUTE to redefine a single result set  
  Some of the previous examples executed `EXEC dbo.uspGetEmployeeManagers 6;` which returned 7 columns. The following example demonstrates using the `WITH RESULT SET` syntax to change the names and data types of the returning result set.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -621,7 +621,7 @@ WITH RESULT SETS
 ### N. Using EXECUTE to redefine a two result sets  
  When executing a statement that returns more than one result set, define each expected result set. The following example in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] creates a procedure that returns two result sets. Then the procedure is executed using the **WITH RESULT SETS** clause, and specifying two result set definitions.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  

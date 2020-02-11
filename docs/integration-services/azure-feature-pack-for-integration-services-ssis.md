@@ -1,7 +1,7 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2019"
+ms.date: "12/24/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -94,8 +94,8 @@ To use TLS 1.2, add a `REG_DWORD` value named `SchUseStrongCrypto` with data `1`
 
 ## Dependency on Java
 
-Java is required to use ORC/Parquet file formats with Azure Data Lake Store/Flat File connectors.  
-Architecture (32/64-bit) of the Java build should match that of the SSIS runtime to use.
+Java is required to use ORC/Parquet file formats with Azure Data Lake Store/Flexible File connectors.  
+The architecture (32/64-bit) of Java build should match that of the SSIS runtime to use.
 The following Java builds have been tested.
 
 - [Zulu's OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
@@ -113,6 +113,13 @@ The following Java builds have been tested.
 7. Select **OK** to close the **New System Variable** dialog box.
 8. Select **OK** to close the **Environment Variables** dialog box.
 9. Select **OK** to close the **System Properties** dialog box.
+
+> [!TIP]
+> If you use Parquet format and hit error saying "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**", you can add an environment variable *`_JAVA_OPTIONS`* to adjust the min/max heap size for JVM.
+>
+>![jvm heap](media/azure-feature-pack-jvm-heap-size.png)
+>
+> Example: set variable *`_JAVA_OPTIONS`* with value *`-Xms256m -Xmx16g`*. The flag Xms specifies the initial memory allocation pool for a Java Virtual Machine (JVM), while Xmx specifies the maximum memory allocation pool. This means that JVM will be started with *`Xms`* amount of memory and will be able to use a maximum of *`Xmx`* amount of memory. The default values are min 64MB and max 1G.
 
 ### Set Up Zulu's OpenJDK on Azure-SSIS Integration Runtime
 
@@ -133,6 +140,13 @@ As the entry point, `main.cmd` triggers execution of the PowerShell script `inst
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> If you use Parquet format and hit error saying "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**", you can add command in *`main.cmd`* to adjust the min/max heap size for JVM. Example:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> The flag Xms specifies the initial memory allocation pool for a Java Virtual Machine (JVM), while Xmx specifies the maximum memory allocation pool. This means that JVM will be started with *`Xms`* amount of memory and will be able to use a maximum of *`Xmx`* amount of memory. The default values are min 64MB and max 1G.
 
 **install_openjdk.ps1**
 
@@ -173,6 +187,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
 ## Release Notes
+
+### Version 1.16.0
+
+#### Bugfixes
+
+1. In certain cases, package execution reports "Error: Could not load file or assembly ‘Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed’ or one of its dependencies."
 
 ### Version 1.15.0
 

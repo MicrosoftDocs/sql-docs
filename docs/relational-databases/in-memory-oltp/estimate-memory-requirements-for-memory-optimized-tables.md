@@ -1,6 +1,6 @@
 ---
-title: "Estimate Memory Requirements for Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Memory requirements - memory-optimized tables"
+ms.custom: seo-dt-2019
 ms.date: "12/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

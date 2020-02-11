@@ -1,6 +1,6 @@
 ---
-title: Create R models RevoScaleR tutorial
-description: Tutorial walkthrough on how to build a model using the R language on SQL Server.
+title: Create R models with RevoScaleR
+description: "RevoScaleR tutorial 7: How to build a model using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,14 +8,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create R models (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 7 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-You have enriched the training data. It's now time to analyze the data using regression modeling. Linear models are an important tool in the world of predictive analytics. The **RevoScaleR** package includes regression algorithms that can subdivide the workload and run it in parallel.
+You have enriched the training data. In this tutorial, you'll analyze the data using regression modeling. Linear models are an important tool in the world of predictive analytics. The **RevoScaleR** package includes regression algorithms that can subdivide the workload and run it in parallel.
 
 > [!div class="checklist"]
 > * Create a linear regression model

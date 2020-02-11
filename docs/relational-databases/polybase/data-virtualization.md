@@ -1,19 +1,25 @@
 ---
-title: Virtualize external data in SQL Server 2019 | Microsoft Docs
+title: Virtualize external data
 description: This page details the steps for using the Create external table wizard for relational Data sources
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+ms.metadata: seo-lt-2019
 ---
 
 # Use the External Table Wizard with relational data sources
 
 One of the key scenarios for SQL Server 2019 is the ability to virtualize data. This process allows the data to stay in its original location. You can *virtualize* the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This process minimizes the need for ETL processes. This process is possible with the use of PolyBase connectors. For more information on data virtualization, see [Get started with PolyBase](polybase-guide.md).
+
+This video provides an introduction into data virtualization:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## Start the External Table wizard
 

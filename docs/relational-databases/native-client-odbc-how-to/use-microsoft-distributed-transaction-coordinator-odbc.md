@@ -1,5 +1,5 @@
 ---
-title: "Use Microsoft Distributed Transaction Coordinator (ODBC) | Microsoft Docs"
+title: "Distributed Transaction Coordinator (ODBC)"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ### To update two or more SQL Servers by using MS DTC  

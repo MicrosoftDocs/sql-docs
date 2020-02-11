@@ -1,5 +1,5 @@
 ---
-title: "ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs"
+title: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,14 +19,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Sets the parameter properties on a per parameter basis by ordinal, or sets bulk parameter properties by specifying an array of SSPARAMPROPS structures.  
   
 ## Syntax  
   
-```  
-  
+```cpp
 HRESULT SetParameterProperties(  
       DB_UPARAMS cParams,   
       SSPARAMPROPS rgParamProperties[]);  
@@ -56,17 +54,15 @@ HRESULT SetParameterProperties(
  If the call to **ISSCommandWithParameters::SetParameterProperties** contains some parameters where the parameter info has been set, and some parameters where the parameter info has not been set, the dwStatus properties in the DBPROPSET of the SSPARAMPROPS property set will return with DBSTATUS_NOTSET.  
   
  The SSPARAMPROPS structure is defined as follows:  
-  
- `struct SSPARAMPROPS {`  
-  
- `DBORDINAL iOrdinal;`  
-  
- `ULONG cPropertySets;`  
-  
- `DBPROPSET *rgPropertySets;`  
-  
- `};`  
-  
+
+```cpp
+struct SSPARAMPROPS {
+    DBORDINAL iOrdinal;
+    ULONG cPropertySets;
+    DBPROPSET *rgPropertySets;
+};
+```
+
  Improvements in the database engine starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] allow ISSCommandWithParameters::SetParameterProperties to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by ISSCommandWithParameters::SetParameterProperties in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 |Member|Description|  
@@ -74,7 +70,8 @@ HRESULT SetParameterProperties(
 |*iOrdinal*|The ordinal of the passed parameter.|  
 |*cPropertySets*|The number of DBPROPSET structures in *rgPropertySets*.|  
 |*rgPropertySets*|A pointer to memory in which to return an array of DBPROPSET structures.|  
-  
+|||
+
 ## See Also  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

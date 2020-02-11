@@ -1,6 +1,7 @@
 ---
-title: "Force a WSFC Cluster to Start Without a Quorum | Microsoft Docs"
-ms.custom: ""
+title: "Force a WSFC Cluster to Start Without a Quorum"
+description: Describes how to force a Windows Server Failover Cluster to start without a quorum. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

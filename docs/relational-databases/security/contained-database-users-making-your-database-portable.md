@@ -1,6 +1,7 @@
 ---
-title: "Contained Database Users - Making Your Database Portable | Microsoft Docs"
-ms.custom: ""
+title: "Contained user access to contained databases"
+description: Learn how to configure contained user access for contained databases, and the differences between a traditional login/user model. 
+ms.custom: seo-lt-2019
 ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

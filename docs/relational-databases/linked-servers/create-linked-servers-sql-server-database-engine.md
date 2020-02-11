@@ -1,11 +1,10 @@
 ---
-title: "Create Linked Servers (SQL Server Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/20/2015"
+title: "Create Linked Servers"
+ms.date: "01/24/2020"
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.linkedserver.properties.general.f1"
@@ -17,6 +16,7 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 ---
 # Create Linked Servers (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,10 @@ ms.author: sstein
   
      **Remote User**  
      Use the remote user to map users not defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
-  
+
+    > [!WARNING]
+    > Only a SQL Server user can be used a "Remote User" in an Azure SQL Database managed instance deployment.  
+
      **Remote Password**  
      Specify the password of the Remote User.  
   

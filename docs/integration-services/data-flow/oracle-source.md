@@ -155,7 +155,7 @@ Use the **Error Output** page of the **Oracle Source Editor** dialog box to sele
 **Error behavior**
 
 Select how the Oracle source should handle errors in a flow: ignore the failure, redirect the row, or fail the component.
-**Related section**: [Error Handling in Data](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Related section**: [Error Handling in Data](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Truncation**
 

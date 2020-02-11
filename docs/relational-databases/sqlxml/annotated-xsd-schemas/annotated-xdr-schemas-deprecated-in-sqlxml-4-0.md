@@ -1,5 +1,5 @@
 ---
-title: "Annotated XDR Schemas (Deprecated in SQLXML 4.0) | Microsoft Docs"
+title: "Annotated XDR Schemas (Deprecated in SQLXML 4.0)"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -1,6 +1,7 @@
 ---
-title: "Publish Execution of Stored Procedure in Transactional Publication | Microsoft Docs"
-ms.custom: ""
+title: "Publish execution of stored procedure (Transactional)"
+description: Learn how to publish the execution of stored procedures using SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publish Execution of Stored Procedure in Transactional Publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

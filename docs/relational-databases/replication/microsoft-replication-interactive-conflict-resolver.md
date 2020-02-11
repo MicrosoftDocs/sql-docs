@@ -1,6 +1,7 @@
 ---
-title: "Microsoft Replication Interactive Conflict Resolver | Microsoft Docs"
-ms.custom: ""
+title: "Interactive Conflict Resolver (Merge)"
+describes: Describes the Interactive Conflict Resolver that can be used for merge subscriptions that are synchronized using the Windows Synchronization Manager. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

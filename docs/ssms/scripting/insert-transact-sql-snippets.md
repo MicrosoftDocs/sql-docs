@@ -1,6 +1,6 @@
 ---
-title: "Insert Transact-SQL Snippets | Microsoft Docs"
-ms.custom: ""
+title: "Insert Transact-SQL Snippets"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

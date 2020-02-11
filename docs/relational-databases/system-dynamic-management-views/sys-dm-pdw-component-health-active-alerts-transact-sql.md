@@ -1,6 +1,6 @@
 ---
-title: "sys.dm_pdw_component_health_active_alerts (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_pdw_component_health_active_alerts (Transact-SQL"
+ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.technology: data-warehouse

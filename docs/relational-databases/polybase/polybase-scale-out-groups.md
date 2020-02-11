@@ -60,3 +60,10 @@ After setup of SQL Server, the instance can be designated as either a head node 
 To configure a PolyBase scale-out group, see the following guide:
 
 [Improve PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md)
+
+## See Also
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

@@ -1,8 +1,8 @@
 ---
-title: "Assess the readiness of a SQL Server data estate migrating to Azure SQL Database | Microsoft Docs"
-description: Learn how to use Data Migration Assistant to migrate a SQL Server data estate for migration to Azure SQL Database
-ms.custom: ""
-ms.date: "07/16/2019"
+title: "Assess SQL Server readiness to migrate to Azure SQL Database"
+titleSuffix: Data Migration Assistant
+description: "Learn how to use Data Migration Assistant to migrate a SQL Server data estate for migration to Azure SQL Database"
+ms.date: "12/19/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -15,15 +15,15 @@ ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
 manager: jroth
+ms.custom: "seo-lt-2019"
 ---
-
 # Assess the readiness of a SQL Server data estate migrating to Azure SQL Database using the Data Migration Assistant
 
 Migrating hundreds of SQL Server instances and thousands of databases to Azure SQL Database, our Platform as a Service (PaaS) offering, is a considerable task. To streamline the process as much as possible, you need to feel confident about your relative readiness for migration. Identifying low-hanging fruit, including the servers and databases that are fully ready or that require minimal effort to prepare for migration, eases and accelerates your efforts.
 
 This article provides step-by-step instructions for leveraging the [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) to summarize readiness results and surface them on the [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) hub.
 
-
+>
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Create a project and add a tool

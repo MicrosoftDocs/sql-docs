@@ -1,8 +1,7 @@
 ---
-title: "View a Job | Microsoft Docs"
+title: "View a Job"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,10 +10,12 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, viewing"
   - "displaying jobs"
 ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
-author: "markingmyname"
-ms.author: "maghan"
-ms.custom: ""
-ms.date: "01/19/2017"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 

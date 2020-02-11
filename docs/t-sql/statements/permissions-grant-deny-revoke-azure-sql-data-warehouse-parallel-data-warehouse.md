@@ -1,6 +1,7 @@
 ---
-title: "GRANT-DENY-REVOKE Perms-Azure SQL Data and Parallel Data Warehouses | Microsoft Docs"
-ms.custom: ""
+title: "GRANT-DENY-REVOKE permissions"
+titleSuffix: "Azure SQL Data Warehouse"
+ms.custom: "seo-lt-2019​"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
@@ -239,7 +240,7 @@ REVOKE
   
  ![APS security permissions poster](../../t-sql/statements/media/aps-security-perms-poster.png "APS security permissions poster")  
   
- To download a full size version of this poster, see [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc@microsoft.com**.  
+ To download a full size version of this poster, see [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc\@microsoft.com**.  
   
 ## Default Permissions  
  The following list describes the default permissions:  

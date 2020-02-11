@@ -1,5 +1,5 @@
 ---
-title: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream | Microsoft Docs"
+title: "BLOB, IRow::GetColumns, ISequentialStream"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -19,11 +19,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The following function uses **IRow::GetColumns** and **ISequentialStream** to fetch large data:  
   
-```  
+```cpp
 void InitializeAndExecuteCommand()  
 {  
     ULONG iidx;  

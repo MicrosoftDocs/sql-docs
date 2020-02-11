@@ -269,7 +269,7 @@ To start learning how to copy data with Azure data factory, see the following to
 
 ### Microsoft.ACE.OLEDB.12.0" has not been registered
 
-This error occurs because the OLEDB provider is not installed. Install it from [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Be sure to install the 64-bit version if Windows and SQL Server are both 64-bit.
+This error occurs because the OLEDB provider is not installed. Install it from [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Be sure to install the 64-bit version if Windows and SQL Server are both 64-bit.
 
 The full error is:
 
@@ -278,7 +278,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## Cannot create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
+### Cannot create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
 
 This indicates that the Microsoft OLEDB has not been configured properly. Run the following Transact-SQL code to resolve this:
 

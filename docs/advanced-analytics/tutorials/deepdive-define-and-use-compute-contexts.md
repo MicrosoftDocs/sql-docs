@@ -1,6 +1,6 @@
 ---
-title: Define and use RevoScaleR compute contexts
-description: Tutorial walkthrough on how to define a compute context using the R language on SQL Server.
+title: Use RevoScaleR compute contexts
+description: "RevoScaleR tutorial 4: How to define a compute context using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,14 +8,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Define and use compute contexts (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 4 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In the previous lesson, you used **RevoScaleR** functions to inspect data objects. This lesson introduces the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function, which lets you define a compute context for a remote SQL Server. With a remote compute context, you can shift R execution from a local session to a remote session on the server. 
+In the previous tutorial, you used **RevoScaleR** functions to inspect data objects. This tutorial introduces the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function, which lets you define a compute context for a remote SQL Server. With a remote compute context, you can shift R execution from a local session to a remote session on the server. 
 
 > [!div class="checklist"]
 > * Learn the elements of a remote SQL Server compute context
@@ -102,7 +103,7 @@ This section walks you through each part.
     rxGetComputeContext()
     ```
 
-7. Reset the compute context back to the local computer by specifying the "local" keyword (the next lesson demonstrates using the remote compute context).
+7. Reset the compute context back to the local computer by specifying the "local" keyword (the next tutorial demonstrates using the remote compute context).
 
     ```R
     rxSetComputeContext("local")

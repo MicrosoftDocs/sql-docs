@@ -1,16 +1,16 @@
 ---
-title: What's new in Language Extensions?
-titleSuffix: SQL Server Language Extensions
-description: Learn about what's new SQL Server 2019 Language Extensions. 
+title: What's new in SQL Server Language Extensions?
+titleSuffix: 
+description: Learn about what's new SQL Server Language Extensions. 
 author: dphansen
 ms.author: davidph 
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# What new in SQL Server Language Extensions?
+# What's new in SQL Server Language Extensions?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [Language Extension](language-extensions-overview.md) capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between external languages and the data platform. 

@@ -1,6 +1,7 @@
 ---
-title: "Replicate Data in Encrypted Columns (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Replicate encrypted columns (SSMS)"
+description: Learn how to replicate data in encrypted columns using SQL Server Management Studio (SSMS). 
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replicate Data in Encrypted Columns (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

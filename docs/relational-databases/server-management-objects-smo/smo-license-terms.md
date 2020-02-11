@@ -1,7 +1,6 @@
 ---
-title: "SQL Server Shared Management Objects (SMO) - License Terms | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2018"
+title: SQL Server Shared Management Objects (SMO) License Terms
+ms.date: 12/15/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssms
@@ -72,7 +71,7 @@ for this software, unless other terms accompany those items. If so, those terms 
 
 **6.	DOCUMENTATION.** Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.
 
-**7.	EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see www.microsoft.com/exporting.
+**7.	EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting).
 
 **8.	SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.
 

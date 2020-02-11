@@ -2,7 +2,7 @@
 title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "09/06/2019"
+ms.date: "01/22/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,12 +14,41 @@ ms.author: "Shamikg"
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v8.6
+
+In addition to a targeted set of fixes designed to improve usability and performance, the v8.6 release of SSMA for DB2 has been enhanced by adding a setting that enables users to omit SSMA extended properties in the converted code.
+
+To leverage this setting, in SSMA for DB2, navigate to **Tools** > **Project Settings** > **General** > **Conversion**, and then under **Misc**, update the value of the **Omit Extended Properties** setting to **Yes**.
+
+![Omit Extended Properties setting](../db2/media/ssma-omit-extended-properties.png)
+
+In addition, SSMA for DB2 now provides:
+
+-	A fix for conversion of functions that use default argument values
+-	Improved parsing of functions in the PARAMETER clause.
+- The ability to convert the LEAVE statement.
+
+> [!IMPORTANT]
+> With SSMA v8.5 and later, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+
+## SSMA v8.5
+
+The v8.5 release of SSMA for DB2 is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+
+In addition, SSMA for DB2 has been enhanced with:
+
+* Support for adding conversion for GET DIAGNOSTICS statement with ROW_NUMBER.
+* A fix for a bug related to spaces at the beginning of the object name not being respected.
+
+> [!IMPORTANT]
+> With SSMA v8.5, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+
 ## SSMA v8.4
 
 The v8.4 release of SSMA for DB2 is enhanced with targeted fixes that are designed to address accessibility issues and fix a bug related to max index columns (to allow 32 instead of 16) for SQL Server 2016 and later versions.
 
 > [!IMPORTANT]
-> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+> With SSMA versions 7.4 though 8.4, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v8.3
 
@@ -33,7 +62,7 @@ The v8.3 release of SSMA for DB2 is enhanced with targeted fixes that are design
 * Improve conversions for global temp tables
 * Address an issue with object uniqueness check order to prioritize tables over constraints, if names collide
 * Address an issue with loading of default column values for DATE and TIMESTAMP for z/OS
-* Support Unicode line feed character (aka NEL)
+* Support Unicode line feed character (also known as NEL)
 * Address an issue with cursor conversion with missing RETURN TO clause
 * Add support for labels and GOTO
 
@@ -150,7 +179,7 @@ The v7.1 release of SSMA for DB2 contains the following changes:
 
 * SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
 * Support for automatic updates to download the latest version of SSMA as soon as it's available.
-* SSMA installable binaries are now delivered through Windows installer package files (.msi).
+* SSMA installable binaries are now delivered through Windows Installer package files (.msi).
 
 ## May 2016
 

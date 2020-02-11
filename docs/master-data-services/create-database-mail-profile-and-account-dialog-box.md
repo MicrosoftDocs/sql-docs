@@ -1,5 +1,5 @@
 ---
-title: "Create Database Mail Profile and Account Dialog Box | Microsoft Docs"
+title: Create Database Mail Profile and Account Dialog Box
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql

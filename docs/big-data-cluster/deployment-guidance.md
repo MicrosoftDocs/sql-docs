@@ -28,7 +28,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- SQL Server 2019 extension for Azure Data Studio
+- [Data Virtualization extension](../azure-data-studio/data-virtualization-extension.md) for Azure Data Studio
 
 ## <a id="prereqs"></a> Kubernetes prerequisites
 
@@ -63,6 +63,12 @@ kubectl config view
 > If you are deploying on a multi node Kuberntes cluster that you bootstrapped using `kubeadm`, before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
 
 After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## Ensure you have storage configured
+
+For most big data cluster deployments to have persistent storage. At this time, you need to make sure you have a plan for how you're going to provide persistent storage on the Kubernetes cluster before you deploy the BDC.
+
+If you deploy in AKS, no storage setup is necessary. AKS provides built-in storage classes with dynamic provisioning. You can customize the storage class (`default` or `managed-premium`) in the deployment configuration file. The built-in profiles use a `default` storage class. If you are deploying on a Kubernetes cluster you deployed using `kubeadm`, you'll need to ensure you have sufficient storage for a cluster of your desired scale available and configured for use. If you wish to customize how your storage is used, you should do this before proceeding. See [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 
 ## <a id="deploy"></a> Deployment overview
 
@@ -182,7 +188,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> You must use `root` user for Knox gateway with the above password. `root` is the only user supported for in this basic authentication (username/password) setup. For SQL Server master, username provisioned to be used with the above password is `sa`.
+> You must use `root` user for Knox gateway with the above password. `root` is the only user supported for in this basic authentication (username/password).
+> To connect to SQL Server with basic authentication, use the same values as the AZDATA_USERNAME and AZDATA_PASSWORD [environment variables](#env). 
 
 
 After setting the environment variables, you must run `azdata bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:

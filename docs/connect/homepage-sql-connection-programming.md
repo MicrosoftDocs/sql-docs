@@ -83,7 +83,7 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 | :-- | :-- |
 | [C# using ADO.NET](./ado-net/index.md)| Root of our documentation. |
 | [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | A set of classes used for ADO.NET. |
-| [Namespace: System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | The set of classes that are most directly the center of ADO.NET. |
+| [Namespace: Microsoft.Data.SqlClient](https://docs.microsoft.com/dotnet/api/microsoft.data.SqlClient) | The set of classes used for Microsoft .NET Data Provider for SQL Server |
 | &nbsp; | <br /> |
 
 

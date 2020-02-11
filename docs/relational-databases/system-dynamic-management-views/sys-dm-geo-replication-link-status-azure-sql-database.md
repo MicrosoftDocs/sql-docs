@@ -1,6 +1,6 @@
 ---
-title: "sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_geo_replication_link_status"
+titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
@@ -18,6 +18,7 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: mashamsft
 ms.author: mathoma
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)
 

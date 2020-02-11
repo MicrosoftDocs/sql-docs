@@ -1,5 +1,5 @@
 ---
-title: "Solution Explorer | Microsoft Docs"
+title: "Solution Explorer"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -15,7 +15,7 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ---
 

@@ -2,15 +2,16 @@
 title: Data Virtualization Extension
 titleSuffix: Azure Data Studio
 description: Data Virtualization extension for Azure Data Studio
-ms.custom: "seodec18"
-ms.date: 11/04/2019
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "rajmera3"
 ms.author: "raajmera"
+ms.custom: "seodec18"
+ms.date: 11/04/2019
 ---
+
 # Data Virtualization extension for Azure Data Studio
 
 The Data Virtualization extension for Azure Data Studio provides support for the PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
@@ -64,13 +65,13 @@ To install the Data Virtualization extension, open Azure Data Studio and downloa
 
 ## Release Notes (v0.10.2)
 ### SQL Server 2019 support
-Support for SQL Server 2019 has been updated. After connecting to a SQL Server Big Data Cluster instance, a new _Data Services_ folder appears in the explorer tree. The folder has launch points for actions such as opening a new notebook against the connection, submitting Spark jobs, and working with HDFS. Some actions, such as _Create External Data_ over a HDFS file/folder, the _SQL Server 2019 Preview_ extension must be installed.
+Support for SQL Server 2019 has been updated. After connecting to a SQL Server Big Data Cluster instance, a new _Data Services_ folder appears in the explorer tree. The folder has launch points for actions such as opening a new notebook against the connection, submitting Spark jobs, and working with HDFS. Some actions, such as _Create External Data_ over a HDFS file/folder, the _SQL Server 2019_ extension must be installed.
 
 ### Notebook support
 We have made significant updates to the Notebook user interface in this release. Our focus was on making it easy to read Notebooks that are shared with you. This meant removing all outline boxes around cells unless selected or hovered, adding hover support for easy cell-level actions without need to select a cell, and clarifying execution state by adding execution count, an animated _stop running_ button and more. We also added keyboard shortcuts for _New Notebook_ (`Ctrl+Shift+N`), _Run Cell_ (`F5`), _New Code Cell_ (`Ctrl+Shift+C`), _New Text Cell_ (`Ctrl+Shift+T`). Moving forward we will aim to have all key actions launchable by shortcut so let us know what you're missing!
 
 Other improvements and fixes include:
-* The _SQL Server 2019 Preview_ extension now prompts users to pick an install directory for Python dependencies. It also no longer includes Python in the `.vsix file`, reducing overall extension size. The Python dependencies support Spark and Python3 kernels.
+* The _SQL Server 2019_ extension now prompts users to pick an install directory for Python dependencies. It also no longer includes Python in the `.vsix file`, reducing overall extension size. The Python dependencies support Spark and Python3 kernels.
 * Support for launching a new notebook from the command-line has been added. Launch with the arguments `--command=notebook.command.new --server=myservername` should open a new notebook and connect to this server.
 * Performance fixes for notebooks with a large code length in cells. If code cells are over 250 lines, a scrollbar is added.
 * Improved .ipynb file support. Version 3 or higher is now supported. Please note that on saving files will be updated to version 4 or higher.

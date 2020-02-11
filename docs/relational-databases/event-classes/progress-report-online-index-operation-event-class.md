@@ -1,5 +1,5 @@
 ---
-title: "Progress Report: Online Index Operation Event Class | Microsoft Docs"
+title: "Progress Report: Online Index Operation Event Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,6 +12,7 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: "stevestein"
 ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Progress Report: Online Index Operation Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

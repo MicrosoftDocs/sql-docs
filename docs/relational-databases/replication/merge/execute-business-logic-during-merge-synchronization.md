@@ -1,6 +1,7 @@
 ---
-title: "Execute Business Logic During Merge Synchronization | Microsoft Docs"
-ms.custom: ""
+title: "Business logic for Merge synchronization"
+description: Learn about writing managed assembly code tor the business logic used for synchronization for Merge Replication. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

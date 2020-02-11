@@ -1,10 +1,7 @@
 ---
-title: "Write the Job Status to the Windows Application Log | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Write the Job Status to the Windows Application Log
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,11 +11,17 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], status"
   - "logs [SQL Server], jobs"
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # Write the Job Status to the Windows Application Log
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

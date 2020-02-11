@@ -1,5 +1,5 @@
 ---
-title: "Add Members to a Collection (Master Data Services) | Microsoft Docs"
+title: Add Members to a Collection
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,22 +1,21 @@
 ---
-title: Work with R and SQL data types and objects
-titleSuffix: SQL Server Machine Learning Services
-description: In this quickstart, learn how to work with data types and data objects in R and SQL Server with SQL Server Machine Learning Services.
+title: "Quickstart: R data structures, data types, and objects"
+description: In this quickstart, you'll learn how to use data structures, data types, and objects when using R in SQL Server Machine Learning Services. You'll learn about moving data between R and SQL Server, and the common issues that might occur.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 10/04/2019  
+ms.date: 01/27/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Quickstart: Handle data types and objects using R in SQL Server Machine Learning Services
+# Quickstart: Data structures, data types, and objects using R in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you'll learn about common issues that occur when moving data between R and SQL Server. The experience you gain through this exercise provides essential background when working with data in your own script.
+In this quickstart, you'll learn how to use data structures and data types when using R in SQL Server Machine Learning Services. You'll learn about moving data between R and SQL Server, and the common issues that might occur.
 
 Common issues to know up front include:
 
@@ -119,7 +118,7 @@ For now, just be aware that you need to check the expected results when coercing
 
 ## Implicit conversion of data objects
 
-Each R data object has its own rules for how values are handled when combined with other data objects if the two data objects have the same number of dimensions, or if any data object contains heterogenous data types.
+Each R data object has its own rules for how values are handled when combined with other data objects if the two data objects have the same number of dimensions, or if any data object contains heterogeneous data types.
 
 First, create a small table of test data.
 

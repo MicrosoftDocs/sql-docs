@@ -1,6 +1,5 @@
 ---
-title: "Create a Matching Policy | Microsoft Docs"
-ms.custom: ""
+title: "Create a Matching Policy"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,8 +11,8 @@ f1_keywords:
   - "sql13.dqs.kb.kbmatchingpolicy.f1"
   - "sql13.dqs.kb.kbmatchingresults.f1"
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Create a Matching Policy
 

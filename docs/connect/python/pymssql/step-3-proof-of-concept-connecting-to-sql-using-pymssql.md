@@ -18,7 +18,7 @@ This example should be considered a proof of concept only.  The sample code is s
   
 ## Step 1:  Connect  
   
-The [pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) function is used to connect to SQL Database.  
+The [pymssql.connect](https://pypi.org/project/pymssql/) function is used to connect to SQL Database.  
   
 ```python
     import pymssql  
@@ -28,7 +28,7 @@ The [pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) function i
   
 ## Step 2:  Execute query  
   
-The [cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and returns a result set which can be iterated over with the use of [cursor.fetchone()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+The [cursor.execute](https://pypi.org/project/pymssql/) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and returns a result set which can be iterated over with the use of [cursor.fetchone()](https://pypi.org/project/pymssql/).  
   
   
 ```python

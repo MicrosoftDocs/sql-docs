@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber) | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Prepare for replication"
+description: In this tutorial, learn how to prepare your publisher, distributor, and subscriber for replication by creating Windows accounts, preparing the snapshot folder, and configuring distribution. 
+ms.custom: seo-lt-2019
 ms.date: "04/02/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -175,8 +176,9 @@ Configuring a publisher with a remote distributor is outside the scope of this t
    !["Configure Distribution" command on the shortcut menu](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > If you have connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using **localhost** rather than the actual server name, you'll be prompted with a warning that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot connect to **localhost**. Select **OK** in the warning dialog box. In the **Connect to Server** dialog box, change **Server name** from **localhost** to the name of your server. Then select **Connect**.  
-  
+   > - If you connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using **localhost** rather than the actual server name, you'll be prompted with a warning that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot connect to **localhost or IP Address**. Select **OK** in the warning dialog box. In the **Connect to Server** dialog box, change **Server name** from **localhost or IP Address** to the name of your server. Then select **Connect**.  
+   > - There is currently a known issue with SQL Server Management Studio (SSMS) 18.0 (and later) where a warning message is _not_ displayed when connecting to the Distributor with the IP address, but this is still invalid. The actual server name should be used when connecting to the Distributor. 
+   
    The Distribution Configuration Wizard starts.  
   
 3. On the **Distributor** page, select <*'ServerName'*> **will act as its own Distributor; SQL Server will create a distribution database and log**. Then select **Next**.  

@@ -1,23 +1,22 @@
 ---
-title: Work with Python and SQL data types and objects
-titleSuffix: SQL Server Machine Learning Services
-description: In this quickstart, learn how to work with data types and data objects in Python and SQL Server with SQL Server Machine Learning Services.
+title: "Quickstart: Python data structures"
+description: In this quickstart, learn how to work with data structures and data objects in Python and SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 10/04/2019  
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Quickstart: Handle data types and objects using Python in SQL Server Machine Learning Services
+# Quickstart: Data structures and objects using Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This quickstart shows how to use data structures when using Python in SQL Server Machine Learning Services.
+In this quickstart, you'll learn how to use data structures when using Python in SQL Server Machine Learning Services.
 
-SQL Server relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to SQL Server and expect it to "just work". In this quickstart, you'll review some basic data type definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and SQL Server.
+SQL Server relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to SQL Server and expect it to "just work". In this quickstart, you'll review some basic data structure definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and SQL Server.
 
 Concepts to know up front include:
 

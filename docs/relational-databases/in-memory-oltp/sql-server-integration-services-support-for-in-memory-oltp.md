@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Integration Services Support for In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
+title: "SSIS support for in-memory OLTP"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

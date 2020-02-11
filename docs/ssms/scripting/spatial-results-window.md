@@ -1,6 +1,6 @@
 ---
-title: "Spatial Results Window | Microsoft Docs"
-ms.custom: ""
+title: "Spatial Results Window"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting

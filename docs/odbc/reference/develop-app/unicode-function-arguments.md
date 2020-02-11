@@ -26,10 +26,10 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
   
 |||  
 |-|-|  
-|**SQLBrowseConnect**|**SQLGetDiagField**|  
-|**SQLColAttribute**|**SQLGetDiagRec**|  
-|**SQLColAttributes**|**SQLGetInfo**|  
-|**SQLColumnPrivileges**|**SQLGetStmtAttr**|  
+|**SQLBrowseConnect**|**SQLGetDiagRec**|  
+|**SQLColAttribute**|**SQLGetInfo**|  
+|**SQLColAttributes**|**SQLGetStmtAttr**|  
+|**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
 |**SQLColumns**|**SQLNativeSQL**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
@@ -44,6 +44,7 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
 |**SQLGetCursorName**|**SQLStatistics**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
 |**SQLGetDescRec**|**SQLTables**|  
+|**SQLGetDiagField**||  
   
  The following is a list of the ODBC Installer and ODBC Translator functions that support both Unicode (W) and ANSI (A) versions:  
   

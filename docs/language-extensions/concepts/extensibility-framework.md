@@ -1,10 +1,10 @@
 ---
 title: Extensibility architecture in SQL Server Language Extensions
-titleSuffix: SQL Server Language Extensions
-description: External code support for the SQL Server database engine, with dual architecture for running external language on relational data.
+titleSuffix:
+description: Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java is supported. The code executes in a language runtime environment as an extension to the core database engine..
 author: dphansen
 ms.author: davidph 
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server Language Extensions has an extensibility framework for running external code such as Java on the server. The code executes in a language runtime environment as an extension to the core database engine.
+Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java is supported. The code executes in a language runtime environment as an extension to the core database engine.
 
 ## Background
 

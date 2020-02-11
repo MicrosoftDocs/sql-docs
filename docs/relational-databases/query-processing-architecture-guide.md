@@ -477,7 +477,7 @@ Certain changes in a database can cause an execution plan to be either inefficie
 
 Most recompilations are required either for statement correctness or to obtain potentially faster query execution plans.
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, whenever a statement within a batch causes recompilation, the whole batch, whether submitted through a stored procedure, trigger, ad-hoc batch, or prepared statement, is recompiled. Starting with [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], only the statement inside the batch that causes recompilation is recompiled. Because of this difference, recompilation counts in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 and later releases are not comparable. Also, there are more types of recompilations in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] and later because of its expanded feature set.
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions prior to 2005, whenever a statement within a batch causes recompilation, the entire batch, whether submitted through a stored procedure, trigger, ad-hoc batch, or prepared statement, was recompiled. Starting with [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], only the statement inside the batch that triggers recompilation is recompiled. Also, there are additional types of recompilations in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] and later because of its expanded feature set.
 
 Statement-level recompilation benefits performance because, in most cases, a small number of statements causes recompilations and their associated penalties, in terms of CPU time and locks. These penalties are therefore avoided for the other statements in the batch that do not have to be recompiled.
 
@@ -504,7 +504,7 @@ The `recompile_cause` column of `sql_statement_recompile` xEvent contains an int
 > [!NOTE]
 > When the `AUTO_UPDATE_STATISTICS` database option is set to `ON`, queries are recompiled when they target tables or indexed views whose statistics have been updated or whose cardinalities have changed significantly since the last execution. 
 > This behavior applies to standard user-defined tables, temporary tables, and the inserted and deleted tables created by DML triggers. If query performance is affected by excessive recompilations, consider changing this setting to `OFF`. When the `AUTO_UPDATE_STATISTICS` database option is set to `OFF`, no recompilations occur based on statistics or cardinality changes, with the exception of the inserted and deleted tables that are created by DML `INSTEAD OF` triggers. Because these tables are created in tempdb, the recompilation of queries that access them depends on the setting of `AUTO_UPDATE_STATISTICS` in tempdb. 
-> Note that in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, queries continue to recompile based on cardinality changes to the DML trigger inserted and deleted tables, even when this setting is `OFF`.
+> Note that in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prior to 2005, queries continue to recompile based on cardinality changes to the DML trigger inserted and deleted tables, even when this setting is `OFF`.
 
 ### <a name="PlanReuse"></a> Parameters and Execution Plan Reuse
 
@@ -582,7 +582,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], using parameters or p
 > [!WARNING] 
 > Using parameters or parameter markers to hold values typed by end users is more secure than concatenating the values into a string that is then executed using either a data access API method, the `EXECUTE` statement, or the `sp_executesql` stored procedure.
 
-If a [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed without parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parameterizes the statement internally to increase the possibility of matching it against an existing execution plan. This process is called simple parameterization. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, the process was referred to as auto-parameterization.
+If a [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed without parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parameterizes the statement internally to increase the possibility of matching it against an existing execution plan. This process is called simple parameterization. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions prior to 2005, the process was referred to as auto-parameterization.
 
 Consider this statement:
 
@@ -634,16 +634,16 @@ Additionally, the following query clauses are not parameterized. Note that in th
 
 * The <select_list> of any `SELECT` statement. This includes `SELECT` lists of subqueries and `SELECT` lists inside `INSERT` statements.
 * Subquery `SELECT` statements that appear inside an `IF` statement.
-* The `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`, or `FOR XM`L clauses of a query.
+* The `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`, or `FOR XML` clauses of a query.
 * Arguments, either direct or as subexpressions, to `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`, or any `FULLTEXT` operator.
 * The pattern and escape_character arguments of a `LIKE` clause.
 * The style argument of a `CONVERT` clause.
 * Integer constants inside an `IDENTITY` clause.
 * Constants specified by using ODBC extension syntax.
-* Constant-foldable expressions that are arguments of the +, -, \*, /, and % operators. When considering eligibility for forced parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:  
+* Constant-foldable expressions that are arguments of the `+`, `-`, `*`, `/`, and `%` operators. When considering eligibility for forced parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:  
   * No columns, variables, or subqueries appear in the expression.  
   * The expression contains a `CASE` clause.  
-* Arguments to query hint clauses. These include the `number_of_rows` argument of the `FAST` query hint, the `number_of_processors` argument of the `MAXDOP` query hint, and the number argument of the `MAXRECURSION` query hint.
+* Arguments to query hint clauses. These include the *number_of_rows* argument of the `FAST` query hint, the *number_of_processors* argument of the `MAXDOP` query hint, and the *number* argument of the `MAXRECURSION` query hint.
 
 Parameterization occurs at the level of individual [!INCLUDE[tsql](../includes/tsql-md.md)] statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (\@1 tinyint).
 

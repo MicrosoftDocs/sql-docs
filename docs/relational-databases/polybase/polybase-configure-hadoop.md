@@ -1,6 +1,6 @@
 ---
-title: "Configure PolyBase to access external data in Hadoop | Microsoft Docs"
-ms.date: 04/23/2019
+title: "Access external data: Hadoop - PolyBase"
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,6 +8,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # Configure PolyBase to access external data in Hadoop
 

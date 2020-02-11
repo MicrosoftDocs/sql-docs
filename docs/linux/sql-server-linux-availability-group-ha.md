@@ -1,5 +1,7 @@
 ---
-title: "SQL Server Always On availability group deployment patterns"
+title: "Availability group deployment patterns - SQL Server on Linux"
+description: Learn supported deployment configurations for SQL Server Always on availability groups on Linux servers. 
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux

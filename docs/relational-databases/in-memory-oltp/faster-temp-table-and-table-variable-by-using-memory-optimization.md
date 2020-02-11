@@ -1,6 +1,6 @@
 ---
-title: "Faster temp table and table variable by using memory optimization | Microsoft Docs"
-ms.custom: ""
+title: "Memory optimization for faster temp table and table variables"
+ms.custom: seo-dt-2019
 ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -118,7 +118,7 @@ CREATE TABLE #tempSessionC
   
   
   
-First, create the following table-value function to filter on **@@spid**. The function will be usable by all SCHEMA_ONLY tables that you convert from session temporary tables.  
+First, create the following table-value function to filter on **\@\@spid**. The function will be usable by all SCHEMA_ONLY tables that you convert from session temporary tables.  
   
   
   

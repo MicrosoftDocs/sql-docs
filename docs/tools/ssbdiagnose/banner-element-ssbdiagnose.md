@@ -1,10 +1,7 @@
 ---
-title: "Banner Element (ssbdiagnose) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: Banner Element
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,10 +11,18 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Banner Element (ssbdiagnose)
+
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Identifies which utility generated the **ssbdiagnose** output XML file.  
+
+Identifies which utility generated the **ssbdiagnose** output XML file.  
   
 ## Syntax  
   

@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services Developer Documentation | Microsoft Docs"
+title: Developer Documentation
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

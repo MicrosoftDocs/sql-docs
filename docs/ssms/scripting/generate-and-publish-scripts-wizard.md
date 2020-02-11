@@ -1,6 +1,6 @@
 ---
-title: "Generate and Publish Scripts Wizard | Microsoft Docs"
-ms.custom: ""
+title: "Generate and Publish Scripts Wizard"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

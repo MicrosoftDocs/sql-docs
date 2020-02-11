@@ -1,6 +1,5 @@
 ---
-title: "Specifying Arithmetic Operators in XPath Queries (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Use arithmetic operators in XPath queries (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Arithmetic Operators in XPath Queries (SQLXML 4.0)

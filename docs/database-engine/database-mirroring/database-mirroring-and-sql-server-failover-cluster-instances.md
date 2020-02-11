@@ -1,6 +1,7 @@
 ---
-title: "Database Mirroring and SQL Server Failover Cluster Instances | Microsoft Docs"
-ms.custom: ""
+title: "Database mirroring & failover cluster instances"
+description: Learn about combining database mirroring with SQL Server failover cluster instances. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability

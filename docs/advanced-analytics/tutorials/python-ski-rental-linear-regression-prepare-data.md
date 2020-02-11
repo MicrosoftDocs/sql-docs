@@ -1,12 +1,13 @@
 ---
-title: 'Python tutorial: Prepare data (linear regression)'
-description: In this tutorial you will use Python and linear regression in SQL Server Machine Learning Services to predict the number of ski rentals. You'll prepare data from a SQL Server database using Python.
+title: "Python tutorial: Prepare data"
+description: In part two of this four-part tutorial series, you'll use Python to prepare data to predict ski rentals in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/02/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Python Tutorial: Prepare data to train a linear regression model in SQL Server Machine Learning Services
@@ -38,49 +39,21 @@ Create a new Python notebook in Azure Data Studio and run the following script. 
 
 The Python script below imports the dataset from the **dbo.rental_data** table in your database to a pandas data frame **df**.
 
+In the connection string, replace connection details as needed.
+
 ```python
-import pandas as pd
+import pyodbc
+import pandas
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
-from revoscalepy import rx_import
 
 # Connection string to your SQL Server instance
-conn_str = 'Driver=SQL Server;Server=<SQL Server>;Database=TutorialDB;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=TutorialDB; Trusted_Connection=yes')
 
-# Define the columns you will import
- column_info = {
-         "Year" : { "type" : "integer" },
-         "Month" : { "type" : "integer" },
-         "Day" : { "type" : "integer" },
-         "RentalCount" : { "type" : "integer" },
-         "WeekDay" : {
-             "type" : "factor",
-             "levels" : ["1", "2", "3", "4", "5", "6", "7"]
-         },
-         "Holiday" : {
-             "type" : "factor",
-             "levels" : ["1", "0"]
-         },
-         "Snow" : {
-             "type" : "factor",
-             "levels" : ["1", "0"]
-         }
-     }
+query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
-# Get the data from the SQL Server table
-data_source = RxSqlServerData(table="dbo.rental_data",
-                               connection_string=conn_str, column_info=column_info)
-computeContext = RxInSqlServer(
-     connection_string = conn_str,
-     num_tasks = 1,
-     auto_cleanup = False
-)
+df = pandas.read_sql(sql=query_str, con=conn_str)
 
-RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-
-# import data source and convert to pandas dataframe
-df = pd.DataFrame(rx_import(input_data = data_source))
 print("Data frame:", df)
 
 # Get all the columns from the dataframe.
@@ -93,16 +66,19 @@ columns = [c for c in columns if c not in ["Year"]]
 You should see results similar to the following.
 
 ```results
-Rows Processed: 453
-Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
-0     20        1      1          445     2        2  2014
-1     13        2      2           40     2        5  2014
-2     10        2      3          456     2        1  2013
-3     31        2      3           38     2        2  2014
-4     24        2      4           23     2        5  2014
-5     11        2      2           42     2        4  2015
-6     28        2      4          310     2        1  2013
-...
+Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
+0    2014      1   20          445        2        1     0
+1    2014      2   13           40        5        0     0
+2    2013      3   10          456        1        0     0
+3    2014      3   31           38        2        0     0
+4    2014      4   24           23        5        0     0
+..    ...    ...  ...          ...      ...      ...   ...
+448  2013      2   19           57        3        0     1
+449  2015      3   18           26        4        0     0
+450  2015      3   24           29        3        0     1
+451  2014      3   26           50        4        0     1
+452  2015     12    6          377        1        0     1
+
 [453 rows x 7 columns]
 ```
 

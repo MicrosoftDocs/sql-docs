@@ -11,8 +11,6 @@
 - name: SQL Data Developer
   href: ../connect/sql-data-developer.md
 
-
-
 - name: ADO.NET
   items:
   - name: Microsoft ADO.NET for SQL Server
@@ -145,6 +143,8 @@
         href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
       - name: SqlClient support for LocalDB
         href: ../connect/ado-net/sql/sqlclient-support-localdb.md
+      - name: SqlClient support for Always Encrypted
+        href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
 
 - name: JDBC
   items:
@@ -2634,6 +2634,9 @@
       href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
     - name: Using Always Encrypted with the JDBC Driver
       href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
+      items:
+      - name: Always Encrypted with secure enclaves
+        href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
     - name: Guide articles
       items:
       - name: Using Statements with SQL
@@ -2768,7 +2771,6 @@
     href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
   - name: "Step 3: Proof of concept connecting to SQL using Node.js"
     href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
-
 
 
 # docs/connect/odbc/ , plus big expando for docs/odbc/ .
@@ -5604,6 +5606,10 @@
       href: ../connect/php/logging-activity.md
     - name: Using Always Encrypted with the PHP Drivers for SQL Server
       href: ../connect/php/using-always-encrypted-php-drivers.md
+    - name: Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server
+      href: ../connect/php/always-encrypted-secure-enclaves.md
+    - name: Non-System Locale Settings
+      href: ../connect/php/non-system-locale-settings.md
     - name: Constants (Microsoft Drivers for PHP for SQL Server)
       href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
     - name: SQLSRV Driver API Reference

@@ -1,7 +1,7 @@
 ---
 title: Get started
-titleSuffix: SQL Server big data clusters
-description: Learn the steps and resources for deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview).
+titleSuffix: SQL Server Big Data Clusters
+description: Learn the steps and resources for deploying SQL Server Big Data Clusters.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -27,6 +27,11 @@ The article orients you to the concepts and provides a framework for understandi
 
 > [!TIP]
 > To quickly get an environment with Kubernetes and big data cluster deployed to help you ramp up on its capabilities, use one of the sample scripts pointed to in [the scripts section](#scripts). After deployment, to manage the cluster use the [client tools](#tools) in the following section.
+
+Watch this 9-minute video for an overview of how to deploy big data clusters:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a id="tools"></a> Client tools
 

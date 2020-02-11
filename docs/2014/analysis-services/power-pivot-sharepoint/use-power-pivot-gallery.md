@@ -43,7 +43,7 @@ manager: craigg
 >  The Power Pivot Gallery requires Microsoft Silverlight.  The Microsoft Edge browser does not support Silverlight.   
 > To view the library contents in Microsoft Edge, click the **Library** tab in  Power Pivot gallery, and then change the document library view to **All Documents**.    
 > To change  the default view , click  the **Library** tab and then click  Modify View. Click  "Make this the default view" and then click OK to save the  default view.  
->  For more information on what Microsoft Edge supports, see the Windows blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  For more information on what Microsoft Edge supports, see the Windows blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  For a complete list of prerequisites, see [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md).  
   
@@ -159,5 +159,4 @@ manager: craigg
  [Delete PowerPivot Gallery](delete-power-pivot-gallery.md)   
  [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md)   
  [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
-  
   

@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Configure replication between two fully connected servers (transactional) | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Configure Transactional Replication"
+description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Servers. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

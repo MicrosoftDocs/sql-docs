@@ -1,6 +1,5 @@
 ---
-title: "Determine Which Queries Are Holding Locks | Microsoft Docs"
-ms.custom: ""
+title: "Determine Which Queries Are Holding Locks"
 ms.date: "10/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -43,7 +43,7 @@ To enable automatic update of statistics for memory-optimized tables that were c
 
 3. Manually recompile the natively compiled stored procedures to benefit from the updated statistics.
 
-*One-time script for statistics:* For memory-optimized tables that were created under a lower compability level, you can run the following Transact-SQL script one time to update the statistics of all memory-optimized tables, and enable automatic update of statistics from then onward (assuming AUTO_UPDATE_STATISTICS is enabled for the database):
+*One-time script for statistics:* For memory-optimized tables that were created under a lower compatibility level, you can run the following Transact-SQL script one time to update the statistics of all memory-optimized tables, and enable automatic update of statistics from then onward (assuming AUTO_UPDATE_STATISTICS is enabled for the database):
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:

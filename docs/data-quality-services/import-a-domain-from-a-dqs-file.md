@@ -1,6 +1,5 @@
 ---
-title: "Import a Domain from a .dqs File | Microsoft Docs"
-ms.custom: ""
+title: "Import a Domain from a .dqs File"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Import a Domain from a .dqs File
 

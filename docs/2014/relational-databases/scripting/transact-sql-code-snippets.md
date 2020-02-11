@@ -1,6 +1,6 @@
 ---
-title: "Transact-SQL Code Snippets | Microsoft Docs"
-ms.custom: ""
+title: Transact-SQL Code Snippets
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

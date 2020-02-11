@@ -14649,7 +14649,7 @@
         href: t-sql/data-types/getancestor-database-engine.md
       - name: GetDescendant
         href: t-sql/data-types/getdescendant-database-engine.md
-      - name: GetLevel)
+      - name: GetLevel
         href: t-sql/data-types/getlevel-database-engine.md
       - name: GetRoot
         href: t-sql/data-types/getroot-database-engine.md

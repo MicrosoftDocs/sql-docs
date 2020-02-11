@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services WMI Provider Library Reference (SSRS) | Microsoft Docs"
+title: "Reporting Services WMI Provider Library Reference | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

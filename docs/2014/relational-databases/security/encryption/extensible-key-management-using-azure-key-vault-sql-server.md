@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "EKM, with key vault"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "Key Management with key vault"
   - "Transparent Data Encryption, using EKM and key vault"
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-caps.latest.revision: 37
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)
@@ -42,19 +39,19 @@ manager: craigg
 ##  <a name="Uses"></a> Uses of EKM  
  An organization can use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption to protect sensitive data. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption includes [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md), [Column Level Encryption](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE), and [Backup Encryption](../../backup-restore/backup-encryption.md). In all of these cases the data is encrypted using a symmetric data encryption key. The symmetric data encryption key is further protected by encrypting it with a hierarchy of keys stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Alternatively, the EKM provider architecture enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to protect the data encryption keys by using an asymmetric key stored outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an external cryptographic provider. Using EKM provider architecture adds an additional layer of security and allows organizations to separate the management of keys and data.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault lets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] leverage the scalable, high performance, and highly available key vault service as an EKM provider for encryption key protection. The key vault service can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Virtual Machines and for on-premises servers. The key vault service also provides the option to use tightly controlled and monitored Hardware Security Modules (HSMs) for a higher level of protection for asymmetric encryption keys. For more information about the key vault, see [Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521401).  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault lets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] leverage the scalable, high performance, and highly available key vault service as an EKM provider for encryption key protection. The key vault service can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Virtual Machines and for on-premises servers. The key vault service also provides the option to use tightly controlled and monitored Hardware Security Modules (HSMs) for a higher level of protection for asymmetric encryption keys. For more information about the key vault, see [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401).  
   
  The following image summarizes the process flow of EKM using the key vault. The process step numbers in the image are not meant to match the setup step numbers that follow the image.  
   
  ![SQL Server EKM using the Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
   
 ##  <a name="Step1"></a> Step 1: Set up the Key Vault for use by SQL Server  
- Use the following steps to set up a key vault for use with the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] for encryption key protection. A vault may already be in use for the organization. When a vault does not exist, the Azure Administrator in your organization that is designated to manage encryption keys can create a vault, generate an asymmetric key in the vault, and then authorize [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use the key. To familiarize yourself with the key vault service review [Get Started with Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402), and the PowerShell [Azure Key Vault Cmdlets](http://go.microsoft.com/fwlink/?LinkId=521403) reference.  
+ Use the following steps to set up a key vault for use with the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] for encryption key protection. A vault may already be in use for the organization. When a vault does not exist, the Azure Administrator in your organization that is designated to manage encryption keys can create a vault, generate an asymmetric key in the vault, and then authorize [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use the key. To familiarize yourself with the key vault service review [Get Started with Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402), and the PowerShell [Azure Key Vault Cmdlets](https://docs.microsoft.com/powershell/module/azurerm.keyvault) reference.  
   
 > [!IMPORTANT]  
 >  If you have multiple Azure subscriptions, you must use the subscription that contains [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-1.  **Create a vault:** Create a vault by using the instructions in the **Create a key vault** section of [Get Started with Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402). Record the name of the vault. This topic uses **ContosoKeyVault** as the key vault name.  
+1.  **Create a vault:** Create a vault by using the instructions in the **Create a key vault** section of [Get Started with Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). Record the name of the vault. This topic uses **ContosoKeyVault** as the key vault name.  
   
 2.  **Generate an asymmetric key in the vault:** The asymmetric key in the key vault is used to protect [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption keys. Only the public portion of the asymmetric key ever leaves the vault, the private portion is never exported by the vault. All cryptographic operations using the asymmetric key are delegated to the Azure Key Vault, and are protected by the key vault security.  
   
@@ -68,7 +65,7 @@ manager: craigg
     > [!IMPORTANT]  
     >  The key vault supports multiple versions of the same named key. Keys to be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the vault and used to encrypt the DEK.  
   
-     For more information on how to import a key into the key vault or to create a key in the key vault (not recommended for a production environment), see the **Add a key or secret to the key vault** section in [Get Started with Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402).  
+     For more information on how to import a key into the key vault or to create a key in the key vault (not recommended for a production environment), see the **Add a key or secret to the key vault** section in [Get Started with Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
 3.  **Get Azure Active Directory Service Principals to use for SQL Server:** When the organization signs up for a Microsoft cloud service, it gets an Azure Active Directory. Create **Service Principals** in the Azure Active Directory for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use (to authenticate itself to Azure Active Directory) while accessing the key vault.  
   
@@ -76,7 +73,7 @@ manager: craigg
   
     -   Another **Service Principal** will be needed by the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] to access the vault for unwrapping keys used in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption.  
   
-     For more information about how to register an application and generate a service principal, see the **Register an Application with Azure Active Directory** section in [Get Started with Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402). The registration process returns an **Application ID** (also known as a **CLIENT ID**) and a **Authentication Key** (also known as a **Secret**) for each Azure Active Directory **Service Principal**. When used in the `CREATE CREDENTIAL` statement, the hyphen must be removed from the **CLIENT ID**. Record these for use in the scripts below:  
+     For more information about how to register an application and generate a service principal, see the **Register an Application with Azure Active Directory** section in [Get Started with Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). The registration process returns an **Application ID** (also known as a **CLIENT ID**) and a **Authentication Key** (also known as a **Secret**) for each Azure Active Directory **Service Principal**. When used in the `CREATE CREDENTIAL` statement, the hyphen must be removed from the **CLIENT ID**. Record these for use in the scripts below:  
   
     -   **Service Principal** for a **sysadmin** login: **CLIENTID_sysadmin_login** and **SECRET_sysadmin_login**  
   
@@ -87,18 +84,18 @@ manager: craigg
     > [!IMPORTANT]  
     >  Users must have at least the **wrapKey** and **unwrapKey** operations for the key vault.  
   
-     For more information about granting permissions to the vault, see the **Authorize the application to use the key or secret** section in [Get Started with Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402).  
+     For more information about granting permissions to the vault, see the **Authorize the application to use the key or secret** section in [Get Started with Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
      Links to Azure Key Vault documentation  
   
-    -   [What is Azure Key Vault?](http://go.microsoft.com/fwlink/?LinkId=521401)  
+    -   [What is Azure Key Vault?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
-    -   [Get Started with Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402)  
+    -   [Get Started with Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   PowerShell [Azure Key Vault Cmdlets](http://go.microsoft.com/fwlink/?LinkId=521403) reference  
+    -   PowerShell [Azure Key Vault Cmdlets](https://docs.microsoft.com/powershell/module/azurerm.keyvault) reference  
   
 ##  <a name="Step2"></a> Step 2: Install the SQL Server Connector  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is downloaded and installed by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is available as a download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=521700).  Search for **SQL Server Connector for Microsoft Azure Key Vault**, review the details, system requirements and install instructions and choose to download the connector and start the installation using **Run**. Review the license and accept the license and continue.  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is downloaded and installed by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Search for **SQL Server Connector for Microsoft Azure Key Vault**, review the details, system requirements and install instructions and choose to download the connector and start the installation using **Run**. Review the license and accept the license and continue.  
   
  By default the connector is installed at **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. This location can be changed during setup. (If changed, adjust the scripts below.)  
   
@@ -129,7 +126,7 @@ manager: craigg
   
 1.  Configure the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to use EKM, and register (create) the cryptographic provider with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-    ```  
+    ```sql
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -150,7 +147,7 @@ manager: craigg
   
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
-    GO   
+    GO
     ```  
   
 2.  Setup a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential for a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administrator login to use the key vault in order to setup and manage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption scenarios.  
@@ -160,7 +157,7 @@ manager: craigg
   
      In the following example, the **Client ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) is stripped of the hyphens and entered as the string `EF5C8E094D2A4A769998D93440D8115D` and the **Secret** is represented by the string *SECRET_sysadmin_login*.  
   
-    ```  
+    ```sql
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoKeyVault',   
@@ -176,7 +173,7 @@ manager: craigg
   
 3.  If you imported an asymmetric key as described earlier in step 1, section 3, open the key by providing your key name in the following example.  
   
-    ```  
+    ```sql
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoMasterKey',  
@@ -185,7 +182,7 @@ manager: craigg
   
      Though not recommended for production (because the key cannot be exported), it is possible to create an asymmetric key directly in the vault from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If you did not import a key earlier, then create an asymmetric key in the key vault for testing by using the following script. Execute the script, using a login provisioned with the **sysadmin_ekm_cred** credential.  
   
-    ```  
+    ```sql
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH ALGORITHM = RSA_2048,  
@@ -225,7 +222,7 @@ manager: craigg
   
      In the following example, the **Client ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) is stripped of the hyphens and entered as the string `EF5C8E094D2A4A769998D93440D8115D` and the **Secret** is represented by the string *SECRET_DBEngine*.  
   
-    ```  
+    ```sql
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoKeyVault',   
@@ -235,7 +232,7 @@ manager: craigg
   
 2.  Create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login to be used by the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] for TDE, and add the credential to it. This example uses the CONTOSO_KEY asymmetric key stored in the key vault, which was imported or created earlier for the master database, as described in [Step 3, section 3](#Step3) above.  
   
-    ```  
+    ```sql
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -255,7 +252,7 @@ manager: craigg
   
      This example uses the CONTOSO_KEY asymmetric key stored in the key vault, which was imported or created earlier, as described in [Step 3, section 3](#Step3) above.  
   
-    ```  
+    ```sql
     USE ContosoDatabase;  
     GO  
   
@@ -279,7 +276,7 @@ manager: craigg
 ###  <a name="ExampleB"></a> Example B: Encrypting Backups by Using an Asymmetric Key from the Key Vault  
  Encrypted backups are supported starting with [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. The following example creates and restores a backup encrypted a data encryption key protected by the asymmetric key in the key vault.  
   
-```  
+```sql
 USE master;  
 BACKUP DATABASE [DATABASE_TO_BACKUP]  
 TO DISK = N'[PATH TO BACKUP FILE]'   
@@ -290,7 +287,7 @@ GO
   
  Sample restore code.  
   
-```  
+```sql
 RESTORE DATABASE [DATABASE_TO_BACKUP]  
 FROM DISK = N'[PATH TO BACKUP FILE]' WITH FILE = 1, NOUNLOAD, REPLACE;  
 GO  
@@ -303,7 +300,7 @@ GO
   
  This example uses the CONTOSO_KEY asymmetric key stored in the key vault, which was imported or created earlier, as described in [Step 3, section 3](#Step3) above. To use this asymmetric key in the `ContosoDatabase` database, you must execute the CREATE ASYMMETRIC KEY statement again, to provide the `ContosoDatabase` database with a reference to the key.  
   
-```  
+```sql
 USE [ContosoDatabase];  
 GO  
   
@@ -347,5 +344,3 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Enable TDE Using EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Backup Encryption](../../backup-restore/backup-encryption.md)   
  [Create an Encrypted Backup](../../backup-restore/create-an-encrypted-backup.md)  
-  
-  

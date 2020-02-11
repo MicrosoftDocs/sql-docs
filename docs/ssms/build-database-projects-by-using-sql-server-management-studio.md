@@ -1,14 +1,9 @@
 ---
-title: "Build Database Projects by Using SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Build Database Projects
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server], database projects"
@@ -16,13 +11,16 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], about projects"
   - "projects [SQL Server Management Studio]"
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-caps.latest.revision: 5
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Build Database Projects by Using SQL Server Management Studio
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 A database script project is an organized set of scripts, connection information, and templates that are all associated with a database or one part of a database. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] for administering and designing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases within the context of a script project. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] includes designers, editors, guides and wizards to assist users in developing, deploying and maintaining databases.  
   
 ## SQL Server Management Studio  
@@ -65,6 +63,6 @@ A solution consists of one or more script projects. A project consists of one or
   
 ## See Also  
 [Use SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Writing, Analyzing, and Editing Queries with SQL Server Management Studio](http://msdn.microsoft.com/en-us/062051e4-4b77-4969-98ae-d2547c24ce3e)  
+[Writing, Analyzing, and Editing Queries with SQL Server Management Studio](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [Solutions &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
   

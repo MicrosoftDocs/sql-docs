@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 api_name: 
   - "srv_rpcnumber"
@@ -21,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_rpcnumber"
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -54,6 +49,6 @@ srvproc
  This function returns only the number component of the remote stored procedure. It does not include the optional specifiers for owner, remote stored procedure name, and database name.  
   
 > [!IMPORTANT]  
->  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

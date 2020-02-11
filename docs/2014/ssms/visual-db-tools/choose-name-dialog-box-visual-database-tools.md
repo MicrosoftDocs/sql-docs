@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.choosename"
   - "vdt.dlgbox.newdatabaseview"
   - "vdt.dlgbox.newtablename"
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

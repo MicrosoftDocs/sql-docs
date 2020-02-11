@@ -1,20 +1,15 @@
 ---
-title: "Faster temp table and table variable by using memory optimization | Microsoft Docs"
-ms.custom: ""
+title: "Memory optimization for faster temp table and table variables"
+ms.custom: seo-dt-2019
 ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: 20
 author: Jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Faster temp table and table variable by using memory optimization
@@ -123,7 +118,7 @@ CREATE TABLE #tempSessionC
   
   
   
-First, create the following table-value function to filter on **@@spid**. The function will be usable by all SCHEMA_ONLY tables that you convert from session temporary tables.  
+First, create the following table-value function to filter on **\@\@spid**. The function will be usable by all SCHEMA_ONLY tables that you convert from session temporary tables.  
   
   
   
@@ -184,7 +179,7 @@ Third, in your general T-SQL code:
     - _Old:_ &#x23;tempSessionC  
     - _New:_ dbo.soSessionC  
 2. Replace the `CREATE TABLE #tempSessionC` statements in your code with `DELETE FROM dbo.soSessionC`, to ensure a session is not exposed to table contents inserted by a previous session with the same session_id. It is important to create the memory-optimized table at deployment time, not at runtime, to avoid the compilation overhead that comes with table creation.
-3. Remove the `DROP TABLE #tempSessionC` statements from your code – optionally you can insert a `DELETE FROM dbo.soSessionC` statement, in case memory size is a potential concern
+3. Remove the `DROP TABLE #tempSessionC` statements from your code - optionally you can insert a `DELETE FROM dbo.soSessionC` statement, in case memory size is a potential concern
   
   
   
@@ -297,7 +292,7 @@ go
 ```  
 
 
-The following script creates the filegroup for you and configures recommended database settings: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+The following script creates the filegroup for you and configures recommended database settings: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
   
 For more information about `ALTER DATABASE ... ADD` for FILE and FILEGROUP, see:  
   

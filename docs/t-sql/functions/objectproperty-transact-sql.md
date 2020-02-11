@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OBJECTPROPERTY"
@@ -21,10 +19,8 @@ helpviewer_keywords:
   - "schema-scoped objects [SQL Server]"
   - "objects [SQL Server], schema-scoped"
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-caps.latest.revision: 81
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECTPROPERTY (Transact-SQL)
@@ -76,7 +72,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsTriggerDisabled|Trigger|Disabled trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerNotForRepl|Trigger|Trigger defined as NOT FOR REPLICATION.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsUpdateTrigger|Trigger|UPDATE trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] Procedure|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Procedure is natively compiled.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Base data type: **int**|  
+|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] Procedure|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> Procedure is natively compiled.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Base data type: **int**|  
 |HasAfterTrigger|Table, view|Table or view has an AFTER trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasDeleteTrigger|Table, view|Table or view has a DELETE trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasInsertTrigger|Table, view|Table or view has an INSERT trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -85,7 +81,7 @@ OBJECTPROPERTY ( id , property )
 |IsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] function, [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure, table, [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger, view|Specifies that the ANSI NULLS option setting for the table is ON. This means all comparisons against a null value evaluate to UNKNOWN. This setting applies to all expressions in the table definition, including computed columns and constraints, for as long as the table exists.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsCheckCnst|Any schema-scoped object|CHECK constraint.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsConstraint|Any schema-scoped object|Is a single column CHECK, DEFAULT, or FOREIGN KEY constraint on a column or table.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsDefault|Any schema-scoped object|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Bound default.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsDefault|Any schema-scoped object|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Bound default.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|Any schema-scoped object|DEFAULT constraint.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|Function, view|The determinism property of the function or view.<br /><br /> 1 = Deterministic<br /><br /> 0 = Not Deterministic|  
 |IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)] function, [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure, table, [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger, view|Indicates that the original text of the module statement was converted to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Users without access to system tables or database files cannot retrieve the obfuscated text. However, the text is available to users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at run time.<br /><br /> 1 = Encrypted<br /><br /> 0 = Not encrypted<br /><br /> Base data type: **int**|  
@@ -104,7 +100,8 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Any schema-scoped object|Bound rule.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|Function|Scalar-valued function.<br /><br /> 1 = Scalar-valued function<br /><br /> 0 = Not scalar-valued function|  
 |IsSchemaBound|Function, view|A schema bound function or view created by using SCHEMABINDING.<br /><br /> 1 = Schema-bound<br /><br /> 0 = Not schema-bound.|  
-|IsSystemTable|Table|System table.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Table|System table.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|SQL Server can verify the determinism and precision properties of the object.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Table|Table.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Function|Table-valued function.<br /><br /> 1 = Table-valued function<br /><br /> 0 = Not table-valued function|  
 |IsTrigger|Any schema-scoped object|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -112,19 +109,20 @@ OBJECTPROPERTY ( id , property )
 |IsUserTable|Table|User-defined table.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|View|View.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|Any schema-scoped object|Owner of the object.<br /><br /> **Note:**  The schema owner is not necessarily the object owner. For example, child objects (those where *parent_object_id* is nonnull) will always return the same owner ID as the parent.<br /><br /> Nonnull = The database user ID of the object owner.|  
+|SchemaId|Any schema-scoped object| Schema ID of the schema to which the object belongs.| 
 |TableDeleteTrigger|Table|Table has a DELETE trigger.<br /><br /> >1 = ID of first trigger with the specified type.|  
 |TableDeleteTriggerCount|Table|Table has the specified number of DELETE triggers.<br /><br /> >0 = The number of DELETE triggers.|  
-|TableFullTextMergeStatus|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Whether a table that has a full-text index that is currently in merging.<br /><br /> 0 = Table does not have a full-text index, or the full-text index is not in merging.<br /><br /> 1 = The full-text index is in merging.|  
-|TableFullTextBackgroundUpdateIndexOn|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Table has full-text background update index (autochange tracking) enabled.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextCatalogId|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID of the full-text catalog in which the full-text index data for the table resides.<br /><br /> Nonzero = Full-text catalog ID, associated with the unique index that identifies the rows in a full-text indexed table.<br /><br /> 0 = Table does not have a full-text index.|  
-|TableFulltextChangeTrackingOn|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Table has full-text change-tracking enabled.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Number of rows processed since the start of full-text indexing. In a table that is being indexed for full-text search, all the columns of one row are considered as part of one document to be indexed.<br /><br /> 0 = No active crawl or full-text indexing is completed.<br /><br /> > 0 = One of the following (A or B): A) The number of documents processed by insert or update operations since the start of Full, Incremental, or Manual change tracking population. B) The number of rows processed by insert or update operations since change tracking with background update index population was enabled, the full-text index schema changed, the full-text catalog rebuilt, or the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarted, and so on.<br /><br /> NULL = Table does not have a full-text index.<br /><br /> This property does not monitor or count deleted rows.|  
-|TableFulltextFailCount|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Number of rows Full-Text Search did not index.<br /><br /> 0 = The population has completed.<br /><br /> > 0 = One of the following (A or B): A) The number of documents that were not indexed since the start of Full, Incremental, and Manual Update change tracking population. B) For change tracking with background update index, the number of rows that were not indexed since the start of the population, or the restart of the population. This could be caused by a schema change, rebuild of the catalog, server restart, and so on.<br /><br /> NULL = Table does not have a full-text index.|  
-|TableFulltextItemCount|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Number of rows that were successfully full-text indexed.|  
-|TableFulltextKeyColumn|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID of the column associated with the single-column unique index that is participating in the full-text index definition.<br /><br /> 0 = Table does not have a full-text index.|  
-|TableFulltextPendingChanges|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Number of pending change tracking entries to process.<br /><br /> 0 = change tracking is not enabled.<br /><br /> NULL = Table does not have a full-text index.|  
-|TableFulltextPopulateStatus|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Idle.<br /><br /> 1 = Full population is in progress.<br /><br /> 2 = Incremental population is in progress.<br /><br /> 3 = Propagation of tracked changes is in progress.<br /><br /> 4 = Background update index is in progress, such as autochange tracking.<br /><br /> 5 = Full-text indexing is throttled or paused.|  
-|TableHasActiveFulltextIndex|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Table has an active full-text index.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableFullTextMergeStatus|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Whether a table that has a full-text index that is currently in merging.<br /><br /> 0 = Table does not have a full-text index, or the full-text index is not in merging.<br /><br /> 1 = The full-text index is in merging.|  
+|TableFullTextBackgroundUpdateIndexOn|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Table has full-text background update index (autochange tracking) enabled.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextCatalogId|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> ID of the full-text catalog in which the full-text index data for the table resides.<br /><br /> Nonzero = Full-text catalog ID, associated with the unique index that identifies the rows in a full-text indexed table.<br /><br /> 0 = Table does not have a full-text index.|  
+|TableFulltextChangeTrackingOn|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Table has full-text change-tracking enabled.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextDocsProcessed|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Number of rows processed since the start of full-text indexing. In a table that is being indexed for full-text search, all the columns of one row are considered as part of one document to be indexed.<br /><br /> 0 = No active crawl or full-text indexing is completed.<br /><br /> > 0 = One of the following (A or B): A) The number of documents processed by insert or update operations since the start of Full, Incremental, or Manual change tracking population. B) The number of rows processed by insert or update operations since change tracking with background update index population was enabled, the full-text index schema changed, the full-text catalog rebuilt, or the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarted, and so on.<br /><br /> NULL = Table does not have a full-text index.<br /><br /> This property does not monitor or count deleted rows.|  
+|TableFulltextFailCount|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Number of rows Full-Text Search did not index.<br /><br /> 0 = The population has completed.<br /><br /> > 0 = One of the following (A or B): A) The number of documents that were not indexed since the start of Full, Incremental, and Manual Update change tracking population. B) For change tracking with background update index, the number of rows that were not indexed since the start of the population, or the restart of the population. This could be caused by a schema change, rebuild of the catalog, server restart, and so on.<br /><br /> NULL = Table does not have a full-text index.|  
+|TableFulltextItemCount|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Number of rows that were successfully full-text indexed.|  
+|TableFulltextKeyColumn|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> ID of the column associated with the single-column unique index that is participating in the full-text index definition.<br /><br /> 0 = Table does not have a full-text index.|  
+|TableFulltextPendingChanges|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Number of pending change tracking entries to process.<br /><br /> 0 = change tracking is not enabled.<br /><br /> NULL = Table does not have a full-text index.|  
+|TableFulltextPopulateStatus|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> 0 = Idle.<br /><br /> 1 = Full population is in progress.<br /><br /> 2 = Incremental population is in progress.<br /><br /> 3 = Propagation of tracked changes is in progress.<br /><br /> 4 = Background update index is in progress, such as autochange tracking.<br /><br /> 5 = Full-text indexing is throttled or paused.|  
+|TableHasActiveFulltextIndex|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> Table has an active full-text index.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasCheckCnst|Table|Table has a CHECK constraint.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasClustIndex|Table|Table has a clustered index.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasDefaultCnst|Table|Table has a DEFAULT constraint.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -146,13 +144,13 @@ OBJECTPROPERTY ( id , property )
 |TableInsertTriggerCount|Table|Table has the specified number of INSERT triggers.<br /><br /> >0 = The number of INSERT triggers.|  
 |TableIsFake|Table|Table is not real. It is materialized internally on demand by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsLockedOnBulkLoad|Table|Table is locked due to a **bcp** or BULK INSERT job.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsMemoryOptimized|Table|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Table is memory optimized<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Base data type: **int**<br /><br /> For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
+|TableIsMemoryOptimized|Table|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> Table is memory optimized<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Base data type: **int**<br /><br /> For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Table|Table is pinned to be held in the data cache.<br /><br /> 0 = False<br /><br /> This feature is not supported in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later.|  
 |TableTextInRowLimit|Table|Maximum bytes allowed for text in row.<br /><br /> 0 if text in row option is not set.|  
 |TableUpdateTrigger|Table|Table has an UPDATE trigger.<br /><br /> > 1 = ID of first trigger with the specified type.|  
 |TableUpdateTriggerCount|Table|The table has the specified number of UPDATE triggers.<br /><br /> > 0 = The number of UPDATE triggers.|  
 |TableHasColumnSet|Table|Table has a column set.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> For more information, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Table|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Specifies the type of table.<br /><br /> 0 = non-temporal table<br /><br /> 1 = history table for system-versioned table<br /><br /> 2 = system-versioned temporal table|  
+|TableTemporalType|Table|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> Specifies the type of table.<br /><br /> 0 = non-temporal table<br /><br /> 1 = history table for system-versioned table<br /><br /> 2 = system-versioned temporal table|  
   
 ## Return Types  
  **int**  

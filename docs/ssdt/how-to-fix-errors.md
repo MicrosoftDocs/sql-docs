@@ -1,21 +1,19 @@
 ---
-title: "How to: Fix Errors | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Fix Errors
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-caps.latest.revision: 11
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Fix Errors
+
 The Error List pane displays any deployment or build errors. Syntax and semantic errors caused by editing in either the Transact\-SQL Editor or Table Designer also shows up in the list when you are editing database entities and its definitions. The Error List is dynamically updated as you edit scripts across different tabs. You can then follow the errors identified for further troubleshooting.  
   
 > [!WARNING]  

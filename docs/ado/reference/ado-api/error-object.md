@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,10 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "error object [ADO]"
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Error Object
 Contains details about data access errors that pertain to a single operation involving the provider.  

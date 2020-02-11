@@ -1,26 +1,23 @@
 ---
-title: "SELECTs and JOINs From System Views for Extended Events in SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "SELECTs and JOINs from system views for extended events"
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-This article explains the two sets of system views that relate to extended events in Microsoft SQL Server, and in the Azure SQL Database cloud service. The article illustrates:
+This article explains the two sets of system views that relate to extended events in SQL Server and in Azure SQL Database. The article illustrates:
 
 - How to JOIN various system views.
 - How to SELECT particular kinds of information from the system views.
@@ -76,7 +73,7 @@ To SELECT from the system views, the following permission is necessary:
 
 This section matches and correlates three different technological perspectives on the same defined event session. The session has been defined and is visible in the **Object Explorer** of SQL Server Management Studio (SSMS.exe), but the session is not currently running.
 
-Every month it is wise to [install the latest update of SSMS](http://msdn.microsoft.com/library/mt238290.aspx), to avoid unexpected failures.
+Every month it is wise to [install the latest update of SSMS](https://msdn.microsoft.com/library/mt238290.aspx), to avoid unexpected failures.
 
 
 Reference documentation about the catalog views for extended events is at [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
@@ -248,7 +245,7 @@ SELECT
 		s.name              AS [Session-Name],
 		'3_EVENT_ACTION'    AS [Clause-Type],
 
-		e.package + '.' + a.name
+		a.package + '.' + a.name
 		                    AS [Parameter-Name],
 
 		'(Not_Applicable)'  AS [Parameter-Value]
@@ -366,7 +363,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 ```
 
 
-This completes the the section on catalog views.
+This completes the section on catalog views.
 
 
 

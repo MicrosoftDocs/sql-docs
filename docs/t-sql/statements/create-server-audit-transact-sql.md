@@ -1,13 +1,11 @@
-﻿---
+---
 title: "CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "01/07/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_SERVER_AUDIT_TSQL"
@@ -21,10 +19,8 @@ helpviewer_keywords:
   - "CREATE SERVER AUDIT statement"
   - "audits [SQL Server], creating"
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
-caps.latest.revision: 44
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE SERVER AUDIT (Transact-SQL)
@@ -39,7 +35,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ```  
 CREATE SERVER AUDIT audit_name  
 {  
-    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL}  
+    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR }  
     [ WITH ( <audit_options> [ , ...n ] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -68,15 +64,15 @@ CREATE SERVER AUDIT audit_name
 }  
   
 <predicate_factor>::=   
-    event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
+    event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
 ## Arguments  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL  
+ TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 
  Determines the location of the audit target. The options are a binary file, The Windows Application log, or the Windows Security log. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot write to the Windows Security log without configuring additional settings in Windows. For more information, see [Write SQL Server Audit Events to the Security Log](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
 > [!IMPORTANT]
-> In Azure SQL Database Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
+> In Azure SQL Database managed instance, SQL Audit works at the server level. Locations can only be `URL` or `EXTERNAL_MONITOR`.
   
  FILEPATH ='*os_file_path*'  
  The path of the audit log. The file name is generated based on the audit name and audit GUID.  
@@ -88,7 +84,7 @@ CREATE SERVER AUDIT audit_name
  Specifies the maximum number of files to retain in the file system in addition to the current file. The *MAX_ROLLOVER_FILES* value must be an integer or UNLIMITED. The default value is UNLIMITED. This parameter is evaluated whenever the audit restarts (which can happen when the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] restarts or when the audit is turned off and then on again) or when a new file is needed because the MAXSIZE has been reached. When *MAX_ROLLOVER_FILES* is evaluated, if the number of files exceeds the *MAX_ROLLOVER_FILES* setting, the oldest file is deleted. As a result, when the setting of *MAX_ROLLOVER_FILES* is 0 a new file is created each time the *MAX_ROLLOVER_FILES* setting is evaluated. Only one file is automatically deleted when *MAX_ROLLOVER_FILES* setting is evaluated, so when the value of *MAX_ROLLOVER_FILES* is decreased, the number of files does not shrink unless old files are manually deleted. The maximum number of files that can be specified is 2,147,483,647.  
   
  MAX_FILES =*integer*  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Specifies the maximum number of audit files that can be created. Does not rollover to the first file when the limit is reached. When the MAX_FILES limit is reached, any action that causes additional audit events to be generated, fails with an error.  
   
@@ -109,18 +105,18 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  FAIL_OPERATION  
  Database actions fail if they cause audited events. Actions, which do not cause audited events can continue, but no audited events can occur. The audit continues to attempt to log events and resumes if the failure condition is resolved. Use this option when maintaining a complete audit is more important than full access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
 
  AUDIT_GUID =*uniqueidentifier*  
  To support scenarios such as database mirroring, an audit needs a specific GUID that matches the GUID found in the mirrored database. The GUID cannot be modified after the audit has been created.  
   
  predicate_expression  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Specifies the predicate expression used to determine if an event should be processed or not. Predicate expressions are limited to 3000 characters, which limits string arguments.  
   
  event_field_name  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Is the name of the event field that identifies the predicate source. Audit fields are described in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). All fields can be filtered except `file_name`, `audit_file_offset`, and `event_time`.  
 
@@ -135,12 +131,12 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 
  number  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Is any numeric type including **decimal**. Limitations are the lack of available physical memory or a number that is too large to be represented as a 64-bit integer.  
   
  ' string '  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Either an ANSI or Unicode string as required by the predicate compare. No implicit string type conversion is performed for the predicate compare functions. Passing the wrong type results in an error.  
   
@@ -157,7 +153,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## Examples  
   
 ### A. Creating a server audit with a file target  
- The following example creates a server audit called `HIPPA_Audit` with a binary file as the target and no options.  
+ The following example creates a server audit called `HIPAA_Audit` with a binary file as the target and no options.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
@@ -165,7 +161,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ### B. Creating a server audit with a Windows Application log target with options  
- The following example creates a server audit called `HIPPA_Audit` with the target set for the Windows Application log. The queue is written every second and shuts down the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine on failure.  
+ The following example creates a server audit called `HIPAA_Audit` with the target set for the Windows Application log. The queue is written every second and shuts down the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine on failure.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

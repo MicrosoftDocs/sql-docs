@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetTranslator"
@@ -19,10 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetTranslator function [ODBC]"
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetTranslator Function
 **Conformance**  
@@ -33,17 +29,17 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLGetTranslator(  
-     HWND      hwndParent,  
-     LPSTR     lpszName,  
-     WORD      cbNameMax,  
-     WORD *    pcbNameOut,  
-     LPSTR     lpszPath,  
-     WORD      cbPathMax,  
-     WORD *    pcbPathOut,  
-     DWORD *   pvOption);  
+     HWND      hwndParent,  
+     LPSTR     lpszName,  
+     WORD      cbNameMax,  
+     WORD *    pcbNameOut,  
+     LPSTR     lpszPath,  
+     WORD      cbPathMax,  
+     WORD *    pcbPathOut,  
+     DWORD *   pvOption);  
 ```  
   
 ## Arguments  

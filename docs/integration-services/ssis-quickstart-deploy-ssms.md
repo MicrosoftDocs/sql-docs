@@ -4,14 +4,16 @@ ms.date: "05/21/2018"
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy an SSIS project with SQL Server Management Studio (SSMS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This quickstart how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then run the Integration Services Deployment Wizard to deploy an SSIS project to the SSIS Catalog. 
 
 SQL Server Management Studio is an integrated environment for managing any SQL infrastructure, from SQL Server to SQL Database. For more info about SSMS, see [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
@@ -43,7 +45,7 @@ To deploy the project to Azure SQL Database, get the connection information you 
 3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 
-## <a name="wizard_auth"></a> Authentication methods in the Deployment Wizard
+## Authentication methods for deployment
 
 If you're deploying to a SQL Server with the Deployment Wizard, you have to use Windows authentication; you can't use SQL Server authentication.
 
@@ -61,7 +63,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified server name | If you're connecting to an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`. |
-   | **Authentication** | SQL Server Authentication | With SQL Server authentication, you can connect to SQL Server or to Azure SQL Database. See [Authentication methods in the Deployment Wizard](#wizard_auth) in this article. |
+   | **Authentication** | SQL Server Authentication | With SQL Server authentication, you can connect to SQL Server or to Azure SQL Database. See [authentication methods in the deployment](#authentication-methods-for-deployment) in this article. |
    | **Login** | The server admin account | This account is the account that you specified when you created the server. |
    | **Password** | The password for your server admin account | This password is the password that you specified when you created the server. |
 
@@ -86,7 +88,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
   
 3.  On the **Select Destination** page, select the destination for the project.
     -   Enter the fully qualified server name. If the target server is an Azure SQL Database server, the name is in this format `<server_name>.database.windows.net`.
-    -   Provide authentication information, and then select **Connect**. See [Authentication methods in the Deployment Wizard](#wizard_auth) in this article.
+    -   Provide authentication information, and then select **Connect**. See [authentication methods in the deployment](#authentication-methods-for-deployment) in this article.
     -   Then select **Browse** to select the target folder in SSISDB.
     -   Then select **Next** to open the **Review** page. (The **Next** button is enabled only after you select **Connect**.)
   

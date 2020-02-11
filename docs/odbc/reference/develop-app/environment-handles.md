@@ -5,18 +5,14 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "environment handles [ODBC]"
   - "handles [ODBC], environment"
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Environment Handles
 An *environment* is a global context in which to access data; associated with an environment is any information that is global in nature, such as:  

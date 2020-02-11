@@ -1,21 +1,17 @@
 ---
-title: "SQL Data Discovery and Classification | Microsoft Docs"
+title: "SQL data discovery and classification | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# SQL Data Discovery and Classification
+# SQL data discovery and classification
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -29,7 +25,7 @@ The code file for this sample is named DataDiscoveryAndClassification.java, and 
 
 ## Requirements  
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](../../jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC driver](../../jdbc/using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;
@@ -181,6 +177,6 @@ public class DataDiscoveryAndClassification {
 }
 ```
 
-## See Also
+## See also
 
-[Sample JDBC Driver Applications](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[Sample JDBC driver applications](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  

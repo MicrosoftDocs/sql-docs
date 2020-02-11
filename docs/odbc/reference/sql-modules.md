@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL modules [ODBC]"
@@ -16,10 +14,8 @@ helpviewer_keywords:
   - "modules [ODBC]"
   - "SQL statements [ODBC], modules"
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL Modules
 The second technique for sending SQL statements to the DBMS is through modules. Briefly, a module consists of a group of procedures, which are called from the host programming language. Each procedure contains a single SQL statement, and data is passed to and from the procedure through parameters.  

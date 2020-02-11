@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "5231 (Database Engine error)"
 ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

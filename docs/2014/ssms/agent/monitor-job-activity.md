@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, monitoring"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "performance [SQL Server], jobs"
   - "current activity"
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg

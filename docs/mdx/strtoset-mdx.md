@@ -8,12 +8,11 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # StrToSet (MDX)
 
 
-  Returns the set specified by a Multidimensional Expressions (MDX)–formatted string.  
+  Returns the set specified by a Multidimensional Expressions (MDX)-formatted string.  
   
 ## Syntax  
   

@@ -2,9 +2,8 @@
 title: "Save a Report to a SharePoint Library (Report Builder) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -19,7 +18,7 @@ ms.author: maggies
   
 ### To save a report to a SharePoint site  
   
-1.  From the Report Builder button, click **Save**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save**. The **Save As**_\<Report Item>_ dialog box opens.  
   
     > [!NOTE]  
     >  If you are resaving a report, it is automatically resaved to its previous location. Use the **Save As** option to change location.  

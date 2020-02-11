@@ -4,11 +4,8 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
@@ -140,9 +137,9 @@ When you add a query parameter to a query, Report Builder automatically creates 
     WHERE StoreID = (@StoreID)  
     ```  
   
-    The **WHERE** clause limits the retrieved data to the store identifier that is specified by the query parameter *@StoreID*.  
+    The **WHERE** clause limits the retrieved data to the store identifier that is specified by the query parameter *\@StoreID*.  
   
-4.  On the query designer toolbar, click **Run** (**!**). The **Define Query Parameters** dialog box opens and prompts for a value for the query parameter *@StoreID*.  
+4.  On the query designer toolbar, click **Run** (**!**). The **Define Query Parameters** dialog box opens and prompts for a value for the query parameter *\@StoreID*.  
   
 5.  In **Parameter Value**, type **200**.  
   
@@ -154,7 +151,7 @@ When you add a query parameter to a query, Report Builder automatically creates 
   
 8.  In the Report Data pane, expand the **Parameters** folder.  
   
-Note there is now a report parameter named *@StoreID*, and a Parameters pane where you can lay out the report parameters.   
+Note there is now a report parameter named *\@StoreID*, and a Parameters pane where you can lay out the report parameters.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -167,7 +164,7 @@ After you create a report parameter, you can adjust the default values for prope
   
 By default, the parameter you created has the data type **Text**. Because the store identifier is an integer, you can change the data type to Integer.  
   
-1.  In the Report Data pane under the **Parameters** node, right-click *@StoreID*, then click **Parameter Properties**.  
+1.  In the Report Data pane under the **Parameters** node, right-click *\@StoreID*, then click **Parameter Properties**.  
   
 2.  In **Prompt**, type **Store identifier?** This text appears on the report viewer toolbar when you run the report.  
   
@@ -177,7 +174,7 @@ By default, the parameter you created has the data type **Text**. Because the st
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Click **Run** to preview the report. The report viewer displays the prompt **Store Identifier?** for *@StoreID*.  
+6.  Click **Run** to preview the report. The report viewer displays the prompt **Store Identifier?** for *\@StoreID*.  
   
 7.  On the report viewer toolbar, next to Store ID, type **200**, and then click **View Report**.  
   
@@ -218,7 +215,7 @@ After you create a dataset to provide available values, you change the report pr
   
 ### To provide available values for a parameter from a dataset  
   
-1.  In the Report Data pane, right-click the parameter *@StoreID*, then click **Parameter Properties**.  
+1.  In the Report Data pane, right-click the parameter *\@StoreID*, then click **Parameter Properties**.  
   
 2.  Click **Available Values**, and then click **Get values from a query**.  
   
@@ -251,7 +248,7 @@ You can specify a default value for each parameter so the report runs automatica
   
 1.  Switch to Design view.  
   
-2.  In the Report Data pane, right-click *@StoreID*, then click **Parameter Properties**.  
+2.  In the Report Data pane, right-click *\@StoreID*, then click **Parameter Properties**.  
   
 3.  Click **Default Values**, then click **Get values from a query**.  
   
@@ -263,13 +260,13 @@ You can specify a default value for each parameter so the report runs automatica
   
 7.  Preview the report.  
   
-For *@StoreID*, the report viewer displays the value "Contoso North America Online Store" because it's the first value from the result set for the dataset **Stores**. The report displays the quantity sold for Digital Cameras for store identifier **199**.  
+For *\@StoreID*, the report viewer displays the value "Contoso North America Online Store" because it's the first value from the result set for the dataset **Stores**. The report displays the quantity sold for Digital Cameras for store identifier **199**.  
   
 ### To specify a custom default value  
   
 1.  Switch to Design view.  
   
-2.  In the Report Data pane, right-click *@StoreID*, and then click **Parameter Properties**.  
+2.  In the Report Data pane, right-click *\@StoreID*, and then click **Parameter Properties**.  
   
 3.  Click **Default Values** > **Specify values** > **Add**. A new value row is added.  
   
@@ -279,7 +276,7 @@ For *@StoreID*, the report viewer displays the value "Contoso North America Onli
   
 6.  Preview the report.  
   
-For *@StoreID*, the report viewer displays "Contoso Catalog Store" because it's the display name for store identifier **200**. The report displays the quantity sold for Accessories, Camcorders, and Digital SLR Cameras for the store identifier **200**.  
+For *\@StoreID*, the report viewer displays "Contoso Catalog Store" because it's the display name for store identifier **200**. The report displays the quantity sold for Accessories, Camcorders, and Digital SLR Cameras for the store identifier **200**.  
   
 ## <a name="NameValue"></a>4d. Look up a Name/Value Pair  
 A dataset might contain both the identifier and the corresponding name field. When you only have an identifier, you can look up the corresponding name in a dataset that you created that includes name/value pairs.  
@@ -321,7 +318,7 @@ When your report readers have questions about a report, it helps to know which p
   
 2.  Right-click the page footer > **Insert** > **Text Box**. Drag the text box next to the text box with the time stamp. Grab the side handle of the text box and expand the width.  
   
-3.  From the Report Data pane, drag the parameter *@StoreID* to the text box. The text box displays `[@StoreID]`.  
+3.  From the Report Data pane, drag the parameter *\@StoreID* to the text box. The text box displays `[@StoreID]`.  
   
 4.  To display the parameter label, click in the text box until the insert cursor appears after the existing expression, type a space, and then drag another copy of the parameter from the Report Data pane to the text box. The text box displays `[@StoreID] [@StoreID]`.  
   
@@ -369,7 +366,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 1.  Switch to Design view.  
   
-2.  In the Report Data pane, right-click *@StoreID*, and then click **Parameter Properties**.  
+2.  In the Report Data pane, right-click *\@StoreID*, and then click **Parameter Properties**.  
   
 3.  Select **Allow multiple values**.  
   
@@ -499,5 +496,5 @@ This concludes the walkthrough for how to add a parameter to your report. To lea
   
 ## See Also  
 * [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
-* [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup Function](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

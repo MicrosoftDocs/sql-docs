@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sample applications [SMO]"
   - "SMO [SQL Server], samples"
   - "SQL Server Management Objects, samples"
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
-caps.latest.revision: 41
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
@@ -23,7 +18,7 @@ manager: craigg
 # Link to Programming Samples
   The following table lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) programming samples that are available in the [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. These samples are available in both [!INCLUDE[csprcs](../../includes/csprcs-md.md)] and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
- For more information about how to install samples, see [AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
+ For more information about how to install samples, see [AdventureWorks for SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
 |Title|Description|  
 |-----------|-----------------|  
@@ -48,5 +43,4 @@ manager: craigg
 |Triggers|Displays database triggers.|  
 |UtilityConversion|Used with `LoadRegAssembly`. Contains demonstration common language runtime (CLR) functions for use with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |VerifyBackup|Verifies a backup on a backup device to ensure the data can be used to restore the database.|  
-  
   

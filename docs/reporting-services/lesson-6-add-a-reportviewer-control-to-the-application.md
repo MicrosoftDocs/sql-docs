@@ -4,14 +4,11 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 6: Add a ReportViewer Control to the Application
 After you design the child report by using the Report Wizard, your next step is to add a ReportViewer control to the website application. If you are using the ASP.NET Reports Web Site, it will have added the ReportViewer control to the default.aspx page.   
@@ -28,7 +25,7 @@ After you design the child report by using the Report Wizard, your next step is 
   
 5.  In the **Choose Report** box, select the parent report you created.  
   
-    When you select a report, instances of data sources used in the report are created automatically. Code is generated to instantiate each DataTable (and its [DataSet](http://msdn.microsoft.com/library/system.data.dataset.aspx) container). An [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) control is added to the design surface, corresponding to each data source used in the report. This data source control is configured automatically.  
+    When you select a report, instances of data sources used in the report are created automatically. Code is generated to instantiate each DataTable (and its [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) container). An [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) control is added to the design surface, corresponding to each data source used in the report. This data source control is configured automatically.  
   
 6.  On the Build menu, click Build website.  
   

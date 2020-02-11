@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_drop_trusted_assembly_TSQL"
@@ -22,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  

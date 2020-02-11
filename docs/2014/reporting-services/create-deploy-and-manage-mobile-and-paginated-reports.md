@@ -1,13 +1,10 @@
 ---
 title: "Reporting Services (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services]"
@@ -16,10 +13,9 @@ helpviewer_keywords:
   - "Reporting Services"
   - "SQL Server Reporting Services"
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 51
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes programming features that enable you to extend and customize your reporting functionality.  
@@ -30,7 +26,7 @@ manager: craigg
   
  For more information about features new in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
- For information about other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../2014-toc/books-online-for-sql-server-2014.md).  
+ For information about other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../2014-toc/index.yml).  
   
  **Browse Content by Area**  
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  
@@ -49,7 +45,7 @@ manager: craigg
   
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
- ![Folder icon](media/hlp-16folder.gif "Folder icon") [Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
   
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Security and Protection](security/reporting-services-security-and-protection.md)  
   
@@ -64,6 +60,6 @@ manager: craigg
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Feature Reference &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## See Also  
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

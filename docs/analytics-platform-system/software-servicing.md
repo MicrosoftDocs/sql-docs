@@ -1,21 +1,21 @@
 ---
-title: Software servicing - Analytics Platform System | Microsoft Docs
+title: Software servicing
 description: Software servicing in Analytics Platform System (APS).
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Software servicing in Analytics Platform System
 This section summarizes the software servicing requirements for Analytics Platform System appliances, including WSUS and Analytics Platform System hotfixes.  
   
 ## <a name="Basics"></a>Software Servicing Basics  
-**WSUS:** Your Analytics Platform System appliance needs to be configured to receive updates from Windows Server Update Services (WSUS). These updates include important changes to appliance software. After they are configured, many updates will install automatically and do not require hands-on management. Typically, WSUS updates are configured during the [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md) step performed during new appliance setup. If not, this configuration step can be performed later. For information on WSUS, see the [WSUS website Guide](http://go.microsoft.com/fwlink/?LinkId=202417).  
+**WSUS:** Your Analytics Platform System appliance needs to be configured to receive updates from Windows Server Update Services (WSUS). These updates include important changes to appliance software. After they are configured, many updates will install automatically and do not require hands-on management. Typically, WSUS updates are configured during the [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md) step performed during new appliance setup. If not, this configuration step can be performed later. For information on WSUS, see the [WSUS website Guide](https://go.microsoft.com/fwlink/?LinkId=202417).  
   
 **Hotfixes:** Additionally, you may need to apply Analytics Platform System hotfixes. A *hotfix* is a software update that is created for a specific customer to resolve an issue with the Analytics Platform System software. Each hotfix is an executable file that installs the fix for the customer-specific issue. Each hotfix also contains an accumulation of all the previously released software updates for Windows, SQL Server, and Analytics Platform System. If you need to install a hotfix, Microsoft support will provide you with the hotfix and instructions.  
   

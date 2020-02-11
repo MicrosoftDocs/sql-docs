@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Prepare SQL event class"
 ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg

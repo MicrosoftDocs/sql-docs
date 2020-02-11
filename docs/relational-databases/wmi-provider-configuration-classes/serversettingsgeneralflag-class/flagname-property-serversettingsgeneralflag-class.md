@@ -1,15 +1,11 @@
 ---
-title: "FlagName Property (ServerSettingsGeneralFlag Class) | Microsoft Docs"
-ms.custom: ""
+title: "FlagName Property (ServerSettingsGeneralFlag)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "FlagName Property (ServerSettingsGeneralFlag Class)"
@@ -19,10 +15,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "FlagName property"
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
-caps.latest.revision: 30
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # FlagName Property (ServerSettingsGeneralFlag Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +39,6 @@ object.FlagName [= value]
 ## Remarks  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

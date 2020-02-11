@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full differential backups [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "database restores [SQL Server], full differential backups"
   - "backing up databases [SQL Server], full differential backups"
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -151,7 +148,7 @@ manager: craigg
 #### A. Restoring a differential database backup  
  This example restores a database and differential database backup of the `MyAdvWorks` database.  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -171,7 +168,7 @@ GO
 #### B. Restoring a database, differential database, and transaction log backup  
  This example restores a database, differential database, and transaction log backup of the `MyAdvWorks` database.  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  

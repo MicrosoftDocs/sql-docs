@@ -5,17 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "drop table command [ODBC]"
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DROP TABLE Command
 Removes a table from the database specified with the data source and deletes it from disk.  

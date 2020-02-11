@@ -1,22 +1,18 @@
 ---
-title: "SQLXML Data Type Sample | Microsoft Docs"
+title: "SQLXML data type sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# SQLXML Data Type Sample
+# SQLXML data type sample
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -37,7 +33,7 @@ The code file for this sample is named SqlXmlDataType.java, and it can be found 
 
 ## Requirements
 
-To run this sample application, you must set the classpath to include the sqljdbc4.jar file. If the classpath is missing an entry for sqljdbc4.jar, the sample application throws the "Class not found" exception. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the sqljdbc4.jar file. If the classpath is missing an entry for sqljdbc4.jar, the sample application throws the "Class not found" exception. For more information about how to set the classpath, see [Using the JDBC driver](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 In addition, you need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database to run this sample application.
 
@@ -59,6 +55,6 @@ The showTransformer method demonstrates how to get an XML data from one table an
 
 [!code[JDBC#UsingSQLXML1](../../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]
 
-## See Also
+## See also
 
-[Working with Data Types &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)
+[Working with data types &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)

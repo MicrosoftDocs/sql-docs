@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables
-  Whether you are creating a new [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized table or migrating an existing disk-based table to a memory-optimized table, it is important to have a reasonable estimate of each table’s memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
+  Whether you are creating a new [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized table or migrating an existing disk-based table to a memory-optimized table, it is important to have a reasonable estimate of each table's memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
   
  If you are contemplating migrating from disk-based tables to memory-optimized tables, before you proceed in this topic, see the topic [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](migrating-to-in-memory-oltp.md) provide guidance on migrating from disk-based to memory-optimized tables.  
   
@@ -36,7 +33,7 @@ manager: craigg
 ##  <a name="bkmk_ExampleTable"></a> Example memory-optimized table  
  Consider the following memory-optimized table schema:  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -72,18 +69,18 @@ GO
   
  The following is a size computation for 5,000,000 (5 million) rows in a memory-optimized table. The total memory used by data rows is estimated as follows:  
   
- **Memory for the table’s rows**  
+ **Memory for the table's rows**  
   
- From the above calculations, the size of each row in the memory-optimized table is 24 + 32 + 200, or 256 bytes.  Since we have 5 million rows, the table will consume 5,000,000 * 256 bytes, or 1,280,000,000 bytes – approximately 1.28 GB.  
+ From the above calculations, the size of each row in the memory-optimized table is 24 + 32 + 200, or 256 bytes.  Since we have 5 million rows, the table will consume 5,000,000 * 256 bytes, or 1,280,000,000 bytes - approximately 1.28 GB.  
   
 ##  <a name="bkmk_IndexMeemory"></a> Memory for indexes  
  **Memory for each hash index**  
   
- Each hash index is a hash array of 8-byte address pointers.  The size of the array is best determined by the number of unique index values for that index – e.g., the number of unique Col2 values is a good starting point for the array size for the t1c2_index. A hash array that is too big wastes memory.  A hash array that is too small slows performance since there will be too many collisions by index values that hash to the same index.  
+ Each hash index is a hash array of 8-byte address pointers.  The size of the array is best determined by the number of unique index values for that index - e.g., the number of unique Col2 values is a good starting point for the array size for the t1c2_index. A hash array that is too big wastes memory.  A hash array that is too small slows performance since there will be too many collisions by index values that hash to the same index.  
   
  Hash indexes achieve very fast equality lookups such as:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -92,7 +89,7 @@ SELECT * FROM t_hk
   
  Nonclustered indexes are faster for range lookups such as:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -101,14 +98,14 @@ SELECT * FROM t_hk
   
  If you are migrating a disk-based table you can use the following to determine the number of unique values for the index t1c2_index.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
   
 ```  
   
- If you are creating a new table, you’ll need to estimate the array size or gather data from your testing prior to deployment.  
+ If you are creating a new table, you'll need to estimate the array size or gather data from your testing prior to deployment.  
   
  For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](../../database-engine/hash-indexes.md).  
   
@@ -124,24 +121,24 @@ SELECT COUNT(DISTINCT [Col2])
   
  Since we have three hash indexes, the memory needed for the hash indexes is 3 * 64MB = 192MB.  
   
- **Memory for non-clustered indexes**  
+ **Memory for nonclustered indexes**  
   
- Non-clustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
+ Nonclustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
   
- Unlike hash indexes, non-clustered indexes do not have a fixed bucket size. The index grows and shrinks dynamically with the data.  
+ Unlike hash indexes, nonclustered indexes do not have a fixed bucket size. The index grows and shrinks dynamically with the data.  
   
- Memory needed by non-clustered indexes can be computed as follows:  
+ Memory needed by nonclustered indexes can be computed as follows:  
   
 -   **Memory allocated to non-leaf nodes**   
     For a typical configuration, the memory allocated to non-leaf nodes is a small percentage of the overall memory taken by the index. This is so small it can safely be ignored.  
   
 -   **Memory for leaf nodes**   
-    The leaf nodes have one row for each unique key in the table that points to the data rows with that unique key.  If you have multiple rows with the same key (i.e., you have a non-unique non-clustered index), there is only one row in the index leaf node that points to one of the rows with the other rows linked to each other.  Thus, the total memory required can be approximated by:   
+    The leaf nodes have one row for each unique key in the table that points to the data rows with that unique key.  If you have multiple rows with the same key (i.e., you have a non-unique nonclustered index), there is only one row in the index leaf node that points to one of the rows with the other rows linked to each other.  Thus, the total memory required can be approximated by:   
     memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Non-clustered indexes are best when used for range lookups, as exemplified by the following query:  
+ Nonclustered indexes are best when used for range lookups, as exemplified by the following query:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

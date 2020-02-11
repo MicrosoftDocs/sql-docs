@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "WMI provider [SMO]"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "network settings [SMO]"
   - "monitoring [SMO]"
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -45,7 +40,7 @@ manager: craigg
 ## Enabling a Server Protocol using a URN String in Visual Basic  
  The code example shows how to identify a server protocol using a URN object, and then enable the protocol.  
   
-```  
+```vb
 'This program must run with administrator privileges.  
         'Declare the ManagedComputer WMI interface.  
         Dim mc As New ManagedComputer()  
@@ -67,7 +62,7 @@ manager: craigg
 ## Enabling a Server Protocol using a URN String in PowerShell  
  The code example shows how to identify a server protocol using a URN object, and then enable the protocol.  
   
-```  
+```powershell
 #This example shows how to identify a server protocol using a URN object, and then enable the protocol  
 #This program must run with administrator privileges.  
   
@@ -94,7 +89,7 @@ $sp.Alter()
 ## Starting and stopping a service in Visual C#  
  The code example shows how to stop and start an instance of SQL Server.  
   
-```  
+```csharp
 {   
    //Declare and create an instance of the ManagedComputer   
    //object that represents the WMI Provider services.   
@@ -138,7 +133,7 @@ $sp.Alter()
 ## Starting and stopping a service in PowerShell  
  The code example shows how to stop and start an instance of SQL Server.  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")  
   
@@ -171,11 +166,8 @@ $svc.Refresh()
 $svc.ServiceState  
 }  
 $svc.ServiceState  
-"Service" + $svc.Name + "is now started"  
-  
+"Service" + $svc.Name + "is now started"
 ```  
   
 ## See Also  
  [WMI Provider for Configuration Management Concepts](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  

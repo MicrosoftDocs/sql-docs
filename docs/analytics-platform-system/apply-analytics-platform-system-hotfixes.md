@@ -1,14 +1,14 @@
 ---
-title: Apply Analytics Platform System hotfixes | Microsoft Docs
+title: Apply Analytics Platform System hotfixes
 description: This article discusses how to apply hotfixes to the Analytics Platform System software.  
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Apply Analytics Platform System hotfixes
@@ -27,7 +27,7 @@ To perform these steps, you will need:
   
 -   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance state. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Knowledge of the Fabric Domain Administrator account to connect to the *<domain_name>***-HST01** node.  
+-   Knowledge of the Fabric Domain Administrator account to connect to the _<domain_name>_**-HST01** node.  
   
 ## <a name="HowToInstallPDW"></a>To apply a Analytics Platform System hotfix  
 Unlike the Microsoft updates, the hotfixes for the Analytics Platform System software are not handled through WSUS. They have a different workflow and are installed by running a hotfix package.  

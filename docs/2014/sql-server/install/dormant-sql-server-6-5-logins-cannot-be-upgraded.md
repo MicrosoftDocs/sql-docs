@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "passwords [SQL Server], dormant logins"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "identifying dormant logins"
   - "password hashes [SQL Server]"
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -41,6 +37,6 @@ GO
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening queries"
   - "queries [SQL Server], opening"
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

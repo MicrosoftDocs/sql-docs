@@ -1,13 +1,12 @@
 ---
-title: "Example: Set Up Database Mirroring with Windows Authentication (T-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Configure database mirroring with Windows authentication (T-SQL)"
+description: "An example that shows all the stages required to create a database mirroring session with a witness using Windows Authentication with Transact-SQL (T-SQL)"
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
@@ -15,12 +14,10 @@ helpviewer_keywords:
   - "authentication [SQL Server], database mirroring"
   - "database mirroring [SQL Server], security"
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
-# Example: Setting Up Database Mirroring Using Windows Authentication (Transact-SQL)
+# Example: Configure database mirroring using Windows authentication (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This example shows all the stages required to create a database mirroring session with a witness using Windows Authentication. The examples in this topic use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Note that as an alternative to using [!INCLUDE[tsql](../../includes/tsql-md.md)] steps, you can use the Configure Database Mirroring Security Wizard for database mirroring setup. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   

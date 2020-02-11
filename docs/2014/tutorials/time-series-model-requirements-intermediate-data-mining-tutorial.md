@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Understanding the Requirements for a Time Series Model (Intermediate Data Mining Tutorial)
   When you are preparing data for use in a forecasting model, you must ensure that your data contains a column that can be used to identify the steps in the time series. That column will be designated as the `Key Time` column. Because it is a key, the column must contain unique numeric values.  
@@ -52,7 +48,7 @@ manager: craigg
   
 -   You can have Analysis Services fill in missing values, either by calculating a mean, or by using a previous value. You do this by setting the MISSING_VALUE_SUBSTITUTION parameter on the mining model. For more information about this parameter, see [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md). For information about how to change parameters on an existing mining model, see [View or Change Algorithm Parameters](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md).  
   
--   You can alter the data source or filter the underlying view to eliminate ragged series or to replace values. You can do this in the relational data source, or you can modify the data source view by creating custom named queries or named calculations. For more information, see [Data Source Views in Multidimensional Models](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md). A later task in this lesson provides an example of how to build both a named query and a custom calculation.  
+-   You can alter the data source or filter the underlying view to eliminate ragged series or to replace values. You can do this in the relational data source, or you can modify the data source view by creating custom named queries or named calculations. For more information, see [Data Source Views in Multidimensional Models](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models). A later task in this lesson provides an example of how to build both a named query and a custom calculation.  
   
  For this scenario, some data is missing at the beginning of one series: that is, there is no data for the T1000 product line until July 2007. Otherwise, all series end on the same date, and there are no missing values.  
   

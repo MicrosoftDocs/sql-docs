@@ -4,20 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "databases"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, threats"
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: jaszymas
 ---
 # Security Best Practices with Contained Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +19,7 @@ manager: craigg
   Contained databases have some unique threats that should be understood and mitigated by [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] administrators. Most of the threats are related to the **USER WITH PASSWORD** authentication process, which moves the authentication boundary from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] level to the database level.  
   
 ## Threats Related to Users  
- Users in a contained database that have the **ALTER ANY USER** permission, such as members of the **db_owner** and **db_securityadmin** fixed database roles, can grant access to the database without the knowledge or permission or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. Granting users access to a contained database increases the potential attack surface area against the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Administrators should understand this delegation of access control, and be very careful about granting users in the contained database the **ALTER ANY USER** permission. All database owners have the **ALTER ANY USER** permission. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators should periodically audit the users in a contained database.  
+ Users in a contained database that have the **ALTER ANY USER** permission, such as members of the **db_owner** and **db_accessadmin** fixed database roles, can grant access to the database without the knowledge or permission or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. Granting users access to a contained database increases the potential attack surface area against the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Administrators should understand this delegation of access control, and be very careful about granting users in the contained database the **ALTER ANY USER** permission. All database owners have the **ALTER ANY USER** permission. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators should periodically audit the users in a contained database.  
   
 ### Accessing Other Databases Using the guest Account  
  Database owners and database users with the **ALTER ANY USER** permission can create contained database users. After connecting to a contained database on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a contained database user can access other databases on the [!INCLUDE[ssDE](../../includes/ssde-md.md)], if the other databases have enabled the **guest** account.  
@@ -56,7 +50,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### Creating a User that Duplicates a Login  
  If a contained database user with password is created, using the same name as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, and if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login connects specifying the contained database as the initial catalog, then the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login will be unable to connect. The connection will be evaluated as the contained database user with password principal on the contained database instead of as a user based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. This could cause an intentional or accidental denial of service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
--   As a best practice, members of the **sysadmin** fixed server role should consider always connecting without using the initial catalog option. This connects the login to the master database and avoids any attempts by a database owner to misuse the login attempt. Then the administrator can change to the contained database by using the **USE***\<database>* statement. You can also set the default database of the login to the contained database, which completes the login to **master**, and then transfers the login to the contained database.  
+-   As a best practice, members of the **sysadmin** fixed server role should consider always connecting without using the initial catalog option. This connects the login to the master database and avoids any attempts by a database owner to misuse the login attempt. Then the administrator can change to the contained database by using the **USE**_\<database>_ statement. You can also set the default database of the login to the contained database, which completes the login to **master**, and then transfers the login to the contained database.  
   
 -   As a best practice, do not create contained database users with passwords who have the same name as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins.  
   

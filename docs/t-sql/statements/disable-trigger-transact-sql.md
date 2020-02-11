@@ -5,9 +5,7 @@ ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DISABLE_TSQL"
@@ -23,10 +21,8 @@ helpviewer_keywords:
   - "triggers [SQL Server], disabling"
   - "disabling triggers"
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-caps.latest.revision: 45
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +58,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
  ALL SERVER  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -83,9 +79,9 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 The following examples are described in the AdventureWorks2012 database.
   
 ### A. Disabling a DML trigger on a table  
- The following example disables trigger `uAddress` that was created on table `Address`.  
+ The following example disables trigger `uAddress` that was created on table `Person`.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -93,7 +89,7 @@ GO
 ### B. Disabling a DDL trigger  
  The following example creates a DDL trigger `safety` with database scope, and then disables it.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   

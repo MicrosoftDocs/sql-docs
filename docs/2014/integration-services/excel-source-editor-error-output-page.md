@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.excelsourceadapter.erroroutput.f1"
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-caps.latest.revision: 18
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Source Editor (Error Output Page)

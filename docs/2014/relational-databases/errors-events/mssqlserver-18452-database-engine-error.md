@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "18456 (Database Engine error)"
   - "18452 (Database Engine error)"
 ms.assetid: 21da332c-e81d-4dee-a9d2-95598911b3be
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

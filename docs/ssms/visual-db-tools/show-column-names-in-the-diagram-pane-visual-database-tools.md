@@ -1,14 +1,10 @@
 ---
-title: "Show Column Names in the Diagram Pane (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Show Column Names in the Diagram Pane
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.prod_service: sql-tools
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "column names [SQL Server]"
@@ -16,10 +12,10 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
   - "names [SQL Server], columns"
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Show Column Names in the Diagram Pane (Visual Database Tools)

@@ -1,12 +1,10 @@
 ---
 title: "View and Read SQL Server Setup Log Files | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/08/2016"
+ms.date: "09/09/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing logs"
@@ -17,11 +15,9 @@ helpviewer_keywords:
   - "errors [SQL Server], Setup"
   - "logs [SQL Server], Setup"
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # View and Read SQL Server Setup Log Files
 
@@ -80,7 +76,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 
   >[!NOTE]
-  > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similiar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
+  > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### Location  
  The summary.txt is located within %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.

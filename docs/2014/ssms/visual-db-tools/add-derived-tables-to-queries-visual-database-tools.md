@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [Visual Database Tools]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "table joins [SQL Server]"
   - "derived tables"
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

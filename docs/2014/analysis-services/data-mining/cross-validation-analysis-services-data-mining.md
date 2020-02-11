@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [Analysis Services], data mining"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "scoring [data mining]"
   - "accuracy testing [data mining]"
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -84,7 +80,7 @@ manager: craigg
   
  After you select the predictable attribute, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically tests all models that use the same predictable attribute. If the target attribute contains discrete values, after you have selected the predictable column, you can optionally type a target state, if there is a specific value that you want to predict.  
   
- The selection of the target state affects the measures that are returned. If you specify a target attribute—that is, a column name—and do not pick a specific value that you want the model to predict, by default the model will be evaluated on its prediction of the most probable state.  
+ The selection of the target state affects the measures that are returned. If you specify a target attribute-that is, a column name-and do not pick a specific value that you want the model to predict, by default the model will be evaluated on its prediction of the most probable state.  
   
  When you use cross-validation with clustering models, there is no predictable column; instead, you select **#Cluster** from the list in the **Target Attribute** list box. After you have selected this option, other options that are not relevant to clustering models, such as **Target State**, are disabled. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will then test all clustering models that are associated with the mining structure.  
   
@@ -103,7 +99,7 @@ manager: craigg
   
  The stored procedures are grouped by mining model type. One set of stored procedures works with clustering models only. The other set of stored procedures works with other mining models.  
   
- For each type of mining model, clustered or non-clustered, the stored procedures perform cross-validation in two separate phases.  
+ For each type of mining model, clustered or nonclustered, the stored procedures perform cross-validation in two separate phases.  
   
  **Partition data and generate metrics for partitions**  
   

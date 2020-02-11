@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Profiler [SQL Server Profiler], space"
   - "SQL Server Profiler, space"
   - "space [SQL Server], SQL Server Profiler"
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

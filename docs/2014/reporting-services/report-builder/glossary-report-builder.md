@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Glossary (Report Builder)
   
@@ -91,7 +87,7 @@ manager: craigg
 |data mining|The process of analyzing data to identify patterns or relationships.|  
 |data point|The smallest individual entity in a chart.|  
 |data processing extension|A component in Reporting Services that is used to retrieve report data from an external data source.|  
-|data provider|The layer of sofware that handles communication between data extensions and customized software specific to each type of external data source. Depending on the specific data source, multiple data providers are available from Microsoft and from third-party vendors.|  
+|data provider|The layer of software that handles communication between data extensions and customized software specific to each type of external data source. Depending on the specific data source, multiple data providers are available from Microsoft and from third-party vendors.|  
 |data region|A report item that displays repeated rows of data from an underlying dataset in a table, matrix, list, or chart.|  
 |data source|1. In ADO and OLE DB, the location of a source of data exposed by an OLE DB provider. 2. The source of data for an object such as a cube or dimension. It is also the specification of the information necessary to access source data. It sometimes refers to object of ClassType clsDataSource. <br />3. In Reporting Services, a specified data source type, connection string, and credentials, which can be saved separately to a report server and shared among report projects or embedded in a report definition (.rdl) file.|  
 |data source name|In a report, the name of the data source object.|  
@@ -155,7 +151,7 @@ manager: craigg
 |gauge|A gauge is a data region that presents data as a range with an indicator pointing to a specific value within the range.|  
 |gauge panel|The gauge panel is the encompassing outer element that contains one or more radial and linear gauges.  Use the gauge panel to define properties that apply for all gauges in a gauge panel.|  
 |gauge pointer|A gauge pointer is a needle, marker, or bar that indicates the current value on the gauge.  A gauge pointer is always attached to a gauge scale.|  
-|gauge range|A gauge range is a colored area that represents a “critical zone,” always bound by a start value and an end value, on the gauge scale.|  
+|gauge range|A gauge range is a colored area that represents a "critical zone," always bound by a start value and an end value, on the gauge scale.|  
 |gauge scale|A gauge scale is the range of values, bound by a minimum and a maximum, shown on the gauge.  Typically, a gauge scale contains gauge labels and gauge tick marks to give accurate readings of what the gauge pointer is showing.|  
 |geodesic data|Data that specifies points, lines, or areas on a curved surface.|  
 |geography data|A SQL Server spatial data type that represents data in a round-earth coordinate system,  such as GPS latitude and longitude coordinates.|  
@@ -186,7 +182,7 @@ manager: craigg
 |KPI|See Other Term: key performance indicator|  
 |label field|A report dataset field that identifies a label for a corresponding key field. Parameters and data regions can display the label for a key field instead of the value.|  
 |latency|The amount of time that elapses when a data change is completed at one server and when that change appears at another server.|  
-|latitude|The latitude coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from –90.0 through +90.0.|  
+|latitude|The latitude coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from -90.0 through +90.0.|  
 |layer|In a map report item, a layer specifies type and presentation of a single type of spatial data. A map report item is a container for multiple layers.|  
 |LCID|A number that identifies a Windows-based locale.|  
 |legend|In a report chart, map, or gauge data region, an element that provides a guide between the display presentation of data and the underlying data values.|  
@@ -199,7 +195,7 @@ manager: craigg
 |log file|A file or set of files that contain records of the modifications made in a database.|  
 |logical name|A name used by SQL Server to identify a file.|  
 |logical operators|The operators AND, OR, and NOT. Used to connect search conditions in WHERE clauses.|  
-|longitude|A coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from –180.0 through +180.0.|  
+|longitude|A coordinate as a decimal degree value in World Geodetic System (WGS 84) datum. Valid range is from -180.0 through +180.0.|  
 |many-to-many relationship|A relationship between two tables in which rows in each table have multiple matching rows in the related table. For example, each sales invoice can contain multiple products, but each product can appear on multiple sales invoices.|  
 |many-to-one relationship|A relationship between two tables in which one row in one table can relate to many rows in another table.|  
 |map|A report item that is a container for titles, various types of legends, and map layers.|  

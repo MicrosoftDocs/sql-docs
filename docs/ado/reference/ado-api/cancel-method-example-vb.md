@@ -6,18 +6,14 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Cancel method [ADO], Visual Basic example"
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Cancel Method Example (VB)
 This example uses the [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) method to cancel a command executing on a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object if the connection is busy.  
@@ -54,7 +50,7 @@ Public Sub Main()
     ' Begin a transaction, then execute a command asynchronously  
     Cnxn.BeginTrans  
     Cnxn.Execute strCmdChange, , adAsyncExecute  
-    ' do something else for a little while –  
+    ' do something else for a little while -  
     ' use i = 1 to 32000 to allow completion  
     Dim i As Integer  
     For i = 1 To 1000  

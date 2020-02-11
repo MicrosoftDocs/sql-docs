@@ -1,14 +1,10 @@
 ---
-title: "Specifying Boolean-Valued Predicates in XPath Queries (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Specify Boolean predicates in XPath queries (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XPath queries [SQLXML], predicates"
@@ -19,10 +15,9 @@ helpviewer_keywords:
   - "Boolean-valued predicates"
   - "multiple predicates"
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Boolean-Valued Predicates in XPath Queries (SQLXML 4.0)
@@ -65,7 +60,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     ```  
   
 3.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
-  
+
      For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
      Here is the result:  

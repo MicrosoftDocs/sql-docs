@@ -1,15 +1,11 @@
 ---
-title: "Modify SQL Server Service Advanced Properties using VBScript | Microsoft Docs"
-ms.custom: ""
+title: "Access the WMI Provider with VBScript"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -18,10 +14,8 @@ helpviewer_keywords:
   - "modifying SQL Server Service properties"
   - "WMI Provider for Configuration Management, VBScript"
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-caps.latest.revision: 17
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Access WMI Provider for Configuration Management using VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +36,7 @@ manager: craigg
 5.  Save the file.  
   
 6.  Run the script by typing **cscript test.vbs** at the command prompt.  
-  
+
 ## Example  
   
 ```  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helprolemember_TSQL"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helprolemember"
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +33,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'** *role* **'**  
+`[ @rolename = ] ' role '`
  Is the name of a role in the current database. *role* is **sysname**, with a default of NULL. *role* must exist in the current database. If *role* is not specified, then all roles that contain at least one member from the current database are returned.  
   
 ## Return Code Values  

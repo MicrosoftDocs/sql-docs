@@ -5,9 +5,7 @@ ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SHOW_STATISTICS_TSQL"
@@ -32,10 +30,8 @@ helpviewer_keywords:
   - "densities [SQL Server]"
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DBCC SHOW_STATISTICS (Transact-SQL)
@@ -84,7 +80,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Suppresses all informational messages that have severity levels from 0 through 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
  Specifying one or more of these options limits the result sets returned by the statement to the specified option or options. If no options are specified, all statistics information is returned.  
   
  STATS_STREAM is [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -122,7 +118,7 @@ The following table describes the columns returned in the result set when the HI
 |RANGE_ROWS|Estimated number of rows whose column value falls within a histogram step, excluding the upper bound.|  
 |EQ_ROWS|Estimated number of rows whose column value equals the upper bound of the histogram step.|  
 |DISTINCT_RANGE_ROWS|Estimated number of rows with a distinct column value within a histogram step, excluding the upper bound.|  
-|AVG_RANGE_ROWS|Average number of rows with duplicate column values within a histogram step, excluding the upper bound (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0).| 
+|AVG_RANGE_ROWS|Average number of rows with duplicate column values within a histogram step, excluding the upper bound. When DISTINCT_RANGE_ROWS is greater than 0, AVG_RANGE_ROWS is calculated by dividing RANGE_ROWS by DISTINCT_RANGE_ROWS. When DISTINCT_RANGE_ROWS is 0, AVG_RANGE_ROWS returns 1 for the histogram step.| 
   
 ## <a name="Remarks"></a> Remarks 
 
@@ -157,14 +153,16 @@ The query optimizer uses densities to enhance cardinality estimates for queries 
  DBCC SHOW_STATISTICS does not provide statistics for spatial or xVelocity memory optimized columnstore indexes.  
   
 ## Permissions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-In order to view the statistics object, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
-  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 modifies the permission restrictions and allows users with SELECT permission to use this command. Note that the following requirements exist for SELECT permissions to be sufficient to run the command:
+In order to view the statistics object, the user must have the SELECT permission on the table.
+Note that the following requirements exist for SELECT permissions to be sufficient to run the command:
 -   Users must have permissions on all columns in the statistics object  
 -   Users must have permission on all columns in a filter condition (if one exists)  
--   The table cannot have a row-level security policy.  
-  
-To disable this behavior, use traceflag 9485.
+-   The table cannot have a row-level security policy.
+-   If any of the columns within a statistics object is masked with Dynamic Data Masking rules, in addition to the SELECT permission, the user must have the UNMASK permission
+
+In versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
+[!NOTE]
+To change the behavior back to the pre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 behavior, use traceflag 9485.
   
 ## Permissions for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS requires SELECT permission on the table or membership in one of the following:

@@ -1,21 +1,19 @@
 ---
-title: "How to: Create a Test Project for SQL Server Database Unit Testing | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Create a Test Project for SQL Server Database Unit Testing
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Create a Test Project for SQL Server Database Unit Testing
+
 Before you can start to write unit tests that evaluate database objects, you must first create a test project. This project contains SQL Server unit tests, but it could contain other types of tests.  
   
 You can place all of your SQL Server unit tests for a given database project within a single test project. However, you might want to create additional test projects based on your answers to the following questions:  
@@ -32,7 +30,7 @@ You have three options for adding a test project to a solution that contains a d
   
 -   Add a test project to the solution. The test project contains a standard unit test, which you can delete. This project does not contain a SQL Server unit test class, which you must add.  
   
--   Add a new SQL Server unit test from the **Test** menu. When you add the unit test, SQL Server Data Tools also creates a test project if you request it. This project contains a SQL Server unit test class. SQL Server unit test test classes contain one or more unit tests.  
+-   Add a new SQL Server unit test from the **Test** menu. When you add the unit test, SQL Server Data Tools also creates a test project if you request it. This project contains a SQL Server unit test class. SQL Server unit test classes contain one or more unit tests.  
   
 -   Create a unit test from a stored procedure, function, or trigger from an open project in SQL Server Object Explorer. When you create the unit test, SQL Server Data Tools also creates a test project, if you request it. This project contains a SQL Server unit test class. SQL Server test classes contain one or more unit tests.  
   

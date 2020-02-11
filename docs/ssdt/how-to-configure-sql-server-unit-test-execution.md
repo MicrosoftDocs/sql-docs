@@ -1,21 +1,19 @@
 ---
-title: "How to: Configure SQL Server Unit Test Execution | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Configure SQL Server Unit Test Execution
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Configure SQL Server Unit Test Execution
+
 By configuring your test project, you can specify several settings that control aspects of how your SQL Server unit tests are run. These configuration settings are stored in your test project's app.config file. If you edit this file directly, the new values appear in the test configuration dialog box.  
   
 Your solution can contain multiple test projects. Each test project contains one app.config file (that is, one set of configuration settings). As a result, your solution can contain different sets of unit tests (one set for each test project) that are configured to run differently.  
@@ -27,7 +25,7 @@ These settings control how your test connects to the database that you will test
 -   **Schema deployment**. A database project is an offline representation of your database. The database project represents the structure of your database objects but contains no data. After you make schema changes in a database project, you can test them in an actual database. In the schema deployment step, database objects that you want to test are copied from your database project into the database on which you run tests. For more information about schema deployment, see [Deploy a Database Schema](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Tests do not run in the solution folder but in a separate folder on the local hard disk. Although you can configure aspects of test deployment, you typically do not need to configure them for unit tests. For more information about test deployment, see [Running Tests](http://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Tests do not run in the solution folder but in a separate folder on the local hard disk. Although you can configure aspects of test deployment, you typically do not need to configure them for unit tests. For more information about test deployment, see [Running Tests](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
 ## <a name="SpecifyConnectionStrings"></a>Specify Connection Strings  
   

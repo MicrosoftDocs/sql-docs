@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing query properties"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "showing query properties"
   - "queries [SQL Server], properties"
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

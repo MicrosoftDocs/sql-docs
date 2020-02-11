@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/30/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
   - "publishing [SQL Server replication], configuring"
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -26,7 +22,7 @@ manager: craigg
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Security"></a> Security  
- For more information, see [Secure Deployment &#40;Replication&#41;](security/secure-deployment-replication.md).  
+ For more information, see [Secure Replication Deployment](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Configure distribution using the New Publication Wizard or the Configure Distribution Wizard. After the Distributor is configured, view and modify properties in the **Distributor Properties - \<Distributor>** dialog box. Use the Configure Distribution Wizard if you want to configure a Distributor so that members of the **db_owner** fixed database roles can create publications, or because you want to configure a remote Distributor that is not a Publisher.  
@@ -60,25 +56,25 @@ manager: craigg
   
     -   If the value of **installed** in the result set is **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) at the Distributor on the master database.  
   
-    -   If the value of **distribution db installed** in the result set is **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) at the Distributor on the master database. Specify the name of the distribution database for **@database**. Optionally, you can specify the maximum transactional retention period for **@max_distretention** and the history retention period for **@history_retention**. If a new database is being created, specify the desired database property parameters.  
+    -   If the value of **distribution db installed** in the result set is **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) at the Distributor on the master database. Specify the name of the distribution database for **\@database**. Optionally, you can specify the maximum transactional retention period for **\@max_distretention** and the history retention period for **\@history_retention**. If a new database is being created, specify the desired database property parameters.  
   
-2.  At the Distributor, which is also the Publisher, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), specifying the UNC share that will be used as default snapshot folder for **@working_directory**.  
+2.  At the Distributor, which is also the Publisher, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), specifying the UNC share that will be used as default snapshot folder for **\@working_directory**.  
   
-3.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Specify the database being published for **@dbname**, the type of replication for **@optname**, and a value of `true` for **@value**.  
+3.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Specify the database being published for **\@dbname**, the type of replication for **\@optname**, and a value of `true` for **\@value**.  
   
 #### To configure publishing using a remote distributor  
   
 1.  Execute [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) to determine if the server is already configured as a Distributor.  
   
-    -   If the value of **installed** in the result set is **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) at the Distributor on the master database. Specify a strong password for **@password**. This password for the **distributor_admin** account will be used by the Publisher when connecting to the Distributor.  
+    -   If the value of **installed** in the result set is **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) at the Distributor on the master database. Specify a strong password for **\@password**. This password for the **distributor_admin** account will be used by the Publisher when connecting to the Distributor.  
   
-    -   If the value of **distribution db installed** in the result set is **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) at the Distributor on the master database. Specify the name of the distribution database for **@database**. Optionally, you can specify the maximum transactional retention period for **@max_distretention** and the history retention period for **@history_retention**. If a new database is being created, specify the desired database property parameters.  
+    -   If the value of **distribution db installed** in the result set is **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) at the Distributor on the master database. Specify the name of the distribution database for **\@database**. Optionally, you can specify the maximum transactional retention period for **\@max_distretention** and the history retention period for **\@history_retention**. If a new database is being created, specify the desired database property parameters.  
   
-2.  At the Distributor, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), specifying the UNC share that will be used as default snapshot folder for **@working_directory**. If the Distributor will use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **@security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@login** and **@password**.  
+2.  At the Distributor, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), specifying the UNC share that will be used as default snapshot folder for **\@working_directory**. If the Distributor will use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of **0** for **\@security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **\@login** and **\@password**.  
   
-3.  At the Publisher on the master database, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Specify the strong password used in step 1 for **@password**. This password will be used by the Publisher when connecting to the Distributor.  
+3.  At the Publisher on the master database, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Specify the strong password used in step 1 for **\@password**. This password will be used by the Publisher when connecting to the Distributor.  
   
-4.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Specify the database being published for **@dbname**, the type of replication for **@optname**, and a value of true for **@value**.  
+4.  At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Specify the database being published for **\@dbname**, the type of replication for **\@optname**, and a value of true for **\@value**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example demonstrates how to configure publishing and distribution programmatically. In this example, the name of the server that is being configured as a publisher and a local distributor is supplied using scripting variables. Replication publishing and distribution can be configured programmatically using replication stored procedures.  
@@ -128,7 +124,7 @@ manager: craigg
 5.  Install the Distributor by calling the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Specify a secure password (used by the Publisher when connecting to the remote Distributor) and the <xref:Microsoft.SqlServer.Replication.DistributionDatabase> object from step 3. For more information, see [Secure the Distributor](security/secure-the-distributor.md).  
   
     > [!IMPORTANT]  
-    >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+    >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  Create an instance of the <xref:Microsoft.SqlServer.Replication.DistributionPublisher> class.  
   
@@ -153,7 +149,7 @@ manager: craigg
 11. Call the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Pass the name of the remote Distributor and the password for the remote Distributor specified in step 5.  
   
     > [!IMPORTANT]  
-    >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.  
+    >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.  
   
 ###  <a name="PShellExample"></a> Example (RMO)  
  You can programmatically configure replication publishing and distribution by using Replication Management Objects (RMO).  

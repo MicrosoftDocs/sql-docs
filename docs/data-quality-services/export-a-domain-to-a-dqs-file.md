@@ -1,20 +1,14 @@
 ---
-title: "Export a Domain to a .dqs File | Microsoft Docs"
-ms.custom: ""
+title: "Export a Domain to a .dqs File"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: swinarko
+ms.author: sawinark
 ---
 # Export a Domain to a .dqs File
 

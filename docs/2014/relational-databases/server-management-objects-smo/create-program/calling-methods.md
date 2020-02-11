@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "methods [SMO]"
@@ -16,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Management Objects, method calling"
   - "SMO [SQL Server], method calling"
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg

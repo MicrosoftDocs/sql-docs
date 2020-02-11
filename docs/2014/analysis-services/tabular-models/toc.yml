@@ -149,7 +149,7 @@
   - name: Create and Manage Partitions in the Workspace Database
     href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
   - name: Process Partitions in the Workspace Database
-    href: process-partitions-in-the-workspace-databse-ssas-tabular.md
+    href: process-partitions-in-the-workspace-database-ssas-tabular.md
 - name: Perspectives
   href: perspectives-ssas-tabular.md
   items:

@@ -1,12 +1,10 @@
 ---
 title: "Define the Serialization of XML Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 10/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "entitization rules [XML in SQL Server]"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], serialization"
   - "typed XML"
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-caps.latest.revision: 22
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Define the Serialization of XML Data
@@ -30,7 +27,7 @@ manager: craigg
   
  For example:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
@@ -44,7 +41,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  For example:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
@@ -58,11 +55,11 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  For example:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- This may result in an error, if the current collation's code page cannot represent the Unicode character Δ, or it will represent it in the specific encoding.  
+ This may result in an error, if the current collation's code page cannot represent the Unicode character &#x10300;, or it will represent it in the specific encoding.  
   
  When returning XML results to the client side, the data will be sent in UTF-16 encoding. The client-side provider will then expose the data according to its API rules.  
   
@@ -86,7 +83,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
  For example:  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -103,13 +100,13 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  If you do not want to apply the last white-space protection rule, you can use the explicit CONVERT option 1 when casting from **xml** to a string or binary type. For example, to avoid entitization, you can do the following:  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  Note that, the [query() Method (xml Data Type)](/sql/t-sql/xml/query-method-xml-data-type) results in an xml data type instance. Therefore, any result of the **query()** method that is cast to a string or binary type is entitized according to the previously described rules. If you want to obtain the string values that are not entitized, you should use the [value() Method (xml Data Type)](/sql/t-sql/xml/value-method-xml-data-type) instead. Following is an example of using the **query()** method:  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -123,7 +120,7 @@ This example contains an entitized char: <.
   
  Following is an example of using the **value()** method:  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
@@ -138,7 +135,7 @@ This example contains an entitized char: <.
   
  For example, the xs:double value 1.34e1 is serialized to 13.4 as shown in the following example:  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  

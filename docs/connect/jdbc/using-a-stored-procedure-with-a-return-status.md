@@ -1,22 +1,18 @@
 ---
-title: "Using a Stored Procedure with a Return Status | Microsoft Docs"
+title: "Using a stored procedure with a return status | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Using a Stored Procedure with a Return Status
+# Using a stored procedure with a return status
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,7 +23,7 @@ When you call this kind of stored procedure by using the JDBC driver, you have t
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> For more information about the SQL escape sequences, see [Using SQL Escape Sequences](../../connect/jdbc/using-sql-escape-sequences.md).
+> For more information about the SQL escape sequences, see [Using SQL escape sequences](../../connect/jdbc/using-sql-escape-sequences.md).
 
 When you construct the `call` escape sequence, specify the return status parameter by using the ? (question mark) character. This character acts as a placeholder for the parameter value that will be returned from the stored procedure. To specify a value for a return status parameter, you must specify the data type of the parameter by using the [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) method of the SQLServerCallableStatement class, before executing the stored procedure.
 
@@ -58,6 +54,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]
 
-## See Also
+## See also
 
-[Using Statements with Stored Procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Using statements with stored procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)

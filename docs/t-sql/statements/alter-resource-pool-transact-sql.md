@@ -5,9 +5,7 @@ ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_RESOURCE_POOL_TSQL"
@@ -17,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER RESOURCE POOL"
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +46,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 [;]  
   
 <scheduler_range_spec> ::=  
-{SCHED_ID | SCHED_ID TO SCHED_ID}[,…n]  
+{SCHED_ID | SCHED_ID TO SCHED_ID}[,...n]  
   
 <NUMA_node_range_spec> ::=  
-{NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,…n]  
+{NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
 ## Arguments  
@@ -72,7 +68,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  Specifies the maximum average CPU bandwidth that all requests in the resource pool will receive when there is CPU contention. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
  CAP_CPU_PERCENT =*value*  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Specifies the target maximum CPU capacity for requests in the resource pool. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
@@ -80,7 +76,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  Due to the statistical nature of CPU governance, you may notice occasional spikes exceeding the value specified in CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Attach the resource pool to specific schedulers. The default value is AUTO.  
   
@@ -103,12 +99,12 @@ INNER JOIN sys.dm_os_schedulers AS sc
  Specifies the total server memory that can be used by requests in this resource pool. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
- **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
   
  Specifies the minimum I/O operations per second (IOPS) per disk volume to reserve for the resource pool. The allowed range for *value* is from 0 through 2^31-1 (2,147,483,647). Specify 0 to indicate no minimum threshold for the pool.  
   
  MAX_IOPS_PER_VOLUME =*value*  
- **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
   
  Specifies the maximum I/O operations per second (IOPS) per disk volume to allow for the resource pool. The allowed range for *value* is from 0 through 2^31-1 (2,147,483,647). Specify 0 to set an unlimited threshold for the pool. The default is 0.  
   
@@ -149,7 +145,7 @@ GO
   
  In the following example, the `CAP_CPU_PERCENT` sets the hard cap to 80% and `AFFINITY SCHEDULER` is set to an individual value of 8 and a range of 12 to 16.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
 ```  
 ALTER RESOURCE POOL Pool25  

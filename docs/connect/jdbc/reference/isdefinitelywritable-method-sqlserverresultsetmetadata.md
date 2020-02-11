@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerResultSetMetaData.isDefinitelyWritable"
@@ -15,10 +13,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # isDefinitelyWritable Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

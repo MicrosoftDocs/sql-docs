@@ -5,9 +5,7 @@ ms.date: "02/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "LTRIM"
@@ -22,10 +20,8 @@ helpviewer_keywords:
   - "LTRIM function"
   - "blank characters [SQL Server]"
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
-caps.latest.revision: 36
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LTRIM (Transact-SQL)

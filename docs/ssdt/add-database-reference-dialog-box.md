@@ -1,23 +1,18 @@
 ---
-title: "Add Database Reference Dialog Box | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Add Database Reference Dialog Box
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "sql.data.tools.adddatabasereference.dialog"
-ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
-caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Add Database Reference Dialog Box
+
 This topic describes the procedures you can perform in the **Add Database Reference** dialog box.  
   
 Database references let you:  
@@ -30,7 +25,8 @@ In a composite project, database references partition a large database into seve
   
 Database references can be made to a database project in the current solution or to a DACPAC. Adding a database reference to a project changes project dependencies and build order.  
   
-## Selecting the Database to Reference  
+## Selecting the Database to Reference
+
 You can reference another database project in the same solution, a system database, or a DACPAC.  
   
 If there is more than one database project in your solution, **Database projects in the current solution** is enabled. You can reference another database in the solution.  
@@ -39,7 +35,8 @@ Select **System database** if you intend to select one of the system databases a
   
 Select **Data-tier Application (.dacpac)** to reference a database in a DACPAC, and browse to the directory with the DACPAC file.  
   
-## Selecting the Database’s Relative Location  
+## Selecting the Database's Relative Location
+
 After you select the database you want to reference, you can specify the expected location of a database object, relative to the referencing project.  
   
 References can be resolved for objects in one of the following locations:  
@@ -50,7 +47,7 @@ References can be resolved for objects in one of the following locations:
   
 - In a database other than the referencing database, on a different server.  
   
-Specify a database name. If you chose **System database**, you shouldn’t modify the system database literal. If you chose **Database projects in the current solution**, the default name of the database is based on the name of the database in the project.  
+Specify a database name. If you chose **System database**, you shouldn't modify the system database literal. If you chose **Database projects in the current solution**, the default name of the database is based on the name of the database in the project.  
   
 If you selected **Different database, different server**, specify a server name.  
   
@@ -61,7 +58,8 @@ If you selected **Different database, different server**, a (SQLCMD) server vari
 > [!IMPORTANT]  
 > In some situations, you can create a database reference that has the same name as an existing database reference. Two database references with the same name can result in unexpected behavior. In this situation, delete both database references.  
   
-## Common Procedures  
+## Common Procedures
+
 The following are common procedures:  
   
 ### To create a reference to a database on the same server  
@@ -114,6 +112,6 @@ When you publish this project, you can deploy composite projects in the same sol
   
 3.  In the **Advanced Publish Settings** dialog box, make sure that **Include composite objects** is checked in the **Advanced Deployment Options** list.  
   
-## See Also  
-[Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md)  
-  
+## See Also
+
+[Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md)

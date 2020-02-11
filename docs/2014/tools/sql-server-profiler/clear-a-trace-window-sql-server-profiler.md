@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
   - "trace window [SQL Server]"
   - "clearing trace window"
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

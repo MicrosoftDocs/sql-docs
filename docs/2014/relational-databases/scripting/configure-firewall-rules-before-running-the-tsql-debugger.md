@@ -1,13 +1,10 @@
 ---
-title: "Configure the Transact-SQL Debugger | Microsoft Docs"
-ms.custom: ""
+title: Configure the Transact-SQL Debugger
+ms.custom: seo-lt-2019
 ms.date: "10/20/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.error.sqlde_register_failed"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "ports [SQL Server], Transact-SQL debugger"
   - "TCP/IP [SQL Server], port numbers"
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg

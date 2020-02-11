@@ -1,31 +1,28 @@
 ---
-title: "Configure distributed availability group (Always On Availability Group) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/17/2017"
+title: "Configure a distributed availability group"
+description: "Describes how to create and configure an Always On distributed availability group. " 
+ms.custom: "seodec18"
+ms.date: "01/28/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
-# Configure distributed availability group  
+# Configure an Always On distributed availability group  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-To create a distributed availability group, you must create an availability group and listener on each Windows Server Failover Cluster (WSFC). You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements. 
+To create a distributed availability group, you must create two availability groups each with its own listener. You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example doesn't cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements.
 
-For a technical overview of distributed availability groups, see [Distributed availability groups](distributed-availability-groups.md).   
+For a technical overview of distributed availability groups, see [Distributed availability groups](distributed-availability-groups.md).
 
 ## Prerequisites
 
 ### Set the endpoint listeners to listen to all IP addresses
 
-Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, configure the listener to `LISTENER_IP = ALL`. 
+Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, set the listener to listen on all IP addresses (`LISTENER_IP = ALL`).
 
 #### Create a listener to listen to all IP addresses
 
@@ -56,7 +53,7 @@ GO
 ## Create first availability group
 
 ### Create the primary availability group on the first cluster  
-Create an availability group on the first WSFC.   In this example, the availability group is named `ag1` for the database `db1`. The primary replica of the primary availability group is known as the **global primary** in a distributed availability group. Server1 is the global primary in this example.        
+Create an availability group on the first Windows Server Failover Cluster (WSFC).   In this example, the availability group is named `ag1` for the database `db1`. The primary replica of the primary availability group is known as the **global primary** in a distributed availability group. Server1 is the global primary in this example.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -78,10 +75,10 @@ GO
 ```  
   
 >[!NOTE]
->The preceding example uses direct seeding, where **SEEDING_MODE** is set to **AUTOMATIC** for both the replicas and the distributed availability group. This configuration sets the secondary replicas and secondary availability group to be automatically populated without requiring a manual backup and restore of primary database.  
+>The preceding example uses automatic seeding, where **SEEDING_MODE** is set to **AUTOMATIC** for both the replicas and the distributed availability group. This configuration sets the secondary replicas and secondary availability group to be automatically populated without requiring a manual backup and restore of primary database.  
   
 ### Join the secondary replicas to the primary availability group  
-Any secondary replicas must be joined to the availability group with **ALTER AVAILABILITY GROUP** with the **JOIN** option. Because direct seeding is used in this example, you must also call  **ALTER AVAILABILITY GROUP** with the **GRANT CREATE ANY DATABASE** option. This setting allows the availability group to create the database and begin seeding it automatically from the primary replica.  
+Any secondary replicas must be joined to the availability group with **ALTER AVAILABILITY GROUP** with the **JOIN** option. Because automatic seeding is used in this example, you must also call  **ALTER AVAILABILITY GROUP** with the **GRANT CREATE ANY DATABASE** option. This setting allows the availability group to create the database and begin seeding it automatically from the primary replica.  
   
 In this example, the following commands are run on the secondary replica, `server2`, to join the `ag1` availability group. The availability group is then permitted to create databases on the secondary.  
   
@@ -132,7 +129,7 @@ GO
 > The secondary availability group must use the same database mirroring endpoint (in this example port 5022). Otherwise, replication will stop after a local failover.  
   
 ### Join the secondary replicas to the secondary availability group  
- In this example, the following  commands are run on the secondary replica, `server4`, to join the `ag2` availability group. The availability group is then permitted to create databases on the secondary to support direct seeding.  
+ In this example, the following  commands are run on the secondary replica, `server4`, to join the `ag2` availability group. The availability group is then permitted to create databases on the secondary to support automatic seeding.  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   
@@ -143,7 +140,7 @@ GO
 ### Create a listener for  the secondary availability group  
  Next add a listener for the secondary availability group on the second WSFC. In this example, the listener is named `ag2-listener`. For detailed instructions on creating a listener, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-```  
+```sql  
 ALTER AVAILABILITY GROUP [ag2]    
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
@@ -174,7 +171,21 @@ GO
 ```  
   
 > [!NOTE]  
->  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener). If you are using a load balancer, for instance in Azure, [add a load balancing rule for the distributed availability group port](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Add the rule for the listener port, in addition to the SQL Server instance port. 
+>  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener). If you are using a load balancer, for instance in Azure, [add a load balancing rule for the distributed availability group port](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Add the rule for the listener port, in addition to the SQL Server instance port. 
+
+### Cancel automatic seeding to forwarder
+
+If, for whatever reason, it becomes necessary to cancel the initialization of the forwarder _before_ the two availability groups are synchronized, ALTER the distributed availability group by setting the forwarder's SEEDING_MODE parameter to MANUAL and immediately cancel the seeding. Run the command on the global primary: 
+
+```sql
+-- Cancel automatic seeding​.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag] ​  
+   MODIFY ​ 
+   AVAILABILITY GROUP ON ​ 
+   'ag2' WITH ​ 
+   ( ​ SEEDING_MODE = MANUAL ​ ); ​  
+```
+
   
 ## Join distributed availability group on second cluster  
  Then join the distributed availability group on the second WSFC.  
@@ -201,17 +212,25 @@ GO
 ```  
 
 ## <a name="failover"></a> Join the database on the secondary of the second availability group
-After the database on the secondary of the second availability group is in a restoring state you have to manually join it to the availability group.
+After the database on the secondary replica of the second availability group is in a restoring state, you have to manually join it to the availability group.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> Fail over to a secondary availability group  
-Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
 
+Only manual failover is supported at this time. To manually fail over a distributed availability group:
 
-1. Set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
+1. To ensure that no data is lost, stop all transactions on the global primary databases (that is, databases of the primary availability group), then set the distributed availability group to synchronous commit.
+1. Wait until the distributed availability group is synchronized and has the same last_hardened_lsn per database. 
+1. On the global primary replica, set the distributed availability group role to `SECONDARY`.
+1. Test failover readiness.
+1. Fail over the primary availability group.
+
+The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
+
+1. To ensure that no data is lost, stop all transactions on the global primary databases (that is, databases of the primary availability group). Then set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -237,25 +256,29 @@ Only manual failover is supported at this time. The following Transact-SQL state
        GO
 
       ```  
-   >[!NOTE]
-   >Similarly to regular availability groups, the synchronization status between two availability groups replicas part of a distributed      availability group, depends on the availability mode of both replicas. For example, for synchronous commit to occur, both the  current primary availability group and the secondary availability group must be configured with synchronous_commit availability mode.  
+   > [!NOTE]
+   > In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For synchronous commit mode, both the current primary availability group, and the current secondary availability group must have `SYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the script above on both the global primary replica, and the forwarder.
 
 
-1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the global primary, which is the primary replica of the primary availability group. 
+1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED` and all replicas have the same last_hardened_lsn (per database). Run the following query on both the global primary, which is the primary replica of the primary availability group, and the forwarder to check the synchronization_state_desc and last_hardened_lsn: 
     
       ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
       SELECT ag.name
              , drs.database_id
+             , db_name(drs.database_id) as database_name
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`. If **synchronization_state_desc** is not `SYNCHRONIZED`, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED`. 
+    Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`, and the last_hardened_lsn is the same per database on both the global primary and forwarder.  If **synchronization_state_desc** is not `SYNCHRONIZED` or last_hardened_lsn is not the same, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED` and last_hardened_lsn is the same per database. 
 
 1. On the global primary, set the distributed availability group role to `SECONDARY`. 
 
@@ -265,23 +288,41 @@ Only manual failover is supported at this time. The following Transact-SQL state
 
     At this point, the distributed availability group is not available.
 
-1. Test the failover readiness. Run the following query:
+1. Test the failover readiness. Run the following query on both the global primary and the forwarder:
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
-    The availability group is ready to fail over when the **synchronization_state_desc** is `SYNCHRONIZED` and the **end_of_log_lsn** is the same for both availability groups. 
 
-1. Fail over from the primary availability group to the secondary availability group. Run the following command on the SQL Server that hosts the primary replica for the secondary availability group. 
+    The availability group is ready to fail over when the **last_hardened_lsn** is the same for both availability groups per database. If the last_hardened_lsn is not the same after a period of time, to avoid data loss, fail back to the global primary by running this command on the global primary and then start over from the second step: 
 
     ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+
+1. Fail over from the primary availability group to the secondary availability group. Run the following command on the forwarder, the SQL Server that hosts the primary replica of the secondary availability group. 
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 

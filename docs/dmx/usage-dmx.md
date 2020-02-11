@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Usage (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,10 +30,10 @@ manager: kfile
   
  Columns that are specified as the **Predict** type are used as both input and output columns. Columns that are specified as **PredictOnly** are only used as output columns. Specific algorithms may treat Predict columns differently.  
   
- For more information about the column usage types that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports, see [Mining Model Columns](../analysis-services/data-mining/mining-model-columns.md).  
+ For more information about the column usage types that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports, see [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   

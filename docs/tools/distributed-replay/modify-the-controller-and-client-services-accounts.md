@@ -1,21 +1,22 @@
 ---
-title: "Modify the Controller and Client Services Accounts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Modify controller and client services accounts
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: craigg
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
-# Modify the Controller and Client Services Accounts
+
+# Modify the controller and client services accounts
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In this topic, you will learn how to modify the Distributed Replay controller and client service accounts, and then reapply the access control lists (ACLs).  
+
+In this topic, you will learn how to modify the Distributed Replay controller and client service accounts, and then reapply the access control lists (ACLs).  
   
 ### To start or stop the Distributed Replay services using Computer Management  
   

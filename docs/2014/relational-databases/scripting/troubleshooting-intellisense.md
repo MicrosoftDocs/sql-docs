@@ -1,13 +1,10 @@
 ---
-title: "Troubleshooting IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Troubleshooting IntelliSense
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unavailable options [IntelliSense]"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], unavailable options"
   - "troubleshooting [IntelliSense]"
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg

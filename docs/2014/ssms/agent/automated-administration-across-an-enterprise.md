@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "enterprise automatic administration [SQL Server]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "multiple instances of SQL Server"
   - "target servers [SQL Server]"
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -61,7 +58,7 @@ manager: craigg
  Contains information about how using nonadministrative Windows accounts or the Local System account for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent service can affect multiserver environments.  
   
  [Set Encryption Options on Target Servers](set-encryption-options-on-target-servers.md)  
- Contains information about setting the MsxEncryptChannelOptions[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent registry subkey on target servers.  
+ Contains information about setting the MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent registry subkey on target servers.  
   
  [Manage Jobs Across an Enterprise](manage-jobs-across-an-enterprise.md)  
  Contains information about checking job status, changing target servers for jobs, synchronizing target server clocks, and polling master servers for their current job status.  

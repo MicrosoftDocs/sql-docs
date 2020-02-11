@@ -1,24 +1,19 @@
 ---
-title: "Advanced Save Options | Microsoft Docs"
-ms.custom: ""
+title: "Advanced Save Options"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.advancedsaveoptions"
 helpviewer_keywords: 
   - "Advanced Save Options dialog box"
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
-caps.latest.revision: 3
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Advanced Save Options
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

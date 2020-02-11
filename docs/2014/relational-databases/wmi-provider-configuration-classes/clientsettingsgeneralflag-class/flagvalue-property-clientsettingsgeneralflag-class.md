@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "FlagValue Property (ClientSettingsGeneralFlag Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "FlagValue property"
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -45,6 +40,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

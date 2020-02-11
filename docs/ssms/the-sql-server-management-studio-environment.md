@@ -1,22 +1,17 @@
 ---
-title: "The SQL Server Management Studio Environment | Microsoft Docs"
-ms.custom: ""
+title: "The SQL Server Management Studio Environment"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], about SQL Server Management Studio"
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
-caps.latest.revision: 3
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # The SQL Server Management Studio Environment
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

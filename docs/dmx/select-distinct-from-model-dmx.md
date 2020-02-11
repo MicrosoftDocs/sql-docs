@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # SELECT DISTINCT FROM &lt;model &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +56,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|The midpoint for the values in the column.|  
   
 ## Discrete Column Example  
- The following code sample is based on the `[TM Decision Tree]` model that you create in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns the unique values that exist in the discrete column, `Gender`.  
+ The following code sample is based on the `[TM Decision Tree]` model that you create in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns the unique values that exist in the discrete column, `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -97,7 +96,7 @@ FROM [TM Decision Tree]
  The following code sample returns the midpoint, maximum, and minimum values for each bucket that has been created by the algorithm for the column, [`Yearly Income]`. To reproduce the results for this example, you must create a new mining structure that is the same as `[Targeted Mailing]`. In the wizard, change the content type of the `Yearly Income` column from **Continuous** to **Discretized**.  
   
 > [!NOTE]  
->  You can also change the mining model created in the Basic Mining Tutorial to discretize the mining structure column, [`Yearly Income]`. For information about how to do this, see [Change the Discretization of a Column in a Mining Model](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md). However, when you change the discretization of the column, it will force the mining structure to be reprocessed, which will change the results of other models that you have built using that structure.  
+>  You can also change the mining model created in the Basic Mining Tutorial to discretize the mining structure column, [`Yearly Income]`. For information about how to do this, see [Change the Discretization of a Column in a Mining Model](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model). However, when you change the discretization of the column, it will force the mining structure to be reprocessed, which will change the results of other models that you have built using that structure.  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   

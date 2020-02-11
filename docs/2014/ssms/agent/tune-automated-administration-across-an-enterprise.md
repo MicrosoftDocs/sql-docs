@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance [SQL Server], automated administration"
   - "tuning automated administration [SQL Server]"
   - "monitoring performance [SQL Server], automated administration"
 ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.tsxwiz.msx.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], creating"
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -93,7 +90,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example enlists the current server into the AdventureWorks1 master server. The location for the current server is Building 21, Room 309, Rack 5.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -108,5 +105,3 @@ manager: craigg
   
 ## See Also  
  [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
-  
-  

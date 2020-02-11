@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "precedence constraints [Integration Services], adding expressions"
   - "expressions [Integration Services], adding"
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
-caps.latest.revision: 44
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Use an Expression in a Precedence Constraint

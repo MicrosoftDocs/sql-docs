@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC applications, executing queries"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, queries"
   - "queries [ODBC]"
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

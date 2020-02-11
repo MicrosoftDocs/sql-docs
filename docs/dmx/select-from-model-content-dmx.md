@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # SELECT FROM &lt;model&gt;.CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,12 +40,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Optional. An expression that returns a scalar value.  
   
 ## Remarks  
- The **SELECT FROM** *\<model>***.CONTENT** statement returns content that is specific to each algorithm. For example, you might want to use the descriptions of all the rules of an association rules model in a custom application. You can use a **SELECT FROM \<model>.CONTENT** statement to return values in the NODE_RULE column of the model.  
+ The **SELECT FROM** _\<model>_**.CONTENT** statement returns content that is specific to each algorithm. For example, you might want to use the descriptions of all the rules of an association rules model in a custom application. You can use a **SELECT FROM \<model>.CONTENT** statement to return values in the NODE_RULE column of the model.  
   
  The following table lists the columns that are included in the mining model content.  
   
 > [!NOTE]  
->  Algorithms might interpret the columns differently in order to correctly represent the content. For a description of the mining model content for each algorithm, and tips on how to interpret and query the mining model content for each model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Algorithms might interpret the columns differently in order to correctly represent the content. For a description of the mining model content for each algorithm, and tips on how to interpret and query the mining model content for each model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |CONTENT rowset column|Description|  
 |---------------------------|-----------------|  
@@ -96,7 +95,7 @@ WHERE ISDESCENDANT('0')
   
  Expected results:  
   
- Because the model is a decision trees model, the descendants of the model parent node include a single marginal statistics node, a node that represents the predictable attribute, and multiple nodes that contain input attributes and values. For more information, see [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Because the model is a decision trees model, the descendants of the model parent node include a single marginal statistics node, a node that represents the predictable attribute, and multiple nodes that contain input attributes and values. For more information, see [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## Using the FLATTENED Keyword  
  The mining model content frequently contains interesting information about the model in nested table columns. The FLATTENED keyword lets you retrieve data from a nested table column without using a provider that supports hierarchical rowsets.  

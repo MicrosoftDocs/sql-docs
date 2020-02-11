@@ -5,15 +5,11 @@ ms.date: "03/21/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: "v-jizho2"
-manager: craigg
 ---
 # Data Source Wizard Screen 2
 
@@ -41,7 +37,7 @@ Specifies that the driver authenticate to SQL Server using an Azure Active Direc
 
 ### With Active Directory Interactive authentication
 
-Specifies that the driver authenticate to SQL Server using Azure Active Directory Interactive mode by providing login ID. This will trigger the Windows Azure Authentication prompt dialog.
+Specifies that the driver authenticate to SQL Server using Azure Active Directory Interactive mode by providing login ID. This will trigger the Azure Authentication prompt dialog.
 
 ### Login ID
 

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,10 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DataTypeEnum enumeration [ADO]"
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DataTypeEnum
 Specifies the data type of a [Field](../../../ado/reference/ado-api/field-object.md), [Parameter](../../../ado/reference/ado-api/parameter-object.md), or [Property](../../../ado/reference/ado-api/property-object-ado.md). The corresponding OLE DB type indicator is shown in parentheses in the description column of the following table.  

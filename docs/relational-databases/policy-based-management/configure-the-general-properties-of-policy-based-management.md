@@ -1,25 +1,20 @@
 ---
-title: "Configure the General Properties of Policy-Based Management | Microsoft Docs"
-ms.custom: ""
+title: "Configure general properties of Policy-Based Management"
+description: Learn how to configure the properties for Policy-Based Management using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.PolicyManagement.f1"
 helpviewer_keywords: 
   - "Policy-Based Management, configure properties"
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
-caps.latest.revision: 8
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # Configure the General Properties of Policy-Based Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +65,7 @@ manager: craigg
     -   When this value is true, both successful and failed policy evaluations are logged.  
   
 4.  When finished, click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To configure Policy-Based Management  

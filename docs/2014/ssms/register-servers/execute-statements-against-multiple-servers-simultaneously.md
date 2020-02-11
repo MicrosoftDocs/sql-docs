@@ -1,22 +1,19 @@
 ---
-title: "Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Execute Statements Against Multiple Servers Simultaneously
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiserver queries"
   - "executing queries against multiple servers"
   - "queries [SQL Server], multiserver"
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 ---
 # Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)
   This topic describes how to query multiple servers at the same time in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], by creating a local server group, or a Central Management Server and one or more server groups, and one or more registered servers within the groups, and then querying the complete group. The results that are returned by the query can be combined into a single results pane, or can be returned in separate results panes. The results set can include additional columns for the server name and the login that is used by the query on each server. Central Management Servers and subordinate servers can be registered by using only Windows Authentication. Servers in local server groups can be registered by using Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  

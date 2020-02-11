@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CHECK constraints, disabling"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "disabling constraints"
   - "constraints [SQL Server], check"
 ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

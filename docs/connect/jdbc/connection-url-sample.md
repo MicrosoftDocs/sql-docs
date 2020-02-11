@@ -1,22 +1,18 @@
 ---
-title: "Connection URL Sample | Microsoft Docs"
+title: "Connection URL sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Connection URL Sample
+# Connection URL sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -73,6 +69,6 @@ public class ConnectURL {
 }
 ```
 
-## See Also
+## See also
 
-[Connecting and Retrieving Data](../../connect/jdbc/connecting-and-retrieving-data.md)
+[Connecting and retrieving data](../../connect/jdbc/connecting-and-retrieving-data.md)

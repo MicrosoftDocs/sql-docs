@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.aggregationtransformation.aggregations.f1"
 helpviewer_keywords: 
   - "Aggregate Transformation Editor"
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-caps.latest.revision: 30
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Aggregate Transformation Editor (Aggregations Tab)

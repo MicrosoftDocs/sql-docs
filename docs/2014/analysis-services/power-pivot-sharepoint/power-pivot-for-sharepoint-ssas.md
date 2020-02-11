@@ -1,16 +1,12 @@
 ---
 title: "PowerPivot for SharePoint (SSAS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -64,7 +60,7 @@ manager: craigg
   
  [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot Gallery](../../2014-toc/index.yml)  
   
  [PowerPivot Data Access](power-pivot-data-access.md)  
   
@@ -86,7 +82,7 @@ manager: craigg
  [Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## See Also  
- [PowerPivot Planning and Deployment](http://go.microsoft.com/fwlink/?linkID=220972)   
- [Disaster Recovery for PowerPivot for SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [PowerPivot Planning and Deployment](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [Disaster Recovery for PowerPivot for SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

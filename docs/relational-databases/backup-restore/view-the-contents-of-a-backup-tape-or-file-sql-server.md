@@ -1,13 +1,11 @@
 ---
-title: "View the Contents of a Backup Tape or File (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
+title: "View backup contents (file or tape)"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backup devices [SQL Server], tapes"
@@ -17,12 +15,10 @@ helpviewer_keywords:
   - "database backups [SQL Server], viewing content"
   - "backing up databases [SQL Server], viewing content"
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
-# View the Contents of a Backup Tape or File (SQL Server)
+# View the contents of a backup tape or file (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to view the content of a backup tape or file in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

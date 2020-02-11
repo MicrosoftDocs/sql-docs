@@ -1,13 +1,11 @@
 ---
-title: "Viewing the SQL Server Error Log | Microsoft Docs"
-ms.custom: ""
+title: "Viewing the SQL Server Error Log"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cycling SQL Server error log"
@@ -17,11 +15,9 @@ helpviewer_keywords:
   - "displaying SQL Server error log"
   - "logs [SQL Server], SQL Server error logs"
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
-caps.latest.revision: 24
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Viewing the SQL Server Error Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

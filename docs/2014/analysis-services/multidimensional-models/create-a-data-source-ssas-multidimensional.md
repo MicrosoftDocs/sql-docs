@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourcedesigner.f1"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "data sources [Analysis Services], creating"
   - "security [Analysis Services], data source connections"
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 60
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -52,7 +48,7 @@ manager: craigg
  Connections that use Windows authentication are specified on the **Impersonation Information** tab of the Data Source Designer. Use this tab to choose the impersonation option that specifies the account under which [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] runs when connecting to the external data source. Not all options can be used in all scenarios. For more information about these options and when to use them, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ### Database Authentication  
- As an alternative to Windows authentication, you can specify a connection that uses an authentication service provided by the database management system. In some cases, using database authentication is required. Scenarios that call for using database authentication include using SQL Server authentication to connect to a Windows Azure SQL Database, or accessing a relational data source that runs on a different operating system or in a non-trusted domain.  
+ As an alternative to Windows authentication, you can specify a connection that uses an authentication service provided by the database management system. In some cases, using database authentication is required. Scenarios that call for using database authentication include using SQL Server authentication to connect to an Azure SQL Database, or accessing a relational data source that runs on a different operating system or in a non-trusted domain.  
   
  For a data source that uses database authentication, the username and password of a database login is specified on the connection string. Credentials are added to the connection string when you enter a user name and password in Connection Manager when setting up the data source connection in your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] model. Remember to specify a user identity that has read permissions to the data.  
   
@@ -74,7 +70,7 @@ manager: craigg
   
 3.  On the **Select how to define the connection** page, choose **Create a data source based on an existing or new connection** and then click **New** to open **Connection Manager**.  
   
-     New connections are created in Connection Manager. In Connection Manager, you select a provider and then specify the connection string properties used by that provider to connect to the underlying data. The exact information required depends upon the provider selected, but generally such information includes a server or service instance, information for logging on to the server or service instance, a database or file name, and other provider-specific settings. For the remainder of this procedure, we’ll assume a SQL Server database connection.  
+     New connections are created in Connection Manager. In Connection Manager, you select a provider and then specify the connection string properties used by that provider to connect to the underlying data. The exact information required depends upon the provider selected, but generally such information includes a server or service instance, information for logging on to the server or service instance, a database or file name, and other provider-specific settings. For the remainder of this procedure, we'll assume a SQL Server database connection.  
   
 4.  Select the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework or native OLE DB provider to use for the connection.  
   
@@ -86,7 +82,7 @@ manager: craigg
   
     1.  **Server Name** is the network name of the Database Engine instance. It can be specified as the IP address, the NETBIOS name of the computer, or a fully qualified domain name. If the server is installed as a named instance, you must include the instance name (for example, \<computername>\\<instancename\>).  
   
-    2.  **Log on to the Server** specifies how the connection will be authentication. **Use Windows Authentication** uses Windows authentication. **Use SQL Server Authentication** specifies a database user login for a Windows Azure SQL databases or a SQL Server instance that supports mixed mode authentication.  
+    2.  **Log on to the Server** specifies how the connection will be authentication. **Use Windows Authentication** uses Windows authentication. **Use SQL Server Authentication** specifies a database user login for an Azure SQL databases or a SQL Server instance that supports mixed mode authentication.  
   
         > [!IMPORTANT]  
         >  Connection Manager includes a **Save my password** checkbox for connections that use SQL Server authentication. Although the checkbox is always visible, it is not always used.  

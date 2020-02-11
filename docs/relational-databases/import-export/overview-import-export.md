@@ -1,20 +1,15 @@
 ---
-title: "Import and export data from SQL Server and Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+title: "Import & export data from SQL Server & Azure SQL Database"
 ms.date: "10/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: data-movement
 ms.topic: conceptual
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Import and export data from SQL Server and Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,12 +23,12 @@ You can also import and export data in a variety of data formats. These formats 
 You can import data with the `BULK INSERT` or the `OPENROWSET(BULK...)` commands. Typically you run these commands in SQL Server Management Studio (SSMS). For more info, see [Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 ### Use BCP from the command prompt
-You can import and export data with the BCP command-line utility. For more info, see [Import and Export Bulk Data by Using the bcp Utility](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+You can import and export data with the BCP command-line utility. For more info, see [Import and Export Bulk Data by Using the bcp Utility](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).
 
 ### Use the Import Flat File Wizard
 If you don't need all the configuration options available in the Import and Export Wizard and other tools, you can import a text file into SQL Server by using the **Import Flat File Wizard** in SQL Server Management Studio (SSMS). For more info, see the following articles:
 - [Import Flat File to SQL Wizard](import-flat-file-wizard.md)
-- [What’s new in SQL Server Management Studio 17.3
+- [What's new in SQL Server Management Studio 17.3
 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 

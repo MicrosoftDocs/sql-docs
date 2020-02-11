@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.sysalerts"
@@ -20,10 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysalerts system table"
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

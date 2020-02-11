@@ -1,23 +1,20 @@
 ---
-title: "Remove the Witness from a Database Mirroring Session (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove database mirroring witness"
+description: "Describes how to remove a witness from a database mirroring session with SQL Server Management Studio (SSMS), or Transact-SQL (T-SQL)."
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "witness [SQL Server], turning off"
   - "witness [SQL Server], removing"
   - "database mirroring [SQL Server], witness"
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Remove the Witness from a Database Mirroring Session (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,20 +4,14 @@ ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database snapshots [SQL Server], creating"
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
-caps.latest.revision: 56
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Create a Database Snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +33,7 @@ manager: craigg
 
 - The source database must not contain a MEMORY_OPTIMIZED_DATA filegroup. For more information, see [Unsupported SQL Server Features for In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 > For information about other significant considerations, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 ##  <a name="Recommendations"></a> Recommendations  
@@ -98,7 +92,7 @@ AdventureWorks_snapshot_evening
 1.  Based on the current size of the source database, ensure that you have sufficient disk space to hold the database snapshot. The maximum size of a database snapshot is the size of the source database at snapshot creation. For more information, see [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
 2.  Issue a CREATE DATABASE statement on the files using the AS SNAPSHOT OF clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:  
-  
+
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -129,14 +123,14 @@ AdventureWorks_snapshot_evening
   
 -   A. [Creating a snapshot on the AdventureWorks database](#Creating_on_AW)  
   
--   B. [Creating a snapshot on the Sales database](#Creating_on_Sales)  
+-   B. [Creating a snapshot on the Sales database](#Creating_on_Sales)
   
 ####  <a name="Creating_on_AW"></a> A. Creating a snapshot on the AdventureWorks database  
  This example creates a database snapshot on the `AdventureWorks` database. The snapshot name, `AdventureWorks_dbss_1800`, and the file name of its sparse file, `AdventureWorks_data_1800.ss`, indicate the creation time, 6 P.M (1800 hours).  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
-( NAME = AdventureWorks_Data, FILENAME =   
+( NAME = AdventureWorks, FILENAME =   
 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks_data_1800.ss' )  
 AS SNAPSHOT OF AdventureWorks;  
 GO  

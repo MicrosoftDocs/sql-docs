@@ -1,17 +1,14 @@
 ---
-title: "WideWorldImporters generate data - SQL sample database | Microsoft Docs"
-ms.custom: ""
+title: "Generate data in SQL samples WideWorldImporters"
 ms.date: "04/04/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+ms.custom: "seo-lt-2019"
 ---
 
 # WideWorldImporters data generation

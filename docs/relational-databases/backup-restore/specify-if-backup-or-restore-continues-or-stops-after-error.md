@@ -1,13 +1,11 @@
 ---
-title: "Specify If Backup or Restore Continues or Stops After Error | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
+title: "Set backup or restore after error"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server], backups"
@@ -15,12 +13,10 @@ helpviewer_keywords:
   - "backups [SQL Server], errors"
   - "database backups [SQL Server], errors"
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
-# Specify If Backup or Restore Continues or Stops After Error
+# Specify backup or restore to continue or stop after error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to specify whether a backup or restore operation continues or stops after encountering an error in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "negative"
@@ -18,10 +16,8 @@ helpviewer_keywords:
   - "negative operator (-)"
   - "negative values"
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unary Operators - Negative
@@ -124,7 +120,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 ```  
 USE ssawPDW;  
   
-SELECT TOP (1) – ( - 17) FROM DimEmployee;  
+SELECT TOP (1) - ( - 17) FROM DimEmployee;  
 ```  
   
  Returns  

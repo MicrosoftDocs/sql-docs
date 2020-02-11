@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vs.saveas"
 helpviewer_keywords: 
   - "Save As dialog box"
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -28,8 +25,8 @@ manager: craigg
  **File name**  
  Use this option to view the current file name, change the file name, or filter the files and folders that are displayed. To filter the files and folders that are displayed, enter a full or partial file name on which to filter. You can use the asterisk (`*`) as a wildcard.  
   
-> [!TIP]  
->  To display files on Web and network locations, enter a URL or network path in the **File name** box. For example, "http://mywebsite" displays the files available at the "mywebsite" Web location and "\\\myserver\myshare" displays the files available at the "myshare" location on "myserver".  
+> [!TIP]
+>  To display files on Web and network locations, enter a URL or network path in the **File name** box. For example, "<http://mywebsite>" displays the files available at the "mywebsite" Web location and "\\\myserver\myshare" displays the files available at the "myshare" location on "myserver".  
   
  **Save as type**  
  Use this option to select a new file type for the selected item. The file types displayed include all available file types to which the selected item can be converted.  

@@ -1,14 +1,10 @@
 ---
-title: "Executing an Updategram by Using OLE DB (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Executing an Updategram by Using OLE DB (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ICommandStream interface"
@@ -16,10 +12,9 @@ helpviewer_keywords:
   - "OLE DB, SQLXML"
   - "executing updategrams [SQLXML]"
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing an Updategram by Using OLE DB (SQLXML 4.0)

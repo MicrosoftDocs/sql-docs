@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CONTAINS predicate (Transact-SQL)"
   - "queries [full-text search], creating"
   - "full-text queries [SQL Server], creating"
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

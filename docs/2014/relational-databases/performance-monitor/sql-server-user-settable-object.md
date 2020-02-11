@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "User Settable object"
   - "SQLServer:User Settable"
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -38,7 +35,7 @@ manager: craigg
 |**User counter 1**|Defined using **sp_user_counter1**.|  
 |**User counter 2**|Defined using **sp_user_counter2**.|  
 |**User counter 3**|Defined using **sp_user_counter3**.|  
-|…||  
+|...||  
 |**User counter 10**|Defined using **sp_user_counter10**.|  
   
  To make use of the user counter stored procedures, execute them from your own application with a single integer parameter representing the new value for the counter. For example, to set **User counter 1** to the value 10, execute this Transact-SQL statement:  

@@ -3,17 +3,13 @@ title: "Getting Started in Visual C# .NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: quickstart
 helpviewer_keywords: 
   - "Visual C# [SMO]"
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
-caps.latest.revision: 40
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Programming - Getting Started in Visual C# .NET

@@ -1,13 +1,11 @@
 ---
-title: "Open, view, and print a deadlock file (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Open, view, print deadlock file (SSMS)"
+ms.custom: seo-dt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deadlocks [SQL Server], printing files"
@@ -15,13 +13,12 @@ helpviewer_keywords:
   - "opening deadlock files"
   - "printing deadlock files"
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
-caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Open, view, and print a deadlock file (SQL Server Management Studio)
+# Open, view, and print a deadlock file in SQL Server Management Studio (SSMS)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   When [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] generates a deadlock, you can capture and save the deadlock information to a file. After you've saved the deadlock file, you can open it in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view it or print it.  
   

@@ -4,18 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
-caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Installing SSMA Components on SQL Server (DB2ToSQL)
 In this version of SSMA there is no need for a separate install on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of the SSMA extension pack, which supports data migration, and DB2 providers to enable server-to-server connectivity.  

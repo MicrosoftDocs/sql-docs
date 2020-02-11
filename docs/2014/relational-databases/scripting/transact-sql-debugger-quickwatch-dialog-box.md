@@ -1,20 +1,16 @@
 ---
-title: "QuickWatch Dialog Box | Microsoft Docs"
-ms.custom: ""
+title: QuickWatch Dialog Box
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.quickwatch"
 helpviewer_keywords: 
   - "QuickWatch Dialog [Transact-SQL]"
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

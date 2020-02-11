@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Designer [SQL Server], Criteria pane"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
   - "limiting rows returned"
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

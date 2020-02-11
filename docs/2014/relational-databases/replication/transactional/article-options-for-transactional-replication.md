@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "articles [SQL Server replication], transactional replication options"
   - "transactional replication, article options"
 ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

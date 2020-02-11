@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.tabledesigner"
   - "vdt.designers.properties.Table"
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -41,7 +38,7 @@ manager: craigg
  Shows the name of the data source of the selected table.  
   
  **Description**  
- Shows a description of the selected table. To see the entire description, or to edit it, click the description and then click the ellipses **(…)** to the right of the property.  
+ Shows a description of the selected table. To see the entire description, or to edit it, click the description and then click the ellipses **(...)** to the right of the property.  
   
  **Schema**  
  Shows the name of the schema to which this table belongs. (Applies only to Microsoft SQL Server.)  

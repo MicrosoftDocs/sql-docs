@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services packages, configurations"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "packages [Integration Services], configurations"
   - "deploying packages [Integration Services], configurations"
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-caps.latest.revision: 71
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create Package Configurations
@@ -108,11 +104,11 @@ manager: craigg
   
 ## External Resources  
   
--   Technical article, [Understanding Integration Services Package Configurations](http://go.microsoft.com/fwlink/?LinkId=165643), on msdn.microsoft.com  
+-   Technical article, [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643), on msdn.microsoft.com  
   
--   Blog entry, [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663), on www.sqlis.com.  
+-   Blog entry, [Creating packages in code - Package Configurations](https://go.microsoft.com/fwlink/?LinkId=217663), on www.sqlis.com.  
   
--   Blog entry, [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664), on blogs.msdn.com.  
+-   Blog entry, [API Sample - Programmatically add a configuration file to a package](https://go.microsoft.com/fwlink/?LinkId=217664), on blogs.msdn.com.  
   
 ## See Also  
  [Package Configurations](../../2014/integration-services/package-configurations.md)   

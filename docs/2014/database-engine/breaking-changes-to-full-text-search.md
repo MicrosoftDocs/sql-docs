@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], breaking changes"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "breaking changes [full-text search]"
   - "full-text indexes [SQL Server], breaking changes"
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
 manager: craigg
@@ -56,6 +53,6 @@ manager: craigg
   
 ## See Also  
  [Behavior Changes to Full-Text Search](../relational-databases/search/full-text-search.md)   
- [Full-Text Search]((../relational-databases/search/full-text-search.md)  
+ [Full-Text Search](../relational-databases/search/full-text-search.md)  
   
   

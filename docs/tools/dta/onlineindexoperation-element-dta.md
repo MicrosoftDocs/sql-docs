@@ -1,29 +1,27 @@
 ---
-title: "OnlineIndexOperation Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: "OnlineIndexOperation Element (DTA)"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "dta"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "OnlineIndexOperation element"
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
-caps.latest.revision: 13
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # OnlineIndexOperation Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies whether the indexes, indexed views, or partitions that Database Engine Tuning Advisor recommends can be created online.  
+
+Specifies whether the indexes, indexed views, or partitions that Database Engine Tuning Advisor recommends can be created online.  
   
 ## Syntax  
   

@@ -1,23 +1,19 @@
 ---
-title: "Example: Online Restore of a Read-Write File (Full Recovery Model) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Online Restore: read-write file (full recovery model)"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full recovery model [SQL Server], RESTORE example"
   - "online restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], online"
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Example: Online Restore of a Read-Write File (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ manager: craigg
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup2 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup3 WITH NORECOVERY;  
-    RESTORE LOG adb WITH RECOVERY;  
+    RESTORE DATABASE adb WITH RECOVERY;  
     ```  
   
      File `a1` is now online.  

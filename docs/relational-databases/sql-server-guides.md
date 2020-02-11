@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "05/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide"
@@ -16,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Guides
@@ -24,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The following guides are available. They discuss general concepts and apply to all versions of SQL Server, unless stated otherwise in the respective guide. 
 
-[Always On Availability Groups Troubleshooting and Monitoring Guide](http://msdn.microsoft.com/library/dn135328)  
+[Always On Availability Groups Troubleshooting and Monitoring Guide](https://msdn.microsoft.com/library/dn135328)  
 [Index Architecture and Design Guide](../relational-databases/sql-server-index-design-guide.md)  
 [Memory Management Architecture Guide](../relational-databases/memory-management-architecture-guide.md)  
 [Pages and Extents Architecture Guide](../relational-databases/pages-and-extents-architecture-guide.md)  

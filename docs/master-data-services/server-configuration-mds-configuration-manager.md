@@ -1,22 +1,17 @@
 ---
-title: "Server Configuration (MDS Configuration Manager) | Microsoft Docs"
+title: Server Configuration
 ms.custom: ""
 ms.date: "01/26/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.srvinfopg.f1"
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-caps.latest.revision: 11
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Server Configuration (MDS Configuration Manager)
 

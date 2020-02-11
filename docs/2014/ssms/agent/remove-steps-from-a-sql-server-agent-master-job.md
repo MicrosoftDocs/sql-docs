@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -53,7 +50,7 @@ manager: craigg
   
 4.  Right-click the job where you want to delete steps and select **Properties**.  
   
-5.  In the **Job Properties –***job_name* dialog box, under **Select a page**, select **Steps**.  
+5.  In the **Job Properties -**_job_name_ dialog box, under **Select a page**, select **Steps**.  
   
 6.  Under **Job step list**, select the job step you want to delete and click **Delete**.  
   

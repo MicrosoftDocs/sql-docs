@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "208 (Database Engine error)"
 ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

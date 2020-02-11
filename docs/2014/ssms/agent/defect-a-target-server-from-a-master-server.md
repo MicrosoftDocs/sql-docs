@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, target servers"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "master servers [SQL Server], defecting target servers"
   - "defecting target servers"
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -64,7 +61,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-```  
+```sql
 sp_msx_defect ;  
 ```  
   
@@ -77,5 +74,3 @@ sp_msx_defect ;
  [Create a Multiserver Environment](create-a-multiserver-environment.md)   
  [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)   
  [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
-  
-  

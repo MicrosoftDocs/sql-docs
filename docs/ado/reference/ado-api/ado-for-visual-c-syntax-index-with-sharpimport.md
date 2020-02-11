@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
@@ -17,10 +15,8 @@ helpviewer_keywords:
   - "ADO for Visual C++ syntax with #import [ADO]"
   - "#import [ADO]"
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADO for Visual C++ Syntax Index with #import
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++ and the **#import** directive.  

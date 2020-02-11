@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.rolemanager.f1"
   - "sql12.asvs.bidtoolset.roledb.f1"
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Create and Manage Roles (SSAS Tabular)
   Roles, in tabular models, define member permissions for a model. Roles are defined for a model project by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. When a model is deployed, database administrators can manage roles by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -65,7 +61,7 @@ manager: craigg
  [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)   
  [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
  [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME Function &#40;DAX&#41;](/dax/username-function-dax)   
+ [CUSTOMDATA Function &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.master_files"
@@ -20,10 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.master_files catalog view"
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-caps.latest.revision: 56
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.master_files (Transact-SQL)
@@ -35,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID of the database to which this file applies. The masterdatabase_id is always 1.|  
 |file_id|**int**|ID of the file within database. The primary file_id is always 1.|  
-|file_guid|**uniqueidentifier**|Unique identifier of the file.<br /><br /> NULL = Database was upgraded from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|file_guid|**uniqueidentifier**|Unique identifier of the file.<br /><br /> NULL = Database was upgraded from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Valid for SQL Server 2005 and earlier) .|  
 |type|**tinyint**|File type:<br /><br /> 0 = Rows.<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (Full-text catalogs earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; full-text catalogs that are upgraded to or created in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or higher will report a file type 0.)|  
 |type_desc|**nvarchar(60)**|Description of the file type:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (Full-text catalogs earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].)|  
 |data_space_id|**int**|ID of the data space to which this file belongs. Data space is a filegroup.<br /><br /> 0 = Log files|  

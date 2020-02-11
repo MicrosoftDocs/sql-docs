@@ -4,25 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_update_agent_profile_TSQL"
   - "sp_update_agent_profile"
 helpviewer_keywords: 
   - "sp_update_agent_profile"
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +31,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## Arguments  
- [**@agent_type=**] **'***agent_type***'**  
+`[ @agent_type = ] 'agent_type'`
  Is the type of agent. *agent_type* is **int**, with no default, and can be one of these values.  
   
 |Value|Description|  
@@ -50,10 +42,10 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|Merge Agent.|  
 |**9**|Queue Reader Agent.|  
   
- [**@agent_id=**] *agent_id*  
+`[ @agent_id = ] 'agent_id'` 
  Is the ID of the agent. *agent_id* is **int**, with no default.  
   
- [**@profile_id=**] *profile_id*  
+`[ @profile_id = ] 'profile_id'` 
  Is the ID of the profile that the agent should use. *profile_id* is **int**, with no default. To view a list of profiles defined for each agent, use [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). For more information about system profiles, see [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## Return Code Values  

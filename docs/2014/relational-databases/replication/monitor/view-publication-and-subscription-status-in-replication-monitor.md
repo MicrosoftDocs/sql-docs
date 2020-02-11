@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Log Reader Agent, monitoring"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], viewing status"
   - "Replication Monitor, publication and subscription status"
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -51,11 +47,8 @@ manager: craigg
   
  **To view publication and subscription status**  
   
--   Replication Monitor: [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) and [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Replication Monitor: [View Information and Perform Tasks using Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).
   
- **To view detailed information for agents**  
-  
--   Replication Monitor: [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## Publication Status Values  
  The following table shows publication status values and their corresponding icons in priority order.  

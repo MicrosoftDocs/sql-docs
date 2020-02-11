@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection managers [Integration Services], modifying"
   - "modifying connection managers"
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-caps.latest.revision: 35
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Set the Properties of a Connection Manager

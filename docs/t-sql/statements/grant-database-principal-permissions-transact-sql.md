@@ -1,13 +1,13 @@
 ---
-title: "GRANT Database Principal Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Database Principal Permissions"
+description: Grant permissions on a database user, database role, or application role.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "03/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -24,10 +24,8 @@ helpviewer_keywords:
   - "GRANT statement, roles"
   - "application roles [SQL Server], permissions"
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
-caps.latest.revision: 24
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Principal Permissions (Transact-SQL)
@@ -89,12 +87,12 @@ GRANT permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
- pecifies a database user mapped to a Windows user.  
+ Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
   
@@ -185,7 +183,7 @@ GO
 ### C. Granting IMPERSONATE permission on a user to an application role  
  The following example grants `IMPERSONATE` permission on user `HamithaL` to `AdventureWorks2012` application role `AccountsPayable17`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  

@@ -1,22 +1,18 @@
 ---
-title: "Import Domains from an Excel File in Knowledge Discovery | Microsoft Docs"
-ms.custom: ""
+title: "Import domains from an Excel file in knowledge discovery"
+description: Learn how to import domains from an excel file during knowledge discovery for SQL Server Data Quality Services (DQS)
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: swinarko
+ms.author: sawinark
 ---
-# Import Domains from an Excel File in Knowledge Discovery
+# Import domains from an Excel file in knowledge discovery - Data Quality Services (DQS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

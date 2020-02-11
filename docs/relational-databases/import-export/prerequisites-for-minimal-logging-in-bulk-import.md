@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "minimal logging [SQL Server]"
@@ -17,10 +14,8 @@ helpviewer_keywords:
   - "minimally logged operations [SQL Server]"
   - "bulk importing [SQL Server], minimal logging"
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +30,7 @@ manager: craigg
   
 -   The table is not being replicated.  
   
--   Table locking is specified (using TABLOCK). For table with clustered columnstore index, you don't need TABLOCK for minimal logging.  Additionally, only the data load into compressed rowgroups are minimally logged requiring a batchsize of 102400 or higher.  
+-   Table locking is specified (using TABLOCK). 
   
     > [!NOTE]  
     >  Although data insertions are not logged in the transaction log during a minimally logged bulk-import operation, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] still logs extent allocations each time a new extent is allocated to the table.  
@@ -48,17 +43,15 @@ manager: craigg
   
 -   If the table has no clustered index but has one or more nonclustered indexes, data pages are always minimally logged. How index pages are logged, however, depends on whether the table is empty:  
   
-    -   If the table is empty, index pages are minimally logged.  
+    -   If the table is empty, index pages are minimally logged.  If you start with an empty table and bulk import the data in multiple batches, both index and data pages are minimally logged for the first batch, but beginning with the second batch, only data pages are minimally logged. 
   
-    -   If table is non-empty, index pages are fully logged.  
+    -   If table is non-empty, index pages are fully logged.    
+
+-   If the table has a clustered index and is empty, both data and index pages are minimally logged. In contrast, if a table has a btree based clustered index and is non-empty, data pages and index pages are both fully logged regardless of the recovery model. If you start with an empty table  rowstore table and bulk import the data in batches, both index and data pages are minimally logged for the first batch, but from the second batch onwards, only data pages are bulk logged.
+
+- For information about logging for a clustered columnstore index (CCI), see [Columnstore index data loading guidance](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups).
   
-        > [!NOTE]  
-        >  If you start with an empty table and bulk import the data in multiple batches, both index and data pages are minimally logged for the first batch, but beginning with the second batch, only data pages are minimally logged.  
-  
--   If the table has a clustered index and is empty, both data and index pages are minimally logged. In contrast, if a table has a btree based  clustered index and is non-empty, data pages and index pages are both fully logged regardless of the recovery model. For tables with clustered columnstore index, the dataload into compressed rowgroup is always minimally logged independent of the table being empty or not when batchsize >= 102400.  
-  
-    > [!NOTE]  
-    >  If you start with an empty table  rowstore table and bulk import the data in batches, both index and data pages are minimally logged for the first batch, but from the second batch onwards, only data pages are bulk logged.  
+
   
 > [!NOTE]  
 >  When transactional replication is enabled, BULK INSERT operations are fully logged even under the Bulk Logged recovery model.  

@@ -1,13 +1,10 @@
 ---
-title: "Use the sqlcmd Utility | Microsoft Docs"
-ms.custom: ""
+title: Use the sqlcmd Utility
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "statements [SQL Server], executing"
   - "sqlcmd utility, about sqlcmd utility"
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -477,12 +473,12 @@ manager: craigg
   
  `SQLCMD returned 100 to the command shell`  
   
-### G. Using sqlcmd to set encryption on Windows Azure SQL Database  
+### G. Using sqlcmd to set encryption on Azure SQL Database  
  A `sqlcmd`can be executed on a connection to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] data on to specify encryption and certificate trust. Two `sqlcmd```options are available:  
   
 -   The -N switch is used by the client to request an encrypted connection. This option is equivalent to the ADO.net option `ENCRYPT = true`.  
   
--   The –C switch is used by the client to configure it to implicitly the trust server certificate and not validate it. This option is equivalent to the ADO.net option `TRUSTSERVERCERTIFICATE = true`.  
+-   The -C switch is used by the client to configure it to implicitly the trust server certificate and not validate it. This option is equivalent to the ADO.net option `TRUSTSERVERCERTIFICATE = true`.  
   
  The [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service does not support all the `SET` options available on a SQL Server instance. The following options throw an error when the corresponding `SET` option is set to `ON` or `OFF`:  
   
@@ -508,21 +504,21 @@ manager: craigg
  Connect using Windows credentials and encrypt communication:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Connect using Windows credentials and trust server certificate:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -531,28 +527,28 @@ SQLCMD –E –N –C
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -T  
   
 ```  
   
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

@@ -1,22 +1,18 @@
 ---
-title: "Data Source Sample | Microsoft Docs"
+title: "Data source sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Data Source Sample
+# Data source sample
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -33,7 +29,7 @@ The code file for this sample is named ConnectDataSource.java, and it can be fou
 To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
@@ -84,6 +80,6 @@ public class ConnectDataSource {
 }
 ```
 
-## See Also
+## See also
 
-[Connecting and Retrieving Data](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)
+[Connecting and retrieving data](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)

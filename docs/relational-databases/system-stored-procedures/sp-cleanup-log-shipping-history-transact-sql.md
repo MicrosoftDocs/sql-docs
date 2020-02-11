@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cleanup_log_shipping_history_TSQL"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cleanup_log_shipping_history"
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +35,10 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## Arguments  
- [ **@agent_id =** ] '*agent_id*',  
+`[ @agent_id = ] 'agent_id',`
  The primary ID for backup or the secondary ID for copy or restore. *agent_id* is **uniqueidentifier** and cannot be NULL.  
   
- [ **@agent_type =** ] '*agent_type*'  
+`[ @agent_type = ] 'agent_type'`
  The type of log shipping job. 0 = Backup, 1 = Copy, 2 = Restore. *agent_type* is **tinyint** and cannot be NULL.  
   
 ## Return Code Values  

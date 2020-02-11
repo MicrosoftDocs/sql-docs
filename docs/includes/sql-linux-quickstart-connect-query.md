@@ -108,9 +108,10 @@ In addition to **sqlcmd**, you can use the following cross-platform tools to man
 
 |||
 |---|---|
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | A cross-platform GUI database management utility. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | A cross-platform command-line interface for running Transact-SQL commands. |
+| [Azure Data Studio](../azure-data-studio/index.md) | A cross-platform GUI database management utility. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | A cross-platform GUI code editor that run Transact-SQL statements with the mssql extension. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | A cross-platform automation and configuration tool based on cmdlets. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | A cross-platform command-line interface for running Transact-SQL commands. |
 
 ## Connecting from Windows
 

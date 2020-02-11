@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagesettingsdialog.f1"
 ms.assetid: 58b26088-f4b1-4962-b824-3e360e955671
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

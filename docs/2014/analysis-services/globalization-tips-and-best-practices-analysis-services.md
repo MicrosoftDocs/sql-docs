@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "translations [Analysis Services], client applications"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "time [Analysis Services]"
   - "month comparisons [Analysis Services]"
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -47,7 +43,7 @@ manager: craigg
   
  The space character is a 'special case' because it can be represented as a single-byte (SBCS) or double-byte character set (DBCS) in Unicode. In the relational engine, two compound strings separated by a space -- one using SBCS, the other in DBCS -- are considered identical. In Analysis Services, during processing, the same two compound strings are not identical, and the second instance will be flagged as a duplicate.  
   
- For more details and suggested workarounds, see [Blanks in a Unicode string have different processing outcomes based on collation](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
+ For more details and suggested workarounds, see [Blanks in a Unicode string have different processing outcomes based on collation](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
 ##  <a name="bkmk_recos"></a> Common collation recommendations  
  Analysis Services always presents the full list of all available languages and collations; it does not filter the collations based on the language you selected. Be sure to choose a workable combination.  
@@ -68,7 +64,7 @@ manager: craigg
   
      In Taiwan, it is more common to see Traditional Chinese with the recommended sort order is based on Stroke Count: Chinese_Taiwan_Stroke (for SQL Server 2000), Chinese_Taiwan_Stroke_90 (for SQL Server 2005) or Chinese_Traditional_Stroke_Count_100 (for SQL Server 2008 and later).  
   
-     Other regions (such as Hong Kong and Macau) also use Traditional Chinese. For collations, in Hong Kong, it's not unusual to see Chinese_Hong_Kong_Stroke_90 (on SQL Server 2005). In Macau, Chinese_Traditional_Stroke_Count_100 (on SQL Server 2008 and later) is used fairly often.  
+     Other regions (such as Hong Kong and Macao) also use Traditional Chinese. For collations, in Hong Kong, it's not unusual to see Chinese_Hong_Kong_Stroke_90 (on SQL Server 2005). In Macao, Chinese_Traditional_Stroke_Count_100 (on SQL Server 2008 and later) is used fairly often.  
   
 -   For Japanese, the most commonly used collation is Japanese_CI_AS. Japanese_XJIS_100 is used in installations supporting [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). Japanese_BIN2 is typically seen in data migration projects, with data originating from non-Windows platforms, or from data sources other than the SQL Server relational database engine.  
   

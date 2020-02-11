@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Source_Control.Visual_SourceSafe"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "source controls [SQL Server Management Studio], options"
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -80,7 +77,7 @@ manager: craigg
      Selecting one of these roles causes the appropriate source control options to be selected automatically.  
   
      **Keep items checked out when checking in**  
-     Specifies that when you check in items to update the source control store, the items should remain checked out to you. If you want to change this option for a specific check-in, click the **Options** arrow in the **Check in** dialog box, and then clear the **Keep****checked out** check box.  
+     Specifies that when you check in items to update the source control store, the items should remain checked out to you. If you want to change this option for a specific check-in, click the **Options** arrow in the **Check in** dialog box, and then clear the **Keep checked out** check box.  
   
      **Checked-in items**  
      Displays a list of options that specify how [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] should behave when you attempt to edit an item that is not checked out. The following tables describe the available options.  

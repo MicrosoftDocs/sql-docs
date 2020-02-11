@@ -1,14 +1,12 @@
 ---
-title: "Clean Up Merge Metadata (Replication Transact-SQL Programming) | Microsoft Docs"
-ms.custom: ""
+title: "Clean up Merge metadata (Replication SP)"
+description: Progrommatically clean up data in the Merge replication tables using replication stored procedures
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -16,10 +14,8 @@ helpviewer_keywords:
   - "metadata [SQL Server replication]"
   - "sp_mergemetadataretentioncleanup"
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
-caps.latest.revision: 33
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Clean Up Merge Metadata (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +25,7 @@ manager: craigg
   
 1.  At the Publisher on the publication database, execute [sp_mergemetadataretentioncleanup](../../../relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql.md).  
   
-2.  (Optional) Note the number of rows removed in step 1 from the [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), and [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) system tables, returned respectively in the **@num_genhistory_rows**, **@num_contents_rows**, and **@num_tombstone_rows** output parameters.  
+2.  (Optional) Note the number of rows removed in step 1 from the [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), and [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) system tables, returned respectively in the `@num_genhistory_rows`, `@num_contents_rows`, and `@num_tombstone_rows` output parameters.  
   
 3.  Repeat steps 1 and 2 at the Subscriber to clean up metadata on the subscription database.  
   

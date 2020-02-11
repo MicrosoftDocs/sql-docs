@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], SQLSetPos"
@@ -16,13 +14,11 @@ helpviewer_keywords:
   - "backward compatibility [ODBC], SqlSetPos"
   - "application upgrades [ODBC], SQLSetPos"
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Calling SQLSetPos
-In ODBC 2.*x*, the pointer to the row status array was an argument to **SQLExtendedFetch**. The row status array was later updated by a call to **SQLSetPos**. Some drivers have relied on the fact that this array does not change between **SQLExtendedFetch** and **SQLSetPos**. In ODBC 3.*x*, the pointer to the status array is a descriptor field and therefore the application can easily change it to point to a different array. This can be a problem when an ODBC 3.*x* application is working with an ODBC 2.*x* driver but is calling **SQLSetStmtAttr** to set the array status pointer and is calling **SQLFetchScroll** to fetch data. The Driver Manager maps it as a sequence of calls to **SQLExtendedFetch**. In the following code, an error would normally be raised when the Driver Manager maps the second **SQLSetStmtAttr** call when working with an ODBC 2*.x* driver:  
+In ODBC *2.x*, the pointer to the row status array was an argument to **SQLExtendedFetch**. The row status array was later updated by a call to **SQLSetPos**. Some drivers have relied on the fact that this array does not change between **SQLExtendedFetch** and **SQLSetPos**. In ODBC *3.x*, the pointer to the status array is a descriptor field and therefore the application can easily change it to point to a different array. This can be a problem when an ODBC *3.x* application is working with an ODBC *2.x* driver but is calling **SQLSetStmtAttr** to set the array status pointer and is calling **SQLFetchScroll** to fetch data. The Driver Manager maps it as a sequence of calls to **SQLExtendedFetch**. In the following code, an error would normally be raised when the Driver Manager maps the second **SQLSetStmtAttr** call when working with an ODBC *2.x* driver:  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -31,7 +27,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- The error would be raised if there were no way to change the row status pointer in ODBC 2.*x* between calls to **SQLExtendedFetch**. Instead, the Driver Manager performs the following steps when working with an ODBC 2*.x* driver:  
+ The error would be raised if there were no way to change the row status pointer in ODBC *2.x* between calls to **SQLExtendedFetch**. Instead, the Driver Manager performs the following steps when working with an ODBC *2.x* driver:  
   
 1.  Initializes an internal Driver Manager flag *fSetPosError* to TRUE.  
   

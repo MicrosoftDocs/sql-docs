@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "11/24/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cardinality estimator"
   - "CE (cardinality estimator)"
   - "estimating cardinality"
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -34,11 +30,11 @@ manager: craigg
   
 2.  Run your test workload with the new cardinality estimator, and then troubleshoot any new performance issues in the same manner you currently troubleshoot performance issues.  
   
-3.  Once your workload is running with the new cardinality estimator (database compatibility level 120 (SQL Server 2014)), and a specific query has regressed, you can run the query with trace flag 9481 to use the version of the cardinality estimator used in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier. To run a query with a trace flag, see the KB article [Enable plan-affecting SQL Server query optimizer behavior that can be controlled by different trace flags on a specific-query level](http://support.microsoft.com/kb/2801413).  
+3.  Once your workload is running with the new cardinality estimator (database compatibility level 120 (SQL Server 2014)), and a specific query has regressed, you can run the query with trace flag 9481 to use the version of the cardinality estimator used in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier. To run a query with a trace flag, see the KB article [Enable plan-affecting SQL Server query optimizer behavior that can be controlled by different trace flags on a specific-query level](https://support.microsoft.com/kb/2801413).  
   
 4.  If you cannot change all of the databases at once to use the new cardinality estimator, you can use the former cardinality estimator for all databases by using [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) to set the database compatibility level to 110.  
   
-5.  If your workload is running with database compatibility level 110 and you want to test or run a specific query with the new cardinality estimator, you can run the query with trace flag 2312 to use the SQL Server 2014 version of the cardinality estimator.  To run a query with a trace flag, see the KB article [Enable plan-affecting SQL Server query optimizer behavior that can be controlled by different trace flags on a specific-query level](http://support.microsoft.com/kb/2801413).  
+5.  If your workload is running with database compatibility level 110 and you want to test or run a specific query with the new cardinality estimator, you can run the query with trace flag 2312 to use the SQL Server 2014 version of the cardinality estimator.  To run a query with a trace flag, see the KB article [Enable plan-affecting SQL Server query optimizer behavior that can be controlled by different trace flags on a specific-query level](https://support.microsoft.com/kb/2801413).  
   
 ## New XEvents  
  There are two new query_optimizer_estimate_cardinality XEvents to support the new query plans.  

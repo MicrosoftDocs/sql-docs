@@ -1,13 +1,11 @@
 ---
 title: "sql_variant (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "9/12/2017"
+ms.date: "09/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sql_variant"
@@ -20,10 +18,8 @@ helpviewer_keywords:
   - "sql_variant data type"
   - "storage [SQL Server], sql_variant"
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +102,9 @@ The following table lists the types of values that cannot be stored by using **s
 |**image**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
-|User-defined types|**datetimeoffset**|  
+|User-defined types|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> SQL Server 2012 and greater do not restrict **datetimeoffset**.
 
 ## Examples  
 

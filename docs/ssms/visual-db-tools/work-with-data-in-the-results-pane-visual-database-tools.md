@@ -1,14 +1,10 @@
 ---
-title: "Work with Data in the Results Pane (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Work with Data in the Results Pane
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.prod_service: sql-tools
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "View Designer, Results pane"
@@ -20,10 +16,10 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
   - "Results pane"
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Work with Data in the Results Pane (Visual Database Tools)

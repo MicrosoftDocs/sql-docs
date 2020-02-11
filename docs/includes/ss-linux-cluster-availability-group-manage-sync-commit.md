@@ -3,7 +3,7 @@
 >[!WARNING]
 >In some cases, a SQL Server availability group in synchronous commit mode on Linux may be vulnerable to data loss. See the following details on the root cause and the workaround to make sure data loss is avoided. This issue is going to be fixed in the upcoming releases.
 
-###Pacemaker notification for Availability Group resource promotion
+### Pacemaker notification for Availability Group resource promotion
 
 Before CTP 1.4 release, the Pacemaker resource agent for availability groups could not know if a replica marked as `SYNCHRONOUS_COMMIT` was really up-to-date or not. It was possible that the replica had stopped synchronizing with the primary but was not aware. Thus the agent could promote an out-of-date replica to primary - which if successful would cause data loss. 
 
@@ -17,7 +17,7 @@ Note that this is only guaranteed to work as long as at least one replica availa
 
 In the following case, an availability group may still be vulnerable to data loss. In a cluster that includes five nodes, if there is an availability group with replicas on three instances of SQL Server, it is possible for the primary replica and one secondary replica to be ahead of the other secondary replica. When they are ahead, the `sequence_number` in `sys.availability_groups` will be higher than the other replicas. In this condition, if the two replicas lose connectivity with the rest of the cluster, Pacemaker may see the remaining three nodes as a quorum, and allow the latent replica to promote itself to primary. In this situation, there is potential for data loss.
 
-sql2017 introduces a new feature to force a certain number of secondaries to be available before any transactions can be committed on the primary. `REQUIRED_COPIES_TO_COMMIT` allows you to set a number of replicas that must commit to secondary replica database transaction logs before a transaction can proceed. You can use this option with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. See [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx).
+sql2017 introduces a new feature to force a certain number of secondaries to be available before any transactions can be committed on the primary. `REQUIRED_COPIES_TO_COMMIT` allows you to set a number of replicas that must commit to secondary replica database transaction logs before a transaction can proceed. You can use this option with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. See [CREATE AVAILABILITY GROUP](https://msdn.microsoft.com/library/ff878399.aspx).
 
 To avoid the potential of data loss described above set `REQUIRED_COPIES_TO_COMMIT` to the maximum number of synchronized replicas. Upcoming releases will have built in logic to handle setting `REQUIRED_COPIES_TO_COMMIT` automatically.
 When `REQUIRED_COPIES_TO_COMMIT` is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of synchronous secondary replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.

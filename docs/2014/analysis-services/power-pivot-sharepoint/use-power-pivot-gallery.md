@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "09/01/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -45,9 +41,9 @@ manager: craigg
   
 > [!NOTE]  
 >  The Power Pivot Gallery requires Microsoft Silverlight.  The Microsoft Edge browser does not support Silverlight.   
-> To view the library contents in Edge, click the **Library** tab in  Power Pivot gallery, and then change the document library view to **All Documents**.    
+> To view the library contents in Microsoft Edge, click the **Library** tab in  Power Pivot gallery, and then change the document library view to **All Documents**.    
 > To change  the default view , click  the **Library** tab and then click  Modify View. Click  "Make this the default view" and then click OK to save the  default view.  
->  For more information on what Edge supports, see the Windows blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  For more information on what Microsoft Edge supports, see the Windows blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  For a complete list of prerequisites, see [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md).  
   
@@ -152,9 +148,9 @@ manager: craigg
 ### Document Type is Not Supported  
  The **PowerPivot Gallery Document** content type is not supported. If you enable the **PowerPivot Gallery Document** content type for a document library, and attempt to create a new document of that type, you will see an error message similar to one of the following:  
   
--   ‘New Document’ requires a Microsoft Sharepoint Foundation-compatible application and web browser. To add a document to this document library, click the ‘Upload Document’ button.  
+-   'New Document' requires a Microsoft Sharepoint Foundation-compatible application and web browser. To add a document to this document library, click the 'Upload Document' button.  
   
--   "The Internet address 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' is not valid."“Microsoft Excel cannot access the file 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. There are several possible reasons:  
+-   "The Internet address 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' is not valid.""Microsoft Excel cannot access the file 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. There are several possible reasons:  
   
  The **PowerPivot Gallery Document** content type is not automatically added to document libraries,  You will not encounter this issue unless you manually enable the unsupported content type.  
   
@@ -163,5 +159,4 @@ manager: craigg
  [Delete PowerPivot Gallery](delete-power-pivot-gallery.md)   
  [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md)   
  [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
-  
   

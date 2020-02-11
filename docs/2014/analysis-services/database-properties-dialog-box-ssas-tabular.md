@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssmsimbi.DatabaseProperties.f1"
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg

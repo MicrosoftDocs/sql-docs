@@ -1,15 +1,12 @@
 ---
-title: Performance best practices for SQL Server on Linux | Microsoft Docs
-description: This article provide performance best practices and guidelines for running SQL Server 2017 on Linux.
+title: Performance best practices for SQL Server on Linux
+description: This article provide performance best practices and guidelines for running SQL Server on Linux.
 author: rgward 
-ms.author: bobward 
-manager: craigg
+ms.author: bobward
+ms.reviewer: vanto
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
@@ -33,11 +30,11 @@ It is recommended to perform the following configuration tasks after you install
 
 - **Configure multiple tempdb data files**
 
-   Because a SQL Server on Linux installation does not offer an option to configure multiple tempdb files, we recommend that you consider creating multiple tempdb data files after installation. For more information, see the guidance in the article, [Recommendations to reduce allocation contention in SQL Server tempdb database](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
+   Because a SQL Server on Linux installation does not offer an option to configure multiple tempdb files, we recommend that you consider creating multiple tempdb data files after installation. For more information, see the guidance in the article, [Recommendations to reduce allocation contention in SQL Server tempdb database](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
 
 ### Advanced Configuration
 
-The following recommendations are optional configuration settings that you may elect to perform after installation of SQL Server on Linux. These choices are based on the requirements of your workload and configuration of your Linux Operating System.
+The following recommendations are optional configuration settings that you may choose to perform after installation of SQL Server on Linux. These choices are based on the requirements of your workload and configuration of your Linux Operating System.
 
 - **Set a memory limit with mssql-conf**
 
@@ -71,7 +68,7 @@ The following table provides recommendations for disk settings:
 | Setting | Value | More information |
 |---|---|---|
 | disk readahead | 4096 | See the **blockdev** command |
-| sysctl settings | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | See the **sysctl** command |
+| sysctl settings | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | See the **sysctl** command |
 
 ### Kernel setting auto numa balancing for multi-node NUMA systems
 

@@ -1,23 +1,19 @@
 ---
-title: "Run Queries (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Run Queries
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.prod_service: sql-tools
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], executing"
   - "executing queries [SQL Server]"
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Run Queries (Visual Database Tools)
@@ -30,7 +26,7 @@ When you have finished designing your query, you can run it.
   
 2.  Right-click anywhere in the query window, and select **Execute SQL** from the shortcut menu.  
   
-    –or–  
+    -or-  
   
     Press CTRL+R.  
   

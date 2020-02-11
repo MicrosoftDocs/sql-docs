@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Analysis Services], assemblies"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "assemblies [Analysis Services]"
   - "application domains [Analysis Services]"
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

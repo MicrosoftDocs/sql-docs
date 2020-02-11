@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [SQL Server], updating"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Update query"
   - "updating tables"
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

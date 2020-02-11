@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "calling stored procedures"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], calling"
   - "SQL Server Native Client OLE DB provider, stored procedures"
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -88,7 +85,7 @@ manager: craigg
   
  The general syntax for calling a procedure by using the ODBC CALL escape sequence is:  
   
- {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
+ {[**?=**]**call**_procedure_name_[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
   
  For example:  
   

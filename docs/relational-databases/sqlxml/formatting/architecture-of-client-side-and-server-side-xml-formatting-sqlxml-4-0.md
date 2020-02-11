@@ -1,14 +1,10 @@
 ---
-title: "Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Architecture of client and server-side XML (SQLXML)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "providers [SQLXML], XML formatting architecture"
@@ -20,10 +16,9 @@ helpviewer_keywords:
   - "SQL Server Native Client, XML"
   - "SQLXMLOLEDB Provider, XML formatting architecture"
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
-caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)

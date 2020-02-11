@@ -1,29 +1,27 @@
 ---
-title: "TuningTimeInMin Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: "TuningTimeInMin Element (DTA)"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "dta"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "TuningTimeInMin element"
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
-caps.latest.revision: 13
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # TuningTimeInMin Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies the maximum length of a tuning session in minutes.  
+
+Specifies the maximum length of a tuning session in minutes.  
   
 ## Syntax  
   

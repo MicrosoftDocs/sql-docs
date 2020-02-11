@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -47,11 +43,11 @@ manager: craigg
  **Select Input**  
  Click to choose the data to use as input to the mining model. If no data source has been specified, you can also click the **\<Input>** link, which is highlighted in red in the **DMX Query** pane.  
   
- Select **@InputRowset** from the dropdown list to open the **Replace InputRowset** dialog box and modify an existing input.  
+ Select **\@InputRowset** from the dropdown list to open the **Replace InputRowset** dialog box and modify an existing input.  
   
  Select **Add Input** to open the **Add Input** dialog box and specify a new data source.  
   
- You can also modify an existing input by clicking the **@InputRowset** link, which is highlighted in red in the DMX Query pane.  
+ You can also modify an existing input by clicking the **\@InputRowset** link, which is highlighted in red in the DMX Query pane.  
   
  **Map Columns**  
  Select columns from the mining model and then map them to columns in the external data source.  

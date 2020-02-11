@@ -1,18 +1,14 @@
 ---
-title: "Multi-Lingual and Global Deployments (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Multi-lingual and global deployments
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
-caps.latest.revision: 8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Multi-Lingual and Global Deployments (Master Data Services)
 

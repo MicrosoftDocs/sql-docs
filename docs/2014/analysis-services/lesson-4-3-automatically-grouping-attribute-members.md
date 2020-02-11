@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -121,7 +117,7 @@ manager: craigg
      Notice that there are now three groups of members of the **Vacation Hours** attribute that have sales values for products. (The other seven groups contain members with no sales data.)  
   
 ## Next Task in Lesson  
- [Hiding and Disabling Attribute Hierarchies](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [Hiding and Disabling Attribute Hierarchies](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## See Also  
  [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  

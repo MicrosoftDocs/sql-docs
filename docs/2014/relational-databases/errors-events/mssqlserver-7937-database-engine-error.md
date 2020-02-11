@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "7937 (Database Engine error)"
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

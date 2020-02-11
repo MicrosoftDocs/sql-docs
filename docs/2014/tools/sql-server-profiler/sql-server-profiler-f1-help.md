@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Profiler [SQL Server Profiler], help"
   - "SQL Server Profiler, help"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

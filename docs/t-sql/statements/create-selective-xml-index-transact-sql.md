@@ -5,17 +5,13 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ CREATE SELECTIVE XML INDEX index_name
     [WITH (<index_options>)]  
   
 <table_object> ::=  
- { [database_name. [schema_name ] . | schema_name. ] table_name }  
+ { database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <promoted_node_path_list> ::=   
 <named_promoted_node_path_item> [, <promoted_node_path_list>]  
@@ -154,7 +150,7 @@ FOR(
   
 ```  
 CREATE SELECTIVE XML INDEX on T1(C1)  
-WITH XMLNAMESPACES ('http://www.tempuri.org/' as myns)  
+WITH XMLNAMESPACES ('https://www.tempuri.org/' as myns)  
 FOR ( path1 = '/myns:book/myns:author/text()' );  
 ```  
   

@@ -1,22 +1,24 @@
 ---
-title: Load data into memory using rxImport (SQL and R deep dive)| Microsoft Docs
+title: Load data using rxImport
+description: "RevoScaleR tutorial 10: How to load data using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Load data into memory using rxImport (SQL and R deep dive)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# Load data into memory using rxImport (SQL Server and RevoScaleR tutorial)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 10 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+
+In this tutorial, you'll learn how to get data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then use the **rxImport** function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.
 
 The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
-
-In this step, you learn how to get data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then use the **rxImport** function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.
 
 ## Extract a subset of data from SQL Server to local memory
 
@@ -55,19 +57,15 @@ You've decided that you want to examine only the high risk individuals in more d
 
 **Results**
 
-*ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans creditLine ccFraudProb1*
-
-*9.786345    SD   Male  Principal   23456       25            5 75   0.99994382*
-
-*9.433040    FL Female  Principal   20629       24           28 75   0.99992003*
-
-*8.556785    NY Female  Principal   19064       82           53 43   0.99980784*
-
-*8.188668    AZ Female  Principal   19948       29            0 75   0.99972235*
-
-*7.551699    NY Female  Principal   11051       95            0 75   0.99947516*
-
-*7.335080    NV   Male  Principal   21566        4            6  75   0.9993482*
+```R
+ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans creditLine ccFraudProb1
+9.786345    SD   Male  Principal   23456       25            5 75   0.99994382
+9.433040    FL Female  Principal   20629       24           28 75   0.99992003
+8.556785    NY Female  Principal   19064       82           53 43   0.99980784
+8.188668    AZ Female  Principal   19948       29            0 75   0.99972235
+7.551699    NY Female  Principal   11051       95            0 75   0.99947516
+7.335080    NV   Male  Principal   21566        4            6  75   0.9993482
+```
 
 ## More about rxImport
 
@@ -77,11 +75,7 @@ The **rxImport** function assigns variable names to the columns during the impor
 
 By specifying additional operations in the *transforms* parameter, you can do elementary processing on each chunk of data that is read.
 
-## Next step
+## Next steps
 
-[Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-
-## Previous step
-
-[Transform data using R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
+> [!div class="nextstepaction"]
+> [Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

@@ -1,14 +1,10 @@
 ---
-title: "Create a Data Quality Project | Microsoft Docs"
-ms.custom: ""
+title: "Create a Data Quality Project"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dqproject.newdqproject.f1"
@@ -16,10 +12,8 @@ helpviewer_keywords:
   - "create,data quality project"
   - "data quality project,create"
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: swinarko
+ms.author: sawinark
 ---
 # Create a Data Quality Project
 

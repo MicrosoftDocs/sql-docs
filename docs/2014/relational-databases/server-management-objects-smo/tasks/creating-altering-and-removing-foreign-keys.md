@@ -4,16 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "foreign keys [SMO]"
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
-caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -36,7 +31,7 @@ manager: craigg
 ## Creating, Altering, and Removing a Foreign Key in Visual C#  
  This code example shows how to create a foreign key relationship between one or more columns in one table to a primary key column in another table.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -65,7 +60,7 @@ manager: craigg
 ## Creating, Altering, and Removing a Foreign Key in PowerShell  
  This code example shows how to create a foreign key relationship between one or more columns in one table to a primary key column in another table.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
@@ -102,7 +97,7 @@ $fk.Create()
   
  The C# version of this sample:  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -197,7 +192,7 @@ public class A {
   
  The Visual Basic version of the sample:  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -290,5 +285,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

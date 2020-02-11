@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DecryptByCert_TSQL"
@@ -19,10 +17,8 @@ helpviewer_keywords:
   - "decryption [SQL Server], certificates"
   - "DECRYPTBYCERT function"
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-caps.latest.revision: 38
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ A variable of type **varbinary** containing data encrypted with the certificate.
 The password used to encrypt the private key of the certificate. *cert_password* must have a Unicode data format.  
   
  @cert_password  
-A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *@cert_password* must have a Unicode data format.  
+A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *\@cert_password* must have a Unicode data format.  
 
 ## Return Types  
 **varbinary**, with a maximum size of 8,000 bytes.  

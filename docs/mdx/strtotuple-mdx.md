@@ -8,12 +8,11 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # StrToTuple (MDX)
 
 
-  Returns the tuple specified by a Multidimensional Expressions (MDX)–formatted string.  
+  Returns the tuple specified by a Multidimensional Expressions (MDX)-formatted string.  
   
 ## Syntax  
   

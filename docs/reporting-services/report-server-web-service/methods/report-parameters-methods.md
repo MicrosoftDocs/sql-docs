@@ -4,18 +4,15 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "methods [Reporting Services], report parameters"
   - "parameters [Reporting Services], methods"
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Parameters Methods
   You can use these methods to set and retrieve parameters for reports.  

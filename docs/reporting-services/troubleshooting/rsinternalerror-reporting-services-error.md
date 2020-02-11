@@ -2,17 +2,16 @@
 title: "rsInternalError - Reporting Services Error | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rsInternalError"
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # rsInternalError - Reporting Services Error
     

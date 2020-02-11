@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB data source objects [SQL Server Native Client]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, persisted data source objects"
   - "persisted data source objects"
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg

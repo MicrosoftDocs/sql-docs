@@ -4,19 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: extensions
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "connections [Reporting Services], data processing extensions"
   - "Connection class"
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Implementing a Connection Class for a Data Processing Extension
   The **Connection** object represents a database connection or similar resource and is the starting point for users of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. It represents connections to database servers, though any entity with similar behavior can be exposed as a **Connection**.  
@@ -43,7 +40,7 @@ ms.author: maghan
 > [!NOTE]  
 >  Implementing <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> implicitly requires you to implement the members of the <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> and <xref:Microsoft.ReportingServices.Interfaces.IExtension> interfaces.  
 >   
->  For a sample **Connection** class implementation, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+>  For a sample **Connection** class implementation, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   

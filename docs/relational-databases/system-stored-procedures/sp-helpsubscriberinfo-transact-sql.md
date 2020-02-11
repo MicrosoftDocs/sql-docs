@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpsubscriberinfo"
@@ -17,13 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpsubscriberinfo"
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpsubscriberinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Displays information about a Subscriber. This stored procedure is executed at the Publisher on any database.  
   
@@ -38,10 +32,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## Arguments  
- [ **@subscriber =** ] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of **%**, which returns all information.  
   
- [ **@publisher =** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, and defaults to the name of the current server.  
   
 > [!NOTE]  

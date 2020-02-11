@@ -2,9 +2,8 @@
 title: "E-Mail Delivery in Reporting Services | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "e-mail [Reporting Services]"
   - "mail [Reporting Services]"
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # E-Mail Delivery in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension that provides a way to e-mail a report to individual users or groups. To distribute a report by e-mail, you 1) configure the report server for e-mail delivery and 2) define either a standard subscription or a data-driven subscription. A single subscription cannot deliver multiple reports in a single e-mail message. However you can create multiple subscriptions.  
@@ -38,9 +37,9 @@ ms.author: maghan
   
 -   Send a notification in the Subject: line of an e-mail message. By default, the Subject: line in the subscription definition includes the following variables that are replaced by report-specific information when the subscription is processed:  
   
-     **@ReportName** specifies the name of the report.  
+     **\@ReportName** specifies the name of the report.  
   
-     **@ExecutionTime** specifies when the report was executed.  
+     **\@ExecutionTime** specifies when the report was executed.  
   
      You can combine these variables with static text or modify the text in the Subject: line for each subscription.  
   

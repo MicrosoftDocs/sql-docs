@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Testing Accuracy with Lift Charts (Basic Data Mining Tutorial)
   On the **Mining Accuracy Chart** tab of Data Mining Designer, you can calculate how well each of your models makes predictions, and compare the results of each model directly against the results of the other models. This method of comparison is referred to as a *lift chart*. Typically, the predictive accuracy of a mining model is measured by either lift or classification accuracy. For this tutorial we will use the lift chart only.  
@@ -44,7 +40,7 @@ manager: craigg
   
      To use a column as the **Predictable Column Name** in an accuracy chart, the columns must have the usage type of `Predict` or `Predict Only`. Also, the content type of the target column must be either `Discrete` or `Discretized`. In other words, you cannot measure accuracy against continuous numeric outputs using the lift chart.  
   
--   Do you want to measure the model’s general accuracy, or its accuracy  in predicting a particular value (such as [Bike Buyer] = ‘Yes’)  
+-   Do you want to measure the model's general accuracy, or its accuracy  in predicting a particular value (such as [Bike Buyer] = 'Yes')  
   
 #### To generate the lift chart  
   

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "10536 (Database Engine error)"
 ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,10 +24,10 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_TOO_MANY_STMTS|  
-|Message Text|Cannot create plan guide '%.\*ls' because the batch or module corresponding to the specified **@plan_handle** contains more than 1000 eligible statements. Create a plan guide for each statement in the batch or module by specifying a **statement_start_offset** value for each statement.|  
+|Message Text|Cannot create plan guide '%.\*ls' because the batch or module corresponding to the specified **\@plan_handle** contains more than 1000 eligible statements. Create a plan guide for each statement in the batch or module by specifying a **statement_start_offset** value for each statement.|  
   
 ## Explanation  
-The batch or module corresponding to the specified **@plan_handle** contains more than 1000 eligible statements.  
+The batch or module corresponding to the specified **\@plan_handle** contains more than 1000 eligible statements.  
   
 ## User Action  
 Create a plan guide for each statement in the batch or module by specifying a **statement_start_offset** value for each statement.  

@@ -1,12 +1,11 @@
 ---
-title: "Summary Page (Always On Availability Group Wizards) | Microsoft Docs"
-ms.custom: ""
+title: "Availability group wizard: Summary Page"
+description: "Describes the options of the 'Summary' page of the Always On Availability Group Wizard in SQL Server Management Studio."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.newagwizard.summary.f1"
@@ -14,10 +13,8 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.summary.f1"
   - "sql13.swb.failoverwizard.summary.f1"
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Summary Page (Always On Availability Group Wizards)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +34,9 @@ manager: craigg
  Once you are satisfied with your choices, click to make the wizard proceed with creating the availability group.  
   
  **Cancel**  
- Click to cancel the wizard. On the **Summary** page, cancelling the wizard causes it to exit without performing any actions.  
+ Click to cancel the wizard. On the **Summary** page, canceling the wizard causes it to exit without performing any actions.  
   
- ![Arrow icon used with Back to Top link](../../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -51,7 +48,7 @@ manager: craigg
   
 -   [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Arrow icon used with Back to Top link](../../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

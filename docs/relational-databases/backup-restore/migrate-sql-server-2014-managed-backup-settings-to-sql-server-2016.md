@@ -1,21 +1,17 @@
 ---
-title: "Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Migrate managed backup settings"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
-# Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016
+# Migrate managed backup settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic covers migration considerations for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] when upgrading from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   

@@ -1,24 +1,21 @@
 ---
-title: "Add Enhanced Database Failover to an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Enhanced failover for an availability group"
+description: "Steps to enable enhanced database failover, which triggers a failover if a database in an Always On availability group is no longer able to write transactions."
+ms.custom: "seodec18"
 ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], enhanced database failover"
 - "Availability Groups [SQL Server], failover"
 ms.assetid: 
-caps.latest.revision: 
 author: "MashaMSFT"
 ms.reviewer: "mikeray"
 ms.author: mathoma
-manager: craigg
 ---
-# Add enhanced database failover to an availability group (SQL Server)
+# Enable enhanced database failover to a database in an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2012 and 2014, if a database participating in an availability group on the primary replica loses the ability to write transactions, it will not trigger a failover even if the replicas are synchronized and configured for automatic failover.
@@ -37,7 +34,7 @@ This has the same availability group configuration as Scenario 1. Rather than Dr
 
 An availability group is configured between Instance A and Instance B containing two databases: DB1 and DB2. The availability mode is set to synchronous commit with a failover mode of automatic, and enhanced database failover is enabled. Access to the disk containing DB2's data and transaction log files is lost. When the problem is detected, the availability group will automatically fail over to Instance B.
 
-## Configure and view the enhanced database failover option
+## Configure enhanced failover
 
 Enhanced database failover can be configured using SQL Server Management Studio or Transact-SQL. The PowerShell cmdlets do not currently have this ability. By default, enhanced database failover is disabled.
 

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "MDAC [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], vs. MDAC"
   - "SQL Server Native Client, updating applications"
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -45,7 +42,7 @@ manager: craigg
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports access to previous [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not contain XML integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports SELECT … FOR XML queries, but does not support any other XML functionality. However, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does support the `xml` data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not contain XML integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports SELECT ... FOR XML queries, but does not support any other XML functionality. However, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does support the `xml` data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports configuring client-side network libraries using only connection string attributes. If you need more complete network library configuration, you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
   

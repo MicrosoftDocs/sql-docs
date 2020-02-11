@@ -1,23 +1,21 @@
 ---
 title: "Joins (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/18/2018"
+ms.date: "07/19/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "HASH join"
   - "NESTED LOOPS join"
   - "MERGE join"
+  - "ADAPTIVE join"
   - "joins [SQL Server], about joins"
   - "join hints [SQL Server]"
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Joins (SQL Server)
@@ -25,13 +23,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs sort, intersect, union, and difference operations using in-memory sorting and hash join technology. Using this type of query plan, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports vertical table partitioning, sometimes called columnar storage.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employs three types of join operations:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employs four types of join operations:    
 -   Nested Loops joins     
 -   Merge joins   
 -   Hash joins   
+-   Adaptive joins (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 ## <a name="fundamentals"></a> Join Fundamentals
-By using joins, you can retrieve data from two or more tables based on logical relationships between the tables. Joins indicate how Microsoft SQL Server should use data from one table to select the rows in another table.    
+By using joins, you can retrieve data from two or more tables based on logical relationships between the tables. Joins indicate how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should use data from one table to select the rows in another table.    
 
 A join condition defines the way two tables are related in a query by:    
 -   Specifying the column from each table to be used for the join. A typical join condition specifies a foreign key from one table and its associated key in the other table.    
@@ -112,6 +111,8 @@ In the simplest case, the search scans an entire table or index; this is called 
 
 A nested loops join is particularly effective if the outer input is small and the inner input is preindexed and large. In many small transactions, such as those affecting only a small set of rows, index nested loops joins are superior to both merge joins and hash joins. In large queries, however, nested loops joins are often not the optimal choice.    
 
+When the OPTIMIZED attribute of a Nested Loops join operator is set to **True**, it means that an Optimized Nested Loops (or Batch Sort) is used to minimize I/O when the inner side table is large, regardless of it being parallelized or not. The presence of this optimization in a given plan may not be very obvious when analyzing an execution plan, given the sort itself is a hidden operation. But by looking in the plan XML for the attribute OPTIMIZED, this indicates the Nested Loops join may try to reorder the input rows to improve I/O performance.
+
 ## <a name="merge"></a> Understanding Merge joins
 If the two join inputs are not small but are sorted on their join column (for example, if they were obtained by scanning sorted indexes), a merge join is the fastest join operation. If both join inputs are large and the two inputs are of similar sizes, a merge join with prior sorting and a hash join offer similar performance. However, hash join operations are often much faster if the two input sizes differ significantly from each other.       
 
@@ -139,15 +140,12 @@ Hash joins are used for many types of set-matching operations: inner join; left,
 The following sections describe different types of hash joins: in-memory hash join, grace hash join, and recursive hash join.    
 
 ### <a name="inmem_hash"></a> In-Memory Hash Join
-
 The hash join first scans or computes the entire build input and then builds a hash table in memory. Each row is inserted into a hash bucket depending on the hash value computed for the hash key. If the entire build input is smaller than the available memory, all rows can be inserted into the hash table. This build phase is followed by the probe phase. The entire probe input is scanned or computed one row at a time, and for each probe row, the hash key's value is computed, the corresponding hash bucket is scanned, and the matches are produced.    
 
 ### <a name="grace_hash"></a> Grace Hash Join
-
 If the build input does not fit in memory, a hash join proceeds in several steps. This is known as a grace hash join. Each step has a build phase and probe phase. Initially, the entire build and probe inputs are consumed and partitioned (using a hash function on the hash keys) into multiple files. Using the hash function on the hash keys guarantees that any two joining records must be in the same pair of files. Therefore, the task of joining two large inputs has been reduced to multiple, but smaller, instances of the same tasks. The hash join is then applied to each pair of partitioned files.    
 
 ### <a name="recursive_hash"></a> Recursive Hash Join
-
 If the build input is so large that inputs for a standard external merge would require multiple merge levels, multiple partitioning steps and multiple partitioning levels are required. If only some of the partitions are large, additional partitioning steps are used for only those specific partitions. In order to make all partitioning steps as fast as possible, large, asynchronous I/O operations are used so that a single thread can keep multiple disk drives busy.    
 
 > [!NOTE]
@@ -161,14 +159,132 @@ If the Query Optimizer anticipates wrongly which of the two inputs is smaller an
 > Role reversal occurs independent of any query hints or structure. Role reversal does not display in your query plan; when it occurs, it is transparent to the user.
 
 ### <a name="hash_bailout"></a> Hash Bailout
-
 The term hash bailout is sometimes used to describe grace hash joins or recursive hash joins.    
 
 > [!NOTE]
 > Recursive hash joins or hash bailouts cause reduced performance in your server. If you see many Hash Warning events in a trace, update statistics on the columns that are being joined.    
 
 For more information about hash bailout, see [Hash Warning Event Class](../../relational-databases/event-classes/hash-warning-event-class.md).    
-  
+
+## <a name="adaptive"></a> Understanding Adaptive joins
+[Batch mode](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) Adaptive Joins enable the choice of a [Hash Join](#hash) or [Nested Loops](#nested_loops) join method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. A query plan can therefore dynamically switch to a better join strategy during execution without having to be recompiled. 
+
+> [!TIP]
+> Workloads with frequent oscillations between small and large join input scans will benefit most from this feature.
+
+The runtime decision is based on the following steps:
+-  If the row count of the build join input is small enough that a Nested Loops join would be more optimal than a Hash join, the plan switches to a Nested Loops algorithm.
+-  If the build join input exceeds a specific row count threshold, no switch occurs and your plan continues with a Hash join.
+
+The following query is used to illustrate an Adaptive Join example:
+
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 360;
+```
+
+The query returns 336 rows. Enabling [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) displays the following plan:
+
+![Query result 336 rows](../../relational-databases/performance/media/4_AQPStats336Rows.png)
+
+In the plan, note the following:
+1. A columnstore index scan used to provide rows for the Hash join build phase.
+2. The new Adaptive Join operator. This operator defines a threshold that is used to decide when to switch to a Nested Loops plan. For this example, the threshold is 78 rows. Anything with &gt;= 78 rows will use a Hash join. If less than the threshold, a Nested Loops join will be used.
+3. Since the query returns 336 rows, this exceeded the threshold and so the second branch represents the probe phase of a standard Hash join operation. Notice that Live Query Statistics shows rows flowing through the operators - in this case "672 of 672".
+4. And the last branch is a Clustered Index Seek for use by the Nested Loops join had the threshold not been exceeded. Notice that we see "0 of 336" rows displayed (the branch is unused).
+
+Now contrast the plan with the same query, but when the *Quantity* value only has one row in the table:
+ 
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 361;
+```
+The query returns one row. Enabling Live Query Statistics displays the following plan:
+
+![Query result one row](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
+
+In the plan, note the following:
+- With one row returned, the Clustered Index Seek now has rows flowing through it.
+- And since the Hash Join build phase did not continue, there are no rows flowing through the second branch.
+
+### Adaptive Join remarks
+Adaptive joins introduce a higher memory requirement than an indexed Nested Loops Join equivalent plan. The additional memory is requested as if the Nested Loops was a Hash join. There is also overhead for the build phase as a stop-and-go operation versus a Nested Loops streaming equivalent join. With that additional cost comes flexibility for scenarios where row counts may fluctuate in the build input.
+
+Batch mode Adaptive joins work for the initial execution of a statement, and once compiled, consecutive executions will remain adaptive based on the compiled Adaptive Join threshold and the runtime rows flowing through the build phase of the outer input.
+
+If an Adaptive Join switches to a Nested Loops operation, it uses the rows already read by the Hash Join build. The operator does **not** re-read the outer reference rows again.
+
+### Tracking Adaptive join activity
+The Adaptive Join operator has the following plan operator attributes:
+
+|Plan attribute|Description|
+|---|---|
+|AdaptiveThresholdRows|Shows the threshold use to switch from a hash join to nested loop join.|
+|EstimatedJoinType|What the join type is likely to be.|
+|ActualJoinType|In an actual plan, shows what join algorithm was ultimately chosen based on the threshold.|
+
+The estimated plan shows the Adaptive Join plan shape, along with a defined Adaptive Join threshold and estimated join type.
+
+> [!TIP]
+> Query Store captures and is able to force a batch mode Adaptive Join plan.
+
+### Adaptive join eligible statements
+A few conditions make a logical join eligible for a batch mode Adaptive Join:
+- The database compatibility level is 140 or higher.
+- The query is a `SELECT` statement (data modification statements are currently ineligible).
+- The join is eligible to be executed both by an indexed Nested Loops join or a Hash join physical algorithm.
+- The Hash join uses [Batch mode](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) - either through the presence of a Columnstore index in the query overall or a Columnstore indexed table being referenced directly by the join.
+- The generated alternative solutions of the Nested Loops join and Hash join should have the same first child (outer reference).
+
+### Adaptive threshold rows
+The following chart shows an example intersection between the cost of a Hash join versus the cost of a Nested Loops join alternative. At this intersection point, the threshold is determined that in turn determines the actual algorithm used for the join operation.
+
+![Join threshold](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
+
+### Disabling Adaptive joins without changing the compatibility level
+Adaptive joins can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  
+To disable Adaptive joins for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+When enabled, this setting will appear as enabled in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+To re-enable adaptive joins for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+Adaptive joins can also be disabled for a specific query by designating `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` as a [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint). For example:
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+> [!NOTE]
+> A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting. 
+
 ## <a name="nulls_joins"></a> Null Values and Joins
 When there are null values in the columns of the tables being joined, the null values do not match each other. The presence of null values in a column from one of the tables being joined can be returned only by using an outer join (unless the `WHERE` clause excludes null values).     
 
@@ -232,8 +348,4 @@ The results do not make it easy to distinguish a NULL in the data from a NULL th
 [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)      
-[Adaptive Joins](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  
+[Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    

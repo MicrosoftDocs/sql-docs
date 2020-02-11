@@ -5,15 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Directional Parameters
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

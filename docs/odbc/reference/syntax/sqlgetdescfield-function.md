@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetDescField"
@@ -19,10 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDescField function [ODBC]"
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetDescField Function
 **Conformance**  
@@ -33,15 +29,15 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDescField(  
-     SQLHDESC        DescriptorHandle,  
-     SQLSMALLINT     RecNumber,  
-     SQLSMALLINT     FieldIdentifier,  
-     SQLPOINTER      ValuePtr,  
-     SQLINTEGER      BufferLength,  
-     SQLINTEGER *    StringLengthPtr);  
+     SQLHDESC        DescriptorHandle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     FieldIdentifier,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
 ```  
   
 ## Arguments  

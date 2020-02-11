@@ -4,18 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
-caps.latest.revision: 25
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Executing the SSMA Console (AccessToSQL)
 Microsoft provides you with a robust set of script file commands and command line options to execute and control SSMA activities. The ensuing sections detail the same.  
@@ -49,7 +42,7 @@ create-new-project: Creates a new SSMA project.
   
     -   sql-azure  
   
-    Default is “sql-server-2008”.  
+    Default is "sql-server-2008".  
   
 **Example:**  
   
@@ -62,13 +55,13 @@ create-new-project: Creates a new SSMA project.
   
   overwrite-if-exists="<true/false>"  
   
-  project-type=”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”  
+  project-type="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"  
   
 />  
 ```  
-Attribute ‘overwrite-if-exists’ is **false** by default.  
+Attribute 'overwrite-if-exists' is **false** by default.  
   
-Attribute ‘project-type’ is **sql-server-2008** by default.  
+Attribute 'project-type' is **sql-server-2008** by default.  
   
 **Command**  
   
@@ -119,7 +112,7 @@ close-project: Closes the migration project.
   
 />  
 ```  
-Attribute ‘if-modified’ is optional, **ignore** by default.  
+Attribute 'if-modified' is optional, **ignore** by default.  
   
 ## Database Connection Script File Commands  
 The Database Connection commands help connect to the database.  
@@ -128,7 +121,7 @@ The **Browse** feature of the UI is not supported in console.
   
 The **windows-authentication** and **port** parameters are not applicable when connecting to SQL Azure.  
   
-For more information on ‘Creating Script Files’, see [Creating Script Files &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md).  
+For more information on 'Creating Script Files', see [Creating Script Files &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md).  
   
 **Command**  
   
@@ -325,7 +318,7 @@ or
 ## Migration Script File Commands  
 The Migration commands convert the target database schema to the source schema and migrates data to the target server.  
   
-The default console output setting for the migration commands is ‘Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
+The default console output setting for the migration commands is 'Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
   
 **Command**  
   
@@ -527,7 +520,7 @@ map-schema: Schema mapping of source database to the target schema.
 ## Manageability Commands  
 The Manageability commands help synchronize the target database objects with the source database.  
   
-The default console output setting for the migration commands is ‘Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
+The default console output setting for the migration commands is 'Full' output report with no detailed error reporting: Only summary at the source object tree root node.  
   
 **Command**  
   

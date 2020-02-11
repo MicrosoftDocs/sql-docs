@@ -5,17 +5,14 @@ ms.date: "07/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 1
 author: "v-makouz"
 ms.author: v-makouz
-manager: "kenvh"
+manager: kenvh
 ---
 # Data Classification
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -32,12 +29,12 @@ SQLGetDescField has the following syntax:
 
 ```  
 SQLRETURN SQLGetDescField(  
-     SQLHDESC        DescriptorHandle,  
-     SQLSMALLINT     RecNumber,  
-     SQLSMALLINT     FieldIdentifier,  
-     SQLPOINTER      ValuePtr,  
-     SQLINTEGER      BufferLength,  
-     SQLINTEGER *    StringLengthPtr);  
+     SQLHDESC        DescriptorHandle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     FieldIdentifier,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
  [Input] IRD(Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statement attribute
@@ -239,5 +236,26 @@ int main(int argc, char **argv)
     }
     return 0;
 }
+```
+
+## <a name="bkmk-version"></a>Supported Version
+Microsoft ODBC Driver 17.2 allows the retrieval Data Classification information via `SQLGetDescField` if `FieldIdentifier` is set to `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
+
+Starting from Microsoft ODBC Driver 17.4.1.1 it is possible to retrieve version of Data Classification supported by a server via `SQLGetDescField` using the `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) field identifier. In 17.4.1.1 the supported data classification version  is set to "2".
+
+ 
+
+Starting from 17.4.2.1 introduced the default version of data classification which is set to "1" and is the version driver is reporting to SQL Server as supported. New connection attribute `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) can allow application to change the supported version of Data Classification from "1" up to maximum supported.  
+
+Example: 
+
+To set the version this call should be made right before the SQLConnect or SQLDriverConnect call:
+```
+ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
+```
+
+The value of the currently supported version of Data Classification can be retirved via SQLGetConnectAttr call: 
+```
+ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
 

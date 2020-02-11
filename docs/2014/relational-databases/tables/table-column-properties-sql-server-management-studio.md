@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65558"
   - "vdtsql.chm:69657"
   - "vdt.ppg.columns"
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg

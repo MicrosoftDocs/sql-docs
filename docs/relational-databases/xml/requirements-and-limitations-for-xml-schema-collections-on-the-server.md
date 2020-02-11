@@ -1,14 +1,10 @@
 ---
-title: "Requirements and Limitations for XML Schema Collections on the Server | Microsoft Docs"
-ms.custom: ""
+title: "Requirements and limitations (XML schema collections) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "identifiers [XML schema collections]"
@@ -25,10 +21,9 @@ helpviewer_keywords:
   - "schema collections [SQL Server], guidelines"
   - "lexical representation"
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 84
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Requirements and Limitations for XML Schema Collections on the Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

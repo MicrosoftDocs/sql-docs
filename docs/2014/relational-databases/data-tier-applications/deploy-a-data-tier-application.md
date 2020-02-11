@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
 ms.topic: conceptual
 f1_keywords: 
@@ -63,7 +62,7 @@ manager: craigg
   
 1.  In **Object Explorer**, expand the node for the instance to which you want to deploy the DAC.  
   
-2.  Right-click the **Databases** node, then select **Deploy Data-tier Application…**  
+2.  Right-click the **Databases** node, then select **Deploy Data-tier Application...**  
   
 3.  Complete the wizard dialogs:  
   
@@ -199,10 +198,10 @@ manager: craigg
 ### Example (PowerShell)  
  The following example deploys a DAC named MyApplication on a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], using a DAC definition from a MyApplication.dacpac package.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -230,5 +229,3 @@ $fileStream.Close()
  [Data-tier Applications](data-tier-applications.md)   
  [Extract a DAC From a Database](extract-a-dac-from-a-database.md)   
  [Database Identifiers](../databases/database-identifiers.md)  
-  
-  

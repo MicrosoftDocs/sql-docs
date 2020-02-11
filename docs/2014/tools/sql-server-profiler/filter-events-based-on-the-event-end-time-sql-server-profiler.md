@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event end times [SQL Server]"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
   - "traces [SQL Server], events"
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying queries"
   - "queries [SQL Server], modifying"
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

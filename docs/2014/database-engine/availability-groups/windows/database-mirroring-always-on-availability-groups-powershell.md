@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -50,13 +47,12 @@ manager: craigg
 > [!IMPORTANT]  
 >  This example works only on a server instance that currently lack a database mirroring endpoint.  
   
-```  
+```powershell
 # Create the endpoint.  
 $endpoint = New-SqlHadrEndpoint MyMirroringEndpoint -Port 5022 -Path SQLSERVER:\SQL\Machine\Instance  
   
 # Start the endpoint  
-Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"  
-  
+Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ```  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
@@ -81,5 +77,3 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ## See Also  
  [Create an Availability Group &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  

@@ -1,17 +1,16 @@
-﻿---
-title: "Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs"
-ms.custom: ""
+---
+title: "Aliasing"
+description: "Aliasing in Azure SQL Data Warehouse and Parallel Data Warehouse."
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: "seo-lt-2019"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)

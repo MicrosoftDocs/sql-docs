@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication database upgrades [SQL Server replication]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -87,9 +83,8 @@ manager: craigg
  To ensure replication settings are retained when restoring a backup of a replicated database from a previous version: restore to a server and database with the same names as the server and database at which the backup was taken.  
   
 ## See Also  
- [Administration &#40;Replication&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Replication Backward Compatibility](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [What's New &#40;Replication&#41;](../../../2014/relational-databases/replication/what-s-new-replication.md)   
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Upgrade to SQL Server 2014](upgrade-sql-server.md)  
   

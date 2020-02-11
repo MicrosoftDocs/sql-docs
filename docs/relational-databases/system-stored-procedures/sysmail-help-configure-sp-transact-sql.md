@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_help_configure_sp"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_configure_sp"
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +33,14 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## Arguments  
- [**@parameter_name** = ] **'***parameter_name***'**  
- The name of the configuration setting to retrieve. When specified, the value of the configuration setting is returned in the **@parameter_value** OUTPUT parameter. When no **@parameter_name** is specified, this stored procedure returns a result set containing all of the Database Mail configuration settings in the instance.  
+`[ @parameter_name = ] 'parameter_name'`
+ The name of the configuration setting to retrieve. When specified, the value of the configuration setting is returned in the **\@parameter_value** OUTPUT parameter. When no **\@parameter_name** is specified, this stored procedure returns a result set containing all of the Database Mail configuration settings in the instance.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  
   
 ## Result Sets  
- When no **@parameter_name** is specified, returns a result set with the following columns.  
+ When no **\@parameter_name** is specified, returns a result set with the following columns.  
   
 ||||  
 |-|-|-|  
@@ -57,7 +52,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## Remarks  
  The stored procedure **sysmail_help_configure_sp** lists the current Database Mail configuration settings for the instance.  
   
- When a **@parameter_name** is specified, but no output parameter is provided for **@parameter_value**, this stored procedure produces no output.  
+ When a **\@parameter_name** is specified, but no output parameter is provided for **\@parameter_value**, this stored procedure produces no output.  
   
  The stored procedure **sysmail_help_configure_sp** is in the **msdb** database and is owned by the **dbo** schema. The procedure must be invoked with a three-part name if the current database is not **msdb**.  
   

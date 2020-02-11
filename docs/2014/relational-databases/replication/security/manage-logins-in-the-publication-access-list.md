@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server replication], publication access list"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "PAL (publication access list)"
   - "logins [SQL Server replication], managing"
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -58,19 +54,19 @@ manager: craigg
   
 #### To view groups and logins that belong to the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_help_publication_access](/sql/relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql). For **@publication**, specify the publication name. This displays information about the groups and logins in the PAL.  
+1.  At the Publisher on the publication database, execute [sp_help_publication_access](/sql/relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql). For **\@publication**, specify the publication name. This displays information about the groups and logins in the PAL.  
   
 #### To add groups and logins to the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_grant_publication_access](/sql/relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being added.  
+1.  At the Publisher on the publication database, execute [sp_grant_publication_access](/sql/relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql). For **\@publication**, specify the publication name; and for **\@login**, specify the name of the login or group that is being added.  
   
 #### To remove groups and logins from the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](/sql/relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being removed.  
+1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](/sql/relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql). For **\@publication**, specify the publication name; and for **\@login**, specify the name of the login or group that is being removed.  
   
 ## See Also  
  [Replication Agent Security Model](replication-agent-security-model.md)   
- [Secure a Replication Topology](secure-a-replication-topology.md)   
+ [Secure a Replication Topology](view-and-modify-replication-security-settings.md)   
  [Secure the Publisher](secure-the-publisher.md)  
   
   

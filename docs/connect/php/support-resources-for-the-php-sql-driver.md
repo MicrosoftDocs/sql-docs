@@ -1,21 +1,17 @@
 ---
 title: "Support Resources for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "10/15/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "support"
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Support Resources for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,8 +27,8 @@ To provide feedback, ask questions, or learn what the development team is consid
   
 [Microsoft PHP driver for SQL Server source code on Github](https://github.com/Microsoft/msphpsql)  
   
-## SQL Server/Transact-SQL Support Resources  
-SQL Server and Transact-SQL documentation can be found at [SQL Server Documentation](../../sql-server/sql-server-technical-documentation.md).  
+## SQL Server and Transact-SQL Support Resources
+SQL Server and Transact-SQL documentation can be found at [SQL Server Documentation](../../sql-server/index.yml).
   
 For peer-to-peer support, visit the [MSDN SQL Server Forums](https://social.msdn.microsoft.com/Forums/sqlserver/home).  
   
@@ -42,7 +38,7 @@ For the latest IIS news, visit [IIS Home](https://www.iis.net/).
 For peer-to-peer support, visit the [IIS Forums](https://forums.iis.net/).  
   
 ## PHP Support Resources  
-[PHP for Windows Documentation](http://windows.php.net/)  
+[PHP for Windows Documentation](https://windows.php.net/)  
   
 For the latest information about PHP, visit [http://www.php.net/](http://www.php.net).  
   

@@ -5,18 +5,14 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC architecture [ODBC], components"
   - "ODBC architecture [ODBC]"
 ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Architecture
 The ODBC architecture has four components:  

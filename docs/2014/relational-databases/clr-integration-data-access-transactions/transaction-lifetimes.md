@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "lifetimes [SQL Server]"
   - "Transact-SQL vs. managed code"
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
-caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
   
 -   An attempt to commit a transaction not started in the same procedure causes a run-time error.  
   
--   An attempt to roll back a transaction not started in the same procedure causes the transaction to hang (preventing any other side-effecting operation from happening). The transaction discontinues until the CLR code goes out of scope. Note that this can be useful when you detect an error inside your procedure and want to make sure the whole transaction terminates.  
+-   An attempt to roll back a transaction not started in the same procedure causes the transaction to stop responding (preventing any other side-effecting operation from happening). The transaction discontinues until the CLR code goes out of scope. Note that this can be useful when you detect an error inside your procedure and want to make sure the whole transaction terminates.  
   
 ## See Also  
  [CLR Integration and Transactions](../native-client-ole-db-transactions/transactions.md)  

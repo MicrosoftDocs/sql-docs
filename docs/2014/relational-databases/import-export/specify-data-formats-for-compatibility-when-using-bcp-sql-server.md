@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk exporting [SQL Server], compatibility"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], compatibility"
   - "bcp utility [SQL Server], compatibility"
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-caps.latest.revision: 36
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Specify Data Formats for Compatibility when Using bcp (SQL Server)

@@ -4,22 +4,18 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Time Series Predictions using Replacement Data (Intermediate Data Mining Tutorial)
   In this task, you will build a new model based on worldwide sales data. Then, you will create a prediction query that applies the worldwide sales model to one of the individual regions.  
   
 ## Building a General Model  
- Remember that your analysis of the results of the original mining model revealed big differences between regions and between product lines. For example, sales in North America were strong for the M200 model, while sales of the T1000 model did not do as well. However, the analysis is complicated by the fact that some series didn’t have much data, or data started at a different point in time. Some data was also missing.  
+ Remember that your analysis of the results of the original mining model revealed big differences between regions and between product lines. For example, sales in North America were strong for the M200 model, while sales of the T1000 model did not do as well. However, the analysis is complicated by the fact that some series didn't have much data, or data started at a different point in time. Some data was also missing.  
   
  ![Series predicting M200 and T1000 quantity](../../2014/tutorials/media/6series-defaultforecasting.gif "Series predicting M200 and T1000 quantity")  
   

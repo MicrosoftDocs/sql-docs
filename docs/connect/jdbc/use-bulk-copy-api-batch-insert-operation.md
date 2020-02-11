@@ -1,22 +1,18 @@
 ---
-title: "Using Bulk Copy API for Batch Insert Operation for MSSQL JDBC Driver | Microsoft Docs"
+title: "Using bulk copy API for batch insert operation for MSSQL JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Using Bulk Copy API for Batch Insert Operation
+# Using bulk copy API for batch insert operation
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -24,14 +20,14 @@ Microsoft JDBC Driver 7.0 for SQL Server supports using Bulk Copy API for batch 
 
 This feature is only applicable to PreparedStatement and CallableStatement's `executeBatch()` & `executeLargeBatch()` APIs.
 
-## Pre-Requisites
+## Prerequisites
 
 There are two prerequisites to enable Bulk Copy API for batch insert.
 
 * The server must be Azure Data Warehouse.
 * The query must be an insert query (the query may contain comments, but the query must start with the INSERT keyword for this feature to come into effect).
 
-## Enabling Bulk Copy API for batch insert
+## Enabling bulk copy API for batch insert
 
 There are three ways to enable Bulk Copy API for batch insert.
 
@@ -63,7 +59,7 @@ There are currently these limitations that apply to this feature.
 * Insert queries that contain INSERT-SELECT expressions (for example, `INSERT INTO TABLE SELECT * FROM TABLE2`), are not supported.
 * Insert queries that contain multiple VALUE expressions (for example, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), are not supported.
 * Insert queries that are followed by the OPTION clause, joined with multiple tables, or followed by another query, are not supported.
-* Due to the limitations of Bulk Copy API, `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, and `GEOGRAPHY` data types, are not supported for this feature.
+* Due to the limitations of Bulk Copy API, `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, and `GEOGRAPHY` data types, are currently not supported for this feature.
 
 If the query fails because of non "SQL server" related errors, the driver will log the error message and fallback to the original logic for batch insert.
 
@@ -138,6 +134,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## See Also
+## See also
 
-[Improving Performance and Reliability with the JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Improving performance and reliability with the JDBC driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65546"
   - "vdt.dlgbox.saveincomplete"
   - "vdtsql.chm:98831"
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

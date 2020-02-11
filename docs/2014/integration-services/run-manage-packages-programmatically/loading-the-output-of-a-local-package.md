@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], loading results"
   - "loading data flow results"
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: 64
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Loading the Output of a Local Package
@@ -82,7 +77,7 @@ manager: craigg
   
 6.  Click `Parameters` and, in the **Set Query Parameters** dialog box, map the single input parameter in the query, Parameter0, to the DtsClient::Country variable.  
   
-7.  Add an Aggregate transformation to the data flow, and connect the output of the OLE DB source to the transformation. Open the Aggregate Transformation Editor and configure it to peform a "Count all" operation on all input columns (*) and to output the aggregated value with the alias CustomerCount.  
+7.  Add an Aggregate transformation to the data flow, and connect the output of the OLE DB source to the transformation. Open the Aggregate Transformation Editor and configure it to perform a "Count all" operation on all input columns (*) and to output the aggregated value with the alias CustomerCount.  
   
 8.  Add a DataReader destination to the data flow and connect the output of the Aggregate transformation to the DataReader destination. The sample code uses "DataReaderDest" as the name of the DataReader. Select the single available input column, CustomerCount, for the destination.  
   
@@ -292,7 +287,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
+![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
   
 ## See Also  
  [Understanding the Differences between Local and Remote Execution](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

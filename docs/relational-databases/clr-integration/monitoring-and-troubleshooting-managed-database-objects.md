@@ -1,10 +1,10 @@
 ---
-title: "Monitoring and Troubleshooting Managed Database Objects | Microsoft Docs"
-ms.custom: ""
+title: "Monitor and Troubleshoot Managed Database Objects"
+description: Information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies (CLR).
+ms.custom: "seo-lt-2019"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -12,10 +12,8 @@ helpviewer_keywords:
   - "monitoring [CLR integration]"
   - "performance [CLR integration]"
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
-caps.latest.revision: 18
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Monitoring and Troubleshooting Managed Database Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +24,7 @@ manager: craigg
   
 |Event|Description|  
 |-----------|-----------------|  
-|[Assembly Load Event Class](http://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|Used to monitor assembly load requests (success and failures).|  
+|[Assembly Load Event Class](/sql/database-engine/assembly-load-event-class)|Used to monitor assembly load requests (success and failures).|  
 |[SQL:BatchStarting Event Class](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [SQL:BatchCompleted Event Class](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Provides information about [!INCLUDE[tsql](../../includes/tsql-md.md)] batches that have started or completed.|  
 |[SP:Starting Event Class](../../relational-databases/event-classes/sp-starting-event-class.md), [SP:Completed Event Class](../../relational-databases/event-classes/sp-completed-event-class.md)|Used to monitor the execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures.|  
 |[SQL:StmtStarting Event Class](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [SQL:StmtCompleted Event Class](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Used to monitor the execution of CLR and [!INCLUDE[tsql](../../includes/tsql-md.md)] routines.|  

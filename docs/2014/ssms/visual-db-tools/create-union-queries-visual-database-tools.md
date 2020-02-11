@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], types"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "combining query results"
   - "merged SELECT query [SQL Server]"
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

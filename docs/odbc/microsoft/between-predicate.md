@@ -5,18 +5,14 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "BETWEEN predicate [ODBC]"
   - "SQL grammar [ODBC], between predicate"
 ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # BETWEEN Predicate
 The syntax:  

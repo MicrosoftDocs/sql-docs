@@ -4,18 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Project Settings (Synchronization) (MySQLToSQL)
 The Synchronization **project settings** let you configure how MySQL database objects are synchronized with SQL Server database objects.  
@@ -63,7 +56,7 @@ Specifies the default setting in the Synchronization dialog box when the objects
 ##### Action when local object metadata is missing  
 Specifies the default setting in the Synchronization dialog box when the local metadata is missing.  
   
--   If you select **Refresh from Database**, SSMA SSMA will load database definitions into the metadata when the condition is met.  
+-   If you select **Refresh from Database**, SSMA will load database definitions into the metadata when the condition is met.  
   
 -   If you select **Skip**, SSMA will not perform any refresh actions  
   

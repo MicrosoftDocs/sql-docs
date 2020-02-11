@@ -1,20 +1,16 @@
 ---
-title: "Use the Properties Window in Management Studio | Microsoft Docs"
-ms.custom: ""
+title: Use the Properties Window in Management Studio
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing properties"
   - "Properties window [SQL Server Management Studio]"
   - "complex properties [SQL Server Management Studio]"
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg

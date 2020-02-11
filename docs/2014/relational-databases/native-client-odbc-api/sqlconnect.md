@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLConnect function"
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -23,7 +20,7 @@ manager: craigg
  For more information on using **SQLConnect** to connect to a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cluster, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## See Also  
- [SQLConnect Function](http://go.microsoft.com/fwlink/?LinkId=101541)   
+ [SQLConnect Function](https://go.microsoft.com/fwlink/?LinkId=101541)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

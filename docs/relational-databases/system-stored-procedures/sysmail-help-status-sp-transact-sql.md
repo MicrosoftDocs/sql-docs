@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_help_status_sp"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_status_sp"
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
-caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLNativeSql"
@@ -19,10 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLNativeSql function [ODBC]"
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNativeSql Function
 **Conformance**  
@@ -33,15 +29,15 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
-     SQLHDBC        ConnectionHandle,  
-     SQLCHAR *      InStatementText,  
-     SQLINTEGER     TextLength1,  
-     SQLCHAR *      OutStatementText,  
-     SQLINTEGER     BufferLength,  
-     SQLINTEGER *   TextLength2Ptr);  
+     SQLHDBC        ConnectionHandle,  
+     SQLCHAR *      InStatementText,  
+     SQLINTEGER     TextLength1,  
+     SQLCHAR *      OutStatementText,  
+     SQLINTEGER     BufferLength,  
+     SQLINTEGER *   TextLength2Ptr);  
 ```  
   
 ## Arguments  
@@ -94,25 +90,25 @@ SQLRETURN SQLNativeSql(
 ## Comments  
  The following are examples of what **SQLNativeSql** might return for the following input SQL string containing the scalar function CONVERT. Assume that the column empid is of type INTEGER in the data source:  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  A driver for Microsoft SQL Server might return the following translated SQL string:  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  A driver for ORACLE Server might return the following translated SQL string:  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  A driver for Ingres might return the following translated SQL string:  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   

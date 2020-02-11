@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLConfigDriver"
@@ -19,10 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLConfigDriver function [ODBC]"
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLConfigDriver Function
 **Conformance**  
@@ -35,16 +31,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLConfigDriver(  
-     HWND     hwndParent,  
-     WORD     fRequest,  
-     LPCSTR   lpszDriver,  
-     LPCSTR   lpszArgs,  
-     LPSTR    lpszMsg,  
-     WORD     cbMsgMax,  
-     WORD *   pcbMsgOut);  
+     HWND     hwndParent,  
+     WORD     fRequest,  
+     LPCSTR   lpszDriver,  
+     LPCSTR   lpszArgs,  
+     LPSTR    lpszMsg,  
+     WORD     cbMsgMax,  
+     WORD *   pcbMsgOut);  
 ```  
   
 ## Arguments  

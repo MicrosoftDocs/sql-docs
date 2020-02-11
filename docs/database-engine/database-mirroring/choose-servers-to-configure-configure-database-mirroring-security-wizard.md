@@ -1,23 +1,20 @@
 ---
-title: "Choose Servers to Configure (Configure Database Mirroring Security Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Configure Security Wizard: Choose Servers"
+descriptoin: "Describes the properties found on the the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'." 
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.configdbmsecurwiz.choosesrvrs.f1"
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
-# Choose Servers to Configure (Configure Database Mirroring Security Wizard)
+# Configure Database Mirroring Wizard: Choose Servers to Configure 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this page to specify which server instances you want to configure now. You must select at least one server instance before continuing the wizard.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "data_spaces"
@@ -20,10 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.data_spaces catalog view"
 ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.data_spaces (Transact-SQL)
@@ -35,10 +30,10 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Name of data space, unique within the database.|  
 |data_space_id|**int**|Data space ID number, unique within the database.|  
-|type|**char(2)**|Data space type:<br /><br /> FG = Filegroup<br /><br /> FD = FILESTREAM data filegroup<br /><br /> FX = Memory-optimized tables filegroup<br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> PS = Partition scheme|  
-|type_desc|**nvarchar(60)**|Description of data space type:<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
+|type|**char(2)**|Data space type:<br /><br /> FG = Filegroup<br /><br /> FD = FILESTREAM data filegroup<br /><br /> FX = Memory-optimized tables filegroup<br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> PS = Partition scheme|  
+|type_desc|**nvarchar(60)**|Description of data space type:<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
 |is_default|**bit**|1 = This is the default data space. The default data space is used when a filegroup or partition scheme is not specified in a CREATE TABLE or CREATE INDEX statement.<br /><br /> 0 = This is not the default data space.|  
-|is_system|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Data space is used for full-text index fragments.<br /><br /> 0 = Data space is not used for full-text index fragments.|  
+|is_system|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> 1 = Data space is used for full-text index fragments.<br /><br /> 0 = Data space is not used for full-text index fragments.|  
   
 ## Permissions  
  Requires membership in the public role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

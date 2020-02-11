@@ -4,12 +4,9 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "security [Reporting Services], reports"
   - "authorization [Reporting Services]"
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "tasks [Reporting Services]"
   - "roles [Reporting Services], methods"
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Authorization Methods
   You can use these methods to manage tasks, roles, and policies on the report server.  

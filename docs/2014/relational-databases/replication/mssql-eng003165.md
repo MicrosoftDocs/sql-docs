@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG003165 error"
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

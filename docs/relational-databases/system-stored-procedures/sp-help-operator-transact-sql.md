@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_operator"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_operator"
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +36,10 @@ sp_help_operator
 ```  
   
 ## Arguments  
- [ **@operator_name=** ] **'***operator_name***'**  
+`[ @operator_name = ] 'operator_name'`
  The operator name. *operator_name* is **sysname**. If *operator_name* is not specified, information about all operators is returned.  
   
- [ **@operator_id=** ] *operator_id*  
+`[ @operator_id = ] operator_id`
  The identification number of the operator for which information is requested. *operator_id*is **int**, with a default of NULL.  
   
 > [!NOTE]  

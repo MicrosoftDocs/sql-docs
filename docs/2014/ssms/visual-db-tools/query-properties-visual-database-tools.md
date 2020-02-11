@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:69636"
   - "vdt.ppg.querydesigner.query"
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -57,10 +54,10 @@ manager: craigg
  Specify that all columns from all tables in the current query will be in the result set. Choosing this option is equivalent to specifying an asterisk (*) in place of individual column names after the SELECT keyword in the SQL statement.  
   
  **Query Parameter List**  
- Shows query parameters. To edit the parameters click the property and then click the ellipses **(…)** to the right of the property. (Applies only to generic OLE DB.)  
+ Shows query parameters. To edit the parameters click the property and then click the ellipses **(...)** to the right of the property. (Applies only to generic OLE DB.)  
   
  **SQL Comment**  
- Shows a description of the SQL statements. To see the entire description or to edit it, click the description and then click the ellipses **(…)** to the right of the property. Your comments can include information such as who uses the query and when they use it. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 databases or later.)  
+ Shows a description of the SQL statements. To see the entire description or to edit it, click the description and then click the ellipses **(...)** to the right of the property. Your comments can include information such as who uses the query and when they use it. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 databases or later.)  
   
  **Top Specification Category**  
  Expand to show properties for the **Top**, **Percent**, **Expression**, and **With Ties** properties.  

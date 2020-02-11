@@ -1,28 +1,24 @@
 ---
-title: "Create a Subscription for a Non-SQL Server Subscriber | Microsoft Docs"
-ms.custom: ""
+title: "Create subscription for non-SQL Subscriber"
+description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
+ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
   - "Subscribers [SQL Server replication], non-SQL Server Subscribers"
   - "non-SQL Server Subscribers, subscriptions"
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
-caps.latest.revision: 28
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+  This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **In This Topic**  
   
@@ -33,7 +29,7 @@ manager: craigg
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- To create a subscription for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber:  
+ To create a subscription for a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber:  
   
 1.  Install and configure the appropriate client software and OLE DB provider(s) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. For more information, see [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
@@ -142,7 +138,7 @@ manager: craigg
  When the Snapshot Agent finishes generating the snapshot, a message is displayed, such as "[100%] A snapshot of 17 article(s) was generated."  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- You can create push subscriptions to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers programmatically using replication stored procedures.  
+ You can create push subscriptions to non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers programmatically using replication stored procedures.  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
@@ -155,27 +151,27 @@ manager: craigg
   
     -   If the value of **enabled_for_het_sub** is 1, non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers are supported.  
   
-    -   If the value of **enabled_for_het_sub** is 0, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **enabled_for_het_sub** for **@property** and **true** for **@value**.  
+    -   If the value of **enabled_for_het_sub** is 0, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **enabled_for_het_sub** for `@property` and **true** for `@value`.  
   
         > [!NOTE]  
         >  Before changing **enabled_for_het_sub** to **true**, you must drop any existing subscriptions to the publication. You cannot set **enabled_for_het_sub** to **true** when the publication also supports updating subscriptions. Changing **enabled_for_het_sub** will affect other publication properties. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, a value of **(default destination)** for **@destination_db**, a value of **push** for **@subscription_type**, and a value of 3 for **@subscriber_type** (specifies an OLE DB provider).  
+3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify `@publication`, `@subscriber`, a value of `(default destination)` for `@destination_db`, a value of **push** for `@subscription_type`, and a value of 3 for `@subscriber_type` (specifies an OLE DB provider).  
   
 4.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
   
-    -   The **@subscriber**and **@publication** parameters.  
+    -   The `@subscriber` and `@publication` parameters.  
   
-    -   A value of **(default destination)** for **@subscriber_db**,  
+    -   A value of **(default destination)** for `@subscriber_db`,  
   
-    -   The properties of the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source for **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**, and **@subscriber_catalog**.  
+    -   The properties of the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source for `@subscriber_provider`, `@subscriber_datasrc`, `@subscriber_location`, `@subscriber_provider_string`, and `@subscriber_catalog`.  
   
-    -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Distributor runs for **@job_login** and **@job_password**.  
+    -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Distributor runs for `@job_login` and `@job_password`.  
   
-        > [!NOTE]  
-        >  Connections made using Windows Integrated Authentication always use the Windows credentials specified by **@job_login** and **@job_password**. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
+       > [!NOTE]  
+       > Connections made using Windows Integrated Authentication always use the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
   
-    -   A value of **0** for **@subscriber_security_mode** and the OLE DB provider login information for **@subscriber_login** and **@subscriber_password**.  
+    -   A value of **0** for `@subscriber_security_mode` and the OLE DB provider login information for `@subscriber_login` and `@subscriber_password`.  
   
     -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

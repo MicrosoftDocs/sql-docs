@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VisualStudio.SourceControl.CheckinWindow"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "modified files list [SQL Server]"
   - "checking in files"
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg

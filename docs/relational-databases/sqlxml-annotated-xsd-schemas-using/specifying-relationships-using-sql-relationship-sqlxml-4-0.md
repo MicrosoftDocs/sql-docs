@@ -1,14 +1,9 @@
 ---
-title: "Specifying Relationships Using sql:relationship (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Set relationships with sql:relationship (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IDREFS relationships [SQLXML]"
@@ -29,10 +24,10 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "named relationships [SQLXML]"
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Relationships Using sql:relationship (SQLXML 4.0)

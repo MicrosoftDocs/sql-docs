@@ -5,24 +5,21 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLBindCol"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBindCol"
 helpviewer_keywords: 
   - "SQLBindCol function [ODBC]"
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBindCol Function
 **Conformance**  
@@ -33,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLBindCol(  
       SQLHSTMT       StatementHandle,  
@@ -49,7 +46,7 @@ SQLRETURN SQLBindCol(
  [Input] Statement handle.  
   
  *ColumnNumber*  
- [Input] Number of the result set column to bind. Columns are numbered in increasing column order starting at 0, where column 0 is the bookmark column. If bookmarks are not used — that is, the SQL_ATTR_USE_BOOKMARKS statement attribute is set to SQL_UB_OFF — then column numbers start at 1.  
+ [Input] Number of the result set column to bind. Columns are numbered in increasing column order starting at 0, where column 0 is the bookmark column. If bookmarks are not used - that is, the SQL_ATTR_USE_BOOKMARKS statement attribute is set to SQL_UB_OFF - then column numbers start at 1.  
   
  *TargetType*  
  [Input] The identifier of the C data type of the \**TargetValuePtr* buffer. When it is retrieving data from the data source with **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, or **SQLSetPos**, the driver converts the data to this type; when it sends data to the data source with **SQLBulkOperations** or **SQLSetPos**, the driver converts the data from this type. For a list of valid C data types and type identifiers, see the [C Data Types](../../../odbc/reference/appendixes/c-data-types.md) section in Appendix D: Data Types.  
@@ -64,13 +61,13 @@ SQLRETURN SQLBindCol(
  If *TargetValuePtr* is a null pointer, the driver unbinds the data buffer for the column. An application can unbind all columns by calling **SQLFreeStmt** with the SQL_UNBIND option. An application can unbind the data buffer for a column but still have a length/indicator buffer bound for the column, if the *TargetValuePtr* argument in the call to **SQLBindCol** is a null pointer but the *StrLen_or_IndPtr* argument is a valid value.  
   
  *BufferLength*  
- [Input] Length of the **TargetValuePtr* buffer in bytes.  
+ [Input] Length of the \**TargetValuePtr* buffer in bytes.  
   
- The driver uses *BufferLength* to avoid writing past the end of the \**TargetValuePtr* buffer when it returns variable-length data, such as character or binary data. Notice that the driver counts the null-termination character when it returns character data to \**TargetValuePtr*. **TargetValuePtr* must therefore contain space for the null-termination character or the driver will truncate the data.  
+ The driver uses *BufferLength* to avoid writing past the end of the \**TargetValuePtr* buffer when it returns variable-length data, such as character or binary data. Notice that the driver counts the null-termination character when it returns character data to \**TargetValuePtr*. \**TargetValuePtr* must therefore contain space for the null-termination character or the driver will truncate the data.  
   
  When the driver returns fixed-length data, such as an integer or a date structure, the driver ignores *BufferLength* and assumes the buffer is large enough to hold the data. Therefore, it is important for the application to allocate a large enough buffer for fixed-length data or the driver will write past the end of the buffer.  
   
- **SQLBindCol** returns SQLSTATE HY090 (Invalid string or buffer length) when *BufferLength* is less than 0 but not when *BufferLength* is 0. However, if *TargetType* specifies a character type, an application should not set *BufferLength* to 0, because ISO CLI–compliant drivers return SQLSTATE HY090 (Invalid string or buffer length) in that case.  
+ **SQLBindCol** returns SQLSTATE HY090 (Invalid string or buffer length) when *BufferLength* is less than 0 but not when *BufferLength* is 0. However, if *TargetType* specifies a character type, an application should not set *BufferLength* to 0, because ISO CLI-compliant drivers return SQLSTATE HY090 (Invalid string or buffer length) in that case.  
   
  *StrLen_or_IndPtr*  
  [Deferred Input/Output] Pointer to the length/indicator buffer to bind to the column. **SQLFetch** and **SQLFetchScroll** return a value in this buffer. **SQLBulkOperations** retrieves a value from this buffer when *Operation* is SQL_ADD, SQL_UPDATE_BY_BOOKMARK, or SQL_DELETE_BY_BOOKMARK. **SQLBulkOperations** returns a value in this buffer when *Operation* is SQL_FETCH_BY_BOOKMARK. **SQLSetPos** returns a value in this buffer when *Operation* is SQL_REFRESH; it retrieves a value from this buffer when *Operation* is SQL_UPDATE.  
@@ -141,7 +138,7 @@ SQLRETURN SQLBindCol(
 ## Binding Columns  
  To bind a column, an application calls **SQLBindCol** and passes the column number, type, address, and length of a data buffer, and the address of a length/indicator buffer. For information about how these addresses are used, see "Buffer Addresses," later in this section. For more information about binding columns, see [Using SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
   
- The use of these buffers is deferred; that is, the application binds them in **SQLBindCol** but the driver accesses them from other functions — namely **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, or **SQLSetPos**. It is the application's responsibility to make sure that the pointers specified in **SQLBindCol** remain valid as long as the binding remains in effect. If the application allows these pointers to become invalid — for example, it frees a buffer — and then calls a function that expects them to be valid, the consequences are undefined. For more information, see [Deferred Buffers](../../../odbc/reference/develop-app/deferred-buffers.md).  
+ The use of these buffers is deferred; that is, the application binds them in **SQLBindCol** but the driver accesses them from other functions - namely **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, or **SQLSetPos**. It is the application's responsibility to make sure that the pointers specified in **SQLBindCol** remain valid as long as the binding remains in effect. If the application allows these pointers to become invalid - for example, it frees a buffer - and then calls a function that expects them to be valid, the consequences are undefined. For more information, see [Deferred Buffers](../../../odbc/reference/develop-app/deferred-buffers.md).  
   
  The binding remains in effect until it is replaced by a new binding, the column is unbound, or the statement is freed.  
   
@@ -229,7 +226,7 @@ SQLRETURN SQLBindCol(
 ## Buffer Addresses  
  The *buffer address* is the actual address of the data or length/indicator buffer. The driver calculates the buffer address just before it writes to the buffers (such as during fetch time). It is calculated from the following formula, which uses the addresses specified in the *TargetValuePtr* and *StrLen_or_IndPtr* arguments, the binding offset, and the row number:  
   
- *Bound Address* + *Binding Offset* + ((*Row Number* – 1) x *Element Size*)  
+ *Bound Address* + *Binding Offset* + ((*Row Number* - 1) x *Element Size*)  
   
  where the formula's variables are defined as described in the following table.  
   
@@ -282,7 +279,7 @@ SQLRETURN SQLBindCol(
   
  For more code examples, see [SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLColumns Function](../../../odbc/reference/syntax/sqlcolumns-function.md), [SQLFetchScroll Function](../../../odbc/reference/syntax/sqlfetchscroll-function.md), and [SQLSetPos Function](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 // SQLBindCol_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  
@@ -292,7 +289,7 @@ SQLRETURN SQLBindCol(
 #include <sqlext.h>  
   
 #define NAME_LEN 50  
-#define PHONE_LEN 20  
+#define PHONE_LEN 60
   
 void show_error() {  
    printf("error\n");  
@@ -332,17 +329,24 @@ int main() {
                if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {  
   
                   // Bind columns 1, 2, and 3  
-                  retcode = SQLBindCol(hstmt, 1, SQL_C_CHAR, &sCustID, 100, &cbCustID);  
-                  retcode = SQLBindCol(hstmt, 2, SQL_C_CHAR, szName, NAME_LEN, &cbName);  
-                  retcode = SQLBindCol(hstmt, 3, SQL_C_CHAR, szPhone, PHONE_LEN, &cbPhone);   
+                  retcode = SQLBindCol(hstmt, 1, SQL_C_WCHAR, &sCustID, 100, &cbCustID);  
+                  retcode = SQLBindCol(hstmt, 2, SQL_C_WCHAR, szName, NAME_LEN, &cbName);  
+                  retcode = SQLBindCol(hstmt, 3, SQL_C_WCHAR, szPhone, PHONE_LEN, &cbPhone);   
   
                   // Fetch and print each row of data. On an error, display a message and exit.  
-                  for (i ; ; i++) {  
+                  for (int i=0 ; ; i++) {  
                      retcode = SQLFetch(hstmt);  
                      if (retcode == SQL_ERROR || retcode == SQL_SUCCESS_WITH_INFO)  
                         show_error();  
                      if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO)  
-                        wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                     {
+                        //replace wprintf with printf
+                        //%S with %ls
+                        //warning C4477: 'wprintf' : format string '%S' requires an argument of type 'char *'
+                        //but variadic argument 2 has type 'SQLWCHAR *'
+                        //wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                        printf("%d: %ls %ls %ls\n", i + 1, sCustID, szName, szPhone);  
+                    }    
                      else  
                         break;  
                   }  

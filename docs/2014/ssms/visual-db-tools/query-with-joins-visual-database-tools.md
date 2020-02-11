@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [Visual Database Tools]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], joins"
   - "joins [SQL Server], queries"
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

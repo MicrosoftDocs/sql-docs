@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, service accounts"
   - "multiserver environments [SQL Server], SQL Server Agent service account behavior"
 ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

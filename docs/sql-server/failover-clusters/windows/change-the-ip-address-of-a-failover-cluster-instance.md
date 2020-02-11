@@ -1,12 +1,11 @@
 ---
-title: "Change the IP Address of a Failover Cluster Instance | Microsoft Docs"
-ms.custom: ""
+title: "Change IP Address of a Failover Cluster Instance"
+description: Learn how to change the IP address of a SQL Server failover cluster instance using the Failover Cluster Manager. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying IP addresses"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Change the IP Address of a Failover Cluster Instance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

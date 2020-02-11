@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.checkconstraint"
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -45,7 +42,7 @@ manager: craigg
  Shows the name of the selected check constraint. To change the name of this constraint, type the text directly in the property field.  
   
  **Description**  
- Describing this check constraint. You can edit the description by typing into the property field or you can click the ellipsis button (**…**) that appears to the right of the property field and edit the description in the **Description Property** dialog box.  
+ Describing this check constraint. You can edit the description by typing into the property field or you can click the ellipsis button (**...**) that appears to the right of the property field and edit the description in the **Description Property** dialog box.  
   
  **Table Designer Category**  
  Expand to show properties for **Check Existing Data on Creation or Re-enabling**, **Enforce For Inserts And Updates**, and **Enforce Replication**.  

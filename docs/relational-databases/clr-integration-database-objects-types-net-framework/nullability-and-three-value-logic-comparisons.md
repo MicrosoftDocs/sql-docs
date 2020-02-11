@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "precision [CLR integration]"
@@ -16,10 +14,8 @@ helpviewer_keywords:
   - "data types [CLR integration]"
   - "SqlBoolean data type"
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Nullability and Three-Value Logic Comparisons
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

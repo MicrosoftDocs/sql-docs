@@ -1,14 +1,14 @@
 ---
-title: "Auto-Statistics (Analytics Platform System)"
+title: "Auto-Statistics"
 description: "Describes auto statistics feature introduced in Analytics Platform System AU7."
 author: "mzaman1" 
-manager: "craigg"	  
 ms.prod: "sql"
-ms.technology: "data-warehouse"
+ms.technology: data-warehouse
 ms.topic: "conceptual"
 ms.date: "06/27/2018"
 ms.author: "murshedz"
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 ---
 # Configure auto statistics
@@ -51,7 +51,7 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
 AUTO_UPDATE STATISTICS_ASYNC option only works if AUTO_UPDATE_STATISTICS is ON.  Therefore, statistics are not updated when AUTO_UPDATE_STATISTICS is OFF and AUTO_UPDATE_STATISTICS_ASYNC is ON. 
 
 ### Error messages
-You could receive the error message “This option is not supported in PDW”.  This error occurs when the system administrator has not enabled auto statistics, and you try to set any of the auto statistics options in ALTER DATABASE. 
+You could receive the error message "This option is not supported in PDW".  This error occurs when the system administrator has not enabled auto statistics, and you try to set any of the auto statistics options in ALTER DATABASE. 
 
 ### Limitations and Restrictions
 Auto statistics does not work on external tables. 

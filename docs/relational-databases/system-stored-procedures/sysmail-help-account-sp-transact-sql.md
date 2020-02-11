@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_help_account_sp_TSQL"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_account_sp"
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-caps.latest.revision: 48
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +33,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## Arguments  
- [ **@account_id** = ] *account_id*  
+`[ @account_id = ] account_id`
  The account ID of the account to list information for. *account_id* is **int**, with a default of NULL.  
   
- [ **@account_name** = ] **'***account_name***'**  
+`[ @account_name = ] 'account_name'`
  The name of the account to list information for. *account_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  
@@ -63,7 +58,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servername**|**sysname**|The name of the e-mail server for the account.|  
 |**port**|**int**|The port number of the e-mail server uses.|  
 |**username**|**nvarchar(128)**|The user name to use to sign in to the e-mail server, if the e-mail server uses authentication. When **username** is NULL, Database Mail does not use authentication for this account.|  
-|**use_default_credentials**|**bit**|Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** is bit, with no default. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. When this parameter is 0, Database Mail uses the **@username** and **@password** for authentication on the SMTP server. If **@username** and **@password** are NULL, then Database Mail uses anonymous authentication. Consult you SMTP administrator before specifying this parameter.|  
+|**use_default_credentials**|**bit**|Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** is bit, with no default. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. When this parameter is 0, Database Mail uses the **\@username** and **\@password** for authentication on the SMTP server. If **\@username** and **\@password** are NULL, then Database Mail uses anonymous authentication. Consult you SMTP administrator before specifying this parameter.|  
 |**enable_ssl**|**bit**|Specifies whether Database Mail encrypts communication using Secure Sockets Layer (SSL). Use this option if SSL is required on your SMTP server. **enable_ssl** is bit, with no default. 1 indicates Database Mail encrypts communication using SSL. 0 indicates Database Mail sends the mail without SSL encryption.|  
   
 ## Remarks  

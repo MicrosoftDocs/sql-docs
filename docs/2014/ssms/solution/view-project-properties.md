@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], viewing properties"
   - "viewing project properties"
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

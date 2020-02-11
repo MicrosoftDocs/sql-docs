@@ -1,8 +1,0 @@
-- name: Developing with ADOMD.NET
-  href: developing-with-adomd-net.md
-- name: ADOMD .NET Client +
-  href: ../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality.md
-- name: ADOMD .NET Server +
-  href: ../../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
-- name: Redistributing ADOMD.NET
-  href: redistributing-adomd-net.md

@@ -5,17 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction support"
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # How to: Perform Transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

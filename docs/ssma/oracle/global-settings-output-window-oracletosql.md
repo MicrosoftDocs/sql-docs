@@ -4,15 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-pelars"
+manager: shamikg
 ---
 # Global Settings (Output Window)  (OracleToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

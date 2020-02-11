@@ -1,12 +1,11 @@
 ---
-title: "View the Log Shipping Report (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "View log shipping report (SSMS)"
+description: Learn how to view the log shipping report using the SQL Server Management Studio (SSMS) GUI. 
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing log shipping reports"
@@ -14,10 +13,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], monitoring"
   - "log shipping [SQL Server], viewing reports"
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # View the Log Shipping Report (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,21 +1,19 @@
 ---
-title: "How to: Create New Database Objects Using Queries | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Create New Database Objects Using Queries
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Create New Database Objects Using Queries
+
 If you prefer to use scripts to create or edit views, stored procedures, functions, triggers, or user-defined-types, you can use the Transact\-SQL Editor. The Transact\-SQL Editor provides IntelliSense and other language support. For more information, see [Use Transact-SQL Editor to Edit and Execute Scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 The Transact\-SQL Editor is invoked when you use the **View Code** contextual menu to open a database entity in a connected database or a project. It is also automatically opened when you use the **New Query** contextual menu from the SQL Server Object Explorer, or add a new script object to a database project. If you are not connected to a database but want to execute a query against it, you can also use the **New Query Connection** dialog box by selecting **Transact-SQL Editor** menu from the **SQL** menu to connect to a database and launch the Transact\-SQL Editor.  

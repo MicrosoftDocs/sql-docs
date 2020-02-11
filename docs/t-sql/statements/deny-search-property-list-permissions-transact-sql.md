@@ -1,13 +1,13 @@
 ---
-title: "DENY Search Property List Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Search Property List Permissions"
+description: Deny permissions on a search property list.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], search property lists"
   - "search property lists [SQL Server], permissions"
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
-caps.latest.revision: 10
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY Search Property List Permissions (Transact-SQL)
@@ -44,7 +42,7 @@ DENY permission [ ,...n ] ON
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   
-ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
  Specifies the search property list on which the permission is being denied. The scope qualifier :: is required.  
   
 *database_principal*  

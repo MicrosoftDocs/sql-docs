@@ -1,12 +1,10 @@
 ---
-title: "Import Registered Server Information (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Import Registered Server Information
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.importregisteredservers.f1"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], importing"
   - "importing registered server information"
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 ---
 # Import Registered Server Information (SQL Server Management Studio)
   This topic describes how to import saved registered server information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Exporting and then importing registered server files lets you easily configure several computers with the same servers in Registered Servers. This is useful when managing a large number of servers from computers in several locations, or when you want to configure basic connection settings for a less-experienced user.  

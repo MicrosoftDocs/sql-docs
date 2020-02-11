@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
@@ -33,7 +30,6 @@ helpviewer_keywords:
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
-caps.latest.revision: 111
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -46,9 +42,9 @@ manager: craigg
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Definition|  
 |---------------------------------------|----------------|  
-|Enterprise (64-bit and 32-bit)|The premium offering, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance, unlimited virtualization, and end-to-end business intelligence — enabling high service levels for mission-critical workloads and end user access to data insights.|  
+|Enterprise (64-bit and 32-bit)|The premium offering, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance, unlimited virtualization, and end-to-end business intelligence - enabling high service levels for mission-critical workloads and end user access to data insights.|  
 |Business Intelligence (64-bit and 32-bit)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence edition delivers comprehensive platform empowering organizations to build and deploy secure, scalable and manageable BI solutions. It offers exciting functionality such as browser based data exploration and visualization; powerful data mash-up capabilities, and enhanced integration management.|  
-|Standard (64-bit and 32-bit)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premise and cloud — enabling effective database management with minimal IT resources.|  
+|Standard (64-bit and 32-bit)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premise and cloud - enabling effective database management with minimal IT resources.|  
   
 ## Specialized Editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Specialized editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are targeted for business workloads. The following table describes the specialized editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

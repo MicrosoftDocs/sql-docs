@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # DrilldownMemberTop (MDX)
 
@@ -49,13 +48,13 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  After sorting, the **DrilldownMemberTop** function returns a set that contains the parent members and the number of child members, specified in *Count,* with the highest value and are contained in both sets.  
   
- If **RECURSIVE** is specified, the function sorts the first set as described previously, then recursively compares the members of the first set, as organized in a hierarchy, against the second set*.* The function retrieves the topmost number of children for each member in the first set that is also present in the second set.  
+ If **RECURSIVE** is specified, the function sorts the first set as described previously, then recursively compares the members of the first set, as organized in a hierarchy, against the second set. The function retrieves the topmost number of children for each member in the first set that is also present in the second set.  
   
  The first set can contain tuples instead of members. Tuple drilldown is an extension of OLE DB, and returns a set of tuples instead of members.  
   
  The **DrilldownMemberTop** function is similar to the [DrilldownMember](../mdx/drilldownmember-mdx.md) function, but instead of including all children for each member in the first set that is also present in the second set, the **DrilldownMemberTop** function returns the topmost number of child members for each member.  
   
- Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) for details.  
+ Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) for details.  
   
 ## Example  
  The following example drills down into the clothing category to return the three subcategories of clothing with the top quantity of orders shipped.  

@@ -4,18 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # New GUI features in SSMA for DB2 (DB2ToSQL)
 This chapter describes new features of SSMA User Interface.  
@@ -58,7 +51,7 @@ You can set/remove a bookmark in the following ways:
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   
 ### Bookmark navigation  
-You can walk thru the bookmarks in the following ways:  
+You can walk through the bookmarks in the following ways:  
   
 -   Use buttons Next Bookmark, Previous Bookmark on the top of the SQL window  
   

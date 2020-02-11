@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.miningstructuredialog.errorconfig.f1"
 ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

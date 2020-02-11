@@ -2,9 +2,8 @@
 title: "Publishing Data Sources and Reports | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reports
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "publishing reports [Reporting Services]"
   - "data sources [Reporting Services], managing"
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Publishing Data Sources and Reports
   Before publishing your report, you should preview the report to see how it will look when it is run. You can continue to refine the design until you are satisfied with the results.  
@@ -34,7 +33,7 @@ ms.author: maghan
  Describes how to publish a report to a SharePoint site.  
   
 ## See Also  
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   

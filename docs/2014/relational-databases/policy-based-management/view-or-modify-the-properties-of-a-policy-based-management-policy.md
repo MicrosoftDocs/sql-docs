@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, modify policies"
   - "Policy-Based Management, view policies"
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -43,7 +40,7 @@ manager: craigg
   
 #### To view the properties of all policies on an object  
   
-1.  In Object Explorer, right-click a server, server object, database, or database object, point to **Policies** and select **View**. For more information on the available options in the **View Policies –***object_name* dialog box, see [View Policies Dialog Box](view-policies-dialog-box.md).  
+1.  In Object Explorer, right-click a server, server object, database, or database object, point to **Policies** and select **View**. For more information on the available options in the **View Policies -**_object_name_ dialog box, see [View Policies Dialog Box](view-policies-dialog-box.md).  
   
 2.  When finished, click **Close**.  
   
@@ -57,7 +54,7 @@ manager: craigg
   
 4.  Click the plus sign to expand the **Policies** folder.  
   
-5.  Right-click the policy that you want to view or modify and select **Properties**. For more information on the available options in the **Open Policy –***policy_name* dialog box, see [Create New Policy or Open Policy Dialog Box, General Page](../../integration-services/general-page-of-integration-services-designers-options.md) and [Create New Policy or Open Policy Dialog Box, Description Page](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Right-click the policy that you want to view or modify and select **Properties**. For more information on the available options in the **Open Policy -**_policy_name_ dialog box, see [Create New Policy or Open Policy Dialog Box, General Page](../../integration-services/general-page-of-integration-services-designers-options.md) and [Create New Policy or Open Policy Dialog Box, Description Page](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  When finished, click **OK**.  
   

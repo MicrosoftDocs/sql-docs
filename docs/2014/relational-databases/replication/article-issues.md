@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newpubwizard.articleissues.f1"
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

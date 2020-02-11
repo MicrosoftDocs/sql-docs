@@ -5,19 +5,19 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoopconn.f1"
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Hadoop Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Hadoop Connection Manager enables a SQL Server Integration Services (SSIS) package to connect to a Hadoop cluster, by using the values you specify for the properties.  
   
 ## Configure the Hadoop Connection Manager  
@@ -67,7 +67,7 @@ There are two options to set up the on-premises environment so you can use Kerbe
 
 #### Requirements:
 
--   The gateway computer needs to join the Kerberos realm, and can’t join any Windows domain.
+-   The gateway computer needs to join the Kerberos realm, and can't join any Windows domain.
 
 #### How to configure:
 
@@ -146,7 +146,7 @@ On the KDC server:
 
     Restart the KDC service after configuration.
 
-2.	Prepare a principal named **krbtgt/REALM.COM@AD.COM** on the KDC server. Use the following command:
+2.	Prepare a principal named **krbtgt/REALM.COM\@AD.COM** on the KDC server. Use the following command:
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -161,7 +161,7 @@ On the domain controller:
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.	Establish trust from the Windows domain to the Kerberos realm. In the following example, `[password]` is the password for the principal **krbtgt/REALM.COM@AD.COM**.
+2.	Establish trust from the Windows domain to the Kerberos realm. In the following example, `[password]` is the password for the principal **krbtgt/REALM.COM\@AD.COM**.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

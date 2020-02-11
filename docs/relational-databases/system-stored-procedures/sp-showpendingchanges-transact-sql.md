@@ -4,25 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_showpendingchanges"
   - "sp_showpendingchanges_TSQL"
 helpviewer_keywords: 
   - "sp_showpendingchanges"
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +37,16 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## Arguments  
- [ @destination_server**=** ] **'***destination_server***'**  
+`[ @destination_server = ] 'destination_server'`
  Is the name of the server where the replicated changes are applied. *destination_server* is **sysname**, with default value of NULL.  
   
- [ @publication**=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default value of NULL. When *publication* is specified, results are limited only to the specified publication.  
   
- [ @article **=** ] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default value of NULL. When *article* is specified, results are limited only to the specified article.  
   
- [ @show_rows **=** ] *show_rows*  
+`[ @show_rows = ] 'show_rows'`
  Specifies whether the result set contains more specific information about pending changes, with a default value of **0**. If a value of **1** is specified, the result set contains the columns is_delete and rowguid.  
   
 ## Result Set  

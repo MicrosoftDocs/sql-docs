@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "events [Integration Services]"
   - "service [Integration Services], events"
   - "Integration Services service, events"
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-caps.latest.revision: 20
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # View Events for the Integration Services Service

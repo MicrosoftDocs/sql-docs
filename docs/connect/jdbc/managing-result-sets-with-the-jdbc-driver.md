@@ -1,21 +1,17 @@
 ---
-title: "Managing Result Sets with the JDBC Driver | Microsoft Docs"
+title: "Managing result sets with the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Managing Result Sets with the JDBC Driver
+# Managing result sets with the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   The result set is an object that represents a set of data returned from a data source, usually as the result of a query. The result set contains rows and columns to hold the requested data elements, and it is navigated with a cursor. A result set can be updatable, meaning that it can be modified and have those modifications pushed to the original data source. A result set can also have various levels of sensitivity to changes in the underlying data source.  
@@ -28,15 +24,15 @@ manager: craigg
   
  The topics in this section describe various aspects of result set usage, including cursor types, concurrency, and row locking.  
   
-## In This Section  
+## In this section  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Understanding Cursor Types](../../connect/jdbc/understanding-cursor-types.md)|Describes the different cursor types that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports.|  
-|[Understanding Concurrency Control](../../connect/jdbc/understanding-concurrency-control.md)|Describes how the JDBC driver supports concurrency control.|  
-|[Understanding Row Locking](../../connect/jdbc/understanding-row-locking.md)|Describes how the JDBC driver supports row locking.|  
+|[Understanding cursor types](../../connect/jdbc/understanding-cursor-types.md)|Describes the different cursor types that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports.|  
+|[Understanding concurrency control](../../connect/jdbc/understanding-concurrency-control.md)|Describes how the JDBC driver supports concurrency control.|  
+|[Understanding row locking](../../connect/jdbc/understanding-row-locking.md)|Describes how the JDBC driver supports row locking.|  
   
-## See Also  
- [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## See also  
+ [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

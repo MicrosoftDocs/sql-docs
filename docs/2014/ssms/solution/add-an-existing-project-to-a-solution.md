@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vs.addexistingproject"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], project additions"
   - "projects [SQL Server Management Studio], adding"
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg

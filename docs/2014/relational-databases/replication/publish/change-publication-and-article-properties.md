@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying article properties"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "publications [SQL Server replication], changing properties"
   - "articles [SQL Server replication], properties"
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -43,10 +39,10 @@ manager: craigg
 |Description|Stored procedure|Properties|Requirements|  
 |-----------------|----------------------|----------------|------------------|  
 |Drop an article|**sp_droparticle**|All parameters.|Articles can be dropped prior to subscriptions being created. Using stored procedures, it is possible to drop a subscription to an article; using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], the entire subscription must be dropped, recreated, and synchronized. For more information, see [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).|  
-|Change a column filter.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
+|Change a column filter.|**sp_articlecolumn**|**\@column**<br /><br /> **\@operation**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Add a row filter.|**sp_articlefilter**|All parameters.|New snapshot.<br /><br /> Reinitialize subscriptions.|  
-|Drop a row filter.|**sp_articlefilter**|**@article**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
-|Change a row filter.|**sp_articlefilter**|**@filter_clause**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
+|Drop a row filter.|**sp_articlefilter**|**\@article**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
+|Change a row filter.|**sp_articlefilter**|**\@filter_clause**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Change a row filter.|**sp_changearticle**|**filter**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Change schema options.|**sp_changearticle**|**schema_option**|New snapshot.|  
 |Change how tables at the Subscriber are handled prior to applying the snapshot.|**sp_changearticle**|**pre_creation_cmd**|New snapshot.|  
@@ -54,7 +50,7 @@ manager: craigg
 |Change INSERT, UPDATE or DELETE commands.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Change destination table name|**sp_changearticle**|**dest_table**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Change destination table owner (schema).|**sp_changearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
-|Change data type mappings (applies to Oracle publishing only).|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
+|Change data type mappings (applies to Oracle publishing only).|**sp_changearticlecolumndatatype**|**\@type**<br /><br /> **\@length**<br /><br /> **\@precision**<br /><br /> **\@scale**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
 ## Publication Properties for Merge Replication  
   
@@ -68,7 +64,7 @@ manager: craigg
 |Change pre- or post-snapshot scripts.|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|New snapshot (also required if you change the script contents).<br /><br /> Reinitialization is required to apply the new script to the Subscriber.|  
 |Add a join filter or logical record.|**sp_addmergefilter**|All parameters.|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Drop a join filter or logical record.|**sp_dropmergefilter**|All parameters.|New snapshot.<br /><br /> Reinitialize subscriptions.|  
-|Change a join filter or logical record.|**sp_changemergefilter**|**@property**<br /><br /> **@value**|New snapshot<br /><br /> Reinitialize subscriptions.|  
+|Change a join filter or logical record.|**sp_changemergefilter**|**\@property**<br /><br /> **\@value**|New snapshot<br /><br /> Reinitialize subscriptions.|  
 |Disable the use of parameterized filters (enabling parameterized filters does not require any special actions).|**sp_changemergepublication**|A value of **false** for **dynamic_filters**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Enable or disable the use of precomputed partitions.|**sp_changemergepublication**|**use_partition_groups**|New snapshot.|  
 |Enable or disable [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] partition optimization.|**sp_changemergepublication**|**keep_partition_changes**|Reinitialize subscriptions.|  
@@ -82,7 +78,7 @@ manager: craigg
 |Drop an article, where the article has the last parameterized filter in the publication.|**sp_dropmergearticle**|All parameters|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Drop an article, where the article is a parent in a join filter or logical record (this has the side effect of dropping the join).|**sp_dropmergearticle**|All parameters|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Drop an article, all other circumstances.|**sp_dropmergearticle**|All parameters|New snapshot.|  
-|Include a column filter that was previously unpublished.|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
+|Include a column filter that was previously unpublished.|**sp_mergearticlecolumn**|**\@column**<br /><br /> **\@operation**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Add, drop, or change a row filter.|**sp_changemergearticle**|**subset_filterclause**|New snapshot.<br /><br /> Reinitialize subscriptions.<br /><br /> If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.<br /><br /> If an article is not involved in any join filters, you can drop the article and add it again with a different row filter, which does not require the entire subscription to be reinitialized. For more information about adding and dropping articles, see [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Change schema options.|**sp_changemergearticle**|**schema_option**|New snapshot.|  
 |Change tracking from column-level to row-level (changing from row-level tracking to column-level tracking does not require any special actions).|**sp_changemergearticle**|A value of **false** for **column_tracking**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
@@ -91,7 +87,7 @@ manager: craigg
 |Change destination table owner.|**sp_changemergearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
 ## See Also  
- [Administration &#40;Replication&#41;](../administration/administration-replication.md)   
+ [Replication Administration FAQ](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Create and Apply the Snapshot](../create-and-apply-the-snapshot.md)   
  [Reinitialize Subscriptions](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

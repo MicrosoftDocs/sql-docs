@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLGetDescField function"
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -149,7 +146,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## See Also  
- [SQLGetDescField Function](http://go.microsoft.com/fwlink/?LinkId=59351)   
+ [SQLGetDescField Function](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

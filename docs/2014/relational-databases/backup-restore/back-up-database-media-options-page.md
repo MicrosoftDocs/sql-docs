@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "swb.backupdatabase.mediaoptions.f1"
   - "sql12.swb.backupdatabase.mediaoptions.f1"
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
 ## Options  
   
 ### Overwrite media  
- The options of the **Overwrite media** panel control how the backup is written to the media. IF you selected URL (Windows Azure Storage) as the backup destination on the General page of the Back Up Database dialog box, the options under the Overwrite media section are disabled. You can overwrite a backup using the `BACKUP TO URL.. WITH FORMAT` Transact-SQL statement. For more information, see [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ The options of the **Overwrite media** panel control how the backup is written to the media. IF you selected URL (Azure Storage) as the backup destination on the General page of the Back Up Database dialog box, the options under the Overwrite media section are disabled. You can overwrite a backup using the `BACKUP TO URL.. WITH FORMAT` Transact-SQL statement. For more information, see [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Only the option, **Backup to a new media, and erase all existing backup sets** is supported with encryption options. If you select the options under the **Back up to existing media** section, the encryptions options on the **Backup Options** page will be disabled.  
   

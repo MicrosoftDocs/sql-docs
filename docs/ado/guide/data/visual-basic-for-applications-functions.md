@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -15,10 +13,8 @@ helpviewer_keywords:
   - "Visual Basic for applications functions [ADO]"
   - "data shaping [ADO], Visual Basic for Applications functions"
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Visual Basic for Applications functions
 The following Visual Basic for Applications functions can be used in data shaping CALC expressions:  

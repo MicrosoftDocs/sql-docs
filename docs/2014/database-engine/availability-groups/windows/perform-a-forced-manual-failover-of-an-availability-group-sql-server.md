@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.availabilitygroup.forcefailover.f1"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -129,7 +126,7 @@ manager: craigg
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To force failover (with possible data loss)**  
   
-1.  Connect to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state in the availability group that that needs to be failed over.  
+1.  Connect to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state in the availability group that needs to be failed over.  
   
 2.  Use the [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) statement, as follows:  
   
@@ -139,7 +136,7 @@ manager: craigg
   
      The following example forces the `AccountsAG` availability group to fail over to the local secondary replica.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
@@ -148,7 +145,7 @@ manager: craigg
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To force failover (with possible data loss)**  
   
-1.  Change directory (`cd`) to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state in the availability group that that needs to be failed over.  
+1.  Change directory (`cd`) to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state in the availability group that needs to be failed over.  
   
 2.  Use the `Switch-SqlAvailabilityGroup` cmdlet with the `AllowDataLoss` parameter in one of the following forms:  
   
@@ -158,10 +155,8 @@ manager: craigg
   
          The following example performs a forced failover (with possible data loss) of the availability group `MyAg` to the secondary replica on the server instance named `SecondaryServer\InstanceName`. You will be prompted to confirm this operation.  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss  
         ```  
   
     -   **-AllowDataLoss-Force**  
@@ -170,10 +165,8 @@ manager: craigg
   
          The following example performs a forced failover (with possible data loss) of the availability group `MyAg` to the server instance named `SecondaryServer\InstanceName`. The `-Force` option suppresses confirmation of this operation.  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss -Force  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss -Force  
         ```  
   
     > [!NOTE]  
@@ -312,15 +305,15 @@ manager: craigg
   
 -   **Blogs:**  
   
-     [SQL Server AlwaysOn Team Blogs: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn Team Blogs: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepapers:**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft White Papers for SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server Customer Advisory Team Whitepapers](http://sqlcat.com/)  
   

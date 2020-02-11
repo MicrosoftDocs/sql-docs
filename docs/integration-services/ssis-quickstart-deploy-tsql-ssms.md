@@ -4,14 +4,16 @@ ms.date: "05/21/2018"
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 This quickstart demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then use Transact-SQL statements to deploy an SSIS project to the SSIS Catalog. 
 
@@ -30,6 +32,10 @@ You can use the information in this quickstart to deploy an SSIS project to the 
 You cannot use the information in this quickstart to deploy an SSIS package to Azure SQL Database. The `catalog.deploy_project` stored procedure expects path to the `.ispac` file in the local (on premises) file system. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 You cannot use the information in this quickstart to deploy an SSIS package to SQL Server on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## Connect to the SSIS Catalog database
 
@@ -50,6 +56,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
 3. Click **Connect**. The Object Explorer window opens in SSMS. 
 
 4. In Object Explorer, expand **Integration Services Catalogs** and then expand **SSISDB** to view the objects in the SSIS Catalog database.
+
 
 ## Run the T-SQL code
 Run the following Transact-SQL code to deploy an SSIS project.

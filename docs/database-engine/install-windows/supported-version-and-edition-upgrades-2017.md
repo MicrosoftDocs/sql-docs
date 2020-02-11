@@ -1,12 +1,11 @@
 ---
-title: "Supported Version and Edition Upgrades - SQL Server 2017| Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2017"
+title: "Supported version and edition upgrades"
+titleSuffix: "SQL Server 2017"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "components [SQL Server], adding to existing installations"
@@ -14,13 +13,11 @@ helpviewer_keywords:
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
-# Supported Version and Edition Upgrades for SQL Server 2017
+# Supported version and edition upgrades for SQL Server 2017
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -40,7 +37,7 @@ manager: craigg
   
 ## Unsupported Scenarios  
   
--   Cross-version instances of [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] are not supported. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components must be the same in an instance of [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+-   Cross-version instances of [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] are not supported. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components must be the same in an instance of [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
   

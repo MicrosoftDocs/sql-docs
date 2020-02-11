@@ -2,17 +2,16 @@
 title: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CreateSSLCertificateBinding"
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - CreateSSLCertificateBinding
   Creates an SSL Certificate binding.  
@@ -68,7 +67,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  The IPAddress specified does not correspond to an IPAddress of this computer.  
   
-3.  The IPAddress specified is a DHCP IPAddress (changes periodically) – use the Wildcard IP address instead (0.0.0.0).  
+3.  The IPAddress specified is a DHCP IPAddress (changes periodically) - use the Wildcard IP address instead (0.0.0.0).  
   
 4.  IPAddress specified does not match the IP address of a URL reservations AND neither a wildcard or host name URL reservation exist.  
   

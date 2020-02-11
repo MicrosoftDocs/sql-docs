@@ -266,7 +266,7 @@ WHERE [Measures].[FreightCostPerOrder]", conn);
 
             //Create a command, and assign it an XMLA command to process the cube.
             AdomdCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "<Process xmlns=\"http://schemas.microsoft.com/analysisservices/2003/engine\">\r\n" +
+            cmd.CommandText = "<Process xmlns=\"https://schemas.microsoft.com/analysisservices/2003/engine\">\r\n" +
   @"<Object>
     <DatabaseID>Adventure Works DW Standard Edition</DatabaseID>
     <CubeID>Adventure Works DW</CubeID>

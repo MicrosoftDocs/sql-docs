@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttoas.connectionproperties.f1"
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg

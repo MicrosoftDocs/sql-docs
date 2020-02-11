@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONCAT_NULL_YIELDS_NULL_TSQL"
@@ -22,10 +20,8 @@ helpviewer_keywords:
   - "concatenation [SQL Server]"
   - "SET CONCAT_NULL_YIELDS_NULL statement"
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
@@ -40,13 +36,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```sql
 -- Syntax for SQL Server  
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
   
-```  
+```sql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
@@ -61,24 +57,23 @@ SET CONCAT_NULL_YIELDS_NULL ON
 >  SET CONCAT_NULL_YIELDS_NULL is the same setting as the CONCAT_NULL_YIELDS_NULL setting of ALTER DATABASE.  
   
  The setting of SET CONCAT_NULL_YIELDS_NULL is set at execute or run time and not at parse time.  
-  
- SET CONCAT_NULL_YIELDS_NULL must be ON when you are creating or changing indexes on computed columns or indexed views. If SET CONCAT_NULL_YIELDS_NULL is OFF, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+
+SET CONCAT_NULL_YIELDS_NULL must be **ON** when creating or altering indexed views, indexes on computed columns, filtered indexes or spatial indexes. If SET CONCAT_NULL_YIELDS_NULL is **OFF**, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns, filtered indexes, spatial indexes or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).
   
  When CONCAT_NULL_YIELDS_NULL is set to OFF, string concatenation across server boundaries cannot occur.  
   
  To view the current setting for this setting, run the following query.  
   
-```  
-DECLARE @CONCAT_NULL_YIELDS_NULL VARCHAR(3) = 'OFF';  
-IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_NULL_YIELDS_NULL = 'ON';  
-SELECT @CONCAT_NULL_YIELDS_NULL AS CONCAT_NULL_YIELDS_NULL;  
-  
+```sql
+DECLARE @CONCAT_SETTING VARCHAR(3) = 'OFF';  
+IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_SETTING = 'ON';  
+SELECT @CONCAT_SETTING AS CONCAT_NULL_YIELDS_NULL; 
 ```  
   
 ## Examples  
  The following example showing using both `SET CONCAT_NULL_YIELDS_NULL` settings.  
   
-```  
+```sql
 PRINT 'Setting CONCAT_NULL_YIELDS_NULL ON';  
 GO  
 -- SET CONCAT_NULL_YIELDS_NULL ON and testing.  

@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Understanding the DMX Select Statement
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +26,7 @@ manager: kfile
   
 -   Copy mining models.  
   
- Each of these tasks uses a different set of data, which we’ll call a *data domain*. You define the data domain in the **FROM** clause of the statement.  
+ Each of these tasks uses a different set of data, which we'll call a *data domain*. You define the data domain in the **FROM** clause of the statement.  
   
 -   You want to find objects in the data mining model itself, such as the rule that defines a set of data, or a formula used to make predictions.  
   
@@ -57,8 +56,8 @@ manager: kfile
   
 |Query Type|Description|  
 |----------------|-----------------|  
-|SELECT FROM [NATURAL] PREDICTION JOIN|Returns a prediction that is created by joining the columns in the mining model to the columns of an internal data source.<br /><br /> The domain for this query type is the predictable columns from the model and the columns from the input data source.<br /><br /> [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Prediction Queries &#40;Data Mining&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
-|SELECT FROM *\<model>*|Returns the most likely state of the predictable column, based only on the mining model. This query type is a shortcut for creating a prediction with an empty prediction join.<br /><br /> The domain for this query type is the predictable columns from the model.<br /><br /> [SELECT FROM &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Prediction Queries &#40;Data Mining&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
+|SELECT FROM [NATURAL] PREDICTION JOIN|Returns a prediction that is created by joining the columns in the mining model to the columns of an internal data source.<br /><br /> The domain for this query type is the predictable columns from the model and the columns from the input data source.<br /><br /> [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Prediction Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|SELECT FROM *\<model>*|Returns the most likely state of the predictable column, based only on the mining model. This query type is a shortcut for creating a prediction with an empty prediction join.<br /><br /> The domain for this query type is the predictable columns from the model.<br /><br /> [SELECT FROM &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Prediction Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [Back to Select Types](#Select_Types)  
   
@@ -67,10 +66,10 @@ manager: kfile
   
 |Query Type|Description|  
 |----------------|-----------------|  
-|SELECT DISTINCT FROM *\<model>*|Returns all the state values from the mining model for the specified column.<br /><br /> The data domain for this query type is the data mining model.<br /><br /> [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
-|SELECT FROM *\<model>*.CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
+|SELECT DISTINCT FROM *\<model>*|Returns all the state values from the mining model for the specified column.<br /><br /> The data domain for this query type is the data mining model.<br /><br /> [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|SELECT FROM *\<model>*.CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
 |SELECT FROM *\<model>*.DIMENSION_CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
+|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [Back to Select Types](#Select_Types)  
   
@@ -88,9 +87,9 @@ manager: kfile
   
 |Query Type|Description|  
 |----------------|-----------------|  
-|SELECT FROM *\<model>*.CASES|Returns the cases used to train the mining model.<br /><br /> The domain for this query type is the data mining model.<br /><br /> [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Create Drillthrough Queries using DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
+|SELECT FROM *\<model>*.CASES|Returns the cases used to train the mining model.<br /><br /> The domain for this query type is the data mining model.<br /><br /> [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Create Drillthrough Queries using DMX](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
 |SELECT FROM *\<model>*.SAMPLE_CASES|Returns a sample case, representative of the cases used to train the mining model.<br /><br /> The domain for this query type is the data mining model.<br /><br /> [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|SELECT FROM *\<structure>*. CASES|Returns the detailed data rows from the underlying mining structure, even if some details were not used in training the mining model.<br /><br /> [SELECT FROM &#60;structure&#62;.CASES](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthrough Queries &#40;Data Mining&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
+|SELECT FROM *\<structure>*. CASES|Returns the detailed data rows from the underlying mining structure, even if some details were not used in training the mining model.<br /><br /> [SELECT FROM &#60;structure&#62;.CASES](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthrough Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [Back to Select Types](#Select_Types)  
   

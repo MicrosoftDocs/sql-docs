@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_os_memory_objects"
@@ -19,10 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_objects dynamic management view"
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_memory_objects (Transact-SQL)
@@ -35,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**memory_object_address**|**varbinary(8)**|Address of the memory object. Is not nullable.|  
 |**parent_address**|**varbinary(8)**|Address of the parent memory object. Is nullable.|  
 |**pages_allocated_count**|**int**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Number of pages that are allocated by this object. Is not nullable.|  
-|**pages_in_bytes**|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Amount of memory in bytes that is allocated by this instance of the memory object. Is not nullable.|  
+|**pages_in_bytes**|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Amount of memory in bytes that is allocated by this instance of the memory object. Is not nullable.|  
 |**creation_options**|**int**|Internal use only. Is nullable.|  
 |**bytes_used**|**bigint**|Internal use only. Is nullable.|  
 |**type**|**nvarchar(60)**|Type of memory object.<br /><br /> This indicates some component that this memory object belongs to, or the function of the memory object. Is nullable.|  
@@ -43,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**memory_node_id**|**smallint**|ID of a memory node that is being used by this memory object. Is not nullable.|  
 |**creation_time**|**datetime**|Internal use only. Is nullable.|  
 |**max_pages_allocated_count**|**int**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Maximum number of pages allocated by this memory object. Is not nullable.|  
-|**page_size_in_bytes**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Size of pages in bytes allocated by this object. Is not nullable.|  
+|**page_size_in_bytes**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Size of pages in bytes allocated by this object. Is not nullable.|  
 |**max_pages_in_bytes**|**bigint**|Maximum amount of memory  ever used by this memory object. Is not nullable.|  
 |**page_allocator_address**|**varbinary(8)**|Memory address of page allocator. Is not nullable. For more information, see [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary(8)**|Internal use only. Is nullable.|  
@@ -59,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ## Remarks  
  Memory objects are heaps. They provide allocations that have a finer granularity than those provided by memory clerks. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components use memory objects instead of memory clerks. Memory objects use the page allocator interface of the memory clerk to allocate pages. Memory objects do not use virtual or shared memory interfaces. Depending on the allocation patterns, components can create different types of memory objects to allocate regions of arbitrary size.  

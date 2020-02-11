@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], upgrading"
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -127,7 +124,7 @@ manager: craigg
   
     5.  Take care that the transaction log of the secondary database does not fill while the database is online. To prevent the transaction log from filling, you might need to back it up. If so, we recommend that you back it up to a shared location, a *backup share*, to make the backups available for restoring on the other server instance.  
   
-#####  <a name="Procedure2 "></a> Procedure 2: Upgrade the Original Primary Server Instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> Procedure 2: Upgrade the Original Primary Server Instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  After you upgrade the original primary server instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database will still be offline and in the format.  
   
 #####  <a name="Procedure3"></a> Procedure 3: Set Up Log Shipping on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -207,7 +204,7 @@ manager: craigg
   
 6.  Upgrade the original primary server (server A).  
   
-7.  On the database to which you failed over—the interim primary database (on server B), manually back up the transaction log using WITH NORECOVERY. This takes the database offline.  
+7.  On the database to which you failed over-the interim primary database (on server B), manually back up the transaction log using WITH NORECOVERY. This takes the database offline.  
   
 8.  Restore all transaction log backups that you created on the interim primary database (on server B) to every other secondary database (on server C) using WITH NORECOVERY. This allows log shipping to continue from the original primary database after its upgrade, without requiring a full database restore on each secondary database.  
   
@@ -222,5 +219,3 @@ manager: craigg
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
-  
-  

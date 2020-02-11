@@ -6,16 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "namespaces in ADO"
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Namespaces
 The XML persistence format in ADO uses the following four namespaces.  
@@ -35,7 +31,7 @@ The XML persistence format in ADO uses the following four namespaces.
 > [!IMPORTANT]
 >  The ID for the schema tag must be "RowsetSchema," and the namespace used to refer to the schema of the current rowset must point to "#RowsetSchema."  
   
- Note that the prefix of the namespace — the part between the colon and the equal sign — is arbitrary.  
+ Note that the prefix of the namespace - the part between the colon and the equal sign - is arbitrary.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

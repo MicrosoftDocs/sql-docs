@@ -1,10 +1,9 @@
 ---
-title: "Bind a Report to a Shared Data Source (SSRS) | Microsoft Docs"
+title: "Bind a Report to a Shared Data Source | Microsoft Docs"
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -12,8 +11,8 @@ helpviewer_keywords:
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], shared"
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Bind a Report to a Shared Data Source (SSRS)
   In some situations, such as when you move a report from a test server to a production server, you might want to save the file to your local computer and then upload it to a different report server. When you upload the report to the new server, you need to rebind it to a shared data source that is stored on the new report server. If you don't rebind the report, it will not work correctly when accessed from the new report server.  
@@ -47,7 +46,7 @@ ms.author: maghan
   
 5.  In the **Connection Type** area, verify that **Shared data source** is selected.  
   
-6.  In the **Data Source Link** area, click the ellipsis (…) button.  
+6.  In the **Data Source Link** area, click the ellipsis (...) button.  
   
 7.  Locate the data source you want to use.  
   
@@ -59,8 +58,8 @@ ms.author: maghan
   
 ## See Also  
  [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
   

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,10 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Catalog object [ADOX]"
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Catalog Object (ADOX)
 Contains collections ([Tables](../../../ado/reference/adox-api/tables-collection-adox.md), [Views](../../../ado/reference/adox-api/views-collection-adox.md), [Users](../../../ado/reference/adox-api/users-collection-adox.md), [Groups](../../../ado/reference/adox-api/groups-collection-adox.md), and [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md)) that describe the schema catalog of a data source.  

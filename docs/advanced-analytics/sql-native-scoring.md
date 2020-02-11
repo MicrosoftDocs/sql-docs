@@ -1,22 +1,23 @@
 ---
-title: Native scoring in SQL Server machine learning | Microsoft Docs
+title: Native scoring using T-SQL PREDICT
 description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pre-trained model written in R or Python on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 08/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Native scoring using the PREDICT T-SQL function
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Native scoring leverages the native C++ extension capabilities in SQL Server 2017 to generate prediction values or *scores* for new data inputs in near-real-time. This methodology offers the fastest processing speed of forecasting and prediction workloads, but comes with platform and library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
+Native scoring uses [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) and the native C++ extension capabilities in SQL Server 2017 to generate prediction values or *scores* for new data inputs in near-real-time. This methodology offers the fastest possible processing speed of forecasting and prediction workloads, but comes with platform and library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
 
-Native scoring requires that you have an already trained model. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to invoke native scoring. The PREDICT function takes a pre-trained model and generates scores over data inputs you provide.
+Native scoring requires that you have an already trained model. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can call the PREDICT function in Transact-SQL to invoke native scoring against new data that you provide as an input parameter. The PREDICT function returns scores over data inputs you provide.
 
 ## How native scoring works
 
@@ -31,7 +32,7 @@ The function returns predictions for the input data, together with any columns o
 
 ## Prerequisites
 
-PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server 2017 Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux), or Azure SQL Database. You do not need to install R, Python, or enable additional features.
+PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux), or Azure SQL Database. You do not need to install R, Python, or enable additional features.
 
 + The model must be trained in advance using one of the supported **rx** algorithms listed below.
 
@@ -74,7 +75,7 @@ In this example, you create a model, and then call the real-time prediction func
 
 Run the following code to create the sample database and required tables.
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -91,7 +92,7 @@ GO
 
 Use the following statement to populate the data table with data from the **iris** dataset.
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -103,7 +104,7 @@ GO
 
 Now, create a table for storing models.
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -114,7 +115,7 @@ GO
 
 The following code creates a model based on the **iris** dataset and saves it to the table named **models**.
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -134,7 +135,7 @@ EXECUTE sp_execute_external_script
 
 You can run a statement such as the following to view the stored model in binary format:
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -143,7 +144,7 @@ FROM ml_models;
 
 The following simple PREDICT statement gets a classification from the decision tree model using the **native scoring** function. It predicts the iris species based on attributes you provide, petal length and width.
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models

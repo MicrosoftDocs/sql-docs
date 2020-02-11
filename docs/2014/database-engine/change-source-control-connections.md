@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server Management Studio], source controls"
   - "source controls [SQL Server Management Studio], connections"
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,28 +4,20 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpdistpublisher_TSQL"
   - "sp_helpdistpublisher"
 helpviewer_keywords: 
   - "sp_helpdistpublisher"
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpdistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns properties of the Publishers using a Distributor. This stored procedure is executed at the Distributor on any database.  
   
@@ -40,10 +32,10 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the Publisher for which properties are returned. *publisher* is **sysname**, with a default of **%**.  
   
- [ **@check_user=** ] *check_user*  
+`[ @check_user = ] check_user`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Result Sets  

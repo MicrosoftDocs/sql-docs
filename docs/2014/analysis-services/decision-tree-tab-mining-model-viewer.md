@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.decisiontree.f1"
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

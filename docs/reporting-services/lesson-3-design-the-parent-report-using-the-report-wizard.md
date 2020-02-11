@@ -4,14 +4,11 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 3: Design the Parent Report using the Report Wizard
 After you create a data connection and a data table for the parent report, your next step is to design the parent report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design Reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
@@ -40,7 +37,7 @@ After you create a data connection and a data table for the parent report, your 
   
 7.  Select **Next** twice, then select **Finish** to close the **Report Wizard**.  
   
-    You’ve now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
+    You've now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
   
 8.  Save the .rdlc file.  
   

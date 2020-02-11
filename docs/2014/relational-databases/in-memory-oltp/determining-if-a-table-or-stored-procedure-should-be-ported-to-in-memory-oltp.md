@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analyze, Migrate, Report"
   - "AMR"
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
-  The transaction performance collector in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application’s performance. The transaction performance analysis report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure.  
+  The transaction performance collector in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application's performance. The transaction performance analysis report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure.  
   
  This topic will discuss how to:  
   
@@ -28,7 +25,7 @@ manager: craigg
   
 -   Generate transaction performance analysis reports to identify performance-critical tables and stored procedures.  
   
- For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  The transaction performance collector and the transaction performance analysis reports help you accomplish the following tasks:  
   
@@ -41,7 +38,7 @@ manager: craigg
     > [!IMPORTANT]  
     >  The performance of a database system is dependent on a variety of factors, not all of which the transaction performance collector can observe and measure. Therefore, the transaction performance analysis report does not guarantee actual performance gains will match its predictions, if any predictions are made.  
   
- The transaction performance collector and the ability to generate a transaction performance analysis report are installed when you select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ The transaction performance collector and the ability to generate a transaction performance analysis report are installed when you select **Management Tools-Basic** or **Management Tools-Advanced** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## Best Practices  
  The recommended workflow is illustrated in the following flowchart. The yellow nodes represent optional procedures:  
@@ -183,13 +180,13 @@ manager: craigg
   
 -   Contention Statistics Section  
   
-     This section includes a table that shows contention on the database table. For more information regarding database latches and locks, please see [Locking Architecture](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). The columns are as follows:  
+     This section includes a table that shows contention on the database table. For more information regarding database latches and locks, please see [Locking Architecture](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). The columns are as follows:  
   
     -   Percent of total waits. The percentage of latch and lock waits on this database table compared to activity of the database. The higher this percentage, the more heavily used the table is compared to other tables in the database.  
   
-    -   Latch Statistics. These columns record the number of latch waits for queries involving for this table. For information on latches, see [Latching](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). The higher this number, the more latch contention on the table.  
+    -   Latch Statistics. These columns record the number of latch waits for queries involving for this table. For information on latches, see [Latching](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). The higher this number, the more latch contention on the table.  
   
-    -   Lock Statistics. This group of columns record the number of page lock acquisitions and waits for queries for this table. For more information on locks, see [Understanding Locking in SQL Server](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). The more waits, the more lock contention on the table.  
+    -   Lock Statistics. This group of columns record the number of page lock acquisitions and waits for queries for this table. For more information on locks, see [Understanding Locking in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). The more waits, the more lock contention on the table.  
   
 -   Migration Difficulties Section  
   
@@ -201,7 +198,7 @@ manager: craigg
   
 -   Execution Statistics Section  
   
-     This section includes a table that shows the statistics that were collected about the stored procedure’s executions. The columns are as follows:  
+     This section includes a table that shows the statistics that were collected about the stored procedure's executions. The columns are as follows:  
   
     -   Cached Time. The time this execution plan is cached. If the stored procedure drops out of the plan cache and re-enters, there will be times for each cache.  
   
@@ -209,7 +206,7 @@ manager: craigg
   
     -   Total Execution Time. The total amount of execution time the stored procedure used during profiling. The higher the difference between this number and the CPU time is, the less efficiently the stored procedure is using the CPU.  
   
-    -   Total Cache Missed. The number of cache misses (reads from physical storage) that is caused by the stored procedure’s executions during profiling.  
+    -   Total Cache Missed. The number of cache misses (reads from physical storage) that is caused by the stored procedure's executions during profiling.  
   
     -   Execution Count. The number of times this stored procedure executed during profiling.  
   

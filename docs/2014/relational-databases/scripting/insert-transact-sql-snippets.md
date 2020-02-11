@@ -1,20 +1,16 @@
 ---
-title: "Insert Transact-SQL Snippets | Microsoft Docs"
-ms.custom: ""
+title: Insert Transact-SQL Snippets
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], snippets"
   - "Transact-SQL snippets, code"
   - "snippets [Transact-SQL], how to insert"
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

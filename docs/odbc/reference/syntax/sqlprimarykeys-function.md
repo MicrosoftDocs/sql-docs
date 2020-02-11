@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLPrimaryKeys"
@@ -19,10 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLPrimaryKeys function [ODBC]"
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLPrimaryKeys Function
 **Conformance**  
@@ -33,16 +29,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLPrimaryKeys(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      CatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      SchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      TableName,  
-     SQLSMALLINT    NameLength3);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      CatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      SchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      TableName,  
+     SQLSMALLINT    NameLength3);  
 ```  
   
 ## Arguments  

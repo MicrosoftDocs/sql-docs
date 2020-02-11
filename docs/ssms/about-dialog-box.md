@@ -1,23 +1,18 @@
 ---
-title: "About Dialog Box | Microsoft Docs"
-ms.custom: ""
+title: "About Dialog Box"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "status information [SQL Server Management Studio]"
   - "About dialog box"
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
-caps.latest.revision: 3
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # About Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  

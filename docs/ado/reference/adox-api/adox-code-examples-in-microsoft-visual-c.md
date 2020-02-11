@@ -6,18 +6,14 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "ADOX code examples, Visual C++"
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADOX Code Examples in Microsoft Visual C++
 These topics provide sample code to help you understand how to use ADOX. All code examples are written using Microsoft Visual C++.  

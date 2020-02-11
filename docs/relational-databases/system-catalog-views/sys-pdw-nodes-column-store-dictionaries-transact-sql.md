@@ -1,21 +1,16 @@
-﻿---
-title: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL) | Microsoft Docs"
+---
+title: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL)"
 ms.date: "03/03/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: sql-data-warehouse
-ms.component: system-objects
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.custom: ""
-ms.tgt_pltfrm: ""
+ms.custom: seo-dt-2019
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
@@ -26,18 +21,18 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indicates the partition ID. Is unique within a database.|  
-|**hobt_id**|**bigint**|ID of the heap or B-tree index (hobt) for the table that has this columnstore index.|  
+|**hobt_id**|**bigint**|ID of the heap or B-tree index (HoBT) for the table that has this columnstore index.|  
 |**column_id**|**int**|ID of the columnstore column.|  
 |**dictionary_id**|**int**|Id of the dictionary.|  
 |**version**|**int**|Version of the dictionary format.|  
-|**type**|**int**|Dictionary type:<br /><br /> 1 – Hash dictionary containing **int** values<br /><br /> 2 – Not used<br /><br /> 3 – Hash dictionary containing string values<br /><br /> 4 – Hash dictionary containing **float** values|  
+|**type**|**int**|Dictionary type:<br /><br /> 1 - Hash dictionary containing **int** values<br /><br /> 2 - Not used<br /><br /> 3 - Hash dictionary containing string values<br /><br /> 4 - Hash dictionary containing **float** values|  
 |**last_id**|**int**|The last data id in the dictionary.|  
 |**entry_count**|**bigint**|Number of entries in the dictionary.|  
 |**on_disc_size**|**bigint**|Size of dictionary in bytes.|  
 |**pdw_node_id**|**int**|Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission.  
+ Requires `VIEW SERVER STATE` permission.  
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

@@ -1,19 +1,15 @@
 ---
-title: "Export Data to Excel from Master Data Services | Microsoft Docs"
-ms.custom: microsoft-excel-add-in
+title: Export Data to Excel
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: master-data-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
-caps.latest.revision: 16
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Export Data to Excel from Master Data Services
 

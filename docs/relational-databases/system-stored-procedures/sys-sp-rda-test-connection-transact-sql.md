@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_rda_test_connection"
@@ -16,9 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_test_connection stored procedure"
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +42,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  The fully qualified address of the Azure server.  
   
--   If you provide a value for **@database_name**, but the specified database is not Stretch-enabled, then you have to provide a value for **@server_address**.  
+-   If you provide a value for **\@database_name**, but the specified database is not Stretch-enabled, then you have to provide a value for **\@server_address**.  
   
--   If you provide a value for **@database_name**, and the specified database is Stretch-enabled, then you don't have to provide a value for **@server_address**. If you provide a value for **@server_address**, the stored procedure ignores it and uses existing Azure server already associated with the Stretch-enabled database.  
+-   If you provide a value for **\@database_name**, and the specified database is Stretch-enabled, then you don't have to provide a value for **\@server_address**. If you provide a value for **\@server_address**, the stored procedure ignores it and uses existing Azure server already associated with the Stretch-enabled database.  
   
  @azure_username = N'*azure_username*  
  The user name for the remote Azure server.  

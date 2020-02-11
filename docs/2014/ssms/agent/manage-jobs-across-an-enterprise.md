@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiserver job management [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, modifying"
   - "target servers [SQL Server], job changes"
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

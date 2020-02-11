@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "PropertyName Property (ClientNetworkProtocolProperty Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "PropertyName property"
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

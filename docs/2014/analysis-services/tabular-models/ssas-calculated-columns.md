@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
 ---
 # Calculated Columns (SSAS Tabular)
-  Calculated columns, in tabular models, allow you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
+  Calculated columns, in tabular models, allow you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column's row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
   
 > [!NOTE]  
 >  Calculated columns are not supported for tabular models in DirectQuery mode. For more information, see [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md).  
@@ -58,7 +54,7 @@ manager: craigg
   
 -   When you rename a calculated column, any formulas that rely on the column must be updated manually. Unless you are in manual update mode, updating the results of formulas takes place automatically. However, this operation might take some time.  
   
--   There are some characters that cannot be used within the names of columns. For more information, see "Naming Requirements" in [DAX Syntax Specification for PowerPivot](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx).  
+-   There are some characters that cannot be used within the names of columns. For more information, see "Naming Requirements" in [DAX Syntax Specification for PowerPivot](/dax/dax-syntax-reference).  
   
 ##  <a name="bkmk_perf"></a> Performance of Calculated Columns  
  The formula for a calculated column can be more resource-intensive than the formula used for a measure. One reason is that the result for a calculated column is always calculated for each row in a table, whereas a measure is only calculated for the cells defined by the filter used in a report, PivotTable, or PivotChart. For example, a table with a million rows will always have a calculated column with a million results, and a corresponding effect on performance. However, a PivotTable generally filters data by applying row and column headings; therefore, a measure is calculated only for the subset of data in each cell of the PivotTable.  

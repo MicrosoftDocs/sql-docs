@@ -1,13 +1,11 @@
 ---
-title: "Use Marked Transactions to Recover Related Databases Consistently | Microsoft Docs"
+title: "Restore databases to marked transaction"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction marks [SQL Server]"
@@ -20,12 +18,11 @@ helpviewer_keywords:
   - "BEGIN TRAN...WITH MARK statement"
   - "two-phase commit"
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Use Marked Transactions to Recover Related Databases Consistently
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  
@@ -60,7 +57,7 @@ manager: craigg
 4.  Restore database backups WITH NORECOVERY.  
   
 5.  Restore logs WITH STOPATMARK.  
-  
+
 ## Considerations for Using Marked Transactions  
  Before inserting named marks into the transaction log, consider the following:  
   

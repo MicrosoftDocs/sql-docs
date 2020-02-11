@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: supportability
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

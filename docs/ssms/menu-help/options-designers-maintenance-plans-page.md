@@ -1,22 +1,17 @@
 ---
-title: "Options (Designers - Maintenance Plans Page) | Microsoft Docs"
-ms.custom: ""
+title: "Options (Designers - Maintenance Plans Page)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.MaintenancePlans"
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options (Designers - Maintenance Plans Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

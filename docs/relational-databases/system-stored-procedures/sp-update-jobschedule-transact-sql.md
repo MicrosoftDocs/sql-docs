@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_jobschedule_TSQL"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_jobschedule"
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +25,7 @@ manager: craigg
   
  **sp_update_jobschedule** is provided for backward compatibility only.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  For more information about syntax used in earlier versions of Microsoft SQL Server, see the Transact-SQL Referencefor Microsoft SQL Server 2000*.*  
   
 ## Remarks  

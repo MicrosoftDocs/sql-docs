@@ -1,28 +1,21 @@
 ---
-title: "Tutorial: Administering Servers by Using Policy-Based Management | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Managing servers using Policy-Based Management"
+description: This tutorial teaches you how to create and apply an off-by-default policy, and a naming-standards policy.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "tutorials [Policy-Based Management]"
   - "Policy-Based Management, tutorials"
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
-caps.latest.revision: 17
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
-# Tutorial: Administering Servers by Using Policy-Based Management
+# Tutorial: Managing servers using Policy-Based Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Welcome to the Administering Servers by Using Policy-Based Management Policies tutorial. This tutorial is intended for users who are familiar with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but new to the Policy-Based Management.  
   

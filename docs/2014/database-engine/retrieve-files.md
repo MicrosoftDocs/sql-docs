@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "version control services [SQL Server], file retrieval"
   - "file retrieval [SQL Server]"
   - "retrieving files"
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg

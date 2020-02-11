@@ -1,22 +1,18 @@
-﻿---
-title: "Targets for Extended Events in SQL Server | Microsoft Docs"
-ms.custom: ""
+---
+title: "Targets for Extended Events in SQL Server"
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Targets for Extended Events in SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -517,7 +513,6 @@ To test the event session, we purposely prevented to acquired locks from being r
 3. Purposely not issue a COMMIT TRANSACTION, until after we examined the targets.
 4. Later after testing, we issued a COMMIT TRANSACTION.
 
-
 The simple **event_counter** target provided the following output rows. Because 52-50=2, the output tells us we should see 2 unpaired lock_acquired events when we examine the output from the pair-matching target.
 
 
@@ -674,7 +669,7 @@ To see the preceding XML, you can issue the following SELECT while the event ses
 
 ```sql
 SELECT
-		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
 	INTO
 		#XmlAsTable
 	FROM

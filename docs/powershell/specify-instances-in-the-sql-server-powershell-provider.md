@@ -1,18 +1,15 @@
 ---
-title: "Specify Instances in the SQL Server PowerShell Provider | Microsoft Docs"
-ms.custom: ""
+title: "Specify instances in SQL Server PowerShell Provider"
+description: Learn how to specify instances when using the SQL Server PowerShell provider. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: scripting
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Specify Instances in the SQL Server PowerShell Provider
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

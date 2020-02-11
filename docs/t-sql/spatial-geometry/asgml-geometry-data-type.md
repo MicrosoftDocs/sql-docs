@@ -5,9 +5,7 @@ ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "AsGml(geometry_Data_Type)_TSQL"
@@ -19,17 +17,15 @@ dev_langs:
 helpviewer_keywords: 
   - "AsGml (geometry Data Type)"
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # AsGml (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns the Geography Markup Language (GML) representation of a **geometry** instance.
   
-For more information on Geography Markup Language, see the following Open Geospatial Consortium Specification:[OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)
+For more information on Geography Markup Language, see the following Open Geospatial Consortium Specification:[OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## Syntax  
   
@@ -57,7 +53,7 @@ SELECT @g.AsGml();
  This method returns the description as a `LineString` instance.  
   
 ```  
-<LineString xmlns="http://www.opengis.net/gml">  
+<LineString xmlns="https://www.opengis.net/gml">  
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   

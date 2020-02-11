@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.SQLSERVEROBJECTEXPLORER.DHELP"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "OE F1 Help"
   - "OE Help"
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg

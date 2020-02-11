@@ -1,25 +1,23 @@
 ---
-title: "How to: Compare and Synchronize the Data of Two Databases | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Compare and Synchronize the Data of Two Databases
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datacompare.connection.datasources.f1"
   - "sql.data.tools.datacompare.watermark.f1"
   - "sql.data.tools.datacompare.connection.objectselection.f1"
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-caps.latest.revision: 10
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Compare and Synchronize the Data of Two Databases
+
 You can compare the data that is contained in two databases. The databases that you compare are known as the *source* and the *target*.  
   
 > [!NOTE]  

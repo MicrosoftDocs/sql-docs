@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "restorefile"
@@ -20,10 +17,8 @@ helpviewer_keywords:
   - "restoring files [SQL Server], restorefile system table"
   - "file restores [SQL Server], restorefile system table"
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # restorefile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

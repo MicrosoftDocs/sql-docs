@@ -4,16 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "full-text search [SMO]"
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -31,7 +26,7 @@ manager: craigg
 ## Creating a Full-Text Search Service in Visual Basic  
  This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.SqlEnum.dll   
 ' /r:Microsoft.SqlServer.Smo.dll   
@@ -68,7 +63,7 @@ Public Class A
       Dim fti As FullTextIndex = Nothing  
       fti = New FullTextIndex(tb)  
   
-      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       Dim ftic As FullTextIndexColumn = Nothing  
       ftic = New FullTextIndexColumn(fti, "Name")  
   
@@ -91,7 +86,7 @@ End Class
 ## Creating a Full-Text Search Service in Visual C#  
  This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.SqlEnum.dll   
 // /r:Microsoft.SqlServer.Smo.dll   
@@ -128,7 +123,7 @@ public class A {
       FullTextIndex fti = default(FullTextIndex);  
       fti = new FullTextIndex(tb);  
   
-      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       FullTextIndexColumn ftic = default(FullTextIndexColumn);  
       ftic = new FullTextIndexColumn(fti, "Name");  
   
@@ -151,33 +146,33 @@ public class A {
 ## Creating a Full-Text Search Service in PowerShell  
  This code example creates a full-text search catalog for the `ProductCategory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. It then creates a full-text search index on the Name column in the `ProductCategory` table. The full-text search index requires that there is a unique index already defined on the column.  
   
-```  
+```powershell
 # Example of implementing a full text search on the default instance.  
 # Set the path context to the local, default instance of SQL Server and database tables  
   
 CD \sql\localhost\default\databases  
-$db = get-item AdventureWorks2012  
+$db = Get-Item AdventureWorks2012  
   
 CD AdventureWorks\tables  
   
 #Get a reference to the table  
-$tb = get-item Production.ProductCategory  
+$tb = Get-Item Production.ProductCategory  
   
 # Define a FullTextCatalog object variable by specifying the parent database and name arguments in the constructor.  
   
-$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -argumentlist $db, "Test_Catalog2"  
+$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -ArgumentList $db, "Test_Catalog2"  
 $ftc.IsDefault = $true  
   
 # Create the Full Text Search catalog on the instance of SQL Server.  
 $ftc.Create()  
   
 # Define a FullTextIndex object variable by supplying the parent table argument in the constructor.  
-$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -argumentlist $tb  
+$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -ArgumentList $tb  
   
-#  Define a FullTextIndexColumn object variable by supplying the parent index   
+#  Define a FullTextIndexColumn object variable by supplying the parent index
 #  and column name arguments in the constructor.  
   
-$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -argumentlist $fti, "Name"  
+$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -ArgumentList $fti, "Name"  
   
 # Add the indexed column to the index.  
 $fti.IndexedColumns.Add($ftic)  
@@ -194,5 +189,3 @@ $fti.CatalogName = "Test_Catalog2"
 # Create the Full Text Search Index  
 $fti.Create()  
 ```  
-  
-  

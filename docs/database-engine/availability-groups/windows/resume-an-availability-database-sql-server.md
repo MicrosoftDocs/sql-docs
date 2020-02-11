@@ -1,12 +1,11 @@
 ---
-title: "Resume an Availability Database (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Resume an availability group database"
+description: Steps to resume a database that's been paused within an Always On availability group using either SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.resumedatamove.f1"
@@ -16,10 +15,8 @@ helpviewer_keywords:
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Resume an Availability Database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,38 +25,19 @@ manager: craigg
 > [!NOTE]  
 >  Suspending and resuming an Always On secondary database does not directly affect the availability of the primary database. However, suspending a secondary database can impact redundancy and failover capabilities for the primary database, until the suspended secondary database is resumed. This is in contrast to database mirroring, where the mirroring state is suspended on both the mirror database and the principal database until mirroring is resumed. Suspending an Always On primary database suspends data movement on all the corresponding secondary databases, and redundancy and failover capabilities cease for that database until the primary database is resumed.  
   
--   **Before you begin:**  
   
-     [Prerequisites](#Prerequisites)  
   
-     [Security](#Security)  
-  
--   **To resume a secondary database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-### Limitations and Restrictions  
+## Limitations and Restrictions  
  A RESUME command returns as soon as it has been accepted by the replica that hosts the target database, but actually resuming the database occurs asynchronously.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
   
--   You must be connected to the server instance that hosts the database to be resumed.  
-  
--   The availability group must be online.  
-  
+-   You must be connected to the server instance that hosts the database to be resumed.    
+-   The availability group must be online.    
 -   The primary database must be online and available.  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER permission on the database.  
   
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
@@ -85,9 +63,9 @@ manager: craigg
   
 1.  Connect to the server instance that hosts the secondary replica whose database you want to resume.  
   
-2.  Resume the secondary database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)statement:  
-  
-     ALTER DATABASE *database_name* SET HADR RESUME  
+2.  Resume the secondary database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) statement:  
+
+     ALTER DATABASE *database_name* SET HADR RESUME;
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To resume a secondary database**  

@@ -1,19 +1,15 @@
 ---
-title: "Automatic Matching of Syntax Pairs | Microsoft Docs"
-ms.custom: ""
+title: Automatic Matching of Syntax Pairs
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], delimiter highlighting"
   - "IntelliSense [SQL Server], syntax pair matching"
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -67,6 +63,6 @@ manager: craigg
 -   Opening and closing quotes on attributes.  
   
 ## MDX and DMX Editor Parenthesis Matching  
- The Multi-Dimensional Expressions (MDX) and and Data Mining Expressions (DMX) Editors automatically match parenthesis pairs in functions.  
+ The Multi-Dimensional Expressions (MDX) and Data Mining Expressions (DMX) Editors automatically match parenthesis pairs in functions.  
   
   

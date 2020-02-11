@@ -4,16 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.windows"
 helpviewer_keywords: 
   - "Windows dialog box"
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -36,5 +31,3 @@ manager: craigg
   
  **Close Windows**  
  Closes the selected documents and windows in the list.  
-  
-  

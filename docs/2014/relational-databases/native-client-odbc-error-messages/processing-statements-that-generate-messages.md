@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "PRINT statement"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "ODBC error handling, statements generating messages"
   - "SQLExecDirect function"
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

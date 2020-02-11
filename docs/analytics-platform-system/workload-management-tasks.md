@@ -1,14 +1,14 @@
 ---
-title: Workload Management Tasks - Analytics Platform System | Microsoft Docs
+title: Workload Management Tasks
 description: Workload management tasks in Analytics Platform System.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Workload Management Tasks in Analytics Platform System
@@ -107,7 +107,7 @@ For resource class descriptions, see [Workload Management](workload-management.m
   
 When a login is not a member of any resource class server role, requests submitted by the login will receive the default amount of system resources.  
   
-Suppose the login Matt is currently a member of all resource class server roles and wants to revert back to having requests receive only the default resources.  The following example assigns the default resources to Matt’s requests by dropping his membership from all three resource class server roles.  
+Suppose the login Matt is currently a member of all resource class server roles and wants to revert back to having requests receive only the default resources.  The following example assigns the default resources to Matt's requests by dropping his membership from all three resource class server roles.  
   
 ```sql  
 --Give the requests submitted by Matt the default system resources   

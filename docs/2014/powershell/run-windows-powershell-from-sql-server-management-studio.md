@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -21,12 +17,11 @@ manager: craigg
 ## Before You Begin  
  When you specify running PowerShell for an object in **Object Explorer**, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] starts a Windows PowerShell session in which the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins have been loaded and registered. The path for the session is preset to the location of the object you right clicked in Object Explorer. For example, if you right-click the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database object in Object Explorer and select **Start PowerShell**, the Windows PowerShell path is set to the following:  
   
-```  
+```
 SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>  
 ```  
   
-## Run PowerShell  
- **To run PowerShell from SQL Server Management Studio**  
+## To run PowerShell from SQL Server Management Studio 
   
 1.  Open **Object Explorer**.  
   
@@ -39,5 +34,3 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
   
 ## See Also  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

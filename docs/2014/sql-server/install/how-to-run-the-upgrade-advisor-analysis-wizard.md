@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Analysis Wizard"
 ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
-caps.latest.revision: 36
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -20,7 +16,7 @@ manager: craigg
 # How to: Run the Upgrade Advisor Analysis Wizard
   You start the Upgrade Advisor Analysis Wizard from the Upgrade Advisor start page. This topic describes how to run the Upgrade Advisor Analysis Wizard.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  When you run the Upgrade Advisor Analysis Wizard, Upgrade Advisor saves the reports in the default report folder. However, the report viewer displays only the five latest saved reports. The default location for the reports is My Documents\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports.  
   
 ### To run the Upgrade Advisor Analysis Wizard  
@@ -29,11 +25,11 @@ manager: craigg
   
 2.  On the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components** page, enter the name of the server to scan in the **Server name** box, and then click **Detect**. Use the following guidelines for the server name:  
   
-    -   To scan non-clustered instances, enter the computer name.  
+    -   To scan nonclustered instances, enter the computer name.  
   
     -   To scan clustered instances, enter the virtual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] name.  
   
-    -   To scan non-clustered components that are installed on a node of a cluster, enter the node name.  
+    -   To scan nonclustered components that are installed on a node of a cluster, enter the node name.  
   
     > [!WARNING]  
     >  Upgrade Advisor does not support connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that is not set to use the standard port (1433) for client connections. If you want to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that does not use the standard port (1433), create an alias using the IP address and the port. For more information about configuring client protocols and creating an alias for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, see [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  

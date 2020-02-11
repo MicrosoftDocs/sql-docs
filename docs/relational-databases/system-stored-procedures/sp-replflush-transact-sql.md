@@ -4,28 +4,20 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replflush"
   - "sp_replflush_TSQL"
 helpviewer_keywords: 
   - "sp_replflush"
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replflush (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Flushes the article cache. This stored procedure is executed at the Publisher on the publication database.  
   

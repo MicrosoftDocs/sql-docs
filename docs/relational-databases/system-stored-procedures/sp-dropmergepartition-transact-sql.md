@@ -4,25 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_dropmergepartition_TSQL"
   - "sp_dropmergepartition"
 helpviewer_keywords: 
   - "sp_dropmergepartition"
 ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_dropmergepartition (Transact-SQL)
@@ -42,13 +34,13 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**] = **'***publication***'**  
+`[ @publication] = 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@suser_sname**= ] **'***suser_sname***'**  
+`[ @suser_sname = ] 'suser_sname'`
  Is the value of the [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) function at the Subscriber used to define the partition. *suser_sname* is **sysname**, with no default.  
   
- [ **@host_name** = ] **'***host_name***'**  
+`[ @host_name = ] 'host_name'`
  Is the value of the [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) function at the Subscriber used to define the partition. *host_name* is **sysname**, with no default.  
   
 ## Return Code Values  

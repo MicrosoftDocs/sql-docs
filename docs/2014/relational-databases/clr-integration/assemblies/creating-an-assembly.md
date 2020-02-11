@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "creating assemblies"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "EXTERNAL_ACCESS assemblies"
   - "assemblies [CLR integration], creating"
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -47,7 +44,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   The assembly that is called or referenced was created in the same database.  
   
 ## Specifying Security When Creating Assemblies  
- When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: `SAFE`, `EXTERNAL_ACCESS`, or `UNSAFE`. When the `CREATE ASSEMBLY` statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: `SAFE`, `EXTERNAL_ACCESS`, or `UNSAFE`. When the `CREATE ASSEMBLY` statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  `SAFE` is the default permission set and works for the majority of scenarios. To specify a given security level, you modify the syntax of the CREATE ASSEMBLY statement as follows:  
   
@@ -133,5 +130,4 @@ WITH PERMISSION_SET = UNSAFE;
  [CLR Integration Code Access Security](../security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY Database Property](../../security/trustworthy-database-property.md)   
  [Allowing Partially Trusted Callers](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
-  
   

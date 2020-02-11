@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], Unicode"
@@ -17,10 +15,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Unicode"
   - "Jet-based ODBC drivers [ODBC], Unicode"
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Desktop Database Driver Compatibility
 Unicode is a method of software character encoding that treats all characters as having a fixed width of two bytes. This method is used as an alternative to Windows ANSI character encoding, which, because it represents characters in one byte, is limited to 256 characters. Because Unicode can represent over 65,000 characters, it accommodates many languages whose characters are not represented in ANSI encoding.  

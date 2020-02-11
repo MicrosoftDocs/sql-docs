@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSpublication_access_TSQL"
   - "MSpublication_access"
@@ -21,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpublication_access system table"
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSpublication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

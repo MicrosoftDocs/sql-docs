@@ -5,15 +5,11 @@ ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +37,7 @@ manager: craigg
   
  When you run this sample, you must pass the name of a server, or a server\instance_name, as well as a value between 4 MB (0x400001) and 4 GB (0xFFFFFFFF) indicating the amount of data to write.  
   
- The fourth ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) code listing deletes the database created by this sample.  
+ The fourth ( [!INCLUDE[tsql](../../../../includes/tsql-md.md)]) code listing deletes the database created by this sample.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

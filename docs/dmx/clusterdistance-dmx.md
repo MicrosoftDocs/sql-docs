@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,15 +30,15 @@ ClusterDistance([<ClusterID expression>])
 ## Remarks  
  The **ClusterDistance** function returns the distance between the input case and the cluster that has the highest probability for that input case.  
   
- In case of K-Means clustering, since any case can belong to only one cluster, with a membership weight of 1.0, the cluster distance is always 0. However, in K-Means, each cluster is assumed to have a centroid. You can obtain the value of the centroid by querying or browsing the NODE_DISTRIBUTION nested table in the mining model content. For more information, see [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ In case of K-Means clustering, since any case can belong to only one cluster, with a membership weight of 1.0, the cluster distance is always 0. However, in K-Means, each cluster is assumed to have a centroid. You can obtain the value of the centroid by querying or browsing the NODE_DISTRIBUTION nested table in the mining model content. For more information, see [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining).  
   
  In the case of the default EM clustering method, all the points inside the cluster are considered equally likely; therefore, by design there is no centroid for the cluster. The value of **ClusterDistance** between a particular case and a particular cluster *N* is calculated as follows:  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
  Or:  
   
- ClusterDistance(N) =1–ClusterProbability (N))  
+ ClusterDistance(N) =1-ClusterProbability (N))  
   
 ## Related Prediction Functions  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the following additional functions for querying clustering models:  
@@ -48,7 +47,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   Use the [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md) function to get the probability that a case belongs to a particular cluster. This value serves as the inverse of the cluster distance.  
   
--   Use the [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) function to return a histogram of the likelihood of the input case existing in each of the model’s clusters.  
+-   Use the [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) function to return a histogram of the likelihood of the input case existing in each of the model's clusters.  
   
 -   Use the [PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md) function to return a measure from 0 to 1 that indicates how likely an input case is to exist considering the model learned by the algorithm.  
   
@@ -123,6 +122,6 @@ NATURAL PREDICTION JOIN
  [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

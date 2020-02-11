@@ -1,13 +1,12 @@
 ---
-title: "Example: Setting Up Database Mirroring Using Certificates (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Example: Database mirroring with certificates (T-SQL)"
+description: An example of configuring SQL Server database mirroring with certificates using Transact-SQL.
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
@@ -15,10 +14,8 @@ helpviewer_keywords:
   - "authentication [SQL Server], database mirroring"
   - "database mirroring [SQL Server], security"
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ manager: craigg
   
  The initial principal role is taken by HOST_A, and the mirror role is taken by HOST_B.  
   
- Setting up database mirroring using certificates involves four general stages, of which three stages—1, 2, and 4—are demonstrated by this example. These stages are as follows:  
+ Setting up database mirroring using certificates involves four general stages, of which three stages-1, 2, and 4-are demonstrated by this example. These stages are as follows:  
   
 1.  [Configuring Outbound Connections](#ConfiguringOutboundConnections)  
   
@@ -260,7 +257,7 @@ manager: craigg
     ```  
   
     > [!NOTE]  
-    >  If you intend to run in high-safety mode with automatic failover, leave transaction safety set to FULL (the default setting) and add the witness as soon as possible after executing the second SET PARTNER **'***partner_server***'** statement. Note that the witness must first be configured for outbound and inbound connections.  
+    >  If you intend to run in high-safety mode with automatic failover, leave transaction safety set to FULL (the default setting) and add the witness as soon as possible after executing the second SET PARTNER **'**_partner_server_**'** statement. Note that the witness must first be configured for outbound and inbound connections.  
   
  [&#91;Top of Example&#93;](#ExampleH2)  
   

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating statistics"
@@ -54,7 +52,7 @@ manager: craigg
   
 5.  Right-click the statistics object you wish to update and select **Properties**.  
   
-6.  In the **Statistics Properties –***statistics_name* dialog box, select the **Update statistics for these columns** check box and then click **OK**.  
+6.  In the **Statistics Properties -**_statistics_name_ dialog box, select the **Update statistics for these columns** check box and then click **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

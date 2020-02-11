@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "trace_xe_event_map_TSQL"
@@ -19,10 +16,8 @@ helpviewer_keywords:
   - "trace_xe_event_map"
   - "extended events [SQL Server], tables"
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Extended Events Tables - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

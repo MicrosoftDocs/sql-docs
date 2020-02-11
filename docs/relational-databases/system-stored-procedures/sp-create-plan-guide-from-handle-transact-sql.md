@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_create_plan_guide_from_handle_TSQL"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_create_plan_guide_from_handle"
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +28,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'  
     , [ @plan_handle = ] plan_handle  
     , [ [ @statement_start_offset = ] { statement_start_offset | NULL } ]  
@@ -63,9 +57,9 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Like sp_create_plan_guide, sp_create_plan_guide_from_handle removes the query plan for the targeted batch or module from the plan cache. This is done to ensure that all users begin using the new plan guide. When creating a plan guide for multiple statements within a single query plan, you can postpone the removal of the plan from the cache by creating all the plan guides in an explicit transaction. This method allows the plan to remain in the cache until the transaction is complete and a plan guide for each specified statement is created. See Example B.  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission. In addition, individual permissions are required for each plan guide that is created by using sp_create_plan_guide_from_handle. To create a plan guide of type OBJECT requires ALTER permission on the referenced object. To create a plan guide of type SQL or TEMPLATE requires ALTER permission on the current database. To determine the plan guide type that will be created, run the following query:  
+ Requires `VIEW SERVER STATE` permission. In addition, individual permissions are required for each plan guide that is created by using sp_create_plan_guide_from_handle. To create a plan guide of type OBJECT requires `ALTER` permission on the referenced object. To create a plan guide of type SQL or TEMPLATE requires `ALTER` permission on the current database. To determine the plan guide type that will be created, run the following query:  
   
-```  
+```sql  
 SELECT cp.plan_handle, sql_handle, st.text, objtype   
 FROM sys.dm_exec_cached_plans AS cp  
 JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle  

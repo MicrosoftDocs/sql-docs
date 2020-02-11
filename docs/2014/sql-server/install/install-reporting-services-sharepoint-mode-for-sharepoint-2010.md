@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
-caps.latest.revision: 41
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Install Reporting Services SharePoint Mode for SharePoint 2010
@@ -72,7 +68,7 @@ manager: craigg
   
 5.  Click **Next** after the support files have completed installing and the support rules show a status of **passed**. Review any warnings or blocking issues.  
   
-6.  On the **Product Key** page, type your key or accept the default of the ‘Enterprise Evaluation’ edition.  
+6.  On the **Product Key** page, type your key or accept the default of the 'Enterprise Evaluation' edition.  
   
      Click **Next**.  
   
@@ -88,7 +84,7 @@ manager: craigg
   
 9. Select the following on the **Feature Selection** page:  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **Reporting Services add-in for SharePoint 2010 products**. ![note](../../../2014/reporting-services/media/rs-fyinote.png "note")The installation wizard option for installing the add-in is new with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release.  
   
@@ -140,20 +136,20 @@ manager: craigg
   
 4.  Run the following PowerShell command to install the SharePoint service. A successful completion of the command displays a new line in the management shell. No message is returned to the management shell when the command completes successfully:  
   
-    ```  
+    ```powershell
     Install-SPRSService  
     ```  
   
 5.  Run the following PowerShell command to install the service proxy:  
   
-    ```  
+    ```powershell
     Install-SPRSServiceProxy  
     ```  
   
 6.  Run the following PowerShell command to start the service or see the following notes for instructions to start the service from SharePoint Central administration:  
   
-    ```  
-    get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+    ```powershell
+    Get-SPServiceInstance -All | Where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
     ```  
   
  You can also start the service from SharePoint central Administration rather than running the third PowerShell command. The following steps are also useful to verify that the service is running.  
@@ -165,10 +161,8 @@ manager: craigg
 3.  The status of the Reporting Services service will change from **Stopped** to **Started**. If the Reporting Services service is not in the list, use PowerShell to install the service.  
   
     > [!NOTE]  
-    >  If the Reporting Services service stays in the **Starting** status and does not change to **Started**, verify the ‘SharePoint 2010 Administration’ service is started in Windows Server Manager.  
-  
+    >  If the Reporting Services service stays in the **Starting** status and does not change to **Started**, verify the 'SharePoint 2010 Administration' service is started in Windows Server Manager.  
 
-  
 ##  <a name="bkmk_create_serrviceapplication"></a> Create a Reporting Services Service Application  
  This section provides the steps to create a service application and a description of the properties, if you are reviewing an existing service application.  
   
@@ -247,7 +241,5 @@ manager: craigg
   
 ## See Also  
  [PowerShell cmdlets for Reporting Services SharePoint Mode](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
-  
-  

@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Login for Updatable Subscriptions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +19,7 @@ manager: craigg
   
  Connections are used by the triggers that fire at the Subscriber, and propagate changes to the Publisher. This account is required even if you selected **Queue changes and commit when possible** on the **Updatable Subscriptions** page. The New Subscription Wizard by default configures queued updating with the ability to switch to immediate updating if required.  
   
-> **IMPORTANT!!** The account specified for the connection should only be granted permission to insert, update, and delete data on the views that replication creates in the publication database. It should not be given any additional permissions. Grant permissions on Views in the publication database named in the form **syncobj_***\<HexadecimalNumber>* to the account you configured at each Subscriber.  
+> **IMPORTANT!!** The account specified for the connection should only be granted permission to insert, update, and delete data on the views that replication creates in the publication database. It should not be given any additional permissions. Grant permissions on Views in the publication database named in the form **syncobj_**_\<HexadecimalNumber>_ to the account you configured at each Subscriber.  
   
  There are three options available for the type of connection:  
   
@@ -34,7 +29,7 @@ manager: craigg
   
 -   A linked server that replication creates; the connection is made with the credentials of the user making the change at the Subscriber.  
   
- The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter **@security_mode**.  
+ The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter `@security_mode`.  
   
 ## Options  
  **Create a linked server that connects using the following SQL Server Authentication login:**  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication], join"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "merge replication join filters [SQL Server replication]"
   - "join filters"
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

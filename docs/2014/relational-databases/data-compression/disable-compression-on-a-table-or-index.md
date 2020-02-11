@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -52,7 +51,7 @@ manager: craigg
   
 1.  In Object Explorer, expand the database that contains the table on which you want to disable compression and then expand the **Tables** folder.  
   
-2.  Right-click the table or index on which you want to disable compression, point to **Storage** and select **Manage Compression…**.  
+2.  Right-click the table or index on which you want to disable compression, point to **Storage** and select **Manage Compression...**.  
   
 3.  To disable compression on an index, expand the table that contains the index and then expand the **Indexes** folder.  
   
@@ -101,7 +100,7 @@ manager: craigg
   
      If you select **Schedule**, click **Change schedule**.  
   
-    1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule’s name.  
+    1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule's name.  
   
     2.  On the **Schedule type** list, select the type of schedule:  
   
@@ -125,15 +124,15 @@ manager: craigg
   
             -   If you select **Monthly**, select either **Day** or **The**.  
   
-                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter “15” in the first box and “2” in the second box. Please note that the largest number allowed in the second box is “99”.  
+                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. Please note that the largest number allowed in the second box is "99".  
   
-                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter “2” in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is “99”.  
+                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is "99".  
   
         2.  Under **Daily frequency**, specify how often the job schedule repeats on the day the job schedule runs:  
   
             -   If you select **Occurs once at**, enter the specific time of day when the job schedule should run in the **Occurs once at** box. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
-            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter “2” in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is “100”.  
+            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is "100".  
   
                  In the **Starting at** box, enter the time that the job schedule should start running. In the **Ending at** box, enter the time that the job schedule should stop repeating. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
@@ -175,10 +174,10 @@ manager: craigg
      Opens the **Save Report As** dialog box.  
   
      **Copy Report to Clipboard**  
-     Copies the results of the wizard’s progress report to the Clipboard.  
+     Copies the results of the wizard's progress report to the Clipboard.  
   
      **Send Report as Email**  
-     Copies the results of the wizard’s progress report into an email message.  
+     Copies the results of the wizard's progress report into an email message.  
   
      When complete, click **Close**.  
   

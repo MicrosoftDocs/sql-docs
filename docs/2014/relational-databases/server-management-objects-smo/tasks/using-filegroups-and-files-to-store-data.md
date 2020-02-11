@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "filegroups [SMO]"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "files [SMO], about files"
   - "storage [SMO]"
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -38,7 +33,7 @@ manager: craigg
 ## Adding FileGroups and DataFiles to a Database in Visual C#  
  The primary file group and data file are created automatically with default property values. The code example specifies some property values that you can use. Otherwise, the default property values are used.  
   
-```  
+```csharp
 {  
             Server srv = new Server();  
             //Reference the AdventureWorks2012 database.   
@@ -61,7 +56,7 @@ manager: craigg
 ## Adding FileGroups and DataFiles to a Database in PowerShell  
  The primary file group and data file are created automatically with default property values. The code example specifies some property values that you can use. Otherwise, the default property values are used.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default\Databases\  
   
@@ -90,7 +85,7 @@ $df1.Create()
 ## Creating, Altering, and Removing a Log File in Visual C#  
  The code example creates a <xref:Microsoft.SqlServer.Management.Smo.LogFile> object, changes one of the properties, and then removes it from the database.  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
             //Reference the AdventureWorks2012 database.   
@@ -104,18 +99,17 @@ $df1.Create()
             lf1.Growth = 6;  
             //Run the Create method to create the log file on the instance of SQL Server.   
             lf1.Create();  
-            //Alter the growth percentage.   
+            //Alter the growth percentage.
             lf1.Growth = 7;  
             lf1.Alter();  
-            //Remove the log file.   
-            lf1.Drop();  
-  
+            //Remove the log file.
+            lf1.Drop();
 ```  
   
 ## Creating, Altering, and Removing a Log File in PowerShell  
  The code example creates a <xref:Microsoft.SqlServer.Management.Smo.LogFile> object, changes one of the properties, and then removes it from the database.  
   
-```  
+```powershell
 #Load the assembly containing the enums used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlEnum")  
   
@@ -147,12 +141,9 @@ $lf1.Create()
 #Alter a value and drop the log file  
 $lf1.Growth = 7.0  
 $lf1.Alter()  
-$lf1.Drop()  
-  
+$lf1.Drop()
 ```  
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Database Files and Filegroups](../../databases/database-files-and-filegroups.md)  
-  
-  

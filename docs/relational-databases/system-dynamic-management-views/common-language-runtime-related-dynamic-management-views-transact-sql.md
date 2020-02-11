@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -14,10 +12,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], dynamic management views"
   - "dynamic management objects [SQL Server], common language runtime"
 ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Common Language Runtime Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -1,15 +1,10 @@
 ---
-title: "Check the Status of E-Mail Messages Sent With Database Mail | Microsoft Docs"
-ms.custom: ""
+title: "Status of E-Mail Messages Sent With Database Mail"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "database-mail"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "e-mail [SQL Server], status information"
@@ -17,13 +12,12 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], message status"
   - "status information [Database Mail]"
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
-caps.latest.revision: 30
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: stevestein
+ms.author: sstein
+ms.custom: seo-dt-2019
 ---
 # Check the Status of E-Mail Messages Sent With Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This topic describes how to check the status of the e-mail message sent using Database Mail  in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Before you begin:**  

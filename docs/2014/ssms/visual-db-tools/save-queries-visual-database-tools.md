@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], saving"
   - "saving queries"
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,13 +1,10 @@
 ---
-title: "Change Font Color, Size, and Style | Microsoft Docs"
-ms.custom: ""
+title: Change Font Color, Size, and Style
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "size [SQL Server], fonts"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], managing fonts"
   - "text fonts [SQL Server Management Studio]"
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

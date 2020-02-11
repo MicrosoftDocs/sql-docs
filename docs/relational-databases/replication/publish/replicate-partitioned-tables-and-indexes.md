@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/10/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned indexes [SQL Server], replicating"
@@ -17,13 +14,12 @@ helpviewer_keywords:
   - "publishing [SQL Server replication], partitioned tables"
   - "transactional replication, partitioned tables"
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
-caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replicate Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Partitioning makes large tables or indexes more manageable because partitioning enables you to manage and access subsets of data quickly and efficiently, and maintain the integrity of a data collection at the same time. For more information, see [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Replication supports partitioning by providing a set of properties that specify how partitioned tables and indexes should be treated.  
   
 ## Article Properties for Transactional and Merge Replication  
@@ -70,9 +66,9 @@ manager: craigg
 ### Enabling Partition Switching  
  The following properties for transactional publications enable users to control the behavior of partition switching in a replicated environment:  
   
--   **@allow_partition_switch**, when set to **true**, SWITCH PARTITION can be executed against the publication database.  
+-   `@allow_partition_switch`, when set to `true`, SWITCH PARTITION can be executed against the publication database.  
   
--   **@replicate_partition_switch** determines whether the SWITCH PARTITION DDL statement should be replicated to Subscribers. This option is valid only when **@allow_partition_switch** is set to **true**.  
+-   `@replicate_partition_switch` determines whether the SWITCH PARTITION DDL statement should be replicated to Subscribers. This option is valid only when `@allow_partition_switch` is set to `true`.  
   
  You can set these properties by using [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) when the publication is created, or by using [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) after the publication is created. As noted earlier, merge replication does not support partition switching. To execute SWITCH PARTITION on a table that is enabled for merge replication, remove the table from the publication.  
   

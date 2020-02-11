@@ -1,20 +1,14 @@
 ---
-title: "Manage a Knowledge Base | Microsoft Docs"
-ms.custom: ""
+title: "Manage a Knowledge Base"
 ms.date: "06/04/2013"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: swinarko
+ms.author: sawinark
 ---
 # Manage a Knowledge Base
 

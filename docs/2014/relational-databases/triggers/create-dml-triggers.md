@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], DML triggers"
@@ -66,7 +64,7 @@ manager: craigg
   
 7.  In the **Query Editor**, replace the comment `-- Insert statements for trigger here` with the following statement:  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  
@@ -104,7 +102,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates the same stored DML trigger as above.  
   
-    ```  
+    ```sql
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
     USE AdventureWorks2012;  
@@ -132,7 +130,3 @@ manager: craigg
           (SELECT PurchaseOrderID FROM inserted)  
     END;  
     ```  
-  
-##  <a name="PowerShellProcedure"></a> [Before You Begin](#Top)  
-  
-  

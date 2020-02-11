@@ -3,19 +3,18 @@ title: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This topic shows you how to connect to a **Microsoft SQL Server** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. There are several data providers that you can use to connect to SQL Server.
 
 > [!TIP]
@@ -29,6 +28,7 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
 
 |Required info|.Net Framework Data Provider for SQL Server property|
 |---|---|
+|Authentication|Default **NotSpecified** as “Integrated Security”, or choose other authentication mode. “Interactive Active Directory Authentication” is not supported. |
 |Server name|**Data Source**|
 |Authentication (login) info|**Integrated Security**; or, **User ID** and **Password**<br/>If you want to see a drop-down list of databases on the server, you first have to provide valid login info.|
 |Database name|**Initial Catalog**|

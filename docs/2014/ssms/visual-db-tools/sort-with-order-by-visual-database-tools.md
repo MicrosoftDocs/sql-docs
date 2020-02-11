@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ORDER BY clause [Visual Database Tools]"
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

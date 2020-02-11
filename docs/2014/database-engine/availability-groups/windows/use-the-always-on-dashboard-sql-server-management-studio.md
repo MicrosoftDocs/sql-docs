@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.agdashboard.f1"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
   - "Availability Groups [SQL Server], dashboard"
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -148,7 +145,7 @@ manager: craigg
  Lists the issue name. This value is shown by default. For a list of all the AlwaysOn policy issues, see [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Availability Mode**  
- Indicates the replica property that that you set separately for each availability replica. This value is hidden by default. The possible values are:  
+ Indicates the replica property that you set separately for each availability replica. This value is hidden by default. The possible values are:  
   
 -   **Asynchronous**. The secondary replica never becomes synchronized with the primary replica.  
   

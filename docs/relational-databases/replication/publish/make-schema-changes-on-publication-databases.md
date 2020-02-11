@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], schema changes"
@@ -18,13 +15,12 @@ helpviewer_keywords:
   - "schemas [SQL Server replication], replicating changes"
   - "publishing [SQL Server replication], schema changes"
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 73
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Make Schema Changes on Publication Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Replication supports a wide range of schema changes to published objects. When you make any of the following schema changes on the appropriate published object at a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, that change is propagated by default to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
   
 -   ALTER TABLE  
@@ -71,7 +67,7 @@ manager: craigg
   
 -   All objects on the Subscriber that are referenced when adding a foreign key must have the same name and owner as the corresponding object on the Publisher.  
   
--   Explicitly adding, dropping, or altering indexes is not supported. Indexes created implicitly for constraints (such as a primary key constraint) are supported.  
+-   Explicit adding, dropping, or altering indexes is not replicated and any change involving an explicit index will need to be run on each replica set individually. Indexes created implicitly for constraints (such as a primary key constraint) are supported.  
   
 -   Altering or dropping identity columns that are managed by replication is not supported. For more information about automatic management of identity columns, see [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   

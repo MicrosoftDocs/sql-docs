@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "custom procedures [SQL Server replication]"
   - "transactional replication, replicating schema changes"
   - "schemas [SQL Server replication], replicating changes"
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

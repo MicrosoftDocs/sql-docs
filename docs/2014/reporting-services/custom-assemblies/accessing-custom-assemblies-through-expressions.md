@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "expressions [Reporting Services], custom assemblies"
@@ -17,10 +13,9 @@ helpviewer_keywords:
   - "calling class members"
   - "custom assemblies [Reporting Services], expressions"
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-caps.latest.revision: 31
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Accessing Custom Assemblies Through Expressions
   Once you have created a custom assembly, made it available to Report Designer or the report server, added the appropriate security policy, and added a reference to your custom assembly in your report definition, you can access the members of the classes in your assembly using report expressions. To refer to custom code in an expression, you must call the member of a class within the assembly. How you do this depends on whether the method is static or instance-based.  
@@ -42,7 +37,7 @@ manager: craigg
 ## Calling Instance Members from a Report Definition File  
  If your custom assembly contains instance members that you need to access in a report definition, you must add an instance name for your class to the report. You can add an instance name for a class using the **Code** tab of the **Report Properties** dialog. For more information about adding instances of classes to a report, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- To call a static member, you need to reference it as an expression that takes the form =Code*.InstanceName.Method*.  
+ To call a static member, you need to reference it as an expression that takes the form = Code*.InstanceName.Method*.  
   
 #### To call instance members  
   

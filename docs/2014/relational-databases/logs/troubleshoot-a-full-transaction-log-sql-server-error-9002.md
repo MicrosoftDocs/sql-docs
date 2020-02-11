@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], full"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], full log"
   - "full transaction logs [SQL Server]"
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
-caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

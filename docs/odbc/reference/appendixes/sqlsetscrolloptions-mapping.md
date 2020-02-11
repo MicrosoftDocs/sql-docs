@@ -5,21 +5,17 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetScrollOptions function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLSetScrollOptions"
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetScrollOptions Mapping
-When an application calls **SQLSetScrollOptions** through an ODBC 3*.x* driver and the driver does not support **SQLSetScrollOptions**, the call to  
+When an application calls **SQLSetScrollOptions** through an ODBC *3.x* driver and the driver does not support **SQLSetScrollOptions**, the call to  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -97,4 +93,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      with *\*ValuePtr* set to the *RowsetSize* argument in **SQLSetScrollOptions**.  
   
     > [!NOTE]  
-    >  When the Driver Manager maps **SQLSetScrollOptions** for an application working with an ODBC 3*.x* driver that does not support **SQLSetScrollOptions**, the Driver Manager sets the SQL_ROWSET_SIZE statement option, not the SQL_ATTR_ROW_ARRAY_SIZE statement attribute, to the *RowsetSize* argument in **SQLSetScrollOption**. As a result, **SQLSetScrollOptions** cannot be used by an application when fetching multiple rows by a call to **SQLFetch** or **SQLFetchScroll**. It can be used only when fetching multiple rows by a call to **SQLExtendedFetch**.
+    >  When the Driver Manager maps **SQLSetScrollOptions** for an application working with an ODBC *3.x* driver that does not support **SQLSetScrollOptions**, the Driver Manager sets the SQL_ROWSET_SIZE statement option, not the SQL_ATTR_ROW_ARRAY_SIZE statement attribute, to the *RowsetSize* argument in **SQLSetScrollOption**. As a result, **SQLSetScrollOptions** cannot be used by an application when fetching multiple rows by a call to **SQLFetch** or **SQLFetchScroll**. It can be used only when fetching multiple rows by a call to **SQLExtendedFetch**.

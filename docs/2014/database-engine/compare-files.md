@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "versions [SQL Server], file comparisons"
   - "comparing files"
   - "file comparisons [SQL Server]"
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -1,12 +1,11 @@
 ---
-title: "View the SQL Server error log (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "View the SQL Server error log (SSMS)"
+description: View the SQL Server error log in SQL Server Management Studio (SSMS).
+ms.custom: seo-dt-2019
 ms.date: "09/29/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing logs"
@@ -15,12 +14,11 @@ helpviewer_keywords:
   - "logs [SQL Server], SQL Server error logs"
   - "logs [SQL Server], viewing"
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
-caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 ---
-# View the SQL Server error log (SQL Server Management Studio)
+# View the SQL Server error log in SQL Server Management Studio (SSMS)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains user-defined events and certain system events you can use for troubleshooting. 
 
@@ -39,7 +37,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
 5. The **Log File Viewer** appears (it might take a moment) with a list of logs for you to view.
-  
+
   ## See also
   For more information, see [MSSQLTips.com's](https://www.mssqltips.com/) helpful post [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/).
 

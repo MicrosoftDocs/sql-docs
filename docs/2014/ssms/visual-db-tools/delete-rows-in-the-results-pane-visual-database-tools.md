@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "View Designer, Results pane"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "deleting rows"
   - "Results pane"
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

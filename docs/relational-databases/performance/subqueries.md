@@ -3,9 +3,8 @@ title: "Subqueries (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/18/2018"
 ms.prod: sql
+ms.technology: performance
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Subquery"
@@ -14,10 +13,8 @@ helpviewer_keywords:
   - "subqueries [SQL Server], correlated"
   - "subqueries [SQL Server], types"
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -103,7 +100,7 @@ A subquery is subject to the following restrictions:
 -   The select list of a subquery introduced with `EXISTS`, by convention, has an asterisk (\*) instead of a single column name. The rules for a subquery introduced with `EXISTS` are the same as those for a standard select list, because a subquery introduced with `EXISTS` creates an existence test and returns TRUE or FALSE, instead of data.   
 
 ## <a name="qualifying"></a> Qualifying column names in subqueries
-In the following example, the *CustomerID* column in the `WHERE` clause of the outer query is implicitly qualified by the table name in the outer query `FROM` clause (*Sales.Store*). The reference to *CustomerID* in the select list of the subquery is qualified by the subquery `FROM` clause, that is, by the *Sales.Customer* table.
+In the following example, the *BusinessEntityID* column in the `WHERE` clause of the outer query is implicitly qualified by the table name in the outer query `FROM` clause (*Sales.Store*). The reference to *CustomerID* in the select list of the subquery is qualified by the subquery `FROM` clause, that is, by the *Sales.Customer* table.
 
 ```sql
 USE AdventureWorks2016;
@@ -487,7 +484,7 @@ GO
 This statement cannot be converted to a join. The analogous not-equal join has a different meaning: It finds the names of products that are in some subcategory that is not a finished bicycle.      
 
 ### <a name="upsert"></a> Subqueries in UPDATE, DELETE, and INSERT Statements
-Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT` and `SELECT `data manipulation (DML) statements.    
+Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT` and `SELECT` data manipulation (DML) statements.    
 
 The following example doubles the value in the *ListPrice* column in the *Production.Product* table. The subquery in the `WHERE` clause references the *Purchasing.ProductVendor* table to restrict the rows updated in the *Product* table to just those supplied by *BusinessEntity* 1540.
 

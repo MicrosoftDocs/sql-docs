@@ -1,24 +1,21 @@
 ---
-title: "Upgrading Log Shipping to SQL Server 2016 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Upgrade log shipping to SQL Server 2016 and newer"
+description: Learn the appropriate order to preserve your log shipping disaster recovery solution when upgrading to SQL Server 2016 and newer from a previous version. 
+ms.custom: seo-lt-2019
 ms.date: "02/01/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], upgrading"
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  When upgrading from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log shipping configuration to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version, a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]service pack, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]cumulative update, upgrading your log shipping servers in the appropriate order will preserve your log shipping disaster recovery solution.  
+  When upgrading from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log shipping configuration to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version, a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service pack, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cumulative update, upgrading your log shipping servers in the appropriate order will preserve your log shipping disaster recovery solution.  
   
 > [!NOTE]  
 >  [Backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
@@ -66,7 +63,7 @@ manager: craigg
  While the monitor server is being upgraded, the log shipping configuration continues to work, but its status is not recorded in the tables on the monitor. Any alerts that have been configured will not be triggered while the monitor server is being upgraded. After the upgrade, you can update the information in the monitor tables by executing the [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) system stored procedure.   For more information about a monitor server, see [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 ##  <a name="UpgradeSecondaries"></a> Upgrading the Secondary Server Instances  
- The upgrade process involves upgrading the secondary server instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] before upgrading the primary server instance. Always upgrade the secondary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances first. Log shipping continues throughout the upgrade process because the upgraded secondary server instances continue to restore the log backups from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primary server instance. If the primary server instance is upgraded before the secondary server instance, log shipping will fail because a backup created on a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored on an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can upgrade the secondary instances simultanously or serially, but all secondary instance must be upgraded before the primary instance is upgraded to avoid a log shipping failure.  
+ The upgrade process involves upgrading the secondary server instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] before upgrading the primary server instance. Always upgrade the secondary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances first. Log shipping continues throughout the upgrade process because the upgraded secondary server instances continue to restore the log backups from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primary server instance. If the primary server instance is upgraded before the secondary server instance, log shipping will fail because a backup created on a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored on an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can upgrade the secondary instances simultaneously or serially, but all secondary instance must be upgraded before the primary instance is upgraded to avoid a log shipping failure.  
   
  While a secondary server instance is being upgraded, the log shipping copy and restore jobs do not run. This means that unrestored transaction log backups will accumulate on the primary and you need to have sufficient space to hold these unrestored backups. The amount of accumulation depends on the frequency of scheduled backup on the primary server instance and the sequence in which you upgrade the secondary instances. Also, if a separate monitor server has been configured, alerts might be raised indicating restores have not been performed for longer than the configured interval.  
   

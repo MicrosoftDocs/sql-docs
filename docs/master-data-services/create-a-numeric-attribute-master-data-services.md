@@ -1,23 +1,18 @@
 ---
-title: "Create a Numeric Attribute (Master Data Services) | Microsoft Docs"
+title: Create a Numeric Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], creating number attributes"
   - "creating number attributes [Master Data Services]"
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-caps.latest.revision: 9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Numeric Attribute (Master Data Services)
 

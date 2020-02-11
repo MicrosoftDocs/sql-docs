@@ -1,12 +1,10 @@
 ---
-title: "Move a Registered Server or Registered Server Group (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Move a Registered Server or Group
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "moving registered server or server group"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], moving server or server group"
   - "groups [SQL Server], server"
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 ---
 # Move a Registered Server or Registered Server Group (SQL Server Management Studio)
   This topic describes how to organize the servers in Registered Servers by moving a registered server or  server groups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Server groups can contain registered servers, or other server groups. Both servers and server groups can be moved from one server group to another.  

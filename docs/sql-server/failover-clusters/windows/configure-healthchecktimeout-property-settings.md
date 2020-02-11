@@ -1,17 +1,15 @@
 ---
-title: "Configure HealthCheckTimeout Property Settings | Microsoft Docs"
-ms.custom: ""
+title: "Configure HealthCheckTimeout for availability group"
+description: "Configure HealthCheckTimeout for an Always On availability group, which is used to specify the time that the SQL Server resource DLL should wait before reporting unresponsiveness."
+ms.custom: "seo-lt-2019"
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure HealthCheckTimeout Property Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +55,11 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### Related Content (PowerShell)  
   
--   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
   
--   [Getting Started with Windows PowerShell on a Failover Cluster](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Cluster resource commands and equivalent Windows PowerShell cmdlets](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Cluster resource commands and equivalent Windows PowerShell cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ##  <a name="WSFC"></a> Using the Failover Cluster Manager Snap-in  
  **To configure HealthCheckTimeout setting**  

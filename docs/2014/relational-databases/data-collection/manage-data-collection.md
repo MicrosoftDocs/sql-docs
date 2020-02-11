@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data collection [SQL Server]"
   - "data collector [SQL Server], Transact-SQL"
   - "data collector [SQL Server], SQL Server Management Studio"
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

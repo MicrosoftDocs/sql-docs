@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "scheduling administrative tasks [SMO]"
   - "SQL Server Agent [SMO]"
   - "automatic administrative SMO tasks"
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -52,7 +47,7 @@ manager: craigg
 ## Creating a Job with Steps and a Schedule in Visual C#  
  This code example creates a job with steps and a schedule, and then informs an operator.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -111,7 +106,7 @@ manager: craigg
 ## Creating a Job with Steps and a Schedule in PowerShell  
  This code example creates a job with steps and a schedule, and then informs an operator.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -144,7 +139,7 @@ $jbstp.OnFailAction =[Microsoft.SqlServer.Management.SMO.Agent.StepCompletionAct
 $jbstp.Create();   
   
 #Define a JobSchedule object variable by supplying the parent job and name arguments in the constructor.   
-$jbsch =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
+$jbsch = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
   
 #Set properties to define the schedule frequency, and duration.   
 $jbsch.FrequencyTypes =  [Microsoft.SqlServer.Management.SMO.Agent.FrequencyTypes]::Daily  
@@ -178,7 +173,7 @@ $jbsch.Create();
   
  An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because `operator` is a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] keyword.  
   
-```  
+```csharp
 {  
              //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
@@ -211,7 +206,7 @@ $jbsch.Create();
   
  An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because `operator` is a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] keyword.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -250,7 +245,7 @@ $op.Drop()
 ## Allowing User Access to Subsystem by Using a Proxy Account in Visual C#  
  This code example shows how to allow a user access to a specified subsystem by using the <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> object.  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
 {   
 Server srv = default(Server);   
@@ -282,5 +277,3 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ## See Also  
  [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)   
  [Implement Jobs](../../../ssms/agent/implement-jobs.md)  
-  
-  

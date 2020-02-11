@@ -1,24 +1,19 @@
 ---
-title: "Updategram Security Considerations (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Updategram Security Considerations (SQLXML)"
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, updategrams"
   - "security [SQLXML], updategrams"
   - "updategrams [SQLXML], security"
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updategram Security Considerations (SQLXML 4.0)

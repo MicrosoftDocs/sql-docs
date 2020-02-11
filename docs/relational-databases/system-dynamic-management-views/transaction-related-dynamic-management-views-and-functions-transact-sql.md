@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "dynamic management objects [SQL Server], transactions"
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Transaction Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

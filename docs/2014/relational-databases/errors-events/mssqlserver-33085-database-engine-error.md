@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "33085 (Database Engine error)"
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

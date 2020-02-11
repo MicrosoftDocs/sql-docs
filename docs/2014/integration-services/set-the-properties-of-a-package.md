@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, properties"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "SSIS packages, properties"
   - "SQL Server Integration Services packages, properties"
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-caps.latest.revision: 23
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Set the Properties of a Package

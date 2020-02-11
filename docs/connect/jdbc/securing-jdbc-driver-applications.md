@@ -1,21 +1,17 @@
 ---
-title: "Securing JDBC Driver Applications | Microsoft Docs"
+title: "Securing JDBC driver applications | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Securing JDBC Driver Applications
+# Securing JDBC driver applications
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -23,7 +19,7 @@ Enhancing the security of a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversio
   
 The topics in this section describe some common security concerns including connection strings, validating user input, and general application security.  
   
-## In This Section  
+## In this section  
   
 | Topic                                                                            | Description                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,6 +29,6 @@ The topics in this section describe some common security concerns including conn
 | [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)               | Describes how to establish a secure communication channel with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using Secure Sockets Layer (SSL). |
 | [FIPS Mode](../../connect/jdbc/fips-mode.md)                                     | Describes how to use JDBC driver in FIPS compliant mode.                                                                                                              |
   
-## See Also  
+## See also  
 
- [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.customize.toolbars"
+f1_keywords:
   - "sql12.swb.vs.customizetool.f1"
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -50,5 +46,3 @@ manager: craigg
   
  **Keyboard**  
  Displays the **Keyboard** pane of the **Options** dialog box, which allows you to change and define shortcut key combinations for commands.  
-  
-  

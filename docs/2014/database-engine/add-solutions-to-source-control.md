@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding solutions"
   - "solutions [SQL Server Management Studio], adding"
 ms.assetid: b9e36569-616d-4e47-9140-0978a9bfe923
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg

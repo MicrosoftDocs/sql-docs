@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: native-client
-ms.tgt_pltfrm: ""
+ms.technology: 
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [OLE DB], data type support"
   - "OLE DB, date/time improvements"
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -64,7 +61,7 @@ manager: craigg
   
 -   Minute range is 0 through 59.  
   
--   Seconds range from 0 through 59. This allows up to two leap seconds to maintain synchronization with sideral time.  
+-   Seconds range from 0 through 59. This allows up to two leap seconds to maintain synchronization with sidereal time.  
   
  Implementations for the following existing OLE DB structs have been modified to support the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types. The definitions, however, have not changed.  
   

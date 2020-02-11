@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.TVO"
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -41,12 +38,12 @@ manager: craigg
  Shows the alias for the selected table-valued object. To add or change an alias, type it into the field.  
   
  **Column List**  
- Shows the columns included in the selected table-valued object. To see them in a separate window, click Column List and then click the ellipses (…) to the right of the property.  
+ Shows the columns included in the selected table-valued object. To see them in a separate window, click Column List and then click the ellipses (...) to the right of the property.  
   
  **Full Name**  
  Shows the name of the selected table-valued object, including additional information such as the schema or data source of the object.  
   
  **Parameter List**  
- Shows the parameters defined for selected table-valued function. To define a value for the parameters, click Parameter List and then click the ellipses (…) to the right of the property. In the Function Parameters dialog box, type in values. This property is only available when a table-valued function is selected.  
+ Shows the parameters defined for selected table-valued function. To define a value for the parameters, click Parameter List and then click the ellipses (...) to the right of the property. In the Function Parameters dialog box, type in values. This property is only available when a table-valued function is selected.  
   
   

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "production databases [SQL Server]"
   - "testing databases"
   - "database testing [SQL Server]"
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

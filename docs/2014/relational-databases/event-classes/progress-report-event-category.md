@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "Progress Report event category [SQL Server]"
   - "SQL Server event classes, Progress Report event category"
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "network protocols [SQL Server], modifying connections"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "protocols [SQL Server], modifying connections"
   - "RPC [SQL Server]"
 ms.assetid: 5c5ae453-cc5b-4898-95c7-ad34157b1f60
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -45,6 +41,6 @@ manager: craigg
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

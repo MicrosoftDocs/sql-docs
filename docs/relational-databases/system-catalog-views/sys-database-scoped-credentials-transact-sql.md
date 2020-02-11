@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sys.database_scoped_credentials"
@@ -20,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_scoped_credentials (Transact-SQL)
@@ -30,8 +26,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|credential_id|**int**|ID of the database scoped credential. Is unique in the database.|  
 |name|**sysname**|Name of the database scoped credential. Is unique in the database.|  
+|credential_id|**int**|ID of the database scoped credential. Is unique in the database.|  
+|principal_id|**int**|ID of the database principal who owns the key.|  
 |credential_identity|**nvarchar(4000)**|Name of the identity to use. This will generally be a Windows user. It does not have to be unique.|  
 |create_date|**datetime**|Time at which the database scoped credential was created.|  
 |modify_date|**datetime**|Time at which the database scoped credential was last modified.|  

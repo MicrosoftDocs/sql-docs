@@ -1,14 +1,11 @@
 ---
-title: "Using ADO to Execute SQLXML 4.0 Queries | Microsoft Docs"
+title: "Using ADO to Execute SQLXML 4.0 Queries"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 12/15/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "query testers [SQLXML]"
@@ -17,10 +14,8 @@ helpviewer_keywords:
   - "queries [SQLXML], ADO"
   - "SQLXML, ADO"
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using ADO to Execute SQLXML 4.0 Queries
@@ -105,7 +100,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 4.  Verify that you have created any additional files, such as XML templates or schemas that are part of the sample you are attempting to recreate locally on your computer. These files should be located in the same directory where you have saved the test script file (Sqlxml4test.vbs).  
   
 5.  Follow the instructions in the next section for how to use the SQLXML 4.0 test script.  
-  
+
 ## Using the SQLXML 4.0 Test Script  
  The following procedure describes how to use the Sqlxml4test.vbs files to test the example queries provided in this documentation.  
   
@@ -122,7 +117,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         > [!NOTE]  
         >  If you need to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Verify that the version of MDAC installed for the client computer is 2.6 or later. If you need to verify MDAC version information, you can use the MDAC Component Checker tool, which is provided as free download from the Microsoft Web site (www.microsoft.com). Fore more information, search on "MDAC Component Checker" on the Microsoft Web site.  
+2.  Verify that the version of MDAC installed for the client computer is 2.6 or later. If you need to verify MDAC version information, you can use the MDAC Component Checker tool, which is provided as free download from the Microsoft Web site, [http://www.microsoft.com](https://www.microsoft.com). Fore more information, search on "MDAC Component Checker" on the Microsoft Web site.  
   
 3.  Execute the script.  
   

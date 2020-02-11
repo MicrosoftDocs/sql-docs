@@ -1,14 +1,10 @@
 ---
-title: "Processing XML on the Client Side (SQLXML Managed Classes) | Microsoft Docs"
-ms.custom: ""
+title: "Processing XML on the Client Side (SQLXML)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "processing XML on client side [SQLXML]"
@@ -17,10 +13,9 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, client-side XML formatting"
   - "ClientSideXml property"
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)
@@ -95,5 +90,4 @@ public static int Main(String[] args)
      This creates an executable (DocSample.exe).  
   
 4.  At the command prompt, execute DocSample.exe.  
-  
-  
+

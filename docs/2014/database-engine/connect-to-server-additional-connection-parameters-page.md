@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttoserver.options.registeredservers.f1"
 ms.assetid: ba34b01a-6289-4eb8-8341-fa3d9ec87b3f
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg

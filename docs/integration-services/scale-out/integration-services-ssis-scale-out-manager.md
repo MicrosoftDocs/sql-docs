@@ -5,16 +5,16 @@ ms.custom: performance
 ms.date: "12/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Integration Services Scale Out Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Scale Out Manager is a management tool that lets you manage your entire SSIS Scale Out topology from a single app. It removes the burden of doing management tasks and running Transact-SQL commands on multiple computers.
 

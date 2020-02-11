@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_grant_publication_access_TSQL"
   - "sp_grant_publication_access"
@@ -20,10 +14,10 @@ helpviewer_keywords:
   - "sp_grant_publication_access"
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_grant_publication_access (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a login to the access list of the publication. This stored procedure is executed at the Publisher on the publication database.  
@@ -33,19 +27,18 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'login'   
     [ , [ @reserved = ] 'reserved' ]  
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to access. **'***publication***'** is **sysname**, with no default.  
   
- [ **@login**= ] **'***login***'**  
+`[ @login = ] 'login'`
  Is the login ID. **'***login***'** is **sysname**, with no default.  
   
- [ **@reserved =**] **'***reserved***'**  
+`[ @reserved = ] 'reserved'`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

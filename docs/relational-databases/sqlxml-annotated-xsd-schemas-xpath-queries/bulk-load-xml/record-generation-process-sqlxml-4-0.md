@@ -1,14 +1,10 @@
 ---
-title: "Record Generation Process (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Record Generation Process (SQLXML)"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML Bulk Load [SQLXML], record generation process"
@@ -22,10 +18,9 @@ helpviewer_keywords:
   - "leaving node scope [SQLXML]"
   - "schema mapping [SQLXML]"
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Record Generation Process (SQLXML 4.0)

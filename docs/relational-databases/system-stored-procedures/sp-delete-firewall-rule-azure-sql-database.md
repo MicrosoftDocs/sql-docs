@@ -1,15 +1,10 @@
-﻿---
-title: "sp_delete_firewall_rule (Azure SQL Database) | Microsoft Docs"
+---
+title: "sp_delete_firewall_rule"
+titleSuffix: Azure SQL Database
 ms.custom: ""
 ms.date: "07/27/2016"
-ms.prod: ""
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-stored-procedures"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_firewall_rule_TSQL"
@@ -23,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_delete_firewall_rule (Azure SQL Database)

@@ -1,21 +1,17 @@
 ---
 title: "OGC Methods on Geography Instances | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/27/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # OGC Methods on Geography Instances
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -24,9 +20,9 @@ manager: craigg
   
  For more information on OGC specifications, see the following resources:  
   
- [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
+ [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+ [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
 ## In This Section  
   
@@ -66,7 +62,7 @@ manager: craigg
   
 -   [STIsEmpty](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
--   [STIsValida](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+-   [STIsValid](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 -   [STLength](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
   

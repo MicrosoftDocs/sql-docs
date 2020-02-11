@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data warehouse [SQL Server]"
   - "OLTP databases [SQL Server]"
   - "databases [SQL Server], about databases"
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -40,7 +36,7 @@ manager: craigg
 |-|-|  
 |[System Databases](system-databases.md)|[Delete Data or Log Files from a Database](delete-data-or-log-files-from-a-database.md)|  
 |[Contained Databases](contained-databases.md)|[Display Data and Log Space Information for a Database](display-data-and-log-space-information-for-a-database.md)|  
-|[SQL Server Data Files in Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Increase the Size of a Database](increase-the-size-of-a-database.md)|  
+|[SQL Server Data Files in Azure](sql-server-data-files-in-microsoft-azure.md)|[Increase the Size of a Database](increase-the-size-of-a-database.md)|  
 |[Database Files and Filegroups](database-files-and-filegroups.md)|[Rename a Database](rename-a-database.md)|  
 |[Database States](database-states.md)|[Set a Database to Single-user Mode](set-a-database-to-single-user-mode.md)|  
 |[File States](file-states.md)|[Shrink a Database](shrink-a-database.md)|  

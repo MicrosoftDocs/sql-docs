@@ -1,14 +1,12 @@
 ---
-title: "Open, Unlock, Rename, and Delete a Data Quality Project | Microsoft Docs"
-ms.custom: ""
+title: "Open, unlock, rename, and delete a data quality project"
+description: Learn how to open, unlock, rename, and delete a data quality project using SQL Server Data Quality Services. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dqproject.opendqproject.f1"
@@ -18,12 +16,10 @@ helpviewer_keywords:
   - "data quality project,unlock"
   - "data quality project,open"
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: swinarko
+ms.author: sawinark
 ---
-# Open, Unlock, Rename, and Delete a Data Quality Project
+# Open, unlock, rename, and delete a Data Quality Project - Data Quality Services (DQS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -61,9 +57,9 @@ manager: craigg
   
 4.  The data quality project opens at the same state of the activity where it was last closed. A data quality project has the following states:  
   
-    -   For the **Cleansing** activity, a data quality project can have the following states: **Cleansing - Map**, **Cleansing - Cleanse**, **Cleansing – Manage and View Results**, and **Cleansing – Export**.  
+    -   For the **Cleansing** activity, a data quality project can have the following states: **Cleansing - Map**, **Cleansing - Cleanse**, **Cleansing - Manage and View Results**, and **Cleansing - Export**.  
   
-    -   For the **Matching** activity, a data quality project can have the following states: **Matching - Map**, **Matching - Matching**, **Matching – Survivorship**, and **Matching – Export**.  
+    -   For the **Matching** activity, a data quality project can have the following states: **Matching - Map**, **Matching - Matching**, **Matching - Survivorship**, and **Matching - Export**.  
   
 ##  <a name="Unlock"></a> Unlock a Data Quality Project  
  When you create a data quality project, it is in a locked state to prevent usage or modification by other users. You must unlock the data quality project after you have completed your work if you want other users to work on your data quality project. A lock symbol is displayed for projects that are locked.  

@@ -4,21 +4,15 @@ ms.custom: ""
 ms.date: "05/02/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ghost cleanup"
   - "ghost records"
   - "ghost clean up process" 
-author: "MashaMSFT"
-ms.author: "mathoma"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Ghost cleanup process guide
 
@@ -38,7 +32,7 @@ The below query can identify how many ghosted records exist in a single database
 
  ```sql
  SELECT sum(ghost_record_count) total_ghost_records, db_name(database_id) 
- FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL)
+ FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, 'SAMPLED')
  group by database_id
  order by total_ghost_records desc
 ```
@@ -56,7 +50,7 @@ Once the ghost cleanup process is disabled, some action needs to be taken to rem
 
 
 ## Next steps  
-[Disabling the ghost clean up process](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
+[Disabling the ghost clean up process](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
 <br>[Remove ghost records from a single database file](system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
 <br>[Remove ghost records from all database data files](system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
 

@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "finding Help topics [SQL Server]"
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
-caps.latest.revision: 19
 author: mightypen
 ms.author: genemi
 manager: craigg

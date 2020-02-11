@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLConnect"
@@ -19,10 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLConnect function [ODBC]"
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLConnect Function
 **Conformance**  
@@ -33,16 +29,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLConnect(  
-     SQLHDBC        ConnectionHandle,  
-     SQLCHAR *      ServerName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      UserName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      Authentication,  
-     SQLSMALLINT    NameLength3);  
+     SQLHDBC        ConnectionHandle,  
+     SQLCHAR *      ServerName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      UserName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      Authentication,  
+     SQLSMALLINT    NameLength3);  
 ```  
   
 ## Arguments  
@@ -190,7 +186,7 @@ SQLRETURN SQLConnect(
 ### Code Example  
  In the following example, an application allocates environment and connection handles. It then connects to the SalesOrders data source with the user ID JohnS and the password Sesame and processes data. When it has finished processing data, it disconnects from the data source and frees the handles.  
   
-```  
+```cpp  
 // SQLConnect_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

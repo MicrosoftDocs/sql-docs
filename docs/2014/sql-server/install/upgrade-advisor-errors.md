@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [Upgrade Advisor]"
 ms.assetid: a493a459-e7ea-4629-a14c-684d8c57e310
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg

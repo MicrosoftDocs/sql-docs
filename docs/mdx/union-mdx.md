@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Union  (MDX)
 
@@ -37,7 +36,7 @@ Alternate syntax 2
  A valid Multidimensional Expressions (MDX) expression that returns a set.  
   
 ## Remarks  
- This function returns the union of two or more specified sets*.* With the standard syntax and with alternate syntax 1, duplicates are eliminated by default. With the standard syntax, using the **ALL** flag keeps duplicates in the joined set. Duplicates are deleted from the tail of the set. With alternate syntax 2, duplicates are always retained.  
+ This function returns the union of two or more specified sets. With the standard syntax and with alternate syntax 1, duplicates are eliminated by default. With the standard syntax, using the **ALL** flag keeps duplicates in the joined set. Duplicates are deleted from the tail of the set. With alternate syntax 2, duplicates are always retained.  
   
 ## Examples  
  The following examples demonstrate the behavior of the **Union** function using each syntax.  

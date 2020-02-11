@@ -1,13 +1,12 @@
 ---
-title: "Create a Server Audit and Database Audit Specification | Microsoft Docs"
-ms.custom: ""
+title: "Create a Server audit & database audit specification"
+description: Learn to create a SQL Server audit and a database audit specification using SQL Server Management Studio or Transact-SQL (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlaudit.dbaudit.general.f1"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Create a Server Audit and Database Audit Specification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,17 +60,17 @@ manager: craigg
   
 1.  In Object Explorer, expand the **Security** folder.  
   
-2.  Right-click the **Audits** folder and select **New Audit…**. For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Right-click the **Audits** folder and select **New Audit...**. For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  When you are finished selecting options, click **OK**.  
-  
+
 #### To create a database-level audit specification  
   
 1.  In Object Explorer, expand the database where you want to create an audit specification.  
   
 2.  Expand the **Security** folder.  
   
-3.  Right-click the **Database Audit Specifications** folder and select **New Database Audit Specification…**.  
+3.  Right-click the **Database Audit Specifications** folder and select **New Database Audit Specification...**.  
   
      The following options are available on the **Create Database Audit Specification** dialog box.  
   
@@ -80,7 +78,7 @@ manager: craigg
      The name of the database audit specification. This is generated automatically when you create a new server audit specification but is editable.  
   
      **Audit**  
-     The name of an existing database audit. Either type in the name of the audit or select it from the list.  
+     The name of an existing server audit object. Either type in the name of the audit or select it from the list.  
   
      **Audit Action Type**  
      Specifies the database-level audit action groups and audit actions to capture. For the list of database-level audit action groups and audit actions and a description of the events they contain, see [SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
@@ -91,13 +89,13 @@ manager: craigg
      **Object Name**  
      The name of the object to audit. This is only available for audit actions; it does not apply to audit groups.  
   
-     **Ellipsis (…)**  
+     **Ellipsis (...)**  
      Opens the **Select Objects** dialog to browse for and select an available object, based on the specified **Audit Action Type**.  
   
      **Principal Name**  
      The account to filter the audit by for the object being audited.  
   
-     **Ellipsis (…)**  
+     **Ellipsis (...)**  
      Opens the **Select Objects** dialog to browse for and select an available object, based on the specified **Object Name**.  
   
 4.  When you are finished selecting option, click **OK**.  

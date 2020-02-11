@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -20,9 +16,9 @@ manager: craigg
   
  This lesson assumes you already completed the following steps:  
   
--   You have a Windows Azure Storage account.  
+-   You have an Azure Storage account.  
   
--   You have created a container under your Windows Azure Storage account.  
+-   You have created a container under your Azure Storage account.  
   
 -   You have created a policy on a container with read, write, and list rights. You also generated a SAS key.  
   
@@ -89,6 +85,6 @@ GO
   
  **Next Lesson:**  
   
- [Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

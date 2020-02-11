@@ -1,13 +1,11 @@
 ---
 title: "STSymDifference (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STSymDifference_TSQL"
@@ -17,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STSymDifference (geometry Data Type)"
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STSymDifference (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ manager: craigg
   
 ## Arguments  
  *other_geometry*  
- Is another **geometry** instance in addition to the instance on which `STSymDistance()` is being invoked.  
+ Is another **geometry** instance in addition to the instance on which `STSymDifference()` is being invoked.  
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  

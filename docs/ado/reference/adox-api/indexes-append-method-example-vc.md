@@ -6,18 +6,14 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Indexes Append method [ADOX], VC++ example"
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Indexes Append Method Example (VC++)
 The following code demonstrates how to create a new index. The index is on two columns in the table.  
@@ -83,7 +79,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateIndexX...." << endl;  
+      cout << "Error occurred in CreateIndexX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

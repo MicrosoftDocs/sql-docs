@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [SQL Server Native Client]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "SQL Server Native Client, bulk copy operations"
   - "SQLNCLI, bulk copy operations"
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -92,7 +89,7 @@ manager: craigg
   
 -   **ISupportErrorInfo**  
   
- The provider-specific properties SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS, and SSPROP_FASTLOADKEEPIDENTITY control behaviors of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider bulk-copy rowset. The properties are specified in the *rgProperties* member of an *rgPropertySets***IOpenRowset**parameter member.  
+ The provider-specific properties SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS, and SSPROP_FASTLOADKEEPIDENTITY control behaviors of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider bulk-copy rowset. The properties are specified in the *rgProperties* member of an _rgPropertySets_**IOpenRowset**parameter member.  
   
 |Property ID|Description|  
 |-----------------|-----------------|  
@@ -112,6 +109,6 @@ manager: craigg
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
- [Optimizing Bulk Import Performance](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
+ [Optimizing Bulk Import Performance](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
   
   

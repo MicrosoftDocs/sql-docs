@@ -1,12 +1,10 @@
 ---
 title: "What's New in SQL Server 2016"
 ms.custom: ""
-ms.date: "07/21/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "new sql server"
@@ -18,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # What's new in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -26,12 +23,12 @@ manager: craigg
 
 This page provides summary information and links to more detailed SQL Server 2016 what's new information for each SQL Server component. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **Try SQL Server today!** 
-- Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
+- Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
-- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
+- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016).
 
 ## SQL Server 2016 Database Engine
 - You can now configure **multiple tempDB** database files during SQL Server installation and setup.
@@ -56,10 +53,10 @@ SQL Server 2016 Analysis Services provides improved performance, authoring, data
 - New **Database Consistency Checker (DBCC)** runs internally to detect potential data corruption issues.
 - **Direct Query**, which queries live external data rather than importing it first, now supports more data sources, including Azure SQL, Oracle and Teradata. 
 - There are numerous new **DAX (Data Access Expressions) functions**.
-- New **[Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** namespace manages tabular mode instances and models. 
-- [Analysis Services Management Objects (AMO)](http://msdn.microsoft.com/library/mt436122.aspx) is re-factored to include a second assembly, **Microsoft.AnalysisServices.Core.dll**.
+- New **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** namespace manages tabular mode instances and models. 
+- [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) is re-factored to include a second assembly, **Microsoft.AnalysisServices.Core.dll**.
 
-See [Analysis Services Engine (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
+See [Analysis Services Engine (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
 
 ## SQL Server 2016 Integration Services (SSIS)
 - Support for **Always On Availability Groups**
@@ -96,11 +93,11 @@ See [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-r
 ## Next steps   
 - [SQL Server setup](../database-engine/install-windows/installation-for-sql-server-2016.md)   
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 2016 datasheet](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
+- [SQL Server 2016 datasheet](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 - [Features supported by Editions of SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
 - [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Install SQL Server 2016 from the Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [Setup and Servicing Installation](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

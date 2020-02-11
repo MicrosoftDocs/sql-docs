@@ -1,26 +1,18 @@
 ---
-title: "Modify Trace Templates | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/12/2017"
+title: Modify Trace Templates
+titleSuffix: SQL Server Profiler
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "templates [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], templates"
-  - "trace templates [SQL Server]"
-  - "modifying trace templates"
-  - "SQL Server Profiler, templates"
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
-caps.latest.revision: 24
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 07/12/2017
 ---
+
 # Modify trace templates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can modify templates that are saved in a file on the local computer on which [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is running. You can also modify templates derived from those files. When you modify existing templates, you edit template properties such as event classes and data columns, in the same order that the properties were set originally, on the **Events Selection** tab of the **Trace Properties** dialog box. Event classes and data columns can be added or removed, and filters can be changed. After the template is modified, a user-specific template is created and the original system template is left intact. For more information, see [Save Traces and Trace Templates](../../tools/sql-server-profiler/save-traces-and-trace-templates.md).  

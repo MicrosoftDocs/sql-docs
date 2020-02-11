@@ -1,14 +1,9 @@
 ---
-title: "Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Get unconsumed data with sql:overflow-field (SQLXML)"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "unconsumed data"
@@ -18,10 +13,10 @@ helpviewer_keywords:
   - "overflow data [SQLXML]"
   - "sql:overflow-field"
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)
@@ -61,7 +56,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- In addition, you must create a virtual directory for the tempdb database—and a template virtual name of **template** type named "template".  
+ In addition, you must create a virtual directory for the tempdb database-and a template virtual name of **template** type named "template".  
   
  In the following example, the mapping schema retrieves the unconsumed data that is stored in the AddressOverflow column of the Customers2 table:  
   
@@ -99,7 +94,7 @@ GO
     ```  
   
 3.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
-  
+
      For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Here is the result set:  

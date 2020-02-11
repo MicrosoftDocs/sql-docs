@@ -1,12 +1,12 @@
-- name: SQL Server Migration Assistant
+- name: SQL Server Migration Assistant (SSMA)
   href: sql-server-migration-assistant.md
-- name: Access +
-  href: ../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
-- name: DB2 +
-  href: ../ssma/db2/installing-ssma-for-db2-db2tosql.md
-- name: MySQL +
-  href: ../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md
-- name: Oracle +
-  href: ../ssma/oracle/installing-ssma-for-oracle-oracletosql.md
-- name: Sybase +
-  href: ../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md
+- name: Access
+  href: access/toc.yml
+- name: DB2
+  href: db2/toc.yml
+- name: mySQL
+  href: mysql/toc.yml
+- name: Oracle
+  href: oracle/toc.yml
+- name: Sybase
+  href: sybase/toc.yml

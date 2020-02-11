@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexed views [SQL Server], creating"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "indexed views [SQL Server]"
   - "views [SQL Server], indexed views"
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 77
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -83,11 +80,11 @@ manager: craigg
   
 -   When you create the index, the IGNORE_DUP_KEY option must be set to OFF (the default setting).  
   
--   Tables must be referenced by two-part names, *schema***.***tablename* in the view definition.  
+-   Tables must be referenced by two-part names, _schema_**.**_tablename_ in the view definition.  
   
 -   User-defined functions referenced in the view must be created by using the WITH SCHEMABINDING option.  
   
--   Any user-defined functions referenced in the view must be referenced by two-part names, *schema***.***function*.  
+-   Any user-defined functions referenced in the view must be referenced by two-part names, _schema_**.**_function_.  
   
 -   The data access property of a user-defined function must be NO SQL, and external access property must be NO.  
   

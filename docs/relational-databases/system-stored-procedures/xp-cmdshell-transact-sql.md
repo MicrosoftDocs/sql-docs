@@ -1,14 +1,11 @@
 ---
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "12/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "xp_cmdshell"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_cmdshell"
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-caps.latest.revision: 26
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +63,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell** can be enabled and disabled by using the Policy-Based Management or by executing **sp_configure**. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md) and [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  If **xp_cmdshell** is executed within a batch and returns an error, the batch will fail. This is a change of behavior. In earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the batch would continue to execute.  
   
 ## xp_cmdshell Proxy Account  
@@ -96,7 +91,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
     > [!NOTE]  
     >  You can also configure this proxy account using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] by right-clicking **Properties** on your server name in Object Explorer, and looking on the **Security** tab for the **Server proxy account** section.  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], using the master database, execute the `GRANT exec ON xp_cmdshell TO '<somelogin>'` statement to give specific non-**sysadmin** users the ability to execute **xp_cmdshell**. The specified login must be mapped to a user in the master database.  
+3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], using the master database, execute the `GRANT exec ON xp_cmdshell TO N'<some_user>';` statement to give specific non-**sysadmin** users the ability to execute **xp_cmdshell**. The specified user must exist in the master database.  
   
  Now non-administrators can launch operating system processes with **xp_cmdshell** and those processes run with the permissions of the proxy account that you have configured. Users with CONTROL SERVER permission (members of the **sysadmin** fixed server role) will continue to receive the permissions of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account for child processes that are launched by **xp_cmdshell**.  
   

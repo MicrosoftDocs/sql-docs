@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], about SQL Server Management Studio"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: e75504b9-7968-4e3b-8411-fd79fe09021e
-caps.latest.revision: 38
 author: mashamsft
 ms.author: mathoma
 manager: craigg

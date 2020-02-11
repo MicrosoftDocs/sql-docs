@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "137 (Database Engine error)"
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +27,13 @@ manager: craigg
 |Message Text|Must declare the scalar variable "%.*ls".|  
   
 ## Explanation  
-This error occurs when a variable is used in a SQL script without first declaring the variable. The following example returns error 137 for both the SET and SELECT statements because **@mycol** is not declared.  
+This error occurs when a variable is used in a SQL script without first declaring the variable. The following example returns error 137 for both the SET and SELECT statements because **\@mycol** is not declared.  
   
 SET @mycol = 'ContactName';  
   
 SELECT @mycol;  
   
-One of the more complicated causes of this error includes the use of a variable that is declared outside the EXECUTE statement. For example, the variable **@mycol** specified in the SELECT statement is local to the SELECT statement; thus it is outside the EXECUTE statement.  
+One of the more complicated causes of this error includes the use of a variable that is declared outside the EXECUTE statement. For example, the variable **\@mycol** specified in the SELECT statement is local to the SELECT statement; thus it is outside the EXECUTE statement.  
   
 USE AdventureWorks2012;  
   

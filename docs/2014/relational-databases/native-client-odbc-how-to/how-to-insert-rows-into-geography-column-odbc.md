@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -34,7 +31,7 @@ manager: craigg
   
  The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -45,7 +42,7 @@ CREATE TABLE SpatialSample (Name varchar(10), Geog Geography)
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -66,7 +63,7 @@ class direxec {
       HSTMT hstmt;   // Statement Handle  
       SQLHDESC hdesc;   // Descriptor handle  
       SQLCHAR szData[MAX_DATA];   // Returned Data Storage  
-      SDWORD cbData;   // Output Lenght of data   
+      SDWORD cbData;   // Output Length of data   
   
       SQLCHAR szConnStrOut[MAX_DATA + 1];  
       SWORD swStrLen;  
@@ -83,7 +80,7 @@ public:
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-      // Allocate the enviroment handle  
+      // Allocate the environment handle  
       rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
       check_rc(rc);  
   
@@ -208,7 +205,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 use tempdb  
 GO  
   

@@ -1,22 +1,18 @@
-﻿---
-title: "sp_pdw_add_network_credentials (SQL Data Warehouse) | Microsoft Docs"
+---
+title: "sp_pdw_add_network_credentials"
+titleSuffix: Azure SQL Data Warehouse
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
 ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

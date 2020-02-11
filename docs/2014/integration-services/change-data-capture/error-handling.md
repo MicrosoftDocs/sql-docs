@@ -4,21 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Error Handling
   An Oracle CDC Instance mines changes from a single Oracle source database (an Oracle RAC cluster is considered a single database) and writes the committed changes to change tables in a CDC database in the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
- A CDC Instance maintains its state in a system table called **cdc.xdbcdc_state**. This table can be queried any time to find the state of the CDC Instance. For more information about the cdc.xdbcdc_state table, see [cdc.xdbcdc_state](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state).  
+ A CDC Instance maintains its state in a system table called **cdc.xdbcdc_state**. This table can be queried any time to find the state of the CDC Instance. For more information about the cdc.xdbcdc_state table, see [cdc.xdbcdc_state](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_state).  
   
  The table below describes the CDC Instance states in the xdbcdc_state table.  
   
@@ -53,7 +49,7 @@ manager: craigg
   
 -   The MSXDBCDC.dbo.xdbcdc_trace table, which is used for general logging and tracing by the Oracle CDC Service main process.  
   
--   The \<cdc-database>.cdc.xdbcdc_trace table, which is used for general logging and tracing by Oracle CDC Instances. This means that errors related to a specific Oracle CDC Instance are logged to that instance’s trace table.  
+-   The \<cdc-database>.cdc.xdbcdc_trace table, which is used for general logging and tracing by Oracle CDC Instances. This means that errors related to a specific Oracle CDC Instance are logged to that instance's trace table.  
   
  Information is logged by the Oracle CDC service when the service:  
   
@@ -113,5 +109,3 @@ manager: craigg
 ## See Also  
  [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [The Oracle CDC Instance](the-oracle-cdc-instance.md)  
-  
-  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)"
@@ -18,10 +15,9 @@ topic_type:
 helpviewer_keywords: 
   - "GenerateDatabaseCreationScript method"
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
-caps.latest.revision: 25
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # GenerateDatabaseCreationScript Method (WMI MSReportServer_ConfigurationSetting)
   Generates a SQL Script that can be used to create a report server database.  

@@ -1,15 +1,10 @@
 ---
-title: "Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs | Microsoft Docs"
-ms.custom: ""
+title: "Create SQL Server Agent job to archive Database Mail messages & events"
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "database-mail"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "archiving mail messages and attachments [SQL Server]"
@@ -17,13 +12,12 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], archiving"
   - "saving mail messages and attachments"
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: stevestein
+ms.author: sstein
+ms.custom: seo-dt-2019
 ---
 # Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Copies of Database Mail messages and their attachments are retained in **msdb** tables along with the Database Mail event log. Periodically you might want to reduce the size of the tables and archive messages and events that are no longer needed. The following procedures create a SQL Server Agent job to automate the process.  
   
 -   **Before you begin:**  , [Prerequisites](#Prerequisites), [Recommendations](#Recommendations), [Permissions](#Permissions)  
@@ -47,11 +41,11 @@ manager: craigg
   
 -   The first procedure creates a job named Archive Database Mail with the following steps.  
   
-    1.  Copy all messages from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_***<year_month>*.  
+    1.  Copy all messages from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_**_<year_month>_.  
   
-    2.  Copy the attachments related to the messages copied in the first step, from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_Attachments_***<year_month>*.  
+    2.  Copy the attachments related to the messages copied in the first step, from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_Attachments_**_<year_month>_.  
   
-    3.  Copy the events from the Database Mail event log that are related to the messages copied in the first step, from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_Log_***<year_month>*.  
+    3.  Copy the events from the Database Mail event log that are related to the messages copied in the first step, from the Database Mail tables to a new table named after the previous month in the format **DBMailArchive_Log_**_<year_month>_.  
   
     4.  Delete the records of the transferred mail items from the Database Mail tables.  
   
@@ -71,7 +65,7 @@ manager: craigg
 4.  In the **Category** box, click the **Database Maintenance**.  
   
 5.  In the **Description** box, type **Archive Database Mail messages**, and then click **Steps**.  
-  
+
  [Overview](#Process_Overview)  
   
 ## To create a step to archive the Database Mail messages  

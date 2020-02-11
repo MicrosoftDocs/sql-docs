@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PathName_TSQL"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "PathName FILESTREAM [SQL Server]"
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: 32
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +38,8 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Requesting the PathName for a column of any other data type or for a **varbinary(max)** columnthat does not have the FILESTREAM storage attribute will cause a query compile-time error.  
   
- *@option*  
- An integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) that defines how the server component of the path should be formatted. *@option* can be one of the following values. The default is 0.  
+ *\@option*  
+ An integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) that defines how the server component of the path should be formatted. *\@option* can be one of the following values. The default is 0.  
   
 |Value|Description|  
 |-----------|-----------------|  

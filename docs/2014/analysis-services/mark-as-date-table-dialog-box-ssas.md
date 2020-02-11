@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.createdatetable.f1"
 ms.assetid: 698b5ef1-b79b-4d76-9847-39669b4f5bb9
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, manually running"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], manually running"
   - "manual job processing [SQL Server]"
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg

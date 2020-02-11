@@ -1,14 +1,14 @@
 ---
-title: Configure Parallel Data Warehouse for remote table copies | Microsoft Docs
+title: Remote table copies
 description: Describes how to configure Parallel Data Warehouse to use the remote table copy feature to copy tables to SMP SQL Server databases on non-appliance servers.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Configure Parallel Data Warehouse for remote table copies
@@ -19,7 +19,7 @@ This topic describes one of the configuration steps for configuring remote table
 ## Before You Begin  
 In order to configure SQL Server PDW to use remote table copy, you must:  
   
--   Have a Analytics Platform System administrator account with the ability to log directly into the ***appliance_domain*-AD01** and ***appliance_domain*-AD02** nodes.  
+-   Have a Analytics Platform System administrator account with the ability to log directly into the <strong>*appliance_domain*-AD01</strong> and <strong>*appliance_domain*-AD02</strong> nodes.  
   
 -   Know the host name or IP name of the destination server.  
   
@@ -28,7 +28,7 @@ The **CREATE REMOTE TABLE** statement, used for remote table copies, specifies t
   
 The following steps outline how to update the DNS server.  
   
-1.  Log on to the active AD node (normally ***appliance_domain*-AD01**).  
+1.  Log on to the active AD node (normally <strong>*appliance_domain*-AD01</strong>).  
   
 2.  Open the DNS Manager. This is located under **Administrative Tools** in the **Start** menu.  
   

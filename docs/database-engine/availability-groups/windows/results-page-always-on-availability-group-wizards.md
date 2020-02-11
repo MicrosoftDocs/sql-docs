@@ -1,12 +1,11 @@
 ---
-title: "Results Page (Always On Availability Group Wizards) | Microsoft Docs"
+title: "Results Page (Always On Availability Group Wizards)"
+description: Describes the options of the "Results" page of the Always On Availability Group Wizard within the SQL Server Management Studio GUI. 
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.failoverwizard.results.f1"
@@ -14,10 +13,8 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.results.f1"
   - "sql13.swb.adddatabasewizard.results.f1"
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Results Page (Always On Availability Group Wizards)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

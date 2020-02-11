@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: table-view-index
-ms.tgt_pltfrm: ""
+ms.technology: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.managepartition.getstart.f1"
@@ -22,7 +20,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "wizards [SQL Server Management Studio] See Manage Partition Wizard"
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

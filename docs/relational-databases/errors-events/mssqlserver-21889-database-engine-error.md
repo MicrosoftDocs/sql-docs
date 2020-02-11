@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "21889 (Database Engine error)"
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,5 +30,5 @@ manager: craigg
 In order to host the publisher database, the instance of SQL Server must be a replication publisher. **sp_validate_redirected_publisher** calls **sp_helpdistributor** at the remote server to determine whether the server is a replication publisher. This error indicates that the target instance of SQL Server is not a replication publisher.  
   
 ## User Action  
-Execute **sp_adddistributor** at the instance of SQL Server that hosts the publisher database. When running **sp_adddistributor**, specify the correct distributor. Use the same value for the *@password* parameter as that used when **sp_adddistributor** was initially run at the distributor.  
+Execute **sp_adddistributor** at the instance of SQL Server that hosts the publisher database. When running **sp_adddistributor**, specify the correct distributor. Use the same value for the *\@password* parameter as that used when **sp_adddistributor** was initially run at the distributor.  
   

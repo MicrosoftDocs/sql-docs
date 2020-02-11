@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vs.advancedsaveoptions"
 helpviewer_keywords: 
   - "Advanced Save Options dialog box"
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

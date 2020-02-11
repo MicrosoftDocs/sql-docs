@@ -1,16 +1,12 @@
 ---
-title: Configure SSIS on Linux with ssis-conf | Microsoft Docs
+title: Configure SSIS on Linux with ssis-conf
 description: This article describes how to configure SQL Server Integration Services (SSIS) on Linux with the ssis-conf utility.
-author: leolimsft 
+author: lrtoyou1223 
 ms.author: lle 
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf
@@ -82,7 +78,7 @@ Enter the 25-character product key:
 
 The `telemetry` command determines whether SSIS sends feedback to Microsoft.
 
-For free editions (that is, Express, Developer, and Evaluation editions), the telemetry service is always enabled. If you have a free edition, you can’t use the `telemetry` command to disable telemetry.
+For free editions (that is, Express, Developer, and Evaluation editions), the telemetry service is always enabled. If you have a free edition, you can't use the `telemetry` command to disable telemetry.
 
 Enter the following command: `$ sudo /opt/ssis/bin/ssis-conf telemetry`.
 

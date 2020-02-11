@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -40,7 +36,7 @@ manager: craigg
 ### Example (PowerShell)  
  The following example sets all three variables and lists their settings:  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
@@ -49,5 +45,3 @@ dir variable:sqlserver*
   
 ## See Also  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

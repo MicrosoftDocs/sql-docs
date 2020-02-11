@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "copy-only backups [SQL Server]"
   - "COPY_ONLY option [BACKUP statement]"
   - "backups [SQL Server], copy-only backups"
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -49,40 +46,37 @@ manager: craigg
   
 -   For a copy-only full backup:  
   
-     BACKUP DATABASE *database_name* TO \<backup_device*>* … WITH COPY_ONLY …  
+     BACKUP DATABASE *database_name* TO \<backup_device*>* ... WITH COPY_ONLY ...  
   
     > [!NOTE]  
     >  COPY_ONLY has no effect when specified with the DIFFERENTIAL option.  
   
 -   For a copy-only log backup:  
   
-     BACKUP LOG *database_name* TO *\<*backup_device*>* … WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<*backup_device*>* ... WITH COPY_ONLY ...  
   
 ###  <a name="PowerShellProcedure"></a> Using PowerShell  
   
-1.  Use the `Backup-SqlDatabase` cmdlet with the `-CopyOnly` parameter.  
+Use the `Backup-SqlDatabase` cmdlet with the `-CopyOnly` parameter.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
- **To create a full or log backup**  
+
+### To create a full or log backup
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
 -   [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
- **To view copy-only backups**  
+### To view copy-only backups
   
 -   [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)  
   
- **To set up and use the SQL Server PowerShell provider**  
+### To set up and use the SQL Server PowerShell provider
   
 -   [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
-  
 
-  
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
-  
-  

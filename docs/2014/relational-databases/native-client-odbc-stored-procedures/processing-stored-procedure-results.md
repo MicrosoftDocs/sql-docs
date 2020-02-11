@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, stored procedures"
   - "SQL Server Native Client ODBC driver, stored procedures"
   - "stored procedures [ODBC], results"
 ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

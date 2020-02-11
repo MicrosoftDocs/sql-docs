@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "Data Collection"
@@ -15,10 +13,8 @@ helpviewer_keywords:
   - "data collector [SQL Server], Transact-SQL"
   - "data collector [SQL Server], SQL Server Management Studio"
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Manage Data Collection
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +167,7 @@ manager: craigg
   
 ## See also  
  [Execute a Stored Procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   
   

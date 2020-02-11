@@ -1,21 +1,19 @@
 ---
-title: "How to: Edit an Existing Table using Queries | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Edit an Existing Table using Queries
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
-caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Edit an Existing Table using Queries
+
 You can edit the definition of a table or its data by writing a Transact\-SQL query. To view or enter data in a table visually, use the Data Editor as described in [Connected Database Development](../ssdt/connected-database-development.md).  
   
 > [!WARNING]  

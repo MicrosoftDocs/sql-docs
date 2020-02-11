@@ -1,21 +1,19 @@
 ---
-title: "Required Permissions for SQL Server Data Tools | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Required Permissions
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
-caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
 ---
+
 # Required Permissions for SQL Server Data Tools
+
 Before you can perform an action on a database in Visual Studio, you must log on with an account that has certain permissions on that database. The specific permissions that you need vary based on what action you want to perform. The following sections describe each action that you might want to perform and the specific permission that you need to perform it.  
   
 -   [Permissions to Create or Deploy a Database](#DatabaseCreationAndDeploymentPermissions)  

@@ -2,9 +2,8 @@
 title: "Save Reports to a Report Server (Report Builder) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -20,7 +19,7 @@ ms.author: maggies
   
 ### To save a report to a report server  
   
-1.  From the Report Builder button, click **Save**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save**. The **Save As**_\<Report Item>_ dialog box opens.  
   
     > [!NOTE]  
     >  If you are resaving a report, it is automatically resaved to its previous location. Use the Save As option to change location.  
@@ -35,7 +34,7 @@ ms.author: maggies
   
 ### To save a report as a different name  
   
-1.  From the Report Builder button, click **Save As**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save As**. The **Save As**_\<Report Item>_ dialog box opens.  
   
 2.  Browse to the report server location or to the file share where you want to save the report.  
   
@@ -47,6 +46,6 @@ ms.author: maggies
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Saving Reports &#40;Report Builder&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   

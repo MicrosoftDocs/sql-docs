@@ -1,22 +1,20 @@
 ---
-title: "Using the WebForms ReportViewer Control | Microsoft Docs"
+title: "Use WebForms ReportViewer Control"
+description: To view reports deployed to a report server or reports that exist on the local file system, you can use the WebForms ReportViewer control to render them in a Web application.
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
-
+ms.custom: seo-lt-2019
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "ReportViewer controls"
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
-# Using the WebForms ReportViewer Control
+# Use the WebForms ReportViewer Control
   To view reports deployed to a report server or reports that exist on the local file system, you can use the WebForms ReportViewer control to render them in a Web application.  
   
 ## To use the ReportViewer Control in a Web application  
@@ -25,7 +23,7 @@ ms.author: maghan
   
      \- Or -  
   
-     Open an exiting ASP.NET Web Site and add a new Web Form.  
+     Open an existing ASP.NET Web Site and add a new Web Form.  
   
 2.  Locate the **ScriptManager** control in the **AJAX Extensions** group in the **Toolbox** window, and drag it to the design surface of the Web form.  
   
@@ -81,7 +79,7 @@ protected void Page_Init(object sender, EventArgs e)
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =  
-            new Uri("http://<Server Name>/reportserver");  
+            new Uri("https://<Server Name>/reportserver");  
         serverReport.ReportPath =  
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -117,7 +115,7 @@ Partial Class _Default
   
             'Set the report server URL and report path  
             serverReport.ReportServerUrl = _  
-                New Uri("http://<Server Name>/reportserver")  
+                New Uri("https://<Server Name>/reportserver")  
             serverReport.ReportPath = _  
                 "/AdventureWorks Sample Reports/Sales Order Detail"  
   

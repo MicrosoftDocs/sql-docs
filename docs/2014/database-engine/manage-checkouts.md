@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "source controls [SQL Server Management Studio], checkouts"
   - "checkouts [SQL Server Management Studio]"
   - "checking out files"
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sharing files"
   - "file sharing [SQL Server]"
   - "version control services [SQL Server], file sharing"
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg

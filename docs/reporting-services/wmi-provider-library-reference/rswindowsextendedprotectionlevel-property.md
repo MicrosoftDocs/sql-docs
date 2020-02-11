@@ -2,15 +2,14 @@
 title: "RSWindowsExtendedProtectionLevel Property | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # RSWindowsExtendedProtectionLevel Property
   Returns a string value that indicates the level of protection the report server is configured to support. This property is read-only.  
@@ -26,9 +25,9 @@ public string RSWindowsExtendedProtectionLevel;
 ```  
   
 ## Remarks  
- Returns a string value that indicates the level of protection the report server is configured to support. If the report server that the WMI provider is connected to does not support extended protection, “” (empty string) is returned. The following list shows valid values:  
+ Returns a string value that indicates the level of protection the report server is configured to support. If the report server that the WMI provider is connected to does not support extended protection, "" (empty string) is returned. The following list shows valid values:  
   
- `“Off” | “Allow” | “Require”`  
+ `"Off" | "Allow" | "Require"`  
   
 ## Example Code  
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

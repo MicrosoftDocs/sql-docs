@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Unpack a DAC Package
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use the Unpack Data-tier Application dialog box to unzip the scripts and files from a data-tier application (DAC) package. The scripts and files are placed in a folder where they can be reviewed before the package is used to deploy the DAC into a production system. The contents of one DAC can also be compared with the contents of another package unpacked to another folder.  
   
 1.  **Before you begin:**  [Security](#Security)  
   
 2.  **To unpack a DAC, using:**  [Unpack Data-tier Application Dialog](#UnpackDACDial), [Examine the Contents of a DAC Package](#ExamDACPack)  
-  
+
 ##  <a name="Security"></a> Security  
  We recommend that you do not deploy a DAC package from unknown or untrusted sources. Such DACs could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema. Before you use a DAC from an unknown or untrusted source, deploy it on an isolated test instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], unpack the DAC and examine the code, such as stored procedures or other user-defined code.  
   

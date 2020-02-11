@@ -1,20 +1,15 @@
 ---
-title: "High Availability Support for In-Memory OLTP databases | Microsoft Docs"
-ms.custom: ""
+title: "High availability - in-memory OLTP databases"
+ms.custom: seo-dt-2019
 ms.date: "08/31/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # High Availability Support for In-Memory OLTP databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

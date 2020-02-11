@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Creating Predictions (Basic Data Mining Tutorial)
   After you have tested the accuracy of your mining models and decided that you are satisfied with the results, you can then generate predictions by using the Prediction Query Builder on the **Mining Model Prediction** tab in the Data Mining Designer.  
@@ -94,7 +90,7 @@ manager: craigg
   
      This specifies the target column for the `PredictProbability` function. For more information about functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Click the next empty row in the **Source** column, and then select TM_Decision_Tree mining model**.**  
+5.  Click the next empty row in the **Source** column, and then select **TM_Decision_Tree** mining model.  
   
 6.  In the `TM_Decision_Tree` row, in the **Field** column, select `Bike Buyer`.  
   
@@ -154,7 +150,7 @@ manager: craigg
   
         2.  Type a name for the table that will contain the query results.  
   
-        3.  Use the option, **Add to DSV**, to create the table and add it to an existing data source view. This is useful if you want to keep all related tables for a model—such as training data, prediction source data, and query results—in the same data source view.  
+        3.  Use the option, **Add to DSV**, to create the table and add it to an existing data source view. This is useful if you want to keep all related tables for a model-such as training data, prediction source data, and query results-in the same data source view.  
   
         4.  Use the option, **Overwrite if exists**, to update an existing table with the latest results.  
   

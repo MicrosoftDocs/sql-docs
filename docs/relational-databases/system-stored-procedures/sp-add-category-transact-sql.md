@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_category"
@@ -20,14 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Adds the specified category of jobs, alerts, or operators to the server.  
+  Adds the specified category of jobs, alerts, or operators to the server. For alternative method, see [Create Job Category using SQL Server Management Studio](/sql/ssms/agent/create-a-job-category).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+ > [!IMPORTANT]  
+ > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
   
 ## Syntax  
   
@@ -40,7 +39,7 @@ sp_add_category
 ```  
   
 ## Arguments  
- [ **@class =** ] **'***class***'**  
+`[ @class = ] 'class'`
  The class of the category to be added. *class* is **varchar(8)** with a default value of JOB, and can be one of these values.  
   
 |Value|Description|  
@@ -49,7 +48,7 @@ sp_add_category
 |ALERT|Adds an alert category.|  
 |OPERATOR|Adds an operator category.|  
   
- [ **@type =** ] **'***type***'**  
+`[ @type = ] 'type'`
  The type of category to be added. *type* is **varchar(12)**, with a default value of **LOCAL**, and can be one of these values.  
   
 |Value|Description|  
@@ -58,7 +57,7 @@ sp_add_category
 |MULTI-SERVER|A multiserver job category.|  
 |NONE|A category for a class other than JOB**.**|  
   
- [ **@name =** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the category to be added. The name must be unique within the specified class. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

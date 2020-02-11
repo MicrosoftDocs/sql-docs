@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "09/10/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned indexes [SQL Server], replicating"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "publishing [SQL Server replication], partitioned tables"
   - "transactional replication, partitioned tables"
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -68,9 +64,9 @@ manager: craigg
 ### Enabling Partition Switching  
  The following properties for transactional publications enable users to control the behavior of partition switching in a replicated environment:  
   
--   **@allow_partition_switch**, when set to `true`, SWITCH PARTITION can be executed against the publication database.  
+-   **\@allow_partition_switch**, when set to `true`, SWITCH PARTITION can be executed against the publication database.  
   
--   **@replicate_partition_switch** determines whether the SWITCH PARTITION DDL statement should be replicated to Subscribers. This option is valid only when **@allow_partition_switch** is set to `true`.  
+-   **\@replicate_partition_switch** determines whether the SWITCH PARTITION DDL statement should be replicated to Subscribers. This option is valid only when **\@allow_partition_switch** is set to `true`.  
   
  You can set these properties by using [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) when the publication is created, or by using [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) after the publication is created. As noted earlier, merge replication does not support partition switching. To execute SWITCH PARTITION on a table that is enabled for merge replication, remove the table from the publication.  
   

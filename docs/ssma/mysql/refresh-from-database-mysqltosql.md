@@ -4,18 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Refresh from database (MySQLToSQL)
 The **Refresh from Database** dialog box lets you select which objects to refresh from the MySQL database. Rows in the dialog box are color coded based on the state of the metadata:  

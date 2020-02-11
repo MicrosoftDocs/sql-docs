@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "07/12/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "NUMA"
   - "non-uniform memory access"
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-caps.latest.revision: 38
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -25,7 +21,6 @@ Modern processors have multiple to many cores per socket. Each socket is represe
 > Hot-add processors are not supported by soft-NUMA.
   
 ## Automatic Soft-NUMA
-
 Starting with SQL Server 2014 Service Pack 2, whenever the database engine server detects more than 8 physical processors at startup, soft-NUMA nodes are created automatically if trace flag 8079 is enabled as a startup parameter. Hyper-threaded processor cores are not accounted for when counting physical processors. When the number of physical processors detected is more than 8 per socket, the database engine service will create soft-NUMA nodes that ideally contain 8 cores, but can go down to 5 or up to 9 logical processors per node. The size of the hardware node can be limited by a CPU affinity mask. The number of NUMA nodes will never exceed the maximum number of supported NUMA nodes.
 
 Without the trace flag, soft-NUMA is disabled by default. You can enable soft-NUMA using trace flag 8079. Changing the value of this setting requires a restart of the database engine to take effect.
@@ -33,6 +28,9 @@ Without the trace flag, soft-NUMA is disabled by default. You can enable soft-NU
 The figure below shows the type of information regarding soft-NUMA that you will see in the SQL Server error log when SQL Server detects hardware NUMA nodes with greater than 8 logical processors and if trace flag 8079 is enabled.
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
+
+> [!NOTE]
+> Starting with SQL Server 2016 this behavior is controlled by the engine and trace flag 8079 has no effect.
 
 ## Manual Soft-NUMA
   
@@ -53,7 +51,7 @@ To configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use so
   
  Instance A, which experiences significant I/O, now has two I/O threads and one lazy writer thread, while instance B, which performs processor-intensive operations, has only one I/O thread and one lazy writer thread. Differing amounts of memory can be assigned to the instances, but unlike hardware NUMA, they both receive memory from the same operating system memory block and there is no memory-to-processor affinity.  
   
- The lazy writer thread is tied to the SQL OS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as physical NUMA nodes will equate to the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ The lazy writer thread is tied to the SQL OS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as physical NUMA nodes will equate to the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]  
 >  The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

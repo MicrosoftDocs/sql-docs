@@ -1,17 +1,18 @@
 ---
-title: How to generate forecasts and predictions using machine learning models in SQL Server | Microsoft Docs
-description: Use rxPredict, or sp_rxPredict for real-time scoring, or PREDICT T-SQL for native scoring for predictions and forecasting in R and Pythin in SQL Server Machine Learning.
+title: Generate forecasts and predictions
+description: Use rxPredict, or sp_rxPredict for real-time scoring, or PREDICT T-SQL for native scoring for predictions and forecasting in R and Python in SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 08/30/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # How to generate forecasts and predictions using machine learning models in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Using an existing model to forecast or predict outcomes for new data inputs is a core task in machine learning. This article enumerates the approaches for generating predictions in SQL Server. Among the approaches are internal processing methodologies for high-speed predictions, where speed is based on incremental reductions of run time dependencies. Fewer dependencies mean faster predictions.
 
@@ -21,9 +22,9 @@ The following table summarizes the scoring frameworks for forecasting and predic
 
 | Methodology           | Interface         | Library requirements | Processing speeds |
 |-----------------------|-------------------|----------------------|----------------------|
-| Extensibility framework | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | None. Models can be based on any R or Python function | Hundreds of milliseconds. <br/>Loading a runtime environment has a fixed cost, averaging three to six hundred milliseconds, before any new data is scored. |
-| Real-time scoring CLR extension | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) on a serialized model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
-| Native scoring C++ extension| [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) on a serialized model | R: RevoScaleR <br/>Python: revoscalepy | Less than 20 milliseconds, on average. | 
+| Extensibility framework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | None. Models can be based on any R or Python function | Hundreds of milliseconds. <br/>Loading a runtime environment has a fixed cost, averaging three to six hundred milliseconds, before any new data is scored. |
+| [Real-time scoring CLR extension](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) on a serialized model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
+| [Native scoring C++ extension](../sql-native-scoring.md) | [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) on a serialized model | R: RevoScaleR <br/>Python: revoscalepy | Less than 20 milliseconds, on average. | 
 
 Speed of processing and not substance of the output is the differentiating feature. Assuming the same functions and inputs, the scored output should not vary based on the approach you use.
 
@@ -39,12 +40,13 @@ _Scoring_ is a two-step process. First, you specify an already trained model to 
 
 Taking a step back, the overall process of preparing the model and then generating scores can be summarized this way:
 
-1. Create a model using a supported algorithm.
-2. Serialize the model using a special binary format.
-3. Make the model available to SQL Server. Typically this means storing the serialized model in a SQL Server table.
-4. Call the function or stored procedure, specifying the model and input data as parameters.
+1. Create a model using a supported algorithm. Support varies by the scoring methodology you choose.
+2. Train the model.
+3. Serialize the model using a special binary format.
+3. Save the model to SQL Server. Typically this means storing the serialized model in a SQL Server table.
+4. Call the function or stored procedure, specifying the model and data inputs as parameters.
 
-When the input includes many rows of data, it is usually faster to insert the prediction values into a table as part of the scoring process.  Generating a single score is more typical in a scenario where you get input values from a form or user request, and return the score to a client application. To improve performance when generating successive scores, SQL Server might cache the model so that it can be reloaded into memory.
+When the input includes many rows of data, it is usually faster to insert the prediction values into a table as part of the scoring process. Generating a single score is more typical in a scenario where you get input values from a form or user request, and return the score to a client application. To improve performance when generating successive scores, SQL Server might cache the model so that it can be reloaded into memory.
 
 ## Compare methods
 
@@ -78,7 +80,7 @@ To use a model with either of the fast scoring options, save the model using a s
 
 **Using SQL**
 
-From SQL code, you can train the model using [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and directly insert the trained models into a table, in a column of type **varbinary(max)**. For a simple example, see [Create a preditive model in R](../tutorials/rtsql-create-a-predictive-model-r.md)
+From SQL code, you can train the model using [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and directly insert the trained models into a table, in a column of type **varbinary(max)**. For a simple example, see [Create a preditive model in R](../tutorials/quickstart-r-train-score-model.md)
 
 **Using R**
 
@@ -93,7 +95,7 @@ Serializing a model to a binary format is useful, but not required if you are sc
 If you are using the [standalone server](r-server-standalone.md) or a [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), you have other options besides stored procedures and T-SQL functions for generating predictions quickly. Both the standalone server and Machine Learning Server support the concept of a *web service* for code deployment. You can bundle an R or Python pre-trained model as a web service, called at run time to evaluate new data inputs. For more information, see these articles:
 
 + [What are web services in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [What is operationalization?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [What is operationalization?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Deploy a Python model as a web service with azureml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publish an R code block or a real-time model as a new web service](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [mrsdeploy package for R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

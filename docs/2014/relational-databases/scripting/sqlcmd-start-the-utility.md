@@ -1,16 +1,12 @@
 ---
-title: "Start the sqlcmd Utility | Microsoft Docs"
-ms.custom: ""
+title: Start the sqlcmd Utility
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg

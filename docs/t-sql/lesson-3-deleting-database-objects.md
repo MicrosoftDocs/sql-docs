@@ -5,18 +5,12 @@ ms.date: "07/30/2018"
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "deleting database objects"
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lesson 3: Delete database objects
@@ -43,33 +37,32 @@ Use the `REVOKE` statement to remove execute permission for `Mary` on the stored
 
 1. Use the `DROP` statement to remove permission for `Mary` to access the `TestData` database:
   
-  ```sql  
-  DROP USER Mary;  
-  GO  
-  ```  
+   ```sql  
+   DROP USER Mary;  
+   GO  
+   ```  
 
 
 2. Use the `DROP` statement to remove permission for `Mary` to access this instance of [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]:
   
-  ```sql  
-    DROP LOGIN [<computer_name>\Mary];  
-    GO   
-  ```  
+   ```sql  
+   DROP LOGIN [<computer_name>\Mary];  
+   GO   
+   ```  
   
-3.   Use the `DROP` statement to remove the store procedure `pr_Names`:  
+3. Use the `DROP` statement to remove the store procedure `pr_Names`:  
   
-    ```sql  
-    DROP PROC pr_Names;  
-    GO  
-    ```  
+   ```sql  
+   DROP PROC pr_Names;  
+   GO   
+   ```  
   
-6.  Use the `DROP` statement to remove the view `vw_Names`:  
+4. Use the `DROP` statement to remove the view `vw_Names`:  
   
-    ```sql  
-    DROP VIEW vw_Names;  
-    GO  
-  
-    ```  
+   ```sql  
+   DROP VIEW vw_Names;  
+   GO  
+   ```  
 
 ## Delete table
   

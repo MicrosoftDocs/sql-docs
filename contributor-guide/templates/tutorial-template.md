@@ -1,7 +1,7 @@
 ---
 <!------------------
 
-This is an outline of a tutorial that has high CSAT (https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-dotnet-get-started). 
+This is an outline of a tutorial that has high CSAT (https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-get-started). 
 
 Tutorials show users how to solve a problem. They include prerequisites and steps. They are not "learn concepts" topics. 
 
@@ -53,7 +53,7 @@ GUIDELINES for procedures (steps)
 
 ## Procedure title (H2)
 
-Add procedures and include screenshots where helpful.
+Add procedures and include screenshots (of equal dimensions) where helpful.
 
 ## Next steps (H2)
 

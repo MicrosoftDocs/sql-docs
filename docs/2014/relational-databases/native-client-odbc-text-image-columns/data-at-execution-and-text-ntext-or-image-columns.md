@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "text columns [ODBC]"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "ODBC data-at-execution"
   - "image columns [ODBC]"
 ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg

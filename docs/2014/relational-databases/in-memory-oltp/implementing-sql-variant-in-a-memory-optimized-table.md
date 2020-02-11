@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -17,13 +14,13 @@ manager: craigg
 # Implementing SQL_VARIANT in a Memory-Optimized Table
   Consider an example of a table with `SQL_VARIANT` column:  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
  Assume that the key column can only be either a `BIGINT` or `NVARCHAR(300)`. You can model this table as follows:  
   
-```tsql  
+```sql  
 -- original disk-based table  
 CREATE TABLE [dbo].[T1_disk]([Key] int not null primary key,  
        [Value] [sql_variant])  
@@ -63,7 +60,7 @@ from dbo.T1_inmem
   
  Now you can load data into [T1_HK] from T1 by opening a cursor on T1:  
   
-```tsql  
+```sql  
 DECLARE T1_rows_cursor CURSOR FOR    
 select *  
 FROM dbo.T1  
@@ -111,7 +108,7 @@ DEALLOCATE T1_rows_cursor
   
  You can convert data back to `SQL_VARIANT` as follows:  
   
-```tsql  
+```sql  
 case [Key_enum] when 1 then convert(sql_variant, [Key_bi])   
                        else convert(sql_variant, [Key_nv])   
                        end  

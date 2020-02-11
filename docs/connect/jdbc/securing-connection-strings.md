@@ -1,22 +1,18 @@
 ---
-title: "Securing Connection Strings | Microsoft Docs"
+title: "Securing connection strings | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Securing Connection Strings
+# Securing connection strings
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -28,6 +24,6 @@ Another approach is to store the encrypted password in a file. Make sure that yo
 
 If you take connection string information from an external source, such as a user supplying a user ID and password, you must validate any input from the source to ensure that it follows the correct format and does not contain additional parameters that affect your connection.
 
-## See Also
+## See also
 
-[Securing JDBC Driver Applications](../../connect/jdbc/securing-jdbc-driver-applications.md)
+[Securing JDBC driver applications](../../connect/jdbc/securing-jdbc-driver-applications.md)

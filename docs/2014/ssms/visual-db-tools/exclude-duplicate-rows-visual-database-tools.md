@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], excluding rows"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "result sets [SQL Server], duplicate values"
   - "excluding rows"
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

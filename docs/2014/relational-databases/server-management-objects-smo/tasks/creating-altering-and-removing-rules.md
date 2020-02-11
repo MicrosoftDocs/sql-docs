@@ -4,16 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rules [SMO]"
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -38,7 +33,7 @@ manager: craigg
   
  The `Dim` statement for the <xref:Microsoft.SqlServer.Management.Smo.Rule> object is specified with the full assembly path to avoid ambiguity with a <xref:Microsoft.SqlServer.Management.Smo.Rule> object in the System.Data assembly.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -71,32 +66,28 @@ manager: craigg
   
  The `Dim` statement for the <xref:Microsoft.SqlServer.Management.Smo.Rule> object is specified with the full assembly path to avoid ambiguity with a <xref:Microsoft.SqlServer.Management.Smo.Rule> object in the System.Data assembly.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a Rule object variable by supplying the parent database, name and schema in the constructor.   
-$ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule `  
--argumentlist $db, "TestRule", "Production"  
+# Define a Rule object variable by supplying the parent database, name and schema in the constructor.
+$ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule -argumentlist $db, "TestRule", "Production"  
   
-#Set the TextHeader and TextBody properties to define the rule.   
+#Set the TextHeader and TextBody properties to define the rule.
 $ru.TextHeader = "CREATE RULE [Production].[TestRule] AS"  
 $ru.TextBody = "@value BETWEEN GETDATE() AND DATEADD(year,4,GETDATE())"  
   
-#Create the rule on the instance of SQL Server.   
+#Create the rule on the instance of SQL Server.
 $ru.Create()  
   
-# Bind the rule to a column in the Product table by supplying the table, schema, and   
-# column as arguments in the BindToColumn method.   
+# Bind the rule to a column in the Product table by supplying the table, schema, and column as arguments in the BindToColumn method.
 $ru.BindToColumn("Product", "SellEndDate", "Production")  
   
-#Unbind from the column before removing the rule from the database.   
+#Unbind from the column before removing the rule from the database.
 $ru.UnbindFromColumn("Product", "SellEndDate", "Production")  
 $ru.Drop()  
 ```  
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.Rule>  
-  
-  

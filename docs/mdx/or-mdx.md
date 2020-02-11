@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # OR (MDX)
 
@@ -43,7 +42,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## Example  
- The following query contains a calculated measure that returns the string “MARRIED OR MALE” if the current member on the Gender hierarchy of the Customer dimension is Male or the current member on the Marital Status hierarchy of the Customer dimension is Married; otherwise it returns the string “UNMARRIED OR FEMALE”.  
+ The following query contains a calculated measure that returns the string "MARRIED OR MALE" if the current member on the Gender hierarchy of the Customer dimension is Male or the current member on the Marital Status hierarchy of the Customer dimension is Married; otherwise it returns the string "UNMARRIED OR FEMALE".  
   
 ```  
 WITH  

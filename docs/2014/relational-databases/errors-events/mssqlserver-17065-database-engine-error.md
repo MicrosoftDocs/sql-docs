@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "17065 (Database Engine error)"
 ms.assetid: 63c2ba5a-be34-461e-bee1-03c25b396cd2
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

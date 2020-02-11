@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)"
@@ -18,10 +15,9 @@ topic_type:
 helpviewer_keywords: 
   - "RemoveUnattendedExecutionAccount method"
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
-caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # RemoveUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)
   Deletes the unattended execution account entry from the report server configuration file.  

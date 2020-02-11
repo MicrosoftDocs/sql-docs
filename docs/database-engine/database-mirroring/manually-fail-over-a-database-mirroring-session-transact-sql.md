@@ -1,23 +1,20 @@
 ---
-title: "Manually Fail Over a Database Mirroring Session (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Manually fail over a database mirror to partner"
+description: "Instructions to manually fail over a principle database mirror to a secondary partner using Transact-SQL (T-SQL)."
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "failover [SQL Server], database mirroring"
   - "manual failover [SQL Server]"
   - "database mirroring [SQL Server], failover"
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Manually Fail Over a Database Mirroring Session (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

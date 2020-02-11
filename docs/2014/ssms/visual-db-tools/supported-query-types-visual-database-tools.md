@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Delete query"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
   - "View Designer, query types"
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
   
 -   **Insert Values** Creates a new row and inserts values into specified columns. This type of query creates an SQL INSERT INTO...VALUES statement.  
   
--   **Update query** Changes the values of individual columns in one or more existing rows in a table. This type of query creates an SQL UPDATE…SET statement.  
+-   **Update query** Changes the values of individual columns in one or more existing rows in a table. This type of query creates an SQL UPDATE...SET statement.  
   
 -   **Delete query** Removes one or more rows from a table. This type of query creates an SQL DELETE statement.  
   

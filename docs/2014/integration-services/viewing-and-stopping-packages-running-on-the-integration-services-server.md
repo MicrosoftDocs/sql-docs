@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], managing"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "packages [Integration Services], running"
   - "running package [Integration Services], managing"
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-caps.latest.revision: 17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Viewing and Stopping Packages Running on the Integration Services Server

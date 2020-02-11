@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "07/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
 ## Maintenance of In-Memory OLTP DLLs  
  The following query shows all table and stored procedure DLLs currently loaded in memory on the server:  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -47,7 +44,7 @@ where description = 'XTP Native DLL'
   
  Consider the following sample script, which creates a database and a memory-optimized table:  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -81,7 +78,7 @@ go
   
  Consider the following sample stored procedure, which inserts rows in the table t1 from the previous example:  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  

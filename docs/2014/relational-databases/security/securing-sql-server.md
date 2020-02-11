@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"
@@ -24,7 +22,7 @@ manager: craigg
 # Securing SQL Server
   Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed as a series of steps, involving four areas: the platform, authentication, objects (including data), and applications that access the system. The following topics will guide you through creating and implementing an effective security plan.  
   
- You can find more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security at the [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web site. This includes a best practice guide and a security checklist. This site also contains the latest service pack information and downloads.  
+ You can find more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security at the [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) Web site. This includes a best practice guide and a security checklist. This site also contains the latest service pack information and downloads.  
   
 ## Platform and Network Security  
  The platform for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the physical hardware and networking systems connecting clients to the database servers, and the binary files that are used to process database requests.  
@@ -47,7 +45,7 @@ manager: craigg
 |---------------------------|---------|  
 |Configuring a firewall to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configuring a firewall to work with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configure a Windows Firewall for Access to the SSIS Service](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|Configuring a firewall to work with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|Configuring a firewall to work with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Opening specific ports on a firewall to enable access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuring support for Extended Protection for Authentication by using channel binding and service binding|[Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   
@@ -72,7 +70,7 @@ manager: craigg
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program files|[File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades provide enhanced security. To determine the latest available service pack available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web site.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades provide enhanced security. To determine the latest available service pack available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) Web site.  
   
  You can use the following script to determine the service pack installed on the system.  
   
@@ -82,7 +80,7 @@ GO
 ```  
   
 ## Principals and Database Object Security  
- Principals are the individuals, groups, and processes granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. “Securables” are the server, database, and objects the database contains. Each has a set of permissions that can be configured to help reduce the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surface area. The following table contains information about principals and securables.  
+ Principals are the individuals, groups, and processes granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. "Securables" are the server, database, and objects the database contains. Each has a set of permissions that can be configured to help reduce the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surface area. The following table contains information about principals and securables.  
   
 |For information about|See|  
 |---------------------------|---------|  

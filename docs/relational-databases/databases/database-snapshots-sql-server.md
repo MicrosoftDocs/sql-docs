@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "static database views"
@@ -20,14 +16,14 @@ helpviewer_keywords:
   - "read-only database views"
   - "database snapshots [SQL Server], about database snapshots"
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 54
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Snapshots (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  A database snapshot is a read-only, static view of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (the *source database*). The database snapshot is transactionally consistent with the source database as of the moment of the snapshot's creation. A database snapshot always resides on the same server instance as its source database. As the source database is updated, the database snapshot is updated. Therefore, the longer a database snapshot exists, the more likely it is to use up its available disk space.  
+
+A database snapshot is a read-only, static view of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (the *source database*). The database snapshot is transactionally consistent with the source database as of the moment of the snapshot's creation. A database snapshot always resides on the same server instance as its source database. While database snapshots provide a read-only view of the data in the same state as when the snapshot was created, the size of the snapshot file grows as changes are made to the source database. For details, see the [Feature Overview](#FeatureOverview) section below.
   
  Multiple snapshots can exist on a given source database. Each database snapshot persists until it is explicitly dropped by the database owner.  
   

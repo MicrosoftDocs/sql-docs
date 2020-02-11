@@ -611,7 +611,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (QUERYTRACEON 4199);
 ```  
 
- You can use multiple trace flags as well as in teh following query:
+ You can also use multiple trace flags as in the following query:
 
 ```sql
 SELECT * FROM Person.Address  

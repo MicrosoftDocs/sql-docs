@@ -36,7 +36,7 @@ ms.author: mathoma
   
      If the original primary server instance is not damaged, back up the tail of the transaction log of the primary database using WITH NORECOVERY. This leaves the database in the restoring state and therefore unavailable to users. Eventually you will be able to roll this database forward by applying transaction log backups from the replacement primary database.  
   
-     For more information, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+     For more information, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).   
   
 4.  After the secondary servers are synchronized, you can fail over to whichever one you prefer by recovering its secondary database and redirecting clients to that server instance. Recovering puts the database into a consistent state and brings it online.  
   

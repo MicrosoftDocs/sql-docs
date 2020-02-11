@@ -24,12 +24,7 @@ ms.author: maggies
 > 
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
-##  <a name="bkmk_top"></a> In this topic
-  
--   [HTML Viewer commands (rc:)](#bkmk_htmlviewer)
--   [Report server commands (rs:)](#bkmk_reportserver)
--   [Report Viewer web part commands (rv:)](#bkmk_webpart)
-  
+
 ##  <a name="bkmk_htmlviewer"></a> HTML Viewer commands (rc:)
  - HTML Viewer commands are used to target the HTML Viewer and are prefixed with *rc:*:
   
@@ -253,7 +248,7 @@ ms.author: maggies
   
 -   **PersistStreams**: Renders a report in a single persisted stream. This parameter is used by the Image renderer to transmit the rendered report one chunk at a time. After using this parameter in a URL access string, use the same URL access string with the *GetNextStream* parameter instead of the *PersistStreams* parameter to get the next chunk in the persisted stream. This URL command eventually returns a 0-byte stream to indicate the end of the persisted stream. The default value is **false**.
   
--   **GetNextStream**: Gets the next data chunk in a persisted stream that's accessed by using the *PersistStreams* parameter. For more information, see the description for **PersistStreams**. The default value is **false**.
+-   **GetNextStream**: Gets the next data chunk in a persisted stream that's accessed by using the *PersistStreams* parameter. For more information, see the description for *PersistStreams*. The default value is **false**.
   
 -   **SessionID**: Specifies an established active report session between the client application and the report server. The value of this parameter is set to the session identifier.
   
@@ -330,7 +325,7 @@ ms.author: maggies
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   **ToolBarItemsDisplayMode**: Controls which toolbar items are displayed. This is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use rv:ToolBarItemsDisplayMode=63 (or 0x3F), which is 1+2+4+8+16+32. For **Actions** menu items only, use rv:ToolBarItemsDisplayMode=960 (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:
+-   **ToolBarItemsDisplayMode**: Controls which toolbar items are displayed. This is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example, for no **Actions** menu, use *rv:ToolBarItemsDisplayMode=63* (or 0x3F), which is 1+2+4+8+16+32. For **Actions** menu items only, use *rv:ToolBarItemsDisplayMode=960* (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:
   
     -   **1 (0x1)**: The **Back** button  
   

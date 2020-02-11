@@ -39,10 +39,9 @@ manager: craigg
  To read the complete topic, see [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## See Also  
- [Azure Home Page](http://www.windowsazure.com/)   
- [Azure Developer Center](http://www.windowsazure.com/develop/overview/)   
- [Azure Manage Center](http://www.windowsazure.com/manage/overview/)   
- [Azure Team Blog](http://www.windowsazure.com/community/blog/)   
- [Azure Support Options](http://www.windowsazure.com/support/contact/)  
-  
+ [Azure Home Page](https://www.windowsazure.com/)   
+ [Azure Developer Center](https://www.windowsazure.com/develop/overview/)   
+ [Azure Manage Center](https://www.windowsazure.com/manage/overview/)   
+ [Azure Team Blog](https://www.windowsazure.com/community/blog/)   
+ [Azure Support Options](https://www.windowsazure.com/support/contact/)  
   

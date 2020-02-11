@@ -1,7 +1,7 @@
 - name: SQL Server Machine Learning Services documentation
   href: ../advanced-analytics/index.yml
 
-- name: Welcome to SQL Server >
+- name: SQL Server documentation >
   href: ../sql-server/index.yml
 
 - name: Overview
@@ -49,11 +49,11 @@
   items:
   - name: Python
     items:
-    - name: Create Python scripts
+    - name: Run Python scripts
       href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-    - name: Handle data types and objects
+    - name: Data structures and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-    - name: Write Python functions
+    - name: Python functions
       href: ../advanced-analytics/tutorials/quickstart-python-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -61,9 +61,9 @@
     items:
     - name: Create R scripts
       href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-    - name: Handle data types and objects
+    - name: Data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-    - name: Write R functions
+    - name: R functions
       href: ../advanced-analytics/tutorials/quickstart-r-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
@@ -141,36 +141,36 @@
         href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
     - name: RevoScaleR deep dive
       items:
-      - name: 1. Introduction
+      - name: Introduction
         href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-      - name: 2. Create database and permissions
+      - name: 1. Create database and permissions
         href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-      - name: 3. Create an RxSqlServerData object
+      - name: 2. Create an RxSqlServerData object
         href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-      - name: 4. Query and modify data
+      - name: 3. Query and modify data
         href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-      - name: 5. Define a compute context
+      - name: 4. Define a compute context
         href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: 6. Compute summary statistics
+      - name: 5. Compute summary statistics
         href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-      - name: 7. Visualize data
+      - name: 6. Visualize data
         href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-      - name: 8. Create models
+      - name: 7. Create models
         href: ../advanced-analytics/tutorials/deepdive-create-models.md
-      - name: 9. Score new data
+      - name: 8. Score new data
         href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-      - name: 10. Transform data
+      - name: 9. Transform data
         href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-      - name: 11. Load data using rxImport
+      - name: 10. Load data using rxImport
         href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-      - name: 12. Create a table using rxDataStep
+      - name: 11. Create a table using rxDataStep
         href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-      - name: 13. Perform chunking analysis
+      - name: 12. Perform chunking analysis
         href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-      - name: 14. Move data between SQL Server and XDF file
+      - name: 13. Move data with XDF file
         href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-      - name: 15. Send custom R using rxExec
-        href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
+      - name: 14. Send custom R using rxExec
+        href: ../advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec.md
   - name: Sample data
     items:
     - name: Airline data set
@@ -245,14 +245,28 @@
       items:
       - name: Get Python package information
         href: ../advanced-analytics/package-management/python-package-information.md
-      - name: Install Python packages
+      - name: Install with sqlmlutils
         href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+      - name: Install with Python tools
+        href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
     - name: Install new R packages
       items:
       - name: Get R package information
         href: ../advanced-analytics/package-management/r-package-information.md
-      - name: Install R packages
+      - name: Install with R tools
+        href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
+      - name: Install with sqlmlutils
         href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
+      - name: Install with T-SQL
+        href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
+      - name: Use RevoScaleR
+        items:
+        - name: Install with RevoScaleR
+          href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
+        - name: Enable remote R management
+          href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+        - name: Synchronize R packages
+          href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
       - name: Create a miniCRAN repo
         href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages

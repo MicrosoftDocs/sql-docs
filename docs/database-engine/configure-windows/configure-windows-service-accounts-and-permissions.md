@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/28/2019"
+ms.date: "01/28/2020"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -276,7 +276,7 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
  Depending on the service configuration, the service account for a service or service SID is added as a member of the service group during install or upgrade.
   
 ###  <a name="Windows"></a> Windows Privileges and Rights  
- The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this.  First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
+ The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this.  First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/download/details.aspx?id=7887).
   
  The following table shows permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup requests for the per-service SIDs or local Windows groups used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.
   
@@ -338,12 +338,12 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 ||Instid\OLAP\Backup|Read, Write|  
 ||Instid\OLAP\Temp|Read, Write|  
 ||130\shared\Errordumps|Read, Write|  
-|SQLServerReportServerUser|Instid\Reporting Services\Log Files|Read, Write, Delete|  
+|ReportServer|Instid\Reporting Services\Log Files|Read, Write, Delete|  
 ||Instid\Reporting Services\ReportServer|Read, Execute|  
-||Instid\Reportingservices\Reportserver\global.asax|Full control|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|Read|  
-||Instid\Reporting Services\reportManager|Read, Execute|  
-||Instid\Reporting Services\RSTempfiles|Read, Write, Execute, Delete|  
+||Instid\Reporting Services\ReportServer\global.asax|Full control|  
+||Instid\Reporting Services\ReportServer\rsreportserver.config|Read|  
+||Instid\Reporting Services\RSTempfiles|Read, Write, Execute, Delete| 
+||Instid\Reporting Services\RSWebApp|Read, Execute|   
 ||130\shared|Read, Execute|  
 ||130\shared\Errordumps|Read, Write|  
 |MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|Read|  
@@ -356,10 +356,8 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 |SQLWriter|N/A (Runs as local system)||  
 |User|Instid\MSSQL\binn|Read, Execute|  
 ||Instid\Reporting Services\ReportServer|Read, Execute, List Folder Contents|  
-||Instid\Reportingservices\Reportserver\global.asax|Read|  
-||Instid\Reporting Services\ReportManager|Read, Execute|  
-||Instid\Reporting Services\ReportManager\pages|Read|  
-||Instid\Reporting Services\ReportManager\Styles|Read|  
+||Instid\Reporting Services\ReportServer\global.asax|Read|  
+||Instid\Reporting Services\RSWebApp|Read, Execute, List Folder Contents|    
 ||130\dts|Read, Execute|  
 ||130\tools|Read, Execute|  
 ||100\tools|Read, Execute|  
@@ -401,15 +399,12 @@ Some access control permissions might have to be granted to built-in accounts or
 ||Administrator only|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name>\*|Full control|  
 ||Administrators, System|\tools\binn\schemas\sqlserver\2004\07\showplan|Full control|  
 ||Users|\tools\binn\schemas\sqlserver\2004\07\showplan|Read, Execute|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Report Server Web Service Account>|*\<install>*\Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Report Manager Application pool identity, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] account, Everyone|*\<install>*\Reporting Services\ReportManager, *\<install>*\Reporting Services\ReportManager\Pages\\\*.\*, *\<install>*\Reporting Services\ReportManager\Styles\\\*.\*, *\<install>*\Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Read|  
-||Report Manager Application pool identity|*\<install>*\Reporting Services\ReportManager\Pages\\*.\*|Read|  
-||\<Report Server Web Service Account>|*\<install>*\Reporting Services\ReportServer|Read|  
-||\<Report Server Web Service Account>|*\<install>*\Reporting Services\ReportServer\global.asax|Full|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Report Server Windows Service Account|*\<install>*\Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Report Server Windows Service Account|*\<install>*\Reporting Services\ReportServer|Read|  
+||Report Server Windows Service Account|*\<install>*\Reporting Services\ReportServer\global.asax|Full|  
+||Report Server Windows Service Account|*\<install>*\Reporting Services\RSWebApp|Read, Execute|  
 ||Everyone|*\<install>*\Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||Network service|*\<install>*\Reporting Services\ReportServer\ReportService.asmx|Full|  
-||Everyone|*\<install>*\Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||ReportServer Windows Services Account|*\<install>*\Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||ReportServer Windows Services Account|*\<install>*\Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Everyone|Report Server keys (Instid hive)|Query Value<br /><br /> Enumerate SubKeys<br /><br /> Notify<br /><br /> Read Control|  
 ||Terminal Services User|Report Server keys (Instid hive)|Query Value<br /><br /> Set Value<br /><br /> Create SubKey<br /><br /> Enumerate SubKey<br /><br /> Notify<br /><br /> Delete<br /><br /> Read Control|  
 ||Power Users|Report Server keys (Instid hive)|Query Value<br /><br /> Set Value<br /><br /> Create Subkey<br /><br /> Enumerate Subkeys<br /><br /> Notify<br /><br /> Delete<br /><br /> Read Control|  

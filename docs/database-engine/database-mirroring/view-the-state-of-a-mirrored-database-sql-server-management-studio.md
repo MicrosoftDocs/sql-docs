@@ -1,6 +1,7 @@
 ---
-title: "View the State of a Mirrored Database (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "View mirrored database state"
+description: Learn how to view the state of a database configured for database mirroring within the SQL Server Management Studio (SSMS) GUI. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: high-availability

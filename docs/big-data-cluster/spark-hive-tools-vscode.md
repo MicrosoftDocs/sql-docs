@@ -1,11 +1,12 @@
 ---
-title: Run Spark jobs with Spark & Hive Tools for VS Code on SQL Server big data cluster
-titleSuffix: SQL Server big data clusters
+title: "Run jobs: Spark & Hive Tools for VS Code"
+titleSuffix: SQL Server Big Data Clusters
 description: Submit spark job with the Spark & Hive Tools for Visual Studio Code on SQL Server big data cluster.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

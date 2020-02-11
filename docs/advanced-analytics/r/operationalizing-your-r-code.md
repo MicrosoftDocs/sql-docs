@@ -1,5 +1,5 @@
 ---
-title: Operationalize R code using stored procedures
+title: Deploy R code in stored procedures
 description: Embed R language code in a SQL Server stored procedure to make it available to any client application having access to a SQL Server database.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Operationalize R code using stored procedures in SQL Server Machine Learning Services

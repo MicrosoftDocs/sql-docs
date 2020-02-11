@@ -1,6 +1,6 @@
 ---
-title: Visualize SQL Server data using RevoScaleR rxHistogram
-description: Tutorial walkthrough on how to visualize data using the R language on SQL Server.
+title: Visualize data using RevoScaleR
+description: "RevoScaleR tutorial 6: How to visualize data using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,25 +8,26 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 #  Visualize SQL Server data using R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 6 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this lesson, use R functions to view the distribution of values in the *creditLine* column by gender.
+In this tutorial, you'll use R functions to view the distribution of values in the *creditLine* column by gender.
 
 > [!div class="checklist"]
 > * Create min-max variables for histogram inputs
 > * Visualize data in a histogram using **rxHistogram** from **RevoScaleR**
 > * Visualize with scatter plots using **levelplot** from **lattice** included in the base R distribution
 
-As this lesson demonstrates, you can combine open-source and Microsoft-specific functions in the same script.
+As this tutorial demonstrates, you can combine open-source and Microsoft-specific functions in the same script.
 
 ## Add maximum and minimum values
 
-Based on the computed summary statistics from the previous lesson, you've discovered some useful information about the data that you can insert into the data source for further computations. For example, the minimum and maximum values can be used to compute histograms. In this exercise, add the high and low values to the **RxSqlServerData** data source.
+Based on the computed summary statistics from the previous tutorial, you've discovered some useful information about the data that you can insert into the data source for further computations. For example, the minimum and maximum values can be used to compute histograms. In this exercise, add the high and low values to the **RxSqlServerData** data source.
 
 1. Start by setting up some temporary variables.
   
@@ -35,7 +36,7 @@ Based on the computed summary statistics from the previous lesson, you've discov
     var <- sumDF$Name
     ```
   
-2. Use the variable *ccColInfo* that you created in the previous lesson to define the columns in the data source.
+2. Use the variable *ccColInfo* that you created in the previous tutorial to define the columns in the data source.
   
    Add new computed columns (*numTrans*, *numIntlTrans*, and *creditLine*) to the column collection that override the original definition. The script below adds factors based on minimum and maximum values, obtained from sumOut, which is storing the in-memory output from **rxSummary**. 
   

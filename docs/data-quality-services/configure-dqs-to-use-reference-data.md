@@ -1,6 +1,5 @@
 ---
-title: "Configure DQS to Use Reference Data | Microsoft Docs"
-ms.custom: ""
+title: "Configure DQS to Use Reference Data"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,8 +11,8 @@ f1_keywords:
   - "sql13.dqs.administration.configuration.createDirectRDS.f1"
   - "sql13.dqs.admin.config.rds.f1"
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Configure DQS to Use Reference Data
 

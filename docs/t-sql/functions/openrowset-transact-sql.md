@@ -69,7 +69,7 @@ OPENROWSET
 
 ## Arguments
 
-'*provider_name*'
+### '*provider_name*'
 Is a character string that represents the friendly name (or PROGID) of the OLE DB provider as specified in the registry. *provider_name* has no default value.
 
 '*datasource*'
@@ -80,6 +80,15 @@ Is a string constant that is the user name passed to the specified OLE DB provid
 
 '*password*'
 Is a string constant that is the user password to be passed to the OLE DB provider. *password* is passed in as the DBPROP_AUTH_PASSWORD property when initializing the provider. *password* cannot be a Microsoft Windows password.
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 '*provider_string*'
 Is a provider-specific connection string that is passed in as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *provider_string* typically encapsulates all the connection information required to initialize the provider. For a list of keywords that are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, see [Initialization and Authorization Properties](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
@@ -93,14 +102,27 @@ Is the name of the schema or object owner for the specified object.
 *object*
 Is the object name that uniquely identifies the object to work with.
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 '*query*'
 Is a string constant sent to and executed by the provider. The local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not process this query, but processes query results returned by the provider, a pass-through query. Pass-through queries are useful when used on providers that do not make available their tabular data through table names, but only through a command language. Pass-through queries are supported on the remote server, as long as the query provider supports the OLE DB Command object and its mandatory interfaces. For more information, see [SQL Server Native Client &#40;OLE DB&#41; Reference](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
-BULK
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### BULK
 Uses the BULK rowset provider for OPENROWSET to read data from a file. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET can read from a data file without loading the data into a target table. This lets you use OPENROWSET with a simple SELECT statement.
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 The arguments of the BULK option allow for significant control over where to start and end reading data, how to deal with errors, and how data is interpreted. For example, you can specify that the data file be read as a single-row, single-column rowset of type **varbinary**, **varchar**, or **nvarchar**. The default behavior is described in the argument descriptions that follow.
 
@@ -117,7 +139,7 @@ Is the full path of the data file whose data is to be copied into the target tab
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the data_file can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 \<bulk_options>
 Specifies one or more arguments for the BULK option.
@@ -197,11 +219,24 @@ By reading *data_file* as ASCII, returns the contents as a single-row, single-co
 SINGLE_NCLOB
 By reading *data_file* as UNICODE, returns the contents as a single-row, single-column rowset of type **nvarchar(max)**, using the collation of the current database.
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### Input file format options
 
 FORMAT **=** 'CSV'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ='*format_file_path*'
 Specifies the full path of a format file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two types of format files: XML and non-XML.
@@ -304,7 +339,7 @@ SELECT CustomerID, CompanyName
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### C. Using OPENROWSET and another table in an INNER JOIN
 
@@ -325,7 +360,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support reading from Windows files.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only supports reading from Azure Blob Storage.
 
 ### D. Using OPENROWSET to bulk insert file data into a varbinary(max) column
 
@@ -346,7 +381,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### E. Using the OPENROWSET BULK provider with a format file to retrieve rows from a text file
 
@@ -375,7 +410,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### F. Specifying a format file and code page
 
@@ -400,7 +435,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support reading from Windows files.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only supports reading from Azure Blob Storage.
 
 ### H. Accessing data from a CSV file without a format file
 
@@ -422,7 +457,7 @@ from openrowset
 > [!IMPORTANT]
 >
 > - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [OBDC Data Sources](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There is 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of sqlservr.exe.
-> - Azure SQL Database does not support reading from Windows files.
+> - Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### I. Accessing data from a file stored on Azure Blob storage
 
@@ -443,7 +478,7 @@ For complete `OPENROWSET` examples including configuring the credential and exte
 The following example shows how to use the OPENROWSET command to load data from a csv file in an Azure Blob storage location on which you have created a SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -472,7 +507,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### Additional Examples
 
@@ -495,7 +530,6 @@ For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK.
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
-- [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

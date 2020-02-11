@@ -1,5 +1,5 @@
 ---
-title: "Executing Commands Containing Table-Valued Parameters | Microsoft Docs"
+title: "Commands with Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Executing Commands Containing Table-Valued Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Executing a command that contains table-valued parameters requires two phases:  
   

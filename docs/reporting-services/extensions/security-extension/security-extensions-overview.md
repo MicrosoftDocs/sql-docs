@@ -1,5 +1,5 @@
 ---
-title: "Security Extensions Overview (SSRS) | Microsoft Docs"
+title: "Security Extensions Overview | Microsoft Docs"
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

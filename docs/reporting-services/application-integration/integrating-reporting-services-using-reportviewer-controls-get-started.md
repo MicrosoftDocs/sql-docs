@@ -1,6 +1,8 @@
 ---
-title: "Getting started with the ReportViewer 2016 control | Microsoft Docs"
-ms.date: 09/18/2018
+title: "Get started with Report Viewer controls"
+description: The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. 
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
@@ -42,7 +44,7 @@ The Report Viewer controls can be used to integrate Reporting Services RDL repor
     
 The final page should look like the following.
 
-```
+```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
@@ -63,7 +65,6 @@ The final page should look like the following.
     </form>
 </body>
 </html>
-
 ```
 
 ## Updating an existing project to use the Report Viewer control
@@ -72,7 +73,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 
 ### Sample web.config changes
 
-```
+```xml
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
@@ -139,9 +140,9 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Add a new control from code or [add the control to the toolbox](##adding-control-to-visual-studio-toolbar).
+3. Add a new control from code or [add the control to the toolbox](#adding-control-to-visual-studio-toolbar).
 
-    ```
+    ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     
     private void InitializeComponent()
@@ -169,7 +170,7 @@ If setting the height of the viewer control to 100% the parent element is requir
 
 ### Setting the height of all the ancestors to 100%
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -190,14 +191,13 @@ If setting the height of the viewer control to 100% the parent element is requir
     </form>
 </body>
 </html>
-
 ```
 
 ### Setting the parent's height attribute
 
 For more information about viewport percentage lengths, see [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -213,7 +213,6 @@ For more information about viewport percentage lengths, see [Viewport-percentage
     </form>
 </body>
 </html>
-
 ```
 
 ## Adding control to Visual Studio toolbar

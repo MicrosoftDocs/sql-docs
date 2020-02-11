@@ -1,7 +1,10 @@
 ---
-title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
-ms.custom: sqlfreshmay19
-ms.date: "05/29/2019"
+title: "Editions and supported features"
+titleSuffix: SQL Server 2016
+ms.custom: 
+   - seo-lt-2019
+   - sqlfreshmay19
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -39,9 +42,10 @@ ms.author: "mikeray"
 
 This topic provides details of features supported by the SQL Server editions.
 
-For information about older versions, see:
+For information about other versions, see:
 
-* [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
+* [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
+* [SQL Server 2017](editions-and-components-of-sql-server-2017.md).  
 * [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

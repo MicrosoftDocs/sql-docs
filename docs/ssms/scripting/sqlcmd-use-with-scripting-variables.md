@@ -1,6 +1,6 @@
 ---
-title: "Use sqlcmd with Scripting Variables | Microsoft Docs"
-ms.custom: ""
+title: "Use sqlcmd with Scripting Variables"
+ms.custom: seo-lt-2019
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.technology: scripting
@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Variables that are used in scripts are called scripting variables. Scripting variables enable one script to be used in multiple scenarios. For example, if you want to run one script against multiple servers, instead of modifying the script for each server, you can use a scripting variable for the server name. By changing the server name supplied to the scripting variable, the same script can be executed on different servers.  
   
- Scripting variables can be defined explicitly by using the **setvar** command, or implicitly by using the **sqlcmd-v** option.  
+ Scripting variables can be defined explicitly by using the **setvar** command, or implicitly by using the **sqlcmd -v** option.  
   
  This topic also includes examples defining environmental variables at the Cmd.exe command prompt by using **SET**.  
   
@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Command shell (**SET X=Y**) set at command prompt before starting **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   

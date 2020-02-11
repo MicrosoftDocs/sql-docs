@@ -67,6 +67,7 @@ To increase security, the error message that is returned to the client deliberat
 |12|Login is valid login, but server access failed.|  
 |18|Password must be changed.|  
 |38, 46|Could not find database requested by user.|
+|58| When SQL Server is set to use Windows Authentication only, and a client attempts to log in using SQL authentication. Another cause is when SIDs do not match.|
 |102 - 111|AAD failure.|
 |122 - 124|Failure due to empty user name or password.|
 |126|Database requested by user does not exist.|

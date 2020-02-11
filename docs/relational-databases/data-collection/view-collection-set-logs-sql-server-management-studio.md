@@ -1,5 +1,5 @@
 ---
-title: "View Collection Set Logs (SQL Server Management Studio) | Microsoft Docs"
+title: "View collection set logs (SSMS)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,8 +12,9 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
-# View Collection Set Logs (SQL Server Management Studio)
+# View collection set logs (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can view all the collection set logs or individual collection set logs from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

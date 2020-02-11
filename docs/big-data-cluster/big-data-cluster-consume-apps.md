@@ -1,11 +1,12 @@
 ---
-title: Consume applications on SQL Server big data clusters
-titleSuffix: SQL Server big data clusters
-description: Consume an application deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using a RESTful web service (preview).
+title: Consume applications
+titleSuffix: SQL Server Big Data Clusters
+description: Consume an application deployed on SQL Server Big Data Clusters using a RESTful web service.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,11 +16,11 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to consume an app deployed on a SQL Server 2019 big data cluster using a RESTful web service (preview).
+This article describes how to consume an app deployed on a SQL Server big data cluster using a RESTful web service.
 
 ## Prerequisites
 
-- [SQL Server 2019 big data cluster](deployment-guidance.md)
+- [SQL Server big data cluster](deployment-guidance.md)
 - [azdata command-line utility](deploy-install-azdata.md)
 - An app deployed using either [azdata](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
 
@@ -85,7 +86,16 @@ One of the other ways to get this information is doing right-click Manage on the
 
 ## Generate a JWT access token
 
-In order to access the RESTful web service for the app you have deployed you first have to generate a JWT Access token. Open the following URL in your browser: `https://[IP]:[PORT]/docs/swagger.json` using the IP address and port you retrieved running the `describe` command above. You will have to sign in with the same credentials you used for `azdata login`.
+In order to access the RESTful web service for the app you have deployed you first have to generate a JWT Access token. The URL for the access token depends on the version of Big Data Cluster. 
+
+|Version |URL|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|CU1 and later| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> For version information, see [Release history](release-notes-big-data-cluster.md#release-history).
+
+Open the appropriate URL in your browser using the IP address and port you retrieved running the [`describe`](#retrieve-the-endpoint) command above. Sign in with the same credentials you used for `azdata login`.
 
 Paste the contents of the `swagger.json` into the [Swagger Editor](https://editor.swagger.io) to understand what methods are available:
 

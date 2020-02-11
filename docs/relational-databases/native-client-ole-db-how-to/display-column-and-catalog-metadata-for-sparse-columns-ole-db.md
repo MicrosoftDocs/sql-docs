@@ -1,5 +1,5 @@
 ---
-title: "Display Column and Catalog Metadata for Sparse Columns (OLE DB) | Microsoft Docs"
+title: "Metadata for Sparse Columns (OLE DB)"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -14,7 +14,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Display Column and Catalog Metadata for Sparse Columns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample creates a table with three columns: a sparse column, a column that is not a sparse column, and a columnset column. The sample then displays OLE DB flags showing the column and catalog metadata for the non-sparse column and the columnset column.  
   
@@ -23,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
-```  
+```cpp
 #include <stddef.h>  
 #include <comdef.h>  
 #include <msdasc.h>  

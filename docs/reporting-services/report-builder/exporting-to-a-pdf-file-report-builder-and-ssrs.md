@@ -1,5 +1,5 @@
 ---
-title: "Exporting to a PDF File (Report Builder and SSRS) | Microsoft Docs"
+title: "Exporting to a PDF File (Report Builder) | Microsoft Docs"
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,7 +1,7 @@
 ﻿---
-title: "bcp Utility | Microsoft Docs"
+title: "bcp Utility"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -25,8 +25,8 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: ""
-ms.date: 01/14/2019
+ms.custom: seo-lt-2019
+ms.date: 01/23/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -78,6 +78,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#c">-c</a>]
     [<a href="#C">-C { ACP | OEM | RAW | code_page } </a>]
     [<a href="#d">-d database_name</a>]
+    [<a href="#D">-D</a>]
     [<a href="#e">-e err_file</a>]
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
@@ -169,10 +170,14 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |OEM|Default code page used by the client. This is the default code page used if **-C** is not specified.|  
 |RAW|No conversion from one code page to another occurs. This is the fastest option because no conversion occurs.|  
 |*code_page*|Specific code page number; for example, 850.<br /><br /> Versions prior to version 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) do not support code page 65001 (UTF-8 encoding). Versions beginning with 13 can import UTF-8 encoding to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|||
   
  **-d** _**database\_name**_<a name="d"></a>   
- Specifies the database to connect to. By default, bcp.exe connects to the user's default database. If **-d database_name and a three part name (database_name.schema.table, passed as the first parameter to bcp.exe) are specified, an error will occur because you cannot specify the database name twice. If *database_name* begins with a hyphen (-) or a forward slash (/), do not add a space between **-d** and the database name.  
-  
+ Specifies the database to connect to. By default, bcp.exe connects to the user's default database. If -d database_name and a three part name (database_name.schema.table, passed as the first parameter to bcp.exe) are specified, an error will occur because you cannot specify the database name twice. If *database_name* begins with a hyphen (-) or a forward slash (/), do not add a space between **-d** and the database name.  
+
+**-D**<a name="D"></a>  
+Causes the value passed to the `bcp` `-S` option to be interpreted as a data source name (DSN). For more information, see _DSN Support in sqlcmd and bcp_ in [Connecting with sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+
  **-e** _**err\_file**_<a name="e"></a>  
  Specifies the full path of an error file used to store any rows that the **bcp** utility cannot transfer from the file to the database. Error messages from the **bcp** command go to the workstation of the user. If this option is not used, an error file is not created.  
   

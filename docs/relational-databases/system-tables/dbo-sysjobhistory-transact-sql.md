@@ -41,7 +41,7 @@ This table is stored in the **msdb** database.
 |**message**|**nvarchar(4000)**|Text, if any, of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
 |**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled<br /><br />**4** = In Progress|  
 |**run_date**|**int**|Date the job or step started execution. For an In Progress history, this is the date/time the history was written.|  
-|**run_time**|**int**|Time the job or step started.|  
+|**run_time**|**int**|Time the job or step started in **HHMMSS** format.|  
 |**run_duration**|**int**|Elapsed time in the execution of the job or step in **HHMMSS** format.|  
 |**operator_id_emailed**|**int**|ID of the operator notified when the job completed.|  
 |**operator_id_netsent**|**int**|ID of the operator notified by a message when the job completed.|  

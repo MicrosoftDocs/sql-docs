@@ -1,6 +1,6 @@
 ---
-title: "Managing Users, Roles, and Logins | Microsoft Docs"
-ms.custom: ""
+title: "Managing Users, Roles, and Logins"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

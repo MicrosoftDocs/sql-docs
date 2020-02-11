@@ -1,6 +1,5 @@
 ---
-title: "Promote Frequently Used XML Values with Computed Columns | Microsoft Docs"
-ms.custom: ""
+title: "Promote frequent XML values with computed columns | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Promote Frequently Used XML Values with Computed Columns
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

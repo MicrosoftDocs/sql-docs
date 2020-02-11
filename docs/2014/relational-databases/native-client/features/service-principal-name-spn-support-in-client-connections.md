@@ -103,9 +103,8 @@ manager: craigg
   
 -   [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programmability Samples](http://msftdpprodsamples.codeplex.com/).  
+ For information about sample applications that demonstrate this feature, see [SQL Server Data Programmability Samples](https://msftdpprodsamples.codeplex.com/).  
   
 ## See Also  
  [SQL Server Native Client Features](sql-server-native-client-features.md)  
-  
   

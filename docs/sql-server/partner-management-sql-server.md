@@ -23,7 +23,7 @@ To manage your SQL Server services, choose from a wide variety of industry-leadi
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][monitor_partners], and [development partners][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 
 
 <!--Article links-->

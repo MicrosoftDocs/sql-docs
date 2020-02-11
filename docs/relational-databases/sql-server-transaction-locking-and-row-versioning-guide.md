@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Transaction Locking and Row Versioning Guide | Microsoft Docs"
-ms.custom: ""
+title: "Transaction Locking and Row Versioning Guide"
+ms.custom: seo-dt-2019
 ms.date: "02/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

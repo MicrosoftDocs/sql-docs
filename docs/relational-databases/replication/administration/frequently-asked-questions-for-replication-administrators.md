@@ -1,6 +1,7 @@
 ---
-title: "Frequently Asked Questions for Replication Administrators | Microsoft Docs"
-ms.custom: ""
+title: "Frequently asked questions for replication administrators"
+description: A list of frequently asked questions relevant to replication administrators for SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Frequently Asked Questions for Replication Administrators
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,7 +107,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 ### Does replication work over low bandwidth connections? Does it use compression?  
  Yes, replication does work over low bandwidth connections. For connections over TCP/IP, it uses the compression provided by the protocol but does not provide additional compression. For Web synchronization connections over HTTPS, it uses the compression provided by the protocol and also additional compression of the XML files used to replicate changes.  
-  
+
+### Can I configure replication if I connect to the server by using the IP address? 
+No, replication works only when you use the actual server name. Beginning in SQL Server Management Studio (SSMS) 18.0 (and later versions), replication can be configured by using the actual server name and port number. 
+
 ## Logins and Object Ownership  
   
 ### Are logins and passwords replicated?  

@@ -1,5 +1,5 @@
 ---
-title: "Send and Receive Data Incrementally with FILESTREAM (ODBC) | Microsoft Docs"
+title: "Data incrementally, FILESTREAM (ODBC)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +14,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Send and Receive Data Incrementally with FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample shows how to use the FILESTREAM feature to send and receive data incrementally with SQLPutData and SQLGetData.  
   
@@ -29,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the database used by this sample.  
   
-```  
+```sql
 USE master  
 GO  
   
@@ -70,7 +69,7 @@ CREATE TABLE [myfilestreamdb]..[mydocs]
 GO  
 ```  
   
-```  
+```cpp
 // compile with: /D "_UNICODE" /D "UNICODE" odbc32.lib /EHsc  
 #pragma once  
 #define WIN32_LEAN_AND_MEAN  
@@ -171,7 +170,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 }  
 ```  
   
-```  
+```sql
 USE master  
 GO  
 -- Drop the filestream demo database  

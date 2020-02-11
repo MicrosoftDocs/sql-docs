@@ -1,6 +1,5 @@
 ---
-title: "Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Convert data types with sql:datatype (SQLXML)"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -21,9 +20,10 @@ ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0)
+# Data Type conversions and the sql:datatype Annotation (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In an XSD schema, the **xsd:type** attribute specifies the XSD data type of an element or attribute. When an XSD schema is used to extract data from the database, the data type specified is used to format the data.  
   

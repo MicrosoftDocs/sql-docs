@@ -1,13 +1,14 @@
 ---
-title: "Configure a Report Server Database Connection  (SSRS Configuration Manager) | Microsoft Docs"
+title: "Configure a Report Server Database Connection (Configuration Manager) | Microsoft Docs"
+description: "Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server."
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies
 ms.reviewer: ""
-ms.custom: seodec18
-ms.date: 10/09/2019
+ms.custom: seo-lt-2019​, seo-mmd-2019
+ms.date: 12/04/2019
 ---
 
 # Configure a Report Server Database Connection (SSRS Configuration Manager)

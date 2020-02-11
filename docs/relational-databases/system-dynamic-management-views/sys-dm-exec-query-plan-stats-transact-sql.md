@@ -62,6 +62,10 @@ This is an opt-in feature and requires [trace flag](../../t-sql/database-console
 
 This system function works under the **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
+The Showplan output by sys.dm_exec_query_plan_stats contains the following information:
+-  All the compile-time information found in the cached plan
+-  Runtime information such as the actual number of rows per operator, the total query CPU time and execution time, spill warnings, actual DOP, the maximum used memory and granted memory
+
 Under the following conditions, a Showplan output **equivalent to an actual execution plan** is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
 
 -   The plan can be found in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     

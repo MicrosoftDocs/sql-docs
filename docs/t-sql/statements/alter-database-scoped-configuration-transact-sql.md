@@ -1,6 +1,8 @@
 ---
-title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER DATABASE SCOPED CONFIGURATION"
+description: Enable several database configuration settings at the individual database level.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -84,6 +86,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
 }
 ```
 
@@ -359,6 +362,12 @@ The `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` option determines how long (
 - When set to 0, a paused operation will never automatically abort
 
 The current value for this option is displayed in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+Allows you to control whether a [Row-Level Security](../../relational-databases/security/row-level-security.md) (RLS) predicate affects the cardinality of the execution plan of the overall user query. When ISOLATE_SECURITY_POLICY_CARDINALITY is ON, an RLS predicate does not affect the cardinality of an execution plan. For example, consider a table containing 1 million rows and an RLS predicate that restricts the result to 10 rows for a specific user issuing the query. With this database scoped configuration set to OFF, the cardinality estimate of this predicate will be 10. When this database scoped configuration is ON, query optimization will estimate 1 million rows. It is recommended to use the default value for most workloads.
 
 ## <a name="Permissions"></a> Permissions
 

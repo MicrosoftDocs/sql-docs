@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Backup and Restore with Microsoft Azure Blob Storage Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/25/2019"
+title: "Backup & restore with Azure Blob Storage"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

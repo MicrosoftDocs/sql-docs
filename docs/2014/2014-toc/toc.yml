@@ -1,5 +1,5 @@
-- name: Books Online for SQL Server 2014
-  href: books-online-for-sql-server-2014.md
+- name: SQL Server 2014 docs
+  href: index.yml
 - name: Analysis Services +
   href: ../analysis-services/analysis-services.md
 - name: Data Quality Services +

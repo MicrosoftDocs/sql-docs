@@ -1,6 +1,7 @@
 ---
-title: "Optimize Parameterized Filter Performance with Precomputed Partitions | Microsoft Docs"
-ms.custom: ""
+title: "Optimize parameterized filters with precomputed partitions (Merge)"
+description: Learn how to use precomputed partitions to optimize the performance of parameterized filters for Merge Publications. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

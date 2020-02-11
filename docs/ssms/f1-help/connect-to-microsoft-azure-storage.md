@@ -1,6 +1,6 @@
 ---
-title: "Connect to Microsoft Azure Storage | Microsoft Docs"
-ms.custom: ""
+title: Connect to Microsoft Azure Storage
+ms.custom: seo-lt-2019
 ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

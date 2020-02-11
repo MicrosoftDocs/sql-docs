@@ -1,5 +1,5 @@
 ---
-title: "Version Management Functional Area (Master Data Manager) | Microsoft Docs"
+title: Version Management Functional Area
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

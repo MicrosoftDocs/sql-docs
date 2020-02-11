@@ -1,6 +1,6 @@
 ---
-title: Move data between SQL Server and XDF file using RevoScaleR
-description: Tutorial walkthrough on how to move data using XDF and the R language on SQL Server.
+title: Move data with XDF file
+description: "RevoScaleR tutorial 13: How to move data using XDF and the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,14 +8,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Move data between SQL Server and XDF file (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 13 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this step, learn to use an XDF file to transfer data between remote and local compute contexts. Storing the data in an XDF file allows you to perform transformations on the data.
+In this tutorial, you'll learn how to use an XDF file to transfer data between remote and local compute contexts. Storing the data in an XDF file allows you to perform transformations on the data.
 
 When you're done, you use the data in the file to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. The function [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) can apply transformations to the data and performs the conversion between data frames and .xdf files.
   
@@ -104,7 +105,7 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
 
 ## Next steps
 
-This lesson concludes the multi-part tutorial series on **RevoScaleR** and SQL Server. It introduced you to numerous data-related and computational concepts, giving you a foundation for moving forward with your own data and project requirements.
+This tutorial concludes the multi-part tutorial series on **RevoScaleR** and SQL Server. It introduced you to numerous data-related and computational concepts, giving you a foundation for moving forward with your own data and project requirements.
 
 To deepen your knowledge of **RevoScaleR**, you can return to the R tutorials list to step through any exercises you might have missed. Alternatively, review the How-to articles in the table of contents for information about general tasks.
 

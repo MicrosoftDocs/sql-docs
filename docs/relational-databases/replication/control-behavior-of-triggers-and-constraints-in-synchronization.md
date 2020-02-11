@@ -1,6 +1,7 @@
 ---
-title: "Control Behavior of Triggers and Constraints in Synchronization | Microsoft Docs"
-ms.custom: ""
+title: "Control behavior of triggers & constraints in synchronization"
+description: Learn how to prevent triggers from executing or constraints from being enforced during the synchronization of a SQL Server Replication Publication. 
+ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -20,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Control Behavior of Triggers and Constraints in Synchronization
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

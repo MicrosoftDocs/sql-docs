@@ -1,8 +1,8 @@
 ---
-title: Development SQL Server partners | Microsoft Docs
+title: Development SQL Server partners
 description: Lists of third-party partners with development solutions for Server.
 ms.topic: conceptual
-ms.custom: ""
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017    
 ms.prod: sql
 ms.technology: 
@@ -25,8 +25,8 @@ For support developing SQL Server database solutions, choose from a wide variety
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][management_partners], and [monitoring partners][monitor_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
-[2]: ./media/partner-hadr-sql-server/click2cloud_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
+[2]: ./media/partner-hadr-sql-server/click2cloud-logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -36,7 +36,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.net
+[click2cloud_website]:https://www.click2cloud.com/
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

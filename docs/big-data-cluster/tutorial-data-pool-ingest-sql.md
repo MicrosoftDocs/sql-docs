@@ -72,8 +72,8 @@ The following steps create an external table in the data pool named **web_clicks
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. In CTP 3.1, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+
+The creation of data pool external table is a blocking operation. Control returns when the specified table has been created on all back-end data pool nodes. If failure occurred during the create operation, an error message is returned to caller.
 
 ## Load data
 

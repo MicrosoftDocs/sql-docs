@@ -1,16 +1,17 @@
 ---
-title: "Quickstart: Connect and query an Azure SQL Data Warehouse"
+title: Connect and query an Azure SQL Data Warehouse
 titleSuffix: Azure Data Studio
 description: This quickstart shows how to use Azure Data Studio to connect to an Azure SQL Data Warehouse and run a query
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.topic: "quickstart"
-author: "yualan"
-ms.author: "alayu"
+ms.topic: quickstart
+author: yualan
+ms.author: alayu
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
 ---
+
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data in Azure SQL Data Warehouse
 
 This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to Azure SQL data warehouse, and then use Transact-SQL statements to create, insert, and select data. 

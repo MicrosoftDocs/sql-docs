@@ -27,7 +27,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 includes all cumulative updates released after 2016 SP1, up to and including CU8.
 
-- [![Microsoft Download Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Download SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- [![Microsoft Download Center](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Download SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
 - For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 The SQL Server 2016 SP2 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP2.
@@ -92,7 +92,7 @@ The following features are available in the Standard, Web, Express, and Local DB
 - Compression
 - Dynamic data masking
 - Fine grain auditing
-- In Memory OLTP (not availabe in Local DB)
+- In Memory OLTP (not available in Local DB)
 - Multiple filestream containers (not available in Local DB)
 - Partitioning
 - PolyBase

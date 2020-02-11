@@ -1,7 +1,7 @@
 ---
-title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
-ms.custom: sqlfreshmay19
-ms.date: "05/15/2019"
+title: "Configure Windows Firewall"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -278,7 +278,7 @@ The following table lists ports and services that [!INCLUDE[ssNoVersion](../../i
   
          The **-n** switch instructs **netstat** to numerically display the address and port number of active TCP connections. The **-a** switch instructs **netstat** to display the TCP and UDP ports on which the computer is listening.  
   
--   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=28590).  
+-   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## See Also  
  [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)   

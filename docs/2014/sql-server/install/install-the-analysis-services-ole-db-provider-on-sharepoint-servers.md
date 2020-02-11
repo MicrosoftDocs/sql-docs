@@ -121,7 +121,7 @@ manager: craigg
   
 #### Step 1: Download and install the client library  
   
-1.  On the [SQL Server 2008 R2 Feature Pack page](https://go.microsoft.com/fwlink/?LinkId=159570), find Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2.  
+1.  On the [SQL Server 2008 R2 Feature Pack page](https://www.microsoft.com/download/details.aspx?id=16978), find Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2.  
   
 2.  Download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program. Although the file name contains SQLServer2008, it is the correct file for the SQL Server 2008 R2 version of the provider.  
   

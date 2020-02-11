@@ -1,5 +1,5 @@
 ---
-title: "Creating a SQL Server Native Client OLE DB Provider Application | Microsoft Docs"
+title: "SQL Native Client OLE DB provider app"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -18,7 +18,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Creating a SQL Server Native Client OLE DB Provider Application
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Creating a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider application involves these steps:  
   

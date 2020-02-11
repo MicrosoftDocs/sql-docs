@@ -1,5 +1,5 @@
 ---
-title: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream | Microsoft Docs"
+title: "Fetch, IRow::GetColumns and ISequentialStream"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +18,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Large data can be bound or retrieved using the **ISequentialStream** interface. For bound columns, the status flag DBSTATUS_S_TRUNCATED indicates that the data is truncated.  
   
@@ -50,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -91,7 +90,7 @@ values
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #define DBINITCONSTANTS  
 #define INITGUID  
@@ -658,7 +657,7 @@ int InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   

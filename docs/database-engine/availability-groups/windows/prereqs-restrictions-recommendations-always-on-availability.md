@@ -1,7 +1,7 @@
 ---
-title: "Prerequisites, Restrictions, and Recommendations for availability groups"
-description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group."
-ms.custom: "seodec18"
+title: "Availability group: Prerequisites, restrictions, & recommendations"
+description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group to SQL Server."
+ms.custom: seo-lt-2019
 ms.date: "03/22/2019"
 ms.prod: sql
 ms.reviewer: ""
@@ -151,17 +151,14 @@ ms.author: mathoma
     -   If a given thread is idle for a while, it is released back into the general [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thread pool. Normally, an inactive thread is released after ~15 seconds of inactivity. However, depending on the last activity, an idle thread might be retained longer.  
 
     -   A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Serial Redo threads are released after ~15 seconds of inactivity. 
-    
-    > [!NOTE]
-    > Databases are chosen to go single-threaded based on their ascending database ID. As such, the database creation order should be considered for SQL Server instances that host more availability group databases than available worker threads. For example, on a system with 32 or more CPU cores, the first six databases (ordered by database ID) in an availability group or groups will use parallel redo mode, and all subsequent databases will use single redo mode.
-  
+     
 -   In addition, availability groups use unshared threads, as follows:  
   
     -   Each primary replica uses 1 Log Capture thread for each primary database. In addition, it uses 1 Log Send thread for each secondary database. Log send threads are released after ~15 seconds of inactivity.    
   
     -   A backup on a secondary replica holds a thread on the primary replica for the duration of the backup operation.  
   
- For more information, see [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
+ For more information, see [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
   
 ###  <a name="PermissionsSI"></a> Permissions (Server Instance)  
   
@@ -180,7 +177,7 @@ ms.author: mathoma
   
 ###  <a name="RelatedContentSI"></a> Related Content (Server Instance)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ##  <a name="NetworkConnect"></a> Network Connectivity Recommendations  
  We strongly recommend that you use the same network links for communications between WSFC nodes and communications between availability replicas.  Using separate network links can cause unexpected behaviors if some of links fail (even intermittently).  
@@ -380,7 +377,7 @@ ms.author: mathoma
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

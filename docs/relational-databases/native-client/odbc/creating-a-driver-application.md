@@ -1,5 +1,5 @@
 ---
-title: "Creating a SQL Server Native Client ODBC Driver Application | Microsoft Docs"
+title: "Create SQL Native Client ODBC app"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -27,7 +27,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Creating a Driver Application
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   ODBC architecture has four components that perform the following functions.  
   

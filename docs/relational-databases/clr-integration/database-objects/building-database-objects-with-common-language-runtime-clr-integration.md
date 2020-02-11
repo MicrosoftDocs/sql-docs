@@ -1,6 +1,7 @@
 ---
-title: "Building Database Objects with Common Language Runtime (CLR) Integration | Microsoft Docs"
-ms.custom: ""
+title: "Common Language Runtime (CLR) build database objects"
+description: Build database objects using the SQL Server integration with the .NET Framework common language runtime (CLR).
+ms.custom: "seo-lt-2019"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.reviewer: ""

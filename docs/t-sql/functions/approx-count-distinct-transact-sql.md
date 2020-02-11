@@ -1,7 +1,7 @@
 ---
 title: "APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/17/2019"
+ms.date: "11/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -21,9 +21,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 This function returns the approximate number of unique non-null values in a group. 
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-> [!NOTE]
-> APPROX_COUNT_DISTINCT is a public preview feature.  
   
 ## Syntax  
   
@@ -52,7 +49,7 @@ The function implementation guarantees up to a 2% error rate within a 97% probab
 `APPROX_COUNT_DISTINCT` requires less memory than an exhaustive COUNT DISTINCT operation.  Given the smaller memory footprint, `APPROX_COUNT_DISTINCT` is less likely to spill memory to disk compared to a precise COUNT DISTINCT operation. To learn more about the algorithm used to achieve this, see [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
-> With collation sensitive strings, the Public Preview version of APPROX_COUNT_DISTINCT uses a binary match and provides results that would have been generated in the presence of BIN collations and not BIN2. 
+> With collation sensitive strings, APPROX_COUNT_DISTINCT uses a binary match and provides results that would have been generated in the presence of BIN collations and not BIN2. 
   
 ## Examples  
   

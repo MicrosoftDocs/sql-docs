@@ -7,9 +7,9 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: "v-jizho2, v-chojas, genemi"
+ms.reviewer: "v-chojas"
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
 ---
 # Release Notes for ODBC to SQL Server on Windows
@@ -38,13 +38,21 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## 17.5, January 2020
+
+| Feature added | Details |
+| :------------ | :------ |
+| SQL_COPT_SS_SPID connection attribute to retrieve SPID without round-trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.4.2, October 2019
 
 | Feature added | Details |
 | :------------ | :------ |
 | Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
-| Driver will now install Azure Active Drirectory Authentication Library (adal.dll) used for authentication to Azure | |
+| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, this will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

@@ -1,10 +1,7 @@
 ---
-title: "Workload Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Workload Element (DTA)"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -14,10 +11,17 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Workload Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies the workload to be used for a tuning session.  
+
+Specifies the workload to be used for a tuning session.  
   
 ## Syntax  
   

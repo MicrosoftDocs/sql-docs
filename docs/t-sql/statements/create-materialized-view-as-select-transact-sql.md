@@ -38,7 +38,7 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
-# CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (preview)
+# CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -82,7 +82,7 @@ Only HASH and ROUND_ROBIN distributions are supported.
 *select_statement*   
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:
 - The SELECT list contains an aggregate function.
-- GROUP BY is used in the Materialized view definition and all columns in GROUP BY are included in the SELECT list.  
+- GROUP BY is used in the Materialized view definition and all columns in GROUP BY are included in the SELECT list.  Up to 32 columns can be used in the GROUP BY clause.
 
 Aggregate functions are required in the SELECT list of the materialized view definition.  Supported aggregations include MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 
@@ -136,7 +136,8 @@ Requires CREATE VIEW permission in the database and ALTER permission on the sche
   
 ## See also
 
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
+[Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   

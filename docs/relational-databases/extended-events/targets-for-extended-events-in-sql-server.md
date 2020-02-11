@@ -1,6 +1,5 @@
 ---
-title: "Targets for Extended Events in SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Targets for Extended Events in SQL Server"
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -670,7 +669,7 @@ To see the preceding XML, you can issue the following SELECT while the event ses
 
 ```sql
 SELECT
-		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
 	INTO
 		#XmlAsTable
 	FROM

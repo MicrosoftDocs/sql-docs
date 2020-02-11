@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Failover Cluster Installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Install Failover Cluster Instance"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

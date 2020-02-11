@@ -1,5 +1,5 @@
 ---
-title: "Register a Standard .NET Framework Data Provider (SSRS) | Microsoft Docs"
+title: "Register a Standard .NET Framework Data Provider | Microsoft Docs"
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

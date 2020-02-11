@@ -1,5 +1,5 @@
 ---
-title: "Requirements for Running SQLXML Examples | Microsoft Docs"
+title: "Requirements for Running SQLXML Examples"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

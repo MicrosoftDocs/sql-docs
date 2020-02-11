@@ -118,6 +118,7 @@ The table below lists available authentication options. A pure Java Kerberos aut
 | Non-Windows | Pure Java Kerberos                    |
 | Non-Windows | SQL Server                            |
 | Non-Windows | Azure Active Directory Authentication |
+| Non-Windows | NTLM                                  |
 | Windows     | Pure Java Kerberos                    |
 | Windows     | SQL Server                            |
 | Windows     | Kerberos with NTLM backup             |

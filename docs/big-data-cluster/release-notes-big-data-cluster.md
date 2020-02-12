@@ -54,12 +54,21 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
+| [CU2](#cu2)           | 15.0.4013.10040   | 2020-02-12   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu2"></a> CU2 (Feb 2020)
+
+Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.23.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4003.10040 |[2019-CU2-ubuntu-16.04]
 
 ## <a id="cu1"></a> CU1 (Jan 2020)
 

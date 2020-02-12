@@ -1,7 +1,7 @@
 ---
 title: "Configure the max degree of parallelism Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/12/2019"
+ms.date: "02/12/2020"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

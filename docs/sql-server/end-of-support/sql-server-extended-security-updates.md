@@ -43,7 +43,7 @@ ESUs do not include technical support, but you can use an active support contrac
   > [!NOTE]
   > Microsoft cannot provide technical support for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] instances (both on-premises, and in hosting environments) that are not covered with an ESU subscription. 
 
-## <a name="download-esus"></a> ESU Availability and Deployment
+## ESU Availability and Deployment
 ESUs are available to customers running their workload in Azure, on-premises, or hosted environments.
 
 ### Azure Virtual Machines

@@ -34,7 +34,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
   - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 on Linux
 
 > [!NOTE]
-> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Haddop encryption zones.
+> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Hadoop encryption zones.
 
 ### Configure Hadoop connectivity
 
@@ -149,15 +149,15 @@ To query the data in your Hadoop data source, you must define an external table 
 
 There are three functions that PolyBase is suited for:  
   
-- Ad-hoc queries against external tables.  
+- Ad hoc queries against external tables.  
 - Importing data.  
 - Exporting data.  
 
 The following queries provide example with fictional car sensor data.
 
-### Ad-hoc queries  
+### Ad hoc queries  
 
-The following ad-hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
+The following ad hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,

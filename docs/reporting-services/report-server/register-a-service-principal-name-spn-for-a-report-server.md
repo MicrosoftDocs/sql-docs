@@ -1,6 +1,6 @@
 ---
 title: "Register a Service Principal Name (SPN) for a Report Server | Microsoft Docs"
-ms.date: 02/11/2020
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -30,7 +30,7 @@ ms.author: maggies
 When you manipulate SPNs with the setspn, the SPN must be entered in the correct format. The format of an SPN is `<serviceclass>/host:<por>`. The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  **SetSPN** is available with Windows Server. The **-s** argument adds a SPN after validating no duplicate exists. **NOTE:-s** is available in Windows Server starting with Windows Server 2008.  
@@ -41,7 +41,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## Register an SPN for Domain User Account  
   
-#### To register an SPN for a Report Server service running as a domain user  
+### To register an SPN for a Report Server service running as a domain user  
   
 1.  Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and configure the Report Server service to run as a domain user account. Note that users will not be able to connect to the report server until you complete the following steps.  
   
@@ -52,10 +52,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  Copy the following command, replacing placeholder values with actual values that are valid for your network:  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     For example: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    For example: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  Run the command.  
   

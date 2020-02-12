@@ -18,8 +18,8 @@ This article provides information for using the SQL Server registry service to r
 
 ## Overview
 Once [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you have the option to sign-up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years, until you are ready to upgrade to a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. This subscription is available in two ways:
--  Can be purchased for your on-premises servers or hosted environments.
--  Free and enabled by default by migrating on-premises servers to Azure Virtual Machines. 
+-  Can be purchased for your on-premises or hosted environment servers.
+-  Free and enabled by default when migrating on-premises servers to Azure Virtual Machines. 
 You can then use the **SQL Server registry** service in the Azure portal to register your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and download updates when they are made available. 
 
 Microsoft recommends applying ESU patches as soon as they are available to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates).

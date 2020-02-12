@@ -11,4 +11,4 @@
 ---
 
 
- ![yes](media/yes.png)SharePoint (2013 & later)
+ ![yes](media/yes.png)SharePoint 2013 & later

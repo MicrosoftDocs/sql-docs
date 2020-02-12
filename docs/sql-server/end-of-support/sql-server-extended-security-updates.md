@@ -49,15 +49,14 @@ ESUs are available to customers running their workload in Azure, on-premises, or
 ### Azure Virtual Machines
 If you migrate your workloads to Azure Virtual Machines (IaaS), you will have access to Extended Security Updates for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the virtual machine. Customers do not need Software Assurance to receive Extended Security Updates in Azure. 
 
-Azure Virtual Machines running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows Server 2008 R2 and greater will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the virtual machine is configured to use [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
+Azure Virtual Machines running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on **Windows Server 2008 R2 and greater** will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the virtual machine is configured to use [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-> [!NOTE]
-> Azure Virtual Machines (VMs) running on Windows Server 2008 or VMs that have *not* been configured for automatic patching will need to manually download and deploy an ESU patch as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
+Azure Virtual Machines (VMs) running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on **Windows Server 2008** or VMs that have ***not* been configured for [automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
 
 ### On-premises or hosted environments
 If you have Software Assurance, you can purchase a Extended Security Update (ESU) subscription for up to three years after the End of Support date, under an Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), a Server & Cloud Enrollment (SCE), or an Enrollment for Education Solutions (EES). You can purchase ESUs only for the servers you need to cover. ESUs can be purchased directly from Microsoft or a Microsoft licensing partner. 
 
-Customers covered by ESU agreements must follow these steps download and deploy an ESU patch:
+Customers covered by ESU agreements must follow these steps to download and deploy an ESU patch:
 -  [Register eligible instances](#register-instances-for-esus) with the **[SQL Server registry](#create-sql-server-registry)**. 
 -  Once registered, whenever ESU patches are released, a download link will be available in the Azure portal to download the package. 
 -  The downloaded package can be deployed to your on-premises or hosted environments manually, or through whatever update orchestration solution is used in your organization, such as Microsoft Endpoint Configuration Manager (formerly System Center Configuration Manager). 

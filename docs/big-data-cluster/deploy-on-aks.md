@@ -162,6 +162,7 @@ If you have any problems creating an Azure Kubernetes Service with the previous 
 
 - Make sure that you have installed the [latest Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Try the same steps using a different resource group and cluster name.
+- Refer to the detailed [troubleshooting documentation for AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
 
 ## Next steps
 

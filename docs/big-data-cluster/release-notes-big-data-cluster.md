@@ -64,7 +64,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../inc
 
 ## <a id="cu2"></a> CU2 (Feb 2020)
 
-Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.23.
+Cumulative Update 2 (CU2) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.23.
 
 |Package version | Image tag |
 |-----|-----|

@@ -1,6 +1,6 @@
 ---
 title: "Register a Service Principal Name (SPN) for a Report Server | Microsoft Docs"
-ms.date: 03/01/2017
+ms.date: 02/11/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -19,14 +19,15 @@ ms.author: maggies
   
  To create an SPN, you can use the **SetSPN** command line utility. For more information, see the following:  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
   
 -   [Service Principal Names (SPNs) SetSPN Syntax (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  You must be a domain administrator to run the utility on the domain controller.  
   
 ## Syntax  
- The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
+
+When you manipulate SPNs with the setspn, the SPN must be entered in the correct format. The format of an SPN is `<serviceclass>/host:<por>`. The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
   
 ```  
 Setspn -s http/<computername>.<domainname> <domain-user-account>  

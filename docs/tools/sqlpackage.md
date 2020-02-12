@@ -39,11 +39,11 @@ The **SqlPackage.exe** command line allows you to specify these actions along wi
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 
-### Usage Examples
+### Usage examples
 
-**Generating a comparison between databases using .dacpac files with a SQL script output.**
+**Generate a comparison between databases by using .dacpac files with a SQL script output**
 
-Start by creating a .dacpac file of your latest database changes
+Start by creating a .dacpac file of your latest database changes:
 
 ```
 sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
@@ -55,7 +55,7 @@ Create a .dacpac file of your database target (that has no changes):
  sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
  ```
 
-Create a SQL Script that generates the differences of two .dacpac files:
+Create a SQL script that generates the differences of two .dacpac files:
 
 ```
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"

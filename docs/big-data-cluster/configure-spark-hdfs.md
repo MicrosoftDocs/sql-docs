@@ -1,7 +1,7 @@
 ---
-title: Configure Spark & HDFS in the Big Data Cluster
-titleSuffix: Configure Spark & HDFS in the Big Data Cluster
-description: Configure Spark & HDFS in the Big Data Cluster.
+title: Configure Spark/HDFS
+titleSuffix: Configure Spark/HDFS in the Big Data Cluster
+description: SQL Server Big Data Clusters allow Spark and HDFS solutions. Learn how to configure them.
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
@@ -11,24 +11,21 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Configure Spark & HDFS in the Big Data Cluster
+# Configure Spark/HDFS in the Big Data Cluster
 
-In order to configure Spark/HDFS in the Big Data Cluster, there are two options:
-
-1. Modifying the cluster profile at deployment time
-1. azdata CLI - this feature will be available mid-2020.
+In order to configure Spark/HDFS in the Big Data Cluster, you need to modify the cluster profile at deployment time.
 
 ## Supported Configurations
 
 Currently we have four configuration categories: 
-- sql 
-- hdfs 
-- spark 
-- gateway 
+- `sql` 
+- `hdfs` 
+- `spark` 
+- `gateway` 
 
-In Big Data Clusters, we define 3 services: hdfs, spark, sql. Coincidentally each service maps to the same named configuration category. All gateway configurations go to category "gateway". 
+In Big Data Clusters, we define 3 services: `hdfs`, `spark`, `sql`. Coincidentally each service maps to the same named configuration category. All gateway configurations go to category `gateway`. 
 
-For example, all configurations in service "hdfs" belong to category "hdfs". Note that all Hadoop (core-site), HDFS and Zookeeper configurations belong to category "hdfs"; all Livy/Spark/Yarn/Hive Metastore configurations belong to category "spark". 
+For example, all configurations in service `hdfs` belong to category `hdfs`. Note that all Hadoop (core-site), HDFS and Zookeeper configurations belong to category `hdfs`; all Livy/Spark/Yarn/Hive Metastore configurations belong to category "spark". 
 
 You can find all possible configurations for each at the associated Apache documentation site:
 - Spark: https://spark.apache.org/docs/latest/configuration.html
@@ -40,6 +37,7 @@ You can find all possible configurations for each at the associated Apache docum
 - Gateway: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
 
 ## Unsupported Configurations
+
 The following configurations are unsupported and cannot be changed in the context of the Big Data Cluster.
 
 | Category  | Sub-Category               | File                       | Blacklisted Configurations                                              |
@@ -293,7 +291,7 @@ In the cluster profile there are resources and services. At deployment time, we 
    } 
    ```
 
-The service "hdfs" is defined as:
+The service `hdfs` is defined as:
 
 ```json
 { 

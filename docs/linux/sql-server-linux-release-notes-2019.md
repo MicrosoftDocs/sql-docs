@@ -60,7 +60,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 
 ## <a id="cu2"></a> CU2 (February 2020)
 
-This is the Cumulative Update 2 (CU2) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4013.40. For information about the fixes and improvements in this release, see <https://support.microsoft.com/en-us/help/4527376>
+This is the Cumulative Update 2 (CU2) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4013.40. For information about the fixes and improvements, see <https://support.microsoft.com/help/4518398>
 
 ### Package details
 

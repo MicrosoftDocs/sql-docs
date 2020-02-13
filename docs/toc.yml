@@ -133,7 +133,7 @@
       items:
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
-      - name: Configure Spark/HDFS
+      - name: Configure Apache Spark & Apache Hadoop
         href: big-data-cluster/configure-spark-hdfs.md
     - name: Data virtualization
       items:

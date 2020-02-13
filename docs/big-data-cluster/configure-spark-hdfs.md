@@ -40,7 +40,7 @@ You can find all possible configurations for each at the associated Apache docum
 
 The following configurations are unsupported and cannot be changed in the context of the Big Data Cluster.
 
-| Category  | Sub-Category               | File                       | Blacklisted Configurations                                              |
+| Category  | Sub-Category               | File                       | Unsupported Configurations                                              |
 |-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
 | spark     |                            |                            |                                                                         |
 |           | yarn-site                  | yarn-site.xml              | yarn.log-aggregation-enable                                             |

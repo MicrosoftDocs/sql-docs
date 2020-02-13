@@ -54,7 +54,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
-| [CU2](#cu2)           | 15.0.4013.10040   | 2020-02-12   |
+| [CU2](#cu2)           | 15.0.4013.40    | 2020-02-12   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
@@ -68,7 +68,7 @@ Cumulative Update 2 (CU2) release for SQL Server 2019. The SQL Server Database E
 
 |Package version | Image tag |
 |-----|-----|
-|15.0.4003.10040 |[2019-CU2-ubuntu-16.04]
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
 ## <a id="cu1"></a> CU1 (Jan 2020)
 

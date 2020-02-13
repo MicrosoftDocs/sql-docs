@@ -39,9 +39,9 @@ On a computer having an internet connection, download the CAB files providing R 
 Release  |Download link  |
 ---------|---------------|
 Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
-Microsoft R Server      | [SRS_9.4.7.32_1033.cab](https://go.microsoft.com/fwlink/?linkid=2100159) |
+Microsoft R Server      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
 Microsoft Python Open   | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |
-Microsoft Python Server | [SPS_9.4.7.32_1033.cab](https://go.microsoft.com/fwlink/?linkid=2100160) |
+Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685) |
 
 > [!NOTE]
 > The Java feature is included with the SQL Server installation media and doesn't need a separate CAB file.

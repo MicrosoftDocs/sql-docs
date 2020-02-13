@@ -45,7 +45,7 @@ This section explains platforms that are supported with [!INCLUDE[big-data-clust
 
 |Platform|Supported versions|
 |---------|---------|
-|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/>Run `azdata –-version` to validate the version. Currently, this version is `15.0.4013`.|
+|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/><br/>Run `azdata –-version` to validate the version.<br/><br/>As of SQL Server 2019 CU2, this version is `15.0.4013`.|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 ## Release history

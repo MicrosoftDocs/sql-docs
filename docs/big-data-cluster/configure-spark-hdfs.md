@@ -318,7 +318,7 @@ The service "hdfs" is defined as:
 > [!NOTE]
 > Resource level configurations override service level configurations. One resource can be assigned to multiple services.
 
-## Limitations (as of CU2):** \
+## Limitations
 
 Configurations can only be specified at category level. To specify multiple configurations with the same sub-category, we cannot extract the common prefix in cluster profile. 
 

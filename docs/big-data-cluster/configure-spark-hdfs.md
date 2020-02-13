@@ -1,6 +1,6 @@
 ---
-title: Configure Spark/HDFS
-titleSuffix: Configure Spark/HDFS in the Big Data Cluster
+title: Apache Spark and Apache Hadoop
+titleSuffix: Configure Apache Spark and Apache Hadoop in Big Data Clusters
 description: SQL Server Big Data Clusters allow Spark and HDFS solutions. Learn how to configure them.
 author: rajmera3
 ms.author: raajmera
@@ -11,9 +11,9 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Configure Spark/HDFS in the Big Data Cluster
+# Configure Apache Spark and Apache Hadoop in Big Data Clusters
 
-In order to configure Spark/HDFS in the Big Data Cluster, you need to modify the cluster profile at deployment time.
+In order to configure Apache Spark and Apache Hadoop in Big Data Clusters, you need to modify the cluster profile at deployment time.
 
 ## Supported Configurations
 
@@ -28,13 +28,14 @@ In Big Data Clusters, we define 3 services: `hdfs`, `spark`, `sql`. Coincidental
 For example, all configurations in service `hdfs` belong to category `hdfs`. Note that all Hadoop (core-site), HDFS and Zookeeper configurations belong to category `hdfs`; all Livy/Spark/Yarn/Hive Metastore configurations belong to category "spark". 
 
 You can find all possible configurations for each at the associated Apache documentation site:
-- Spark: https://spark.apache.org/docs/latest/configuration.html
-- HDFS HDFS-Site: https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
-- HDFS Core-Site: https://hadoop.apache.org/docs/r2.8.0/hadoop-project-dist/hadoop-common/core-default.xml
-- Yarn: https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/ResourceModel.html
+- Apache Spark: https://spark.apache.org/docs/latest/configuration.html
+- Apache Hadoop:
+   * HDFS HDFS-Site: https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
+   * HDFS Core-Site: https://hadoop.apache.org/docs/r2.8.0/hadoop-project-dist/hadoop-common/core-default.xml  
+   * Yarn: https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/ResourceModel.html
 - Hive: https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy: https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
-- Gateway: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+- Apache Knox Gateway: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
 
 ## Unsupported Configurations
 

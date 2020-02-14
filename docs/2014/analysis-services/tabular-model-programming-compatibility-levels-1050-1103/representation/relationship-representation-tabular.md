@@ -44,7 +44,7 @@ private Boolean createRelationship(string PKTableName, string PKColumnName, stri
     //Make sure PKTableName.PKColumnName  is set as PK ==> <attribute>.usage == AMO.AttributeUsage.Key  
     if (tabularDb.Dimensions[PKTableName].Attributes[PKColumnName].Usage != AMO.AttributeUsage.Key)  
     {  
-        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not beeing the PK of the table  
+        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not being the PK of the table  
         setPKColumn(tabularDb, PKTableName, PKColumnName);  
     }  
   

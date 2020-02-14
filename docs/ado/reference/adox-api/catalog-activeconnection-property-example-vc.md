@@ -69,7 +69,7 @@ void OpenConnectionX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionX...." << endl;  
+      cout << "Error occurred in OpenConnectionX...." << endl;  
    }  
   
    if (m_pCnn)  
@@ -100,7 +100,7 @@ void OpenConnectionWithStringX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionWithStringX...." << endl;  
+      cout << "Error occurred in OpenConnectionWithStringX...." << endl;  
    }  
 }  
 ```  

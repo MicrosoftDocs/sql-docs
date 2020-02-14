@@ -1,5 +1,5 @@
 ---
-title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
+title: "What's new in Reporting Services | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -45,7 +45,7 @@ With Azure Active Directory Application Proxy, you no longer need to manage your
 
 ### Custom headers
 
-Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#custom-headers) in the **Server Properties Advanced Page** article for details.
+Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#customheaders) in the **Server Properties Advanced Page** article for details.
 
 ### Transparent Database Encryption
 
@@ -79,7 +79,7 @@ In the latest releases of Report Builder and SQL Server Data Tools, you can crea
 
 ### REST API support
 
-To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ### Query designer support for DAX now in Report Builder and SQL Server Data Tools
 

@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/10/2020
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -452,7 +452,7 @@ WITH
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -467,7 +467,7 @@ WITH
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='customer',
+    LOCATION='.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
 ```

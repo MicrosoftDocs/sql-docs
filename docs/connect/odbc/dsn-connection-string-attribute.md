@@ -107,6 +107,7 @@ The following table lists the available keywords and the attributes for each pla
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
 | | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | W |
 | | [SQL_COPT_SS_PRESERVE_CURSORS](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsspreservecursors) | LMW |
+| | [SQL_COPT_SS_SPID](../../connect/odbc/dsn-connection-string-attribute.md#sql_copt_ss_spid) (v17.5+) | LMW |
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
@@ -255,3 +256,11 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 |FALSE|Disassociates the transaction with the ODBC connection.|Windows|
 
  See [Using XA Transactions](../../connect/odbc/use-xa-with-dtc.md) for more information about XA transactions.
+
+### SQL_COPT_SS_SPID
+
+Retrieves the server process ID of the connection. This is equivalent to the T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md) variable, except that it does not incur an additional round-trip to the server.
+
+| Attribute Value | Description |
+|-|-|
+| DWORD | SPID |

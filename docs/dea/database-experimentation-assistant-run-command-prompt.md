@@ -2,7 +2,7 @@
 title: Run Database Experimentation Assistant at a command prompt
 description: Run Database Experimentation Assistant at a command prompt
 ms.custom: "seo-lt-2019"
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql

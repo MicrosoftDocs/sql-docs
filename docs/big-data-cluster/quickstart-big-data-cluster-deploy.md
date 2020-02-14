@@ -84,8 +84,6 @@ Use the following steps to run the deployment script in a Windows PowerShell or 
 
 1. The script will start by creating an AKS cluster using the parameters you specified. This step takes several minutes.
 
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
-
 ## Monitor the status
 
 After the script creates the AKS cluster, it proceeds to set necessary environment variables with the settings you specified earlier. It then calls **azdata** to deploy the big data cluster on AKS.

@@ -7,7 +7,6 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: "reference"
 dev_langs: 
-  - "TSQL"
   - "VB"
   - "CSharp"
 helpviewer_keywords: 
@@ -43,9 +42,9 @@ manager: craigg
  Information may be returned from [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stored procedures in several ways. This includes output parameters, tabular results, and messages.  
   
 ### OUTPUT Parameters and CLR Stored Procedures  
- As with [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, information may be returned from [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stored procedures using OUTPUT parameters. The [!INCLUDE[tsql](../../includes/tsql-md.md)] DML syntax used for creating [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stored procedures is the same as that used for creating stored procedures written in [!INCLUDE[tsql](../../includes/tsql-md.md)]. The corresponding parameter in the implementation code in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class should use a pass-by-reference parameter as the argument. Note that Visual Basic does not support output parameters in the same way that Visual C# does. You must specify the parameter by reference and apply the \<Out()> attribute to represent an OUTPUT parameter, as in the following:  
+ As with [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, information may be returned from [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stored procedures using OUTPUT parameters. The [!INCLUDE[tsql](../../includes/tsql-md.md)] DML syntax used for creating [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stored procedures is the same as that used for creating stored procedures written in [!INCLUDE[tsql](../../includes/tsql-md.md)]. The corresponding parameter in the implementation code in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class should use a pass-by-reference parameter as the argument. Note that Visual Basic does not support output parameters in the same way that C# does. You must specify the parameter by reference and apply the \<Out()> attribute to represent an OUTPUT parameter, as in the following:  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -53,9 +52,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  The following shows a stored procedure returning information through an OUTPUT parameter:  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -85,9 +82,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -123,7 +118,7 @@ End Class
   
  Once the assembly containing the above CLR stored procedure has been built and created on the server, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] is used to create the procedure in the database, and specifies *sum* as an OUTPUT parameter.  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -144,9 +139,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### Returning Tabular Results  
  To send the results of a query directly to the client, use one of the overloads of the `Execute` method on the `SqlPipe` object. This is the most efficient way to return results to the client, since the data is transferred to the network buffers without being copied into managed memory. For example:  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -171,9 +164,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -224,10 +215,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -281,9 +270,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -333,9 +320,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -366,7 +351,7 @@ End Class
   
  Note that these examples are for illustrative purposes only. CLR functions are more appropriate than simple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements for computation-intensive applications. An almost equivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure to the previous example is:  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -379,13 +364,13 @@ END;
   
  If the above Visual C# code is saved in a file MyFirstUdp.cs and compiled with:  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  Or, if the above Visual Basic code is saved in a file MyFirstUdp.vb and compiled with:  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -394,7 +379,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  The resulting assembly can be registered, and the entry point invoked, with the following DDL:  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  

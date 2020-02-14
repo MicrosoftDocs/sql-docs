@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: "v-jizho2, v-chojas, genemi"
+ms.reviewer: "v-chojas"
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
 ---
 # Release Notes for ODBC to SQL Server on Windows
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This release notes article describes what's new for the Microsoft ODBC driver to SQL Server on Windows.
+This release notes article describes what's new for the Microsoft ODBC driver for SQL Server on Windows.
 
 <!--
 PLEASE USE THE STANDARD 2-COLUMN TABLE FORMAT!
@@ -37,6 +37,14 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## 17.5, January 2020
+
+| Feature added | Details |
+| :------------ | :------ |
+| SQL_COPT_SS_SPID connection attribute to retrieve SPID without round-trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.4.2, October 2019
 

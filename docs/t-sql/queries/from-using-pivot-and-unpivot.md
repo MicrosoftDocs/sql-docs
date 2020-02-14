@@ -151,6 +151,8 @@ The unique values returned by the `EmployeeID` column become fields in the final
   
 > [!IMPORTANT]  
 >  When aggregate functions are used with `PIVOT`, the presence of any null values in the value column are not considered when computing an aggregation.  
+
+## UNPIVOT Example
   
 `UNPIVOT` carries out almost the reverse operation of `PIVOT`, by rotating columns into rows. Suppose the table produced in the previous example is stored in the database as `pvt`, and you want to rotate the column identifiers `Emp1`, `Emp2`, `Emp3`, `Emp4`, and `Emp5` into row values that correspond to a particular vendor. As such, you must identify two additional columns. The column that will contain the column values that you're rotating (`Emp1`, `Emp2`,...) will be called `Employee`, and the column that will hold the values that currently exist under the columns being rotated will be called `Orders`. These columns correspond to the *pivot_column* and *value_column*, respectively, in the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition. Here is the query.  
   

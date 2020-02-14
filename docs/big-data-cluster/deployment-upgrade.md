@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters to a new release.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -29,7 +29,7 @@ Before you proceed, check the [upgrade release notes for known issues](release-n
 
 ## Upgrade from supported release
 
-This section explains how to upgrade a SQL Server BDC from a supported release (startign with SQL Server 2019 GDR1) to a newer supported release.
+This section explains how to upgrade a SQL Server BDC from a supported release (starting with SQL Server 2019 GDR1) to a newer supported release.
 
 1. Back up SQL Server master instance.
 2. Back up HDFS.
@@ -71,7 +71,7 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
 >The latest image tags are available at [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md).
 
 >[!IMPORTANT]
->If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as >the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the >credentials of the private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. >There is no support for updating the credentials through DOCKER_PASSWORD and DOCKER_USERNAME environment variables. Update the secret >using [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Upgrading using different >private repositories for current and target builds is not supported.
+>If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as >the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the >credentials of the private repository since the original deployment, update the corresponding environment variables DOCKER_PASSWORD and >DOCKER_USERNAME. Upgrading using different private repositories for current and target builds is not supported.
 
 ### Increase the timeout for the upgrade
 
@@ -88,7 +88,15 @@ A timeout can occur if certain components are not upgraded in the allocated time
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-To increase the timeouts for an upgrade, edit the upgrade config map. To edit the upgrade config map:
+To increase the timeouts for an upgrade, use **--controller-timeout** and **--component-timeout** parameters to specify higher values when you issue the upgrade. This option is only available starting with SQL Server 2019 CU2 release. For example:
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout** designates the number of minutes to wait for the controller or controller db to finish upgrading.
+**--component-timeout** designates the amount of time that each subsequent phase of the upgrade has to complete.
+
+To increase the timeouts for an upgrade before the SQL Server 2019 CU2 release, edit the upgrade config map. To edit the upgrade config map:
 
 Run the following command:
 
@@ -99,7 +107,7 @@ Run the following command:
 Edit the following fields:
 
    **controllerUpgradeTimeoutInMinutes** Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
-   **totalUpgradeTimeoutInMinutes**: Designates the combines amount of time for both the controller and controller db to finish upgrading (controller + controllerdb upgrade).Default is 10. Update to at least 40.
+   **totalUpgradeTimeoutInMinutes**: Designates the combined amount of time for both the controller and controller db to finish upgrading (controller + controller db upgrade).Default is 10. Update to at least 40.
    **componentUpgradeTimeoutInMinutes**: Designates the amount of time that each subsequent phase of the upgrade has to complete. Default is 30. Update to 45.
 
 Save and exit.

@@ -25,7 +25,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 1 [(KB 4527376)](https://support.microsoft.com/help/4527376)|1/7/2020|[SQL Server 2019 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 2 [(KB 4536075)](https://support.microsoft.com/help/4536075)|2/13/2020|[SQL Server 2019 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 19 [(KB 4535007)](https://support.microsoft.com/help/4535007)|2/5/2020|[SQL Server 2017 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 11 [(KB 4535706)](https://support.microsoft.com/kb/4535706)|2/11/2020|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|7/9/2019|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|

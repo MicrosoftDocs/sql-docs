@@ -1,11 +1,11 @@
 ---
-title: Deploy SQL Server Big Data Cluster in Active Directory mode
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: Deploy in Active Directory mode
+titleSuffix: SQL Server Big Data Cluster
 description: Learn how to upgrade SQL Server Big Data Clusters in an Active Directory domain.
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

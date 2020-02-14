@@ -101,7 +101,7 @@ From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `max degree of parallelism` option to `8`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `max degree of parallelism` option to `16`.  
   
 ```sql  
 USE AdventureWorks2012 ;  

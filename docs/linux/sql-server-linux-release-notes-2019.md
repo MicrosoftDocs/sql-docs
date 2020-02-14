@@ -201,9 +201,9 @@ To work around this issue, do one of the following:
 #### Network File System (NFS)
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
 
-- Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as fallocate and sparse file creation, common to modern file systems.
+- Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as `fallocate` and sparse file creation, common to modern file systems.
 - Locate only the **/var/opt/mssql** directories on the NFS mount. Other files, such as the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system binaries, are not supported.
-- Ensure that NFS clients use the 'nolock' option when mounting the remote share.
+- Ensure that NFS clients use the `nolock` option when mounting the remote share.
 
 ### Localization
 

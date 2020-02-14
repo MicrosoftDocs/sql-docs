@@ -29,7 +29,7 @@ Before you proceed, check the [upgrade release notes for known issues](release-n
 
 ## Upgrade from supported release
 
-This section explains how to upgrade a SQL Server BDC from a supported release (startign with SQL Server 2019 GDR1) to a newer supported release.
+This section explains how to upgrade a SQL Server BDC from a supported release (starting with SQL Server 2019 GDR1) to a newer supported release.
 
 1. Back up SQL Server master instance.
 2. Back up HDFS.
@@ -107,7 +107,7 @@ Run the following command:
 Edit the following fields:
 
    **controllerUpgradeTimeoutInMinutes** Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
-   **totalUpgradeTimeoutInMinutes**: Designates the combines amount of time for both the controller and controller db to finish upgrading (controller + controllerdb upgrade).Default is 10. Update to at least 40.
+   **totalUpgradeTimeoutInMinutes**: Designates the combined amount of time for both the controller and controller db to finish upgrading (controller + controller db upgrade).Default is 10. Update to at least 40.
    **componentUpgradeTimeoutInMinutes**: Designates the amount of time that each subsequent phase of the upgrade has to complete. Default is 30. Update to 45.
 
 Save and exit.

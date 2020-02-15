@@ -91,7 +91,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **Log Optimization:** Reduced logging when the data is loaded into compressed rowgroup.   
 -   **Locking Optimization:** When loading into compressed rowgroup, the X lock on rowgroup is acquired. However, with delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the locks PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
   
- If you have or more nonclustered indexes, there is no locking or logging optimization for the index itself but the optimizations on clustered columnstore index as described above are still there  
+ If you have one or more nonclustered indexes, there is no locking or logging optimization for the index itself but the optimizations on clustered columnstore index as described above are still there  
   
 ## What is trickle insert?
 

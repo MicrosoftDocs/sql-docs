@@ -322,7 +322,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer uses 
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * The `NUMERIC_ROUNDABORT` session option is set to OFF.
+* The `NUMERIC_ROUNDABORT` session option is set to OFF.
 * The Query Optimizer finds a match between the view index columns and elements in the query, such as the following: 
   * Search condition predicates in the WHERE clause
   * Join operations
@@ -477,7 +477,7 @@ Changing any of the following SET options for a given execution will affect the 
 |||
 |-----------|------------|------------|
 |ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|
-|DATEFIRST|ANSI_PADDINGNUMERIC_ROUNDABORT|
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|
 |ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|
 |DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|
 |ANSI_NULLS|NO_BROWSETABLE||

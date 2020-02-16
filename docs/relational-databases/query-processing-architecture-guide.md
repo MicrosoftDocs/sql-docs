@@ -529,7 +529,7 @@ GO
 Verify what can be found in the plan cache using the query below:
 
 ```sql
-SELECT cp.objtype, refcounts, usecounts, 
+SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
 	qs.query_plan_hash, qs.query_hash,
 	qs.plan_handle, qs.sql_handle
 FROM sys.dm_exec_cached_plans AS cp
@@ -543,9 +543,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-objtype   refcounts   usecounts   query_plan_hash    query_hash
--------   ---------   ---------   ------------------ ------------------ 
-Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------	-------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -553,7 +553,7 @@ plan_handle
 
 sql_handle
 ------------------------------------------------------------------------------------------
-0x0300130095555D022497A90061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
 ```
 
 Now execute the stored procedure with a different parameter, but no other changes to execution context:
@@ -566,9 +566,9 @@ GO
 Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-objtype   refcounts   usecounts   query_plan_hash    query_hash
--------   ---------   ---------   ------------------ ------------------ 
-Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------	-------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -576,7 +576,7 @@ plan_handle
 
 sql_handle
 ------------------------------------------------------------------------------------------
-0x0300130095555D022497A90061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
 ```
 
 Notice the `usecounts` has increased to 2, which means the same cached plan was re-used as-is, because the execution context data structures were reused. Now change the `SET ANSI_DEFAULTS` option and execute the stored procedure using the same parameter.
@@ -592,10 +592,10 @@ GO
 Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-objtype   refcounts   usecounts   query_plan_hash    query_hash
--------   ---------   ---------   ------------------ ------------------ 
-Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------	-------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -604,13 +604,18 @@ plan_handle
 
 sql_handle
 ------------------------------------------------------------------------------------------
-0x0300130095555D022497A90061AB000001000000000000000000000000000000000000000000000000000000
-0x0300130095555D022497A90061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
 ```
 
-Notice there are now two entries in the `sys.dm_exec_cached_plans` DMV (the `usecounts` column shows the value `1` in the first record). The value for `query_plan_hash`, `query_hash`, and `sql_handle` is the same for both records because it's the same query and query plan. But the execution context changed in the latest execution and so the execution context is reinitialized with the context for the new user. It's still the same plan and the same query, and there was no recompilation, but now there is a new `plan_handle` matching a new possible execution context for an existing query plan, available for reuse.
+Notice there are now two entries in the `sys.dm_exec_cached_plans` DMV:
+-  The `usecounts` column shows the value `1` in the first record which is the plan executed once with `SET ANSI_DEFAULTS OFF`.
+-  The `usecounts` column shows the value `2` in the second record which is the plan executed with `SET ANSI_DEFAULTS ON`, because it was executed twice.
+The values for `query_plan_hash` and `query_hash` are the same for both records because it's the same query and query plan. 
+The `sql_handle` is also the same becaus eit refers to the same batch.
+However, with the latest execution there is a new `plan_handle` available for reuse. This happens because the execution context is reinitialized due to changed SET options. It's still the same plan and the same query, as evidenced by the same query hash and query plan hash, and there was no recompilation.
 
-What this effectively means is that we have two plans corresponding to the same batch, and it underscores the importance of making sure that the plan cache affecting SET options are the same, when the same queries are executed repeatedly, to optimize for plan reuse. 
+What this effectively means is that we have two plan entries in the cache corresponding to the same batch, and it underscores the importance of making sure that the plan cache affecting SET options are the same, when the same queries are executed repeatedly, to optimize for plan reuse and keep plan cache size to its required minimum. 
 
 > [!TIP]
 > A common pitfall is that different clients may have different default values for the SET options. For example, a connection made through [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatically sets QUOTED_IDENTIFIER to ON, while SQLCMD sets QUOTED_IDENTIFIER to OFF. Executing the same queries from these two clients will result in multiple plans (as described in the example above).

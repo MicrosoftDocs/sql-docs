@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 

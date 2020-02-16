@@ -1,7 +1,7 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/24/2019"
+ms.date: "02/14/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "row mode execution"
   - "batch mode execution"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-author: "rothja"
-ms.author: "jroth"
+author: "pmasl"
+ms.author: "pelopes"
 ---
 # Query Processing Architecture Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ A query execution plan is a definition of the following:
 
 The process of selecting one execution plan from potentially many possible plans is referred to as optimization. The Query Optimizer is one of the most important components of a SQL database system. While some overhead is used by the Query Optimizer to analyze the query and select a plan, this overhead is typically saved several-fold when the Query Optimizer picks an efficient execution plan. For example, two construction companies can be given identical blueprints for a house. If one company spends a few days at the beginning to plan how they will build the house, and the other company begins building without planning, the company that takes the time to plan their project will probably finish first.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is a cost-based Query Optimizer. Each possible execution plan has an associated cost in terms of the amount of computing resources used. The Query Optimizer must analyze the possible plans and choose the one with the lowest estimated cost. Some complex `SELECT` statements have thousands of possible execution plans. In these cases, the Query Optimizer does not analyze all possible combinations. Instead, it uses complex algorithms to find an execution plan that has a cost reasonably close to the minimum possible cost.
+The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is a cost-based optimizer. Each possible execution plan has an associated cost in terms of the amount of computing resources used. The Query Optimizer must analyze the possible plans and choose the one with the lowest estimated cost. Some complex `SELECT` statements have thousands of possible execution plans. In these cases, the Query Optimizer does not analyze all possible combinations. Instead, it uses complex algorithms to find an execution plan that has a cost reasonably close to the minimum possible cost.
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does not choose only the execution plan with the lowest resource cost; it chooses the plan that returns results to the user with a reasonable cost in resources and that returns the results the fastest. For example, processing a query in parallel typically uses more resources than processing it serially, but completes the query faster. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will use a parallel execution plan to return results if the load on the server will not be adversely affected.
 
@@ -126,7 +126,7 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 5. The relational engine processes the data returned from the storage engine into the format defined for the result set and returns the result set to the client.
 
 ### <a name="ConstantFolding"></a> Constant Folding and Expression Evaluation 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../includes/tsql-md.md)] literal, such as 3, 'ABC', '2005-12-31', 1.0e3, or 0x12345678.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`.
 
 #### Foldable Expressions
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses constant folding with the following types of expressions:
@@ -197,11 +197,11 @@ GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
 BEGIN
-DECLARE @d2 datetime
-SET @d2 = @d+1
-SELECT COUNT(*)
-FROM Sales.SalesOrderHeader
-WHERE OrderDate > @d2
+  DECLARE @d2 datetime
+  SET @d2 = @d+1
+  SELECT COUNT(*)
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate > @d2
 END;
 ```
 
@@ -234,7 +234,7 @@ CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
 FROM HumanResources.Employee AS h 
 JOIN Person.Person AS p
-ON h.BusinessEntityID = p.BusinessEntityID;
+  ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
@@ -245,16 +245,16 @@ Based on this view, both of these [!INCLUDE[tsql](../includes/tsql-md.md)] state
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
-ON (soh.SalesPersonID = EmpN.BusinessEntityID)
+  ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
-ON soh.SalesPersonID = e.BusinessEntityID
+  ON soh.SalesPersonID = e.BusinessEntityID
 JOIN AdventureWorks2014.Person.Person AS p
-ON e.BusinessEntityID =p.BusinessEntityID
+  ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
@@ -411,25 +411,59 @@ The execution plan for stored procedures and triggers is executed separately fro
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a pool of memory that is used to store both execution plans and data buffers. The percentage of the pool allocated to either execution plans or data buffers fluctuates dynamically, depending on the state of the system. The part of the memory pool that is used to store execution plans is referred to as the plan cache.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] execution plans have the following main components: 
+The plan cache has two stores for all compiled plans:
+-  The **Object Plans** cache store (OBJCP) used for plans related to stored procedures, functions and triggers.
+-  The **SQL Plans** cache store (SQLCP) used for plans related to autoparameterized, dynamic, or prepared queries.
 
-- **Query Execution Plan**     
-  The bulk of the execution plan is a re-entrant, read-only data structure used by any number of users. This is referred to as the query plan. No user context is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism. 
-- **Execution Context**     
-  Each user that is currently executing the query has a data structure that holds the data specific to their execution, such as parameter values. This data structure is referred to as the execution context. The execution context data structures are reused. If a user executes a query and one of the structures is not being used, it is reinitialized with the context for the new user. 
+The query below provides information about memory usage for these two cache stores:
 
-![execution_context](../relational-databases/media/execution-context.gif)
-
-When any [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the Relational Engine first looks through the plan cache to verify that an existing execution plan for the same [!INCLUDE[tsql](../includes/tsql-md.md)] statement exists. The [!INCLUDE[tsql](../includes/tsql-md.md)] statement qualifies as existing if it literally matches a previously executed [!INCLUDE[tsql](../includes/tsql-md.md)] statement with a cached plan, character per character. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the [!INCLUDE[tsql](../includes/tsql-md.md)] statement. If no existing execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
+```sql
+SELECT * FROM sys.dm_os_memory_clerks
+WHERE name LIKE '%plans%';
+```
 
 > [!NOTE]
-> Some [!INCLUDE[tsql](../includes/tsql-md.md)] statements are not cached, such as bulk operation statements running on rowstore or statements containing string literals larger than 8 KB in size.
+> The plan cache has two additional stores that are not used for storing plans:     
+> -  The **Bound Trees** cache store (PHDR) used for data structures used during plan compilation for views, constraints, and defaults. These structures are known as Bound Trees or Algebrizer Trees.      
+> -  The **Extended Stored Procedures** cache store (XPROC) used for predefined system procedures, like `sp_executeSql` or `xp_cmdshell`, that are defined using a DLL, not using Transact-SQL statements. The cached structure contains only the function name and the DLL name in which the procedure is implemented.      
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] execution plans have the following main components: 
+
+- **Compiled Plan** (or Query Plan)     
+  The query plan produced by the compilation process is mostly a re-entrant, read-only data structure used by any number of users. It stores information about:
+  -  Physical operators which implement the operation described by logical operators. 
+  -  The order of these operators, which determines the order in which data is accessed, filtered, and aggregated. 
+  -  The number of estimated rows flowing through the operators. 
+  
+	 > [!NOTE]
+	 > In newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
+	 
+  -  What support objects must be created, such as [worktables](#worktables) or workfiles in tempdb. 
+  No user context or runtime information is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism. 
+  
+  > [!NOTE]
+  > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
+  > -  The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan.        
+  > -  The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan but includes runtime information after execution completes. Runtime information includes for example execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
+  > -  The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan, but includes runtime information during execution progresses, updated every second. Runtime information includes for example the actual number of rows flowing through the operators..       
+  
+- **Execution Context**     
+  Each user that is currently executing the query has a data structure that holds the data specific to their execution, such as parameter values. This data structure is referred to as the execution context. The execution context data structures are reused, but their content is not. If another user executes the same query, the data structures are reinitialized with the context for the new user. 
+
+  ![execution_context](../relational-databases/media/execution-context.gif)
+
+When any [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] first looks through the plan cache to verify that an existing execution plan for the same [!INCLUDE[tsql](../includes/tsql-md.md)] statement exists. The [!INCLUDE[tsql](../includes/tsql-md.md)] statement qualifies as existing if it literally matches a previously executed [!INCLUDE[tsql](../includes/tsql-md.md)] statement with a cached plan, character per character. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the [!INCLUDE[tsql](../includes/tsql-md.md)] statement. If no existing execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
+
+> [!NOTE]
+> The execution plans for some [!INCLUDE[tsql](../includes/tsql-md.md)] statements are not persisted in the plan cache, such as bulk operation statements running on rowstore or statements containing string literals larger than 8 KB in size. These plans only exist while the query is being executed.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has an efficient algorithm to find any existing execution plans for any specific [!INCLUDE[tsql](../includes/tsql-md.md)] statement. In most systems, the minimal resources that are used by this scan are less than the resources that are saved by being able to reuse existing plans instead of compiling every [!INCLUDE[tsql](../includes/tsql-md.md)] statement.
 
-The algorithms to match new [!INCLUDE[tsql](../includes/tsql-md.md)] statements to existing, unused execution plans in the cache require that all object references be fully qualified. For example, assume that `Person` is the default schema for the user executing the below `SELECT` statements. While in this example it is not required that the `Person` table is fully qualified to execute, it means that the second statement is not matched with an existing plan, but the third is matched:
+The algorithms to match new [!INCLUDE[tsql](../includes/tsql-md.md)] statements to existing, unused execution plans in the plan cache require that all object references be fully qualified. For example, assume that `Person` is the default schema for the user executing the below `SELECT` statements. While in this example it is not required that the `Person` table is fully qualified to execute, it means that the second statement is not matched with an existing plan, but the third is matched:
 
 ```sql
+USE AdventureWorks2014;
+GO
 SELECT * FROM Person;
 GO
 SELECT * FROM Person.Person;
@@ -438,7 +472,150 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-### Removing Execution Plans from the Plan Cache
+Changing any of the following SET options for a given execution will affect the ability to reuse plans, because the [!INCLUDE[ssde_md](../includes/ssde_md.md)] performs [constant folding](#ConstantFolding) and these options affect the results of such expressions:
+
+|||
+|-----------|------------|------------|
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|
+|DATEFIRST|ANSI_PADDINGNUMERIC_ROUNDABORT|
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|
+|ANSI_NULLS|NO_BROWSETABLE||
+
+### Caching multiple plans for the same query 
+Queries and query plans are uniquely identifiable in the [!INCLUDE[ssde_md](../includes/ssde_md.md)], much like a fingerprint:
+-  The **query plan hash** is a binary hash value calculated on the execution plan for a given query, and used to uniquely identify similar query execution plans. 
+-  The **query hash** is a binary hash value calculated on the [!INCLUDE[tsql](../includes/tsql-md.md)] text of a query, and is used to uniquely identify queries. 
+
+A compiled plan can be retrieved from the plan cache using a **Plan Handle**, which is a transient identifier that remains constant only while the plan remains in the cache. The plan handle is a hash value derived from the compiled plan of the entire batch. The plan handle for a compiled plan remains the same even if one or more statements in the batch get recompiled.
+
+> [!NOTE]
+> If a Compiled Plan was created for a batch instead of a single statement, the plan for individual statements in the batch can be retrieved using the plan handle and statement offsets.     
+> The `sys.dm_exec_requests` DMV contains the `statement_start_offset` and `statement_end_offset` columns, which refer to the currently executing statement of a currently executing batch or persisted object. For more information, see [sys.dm_exec_requests  (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).       
+> The `sys.dm_exec_query_stats` DMV also contains these columns for each row, which refer to the position of a statement within a batch or persisted object. For more information, see [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).     
+
+The actual sql text of a batch is stored in a separate memory space from the plan cache, called the **SQL Manager** cache (SQLMGR). The sql text for a compiled plan can be retrieved from the sql manager cache using a **SQL Handle**, which is a transient identifier that remains constant only while at least one plan that references it remains in the plan cache. The sql handle is a hash value derived from the entire batch text and is guaranteed to be unique for every batch.
+
+> [!NOTE]
+> Like a compiled plan, the sql text is stored per batch, including the comments. The sql handle contains the MD5 hash of the entire batch text and is guaranteed to be unique for every batch
+
+The query below provides information about memory usage for the sql manager cache:
+
+```sql
+SELECT * FROM sys.dm_os_memory_objects
+WHERE type = 'MEMOBJ_SQLMGR';
+```
+
+There is a 1:N relation between a sql handle and plan handles. Such a condition occurs when the cache key for the compiled plans is different. This may occur due to change in SET options between two executions of the same batch.
+
+Consider the following stored procedure:
+
+```sql
+USE WideWorldImporters;
+GO
+CREATE PROCEDURE usp_SalesByCustomer @CID int
+AS
+SELECT * FROM Sales.Customers
+WHERE CustomerID = @CID
+GO
+
+SET ANSI_DEFAULTS ON
+GO
+
+EXEC usp_SalesByCustomer 10
+GO
+```
+
+Verify what can be found in the plan cache using the query below:
+
+```sql
+SELECT cp.objtype, refcounts, usecounts, 
+	qs.query_plan_hash, qs.query_hash,
+	qs.plan_handle, qs.sql_handle
+FROM sys.dm_exec_cached_plans AS cp
+CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
+CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
+INNER JOIN sys.dm_exec_query_stats AS qs ON qs.plan_handle = cp.plan_handle
+WHERE text LIKE '%usp_SalesByCustomer%'
+GO
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+objtype   refcounts   usecounts   query_plan_hash    query_hash
+-------   ---------   ---------   ------------------ ------------------ 
+Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D022497A90061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Now execute the stored procedure with a different parameter, but no other changes to execution context:
+
+```sql
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+objtype   refcounts   usecounts   query_plan_hash    query_hash
+-------   ---------   ---------   ------------------ ------------------ 
+Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D022497A90061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Notice the `usecounts` has increased to 2, which means the same cached plan was re-used as-is, because the execution context data structures were reused. Now change the `SET ANSI_DEFAULTS` option and execute the stored procedure using the same parameter.
+
+```sql
+SET ANSI_DEFAULTS OFF
+GO
+
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+objtype   refcounts   usecounts   query_plan_hash    query_hash
+-------   ---------   ---------   ------------------ ------------------ 
+Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02B031F111CD01000001000000000000000000000000000000000000000000000000000000
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D022497A90061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D022497A90061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Notice there are now two entries in the `sys.dm_exec_cached_plans` DMV (the `usecounts` column shows the value `1` in the first record). The value for `query_plan_hash`, `query_hash`, and `sql_handle` is the same for both records because it's the same query and query plan. But the execution context changed in the latest execution and so the execution context is reinitialized with the context for the new user. It's still the same plan and the same query, and there was no recompilation, but now there is a new `plan_handle` matching a new possible execution context for an existing query plan, available for reuse.
+
+What this effectively means is that we have two plans corresponding to the same batch, and it underscores the importance of making sure that the plan cache affecting SET options are the same, when the same queries are executed repeatedly, to optimize for plan reuse. 
+
+> [!TIP]
+> A common pitfall is that different clients may have different default values for the SET options. For example, a connection made through [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatically sets QUOTED_IDENTIFIER to ON, while SQLCMD sets QUOTED_IDENTIFIER to OFF. Executing the same queries from these two clients will result in multiple plans (as described in the example above).
+
+### Removing execution plans from the Plan Cache
 
 Execution plans remain in the plan cache as long as there is enough memory to store them. When memory pressure exists, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a cost-based approach to determine which execution plans to remove from the plan cache. To make a cost-based decision, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] increases and decreases a current cost variable for each execution plan according to the following factors.
 
@@ -497,8 +674,8 @@ The `recompile_cause` column of `sql_statement_recompile` xEvent contains an int
 
 > [!NOTE]
 > In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions where xEvents are not available, then the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
-> The trace event [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) also reports statement-level recompilations, and this trace event can also be used to track and debug recompilations. 
-> Whereas SP:Recompile generates only for stored procedures and triggers, `SQL:StmtRecompile` generates for stored procedures, triggers, ad-hoc batches, batches that are executed by using `sp_executesql`, prepared queries, and dynamic SQL.
+> The trace event `SQL:StmtRecompile` also reports statement-level recompilations, and this trace event can also be used to track and debug recompilations. 
+> Whereas `SP:Recompile` generates only for stored procedures and triggers, `SQL:StmtRecompile` generates for stored procedures, triggers, ad-hoc batches, batches that are executed by using `sp_executesql`, prepared queries, and dynamic SQL.
 > The *EventSubClass* column of `SP:Recompile` and `SQL:StmtRecompile` contains an integer code that indicates the reason for the recompilation. The codes are described [here](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
@@ -1011,16 +1188,15 @@ The following illustration shows the properties of the `Clustered Index Seek` op
 
 #### Partitioned Attribute
 
-When an operator such as an `Index Seek` is executed on a partitioned table or index, the `Partitioned` attribute appears in the compile-time and run-time plan and is set to `True` (1). The attribute does not display when it is set to `False` (0).
+When an operator such as an Index Seek is executed on a partitioned table or index, the `Partitioned` attribute appears in the compile-time and run-time plan and is set to `True` (1). The attribute does not display when it is set to `False` (0).
 
 The `Partitioned` attribute can appear in the following physical and logical operators:  
-* `Table Scan`  
-* `Index Scan`  
-* `Index Seek`  
-* `Insert`  
-* `Update`  
-* `Delete`  
-* `Merge`  
+|||
+|--------|--------|
+|Table Scan|Index Scan|
+|Index Seek|Insert|
+|Update|Delete|
+|Merge||
 
 As shown in the previous illustration, this attribute is displayed in the properties of the operator in which it is defined. In the XML Showplan output, this attribute appears as `Partitioned="1"` in the `RelOp` node of the operator in which it is defined.
 

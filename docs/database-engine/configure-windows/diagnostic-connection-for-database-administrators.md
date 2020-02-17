@@ -36,7 +36,13 @@ ms.author: mikeray
   
  Only members of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin role can connect using the DAC.  
   
- The DAC is available and supported through the **sqlcmd** command-prompt utility using a special administrator switch (**-A**). For more information about using **sqlcmd**, see [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). You can also connect prefixing **admin:** to the instance name in the format **sqlcmd -S admin:<*instance_name*>**. You can also initiate a DAC from a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor by connecting to **admin:\<*instance_name*>**.  
+ The DAC is available and supported through the **sqlcmd** command-prompt utility using a special administrator switch (**-A**). For more information about using **sqlcmd**, see [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). You can also connect prefixing **admin:** to the instance name in the format **sqlcmd -S admin:<*instance_name*>**. You can also initiate a DAC from a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor by connecting to **admin:\<*instance_name*>**.
+ 
+> [!Note]  
+> To establish a DAC from SQL Server Management Studio
+> - Disconnect all connections to the related database
+> - From the menu select **File** > **New** > **Database Engine Query**
+> - From the connection dialog box in the Server Name field, enter **admin:** if using the default instance or **admin:\<*instance_name*\>** if using a named instance
   
 ## Restrictions  
  Because the DAC exists solely for diagnosing server problems in rare circumstances, there are some restrictions on the connection:  

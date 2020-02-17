@@ -474,13 +474,13 @@ GO
 
 Changing any of the following SET options for a given execution will affect the ability to reuse plans, because the [!INCLUDE[ssde_md](../includes/ssde_md.md)] performs [constant folding](#ConstantFolding) and these options affect the results of such expressions:
 
-|||
-|-----------|------------|------------|
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|
-|ANSI_NULLS|NO_BROWSETABLE||
+|||   
+|-----------|------------|------------|    
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
+|ANSI_NULLS|NO_BROWSETABLE||    
 
 ### Caching multiple plans for the same query 
 Queries and query plans are uniquely identifiable in the [!INCLUDE[ssde_md](../includes/ssde_md.md)], much like a fingerprint:
@@ -545,7 +545,7 @@ GO
 ```
 memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
 ---------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060    	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -568,7 +568,7 @@ Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../include
 ```
 memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
 ---------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060    	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -594,8 +594,8 @@ Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../include
 ```
 memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
 ---------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+0x000001CD01DEC060    	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060    	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------

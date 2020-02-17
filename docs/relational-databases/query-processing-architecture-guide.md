@@ -412,7 +412,7 @@ The execution plan for stored procedures and triggers is executed separately fro
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a pool of memory that is used to store both execution plans and data buffers. The percentage of the pool allocated to either execution plans or data buffers fluctuates dynamically, depending on the state of the system. The part of the memory pool that is used to store execution plans is referred to as the plan cache.
 
 The plan cache has two stores for all compiled plans:
--  The **Object Plans** cache store (OBJCP) used for plans related to stored procedures, functions and triggers.
+-  The **Object Plans** cache store (OBJCP) used for plans related to persisted objects (stored procedures, functions, and triggers).
 -  The **SQL Plans** cache store (SQLCP) used for plans related to autoparameterized, dynamic, or prepared queries.
 
 The query below provides information about memory usage for these two cache stores:
@@ -435,24 +435,24 @@ WHERE name LIKE '%plans%';
   -  The order of these operators, which determines the order in which data is accessed, filtered, and aggregated. 
   -  The number of estimated rows flowing through the operators. 
   
-	 > [!NOTE]
-	 > In newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
+     > [!NOTE]
+     > In newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
 	 
   -  What support objects must be created, such as [worktables](#worktables) or workfiles in tempdb. 
-  No user context or runtime information is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism. 
-  
-  > [!NOTE]
-  > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
-  > -  The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan.        
-  > -  The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan but includes runtime information after execution completes. Runtime information includes for example execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
-  > -  The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan, but includes runtime information during execution progresses, updated every second. Runtime information includes for example the actual number of rows flowing through the operators..       
+  No user context or runtime information is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism.   
   
 - **Execution Context**     
   Each user that is currently executing the query has a data structure that holds the data specific to their execution, such as parameter values. This data structure is referred to as the execution context. The execution context data structures are reused, but their content is not. If another user executes the same query, the data structures are reinitialized with the context for the new user. 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
 
-When any [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] first looks through the plan cache to verify that an existing execution plan for the same [!INCLUDE[tsql](../includes/tsql-md.md)] statement exists. The [!INCLUDE[tsql](../includes/tsql-md.md)] statement qualifies as existing if it literally matches a previously executed [!INCLUDE[tsql](../includes/tsql-md.md)] statement with a cached plan, character per character. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the [!INCLUDE[tsql](../includes/tsql-md.md)] statement. If no existing execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
+> -  The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan.        
+> -  The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
+> -  The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.       
+
+When any [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] first looks through the plan cache to verify that an existing execution plan for the same [!INCLUDE[tsql](../includes/tsql-md.md)] statement exists. The [!INCLUDE[tsql](../includes/tsql-md.md)] statement qualifies as existing if it literally matches a previously executed [!INCLUDE[tsql](../includes/tsql-md.md)] statement with a cached plan, character per character. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the [!INCLUDE[tsql](../includes/tsql-md.md)] statement. If no execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
 
 > [!NOTE]
 > The execution plans for some [!INCLUDE[tsql](../includes/tsql-md.md)] statements are not persisted in the plan cache, such as bulk operation statements running on rowstore or statements containing string literals larger than 8 KB in size. These plans only exist while the query is being executed.
@@ -483,21 +483,21 @@ Changing any of the following SET options for a given execution will affect the 
 |ANSI_NULLS|NO_BROWSETABLE||    
 
 ### Caching multiple plans for the same query 
-Queries and query plans are uniquely identifiable in the [!INCLUDE[ssde_md](../includes/ssde_md.md)], much like a fingerprint:
--  The **query plan hash** is a binary hash value calculated on the execution plan for a given query, and used to uniquely identify similar query execution plans. 
+Queries and execution plans are uniquely identifiable in the [!INCLUDE[ssde_md](../includes/ssde_md.md)], much like a fingerprint:
+-  The **query plan hash** is a binary hash value calculated on the execution plan for a given query, and used to uniquely identify similar execution plans. 
 -  The **query hash** is a binary hash value calculated on the [!INCLUDE[tsql](../includes/tsql-md.md)] text of a query, and is used to uniquely identify queries. 
 
 A compiled plan can be retrieved from the plan cache using a **Plan Handle**, which is a transient identifier that remains constant only while the plan remains in the cache. The plan handle is a hash value derived from the compiled plan of the entire batch. The plan handle for a compiled plan remains the same even if one or more statements in the batch get recompiled.
 
 > [!NOTE]
-> If a Compiled Plan was created for a batch instead of a single statement, the plan for individual statements in the batch can be retrieved using the plan handle and statement offsets.     
-> The `sys.dm_exec_requests` DMV contains the `statement_start_offset` and `statement_end_offset` columns, which refer to the currently executing statement of a currently executing batch or persisted object. For more information, see [sys.dm_exec_requests  (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).       
-> The `sys.dm_exec_query_stats` DMV also contains these columns for each row, which refer to the position of a statement within a batch or persisted object. For more information, see [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).     
+> If a plan was compiled for a batch instead of a single statement, the plan for individual statements in the batch can be retrieved using the plan handle and statement offsets.     
+> The `sys.dm_exec_requests` DMV contains the `statement_start_offset` and `statement_end_offset` columns for each record, which refer to the currently executing statement of a currently executing batch or persisted object. For more information, see [sys.dm_exec_requests  (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).       
+> The `sys.dm_exec_query_stats` DMV also contains these columns for each record, which refer to the position of a statement within a batch or persisted object. For more information, see [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).     
 
-The actual sql text of a batch is stored in a separate memory space from the plan cache, called the **SQL Manager** cache (SQLMGR). The sql text for a compiled plan can be retrieved from the sql manager cache using a **SQL Handle**, which is a transient identifier that remains constant only while at least one plan that references it remains in the plan cache. The sql handle is a hash value derived from the entire batch text and is guaranteed to be unique for every batch.
+The actual [!INCLUDE[tsql](../includes/tsql-md.md)] text of a batch is stored in a separate memory space from the plan cache, called the **SQL Manager** cache (SQLMGR). The [!INCLUDE[tsql](../includes/tsql-md.md)] text for a compiled plan can be retrieved from the sql manager cache using a **SQL Handle**, which is a transient identifier that remains constant only while at least one plan that references it remains in the plan cache. The sql handle is a hash value derived from the entire batch text and is guaranteed to be unique for every batch.
 
 > [!NOTE]
-> Like a compiled plan, the sql text is stored per batch, including the comments. The sql handle contains the MD5 hash of the entire batch text and is guaranteed to be unique for every batch
+> Like a compiled plan, the [!INCLUDE[tsql](../includes/tsql-md.md)] text is stored per batch, including the comments. The sql handle contains the MD5 hash of the entire batch text and is guaranteed to be unique for every batch.
 
 The query below provides information about memory usage for the sql manager cache:
 
@@ -608,11 +608,11 @@ sql_handle
 0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
 ```
 
-Notice there are now two entries in the `sys.dm_exec_cached_plans` DMV:
+Notice there are now two entries in the `sys.dm_exec_cached_plans` DMV output:
 -  The `usecounts` column shows the value `1` in the first record which is the plan executed once with `SET ANSI_DEFAULTS OFF`.
 -  The `usecounts` column shows the value `2` in the second record which is the plan executed with `SET ANSI_DEFAULTS ON`, because it was executed twice.    
-
-The `sql_handle` value is the same because it refers to the same batch. However, with the latest execution there is a new `plan_handle` available for reuse. This happens because the execution context is reinitialized due to changed SET options, but that doesn't trigger a recompile. It's still the same plan and the same query, as evidenced by the same `query_plan_hash` and `query_hash` values.
+-  The different `memory_object_address` refers to a different execution plan entry in the plan cache. However, the `sql_handle` value is the same for both entries because they refer to the same batch. 
+   -  The execution with `ANSI_DEFAULTS` set to OFF has a new `plan_handle`, and its available for reuse for calls that have the same set of SET options. The new plan handle is necessary because the execution context was reinitialized due to changed SET options. But that doesn't trigger a recompile: both entries refer to the same plan and query, as evidenced by the same `query_plan_hash` and `query_hash` values.
 
 What this effectively means is that we have two plan entries in the cache corresponding to the same batch, and it underscores the importance of making sure that the plan cache affecting SET options are the same, when the same queries are executed repeatedly, to optimize for plan reuse and keep plan cache size to its required minimum. 
 

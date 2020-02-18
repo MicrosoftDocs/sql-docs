@@ -35,9 +35,6 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS is free!
 
-> [!Note]
-> This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
-
 ## Download SSMS
 
 **[![download](media/download-icon.png) Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
@@ -71,11 +68,13 @@ SQL Server Management Studio 18.4:
 
 ## What's new
 
-For details about what's new in this release, see [What's new](release-notes-ssms.md#whats-new-in-184).
+For details more information about what's new in this release, see [SSMS release notes](release-notes-ssms.md).
 
 There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
 
-For more information about this release, see the [SSMS release notes](release-notes-ssms.md).
+## Previous versions
+
+This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
 ## Supported SQL offerings (SSMS 18.4)
 

@@ -75,7 +75,7 @@ For details about what's new in this release, see [What's new](release-notes-ssm
 
 There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
 
-For more information about this release, see [the SSMS release notes](release-notes-ssms.md).
+For more information about this release, see the [SSMS release notes](release-notes-ssms.md).
 
 ## Supported SQL offerings (SSMS 18.4)
 

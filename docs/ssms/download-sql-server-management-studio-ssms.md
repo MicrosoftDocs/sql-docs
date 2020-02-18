@@ -36,7 +36,7 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 SSMS is free!
 
 > [!Note]
-> This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SQL Server Management Studio Releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
+> This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
 ## Download SSMS
 
@@ -69,7 +69,7 @@ SQL Server Management Studio 18.4:
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 
-## Release notes (SSMS 18.4)
+## What's new
 
 For details about what's new in this release, see [What's new](release-notes-ssms.md#whats-new-in-184).
 

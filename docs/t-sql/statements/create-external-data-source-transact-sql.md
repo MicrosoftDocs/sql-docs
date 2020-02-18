@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/22/2020
+ms.date: 02/18/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -216,8 +216,7 @@ CREATE EXTERNAL DATA SOURCE MyOracleServer
 WITH
   ( LOCATION = 'oracle://145.145.145.145:1521',
     CREDENTIAL = OracleProxyAccount,
-    PUSHDOWN = ON,
-    TYPE=BLOB_STORAGE,
+    PUSHDOWN = ON
   ) ;
 ```
 

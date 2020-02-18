@@ -68,7 +68,7 @@ SQL Server Management Studio 18.4:
 
 ## What's new
 
-For details more information about what's new in this release, see [SSMS release notes](release-notes-ssms.md).
+For details and more information about what's new in this release, see [SSMS release notes](release-notes-ssms.md).
 
 There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
 

@@ -16,7 +16,6 @@ ms.technology: big-data-cluster
 A key big data usage pattern is high volume data processing in Spark, followed by writing the data to SQL Server for access to line-of-business applications. These usage patterns benefit from a connector that utilizes key SQL optimizations and provides an efficient write mechanism.
 
 This article provides an example of how to use the MSSQL Spark connector to read and write to the following locations within a big data cluster:
-
 1. The SQL Server master instance
 1. The SQL Server data pool
 
@@ -30,7 +29,43 @@ The sample performs the following tasks:
 
 ## MSSQL Spark Connector Interface
 
-SQL Server 2019 provides the **MSSQL Spark connector** for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. MSSQL Spark Connector is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The MSSQL Spark connector is referenced by the name **com.microsoft.sqlserver.jdbc.spark**.
+SQL Server 2019 provides the **MSSQL Spark connector** for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. MSSQL Spark Connector is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The MSSQL Spark connector is referenced by the name **com.microsoft.sqlserver.jdbc.spark**. The MSSQL Spark connector supports two security modes to connect with SQL Server, non-AD mode and AD-mode:
+### Non-AD Mode:
+In non-AD mode security, each user has a username and password which need to be provided as parameters during the connector instantiation to perform read and/or writes.
+An example connector instantiation for non-AD mode is below:
+```python
+# Note: '?' is a placeholder for a necessary user-specified value
+connector_type = "com.microsoft.sqlserver.jdbc.spark" 
+
+url = "jdbc:sqlserver://master-p-svc;databaseName=?;"
+writer = df.write \ 
+   .format(connector_type)\ 
+   .mode("overwrite") 
+   .option("url", url) \ 
+   .option("user", ?) \ 
+   .option("password",?) 
+writer.save() 
+```
+### AD Mode:
+In AD mode security, after a user has generated a key tab file, the user needs to provide the `principal` and `keytab` as parameters during the connector instantiation.
+
+In this mode, the driver loads the keytab file to the respective executor containers. Then, the executors use the principal name and keytab to generate a token that is used to create a JDBC connector for read/write.
+
+An example connector instantiation for AD mode is below:
+```python
+# Note: '?' is a placeholder for a necessary user-specified value
+connector_type = "com.microsoft.sqlserver.jdbc.spark"
+
+url = "jdbc:sqlserver://master-p-svc;databaseName=?;integratedSecurity=true;authenticationScheme=JavaKerberos;" 
+writer = df.write \ 
+   .format(connector_type)\ 
+   .mode("overwrite") 
+   .option("url", url) \ 
+   .option("principal", ?) \ 
+   .option("keytab", ?)   
+
+writer.save() 
+```
 
 The following table describes interface parameters that have changed or are new:
 
@@ -40,13 +75,14 @@ The following table describes interface parameters that have changed or are new:
 
 The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be passed as optional parameters by the user and are passed as-is by the connector to the underlying API. For more information about bulk write operations, see [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## Prerequisites
+## MSSQL Spark Connector Sample
+### Prerequisites
 
 - A [SQL Server big data cluster](deploy-get-started.md).
 
 - [Azure Data Studio](https://aka.ms/getazuredatastudio).
 
-## Create the target database
+### Create the target database
 
 1. Open Azure Data Studio, and [connect to the SQL Server master instance of your big data cluster](connect-to-big-data-cluster.md).
 
@@ -57,7 +93,7 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
    GO
    ```
 
-## Load sample data into HDFS
+### Load sample data into HDFS
 
 1. Download [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) to your local machine.
 
@@ -69,9 +105,9 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
    ![AdultCensusIncome CSV file](./media/spark-mssql-connector/spark_data.png)
 
-## Run the sample notebook
+### Run the sample notebook
 
-To demonstrate the use of the MSSQL Spark Connector with this data, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server](notebooks-guidance.md).
+To demonstrate the use of the MSSQL Spark Connector with this data in non-AD mode, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server](notebooks-guidance.md).
 
 1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector_non_ad_pyspark.ipynb** sample notebook:
 
@@ -86,3 +122,5 @@ To demonstrate the use of the MSSQL Spark Connector with this data, you can down
 ## Next steps
 
 For more information about big data clusters, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)
+
+Have feedback or feature recommendations for SQL Server Big Data Clusters? [Leave us a note at SQL Server Big Data Clusters Feedback](https://aka.ms/sql-server-bdc-feedback).

@@ -9,12 +9,24 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: 02/13/2020
+ms.date: 02/19/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## February (hotfix)
+
+February 19, 2019 &nbsp; / &nbsp; version: 1.15.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #9149 Show active connections | [#9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| Fix bug #9061 Edit Data grid doesn't properly resize when showing or hiding SQL Pane | [#9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
 
 ## February 2020
 

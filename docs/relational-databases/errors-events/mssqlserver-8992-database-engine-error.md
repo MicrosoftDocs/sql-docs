@@ -26,7 +26,8 @@ ms.author: mathoma
 |Symbolic Name|DBCC3_CHECK_CATALOG|  
 |Message Text|Check Catalog Msg ERROR Level LEVEL State STATE: MESSAGE.|  
 
-Note: 8992 Error message will reference another specific message (ranging from 3851 to 3858) about the actual inconsistency.
+> [!NOTE]
+> 8992 Error message references another specific message (ranging from 3851 to 3858) about the actual inconsistency.
 
 ## Explanation  
 DBCC CHECKCATALOG or DBCC CHECKDB found an inconsistency in the system metadata tables for the specified object. That is, there is an inconsistency between the recorded object ID and the object specified in error message.  
@@ -63,12 +64,19 @@ If the backup also contains the metadata inconsistency, you need to create a new
 This error cannot be repaired.  If you cannot restore the database from a backup, contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Service and Support (CSS).  
   
 ### Do Not Manually Update System Tables  
+
 Do not make manual updates to system tables. SQL Server does not support any manual changes to system databases. If you update a system table in a SQL Server database, the following events are logged:
+
 #### When a system table is manually updated
+
 Msg 17659: Warning: System table ID <id> has been updated directly in database ID <id> and cache coherence may not have been maintained. SQL Server should be restarted.
+
 #### Starting a database with a system table that was manually updated
+
 Msg 3859: Warning: The system catalog was updated directly in database ID <id>, most recently at date_time
+
 #### when you execute the DBCC_CHECKDB command after a system table is manually updated
+
 Msg 3859: Warning: The system catalog was updated directly in database ID <id>, most recently at date_time.  
 
 ## See Also  

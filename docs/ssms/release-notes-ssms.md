@@ -100,10 +100,10 @@ Download previous SSMS versions by clicking the title links in the following sec
 
 | SSMS version | Build number | Release date |
 |--------------|--------------|-------------------|
-| [18.3.1](#downloadssdtmediadownloadpng-ssms-1831httpsgomicrosoftcomfwlinklinkid2105412) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#downloadssdtmediadownloadpng-ssms-181httpsgomicrosoftcomfwlinklinkid2094583) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649) | 15.0.18118.0 | April 24, 2019 |
+| [18.3.1](#whats-new-in-1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#whats-new-in-182-1) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#whats-new-in-181-2) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#whats-new-in-180-3) | 15.0.18118.0 | April 24, 2019 |
 | [17.9.1](#downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409) | 14.0.17289.0 | November 21, 2018 |
 | [16.5.3](#downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946) | 13.0.16106.4 |  |
 

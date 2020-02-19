@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
 ms.custom: "seodec18"
-ms.date: 2/13/2020
+ms.date: 2/19/2020
 ms.reviewer: "alayu; sstein"
 ---
 
@@ -24,9 +24,9 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2116782)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2116781)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2116691)|February 13, 2020|1.15.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2116692)|February 13, 2020|1.15.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2116780)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2116779)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2116783)|February 13, 2020|1.15.0|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2116782)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2116781)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2116691)|February 19, 2020|1.15.1|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2116692)|February 19, 2020|1.15.1|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2116780)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2116779)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2116783)|February 19, 2020|1.15.1|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

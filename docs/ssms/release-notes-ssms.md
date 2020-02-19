@@ -100,14 +100,16 @@ Download previous SSMS versions by clicking the title links in the following sec
 
 | SSMS version | Build number | Release date |
 |--------------|--------------|-------------------|
-| [18.3.1](#whats-new-in-1831) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#whats-new-in-182-1) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#whats-new-in-181-2) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#whats-new-in-180-3) | 15.0.18118.0 | April 24, 2019 |
-| [17.9.1](#downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946) | 13.0.16106.4 |  |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 |  |
 
-## ![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+## 18.3.1
+
+![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 Release number: 18.3.1  
 Build number: 15.0.18183.0  
@@ -161,7 +163,9 @@ SSMS 18.3.1 is the latest general availability (GA) release of SSMS. If you need
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
-## ![download](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+## 18.2
+
+![download](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 Release number: 18.2  
 Build number: 15.0.18142.0  
@@ -231,7 +235,9 @@ Release date: July 25, 2019
 
 - The default language for SQL logins may display as Arabic in the Login Properties dialog, regardless of the actual default language set for the login. To view the actual default language for a given login, use T-SQL to select the login's **default_language_name** from **master.sys.server_principles**.
 
-## ![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+## 18.1
+
+![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Release number: 18.1  
 - Build number: 15.0.18131.0  
@@ -301,7 +307,9 @@ Release date: July 25, 2019
 
 - Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
-## ![download](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+## 18.0
+
+![download](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - Release number: 18.0  
 - Build number: 15.0.18118.0  
@@ -570,7 +578,9 @@ Deprecated / Removed Features
 
 - There are redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) for more details. A workaround for this issue is to disable hardware acceleration under Tools > Options.
 
-## ![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+## 17.9.1
+
+![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Release number: 17.9.1<br>
 - Build number: 14.0.17289.0<br>
@@ -611,7 +621,9 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 6. Upgrade to the [latest version of the Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) if you're not currently up to date.
 
-## ![download](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+## 16.5.3
+
+![download](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 
 - Release number: 16.5.3<br>
 - Build number: 13.0.16106.4<br>

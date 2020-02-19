@@ -1,7 +1,7 @@
 ---
-title: "Download SQL Server Management Studio (SSMS)"
+title: Download SQL Server Management Studio (SSMS)
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 keywords: 
@@ -22,7 +22,7 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
+ms.date: 02/18/2020
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -66,25 +66,15 @@ SQL Server Management Studio 18.4:
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 
-## New in this release (SSMS 18.4)
+## What's new
 
-| New item | Details |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Classification | Added support for custom information protection policy for data classification. |
-| Query Store | Added the *Max Plan per query* value in the dialog properties. |
-| Query Store | Added support for the new Custom Capture Policies. |
-| SMO/Scripting | Support Script of materialized view in SQL DW. |
-| SMO/Scripting | Added support for *SQL On Demand*. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added 50 assessment rules (see details on GitHub). |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added base math expressions and comparisons to rules conditions. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added support for RegisteredServer object. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated how rules are stored in the JSON format and also updated the mechanism of applying overrides/customizations. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated rules to support SQL on Linux. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated the ruleset JSON format and added SCHEMA version. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated cmdlets output to improve readability of recommendations. |
-| XEvent Profiler | Added *error_reported* event to XEvent Profiler sessions. |
+For details and more information about what's new in this release, see [SSMS release notes](release-notes-ssms.md).
 
-For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
+There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
+
+## Previous versions
+
+This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
 ## Supported SQL offerings (SSMS 18.4)
 
@@ -108,16 +98,6 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 > [!NOTE]
 > SSMS runs on Windows (AMD or Intel) only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
-
-## Release notes (SSMS 18.4)
-
-There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
-
-For details about this release, see [the SSMS release notes](release-notes-ssms.md).
-
-## Previous SSMS releases
-
-[Previous SQL Server Management Studio Releases](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

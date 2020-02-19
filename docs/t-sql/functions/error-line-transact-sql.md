@@ -68,20 +68,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
-Result 
------------
-
-(0 row(s) affected)
-
-ErrorLine
------------
-4
-
-(1 row(s) affected)
-```  
   
 ### B. Using ERROR_LINE in a CATCH block with a stored procedure  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_LINE` returns the line number where the error occurred.  

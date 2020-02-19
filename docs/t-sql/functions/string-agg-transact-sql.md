@@ -111,7 +111,7 @@ FROM Person.Person;
 > [!NOTE]
 > Results are shown trimmed.
 
-|Csv | 
+|csv | 
 |--- |
 |Syed,Catherine,Kim,Kim,Kim,Hazem,Sam,Humberto,Gustavo,Pilar,Pilar, ...|  
 

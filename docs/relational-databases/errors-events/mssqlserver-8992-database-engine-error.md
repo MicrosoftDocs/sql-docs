@@ -79,6 +79,7 @@ Msg 3859: Warning: The system catalog was updated directly in database ID <id>, 
 
 Msg 3859: Warning: The system catalog was updated directly in database ID <id>, most recently at date_time.  
 
-## See Also  
-[System Base Tables](https://docs.microsoft.com/en-us/sql/relational-databases/system-tables/system-base-tables)  
+## See Also
+
+[System Base Tables](../system-tables/system-base-tables.md)
   

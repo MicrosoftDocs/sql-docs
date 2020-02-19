@@ -23,15 +23,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ## SSDT for Visual Studio 2019
 
-Release number: X
-Build number: X
+Release number: X  
+Build number: X  
 Release date: X
 
 ### Changes in SSDT for Visual Studio 2019
 
 The core SSDT functionality to create database projects has remained integral to Visual Studio.
 
-With Visual Studio 2019, the required functionality to enable Analysis Services, Integration Services, and Reporting Services projects has moved into the respective Visual Studio extensions only. There's no more a standalone SSDT installation required.
+With Visual Studio 2019, the required functionality to enable Analysis Services, Integration Services, and Reporting Services projects has moved into the respective Visual Studio (VSIX) extensions only. There's no more a standalone SSDT installation required.
 
 ### Install SSDT with Visual Studio 2019
 

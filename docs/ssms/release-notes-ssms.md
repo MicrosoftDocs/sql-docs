@@ -10,7 +10,7 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
+ms.date: 02/19/2020
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -96,7 +96,16 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 
 ## Previous SSMS releases
 
-Download previous SSMS versions by clicking the title links in the following sections:
+Download previous SSMS versions by clicking the title links in the following sections.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|-------------------|
+| [18.3.1](#downloadssdtmediadownloadpng-ssms-1831httpsgomicrosoftcomfwlinklinkid2105412) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#downloadssdtmediadownloadpng-ssms-181httpsgomicrosoftcomfwlinklinkid2094583) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946) | 13.0.16106.4 |  |
 
 ## ![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
@@ -578,8 +587,35 @@ Deprecated / Removed Features
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
+### Uninstall and reinstall SSMS 17.x
+
+If your SSMS installation is having problems, and a standard uninstall and reinstall doesn't resolve them, you can first try [repairing](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, the following steps have been found to fix many random issues:
+
+1. Uninstall SSMS the same way you uninstall any application (using *Apps & features*, *Programs, and features*, depending on your version of Windows).
+
+2. Uninstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3. Uninstall Microsoft Visual C++ 2015 Redistributable the same way you uninstall any application. Uninstall both x86 and x64 if they're on your computer.
+
+4. Reinstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+
+    ```vs_isoshell.exe /PromptRestart```
+
+5. Reinstall SSMS.
+
+6. Upgrade to the [latest version of the Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) if you're not currently up-to-date.
+
 ## ![download](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
-Generally available| Build number: 13.0.16106.4
+
+- Release number: 16.5.3<br>
+- Build number: 13.0.16106.4<br>
+- Release date: 
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
@@ -608,30 +644,6 @@ The following issues were fixed this release:
 * SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
-
-## Uninstall and reinstall SSMS 17.x
-
-If your SSMS installation is having problems, and a standard uninstall and reinstall doesn't resolve them, you can first try [repairing](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, the following steps have been found to fix many random issues:
-
-1. Uninstall SSMS the same way you uninstall any application (using *Apps & features*, *Programs, and features*, depending on your version of Windows).
-
-2. Uninstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
-
-    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
-
-3. Uninstall Microsoft Visual C++ 2015 Redistributable the same way you uninstall any application. Uninstall both x86 and x64 if they're on your computer.
-
-4. Reinstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:  
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
-
-    ```vs_isoshell.exe /PromptRestart```
-
-5. Reinstall SSMS.
-
-6. Upgrade to the [latest version of the Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) if you're not currently up-to-date.
 
 ## Additional Downloads
 

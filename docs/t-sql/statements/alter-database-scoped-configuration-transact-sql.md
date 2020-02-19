@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: "CarlRabeler"
 ms.author: "carlrab"
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||||=azure-sqldw-latest|| = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions"
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 

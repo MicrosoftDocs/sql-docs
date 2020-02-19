@@ -81,4 +81,16 @@ ms.author: sstein
 |**sys.sysobjvalues**|Exists in every database. Contains a row for each general value property of an entity.|  
 |**sys.sysguidrefs**|Exists in every database. Contains a row for each GUID classified ID reference.|  
   
-  
+## Updating System Base Tables    
+You can view the data in the system tables through the system catalog views. To update the metadata present in system base tables use the appropriate TSQL interface (e.g. DDL statements). Manually updating system tables is not a supported operation. SQL Server reports the following messages when you perform direct updates to system tables:
+
+### when a system table is manually updated
+Msg 17659: Warning: System table ID <id> has been updated directly in database ID <id> and cache coherence may not have been maintained. SQL Server should be restarted.
+
+### starting a database with a system table that was manually updated
+Msg 3859: Warning: The system catalog was updated directly in database ID 17, most recently at date_time
+
+### when you execute the DBCC_CHECKDB command after a system table is manually updated
+Msg 3859: Warning: The system catalog was updated directly in database ID 17, most recently at date_time.
+
+If you perform manual updates to system table and you encounter a problem, you might be asked to restore from a backup or copy out the data from this affected database to a new database. For more information refer to https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/mssqlserver-8992-database-engine-error?view=sql-server-ver15#user-action

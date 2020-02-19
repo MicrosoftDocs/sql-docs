@@ -105,7 +105,7 @@ Download previous SSMS versions by clicking the download link in the related sec
 | [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
 | [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
 | [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
 
 ### 18.3.1
 
@@ -241,7 +241,7 @@ Release date: July 25, 2019
 
 - Release number: 18.1  
 - Build number: 15.0.18131.0  
-- Release date: June 11, 2019  
+- Release date: June 11, 2019
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
@@ -582,11 +582,13 @@ Deprecated / Removed Features
 
 ![download](../ssdt/media/download.png) [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
-- Release number: 17.9.1<br>
-- Build number: 14.0.17289.0<br>
+- Release number: 17.9.1  
+- Build number: 14.0.17289.0  
 - Release date: November 21, 2018
 
 17.9.1 is a small update to 17.9 with the following bug fixes:
+
+#### Bug fixes in 17.9.1
 
 - Fixed an issue where users may experience their connection being closed and reopened with each query invocation when using "Azure Active Directory - Universal with MFA support" authentication with the SQL query editor. Side effects of the connection closing included global temporary tables being dropped unexpectedly, and sometimes a new SPID given to the connection.
 - Fixed a long outstanding issue where restore plan would fail to find a restore plan, or would generate an inefficient restore plan under certain conditions.
@@ -625,13 +627,13 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 ![download](../ssdt/media/download.png) [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 
-- Release number: 16.5.3<br>
-- Build number: 13.0.16106.4<br>
-- Release date: 2018
+- Release number: 16.5.3  
+- Build number: 13.0.16106.4  
+- Release date: January 30, 2017
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
-The following issues were fixed this release:
+#### Bug fixes in 16.5.3
 
 * Fixed an issue introduced in SSMS 16.5.2, which was causing the expansion of the 'Table' node when the table had more than one sparse column.
 

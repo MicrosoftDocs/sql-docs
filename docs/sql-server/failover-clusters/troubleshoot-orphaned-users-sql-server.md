@@ -112,7 +112,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 ```  
   
 > [!IMPORTANT]  
->  Any login can change it's own password. Only logins with the `ALTER ANY LOGIN` permission can change the password of another user's login. However, only members of the **sysadmin** role can modify passwords of **sysadmin** role members.  
+>  Any login can change its own password. Only logins with the `ALTER ANY LOGIN` permission can change the password of another user's login. However, only members of the **sysadmin** role can modify passwords of **sysadmin** role members.  
   
  The deprecated procedure [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) also works with orphaned users. `sp_change_users_login` cannot be used with [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

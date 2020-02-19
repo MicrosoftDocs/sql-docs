@@ -28,13 +28,13 @@ ms.author: "pelopes"
 Trace flags are used to set specific server characteristics or to alter a particular behavior. For example, trace flag 3226 is a commonly used startup trace flag which suppresses successful backup messages in the error log. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems, but they may also be recommended by Microsoft Support to address behavior that is negatively impacting a specific workload.  All documented trace flags and those recommended by Microsoft Support are fully supported in a production environment when used as directed.  Note that trace flags in this list may have additional considerations regarding their particular usage, so it is advisable to carefully review all the recommendations given here and/or by your support engineer. Also, as with any configuration change in SQL Server, it is always best to thoroughly test the flag in a non-production environment before deploying.
 
 ## Remarks  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are three types of trace flags: query, session and global. Query trace flags are active for the context of a specific query. Session trace flags are active for a connection and are visible only to that connection. Global trace flags are set at the server level and are visible to every connection on the server. Some flags can only be enabled as global, and some can be enabled at either global or session scope.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are three scopes at which trace flags can work: query, session, and global. Query trace flags are active for the context of a specific query. Session trace flags are active for a connection and are visible only to that connection. Global trace flags are set at the server level and are visible to every connection on the server. Some flags can only be enabled as global, and some can be enabled at either global or session scope.  
   
  The following rules apply:  
 -   A global trace flag must be enabled globally. Otherwise, the trace flag has no effect. We recommend that you enable global trace flags at startup, by using the **-T** command line option. This ensures the trace flag remains active after a server restart. Restart SQL Server for the trace flag to take effect. 
 -   If a trace flag has either global, session or query scope, it can be enabled with the appropriate scope. A trace flag that is enabled at the session level never affects another session, and the effect of the trace flag is lost when the SPID that opened the session logs out.  
   
-Trace flags are set on or off by using either of the following methods:
+Trace flags are set ON or OFF by using either of the following methods:
 -   Using the DBCC TRACEON and DBCC TRACEOFF commands.  
      For example, to enable the 2528 trace flag globally, use [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) with the -1 argument: `DBCC TRACEON (2528, -1)`. The effect of enabling a global trace flag with DBCC TRACEON is lost on server restart. To turn off a global trace flag, use [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) with the -1 argument.  
 -   Using the **-T** startup option to specify that the trace flag be set on during startup.  
@@ -48,7 +48,7 @@ Use the `DBCC TRACESTATUS` command to determine which trace flags are currently 
 The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> Azure SQL Database Managed Instance supports the following global Trace Flags: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389,1 0316, and 11024. Session trace-flags are not yet supported in Managed Instance.
+> Azure SQL Database Managed Instance supports the following global Trace Flags: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 1 0316, and 11024. Session trace-flags are not yet supported in Managed Instance.
  
 > [!NOTE]
 > Some trace flags were introduced in specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. For more information on the applicable version, see the Microsoft Support article associated with a specific trace flag.

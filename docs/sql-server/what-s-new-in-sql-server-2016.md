@@ -46,7 +46,6 @@ This page provides summary information and links to more detailed SQL Server 201
     - **Dynamic Data Masking:** If specified in the table definition, masked data is hidden from most users, and only users with UNMASK permission can see the complete data.
     - **Row Level Security:** Data access can be restricted at the database engine level, so users see only what is relevant to them. 
 
-See [Database Engine](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services provides improved performance, authoring, database management, filtering, processing, and much more for tabular model databases based on the **1200 compatibility level**.
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integrate the R programming language, used for statistical analysis, into SQL Server. 

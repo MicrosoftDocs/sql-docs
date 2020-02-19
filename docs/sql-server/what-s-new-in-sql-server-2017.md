@@ -49,8 +49,6 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 - **DATABASE SCOPED CREDENTIAL** is a new class of securable, supporting CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP, and VIEW DEFINITION permissions. ADMINISTER DATABASE BULK OPERATIONS is now visible in sys.fn_builtin_permissions. (CTP 1.0)
 - Database **COMPATIBILITY_LEVEL 140** is added. (CTP 1.0).  
 
-For more information, see [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
-
 ## SQL Server 2017 Integration Services (SSIS)
 - The new **Scale Out** feature in SSIS has the following new and changed features. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)
     -   Scale Out Master now supports high availability.

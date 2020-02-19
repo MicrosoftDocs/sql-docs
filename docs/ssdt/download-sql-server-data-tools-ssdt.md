@@ -23,9 +23,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ## SSDT for Visual Studio 2019
 
-Release number: X  
-Build number: X  
-Release date: X
+Release number: 16.4.5  
+Build number: 16.4.29806.167  
+Release date: February 11, 2020
 
 ### Changes in SSDT for Visual Studio 2019
 
@@ -35,7 +35,7 @@ With Visual Studio 2019, the required functionality to enable Analysis Services,
 
 ### Install SSDT with Visual Studio 2019
 
-If you have a Visual Studio 2019 license:
+If you have a [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) license:
 
 * For SQL database projects, select **SQL Server Data Tools** under **Data storage and processing**.
 
@@ -43,7 +43,7 @@ If you have a Visual Studio 2019 license:
 
 * For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) from either *Tools > Extensions and Updates* or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
-If you don’t have a Visual Studio 2019 license:
+If you don’t have a [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) license:
 
 * Install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/). Then for database projects, select **SQL Server Data Tools** under **Data storage and processing** during the Visual Studio installation.
 

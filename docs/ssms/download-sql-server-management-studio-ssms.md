@@ -22,7 +22,7 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 02/18/202
+ms.date: 02/18/2020
 ---
 
 # Download SQL Server Management Studio (SSMS)

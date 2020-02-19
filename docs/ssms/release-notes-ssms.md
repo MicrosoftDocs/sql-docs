@@ -47,7 +47,7 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 
 18.4 is an update to 18.3.1 with the following new items and bug fixes.
 
-## What's new in 18.4
+### What's new in 18.4
 
 | New item | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +66,7 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated cmdlets output to improve readability of recommendations. |
 | XEvent Profiler | Added *error_reported* event to XEvent Profiler sessions. |
 
-## Bug fixes in 18.4
+### Bug fixes in 18.4
 
 | New Item | Details |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -96,7 +96,7 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 
 ## Previous SSMS releases
 
-Download previous SSMS versions by clicking the title links in the following sections.
+Download previous SSMS versions by clicking the download link in the related section.
 
 | SSMS version | Build number | Release date |
 |--------------|--------------|-------------------|
@@ -107,9 +107,9 @@ Download previous SSMS versions by clicking the title links in the following sec
 | [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
 | [16.5.3](#1653) | 13.0.16106.4 | 2018 |
 
-## 18.3.1
+### 18.3.1
 
-![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+![download](../ssdt/media/download.png) [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 Release number: 18.3.1  
 Build number: 15.0.18183.0  
@@ -119,7 +119,7 @@ SSMS 18.3.1 is the latest general availability (GA) release of SSMS. If you need
 
 18.3.1 is an update to 18.2 with the following new items and bug fixes.
 
-## What's new in 18.3.1
+#### What's new in 18.3.1
 
 | New item | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -133,7 +133,7 @@ SSMS 18.3.1 is the latest general availability (GA) release of SSMS. If you need
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added support for Azure SQL Database Managed Instance. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated default view of cmdlets to display results as a table. |
 
-## Bug fixes in 18.3.1
+#### Bug fixes in 18.3.1
 
 | New Item | Details |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -155,7 +155,7 @@ SSMS 18.3.1 is the latest general availability (GA) release of SSMS. If you need
 | Query Store UI | Fixed an issue where the Y-axis didn't scale when *Execution Count* Metric was selected in *Tracked Query* View. |
 | Vulnerability Assessment | Disabled clearing and approving baseline for Azure SQL DBs.|
 
-### Known issues (18.3.1)
+#### Known issues (18.3.1)
 
 - Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
@@ -163,9 +163,9 @@ SSMS 18.3.1 is the latest general availability (GA) release of SSMS. If you need
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
-## 18.2
+### 18.2
 
-![download](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+![download](../ssdt/media/download.png) [Download SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 Release number: 18.2  
 Build number: 15.0.18142.0  
@@ -173,7 +173,7 @@ Release date: July 25, 2019
 
 18.2 is an update to 18.1 with the following new items and bug fixes.
 
-## What's new in 18.2
+### What's new in 18.2
 
 |  New Item  |  Details  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -187,7 +187,7 @@ Release date: July 25, 2019
 | SMO | Added support for *SQL Assessment API*. For more information, see [SQL Assessment API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
 |  |  |
 
-## Bug fixes in 18.2
+#### Bug fixes in 18.2
 
 |  New Item  |  Details  |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -223,7 +223,7 @@ Release date: July 25, 2019
 |**SSMS Setup**| **Mitigated an issue where SSMS setup was incorrectly blocking the installation of SSMS reporting mismatching languages. This could have been an issue in some abnormal situations, like an aborted setup or an incorrect uninstall of a previous version of SSMS. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37483594/) for more details.** |
 | XEvent Profiler | Fixed a crash when the viewer is being closed. |
 
-### Known issues (18.2)
+#### Known issues (18.2)
 
 - Database Diagram created from on an SSMS running on machine A cannot be modified from machine B (it would crash SSMS). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
@@ -235,9 +235,9 @@ Release date: July 25, 2019
 
 - The default language for SQL logins may display as Arabic in the Login Properties dialog, regardless of the actual default language set for the login. To view the actual default language for a given login, use T-SQL to select the login's **default_language_name** from **master.sys.server_principles**.
 
-## 18.1
+### 18.1
 
-![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+![download](../ssdt/media/download.png) [Download SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Release number: 18.1  
 - Build number: 15.0.18131.0  
@@ -247,7 +247,7 @@ Release date: July 25, 2019
 
 18.1 is a small update to 18.0 with the following new item and bug fixes.
 
-## What's new in 18.1
+#### What's new in 18.1
 
 | New item| Details|
 | :-------| :------|
@@ -255,7 +255,7 @@ Release date: July 25, 2019
 | SSBDIAGNOSE.EXE |The SQL Server Diagnose (command-line tool) was added back into the SSMS package.|
 | Integration Services (SSIS) | Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item is shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database managed instance.|
 
-## Bug fixes in 18.1
+#### Bug fixes in 18.1
 
 | New Item | Details |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -297,7 +297,7 @@ Release date: July 25, 2019
 | XEvent UI | Added "Package" column to XEvents list to disambiguate events with identical names. |
 | XEvent UI | Added missing "EXTERNAL LIBRARY" class type mapping to XEventUI. |
 
-### Known issues (18.1)
+#### Known issues (18.1)
 
 - Users may see an error when dragging a table object from the Object Explorer into the Query Editor. We are aware of the issue, and the fix is planned for the next release.
 
@@ -307,9 +307,9 @@ Release date: July 25, 2019
 
 - Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
-## 18.0
+### 18.0
 
-![download](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+![download](../ssdt/media/download.png) [Download SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - Release number: 18.0  
 - Build number: 15.0.18118.0  
@@ -317,7 +317,7 @@ Release date: July 25, 2019
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
-### What's new in 18.0
+#### What's new in 18.0
 
 | New item| Details|
 | :-------| :------|
@@ -403,7 +403,7 @@ Release date: July 25, 2019
 |Vulnerability Assessment|Added a new exporting feature to export the vulnerability assessment scan results to Excel.|
 |XEvent Viewer|XEvent Viewer: enabled showplan window for more XEvents.|
 
-### Bug fixes in 18.0
+#### Bug fixes in 18.0
 
 | New item| Details|
 | :-------| :------|
@@ -547,7 +547,7 @@ Release date: July 25, 2019
 |XEvent Profiler|Fixed an issue where XEvent Profiler failed to launch when connected to a 96-core SQL Server.|
 |XEvent Viewer|Fixed an issue where XEvent Viewer was crashing when trying to group the events using the "Extended Event Toolbar Options".|
 
-### Deprecated and removed features in 18.0
+#### Deprecated and removed features in 18.0
 
 Deprecated / Removed Features
 - T-SQL Debugger
@@ -570,7 +570,7 @@ Deprecated / Removed Features
 - Removed node "Maintenance > Legacy" in Object Explorer.
   - The old "Database Maintenance Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes continue to work as usual.
 
-### Known issues (18.0)
+#### Known issues (18.0)
 
 - You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, follow the steps from the [SSMS2018 - Installed, but not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) article.
 
@@ -578,9 +578,9 @@ Deprecated / Removed Features
 
 - There are redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) for more details. A workaround for this issue is to disable hardware acceleration under Tools > Options.
 
-## 17.9.1
+### 17.9.1
 
-![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+![download](../ssdt/media/download.png) [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Release number: 17.9.1<br>
 - Build number: 14.0.17289.0<br>
@@ -597,7 +597,7 @@ Deprecated / Removed Features
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-### Uninstall and reinstall SSMS 17.x
+#### Uninstall and reinstall SSMS 17.x
 
 If your SSMS installation is having problems, and a standard uninstall and reinstall doesn't resolve them, you can first try [repairing](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, the following steps have been found to fix many random issues:
 
@@ -621,9 +621,9 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 6. Upgrade to the [latest version of the Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) if you're not currently up to date.
 
-## 16.5.3
+### 16.5.3
 
-![download](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+![download](../ssdt/media/download.png) [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 
 - Release number: 16.5.3<br>
 - Build number: 13.0.16106.4<br>

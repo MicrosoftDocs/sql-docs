@@ -15,9 +15,13 @@ mtps_version: v=MSDN.10
 
 # Latest updates for Microsoft SQL Server
 
-Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to  receive information about updates and to download the updates.
+Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to receive information about updates and to download the updates.
 
-This page tracks the latest updates to all supported versions of SQL Server. For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](https://support.microsoft.com/lifecycle/).
+This page tracks the latest updates to all supported versions of SQL Server. 
+
+For information about previous updates, see the [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/). 
+
+For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](https://support.microsoft.com/lifecycle/). 
 
 ## Latest updates
 
@@ -60,3 +64,5 @@ Each of the following links provides information for all of the applicable produ
   - [SQL Server DevCenter](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server TechCenter](https://technet.microsoft.com/sqlserver/default.aspx)
   - [SQL Server Product Information Center](https://www.microsoft.com/sqlserver/default.aspx)
+  - [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/)
+  - [SQL Server release blogs](https://aka.ms/sqlreleases)

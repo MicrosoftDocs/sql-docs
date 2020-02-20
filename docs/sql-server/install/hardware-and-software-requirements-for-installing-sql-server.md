@@ -60,7 +60,7 @@ For SQL Server on Linux, see [Hardware and Software Requirements for [!INCLUDE[s
 
 You can get relevant installation media from the following locations: 
   
-- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
+- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
 - [Azure virtual machine with SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal)
 - [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)

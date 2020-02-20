@@ -77,7 +77,7 @@ The following Transact-SQL commands are used in this section:
   * Configured for processing pushed down to the server (`PUSHDOWN = ON`)
   * Using the `credential_name` credential
 
-    ```sql
+  ```sql
   CREATE EXTERNAL DATA SOURCE external_data_source_name
   WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
   CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};

@@ -60,7 +60,7 @@ To use **sqlmlutils**, you first need to install it on the client computer that 
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## Add a Python package on SQL Server

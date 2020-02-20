@@ -440,8 +440,6 @@ Performs the bulk-copy operation using the native (database) data types of the d
 
 ## Remarks<a name="remarks"></a>
 
-### Check installed version
-
 - The **bcp** 13.0 client is installed when you install [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] tools. If tools are installed for both [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], depending on the order of values of the PATH environment variable, you might be using the earlier **bcp** client instead of the **bcp** 13.0 client. This environment variable defines the set of directories used by Windows to search for executable files. To discover which version you are using, run the **bcp /v** or **bcp -v** command at the Windows Command Prompt. For information about how to set the command path in the PATH environment variable, see [Environment Variables](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) or search for Environment Variables in Windows Help.
 
     To make sure the newest version of the bcp utility is running you need to remove any older versions of the bcp utility.

@@ -1,7 +1,7 @@
 ---
 title: "managed_backup.sp_backup_config_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "02/20/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -61,10 +61,10 @@ EXEC managed_backup.sp_backup_config_schedule
  The duration of the backup time window. Note that there is no guarantee that backups will be completed during the time window defined by @backup_begin_time and @backup_duration. Backup operations that are started in this time window but exceed the duration of the window will not be cancelled.  
   
  @log_backup_freq  
- This determines the frequency of transaction log backups. These backups happen at regular intervals rather than on the schedule specified for the database backups. @log_backup_freq can be in minutes or hours and 0 is valid, which indicates no log backups. Disabling log backups would only be appropriate for databases with a simple recovery model.  
+ This determines the frequency of transaction log backups. These backups happen at regular intervals rather than on the schedule specified for the database backups. @log_backup_freq can be in minutes or hours and `0:00` is valid, which indicates no log backups. Disabling log backups would only be appropriate for databases with a simple recovery model.  
   
 > [!NOTE]  
->  If the recovery model changes from simple to full, you need to reconfigure the log_backup_freq from 0 to a non-zero value.  
+>  If the recovery model changes from simple to full, you need to reconfigure the log_backup_freq from `0:00` to a non-zero value.  
   
 ## Return Code Value  
  0 (success) or 1 (failure)  

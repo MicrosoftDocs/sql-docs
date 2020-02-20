@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 11/04/2019
+ms.date: 02/19/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: language-extensions
@@ -27,12 +27,11 @@ Registers external language extensions in the database from the specified file p
 CREATE EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH (<option_spec>)
 [ ; ]  
 
 <file_spec> ::=  
 {
-    ( CONTENT = { <external_lang_specifier> | <content_bits>,
+    ( CONTENT = { <external_lang_specifier> | <content_bits> },
     FILE_NAME = <external_lang_file_name>
     [ , PLATFORM = <platform> ]
     [ , PARAMETERS = <external_lang_parameters> ]

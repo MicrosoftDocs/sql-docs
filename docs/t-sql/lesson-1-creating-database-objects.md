@@ -262,6 +262,35 @@ To test the stored procedure, type and execute the following statement. The proc
   GO  
   ```  
 
+## Delete test database
+
+> [!CAUTION]
+> This section is optional. Do not complete this section if you plan on proceeding to [lesson 2](lesson-2-configuring-permissions-on-database-objects.md).
+
+If the steps before this section failed, you can drop the database, and then start over at [Create a database](#create-a-database).
+
+The following command removes the test database. The change cannot be un-done. Use the following command only to reset the test scenario. 
+
+To drop the database, run the following command.
+
+```sql
+USE [master]
+GO
+
+ALTER DATABASE [TestData] 
+ SET SINGLE_USER 
+ WITH ROLLBACK IMMEDIATE
+GO
+
+DROP DATABASE [TestData]
+GO
+
+CREATE DATABASE [TestData] 
+GO
+```
+
+After the previous command completes, return to [Create a database](#create-a-database) to start the lesson over. 
+
 ## Next steps
 The next article teaches you how to configure permissions on database objects. The objects created in lesson 1 will also be used in lesson 2. 
 

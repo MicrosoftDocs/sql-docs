@@ -51,7 +51,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   
- - **Azure SQL Database or Azure SQL Data Warehouse**:
+ - **Azure SQL Database**:
  
     This argument is used to specify a blob URL (including the storage endpoint and container). While it does not support an asterisk wildcard, you can use a partial file (blob) name prefix (instead of the full blob name) to collect multiple files (blobs) that begin with this prefix. For example:
  

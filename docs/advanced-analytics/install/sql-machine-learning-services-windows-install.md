@@ -35,7 +35,7 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Machine Learning Services is installed by default on SQL Server Big Data Clusters. You don't need to follow the steps in this article if you use a Big Data Cluster. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+> Machine Learning Services is installed by default on **SQL Server Big Data Clusters**. You don't need to follow the steps in this article if you use a **Big Data Cluster**. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
 > [!IMPORTANT]

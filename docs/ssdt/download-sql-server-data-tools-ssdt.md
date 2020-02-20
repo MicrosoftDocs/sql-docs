@@ -100,6 +100,12 @@ This release of **SSDT for VS 2017** can be installed in the following languages
 * [Russian]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
 * [Spanish]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
 
+### Considerations and limitations
+
+* You can’t install the community version offline
+
+* To upgrade SSDT, you need to follow the same path used to install SSDT. For example, if you added SSDT using the VSIX extensions, then you must upgrade via the VSIX extensions. If you installed SSDT via a separate install, then you need to upgrade using that method.
+
 ## Offline install
 
 To install SSDT when you’re not connected to the internet, follow the steps in this section. For more information, see [Create a network installation of Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio).
@@ -128,12 +134,6 @@ For available options, run `SSDT-Setup-ENU.exe /help`
 > [!NOTE]
 > If using a full version of Visual Studio 2017, create an offline folder for SSDT only, and run `SSDT-Setup-ENU.exe` from this newly created folder (don’t add SSDT to another Visual Studio 2017 offline layout). If you add the SSDT layout to an existing Visual Studio offline layout, the necessary runtime (.exe) components are not created there.
 
-### Considerations and limitations
-
-* You can’t install the community version offline
-
-* To upgrade SSDT, you need to follow the same path used to install SSDT. For example, if you added SSDT using the VSIX extensions, then you must upgrade via the VSIX extensions. If you installed SSDT via a separate install, then you need to upgrade using that method.
-
 ## Supported SQL versions
 
 |Project Templates|SQL Platforms Supported|
@@ -144,7 +144,7 @@ For available options, run `SSDT-Setup-ENU.exe /help`
 
 ## DacFx
 
-SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4.1: [Download Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
+SSDT for Visual Studio 2015 and 2017 both use DacFx 17.4.1: [Download Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
 
 ## Previous versions
 
@@ -172,4 +172,4 @@ After installing SSDT, work through these tutorials to learn how to create datab
 
 * [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)
 
-*[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+* [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

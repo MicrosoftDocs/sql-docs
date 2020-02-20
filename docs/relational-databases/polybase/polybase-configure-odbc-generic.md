@@ -38,7 +38,7 @@ In the example above, the name of the driver is circled in red. Use this name wh
 > [!IMPORTANT]
 > In order to improve query performance, enable connection pooling. This can be accomplished from the **ODBC Data Source Administrator**.
 
-## Create an External Table
+## Create an external table
 
 To query the data from an ODBC data source, you must create external tables to reference the external data. This section provides sample code to create external tables.
 

@@ -48,51 +48,51 @@ The following Transact-SQL commands are used in this section:
 
 1. Create a database scoped credential for accessing the ODBC source.
 
-  ```sql
-  CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
-  ```
+    ```sql
+    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    ```
 
-  For example, the following example creates a credential named `credential_name`, with an identity of `username` and a complex password.
+    For example, the following example creates a credential named `credential_name`, with an identity of `username` and a complex password.
 
-  ```sql
-  CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'BycA4ZjrE#*2W%!';
-  ```
+    ```sql
+    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'BycA4ZjrE#*2W%!';
+    ```
 
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-  ```sql
-  CREATE EXTERNAL DATA SOURCE <external_data_source_name>
-  WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
-  CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
-  ServerNode = <name of server  address>:<Port>',
-  -- PUSHDOWN = [ON] | OFF,
-  CREDENTIAL = <credential_name> );
-  ```
+    ```sql
+    CREATE EXTERNAL DATA SOURCE <external_data_source_name>
+    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+    CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
+    ServerNode = <name of server  address>:<Port>',
+    -- PUSHDOWN = [ON] | OFF,
+    CREDENTIAL = <credential_name> );
+    ```
 
-  The following example creates an external data source:
-  * Named `external_data_source_name`
-  * Located at the ODBC server address and port
-  * Connecting with `CData ODBC Driver For SAP 2015` - This is the driver created under [Install the ODBC driver]()
-  * On `ServerNode` `<name of server  address>:<Port>`
-  * Configured for processing pushed down to the server (`PUSHDOWN = ON`)
-  * Using the `credential_name` credential
+    The following example creates an external data source:
+    * Named `external_data_source_name`
+    * Located at the ODBC server address and port
+    * Connecting with `CData ODBC Driver For SAP 2015` - This is the driver created under [Install the ODBC driver]()
+    * On `ServerNode` `<name of server  address>:<Port>`
+    * Configured for processing pushed down to the server (`PUSHDOWN = ON`)
+    * Using the `credential_name` credential
 
-  ```sql
-  CREATE EXTERNAL DATA SOURCE external_data_source_name
-  WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
-  CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
-  ServerNode = <name of server  address>:<Port>',
-  PUSHDOWN = ON,
-  CREDENTIAL = credential_name );
-  ```
+    ```sql
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+    CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
+    ServerNode = <name of server  address>:<Port>',
+    PUSHDOWN = ON,
+    CREDENTIAL = credential_name );
+    ```
 
 1. **Optional:** Create statistics on an external table.
 
-  For optimal query performance, we recommend creating statistics on external table columns especially the ones used for joins, filters, and aggregates.
+    For optimal query performance, we recommend creating statistics on external table columns especially the ones used for joins, filters, and aggregates.
 
-  ```sql
-  CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
-  ```
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    ```
 
 >[!IMPORTANT]
 >Once you have created an external data source, use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a query-able table over that source.

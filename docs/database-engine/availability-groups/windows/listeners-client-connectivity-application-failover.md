@@ -51,7 +51,7 @@ For essential information about availability group listeners, see [Create or Con
  For a given availability group listener, the IP address can use either Dynamic Host Configuration Protocol (DHCP), or one or more static IP address. Using DHCP can cause connectivity delays during failover, and so it is not recommended for use in production environments. Availability groups that extend across multiple subnets, or use hybrid network configurations, must use a static IP address. 
  
   
-##  <a name="SelectListenerPort"></a> Select port 
+##  <a name="SelectListenerPort"></a> Listener port 
  When configuring an availability group listener, you must designate a port.  You can configure the default port to 1433 in order to allow for simplicity of the client connection strings. If using 1433, you do not need to designate a port number in a connection string.   Also, since each availability group listener will have a separate virtual network name, each availability group listener configured on a single WSFC can be configured to reference the same default port of 1433.  
   
  You can also designate a non-standard listener port; however this means that you will also need to explicitly specify a target port in your connection string whenever connecting to the availability group listener.  You will also need to open permission on the firewall for the non-standard port.  
@@ -60,7 +60,7 @@ For essential information about availability group listeners, see [Create or Con
   
  If one of the instances of SQL Server is already listening on TCP port 1433 via the instance listener and there are no other services (including additional instances of SQL Server) on the computer listening on port 1433, this will not cause a port conflict with the availability group listener.  This is because the availability group listener can share the same TCP port inside the same service process.  However multiple instances of SQL Server (side-by-side) should not be configured to listen on the same port.  
   
-##  <a name="ConnectToPrimary"></a> Connect to the Primary Replica  
+##  <a name="ConnectToPrimary"></a> Connect to the primary replica  
 
 Specify the availability group listener DNS name in the connection string to connect to the primary replica for read-write access. During a failover, when the primary replica changes, existing connections to the listener are disconnected and new connections are routed to the new primary replica.  
 
@@ -73,7 +73,7 @@ Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI
 
 You can still connect directly to the instance of SQL Server using the instance name of the primary or secondary replica instead of using the availability group listener. However, you will then lose the benefit of new connections being routed automatically to the new current primary replica. Additionally, you will lose the benefit of read-only routing, where connections specified with `read-intent` are automatically routed to the readable secondary replica. 
 
-##  <a name="ReadOnlyAppIntent"></a> Read-Only Application Intent and Read-Only Routing  
+##  <a name="ReadOnlyAppIntent"></a> Read-only routing  
  The application intent connection string property expresses the client application's request to be directed either to a read-write or read-only version of an availability group database. To use read-only routing, a client must use an application intent of read-only in the connection string when connecting to the availability group listener. Without the read-only application intent, connections to the availability group listener are directed to the database on the primary replica.  
   
  The application intent attribute is stored in the client's session during login and the instance of SQL Server will then process this intent and determine what to do according to the configuration of the availability group and the current read-write state of the target database in the secondary replica.  
@@ -92,7 +92,18 @@ The application intent can be sent from a client driver to a down-level instance
   
 You can bypass read-only routing by not setting the application intent connection property to **ReadOnly** (when not designated, the default is **ReadWrite** during login) or by connecting directly to the primary replica instance of SQL Server instead of using the availability group listener name.  Read-only routing will also not occur if you connect directly to a read-only replica.  
 
+    
+##  <a name="ConfigureARsForROR"></a> Configure read-only routing  
+ A database administrator must configure the availability replicas as follows:  
   
+1. For each replica you want to configure as a readable secondary replica, set the settings for the secondary role: 
+
+    -   Connection access must be set to "all" or "read only".  
+  
+    -   The read-only routing URL must be specified.  
+  
+2.  For each of these replicas, a read-only routing list must be specified for the primary role. Specify one or more server names as routing targets.  
+
 ##  <a name="ConnectToSecondary"></a> Connect to a read-only replica 
 
 _Read-only routing_ refers to automatically routing incoming listener connections to a readable secondary replica that is configured to allow read-only workloads. 
@@ -105,17 +116,6 @@ Connections are automatically routed to the read-only replica if the following a
 -   The connection string references a database involved in the Availability Group. An alternative to this would be the login used in the connection has the database configured as its default database. For more information, see [this article on how the algorithm works with read-only routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
 
 -   The connection string references an availability group listener, and the application intent of the incoming connection is set to read-only (for example, by using the **Application Intent=ReadOnly** keyword in the ODBC or OLEDB connection strings or connection attributes or properties). 
-  
-##  <a name="ConfigureARsForROR"></a> Configure read-only routing  
- A database administrator must configure the availability replicas as follows:  
-  
-1. For each replica you want to configure as a readable secondary replica, set the settings for the secondary role: 
-
-    -   Connection access must be set to "all" or "read only".  
-  
-    -   The read-only routing URL must be specified.  
-  
-2.  For each of these replicas, a read-only routing list must be specified for the primary role. Specify one or more server names as routing targets.  
   
 ####  <a name="RelatedTasksROR"></a> Related Tasks  
   
@@ -175,7 +175,7 @@ CN = ServerFQDN
 SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
 ```  
   
-##  <a name="SPNs"></a> Availability Group Listeners and Service Principal Names (SPNs)  
+##  <a name="SPNs"></a> Listeners & Kerberos (SPNs) 
 
 A domain administrator must configure a Service Principal Name (SPN) in Active Directory for each availability group listener to enable Kerberos for client connections to the listener. When registering the SPN, you must use the service account of the server instance that hosts the availability replica .  For the SPN to work across all replicas, the same service account must be used for all instances in the WSFC cluster that hosts the availability group.  
   

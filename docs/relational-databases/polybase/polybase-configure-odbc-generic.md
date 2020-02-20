@@ -14,7 +14,9 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproduc
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sources through the ODBC connector. 
+PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sources through the ODBC connector.
+
+This article provides some examples using an ODBC driver. Check with your ODBC provider for specific examples.
 
 ## Prerequisites
 
@@ -71,17 +73,17 @@ The following Transact-SQL commands are used in this section:
 
     The following example creates an external data source:
     * Named `external_data_source_name`
-    * Located at the ODBC server address and port
+    * Located at the ODBC `SERVERNAME` and port `4444`
     * Connecting with `CData ODBC Driver For SAP 2015` - This is the driver created under [Install the ODBC driver](#install-the-odbc-driver)
-    * On `ServerNode` `<name of server  address>:<Port>`
+    * On `ServerNode` `sap_server_node` port `5555`
     * Configured for processing pushed down to the server (`PUSHDOWN = ON`)
     * Using the `credential_name` credential
 
     ```sql
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+    WITH ( LOCATION = odbc://SERVERNAME:4444,
     CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
-    ServerNode = <name of server  address>:<Port>',
+    ServerNode = sap_server_node:5555',
     PUSHDOWN = ON,
     CREDENTIAL = credential_name );
     ```

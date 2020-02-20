@@ -72,7 +72,7 @@ The following Transact-SQL commands are used in this section:
     The following example creates an external data source:
     * Named `external_data_source_name`
     * Located at the ODBC server address and port
-    * Connecting with `CData ODBC Driver For SAP 2015` - This is the driver created under [Install the ODBC driver]()
+    * Connecting with `CData ODBC Driver For SAP 2015` - This is the driver created under [Install the ODBC driver](#install-the-odbc-driver)
     * On `ServerNode` `<name of server  address>:<Port>`
     * Configured for processing pushed down to the server (`PUSHDOWN = ON`)
     * Using the `credential_name` credential

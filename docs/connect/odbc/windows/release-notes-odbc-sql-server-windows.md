@@ -16,7 +16,7 @@ manager: kenvh
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This release notes article describes what's new for the Microsoft ODBC driver to SQL Server on Windows.
+This release notes article describes what's new for the Microsoft ODBC driver for SQL Server on Windows.
 
 <!--
 PLEASE USE THE STANDARD 2-COLUMN TABLE FORMAT!

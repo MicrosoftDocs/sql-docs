@@ -144,10 +144,10 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 
 ### macOS
 
+- macOS 10.15 Catalina
+- macOS 10.14 Mojave
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
-- macOS 10.14 Mojave
-- macOS 10.15 Catalina
 
 ### Linux
 

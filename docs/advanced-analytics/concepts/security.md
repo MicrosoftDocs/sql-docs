@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework. It examines the securables, services, process identity, and permissions. For more information about the key concepts and components of extensibility in SQL Server, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md)].
+This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework. It examines the securables, services, process identity, and permissions. For more information about the key concepts and components of extensibility in SQL Server, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
 
 ## Securables for external script
 
@@ -65,6 +65,8 @@ Therefore, all external scripts that are initiated from a remote client must spe
 
 <a name="launchpad"></a>
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+
 ## Services used in external processing (Launchpad)
 
 The extensibility framework adds one new NT service to the [list of services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in a SQL Server installation: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
@@ -76,7 +78,23 @@ In addition to launching external processes, Launchpad is also responsible for t
 > [!NOTE]
 > By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. For more information about configurable options, see [SQL Server Launchpad service configuration](../security/sql-server-launchpad-service-account.md).
 
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+## Services used in external processing (Launchpad)
+
+The extensibility framework adds one new daemon in a SQL Server installation: [mssql-launchpadd](extensibility-framework.md#launchpad).
+
+Only one database engine instance is supported and there is one launchpadd service bound to the instance. When a script is executed, the launchpadd service starts a separate launchpad process with the low-privileged user account mssql_satellite. Each satellite process inherits the mssql_satellite user account of launchpad and uses that for the duration of script execution.
+
+For more details, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
+
+::: moniker-end
+
 <a name="sqlrusergroup"></a>
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 
 ## Identities used in processing (SQLRUserGroup)
 
@@ -90,24 +108,13 @@ In addition to launching external processes, Launchpad is also responsible for t
 
 Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Modify the user account pool for machine learning](../../advanced-analytics/administration/modify-user-account-pool.md).
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-### AppContainer isolation in SQL Server 2019
-
-In SQL Server 2019, Setup no longer creates worker accounts for **SQLRUserGroup**. Instead, isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when an external script is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
-
-As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls. For more information, see [Firewall configuration for SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
-
-> [!Note]
-> In SQL Server 2019, **SQLRUserGroup** only has one member which is now the single SQL Server Launchpad service account instead of multiple worker accounts.
-::: moniker-end
-
 ### Permissions granted to SQLRUserGroup
 
 By default, members of **SQLRUserGroup** have read and execute permissions on files in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, with access to executables, libraries, and built-in datasets in the R and Python distributions installed with SQL Server. 
 
 To protect sensitive resources on SQL Server, you can optionally define an access control list (ACL) that denies access to **SQLRUserGroup**. Conversely, you could also grant permissions to local data resources that exist on host computer, apart from SQL Server itself. 
 
-By design, **SQLRUserGroup** does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loop back connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
+By design, **SQLRUserGroup** does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loopback connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## Identity mapping
 
@@ -115,11 +122,40 @@ When a session is started, Launchpad maps the identity of the calling user to a 
 
 During execution, Launchpad creates temporary folders to store session data, deleting them when the session concludes. The directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created. If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
 
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+## AppContainer isolation
+
+Isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when an external script is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
+
+As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls. For more information, see [Firewall configuration for SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
+
+## Identity mapping
+
+When a session is started, Launchpad maps the identity of the calling user to an **AppContainer**.
+
+> [!Note]
+> In SQL Server 2019 and later, **SQLRUserGroup** only has one member which is now the single SQL Server Launchpad service account instead of multiple worker accounts.
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+## Identity mapping
+
+LAUNCHPADD (double 'D' - [mssql-launchpadd](extensibility-framework.md#launchpad)) daemon maps the identity of the calling user to a separate LAUNCHPAD (single 'D') with a “launchpad GUID” folder and a satellite certificate. These launchpad GUID folders are created under `/var/opt/mssql-extensibility/data/`. The LAUNCHPAD uses this certificate to authenticate back to SQL, and then creates temporary folders for each session GUID under the launchpad GUID folder. The satellite (R or Python) process can access the launchpad GUID folder, the certificate under it, and its session GUID folder.
+
+::: moniker-end
+
 <a name="implied-authentication"></a>
 
-## Implied authentication (loop back requests)
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 
-*Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loop back requests for data or operations. As a concept, implied authentication is unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loop back*.
+## Implied authentication (loopback requests)
+
+*Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loopback requests for data or operations. As a concept, implied authentication is unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loopback*.
 
 Trusted connections are workable from R and Python script, but only with additional configuration. In the extensibility architecture, R and Python processes run under worker accounts, inheriting permissions from the parent **SQLRUserGroup**. When a connection string specifies `Trusted_Connection=True`, the identity of the worker account is presented on the connection request, which is unknown by default to SQL Server.
 
@@ -136,6 +172,32 @@ The following diagram shows the interaction of SQL Server components with the R 
 The next diagram shows the interaction of SQL Server components with the Python runtime and how it does implied authentication for Python.
 
 ![Implied authentication for Python](../security/media/implied-auth-python2.png)
+
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+## Implied authentication (loopback requests)
+
+*Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loopback requests for data or operations. As a concept, implied authentication is unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loopback*.
+
+By managing identity and credentials, the AppContainer prevents the use of user credentials to gain access to resources or login to other environments. The AppContainer environment creates an identifier that uses the combined identities of the user and the application, so credentials are unique to each user/application pairing and the application cannot impersonate the user. For more information, see [AppContainer Isolation](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation).
+
+For details regarding loopback connections, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+## Implied authentication (loopback requests)
+
+*Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loopback requests for data or operations. It is sometimes also referred to as a loopback.
+
+A loopback connection is achieved by using the satellite certificate from the launchpad GUID folder to authenticate back to SQL Server by the satellite process. The identity of the calling user is mapped to this certificate and hence the satellite process connecting back to SQL using the certificate can be mapped back to the calling user.
+
+For details, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
+
+::: moniker-end
 
 ## No support for Transparent Data Encryption at rest
 

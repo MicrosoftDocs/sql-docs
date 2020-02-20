@@ -16,7 +16,7 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproduc
 
 PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sources through the ODBC connector.
 
-This article provides some examples using an ODBC driver. Check with your ODBC provider for specific examples.
+This article provides some examples using an ODBC driver. Check with your ODBC provider for specific examples. Reference the ODBC driver documentation for the data source to determine the appropriate connection string options. The examples in this article may not apply to any specific ODBC driver.
 
 ## Prerequisites
 

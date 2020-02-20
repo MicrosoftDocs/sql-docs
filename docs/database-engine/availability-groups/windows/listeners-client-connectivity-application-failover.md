@@ -44,7 +44,7 @@ For essential information about availability group listeners, see [Create or Con
  **A unique DNS name**  
  This is also known as a Virtual Network Name (VNN). Active Directory naming rules for DNS host names apply. For more information, see the [Naming conventions in Active Directory for computers, domains, sites, and OUs](https://support.microsoft.com/kb/909264) KB article.  
   
-**One or more Virtual IP addresses (VIPs)** 
+**One or more Virtual IP addresses (VIPs)**  
  VIPs are configured for one or more subnets to which the availability group can fail over.  
   
 **IP address configuration**  

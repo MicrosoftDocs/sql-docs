@@ -1,6 +1,6 @@
 ---
 title: "Access external data: ODBC generic types - PolyBase"
-ms.date: 12/13/2019
+ms.date: 02/19/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -18,23 +18,23 @@ PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sourc
 
 ## Prerequisites
 
-Note = feature only works on SQL Server on Windows. 
+>[!NOTE]
+>This feature requires SQL Server on Windows.
 
-If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md).
+* [PolyBase installation](polybase-installation.md).
 
- Before creating a database scoped credential, a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created. 
+* Before creating a database scoped credential, a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created.
 
-First download and install the ODBC driver of the data source you want to connect to on each of the PolyBase nodes. Once the driver is properly installed, you can view and test the driver from the "ODBC Data Source Administrator".
+## Install the ODBC driver
+
+First, download and install the ODBC driver of the data source you want to connect to on each of the PolyBase nodes. Once the driver is properly installed, you can view and test the driver from the **ODBC Data Source Administrator**.
 
 ![PolyBase scale-out groups](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-> **IMPORTANT!**
-> 
-> In order to improve query performance make sure that the driver has connection pooling enabled. This can be accomplished from the "ODBC Data Source Administrator".
-> 
-> **Note**
-> 
-> The name of the driver (example circled above) will need to be specified when creating the external data source (Step 3 below).
+In the example above, the name of the driver is circled in red. Use this name when you create the external data source.
+
+> [!IMPORTANT]
+> In order to improve query performance, enable connection pooling. This can be accomplished from the **ODBC Data Source Administrator**.
 
 ## Create an External Table
 
@@ -42,46 +42,60 @@ To query the data from an ODBC data source, you must create external tables to r
 
 The following Transact-SQL commands are used in this section:
 
-- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
-- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
+* [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Create a database scoped credential for accessing the ODBC source.
 
-    ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source. 
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
-    ```
+  ```sql
+  CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+  ```
+
+  For example, the following example creates a credential named `credential_name`, with an identity of `username` and a complex password.
+
+  ```sql
+  CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'BycA4ZjrE#*2W%!';
+  ```
 
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
+  ```sql
+  CREATE EXTERNAL DATA SOURCE <external_data_source_name>
+  WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+  CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
+  ServerNode = <name of server  address>:<Port>',
+  -- PUSHDOWN = [ON] | OFF,
+  CREDENTIAL = <credential_name> );
+  ```
+
+  The following example creates an external data source:
+  * Named `external_data_source_name`
+  * Located at the ODBC server address and port
+  * Connecting with `CData ODBC Driver For SAP 2015` - This is the driver created under [Install the ODBC driver]()
+  * On `ServerNode` `<name of server  address>:<Port>`
+  * Configured for processing pushed down to the server (`PUSHDOWN = ON`)
+  * Using the `credential_name` credential
+
     ```sql
-    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *CONNECTION_OPTIONS: Specify driver location
-    *  CREDENTIAL: the database scoped credential, created above.
-    */  
-    CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
-    CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
-    ServerNode = <name of server  address>:<Port>',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = credential_nam );
-    ```
+  CREATE EXTERNAL DATA SOURCE external_data_source_name
+  WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+  CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
+  ServerNode = <name of server  address>:<Port>',
+  PUSHDOWN = ON,
+  CREDENTIAL = credential_name );
+  ```
 
 1. **Optional:** Create statistics on an external table.
 
-For optimal query performance, we recommend creating statistics on external table columns especially the ones used for joins, filters, and aggregates.
+  For optimal query performance, we recommend creating statistics on external table columns especially the ones used for joins, filters, and aggregates.
 
-    ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
-    ```
+  ```sql
+  CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+  ```
 
->[!IMPORTANT] 
->Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source. 
+>[!IMPORTANT]
+>Once you have created an external data source, use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a query-able table over that source.
 
 ## Next steps
 

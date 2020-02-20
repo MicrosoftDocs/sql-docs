@@ -17,7 +17,10 @@ Learn how to run Python and R scripts in a notebooks in [Azure Data Studio](http
 ## Prerequisites
 
 - [Download and install Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) on your workstation computer. Azure Data Studio is cross-platform, and runs on Windows, MacOS, and Linux.
-- [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md) or 
+- A server with SQL Server Machine Learning Services installed. You can run Machine Learning Services on Windows, Linux, or SQL Server Big Data Clusters:
+    - [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md) 
+    - [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
+    - [Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 
 ## Create a SQL notebook
 

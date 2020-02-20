@@ -23,10 +23,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ## SSDT for Visual Studio 2019
 
-Release number: 16.4.5  
-Build number: 16.4.29806.167  
-Release date: February 11, 2020
-
 ### Changes in SSDT for Visual Studio 2019
 
 The core SSDT functionality to create database projects has remained integral to Visual Studio.
@@ -50,10 +46,6 @@ If you don’t have a [Visual Studio 2019](https://docs.microsoft.com/visualstud
 * For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) from either *Tools > Extensions and Updates* or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
 ## SSDT for Visual Studio 2017
-
-* Release number: 15.9.3  
-* Build number: 14.0.16203.0  
-* Release date: January 3, 2020
 
 ### Changes in SSDT for Visual Studio 2017
 
@@ -85,7 +77,6 @@ The installer lists available Visual Studio instances to add SSDT tools. If Visu
 > * Before installing SSDT for Visual Studio 2017 (15.9.3), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
 > * Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/en-us/download/details.aspx?id=100619).
 > * Removed the inbox component Microsoft Oracle Connector for SQL Server 2019. Now we have announced Microsoft Oracle Connector for SQL Server 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/en-us/download/details.aspx?id=58228).
-> * Please use SSDT for Visual Studio 2017 (15.8.0) or the previous versions for designing SSIS packages that contain Teradata Source/Destination. SSDT for Visual Studio 2017 after 15.8.0 can’t design SSIS packages that contain Teradata Source/Destination by Attunity.
 
 ### What's new
 

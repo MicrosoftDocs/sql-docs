@@ -16,7 +16,6 @@ ms.reviewer: "alayu; sstein"
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-
 Download and install the latest release:
 
 > [!NOTE]
@@ -67,6 +66,7 @@ The *user installer* is recommended because it does not require administrator pr
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**
+
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
@@ -75,6 +75,7 @@ The *user installer* is recommended because it does not require administrator pr
    ```
 
    **rpm Installation:**
+
    ```bash
    cd ~
    yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
@@ -83,7 +84,8 @@ The *user installer* is recommended because it does not require administrator pr
    ```
 
    **tar.gz Installation:**
-   ```bash 
+
+   ```bash
    cd ~ 
    cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
    tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
@@ -94,9 +96,8 @@ The *user installer* is recommended because it does not require administrator pr
 
    > [!NOTE]
    > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
-   
 
-   **Debian:** 
+   **Debian:**
    ```bash
    sudo apt-get install libunwind8
    ```
@@ -114,7 +115,9 @@ The *user installer* is recommended because it does not require administrator pr
 
    sudo apt-get install libunwind8
    ```
+
 ## Download Insiders build of Azure Data Studio
+
 In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 
 ## Uninstall Azure Data Studio
@@ -128,6 +131,7 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux, and is supported on the following platforms:
 
 ### Windows
+
 - Windows 10 (64-bit)
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)
@@ -142,6 +146,8 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
+- macOS 10.14 Mojave
+- macOS 10.15 Catalina
 
 ### Linux
 
@@ -177,7 +183,6 @@ When upgrading from the old preview to the latest Azure Data Studio, you will lo
 If you want to move your custom settings, keyboard shortcuts, or code snippets, follow the steps below. This is important to do if you are upgrading from SQL Operations Studio version to Azure Data Studio.
 
 *If you already have Azure Data Studio, or you've never installed or customized SQL Operations Studio, then you can ignore this section.*
-
 
 1. Open Settings by clicking the gear on the bottom left and clicking **Settings.**
 

@@ -73,8 +73,8 @@ The installer lists available Visual Studio instances to add SSDT tools. If Visu
 
 > [!IMPORTANT]
 > * Before installing SSDT for Visual Studio 2017 (15.9.3), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
-> * Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/en-us/download/details.aspx?id=100619).
-> * Removed the inbox component Microsoft Oracle Connector for SQL Server 2019. Now we have announced Microsoft Oracle Connector for SQL Server 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/en-us/download/details.aspx?id=58228).
+> * Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=100619).
+> * Removed the inbox component Microsoft Oracle Connector for SQL Server 2019. Now we have announced Microsoft Oracle Connector for SQL Server 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=58228).
 
 ### Release Notes
 

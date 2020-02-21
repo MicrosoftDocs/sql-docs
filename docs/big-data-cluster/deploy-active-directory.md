@@ -160,23 +160,23 @@ In addition to environment variables for credentials, you also need to provide s
 
 AD integration requires the following parameters. Add these parameters to the `control.json` and `bdc.json` files using `config replace` commands shown further down in this article. All the examples below are using the example domain `contoso.local`.
 
-- `security.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
+- `security.activeDirectory.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.dnsIpAddresses`: list of IP addresses of domain controllers
+- `security.activeDirectory.dnsIpAddresses`: list of IP addresses of domain controllers
 
-- `security.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`).
+- `security.activeDirectory.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`).
 
-- `security.domainDnsName`: Name of your domain (e.g. `contoso.local`).
+- `security.activeDirectory.domainDnsName`: Name of your domain (e.g. `contoso.local`).
 
-- `security.clusterAdmins`: This parameter takes **one AD group**. Members of this group will get administrator permissions in the cluster. This means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller. **Please note that this group needs to exist in AD before deployment begins. Also note that this group can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+- `security.activeDirectory.clusterAdmins`: This parameter takes **one AD group**. Members of this group will get administrator permissions in the cluster. This means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller. **Please note that this group needs to exist in AD before deployment begins. Also note that this group can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
 
-- `security.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
 
-- `security.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+- `security.activeDirectory.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
 
-- `security.appReaders` **Optional parameter**: list of the AD groups who have permissions to run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+- `security.activeDirectory.appReaders` **Optional parameter**: list of the AD groups who have permissions to run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
 
 **How to check AD group scope:**
 [Click here for instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) for checking the scope of an AD group, to determine if it is DomainLocal.

@@ -39,7 +39,9 @@ If [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-
 
 * For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) from either *Tools > Extensions and Updates* or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
-If you don’t have Visual Studio 2019 installed, then you can install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/). For database projects, select **SQL Server Data Tools** under **Data storage and processing** during the Visual Studio installation.
+If you don’t have Visual Studio 2019 installed, then you can download and install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/). 
+
+* For SQL database projects, select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads during installation.
 
 * For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) from either *Tools > Extensions and Updates* or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 

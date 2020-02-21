@@ -5,7 +5,7 @@ description: SQL Server Big Data Clusters allow Spark and HDFS solutions. Learn 
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -36,6 +36,10 @@ You can find all possible configurations for each at the associated Apache docum
 - Hive: https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy: https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Apache Knox Gateway: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+
+In addition to these configurations, we also offer the ability to configure whether or not Spark jobs can run in the Storage pool. 
+
+This boolean value, `includeSpark`, is in the `bdc.json` configuration file at `spec.resources.storage-0.spec.settings.spark`.
 
 ## Unsupported Configurations
 

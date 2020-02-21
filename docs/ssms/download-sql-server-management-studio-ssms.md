@@ -76,7 +76,7 @@ There are a few [known issues](release-notes-ssms.md#known-issues-184) with this
 
 This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
-## Install SQL Server Management Studio via command prompt
+## Install using the command prompt
 
 You can also install SSMS via the command prompt.
 

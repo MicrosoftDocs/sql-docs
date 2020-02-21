@@ -64,7 +64,8 @@ GRANT
     | DATABASE  
     | OBJECT  
     | ROLE  
-    | SCHEMA  
+    | SCHEMA
+    | TYPE
     | USER  
 }  
 ```  

@@ -11,7 +11,7 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 02/19/2020
+ms.date: 02/20/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 

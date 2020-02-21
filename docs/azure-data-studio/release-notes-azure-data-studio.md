@@ -9,12 +9,42 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: 12/26/2019
+ms.date: 02/19/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## February (hotfix)
+
+February 19, 2019 &nbsp; / &nbsp; version: 1.15.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #9149 Show active connections | [#9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| Fix bug #9061 Edit Data grid doesn't properly resize when showing or hiding SQL Pane | [#9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
+
+## February 2020
+
+February 13, 2019 &nbsp; / &nbsp; version: 1.15.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| New Azure Sign-in improvement | Added improved Azure Sign-in experience, including removal of copy/paste of device code to make a more seamless connected experience. |
+| Find in Notebook support | Users can now use Ctrl+F inside of a notebook. Find in Notebook support searches line by line through both code and text cells. |
+| VS Code merge from 1.38 to 1.42 | This release includes updates to VS Code from the 3 previous VS Code releases. [Read their release notes](https://code.visualstudio.com/updates/v1_42) to learn more. |
+| Fix for the ["white/blank screen"](https://github.com/microsoft/azuredatastudio/issues/8775) issue reported by many users. | |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22). |
+| &nbsp; | &nbsp; |
+
+### Known Issue
+- Users on macOS Catalina will need to right-click Azure Data Studio and then click open.
 
 ## December 2019 (hotfix)
 

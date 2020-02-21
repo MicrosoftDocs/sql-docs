@@ -133,6 +133,8 @@
       items:
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
+      - name: Configure Apache Spark & Apache Hadoop
+        href: big-data-cluster/configure-spark-hdfs.md
     - name: Data virtualization
       items:
       - name: Relational data
@@ -464,6 +466,8 @@
           href: relational-databases/backup-restore/transaction-log-backups-sql-server.md
         - name: System databases
           href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
+        - name: VSS & SQL Writer 
+          href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
       - name: Configuration
         items:
         - name: Compression
@@ -14647,7 +14651,7 @@
         href: t-sql/data-types/getancestor-database-engine.md
       - name: GetDescendant
         href: t-sql/data-types/getdescendant-database-engine.md
-      - name: GetLevel)
+      - name: GetLevel
         href: t-sql/data-types/getlevel-database-engine.md
       - name: GetRoot
         href: t-sql/data-types/getroot-database-engine.md

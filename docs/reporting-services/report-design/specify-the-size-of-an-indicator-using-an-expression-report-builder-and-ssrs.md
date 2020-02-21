@@ -1,5 +1,5 @@
 ---
-title: "Specify the Size of an Indicator Using an Expression (Report Builder and SSRS) | Microsoft Docs"
+title: "Specify the Size of an Indicator Using an Expression (Report Builder) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,5 +1,5 @@
 ---
-title: "Design Reports with Report Designer (SSRS) | Microsoft Docs"
+title: "Design Reports with Report Designer | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

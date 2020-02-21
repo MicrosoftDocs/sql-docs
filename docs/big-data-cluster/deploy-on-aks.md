@@ -65,6 +65,12 @@ An Azure resource group is a logical group in which Azure resources are deployed
    az account set --subscription <subscription id>
    ```
 
+1. Identify the Azure region where you want to deploy the cluster and the resources by using this command:
+
+   ```azurecli
+   az account list-locations -o table
+   ```
+
 1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbdcgroup` in the `westus2` location.
 
    ```azurecli
@@ -127,7 +133,7 @@ Choose the latest available version for your cluster. Record the version number.
    --kubernetes-version <version number>
    ```
 
-   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes.
+   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes. You can also change the `--node-vm-size` to select an appropriate virtual machine size that matches your workload requirements. Use the `az vm list-sizes --location westus2 -o table` command to list available virtual machine sizes in your region.
 
    After several minutes, the command completes and returns JSON-formatted information about the cluster.
 
@@ -156,6 +162,7 @@ If you have any problems creating an Azure Kubernetes Service with the previous 
 
 - Make sure that you have installed the [latest Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Try the same steps using a different resource group and cluster name.
+- Refer to the detailed [troubleshooting documentation for AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
 
 ## Next steps
 

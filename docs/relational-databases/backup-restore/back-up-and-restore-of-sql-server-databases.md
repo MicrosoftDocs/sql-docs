@@ -149,7 +149,7 @@ ms.author: mikeray
 
 ### Verify Media Stability and Consistency
 Use the verification options provided by the backup utilities (BACKUP T-SQL command, SQL Server Maintenance Plans, your backup software or solution, etc). For an example, see [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-Use advanced features like BACKUP CHECKSUM to detect problems with the backup media itself. For more information see [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+Use advanced features like BACKUP CHECKSUM to detect problems with the backup media itself. For more information see [Possible Media Errors During Backup and Restore (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
 
 ### Document Backup/Restore Strategy 
 We recommend that you document your backup and restore procedures and keep a copy of the documentation in your run book.

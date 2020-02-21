@@ -104,12 +104,14 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
 
 A materialized view in Azure data warehouse is very similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](/sql/relational-databases/views/create-indexed-views) for details) except that a materialized view supports aggregate functions.   
 
-A materialized view cannot be created on a table with dynamic data masking (DDM) enabled, even if the materialized view does not include any DDM enabled columns.  Dynamic data masking can only be enabled on a column if this column is not part of an active materialized view or a disabled materialized view. 
-
 Only CLUSTERED COLUMNSTORE INDEX is supported by materialized view. 
 
 A materialized view cannot reference other views.  
- 
+
+A materialized view cannot be created on a table with dynamic data masking (DDM) enabled, even if the materialized view does not include any DDM enabled columns.  Dynamic data masking can only be enabled on a column if this column is not part of an active materialized view or a disabled materialized view. 
+
+A materialized view cannot be created on a table with row level security.
+
 Materialized Views can be created on partitioned tables.  SPLIT/MERGE operations are supported on tables referenced in materialized views.  SWITCH is not supported on tables referenced in materialized views. If attempted, the user will see the error,  `Msg 106104, Level 16, State 1, Line 9`
  
 ALTER TABLE SWITCH is not supported on tables that are referenced in materialized views. Disable or drop the materialized views before using ALTER TABLE SWITCH. In the following scenarios, the materialized view creation requires new columns to be added to the materialized view:

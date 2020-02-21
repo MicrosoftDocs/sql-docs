@@ -76,7 +76,6 @@ The following example demonstrates how to communicate with the TM for XA transac
 // XA-DTC.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include "sqlwindef.h"
 #include "xplatsec.h"
 
@@ -510,7 +509,6 @@ private:
 
 ## XaTestRunner.cpp
 ```
-#include "stdafx.h"
 #include "XaTestRunner.h"
 #include <chrono>
 #include <thread>

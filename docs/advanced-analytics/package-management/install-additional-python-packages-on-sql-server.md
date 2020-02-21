@@ -81,7 +81,6 @@ If the client computer you use to connect to SQL Server has Internet access, you
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
-
 ### Add the package offline
 
 If the client computer you use to connect to SQL Server doesn't have an Internet connection, you can use **pip** on a computer with Internet access to download the package and any dependent packages to a local folder. You then copy the folder to the client computer where you can install the package offline.

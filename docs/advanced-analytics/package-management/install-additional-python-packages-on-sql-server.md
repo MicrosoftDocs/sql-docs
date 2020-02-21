@@ -77,7 +77,7 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pid="password")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 

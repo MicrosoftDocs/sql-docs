@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein; maghan
-ms.topic: quickstart
+ms.topic: tutorial
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms

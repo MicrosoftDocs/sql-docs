@@ -52,7 +52,7 @@ These are the recommended Linux Operating System settings related to high perfor
 
 
 > [!Note]
-> For Red Hat Enterprise Linux (RHEL) users, the tuned throughput-performance profile configure these settings automatically (except for C-States). Starting with RHEL 8.0, a /usr/lib/tuned built-in mssql profile was co-developed with Red Hat and offers finer Linux performance related tunings for SQL Server workloads. This profile includes the RHEL throughput-performance profile and we present its definitions below for your review with other Linux distros and RHEL releases without this profile.
+> For Red Hat Enterprise Linux (RHEL) users, the [tuned](https://tuned-project.org) throughput-performance profile configure these settings automatically (except for C-States). Starting with RHEL 8.0, a /usr/lib/tuned built-in mssql profile was co-developed with Red Hat and offers finer Linux performance related tunings for SQL Server workloads. This profile includes the RHEL throughput-performance profile and we present its definitions below for your review with other Linux distros and RHEL releases without this profile.
 
 The following table provides recommendations for CPU settings:
 

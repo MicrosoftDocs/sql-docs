@@ -82,7 +82,7 @@ You can also install SSMS via the command prompt.
 
 First launch the command prompt with elevated permissions.
 
-Then type this in the command prompt:
+Then type the command below in the command prompt:
 
 ```cmd
 SSMS-Setup-ENU.exe /install /quiet

@@ -235,10 +235,8 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
         {
             auto isCommit = testType == TestType::Commit || testType == TestType::Commit1Phase;
 
-            
             rc = GetRowCount(hstmt, tableName, rowCount);
             result = (rowCount == (isCommit ? ROWS_TO_TEST : 0)) && SQL_SUCCEEDED(xaStatus);
-            
 
             std::cout << "TestXaRunner::" << (isCommit ? "Commit" : "Rollback") << " rowCount=" << rowCount << " xaStatus=" << xaStatus << " test " << (result ? "Succeded" : "Failed") << std::endl;
         }
@@ -321,7 +319,6 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
 
             XID xid;
             XaTestRunner::GetUniqueXid(xid);
-            
             rc = testRunner->Start(xid, TMNOFLAGS, xaStatus);
             if (xaStatus < 0)
             {
@@ -362,7 +359,6 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
         XID* pXid = (XID*)&buff[0];
         for (auto tr = 0; tr < numRecoveredTransactions; tr++, pXid++)
         {
-            //rc = testRunner->Rollback(*pXid, xaStatus);
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {

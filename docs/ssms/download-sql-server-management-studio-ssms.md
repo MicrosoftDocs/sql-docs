@@ -76,6 +76,18 @@ There are a few [known issues](release-notes-ssms.md#known-issues-184) with this
 
 This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
+## Install SQL Server Management Studio via command prompt
+
+You can also install SSMS via the command prompt.
+
+First launch the command prompt with elevated permissions.
+
+Then type this in the command prompt:
+
+```cmd
+SSMS-Setup-ENU.exe /install /quiet
+```
+
 ## Supported SQL offerings (SSMS 18.4)
 
 - This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.

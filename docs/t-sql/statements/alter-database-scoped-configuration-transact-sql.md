@@ -81,7 +81,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | ACCELERATED_PLAN_FORCING = { ON | OFF }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTO_DROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
@@ -311,7 +311,7 @@ Enables an optimized mechanism for query plan forcing, applicable to all forms o
 > [!NOTE]
 > It is not recommended to disable accelerated plan forcing.
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
+GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
 **APPLIES TO**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
 

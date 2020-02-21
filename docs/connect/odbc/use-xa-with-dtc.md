@@ -93,7 +93,6 @@ The following example demonstrates how to communicate with the TM for XA transac
 
 enum class TestType { Commit, Commit1Phase, Rollback, Recover};
 
-
 RETCODE GetRowCount(HSTMT hstmt, const std::string tableName, int& count)
 {
     char query[256];
@@ -146,7 +145,7 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
         bool isTimeoutTest = false;
 
         XID xid;
-		    XaTestRunner::GetUniqueXid(xid);
+        XaTestRunner::GetUniqueXid(xid);
 
         do
         {            
@@ -367,7 +366,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {
-                std::cout << "TestRecover::Successfully commited recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
+                std::cout << "TestRecover::Successfully committed recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
             }
             else
             {
@@ -375,8 +374,6 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             }
         }
     }
-
-
 
     for (const auto& name : tableNames)
     {
@@ -421,7 +418,6 @@ int main(int argc, char** argv)
     bool result;
 
     result = TestSetTimeout(hdbc, pConnStr);
-
     result = TestCommit(hdbc, pConnStr);
     result = TestCommit1Phase(hdbc, pConnStr);
     result = TestRollback(hdbc, pConnStr);
@@ -449,7 +445,8 @@ The `XATestRunner` class implements the possible XA calls when communicating wit
 #include <random>
 
 
-struct RandomProvider {
+struct RandomProvider
+{
     std::random_device rd;    
 };
 
@@ -536,8 +533,6 @@ int XidMgr::GetRandomNumber(int low, int high)
     return dis(gen);
 }
 
-
-
 void XidMgr::GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer)
 {
     std::mt19937 gen(XidMgr::rndPrv.rd());
@@ -549,18 +544,16 @@ void XidMgr::GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer)
 }
 
 XaTestRunner::XaTestRunner(HDBC dbc)
-	: m_hdbc(dbc)
+             : m_hdbc(dbc)
 {
 	GetUniqueName(m_tableName);
 	m_commandCreateTable = COMMAND_CREATE_TABLE;
 	m_commandInsertRow = COMMAND_INSERT_ROW;
 }
 
-
 XaTestRunner::~XaTestRunner()
 {
 }
-
 
 void XidMgr::GetUniqueXid(XID& xid)
 {
@@ -674,7 +667,6 @@ RETCODE XaTestRunner::End(const XID& xid, const int flags, RETCODE& xaStatus)
     return IssueXaCall(&xid, OP_END, flags, nullptr, sizeBuffer, xaStatus);
 }
 
-
 RETCODE XaTestRunner::Prepare(const XID& xid, RETCODE& xaStatus)
 {
     unsigned int sizeBuffer = 0;
@@ -719,7 +711,6 @@ int XaTestRunner::GetTimeout()
     RETCODE xaStatus;
     IssueXaCall(nullptr, OP_GETTIMEOUT, TMNOFLAGS, (unsigned char*)&timeout, sizeBuffer, xaStatus);
     return timeout;
-
 }
 
 void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
@@ -953,6 +944,3 @@ typedef struct XACallParam {
 #define FLAG_TIGHTLYCOUPLED  0x8000
 
 ```
-
-
-

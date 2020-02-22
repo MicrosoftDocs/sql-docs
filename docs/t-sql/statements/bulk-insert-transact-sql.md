@@ -1,7 +1,7 @@
 ---
 title: "BULK INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -359,7 +359,9 @@ When importing from Azure Blob storage and the data is not public (anonymous acc
 
 ### Permissions
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required. Additionally, ALTER TABLE permission is required if one or more of the following is true:
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required. ADMINISTER BULK OPERATIONS permissions or the bulkadmin role is not supported for SQL Server on Linux. Only the `sysadmin` can perform bulk inserts for SQL Server on Linux. 
+
+Additionally, ALTER TABLE permission is required if one or more of the following is true:
 
 - Constraints exist and the CHECK_CONSTRAINTS option is not specified.
 

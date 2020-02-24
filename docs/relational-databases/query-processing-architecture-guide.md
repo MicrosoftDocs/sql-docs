@@ -951,7 +951,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
 
 5. Whether current distribution statistics are available.  
    If the highest degree of parallelism is not possible, lower degrees are considered before the parallel plan is abandoned.  
-  For example, when you create a clustered index on a view, distribution statistics cannot be evaluated, because the clustered index does not yet exist. In this case, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cannot provide the highest degree of parallelism for the index operation. However, some operators, such as sorting and scanning, can still benefit from parallel execution.
+   For example, when you create a clustered index on a view, distribution statistics cannot be evaluated, because the clustered index does not yet exist. In this case, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cannot provide the highest degree of parallelism for the index operation. However, some operators, such as sorting and scanning, can still benefit from parallel execution.
 
 > [!NOTE]
 > Parallel index operations are only available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.
@@ -964,18 +964,19 @@ Static and keyset-driven cursors can be populated by parallel execution plans. H
 
 #### Overriding Degrees of Parallelism
 The degree of parallelism sets the number of processors to use in parallel plan execution. This configuration can be set at various levels:
-1.  Server level, using the **max degree of parallelism (MAXDOP)** [server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+1.  Server level, using the **max degree of parallelism (MAXDOP)** [server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).    
     **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-2. Workload level, using the **MAX_DOP** [Resource Governor workload group configuration option](../t-sql/statements/create-workload-group-transact-sql.md).
+2. Workload level, using the **MAX_DOP** [Resource Governor workload group configuration option](../t-sql/statements/create-workload-group-transact-sql.md).    
    **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-3. Database level, using the **MAXDOP** [database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). 
+3. Database level, using the **MAXDOP** [database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).     
    **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
-4. Query or index statement level, using the **MAXDOP** [query hint](../t-sql/queries/hints-transact-sql-query.md) or **MAXDOP** index option. For example, you can use the MAXDOP option to control, by increasing or reducing, the number of processors dedicated to an online index operation. In this way, you can balance the resources used by an index operation with those of the concurrent users.
+4. Query or index statement level, using the **MAXDOP** [query hint](../t-sql/queries/hints-transact-sql-query.md) or **MAXDOP** index option. For example, you can use the MAXDOP option to control, by increasing or reducing, the number of processors dedicated to an online index operation. In this way, you can balance the resources used by an index operation with those of the concurrent users.    
    **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 Setting the max degree of parallelism option to 0 (default) enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors in a parallel plan execution. Although [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sets a runtime target of 64 logical processors when MAXDOP option is set to 0, a different value can be manually set if needed. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution. MAXDOP is not an enforced value for all parallel queries, but rather a tentative target for all queries eligible for parallelism. This means that if not enough worker threads are available at runtime, a query may execute with a lower degree of parallelism than the MAXDOP server configuration option.
 
-Refer to this [documentation page](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines) for guidelines on configuring MAXDOP.
+> [!TIP]
+> Refer to this [documentation page](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines) for guidelines on configuring MAXDOP.
 
 ### Parallel Query Example
 The following query counts the number of orders placed in a specific quarter, starting on April 1, 2000, and in which at least one line item of the order was received by the customer later than the committed date. This query lists the count of such orders grouped by each order priority and sorted in ascending priority order. 

@@ -61,34 +61,11 @@ For SQL Server on Linux, see [Hardware and Software Requirements for [!INCLUDE[s
 You can get relevant installation media from the following locations: 
   
 - [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
-- [Azure virtual machine with SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal)
 - [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
-- [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
 
+Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal). 
 
-## Considerations
-
-
-**The following considerations apply to all editions:**  
   
--   We recommend that you run [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on computers with the NTFS or ReFS file formats. Installing [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a computer with FAT32 file system is supported but not recommended as it is less secure than the NTFS or ReFS file systems.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will block installations on read-only, mapped, or compressed drives.  
-  
--   Installation fails if you launch setup through Remote Desktop Connection with the media on a local resource in the RDC client. To install remotely the media must be on a network share or local to the physical or virtual machine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media may be either on a network share, a mapped drive, a local drive, or presented as an ISO to a virtual machine.  
-  
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installation requires installing  .NET 4.6.1 as a prerequisite. .NET 4.6.1 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is selected.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
-  
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
-  
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
-  
--   For minimum version requirements to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on [!INCLUDE[win8srv](../../includes/win8srv-md.md)] or [!INCLUDE[win8](../../includes/win8-md.md)], see [Installing SQL Server on Windows Server 2012 or Windows 8](https://support.microsoft.com/kb/2681562).  
-  
-
 ##  <a name="hwswr"></a> Software Requirements  
 The following requirements apply to all installations:  
   
@@ -111,7 +88,7 @@ The following requirements apply to all installations:
 |Component|Requirement|  
 |---------------|-----------------|  
 |Hard Disk|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard-disk space.<br/><br/> Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
-|Drive|A DVD drive, as appropriate, is required for installation from disc.|  
+|Drive|A DVD drive, as appropriate, is required for installation from disc. <br/><br/> Installing SQL Server on computers with the NTFS or ReFS file formats is recommended. The FAT32 file system is supported but not recommended as it is less secure than the NTFS or ReFS file systems. <br/><br/>  Read-only, mapped, or compressed drives are blocked during installation.  |  
 |Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires Super-VGA (800x600) or higher resolution monitor.|  
 |Internet|Internet functionality requires Internet access (fees may apply).|  
 |Memory \*|**Minimum:**<br/><br/> Express Editions: 512 MB<br/><br/> All other editions: 1 GB<br/><br/> **Recommended:**<br/><br/> Express Editions: 1 GB<br/><br/> All other editions: At least 4 GB and should be increased as database size increases to ensure optimal performance.|  
@@ -154,6 +131,8 @@ The following table shows which editions of SQL Server 2016 and 2017 are compati
 | Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 8 Pro                     |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 8                         |    No      |    Yes    |    Yes   | No  |   Yes   | 
+
+For minimum version requirements to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on [!INCLUDE[win8srv](../../includes/win8srv-md.md)] or [!INCLUDE[win8](../../includes/win8-md.md)], see [Installing SQL Server on Windows Server 2012 or Windows 8](https://support.microsoft.com/kb/2681562). 
 
 > [!NOTE]  
 > Exceptions to the operating system support noted in this section are the following Business Intelligence features for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and earlier, which can be installed on Windows Server 2008 R2 SP1 or later:  

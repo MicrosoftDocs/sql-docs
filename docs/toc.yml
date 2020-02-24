@@ -706,7 +706,7 @@
           href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
         - name: View listener properties
           href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-      - name: Operation
+      - name: Operate
         items:
         - name: Add Database
           items:
@@ -750,6 +750,8 @@
           href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
         - name: View health with policies
           href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: Connect to listener
+          href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
     - name: Concepts
       items:
       - name: Configuration
@@ -788,12 +790,12 @@
           href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
       - name: Connectivity
         items:
-        - name: Client connection
+        - name: Listener
+          href: database-engine/availability-groups/windows/listener-connectivity.md
+        - name: Client connection types
           href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-        - name: Client connectivity
+        - name: Driver & client support
           href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-        - name: Listeners, clients, & failover
-          href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
       - name: Interoperability
         items:
         - name: Replication, CT, & CDC

@@ -24,7 +24,6 @@ ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 02/18/2020
 ---
-
 # Download SQL Server Management Studio (SSMS)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -49,7 +48,7 @@ SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).
 
-The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use. However, if you have a ***preview*** version of SSMS 18.x installed, you must **uninstall** it before installing SSMS 18.4. You can see if you have the *Preview* version by going to the Help > About window.
+The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a ***preview*** version of SSMS 18.x installed, you must **uninstall** it before installing SSMS 18.4. You can see if you have the *Preview* version by going to the Help > About window.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
@@ -80,13 +79,45 @@ This article is for the latest version of SSMS only. To download previous versio
 
 You can also install SSMS via the command prompt.
 
-First launch the command prompt with elevated permissions.
+### Non-GUI install
 
-Then type the command below in the command prompt:
+If you want to install SSMS in the background with no GUI prompts, then follow the steps below.
 
-```cmd
-SSMS-Setup-ENU.exe /install /quiet
-```
+1. Launch the command prompt with elevated permissions.
+
+2. Type the command below in the command prompt.
+
+    ```console
+    start "" <full path where SSMS-ENU.exe file is downloaded> /Quiet SSMSInstallRoot=<full path where you want to install SSMS>
+    ```
+
+    Example:
+
+    ```console
+    start "" c:\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=c:\SSMSto
+    ```
+
+3. Then check to see if SSMS is installed in the correct folder.
+
+### GUI install
+
+If you want to install SSMS while seeing the GUI steps with no interaction, then follow the steps below.
+
+1. Launch the command prompt with elevated permissions.
+
+2. Type the command below in the command prompt:
+
+    ```console
+    start "" <full path where SSMS-ENU.exe file is downloaded> /Passive SSMSInstallRoot=<full path where you want to install SSMS>
+    ```
+
+    Example:
+
+    ```console
+    start "" c:\SSMSfrom\SSMS-Setup-ENU.exe /passive SSMSInstallRoot=c:\SSMSto
+    ```
+
+3. Then check to see if SSMS is installed in the correct folder.
 
 ## Supported SQL offerings (SSMS 18.4)
 

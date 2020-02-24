@@ -60,7 +60,7 @@ _Read-only routing_ refers to automatically routing incoming listener connection
 
 Connections are automatically routed to the read-only replica if the following are true: 
  
--   At least one secondary replica is set to read-only access, and each read-only secondary replica and the primary replica are configured to support read-only routing. For more information, see [To Configure Availability Replicas for Read-Only Routing](#ConfigureARsForROR), later in this section.  
+-   At least one secondary replica is set to read-only access, and each read-only secondary replica and the primary replica are [configured to support read-only routing](configure-read-only-routing-for-an-availability-group-sql-server). 
 
 -   The connection string references a database involved in the Availability Group. An alternative to this would be the login used in the connection has the database configured as its default database. For more information, see [this article on how the algorithm works with read-only routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
 
@@ -71,7 +71,6 @@ The application intent attribute is stored in the client's session during login 
 For example, to connect to a read-only replica using SQL Server Management Studio, select **Options** on the **Connect to Server** dialog box, select the **Additional Connection Parameters** tab, and then specify `ApplicationIntent=ReadOnly` in the text box:
 
 ![Read only connection in SSMS](media/listeners-client-connectivity-application-failover/read-only-intent-in-ssms.png)
-
   
 An example of a connection string for the ADO.NET provider (System.Data.SqlClient) that designates read-only application intent: 
 

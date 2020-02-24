@@ -61,22 +61,9 @@ For SQL Server on Linux, see [Hardware and Software Requirements for [!INCLUDE[s
 You can get relevant installation media from the following locations: 
   
 - [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
-- [Azure virtual machine with SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal)
 - [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
-- [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
-  
 
-## Considerations
-  
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will block installations on read-only, mapped, or compressed drives.  
-  
-- Installation fails if you launch setup through Remote Desktop Connection with the media on a local resource in the RDC client. To install remotely the media must be on a network share or local to the physical or virtual machine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media may be either on a network share, a mapped drive, a local drive, or presented as an ISO to a virtual machine.
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
-  
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
-  
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
+Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal). 
 
 ##  <a name="hwswr"></a> Software requirements  
 

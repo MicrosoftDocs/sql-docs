@@ -16,7 +16,6 @@ ms.date: "06/28/2019"
 
 This article describes how to launch the Notebook experience in Azure Data Studio and how to start authoring your own notebooks. It also shows how to write Notebooks using different kernels.
 
-
 ## Connect to SQL Server
 
 You can connect to the Microsoft SQL Server connection type in Azure Data Studio.
@@ -32,16 +31,16 @@ There are multiple ways to launch a new notebook.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-3. Right click on the **SQL Server** connection and then launch **New Notebook**. 
+2. Right click on the **SQL Server** connection and then launch **New Notebook**. 
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-4. Open the command palette (**Ctrl+Shift+P**)) and then type in **New Notebook**. A new file named `Notebook-1.ipynb` opens.
+3. Open the command palette (**Ctrl+Shift+P**)) and then type in **New Notebook**. A new file named `Notebook-1.ipynb` opens.
 
 ## Supported kernels and attach to context
 
-The Notebook Installation in Azure Data Studio natively supports SQL Kernel. If you are a SQL developer and would like to use Notebooks, then this would be your chosen Kernel. 
+The Notebook Installation in Azure Data Studio natively supports SQL Kernel. If you're a SQL developer and want to use Notebooks, then this would be your chosen Kernel.
 
-The SQL Kernel can also be used to connect to PostgreSQL server instances. If you are a PostgreSQL developer and would like to connect to your PostgreSQL Server, then download the [**PostgreSQL extension**](postgres-extension.md) in the Azure Data Studio extension marketplace.
+The SQL Kernel can also be used to connect to PostgreSQL server instances. If you're a PostgreSQL developer and would like to connect to your PostgreSQL Server, then download the [**PostgreSQL extension**](postgres-extension.md) in the Azure Data Studio extension Marketplace.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -69,11 +68,11 @@ Query Results
 
 ### Configure Python for Notebooks
 
-When you select any of the other kernels apart from SQL from the kernel dropdown, this prompts you to **Configure Python for Notebooks**. The Notebook dependencies get installed in a specified location but you can decide whether to set the installation location. This installation can take some time and it is recommended to not close the application until the installation is complete. Once the installation finishes, you can start writing code in the supported language.
+When you select any of the other kernels apart from SQL from the kernel dropdown, this prompts you to **Configure Python for Notebooks**. The Notebook dependencies get installed in a specified location but you can decide whether to set the installation location. This installation can take some time and it's recommended to not close the application until the installation is complete. Once the installation is complete, you can start writing code in the supported language.
 
 ![image21](media/sql-notebooks/configure-python.png)
 
-Once the installation succeeds, you will find a notification in the Task History along with the location of the Jupyter backend server running in the Output Terminal.
+Once the installation succeeds, you can find a notification in the Task History along with the location of the Jupyter backend server running in the Output Terminal.
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
@@ -84,11 +83,11 @@ Once the installation succeeds, you will find a notification in the Task History
 |Spark Kernel|Write Scala and R code using Spark compute from the cluster.
 |Python Kernel|Write Python code for local development.
 
-`Attach to` provides the context for the Kernel to attach. If you are using SQL Kernel, then you can `Attach to` any of your SQL Server instances.
+`Attach to` provides the context for the Kernel to attach. If you're using SQL Kernel, then you can `Attach to` any of your SQL Server instances.
 
-If you are using Python3 Kernel the `Attach to` is `localhost`. You can use this kernel for your local Python development.
+If you're using Python3 Kernel the `Attach to` is `localhost`. You can use this kernel for your local Python development.
 
-When you are connected to SQL Server 2019 big data cluster, the default `Attach to` is that end point of the cluster and will let you submit Python, Scala and R code using the Spark compute of the cluster.
+When you're connected to SQL Server 2019 big data cluster, the default `Attach to` is that end point of the cluster that lets you submit Python, Scala, and R code using the Spark compute of the cluster.
 
 ### Code Cells and Markdown Cells
 
@@ -98,11 +97,11 @@ Add a new text cell by clicking the **+Text** command in the toolbar.
 
 ![image8](media/sql-notebooks/notebook-toolbar.png)
 
-The cell changes to edit mode and now type markdown and you will see the preview at the same time
+The cell changes to edit mode and now type markdown and you can see the preview at the same time
 
 ![image9](media/sql-notebooks/notebook-markdown-cell.png)
 
-Clicking outside the text cell will show the markdown text.
+Clicking outside the text cell shows the markdown text.
 
 ![image10](media/sql-notebooks/notebook-markdown-preview.png)
 
@@ -110,9 +109,9 @@ Clicking outside the text cell will show the markdown text.
 
 Notebooks open in Azure Data Studio are default **Trusted**.
 
-If you open a Notebook from some other source, it will be opened in **Non Trusted** mode and then you can make it **Trusted**.
+If you open a Notebook from some other source, it opens in **Non Trusted** mode and then you can make it **Trusted**.
 
-### Save 
+### Save
 
 You can save the Notebook by **Ctrl+S** or clicking the **File Save**, **File Save As...** and **File Save All** commands from the File menu and **File: Save** commands entered in the command palette.
 
@@ -149,29 +148,30 @@ Choose the local Python Kernel and in the cell type in -
 ![image16](media/sql-notebooks/local-python.png)
 
 ## Manage Packages
-One of the things we optimized for local Python development was to include the ability to install packages which customers would need for their scenarios. By default, we include the common packages like `pandas`, `numpy` etc., but if you are expecting a package that is not included then write the following code in the notebook cell: 
+
+One of the things we optimized for local Python development was to include the ability to install packages which customers would need for their scenarios. By default, we include the common packages like `pandas`, `numpy` etc., but if you're expecting a package that isn't included then write the following code in the notebook cell:
 
 ```python
 import <package-name>
 ```
 
-When you run this command, `Module not found` is returned. If your package exists, then you will not get the error.
+When you run this command, `Module not found` is returned. If your package exists, then you don't get the error.
 
 If it returns a `Module not Found` error, then click on **Manage Packages** to launch the wizard experience. 
 
 ![image17](media/sql-notebooks/manage-packages.png)
 
-In this wizard you will be able to see the **Installed** packages. You can search through the list and the associated version of each of these packages. If you need to **uninstall** any of these packages then you can click on one of the packages and then click on the **Uninstall selected packages** option.
+In this wizard, you're able to see the **Installed** packages. You can search through the list and the associated version of each of these packages. If you need to uninstall any of these packages, then you can click on one of the packages and then click on the **Uninstall selected packages** option.
 
-You will also be able to click on **Add new** packages to **Search** for a particular package, choose the related version and click **install**. By default, we select the latest version of the searched package. 
+You can also click on **Add new** packages to **Search** for a particular package, choose the related version and click **install**. By default, we select the latest version of the searched package.
 
-After the package is installed, you should be able to go in the Notebook cell and type in following command:
+After the package is installed, you can go in the Notebook cell and type in following command:
 
 ```python
 import <package-name>
 ```
 
-If you need to **uninstall** any of these packages then you can click on one or multiple packages and then click on the **Uninstall selected packages** option.
+If you need to uninstall any of these packages, then you can click on one or multiple packages and then click on the **Uninstall selected packages** option.
 
 ## Next steps
 

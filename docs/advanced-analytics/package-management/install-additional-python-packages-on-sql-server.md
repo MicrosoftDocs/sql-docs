@@ -73,11 +73,11 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
 1. On the client computer, open **Python** or a Python environment.
 
-1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters).
+1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information.
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 

@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Machine Learning Services (Python and R) on Docker
+# Install SQL Server MLS (Python and R) on Docker
 
 This article explains how to install SQL Server Machine Learning Services on Docker. You can use Machine Learning Services to execute Python and R scripts in-database. We do not provide pre-built containers with Machine Learning Services, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)
 
@@ -36,8 +36,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
     git clone https://github.com/microsoft/mssql-docker mssql-docker
     ```
 
-## Build a SQL Server Linux container image with Machine Learning Services
-
+## Build a SQL Server Linux container image with MLS
 1. Change the directory to the mssql-mlservices directory:
 
     ```bash
@@ -53,7 +52,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
    > [!NOTE]
    > To build the Docker image, you must install packages that are several GBs in size. The script may take up to 20 minutes to finish running, depending on network bandwidth.
 
-## Run the SQL Server Linux container image with Machine Learning Services
+## Run the SQL Server Linux container image with MLS
 
 1. Set your environment variables before running the container. Set the PATH_TO_MSSQL environment variable to a host directory:
 
@@ -95,7 +94,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 ## Run in a container
 
-Follow the steps below to build and run SQL Server Machine Learning Services in a Docker container. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md).
+[Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md).
 
 ## Next steps
 

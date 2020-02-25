@@ -1,6 +1,6 @@
 ---
 title: "Step 4: Connect resiliently to SQL with ADO.NET | Microsoft Docs"
-description: "Describes how to connection reciliently to SQL"
+description: "Describes how to connection resiliently to SQL"
 ms.custom: ""
 ms.date: "08/15/2019"
 ms.prod: sql

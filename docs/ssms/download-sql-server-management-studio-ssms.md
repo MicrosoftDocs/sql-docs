@@ -75,7 +75,7 @@ There are a few [known issues](release-notes-ssms.md#known-issues-184) with this
 
 This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
-## Install using script
+## Unattended install
 
 You can also install SSMS using a command prompt script.
 

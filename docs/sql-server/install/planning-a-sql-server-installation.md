@@ -34,8 +34,8 @@ ms.author: mathoma
  [What's New in SQL Server Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  This article describes the details about the new or improved features of installation in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- This article lists the minimum hardware and software requirements to install and run an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Hardware and software requirements for installing [SQL Server 2016 & 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) or [SQL Server on Linux](../../linux/sql-server-linux-setup.md)
+ This article lists the minimum hardware and software requirements to install and run an instance of SQL Server. .  
   
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  This article describes some security best practices that you should consider before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

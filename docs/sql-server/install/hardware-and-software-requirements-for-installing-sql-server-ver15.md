@@ -63,7 +63,7 @@ You can get relevant installation media from the following locations:
 - [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
 - [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
-Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal). 
+Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.
 
 ##  <a name="hwswr"></a> Software requirements  
 
@@ -75,9 +75,11 @@ The following requirements apply to all installations:
 |.NET Framework|Minimum operating systems includes minimum .NET framework.|  
 |Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, and TCP/IP.<br/><br/> |  
 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
+  
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
 
-> [!NOTE]
-> Running [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a virtual machine will be slower than running natively because of the overhead of virtualization.  
 
 > [!IMPORTANT]
 > There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  

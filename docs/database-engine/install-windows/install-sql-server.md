@@ -38,7 +38,9 @@ Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssno
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
-*  **Requirements**: Review installation requirements, system configuration checks, and security considerations in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **Requirements**: Review hardware and software installation requirements for [SQL Server 2016 & 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) or [SQL Server on Linux](../../linux/sql-server-linux-setup.md), or system configuration checks, and security considerations in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) 
+
+
   
 * **Sample databases and sample code**: 
     * They are not installed as part of SQL Server setup by default but can be found 
@@ -116,7 +118,7 @@ Other SQL Server components can be found here:
 
 [Upgrade [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/upgrade-sql-server.md)   
 [Uninstall [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/uninstall-sql-server.md)   
-[Install SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)
-[Install SQL Server Analysis  Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)
+[Install SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)   
+[Install SQL Server Analysis  Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)   
 [Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
 [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

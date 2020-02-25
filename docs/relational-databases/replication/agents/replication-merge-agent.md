@@ -389,6 +389,13 @@ replmerg [-?]
  To start the Merge Agent, execute **replmerg.exe** from the command prompt. For information, see [Replication Agent Executables](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
  The merge agent history for the current session is not removed while running in continuous mode. A long running agent can result in a large number of entries in the merge history tables which could impact performance. To resolve this problem switch to scheduled mode, or continue to use continuous mode but create a dedicated job to periodically restart the merge agent, or reduce the verbosity of the history level to reduce the number of rows and therefor reduce the performance impact.  
+ 
+  Typically, the Replication Merge Agent takes a long time to replicate changes. To determine which step of the merge replication synchronization process takes the most time, use trace flag 101 together with merge agent logging. To do this, use the following parameters for the merge agent parameters, and then restart the agent:
+-T 101
+-output
+-outputverboselevel
+
+In addition, if you have to write statistics to the <Distribution server>..msmerge_history table, use trace flag -T 102.
   
 ## See Also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  

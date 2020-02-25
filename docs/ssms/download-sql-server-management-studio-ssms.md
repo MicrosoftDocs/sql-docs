@@ -75,7 +75,7 @@ There are a few [known issues](release-notes-ssms.md#known-issues-184) with this
 
 This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
-## Install using a script
+## Install using script
 
 You can also install SSMS using a command prompt script.
 
@@ -95,7 +95,7 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
     start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=c:\SSMSto
     ```
 
-    You can pass */Passive* instead of */Quiet* to see the setup UI.
+    You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
 3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe” based on the example. If something went wrong, you could inspect the error code returned and take a peek at the %TEMP%\SSMSSetup for the log file.
 

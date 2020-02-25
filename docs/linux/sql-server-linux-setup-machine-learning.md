@@ -28,13 +28,13 @@ Install and configure the SQL Server database engine first so that you can resol
 
 ## Pre-install checklist
 
-Install SQL Server on LINUX [Install SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup) and verify install.
+[Install SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup) and verify install.
 
 Check the SQL Server Linux repositories for the Python and R extensions. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
 
 Python and R scripts can be executed in-database using Machine Learning Services.
 
-(R only) [Microsoft R Open](#mro) provides the base R distribution for the R feature in SQL Server
+[Microsoft R Open](#mro) provides the base R distribution for the R feature in SQL Server
 
 + You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
@@ -57,7 +57,7 @@ Choose from the following two approaches to install MRO:
 
 ## Install on RedHat
 
-### Install Microsoft R Open (MRO) on Red Hat
+### Install (MRO) on Red Hat
 
 ```bash
 # Import the Microsoft repository key
@@ -120,9 +120,9 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 ```
 <a name="ubuntu"></a>
 
-## Install on Ubuntu:
+## Install on Ubuntu
 
-### Install Microsoft R Open (MRO) on Ubuntu
+### Install (MRO) on Ubuntu
 
 ```bash
 # Install as root
@@ -193,7 +193,7 @@ sudo apt-get install mssql-mlservices-packages-r
 
 ## Install on SUSE
 
-### Install Microsoft R Open (MRO) on SUSE(SLES)
+### Install (MRO) on SUSE(SLES)
 
 ```bash
 # Install as root
@@ -280,11 +280,11 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 5. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
-   + Edit or create a file `named.bash_profile` in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
+   + Edit or create a file named `.bash_profile` in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
    + Execute this file by typing `source.bash_profile` at a bash command prompt.
 
-6. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A notification is message displayed when an extensibility-related setting is modified.  
+6. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A notification message is displayed when an extensibility-related setting is modified.  
 
    ```bash
    systemctl restart mssql-launchpadd

@@ -28,14 +28,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SSMS Query Editor (database engine)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-toolbar-cancel-execute-query.png
-toolbar-cancel-execute-query.png
 
 The Query Editor creates and runs scripts containing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and **sqlcmd** commands.
 
 The Query Editor is one of four editors implemented in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For a description of the functionality implemented in the Query Editor and the main tasks you can perform using the editor, see [Query and Text Editors](../scripting/query-and-text-editors-sql-server-management-studio.md)
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/new-query.png" alt-text="New query":::
+You can add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows are open, all the buttons are unavailable.
+
+![New query
+](media/database-engine-query-editor-sql-server-management-studio/new-query.png)
 
 ## Transact-SQL F1 Help
 
@@ -55,7 +56,7 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 
 ## SQL Editor Toolbar
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png" alt-text="Editor Toolbar":::
+![Editor toolbar](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
 When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is open, the SQL Editor toolbar appears with the following buttons.
 
@@ -63,97 +64,122 @@ When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is open, the S
 
 Opens the **Connect to Server** dialog box. Use this dialog box to establish a connection to a server.
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-connect.png" alt-text="Connect icon":::
+![Connect icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-connect.png)
 
 ### Change Connection
 
 Opens the **Connect to Server** dialog box. Use this dialog box to establish a connection to a different server.
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-change-connection.png" alt-text="Change Connection icon":::
+![Change Connection icon
+](media/database-engine-query-editor-sql-server-management-studio/toolbar-change-connection.png)
 
 ### Available Databases
 
 Change the connection to a different database on the same server.
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-available-databases.png" alt-text="Available Databases icon":::
+![Available Databases icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-available-databases-2.png)
 
 ### Execute
 
 Executes the selected code or, if no code is selected, executes all the code in the Query Editor.
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-execute.png" alt-text="Execute icon":::
+![Execute icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-execute-2.png)
 
 ### Cancel Executing Query
 
 Sends a cancellation request to the server. Some queries can't be canceled immediately, but must wait for a suitable cancellation condition. When transactions are canceled, delays might occur while transactions are rolled back.
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-cancel-execute-query.png" alt-text="Cancel Execution Query icon":::
+![Cancel Execution Query icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-cancel-execute-query.png)
 
 ### Parse
 
 Check the syntax of the selected code. If no code is selected, it checks the syntax of the all code in the Query Editor window.
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-parse.png" alt-text="Parse icon":::
+![Parse icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-parse.png)
 
 ### Display Estimated Execution Plan
 
 Requests a query execution plan from the query processor without actually executing the query, and displays the plan in the **Execution plan** window. This plan uses index statistics as an estimate of the number of rows that are expected to be returned during each part of the query execution. The actual query plan that is used can be different from the estimated execution plan. This can occur if the number of rows that are returned is significantly different from the estimate, and the query processor changes the plan to be more efficient.
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-display-estimated-execution-plan.png" alt-text="Display Estimated Execution Plan icon":::
+![Display Estimated Execution Plan icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-display-estimated-execution-plan.png)
 
 ### Query Options
 
 Opens the **Query Options** dialog box. Use this dialog box to configure the default options for query execution and for query results.
 
+![Query Options icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-query-options.png)
+
 ### IntelliSense Enabled
 
 Specifies whether IntelliSense functionality is available in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.
+
+![Intellisense Enabled icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-intellisense-enabled.png)
 
 ### Include Actual Execution Plan
 
 Executes the query, returns the query results, and the execution plan that was used for the query. These appear as a graphical query plan in the ### Execution plan###  window.
 
+![Include Actual Execution Plan icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-include-actual-execution-plan.png)
+
 ### Include Live Query Statistics
 
 Provides real-time insights into the query execution process as the controls flow from one query plan operator to another.
+
+![Include Live Query Statistics icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-include-live-query-statistics.png)
 
 ### Include Client Statistics
 
 Includes a **Client Statistics** window that contains statistics about the query and about the network packets, and the elapsed time of the query.
 
+![Include Client Statistics icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-include-client-statistics.png)
+
 ### Results to Text
 
 Returns the query results as text in the **Results** window.
+
+![Results to Text icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-results-to-text.png)
 
 ### Results to Grid
 
 Returns the query results as one or more grids in the **Results** window.
 
+![Results to Grid icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-results-to-grid.png)
+
 ### Results to File
 
 When the query executes, the **Save Results** dialog box opens. In **Save In**, select the folder in which you want to save the file. In **File name**, type the name of the file, and then select **Save** to save the query results as a **Report** file that has the .rpt extension. For advanced options, click the down-arrow on the **Save** button, and then select **Save with Encoding**.
 
-### Comment Selection
+![Results to File icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-results-to-file.png)
+
+### Comment out the selected lines
 
 Makes the current line a comment by adding a comment operator (--) at the beginning of the line.
 
-### Uncomment Selection
+![Comment Selection icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-comment-selection.png)
+
+### Uncomment the selected lines
 
 Makes the current line an active source statement by removing any comment operator (--) at the beginning of the line.
 
-### Decrease Line Indent
+![Uncomment Selection icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-uncomment-selection.png)
+
+### Decrease Indent
 
 Moves the text of the line to the left by removing blanks at the beginning of the line.
+
+![Decrease Indent icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-decrease-indent.png)
 
 ### Increase Line Indent
 
 Moves the text of the line to the right by adding blanks at the beginning of the line.
 
+![Increase Line Indent icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-increase-indent.png)
+
 ### Specify Values for Template Parameters
 
 Opens a dialog box that you can use to specify values for parameters in stored procedures and functions.
 
-You can also add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows are open, all the buttons are unavailable.
+![Specify Values for Template Parameters icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-specify-values-for-template-parameters.png)
 
 ## See also
 

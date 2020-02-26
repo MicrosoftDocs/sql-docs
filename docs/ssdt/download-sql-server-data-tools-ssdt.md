@@ -27,13 +27,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The core SSDT functionality to create database projects has remained integral to Visual Studio.
 
-With Visual Studio 2019, the required functionality to enable Analysis Services, Integration Services, and Reporting Services projects has moved into the respective Visual Studio (VSIX) extensions only. There's no more a standalone SSDT installation required.
+With Visual Studio 2019, the required functionality to enable Analysis Services, Integration Services, and Reporting Services projects has moved into the respective Visual Studio (VSIX) extensions only.
+
+> [!NOTE]
+> There's no SSDT standalone installer for Visual Studio 2019.
 
 ### Install SSDT with Visual Studio 2019
 
 If [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) is already installed, you can edit the list of workloads to include SSDT.
 
-* For SQL database projects, select **SQL Server Data Tools** under **Data storage and processing**.
+* For SQL Database projects, select **SQL Server Data Tools** under **Data storage and processing**.
 
    ![Data storage and processing workload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -41,7 +44,7 @@ If [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-
 
 If you don’t have Visual Studio 2019 installed, then you can download and install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/). 
 
-* For SQL database projects, select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads during installation.
+* For SQL Database projects, select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads during installation.
 
 * For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) from either *Tools > Extensions and Updates* or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
@@ -51,7 +54,7 @@ If you don’t have Visual Studio 2019 installed, then you can download and inst
 
 Starting with Visual Studio 2017, the functionality of creating Database Projects has been integrated into the Visual Studio installation. There's no need to install the SSDT standalone installer for the core SSDT experience.
 
-Now to create Analysis Services, Integration Services or Reporting Services projects, you still need the SSDT standalone installer.
+Now to create Analysis Services, Integration Services, or Reporting Services projects, you still need the SSDT standalone installer.
 
 ### Install SSDT with Visual Studio 2017
 

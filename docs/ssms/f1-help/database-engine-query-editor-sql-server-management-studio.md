@@ -53,7 +53,7 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 
 ## SQL Editor Toolbar
 
-:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/editor-bar.png" alt-text="Editor Toolbar":::
+:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png" alt-text="Editor Toolbar":::
 
 When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is open, the SQL Editor toolbar appears with the following buttons.
 

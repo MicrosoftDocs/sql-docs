@@ -1,7 +1,7 @@
 ---
 title: "Release notes for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/10/2020"
+ms.date: "02/26/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,7 +21,7 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ### Compliance
 
-February 10, 2020
+February 26, 2020
 
 | Compliance change | Details |
 | :---------------- | :------ |

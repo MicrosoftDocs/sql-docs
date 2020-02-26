@@ -29,15 +29,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor to create and run scripts containing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The editor also supports running scripts that contain **sqlcmd** commands.
+The Query Editor creates and runs scripts containing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and **sqlcmd** commands.
 
-The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is one of four editors implemented in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For a description of the functionality implemented in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor and the main tasks you can perform using the editor, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).
+The Query Editor is one of four editors implemented in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For a description of the functionality implemented in the Query Editor and the main tasks you can perform using the editor, see [Query and Text Editors](../scripting/query-and-text-editors-sql-server-management-studio.md)
 
 :::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/new-query.png" alt-text="New query":::
 
 ## Transact-SQL F1 Help
 
-The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor supports linking you to the reference topic for a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement when you select F1. To do so, highlight the name of a Transact-SQL statement and then select F1. The help search engine then searches for a topic that has an F1 help attribute that matches the string you highlighted.
+The Query Editor supports linking you to the reference topic for a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement when you select F1. To do so, highlight the name of a Transact-SQL statement and then select F1. The help search engine then searches for a topic that has an F1 help attribute that matches the string you highlighted.
 
 If the help search engine doesn't find a topic with an F1 help keyword that exactly matches the string you highlighted, then this topic is displayed. In that case, there are two approaches to finding the help you're looking for:
 
@@ -61,21 +61,31 @@ When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is open, the S
 
 Opens the **Connect to Server** dialog box. Use this dialog box to establish a connection to a server.
 
+:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-connect.png" alt-text="Connect icon":::
+
 ### Change Connection
 
 Opens the **Connect to Server** dialog box. Use this dialog box to establish a connection to a different server.
+
+:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-change-connection.png" alt-text="Change Connection icon":::
 
 ### Available Databases
 
 Change the connection to a different database on the same server.
 
+:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-available-databases.png" alt-text="Available Databases icon":::
+
 ### Execute
 
 Executes the selected code or, if no code is selected, executes all the code in the Query Editor.
 
+:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-execute.png" alt-text="Execute icon":::
+
 ### Cancel Executing Query
 
 Sends a cancellation request to the server. Some queries can't be canceled immediately, but must wait for a suitable cancellation condition. When transactions are canceled, delays might occur while transactions are rolled back.
+
+:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-cancel-execute-query.png" alt-text="Cancel Execution Query icon":::
 
 ### Parse
 
@@ -141,4 +151,4 @@ You can also add the SQL Editor toolbar by selecting the **View** menu, selectin
 
 ## See Also
 
-[SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)
+- [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

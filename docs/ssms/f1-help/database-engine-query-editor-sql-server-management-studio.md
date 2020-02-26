@@ -99,6 +99,8 @@ Check the syntax of the selected code. If no code is selected, it checks the syn
 
 Requests a query execution plan from the query processor without actually executing the query, and displays the plan in the **Execution plan** window. This plan uses index statistics as an estimate of the number of rows that are expected to be returned during each part of the query execution. The actual query plan that is used can be different from the estimated execution plan. This can occur if the number of rows that are returned is significantly different from the estimate, and the query processor changes the plan to be more efficient.
 
+:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-display-estimated-execution-plan.png" alt-text="Display Estimated Execution Plan icon":::
+
 ### Query Options
 
 Opens the **Query Options** dialog box. Use this dialog box to configure the default options for query execution and for query results.
@@ -153,6 +155,6 @@ Opens a dialog box that you can use to specify values for parameters in stored p
 
 You can also add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows are open, all the buttons are unavailable.
 
-## See Also
+## See also
 
-- [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)
+[SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

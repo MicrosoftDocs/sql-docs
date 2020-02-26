@@ -28,6 +28,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SSMS Query Editor (database engine)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+toolbar-cancel-execute-query.png
+toolbar-cancel-execute-query.png
 
 The Query Editor creates and runs scripts containing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and **sqlcmd** commands.
 
@@ -90,6 +92,8 @@ Sends a cancellation request to the server. Some queries can't be canceled immed
 ### Parse
 
 Check the syntax of the selected code. If no code is selected, it checks the syntax of the all code in the Query Editor window.
+
+:::image type="content" source="media/database-engine-query-editor-sql-server-management-studio/toolbar-parse.png" alt-text="Parse icon":::
 
 ### Display Estimated Execution Plan
 

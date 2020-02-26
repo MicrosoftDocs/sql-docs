@@ -76,7 +76,7 @@ ms.author: chugu
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
 ## Analysis Services Processing Task Editor (General Page)
-  Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  
+  Use the **General** page of the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  
   
 ### Options  
  **Name**  

@@ -1,6 +1,6 @@
 ---
 title: "Oracle Connection Type (Report Builder & Power BI Report Server) | Microsoft Docs"
-ms.date: 01/16/2020
+ms.date: 02/26/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -93,7 +93,7 @@ Data Source="Oracle"; Unicode="True"
   
  For more information, see the following articles:  
   
--   [How to use Reporting Services to configure and to access an Oracle data source](https://support.microsoft.com/kb/834305)  
+-   [How to use Reporting Services to configure and to access an Oracle data source](https://docs.microsoft.com/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
 -   [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668)  
   
 ### Alternate Data Extensions 

@@ -17,24 +17,74 @@ Learn how to run Python and R scripts in a notebooks in [Azure Data Studio](http
 ## Prerequisites
 
 - [Download and install Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) on your workstation computer. Azure Data Studio is cross-platform, and runs on Windows, MacOS, and Linux.
-- A server with SQL Server Machine Learning Services installed. You can run Machine Learning Services on Windows, Linux, or SQL Server Big Data Clusters:
-    - [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md) 
-    - [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
+- A server with SQL Server Machine Learning Services installed and enabled. You can use Machine Learning Services on Windows, Linux, or Big Data Clusters:
+    - [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md).
+    - [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
     - [Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 
 ## Create a SQL notebook
 
 You can use Machine Learning Services in Azure Data Studio with a SQL notebook. To create a new notebook, follow these steps:
 
-1. Click **new connection** to connect to your SQL Server.
+1. Click **File** and **New Notebook** to create a new notebook. The notebook will by default use the **SQL kernel**.
 
-1. Enter your **Connection Details** and click **Connect**.
-
-1. Click **New Notebook** to create a new notebook. The notebook will by default use the **SQL kernel**.
+1. Click **Attach To** and **Change Connection** to connect to a SQL Server. You can either:
+    1. Choose an existing connection under **Recent Connections** or **Saved Connections**.
+    1. Create a new connection under **Connection Details**. Fill out the connection details to your SQL Server and database.
 
 > [!IMPORTANT]
 > Machine Learning Services runs as part of SQL Server. Therefore, you need to use a SQL notebook and not a Python notebook.
 
-## Example
+## Run Python or R scripts
+
+SQL Notebooks consists of code and text cells. Code cells are used to run Python or R scripts via the stored procedure [sp_execute_external_scripts](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Text cells can be used to document your code in the notebook.
+
+### Run a Python script
+
+Follow these steps to run a Python script:
+
+1. Click **+ Code** to add a code cell.
+
+1. Enter the following script in the code cell:
+
+    ```python
+    EXECUTE sp_execute_external_script @language = N'Python'
+        , @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    print(c, d)
+    '
+    ```
+
+1. Click **Run cell (F5)** or press **F5** to run the single cell.
+
+1. The result will be hown under the code cell.
+
+
+### Run an R script
+
+Follow these steps to run an R script:
+
+1. Click **+ Code** to add a code cell.
+
+1. Enter the following script in the code cell:
+
+    ```python
+    EXECUTE sp_execute_external_script @language = N'Python'
+        , @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    print(c, d)
+    '
+    ```
+
+1. Click **Run cell (F5)** or press **F5** to run the single cell.
+
+1. The result will be hown under the code cell.
+
 
 ## Next steps

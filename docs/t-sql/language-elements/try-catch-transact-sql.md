@@ -68,7 +68,7 @@ END CATCH
  
  If there is an error in the code that is enclosed in a TRY block, control passes to the first statement in the associated CATCH block. When the code in the CATCH block finishes, control passes to the statement immediately after the END CATCH statement. 
  
- >[!NOTE] 
+ > [!NOTE] 
  > If the END CATCH statement is the last statement in a stored procedure or trigger, control is passed back to the statement that called the stored procedure or fired the trigger. 
  
  Errors trapped by a CATCH block are not returned to the calling application. If any part of the error information must be returned to the application, the code in the CATCH block must do so by using mechanisms such as SELECT result sets or the RAISERROR and PRINT statements.  

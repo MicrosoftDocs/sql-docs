@@ -1,7 +1,7 @@
 ---
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/06/2018
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -307,7 +307,7 @@ Is a default value for the parameter. If a *default* value is defined, the funct
  When a parameter of the function has a default value, the keyword DEFAULT must be specified when the function is called to retrieve the default value. This behavior is different from using parameters with default values in stored procedures in which omitting the parameter also implies the default value. However, the DEFAULT keyword is not required when invoking a scalar function by using the EXECUTE statement.  
   
  READONLY  
- Indicates that the parameter cannot be updated or modified within the definition of the function. If the parameter type is a user-defined table type, READONLY should be specified.  
+ Indicates that the parameter cannot be updated or modified within the definition of the function. READONLY is required for user-defined table type parameters (TVPs), and cannot be used for any other parameter type.
   
  *return_data_type*  
  Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except the **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a return data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  

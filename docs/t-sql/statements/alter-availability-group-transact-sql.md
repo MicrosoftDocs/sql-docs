@@ -401,7 +401,16 @@ Specifies whether distributed transactions are enabled for this Availability Gro
   
  NONE  
  Specifies that when this availability replica is the primary replica, read-only routing will not be supported. This is the default behavior. When used with MODIFY REPLICA ON, this value disables an existing list, if any.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('**\<server_instance>**')** } 
+ Applies to: SQL Server (Starting with SQL Server 2019 (15.x)) 
+
+ Specifies a server instances that host availability replicas for this availability group that meet the following requirements when running under the primary role:
+-   The replica spec PRIMARY_ROLE must include READ_WRITE_ROUTING_URL.
+-   The connection string must be ReadWrite either by defining ApplicationIntent as ReadWrite or by not setting ApplicationIntent and letting the default (ReadWrite) take effect.
+
+Please see detail on the option on: [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md)
+
  SESSION_TIMEOUT **=**_seconds_  
  Specifies the session-timeout period in seconds. If you do not specify this option, by default, the time period is 10 seconds. The minimum value is 5 seconds.  
   

@@ -128,7 +128,7 @@ EXEC master..xp_cmdshell 'dir *.exe'
 USE master;  
   
 EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck  
-    \\server2\backups\SQLbcks, NO_OUTPUT';  
+    \\server2\backups\SQLbcks', NO_OUTPUT;  
 GO  
 ```  
   

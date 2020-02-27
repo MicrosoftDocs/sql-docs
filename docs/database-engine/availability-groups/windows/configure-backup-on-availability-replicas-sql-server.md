@@ -29,8 +29,8 @@ ms.author: mathoma
 ##  <a name="Prerequisites"></a> Prerequisites  
  You must be connected to the server instance that hosts the primary replica.  
  
-    > [!NOTE]
-    > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`. 
+   > [!NOTE]
+   > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`. 
   
   
 ##  <a name="Permissions"></a> Permissions  

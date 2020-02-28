@@ -223,6 +223,10 @@
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
+    - name: Troubleshoot
+      items:
+      - name: Active directory deployment
+        href: big-data-cluster/troubleshoot-active-directory.md
   - name: Reference
     items:
     - name: Deployment reference
@@ -287,10 +291,6 @@
           href: big-data-cluster/reference-azdata-bdc-sql.md
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
-  - name: Troubleshoot
-    items:
-    - name: Active directory deployment
-      href: big-data-cluster/troubleshoot-active-directory.md
 - name: Business continuity
   items:
   - name: Overview

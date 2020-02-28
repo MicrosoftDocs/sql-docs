@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Install SQL Server MLS (Python and R) on Docker
 
-This article explains how to install SQL Server Machine Learning Services on Docker. You can use Machine Learning Services to execute Python and R scripts in-database. We do not provide pre-built containers with Machine Learning Services, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)
+This article explains how to install SQL Server Machine Learning Services on Docker. You can use Machine Learning Services to execute Python and R scripts in-database. We do not provide pre-built containers with Machine Learning Services. You can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)
 
 ## Prerequisites
 
@@ -40,15 +40,17 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 1. Change the directory to the mssql-mlservices directory:
 
-2. In the same directory run the following command
+2. In the same directory, run the following command
 
-   docker build -t mssql-server-mlservices
+   docker builds -t mssql-server-mlservices
 
 3. Run the command:
 
-   docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<some password> -v <some directory on the host OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+   docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=  -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
 
-4. Confirm that the container is running by running the following command:
+   Modify to add SA_PASSWORD and -v path 
+
+4. Confirm by running the following command:
 
    docker ps -a
 
@@ -101,7 +103,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 ## Connect to Linux SQL Server in the container
 
-EXEC sp_configure  'external scripts enabled', 1
+EXEC sp_configure  'external scripts enabled', one
 RECONFIGURE WITH OVERRIDE
 
 Verify ML Services is working by running the following simple R/Python sp_execute_external_script:

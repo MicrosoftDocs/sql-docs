@@ -2,8 +2,8 @@
 title: Deploy in Active Directory mode
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to upgrade SQL Server Big Data Clusters in an Active Directory domain.
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/13/2020
 ms.topic: conceptual
@@ -170,16 +170,27 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.domainDnsName`: Name of your domain (e.g. `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: This parameter takes **one AD group**. Members of this group will get administrator permissions in the cluster. This means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller. **Please note that this group needs to exist in AD before deployment begins. Also note that this group can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or domain global. Members of this group get administrator permissions in the cluster. This means that they have `sysadmin` permissions in SQL Server, superuser permissions in HDFS, and administrators in controller. 
 
-- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+  >[!IMPORTANT]
+  >Create this group in AD before deployment begins. If the scope for this AD group is domain local deployment fails.
 
-- `security.activeDirectory.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
 
-- `security.activeDirectory.appReaders` **Optional parameter**: list of the AD groups who have permissions to run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+  >[!IMPORTANT]
+  >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
-**How to check AD group scope:**
-[Click here for instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) for checking the scope of an AD group, to determine if it is DomainLocal.
+- `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+
+  >[!IMPORTANT]
+  >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+
+- `security.activeDirectory.appReaders` **Optional parameter**: List of the AD groups who have permissions to run any application. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+
+  >[!IMPORTANT]
+  >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+
+[Check AD group scope](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), to determine if it is DomainLocal.
 
 If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration.
 

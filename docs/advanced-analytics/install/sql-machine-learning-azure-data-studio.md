@@ -116,5 +116,5 @@ Follow these steps to run an R script:
 
 ## Next steps
 
-- [Quickstart: Run simple Python scripts with SQL Server Machine Learning Services](quickstart-python-create-script.md)
-- [Quickstart: Run simple R scripts with SQL Server Machine Learning Services](quickstart-r-create-script.md)
+- [Quickstart: Run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
+- [Quickstart: Run simple R scripts with SQL Server Machine Learning Services](../tutorials/quickstart-r-create-script.md)

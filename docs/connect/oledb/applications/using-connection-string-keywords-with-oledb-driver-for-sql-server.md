@@ -51,7 +51,7 @@ ms.author: pelopes
   
  If you specify multiple instances of the same provider-specific property, the first value of the first property will be used.  
 
-## Using IDBInitialize::Initialize with the OLE DB Driver
+## Using IDBInitialize::Initialize
 
  Connection strings used by OLE DB applications using DBPROP_INIT_PROVIDERSTRING with **IDBInitialize::Initialize** have the following syntax:  
   
@@ -107,7 +107,7 @@ ms.author: pelopes
   
 <b id="table1_1">[1]:</b> To improve security, encryption and certificate validation behavior is modified when using Authentication or Access Token initialization properties or their corresponding connection string keywords. For more information, see [Encryption and certificate validation](../features/using-azure-active-directory.md#encryption-and-certificate-validation).
 
-## Using IDataInitialize::GetDataSource with the OLE DB Driver
+## Using IDataInitialize::GetDataSource
 
  Connection strings used by OLE DB applications using **IDataInitialize::GetDataSource** have the following syntax:  
   

@@ -19,7 +19,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Live Query Statistics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides the ability to view the live execution plan of an active query. This live query plan provides real-time insights into the query execution process as the controls flow from one [query plan operator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) to another. The live query plan displays the overall query progress and operator-level run-time execution statistics such as the number of rows produced, elapsed time, operator progress, etc. Because this data is available in real time without needing to wait for the query to complete, these execution statistics are extremely useful for debugging query performance issues. This feature is available beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], however it can work with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
@@ -56,7 +56,9 @@ The live execution plan can also be accessed from the **[Activity Monitor](../..
  The statistics profile infrastructure must be enabled before live query statistics can capture information about the progress of queries. Depending on the version, the overhead may be significant. For more information on this overhead, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## Permissions  
- Requires the database level `SHOWPLAN` permission to populate the **Live Query Statistics** results page, the server level `VIEW SERVER STATE` permission to see the live statistics, and requires any permissions necessary to execute the query.  
+Requires the database level `SHOWPLAN` permission to populate the **Live Query Statistics** results page, and requires any permissions necessary to execute the query.
+On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires the server level `VIEW SERVER STATE` permission to see the live statistics.  
+On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database to see the live statistics. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or an **Azure Active Directory admin** account to see the live statistics.
   
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

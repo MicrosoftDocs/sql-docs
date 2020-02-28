@@ -2,8 +2,8 @@
 title: Troubleshoot Active Directory mode deployment
 titleSuffix: SQL Server Big Data Cluster
 description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Active Directory domain.
-author: mihaelablendea
-ms.author: mihaelab
+author: rl-msft
+ms.author: rafidl
 ms.reviewer: mikeray
 ms.date: 02/13/2020
 ms.topic: conceptual

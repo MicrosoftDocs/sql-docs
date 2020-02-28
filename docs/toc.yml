@@ -791,7 +791,7 @@
       - name: Connectivity
         items:
         - name: Listener
-          href: database-engine/availability-groups/windows/listener-connectivity.md
+          href: database-engine/availability-groups/windows/availability-group-listener-overview.md
         - name: Client connection types
           href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
         - name: Driver & client support

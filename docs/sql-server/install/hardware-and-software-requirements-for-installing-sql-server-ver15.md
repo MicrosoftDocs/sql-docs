@@ -1,5 +1,5 @@
 ---
-title: "Hardware and software requirements (SQL Server 2019)"
+title: "SQL Server 2019: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2019. 
 ms.custom: sqlfreshmay19
 ms.date: 02/19/2020
@@ -46,24 +46,32 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Hardware and software requirements for installing SQL Server
+# SQL Server 2019: Hardware and software requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2019 on the Windows operating system.
 
-**For SQL Server 2016 and 2017, see [SQL Server 2016/2017 requirements](hardware-and-software-requirements-for-installing-sql-server.md).**
+For hardware and software requirements for other versions of SQL Server, see:
+- [SQL Server 2016 and 2017](hardware-and-software-requirements-for-installing-sql-server.md)
+- [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system)
 
-For SQL Server on Linux, see [Hardware and Software Requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux](../../linux/sql-server-linux-setup.md#system). 
-
-
-## Installation media
-
-You can get relevant installation media from the following locations: 
+##  <a name="pmosr"></a> Hardware requirements  
+ The following memory and processor requirements apply to all editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
   
-- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
-- [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+|Component|Requirement|  
+|---------------|-----------------|  
+|Hard Disk|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard-disk space.<br/><br/> Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
+|Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires Super-VGA (800x600) or higher resolution monitor.|  
+|Internet|Internet functionality requires Internet access (fees may apply).|  
+|Memory \*|**Minimum:**<br/><br/> Express Editions: 512 MB<br/><br/> All other editions: 1 GB<br/><br/> **Recommended:**<br/><br/> Express Editions: 1 GB<br/><br/> All other editions: At least 4 GB and should be increased as database size increases to ensure optimal performance.|  
+|Processor Speed|**Minimum:** x64 Processor: 1.4 GHz<br/><br/> **Recommended:** 2.0 GHz or faster|  
+|Processor Type|x64 Processor: AMD Opteron, AMD Athlon 64, Intel Xeon with Intel EM64T support, Intel Pentium IV with EM64T support|  
+  
+> [!NOTE]  
+> Installation of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] is supported on x64 processors only. It is no longer supported on x86 processors.  
+  
+ \* The minimum memory required for installing the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) is 2 GB of RAM, which is different from the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] minimum memory requirement. For information about installing DQS, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
 
-Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.
 
 ##  <a name="hwswr"></a> Software requirements  
 
@@ -84,23 +92,6 @@ The following requirements apply to all installations:
 > [!IMPORTANT]
 > There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
-##  <a name="pmosr"></a> Hardware requirements  
- The following memory and processor requirements apply to all editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
-  
-|Component|Requirement|  
-|---------------|-----------------|  
-|Hard Disk|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard-disk space.<br/><br/> Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
-|Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires Super-VGA (800x600) or higher resolution monitor.|  
-|Internet|Internet functionality requires Internet access (fees may apply).|  
-|Memory \*|**Minimum:**<br/><br/> Express Editions: 512 MB<br/><br/> All other editions: 1 GB<br/><br/> **Recommended:**<br/><br/> Express Editions: 1 GB<br/><br/> All other editions: At least 4 GB and should be increased as database size increases to ensure optimal performance.|  
-|Processor Speed|**Minimum:** x64 Processor: 1.4 GHz<br/><br/> **Recommended:** 2.0 GHz or faster|  
-|Processor Type|x64 Processor: AMD Opteron, AMD Athlon 64, Intel Xeon with Intel EM64T support, Intel Pentium IV with EM64T support|  
-  
-> [!NOTE]  
-> Installation of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] is supported on x64 processors only. It is no longer supported on x86 processors.  
-  
- \* The minimum memory required for installing the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) is 2 GB of RAM, which is different from the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] minimum memory requirement. For information about installing DQS, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
- 
 
 ##  <a name="TOP_Principal"></a> Operating system support 
 
@@ -186,7 +177,18 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not supported on a read-only domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup cannot create security groups or provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup will fail. 
 - A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance is not supported in an environment where only a read-only domain controller is accessible. 
   
-## See also  
- [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+## Installation media
+
+You can get relevant installation media from the following locations: 
+  
+- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
+- [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+
+Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.
+
+
+## Next steps
+
+Once you've reviewed the hardware and software requirements for installing SQL Server, you can start to [Plan a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) or review the [Security considerations for SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
+
 

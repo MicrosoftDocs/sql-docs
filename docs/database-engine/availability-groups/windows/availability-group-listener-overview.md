@@ -1,8 +1,8 @@
 ---
 title: "What is an availability group listener?"
-description: "An overview of the availability group listener. "
+description: "An overview of the Always On availability group listener and how it functions to direct traffic automatically to the intended server. "
 ms.custom: "seodec18"
-ms.date: "05/17/2016"
+ms.date: "02/27/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -21,15 +21,13 @@ ms.author: mathoma
 # What is an availability group listener?  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article provides an overview of an availability group listener. To learn how to connect to the listener, see [Connect to listener](listeners-client-connectivity-application-failover.md)
-
 An availability group listener is a virtual network name (VNN) that clients can connect to in order to access a database in a primary or secondary replica of an Always On availability group. A listener allows a client to connect to a replica without having to know the physical instance name of the SQL Server. Since the listener routes traffic, the client connection string does not need to be modified after a failover occurs. 
 
 An availability group listener consists of a Domain Name System (DNS) listener name, listener port designation, and one or more IP addresses. Only the TCP protocol is supported by availability group listener.  The DNS name of the listener must be unique in the domain and in NetBIOS.  When you create a  listener, it becomes a resource in a cluster with an associated virtual network name (VNN), virtual IP (VIP), and availability group dependency. A client uses DNS to resolve the VNN into multiple IP addresses and then tries to connect to each address, until a connection request succeeds or until the connection requests time out.  
   
-If read-only routing is configured for one or more [readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), read-intent client connections to the primary replica are redirected to a readable secondary replica. 
+If read-only routing is configured for one or more [readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), read-intent client connections to the listener are  automatically redirected to a readable secondary replica. 
   
-For essential information about availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+This article provides an overview of an availability group listener. You can also [configure the listener](create-or-configure-an-availability-group-listener-sql-server.md), and then learn how to [connect to the listener](listeners-client-connectivity-application-failover.md).
   
   
 ##  <a name="AGlConfig"></a> Listener parameters  
@@ -61,14 +59,14 @@ For essential information about availability group listeners, see [Create or Con
  When an availability group failover occurs, existing persistent connections to the availability group are terminated and the client must establish a new connection in order to continue working with the same primary database or read-only secondary database.  While a failover is occurring on the server side, connectivity to the availability group may fail, forcing the client application to retry connecting until the primary is brought fully back online.  
   
  If the availability group comes back online during a client application's connection attempt but before the connect timeout period, the client driver may successfully connect during one of its internal retry attempts and no error will be surfaced to the application in this case.  
-  
-  
-## See Also  
 
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
+
+## Next steps
+
+Now that you're familiar with how an availability group listener functions, [create your listener](create-or-configure-an-availability-group-listener-sql-server.md) and then configure your application to [connect to the listener](listeners-client-connectivity-application-failover.md). You can also review various [availability group monitoring strategies](monitoring-of-availability-groups-sql-server.md) to ensure the health of your availability group. 
+
+For more information about availability groups, see the  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+  
+
   
   

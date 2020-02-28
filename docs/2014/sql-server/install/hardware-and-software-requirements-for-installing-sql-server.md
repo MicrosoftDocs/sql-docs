@@ -1,5 +1,5 @@
 ---
-title: "Hardware and Software Requirements for Installing SQL Server 2014 | Microsoft Docs"
+title: "SQL Server 2014: Hardware & Software Requirements"
 ms.custom: ""
 ms.date: "07/10/2018"
 ms.prod: "sql-server-2014"
@@ -46,7 +46,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Hardware and Software Requirements for Installing SQL Server 2014
+# SQL Server 2014: Hardware and Software Requirements
 
  > - Try SQL Server 2016 by installing the **[Free Developer edition](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)!**  
   

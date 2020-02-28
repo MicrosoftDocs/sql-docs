@@ -1,5 +1,5 @@
 ---
-title: "Hardware & software requirements (SQL Server 2016 & 2017)"
+title: "SQL Server 2016 & 2017: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2016 and SQL Server 2017. 
 ms.custom: "seo-lt-2019"
 ms.date: "02/19/2020"
@@ -46,44 +46,15 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Hardware & software requirements for SQL Server 2016 & 2017
+# SQL Server 2016 & 2017: Hardware & software requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2016 and SQL Server 2017 on the Windows operating system.  
 
-**For SQL Server 2019, see [SQL Server 2019 requirements](hardware-and-software-requirements-for-installing-sql-server-ver15.md).**
+For hardware and software requirements for other versions of SQL Server, see:
+- [SQL Server 2019](hardware-and-software-requirements-for-installing-sql-server-ver15.md)
+- [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system)
 
-For SQL Server on Linux, see [Hardware and Software Requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux](../../linux/sql-server-linux-setup.md#system). 
-
-
-## Installation media
-
-You can get relevant installation media from the following locations: 
-  
-- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
-- [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
-
-Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.
-
-  
-##  <a name="hwswr"></a> Software Requirements  
-The following requirements apply to all installations:  
-  
-|Component|Requirement|  
-|---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br/><br/> For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], and [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
-|Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br/><br/> **Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios.<br/><br/> **Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
-
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
-  
-   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
-   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
-
-  
-  
-> [!IMPORTANT]
-> There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
-  
 ## Hardware requirements
 
  The following hardware requirements apply to SQL Server 2016 and SQL Server 2017: 
@@ -103,6 +74,26 @@ The following requirements apply to all installations:
   
  \* The minimum memory required for installing the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) is 2 GB of RAM, which is different from the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] minimum memory requirement. For information about installing DQS, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   
+  
+##  <a name="hwswr"></a> Software Requirements  
+The following requirements apply to all installations:  
+  
+|Component|Requirement|  
+|---------------|-----------------|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br/><br/> For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], and [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br/><br/> **Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios.<br/><br/> **Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
+  
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
+
+  
+  
+> [!IMPORTANT]
+> There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+  
+
 
 
 ## Operating System support
@@ -238,8 +229,18 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
 
   > [!NOTE]
   > This restriction also applies to installations on domain member nodes.
+
+## Installation media
+
+You can get relevant installation media from the following locations: 
   
-## See Also  
- [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
+- [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+
+Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.
+  
+  
+## Next steps
+
+Once you've reviewed the hardware and software requirements for installing SQL Server, you can start to [Plan a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) or review the [Security considerations for SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
 

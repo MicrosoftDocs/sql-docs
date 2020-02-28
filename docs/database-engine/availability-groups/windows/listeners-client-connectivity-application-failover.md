@@ -2,7 +2,7 @@
 title: "Connect to an availability group listener"
 description: "Contains information about connecting to an Always On availability group listener, such as how to connect to the primary replica, a read-only secondary replica, use SSL, and Kerberos." 
 ms.custom: "seodec18"
-ms.date: "05/17/2016"
+ms.date: "02/27/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -21,7 +21,7 @@ ms.author: mathoma
 # Connect to an Always On availability group listener 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
-This article contains information about connecting to an availability group listener. 
+Once you've [configured your availability group listener](create-or-configure-an-availability-group-listener-sql-server.md), you'll need to update your connection string to connect to the Always On availability group listener. This will route traffic from your application automatically to the intended replica without having to manually update the connection string after every failover. 
   
 
 ##  <a name="ConnectToPrimary"></a> Connect to the primary replica  
@@ -150,9 +150,10 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
  For more information about manual registration of a SPN for SQL Server, see [Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
-  
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
-  [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
-  
+
+
+## Next steps
+
+Once you've successfully connected to the listener, consider offloading [read-only workloads](overview-of-always-on-availability-groups-sql-server.md) and [backups](configure-backup-on-availability-replicas-sql-server.md) to the secondary replica to improve performance. You can also review various [availability group monitoring strategies](monitoring-of-availability-groups-sql-server.md) to ensure the health of your availability group. 
+
+For more information about availability groups, see the  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 

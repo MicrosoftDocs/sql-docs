@@ -28,31 +28,34 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 1. Open a Bash terminal on Linux or Mac, or open a WSL terminal on Windows.
 
-1. Create a local directory to hold a local copy of the mssql-docker repository.
+2. Create a local directory to hold a local copy of the mssql-docker repository.
 
-1. Run the git clone command to clone the mssql-docker repository:
+3. Run the git clone command to clone the mssql-docker repository:
 
     ```bash
     git clone https://github.com/microsoft/mssql-docker mssql-docker
     ```
 
-## Build a SQL Server Linux container image with MLS
+## Build a SQL Server Linux container image
+
 1. Change the directory to the mssql-mlservices directory:
 
-    ```bash
-    cd mssql-docker/linux/preview/examples/mssql-mlservices
-    ```
+2. In the same directory run the following command
 
-1. Run the build.sh script:
+   docker build -t mssql-server-mlservices
 
-   ```bash
-   ./build.sh
-   ```
+3. Run the command:
+
+   docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<some password> -v <some directory on the host OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+
+4. Confirm that the container is running by running the following command:
+
+   docker ps -a
 
    > [!NOTE]
    > To build the Docker image, you must install packages that are several GBs in size. The script may take up to 20 minutes to finish running, depending on network bandwidth.
 
-## Run the SQL Server Linux container image with MLS
+## Run the SQL Server Linux container image
 
 1. Set your environment variables before running the container. Set the PATH_TO_MSSQL environment variable to a host directory:
 
@@ -63,7 +66,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
     export PATH_TO_MSSQL='/home/mssql/'
    ```
 
-1. Run the run.sh script:
+2. Run the run.sh script:
 
    ```bash
    ./run.sh
@@ -74,13 +77,13 @@ This article explains how to install SQL Server Machine Learning Services on Doc
    > [!NOTE]
    > The process for running production SQL Server editions in containers is slightly different. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
 
-1. To view your Docker containers, run the `docker ps` command:
+3. To view your Docker containers, run the `docker ps` command:
 
    ```bash
    sudo docker ps -a
    ```
 
-1. If the **STATUS** column shows a status of **Up**, SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
+4. If the **STATUS** column shows a status of **Up**, SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
 
    ```bash
    $ sudo docker ps -a
@@ -95,6 +98,33 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 ## Run in a container
 
 [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md).
+
+## Connect to Linux SQL Server in the container
+
+EXEC sp_configure  'external scripts enabled', 1
+RECONFIGURE WITH OVERRIDE
+
+Verify ML Services is working by running the following simple R/Python sp_execute_external_script:
+
+execute sp_execute_external_script 
+@language = N'R',
+@script = N'
+print("Hello World!")
+print(R.version)
+print(Revo.version)
+OutputDataSet <- InputDataSet', 
+@input_data_1 = N'select 1'
+go
+
+execute sp_execute_external_script 
+@language = N'Python',
+@script = N'
+import sys
+print(sys.version)
+print("Hello World!")
+OutputDataSet = InputDataSet',
+@input_data_1 = N'select 1'
+go
 
 ## Next steps
 

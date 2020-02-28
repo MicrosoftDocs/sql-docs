@@ -9,6 +9,7 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
+feedback_product_url: "https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/"
 ---
 
 # What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?

@@ -96,7 +96,7 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 
 ## Previous SSMS releases
 
-Download previous SSMS versions by clicking the download link in the related section.
+Download previous SSMS versions by selecting the download link in the related section.
 
 | SSMS version | Build number | Release date |
 |--------------|--------------|-------------------|

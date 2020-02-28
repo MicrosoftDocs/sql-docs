@@ -7,7 +7,7 @@ ms.date: 01/31/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Use Azure Data Studio notebooks with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +28,17 @@ You can use Machine Learning Services in Azure Data Studio with a SQL notebook. 
 
 1. Click **File** and **New Notebook** to create a new notebook. The notebook will by default use the **SQL kernel**.
 
-1. Click **Attach To** and **Change Connection** to connect to a SQL Server. You can either:
+1. Click **Attach To** and **Change Connection**. 
+
+    > [!div class="mx-imgBorder"]
+    > ![Azure Data Studio SQL Notebook change connection](media/ads-attach-to-connection.png)
+    
+1. Connect to an existing or new SQL Server. You can either:
     1. Choose an existing connection under **Recent Connections** or **Saved Connections**.
     1. Create a new connection under **Connection Details**. Fill out the connection details to your SQL Server and database.
+
+    > [!div class="mx-imgBorder"]
+    > ![Azure Data Studio SQL Notebook connection details](media/ads-connection-details.png)  
 
 > [!IMPORTANT]
 > Machine Learning Services runs as part of SQL Server. Therefore, you need to use a SQL notebook and not a Python notebook.

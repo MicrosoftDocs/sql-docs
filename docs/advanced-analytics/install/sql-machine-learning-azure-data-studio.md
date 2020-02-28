@@ -109,7 +109,15 @@ Follow these steps to run an R script:
 
 1. Click **Run cell** (the round black arrow) or press **F5** to run the single cell.
 
+    > [!div class="mx-imgBorder"]
+    > ![Azure Data Studio SQL Notebook run R code](media/ads-run-r.png)  
+
 1. The result will be shown under the code cell.
 
+    > [!div class="mx-imgBorder"]
+    > ![Azure Data Studio SQL Notebook R code output](media/ads-run-r-output.png)  
 
 ## Next steps
+
+- [Quickstart: Run simple Python scripts with SQL Server Machine Learning Services](quickstart-python-create-script.md)
+- [Quickstart: Run simple R scripts with SQL Server Machine Learning Services](quickstart-r-create-script.md)

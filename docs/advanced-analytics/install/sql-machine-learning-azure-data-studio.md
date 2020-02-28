@@ -47,7 +47,7 @@ Follow these steps to run a Python script:
 
 1. Enter the following script in the code cell:
 
-    ```python
+    ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
         , @script = N'
     a = 1
@@ -60,7 +60,7 @@ Follow these steps to run a Python script:
 
 1. Click **Run cell (F5)** or press **F5** to run the single cell.
 
-1. The result will be hown under the code cell.
+1. The result will be shown under the code cell.
 
 
 ### Run an R script
@@ -71,20 +71,20 @@ Follow these steps to run an R script:
 
 1. Enter the following script in the code cell:
 
-    ```python
-    EXECUTE sp_execute_external_script @language = N'Python'
+    ```sql
+    EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
-    a = 1
-    b = 2
-    c = a/b
-    d = a*b
-    print(c, d)
+    a <- 1
+    b <- 2
+    c <- a/b
+    d <- a*b
+    print(c(c, d))
     '
     ```
 
 1. Click **Run cell (F5)** or press **F5** to run the single cell.
 
-1. The result will be hown under the code cell.
+1. The result will be shown under the code cell.
 
 
 ## Next steps

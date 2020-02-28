@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 
 This article explains how to troubleshoot deployment of a SQL Server Big Data Cluster in Active Directory mode.
 
-## Places to check
+## Check deployment progress
 
 Deployment can take several minutes. If the cluster is not ready after 15 minutes, check controller logs for more details.
 
@@ -33,34 +33,40 @@ Verify that the list of pods returned include:
 - `data-`
 - `storage-`
 
-Check `controller.log` (`<folderOfDebugCopyLog>\debuglogs-mssql-cluster-20200219-093941\mssql-cluster\control-<suffix>\controller\controller\<date>\controller.log`). Look for the following entry:
+If these compute, data, and storage pods are not created, check the logs to identify why.
 
-`WARN | StatefulSet master is not ready with 0 ready pods and 3 unready pods `
+## Check logs
 
-Check `master-0` `provisioner.log` (`<folderOfDebugCopyLog>\debuglogs-mssql-cluster-20200219-093941\mssql-cluster\master-0\mssql-server\provisioner\provisioner.log`)
+To identify why deployment quit without creating compute, data, or storage pods, check the following logs: 
 
-```
-ERROR | Failed to create sql login for domain user [contoso.com\<domain-group>]
-	Traceback (most recent call last):
-	  File "/opt/provisioner/bin/scripts/provisioningpool.py", line 214, in executeNonQueries
-	    connection.execute_non_query(command)
-	  File "src/_mssql.pyx", line 1033, in _mssql.MSSQLConnection.execute_non_query
-	  File "src/_mssql.pyx", line 1061, in _mssql.MSSQLConnection.execute_non_query
-	  File "src/_mssql.pyx", line 1634, in _mssql.check_and_raise
-	  File "src/_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
-	_mssql.MSSQLDatabaseException: (15401, b"Windows NT user or group 'contoso.com\\<domain-group>' not found. Check the name again.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
-WARNING | [3/3] Provisioning exception occurred during provisioning step: ProvisioningMasterPool.
-WARNING | Failed to create sql login for domain user [contoso.com\<domain-group>]
-WARNING | Retrying.
-```
+- Check `controller.log` (`<folderOfDebugCopyLog>\debuglogs-mssql-cluster-20200219-093941\mssql-cluster\control-<suffix>\controller\controller\<date>\controller.log`). Look for the following entry:
 
-- Check the scope of the domain group (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
+  `WARN | StatefulSet master is not ready with 0 ready pods and 3 unready pods `
 
-If the `<domain-group>` group scope is domain local (`DomainLocal`) deployment fails. 
+- Check `master-0` `provisioner.log` (`<folderOfDebugCopyLog>\debuglogs-mssql-cluster-20200219-093941\mssql-cluster\master-0\mssql-server\provisioner\provisioner.log`)
 
-[Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md) explains AD group scope requirements.
+  ```
+  ERROR | Failed to create sql login for domain user [<domain>.<top-level-domain>\<domain-group>]
+    Traceback (most recent call last):
+      File "/opt/provisioner/bin/scripts/provisioningpool.py", line 214, in executeNonQueries
+        connection.execute_non_query(command)
+      File "src/_mssql.pyx", line 1033, in _mssql.MSSQLConnection.execute_non_query
+      File "src/_mssql.pyx", line 1061, in _mssql.MSSQLConnection.execute_non_query
+      File "src/_mssql.pyx", line 1634, in _mssql.check_and_raise
+      File "src/_mssql.pyx", line 1683, in _mssql.maybe_raise_MSSQLDatabaseException
+    _mssql.MSSQLDatabaseException: (15401, b"Windows NT user or group '<domain>.<top-level-domain>\\<domain-group>' not found. Check the name again.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+  WARNING | [3/3] Provisioning exception occurred during provisioning step: ProvisioningMasterPool.
+  WARNING | Failed to create sql login for domain user [<domain>.<top-level-domain>\<domain-group>]
+  WARNING | Retrying.
+  ```
+
+  In the example above, the deployment fails to create a sql login for the domain user because the domaing group is scoped as domain local. Use domain global or domain universal scoped groups. [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md) explains AD group scope requirements.
 
 ## Check the scope of domain groups.
+
+Check the scope of the domain group (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
+
+If the `<domain-group>` group scope is domain local (`DomainLocal`) deployment fails. 
 
 The following PowerShell script checks the scope of two AD groups named `bdcadmins` and `bdcusers`. Replace the names with the names for your groups. 
 
@@ -68,8 +74,6 @@ The following PowerShell script checks the scope of two AD groups named `bdcadmi
 #Administrators and users AD groups
 $Cluster_admins_group='bdcadmins'
 $Cluster_users_group='bdcusers'
-
-
 
 #Performing AD Group Checks...
 
@@ -107,3 +111,57 @@ catch {
 #Display the results
 $ClusterUsersGroupScope_Result
 ```
+
+## Check security-support container 
+
+Review the security-support container logs.
+
+The following command collects the security-support logs in a cluster at namespace `mssql-cluster`.
+
+```console
+azdata bdc debug copy-logs -n mssql-cluster -c security-support
+```
+
+Extract the logs and locate `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
+
+Look for the following entries in the log:
+
+```
+ERROR | Failed to create AD user account 'cntrl-controller'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=cntrl-controller,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
+ERROR | Failed to create AD user account 'ldap-user'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=ldap-user,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
+ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=nginx-mgmtproxy,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform.
+```
+
+This can happen when the domain controller DNS server is missing reverse DNS entry (PTR record).
+
+## Verify reverse lookup (PTR record)
+
+Run the following PowerShell script to confirm if you have reverse DNS entry (PTR record) configured.
+
+```powershell
+#Domain Controller FQDN 'DCserver01.contoso.local'
+$Domain_controller_FQDN = 'DCserver01.contoso.local'
+
+#Performing Domain Controller DNS record, reverse PTR Checks...
+$DcControllerDnsPtr_Result = New-Object System.Collections.ArrayList
+try {
+    $Domain_controller_DNS_Record = Resolve-DnsName $Domain_controller_FQDN -Type A -Server $Domain_DNS_IP_address -ErrorAction Stop
+    foreach ($ip in $Domain_controller_DNS_Record.IPAddress) {
+        #resolving hostname by IP address to make sure we have reverse PTR record 
+        if ((Resolve-DnsName $ip).NameHost -eq $Domain_controller_FQDN) {
+            [void]$DcControllerDnsPtr_Result.add("OK - $Domain_controller_FQDN has an A record with an IP $ip, Reverse PTR record is in place") 
+        }
+        else {
+            [void]$DcControllerDnsPtr_Result.add("Missing - $Domain_controller_FQDN has an A record with an IP $ip, But no reverse PTR record was found for the host")
+        }
+    }
+}
+catch {
+    [void]$DcControllerDnsPtr_Result.add("Error - " + $_.exception.message)
+}
+
+#show the results 
+$DcControllerDnsPtr_Result
+```
+
+[Verify reverse DNS entry (PTR record) for domain controller](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).

@@ -30,6 +30,15 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## 17.5.2, February 2020
+
+| Feature added | Details |
+| :------------ | :------ |
+| Support authentication with Managed Identity for Azure Key Vault | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.5, January 2020
 
 | Feature added | Details |

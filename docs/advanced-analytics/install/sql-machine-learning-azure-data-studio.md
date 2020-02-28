@@ -28,6 +28,9 @@ Learn how to run Python and R scripts in a notebooks in [Azure Data Studio](http
 
 ## Create a SQL notebook
 
+> [!IMPORTANT]
+> Machine Learning Services runs as part of SQL Server. Therefore, you need to use a SQL notebook and not a Python notebook.
+
 You can use Machine Learning Services in Azure Data Studio with a SQL notebook. To create a new notebook, follow these steps:
 
 1. Click **File** and **New Notebook** to create a new notebook. The notebook will by default use the **SQL kernel**.
@@ -45,9 +48,6 @@ You can use Machine Learning Services in Azure Data Studio with a SQL notebook. 
 
     > [!div class="mx-imgBorder"]
     > ![Azure Data Studio SQL Notebook connection details](media/ads-connection-details.png)  
-
-> [!IMPORTANT]
-> Machine Learning Services runs as part of SQL Server. Therefore, you need to use a SQL notebook and not a Python notebook.
 
 ## Run Python or R scripts
 

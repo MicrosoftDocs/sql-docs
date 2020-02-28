@@ -75,10 +75,15 @@ Follow these steps to run a Python script:
     '
     ```
 
-1. Click **Run cell (F5)** or press **F5** to run the single cell.
+1. Click **Run cell** (the round black arrow) or press **F5** to run the single cell.
+
+    > [!div class="mx-imgBorder"]
+    > ![Azure Data Studio SQL Notebook run Python code](media/ads-run-python.png)  
 
 1. The result will be shown under the code cell.
 
+    > [!div class="mx-imgBorder"]
+    > ![Azure Data Studio SQL Notebook Python code output](media/ads-run-python-output.png)  
 
 ### Run an R script
 
@@ -102,7 +107,7 @@ Follow these steps to run an R script:
     '
     ```
 
-1. Click **Run cell (F5)** or press **F5** to run the single cell.
+1. Click **Run cell** (the round black arrow) or press **F5** to run the single cell.
 
 1. The result will be shown under the code cell.
 

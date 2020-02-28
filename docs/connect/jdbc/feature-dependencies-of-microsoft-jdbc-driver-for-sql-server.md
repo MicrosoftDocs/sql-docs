@@ -1,7 +1,7 @@
 ---
 title: "Feature dependencies of the Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/29/2020"
+ms.date: "02/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -38,7 +38,7 @@ Specific projects that require either of the preceding features need to explicit
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -61,7 +61,7 @@ Specific projects that require either of the preceding features need to explicit
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -88,7 +88,7 @@ Specific projects that require either of the preceding features need to explicit
 
 ### Working with the Azure Key Vault provider:
 
-- JDBC driver version 8.2.0 - Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC driver version 8.2.1 - Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 7.4.1 - Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 7.2.2 - Dependency versions: Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 7.0.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
@@ -103,7 +103,7 @@ Specific projects that require either of the preceding features need to explicit
 
 ### Working with Azure Active Directory authentication:
 
-- JDBC Driver version 8.2.0 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies. In this version of the driver, 'sqljdbc_auth.dll' has been renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'.
+- JDBC Driver version 8.2.1 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies. In this version of the driver, 'sqljdbc_auth.dll' has been renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'.
 - JDBC Driver version 7.4.1 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies
 - JDBC Driver version 7.2.2 - Dependency versions: Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies
 - JDBC Driver version 7.0.0 - Dependency versions: Adal4j (version 1.6.0) and its dependencies
@@ -115,7 +115,7 @@ From driver version 6.4.0 onward, applications don't necessarily require using A
 
 For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by default and doesn't require Kerberos ticket setup or Azure library dependencies. If sqljdbc_auth.dll isn't available, the driver looks for the Kerberos ticket for authenticating to Active Directory as on other operating systems.
 
-From driver version 8.2.0 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'. E.g. 'mssql-jdbc_auth-8.2.0.x64.dll'.
+From driver version 8.2.1 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'. E.g. 'mssql-jdbc_auth-8.2.1.x64.dll'.
 
 You can get a [sample application](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md) that uses this feature.
 

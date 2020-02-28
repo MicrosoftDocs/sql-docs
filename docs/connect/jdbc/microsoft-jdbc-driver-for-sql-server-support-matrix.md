@@ -1,7 +1,7 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server support matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/29/2020"
+ms.date: "02/26/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -26,7 +26,7 @@ manager: jroth
   
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
-|Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.0.jre13.jar<br> mssql-jdbc-8.2.0.jre11.jar<br> mssql-jdbc-8.2.0.jre8.jar|Jan 31, 2025|
+|Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.1.jre13.jar<br> mssql-jdbc-8.2.1.jre11.jar<br> mssql-jdbc-8.2.1.jre8.jar|February 26, 2025|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|August 2, 2024|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|April 16, 2024|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|July 31, 2023|  

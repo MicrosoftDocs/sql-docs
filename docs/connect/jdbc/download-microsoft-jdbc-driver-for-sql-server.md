@@ -1,7 +1,7 @@
 ---
 title: Download Microsoft JDBC Driver for SQL Server
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server.
-ms.date: 01/29/2020
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,7 +21,7 @@ Use the links in the following table to download the latest Microsoft JDBC Drive
 
 | Version | Release date | Java versions |
 |---|---|---|
-| [Microsoft JDBC Driver 8.2](https://go.microsoft.com/fwlink/?linkid=2116870) | 1/31/2020 | JRE 8, 11, 13 |
+| [Microsoft JDBC Driver 8.2](https://go.microsoft.com/fwlink/?linkid=2116870) | 2/26/2020 | JRE 8, 11, 13 |
 | [Microsoft JDBC Driver 7.4](https://go.microsoft.com/fwlink/?linkid=2099962) | 8/1/2019 | JRE 8, 11, 12 |
 | [Microsoft JDBC Driver 7.2](https://go.microsoft.com/fwlink/?linkid=2063159) | 4/17/2019 | JRE 8, 11 |
 | [Microsoft JDBC Driver 7.0](https://go.microsoft.com/fwlink/?linkid=2005972) | 7/31/2018 | JRE 8, 10 |
@@ -40,7 +40,7 @@ The JDBC driver can be added to a Maven project by adding it as a dependency in 
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
 </dependency>
 ```  
 

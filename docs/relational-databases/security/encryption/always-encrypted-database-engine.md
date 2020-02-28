@@ -157,13 +157,12 @@ Always Encrypted isn't supported for the columns with the below characteristics.
 - Columns with the `IDENTITY` property.  
 - Columns with `ROWGUIDCOL` property.  
 - String (`varchar`, `char`, etc.) columns with non-bin2 collations.  
-- Columns that are keys for nonclustered indices using a randomized encrypted column as a key column (deterministic encrypted columns are fine).  
-- Columns that are keys for clustered indices using a randomized encrypted column as a key column (deterministic encrypted columns are fine).  
-- Columns that are keys for fulltext indices containing encrypted columns both randomized and deterministic.  
+- Columns that are keys for clustered or nonclustered indices when using randomized encryption (deterministic encryption is fine).  
+- Columns that are keys for fulltext indices when using randomized encryption (deterministic encryption is fine).  
 - Computed columns.
 - Columns referenced by computed columns (when the expression does unsupported operations for Always Encrypted).  
 - Sparse column set.  
-- Columns that are referenced by statistics.  
+- Columns that are referenced by statistics when using randomized encryption (deterministic encryption is fine).  
 - Columns using alias type.  
 - Partitioning columns.  
 - Columns with default constraints.  
@@ -171,7 +170,7 @@ Always Encrypted isn't supported for the columns with the below characteristics.
 - Primary key columns when using randomized encryption (deterministic encryption is supported).  
 - Referencing columns in foreign key constraints when using randomized encryption or when using deterministic encryption, if the referenced and referencing columns use different keys or algorithms.  
 - Columns referenced by check constraints.  
-- Columns in tables that use change data capture.  
+- Columns captured/tracked using change data capture.  
 - Primary key columns on tables that have change tracking.  
 - Columns that are masked (using Dynamic Data Masking).  
 - Columns in Stretch Database tables. (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)  

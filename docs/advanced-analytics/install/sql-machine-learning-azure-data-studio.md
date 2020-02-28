@@ -53,6 +53,9 @@ Follow these steps to run a Python script:
 
 1. Click **+ Code** to add a code cell.
 
+> [!div class="mx-imgBorder"]
+> ![Azure Data Studio SQL Notebook add code block](media/ads-add-code.png)  
+
 1. Enter the following script in the code cell:
 
     ```sql

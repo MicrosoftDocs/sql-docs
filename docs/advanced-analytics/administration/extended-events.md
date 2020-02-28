@@ -3,7 +3,7 @@ title: Monitor scripts with extended events
 description: Learn how to use extended events to monitor and troubleshooting operations related to the SQL Server Machine Learning Services, SQL Server Launchpad, and Python or R jobs external scripts.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -81,13 +81,13 @@ SQL Server Machine Learning Services starts some services that run outside of th
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    To capture events related to the Launchpad, place the *.config* file in the Binn directory for the SQL Server instance. In a default installation, this would be:
+    To capture events related to the Launchpad, place the *.xml* file in the Binn directory for the SQL Server instance. In a default installation, this would be:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** is the satellite process that supports SQL extensibility with external script languages, such as R or Python. A separate instance of BxlServer is launched for each external language instance.
   
-    To capture events related to BXLServer, place the *.config* file in the R or Python installation directory. In a default installation, this would be:
+    To capture events related to BXLServer, place the *.xml* file in the R or Python installation directory. In a default installation, this would be:
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
@@ -139,7 +139,7 @@ The following example shows the definition of an event trace for the Launchpad s
 </event_sessions>  
 ```
 
-+ Place the *.config* file in the Binn directory for the SQL Server instance.
++ Place the *.xml* file in the Binn directory for the SQL Server instance.
 + This file must be named `Launchpad.xevents.xml`.
 
 ### Example: Capturing BXLServer events  
@@ -169,7 +169,7 @@ The following example shows the definition of an event trace for the BXLServer e
 </event_sessions>  
 ```
 
-+ Place the *.config* file in the same directory as the BXLServer executable.
++ Place the *.xml* file in the same directory as the BXLServer executable.
 + This file must be named `bxlserver.xevents.xml`.
 
 ## Next steps

@@ -384,12 +384,15 @@ The driver supports authenticating to Azure Key Vault using the following creden
 
 - Client ID/Secret - with this method, the credentials are an application client ID and an application secret.
 
+- Managed Identity (17.5.2+) - either system or user-assigned; see [Managed Identities for Azure resources](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/) for more information.
+
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
 |Credential Type| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |Username/password| `KeyVaultPassword`|User Principal Name|Password|
 |Client ID/secret| `KeyVaultClientSecret`|Client ID|Secret|
+|Managed Identity|`KeyVaultManagedIdentity`|Object ID (optional, for user-assigned only)|(not specified)|
 
 #### Example Connection Strings
 
@@ -406,6 +409,19 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
+
+**Managed Identity (system-assigned)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**Managed Identity (user-assigned)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 
 No other ODBC application changes are required to use AKV for CMK storage.
 

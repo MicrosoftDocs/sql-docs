@@ -23,7 +23,7 @@ Learn how to run Python and R scripts in a notebooks in [Azure Data Studio](http
     - [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md).
 
     - [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
-    
+
     - [Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 
 ## Create a SQL notebook
@@ -59,8 +59,8 @@ Follow these steps to run a Python script:
 
 1. Click **+ Code** to add a code cell.
 
-> [!div class="mx-imgBorder"]
-> ![Azure Data Studio SQL Notebook add code block](media/ads-add-code.png)  
+    > [!div class="mx-imgBorder"]
+    > ![Azure Data Studio SQL Notebook add code block](media/ads-add-code.png)  
 
 1. Enter the following script in the code cell:
 

@@ -106,28 +106,6 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 EXEC sp_configure  'external scripts enabled', one
 RECONFIGURE WITH OVERRIDE
 
-Verify ML Services is working by running the following simple R/Python sp_execute_external_script:
-
-execute sp_execute_external_script 
-@language = N'R',
-@script = N'
-print("Hello World!")
-print(R.version)
-print(Revo.version)
-OutputDataSet <- InputDataSet', 
-@input_data_1 = N'select 1'
-go
-
-execute sp_execute_external_script 
-@language = N'Python',
-@script = N'
-import sys
-print(sys.version)
-print("Hello World!")
-OutputDataSet = InputDataSet',
-@input_data_1 = N'select 1'
-go
-
 ## Next steps
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:

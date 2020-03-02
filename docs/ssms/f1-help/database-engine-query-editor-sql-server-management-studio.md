@@ -31,15 +31,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ![New query](media/database-engine-query-editor-sql-server-management-studio/new-query.png)
 
-The Database Engine Query Editor is one of four editors implemented in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For a description of the functionality implemented in the Query Editor and the main tasks you can perform using the editor, see [Query and Text Editors](../scripting/query-and-text-editors-sql-server-management-studio.md)
+The Database Engine Query Editor is one of four editors implemented in SQL Server Management Studio (SSMS).
 
 Use the Query Editor to create and run scripts containing Transact-SQL statements. The editor also supports running scripts that contain **sqlcmd** commands.
 
-You can add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows are open, all the buttons are unavailable.
+For a description of the functionality implemented in the Query Editor and the main tasks you can perform using the editor, see [Query and Text Editors](../scripting/query-and-text-editors-sql-server-management-studio.md)
 
 ## Transact-SQL F1 Help
 
-The Query Editor supports linking you to the reference topic for a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement when you select F1. To do so, highlight the name of a Transact-SQL statement and then select F1. The help search engine then searches for a topic that has an F1 help attribute that matches the string you highlighted.
+The Query Editor supports linking you to the reference topic for a specific Transact-SQL statement when you select F1. To do so, highlight the name of a Transact-SQL statement and then select F1. The help search engine then searches for a topic that has an F1 help attribute that matches the string you highlighted.
 
 If the help search engine doesn't find a topic with an F1 help keyword that exactly matches the string you highlighted, then this topic is displayed. In that case, there are two approaches to finding the help you're looking for:
 
@@ -57,9 +57,11 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 
 ![Editor toolbar](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
-When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is open, the SQL Editor toolbar appears with the following buttons.
+When the Query Editor is open, the SQL Editor toolbar appears with the following buttons.
 
-### Connect using the SQL Editor Toolbar
+You can also add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no Query Editor windows are open, all the buttons are unavailable.
+
+### Connect
 
 ![Connect icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-connect.png)
 
@@ -67,7 +69,7 @@ Opens the **Connect to Server** dialog box. Use this dialog box to establish a c
 
 You can also connect to your database using the [context menu](#connection-using-the-context-menu).
 
-### Change Connection using the Editor Toolbar
+### Change Connection
 
 ![Change Connection icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-change-connection.png)
 
@@ -75,13 +77,13 @@ Opens the **Connect to Server** dialog box. Use this dialog box to establish a c
 
 You can also change connections using the [context menu](#connection-using-the-context-menu).
 
-### Available Databases using the Editor Toolbar
+### Available Databases
 
 ![Available Databases icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-available-databases.png)
 
 Change the connection to a different database on the same server.
 
-### Execute using the Editor Toolbar
+### Execute
 
 ![Execute icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-execute.png)
 
@@ -89,7 +91,7 @@ Executes the selected code or, if no code is selected, executes all the code in 
 
 You can also **Execute** a query by selecting F5 or from the [context menu](#execute-using-the-context-menu).
 
-### Cancel Executing Query using the Editor Toolbar
+### Cancel Executing Query
 
 ![Cancel Execution Query icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-cancel-execute-query.png)
 
@@ -97,7 +99,7 @@ Sends a cancellation request to the server. Some queries can't be canceled immed
 
 You can also cancel an executing query by selecting Alt + Break.
 
-### Parse using the Editor Toolbar
+### Parse
 
 ![Parse icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-parse.png)
 
@@ -105,7 +107,7 @@ Checks the syntax of the selected code. If no code is selected, it checks the sy
 
 You can also check the code in the Query Editor by selecting Ctrl + F5.
 
-### Display Estimated Execution Plan using the Editor Toolbar
+### Display Estimated Execution Plan
 
 ![Display Estimated Execution Plan icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-display-estimated-execution-plan.png)
 
@@ -113,7 +115,7 @@ Requests a query execution plan from the query processor without actually execut
 
 You can also display an estimated execution plan by selecting Ctrl + L or from the [context menu](#display-estimated-execution-plan-using-the-context-menu).
 
-### Query Options using the Editor Toolbar
+### Query Options
 
 ![Query Options icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-query-options.png)
 
@@ -121,7 +123,7 @@ Opens the **Query Options** dialog box. Use this dialog box to configure the def
 
 You can also select **Query Options** from the [context menu](#query-options-using-the-context-menu).
 
-### IntelliSense Enabled using the Editor Toolbar
+### IntelliSense Enabled
 
 ![Intellisense Enabled icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-intellisense-enabled.png)
 
@@ -129,7 +131,7 @@ Specifies whether IntelliSense functionality is available in the [!INCLUDE[ssDE]
 
 You can also select **IntelliSense Enabled** by selecting Ctrl + B then Ctrl I, or from the [context menu](#intellisense-enabled-using-the-context-menu).
 
-### Include Actual Execution Plan using the Editor Toolbar
+### Include Actual Execution Plan
 
 ![Include Actual Execution Plan icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-include-actual-execution-plan.png)
 
@@ -137,7 +139,7 @@ Executes the query, returns the query results, and the execution plan that was u
 
 You can also select the **Include Actual Execution Plan** by selecting Ctrl + M or from the [context menu](#include-actual-execution-plan-from-the-context-menu).
 
-### Include Live Query Statistics using the Editor Toolbar
+### Include Live Query Statistics
 
 ![Include Live Query Statistics icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-include-live-query-statistics.png).
 
@@ -145,7 +147,7 @@ Provides real-time insights into the query execution process as the controls flo
 
 You can also select the **Include Live Query Statistics** from the [context menu](#include-live-query-statistics-from-the-context-menu)
 
-### Include Client Statistics using the Editor Toolbar
+### Include Client Statistics
 
 ![Include Client Statistics icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-include-client-statistics.png)
 
@@ -153,7 +155,7 @@ Includes a **Client Statistics** window that contains statistics about the query
 
 You can also select the **Include Live Query Statistics** by selecting Shift + Alt + S or from the [context menu](#include-client-statistics-from-the-context-menu).
 
-### Results to Text using the Editor Toolbar
+### Results to Text
 
 ![Results to Text icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-results-to-text.png)
 
@@ -161,7 +163,7 @@ Returns the query results as text in the **Results** window.
 
 You can also return results to text by selecting Ctrl + T or from the [context menu](#results-to-text-using-the-context-menu).
 
-### Results to Grid using the Editor Toolbar
+### Results to Grid
 
 ![Results to Grid icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-results-to-grid.png)
 
@@ -169,7 +171,7 @@ Returns the query results as one or more grids in the **Results** window. This o
 
 You can also return results to text by selecting Ctrl + D or from the [context menu](#results-to-grid-using-the-context-menu).
 
-### Results to File using the Editor Toolbar
+### Results to File
 
 ![Results to File icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-results-to-file.png)
 
@@ -177,7 +179,7 @@ When the query executes, the **Save Results** dialog box opens. In **Save In**, 
 
 You can also return results to text by selecting Ctrl + Shift + F or from the [context menu](#results-to-file-using-the-context-menu).
 
-### Comment out the selected lines using the Editor Toolbar
+### Comment out the selected lines
 
 ![Comment Selection icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-comment-selection.png)
 
@@ -185,7 +187,7 @@ Makes the current line a comment by adding a comment operator (--) at the beginn
 
 You can also comment out a line by selecting Ctrl + K then Ctrl + C.
 
-### Uncomment the selected lines using the Editor Toolbar
+### Uncomment the selected lines
 
 ![Uncomment Selection icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-uncomment-selection.png)
 
@@ -193,19 +195,19 @@ Makes the current line an active source statement by removing any comment operat
 
 You can also comment out a line by selecting Ctrl + K then Ctrl + U.
 
-### Decrease Indent using the Editor Toolbar
+### Decrease Indent
 
 ![Decrease Indent icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-decrease-indent.png)
 
 Moves the text of the line to the left by removing blanks at the beginning of the line.
 
-### Increase Line Indent using the Editor Toolbar
+### Increase Line Indent
 
 ![Increase Line Indent icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-increase-indent.png)
 
 Moves the text of the line to the right by adding blanks at the beginning of the line.
 
-### Specify Values for Template Parameters using the Editor Toolbar
+### Specify Values for Template Parameters
 
 ![Specify Values for Template Parameters icon](media/database-engine-query-editor-sql-server-management-studio/toolbar-specify-values-for-template-parameters.png)
 
@@ -219,9 +221,13 @@ You can access the context menu by *right-clicking* anywhere in the query editor
 
 ### Insert Snippet
 
+A Transact-SQL code snippet is a template you can use as a starting point when writing new Transact-SQL statements in the Query Editor.
+
 ### Surround With
 
-### Connection using the context menu
+A surround-with snippet is a template you can use as a starting point when enclosing a set of Transact-SQL statements in a BEGIN, IF, or WHILE block.
+
+### Connection
 
 ![Context menu options](media/database-engine-query-editor-sql-server-management-studio/context-menu-connections.png)
 
@@ -236,6 +242,8 @@ There are more **Connection** options in the context menu compared to the toolba
 - **Change Connection** - Opens the Connect to Server dialog box. Use this dialog box to establish a connection to a different server.
 
 ### Open Server in Object Explorer
+
+Object Explorer provides a hierarchical user interface to view and manage the objects in each instance of SQL Server. The Object Explorer Details pane presents a tabular view of instance objects, and the capability to search for specific objects. The capabilities of Object Explorer vary slightly depending on the type of server, but generally include the development features for databases, and management features for all server types.
 
 ### Execute using the context menu
 
@@ -257,9 +265,15 @@ Specifies whether IntelliSense functionality is available in the [!INCLUDE[ssDE]
 
 ### Trace Query in SQL Server Profiler
 
+SQL Server Profiler is an interface to create and manage traces and analyze and replay trace results. Events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem.
+
 ### Analyze Query in Database Engine Tuning Advisor
 
+The Microsoft Database Engine Tuning Advisor (DTA) analyzes databases and makes recommendations that you can use to optimize query performance. You can use the Database Engine Tuning Advisor to select and create an optimal set of indexes, indexed views, or table partitions without having an expert understanding of the database structure or the internals of SQL Server. Using the DTA, you can perform the following tasks.
+
 ### Design Query in Editor
+
+The Query and View Designer opens when you open the definition of a view, show the results for a query or view, or create or open a query.
 
 ### Include Actual Execution Plan using the context menu
 
@@ -292,6 +306,10 @@ You can select any of the *Result* options you want from the context menu.
 - **Results to File** - When the query executes, the **Save Results** dialog box opens. In **Save In**, select the folder in which you want to save the file. In **File name**, type the name of the file, and then select **Save** to save the query results as a **Report** file that has the .rpt extension. For advanced options, click the down-arrow on the **Save** button, and then select **Save with Encoding**.
 
 ### Properties Window
+
+The Properties window describes the state of an item in SQL Server Management Studio, such as a connection or a Showplan operator, and information about database objects such as tables, views, and designers.
+
+You can use the Properties window to view the properties of the current connection. Many properties are read-only in the Properties window but can be changed elsewhere in the Management Studio. For example, the Database property of a query is read-only in the Properties window, but can be changed on the tool bar.
 
 ### Query Options using the context menu
 

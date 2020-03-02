@@ -59,6 +59,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  The following example shows how to obtain the initial synchronization version and the initial data set.  
   
 ```sql  
+    declare @synchronization_version bigint;
+
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -73,6 +75,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  To obtain the changed rows for a table and information about the changes, use CHANGETABLE(CHANGES...). For example, the following query obtains changes for the `SalesLT.Product` table.  
   
 ```sql  
+declare @last_synchronization_version bigint;
+
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  

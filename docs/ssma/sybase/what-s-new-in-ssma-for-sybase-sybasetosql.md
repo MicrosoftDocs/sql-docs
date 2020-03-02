@@ -20,7 +20,7 @@ This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly S
 The v8.7 release of SSMA for SAP ASE has minor fixes and performance improvements in graphical user interface.
 
 > [!IMPORTANT]
-> With SSMA v8.5 and later, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+> With SSMA v8.5 and later, .NET 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## SSMA v8.6
 
@@ -31,7 +31,7 @@ To leverage this setting, in SSMA for SAP ASE, navigate to **Tools** > **Project
 ![Omit Extended Properties setting](../sybase/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> With SSMA v8.5 and later, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+> With SSMA v8.5 and later, .NET 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## SSMA v8.5
 
@@ -40,14 +40,14 @@ The v8.5 release of SSMA for SAP ASE is enhanced with support for Azure Active D
 In addition, SSMA for SAP ASE now allows you to hide system tables and views (exclude them from conversion).
 
 > [!IMPORTANT]
-> With SSMA v8.5, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+> With SSMA v8.5, .NET 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## SSMA v8.4
 
 The v8.4 release of SSMA for SAP ASE is enhanced with targeted fixes that are designed to address accessibility issues and fix a bug related to max index columns (to allow 32 instead of 16) for SQL Server 2016 and later versions.
 
 > [!IMPORTANT]
-> With SSMA versions 7.4 through 8.4, .Net 4.5.2 is an installation pre-requisite.
+> With SSMA versions 7.4 through 8.4, .NET 4.5.2 is an installation pre-requisite.
 
 ## SSMA v8.3
 
@@ -141,7 +141,7 @@ The v7.4 release of SSMA for Sybase contains the following changes:
 * The quality and conversion metric has been improved with targeted fixes, based on customer feedback.
 
   > [!IMPORTANT]
-  > .Net 4.5.2 is a pre-requisite for installing SSMA v7.4. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
+  > .NET 4.5.2 is a pre-requisite for installing SSMA v7.4. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
 
 ## SSMA v7.3
 
@@ -178,8 +178,8 @@ The v7.1 release of SSMA for Sybase contains the following changes:
 The May 2016 release of SSMA for Sybase contains the following changes:
 
 * Added support for SQL Server 2016.
-* Removed installer check for .Net 2.0.
-* Updated Extension Pack dependency from .Net 3.5 to .Net 4.0.
+* Removed installer check for .NET 2.0.
+* Updated Extension Pack dependency from .NET 3.5 to .NET 4.0.
 * Fixed `save-project` and `open-project` commands for SSMA Console.
 * Fixed `securepassword` command for SSMA Console.
 * Fixed counting of objects for initial loading.
@@ -240,7 +240,7 @@ The April 2011 release of SSMA for Sybase contains the following changes:
 * Improved data migration performance with Simple and Bulk logged recovery models.
 * Added the ability to properly convert and migrate case-sensitive Sybase databases to case-sensitive SQL Server.
 * Added support for conversion of Sybase ASE Non-ANSI join statements to SQL Server ANSI join statements has been extended to DELETE and UPDATE statements.
-* Provided additional connectivity options for connecting to Sybase ASE servers using Sybase ASE ODBC provider and Sybase ASE ADO.Net providers.
+* Provided additional connectivity options for connecting to Sybase ASE servers using Sybase ASE ODBC provider and Sybase ASE ADO.NET providers.
 * Removed the dependency on a separate database called `SysDB`, which contains the Sybase emulation functions (installed as part of Extension Pack).
 * Added the ability to install SSMA for Sybase Extension Pack on [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] clusters.
 * Added backward compatibility of projects created by earlier versions of SSMA (v4.0 and v4.2).

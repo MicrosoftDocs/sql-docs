@@ -22,7 +22,7 @@ The v8.7 release of SSMA for MySQL has minor fixes and performance improvements 
 In addition, SSMA for MySQL now provides conversion for `LIMIT` clause when targeting Azure SQL.
 
 > [!IMPORTANT]
-> With SSMA v8.5 and later, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+> With SSMA v8.5 and later, .NET 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## SSMA v8.6
 
@@ -33,21 +33,21 @@ To leverage this setting, in SSMA for MySQL, navigate to **Tools** > **Project S
 ![Omit Extended Properties setting](../mysql/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> With SSMA v8.5 and later, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+> With SSMA v8.5 and later, .NET 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## SSMA v8.5
 
 The v8.5 release of SSMA for MySQL is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
 
 > [!IMPORTANT]
-> With SSMA v8.5, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+> With SSMA v8.5, .NET 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## SSMA v8.4
 
 The v8.4 release of SSMA for MySQL is enhanced with targeted fixes that are designed to address accessibility issues and fix a bug related to max index columns (to allow 32 instead of 16) for SQL Server 2016 and later versions.
 
 > [!IMPORTANT]
-> With SSMA versions 7.4 though 8.4, .Net 4.5.2 is an installation pre-requisite.
+> With SSMA versions 7.4 though 8.4, .NET 4.5.2 is an installation pre-requisite.
 
 ## SSMA v8.3
 
@@ -140,7 +140,7 @@ The v7.4 release of SSMA for MySQL contains the following changes:
 * The quality and conversion metric has been improved with targeted fixes, based on customer feedback.
 
 > [!IMPORTANT]
-> .Net 4.5.2 is a pre-requisite for installing SSMA v7.4. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
+> .NET 4.5.2 is a pre-requisite for installing SSMA v7.4. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
 
 ## SSMA v7.3
 
@@ -178,8 +178,8 @@ The May 2016 release of SSMA for MySQL contains  the following changes:
 
 * Added support for SQL Server 2016.
 * Improved parser and resolver.
-* Removed installer check for .Net 2.0.
-* Updated Extension Pack dependency from .Net 3.5 to .Net 4.0.
+* Removed installer check for .NET 2.0.
+* Updated Extension Pack dependency from .NET 3.5 to .NET 4.0.
 * Fixed default BigInt type mapping for MySql.
 * Fixed `save-project` and `open-project` commands for SSMA Console.
 * Fixed `securepassword` command for SSMA Console.

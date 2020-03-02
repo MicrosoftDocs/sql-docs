@@ -174,7 +174,7 @@ Once you can connect using TCP on the same computer, it's time to try connecting
    - `ping` of the IP address doesn't work, indicating a general TCP configuration problem. Go back to the section [Testing TCP/IP connectivity](#testTCPIP).
    - SQL Server is not listening on the TCP protocol. Go back to the section [Enable protocols](#enableprotocols).
    - SQL Server is listening on a port other than the port you specified. Go back to the section [Get the TCP port number](#getTCP).
-   - The SQL Server TCP port is being blocked by the firewall. Go back to the section [Open a port in the firewall](#open-a-port-in-the-firewall).
+   - The SQL Server TCP port is being blocked by the firewall. Go back to the section [Open a port in the firewall](#openport-in-the-firewall).
 
 2. Once you can connect using the IP address and port number, attempt to connect using the IP address without a port number. For a default instance, just use the IP address. For a named instance, use the IP address and the instance name in the format IP address backslash instance name, for example `192.168.1.101\<instance name>` If this doesn't work, then you probably have one of the following problems:
 

@@ -46,6 +46,8 @@ As part of the move to AppContainers, there are new firewall rules based on AppC
 > [!Note]
 > If network calls are required, you can disable the outbound rules in Windows Firewall.
 
+<a name="file-permissions"></a>
+
 ## File permissions
 
 By default, external Python and R scripts only have read access permission to their working directories. 

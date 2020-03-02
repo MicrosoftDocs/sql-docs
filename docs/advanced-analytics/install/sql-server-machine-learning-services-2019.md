@@ -3,7 +3,7 @@ title: 'Isolation changes for Windows'
 description: This article describes the changes to the isolation mechanism in Machine Learning Services in SQL Server 2019 on Windows. These changes affect SQLRUserGroup, firewall rules, file permission, and implied authentication.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 03/02/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -48,7 +48,20 @@ As part of the move to AppContainers, there are new firewall rules based on AppC
 
 ## File permissions
 
-By default, external Python and R scripts have read access permission to their working directories by default. If your Python or R script needs access to other directories, you need give either **Read & execute** and/or **Write** permissions to the **NT Service\MSSQLLaunchpad** service user account and **ALL APPLICATION PACKAGES**.
+By default, external Python and R scripts only have read access permission to their working directories. 
+
+If your Python or R script needs access to other directories, you need give either **Read & execute** and/or **Write** permissions to the **NT Service\MSSQLLaunchpad** service user account and **ALL APPLICATION PACKAGES**.
+
+Follow the steps below to grant this access.
+
+1. In File Explorer, right click on the folder you want to use as working directory, and select **Properties**.
+1. Select **Security** and click **Edit...** to change permissions.
+1. Click **Add...**
+1. Make sure the **From this location** is the local computer name.
+1. Enter **ALL APPLICATION PACKAGES** in **Enter the object names to select** and click **Check Names**. Click **OK**.
+1. Select **Read & execute** under the **Allow** column.
+1. Select **Write** under the **Allow** column, if you want to grant write permissions.
+1. Click **OK** and **OK**.
 
 ### Program file permissions
 

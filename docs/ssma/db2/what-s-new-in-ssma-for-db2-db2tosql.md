@@ -208,7 +208,7 @@ The May 2016 release of SSMA for DB2 contains the following changes:
 * Added conversion of DB2 system-versioned tables to SQL Server temporal tables.
 * Improved DB2 parser and resolver.
 * Removed installer check for .Net 2.0.
-* Removed unnecessary *.dll from Db2 installer.
+* Removed unnecessary \*.dll from Db2 installer.
 * Fixed `save-project` and `open-project` commands for SSMA Console.
 * Fixed `securepassword` command for SSMA Console.
 * Fixed counting of objects for initial loading.

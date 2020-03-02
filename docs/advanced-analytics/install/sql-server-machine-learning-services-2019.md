@@ -46,7 +46,11 @@ As part of the move to AppContainers, there are new firewall rules based on AppC
 > [!Note]
 > If network calls are required, you can disable the outbound rules in Windows Firewall.
 
-## Program file permissions
+## File permissions
+
+By default, external Python and R scripts have read access permission to their working directories by default. If your Python or R script needs access to other directories, you need give either **Read & execute** and/or **Write** permissions to the **NT Service\MSSQLLaunchpad** service user account and **ALL APPLICATION PACKAGES**.
+
+### Program file permissions
 
 As with previous releases, the **SQLRUserGroup** continues to provide read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories. In this release, the only member of **SQLRUserGroup** is the SQL Server Launchpad service account.  When Launchpad service starts an R or Python execution environment, the process runs as LaunchPad service.
 

@@ -265,6 +265,6 @@ Opens the **Query Options** dialog box. Use this dialog box to configure the def
 
 ## See also
 
-[Customize menus and shortcut keys](../customize-menus-and-shortcut-keys.md)
+- [Customize menus and shortcut keys](../customize-menus-and-shortcut-keys.md)
 
-[SQL Server Management Studio Alternatives](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)
+- [SQL Server Management Studio Alternatives](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

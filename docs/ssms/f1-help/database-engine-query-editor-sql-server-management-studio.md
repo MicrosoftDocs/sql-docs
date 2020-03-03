@@ -29,13 +29,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-![New query](media/database-engine-query-editor-sql-server-management-studio/new-query.png)
-
 The Database Engine Query Editor is one of four editors implemented in SQL Server Management Studio (SSMS).
 
 Use the Query Editor to create and run scripts containing Transact-SQL statements. The editor also supports running scripts that contain **sqlcmd** commands.
 
 For a description of the functionality implemented in the Query Editor and the main tasks you can perform using the editor, see [Query and Text Editors](../scripting/query-and-text-editors-sql-server-management-studio.md)
+
+![New query](media/database-engine-query-editor-sql-server-management-studio/new-query.png)
 
 ## Transact-SQL F1 Help
 
@@ -53,7 +53,7 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 
   - The name of a system stored procedure table, or view, such as sys.data_spaces or sp_tableoption.
 
-## SQL Editor Toolbar
+## SQL Editor toolbar
 
 ![Editor toolbar](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 

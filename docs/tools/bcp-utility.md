@@ -186,7 +186,7 @@ Causes the value passed to the `bcp` `-S` option to be interpreted as a data sou
  **-E**<a name="E"></a>   
  Specifies that identity value or values in the imported data file are to be used for the identity column. If **-E** is not given, the identity values for this column in the data file being imported are ignored, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values based on the seed and increment values specified during table creation.  
   
- If the data file does not contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view should be skipped when importing data; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values for the column. For more information, see [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ If the data file does not contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view should be skipped when importing data; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values for the column. For more information, see [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-cmd-commands/dbcc-checkident-transact-sql.md).  
   
  The **-E** option has a special permissions requirement. For more information, see "[Remarks](#remarks)" later in this topic.  
    
@@ -224,13 +224,13 @@ Causes the value passed to the `bcp` `-S` option to be interpreted as a data sou
 
     The following example exports data using Azure AD Username and Password where user and password is an AAD credential. The example exports table `bcptest` from database `testdb` from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data1.dat`:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     The following example imports data using Azure AD Username and Password where user and password is an AAD credential. The example imports data from file `c:\last\data1.dat` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD User/Password:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -240,13 +240,13 @@ Causes the value passed to the `bcp` `-S` option to be interpreted as a data sou
 
     The following example exports data using Azure AD-Integrated account. The example exports table `bcptest` from database `testdb` using Azure AD Integrated from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     The following example imports data using Azure AD-Integrated auth. The example imports data from file `c:\last\data2.txt` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD Integrated auth:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -262,13 +262,13 @@ Causes the value passed to the `bcp` `-S` option to be interpreted as a data sou
 
    Interactive mode requires a password to be manually entered, or for accounts with multi-factor authentication enabled, complete your configured MFA authentication method.
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    In case an Azure AD user is a domain federated one using Windows account, the user name required in the command line, contains its domain account (for example,  joe@contoso.com see below):
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -446,7 +446,7 @@ Performs the bulk-copy operation using the native (database) data types of the d
     
     To determine where all versions of the bcp utility are installed, type in the command prompt:
     
-    ```console
+    ```cmd
     where bcp.exe
     ```
 
@@ -583,13 +583,13 @@ SET NOCOUNT ON;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')
 BEGIN
-	SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
-	FROM WideWorldImporters.Warehouse.StockItemTransactions  
-	WHERE 1 = 2;  
+    SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
+    FROM WideWorldImporters.Warehouse.StockItemTransactions  
+    WHERE 1 = 2;  
 
-	ALTER TABLE Warehouse.StockItemTransactions_bcp 
-	ADD CONSTRAINT PK_Warehouse_StockItemTransactions_bcp PRIMARY KEY NONCLUSTERED 
-	(StockItemTransactionID ASC);
+    ALTER TABLE Warehouse.StockItemTransactions_bcp 
+    ADD CONSTRAINT PK_Warehouse_StockItemTransactions_bcp PRIMARY KEY NONCLUSTERED 
+    (StockItemTransactionID ASC);
 END
 ```
 
@@ -602,7 +602,7 @@ END
 
 At a command prompt, enter the following command:
 
-```console
+```cmd
 bcp -v
 ```
   
@@ -615,7 +615,7 @@ This example creates a data file named `StockItemTransactions_character.bcp` and
 
   At a command prompt, enter the following command:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -637,7 +637,7 @@ The following example illustrates the **out** option on the `WideWorldImporters.
 
 At a command prompt, enter the following command: \(The system will prompt you for your password.\)
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +650,7 @@ This example uses the `StockItemTransactions_character.bcp` data file previously
 
   At a command prompt, enter the following command:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -659,7 +659,7 @@ This example uses the `StockItemTransactions_native.bcp` data file previously cr
   
 At a command prompt, enter the following command:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -671,7 +671,7 @@ To copy a specific column, you can use the **queryout** option.  The following e
   
 At a command prompt, enter the following command:
 
-```console
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -681,7 +681,7 @@ To copy a specific row, you can use the **queryout** option. The following examp
   
 At a command prompt, enter the following command:
 
-```console
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -691,7 +691,7 @@ To copy the result set from a Transact-SQL statement to a data file, use the **q
 
 At a command prompt, enter the following command:
 
-```console
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -701,7 +701,7 @@ The following example creates three different format files for the `Warehouse.St
 
 At a command prompt, enter the following commands:
 
-```console
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -723,7 +723,7 @@ To use a previously created format file when importing data into an instance of 
 
 At a command prompt, enter the following command:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

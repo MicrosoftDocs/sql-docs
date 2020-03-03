@@ -50,3 +50,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 > [!NOTE] 
 > Alternatively, use [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) to return execution plan information for each statement after executing it. If used in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the *Results* tab will have a link to open the execution plan in graphical format.   
 > For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
+  
+## See Also  
+ [Execution Plans](../../relational-databases/performance/execution-plans.md)    
+ [Query Processingg Architecture Guide](../../relational-databases/query-processing-architecture-guide)  

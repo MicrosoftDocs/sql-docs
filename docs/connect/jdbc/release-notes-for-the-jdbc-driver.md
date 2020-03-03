@@ -39,7 +39,7 @@ Microsoft JDBC Driver 8.2.1 for SQL Server is now compatible with Java Developme
 | Always Encrypted change | Details |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2.1 for SQL Server now supports Always Encrypted with secure enclaves. The details can be found here: Always Encrypted with secure enclaves. |
-| More details and sample code. | See [Always Encrypted with Secure Enclaves](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
+| More details and sample code. | See [Always Encrypted with Secure Enclaves](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Performance Improvement when Retrieving Temporal Datatypes from SQL Server

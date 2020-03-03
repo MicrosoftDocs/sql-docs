@@ -39,8 +39,8 @@ A query execution plan is a definition of the following:
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
-> -  The ***[Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.        
-> -  The ***[Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
+> -  The ***[Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer based on estimations.        
+> -  The ***[Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its [execution context](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). This includes actual runtime information that is available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
 > -  The ***[Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.       
 
 > [!TIP]

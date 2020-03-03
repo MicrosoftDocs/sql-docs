@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article guides you in the installation of [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux.
+This article guides you in the installation of [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
 [!NOTE]
 > Machine Learning Services is installed by default on SQL Server Big Data Clusters. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md)
@@ -30,9 +30,8 @@ Install and configure the SQL Server database engine first so that you can resol
 
 [Install SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup) and verify install.
 
-Check the SQL Server Linux repositories for the Python and R extensions. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
-
-Python and R scripts can be executed in-database using Machine Learning Services.
+* Check the SQL Server Linux repositories for the Python and R extensions. 
+* If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
 
 [Microsoft R Open](#mro) provides the base R distribution for the R feature in SQL Server
 
@@ -280,7 +279,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 5. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
-   + Edit or create a file named `.bash_profile` in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
+   + Edit or create a file `named.bash_profile` in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
    + Execute this file by typing `source.bash_profile` at a bash command prompt.
 

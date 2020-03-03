@@ -32,6 +32,8 @@ If you do not have an **Azure DevOps** organization, firstly sign up for [Azure 
 
 Path of the project folder or file to be built. If a folder path is specified, SSIS Build task will search all dtproj files recursively under this folder and build them all.
 
+Project path cannot be *empty*, set as **.** to build from the root folder of the repository.
+
 #### Project configuration
 
 Name of the project configuration to be used for build. If not supplied, it defaults to the first defined project configuration in each dtproj file.
@@ -44,9 +46,19 @@ Path of a separate folder to save build results, which can be published as build
 
 - SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline, you must choose **vs2017-win2016** for Microsoft-hosted agents, or install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
 
-- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) or [Command Line Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) to download and install the components before SSIS Build task  is executed.
+- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) or [Command Line Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) to download and install the components before SSIS Build task  is executed. Below is the sample PowerShell script to install Azure Feature Pack: 
 
-- Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Please make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will hang and timeout during execution.
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
+
+- Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will hang and time out during execution.
+
+- **ConnectByProxy** is a new property added in SSDT recently. SSDT installed on Microsoft-hosted agent is not updated, so please use self-hosted agent as a work-around.
 
 ## SSIS Deploy task
 
@@ -76,7 +88,7 @@ Path of the destination folder where the source file will be deployed to. For ex
 - /SSISDB/\<folderName\>
 - \\\\\<machineName\>\\\<shareFolderName\>\\\<optionalSubfolderName\>
 
-SSIS Deploy task will create the folder and sub-folder if they don’t exist.
+SSIS Deploy task will create the folder and subfolder if they don’t exist.
 
 #### Authentication type
 
@@ -122,7 +134,7 @@ Specify whether tp continue deployment for remaining projects or files when an e
 SSIS Deploy Task doesn’t support the following scenarios currently:
 
 - Configure environment in SSIS catalog.
-- Deploy ispac to Azure SQL Server or Azure SQL Managed Instance which only allows multi-factor authentication (MFA).
+- Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
 - Deploy packages to MSDB or SSIS Package Store.
 
 ## Release notes

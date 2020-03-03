@@ -60,7 +60,7 @@ To use **sqlmlutils**, you first need to install it on the client computer that 
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## Add a Python package on SQL Server
@@ -73,11 +73,11 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
 1. On the client computer, open **Python** or a Python environment.
 
-1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters).
+1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information.
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 

@@ -49,7 +49,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    **Set mixed mode authentication**
 
-   For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
+   For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms).
 
 1. Install SQL Server 2017 on Linux. For instructions, see [Install SQL Server](sql-server-linux-setup.md). Enable `hadr` via mssql-conf.
 

@@ -1,7 +1,7 @@
 ---
 title: "System requirements for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/29/2020"
+ms.date: "02/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -41,7 +41,7 @@ ms.author: genemi
 
 **Microsoft JDBC Driver 8.2 for SQL Server:**  
 
-  The JDBC Driver 8.2 includes three JAR class libraries in each installation package: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar**, and **mssql-jdbc-8.2.0.jre13.jar**.
+  The JDBC Driver 8.2 includes three JAR class libraries in each installation package: **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar**, and **mssql-jdbc-8.2.1.jre13.jar**.
 
   The JDBC Driver 8.2 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 13.0.
   
@@ -49,9 +49,9 @@ ms.author: genemi
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
-|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
-|mssql-jdbc-8.2.0.jre13.jar|4.3|13|Requires a Java Runtime Environment (JRE) 13.0. Using JRE 11.0 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
+|mssql-jdbc-8.2.1.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
+|mssql-jdbc-8.2.1.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
+|mssql-jdbc-8.2.1.jre13.jar|4.3|13|Requires a Java Runtime Environment (JRE) 13.0. Using JRE 11.0 or lower throws an exception.<br /><br /> New Features in 8.2 include: JDK 13 support, Always Encrypted with Secure Enclaves, and temporal datatype performance improvements. |
 
 
   The JDBC Driver 8.2 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
@@ -60,7 +60,7 @@ ms.author: genemi
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
 </dependency>
 ```
 

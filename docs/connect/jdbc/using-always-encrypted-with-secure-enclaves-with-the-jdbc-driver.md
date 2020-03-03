@@ -1,7 +1,7 @@
 ---
-title: "Using Always Encrypted with secure enclaves | Microsoft Docs"
+title: "Using Always Encrypted with secure enclaves with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/29/2020"
+ms.date: "03/02/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,7 +11,7 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
 ---
-# Using Always Encrypted with the secure enclaves
+# Using Always Encrypted with secure enclaves with the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This page provides information on how to develop Java applications using [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the Microsoft JDBC Driver 8.2 (or higher) for SQL Server.
@@ -19,7 +19,8 @@ This page provides information on how to develop Java applications using [Always
 Secure enclaves is an addition to the existing [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. The purpose of secure enclaves is to address limitations when working with Always Encrypted data. Previously, users could only perform equality comparisons on Always Encrypted data, and had to retrieve and decrypt the data in order to perform other operations. Secure enclaves address this limitation by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.
 
 ## Prerequisites
-- Make sure Microsoft JDBC Driver 8.2 (or higher) for SQL Server is installed on your development machine. 
+- Make sure Microsoft JDBC Driver 8.2 (or higher) for SQL Server is installed on your development machine.
+- Verify environment dependencies such as DLLs, KeyStores, etc. are in the correct paths. Always Encrypted with secure enclaves is an add-on to the existing [Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md) feature and share similar prerequisites.
 
 > [!Note]
 > If you are using an older version of JDK 8, you may need to download and install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files. Be sure to read the Readme included in the zip file for installation instructions and relevant details on possible export/import issues.  

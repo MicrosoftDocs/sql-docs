@@ -8524,7 +8524,7 @@
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           items:
           - name: Database Engine Query Editor
-            href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+            href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md 
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
           - name: Color Coding in Query Editors

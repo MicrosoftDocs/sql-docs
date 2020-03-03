@@ -123,11 +123,11 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 -   **in**<a name="in"></a> copies from a file into the database table or view.  
   
--   **out**<a name="out"></a> copies from the database table or view to a file. If you specify an existing file, the file is overwritten. When extracting data, note that the **bcp** utility represents an empty string as a null and a null string as an empty string.  
+-   **out**<a name="out"></a> copies from the database table or view to a file. If you specify an existing file, the file is overwritten. When extracting data, the **bcp** utility represents an empty string as a null and a null string as an empty string.  
   
 -   **queryout**<a name="qry_out"></a> copies from a query and must be specified only when bulk copying data from a query.  
   
--   **format**<a name="format"></a> creates a format file based on the option specified (**-n**, **-c**, **-w**, or **-N**) and the table or view delimiters. When bulk copying data, the **bcp** command can refer to a format file, which saves you from re-entering format information interactively. The **format** option requires the **-f** option; creating an XML format file, also requires the **-x** option. For more information, see [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). You must specify **nul** as the value (**format nul**).  
+-   **format**<a name="format"></a> creates a format file based on the option specified (**-n**, **-c**, **-w**, or **-N**) and the table or view delimiters. When bulk copying data, the **bcp** command can refer to a format file, which saves you from reentering format information interactively. The **format** option requires the **-f** option; creating an XML format file, also requires the **-x** option. For more information, see [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). You must specify **nul** as the value (**format nul**).  
   
  _**owner**_<a name="schema"></a>  
  Is the name of the owner of the table or view. *owner* is optional if the user performing the operation owns the specified table or view. If *owner* is not specified and the user performing the operation does not own the specified table or view, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] returns an error message, and the operation is canceled.  
@@ -183,10 +183,11 @@ Causes the value passed to the `bcp` `-S` option to be interpreted as a data sou
   
  If *err_file* begins with a hyphen (-) or a forward slash (/), do not include a space between **-e** and the *err_file* value.  
   
- **-E**<a name="E"></a>   
- Specifies that identity value or values in the imported data file are to be used for the identity column. If **-E** is not given, the identity values for this column in the data file being imported are ignored, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values based on the seed and increment values specified during table creation.  
+**-E**<a name="E"></a>
+
+Specifies that identity value or values in the imported data file are to be used for the identity column. If **-E** is not given, the identity values for this column in the data file being imported are ignored, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values based on the seed and increment values specified during table creation.  For more information, see [DBCC CHECKIDENT](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
   
- If the data file does not contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view should be skipped when importing data; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values for the column. For more information, see [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ If the data file does not contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view should be skipped when importing data; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically assigns unique values for the column.
   
  The **-E** option has a special permissions requirement. For more information, see "[Remarks](#remarks)" later in this topic.  
    
@@ -460,7 +461,7 @@ Performs the bulk-copy operation using the native (database) data types of the d
 
 - For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
 
-- [Using additonal special characters](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+- [Using additional special characters](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
 
     The characters <, >, |, &, ^ are special command shell characters, and they must be preceded by the escape character (^) or enclosed in quotation marks when used in String (for example, "StringContaining&Symbol"). If you use quotation marks to enclose a string that contains one of the special characters, the quotation marks are set as part of the environment variable value.
 
@@ -583,13 +584,13 @@ SET NOCOUNT ON;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')
 BEGIN
-	SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
-	FROM WideWorldImporters.Warehouse.StockItemTransactions  
-	WHERE 1 = 2;  
+    SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
+    FROM WideWorldImporters.Warehouse.StockItemTransactions  
+    WHERE 1 = 2;  
 
-	ALTER TABLE Warehouse.StockItemTransactions_bcp 
-	ADD CONSTRAINT PK_Warehouse_StockItemTransactions_bcp PRIMARY KEY NONCLUSTERED 
-	(StockItemTransactionID ASC);
+    ALTER TABLE Warehouse.StockItemTransactions_bcp 
+    ADD CONSTRAINT PK_Warehouse_StockItemTransactions_bcp PRIMARY KEY NONCLUSTERED 
+    (StockItemTransactionID ASC);
 END
 ```
 

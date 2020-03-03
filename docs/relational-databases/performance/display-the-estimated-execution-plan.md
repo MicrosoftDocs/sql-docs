@@ -47,3 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  
 > [!NOTE] 
 > Alternatively, use [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) to return execution plan information for each statement without executing it. If used in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the *Results* tab will have a link to open the execution plan in graphical format.   
+  
+## See Also  
+ [Execution Plans](../../relational-databases/performance/execution-plans.md)    
+ [Query Processingg Architecture Guide](../../relational-databases/query-processing-architecture-guide)  

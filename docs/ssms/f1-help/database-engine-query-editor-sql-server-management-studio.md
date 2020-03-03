@@ -63,13 +63,13 @@ You can also add the SQL Editor toolbar by selecting the **View** menu, selectin
 
 ### Connect using the editor toolbar
 
-Opens the **Connect to Server** dialog box. Use this dialog box to establish a connection to a server.
+Opens the **[Connect to Server](connect-to-server-database-engine.md)** dialog box. Use this dialog box to establish a connection to a server.
 
 You can also connect to your database using the [context menu](#connection-using-the-context-menu).
 
 ### Change Connection using the editor toolbar
 
-Opens the **Connect to Server** dialog box. Use this dialog box to establish a connection to a different server.
+Opens the **Connect to Server** dialog box. Use this dialog box to establish a [connection to a different server](f1-help-for-server-connections-sql-server-management-studio.md).
 
 You can also change connections using the [context menu](#connection-using-the-context-menu).
 
@@ -255,7 +255,7 @@ You can select any of the *Result* options you want from the context menu.
 
 ### Properties Window using the context menu
 
-The Properties window describes the state of an item in SQL Server Management Studio, such as a connection or a Showplan operator, and information about database objects such as tables, views, and designers.
+The [Properties Window](../menu-help/properties-window-f1-help-management-studio.md) describes the state of an item in SQL Server Management Studio, such as a connection or a Showplan operator, and information about database objects such as tables, views, and designers.
 
 You can use the Properties window to view the properties of the current connection. Many properties are read-only in the Properties window but can be changed elsewhere in the Management Studio. For example, the Database property of a query is read-only in the Properties window, but can be changed on the tool bar.
 

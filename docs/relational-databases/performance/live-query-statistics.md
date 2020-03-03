@@ -62,7 +62,7 @@ On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VI
   
 ## See Also  
  [Execution Plans](../../relational-databases/performance/execution-plans.md)    
- [Query Processingg Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    
+ [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

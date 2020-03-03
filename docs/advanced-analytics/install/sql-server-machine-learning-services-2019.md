@@ -54,7 +54,7 @@ By default, external Python and R scripts only have read access permission to th
 
 If your Python or R script needs access to other directories, you need give either **Read & execute** and/or **Write** permissions to the **NT Service\MSSQLLaunchpad** service user account and **ALL APPLICATION PACKAGES**.
 
-Follow the steps below to grant this access.
+Follow the steps below to grant access.
 
 1. In File Explorer, right click on the folder you want to use as working directory, and select **Properties**.
 1. Select **Security** and click **Edit...** to change permissions.

@@ -3,8 +3,7 @@ title: "R + T-SQL tutorial: Explore data"
 description: Tutorial showing how to explore and visualize SQL Server data using R functions.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 10/29/2018  
+ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -56,6 +55,11 @@ In the original public dataset, the taxi identifiers and trip records were provi
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
 
 ## Create a stored procedure using rxHistogram to plot the data
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> From SQL Server 2019, the isolation mechanism has changed. Therefore you need to give appropriate permissions to the directory that the plot file is stored. For more information on how to set these permissions, see [the File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
 
 To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotRxHistogram**.
 

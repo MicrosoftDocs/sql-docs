@@ -18,7 +18,9 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: "markingmyname"
 ms.author: "maghan"
 ---
+
 # Connect to Server (Database Engine)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use this dialog to view or specify options when connecting to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. In most cases, you can connect by entering the computer name of the database server in the **Server name** box and then clicking **Connect**. If you are connecting to a named instance, use the computer name followed by a backslash, and then the instance name. For example, `mycomputer\myinstance`. If you are connecting to [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], use the computer name followed by **\sqlexpress**.  
   

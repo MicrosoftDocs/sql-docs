@@ -53,4 +53,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## See Also  
  [Execution Plans](../../relational-databases/performance/execution-plans.md)    
- [Query Processingg Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)  
+ [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)  

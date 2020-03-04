@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -307,6 +307,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - The secure AD mode will only work on `kubeadm` deployment environments and not on AKS right now. The `kubeadm-prod` deployment profile includes the security sections by default.
 
-- Only one BDC per domain is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
+- Only one BDC per domain (Active Directory) is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
 
 - None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

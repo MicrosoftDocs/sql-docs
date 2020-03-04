@@ -16,8 +16,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 This article describes improvements to the data science process that are possible through integration with SQL Server.
 
-Applies to: SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
-
 ## The Data Science Process
 
 Data scientists often use R to explore data and build predictive models. This is typically an iterative process of trial and error until a good predictive model is reached. As an experienced data scientist, you  might connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and fetch the data to your local workstation using the RODBC package, explore your data, and build a predictive model using standard R packages.

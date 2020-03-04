@@ -16559,6 +16559,11 @@
       "source_path": "docs/azure-data-studio/download.md",
       "redirect_url": "/sql/azure-data-studio/download-azure-data-studio",
       "redirect_document_id": true
-    }    
+    },
+    {
+      "source_path": "docs/ssms/scripting/database-engine-query-editor-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio",
+      "redirect_document_id": true
+    }
   ]
 }

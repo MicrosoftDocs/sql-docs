@@ -17,7 +17,7 @@ author: "pmasl"
 ms.author: "pelopes"
 ---
 # Query Processing Architecture Guide
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
@@ -80,7 +80,7 @@ GO
 ```
 
 ### Optimizing SELECT statements
-A `SELECT` statement is non-procedural; it does not state the exact steps that the database server should use to retrieve the requested data. This means that the database server must analyze the statement to determine the most efficient way to extract the requested data. This is referred to as optimizing the `SELECT` statement. The component that does this is called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan or just a plan. The contents of a query plan are described in more detail later in this topic.
+A `SELECT` statement is non-procedural; it does not state the exact steps that the database server should use to retrieve the requested data. This means that the database server must analyze the statement to determine the most efficient way to extract the requested data. This is referred to as optimizing the `SELECT` statement. The component that does this is called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan, or execution plan. The contents of an execution plan are described in more detail later in this topic.
 
 The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` statement are illustrated in the following diagram:
 
@@ -94,17 +94,20 @@ A `SELECT` statement defines only the following:
 
 A query execution plan is a definition of the following: 
 
-* The sequence in which the source tables are accessed.  
+- **The sequence in which the source tables are accessed.** 
   Typically, there are many sequences in which the database server can access the base tables to build the result set. For example, if the `SELECT` statement references three tables, the database server could first access `TableA`, use the data from `TableA` to extract matching rows from `TableB`, and then use the data from `TableB` to extract data from `TableC`. The other sequences in which the database server could access the tables are:  
   `TableC`, `TableB`, `TableA`, or  
   `TableB`, `TableA`, `TableC`, or  
   `TableB`, `TableC`, `TableA`, or  
   `TableC`, `TableA`, `TableB`  
 
-* The methods used to extract data from each table.  
+- **The methods used to extract data from each table.**  
   Generally, there are different methods for accessing the data in each table. If only a few rows with specific key values are required, the database server can use an index. If all the rows in the table are required, the database server can ignore the indexes and perform a table scan. If all the rows in a table are required but there is an index whose key columns are in an `ORDER BY`, performing an index scan instead of a table scan may save a separate sort of the result set. If a table is very small, table scans may be the most efficient method for almost all access to the table.
+  
+- **The methods used to compute calculations, and how to filter, aggregate, and sort data from each table.**  
+  As data is accessed from tables, there are different methods to perform calculations over data such as computing scalar values, and to aggregate and sort data as defined in the query text, for example when using a `GROUP BY` or `ORDER BY` clause, and how to filter data, for example when using a `WHERE` or `HAVING` clause.
 
-The process of selecting one execution plan from potentially many possible plans is referred to as optimization. The Query Optimizer is one of the most important components of a SQL database system. While some overhead is used by the Query Optimizer to analyze the query and select a plan, this overhead is typically saved several-fold when the Query Optimizer picks an efficient execution plan. For example, two construction companies can be given identical blueprints for a house. If one company spends a few days at the beginning to plan how they will build the house, and the other company begins building without planning, the company that takes the time to plan their project will probably finish first.
+The process of selecting one execution plan from potentially many possible plans is referred to as optimization. The Query Optimizer is one of the most important components of the [!INCLUDE[ssde_md](../includes/ssde_md.md)]. While some overhead is used by the Query Optimizer to analyze the query and select a plan, this overhead is typically saved several-fold when the Query Optimizer picks an efficient execution plan. For example, two construction companies can be given identical blueprints for a house. If one company spends a few days at the beginning to plan how they will build the house, and the other company begins building without planning, the company that takes the time to plan their project will probably finish first.
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is a cost-based optimizer. Each possible execution plan has an associated cost in terms of the amount of computing resources used. The Query Optimizer must analyze the possible plans and choose the one with the lowest estimated cost. Some complex `SELECT` statements have thousands of possible execution plans. In these cases, the Query Optimizer does not analyze all possible combinations. Instead, it uses complex algorithms to find an execution plan that has a cost reasonably close to the minimum possible cost.
 
@@ -115,6 +118,12 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relie
 <sup>1</sup> Density defines the distribution of unique values that exist in the data, or the average number of duplicate values for a given column. As density decreases, selectivity of a value increases.
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is important because it enables the database server to adjust dynamically to changing conditions in the database without requiring input from a programmer or database administrator. This enables programmers to focus on describing the final result of the query. They can trust that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will build an efficient execution plan for the state of the database every time the statement is run.
+
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
+> -  The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.        
+> -  The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
+> -  The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.       
 
 ### Processing a SELECT Statement
 The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses to process a single SELECT statement include the following: 
@@ -133,19 +142,22 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 - Arithmetic expressions, such as 1+1, 5/3*2, that contain only constants.
 - Logical expressions, such as 1=1 and 1>2 AND 3>4, that contain only constants.
 - Built-in functions that are considered foldable by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions are not foldable. Deterministic built-in functions are foldable, with some exceptions.
+- Deterministic methods of CLR user-defined types and deterministic scalar-valued CLR user-defined functions (starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). For more information, see [Constant Folding for CLR User-Defined Functions and Methods](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
-> An exception is made for large object types. If the output type of the folding process is a large object type (text, image, nvarchar(max), varchar(max), or varbinary(max)), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
+> An exception is made for large object types. If the output type of the folding process is a large object type (text,ntext, image, nvarchar(max), varchar(max), varbinary(max), or XML), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
 
 #### Nonfoldable Expressions
 All other expression types are not foldable. In particular, the following types of expressions are not foldable:
 - Nonconstant expressions such as an expression whose result depends on the value of a column.
 - Expressions whose results depend on a local variable or parameter, such as @x.
 - Nondeterministic functions.
-- User-defined functions (both [!INCLUDE[tsql](../includes/tsql-md.md)] and CLR).
+- User-defined [!INCLUDE[tsql](../includes/tsql-md.md)] functions<sup>1</sup>.
 - Expressions whose results depend on language settings.
 - Expressions whose results depend on SET options.
 - Expressions whose results depend on server configuration options.
+
+<sup>1</sup> Before [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], deterministic scalar-valued CLR user-defined functions and methods of CLR user-defined types were not foldable. 
 
 #### Examples of Foldable and Nonfoldable Constant Expressions
 Consider the following query:
@@ -441,12 +453,6 @@ WHERE name LIKE '%plans%';
   Each user that is currently executing the query has a data structure that holds the data specific to their execution, such as parameter values. This data structure is referred to as the execution context. The execution context data structures are reused, but their content is not. If another user executes the same query, the data structures are reinitialized with the context for the new user. 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
-
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
-> -  The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan.        
-> -  The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], the elapsed and CPU time used during execution.        
-> -  The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.       
 
 When any [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] first looks through the plan cache to verify that an existing execution plan for the same [!INCLUDE[tsql](../includes/tsql-md.md)] statement exists. The [!INCLUDE[tsql](../includes/tsql-md.md)] statement qualifies as existing if it literally matches a previously executed [!INCLUDE[tsql](../includes/tsql-md.md)] statement with a cached plan, character per character. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the [!INCLUDE[tsql](../includes/tsql-md.md)] statement. If no execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
 
@@ -909,23 +915,28 @@ During query optimization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 > Certain constructs inhibit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]'s ability to leverage parallelism on the entire execution plan, or parts or the execution plan.
 
 Constructs that inhibit parallelism include:
--   **Scalar UDFs**</br>    
+-   **Scalar UDFs**        
     For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
--   **Remote Query**</br>    
+    
+-   **Remote Query**        
     For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
--   **Dynamic cursors**</br>    
+    
+-   **Dynamic cursors**        
     For more information on cursors, see [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
--   **Recursive queries**</br>    
+    
+-   **Recursive queries**        
     For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions
 ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
--   **Table Valued Functions (TVFs)**</br>    
+
+-   **Table Valued Functions (TVFs)**        
     For more information on TVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
--   **TOP keyword**</br>    
+    
+-   **TOP keyword**        
     For more information, see [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
 After exchange operators are inserted, the result is a parallel-query execution plan. A parallel-query execution plan can use more than one worker thread. A serial execution plan, used by a non-parallel (serial) query, uses only one worker thread for its execution. The actual number of worker threads used by a parallel query is determined at query plan execution initialization and is determined by the complexity of the plan and the degree of parallelism. 
 
-Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it does not mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
+Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it does not mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). More processors than specififed by the MAXDOP may be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does not use a parallel execution plan for a query if any one of the following conditions is true:
 

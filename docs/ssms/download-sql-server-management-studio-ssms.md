@@ -92,7 +92,7 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
     Example:
 
     ```console
-    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=c:\SSMSto
+    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
     ```
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.

@@ -17,11 +17,11 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest"
 ---
 # sys.database_scoped_configurations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Contains one row per configuration. 
 
@@ -32,6 +32,7 @@ Contains one row per configuration.
 |**value**|**sqlvariant**|The value set for this configuration option for the primary replica.|
 |**value_for_secondary**|**sqlvariant**|The value set for this configuration option for the secondary replicas.|
 |**is_value_default**|**bit** |Specifies whether the value set is the default value.|
+|**dw_compatibility_level**|**int**|The compatibility level (Preview) of the database.  Default = 0 (AUTO)|
 
 ## <a name="Permissions"></a> Permissions
 

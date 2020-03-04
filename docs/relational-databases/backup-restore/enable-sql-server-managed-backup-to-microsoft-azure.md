@@ -1,5 +1,5 @@
 ---
-title: Use manged backup to Azure"
+title: Use managed backup to Azure"
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.description: "Enable SQL Server managed backup to Azure"

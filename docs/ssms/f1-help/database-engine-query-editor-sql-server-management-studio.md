@@ -21,7 +21,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 02/27/2020
+ms.date: 03/03/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

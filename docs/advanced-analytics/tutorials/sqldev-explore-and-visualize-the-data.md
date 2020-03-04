@@ -58,7 +58,7 @@ In the original public dataset, the taxi identifiers and trip records were provi
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!IMPORTANT]
-> From SQL Server 2019, the isolation mechanism has changed. Therefore you need to give appropriate permissions to the directory that the plot file is stored. For more information on how to set these permissions, see [the File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+> From SQL Server 2019, the isolation mechanism has changed. Therefore you need to give appropriate permissions to the directory where the plot file is stored. For more information on how to set these permissions, see [the File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
 To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotRxHistogram**.

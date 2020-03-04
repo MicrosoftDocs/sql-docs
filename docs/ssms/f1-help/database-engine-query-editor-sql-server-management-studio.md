@@ -175,9 +175,9 @@ Opens a dialog box that you can use to specify values for parameters in stored p
 
 ## Context menu
 
-![Context menu options](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
-
 You can access the context menu by *right-clicking* anywhere in the query editor. The options in the context menu are similar to the SQL Editor Toolbar. With the context menu, you see the same options as **Connect** and **Execute**, but you also get other options listed such as **Insert Snippet** and **Surround With**.
+
+![Context menu options](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
 ### Insert Snippet using the context menu
 

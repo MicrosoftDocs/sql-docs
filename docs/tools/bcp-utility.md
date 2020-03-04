@@ -116,7 +116,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  _**database\_name**_<a name="db_name"></a>  
  Is the name of the database in which the specified table or view resides. If not specified, this is the default database for the user.  
 
- You can also explicitly specify the database name with **d-**.  
+ You can also explicitly specify the database name with **-d**.  
 
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  Specifies the direction of the bulk copy, as follows:  

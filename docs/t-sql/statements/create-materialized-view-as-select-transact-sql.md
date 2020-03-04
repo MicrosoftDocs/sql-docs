@@ -1,7 +1,7 @@
 ---
 title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2019"
+ms.date: "03/04/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -142,6 +142,7 @@ Requires CREATE VIEW permission in the database and ALTER permission on the sche
 
 [Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
+[DROP VIEW](sql/t-sql/statements/drop-view-transact-sql?view=azure-sqldw-latest)
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   

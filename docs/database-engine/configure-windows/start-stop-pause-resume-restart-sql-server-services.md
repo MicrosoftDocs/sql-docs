@@ -64,7 +64,9 @@ ms.author: mikeray
   
     -   [Transact-SQL](#TsqlProcedure)  
   
-    -   [PowerShell](#PowerShellProcedure)  
+    -   [PowerShell](#PowerShellProcedure)
+    
+    -   [Using ServiceController Class](#ServiceController)
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -347,6 +349,10 @@ ms.author: mikeray
     $DfltInstance  
     ```  
   
+##  <a name="ServiceController"></a> Using Service Controller Class
+
+You can use ServiceController class to control SQL server service or any other Windows service. For an example on how to do this, see [ServiceController Class](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
+
 ## See Also  
  [Overview of SQL Server Setup Documentation](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   

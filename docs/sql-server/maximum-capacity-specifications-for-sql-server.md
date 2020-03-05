@@ -56,7 +56,7 @@ Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](.
 |Clustered indexes per table||1||
 |Columns in `GROUP BY`, `ORDER BY`||Limited only by number of bytes||
 |Columns or expressions in a `GROUP BY WITH CUBE` or `WITH ROLLUP` statement||10||
-|Columns per index key||32|If the table contains one or more XML indexes, the clustering key of the user table is limited to 31 columns because the XML column is added to the clustering key of the primary XML index. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can include nonkey columns in a nonclustered index to avoid the limitation of a maximum of 32 key columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|
+|Columns per index key||32|If the table contains one or more XML indexes, the clustering key of the user table is limited to 31 columns because the XML column is added to the clustering key of the primary XML index. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can include non-key columns in a nonclustered index to avoid the limitation of a maximum of 32 key columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|
 |Columns per foreign key or primary key||32||
 |Columns per `INSERT` statement||4,096||
 |Columns per `SELECT` statement||4,096||
@@ -80,7 +80,7 @@ Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](.
 |Length of a string containing SQL statements (batch size)||65,536 (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
 |Locks per connection||Maximum locks per server||
 |Locks per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limited only by memory|This value is for static lock allocation. Dynamic locks are limited only by memory.|
-|Nested stored procedure levels||32|If a stored procedure accesses more than 64  databases, or more than two databases in interleaving, you will receive an error.|
+|Nested stored procedure levels||32|If a stored procedure accesses more than 64 databases, or more than two databases in interleaving, you will receive an error.|
 |Nested subqueries||32||
 |Nested transactions||4,294,967,296|| 
 |Nested trigger levels||32||

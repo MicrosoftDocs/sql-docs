@@ -1,13 +1,14 @@
 ---
 title: Security overview for extensibility
-description: Security overview for the extensibility framework in SQL Server Machine Learning Services. Security for login and user accounts, SQL Server Launchpad service, worker accounts, running multiple scripts, and file permissions.
+description: Security overview for the extensibility framework in SQL Server Machine Learning Services. Security for login and user accounts, SQL Server launchpad service, worker accounts, running multiple scripts, and file permissions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/21/2020  
+ms.date: 03/04/2020  
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
@@ -65,28 +66,45 @@ Therefore, all external scripts that are initiated from a remote client must spe
 
 <a name="launchpad"></a>
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 
-## Services used in external processing (Launchpad)
+## Services used in external processing (launchpad)
 
 The extensibility framework adds one new NT service to the [list of services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in a SQL Server installation: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
-The database engine uses the SQL Server Launchpad service to instantiate an R or Python session as a separate process. The process runs under a low-privilege account; distinct from SQL Server, Launchpad itself, and the user identity under which the stored procedure or host query was executed. Running script in a separate process, under low-privilege account, is the basis of the security and isolation model for R and Python in SQL Server.
+The database engine uses the SQL Server **launchpad** service to instantiate an R or Python session as a separate process. 
+The process runs under a low-privilege account; distinct from SQL Server, launchpad itself, and the user identity under which the stored procedure or host query was executed. Running script in a separate process, under low-privilege account, is the basis of the security and isolation model for R and Python in SQL Server.
 
-In addition to launching external processes, Launchpad is also responsible for tracking the identity of the calling user, and mapping that identity to the low-privilege worker account used to start the process. In some scenarios, where script or code calls back to SQL Server for data and operations, Launchpad is usually able to manage identity transfer seamlessly. Script containing SELECT statements or calling functions and other programming objects will typically succeed if the calling user has sufficient permissions.
+SQL Server also maintains a mapping of the identity of the calling user to the low-privilege worker account used to start the satellite process. In some scenarios, where script or code calls back to SQL Server for data and operations, SQL Server is able to manage identity transfer seamlessly. Script containing SELECT statements or calling functions and other programming objects will typically succeed if the calling user has sufficient permissions.
 
 > [!NOTE]
-> By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. For more information about configurable options, see [SQL Server Launchpad service configuration](../security/sql-server-launchpad-service-account.md).
+> By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. For more information about configurable options, see [SQL Server launchpad service configuration](../security/sql-server-launchpad-service-account.md).
+
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+## Services used in external processing (launchpad)
+
+The extensibility framework adds one new NT service to the [list of services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in a SQL Server installation: [**SQL Server launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
+
+The database engine uses the SQL Server **launchpad** service to instantiate an R or Python session as a separate process. 
+The process runs under the launchpad user identity but with the added restriction of being contained inside an AppContainer. Running script in a separate process, under AppContainer, is the basis of the security and isolation model for R and Python in SQL Server.
+
+SQL Server also maintains a mapping of the identity of the calling user to the low-privilege worker account used to start the satellite process. In some scenarios, where script or code calls back to SQL Server for data and operations, SQL Server is able to manage identity transfer seamlessly. Script containing SELECT statements or calling functions and other programming objects will typically succeed if the calling user has sufficient permissions.
+
+> [!NOTE]
+> By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. For more information about configurable options, see [SQL Server launchpad service configuration](../security/sql-server-launchpad-service-account.md).
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
-## Services used in external processing (Launchpad)
+## Services used in external processing (launchpad)
 
-The extensibility framework adds one new daemon in a SQL Server installation: [mssql-launchpadd](extensibility-framework.md#launchpad).
+The extensibility framework adds one new daemon in a SQL Server installation: [mssql-launchpadd](extensibility-framework.md#launchpad). mssql-launchpadd runs under the low-privileged account that mssql_launchpadd creates when the mssql-server-extensibility package is installed.
 
-Only one database engine instance is supported and there is one launchpadd service bound to the instance. When a script is executed, the launchpadd service starts a separate launchpad process with the low-privileged user account mssql_satellite. Each satellite process inherits the mssql_satellite user account of launchpad and uses that for the duration of script execution.
+Only one database engine instance is supported and there is one launchpadd service bound to the instance. When a script is executed, the launchpadd service starts a separate launchpad process with the low-privileged user account mssql_satellite in its own new PID, IPC, mount, and network namespace. Each satellite process inherits the mssql_satellite user account of launchpad and uses that for the duration of script execution.
 
 For more details, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
 
@@ -98,7 +116,7 @@ For more details, see [Extensibility architecture in SQL Server Machine Learning
 
 ## Identities used in processing (SQLRUserGroup)
 
-**SQLRUserGroup** (SQL restricted user group) is created by SQL Server Setup and contains a pool of low-privilege local Windows user accounts. When an external process is needed, Launchpad takes an available worker account and uses it to run a process. More specifically, Launchpad activates an available worker account, maps it to the identity of the calling user, and runs the script under the worker account.
+**SQLRUserGroup** (SQL restricted user group) is created by SQL Server Setup and contains a pool of low-privilege local Windows user accounts. When an external process is needed, launchpad takes an available worker account and uses it to run a process. More specifically, launchpad activates an available worker account, maps it to the identity of the calling user, and runs the script under the worker account.
 
 + **SQLRUserGroup** is linked to a specific instance. A separate pool of worker accounts is needed for each instance on which machine learning has been enabled. Accounts cannot be shared between instances.
 
@@ -118,9 +136,9 @@ By design, **SQLRUserGroup** does not have a database login or permissions to an
 
 ## Identity mapping
 
-When a session is started, Launchpad maps the identity of the calling user to a worker account. The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the SQL stored procedure that executes the external script. Parallel queries from the same login are mapped to the same user worker account.
+When a session is started, launchpad maps the identity of the calling user to a worker account. The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the SQL stored procedure that executes the external script. Parallel queries from the same login are mapped to the same user worker account.
 
-During execution, Launchpad creates temporary folders to store session data, deleting them when the session concludes. The directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created. If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
+During execution, launchpad creates temporary folders to store session data, deleting them when the session concludes. The directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created. If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
 
 ::: moniker-end
 
@@ -128,16 +146,16 @@ During execution, Launchpad creates temporary folders to store session data, del
 
 ## AppContainer isolation
 
-Isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when an external script is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
+Isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when an external script is detected in a stored procedure or query, SQL Server calls launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
 
 As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls. For more information, see [Firewall configuration for SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
 
 ## Identity mapping
 
-When a session is started, Launchpad maps the identity of the calling user to an **AppContainer**.
+When a session is started, launchpad maps the identity of the calling user to an **AppContainer**.
 
 > [!Note]
-> In SQL Server 2019 and later, **SQLRUserGroup** only has one member which is now the single SQL Server Launchpad service account instead of multiple worker accounts.
+> In SQL Server 2019 and later, **SQLRUserGroup** only has one member which is now the single SQL Server launchpad service account instead of multiple worker accounts.
 
 ::: moniker-end
 
@@ -145,7 +163,21 @@ When a session is started, Launchpad maps the identity of the calling user to an
 
 ## Identity mapping
 
-LAUNCHPADD (double 'D' - [mssql-launchpadd](extensibility-framework.md#launchpad)) daemon maps the identity of the calling user to a separate LAUNCHPAD (single 'D') with a “launchpad GUID” folder and a satellite certificate. These launchpad GUID folders are created under `/var/opt/mssql-extensibility/data/`. The LAUNCHPAD uses this certificate to authenticate back to SQL, and then creates temporary folders for each session GUID under the launchpad GUID folder. The satellite (R or Python) process can access the launchpad GUID folder, the certificate under it, and its session GUID folder.
+**Launchpadd** (double 'D' - [mssql-launchpadd](extensibility-framework.md#launchpad)) daemon maps the identity of the calling user to a separate **launchpad** (single 'D') process with a "launchpad GUID" folder and a satellite certificate. These launchpad GUID folders are created under `/var/opt/mssql-extensibility/data/`. The launchpad process uses this certificate to authenticate back to SQL, and then creates temporary folders for each session GUID under the launchpad GUID folder. The satellite (R, Python, or ExtHost) process can access the launchpad GUID folder, the certificate under it, and its session GUID folder.
+
+The following SQL script prints the contents of the launchpad folders.
+
+```sql
+EXECUTE sp_execute_external_script @language = N'R'
+    ,@script = N'
+print("Contents of /var/opt/mssql-extensibility/data :");
+print(system("ls -al /var/opt/mssql-extensibility/data"));
+print("Contents of Launchpad GUID folder:");
+print(system("ls -al /var/opt/mssql-extensibility/data/*"));
+print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
+'
+    ,@input_data_1 = N'SELECT 1 AS hello'
+```
 
 ::: moniker-end
 
@@ -179,7 +211,7 @@ The next diagram shows the interaction of SQL Server components with the Python 
 
 ## Implied authentication (loopback requests)
 
-*Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loopback requests for data or operations. As a concept, implied authentication is unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loopback*.
+*Implied authentication* describes connection request behavior under which external processes running under AppContainers are presented as a trusted user identity to SQL Server on loopback requests for data or operations. As a concept, implied authentication is no longer unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loopback*.
 
 By managing identity and credentials, the AppContainer prevents the use of user credentials to gain access to resources or login to other environments. The AppContainer environment creates an identifier that uses the combined identities of the user and the application, so credentials are unique to each user/application pairing and the application cannot impersonate the user. For more information, see [AppContainer Isolation](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation).
 
@@ -191,9 +223,9 @@ For details regarding loopback connections, see [Loopback connection to SQL Serv
 
 ## Implied authentication (loopback requests)
 
-*Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loopback requests for data or operations. It is sometimes also referred to as a loopback.
+*Implied authentication* describes connection request behavior under which external processes running as low-privilege mssql_satellite users in their own namespaces are presented as a trusted user identity to SQL Server on loopback requests for data or operations. It is sometimes also referred to as a loopback.
 
-A loopback connection is achieved by using the satellite certificate from the launchpad GUID folder to authenticate back to SQL Server by the satellite process. The identity of the calling user is mapped to this certificate and hence the satellite process connecting back to SQL using the certificate can be mapped back to the calling user.
+A loopback connection is achieved by using the satellite certificate from the launchpad GUID folder to authenticate back to SQL Server by the satellite process. The identity of the calling user is mapped to this certificate and hence the satellite process connecting back to SQL Server using the certificate can be mapped back to the calling user.
 
 For details, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
 
@@ -209,6 +241,6 @@ In the case of [Always Encrypted](../../relational-databases/security/encryption
 
 ## Next steps
 
-In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Key points covered in this article include the purpose of Launchpad, SQLRUserGroup and worker accounts, process isolation of R and Python, and how user identities are mapped to worker accounts. 
+In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Key points covered in this article include the purpose of launchpad, SQLRUserGroup and worker accounts, process isolation of R and Python, and how user identities are mapped to worker accounts. 
 
 As a next step, review the instructions for [granting permissions](../../advanced-analytics/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) to learn when additional configuration is required.

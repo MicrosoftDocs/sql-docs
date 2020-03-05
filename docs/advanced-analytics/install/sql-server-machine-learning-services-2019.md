@@ -52,7 +52,7 @@ As part of the move to AppContainers, there are new firewall rules based on AppC
 
 By default, external Python and R scripts only have read access permission to their working directories. 
 
-If your Python or R scripts need access to another directory, you need give either **Read & execute** and/or **Write** permissions to the **NT Service\MSSQLLaunchpad** service user account and **ALL APPLICATION PACKAGES** on this directory.
+If your Python or R scripts need access to any other directory, you need give either **Read & execute** and/or **Write** permissions to the **NT Service\MSSQLLaunchpad** service user account and **ALL APPLICATION PACKAGES** on this directory.
 
 Follow the steps below to grant access.
 

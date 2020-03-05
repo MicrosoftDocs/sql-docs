@@ -60,7 +60,7 @@ For more information about how to do this, see the section, [Collecting events f
 |satellite_message_ring_buffer_record|message ring buffer record||  
 |satellite_message_summary|summary information about messaging||  
 |satellite_message_version_mismatch|Message's version field is not matched||  
-|satellite_messaging|Used for tracing messaging event (bind, unbind etc)||  
+|satellite_messaging|Used for tracing messaging event (bind, unbind, etc.)||  
 |satellite_partial_message|Used for tracing partial message at networking layer||  
 |satellite_schema_received|Fires when schema message is received and read by SQL.||  
 |satellite_schema_sent|Fires when schema message is sent by the satellite.|Fired only from external process. See instructions on collecting events from external processes.|  

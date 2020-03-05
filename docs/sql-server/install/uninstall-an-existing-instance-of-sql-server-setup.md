@@ -1,5 +1,5 @@
 ---
-title: "Uninstall existing instanceInstance"
+title: "Uninstall existing instance"
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

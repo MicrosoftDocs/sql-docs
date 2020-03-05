@@ -1,6 +1,6 @@
 ---
-title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
-ms.date: 10/07/2019
+title: "Maximum capacity specifications for SQL Server"
+ms.date: 03/05/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -18,28 +18,30 @@ helpviewer_keywords:
   - "objects [SQL Server], capacity specifications"
   - "Database Engine [SQL Server], capacity specifications"
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 ---
-# Maximum Capacity Specifications for SQL Server
+# Maximum capacity specifications for SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  The following tables specify maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
-  
- [SQL Server Database Engine Objects](#Engine)  
-  
- [SQL Server Utility Objects](#Utility)  
-  
- [SQL Server Data-tier Application Objects](#DAC)  
-  
- [SQL Server Replication Objects](#Replication)  
-  
-##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] Objects  
- Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases or referenced in [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
+This article show maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components.
+
+>[!NOTE]
+>In addition to the information in this article, you might also find the following links helpful:
+>
+>* [Download SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [Hardware and software requirements for installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+>* [Check parameters for system configuration checker](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
+>
+
+## [!INCLUDE[ssDE](../includes/ssde-md.md)] objects  
+
+Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases or referenced in [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] object||Maximum sizes/numbers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|Additional Information|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
-|Batch size||65,536 * Network Packet Size|Network Packet Size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|  
+|Batch size||65,536 <sup>*</sup> (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|  
 |Bytes per short string column||8,000||  
 |Bytes per GROUP BY, ORDER BY||8,060||  
 |Bytes per index key||900 bytes for a clustered index. 1,700 for a nonclustered index.|The maximum number of bytes in a clustered index key cannot exceed 900 in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a nonclustered index key, the maximum is 1700 bytes.<br /><br /> You can define a key using variable-length columns whose maximum sizes add up to more than the limit. However, the combined sizes of the data in those columns can never exceed the limit.<br /><br /> In a nonclustered index, you can include extra non-key columns, and they do not count against the size limit of the key. The non-key columns might help some queries perform better.|  
@@ -75,7 +77,7 @@ ms.author: "mikeray"
 |Identifier length (in characters)||128||  
 |Instances per computer||50 instances on a stand-alone server.<br /><br /> 25 instances on a failover cluster when using a shared cluster disk as the stored option for you cluster installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports 50 instances on a failover cluster if you choose SMB file shares as the storage option for your cluster installation.||  
 |Indexes per memory-optimized table||999 starting [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] and in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] and [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||  
-|Length of a string containing SQL statements (batch size)||65,536 * Network packet size|Network Packet Size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|  
+|Length of a string containing SQL statements (batch size)||65,536 (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|  
 |Locks per connection||Maximum locks per server||  
 |Locks per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limited only by memory|This value is for static lock allocation. Dynamic locks are limited only by memory.|  
 |Nested stored procedure levels||32|If a stored procedure accesses more than 64  databases, or more than 2 databases in interleaving, you will receive an error.|  
@@ -97,14 +99,15 @@ ms.author: "mikeray"
 |User connections||32,767||  
 |XML indexes||249||  
   
-##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility Objects  
- Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility.  
+## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility objects  
+
+Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility object||Maximum sizes/numbers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
 |----------------------------------------------|-|------------------------------------------------------------------|  
 |Computers (physical computers or virtual machines) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility||100|  
 |Instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per computer||5|  
-|Total number of instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility||200*|  
+|Total number of instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility||200<sup>*</sup>|  
 |User databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including data-tier applications||50|  
 |Total number of user databases per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility||1,000|  
 |File groups per database||1|  
@@ -112,38 +115,37 @@ ms.author: "mikeray"
 |Log files per database||1|  
 |Volumes per computer||3|  
   
- *The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility may vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
+<sup>*</sup> The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility may vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
-##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data-tier Application Objects  
- Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data-tier applications (DAC).  
+## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data-tier application objects  
+
+Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data-tier applications (DAC).  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC object||Maximum sizes/numbers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
 |Databases per DAC||1|  
-|Objects per DAC*||Limited by the number of objects in a database, or available memory.|  
+|Objects per DAC <sup>*</sup>||Limited by the number of objects in a database, or available memory.|  
   
- *The types of objects included in the limit are users, tables, views, stored procedures, user-defined functions, user-defined data type, database roles, schemas, and user-defined table types.  
-  
-##  <a name="Replication"></a> Replication Objects  
- Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication.  
+<sup>*</sup> The types of objects included in the limit are users, tables, views, stored procedures, user-defined functions, user-defined data type, database roles, schemas, and user-defined table types.  
+
+## Replication objects  
+
+Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication object||Maximum sizes/numbers SQL Server (64-bit)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
 |Articles (merge publication)||2048|  
 |Articles (snapshot or transactional publication)||32,767|  
-|Columns in a table* (merge publication)||246|  
-|Columns in a table** ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snapshot or transactional publication)||1,000|  
-|Columns in a table** (Oracle snapshot or transactional publication)||995|  
+|Columns in a table<sup>*</sup> (merge publication)||246|  
+|Columns in a table<sup>**</sup> ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snapshot or transactional publication)||1,000|  
+|Columns in a table<sup>**</sup> (Oracle snapshot or transactional publication)||995|  
 |Bytes for a column used in a row filter (merge publication)||1,024|  
 |Bytes for a column used in a row filter (snapshot or transactional publication)||8,000|  
 
- *If row tracking is used for conflict detection (the default), the base table can include a maximum of 1,024 columns, but columns must be filtered from the article so that a maximum of 246 columns is published. If column tracking is used, the base table can include a maximum of 246 columns.  
+<sup>*</sup>If row tracking is used for conflict detection (the default), the base table can include a maximum of 1,024 columns, but columns must be filtered from the article so that a maximum of 246 columns is published. If column tracking is used, the base table can include a maximum of 246 columns.  
+
+<sup>**/sup>The base table can include the maximum number of columns allowable in the publication database (1,024 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), but columns must be filtered from the article if they exceed the maximum specified for the publication type.  
   
- **The base table can include the maximum number of columns allowable in the publication database (1,024 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), but columns must be filtered from the article if they exceed the maximum specified for the publication type.  
-  
-## See Also  
- [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [Check Parameters for the System Configuration Checker](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
- [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  
-  
+## See also  
+
+[SQL Server utility features and tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

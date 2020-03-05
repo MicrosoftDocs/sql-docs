@@ -4166,9 +4166,9 @@
   items:
   - name: Overview
     items:
-    - name: What's New
+    - name: What's new
       href: sql-server/install/what-s-new-in-sql-server-installation.md
-    - name: Maximum Capacity Specifications
+    - name: Maximum capacity specifications
       href: sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Compute capacity limits by edition
       href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md

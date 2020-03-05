@@ -15,18 +15,24 @@ manager: jroth
 
 # Install the Microsoft ODBC driver for SQL Server (Linux)
 
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
-
 This article explains how to install the Microsoft ODBC Driver for SQL Server on Linux. It also includes instructions for the optional command-line tools for SQL Server (`bcp` and `sqlcmd`) and the unixODBC development headers.
+
+This article provides commands for installing the ODBC driver from the bash shell. If you want to download the packages directly, see [Download ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
 ## <a id="17"></a> Microsoft ODBC 17
 
 The following sections explain how to install the Microsoft ODBC driver 17 from the bash shell for different Linux distributions.
 
+- [Alpine Linux](#alpine17)
+- [Debian](#debian17)
+- [Red Hat Enterprise Linux and Oracle](#redhat17)
+- [SUSE Linux Enterprise Server](#suse17)
+- [Ubuntu](#ubuntu17)
+
 > [!IMPORTANT]
 > If you installed the v17 `msodbcsql` package that was briefly available, you should remove it before installing the `msodbcsql17` package. This will avoid conflicts. The `msodbcsql17` package can be installed side by side with the `msodbcsql` v13 package.
 
-### Alpine Linux
+### <a id="alpine17"></a> Alpine Linux
 
 ```bash
 #Download the desired package(s)
@@ -51,7 +57,7 @@ sudo apk add --allow-untrusted mssql-tools_17.5.1.2-1_amd64.apk
 > [!NOTE]
 > Driver version 17.5 or higher is required for Alpine support.
 
-### Debian
+### <a id="debian17"></a> Debian
 
 ```bash
 sudo su
@@ -86,7 +92,7 @@ sudo apt-get install libgssapi-krb5-2
 > [!NOTE]
 > You can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
-### Red Hat Enterprise Server and Oracle Linux
+### <a id="redhat17"></a> Red Hat Enterprise Server and Oracle Linux
 
 ```bash
 sudo su
@@ -115,7 +121,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### SUSE Linux Enterprise Server
+### <a id="suse17"></a> SUSE Linux Enterprise Server
 
 ```bash
 sudo su
@@ -146,7 +152,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ```
 
-### Ubuntu
+### <a id="ubuntu17"></a> Ubuntu
 
 ```bash
 sudo su
@@ -191,7 +197,7 @@ The following sections provide instructions for installing previous versions of 
 - [Microsoft ODBC driver 13 for SQL Server](#13)
 - [Microsoft ODBC driver 11 for SQL Server](#11)
 
-## <a id="13.1"></a> Microsoft ODBC 13.1
+### <a id="13.1"></a> Microsoft ODBC 13.1
 
 The following sections explain how to install the Microsoft ODBC driver 13.1 from the bash shell for different Linux distributions.
 
@@ -333,7 +339,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-## <a id="13"></a> Microsoft ODBC 13
+### <a id="13"></a> Microsoft ODBC 13
 
 The following sections explain how to install the Microsoft ODBC driver 13 from the bash shell for different Linux distributions.
 
@@ -457,7 +463,7 @@ After you have completed the package installation, you can verify that the [!INC
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```
 
-## <a id="11"></a> ODBC driver 11
+### <a id="11"></a> Microsoft ODBC driver 11
 
 The following sections explain how to install the Microsoft ODBC driver 11 on Linux. Before you can use the driver, install the unixODBC driver manager. For more information, see [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md).
 
@@ -571,8 +577,9 @@ The driver needs to load the resource file in order to function. This file is ca
 
 ## Next steps
 
-[Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
+For examples of how to use the ODBC driver in Python and PHP, see the following tutorials:
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Python SQL Driver - pyodbc](../../python/pyodbc/python-sql-driver-pyodbc.md)
+- [Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server](../../php/installation-tutorial-linux-mac.md)
 
-[System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)
+For more information, see the ODBC [release notes](release-notes-odbc-sql-server-linux-mac.md) and [system requirements](system-requirements.md).

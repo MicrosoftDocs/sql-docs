@@ -14,9 +14,9 @@ manager: jroth
 
 # Install the Microsoft ODBC driver for SQL Server (macOS)
 
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
-
 This article explains how to install the Microsoft ODBC Driver for SQL Server on macOS. It also includes instructions for the optional command-line tools for SQL Server (`bcp` and `sqlcmd`) and the unixODBC development headers.
+
+This article provides commands for installing the ODBC driver from the bash shell. If you want to download the packages directly, see [Download ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
 ## Microsoft ODBC 17
 
@@ -34,9 +34,11 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 
 ## Previous versions
 
-The following sections provide instructions for installing previous versions of the Microsoft ODBC driver on macOS.
+The following sections provide instructions for installing previous versions of the Microsoft ODBC driver on macOS. The following driver versions are covered:
 
-## <a id="13.1></a> Microsoft ODBC 13.1
+- [Microsoft ODBC driver 13.1 for SQL Server](#13.1)
+
+### <a id="13.1></a> Microsoft ODBC 13.1
 
 Use the following commands to install the Microsoft ODBC driver 13.1 for SQL Server on OS X 10.11 (El Capitan) and macOS 10.12 (Sierra):
 
@@ -65,6 +67,9 @@ The driver needs to load the resource file in order to function. This file is ca
   
 ## Next steps
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+For examples of how to use the ODBC driver in Python and PHP, see the following tutorials:
 
-[System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)
+- [Python SQL Driver - pyodbc](../../python/pyodbc/python-sql-driver-pyodbc.md)
+- [Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server](../../php/installation-tutorial-linux-mac.md)
+
+For more information, see the ODBC [release notes](release-notes-odbc-sql-server-linux-mac.md) and [system requirements](system-requirements.md).

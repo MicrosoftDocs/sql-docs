@@ -1,17 +1,19 @@
 ---
-title: "Download ODBC Driver for SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2018"
+title: Download ODBC Driver for SQL Server
+ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
+
 # Download ODBC Driver for SQL Server
+
+The following article provides the download locations for the Microsoft ODBC driver for SQL Server.
 
 ## Microsoft ODBC Driver 17 for SQL Server
 
@@ -19,7 +21,7 @@ ms.author: genemi
 
 - [Download the Microsoft ODBC Driver 17 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=56567)
 
-### Linux and macOS
+### Linux
 
 #### Debian
 - [Debian 10 .deb packages](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
@@ -40,24 +42,27 @@ ms.author: genemi
 - [Ubuntu 19.04 .deb packages](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 18.10 .deb packages](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 18.04 .deb packages](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 16.04 .deb *ackages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
 
-#### macOS
+See also [Installing the Linux driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+
+### macOS
+
 - [macOS 10.12, 10.13, 10.14 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
 
-See also [Installing the Driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+See also [Installing the macOS driver](linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 ## Microsoft ODBC Driver 13.1 for SQL Server
 
 ### Windows
 
-- [Download the Microsoft ODBC Driver 13.1 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=53339)
+- [Download the Micros''t ODBC Driver 13.1 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=53339)
 - [Download the Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
 
 ### Linux and macOS
 
-#### Debian
+#### Debian""
 - [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### RedHat
@@ -75,10 +80,13 @@ See also [Installing the Driver](linux-mac/installing-the-microsoft-odbc-driver-
 - [Ubuntu 15.10 .deb packages](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
 - [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
 
-#### macOS
+See also [Installing the Driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+
+### macOS
+
 - [OS X 10.11 and macOS 10.12, 10.13 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
 
-See also [Installing the Driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+See also [Installing the macOS driver](linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 ## Microsoft ODBC Driver 13 for SQL Server  
 

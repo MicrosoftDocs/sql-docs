@@ -34,11 +34,9 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 
 ## Previous versions
 
-The following sections provide instructions for installing previous versions of the Microsoft ODBC driver on macOS. The following driver versions are covered:
+The following sections provide instructions for installing previous versions of the Microsoft ODBC driver on macOS.
 
-- [Microsoft ODBC driver 13.1 for SQL Server](#13.1)
-
-### <a id="13.1></a> Microsoft ODBC 13.1
+## <a id="13.1></a> ODBC 13.1
 
 Use the following commands to install the Microsoft ODBC driver 13.1 for SQL Server on OS X 10.11 (El Capitan) and macOS 10.12 (Sierra):
 
@@ -48,7 +46,7 @@ brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-rel
 brew update
 brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 ```
-  
+
 ## Driver files
 
 The ODBC driver on macOS consists of the following components:
@@ -64,7 +62,11 @@ The ODBC driver on macOS consists of the following components:
 ## Resource file loading
 
 The driver needs to load the resource file in order to function. This file is called `msodbcsqlr17.rll` or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the table above. As of version 17.1 the driver will also attempt to load the `.rll` from the default directory if loading from the relative path fails. The default resource file path on macOS is `/usr/local/share/msodbcsql17/resources/en_US/`
-  
+
+## Troubleshooting
+
+If you are unable to make a connection to SQL Server using the ODBC driver, see the known issues article on [troubleshooting connection problems](known-issues-in-this-version-of-the-driver.md#connectivity).
+
 ## Next steps
 
 For examples of how to use the ODBC driver in Python and PHP, see the following tutorials:

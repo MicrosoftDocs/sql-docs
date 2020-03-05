@@ -41,11 +41,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 ---
+
 # Start, Stop, Pause, Resume, Restart SQL Server Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This topic describes how to start, stop, pause, resume, or restart the SQL Server Database Engine, the SQL Server Agent, or the SQL Server Browser service by using SQL Server Configuration Manager, SQL Server Management Studio, net commands from a command prompt, Transact-SQL, or PowerShell.
+This topic describes how to start, stop, pause, resume, or restart the SQL Server Database Engine, the SQL Server Agent, or the SQL Server Browser service by using SQL Server Configuration Manager, SQL Server Management Studio (SSMS), net commands from a command prompt, Transact-SQL, or PowerShell.
 
 ## Before You Begin
 
@@ -59,19 +60,19 @@ The executable process that is the SQL Server Database Engine. The Database Engi
 
 #### SQL Server Agent service
 
-A Windows service that executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent is not available in every edition of SQL Server. For a list of features that are supported by the editions of SQL Server, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
+A Windows service that executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent is not available in every edition of SQL Server. For a list of features that are supported by the editions of SQL Server, see [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 
 #### SQL Server Browser service
 
 A Windows service that listens for incoming requests for SQL Server resources and provides clients information about SQL Server instances installed on the computer. A single instance of the SQL Server Browser service is used for all instances of SQL Server installed on the computer.
 
-#### Additional Information
+### Additional Information
 
 - Pausing the Database Engine service prevents new users from connecting to the Database Engine, but users who are already connected can continue to work until their connections are broken. Use pause when you want to wait for users to complete work before you stop the service. This enables them to complete transactions that are in progress. *Resume* allows the Database Engine to accept new connections again. The SQL Server Agent service cannot be paused or resumed.  
 
 - The SQL Server Configuration Manager and SSMS display the current status of services by using the following icons.  
 
-  **SQL Server Configuration Manager**
+    **SQL Server Configuration Manager**
 
   - A green arrow on the icon next to the service name indicates that the service is started.
 
@@ -81,7 +82,7 @@ A Windows service that listens for incoming requests for SQL Server resources an
 
   - When restarting the Database Engine, a red square indicates that the service stopped, and then a green arrow indicates that the service started successfully.
 
-   **SQL Server Management Studio (SSMS)**
+    **SQL Server Management Studio (SSMS)**
 
   - A white arrow on a green circle icon next to the service name indicates that the service is started.  
 
@@ -111,12 +112,13 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 
 |||
 |-|-|
+|SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
+|SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager17.msc|
 |SQL Server 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|
+|SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
+|SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
+#### <a name="configmanager"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
 1. Start SQL Server Configuration Manager, using the instructions above.
 
@@ -148,7 +150,7 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 
 ## Using SQL Server Management Studio
 
-### To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
+### <a name="ssms"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
 1. In Object Explorer, connect to the instance of the Database Engine, right-click the instance of the Database Engine you want to start, and then click **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
 
@@ -180,7 +182,7 @@ The Microsoft SQL Server services can be started, stopped, or paused by using Mi
 
     **net start MSSQLSERVER**
 
-### <a name="dbNamed"></a> To start a named instance of the Database Engine  
+### <a name="dbNamed"></a> To start a named instance of the Database Engine
 
 - From a command prompt, enter one of the following commands. Replace *\<instancename>* with the name of the instance you want to manage.  
   
@@ -203,7 +205,7 @@ The Microsoft SQL Server services can be started, stopped, or paused by using Mi
   > [!NOTE]
   >  For more information about startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a> To start the SQL Server Agent on the default instance of SQL Server  
+###  <a name="agDefault"></a> To start the SQL Server Agent on the default instance of SQL Server
   
 - From a command prompt, enter one of the following commands:  
   

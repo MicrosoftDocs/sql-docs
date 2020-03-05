@@ -126,7 +126,7 @@ Specific rules have thresholds that are compared against the current value of a 
 You can string together rulesets by adding one or more JSON files as parameters to your SQL Assessment API call. Your organization might write those files or obtain them from a third party. For example, you can have your JSON file that disables specific rules from the Microsoft ruleset, and another JSON file by an industry expert that include rules you find useful for your environment, followed by another JSON file that changes some threshold values in that JSON file.
 
 > [!IMPORTANT]  
->  We urge you not to use rulesets that come from untrusted sources until you thoroughly review them to make sure they are safe.
+> We urge you not to use rulesets that come from untrusted sources until you thoroughly review them to make sure they are safe.
 
 ## Next steps
 

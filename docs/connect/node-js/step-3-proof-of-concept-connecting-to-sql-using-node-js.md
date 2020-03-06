@@ -15,7 +15,7 @@ ms.author: genemi
 
 ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft. Other examples which use the same crucial functions are available on Github:
+This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft. Other examples, which use the same crucial functions are available on GitHub:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
@@ -107,7 +107,7 @@ All SQL statements are executed using the **new Request()** function. If the sta
   
 ## Step 3: Insert a row  
   
-In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
+In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, passing parameters, which protect your application from [SQL injection](../../relational-databases/security/sql-injection.md) values.    
   
   
 ```javascript  

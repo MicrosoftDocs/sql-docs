@@ -5,7 +5,7 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 02/11/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -33,9 +33,11 @@ Install and configure the SQL Server database engine first so that you can resol
 * Check the SQL Server Linux repositories for the Python and R extensions. 
 * If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
 
-[Microsoft R Open](#mro) provides the base R distribution for the R feature in SQL Server
+* [Microsoft R Open](#mro) provides the base R distribution for the R feature in SQL Server
 
-+ You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
+* You should have a tool for running T-SQL commands. 
+* A query editor is necessary for post-install configuration and validation. 
+* We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
 
 <a name="mro"></a>

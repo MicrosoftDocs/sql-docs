@@ -13,7 +13,7 @@ ms.reviewer: v-kaywon
 ---
 # SQL Server features and ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 The topics in this section discuss features in SQL Server that are targeted at developing database applications using ADO.NET.  
   

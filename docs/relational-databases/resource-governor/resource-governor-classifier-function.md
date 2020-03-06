@@ -64,7 +64,7 @@ ms.author: jrasnick
   
 1.  Login authentication  
   
-2.  LOGON trigger execution  
+2.  LOGON trigger execution (Consider this step only if logon triggers exist in the environment)
   
 3.  Classification  
 

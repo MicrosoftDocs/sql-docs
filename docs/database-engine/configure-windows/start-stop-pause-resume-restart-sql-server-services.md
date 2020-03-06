@@ -118,7 +118,7 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmanager"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
+#### <a name="configmande"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
 1. Start SQL Server Configuration Manager, using the instructions above.
 
@@ -150,7 +150,7 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 
 ## Using SQL Server Management Studio
 
-### <a name="ssms"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
+### <a name="ssmsde"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 
 1. In Object Explorer, connect to the instance of the Database Engine, right-click the instance of the Database Engine you want to start, and then click **Start**, **Stop**, **Pause**, **Resume**, or **Restart**.
 
@@ -287,33 +287,33 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
 
     - To get a reference to the default instance of the Database Engine.
 
-    ```powershell
-    $DfltInstance = $Wmi.Services['MSSQLSERVER']
-    ```
+        ```powershell
+        $DfltInstance = $Wmi.Services['MSSQLSERVER']
+        ```
 
     - To get a reference to a named instance of the Database Engine.
 
-    ```powershell
-    $DfltInstance = $Wmi.Services['MSSQL$instancename']
-    ```
+        ```powershell
+        $DfltInstance = $Wmi.Services['MSSQL$instancename']
+        ```
 
     - To get a reference to the SQL Server Agent service on the default instance of the Database Engine.  
 
-    ```powershell
-    $DfltInstance = $Wmi.Services['SQLSERVERAGENT']
-    ```
+        ```powershell
+        $DfltInstance = $Wmi.Services['SQLSERVERAGENT']
+        ```
 
     - To get a reference to the SQL Server Agent service on a named instance of the Database Engine.  
 
-    ```powershell
-    $DfltInstance = $Wmi.Services['SQLAGENT$instancename']
-    ```
+        ```powershell
+        $DfltInstance = $Wmi.Services['SQLAGENT$instancename']
+        ```
 
     - To get a reference to the SQL Server Browser service.
 
-    ```powershell
-    $DfltInstance = $Wmi.Services['SQLBROWSER']
-    ```
+        ```powershell
+        $DfltInstance = $Wmi.Services['SQLBROWSER']
+        ```
 
 4. Complete the example to start and then stop the selected service.
   

@@ -8523,8 +8523,6 @@
         - name: Query & Text Editors
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           items:
-          - name: Database Engine Query Editor
-            href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
           - name: Color Coding in Query Editors
@@ -9026,6 +9024,8 @@
         items:
         - name: F1 Help for Server Connections (SSMS)
           href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+        - name: Database Engine Query Editor
+          href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
         - name: Connect to Microsoft Azure Storage
           href: ssms/f1-help/connect-to-microsoft-azure-storage.md
         - name: Connect to Any SQL Server Component from SQL Server Management Studio

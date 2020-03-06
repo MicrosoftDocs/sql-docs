@@ -38,10 +38,26 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |group_name|**sysname** |For requests utilizing resources, group_name is the name of the workload group the request is running under.  If the request does not utilize resources, group_name is null.</br>Applies to: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|For requests utilizing resources, The name of the classifier used for assigning resources and importance.||
 |resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure SQL Data Warehouse|
-|result_set_cache|**bit**|Details whether a completed query was a result cache hit (1) or not (0). </br>Applies to: Azure SQL Data Warehouse|0,1|
+|result_set_cache|**bit**|Details whether a completed query used result set cache.  </br>Applies to: Azure SQL Data Warehouse| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative values = Reasons why result set caching was not used.  See remarks section for details.|
 ||||
   
+## Remarks 
  For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.
+
+ The result_set_cache is a bitmask of a query's use of result set cache.  This column can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**1**|Result set cache hit|  
+|-**0x00**|Result set cache miss|  
+|-**0x01**|Result set caching is disabled on the database.|  
+|-**0x02**|Result set caching is disabled on the session. | 
+|-**0x04**|Result set caching is disabled due to no data sources for the query.|  
+|-**0x08**|Result set caching is disabled due to row level security predicates.|  
+|-**0x10**|Result set caching is disabled due to the use of system table, temporary table, or external table in the query.|  
+|-**0x20**|Result set caching is disabled because the query contains runtime constants, user-defined functions, or non-deterministic functions.|  
+|-**0x40**|Result set caching is disabled due to estimated result set size being too large (> 1 million rows).|  
+|-**0x80**|Result set caching is disabled because the result set contains rows with large size (>64kb).|  
   
 ## Permissions
 

@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "08/15/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs: 
@@ -17,7 +16,7 @@ ms.reviewer: v-kaywon
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - Previous article:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-connect-sql-ado-net.md)  
 

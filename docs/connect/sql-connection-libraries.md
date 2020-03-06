@@ -70,7 +70,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 <a name="anchor-60-build-an-app-webpages" />
 
 ## Build-an-app webpages
-[https://aka.ms/sqldev](https://aka.ms/sqldev) takes you to a set of *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
+**[https://aka.ms/sqldev](https://aka.ms/sqldev)** takes you to a set of *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
 
 - Details about how to get started from the very beginning, for each combination of language + operating system + driver.
     - Instructions for installing the latest SQL connection drivers.

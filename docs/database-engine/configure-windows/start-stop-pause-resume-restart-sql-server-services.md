@@ -113,7 +113,7 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 |||
 |-|-|
 |SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
-|SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager17.msc|
+|SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|
 |SQL Server 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|

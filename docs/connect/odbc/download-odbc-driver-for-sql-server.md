@@ -42,7 +42,7 @@ The following article provides the download locations for the Microsoft ODBC dri
 - [Ubuntu 19.04 .deb packages](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 18.10 .deb packages](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 18.04 .deb packages](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 16.04 .deb *ackages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
 
 See also [Installing the Linux driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
@@ -57,12 +57,12 @@ See also [Installing the macOS driver](linux-mac/install-microsoft-odbc-driver-s
 
 ### Windows
 
-- [Download the Micros''t ODBC Driver 13.1 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=53339)
+- [Download the Microsoft ODBC Driver 13.1 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=53339)
 - [Download the Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
 
 ### Linux and macOS
 
-#### Debian""
+#### Debian
 - [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### RedHat
@@ -80,7 +80,7 @@ See also [Installing the macOS driver](linux-mac/install-microsoft-odbc-driver-s
 - [Ubuntu 15.10 .deb packages](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
 - [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
 
-See also [Installing the Driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+See also [Installing the Linus driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ### macOS
 
@@ -110,3 +110,7 @@ See also [Installing the macOS driver](linux-mac/install-microsoft-odbc-driver-s
 - **Red Hat Enterprise Linux 5 and 6 (64-bit)** - [Download Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
 
 - **SUSE Linux Enterprise 11 Service Pack 2 (64-bit)** - [Download Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)
+
+## Next steps
+
+For more information, see [Microsoft ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).

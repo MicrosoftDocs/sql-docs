@@ -80,8 +80,9 @@ For more information about resolving connection failures, see:
 
 ## Next steps
 
-For more information, see the following articles:
+For ODBC driver installation instructions, see the following articles:
 
-- [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)  
-- [Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
+- [Installing the Microsoft ODBC Driver for SQL Server on Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installing the Microsoft ODBC Driver for SQL Server on macOS](install-microsoft-odbc-driver-sql-server-macos.md)
 
+For more information, see the [Programming guidelines](programming-guidelines.md) and the [Release notes](release-notes-odbc-sql-server-linux-mac.md).  

@@ -36,7 +36,7 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 
 The following sections provide instructions for installing previous versions of the Microsoft ODBC driver on macOS.
 
-## <a id="13.1></a> ODBC 13.1
+## <a id="13.1"></a> ODBC 13.1
 
 Use the following commands to install the Microsoft ODBC driver 13.1 for SQL Server on OS X 10.11 (El Capitan) and macOS 10.12 (Sierra):
 

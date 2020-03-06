@@ -58,7 +58,7 @@ RLS supports two types of security predicates.
   
  Both filter and block predicates and security policies have the following behavior:  
   
-- You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON`, then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need **SELECT** or **EXECUTE** permissions on these additional tables and functions to query the target table.
+- You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON` (the default), then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need **SELECT** permissions on these additional tables and functions to query the target table. If the predicate function invokes a CLR scalar-valued function, the **EXECUTE** permission is needed in addition.
   
 - You may issue a query against a table that has a security predicate defined but disabled. Any rows that are filtered or blocked aren't affected.  
   
@@ -116,7 +116,7 @@ RLS supports two types of security predicates.
   
 ## <a name="Best"></a> Best Practices  
   
-- It's highly recommended to create a separate schema for the RLS objects, predicate function, and security policy.  
+- It's highly recommended to create a separate schema for the RLS objects: predicate functions, and security policies. This helps to separate the permissions that are required on these special objects from the target tables. Additional separation for different policies and predicate functions may be needed in multi-tenant-databases, but not as a standard for every case.
   
 - The **ALTER ANY SECURITY POLICY** permission is intended for highly privileged users (such as a security policy manager). The security policy manager doesn't require **SELECT** permission on the tables they protect.  
   

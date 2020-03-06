@@ -25,8 +25,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## 18.3.0
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2117515)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2117517)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2117517)  
 
 Released: October 2019
 
@@ -55,8 +55,8 @@ Download previous OLE DB Driver versions by clicking the download links in the f
 
 ## 18.2.3
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2119554)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2119738)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
 Released: June 2019
 
@@ -73,8 +73,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.2.2
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118512)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118415)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
 Released: May 2019
 
@@ -91,8 +91,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.2.1
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118511)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118278)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
 Released: February 2019
 
@@ -110,8 +110,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.1.0
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118506)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118509)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
 Released: July 2018
 
@@ -135,8 +135,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.0.2
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118504)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118277)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118277)  
 
 Released: March 2018
 

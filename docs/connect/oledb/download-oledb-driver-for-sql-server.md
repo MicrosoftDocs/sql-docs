@@ -18,8 +18,8 @@ The OLE DB Driver for SQL Server is a stand-alone data access application progra
 
 Microsoft OLE DB Driver 18.3 for SQL Server is the latest general availability (GA) version. If you have a previous version of Microsoft OLE DB Driver 18 for SQL Server installed, installing 18.3 upgrades it to 18.3.
 
-**[![Download](../../ssdt/media/download.png) Download Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
-**[![Download](../../ssdt/media/download.png) Download Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
 
 ### Version information
 

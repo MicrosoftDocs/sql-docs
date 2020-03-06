@@ -42,17 +42,23 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 2. In the same directory, run the following command
 
+```bash
    docker builds -t mssql-server-mlservices
+```
 
 3. Run the command:
 
+```bash
    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=  -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+```
 
    Modify to add SA_PASSWORD and -v path 
 
 4. Confirm by running the following command:
 
+```bash
    docker ps -a
+```
 
    > [!NOTE]
    > To build the Docker image, you must install packages that are several GBs in size. The script may take up to 20 minutes to finish running, depending on network bandwidth.
@@ -103,8 +109,10 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 ## Connect to Linux SQL Server in the container
 
-EXEC sp_configure  'external scripts enabled', one
+```sql
+EXEC sp_configure  'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE
+```
 
 ## Next steps
 

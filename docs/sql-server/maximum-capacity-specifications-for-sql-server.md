@@ -75,7 +75,7 @@ Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](.
 |Delta file per data file for memory-optimized data||1||
 |Foreign key table references per table||Outgoing = 253. Incoming = 10,000.|For restrictions, see [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|
 |Identifier length (in characters)||128||
-|Instances per computer||50 instances on a stand-alone server.<br /><br />25 failover cluster instances when using a shared cluster disks as storage.<br/><br/>50 failover cluster instances on a failover cluster with SMB file shares as the storage option.||
+|Instances per computer||50 instances on a stand-alone server.<br /><br />25 failover cluster instances when using a shared cluster disks as storage.<br/><br/>50 failover cluster instances with SMB file shares as the storage option.||
 |Indexes per memory-optimized table||999 starting [!INCLUDE[ssSQL17../includes/ssSQL17-md.md)] and in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] and [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||
 |Length of a string containing SQL statements (batch size)||65,536 (Network packet size)|Network packet size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|
 |Locks per connection||Maximum locks per server||

@@ -40,15 +40,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following query returns the members of the database roles.  
   
 ```  
-SELECT DP1.name AS DatabaseRoleName,   
-   isnull (DP2.name, 'No members') AS DatabaseUserName   
- FROM sys.database_role_members AS DRM  
- RIGHT OUTER JOIN sys.database_principals AS DP1  
-   ON DRM.role_principal_id = DP1.principal_id  
- LEFT OUTER JOIN sys.database_principals AS DP2  
-   ON DRM.member_principal_id = DP2.principal_id  
-WHERE DP1.type = 'R'
-ORDER BY DP1.name;  
+select DP1.name                       as DatabaseRoleName
+     , isnull(DP2.name, 'No members') as DatabaseUserName
+  from sys.database_role_members as DRM
+         right outer join
+	   sys.database_principals   as DP1 on DRM.role_principal_id   = DP1.principal_id
+         left outer join
+	   sys.database_principals   as DP2 on DRM.member_principal_id = DP2.principal_id
+ where DP1.type = 'R'
+ order by DP1.name
+     , isnull(DP2.name, 'No members');
 ```  
   
 ## See Also  

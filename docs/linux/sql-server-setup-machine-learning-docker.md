@@ -103,7 +103,8 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 ## Connect to Linux SQL Server in the container
 
-EXEC sp_configure  'external scripts enabled', one
+EXEC sp_configure  'external scripts enabled', 1;
+RECONFIGURE WITH OVERRIDE;
 RECONFIGURE WITH OVERRIDE
 
 ## Next steps

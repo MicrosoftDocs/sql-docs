@@ -528,9 +528,4 @@ If you are unable to make a connection to SQL Server using the ODBC driver, see 
 
 ## Next steps
 
-For examples of how to use the ODBC driver in Python and PHP, see the following tutorials:
-
-- [Python SQL Driver - pyodbc](../../python/pyodbc/python-sql-driver-pyodbc.md)
-- [Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server](../../php/installation-tutorial-linux-mac.md)
-
-For more information, see the ODBC [release notes](release-notes-odbc-sql-server-linux-mac.md) and [system requirements](system-requirements.md).
+For more information, see the ODBC driver [release notes](release-notes-odbc-sql-server-linux-mac.md) and [system requirements](system-requirements.md).

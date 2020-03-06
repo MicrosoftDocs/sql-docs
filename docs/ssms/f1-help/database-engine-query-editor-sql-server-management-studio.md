@@ -21,7 +21,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 02/27/2020
+ms.date: 03/03/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -55,11 +55,11 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 
 ## SQL Editor toolbar
 
-![Editor toolbar](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
-
 When the Query Editor is open, the SQL Editor toolbar appears with the following buttons.
 
 You can also add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no Query Editor windows are open, all the buttons are unavailable.
+
+![Editor toolbar](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
 ### Connect using the editor toolbar
 
@@ -175,9 +175,9 @@ Opens a dialog box that you can use to specify values for parameters in stored p
 
 ## Context menu
 
-![Context menu options](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
-
 You can access the context menu by *right-clicking* anywhere in the query editor. The options in the context menu are similar to the SQL Editor Toolbar. With the context menu, you see the same options as **Connect** and **Execute**, but you also get other options listed such as **Insert Snippet** and **Surround With**.
+
+![Context menu options](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
 ### Insert Snippet using the context menu
 

@@ -90,7 +90,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | Data Classification for Azure SQL Database and SQL Server. | See [Data Classification](../data-classification.md). |
 | Support UTF-8 server encoding. | &nbsp; |
 | `SQLBrowseConnect` | &nbsp; |
-| Dynamic dependency on `libcurl`. | Starting with this version, the `libcurl` package is not an explict dependency.<br/>The `libcurl` package for OpenSSL or NSS is required when using Azure Key Vault or Azure Active Directory authentication.<br/>If you encounter an error regarding `libcurl`, ensure it is installed. |
+| Dynamic dependency on `libcurl`. | Starting with this version, the `libcurl` package is not an explicit dependency.<br/>The `libcurl` package for OpenSSL or NSS is required when using Azure Key Vault or Azure Active Directory authentication.<br/>If you encounter an error regarding `libcurl`, ensure it is installed. |
 | Idle Connection Resiliency with ConnectRetryCount and ConnectRetryInterval keywords in connection string. | &bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_COUNT`(read only) to retrieve the number of connection retry attempts.<br/><br/>&bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(read only) to retrieve the length of the connection retry interval.<br/><br/>See [Connection Resiliency in the Windows ODBC Driver](../windows/connection-resiliency-in-the-windows-odbc-driver.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |

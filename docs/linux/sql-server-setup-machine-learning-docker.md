@@ -12,21 +12,19 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server MLS (Python and R) on Docker
+# Install SQL Server Machine Learning Services (Python and R) on Docker
 
 This article explains how to install SQL Server Machine Learning Services on Docker. You can use Machine Learning Services to execute Python and R scripts in-database. We do not provide pre-built containers with Machine Learning Services. You can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)
 
 ## Prerequisites
 
 - Git command-line interface.
-- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-- Minimum of 2 gigabytes (GB) of disk space.
-- Minimum of 2 GB of RAM.
+- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/install/).
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Clone the mssql-docker repository
 
-1. Open a Bash terminal on Linux or Mac, or open a WSL terminal on Windows.
+1. Open a Bash terminal on Linux or Mac, or open a Windows Subsystem for Linux terminal on Windows.
 
 2. Create a local directory to hold a local copy of the mssql-docker repository.
 

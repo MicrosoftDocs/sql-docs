@@ -5,7 +5,7 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 02/03/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article explains how to install [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. You can use Machine Learning Services to execute Python and R scripts in-database.
+This article guides you in the installation of [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
 The following Linux distributions are supported:
 
@@ -29,46 +29,16 @@ Package location for the Python and R extensions is in the SQL Server Linux sour
 
 Machine Learning Services is also supported on Linux containers. We do not provide pre-built containers with Machine Learning Services, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Machine Learning Services is installed by default on SQL Server Big Data Clusters, and you do not need to follow the steps in this case. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+[Install SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup) and verify install.
 
-## Uninstall preview release
+* Check the SQL Server Linux repositories for the Python and R extensions. 
+* If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
 
-If you have installed a preview release (Community Technical Preview (CTP) or Release Candidate), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
+* [Microsoft R Open](#mro) provides the base R distribution for the R feature in SQL Server
 
-### 1. Confirm package installation
-
-You might want to check for the existence of a previous installation as a first step. The following files indicate an existing installation: checkinstallextensibility.sh, exthost, launchpad.
-
-```bash
-ls /opt/microsoft/mssql/bin
-```
-
-### 2. Uninstall CTP/RC packages
-
-Uninstall at the lowest package level. Any upstream package dependent on a lower-level package is automatically uninstalled.
-
-  + For R integration, remove **microsoft-r-open***
-  + For Python integration, remove **mssql-mlservices-python**
-
-Commands for removing packages appear in the following table.
-
-| Platform	| Package removal command(s) | 
-|-----------|----------------------------|
-| Red Hat	| `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
-| SUSE	| `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
-| Ubuntu	| `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
-
-> [!Note]
-> Microsoft R Open 3.4.4 is composed of two packages, depending on which CTP release you previously installed. (The foreachiterators package was combined into the main mro package in CTP 2.2.) If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
-> ```
-> microsoft-r-open-foreachiterators-3.4.4
-> microsoft-r-open-mkl-3.4.4
-> microsoft-r-open-mro-3.4.4
-> ```
-
-### 3. Proceed with install
-
-Install at the highest package level using the instructions in this article for your operating system.
+* You should have a tool for running T-SQL commands. 
+* A query editor is necessary for post-install configuration and validation. 
+* We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
 For each OS-specific set of installation instructions, *highest package level* is either **Example 1 - Full installation** for the full set of packages, or **Example 2 - Minimal installation** for the least number of packages required for a viable installation.
 
@@ -112,25 +82,7 @@ The following commands register the repository providing MRO. Post-registration,
 
 #### MRO on Ubuntu
 
-```bash
-# Install as root
-sudo su
-
-# Optionally, if your system does not have the https apt transport option
-apt-get install apt-transport-https
-
-# Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 16.04. Replace with 14.04 if you want that version
-wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
-
-# Register the repo
-dpkg -i packages-microsoft-prod.deb
-
-# Update packages on your system (required), including MRO installation
-sudo apt-get update
-```
-
-#### MRO on Red Hat
+### Install (MRO) on Red Hat
 
 ```bash
 # Import the Microsoft repository key
@@ -207,6 +159,11 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, c
 sudo yum install mssql-mlservices-packages-py-9.4.7*
 sudo yum install mssql-mlservices-packages-r-9.4.7*
 ```
+<a name="ubuntu"></a>
+
+## Install on Ubuntu
+
+### Install (MRO) on Ubuntu
 
 <a name="ubuntu"></a>
 
@@ -245,7 +202,25 @@ sudo apt-get install mssql-mlservices-packages-r
 
 ## SUSE commands
 
-You can install language support in whatever combination you require (single or multiple languages). For R and Python, there are two packages to choose from. One provides all available features, characterized as the *full installation*. The alternative choice excludes the pretrained machine learning models and is considered the *minimal installation*.
+### Install (MRO) on SUSE(SLES)
+
+```bash
+# Install as root
+sudo su
+
+# Set the location of the package repo at the "prod" directory containing the distribution
+# This example is for SLES12, the only supported version of SUSE in Machine Learning Server
+zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
+
+# Update packages on your system (optional)
+zypper update
+```
+
+Installation Options for Python and R:
+
+*  Install language support based on your requirements (single or multiple languages).
+*  The *full installation* provides all available features the including pre-trained machine learning models.
+*  The *minimal installation* excludes the models but still has all of the functionality.
 
 ### Example 1 -  Full installation 
 
@@ -306,7 +281,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
    + Execute this file by typing `source .bash_profile` at a bash command prompt.
 
-5. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A restart message reminds you whenever an extensibility-related setting is modified.  
+6. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A notification message is displayed when an extensibility-related setting is modified.  
 
    ```bash
    systemctl restart mssql-launchpadd

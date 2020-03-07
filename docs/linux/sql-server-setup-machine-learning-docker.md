@@ -105,7 +105,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 ## Run in a container
 
-[Run SQL Server container images with Docker](quick-start-install-connect-docker.md).
+[Run SQL Server container images with Docker](quickstart-install-connect-docker.md).
 
 ## Connect to Linux SQL Server in the container
 

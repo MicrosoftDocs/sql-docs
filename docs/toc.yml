@@ -8455,7 +8455,7 @@
           items:
           - name: Download Instructions Tab
             href: ssms/agent/target-servers-download-instructions-tab.md
-          - name: arget Server Status Tab
+          - name: Target Server Status Tab
             href: ssms/agent/target-servers-target-server-status-tab.md
         - name: Alerts Properties
           href: ssms/agent/alerts.md

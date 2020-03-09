@@ -61,31 +61,31 @@ Go through the examples below to get started.
     Get-SqlInstance -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-2. Get a list of available checks for all databases of the instance. Here, we're using the Get-Item cmdlet and a path implemented with the Windows Powershel SQL Server provider to get a list of the databases, and then piping it to the Get-SqlDatabase cmdlet.
+2. Get a list of available checks for all databases of the instance. Here, we're using the Get-Item cmdlet and a path implemented with the Windows PowerShell SQL Server provider to get a list of the databases, and then piping it to the Get-SqlDatabase cmdlet.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Also, you can use the Get-SqlDatabase cmdlet to do the same.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-3. Get a list of available checks for all databases of the instance. Here, we're using the Get-Item cmdlet and a path implemented with the Windows Powershel SQL Server provider to get a list of the databases, and then piping it to the Get-SqlDatabase cmdlet.
+3. Get a list of available checks for all databases of the instance. Here, we're using the Get-Item cmdlet and a path implemented with the Windows PowerShell SQL Server provider to get a list of the databases, and then piping it to the Get-SqlDatabase cmdlet.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Also, you can use the Get-SqlDatabase cmdlet to do the same.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. Note that the Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter in this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter raises an error if you omit the parameter.
+4. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. The Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter in this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter raises an error if you omit the parameter.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |

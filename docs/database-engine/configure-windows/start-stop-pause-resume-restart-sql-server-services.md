@@ -1,5 +1,5 @@
 ---
-title: Start, Stop, Pause, Resume, Restart SQL Server Services
+title: Start, stop, pause, resume, restart SQL Server services
 ms.custom: ""
 ms.date: "03/05/2020"
 ms.prod: sql

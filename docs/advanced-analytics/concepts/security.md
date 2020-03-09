@@ -20,7 +20,7 @@ This article describes the overall security architecture that is used to integra
 
 ## Securables for external script
 
-An external script written in R or Python is submitted as an input parameter to a [system stored procedure](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) created for this purpose, or is wrapped in a stored procedure that you define. Alternatively, you might have models that are pretrained and stored in a binary format in a database table, callable in a T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) function.
+An external script - written in R, Python, or external languages such as Java or .NET - is submitted as an input parameter to a [system stored procedure](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) created for this purpose, or is wrapped in a stored procedure that you define. Alternatively, you might have models that are pretrained and stored in a binary format in a database table, callable in a T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) function.
 
 As the script is provided through existing database schema objects, stored procedures and tables, there are no new [securables](../../relational-databases/security/securables.md) for SQL Server Machine Learning Services.
 
@@ -30,14 +30,14 @@ Regardless of how you are using script or, what they consist of, database object
 
 ## Permissions
 
-SQL Server's data security model of database logins and roles extend to R and Python script. A SQL Server login or Windows user account is required to run external scripts that use SQL Server data or that run with SQL Server as the compute context. Database users having permissions to execute an ad hoc query can access the same data from R or Python script.
+SQL Server's data security model of database logins and roles extend to external script. A SQL Server login or Windows user account is required to run external scripts that use SQL Server data or that run with SQL Server as the compute context. Database users having permissions to execute an ad hoc query can access the same data from external script.
 
 The login or user account identifies the *security principal*, who might need multiple levels of access, depending on the external script requirements:
 
 + Permission to access the database where external scripts are enabled.
 + Permissions to read data from secured objects such as tables.
 + The ability to write new data to a table, such as a model, or scoring results.
-+ The ability to create new objects, such as tables, stored procedures that use the external script, or custom functions that use R or Python job.
++ The ability to create new objects, such as tables, stored procedures that use the external script, or custom functions that use external script job.
 + The right to install new packages on the SQL Server computer, or use packages provided to a group of users.
 
 Each person who runs an external script using SQL Server as the execution context must be mapped to a user in the database. Rather than individually set database user permissions, you could create roles to manage sets of permissions, and assign users to those roles, rather than individually set user permissions.
@@ -46,7 +46,7 @@ For more information, see [Give users permission to SQL Server Machine Learning 
 
 ## Permissions when using an external client tool
 
-Users who are using R or Python in an external client tool must have their login or account mapped to a user in the database if they need to run an external script in-database, or access database objects and data. The same permissions are required whether the external script is sent from a remote data science client or run using a T-SQL stored procedure.
+Users who are using script in an external client tool must have their login or account mapped to a user in the database if they need to run an external script in-database, or access database objects and data. The same permissions are required whether the external script is sent from a remote data science client or run using a T-SQL stored procedure.
 
 For example, assume that you created an external script that runs on your local computer, and you want to run that script on SQL Server. You must ensure that the following conditions are met:
 
@@ -72,8 +72,8 @@ Therefore, all external scripts that are initiated from a remote client must spe
 
 The extensibility framework adds one new NT service to the [list of services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in a SQL Server installation: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
-The database engine uses the SQL Server **launchpad** service to instantiate an R or Python session as a separate process. 
-The process runs under a low-privilege account; distinct from SQL Server, launchpad itself, and the user identity under which the stored procedure or host query was executed. Running script in a separate process, under low-privilege account, is the basis of the security and isolation model for R and Python in SQL Server.
+The database engine uses the SQL Server **launchpad** service to instantiate an external script session as a separate process. 
+The process runs under a low-privilege account; distinct from SQL Server, launchpad itself, and the user identity under which the stored procedure or host query was executed. Running script in a separate process, under low-privilege account, is the basis of the security and isolation model for external scripts in SQL Server.
 
 SQL Server also maintains a mapping of the identity of the calling user to the low-privilege worker account used to start the satellite process. In some scenarios, where script or code calls back to SQL Server for data and operations, SQL Server is able to manage identity transfer seamlessly. Script containing SELECT statements or calling functions and other programming objects will typically succeed if the calling user has sufficient permissions.
 
@@ -88,8 +88,8 @@ SQL Server also maintains a mapping of the identity of the calling user to the l
 
 The extensibility framework adds one new NT service to the [list of services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in a SQL Server installation: [**SQL Server launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
-The database engine uses the SQL Server **launchpad** service to instantiate an R or Python session as a separate process. 
-The process runs under the launchpad user identity but with the added restriction of being contained inside an AppContainer. Running script in a separate process, under AppContainer, is the basis of the security and isolation model for R and Python in SQL Server.
+The database engine uses the SQL Server **launchpad** service to instantiate an external script session as a separate process. 
+The process runs under the launchpad user identity but with the added restriction of being contained inside an AppContainer. Running script in a separate process, under AppContainer, is the basis of the security and isolation model for external scripts in SQL Server.
 
 SQL Server also maintains a mapping of the identity of the calling user to the low-privilege worker account used to start the satellite process. In some scenarios, where script or code calls back to SQL Server for data and operations, SQL Server is able to manage identity transfer seamlessly. Script containing SELECT statements or calling functions and other programming objects will typically succeed if the calling user has sufficient permissions.
 
@@ -189,13 +189,13 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 *Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loopback requests for data or operations. As a concept, implied authentication is unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loopback*.
 
-Trusted connections are workable from R and Python script, but only with additional configuration. In the extensibility architecture, R and Python processes run under worker accounts, inheriting permissions from the parent **SQLRUserGroup**. When a connection string specifies `Trusted_Connection=True`, the identity of the worker account is presented on the connection request, which is unknown by default to SQL Server.
+Trusted connections are workable from external script, but only with additional configuration. In the extensibility architecture, external processes run under worker accounts, inheriting permissions from the parent **SQLRUserGroup**. When a connection string specifies `Trusted_Connection=True`, the identity of the worker account is presented on the connection request, which is unknown by default to SQL Server.
 
 To make trusted connections successful, you must create a database login for the **SQLRUserGroup**. After doing so, any trusted connection from any member of **SQLRUserGroup** has login rights to SQL Server. For step-by-step instructions, see [Add SQLRUserGroup to a database login](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
-Trusted connections are not the most widely used formulation of a connection request. When R or Python script specifies a connection, it can be more common to use a SQL login, or a fully-specified user name and password if the connection is to an ODBC data source.
+Trusted connections are not the most widely used formulation of a connection request. When external script specifies a connection, it can be more common to use a SQL login, or a fully-specified user name and password if the connection is to an ODBC data source.
 
-### How implied authentication works for R and Python sessions
+### How implied authentication works for external script sessions
 
 The following diagram shows the interaction of SQL Server components with the R runtime and how it does implied authentication for R.
 
@@ -233,14 +233,14 @@ For details, see [Loopback connection to SQL Server from a Python or R script](.
 
 ## No support for Transparent Data Encryption at rest
 
-[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) is not supported for data sent to or received from the external script runtime. The reason is that the external process (R or Python) runs outside the SQL Server process. Therefore, data used by the external runtime is not protected by the encryption features of the database engine. This behavior is no different than any other client running on the SQL Server computer that reads data from the database and makes a copy.
+[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) is not supported for data sent to or received from the external script runtime. The reason is that the external process runs outside the SQL Server process. Therefore, data used by the external runtime is not protected by the encryption features of the database engine. This behavior is no different than any other client running on the SQL Server computer that reads data from the database and makes a copy.
 
-As a consequence, TDE **is not** applied to any data that you use in R or Python scripts, or to any data saved to disk, or to any persisted intermediate results. However, other types of encryption, such as Windows BitLocker encryption or third-party encryption applied at the file or folder level, still apply.
+As a consequence, TDE **is not** applied to any data that you use in external scripts, or to any data saved to disk, or to any persisted intermediate results. However, other types of encryption, such as Windows BitLocker encryption or third-party encryption applied at the file or folder level, still apply.
 
 In the case of [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md), external runtimes do not have access to the encryption keys. Therefore, data cannot be sent to the scripts.
 
 ## Next steps
 
-In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Key points covered in this article include the purpose of launchpad, SQLRUserGroup and worker accounts, process isolation of R and Python, and how user identities are mapped to worker accounts. 
+In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Key points covered in this article include the purpose of launchpad, SQLRUserGroup and worker accounts, process isolation of external scripts, and how user identities are mapped to worker accounts. 
 
 As a next step, review the instructions for [granting permissions](../../advanced-analytics/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) to learn when additional configuration is required.

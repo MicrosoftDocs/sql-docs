@@ -4,7 +4,7 @@ description: Security overview for the extensibility framework in SQL Server Mac
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 03/04/2020  
+ms.date: 03/09/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -197,13 +197,9 @@ Trusted connections are not the most widely used formulation of a connection req
 
 ### How implied authentication works for external script sessions
 
-The following diagram shows the interaction of SQL Server components with the R runtime and how it does implied authentication for R.
+The following diagram shows the interaction of SQL Server components with the language runtime and how it does implied authentication in Windows.
 
-![Implied authentication for R](../security/media/implied-auth-rsql.png)
-
-The next diagram shows the interaction of SQL Server components with the Python runtime and how it does implied authentication for Python.
-
-![Implied authentication for Python](../security/media/implied-auth-python2.png)
+(:::image type="content" source="../security/media/implied-auth-windows.png" alt-text="Implied authentication in Windows":::)
 
 ::: moniker-end
 
@@ -215,7 +211,13 @@ The next diagram shows the interaction of SQL Server components with the Python 
 
 By managing identity and credentials, the AppContainer prevents the use of user credentials to gain access to resources or login to other environments. The AppContainer environment creates an identifier that uses the combined identities of the user and the application, so credentials are unique to each user/application pairing and the application cannot impersonate the user. For more information, see [AppContainer Isolation](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation).
 
-For details regarding loopback connections, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
+For more details regarding loopback connections, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
+
+### How implied authentication works for external script sessions
+
+The following diagram shows the interaction of SQL Server components with the language runtime and how it does implied authentication in Linux.
+
+:::image type="content" source="../security/media/implied-auth-linux.png" alt-text="Implied authentication in Linux":::
 
 ::: moniker-end
 

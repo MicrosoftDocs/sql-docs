@@ -335,7 +335,25 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
     # Display the state of the service.
     $DfltInstance
     ```  
-  
+
+## Manage the SQL Server service on Linux
+
+The following shows how to start, stop, restart, and check the status of the [SQL Server service on Linux](../../linux/sql-server-linux-troubleshooting-guide.md).
+
+Check the status of the SQL Server service using this command:
+
+   ```bash
+   sudo systemctl status mssql-server
+   ```
+
+You can stop, start, or restart the SQL Server service as needed using the following commands:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   sudo systemctl start mssql-server
+   sudo systemctl restart mssql-server
+   ```
+
 ## Next steps
 
 - [Overview of SQL Server Setup Documentation](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)

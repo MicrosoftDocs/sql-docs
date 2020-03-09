@@ -199,7 +199,7 @@ Trusted connections are not the most widely used formulation of a connection req
 
 The following diagram shows the interaction of SQL Server components with the language runtime and how it does implied authentication in Windows.
 
-(:::image type="content" source="../security/media/implied-auth-windows.png" alt-text="Implied authentication in Windows":::)
+![Implied authentication in Windows](../security/media/implied-auth-windows.png)
 
 ::: moniker-end
 
@@ -215,9 +215,9 @@ For more details regarding loopback connections, see [Loopback connection to SQL
 
 ### How implied authentication works for external script sessions
 
-The following diagram shows the interaction of SQL Server components with the language runtime and how it does implied authentication in Linux.
+The following diagram shows the interaction of SQL Server components with the language runtime and how it does implied authentication in Windows.
 
-:::image type="content" source="../security/media/implied-auth-linux.png" alt-text="Implied authentication in Linux":::
+![Implied authentication in Windows](../security/media/implied-auth-windows.png)
 
 ::: moniker-end
 
@@ -229,7 +229,13 @@ The following diagram shows the interaction of SQL Server components with the la
 
 A loopback connection is achieved by using the satellite certificate from the launchpad GUID folder to authenticate back to SQL Server by the satellite process. The identity of the calling user is mapped to this certificate and hence the satellite process connecting back to SQL Server using the certificate can be mapped back to the calling user.
 
-For details, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
+For more details, see [Loopback connection to SQL Server from a Python or R script](../connect/loopback-connection.md).
+
+### How implied authentication works for external script sessions
+
+The following diagram shows the interaction of SQL Server components with the language runtime and how it does implied authentication in Linux.
+
+![Implied authentication in Linux](../security/media/implied-auth-linux.png)
 
 ::: moniker-end
 

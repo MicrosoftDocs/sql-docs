@@ -340,7 +340,7 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
 
 ### To start, stop, or restart an instance of the SQL Server Database Engine
 
-The following shows how to start, stop, restart, and check the status of the [SQL Server service on Linux](../../linux/sql-server-linux-troubleshooting-guide.md).
+The following shows how to start, stop, restart, and check the status of the [SQL Server service on Linux](../../linux/sql-server-linux-troubleshooting-guide.md#manage-the-sql-server-service).
 
 Check the status of the SQL Server service using this command:
 

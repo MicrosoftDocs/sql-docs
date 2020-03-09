@@ -65,11 +65,6 @@ Rebuilding an index drops and re-creates the index. Depending on the type of ind
 - For [rowstore indexes](clustered-and-nonclustered-indexes-described.md), rebuilding removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When `ALL` is specified, all indexes on the table are dropped and rebuilt in a single transaction. Foreign key constraints do not have to be dropped in advance. When indexes with 128 extents or more are rebuilt, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. For syntax examples, see [Examples: Rowstore reorganize](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
 - For  [columnstore indexes](columnstore-indexes-overview.md), rebuilding removes fragmentation, moves all rows into the columnstore, and reclaims disk space by physically deleting rows that have been logically deleted from the table. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], rebuilding the columnstore index is usually not needed since `REORGANIZE` performs the essentials of a rebuild in the background as an online operation. For syntax examples, see [Examples: ColumnStore reorganize](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
-### Using INDEX REBUILD to recover from hardware failures
-
-In earlier versions of SQL Server, you could sometimes rebuild a rowstore nonclustered index to correct inconsistencies caused by hardware failures.
-Starting with SQL Server 2008, you may still be able to repair such inconsistencies between the index and the clustered index by rebuilding a nonclustered index offline. However, you cannot repair nonclustered index inconsistencies by rebuilding the index online, because the online rebuild mechanism uses the existing nonclustered index as the basis for the rebuild and thus persist the inconsistency. Rebuilding the index offline can sometimes force a scan of the clustered index (or heap) and so remove the inconsistency. To assure a rebuild from the clustered index, drop and recreate the nonclustered index. As with earlier versions, we recommend recovering from inconsistencies by restoring the affected data from a backup; however, you may be able to repair the index inconsistencies by rebuilding the nonclustered index offline. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
-
 ## <a name="Fragmentation"></a> Detecting fragmentation
 
 The first step in deciding which index defragmentation method to use is to analyze the index to determine the degree of fragmentation.
@@ -404,6 +399,11 @@ For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/state
 #### Automatic index and statistics management
 
 Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
+
+## Using INDEX REBUILD to recover from hardware failures
+
+In earlier versions of SQL Server, you could sometimes rebuild a rowstore nonclustered index to correct inconsistencies caused by hardware failures.
+Starting with SQL Server 2008, you may still be able to repair such inconsistencies between the index and the clustered index by rebuilding a nonclustered index offline. However, you cannot repair nonclustered index inconsistencies by rebuilding the index online, because the online rebuild mechanism uses the existing nonclustered index as the basis for the rebuild and thus persist the inconsistency. Rebuilding the index offline can sometimes force a scan of the clustered index (or heap) and so remove the inconsistency. To assure a rebuild from the clustered index, drop and recreate the nonclustered index. As with earlier versions, we recommend recovering from inconsistencies by restoring the affected data from a backup; however, you may be able to repair the index inconsistencies by rebuilding the nonclustered index offline. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
 
 ## See also
 

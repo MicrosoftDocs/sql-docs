@@ -15,7 +15,7 @@ ms.reviewer: v-kaywon
 ---
 # Snapshot isolation in SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Snapshot isolation enhances concurrency for OLTP applications.  
   

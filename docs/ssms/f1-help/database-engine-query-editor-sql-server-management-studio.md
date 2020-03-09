@@ -55,11 +55,11 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 
 ## SQL Editor toolbar
 
-![Editor toolbar](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
-
 When the Query Editor is open, the SQL Editor toolbar appears with the following buttons.
 
 You can also add the SQL Editor toolbar by selecting the **View** menu, selecting **Toolbars**, and then selecting **SQL Editor**. If you add the SQL Editor toolbar when no Query Editor windows are open, all the buttons are unavailable.
+
+![Editor toolbar](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
 ### Connect using the editor toolbar
 

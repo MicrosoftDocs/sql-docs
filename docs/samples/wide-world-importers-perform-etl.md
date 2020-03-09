@@ -1,5 +1,6 @@
 ---
 title: "WideWorldImportersDW - ETL workflow | Microsoft Docs"
+description: Learn about using the ETL package with Integration Services to periodically migrate data from the WideWorldImporters database to the WideWorldImportersDW.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples

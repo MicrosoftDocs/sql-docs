@@ -8455,7 +8455,7 @@
           items:
           - name: Download Instructions Tab
             href: ssms/agent/target-servers-download-instructions-tab.md
-          - name: arget Server Status Tab
+          - name: Target Server Status Tab
             href: ssms/agent/target-servers-target-server-status-tab.md
         - name: Alerts Properties
           href: ssms/agent/alerts.md
@@ -9840,6 +9840,8 @@
         href: linux/sql-server-linux-setup-ssis.md
       - name: Install SQL Server Machine Learning Services
         href: linux/sql-server-linux-setup-machine-learning.md
+      - name: Install SQL Server Machine Learning Services on Docker
+        href: linux/sql-server-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
         href: linux/sql-server-linux-setup-language-extensions.md
       - name: Configure repositories

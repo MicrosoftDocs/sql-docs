@@ -42,27 +42,25 @@ ms.author: mikeray
 ms.reviewer: ""
 ---
 
-# Start, Stop, Pause, Resume, Restart SQL Server Services
+# Start, stop, pause, resume, restart SQL Server services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic describes how to start, stop, pause, resume, or restart the SQL Server Database Engine, the SQL Server Agent, or the SQL Server Browser service by using SQL Server Configuration Manager, SQL Server Management Studio (SSMS), net commands from a command prompt, Transact-SQL, or PowerShell.
 
-## Before You Begin
-
-### What is the SQL Server Database Engine service, the SQL Server Agent service, and the SQL Server Browser service?
+## Identify the service
 
 SQL Server components are executable programs that run as a Windows service. Programs that run as a Windows service can continue to operate without displaying any activity on the computer screen.
 
-#### Database Engine service
+### Database Engine service
 
 The executable process that is the SQL Server Database Engine. The Database Engine can be the default instance (limit one per computer) or can be one of many named instances of the Database Engine. Use SQL Server Configuration Manager to determine which instances of the Database Engine are installed on the computer. The default instance (if you install it) is listed as **SQL Server (MSSQLSERVER)**. Named instances (if you install them) are listed as **SQL Server (<instance_name>)**. By default, SQL Server Express is installed as **SQL Server (SQLEXPRESS)**.
 
-#### SQL Server Agent service
+### SQL Server Agent service
 
 A Windows service that executes scheduled administrative tasks, which are called jobs and alerts. For more information, see [SQL Server Agent](../../ssms/agent/sql-server-agent.md). SQL Server Agent is not available in every edition of SQL Server. For a list of features that are supported by the editions of SQL Server, see [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 
-#### SQL Server Browser service
+### SQL Server Browser service
 
 A Windows service that listens for incoming requests for SQL Server resources and provides clients information about SQL Server instances installed on the computer. A single instance of the SQL Server Browser service is used for all instances of SQL Server installed on the computer.
 
@@ -102,7 +100,7 @@ By default, only members of the local administrators group can start, stop, paus
 
 Stopping the Database Engine by using the Transact-SQL **SHUTDOWN** command requires membership in the **sysadmin** or **serveradmin** fixed server roles, and is not transferable.
 
-## Using SQL Server Configuration Manager
+## SQL Server Configuration Manager
 
 ### Starting SQL Server Configuration Manager
 
@@ -148,7 +146,7 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 > [!NOTE]
 > SQL Server Agent cannot be paused.
 
-## Using SQL Server Management Studio
+## SQL Server Management Studio
 
 ### <a name="ssmsde"></a> To start, stop, pause, resume, or restart an instance of the SQL Server Database Engine
 

@@ -166,7 +166,7 @@ Because the SQL Server Configuration Manager is a snap-in for the Microsoft Mana
 
 3. When prompted if you want to act, click **Yes**.
 
-## <a name="CommandPrompt"></a> From the Command Prompt Window using net Commands
+## <a name="CommandPrompt"></a> Command Prompt Window using net Commands
 
 The Microsoft SQL Server services can be started, stopped, or paused by using Microsoft Windows **net** commands.
 
@@ -243,7 +243,7 @@ The Microsoft SQL Server services can be started, stopped, or paused by using Mi
 
 - To stop a service, replace **net start** with use **net stop**.  
 
-## <a name="TsqlProcedure"></a> Using Transact-SQL
+## <a name="TsqlProcedure"></a> Transact-SQL
 
 The Database Engine can be stopped by using the **SHUTDOWN** statement.  
 
@@ -263,24 +263,24 @@ The Database Engine can be stopped by using the **SHUTDOWN** statement.
 
 For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md).  
 
-## <a name="PowerShellProcedure"></a> Using PowerShell  
-  
+## <a name="PowerShellProcedure"></a> PowerShell
+
 ### To start and stop Database Engine services
-  
+
 1. In a Command Prompt window, start SQL Server PowerShell by executing the following command.  
-  
+
     ```cmd
     sqlps
     ```
-  
+
 2. At a SQL Server PowerShell command prompt, by executing the following command. Replace `computername` with the name of your computer.  
-  
+
     ```powershell
     # Get a reference to the ManagedComputer class.
     CD SQLSERVER:\SQL\computername
     $Wmi = (get-item .).ManagedComputer
     ```
-  
+
 3. Identify the service that you want to stop or start. Pick one of the following lines. Replace `instancename` with the name of the named instance.
 
     - To get a reference to the default instance of the Database Engine.

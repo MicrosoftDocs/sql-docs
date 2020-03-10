@@ -39,7 +39,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | Azure Active Directory authentication support (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Using Azure Active Directory](features/using-azure-active-directory.md). |
-| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, this will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
+| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the OLE DB installer will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 | &nbsp; | &nbsp; |
 
 ### Bugs fixed

@@ -13,11 +13,13 @@ ms.author: jroth
 
 # Download ODBC Driver for SQL Server
 
-Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to Microsoft SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure SQL Data Warehouse, and Analytics Platform System. Microsoft ODBC Driver 17 for SQL Server should be used to create new applications or enhance existing applications that need to take advantage of newer SQL Server features.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to SQL Server. Use Microsoft ODBC Driver 17 for SQL Server to create new applications or enhance existing applications that need to take advantage of newer SQL Server features.
 
 ## Download for Windows
 
-The redistributable installer for Microsoft ODBC Driver 17 for SQL Server installs the client components needed during run time to take advantage of newer SQL Server features and optionally installs the header files needed to develop an application that uses the ODBC API. Starting with version 17.4.2, the installer also includes and installs the Microsoft Active Directory Authentication Library (ADAL.dll).
+The redistributable installer for Microsoft ODBC Driver 17 for SQL Server installs the client components, which are required during run time to take advantage of newer SQL Server features. It optionally installs the header files needed to develop an application that uses the ODBC API. Starting with version 17.4.2, the installer also includes and installs the Microsoft Active Directory Authentication Library (ADAL.dll).
 
 Version 17.5.2 is the latest general availability (GA) version. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.5.2 upgrades it to 17.5.2.
 
@@ -53,8 +55,9 @@ To download previous releases for Windows, see [previous Microsoft ODBC Driver f
 ## Download for Linux and macOS
 
 The Microsoft ODBC Driver for SQL Server can be downloaded and installed using package managers for Linux and macOS using the relevant installation instructions:  
-[Install ODBC for SQL Server (Linux)](docs\connect\odbc\linux-mac\installing-the-microsoft-odbc-driver-for-sql-server.md)  
-[Install ODBC for SQL Server (macOS)](docs\connect\odbc\linux-mac\install-microsoft-odbc-driver-sql-server-macos.md)  
+[Install ODBC for SQL Server (Linux)](linux-mac\installing-the-microsoft-odbc-driver-for-sql-server.md)  
+[Install ODBC for SQL Server (macOS)](linux-mac\install-microsoft-odbc-driver-sql-server-macos.md)  
+
 If you need to download the packages for offline installation, all versions are available via the below links.
 
 > [!Note]

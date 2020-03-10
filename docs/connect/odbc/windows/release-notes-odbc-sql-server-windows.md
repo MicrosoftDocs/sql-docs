@@ -79,7 +79,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| SQL_COPT_SS_SPID connection attribute to retrieve SPID without round-trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| SQL_COPT_SS_SPID connection attribute to retrieve SPID without round trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -101,7 +101,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
-| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, this will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
+| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the ODBC installer will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

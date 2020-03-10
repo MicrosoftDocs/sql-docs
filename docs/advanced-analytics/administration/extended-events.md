@@ -3,7 +3,7 @@ title: Monitor scripts with extended events
 description: Learn how to use extended events to monitor and troubleshooting operations related to the SQL Server Machine Learning Services, SQL Server Launchpad, and Python or R jobs external scripts.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -60,7 +60,7 @@ For more information about how to do this, see the section, [Collecting events f
 |satellite_message_ring_buffer_record|message ring buffer record||  
 |satellite_message_summary|summary information about messaging||  
 |satellite_message_version_mismatch|Message's version field is not matched||  
-|satellite_messaging|Used for tracing messaging event (bind, unbind etc)||  
+|satellite_messaging|Used for tracing messaging event (bind, unbind, etc.)||  
 |satellite_partial_message|Used for tracing partial message at networking layer||  
 |satellite_schema_received|Fires when schema message is received and read by SQL.||  
 |satellite_schema_sent|Fires when schema message is sent by the satellite.|Fired only from external process. See instructions on collecting events from external processes.|  
@@ -78,7 +78,12 @@ For more information about how to do this, see the section, [Collecting events f
 ### Collecting events from external processes
 
 SQL Server Machine Learning Services starts some services that run outside of the SQL Server process. To capture events related to these external processes, you must create an events trace configuration file and place the file in the same directory as the executable for the process.  
-  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> From SQL Server 2019, the isolation mechanism has changed. Therefore you need to give appropriate permissions to the directory where the events trace configuration file is stored. For more information on how to set these permissions, see [the File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
+
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
     To capture events related to the Launchpad, place the *.xml* file in the Binn directory for the SQL Server instance. In a default installation, this would be:

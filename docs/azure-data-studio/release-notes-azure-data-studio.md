@@ -18,7 +18,7 @@ ms.date: 02/19/2020
 
 ## February (hotfix)
 
-February 19, 2019 &nbsp; / &nbsp; version: 1.15.1
+February 19, 2020 &nbsp; / &nbsp; version: 1.15.1
 
 &nbsp;
 
@@ -30,7 +30,7 @@ February 19, 2019 &nbsp; / &nbsp; version: 1.15.1
 
 ## February 2020
 
-February 13, 2019 &nbsp; / &nbsp; version: 1.15.0 
+February 13, 2020 &nbsp; / &nbsp; version: 1.15.0 
 
 &nbsp;
 

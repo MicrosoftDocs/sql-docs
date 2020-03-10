@@ -15,7 +15,7 @@ ms.reviewer: v-kaywon
 ---
 # Authentication in SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server supports two authentication modes, Windows authentication mode and mixed mode.  
   

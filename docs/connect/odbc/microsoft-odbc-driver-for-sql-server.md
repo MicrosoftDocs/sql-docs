@@ -29,7 +29,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 
 ## Download
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
 
 ## Documentation
 

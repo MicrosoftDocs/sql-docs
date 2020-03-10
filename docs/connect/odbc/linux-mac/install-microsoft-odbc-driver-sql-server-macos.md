@@ -69,4 +69,6 @@ If you are unable to make a connection to SQL Server using the ODBC driver, see 
 
 ## Next steps
 
+After installing the driver, you can try the [C++ ODBC example application](../../odbc/cpp-code-example-app-connect-access-sql-db.md). For more information about developing ODBC applications, see [Developing Applications](../../../odbc/reference/develop-app/developing-applications.md).
+
 For more information, see the ODBC driver [release notes](release-notes-odbc-sql-server-linux-mac.md) and [system requirements](system-requirements.md).

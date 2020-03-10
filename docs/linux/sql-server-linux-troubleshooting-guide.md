@@ -50,7 +50,7 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
 
 ## Manage the SQL Server service
 
-The following sections show how to start, stop, restart, and check the status of the SQL Server service. 
+The following sections show how to start, stop, restart, and check the status of the SQL Server service.
 
 ### Manage the mssql-server service in Red Hat Enterprise Linux (RHEL) and Ubuntu 
 

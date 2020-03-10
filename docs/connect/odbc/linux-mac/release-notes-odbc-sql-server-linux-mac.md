@@ -1,7 +1,7 @@
 ---
-title: "Release Notes ODBC on Linux and macOS | Microsoft Docs"
+title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
 ms.custom: ""
-ms.date: "06/30/2018"
+ms.date: "03/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-jizho2"
@@ -11,7 +11,7 @@ author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
 ---
-# Release Notes for the Microsoft ODBC Driver to SQL Server on Linux and macOS
+# Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -118,7 +118,7 @@ Always Encrypted support for BCP API
 
 New connection string attribute UseFMTOnly causes driver to use legacy metadata in special cases requiring temp tables.
 
-Support for Azure SQL Managed Instance (Extended Private Preview). 
+Support for Azure SQL Managed Instance. 
 > [!NOTE]
 > There are a number of differences when using Managed Instance:
 > -   FILESTREAM is not supported 

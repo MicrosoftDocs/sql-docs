@@ -32,7 +32,7 @@ Trace flags are used to set specific server characteristics or to alter a partic
   
  The following rules apply:  
 -   A global trace flag must be enabled globally. Otherwise, the trace flag has no effect. We recommend that you enable global trace flags at startup, by using the **-T** command line option. This ensures the trace flag remains active after a server restart. Restart SQL Server for the trace flag to take effect. 
--   If a trace flag has either global, session or query scope, it can be enabled with the appropriate scope. A trace flag that is enabled at the session level never affects another session, and the effect of the trace flag is lost when the SPID that opened the session logs out.  
+-   If a trace flag has either global, session or query scope, it can be enabled with the appropriate scope. A trace flag that is enabled at the session level never affects another session, and the effect of the trace flag is lost when the SPID that opened the session logs out.     
   
 Trace flags are set ON or OFF by using either of the following methods:
 -   Using the DBCC TRACEON and DBCC TRACEOFF commands.  

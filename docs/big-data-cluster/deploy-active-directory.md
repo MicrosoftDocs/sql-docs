@@ -162,7 +162,7 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: list of IP addresses of domain controllers
+- `security.activeDirectory.dnsIpAddresses`: contains the list of domain’s DNS servers IP addresses. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`
 

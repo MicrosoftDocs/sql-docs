@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -45,7 +45,7 @@ This section explains platforms that are supported with [!INCLUDE[big-data-clust
 
 |Platform|Supported versions|
 |---------|---------|
-|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/><br/>Run `azdata –-version` to validate the version.<br/><br/>As of SQL Server 2019 CU2, this version is `15.0.4013`.|
+|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/><br/>Run `azdata –-version` to validate the version.<br/><br/>As of SQL Server 2019 CU3, this version is `15.0.4023`.|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 ## Release history
@@ -54,6 +54,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
+| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-11   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
@@ -61,6 +62,21 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu3"></a> CU3 (Mar 2020)
+
+Cumulative Update 3 (CU3) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4023.6.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### Resolved issues
+
+SQL Server 2019 CU3 resolves the following issues from previous releases.
+
+- [Deployment with private repository](#deployment-with-private-repository)
+- [Upgrade may fail due to timeout](#upgrade-may-fail-due-to-timeout)
 
 ## <a id="cu2"></a> CU2 (Feb 2020)
 
@@ -92,6 +108,8 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ### Deployment with private repository
 
+- **Affected releases**: GDR1, CU1, CU2. Resolved for CU3.
+
 - **Issue and customer impact**: Upgrade from private repository has specific requirements
 
 - **Workaround**: If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the credentials of the  private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. `azdata` does not support updating the credentials through `AZDATA_PASSWORD` and `AZDATA_USERNAME` environment variables. Update the secret using [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
@@ -99,6 +117,8 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 Upgrading using different repositories for current and target builds is not supported.
 
 ### Upgrade may fail due to timeout
+
+- **Affected releases**: GDR1, CU1, CU2. Resolved for CU 3.
 
 - **Issue and customer impact**: An upgrade may fail due to timeout.
 
@@ -127,7 +147,7 @@ Upgrading using different repositories for current and target builds is not supp
       kubectl edit configmap controller-upgrade-configmap
       ```
 
-   2.	Edit the following fields:
+   2. Edit the following fields:
 
        **`controllerUpgradeTimeoutInMinutes`** Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
 
@@ -135,7 +155,7 @@ Upgrading using different repositories for current and target builds is not supp
 
        **`componentUpgradeTimeoutInMinutes`**: Designates the amount of time that each subsequent phase of the upgrade has to complete.  Default is 30. Update to 45.
 
-   3.	Save and exit
+   3. Save and exit
 
    The python script below is another way to set the timeout:
 

@@ -84,8 +84,7 @@ If you need to download the packages for offline installation, all versions are 
 
 ### Ubuntu
 
-- [Ubuntu 19.04 .deb packages](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 18.10 .deb packages](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 19.10 .deb packages](https://packages.microsoft.com/ubuntu/19.10/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 18.04 .deb packages](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/)

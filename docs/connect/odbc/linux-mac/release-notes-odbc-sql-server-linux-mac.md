@@ -1,7 +1,7 @@
 ---
-title: "Release Notes ODBC on Linux and macOS | Microsoft Docs"
+title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
 ms.custom: ""
-ms.date: "06/30/2018"
+ms.date: "03/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-jizho2"
@@ -11,7 +11,7 @@ author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
 ---
-# Release Notes for the Microsoft ODBC Driver to SQL Server on Linux and macOS
+# Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -43,9 +43,9 @@ GeneMi.  2019/04/03.
 
 | Feature added | Details |
 | :------------ | :------ |
-| SQL_COPT_SS_SPID connection attribute to retrieve SPID without round-trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| SQL_COPT_SS_SPID connection attribute to retrieve SPID without round trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Support for indicating EULA acceptance via `debconf` on Debian and Ubuntu | See [Installing the Driver](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
-| New distributions supported. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| New distributions supported. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -60,7 +60,7 @@ GeneMi.  2019/04/03.
 
 **Known Issue:**
 
-When using Always Encrypted with secure enclaves and Azure Key Vault, odd key path lengths may result in CMK signature verification errors. If you encounter this issue, try changing the length of the keypath by one character by renaming the AKV key.
+When using Always Encrypted with secure enclaves and Azure Key Vault, odd key path lengths may result in CMK signature verification errors. If you encounter this issue, try changing the length of the key path by one character by renaming the AKV key.
 
 ## 17.4, August 2019
 
@@ -78,7 +78,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | :------- | :------ |
 | New distributions supported. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
-| Ability to stream input parameters against Always Encrypted columns. | See , for more information see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
+| Ability to stream input parameters against Always Encrypted columns. | For more information, see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | See [Using XA Transactions](../use-xa-with-dtc.md).<br/><br/>XA is an initialism for _eXtended Architecture_, which is a standard for the execution of a global transaction that accesses more than one server-side data storage system. |
 | &nbsp; | &nbsp; |
 
@@ -118,7 +118,7 @@ Always Encrypted support for BCP API
 
 New connection string attribute UseFMTOnly causes driver to use legacy metadata in special cases requiring temp tables.
 
-Support for Azure SQL Managed Instance (Extended Private Preview). 
+Support for Azure SQL Managed Instance. 
 > [!NOTE]
 > There are a number of differences when using Managed Instance:
 > -   FILESTREAM is not supported 

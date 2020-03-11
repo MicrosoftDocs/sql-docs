@@ -92,7 +92,7 @@ Install the ODBC driver for Ubuntu by following the instructions on the [Linux i
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
-sudo pecl config-set php_ini /etc/php/7.3/fpm/php.ini
+sudo pecl config-set php_ini /etc/php/7.4/fpm/php.ini
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su

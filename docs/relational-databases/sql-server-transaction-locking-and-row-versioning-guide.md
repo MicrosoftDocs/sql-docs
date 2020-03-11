@@ -1822,8 +1822,7 @@ GO
 -   To reduce blocking, consider using a row versioning-based isolation level for read-only queries.  
   
 -   Make intelligent use of lower transaction isolation levels.  
-  
-     Many applications can be readily coded to use a read-committed transaction isolation level. Not all transactions require the serializable transaction isolation level.  
+    Many applications can be readily coded to use a read-committed transaction isolation level. Not all transactions require the serializable transaction isolation level.  
   
 -   Make intelligent use of lower cursor concurrency options, such as optimistic concurrency options.  
     In a system with a low probability of concurrent updates, the overhead of dealing with an occasional "somebody else changed your data after you read it" error can be much lower than the overhead of always locking rows as they are read.  

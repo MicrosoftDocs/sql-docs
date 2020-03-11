@@ -619,7 +619,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Memory**. When concurrent requests are waiting for memory grants that cannot be satisfied with the available memory, a deadlock can occur. For example, two concurrent queries, Q1 and Q2, execute as user-defined functions that acquire 10MB and 20MB of memory respectively. If each query needs 30MB and the total available memory is 20MB, then Q1 and Q2 must wait for each other to release memory, and this results in a deadlock.  
   
--   **Parallel query execution-related resources** Coordinator, producer, or consumer threads associated with an exchange port may block each other causing a deadlock usually when including at least one other process that is not a part of the parallel query. Also, when a parallel query starts execution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determines the degree of parallelism, or the number of worker threads, based upon the current workload. If the system workload unexpectedly changes, for example, where new queries start running on the server or the system runs out of worker threads, then a deadlock could occur.  
+-   **Parallel query execution-related resources**. Coordinator, producer, or consumer threads associated with an exchange port may block each other causing a deadlock usually when including at least one other process that is not a part of the parallel query. Also, when a parallel query starts execution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determines the degree of parallelism, or the number of worker threads, based upon the current workload. If the system workload unexpectedly changes, for example, where new queries start running on the server or the system runs out of worker threads, then a deadlock could occur.  
   
 -   **Multiple Active Result Sets (MARS) resources**. These resources are used to control interleaving of multiple active requests under MARS. For more information, see [Using Multiple Active Result Sets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
@@ -767,7 +767,7 @@ For more information, see [Use the system_health Session](../relational-database
  When deadlocks occur, trace flag 1204 and trace flag 1222 return information that is captured in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log. Trace flag 1204 reports deadlock information formatted by each node involved in the deadlock. Trace flag 1222 formats deadlock information, first by processes and then by resources. It is possible to enable both trace flags to obtain two representations of the same deadlock event.  
 
 > [!IMPORTANT]
-> Avoid using trace flag 1204 and 1222 on high-end systems. Using these trace flags may introduce performance issues. Instead, use the Deadlock Extended Event(#deadlock_xevent).
+> Avoid using trace flag 1204 and 1222 on high-end systems or intensive workloads causing deadlocks. Using these trace flags may introduce performance issues. Instead, use the Deadlock Extended Event(#deadlock_xevent).
   
  In addition to defining the properties of trace flag 1204 and 1222, the following table also shows the similarities and differences.  
   
@@ -916,7 +916,7 @@ For more information about running the SQL Profiler deadlock graph, see [Save De
 -   Keep transactions short and in one batch.  
 -   Use a lower isolation level.  
 -   Use a row versioning-based isolation level.  
-    -   Set READ_COMMITTED_SNAPSHOT database option ON to enable read-committed transactions to use row versioning.  
+    -   Set `READ_COMMITTED_SNAPSHOT` database option ON to enable read-committed transactions to use row versioning.  
     -   Use snapshot isolation.  
 -   Use bound connections.  
   

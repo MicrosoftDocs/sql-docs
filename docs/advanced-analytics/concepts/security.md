@@ -4,7 +4,7 @@ description: Security overview for the extensibility framework in SQL Server Mac
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 03/09/2020
+ms.date: 03/11/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -100,9 +100,9 @@ SQL Server also maintains a mapping of the identity of the calling user to the l
 
 ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
-## Services used in external processing (launchpad)
+## Services used in external processing
 
-The extensibility framework adds one new daemon in a SQL Server installation: [mssql-launchpadd](extensibility-framework.md#launchpad). mssql-launchpadd runs under the low-privileged account that mssql_launchpadd creates when the mssql-server-extensibility package is installed.
+The extensibility framework adds one new daemon in a SQL Server installation: [mssql-launchpadd](extensibility-framework.md#launchpad). mssql-launchpadd runs under the low-privileged account mssql_launchpadd that is created when the mssql-server-extensibility package is installed.
 
 Only one database engine instance is supported and there is one launchpadd service bound to the instance. When a script is executed, the launchpadd service starts a separate launchpad process with the low-privileged user account mssql_satellite in its own new PID, IPC, mount, and network namespace. Each satellite process inherits the mssql_satellite user account of launchpad and uses that for the duration of script execution.
 

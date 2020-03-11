@@ -49,7 +49,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## Remarks  
- If supplied, the values for *length* and *decimal* parameters to STR should be positive. The number is rounded to an integer by default or if the decimal parameter is 0. The specified length should be greater than or equal to the part of the number before the decimal point plus the number's sign (if any). A short *float_expression* is right-justified in the specified length, and a long *float_expression* is truncated to the specified number of decimal places. For example, STR(12**,**10) yields the result of 12. This is right-justified in the result set. However, STR(1223**,**2) truncates the result set to **. String functions can be nested.  
+ If supplied, the values for *length* and *decimal* parameters to STR should be positive. The number is rounded to an integer by default or if the decimal parameter is 0. The specified length should be greater than or equal to the part of the number before the decimal point plus the number's sign (if any). A short *float_expression* is right-justified in the specified length, and a long *float_expression* is truncated to the specified number of decimal places. For example, STR(12, 10) yields the result of 12. This is right-justified in the result set. However, STR(1223, 2) truncates the result set to \*\*. String functions can be nested.  
   
 > [!NOTE]  
 >  To convert to Unicode data, use STR inside a CONVERT or [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) conversion function.  

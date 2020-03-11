@@ -54,7 +54,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
-| [CU3](#cu3)           | 15.0.4023.10006    | 2020-03-11   |
+| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
@@ -65,11 +65,11 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../inc
 
 ## <a id="cu3"></a> CU3 (Mar 2020)
 
-Cumulative Update 3 (CU3) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4023.6. The SQL Server 2019 Big Data Cluster version for this release is 15.0.4023.10006.
+Cumulative Update 3 (CU3) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4023.6.
 
 |Package version | Image tag |
 |-----|-----|
-|15.0.4023.10006 |[2019-CU3-ubuntu-16.04]
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
 
 ### Resolved issues
 

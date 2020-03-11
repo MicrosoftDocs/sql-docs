@@ -54,6 +54,7 @@ The article lists the minimum hardware and software requirements to install and 
 For hardware and software requirements for other versions of SQL Server, see:
 - [SQL Server 2016 and 2017](hardware-and-software-requirements-for-installing-sql-server.md)
 - [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system)
+- [Big data cluster](../../big-data-cluster/deployment-guidance.md)
 
 ##  <a name="pmosr"></a> Hardware requirements  
  The following memory and processor requirements apply to all editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  

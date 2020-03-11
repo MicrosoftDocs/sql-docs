@@ -111,7 +111,7 @@ You can also select **Query Options** from the [context menu](#query-options-usi
 
 Specifies whether IntelliSense functionality is available in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. This option is set by default.
 
-You can also select **IntelliSense Enabled** by selecting Ctrl + B then Ctrl I, or from the [context menu](#intellisense-enabled-using-the-context-menu).
+You can also select **IntelliSense Enabled** by selecting Ctrl + B then Ctrl + I, or from the [context menu](#intellisense-enabled-using-the-context-menu).
 
 ### Include Actual Execution Plan using the editor toolbar
 
@@ -159,7 +159,7 @@ You can also comment out a line by selecting Ctrl + K then Ctrl + C.
 
 Makes the current line an active source statement by removing any comment operator (--) at the beginning of the line.
 
-You can also comment out a line by selecting Ctrl + K then Ctrl + U.
+You can also uncomment a line by selecting Ctrl + K then Ctrl + U.
 
 ### Decrease Indent using the editor toolbar
 

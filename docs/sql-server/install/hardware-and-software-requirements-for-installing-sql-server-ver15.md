@@ -181,7 +181,7 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
 
 You can get relevant installation media from the following locations: 
   
-- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)
+- [SQL Server evaluation center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019)
 - [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.

@@ -89,7 +89,12 @@ manager: craigg
 -   [Installing SQL Server on a Domain Controller](hardware-and-software-requirements-for-installing-sql-server.md#DC_support)  
   
 ##  <a name="hwswr"></a> Hardware and Software Requirements  
- The following requirements apply to all [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installations:  
+
+
+The table in this section lists the minimum requirements for running SQL Server. There are also recommended configuration options for [optimal performance](https://support.microsoft.com/en-us/help/2964518). 
+
+The following software requirements apply to all installations:  
+
   
 |Component|Requirement|  
 |---------------|-----------------|  

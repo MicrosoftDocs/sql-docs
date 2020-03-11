@@ -151,6 +151,9 @@ If necessary, remove the old repository. Use one of the following commands based
 ::: zone pivot="ld2-ubuntu"
 If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
 
+> [!NOTE]
+> Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported. If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`.
+
 | Repository | Command to remove |
 |---|---|
 | **Preview (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |

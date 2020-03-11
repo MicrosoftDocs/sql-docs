@@ -1,5 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
+description: Find information about SQL Server 2019 (15.x) limitations, known issues, help resources, and other release notes.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""

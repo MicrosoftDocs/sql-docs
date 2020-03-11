@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: vin-yu 
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -31,13 +31,17 @@ In this quickstart, you use Docker to pull and run the SQL Server 2017 container
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+> [!NOTE]
+> Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
+
 In this quickstart, you use Docker to pull and run the SQL Server 2019 container image, [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This quickstart creates SQL Server 2019 containers. If you prefer to create SQL Server 2017 containers, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017).
+
 ::: moniker-end
 
-This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quickstart specifically focuses on using the SQL Server on **linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+This image consists of SQL Server running on Linux based on Ubuntu 18.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quickstart specifically focuses on using the SQL Server on **linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Prerequisites
 
@@ -178,19 +182,19 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -209,7 +213,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -217,7 +221,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -225,7 +229,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -243,7 +247,7 @@ Before starting the following steps, make sure that you have selected your prefe
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** | The SQL Server 2019 Ubuntu Linux container image. |
+   | **mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04** | The SQL Server 2019 Ubuntu Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 

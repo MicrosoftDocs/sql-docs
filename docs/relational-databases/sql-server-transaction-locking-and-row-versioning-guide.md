@@ -767,7 +767,7 @@ For more information, see [Use the system_health Session](../relational-database
  When deadlocks occur, trace flag 1204 and trace flag 1222 return information that is captured in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log. Trace flag 1204 reports deadlock information formatted by each node involved in the deadlock. Trace flag 1222 formats deadlock information, first by processes and then by resources. It is possible to enable both trace flags to obtain two representations of the same deadlock event.  
 
 > [!IMPORTANT]
-> Avoid using trace flag 1204 and 1222 on high-end systems or intensive workloads causing deadlocks. Using these trace flags may introduce performance issues. Instead, use the Deadlock Extended Event(#deadlock_xevent).
+> Avoid using trace flag 1204 and 1222 on workload-intensive systems that are causing deadlocks. Using these trace flags may introduce performance issues. Instead, use the Deadlock Extended Event(#deadlock_xevent).
   
  In addition to defining the properties of trace flag 1204 and 1222, the following table also shows the similarities and differences.  
   

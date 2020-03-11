@@ -1,14 +1,16 @@
 ---
-title: "SqlPackage.exe"
+title: SqlPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: "alayu; sstein"
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "pensivebrian"
 ms.author: "broneill"
+ms.reviewer: "alayu; sstein"
+ms.date: 06/28/2018
 ---
+
 # SqlPackage.exe
 
 **SqlPackage.exe** is a command-line utility that automates the following database development tasks:  

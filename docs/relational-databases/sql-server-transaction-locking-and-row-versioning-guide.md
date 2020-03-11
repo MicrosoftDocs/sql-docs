@@ -3,7 +3,7 @@ title: "Transaction Locking and Row Versioning Guide"
 ms.custom: seo-dt-2019
 ms.date: "03/10/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"Ddeadlocks
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -12,6 +12,9 @@ helpviewer_keywords:
   - "transaction locking and row versioning guide"
   - "lock compatibility matrix, [SQL Server]"
   - "lock granularity and hierarchies, [SQL Server]"
+  - "deadlocks, [SQL Server]"
+  - "lock escalation, [SQL Server]"
+  - "lock partitioning, [SQL Server]"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: "rothja"
 ms.author: "jroth"

@@ -3,7 +3,7 @@ title: Configure Linux repositories for SQL Server 2017 and 2019
 description: Check and configure source repositories for SQL Server 2019 and SQL Server 2017 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 01/07/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -154,8 +154,8 @@ If necessary, remove the old repository. Use one of the following commands based
 | Repository | Command to remove |
 |---|---|
 | **Preview (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
-| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -198,6 +198,11 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 ::: zone pivot="ld2-ubuntu"
 Configure the new repository to use for SQL Server installations and upgrades.
 
+> [!NOTE]
+> Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported. The following commands for SQL Server 2019 points to the Ubuntu 18.04 repository.
+>
+> If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`.
+
 1. Import the public repository GPG keys.
 
    ```bash
@@ -208,8 +213,8 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
    | Repository | Version | Command |
    |---|---|---|
-   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
-   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"` |
+   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019-gdr.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 

@@ -3,7 +3,7 @@ title: "Transaction Locking and Row Versioning Guide"
 ms.custom: seo-dt-2019
 ms.date: "03/10/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"Ddeadlocks
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -571,7 +571,7 @@ INSERT mytable VALUES ('Dan');
   
  Starting with [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], the behavior of lock escalation has changed with the introduction of the `LOCK_ESCALATION` option. For more information, see the `LOCK_ESCALATION` option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="deadlocks"></a> Deadlocks  
+## <a name="deadlocks"></a> Deadlocks  
  A deadlock occurs when two or more tasks permanently block each other by each task having a lock on a resource which the other tasks are trying to lock. For example:  
   
 -   Transaction A acquires a share lock on row 1.  
@@ -596,7 +596,7 @@ INSERT mytable VALUES ('Dan');
   
  Deadlocks can also occur when a table is partitioned and the `LOCK_ESCALATION` setting of `ALTER TABLE` is set to AUTO. When `LOCK_ESCALATION` is set to AUTO, concurrency increases by allowing the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to lock table partitions at the HoBT level instead of at the table level. However, when separate transactions hold partition locks in a table and want a lock somewhere on the other transactions partition, this causes a deadlock. This type of deadlock can be avoided by setting `LOCK_ESCALATION` to `TABLE`; although this setting will reduce concurrency by forcing large updates to a partition to wait for a table lock.  
   
-#### Detecting and Ending Deadlocks  
+### Detecting and Ending Deadlocks  
  A deadlock occurs when two or more tasks permanently block each other by each task having a lock on a resource which the other tasks are trying to lock. The following graph presents a high level view of a deadlock state where:  
   
 -   Task T1 has a lock on resource R1 (indicated by the arrow from R1 to T1) and has requested a lock on resource R2 (indicated by the arrow from T1 to R2).  
@@ -607,7 +607,7 @@ INSERT mytable VALUES ('Dan');
   
  The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatically detects deadlock cycles within [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] chooses one of the sessions as a deadlock victim and the current transaction is terminated with an error to break the deadlock.  
   
-##### <a name="deadlock_resources"></a> Resources that can Deadlock  
+#### <a name="deadlock_resources"></a> Resources that can Deadlock  
  Each user session might have one or more tasks running on its behalf where each task might acquire or wait to acquire a variety of resources. The following types of resources can cause blocking that could result in a deadlock.  
   
 -   **Locks**. Waiting to acquire locks on resources, such as objects, pages, rows, metadata, and applications can cause deadlock. For example, transaction T1 has a shared (S) lock on row r1 and is waiting to get an exclusive (X) lock on r2. Transaction T2 has a shared (S) lock on r2 and is waiting to get an exclusive (X) lock on row r1. This results in a lock cycle in which T1 and T2 wait for each other to release the locked resources.  

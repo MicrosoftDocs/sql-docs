@@ -1,5 +1,6 @@
 ---
 title: "Install and configure AdventureWorks sample database"
+description: Follow these instructions to download and install AdventureWorks sample databases with SQL Server Management Studio or in Azure SQL Database.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples

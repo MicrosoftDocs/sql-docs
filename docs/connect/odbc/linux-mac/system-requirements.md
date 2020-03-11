@@ -40,9 +40,9 @@ The Linux and macOS drivers are available only for the 64-bit versions of the fo
 |RedHat Enterprise Linux 6|13, 13.1, 17+|
 |RedHat Enterprise Linux 7|13, 13.1, 17+|
 |RedHat Enterprise Linux 8|17.4+|
-|SuSE Linux Enterprise Server 11|13, 13.1, 17+ <br /><br /> **NOTE:** ODBC Driver 17 supports SuSE Linux Enterprise Server 11 SP4 only|
-|SuSE Linux Enterprise Server 12|13, 13.1, 17+|
-|SuSE Linux Enterprise Server 15|17+|
+|SUSE Linux Enterprise Server 11|13, 13.1, 17+ <br /><br /> **NOTE:** ODBC Driver 17 supports SUSE Linux Enterprise Server 11 SP4 only|
+|SUSE Linux Enterprise Server 12|13, 13.1, 17+|
+|SUSE Linux Enterprise Server 15|17+|
 |Ubuntu Linux 14.04|13, 13.1, 17.4|
 |Ubuntu Linux 15.10|13, 13.1|
 |Ubuntu Linux 16.04|13, 13.1, 17+|

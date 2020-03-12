@@ -68,6 +68,31 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
 |Traditional model|Contained database user model|  
 |-----------------------|-----------------------------------|  
 |To change password, in context of master DB:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|To change password, in context of user DB:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
+
+### Managed instance
+
+An Azure SQL Database managed instance behaves like SQL Server on-premises in the context of contained databases. Be sure to update your connection string to the master database, and then to the user database.
+
+For example: 
+
+```sql
+Use MASTER;
+GO 
+
+ALTER DATABASE Test
+SET containment=partial
+
+
+USE Test;  
+GO  
+CREATE USER Carlo  
+WITH PASSWORD='Enterpwdhere*'  
+
+
+SELECT containment_desc FROM sys.databases
+WHERE name='test'
+```
+
   
 ## Remarks  
   

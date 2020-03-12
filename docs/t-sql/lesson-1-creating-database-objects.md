@@ -38,7 +38,7 @@ If you don't have a SQL Server instance, create one. To create one, select your 
 - **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## Create a database
-Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the CREATE DATABASE statement has a required parameter: the name of the database. CREATE DATABASE also has many optional parameters, such as the disk location where you want to put the database files. When you execute CREATE DATABASE without the optional parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses default values for many of these parameters. This tutorial uses very few of the optional syntax parameters.   
+Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the [`CREATE DATABASE`](statements/create-database-transact-sql.md) statement has a required parameter: the name of the database.` CREATE DATABASE` also has many optional parameters, such as the disk location where you want to put the database files. When you execute `CREATE DATABASE` without the optional parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses default values for many of these parameters.
 
 1.  In a Query Editor window, type but do not execute the following code:  
   
@@ -47,7 +47,7 @@ Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the CREATE DATABA
     GO  
     ```  
   
-2.  Use the pointer to select the words `CREATE DATABASE`, and then press **F1**. The CREATE DATABASE topic in SQL Server Books Online should open. You can use this technique to find the complete syntax for CREATE DATABASE and for the other statements that are used in this tutorial.  
+2.  Use the pointer to select the words `CREATE DATABASE`, and then press **F1**. The `CREATE DATABASE` topic in SQL Server Books Online should open. You can use this technique to find the complete syntax for `CREATE DATABASE` and for the other statements that are used in this tutorial.  
   
 3.  In Query Editor, press **F5** to execute the statement and create a database named `TestData`.  
   
@@ -81,7 +81,7 @@ In a Query Editor window, type and execute the following code to change your con
   
 ### Create the table
 
-In a Query Editor window, type and execute the following code to create a simple table named `Products`. The columns in the table are named `ProductID`, `ProductName`, `Price`, and `ProductDescription`. The `ProductID` column is the primary key of the table. `int`, `varchar(25)`, `money`, and `varchar(max)` are all data types. Only the `Price` and `ProductionDescription` columns can have no data when a row is inserted or changed. This statement contains an optional element (`dbo.`) called a schema. The schema is the database object that owns the table. If you are an administrator, `dbo` is the default schema. `dbo` stands for database owner.  
+In a Query Editor window, type and execute the following code to create a table named `Products`. The columns in the table are named `ProductID`, `ProductName`, `Price`, and `ProductDescription`. The `ProductID` column is the primary key of the table. `int`, `varchar(25)`, `money`, and `varchar(max)` are all data types. Only the `Price` and `ProductionDescription` columns can have no data when a row is inserted or changed. This statement contains an optional element (`dbo.`) called a schema. The schema is the database object that owns the table. If you are an administrator, `dbo` is the default schema. `dbo` stands for database owner.  
   
   ```sql  
   CREATE TABLE dbo.Products  
@@ -100,13 +100,13 @@ Now that you have created the **Products** table, you are ready to insert data i
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
-|3000|3mm Bracket|.52||  
+|3000|3 mm Bracket|0.52||  
   
 The basic syntax is: INSERT, table name, column list, VALUES, and then a list of the values to be inserted. The two hyphens in front of a line indicate that the line is a comment and the text will be ignored by the compiler. In this case, the comment describes a permissible variation of the syntax.  
   
 ### Insert data into a table  
   
-1.  Execute the following statement to insert a row into the `pProducts` table that was created in the previous task. This is the basic syntax.  
+1.  Execute the following statement to insert a row into the `Products` table that was created in the previous task.
   
    ```sql 
    -- Standard syntax  
@@ -152,7 +152,7 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -180,7 +180,7 @@ Use the SELECT statement to read the data in a table. The SELECT statement is on
   GO  
   ```  
   
-2.  You can use an asterisk to select all the columns in the table. This is often used in ad hoc queries. You should provide the column list in your permanent code so that the statement returns the predicted columns, even if a new column is added to the table later.  
+2.  You can use an asterisk (`*`) to select all the columns in the table. The asterisk is for ad hoc queries. In permanent code, provide the column list so that the statement returns the predicted columns, even if a new column is added to the table later.  
   
   ```sql  
   -- Returns all columns in the table  
@@ -235,7 +235,7 @@ For this example, you will use CREATE VIEW to create a view that selects only tw
   
 ### Create a view  
   
-Execute the following statement to create a very simple view that executes a select statement, and returns the names and prices of our products to the user.  
+Execute the following statement to create a view that executes a select statement, and returns the names and prices of our products to the user.  
   
   ```sql  
   CREATE VIEW vw_Names  

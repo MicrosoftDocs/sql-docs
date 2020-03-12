@@ -33,7 +33,7 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
+If you don't have a SQL Server instance, creae one. To create one, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
@@ -181,7 +181,7 @@ Use the SELECT statement to read the data in a table. The SELECT statement is on
   GO  
   ```  
   
-2.  You can use an asterisk to select all the columns in the table. This is often used in ad hoc queries. You should provide the column list in you permanent code so that the statement will return the predicted columns, even if a new column is added to the table later.  
+2.  You can use an asterisk to select all the columns in the table. This is often used in ad hoc queries. You should provide the column list in your permanent code so that the statement returns the predicted columns, even if a new column is added to the table later.  
   
   ```sql  
   -- Returns all columns in the table  

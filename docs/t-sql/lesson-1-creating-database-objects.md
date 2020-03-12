@@ -18,7 +18,7 @@ This lesson shows you how to create a database, create a table in the database, 
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] statements can be written and submitted to the [!INCLUDE[ssDE](../includes/ssde-md.md)] in the following ways:  
   
--   By using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This tutorial assumes that you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], but you can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, which is available as a free download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=7593).  
+-   By using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This tutorial assumes that you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], but you can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, which is available as a free download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   By using the [sqlcmd utility](../tools/sqlcmd-utility.md).  
   
@@ -57,6 +57,7 @@ When you create a database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 > The keyword GO separates statements when more than one statement is submitted in a single batch. GO is optional when the batch contains only one statement.  
 
 ## Create a Table
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 To create a table, you must provide a name for the table, and the names and data types of each column in the table. It is also a good practice to indicate whether null values are allowed in each column. To create a table, you must have the `CREATE TABLE` permission, and the `ALTER SCHEMA` permission on the schema that will contain the table. The [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) fixed database role has these permissions.  
@@ -70,6 +71,7 @@ For a list of data types and links for a description of each, see [Data Types &#
   
   
 ### Switch the Query Editor connection to the TestData database  
+
 In a Query Editor window, type and execute the following code to change your connection to the `TestData` database.  
   
   ```sql  
@@ -78,6 +80,7 @@ In a Query Editor window, type and execute the following code to change your con
   ```  
   
 ### Create the table
+
 In a Query Editor window, type and execute the following code to create a simple table named `Products`. The columns in the table are named `ProductID`, `ProductName`, `Price`, and `ProductDescription`. The `ProductID` column is the primary key of the table. `int`, `varchar(25)`, `money`, and `varchar(max)` are all data types. Only the `Price` and `ProductionDescription` columns can have no data when a row is inserted or changed. This statement contains an optional element (`dbo.`) called a schema. The schema is the database object that owns the table. If you are an administrator, `dbo` is the default schema. `dbo` stands for database owner.  
   
   ```sql  
@@ -103,7 +106,7 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
   
 ### Insert data into a table  
   
-1.  Execute the following statement to insert a row into the `Products` table that was created in the previous task. This is the basic syntax.  
+1.  Execute the following statement to insert a row into the `pProducts` table that was created in the previous task. This is the basic syntax.  
   
    ```sql 
    -- Standard syntax  
@@ -111,7 +114,22 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > If the insert fails, it may be because the `Product` table already has a row with that product ID in it. To proceed, delete all the rows in the table and repeat the preceding step. [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) deletes all the rows in the table. 
+   >
+   > Do not run the following code if the insert succeed.
+   >
+   > Run the following command to delete all the rows in the table:
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > After you truncate the table, repeat the `INSERT` command in this step.
+
+
 2.  The following statement shows how you can change the order in which the parameters are provided by switching the placement of the `ProductID` and `ProductName` in both the field list (in parentheses) and in the values list.  
   
    ```sql  
@@ -261,35 +279,6 @@ To test the stored procedure, type and execute the following statement. The proc
   EXECUTE pr_Names 10.00;  
   GO  
   ```  
-
-## Delete test database
-
-> [!CAUTION]
-> This section is optional. Do not complete this section if you plan on proceeding to [lesson 2](lesson-2-configuring-permissions-on-database-objects.md).
-
-If the steps before this section failed, you can drop the database, and then start over at [Create a database](#create-a-database).
-
-The following command removes the test database. The change cannot be un-done. Use the following command only to reset the test scenario. 
-
-To drop the database, run the following command.
-
-```sql
-USE [master]
-GO
-
-ALTER DATABASE [TestData] 
- SET SINGLE_USER 
- WITH ROLLBACK IMMEDIATE
-GO
-
-DROP DATABASE [TestData]
-GO
-
-CREATE DATABASE [TestData] 
-GO
-```
-
-After the previous command completes, return to [Create a database](#create-a-database) to start the lesson over. 
 
 ## Next steps
 The next article teaches you how to configure permissions on database objects. The objects created in lesson 1 will also be used in lesson 2. 

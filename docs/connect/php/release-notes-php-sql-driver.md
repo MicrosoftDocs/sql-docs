@@ -37,7 +37,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 5.8
 
-![download](../../ssdt/media/download.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120362)  
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120362)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 
 ### Version information
@@ -69,7 +69,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 5.6.1
 
-![download](../../ssdt/media/download.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120446)  
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120446)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.1)
 
 ### Version information
@@ -88,7 +88,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 5.6
 
-![download](../../ssdt/media/download.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120450)  
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120450)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 
 ### Version information
@@ -115,7 +115,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 5.3
 
-![download](../../ssdt/media/download.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120447)  
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120447)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 
 ### Version information
@@ -133,7 +133,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 5.2
 
-![download](../../ssdt/media/download.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120451)  
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120451)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 
 ### Version information
@@ -158,7 +158,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 4.3
 
-![download](../../ssdt/media/download.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120616)  
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120616)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
 
 ### Version information
@@ -180,7 +180,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 4.0
 
-![download](../../ssdt/media/download.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120448)  
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120448)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
 
 ### Version information
@@ -196,7 +196,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 3.2
 
-![download](../../ssdt/media/download.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120449)  
+![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120449)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
 
 ### Version information

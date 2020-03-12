@@ -87,8 +87,8 @@ SSL uses the OpenSSL library. The following table shows the minimum supported ve
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
-|SuSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SUSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
 |Ubuntu 18.10, 19.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
@@ -107,7 +107,8 @@ settings in the driver's section in `odbcinst.ini`. If the setting is not presen
 
 - `KeepAliveInterval=<integer>` determines the interval separating keep-alive retransmissions until a response is received.  The default is **1** second.
 
+## See Also
 
-## See Also  
-[Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
-[Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)

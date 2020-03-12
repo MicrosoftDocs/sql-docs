@@ -23,10 +23,10 @@ manager: craigg
 |-----------|-----------------|  
 |[ADOMD.NET Server Functionality](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|Describes the uses for ADOMD.NET server objects.|  
 |[ADOMD.NET Server Object Architecture](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|Describes the object architecture for ADOMD.NET server objects.|  
-|[User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)|Walks you through the process of creating a user defined function or stored Procedure.|  
+|[User Defined Functions and Stored Procedures](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)|Walks you through the process of creating a user defined function or stored Procedure.|  
   
 ## See Also  
- [ADOMD.NET Client Programming](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
+ [ADOMD.NET Client Programming](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
  [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
   

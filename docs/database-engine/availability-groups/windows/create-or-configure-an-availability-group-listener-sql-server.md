@@ -262,7 +262,7 @@ manager: erikre
     >  When you create an availability group listener through the WSFC cluster (Failover Cluster Manager GUI), **RegisterAllProvidersIP** will be 0 (false) by default.  
   
 ###  <a name="HostRecordTTL"></a> HostRecordTTL Setting  
- By default, clients cache cluster DNS records for 20 minutes.  By reducing **HostRecordTTL**, the Time to Live (TTL), for the cached record, legacy clients may reconnect more quickly.  However, reducing the **HostRecordTTL** setting may also result in increased traffic to the DN servers.  
+ By default, clients cache cluster DNS records for 20 minutes.  By reducing **HostRecordTTL**, the Time to Live (TTL), for the cached record, legacy clients may reconnect more quickly.  However, reducing the **HostRecordTTL** setting may also result in increased traffic to the DNS servers.  
   
 ###  <a name="SampleScript"></a> Sample PowerShell Script to Disable RegisterAllProvidersIP and Reduce TTL  
  The following PowerShell example demonstrates how to configure both the **RegisterAllProvidersIP** and **HostRecordTTL** cluster parameters for the listener resource.  The DNS record will be cached for 5 minutes rather than the default 20 minutes.  Modifying both cluster parameters may reduce the time to connect to the correct IP address after a failover for legacy clients that cannot use the **MultiSubnetFailover** parameter.  Replace `yourListenerName` with the name of the listener that you are changing.  

@@ -5,7 +5,7 @@ description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Acti
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -27,13 +27,13 @@ While the cluster is deploying, check the pods.
 kubectl get pods -n mssql-cluster
 ```
 
-Verify that the list of pods returned include:
+Verify that the list of pods returned includes:
 
 - `compute-`$
 - `data-`
 - `storage-`
 
-If these compute, data, and storage pods are not created, check the logs to identify why.
+If the compute, data, and storage pods are not created, check the logs to identify why.
 
 ## Check logs
 
@@ -60,7 +60,7 @@ To identify why deployment quit without creating compute, data, or storage pods,
   WARNING | Retrying.
   ```
 
-  In the example above, the deployment fails to create a sql login for the domain user because the domaing group is scoped as domain local. Use domain global or domain universal scoped groups. [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md) explains AD group scope requirements.
+  In the example above, the deployment fails to create a login for the domain user because the domain group is scoped as domain local. Use domain global or domain universal scoped groups. [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md) explains AD group scope requirements.
 
 ## Check the scope of domain groups.
 
@@ -132,7 +132,7 @@ ERROR | Failed to create AD user account 'ldap-user'. Error code: 53. Message: F
 ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=nginx-mgmtproxy,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform.
 ```
 
-This can happen when the domain controller DNS server is missing reverse DNS entry (PTR record).
+These entries can happen when the domain controller DNS server is missing reverse DNS entry (PTR record).
 
 ## Verify reverse lookup (PTR record)
     

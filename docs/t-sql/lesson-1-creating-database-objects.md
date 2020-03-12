@@ -116,9 +116,9 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
    ```  
 
    > [!NOTE]
-   > If the insert fails, it may be because the `Product` table already has a row with that product ID in it. To proceed, delete all the rows in the table and repeat the preceding step. [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) deletes all the rows in the table. 
+   > If the insert succeeds, proceed to the next step.
    >
-   > Do not run the following code if the insert succeed.
+   > If the insert fails, it may be because the `Product` table already has a row with that product ID in it. To proceed, delete all the rows in the table and repeat the preceding step. [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) deletes all the rows in the table. 
    >
    > Run the following command to delete all the rows in the table:
    > 
@@ -128,7 +128,6 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
    >```
    >
    > After you truncate the table, repeat the `INSERT` command in this step.
-
 
 2.  The following statement shows how you can change the order in which the parameters are provided by switching the placement of the `ProductID` and `ProductName` in both the field list (in parentheses) and in the values list.  
   

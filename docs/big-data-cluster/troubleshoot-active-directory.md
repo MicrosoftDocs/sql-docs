@@ -127,7 +127,7 @@ Extract the logs and locate `\mssql-cluster\control-<identifier>\controller\cont
 Look for the following entries in the log:
 
 ```
-ERROR | Failed to create AD user account 'cntrl-controller'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=cntrl-controller,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
+ERROR    | Failed to create AD user account 'cntrl-controller'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=cntrl-controller,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
 ERROR | Failed to create AD user account 'ldap-user'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=ldap-user,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
 ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=nginx-mgmtproxy,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform.
 ```
@@ -135,7 +135,7 @@ ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Mess
 This can happen when the domain controller DNS server is missing reverse DNS entry (PTR record).
 
 ## Verify reverse lookup (PTR record)
-
+    
 Run the following PowerShell script to confirm if you have reverse DNS entry (PTR record) configured.
 
 ```powershell

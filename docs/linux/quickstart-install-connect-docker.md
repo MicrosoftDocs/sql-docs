@@ -85,7 +85,7 @@ Before starting the following steps, make sure that you have selected your prefe
    The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). To see all available images, see [the mssql-server Docker hub page](https://hub.docker.com/r/microsoft/mssql-server).
 
    ::: zone pivot="cs1-bash"
-   For the bash commands in this article, `sudo` is used. On MacOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   For the bash commands in this article, `sudo` is used. On macOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
    ::: zone-end
 
 2. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS) or elevated PowerShell command prompt.
@@ -204,7 +204,7 @@ Before starting the following steps, make sure that you have selected your prefe
    The previous command pulls the SQL Server 2019 container image based on Ubuntu. To instead use container images based on RedHat, see [Run RHEL-based container images](sql-server-linux-configure-docker.md#rhel). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/_/microsoft-mssql-server).
 
    ::: zone pivot="cs1-bash"
-   For the bash commands in this article, `sudo` is used. On MacOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   For the bash commands in this article, `sudo` is used. On macOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
    ::: zone-end
 
 2. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS) or elevated PowerShell command prompt.

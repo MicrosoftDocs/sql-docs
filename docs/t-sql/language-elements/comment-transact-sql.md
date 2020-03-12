@@ -49,7 +49,7 @@ Use two hyphens (**--**) for single-line or nested comments. Comments inserted w
 |Make the selected text a comment|CTRL+K, CTRL+C|  
 |Uncomment the selected text|CTRL+K, CTRL+U|  
   
- For more information about keyboard shortcuts, see [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+ For more information about keyboard shortcuts, see [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
  For multiline comments, see [Slash Star &#40;Block Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   

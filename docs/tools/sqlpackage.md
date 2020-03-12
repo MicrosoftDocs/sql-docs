@@ -1,14 +1,16 @@
 ---
-title: "SqlPackage.exe"
+title: SqlPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: "alayu; sstein"
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "pensivebrian"
 ms.author: "broneill"
+ms.reviewer: "alayu; sstein"
+ms.date: 06/28/2018
 ---
+
 # SqlPackage.exe
 
 **SqlPackage.exe** is a command-line utility that automates the following database development tasks:  
@@ -222,7 +224,7 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Specifies whether differences in the amount of time that SQL Server retains the route in the routing table should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Specifies whether differences in the semi-colons between T-SQL statements will be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Specifies whether differences in the table options will be ignored or updated when you publish to a database.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifies whether differences in the table partition options will be ignored or updated when you publish to a database.  This option applies only to Azure Synapse Analytics data warehouse databases.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifies whether differences in the table partition options will be ignored or updated when you publish to a database.  This option applies only to Azure Synapse Analytics SQL pool (data warehouse) databases.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Specifies whether differences in the user settings objects will be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Specifies whether differences in white space will be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Specifies whether differences in the value of the WITH NOCHECK clause for check constraints will be ignored or updated when you publish.|

@@ -41,7 +41,7 @@ apt-get update
 apt-get install php7.4 php7.4-dev php7.4-xml -y --allow-unauthenticated
 ```
 ### Step 2. Install prerequisites
-Install the ODBC driver for Ubuntu by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Install the ODBC driver for Ubuntu by following the instructions on the [Linux installation article](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
@@ -88,7 +88,7 @@ Verify the status of the PHP-FPM service by running
 systemctl status php7.4-fpm
 ```
 ### Step 2. Install prerequisites
-Install the ODBC driver for Ubuntu by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Install the ODBC driver for Ubuntu by following the instructions on the [Linux installation article](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
@@ -172,7 +172,7 @@ dnf install php-pdo php-pear php-devel
 ```
 
 ### Step 2. Install prerequisites
-Install the ODBC driver for Red Hat 7 or 8 by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Install the ODBC driver for Red Hat 7 or 8 by following the instructions on the [Linux installation article](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
@@ -217,7 +217,7 @@ apt-get update
 apt-get install -y php7.4 php7.4-dev php7.4-xml php7.4-intl
 ```
 ### Step 2. Install prerequisites
-Install the ODBC driver for Debian by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+Install the ODBC driver for Debian by following the instructions on the [Linux installation article](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
 You may also need to generate the correct locale to get PHP output to display correctly in a browser. For example, for the en_US UTF-8 locale, run the following commands:
 ```
@@ -274,7 +274,7 @@ zypper --gpg-auto-import-keys refresh
 zypper -n install php7 php7-devel php7-openssl
 ```
 ### Step 2. Install prerequisites
-Install the ODBC driver for Suse by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Install the ODBC driver for Suse by following the instructions on the [Linux installation article](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 > [!NOTE]
@@ -323,7 +323,7 @@ apk update
 apk add php7 php7-dev php7-pear php7-pdo php7-openssl autoconf make g++
 ```
 ### Step 2. Install prerequisites
-Install the ODBC driver for Alpine by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+Install the ODBC driver for Alpine by following the instructions on the [Linux installation article](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
@@ -371,7 +371,7 @@ brew link --force --overwrite php@7.4
 ```
 
 ### Step 2. Install prerequisites
-Install the ODBC driver for macOS by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+Install the ODBC driver for macOS by following the instructions on the [macOS installation article](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md). 
 
 In addition, you may need to install the GNU make tools:
 ```

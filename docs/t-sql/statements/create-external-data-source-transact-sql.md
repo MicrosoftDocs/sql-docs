@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/18/2020
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -292,7 +292,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = HADOOP
+    TYPE = BLOB_STORAGE
   ) ;
 ```
 
@@ -717,7 +717,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = HADOOP
+    TYPE = BLOB_STORAGE
   ) ;
 ```
 
@@ -1044,7 +1044,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/'
     CREDENTIAL = AzureStorageCredential
-    TYPE = HADOOP
+    TYPE = BLOB_STORAGE
   ) ;
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "Aggregate Values in a Dataset by Using the Aggregate Transformation | Microsoft Docs"
+title: "Aggregate Values in a Dataset with the Aggregate Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,7 +15,7 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
 ---
-# Aggregate Values in a Dataset by Using the Aggregate Transformation
+# Aggregate Values in a Dataset with the Aggregate Transformation
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

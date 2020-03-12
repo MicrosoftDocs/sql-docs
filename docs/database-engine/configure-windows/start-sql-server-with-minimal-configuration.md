@@ -28,6 +28,8 @@ ms.author: mikeray
 -   Startup stored procedures do not run.  
 
 -   `tempdb` is configured at the smallest possible size.
+
+-   Audit will be disabled but Audit DDL can still be issued. In practice, **-m** should be sufficient for most cases that require SQL Serve Audit reconfiguration. For more details about security in Auditing configuration, see [Auditing in SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
   
  After the server has been started with minimal configuration, you should change the appropriate server option value or values, stop, and then restart the server.  
   

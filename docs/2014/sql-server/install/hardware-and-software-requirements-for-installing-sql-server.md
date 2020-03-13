@@ -91,7 +91,7 @@ manager: craigg
 ##  <a name="hwswr"></a> Hardware and Software Requirements  
 
 
-The table in this section lists the minimum requirements for running SQL Server. There are also recommended configuration options for [optimal performance](https://support.microsoft.com/en-us/help/2964518). 
+The table in this section lists the minimum requirements for running SQL Server. There are also recommended configuration options for [optimal performance](https://support.microsoft.com/help/2964518). 
 
 The following software requirements apply to all installations:  
 

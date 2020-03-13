@@ -46,7 +46,7 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 ---
-# SQL Server 2016 & 2017: Hardware & software requirements
+# SQL Server 2016 and 2017: Hardware and software requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2016 and SQL Server 2017 on the Windows operating system.  
@@ -75,9 +75,9 @@ For hardware and software requirements for other versions of SQL Server, see:
  \* The minimum memory required for installing the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) is 2 GB of RAM, which is different from the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] minimum memory requirement. For information about installing DQS, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   
   
-##  <a name="hwswr"></a> Software Requirements  
+##  <a name="hwswr"></a> Software requirements  
 
-The table in this section lists the minimum software requirements for running SQL Server. There are also recommended configuration options for [optimal performance](https://support.microsoft.com/en-us/help/4465518/recommended-updates-and-configurations-for-sql-server). 
+The table in this section lists the minimum software requirements for running SQL Server. There are also recommended configuration options for [optimal performance](https://support.microsoft.com/help/4465518/recommended-updates-and-configurations-for-sql-server). 
 
 The following software requirements apply to all installations:  
   
@@ -138,7 +138,7 @@ For minimum version requirements to install [!INCLUDE[ssNoVersion](../../include
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products  
 
 
-### Server Core Support
+### Server Core support
 
 Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
 
@@ -152,12 +152,12 @@ Installing SQL Server 2016 and 2017 on Server Core mode is supported by the foll
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
-### WOW64 Support
+### WOW64 support
   
  WOW64 (Windows 32-bit on Windows 64-bit) is a feature of 64-bit editions of Windows that enables 32-bit applications to run natively in 32-bit mode. Applications function in 32-bit mode, even though the underlying operating system is a 64-bit operating system. WOW64 is not supported for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] installations. However, Management Tools are supported in WOW64.  
 
   
-### Features Supported on 32-bit Client Operating Systems  
+### Features supported on 32-bit client Operating Systems 
  Windows client operating systems, for example Windows 10 and Windows 8.1 are available as 32-bit or 64-bit architectures.   All SQL Server features are supported on 64-bit client operating systems. On supported 32-bit client operating systems Microsoft supports the following features:  
   
 -   Data Quality Client
@@ -174,10 +174,10 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] and later server operating systems are not available as 32-bit architectures. All supported server operating systems are only available as 64-bit. All features are supported on 64-bit server operating systems.  
 
 
-##  <a name="CrossLanguageSupport"></a> Cross-Language Support  
+##  <a name="CrossLanguageSupport"></a> Cross-Language support  
  For more information about cross-language support and considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in localized languages, see [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md).  
   
-##  <a name="HardDiskSpace"></a> Disk Space Requirements  
+##  <a name="HardDiskSpace"></a> Disk space requirements  
  During installation of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], Windows Installer creates temporary files on the system drive. Before you run Setup to install or upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verify that you have at least 6.0 GB of available disk space on the system drive for these files. This requirement applies even if you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to a non-default drive.  
   
  Actual hard disk space requirements depend on your system configuration and the features that you decide to install. The following table provides disk space requirements for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components.  
@@ -237,7 +237,7 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
 
 You can get relevant installation media from the following locations: 
   
-- [SQL Server evaluation center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-rtm)
+- [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
 - [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.

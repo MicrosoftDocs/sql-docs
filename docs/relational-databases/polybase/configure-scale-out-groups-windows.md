@@ -81,8 +81,8 @@ After setup is complete, both machines can function as PolyBase Group head nodes
   
 4. Shutdown the PolyBase engine and restart the PolyBase data movement service.
 
-> [!NOTE]
-> When Polybase Engine service gets restarted or stopped in head node, DMS engine services gets stopped as soon as the control channel closed between DMS and DW engine. If DW engine keeps getting restarted for more than 2 times, DMS goes to quiet period for 90 minutes and it must to wait 90 minutes for the next try. In such situation, you should start this service manually in all nodes.
+> [!NOTE] 
+> When the Polybase Engine service gets restarted or stopped in the head node, the Data Movement Service (DMS) services gets stopped as soon as the communication channel is closed between DMS and Polybase Engine Service (DW). If the DW engine gets restarted more than 2 times, the DMS goes to a quiet period for 90 minutes and it must wait 90 minutes for the next auto start attempt. In such situation, you should start this service manually on all nodes.
 
 ## Optional: Remove a compute node  
   

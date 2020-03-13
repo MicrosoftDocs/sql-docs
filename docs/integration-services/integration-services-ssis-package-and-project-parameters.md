@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) Package and Project Parameters | Microsoft Docs"
+title: "Package and Project Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

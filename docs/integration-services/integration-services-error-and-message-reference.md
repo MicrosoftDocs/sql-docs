@@ -2020,149 +2020,149 @@ ms.author: chugu
 ##  <a name="msgWarning"></a> Warning Messages  
  The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] warning messages begin with **DTS_W_**.  
 
-> [!div class="mx-tdBreakAll"]
-|Hexadecimal code|Decimal Code|Symbolic Name|Description|  
-|----------------------|------------------|-------------------|-----------------|  
-|0x80000036|-2147483594|DTS_W_COUNTDOWN|There are %1!lu! days left in the evaluation. When it expires, packages will not be able to be executed.|  
-|0x80010015|-2147418091|DTS_W_GENERICWARNING|Warning(s) raised. There should be more specific warnings preceding this one that explain the specifics of the warning(s).|  
-|0x80012010|-2147409904|DTS_W_FAILEDXMLDOCCREATION|Cannot create an XML document object instance. Verify that MSXML is installed and registered correctly.|  
-|0x80012011|-2147409903|DTS_W_FAILEDCONFIGLOAD|Cannot load the XML configuration file. The XML configuration file may be malformed or not valid.|  
-|0x80012012|-2147409902|DTS_W_CONFIGFILENAMEINVALID|The configuration file name "%1" is not valid. Check the configuration file name.|  
-|0x80012013|-2147409901|DTS_W_CONFIGFILEINVALID|The configuration file loaded, but is not valid. The file is not formatted correctly, may be missing an element, or may be damaged.|  
-|0x80012014|-2147409900|DTS_W_CONFIGFILENOTFOUND|The configuration file "%1" cannot be found. Check the directory and file name.|  
-|0x80012015|-2147409899|DTS_W_CONFIGKEYNOTFOUND|Configuration registry key "%1" was not found. A configuration entry specifies a registry key that is not available. Check the registry to ensure that the key is there.|  
-|0x80012016|-2147409898|DTS_W_CONFIGTYPEINVALID|The configuration type in one of the configuration entries was not valid. Valid types are listed in the DTSConfigurationType enumeration.|  
-|0x80012017|-2147409897|DTS_W_CANNOTFINDOBJECT|The package path referenced an object that cannot be found: "%1". This occurs when an attempt is made to resolve a package path to an object that cannot be found.|  
-|0x80012018|-2147409896|DTS_W_CONFIGFORMATINVALID_PACKAGEDELIMITER|The configuration entry, "%1", has an incorrect format because it does not begin with the package delimiter. Prepend "\package" to the package path.|  
-|0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|The configuration entry "%1" had an incorrect format. This can occur because of a missing delimiter or formatting errors, like an invalid array delimiter.|  
-|0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|Configuration from a parent variable "%1" did not occur because there was no parent variable collection.|  
-|0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|Failure importing configuration file: "%1".|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|Configuration from a parent variable "%1" did not occur because there was no parent variable. Error code: 0x%2!8.8X!.|  
-|0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|The configuration file was empty and contained no configuration entries.|  
-|0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|The configuration type for configuration "%1" is not valid. This may occur when an attempt is made to set the type property of a configuration object to an invalid configuration type.|  
-|0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|The configuration type for the registry configuration was not found in key "%1". Add a value called ConfigType to the registry key and give it a string value of "Variable", "Property", "ConnectionManager", "LoggingProvider", or "ForEachEnumerator".|  
-|0x80012026|-2147409882|DTS_W_REGISTRYCONFIGURATIONVALUENOTFOUND|The configuration value for the registry configuration was not found in key "%1". Add a value called Value to the registry key of type DWORD or String.|  
-|0x80012028|-2147409880|DTS_W_PROCESSCONFIGURATIONFAILEDSET|Process configuration failed to set the destination at the package path of "%1". This occurs when attempting to set the destination property or variable fails. Check the destination property or variable.|  
-|0x80012032|-2147409870|DTS_W_CONFIGUREDVALUESECTIONEMPTY|Failed to retrieve value from the .ini file. The ConfiguredValue section is either empty, or does not exist: "%1".|  
-|0x80012033|-2147409869|DTS_W_CONFIGUREDTYPESECTIONEMPTY|Failed to retrieve value from the .ini file. The ConfiguredType section is either empty, or does not exist: "%1".|  
-|0x80012034|-2147409868|DTS_W_PACKAGEPATHSECTIONEMPTY|Failed to retrieve value from the .ini file. The PackagePath section is either empty, or does not exist: "%1".|  
-|0x80012035|-2147409867|DTS_W_CONFIGUREDVALUETYPE|Failed to retrieve value from the .ini file. The ConfiguredValueType section is either empty, or does not exist: "%1".|  
-|0x80012051|-2147409839|DTS_W_SQLSERVERFAILEDIMPORT|Configuration from SQL Server was not successfully imported: "%1".|  
-|0x80012052|-2147409838|DTS_W_INICONFIGURATIONPROBLEM|The .ini configuration file is not valid due to empty or missing fields.|  
-|0x80012054|-2147409836|DTS_W_NORECORDSFOUNDINTABLE|Table "%1" does not have any records for configuration. This occurs when configuring from a SQL Server table that has no records for the configuration.|  
-|0x80012055|-2147409835|DTS_W_DUPLICATECUSTOMEVENT|Error using same name for different custom events. The custom event "%1" was defined differently by different children of this container. There may be an error when executing the event handler.|  
-|0x80012057|-2147409833|DTS_W_CONFIGREADONLYVARIABLE|The configuration attempted to change a read-only variable. The variable is at the package path "%1".|  
-|0x80012058|-2147409832|DTS_W_CONFIGPROCESSCONFIGURATIONFAILED|Calling ProcessConfiguration on the package failed. The configuration attempted to change the property at the package path "%1".|  
-|0x80012059|-2147409831|DTS_W_ONEORMORECONFIGLOADFAILED|Failed to load at least one of the configuration entries for the package. Check configuration entries for "%1" and previous warnings to see descriptions of which configuration failed.|  
-|0x8001205A|-2147409830|DTS_W_CONFIGNODEINVALID|The configuration entry "%1" in the configuration file was not valid, or failed to configure the variable.  The name indicates which entry failed. In some cases, the name will not be available.|  
-|0x80014058|-2147401640|DTS_W_FAILURENOTRESTARTABLE|This task or container has failed, but because FailPackageOnFailure property is FALSE, the package will continue. This warning is posted when the SaveCheckpoints property of the package is set to TRUE and the task or container fails.|  
-|0x80017101|-2147389183|DTS_W_EMPTYPATH|The path is empty.|  
-|0x80019002|-2147381246|DTS_W_MAXIMUMERRORCOUNTREACHED|SSIS Warning Code DTS_W_MAXIMUMERRORCOUNTREACHED.  The Execution method succeeded, but the number of errors raised (%1!d!) reached the maximum allowed (%2!d!); resulting in failure. This occurs when the number of errors reaches the number specified in MaximumErrorCount. Change the MaximumErrorCount or fix the errors.|  
-|0x80019003|-2147381245|DTS_W_CONFIGENVVARNOTFOUND|The configuration environment variable was not found.  The environment variable was: "%1". This occurs when a package specifies an environment variable for a configuration setting but it cannot be found. Check the configurations collection in the package and verify that the specified environment variable is available and valid.|  
-|0x80019316|-2147380458|DTS_W_CONNECTIONPROVIDERCHANGE|The provider name for the connection manager "%1" has been changed from "%2" to "%3".|  
-|0x80019317|-2147380457|DTS_W_READEXTMAPFAILED|An exception occurred while reading the upgrade mapping files. The exception is "%1".|  
-|0x80019318|-2147380456|DTS_W_DUPLICATEMAPPINGKEY|There is a duplicate mapping in file, "%1". The tag is "%2", and the key is "%3".|  
-|0x80019319|-2147380455|DTS_W_IMPLICITUPGRADEMAPPING|The extension, "%1", was implicitly upgraded to "%2". Add a mapping for this extension to the UpgradeMappings directory.|  
-|0x8001931A|-2147380454|DTS_W_INVALIDEXTENSIONMAPPING|A mapping in the file, "%1", is not valid. Values cannot be null or empty. The tag is "%2", the key is "%3", and the value is "%4".|  
-|0x8001931C|-2147380452|DTS_W_ADOCONNECTIONDATATYPECOMPATCHANGE|The DataTypeCompatibility property of ADO type connection manager "%1" was set to 80 for backward compatibility reasons.|  
-|0x8001C004|-2147368956|DTS_W_FILEENUMEMPTY|The For Each File enumerator is empty. The For Each File enumerator did not find any files that matched the file pattern, or the specified directory was empty.|  
-|0x8001F02F|-2147356625|DTS_W_COULDNOTRESOLVEPACKAGEPATH|Cannot resolve a package path to an object in the package "%1". Verify that the package path is valid.|  
-|0x8001F203|-2147356157|DTS_W_ITERATIONEXPRESSIONISNOTASSIGNMENT|The iteration expression is not an assignment expression: "%1". This error usually occurs when the expression in the assignment expression on the ForLoop is not an assignment expression.|  
-|0x8001F204|-2147356156|DTS_W_INITIALIZATIONEXPRESSIONISNOTASSIGNMENT|The initialization expression is not an assignment expression: "%1". This error usually occurs when the expression in the iterate expressions on the ForLoop is not an assignment expression.|  
-|0x8001F205|-2147356155|DTS_W_LOGPROVIDERNOTDEFINED|The executable "%1" was pasted successfully. However a log provider that was associated with the executable was not found in the collection "LogProviders".  The executable was pasted without log provider information.|  
-|0x8001F300|-2147355904|DTS_W_PACKAGEUPGRADED|Succeeded in upgrading the package.|  
-|0x8001F42B|-2147355605|DTS_W_LEGACYPROGID|The "%1" ProgID has been deprecated. The new ProgID for this component "%2" should be used instead.|  
-|0x80020918|-2147350248|DTS_W_FTPTASK_OPERATIONFAILURE|Operation "%1" failed.|  
-|0x800283A5|-2147318875|DTS_W_MSMQTASK_USE_WEAK_ENCRYPTION|The encryption algorithm "%1" uses weak encryption.|  
-|0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|Task failed to execute operation "%1".|  
-|0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|File/Process "%1" is not in path.|  
-|0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|The subject is empty.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|The address in the "To" line is malformed. It is either missing the "\@" symbol or is not valid.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|The address in the "From" line is malformed. It is either missing the "\@" symbol or is not valid.|  
-|0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|The two XML documents are different.|  
-|0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD Validation will use the DTD file defined in the DOCTYPE line in the XML document. It will not use what is assigned to the property "%1".|  
-|0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Task failed to validate "%1".|  
-|0x80029291|-2147315055|DTS_W_TRANSFERDBTASK_ACTIONSETTOCOPY|The transfer action value was invalid.  It is being set to copy.|  
-|0x80029292|-2147315054|DTS_W_TRANSFERDBTASK_METHODSETTOONLINE|The transfer method value was invalid.  It is being set to an online transfer.|  
-|0x8002F304|-2147290364|DTS_W_PROBLEMOCCURREDWITHFOLLOWINGMESSAGE|A problem occurred with the following messages: "%1".|  
-|0x8002F322|-2147290334|DTS_W_ERRMSGTASK_ERRORMESSAGEALREADYEXISTS|The error message "%1" already exists at destination server.|  
-|0x8002F331|-2147290319|DTS_W_JOBSTASK_JOBEXISTSATDEST|The job "%1" already exists at destination server.|  
-|0x8002F332|-2147290318|DTS_W_JOBSTASK_SKIPPINGJOBEXISTSATDEST|Skipping the transfer of job "%1" since it already exists at destination.|  
-|0x8002F333|-2147290317|DTS_W_JOBSTASK_OVERWRITINGJOB|Overwriting the job "%1" at destination server.|  
-|0x8002F339|-2147290311|DTS_W_LOGINSTASK_ENUMVALUEINCORRECT|Persisted enumeration value of property "FailIfExists" was changed and rendered invalid. Resetting to default.|  
-|0x8002F343|-2147290301|DTS_W_LOGINSTASK_OVERWRITINGLOGINATDEST|Overwriting Login "%1" at destination.|  
-|0x8002F356|-2147290282|DTS_W_TRANSOBJECTSTASK_SPALREADYATDEST|Stored procedure "%1" already exists at destination.|  
-|0x8002F360|-2147290272|DTS_W_TRANSOBJECTSTASK_RULEALREADYATDEST|Rule "%1" already exists at destination.|  
-|0x8002F364|-2147290268|DTS_W_TRANSOBJECTSTASK_TABLEALREADYATDEST|Table "%1" already exists at destination.|  
-|0x8002F368|-2147290264|DTS_W_TRANSOBJECTSTASK_VIEWALREADYATDEST|View "%1" already exists at destination.|  
-|0x8002F372|-2147290254|DTS_W_TRANSOBJECTSTASK_UDFALREADYATDEST|User Defined Function "%1" already exists at destination.|  
-|0x8002F376|-2147290250|DTS_W_TRANSOBJECTSTASK_DEFAULTALREADYATDEST|Default "%1" already exists at destination.|  
-|0x8002F380|-2147290240|DTS_W_TRANSOBJECTSTASK_UDDTALREADYATDEST|User Defined Data Type "%1" already exists at destination.|  
-|0x8002F384|-2147290236|DTS_W_TRANSOBJECTSTASK_PFALREADYATDEST|Partition Function "%1" already exists at destination.|  
-|0x8002F388|-2147290232|DTS_W_TRANSOBJECTSTASK_PSALREADYATDEST|Partition Scheme "%1" already exists at destination.|  
-|0x8002F391|-2147290223|DTS_W_TRANSOBJECTSTASK_SCHEMAALREADYATDEST|Schema "%1" already exists at destination.|  
-|0x8002F396|-2147290218|DTS_W_TRANSOBJECTSTASK_SQLASSEMBLYALREADYATDEST|SqlAssembly "%1" already exists at destination.|  
-|0x8002F400|-2147290112|DTS_W_TRANSOBJECTSTASK_AGGREGATEALREADYATDEST|User Defined Aggregate "%1" already exists at destination.|  
-|0x8002F404|-2147290108|DTS_W_TRANSOBJECTSTASK_TYPEALREADYATDEST|User Defined Type "%1" already exists at destination.|  
-|0x8002F408|-2147290104|DTS_W_TRANSOBJECTSTASK_XMLSCHEMACOLLECTIONALREADYATDEST|XmlSchemaCollection "%1" already exists at destination.|  
-|0x8002F412|-2147290094|DTS_W_TRANSOBJECTSTASK_NOELEMENTSPECIFIEDTOTRANSFER|There are no elements specified to transfer.|  
-|0x8002F415|-2147290091|DTS_W_TRANSOBJECTSTASK_LOGINALREADYATDEST|Login "%1" already exists at destination.|  
-|0x8002F41A|-2147290086|DTS_W_TRANSOBJECTSTASK_USERALREADYATDEST|User "%1" already exists at destination.|  
-|0x80047007|-2147192825|DTS_W_NOLINEAGEVALIDATION|The lineage IDs of the input columns cannot be validated because the execution trees contain cycles.|  
-|0x80047034|-2147192780|DTS_W_EMPTYDATAFLOW|The DataFlow task has no components. Add components or remove the task.|  
-|0x80047069|-2147192727|DTS_W_SORTEDOUTPUTHASNOSORTKEYPOSITIONS|The IsSorted property of %1 is set to TRUE, but all of its output columns' SortKeyPositions are set to zero.|  
-|0x8004706F|-2147192721|DTS_W_SOURCEREMOVED|Source "%1" (%2!d!) will not be read because none of its data ever becomes visible outside the Data Flow Task.|  
-|0x80047076|-2147192714|DTS_W_UNUSEDOUTPUTDATA|The output column "%1" (%2!d!) on output "%3" (%4!d!) and component "%5" (%6!d!) is not subsequently used in the Data Flow task. Removing this unused output column can increase Data Flow task performance.|  
-|0x800470AE|-2147192658|DTS_W_COMPONENTREMOVED|Component "%1" (%2!d!) has been removed from the Data Flow task because its output is not used and its inputs either have no side effects or are not connected to outputs of other components. If the component is required, then the HasSideEffects property on at least one of its inputs should be set to true, or its output should be connected to something.|  
-|0x800470B0|-2147192656|DTS_W_NOWORKTODO|Rows were given to a thread, but that thread has no work to do. The layout has a disconnected output. Running the pipeline with the RunInOptimizedMode property set to TRUE will be faster, and prevents this warning.|  
-|0x800470C8|-2147192632|DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|The external columns for %1 are out of synchronization with the data source columns. %2|  
-|0x800470C9|-2147192631|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSADDITION|The column "%1" needs to be added to the external columns.|  
-|0x800470CA|-2147192630|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSUPDATE|The external column "%1" needs to be updated.|  
-|0x800470CB|-2147192629|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSREMOVAL|The %1 needs to be removed from the external columns.|  
-|0x800470D8|-2147192616|DTS_W_EXPREVALPOTENTIALSTRINGTRUNCATION|The result string for expression "%1" may be truncated if it exceeds the maximum length of %2!d! characters. The expression could have a result value that exceeds the maximum size of a DT_WSTR.|  
-|0x800470E9|-2147192599|DTS_W_COMPONENTLEAKPROCESSINPUT|A call to the ProcessInput method for input %1!d! on %2 unexpectedly kept a reference to the buffer it was passed. The refcount on that buffer was %3!d! before the call, and %4!d! after the call returned.|  
-|0x800470EB|-2147192597|DTS_W_EXPREVALUNREFERENCEDINPUTCOLUMN|The "%1" on "%2" has usage type READONLY, but is not referenced by an expression. Remove the column from the list of available input columns, or reference it in an expression.|  
-|0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|Cannot find the "%1" value for component %2. The CurrentVersion value for the component cannot be located. This error occurs if the component has not set its registry information to contain a CurrentVersion value in the DTSInfo section. This message occurs during component development, or when the component is used in a package, if the component is not registered properly.|  
-|0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|The buffer manager could not get a temporary file name.|  
-|0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|The buffer manager could not create a temporary file on the path "%1". The path will not be considered for temporary storage again.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warning: Could not open global shared memory to communicate with performance DLL; data flow performance counters are not available.  To resolve, run this package as an administrator, or on the system's console.|  
-|0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|There is a partial row at the end of the file.|  
-|0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|The end of the data file was reached while reading header rows. Make sure the header row delimiter and the number of header rows to skip are correct.|  
-|0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Cannot retrieve the column code page info from the OLE DB provider.  If the component supports the "%1" property, the code page from that property will be used.  Change the value of the property if the current string code page values are incorrect.  If the component does not support the property, the code page from the component's locale ID will be used.|  
-|0x802020F7|-2145378057|DTS_W_TXSORTSORTISTHESAME|The data is already sorted as specified so the transform can be removed.|  
-|0x8020400D|-2145370099|DTS_W_NOPIPELINEDATATYPEMAPPINGAVAILABLE|The %1 references an external data type that cannot be mapped to a Data Flow task data type. The Data Flow task data type DT_WSTR will be used instead.|  
-|0x802070CC|-2145357620|DTS_W_STATICTRUNCATIONINEXPRESSION|The expression "%1" will always result in a truncation of data. The expression contains a static truncation (the truncation of a fixed value).|  
-|0x8020820C|-2145353204|DTS_W_UNMAPPEDINPUTCOLUMN|The input column "%1" with ID %2!d! at index %3!d! is unmapped. The lineage ID for the column is zero.|  
-|0x80208305|-2145352955|DTS_W_TXFUZZYLOOKUP_DELIMITERS_DONT_MATCH|The specified delimiters do not match the delimiters used to build the pre-existing match index "%1". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.|  
-|0x80208308|-2145352952|DTS_W_TXFUZZYLOOKUP_MAXRESULTS_IS_ZERO|The MaxOutputMatchesPerInput property on the Fuzzy Lookup transformation is zero. No results will be produced.|  
-|0x80208310|-2145352944|DTS_W_TXFUZZYLOOKUP_NO_FUZZY_JOIN_COLUMNS|There were no valid input columns with JoinType column property set to Fuzzy.  Performance on Exact joins may be improved by using the Lookup transform instead of FuzzyLookup.|  
-|0x8020831C|-2145352932|DTS_W_TXFUZZYLOOKUP_TIMESTAMPCAVEAT|The reference column "%1" may be a SQL timestamp column. When the fuzzy match index is built, and a copy of the reference table is made, all reference table timestamps will reflect the current state of the table at the time of the copy. Unexpected behavior may occur if the CopyReferenceTable is set to false.|  
-|0x80208321|-2145352927|DTS_W_MATCHINDEXALREADYEXISTS|A table with the name '%1' given for MatchIndexName already exists and DropExistingMatchIndex is set to FALSE.  Transform execution will fail unless this table is dropped, a different name is specified, or DropExisitingMatchIndex is set to TRUE.|  
-|0x8020832B|-2145352917|DTS_W_TXFUZZYLOOKUP_JOINLENGTHMISMATCH|The length of input column '%1' is not equal to the length of the reference column '%2' that it is being matched against.|  
-|0x8020832D|-2145352915|DTS_W_TXFUZZYLOOKUP_CODEPAGE_MISMATCH|The code pages of the DT_STR source column "%1" and the DT_STR dest column "%2" do not match.  This may cause unexpected results.|  
-|0x8020832E|-2145352914|DTS_W_FUZZYLOOKUP_TOOMANYEXACTMATCHCOLUMNS|There are more than 16 exact match joins, so performance may not be optimal. Reduce the number of exact match joins to improve performance. SQL Server has a limit of 16 columns per index, the inverted index will be used for all lookups.|  
-|0x80208350|-2145352880|DTS_W_FUZZYLOOKUP_MEMLIMITANDEXHAUSTIVESPECIFIED|The Exhaustive option requires that the entire reference be loaded into main memory.  Since a memory limit has been specified for the MaxMemoryUsage property, it is possible that the entire reference table will not fit within this bound and that the match operation will fail at runtime.|  
-|0x80208351|-2145352879|DTS_W_FUZZYLOOKUP_EXACTMATCHCOLUMNSEXCEEDBYTELIMIT|The cumulative lengths of the columns specified in the exact match joins exceeds the 900 byte limit for index keys.  Fuzzy Lookup creates an index on the exact match columns to increase lookup performance and there is a possibility that creation of this index may fail and the lookup will fall back to an alternative, possibly slower, method of finding matches. If performance is a problem, try removing some exact match join columns or reduce the maximum lengths of variable length exact match columns.|  
-|0x80208352|-2145352878|DTS_W_FUZZYLOOKUP_EXACTMATCHINDEXCREATIONFAILED|Failed to create an index for exact match columns. Reverting to alternative fuzzy lookup method.|  
-|0x80208353|-2145352877|DTS_W_FUZZYGROUPINGINTERNALPIPELINEWARNING|The following Fuzzy Grouping internal pipeline warning occurred with warning code 0x%1!8.8X!: "%2".|  
-|0x80208375|-2145352843|DTS_W_XMLSRCOUTPUTCOLUMNLENGTHSETTODEFAULT|No maximum length was specified for the %1 with external data type %2. The SSIS Data Flow Task data type "%3" with a length of %4!d! will be used.|  
-|0x80208376|-2145352842|DTS_W_XMLSRCOUTPUTCOLUMNDATATYPEMAPPEDTOSTRING|The %1 references external data type %2, which cannot be mapped to a SSIS Data Flow Task data type.  The SSIS Data Flow Task data type DT_WSTR with a length of %3!d! will be used instead.|  
-|0x80208385|-2145352827|DTS_W_NOREDIRECTWITHATTACHEDERROROUTPUTS|No rows will be sent to error output(s). Configure error or truncation dispositions to redirect rows to the error output(s), or delete data flow transformations or destinations that are attached to the error output(s).|  
-|0x80208386|-2145352826|DTS_W_REDIRECTWITHNOATTACHEDERROROUTPUTS|Rows sent to the error output(s) will be lost. Add new data flow transformations or destinations to receive error rows, or reconfigure the component to stop redirecting rows to the error output(s).|  
-|0x80208391|-2145352815|DTS_W_XMLSRCOUTPUTCOLUMNLENGTHSETTOMAXIMUM|For the %1 with external data type %2, the XML schema specified a maxLength constraint of %3!d!, which exceeds the maximum allowed column length of %4!d!. The SSIS Data Flow Task data type "%5" with a length of %6!d! will be used.|  
-|0x802090E4|-2145349404|DTS_W_TXLOOKUP_DUPLICATE_KEYS|The %1 encountered duplicate reference key values when caching reference data. This error occurs in Full Cache mode only. Either remove the duplicate key values, or change the cache mode to PARTIAL or NO_CACHE.|  
-|0x802092A7|-2145348953|DTS_W_POTENTIALTRUNCATIONFROMDATAINSERTION|Truncation may occur due to inserting data from data flow column "%1" with a length of %2!d! to database column "%3" with a length of %4!d!.|  
-|0x802092A8|-2145348952|DTS_W_POTENTIALTRUNCATIONFROMDATARETRIEVAL|Truncation may occur due to retrieving data from database column "%1" with a length of %2!d! to data flow column "%3" with a length of %4!d!.|  
-|0x802092AA|-2145348950|DTS_W_ADODESTBATCHNOTSUPPORTEDFORERRORDISPOSITION|Batch mode is not currently supported when error row disposition is used. The BatchSize property will be set to 1.|  
-|0x802092AB|-2145348949|DTS_W_ADODESTNOROWSINSERTED|No rows were successfully inserted into the destination. This may be due to a data type mismatch between columns, or due to the use of a datatype that is unsupported by your ADO.NET provider. Since the error disposition for this component is not "Fail component", error messages are not shown here; set the error disposition to "Fail component" to see error messages here.|  
-|0x802092AC|-2145348948|DTS_W_ADODESTPOTENTIALDATALOSS|Potential data loss may occur due to inserting data from input column "%1" with data type "%2" to external column "%3" with data type "%4". If this is intended, an alternative way to do conversion is using a Data Conversion component before ADO NET destination component.|  
-|0x802092AD|-2145348947|DTS_W_ADODESTEXTERNALCOLNOTMATCHSCHEMACOL|The %1 has been out of synchronization with the database column.  The latest column has %2. Use advanced editor to refresh  available destination columns if needed.|  
-|0x802092AE|-2145348946|DTS_W_ADODESTEXTERNALCOLNOTEXIST|The %1 does not exist in the database. It may have been removed or renamed. Use Advanced Editor to refresh the available destination columns if needed.|  
-|0x802092AF|-2145348945|DTS_W_ADODESTNEWEXTCOL|A new column with name %1 has been added to the external database table. Use advanced editor to refresh available destination columns if needed.|  
-|0x8020930C|-2145348852|DTS_W_NOMATCHOUTPUTGETSNOROWS|No rows will be sent to the no match output. Configure the transformation to redirect rows with no matching entries to the no match output, or delete the data flow transformations or destinations that are attached to the no match output.|  
-|0x8020931B|-2145348837|DTS_W_ADODESTINVARIANTEXCEPTION|Exception received while enumerating ADO.Net providers. The invariant was "%1". The exception message is: "%2"|  
-|0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|The %1 has no input column mapped to it.|  
-|0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|The table "%1" has changed. New columns might have been added to the table.|  
+>[!div class="mx-tdBreakAll"]
+>|Hexadecimal code|Decimal Code|Symbolic Name|Description|  
+>|----------------------|------------------|-------------------|-----------------|  
+>|0x80000036|-2147483594|DTS_W_COUNTDOWN|There are %1!lu! days left in the evaluation. When it expires, packages will not be able to be executed.|  
+>|0x80010015|-2147418091|DTS_W_GENERICWARNING|Warning(s) raised. There should be more specific warnings preceding this one that explain the specifics of the warning(s).|  
+>|0x80012010|-2147409904|DTS_W_FAILEDXMLDOCCREATION|Cannot create an XML document object instance. Verify that MSXML is installed and registered correctly.|  
+>|0x80012011|-2147409903|DTS_W_FAILEDCONFIGLOAD|Cannot load the XML configuration file. The XML configuration file may be malformed or not valid.|  
+>|0x80012012|-2147409902|DTS_W_CONFIGFILENAMEINVALID|The configuration file name "%1" is not valid. Check the configuration file name.|  
+>|0x80012013|-2147409901|DTS_W_CONFIGFILEINVALID|The configuration file loaded, but is not valid. The file is not formatted correctly, may be missing an element, or may be >damaged.|  
+>|0x80012014|-2147409900|DTS_W_CONFIGFILENOTFOUND|The configuration file "%1" cannot be found. Check the directory and file name.|  
+>|0x80012015|-2147409899|DTS_W_CONFIGKEYNOTFOUND|Configuration registry key "%1" was not found. A configuration entry specifies a registry key that is not available. Check the >registry to ensure that the key is there.|  
+>|0x80012016|-2147409898|DTS_W_CONFIGTYPEINVALID|The configuration type in one of the configuration entries was not valid. Valid types are listed in the DTSConfigurationType >enumeration.|  
+>|0x80012017|-2147409897|DTS_W_CANNOTFINDOBJECT|The package path referenced an object that cannot be found: "%1". This occurs when an attempt is made to resolve a package path >to an object that cannot be found.|  
+>|0x80012018|-2147409896|DTS_W_CONFIGFORMATINVALID_PACKAGEDELIMITER|The configuration entry, "%1", has an incorrect format because it does not begin with the package delimiter. >Prepend "\package" to the package path.|  
+>|0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|The configuration entry "%1" had an incorrect format. This can occur because of a missing delimiter or formatting errors, like >an invalid array delimiter.|  
+>|0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|Configuration from a parent variable "%1" did not occur because there was no parent variable collection.|  
+>|0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|Failure importing configuration file: "%1".|  
+>|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|Configuration from a parent variable "%1" did not occur because there was no parent variable. Error code: 0x%2!8.8X!.|  
+>|0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|The configuration file was empty and contained no configuration entries.|  
+>|0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|The configuration type for configuration "%1" is not valid. This may occur when an attempt is made to set the type >property of a configuration object to an invalid configuration type.|  
+>|0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|The configuration type for the registry configuration was not found in key "%1". Add a value called ConfigType >to the registry key and give it a string value of "Variable", "Property", "ConnectionManager", "LoggingProvider", or "ForEachEnumerator".|  
+>|0x80012026|-2147409882|DTS_W_REGISTRYCONFIGURATIONVALUENOTFOUND|The configuration value for the registry configuration was not found in key "%1". Add a value called Value to >the registry key of type DWORD or String.|  
+>|0x80012028|-2147409880|DTS_W_PROCESSCONFIGURATIONFAILEDSET|Process configuration failed to set the destination at the package path of "%1". This occurs when attempting to set >the destination property or variable fails. Check the destination property or variable.|  
+>|0x80012032|-2147409870|DTS_W_CONFIGUREDVALUESECTIONEMPTY|Failed to retrieve value from the .ini file. The ConfiguredValue section is either empty, or does not exist: "%1".|  
+>|0x80012033|-2147409869|DTS_W_CONFIGUREDTYPESECTIONEMPTY|Failed to retrieve value from the .ini file. The ConfiguredType section is either empty, or does not exist: "%1".|  
+>|0x80012034|-2147409868|DTS_W_PACKAGEPATHSECTIONEMPTY|Failed to retrieve value from the .ini file. The PackagePath section is either empty, or does not exist: "%1".|  
+>|0x80012035|-2147409867|DTS_W_CONFIGUREDVALUETYPE|Failed to retrieve value from the .ini file. The ConfiguredValueType section is either empty, or does not exist: "%1".|  
+>|0x80012051|-2147409839|DTS_W_SQLSERVERFAILEDIMPORT|Configuration from SQL Server was not successfully imported: "%1".|  
+>|0x80012052|-2147409838|DTS_W_INICONFIGURATIONPROBLEM|The .ini configuration file is not valid due to empty or missing fields.|  
+>|0x80012054|-2147409836|DTS_W_NORECORDSFOUNDINTABLE|Table "%1" does not have any records for configuration. This occurs when configuring from a SQL Server table that has no >records for the configuration.|  
+>|0x80012055|-2147409835|DTS_W_DUPLICATECUSTOMEVENT|Error using same name for different custom events. The custom event "%1" was defined differently by different children of >this container. There may be an error when executing the event handler.|  
+>|0x80012057|-2147409833|DTS_W_CONFIGREADONLYVARIABLE|The configuration attempted to change a read-only variable. The variable is at the package path "%1".|  
+>|0x80012058|-2147409832|DTS_W_CONFIGPROCESSCONFIGURATIONFAILED|Calling ProcessConfiguration on the package failed. The configuration attempted to change the property at the >package path "%1".|  
+>|0x80012059|-2147409831|DTS_W_ONEORMORECONFIGLOADFAILED|Failed to load at least one of the configuration entries for the package. Check configuration entries for "%1" and >previous warnings to see descriptions of which configuration failed.|  
+>|0x8001205A|-2147409830|DTS_W_CONFIGNODEINVALID|The configuration entry "%1" in the configuration file was not valid, or failed to configure the variable.  The name indicates >which entry failed. In some cases, the name will not be available.|  
+>|0x80014058|-2147401640|DTS_W_FAILURENOTRESTARTABLE|This task or container has failed, but because FailPackageOnFailure property is FALSE, the package will continue. This >warning is posted when the SaveCheckpoints property of the package is set to TRUE and the task or container fails.|  
+>|0x80017101|-2147389183|DTS_W_EMPTYPATH|The path is empty.|  
+>|0x80019002|-2147381246|DTS_W_MAXIMUMERRORCOUNTREACHED|SSIS Warning Code DTS_W_MAXIMUMERRORCOUNTREACHED.  The Execution method succeeded, but the number of errors raised >(%1!d!) reached the maximum allowed (%2!d!); resulting in failure. This occurs when the number of errors reaches the number specified in MaximumErrorCount. Change the >MaximumErrorCount or fix the errors.|  
+>|0x80019003|-2147381245|DTS_W_CONFIGENVVARNOTFOUND|The configuration environment variable was not found.  The environment variable was: "%1". This occurs when a package >specifies an environment variable for a configuration setting but it cannot be found. Check the configurations collection in the package and verify that the specified >environment variable is available and valid.|  
+>|0x80019316|-2147380458|DTS_W_CONNECTIONPROVIDERCHANGE|The provider name for the connection manager "%1" has been changed from "%2" to "%3".|  
+>|0x80019317|-2147380457|DTS_W_READEXTMAPFAILED|An exception occurred while reading the upgrade mapping files. The exception is "%1".|  
+>|0x80019318|-2147380456|DTS_W_DUPLICATEMAPPINGKEY|There is a duplicate mapping in file, "%1". The tag is "%2", and the key is "%3".|  
+>|0x80019319|-2147380455|DTS_W_IMPLICITUPGRADEMAPPING|The extension, "%1", was implicitly upgraded to "%2". Add a mapping for this extension to the UpgradeMappings directory.|  
+>|0x8001931A|-2147380454|DTS_W_INVALIDEXTENSIONMAPPING|A mapping in the file, "%1", is not valid. Values cannot be null or empty. The tag is "%2", the key is "%3", and the value >is "%4".|  
+>|0x8001931C|-2147380452|DTS_W_ADOCONNECTIONDATATYPECOMPATCHANGE|The DataTypeCompatibility property of ADO type connection manager "%1" was set to 80 for backward compatibility >reasons.|  
+>|0x8001C004|-2147368956|DTS_W_FILEENUMEMPTY|The For Each File enumerator is empty. The For Each File enumerator did not find any files that matched the file pattern, or the >specified directory was empty.|  
+>|0x8001F02F|-2147356625|DTS_W_COULDNOTRESOLVEPACKAGEPATH|Cannot resolve a package path to an object in the package "%1". Verify that the package path is valid.|  
+>|0x8001F203|-2147356157|DTS_W_ITERATIONEXPRESSIONISNOTASSIGNMENT|The iteration expression is not an assignment expression: "%1". This error usually occurs when the expression >in the assignment expression on the ForLoop is not an assignment expression.|  
+>|0x8001F204|-2147356156|DTS_W_INITIALIZATIONEXPRESSIONISNOTASSIGNMENT|The initialization expression is not an assignment expression: "%1". This error usually occurs when the >expression in the iterate expressions on the ForLoop is not an assignment expression.|  
+>|0x8001F205|-2147356155|DTS_W_LOGPROVIDERNOTDEFINED|The executable "%1" was pasted successfully. However a log provider that was associated with the executable was not found in >the collection "LogProviders".  The executable was pasted without log provider information.|  
+>|0x8001F300|-2147355904|DTS_W_PACKAGEUPGRADED|Succeeded in upgrading the package.|  
+>|0x8001F42B|-2147355605|DTS_W_LEGACYPROGID|The "%1" ProgID has been deprecated. The new ProgID for this component "%2" should be used instead.|  
+>|0x80020918|-2147350248|DTS_W_FTPTASK_OPERATIONFAILURE|Operation "%1" failed.|  
+>|0x800283A5|-2147318875|DTS_W_MSMQTASK_USE_WEAK_ENCRYPTION|The encryption algorithm "%1" uses weak encryption.|  
+>|0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|Task failed to execute operation "%1".|  
+>|0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|File/Process "%1" is not in path.|  
+>|0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|The subject is empty.|  
+>|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|The address in the "To" line is malformed. It is either missing the "\@" symbol or is not valid.|  
+>|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|The address in the "From" line is malformed. It is either missing the "\@" symbol or is not valid.|  
+>|0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|The two XML documents are different.|  
+>|0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD Validation will use the DTD file defined in the DOCTYPE line in the XML document. It will not use what is >assigned to the property "%1".|  
+>|0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Task failed to validate "%1".|  
+>|0x80029291|-2147315055|DTS_W_TRANSFERDBTASK_ACTIONSETTOCOPY|The transfer action value was invalid.  It is being set to copy.|  
+>|0x80029292|-2147315054|DTS_W_TRANSFERDBTASK_METHODSETTOONLINE|The transfer method value was invalid.  It is being set to an online transfer.|  
+>|0x8002F304|-2147290364|DTS_W_PROBLEMOCCURREDWITHFOLLOWINGMESSAGE|A problem occurred with the following messages: "%1".|  
+>|0x8002F322|-2147290334|DTS_W_ERRMSGTASK_ERRORMESSAGEALREADYEXISTS|The error message "%1" already exists at destination server.|  
+>|0x8002F331|-2147290319|DTS_W_JOBSTASK_JOBEXISTSATDEST|The job "%1" already exists at destination server.|  
+>|0x8002F332|-2147290318|DTS_W_JOBSTASK_SKIPPINGJOBEXISTSATDEST|Skipping the transfer of job "%1" since it already exists at destination.|  
+>|0x8002F333|-2147290317|DTS_W_JOBSTASK_OVERWRITINGJOB|Overwriting the job "%1" at destination server.|  
+>|0x8002F339|-2147290311|DTS_W_LOGINSTASK_ENUMVALUEINCORRECT|Persisted enumeration value of property "FailIfExists" was changed and rendered invalid. Resetting to default.|  
+>|0x8002F343|-2147290301|DTS_W_LOGINSTASK_OVERWRITINGLOGINATDEST|Overwriting Login "%1" at destination.|  
+>|0x8002F356|-2147290282|DTS_W_TRANSOBJECTSTASK_SPALREADYATDEST|Stored procedure "%1" already exists at destination.|  
+>|0x8002F360|-2147290272|DTS_W_TRANSOBJECTSTASK_RULEALREADYATDEST|Rule "%1" already exists at destination.|  
+>|0x8002F364|-2147290268|DTS_W_TRANSOBJECTSTASK_TABLEALREADYATDEST|Table "%1" already exists at destination.|  
+>|0x8002F368|-2147290264|DTS_W_TRANSOBJECTSTASK_VIEWALREADYATDEST|View "%1" already exists at destination.|  
+>|0x8002F372|-2147290254|DTS_W_TRANSOBJECTSTASK_UDFALREADYATDEST|User Defined Function "%1" already exists at destination.|  
+>|0x8002F376|-2147290250|DTS_W_TRANSOBJECTSTASK_DEFAULTALREADYATDEST|Default "%1" already exists at destination.|  
+>|0x8002F380|-2147290240|DTS_W_TRANSOBJECTSTASK_UDDTALREADYATDEST|User Defined Data Type "%1" already exists at destination.|  
+>|0x8002F384|-2147290236|DTS_W_TRANSOBJECTSTASK_PFALREADYATDEST|Partition Function "%1" already exists at destination.|  
+>|0x8002F388|-2147290232|DTS_W_TRANSOBJECTSTASK_PSALREADYATDEST|Partition Scheme "%1" already exists at destination.|  
+>|0x8002F391|-2147290223|DTS_W_TRANSOBJECTSTASK_SCHEMAALREADYATDEST|Schema "%1" already exists at destination.|  
+>|0x8002F396|-2147290218|DTS_W_TRANSOBJECTSTASK_SQLASSEMBLYALREADYATDEST|SqlAssembly "%1" already exists at destination.|  
+>|0x8002F400|-2147290112|DTS_W_TRANSOBJECTSTASK_AGGREGATEALREADYATDEST|User Defined Aggregate "%1" already exists at destination.|  
+>|0x8002F404|-2147290108|DTS_W_TRANSOBJECTSTASK_TYPEALREADYATDEST|User Defined Type "%1" already exists at destination.|  
+>|0x8002F408|-2147290104|DTS_W_TRANSOBJECTSTASK_XMLSCHEMACOLLECTIONALREADYATDEST|XmlSchemaCollection "%1" already exists at destination.|  
+>|0x8002F412|-2147290094|DTS_W_TRANSOBJECTSTASK_NOELEMENTSPECIFIEDTOTRANSFER|There are no elements specified to transfer.|  
+>|0x8002F415|-2147290091|DTS_W_TRANSOBJECTSTASK_LOGINALREADYATDEST|Login "%1" already exists at destination.|  
+>|0x8002F41A|-2147290086|DTS_W_TRANSOBJECTSTASK_USERALREADYATDEST|User "%1" already exists at destination.|  
+>|0x80047007|-2147192825|DTS_W_NOLINEAGEVALIDATION|The lineage IDs of the input columns cannot be validated because the execution trees contain cycles.|  
+>|0x80047034|-2147192780|DTS_W_EMPTYDATAFLOW|The DataFlow task has no components. Add components or remove the task.|  
+>|0x80047069|-2147192727|DTS_W_SORTEDOUTPUTHASNOSORTKEYPOSITIONS|The IsSorted property of %1 is set to TRUE, but all of its output columns' SortKeyPositions are set to zero.|  
+>|0x8004706F|-2147192721|DTS_W_SOURCEREMOVED|Source "%1" (%2!d!) will not be read because none of its data ever becomes visible outside the Data Flow Task.|  
+>|0x80047076|-2147192714|DTS_W_UNUSEDOUTPUTDATA|The output column "%1" (%2!d!) on output "%3" (%4!d!) and component "%5" (%6!d!) is not subsequently used in the Data Flow task. >Removing this unused output column can increase Data Flow task performance.|  
+>|0x800470AE|-2147192658|DTS_W_COMPONENTREMOVED|Component "%1" (%2!d!) has been removed from the Data Flow task because its output is not used and its inputs either have no side >effects or are not connected to outputs of other components. If the component is required, then the HasSideEffects property on at least one of its inputs should be set to true, >or its output should be connected to something.|  
+>|0x800470B0|-2147192656|DTS_W_NOWORKTODO|Rows were given to a thread, but that thread has no work to do. The layout has a disconnected output. Running the pipeline with the >RunInOptimizedMode property set to TRUE will be faster, and prevents this warning.|  
+>|0x800470C8|-2147192632|DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|The external columns for %1 are out of synchronization with the data source columns. %2|  
+>|0x800470C9|-2147192631|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSADDITION|The column "%1" needs to be added to the external columns.|  
+>|0x800470CA|-2147192630|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSUPDATE|The external column "%1" needs to be updated.|  
+>|0x800470CB|-2147192629|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSREMOVAL|The %1 needs to be removed from the external columns.|  
+>|0x800470D8|-2147192616|DTS_W_EXPREVALPOTENTIALSTRINGTRUNCATION|The result string for expression "%1" may be truncated if it exceeds the maximum length of %2!d! characters. The >expression could have a result value that exceeds the maximum size of a DT_WSTR.|  
+>|0x800470E9|-2147192599|DTS_W_COMPONENTLEAKPROCESSINPUT|A call to the ProcessInput method for input %1!d! on %2 unexpectedly kept a reference to the buffer it was passed. The >refcount on that buffer was %3!d! before the call, and %4!d! after the call returned.|  
+>|0x800470EB|-2147192597|DTS_W_EXPREVALUNREFERENCEDINPUTCOLUMN|The "%1" on "%2" has usage type READONLY, but is not referenced by an expression. Remove the column from the list >of available input columns, or reference it in an expression.|  
+>|0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|Cannot find the "%1" value for component %2. The CurrentVersion value for the component cannot be located. This error >occurs if the component has not set its registry information to contain a CurrentVersion value in the DTSInfo section. This message occurs during component development, or when >the component is used in a package, if the component is not registered properly.|  
+>|0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|The buffer manager could not get a temporary file name.|  
+>|0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|The buffer manager could not create a temporary file on the path "%1". The path will not be considered for temporary storage >again.|  
+>|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warning: Could not open global shared memory to communicate with performance DLL; data flow performance counters are not >available.  To resolve, run this package as an administrator, or on the system's console.|  
+>|0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|There is a partial row at the end of the file.|  
+>|0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|The end of the data file was reached while reading header rows. Make sure the header row delimiter and the >number of header rows to skip are correct.|  
+>|0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Cannot retrieve the column code page info from the OLE DB provider.  If the component supports the "%1" >property, the code page from that property will be used.  Change the value of the property if the current string code page values are incorrect.  If the component does not >support the property, the code page from the component's locale ID will be used.|  
+>|0x802020F7|-2145378057|DTS_W_TXSORTSORTISTHESAME|The data is already sorted as specified so the transform can be removed.|  
+>|0x8020400D|-2145370099|DTS_W_NOPIPELINEDATATYPEMAPPINGAVAILABLE|The %1 references an external data type that cannot be mapped to a Data Flow task data type. The Data Flow task >data type DT_WSTR will be used instead.|  
+>|0x802070CC|-2145357620|DTS_W_STATICTRUNCATIONINEXPRESSION|The expression "%1" will always result in a truncation of data. The expression contains a static truncation (the >truncation of a fixed value).|  
+>|0x8020820C|-2145353204|DTS_W_UNMAPPEDINPUTCOLUMN|The input column "%1" with ID %2!d! at index %3!d! is unmapped. The lineage ID for the column is zero.|  
+>|0x80208305|-2145352955|DTS_W_TXFUZZYLOOKUP_DELIMITERS_DONT_MATCH|The specified delimiters do not match the delimiters used to build the pre-existing match index "%1". This >error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.|  
+>|0x80208308|-2145352952|DTS_W_TXFUZZYLOOKUP_MAXRESULTS_IS_ZERO|The MaxOutputMatchesPerInput property on the Fuzzy Lookup transformation is zero. No results will be produced.|  
+>|0x80208310|-2145352944|DTS_W_TXFUZZYLOOKUP_NO_FUZZY_JOIN_COLUMNS|There were no valid input columns with JoinType column property set to Fuzzy.  Performance on Exact joins may >be improved by using the Lookup transform instead of FuzzyLookup.|  
+>|0x8020831C|-2145352932|DTS_W_TXFUZZYLOOKUP_TIMESTAMPCAVEAT|The reference column "%1" may be a SQL timestamp column. When the fuzzy match index is built, and a copy of the >reference table is made, all reference table timestamps will reflect the current state of the table at the time of the copy. Unexpected behavior may occur if the >CopyReferenceTable is set to false.|  
+>|0x80208321|-2145352927|DTS_W_MATCHINDEXALREADYEXISTS|A table with the name '%1' given for MatchIndexName already exists and DropExistingMatchIndex is set to FALSE.  Transform >execution will fail unless this table is dropped, a different name is specified, or DropExisitingMatchIndex is set to TRUE.|  
+>|0x8020832B|-2145352917|DTS_W_TXFUZZYLOOKUP_JOINLENGTHMISMATCH|The length of input column '%1' is not equal to the length of the reference column '%2' that it is being matched >against.|  
+>|0x8020832D|-2145352915|DTS_W_TXFUZZYLOOKUP_CODEPAGE_MISMATCH|The code pages of the DT_STR source column "%1" and the DT_STR dest column "%2" do not match.  This may cause >unexpected results.|  
+>|0x8020832E|-2145352914|DTS_W_FUZZYLOOKUP_TOOMANYEXACTMATCHCOLUMNS|There are more than 16 exact match joins, so performance may not be optimal. Reduce the number of exact match >joins to improve performance. SQL Server has a limit of 16 columns per index, the inverted index will be used for all lookups.|  
+>|0x80208350|-2145352880|DTS_W_FUZZYLOOKUP_MEMLIMITANDEXHAUSTIVESPECIFIED|The Exhaustive option requires that the entire reference be loaded into main memory.  Since a memory >limit has been specified for the MaxMemoryUsage property, it is possible that the entire reference table will not fit within this bound and that the match operation will fail >at runtime.|  
+>|0x80208351|-2145352879|DTS_W_FUZZYLOOKUP_EXACTMATCHCOLUMNSEXCEEDBYTELIMIT|The cumulative lengths of the columns specified in the exact match joins exceeds the 900 byte limit >for index keys.  Fuzzy Lookup creates an index on the exact match columns to increase lookup performance and there is a possibility that creation of this index may fail and the >lookup will fall back to an alternative, possibly slower, method of finding matches. If performance is a problem, try removing some exact match join columns or reduce the >maximum lengths of variable length exact match columns.|  
+>|0x80208352|-2145352878|DTS_W_FUZZYLOOKUP_EXACTMATCHINDEXCREATIONFAILED|Failed to create an index for exact match columns. Reverting to alternative fuzzy lookup method.|  
+>|0x80208353|-2145352877|DTS_W_FUZZYGROUPINGINTERNALPIPELINEWARNING|The following Fuzzy Grouping internal pipeline warning occurred with warning code 0x%1!8.8X!: "%2".|  
+>|0x80208375|-2145352843|DTS_W_XMLSRCOUTPUTCOLUMNLENGTHSETTODEFAULT|No maximum length was specified for the %1 with external data type %2. The SSIS Data Flow Task data type "%3" >with a length of %4!d! will be used.|  
+>|0x80208376|-2145352842|DTS_W_XMLSRCOUTPUTCOLUMNDATATYPEMAPPEDTOSTRING|The %1 references external data type %2, which cannot be mapped to a SSIS Data Flow Task data type.  The >SSIS Data Flow Task data type DT_WSTR with a length of %3!d! will be used instead.|  
+>|0x80208385|-2145352827|DTS_W_NOREDIRECTWITHATTACHEDERROROUTPUTS|No rows will be sent to error output(s). Configure error or truncation dispositions to redirect rows to the >error output(s), or delete data flow transformations or destinations that are attached to the error output(s).|  
+>|0x80208386|-2145352826|DTS_W_REDIRECTWITHNOATTACHEDERROROUTPUTS|Rows sent to the error output(s) will be lost. Add new data flow transformations or destinations to receive >error rows, or reconfigure the component to stop redirecting rows to the error output(s).|  
+>|0x80208391|-2145352815|DTS_W_XMLSRCOUTPUTCOLUMNLENGTHSETTOMAXIMUM|For the %1 with external data type %2, the XML schema specified a maxLength constraint of %3!d!, which >exceeds the maximum allowed column length of %4!d!. The SSIS Data Flow Task data type "%5" with a length of %6!d! will be used.|  
+>|0x802090E4|-2145349404|DTS_W_TXLOOKUP_DUPLICATE_KEYS|The %1 encountered duplicate reference key values when caching reference data. This error occurs in Full Cache mode only. >Either remove the duplicate key values, or change the cache mode to PARTIAL or NO_CACHE.|  
+>|0x802092A7|-2145348953|DTS_W_POTENTIALTRUNCATIONFROMDATAINSERTION|Truncation may occur due to inserting data from data flow column "%1" with a length of %2!d! to database >column "%3" with a length of %4!d!.|  
+>|0x802092A8|-2145348952|DTS_W_POTENTIALTRUNCATIONFROMDATARETRIEVAL|Truncation may occur due to retrieving data from database column "%1" with a length of %2!d! to data flow >column "%3" with a length of %4!d!.|  
+>|0x802092AA|-2145348950|DTS_W_ADODESTBATCHNOTSUPPORTEDFORERRORDISPOSITION|Batch mode is not currently supported when error row disposition is used. The BatchSize property will >be set to 1.|  
+>|0x802092AB|-2145348949|DTS_W_ADODESTNOROWSINSERTED|No rows were successfully inserted into the destination. This may be due to a data type mismatch between columns, or due to >the use of a datatype that is unsupported by your ADO.NET provider. Since the error disposition for this component is not "Fail component", error messages are not shown here; >set the error disposition to "Fail component" to see error messages here.|  
+>|0x802092AC|-2145348948|DTS_W_ADODESTPOTENTIALDATALOSS|Potential data loss may occur due to inserting data from input column "%1" with data type "%2" to external column "%3" >with data type "%4". If this is intended, an alternative way to do conversion is using a Data Conversion component before ADO NET destination component.|  
+>|0x802092AD|-2145348947|DTS_W_ADODESTEXTERNALCOLNOTMATCHSCHEMACOL|The %1 has been out of synchronization with the database column.  The latest column has %2. Use advanced >editor to refresh  available destination columns if needed.|  
+>|0x802092AE|-2145348946|DTS_W_ADODESTEXTERNALCOLNOTEXIST|The %1 does not exist in the database. It may have been removed or renamed. Use Advanced Editor to refresh the >available destination columns if needed.|  
+>|0x802092AF|-2145348945|DTS_W_ADODESTNEWEXTCOL|A new column with name %1 has been added to the external database table. Use advanced editor to refresh available destination >columns if needed.|  
+>|0x8020930C|-2145348852|DTS_W_NOMATCHOUTPUTGETSNOROWS|No rows will be sent to the no match output. Configure the transformation to redirect rows with no matching entries to the >no match output, or delete the data flow transformations or destinations that are attached to the no match output.|  
+>|0x8020931B|-2145348837|DTS_W_ADODESTINVARIANTEXCEPTION|Exception received while enumerating ADO.Net providers. The invariant was "%1". The exception message is: "%2"|  
+>|0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|The %1 has no input column mapped to it.|  
+>|0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|The table "%1" has changed. New columns might have been added to the table.|  
   
 ##  <a name="msgInfo"></a> Informational Messages  
  The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] informational messages begin with **DTS_I_**.  

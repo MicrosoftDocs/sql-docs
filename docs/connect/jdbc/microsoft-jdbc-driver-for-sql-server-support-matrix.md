@@ -86,15 +86,15 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
   
 |JDBC Driver Version|JRE Versions|JDBC API Version|
 |-|-|-|
-|[8.2](release-notes-for-the-jdbc-driver.md#8.2)|1.8, 11, 13|4.2, 4.3 (partially)|
-|[7.4](release-notes-for-the-jdbc-driver.md#7.4)|1.8, 11, 12|4.2, 4.3 (partially)|
-|[7.2](release-notes-for-the-jdbc-driver.md#7.2)|1.8, 11|4.2, 4.3 (partially)|
-|[7.0](release-notes-for-the-jdbc-driver.md#7.0)|1.8, 10|4.2, 4.3 (partially)|
-|[6.4](release-notes-for-the-jdbc-driver.md#6.4)|1.7, 1.8, 9|4.1, 4.2, 4.3 (partially)|
-|[6.2](release-notes-for-the-jdbc-driver.md#6.2)|1.7, 1.8|4.1, 4.2|
-|[6.1](release-notes-for-the-jdbc-driver.md#6.1)|1.7, 1.8|4.1, 4.2|
-|[6.0](release-notes-for-the-jdbc-driver.md#6.0)|1.7, 1.8|4.1, 4.2|
-|[4.2](release-notes-for-the-jdbc-driver.md#4.2)|1.7, 1.8|4.1, 4.2|
+|[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8, 11, 13|4.2, 4.3 (partially)|
+|[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8, 11, 12|4.2, 4.3 (partially)|
+|[7.2](release-notes-for-the-jdbc-driver.md#72)|1.8, 11|4.2, 4.3 (partially)|
+|[7.0](release-notes-for-the-jdbc-driver.md#70)|1.8, 10|4.2, 4.3 (partially)|
+|[6.4](release-notes-for-the-jdbc-driver.md#64)|1.7, 1.8, 9|4.1, 4.2, 4.3 (partially)|
+|[6.2](release-notes-for-the-jdbc-driver.md#62)|1.7, 1.8|4.1, 4.2|
+|[6.1](release-notes-for-the-jdbc-driver.md#61)|1.7, 1.8|4.1, 4.2|
+|[6.0](release-notes-for-the-jdbc-driver.md#60)|1.7, 1.8|4.1, 4.2|
+|[4.2](release-notes-for-the-jdbc-driver.md#42)|1.7, 1.8|4.1, 4.2|
 |4.1|1.7|4.0|
 |4.0|1.5, 1.6, 1.7|3.0, 4.0|
 |3.0|1.5, 1.6,|3.0, 4.0|
@@ -106,7 +106,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 ## Supported operating systems
 
-The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX, MacOS, and others.  
+The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX, macOS, and others.  
 
 The JDBC product team tests our driver on Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, and macOS.
 

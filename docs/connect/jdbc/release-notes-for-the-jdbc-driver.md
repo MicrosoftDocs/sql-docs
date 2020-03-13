@@ -15,7 +15,7 @@ ms.author: genemi
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
 
-## <a id="8.2"></a> 8.2
+## <a id="82"></a> 8.2
 
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2122433)**  
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122536)**  
@@ -73,7 +73,9 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | When using Always Encrypted with secure enclaves with Java 8. | Users must include BouncyCastle Provider as a dependency OR map/load a security provider which supports the RSASSA-PSS signature algorithm. |
 | &nbsp; | &nbsp; |
 
-## <a id="7.4"> 7.4.1
+## Previous releases
+
+## <a id="74"> 7.4.1
 
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.4.1 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122712)**  
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.4.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122613)**  
@@ -131,7 +133,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. See [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) for more details and workaround suggestions. |
 | &nbsp; | &nbsp; |
 
-## <a id="7.2"> 7.2.2
+## <a id="72"> 7.2.2
 
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.2.2 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2122435)**  
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 7.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122434)**  

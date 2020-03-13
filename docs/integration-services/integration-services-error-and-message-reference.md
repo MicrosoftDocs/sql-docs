@@ -43,7 +43,8 @@ ms.author: chugu
   
 ##  <a name="msgError"></a> Error Messages  
  The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages begin with **DTS_E_**.  
-  
+
+[!div class="mx-tdBreakAll"]
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |--------|---------|---------|--------------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Overwriting Stored Procedure "%1" at destination.|  
@@ -1695,7 +1696,7 @@ ms.author: chugu
 |0xC020830D|-1071611123|DTS_E_TXFUZZYLOOKUP_INCOMPATIBLE_COPYCOLUMN_DATATYPES|The copy columns, "%1" and "%2", do not have equal data types or are not trivially convertible string types. This occurs because copying from reference to output between columns with equal data types, or a DT_STR and DT_WSTR combination, is supported, but other types are not.|  
 |0xC020830E|-1071611122|DTS_E_TXFUZZYLOOKUP_INCOMPATIBLE_PASSTHRUCOLUMN_DATATYPES|The passthrough columns, "%1" and "%2", do not have equal data types. Only columns with equal data types are supported as passthrough columns from input to output.|  
 |0xC020830F|-1071611121|DTS_E_TXFUZZYLOOKUP_UNABLETOLOCATEREFCOLUMN|Cannot locate reference column "%1".|  
-|0xC0208311|-1071611119|`DTS_E_TXFUZZYLOOKUP_OUTPUT_COLUMN_MUST_BE_PASSTHRU_COLUMN_OR_A_COPY_COLUMN`|An output column must have exactly one CopyColumn or PassThruColumn property specified. This error occurs when neither the CopyColumn or the PassThruColumn properties, or both the CopyColumn and PassThruColumn properties, are set to non-empty values.|  
+|0xC0208311|-1071611119|DTS_E_TXFUZZYLOOKUP_OUTPUT_COLUMN_MUST_BE_PASSTHRU_COLUMN_OR_A_COPY_COLUMN|An output column must have exactly one CopyColumn or PassThruColumn property specified. This error occurs when neither the CopyColumn or the PassThruColumn properties, or both the CopyColumn and PassThruColumn properties, are set to non-empty values.|  
 |0xC0208312|-1071611118|DTS_E_TXFUZZYLOOKUP_PASSTHRU_COLUMN_NOT_FOUND|The source lineage id '%1!d!' specified for property '%2' on output column '%3' was not found in the input column collection. This occurs when the input column id specified on an output column as a passthrough column is not found in the set of inputs.|  
 |0xC0208313|-1071611117|DTS_E_TXFUZZYLOOKUP_INDEXED_COLUMN_NOT_FOUND_IN_REF_TABLE|The column "%1" in the pre-built index "%2" was not found in the reference table/query. This happens if the schema/query of the reference table has changed since the pre-existing match index was built.|  
 |0xC0208314|-1071611116|DTS_E_TXFUZZYLOOKUP_TOKEN_TOO_LONG|The component encountered a token that was larger than 2147483647 characters.|  
@@ -2014,10 +2015,12 @@ ms.author: chugu
 |||DTS_E_INITTASKOBJECTFAILED|Failed to initialize the task object for task "%1!s!", type "%2!s!" due to error 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Failed to create COM Component Categories Manager due to error 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Component %1!s! failed to initialize due to error 0x%2!8.8X! "%3!s!".|  
-  
+
+
 ##  <a name="msgWarning"></a> Warning Messages  
  The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] warning messages begin with **DTS_W_**.  
-  
+
+[!div class="mx-tdBreakAll"]
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|There are %1!lu! days left in the evaluation. When it expires, packages will not be able to be executed.|  

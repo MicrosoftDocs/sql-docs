@@ -75,10 +75,10 @@ For local installations, you must run Setup as an administrator. If you install 
 -   Template databases remain on the computer after the upgrade.  
 
 > [!NOTE]  
-> If the procedure documented in the above topic fails on Engine_SqlEngineHealthCheck rule, then you can use the command line installation option to skip this specific rule to allow the upgrade process to complete successfully. To skip checking this rule, open a command prompt, change to the path that contains SQL Server Setup (Setup.exe). Then, type the following command: 
+> If the procedure fails on Engine_SqlEngineHealthCheck rule, then you can use the command line installation option to skip this specific rule to allow the upgrade process to complete successfully. To skip checking this rule, open a command prompt, change to the path that contains SQL Server Setup (Setup.exe). Then, type the following command: 
 
 ```console
-setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules= Engine_SqlEngineHealthCheck
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
 ```
 
 

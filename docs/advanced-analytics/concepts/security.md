@@ -199,7 +199,7 @@ Trusted connections are not the most widely used formulation of a connection req
 
 The following diagram shows the interaction of SQL Server components with the language runtime and how it does implied authentication in Windows.
 
-![Implied authentication in Windows](../security/media/implied-auth-windows.png)
+![Implied authentication in Windows](../security/media/implied-auth-windows-2017.png)
 
 ::: moniker-end
 

@@ -65,7 +65,6 @@ The following commands register the repository providing MRO. Post-registration,
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-
 # Set the location of the package repo at the "prod" directory
 # The following command is for version 7.x
 # For 6.x, replace 7 with 6 to get that version
@@ -84,7 +83,7 @@ Installation Options for Python and R:
 > [!Tip]
 > If possible, run `yum clean all` to refresh packages on the system prior to installation.
 
-### Example 1 - Full installation
+### Full installation
 
 Includes:
 *  Open-Source Python
@@ -103,7 +102,7 @@ sudo yum install mssql-mlservices-mlm-py-9.4.7*
 sudo yum install mssql-mlservices-mlm-r-9.4.7*
 ```
 
-### Example 2 - Minimum installation
+### Minimum installation
 
 Includes:
 *  open-source Python
@@ -269,9 +268,9 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
    # Use set + EULA 
    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
    ```
-3. Setup detects the mssql-mlservices packages and prompts for EULA acceptance (if not previously accepted) when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
+  Setup detects the mssql-mlservices packages and prompts for EULA acceptance (if not previously accepted) when `mssql-conf setup` is     run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-   conf.md#mlservices-eula).
 
-4. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using the mssql-conf tool. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using the mssql-conf tool. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -279,13 +278,14 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-5. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+4. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
    + Edit or create a file "named.bash_profile" in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
    + Execute this file by typing "source .bash_profile" at a bash command prompt.
 
-6. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A notification message is displayed when an extensibility-related setting is modified.  
+5. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A  
+   notification message is displayed when an extensibility-related setting is modified.  
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -297,7 +297,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
    RECONFIGURE WITH OVERRIDE 
    ```
 
-7. Restart the Launchpad service again.
+6. Restart the Launchpad service again.
 
 ## Verify installation
 

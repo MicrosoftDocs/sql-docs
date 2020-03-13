@@ -1,12 +1,12 @@
 ---
 title: "Integration Services Error and Message Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/13/2020"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.reviewer: ""
+ms.reviewer: "vanto"
 ms.technology: integration-services
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "error numbers [Integration Services]"
   - "hresults [Integration Services]"
@@ -25,9 +25,9 @@ ms.author: chugu
  This list may be useful when you encounter an error code without its description. The list does not include troubleshooting information at this time.  
   
 > [!IMPORTANT]  
->  Many of the error messages that you may see while working with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come from other components. In this topic, you will find all the errors raised by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] components. If you do not see your error in the list, the error was raised by a component outside [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. These may include OLE DB providers, other database components such as the [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , or other services or components such as the file system, the SMTP server, Message Queuing (also known as MSMQ), and so forth. To find information about these external error messages, see the documentation specific to the component.  
+>  Many of the error messages that you may see while working with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come from other components. In this topic, you will find all the errors raised by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] components. If you do not see your error in the list, the error was raised by a component outside [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. These may include OLE DB providers, other database components such as the [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], or other services or components such as the file system, the SMTP server, Message Queuing (also known as MSMQ), and so forth. To find information about these external error messages, see the documentation specific to the component.  
   
- This list cadontains the following groups of messages:  
+ This list contains the following groups of messages:  
   
 -   [Error Messages (DTS_E_*)](#msgError)  
   
@@ -45,8 +45,8 @@ ms.author: chugu
  The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages begin with **DTS_E_**.  
   
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
-|----------------------|------------------|-------------------|-----------------|  
-|0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Overwriting Stored Procedure "%1" at destination.|  
+|--------|---------|---------|--------------------|  
+|0x8002F347|-2147290297|`DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Overwriting Stored Procedure "%1" at destination.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|The data type "%1" found on column "%2" is not supported for the %3. This column will be converted to  DT_NTEXT.|  
 |0x8020838C|-2145352820|DTS_E_XMLSRCSCHEMACOLUMNNOTINEXTERNALMETADATA|The column %1 in table %2 in the XML schema does not have a mapping in the external metadata columns.|  
 |0xC0000032|-1073741774|DTS_E_NOTINITIALIZED|An internal object or variable was not initialized. This is an internal product error.  This error is returned when a variable should have a valid value but does not.|  
@@ -1695,7 +1695,7 @@ ms.author: chugu
 |0xC020830D|-1071611123|DTS_E_TXFUZZYLOOKUP_INCOMPATIBLE_COPYCOLUMN_DATATYPES|The copy columns, "%1" and "%2", do not have equal data types or are not trivially convertible string types. This occurs because copying from reference to output between columns with equal data types, or a DT_STR and DT_WSTR combination, is supported, but other types are not.|  
 |0xC020830E|-1071611122|DTS_E_TXFUZZYLOOKUP_INCOMPATIBLE_PASSTHRUCOLUMN_DATATYPES|The passthrough columns, "%1" and "%2", do not have equal data types. Only columns with equal data types are supported as passthrough columns from input to output.|  
 |0xC020830F|-1071611121|DTS_E_TXFUZZYLOOKUP_UNABLETOLOCATEREFCOLUMN|Cannot locate reference column "%1".|  
-|0xC0208311|-1071611119|DTS_E_TXFUZZYLOOKUP_OUTPUT_COLUMN_MUST_BE_PASSTHRU_COLUMN_OR_A_COPY_COLUMN|An output column must have exactly one CopyColumn or PassThruColumn property specified. This error occurs when neither the CopyColumn or the PassThruColumn properties, or both the CopyColumn and PassThruColumn properties, are set to non-empty values.|  
+|0xC0208311|-1071611119|`DTS_E_TXFUZZYLOOKUP_OUTPUT_COLUMN_MUST_BE_PASSTHRU_COLUMN_OR_A_COPY_COLUMN`|An output column must have exactly one CopyColumn or PassThruColumn property specified. This error occurs when neither the CopyColumn or the PassThruColumn properties, or both the CopyColumn and PassThruColumn properties, are set to non-empty values.|  
 |0xC0208312|-1071611118|DTS_E_TXFUZZYLOOKUP_PASSTHRU_COLUMN_NOT_FOUND|The source lineage id '%1!d!' specified for property '%2' on output column '%3' was not found in the input column collection. This occurs when the input column id specified on an output column as a passthrough column is not found in the set of inputs.|  
 |0xC0208313|-1071611117|DTS_E_TXFUZZYLOOKUP_INDEXED_COLUMN_NOT_FOUND_IN_REF_TABLE|The column "%1" in the pre-built index "%2" was not found in the reference table/query. This happens if the schema/query of the reference table has changed since the pre-existing match index was built.|  
 |0xC0208314|-1071611116|DTS_E_TXFUZZYLOOKUP_TOKEN_TOO_LONG|The component encountered a token that was larger than 2147483647 characters.|  
@@ -2333,5 +2333,4 @@ ms.author: chugu
 |0xC8000016|-939524074|DTSBC_E_UNMAPINPUTCOLUMNS|There are input columns that do not have associated output columns. The input columns will be unmapped.|  
 |0xC8000017|-939524073|DTSBC_E_MULTIPLEINCOLSTOOUTCOL|There is an input column associated with an output column, and that output column is already associated with another input column on the same input.|  
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|The %1 does not allow the insertion of external metadata columns.|  
-  
   

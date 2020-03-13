@@ -46,7 +46,7 @@ ms.author: chugu
   
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |--------|---------|---------|--------------------|  
-|0x8002F347|-2147290297|`DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Overwriting Stored Procedure "%1" at destination.|  
+|0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Overwriting Stored Procedure "%1" at destination.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|The data type "%1" found on column "%2" is not supported for the %3. This column will be converted to  DT_NTEXT.|  
 |0x8020838C|-2145352820|DTS_E_XMLSRCSCHEMACOLUMNNOTINEXTERNALMETADATA|The column %1 in table %2 in the XML schema does not have a mapping in the external metadata columns.|  
 |0xC0000032|-1073741774|DTS_E_NOTINITIALIZED|An internal object or variable was not initialized. This is an internal product error.  This error is returned when a variable should have a valid value but does not.|  

@@ -29,17 +29,6 @@ The present article devotes separate sections to these two kinds of connection d
 
 ## Drivers for relational access
 
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
-
 | Language | Download the SQL driver |
 | :------- | :---------------------- |
 | C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
@@ -70,14 +59,15 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 <a name="anchor-60-build-an-app-webpages" />
 
 ## Build-an-app webpages
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** takes you to a set of *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
 
 - Details about how to get started from the very beginning, for each combination of language + operating system + driver.
-    - Instructions for installing the latest SQL connection drivers.
+  - Instructions for installing the latest SQL connection drivers.
 - Code examples for each of the following items:
-    - Object-relational code examples.
-    - ORM code examples.
-    - Columnstore index demonstrations for much faster performance.
+  - Object-relational code examples.
+  - ORM code examples.
+  - Columnstore index demonstrations for much faster performance.
 
 **First page, of Build-an-app webpages:**  
 ![Build-an-app webpages, first page screenshot](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -88,6 +78,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 &nbsp;
 
 ## Related links
+
 - [Code examples for connecting to Azure SQL Database in the cloud, with Java and other languages](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!--

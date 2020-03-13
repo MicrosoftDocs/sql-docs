@@ -44,7 +44,7 @@ ms.author: chugu
 ##  <a name="msgError"></a> Error Messages  
  The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages begin with **DTS_E_**.  
 
-[!div class="mx-tdBreakAll"]
+> [!div class="mx-tdBreakAll"]
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |--------|---------|---------|--------------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Overwriting Stored Procedure "%1" at destination.|  
@@ -2020,7 +2020,7 @@ ms.author: chugu
 ##  <a name="msgWarning"></a> Warning Messages  
  The symbolic names of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] warning messages begin with **DTS_W_**.  
 
-[!div class="mx-tdBreakAll"]
+> [!div class="mx-tdBreakAll"]
 |Hexadecimal code|Decimal Code|Symbolic Name|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|There are %1!lu! days left in the evaluation. When it expires, packages will not be able to be executed.|  

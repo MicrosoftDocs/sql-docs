@@ -38,7 +38,7 @@ In this quickstart, you install SQL Server 2019 on Ubuntu 18.04. You then connec
 
 You must have a Ubuntu 16.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu 16.04 on your own machine, go to <http://releases.ubuntu.com/bionic/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu 16.04 on your own machine, go to <http://releases.ubuntu.com>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.

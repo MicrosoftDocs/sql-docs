@@ -80,14 +80,9 @@ SELECT * FROM
 sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
-The following example returns two tables:
-
-- The first shows the current status of hybrid buffer pool system configuration for an instance of SQL Server.
-- The second lists the databases and the database level setting for hybrid buffer pool (`is_memory_optimized_enabled`).
+The following example lists the databases and the database level setting for hybrid buffer pool (`is_memory_optimized_enabled`).
 
 ```sql
-SELECT * FROM sys.configurations WHERE name = 'hybrid_buffer_pool';
-
 SELECT name, is_memory_optimized_enabled FROM sys.databases;
 ```
 

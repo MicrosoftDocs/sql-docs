@@ -223,6 +223,10 @@
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
+    - name: Troubleshoot
+      items:
+      - name: Active directory deployment
+        href: big-data-cluster/troubleshoot-active-directory.md
   - name: Reference
     items:
     - name: Deployment reference
@@ -4168,12 +4172,8 @@
   items:
   - name: Overview
     items:
-    - name: What's New
+    - name: What's new
       href: sql-server/install/what-s-new-in-sql-server-installation.md
-    - name: Maximum Capacity Specifications
-      href: sql-server/maximum-capacity-specifications-for-sql-server.md
-    - name: Compute capacity limits by edition
-      href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
   - name: Release notes
     items:
     - name: Discontinued functionality in SQL Server
@@ -4193,25 +4193,29 @@
   - name: Planning
     href: sql-server/install/planning-a-sql-server-installation.md
     items:
-    - name: Hardware & Software Requirements
+    - name: Maximum capacity specifications
+      href: sql-server/maximum-capacity-specifications-for-sql-server.md
+    - name: Compute capacity limits by edition
+      href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
+    - name: Hardware & software requirements
       items:
       - name: SQL Server 2019
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
       - name: SQL Server 2016 & 2017
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
-    - name: Security Considerations
+    - name: Security considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-    - name: Network Protocols & Network Libraries
+    - name: Network protocols & libraries
       href: sql-server/install/network-protocols-and-network-libraries.md
-    - name: Work with Multiple Versions & Instances
+    - name: Work with multiple Versions & Instances
       href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-    - name: Local Language Versions
+    - name: Language versions
       href: sql-server/install/local-language-versions-in-sql-server.md
-    - name: File Locations
+    - name: File locations
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: SQL Server Privacy supplement
+      - name: SQL Server privacy supplement
         items:
         - name: SQL Server 2017 and prior
           href: sql-server/sql-server-privacy.md
@@ -8457,7 +8461,7 @@
           items:
           - name: Download Instructions Tab
             href: ssms/agent/target-servers-download-instructions-tab.md
-          - name: arget Server Status Tab
+          - name: Target Server Status Tab
             href: ssms/agent/target-servers-target-server-status-tab.md
         - name: Alerts Properties
           href: ssms/agent/alerts.md
@@ -8525,8 +8529,6 @@
         - name: Query & Text Editors
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           items:
-          - name: Database Engine Query Editor
-            href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
           - name: Color Coding in Query Editors
@@ -9028,6 +9030,8 @@
         items:
         - name: F1 Help for Server Connections (SSMS)
           href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+        - name: Database Engine Query Editor
+          href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
         - name: Connect to Microsoft Azure Storage
           href: ssms/f1-help/connect-to-microsoft-azure-storage.md
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
@@ -9842,6 +9846,8 @@
         href: linux/sql-server-linux-setup-ssis.md
       - name: Install SQL Server Machine Learning Services
         href: linux/sql-server-linux-setup-machine-learning.md
+      - name: Install SQL Server Machine Learning Services on Docker
+        href: linux/sql-server-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
         href: linux/sql-server-linux-setup-language-extensions.md
       - name: Configure repositories

@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Set Up SQL Server Integration Services Scale Out | Microsoft Docs"
+title: "Walkthrough: Set Up SSIS Scale Out | Microsoft Docs"
 description: "This article walks you through the setup and configuration of SSIS Scale Out"
 ms.custom: performance
 ms.date: "12/13/2017"

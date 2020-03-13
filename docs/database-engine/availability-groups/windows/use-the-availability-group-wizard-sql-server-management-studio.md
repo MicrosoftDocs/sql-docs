@@ -74,7 +74,7 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
 4.  The first time you run this wizard, an **Introduction** page appears. To bypass this page in the future, you can click **Do not show this page again**. After reading this page, click **Next**.  
   
-5.  On the **Specify Availability Group Options** page, enter the name of the new availability group in the **Availability group name** field. This name must be a valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifier that is unique on the cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters. e
+5.  On the **Specify Availability Group Options** page, enter the name of the new availability group in the **Availability group name** field. This name must be a valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifier that is unique on the cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters.
 
 6. Next, specify the cluster type. The possible cluster types depend on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version and operating system. Choose either **WSFC**, **EXTERNAL**, or **NONE**. For details see [Specify Availability Group Name Page](specify-availability-group-name-page.md)
  

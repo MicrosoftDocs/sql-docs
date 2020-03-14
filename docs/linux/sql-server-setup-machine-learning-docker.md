@@ -20,13 +20,13 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 - Git command-line interface.
 
-- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/install/).
-
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md).
 
-Start session with Linux.
-
+ The following command clones the mssql git repository to a local directory.
+ 
 ## Clone the mssql-docker repository
+
+- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/install/).
 
 1. Open a Bash terminal on Linux or Mac, or open a Windows Subsystem for Linux terminal on Windows.
 
@@ -37,9 +37,9 @@ Start session with Linux.
     ```bash
     git clone https://github.com/microsoft/mssql-docker mssql-docker
     ```
-Begin building process.
-
 ## Build a SQL Server Linux container image
+
+Complete the following steps to build the docker image:
 
 1. Change the directory to the mssql-mlservices directory:
 
@@ -62,9 +62,6 @@ Begin building process.
     ```bash
        docker ps -a
     ```
-
-Execute the script to create the container image.
-
    > [!NOTE]
    > To build the Docker image, you must install packages that are several GBs in size. The script may take some time to finish running, depending on network bandwidth.
 
@@ -111,9 +108,9 @@ Execute the script to create the container image.
     941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
     ```
 
-Start and install Docker container.
-
 [Run SQL Server container images with Docker](quickstart-install-connect-docker.md).
+
+The following steps use sql to connect to SQL Server instance.
 
 ## Connect to Linux SQL Server in the container
 
@@ -133,5 +130,5 @@ To view examples of machine learning that are based on real-world scenarios, see
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Run R in T-SQL](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
++ [Tutorial: In-database analytics for R developers](..\advanced-analytics\tutorials\python-clustering-model.md)

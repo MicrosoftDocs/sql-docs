@@ -268,7 +268,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
    # Use set + EULA 
    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
    ```
-  Setup detects the mssql-mlservices packages and prompts for EULA acceptance (if not previously accepted) when `mssql-conf setup` is     run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-   conf.md#mlservices-eula).
+   Setup detects the mssql-mlservices packages and prompts for EULA acceptance (if not previously accepted) when `mssql-conf setup` is     run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-   conf.md#mlservices-eula).
 
 3. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using the mssql-conf tool. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 

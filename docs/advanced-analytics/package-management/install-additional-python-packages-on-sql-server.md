@@ -75,13 +75,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 1. On the client computer, open **Python** or a Python environment.
 
-1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters).
-
-   ```python
-   import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="server", database="database")
-   sqlmlutils.SQLPackageManager(connection).install("text-tools")
-   ```
+1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information (if you use Windows Authentication, you don't need the `uid` and `pwd` parameters).
 
 ::: moniker-end
 
@@ -91,13 +85,13 @@ monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information.
 
+::: moniker-end
+
    ```python
    import sqlmlutils
    connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
-
-::: moniker-end
 
 ### Add the package offline
 
@@ -121,13 +115,7 @@ In this example, **text-tools** has no dependencies, so there is only one file f
 
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
-Run the following Python script. Substitute the actual file path and name of the package, and your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters). Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
-
-```python
-import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="username", pwd="password")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
-```
+Run the following Python script. Substitute the actual file path and name of the package, and your own SQL Server database connection information (if you use Windows Authentication, you don't need the `uid` and `pwd` parameters). Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 
 ::: moniker-end
 
@@ -135,13 +123,13 @@ monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 Run the following Python script. Substitute the actual file path and name of the package, and your own SQL Server database connection information. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 
+::: moniker-end
+
 ```python
 import sqlmlutils
 connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
+sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
-
-::: moniker-end
 
 ## Use the package in SQL Server
 

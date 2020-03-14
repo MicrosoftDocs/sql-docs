@@ -71,7 +71,7 @@ In the following example, you'll add the [text-tools](https://pypi.org/project/t
 
 If the client computer you use to connect to SQL Server has Internet access, you can use **sqlmlutils** to find the **text-tools** package and any dependencies over the Internet, and then install the package to a SQL Server instance remotely.
 
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 1. On the client computer, open **Python** or a Python environment.
 
@@ -79,7 +79,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 ::: moniker-end
 
-monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 1. On the client computer, open **Python** or a Python environment.
 
@@ -113,13 +113,13 @@ Use **sqlmlutils** to install each package (WHL file) you find in the local fold
 
 In this example, **text-tools** has no dependencies, so there is only one file from the `text-tools` folder for you to install. In contrast, a package such as **scikit-plot** has 11 dependencies, so you would find 12 files in the folder (the **scikit-plot** package and the 11 dependent packages), and you would install each of them.
 
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Run the following Python script. Substitute the actual file path and name of the package, and your own SQL Server database connection information (if you use Windows Authentication, you don't need the `uid` and `pwd` parameters). Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 
 ::: moniker-end
 
-monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 Run the following Python script. Substitute the actual file path and name of the package, and your own SQL Server database connection information. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 

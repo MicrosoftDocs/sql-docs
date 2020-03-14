@@ -292,7 +292,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
    systemctl restart mssql-server.service
    ```
-   ```bash
+   ```sql
    EXEC sp_configure 'external scripts enabled', 1 
    RECONFIGURE WITH OVERRIDE 
    ```
@@ -309,7 +309,7 @@ To validate installation:
 
 - Run a T-SQL script that executes a system stored procedure invoking Python or R using a query tool. 
 
-```
+```sql
 EXEC sp_execute_external_script   
 @language =N'R', 
 @script=N' 
@@ -321,7 +321,7 @@ GO
  
 Execute the following SQL command to test Python execution in SQL Server. 
  
-```python
+```sql
 EXEC sp_execute_external_script  
 @language =N'Python', 
 @script=N' 

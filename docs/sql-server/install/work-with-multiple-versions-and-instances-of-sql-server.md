@@ -91,7 +91,7 @@ You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a c
 
 The following table shows side-by-side support for each version of SQL Server:
 
-| Existing instance | side by side support| 
+| Existing instance | Side by side support| 
 |-------------------|----------------------------|
 | SQL Server 2019 | SQL Server 2005 through SQL Server 2017| 
 | SQL Server 2017 | SQL Server 2005 through SQL Server 2016| 

@@ -152,7 +152,7 @@ Installation Options for Python and R:
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. 
 
-### Example 1 -  Full installation 
+### Full installation 
 
 Includes:
 *  open-source Python
@@ -172,7 +172,7 @@ sudo apt-get install mssql-mlservices-mlm-py
 sudo apt-get install mssql-mlservices-mlm-r 
 ```
 
-### Example 2 - Minimum installation 
+### Minimum installation 
 
 Includes:
 *  open-source Python
@@ -214,7 +214,7 @@ Installation Options for Python and R:
 *  The *full installation* provides all available features the including pre-trained machine learning models.
 *  The *minimal installation* excludes the models but still has all of the functionality.
 
-### Example 1 -  Full installation 
+### Full installation 
 
 Includes:
 *  open-source Python
@@ -233,7 +233,7 @@ sudo zypper install mssql-mlservices-mlm-py-9.4.7*
 sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
-### Example 2 - Minimum installation 
+### Minimum installation 
 
 Includes:
 *  open-source Python
@@ -307,30 +307,30 @@ Python libraries (microsoftml and revoscalepy) can be found at `/opt/mssql/mlser
 
 To validate installation:
 
-- Run a T-SQL script that executes a system stored procedure invoking Python or R using a query tool. 
+* Run a T-SQL script that executes a system stored procedure invoking Python or R using a query tool. 
 
-```sql
-EXEC sp_execute_external_script   
-@language =N'R', 
-@script=N' 
-OutputDataSet <- InputDataSet', 
-@input_data_1 =N'SELECT 1 AS hello' 
-WITH RESULT SETS (([hello] int not null)); 
-GO 
-```
+  ```sql
+  EXEC sp_execute_external_script   
+  @language =N'R', 
+  @script=N' 
+  OutputDataSet <- InputDataSet', 
+  @input_data_1 =N'SELECT 1 AS hello' 
+  WITH RESULT SETS (([hello] int not null)); 
+  GO 
+  ```
  
-Execute the following SQL command to test Python execution in SQL Server. 
+* Execute the following SQL command to test Python execution in SQL Server. 
  
-```sql
-EXEC sp_execute_external_script  
-@language =N'Python', 
-@script=N' 
-OutputDataSet = InputDataSet; 
-', 
-@input_data_1 =N'SELECT 1 AS hello' 
-WITH RESULT SETS (([hello] int not null)); 
-GO 
-```
+  ```sql
+  EXEC sp_execute_external_script  
+  @language =N'Python', 
+  @script=N' 
+  OutputDataSet = InputDataSet; 
+  ', 
+  @input_data_1 =N'SELECT 1 AS hello' 
+  WITH RESULT SETS (([hello] int not null)); 
+  GO 
+  ```
 
 <a name="install-all"></a>
 
@@ -353,7 +353,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 > [!Tip]
 > Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
 
-
+ 
 ### Download site
 
 Download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for Python and R are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).

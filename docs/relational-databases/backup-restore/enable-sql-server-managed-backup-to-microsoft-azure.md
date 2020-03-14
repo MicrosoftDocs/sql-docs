@@ -50,10 +50,11 @@ For more information about storage accounts, see [About Azure Storage Accounts](
     az storage container create --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value 
     ```  
   
-1. Generate a Shared Access Signature (SAS) to access the container. The following command creates a SAS token for the `<backupContainer>` blob container that expires in one year.  
+1. Generate a Shared Access Signature (SAS) with stored access policy to access the container. The stored access policy specifies the expiry and permissions of the SAS created using the policy. The following commands create a `<policyName>` stored access policy, with `rwld` permissions, that expires on `2021-01-01`, on the `<backupContainer>` blob container, and a SAS that conforms to the policy.
   
     ```azurecli-interactive 
-    az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
+    az storage container policy create --name <policyName> --container-name <backupContainer> --permissions rwld --start 2020-01-01 --expiry 2021-01-01 --account-name <backupStorage> --account-key $keys[0].value
+    az storage container generate-sas --name <backupContainer> --policy-name <policyName> --account-name <backupStorage> --account-key $keys[0].value
     ```
 
 #### [PowerShell](#tab/azure-powershell)
@@ -78,10 +79,11 @@ For more information about storage accounts, see [About Azure Storage Accounts](
     New-AzStorageContainer -Name <backupContainer> -Context $context  
     ```  
   
-1. Generate a Shared Access Signature (SAS) to access the container. The following command creates a SAS token for the `<backupContainer>` blob container that expires in one year.
+1. Generate a Shared Access Signature (SAS) with stored access policy to access the container. The stored access policy specifies the expiry and permissions of the SAS created using the policy. The following commands create a `<policyName>` stored access policy, with `rwld` permissions, that expires in one year, on the `<backupContainer>` blob container, and a SAS that conforms to the policy.
   
     ```azurepowershell-interactive 
-    New-AzStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
+    $policy = New-AzStorageContainerStoredAccessPolicy -Container <backupContainer> -Policy <policyName> -Context $context -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(1) -Permission rwld 
+    New-AzStorageContainerSASToken -Name <backupContainer> -Policy $policy -Context $context
     ```
 
 * * *
@@ -91,14 +93,14 @@ For more information about storage accounts, see [About Azure Storage Accounts](
 
 The output will contain either the URL to the container and/or the SAS token. The following is an example:  
   
-  `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
+  `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2018-11-09&si=policyname&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsD`
   
 If the URL is included, separate it from the SAS token at the question mark (do not include the question mark). For example, the previous output would result in the following two values.  
   
 |||  
 |-|-|  
 |**Container URL**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-|**SAS token**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|**SAS token**|sv=2018-11-09&si=policyname&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsD|  
 |||
   
 Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
@@ -110,7 +112,7 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
     ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
-    SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
+    SECRET = 'sv=2018-11-09&si=policyname&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsD'  
     ```  
   
 2.  **Ensure SQL Server Agent service is Started and Running:** Start SQL Server Agent if it is not currently running.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requires SQL Server Agent to be running on the instance to perform backup operations.  You may want to set SQL Server Agent to run automatically to make sure that backup operations can occur regularly.  

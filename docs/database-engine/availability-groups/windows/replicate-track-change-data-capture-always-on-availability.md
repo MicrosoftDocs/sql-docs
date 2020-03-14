@@ -117,7 +117,7 @@ ms.author: mathoma
   
     -   One ensures that connection requests are directed to a read-only secondary replica.  
   
-     If used to locate a read-only secondary replica, a read-only routing list must also be defined for the availability group. For more information about routing access to readable secondaries, see [To Configure Availability Replicas for Read-Only Routing](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConfigureARsForROR).  
+     If used to locate a read-only secondary replica, a read-only routing list must also be defined for the availability group. For more information about routing access to readable secondaries, see [To Configure Availability Replicas for Read-Only Routing](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
     > [!NOTE]  
     >  There is some propagation delay associated with the creation of an availability group listener name and its use by client applications to access an availability group database replica.  

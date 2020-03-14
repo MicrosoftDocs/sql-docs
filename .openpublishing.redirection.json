@@ -14886,6 +14886,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/kb-support/end-support-sql-server-2008.md",
+      "redirect_url": "/sql-server/end-of-support/sql-server-end-of-life-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/kb-support/resource-monitor-nonyielding-condition.md",
+      "redirect_url": "/sql/relational-databases/performance/known-issue-resource-monitor-nonyielding-condition",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ado/guide/appendixes/index.md",
       "redirect_url": "/sql/ado/guide/appendixes/appendix-a-providers",
       "redirect_document_id": false

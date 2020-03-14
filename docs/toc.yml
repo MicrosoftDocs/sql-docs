@@ -6171,15 +6171,6 @@
             href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
     - name: Transaction log management
       items:
-      - name: Log File Viewer
-        href: relational-databases/logs/log-file-viewer.md
-        items:
-        - name: Open
-          href: relational-databases/logs/open-log-file-viewer.md
-        - name: View Offline
-          href: relational-databases/logs/view-offline-log-files.md
-        - name: F1 Help
-          href: relational-databases/logs/log-file-viewer-f1-help.md
       - name: Transaction log
         href: relational-databases/logs/the-transaction-log-sql-server.md
         items:
@@ -6543,6 +6534,10 @@
       items:
       - name: Configuring Storage Spaces with a NVDIMM-N write-back cache
         href: relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
+      - name: Troubleshoot known issues
+        items:
+        - name: Nonyielding resource monitor
+          href: relational-databases/performance/known-issue-resource-monitor-nonyielding-condition.md
     - name: Database Tuning Advisor
       href: relational-databases/performance/database-engine-tuning-advisor.md
       items:
@@ -8406,6 +8401,15 @@
         href: ssms/ssms-utility.md
       - name: SSMS Keyboard Shortcuts
         href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+      - name: Log File Viewer
+        href: relational-databases/logs/log-file-viewer.md
+        items:
+        - name: F1 Help
+          href: relational-databases/logs/log-file-viewer-f1-help.md
+        - name: Open
+          href: relational-databases/logs/open-log-file-viewer.md
+        - name: View Offline
+          href: relational-databases/logs/view-offline-log-files.md
       - name: SQL Server Agent
         items:
         - name: SQL Server Agent
@@ -17073,5 +17077,4 @@
         href: xquery/string-search-in-xquery.md
       - name: Handling Namespaces in XQuery
         href: xquery/handling-namespaces-in-xquery.md
-- name: Knowledge Base support
-  href: kb-support/toc.yml
+

@@ -23,7 +23,7 @@ ms.author: vanto
 
   Maps an existing database user to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. 
   
- > [!NOTE]
+ > [!IMPORTANT]
  > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) instead.  
   
   
@@ -72,7 +72,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserSID|**varbinary(85)**|User's security identifier.|  
   
 ## Remarks  
- Use sp_change_users_login to link a database user in the current database with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. If the login for a user has changed, use sp_change_users_login to link the user to the new login without losing user permissions. The new *login* cannot be sa, and the *user*cannot be dbo, guest, or an INFORMATION_SCHEMA user.  
+ Use sp_change_users_login to link a database user in the current database with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. If the login for a user has changed, use sp_change_users_login to link the user to the new login without losing user permissions. The new *login* cannot be sa, and the *user* cannot be dbo, guest, or an INFORMATION_SCHEMA user.  
   
  sp_change_users_login cannot be used to map database users to Windows-level principals, certificates, or asymmetric keys.  
   

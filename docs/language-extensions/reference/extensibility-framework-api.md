@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description:  
 author: dphansen
 ms.author: davidph 
-ms.date: 12/05/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
@@ -113,7 +113,7 @@ SQLRETURN InitParam(
 ```
 
 - **ParamNumber:** Number of the parameter. Parameters are numbered sequentially in increasing order starting at 0.
-- **ParamName:** Pointer to a null-terminated buffer that contains the parameter’s name.
+- **ParamName:** Pointer to a null-terminated buffer that contains the parameter's name.
 - **ParamNameLength:** The length (excluding the null termination character) of ParamName in bytes.
 - **DataType:** The C type identifier of the parameter.
 - **ParamSize:** The size of the parameter type in bytes.
@@ -141,12 +141,12 @@ SQLRETURN Execute(
 ```
 
 - **RowsNumber:** Number of rows in the input dataset passes in Data.
-- **Data:** A 2D array of the input dataset. The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column’s array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn). Each such element is the value of row \[i\] of column\[j\].
+- **Data:** A 2D array of the input dataset. The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column's array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn). Each such element is the value of row \[i\] of column\[j\].
 - **StrLen_or_Ind:** A 2D array the size of the input data that represents the length or null indicator value. Possible values of each cell:
     - n, where n > 0. Indicating the length of the data in bytes
     - SQL_NULL_DATA
 
-    The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column’s array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn).
+    The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column's array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn).
 
     If column col is not nullable and represents a data type of fixed size, StrLen_or_Ind\[col\] is a null pointer. Otherwise it points to a valid array with \[RowsNumber\] elements, and for each element it contains its length or null indicator data.
 
@@ -193,13 +193,13 @@ SQLRETURN GetResults(
 
 - **RowsNumber:** \[Output\] Number of rows in the output dataset being passes in Data.
 
-- **Data:** \[Output\] A 2D array of the output dataset allocated by the extension. The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column’s array should have \[RowsNumber\] elements that should be interpreted according to the column type (known from `GetResultColumn()`). Each such element is the value of row \[i\] of column\[j\]. 
+- **Data:** \[Output\] A 2D array of the output dataset allocated by the extension. The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column's array should have \[RowsNumber\] elements that should be interpreted according to the column type (known from `GetResultColumn()`). Each such element is the value of row \[i\] of column\[j\]. 
 
 - **StrLen_or_Ind:** \[Output\] A 2D array the size of the output data that represents the length or null indicator value. Possible values of each cell: 
     - n, where n > 0. Indicating the length of the data in bytes 
     - SQL_NULL_DATA 
  
-    The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column’s array has \[RowsNumber\] elements that should be interpreted according to the column type (known from GetResultColumn()). 
+    The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column's array has \[RowsNumber\] elements that should be interpreted according to the column type (known from GetResultColumn()). 
 
     If column col is not nullable and represents a data type of fixed size, StrLen_or_Ind\[col\] is ignored.
 

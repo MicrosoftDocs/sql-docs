@@ -192,9 +192,7 @@ SQLRETURN GetResults(
 ```
 
 - **RowsNumber:** \[Output\] Number of rows in the output dataset being passes in Data.
-
 - **Data:** \[Output\] A 2D array of the output dataset allocated by the extension. The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column's array should have \[RowsNumber\] elements that should be interpreted according to the column type (known from `GetResultColumn()`). Each such element is the value of row \[i\] of column\[j\]. 
-
 - **StrLen_or_Ind:** \[Output\] A 2D array the size of the output data that represents the length or null indicator value. Possible values of each cell: 
     - n, where n > 0. Indicating the length of the data in bytes 
     - SQL_NULL_DATA 
@@ -243,7 +241,13 @@ SQLRETURN Cleanup();
 
 ### GetTelemetryResults
 
-Retrieve telemtry collected by the extension.
+Retrieves telemetry (key-value pairs) data from the extension. The function is optional and doesn't require implementation. The telemetry is exposed by the `dm_db_external_script_execution_stats` dynamic management view (DMV). 
+
+There is a counter named script_executions which is sent by the framework. The extesion should not use this name.
+
+Each telemetry entry is a key-value pair. The keys are strings, the values are 64-bit integers - counters. Thus, the output comprises for two logical arrays: the names and their corresponding counters. Each array is output.
+
+The length of each array is RowsNumber, which is output. The first logical output contains pointers to strings, thus, it's represented by two arrays: CounterNames (the actual string data) and CounterNamesLength (the length of each string). The second logical output is stored in the CounterValues pointer. 
 
 ```C++
 SQLRETURN GetTelemetryResults(
@@ -256,9 +260,14 @@ SQLRETURN GetTelemetryResults(
 );
 ```
 
+- RowsNumber: \[Output\] The number of key-value pairs
+- CounterNames: \[Output\] The string data containing the keys
+- CounterNamesLength: \[Output\] The length of each key string
+- CounterValues: \[Output\] The 64-bit integer data containing the values
+
 ### InstallExternalLibrary
 
-Installs a library.
+Installs a library. The function is optional and doesn't require implementation. The default implementation is to copy the content of the library (see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)) to a file at the proper location. The file name is library name.
 
 ```C++
 SQLRETURN InstallExternalLibrary(
@@ -274,9 +283,18 @@ SQLRETURN InstallExternalLibrary(
 );
 ```
 
+- **LibraryName:** \[Input\] The library name.
+- **LibraryNameLength:** \[Input\] The length of the library name.
+- **LibraryFile:** \[Input\] The path (as a string) to the library file containing the binary content specified by [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+- **LibraryFileLength:** \[Input\] The length of the LibraryFile string.
+- **LibraryInstallDirectory:** \[Input\] The root directory to install the library.
+- **LibraryInstallDirectoryLength:** \[Input\] The length of the LibraryInstallDirectory string.
+- **LibraryError:** \[Output\] The library error string.
+- **LibraryErrorLength:** \[Output\] The length of the LibraryError string.
+
 ### UninstallLibrary
 
-Uninstalls a library.
+Uninstalls a library. The function is optional and doesn't require implementation. The default implementation is to undo the work done by the default Implementation of InstallExternalLibrary. The default implementation deletes the content of the **LibraryName** file under **LibraryInstallDirectory**.
 
 ```C++
 SQLRETURN UninstallExternalLibrary(
@@ -289,6 +307,15 @@ SQLRETURN UninstallExternalLibrary(
     SQLINTEGER *LibraryErrorLength
 );
 ```
+
+- LibraryName: \[Input\] The library name
+- LibraryNameLength: \[Input\] The length of the library name
+- LibraryFile: \[Input\] The path (as a string) to the library file containing the binary content specified by CREATE EXTERNAL LIBRARY
+- LibraryFileLength: \[Input\] The length of the LibraryFile string
+- LibraryInstallDirectory: \[Input\] The root directory to install the library
+- LibraryInstallDirectoryLength: \[Input\] The length of the LibraryInstallDirectory string.
+- LibraryError: \[Output\] The library error string.
+- LibraryErrorLength: \[Output\] The length of the LibraryError string.
 
 ## Next steps
 

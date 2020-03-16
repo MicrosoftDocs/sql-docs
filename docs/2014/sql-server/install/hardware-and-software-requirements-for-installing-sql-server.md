@@ -1,5 +1,5 @@
 ---
-title: "Hardware and Software Requirements for Installing SQL Server 2014 | Microsoft Docs"
+title: "SQL Server 2014: Hardware & Software Requirements"
 ms.custom: ""
 ms.date: "07/10/2018"
 ms.prod: "sql-server-2014"
@@ -46,7 +46,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Hardware and Software Requirements for Installing SQL Server 2014
+# SQL Server 2014: Hardware and Software Requirements
 
  > - Try SQL Server 2016 by installing the **[Free Developer edition](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)!**  
   
@@ -89,7 +89,12 @@ manager: craigg
 -   [Installing SQL Server on a Domain Controller](hardware-and-software-requirements-for-installing-sql-server.md#DC_support)  
   
 ##  <a name="hwswr"></a> Hardware and Software Requirements  
- The following requirements apply to all [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installations:  
+
+
+The table in this section lists the minimum requirements for running SQL Server. There are also recommended configuration options for [optimal performance](https://support.microsoft.com/help/2964518). 
+
+The following software requirements apply to all installations:  
+
   
 |Component|Requirement|  
 |---------------|-----------------|  
@@ -181,9 +186,9 @@ Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core 
 ## Minimum SQL Server version requirements for Windows 10  
  Before you install SQL Server on a computer that is running Windows 10, you must make sure that you fulfill the following minimum requirements:  
   
--   For SQL Server 2014, you must apply SQL Server 2014 Service Pack 1 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/en-us/kb/2958069).  
+-   For SQL Server 2014, you must apply SQL Server 2014 Service Pack 1 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/kb/2958069).  
   
--   For SQL Server 2012, you must apply SQL Server 2012 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/en-us/kb/2755533).  
+-   For SQL Server 2012, you must apply SQL Server 2012 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/kb/2755533).  
   
 -   SQL Server 2008 R2  
     and SQL Server 2008 is not supported on Windows 10.  

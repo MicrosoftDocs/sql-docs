@@ -1,6 +1,6 @@
 ---
-title: "Determine Which Queries Are Holding Locks | Microsoft Docs"
-ms.custom: ""
+title: "Determine Which Queries Are Holding Locks"
+description: This article shows a method of finding which query holds a lock. Database administrators may need to find the source of locks that hinder database performance.
 ms.date: "10/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

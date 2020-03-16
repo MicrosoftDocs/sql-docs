@@ -1,6 +1,6 @@
 ---
-title: "Monitor System Activity Using Extended Events | Microsoft Docs"
-ms.custom: ""
+title: "Monitor System Activity Using Extended Events"
+description: Use Extended Events with Event Tracing for Windows to monitor system activity. Learn about CREATE EVENT SESSION, ALTER EVENT SESSION, and DROP EVENT SESSION.
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

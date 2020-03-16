@@ -1,6 +1,6 @@
 ---
 title: "Manage Bookmarks"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -87,4 +87,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Clears or enables the check boxes for all bookmarks in the **Bookmarks** window. Does not remove bookmarks, or alter the lines of code that they mark.  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

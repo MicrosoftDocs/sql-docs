@@ -1,10 +1,7 @@
 ---
-title: "Alerts | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Alerts
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,11 +17,17 @@ helpviewer_keywords:
   - "SQL Server Agent alerts, about alerts"
   - "alerts [SQL Server], names"
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # Alerts
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -96,6 +99,12 @@ You can specify an alert to occur in response to a particular performance condit
   
     > [!NOTE]  
     > Performance data is sampled periodically, which can lead to a small delay (a few seconds) between the threshold being reached and the occurrence of the performance alert.  
+  
+    > [!NOTE]  
+    > An Event log variable that stores the server name is limited to 32 characters. Therefore if the combined size of your host name and instance name is greater than 32 characters, you may get the following error:
+    
+    Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+  
   
 ## Selecting a WMI Event  
 You can specify that an alert occur in response to a particular WMI event. To select a WMI event, you must define the following on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **General** page of the **New Alert** or the **Alert Properties** dialog box:  

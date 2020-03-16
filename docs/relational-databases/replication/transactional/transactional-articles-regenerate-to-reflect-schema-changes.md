@@ -1,6 +1,7 @@
 ---
-title: "Regenerate Custom Transactional Procedures to Reflect Schema Changes | Microsoft Docs"
-ms.custom: ""
+title: "Regenerate custom procedures for schema changes (Transactional)"
+description: Regenerate custom transactional stored procedures to reflect schema changes for Transactional Replication. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Transactional Articles - Regenerate to Reflect Schema Changes
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

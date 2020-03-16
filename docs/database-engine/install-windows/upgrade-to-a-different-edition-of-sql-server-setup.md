@@ -1,7 +1,7 @@
 ---
-title: "Upgrade to a Different Edition of SQL Server 2016 (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
+title: "Upgrade to different edition"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -72,7 +72,15 @@ For local installations, you must run Setup as an administrator. If you install 
 -   Sizes and recovery mode for the tempdb and model system databases remain unchanged after the upgrade. Reconfigure these settings as needed. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 -   Template databases remain on the computer after the upgrade.  
-  
+
+> [!NOTE]  
+> If the procedure fails on Engine_SqlEngineHealthCheck rule, then you can use the command line installation option to skip this specific rule to allow the upgrade process to complete successfully. To skip checking this rule, open a command prompt, change to the path that contains SQL Server Setup (Setup.exe). Then, type the following command: 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## See Also  
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

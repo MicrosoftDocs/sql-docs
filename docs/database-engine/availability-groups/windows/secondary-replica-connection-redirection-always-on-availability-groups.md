@@ -1,6 +1,7 @@
 ---
-title: "SQL Server secondary to primary replica read/write connection redirection-Always On Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "Redirect read/write connections to primary replica"
+description: Learn how to always redirect read/write connections to the primary replica of an Always On availability group regardless of the target server specified in the connection string. 
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ""
@@ -39,7 +40,7 @@ Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG liste
 In order for a secondary replica to redirect read/write connection requests:
 * The secondary replica must be online. 
 * The replica spec `PRIMARY_ROLE` must include `READ_WRITE_ROUTING_URL`.
-* The connection string must define `ApplicationIntent` as `ReadWrite`- which is the default.
+* The connection string must be `ReadWrite` either by defining `ApplicationIntent` as `ReadWrite` or by not setting `ApplicationIntent` and letting the default (`ReadWrite`) take effect.
 
 ## Set READ_WRITE_ROUTING_URL option
 

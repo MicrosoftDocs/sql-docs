@@ -38,7 +38,9 @@ Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssno
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
-*  **Requirements**: Review installation requirements, system configuration checks, and security considerations in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **Requirements**: Review hardware and software installation requirements for [SQL Server 2016 & 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) or [SQL Server on Linux](../../linux/sql-server-linux-setup.md), as well as system configuration checks, and security considerations in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) 
+
+
   
 * **Sample databases and sample code**: 
     * They are not installed as part of SQL Server setup by default but can be found 
@@ -49,21 +51,32 @@ Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssno
 
 The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] depends on the edition:
 
-* **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For the Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft purchasing website](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx). 
+* **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For the Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft licensing page](https://www.microsoft.com/licensing/product-licensing/sql-server).
 * [Free version - latest](https://www.microsoft.com/sql-server/sql-server-downloads)
-* [Free version - others](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)
+* [Free version - others](https://www.microsoft.com/evalcenter/evaluate-sql-server)
 
 
 Other SQL Server components can be found here: 
 
 * [All cumulative updates](https://sqlserverbuilds.blogspot.com/)
-* [SQL Server Reporting Services](https://www.microsoft.com/en-us/download/details.aspx?id=100122). 
+* [SQL Server Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122). 
 * [SQL Server Management Studio](https://aka.ms/ssmsfullsetup)
 * [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 
 
+## Considerations
+
+-   Installation fails if you launch setup through Remote Desktop Connection with the media on a local resource in the RDC client. To install remotely the media must be on a network share or local to the physical or virtual machine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media may be either on a network share, a mapped drive, a local drive, or presented as an ISO to a virtual machine.  
+  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
+  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
+
 ## SQL Server installation
- 
+
+
 |Article|Description|  
 |-----------|-----------------|  
 |[Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Install SQL Server using the Installation Wizard GUI launched from the setup.exe setup media. |  
@@ -105,7 +118,7 @@ Other SQL Server components can be found here:
 
 [Upgrade [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/upgrade-sql-server.md)   
 [Uninstall [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/uninstall-sql-server.md)   
-[Install SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)
-[Install SQL Server Analysis  Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)
+[Install SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)   
+[Install SQL Server Analysis  Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)   
 [Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
 [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

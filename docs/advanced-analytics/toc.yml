@@ -39,6 +39,8 @@
     href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
   - name: Upgrade Python and R
     href: ../advanced-analytics/install/upgrade-r-and-python.md
+  - name: Azure Data Studio notebooks
+    href: ../advanced-analytics/install/sql-machine-learning-azure-data-studio.md
   - name: Set up a Python client
     href: ../advanced-analytics/python/setup-python-client-tools-sql.md
   - name: Set up an R client
@@ -49,11 +51,11 @@
   items:
   - name: Python
     items:
-    - name: Create Python scripts
+    - name: Run Python scripts
       href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-    - name: Handle data types and objects
+    - name: Data structures and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-    - name: Write Python functions
+    - name: Python functions
       href: ../advanced-analytics/tutorials/quickstart-python-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -61,9 +63,9 @@
     items:
     - name: Create R scripts
       href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-    - name: Handle data types and objects
+    - name: Data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-    - name: Write R functions
+    - name: R functions
       href: ../advanced-analytics/tutorials/quickstart-r-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
@@ -245,8 +247,10 @@
       items:
       - name: Get Python package information
         href: ../advanced-analytics/package-management/python-package-information.md
-      - name: Install Python packages
+      - name: Install with sqlmlutils
         href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+      - name: Install with Python tools
+        href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
     - name: Install new R packages
       items:
       - name: Get R package information

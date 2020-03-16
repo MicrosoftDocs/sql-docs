@@ -1,6 +1,8 @@
 ---
-title: "DENY Database Principal Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Database Principal Permissions"
+description: Deny permissions on a database user, database role, or application role.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

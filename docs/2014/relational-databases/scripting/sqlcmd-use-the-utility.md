@@ -1,6 +1,6 @@
 ---
-title: "Use the sqlcmd Utility | Microsoft Docs"
-ms.custom: ""
+title: Use the sqlcmd Utility
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

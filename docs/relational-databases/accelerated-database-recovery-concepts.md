@@ -1,10 +1,8 @@
 ---
 title: "Accelerated database recovery | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -88,6 +86,10 @@ The ADR recovery process has the same three phases as the current recovery proce
 - **Undo phase**
 
    The undo phase with ADR completes almost instantaneously by using sLog to undo non-versioned operations and persisted version store (PVS) with logical revert to perform row level version-based undo.
+
+You can also watch this 8-minute video that explains Accelerated Database Recovery
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 
 ## ADR recovery components
 

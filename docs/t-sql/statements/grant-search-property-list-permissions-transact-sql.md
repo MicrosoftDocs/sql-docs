@@ -1,6 +1,8 @@
 ---
-title: "GRANT Search Property List Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Search Property List Permissions"
+description: Grant permissions on a search property list.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

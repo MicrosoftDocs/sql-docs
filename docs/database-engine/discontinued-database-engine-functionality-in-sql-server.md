@@ -1,7 +1,8 @@
 ---
-title: "Discontinued database engine functionality in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/13/2019"
+title: Discontinued database engine functionality
+description: Learn which database engine functionality and features were discontinued in SQL Server 2019 (15.x), SQL Server 2016 (13.x), and previous versions.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

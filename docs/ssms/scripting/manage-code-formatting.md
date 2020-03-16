@@ -1,6 +1,6 @@
 ---
 title: "Manage Code Formatting"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
@@ -122,7 +122,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  To convert text to lowercase, press CTRL+SHIFT+L, or click **Make Lowercase** on the **Advanced** submenu of the **Edit** menu.  
   
 > [!NOTE]  
->  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## Displaying and Linking to URLs  
  You can create and display clickable URLs in your code. By default, the URLs:  

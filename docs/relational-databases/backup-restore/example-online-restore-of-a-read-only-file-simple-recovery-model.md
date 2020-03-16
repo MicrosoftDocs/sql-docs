@@ -1,5 +1,5 @@
 ---
-title: "Example: Online Restore of a Read-Only File (Simple Recovery Model) | Microsoft Docs"
+title: "Online restore: read-only file (simple recovery model)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

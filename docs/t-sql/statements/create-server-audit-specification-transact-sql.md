@@ -66,12 +66,13 @@ FOR SERVER AUDIT audit_name
 ```  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
-    ADD (FAILED_LOGIN_GROUP);  
+    ADD (FAILED_LOGIN_GROUP)  
+    WITH (STATE=ON);  
 GO  
 ```  
   
  For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-  
+   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

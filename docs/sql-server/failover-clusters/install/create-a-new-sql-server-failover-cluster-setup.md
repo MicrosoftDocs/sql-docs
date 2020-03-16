@@ -1,7 +1,7 @@
 ---
-title: "Create a New SQL Server Failover Cluster (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Create new Failover Cluster"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: install

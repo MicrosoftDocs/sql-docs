@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
 ---
 # SQL Server Express security
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition (SQL Server Express) is based on Microsoft SQL Server, and supports most of the features of the database engine. It is designed so that nonessential features and network connectivity are off by default. This reduces the surface area available for attack by a malicious user.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Change a SQL Server Authentication User Password (OLE DB) | Microsoft Docs"
+title: "SQL Authentication User Password (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The server on which you will run this sample must have at least one login enabled for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. The server must also be enabled to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication logins.  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   

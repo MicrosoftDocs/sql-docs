@@ -1,6 +1,5 @@
 ---
-title: "Building a Knowledge Base | Microsoft Docs"
-ms.custom: ""
+title: "Building a Knowledge Base"
 ms.date: "07/31/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Building a Knowledge Base
 

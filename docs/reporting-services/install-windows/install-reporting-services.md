@@ -62,7 +62,7 @@ Installing a report server is straightforward. There are only a few steps to ins
 
 7. After a successful setup, select **Configure Report Server** to launch the Reporting Services Configuration Manager.
 
-## Configuration your report server
+## Configure your report server
 
 After you select **Configure Report Server** in the setup, you will be presented with **Report Server Configuration Manager**. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
 

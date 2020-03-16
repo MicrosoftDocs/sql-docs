@@ -1,6 +1,7 @@
 ---
-title: "Add Articles to and Drop Articles from Existing Publications | Microsoft Docs"
-ms.custom: ""
+title: "Add & drop articles (existing Publication)"
+description: Learn how to add articles to and drop articles from existing publications for SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -19,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Add Articles to and Drop Articles from Existing Publications
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

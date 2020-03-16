@@ -1,5 +1,5 @@
 ---
-title: "Using Connection String Keywords with SQL Server Native Client | Microsoft Docs"
+title: "Native Client, connection keywords SQL"
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

@@ -16,7 +16,7 @@ manager: craigg
 # Server Configuration - Service Accounts
   Use the Server Configuration page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to assign login accounts to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services configured on this page depend on the features you have selected to install.  
   
- Startup accounts used to start and run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be  HYPERLINK "ms-help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm" \l "Domain_User" domain user accounts, local user accounts, managed service accounts, virtual accounts, or built-in system accounts.  
+Startup accounts used to start and run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be domain user accounts, local user accounts, managed service accounts, virtual accounts, or built-in system accounts.  
   
 ## Options  
  You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, are started manually, or are disabled. The default account is recommended for most installations.  

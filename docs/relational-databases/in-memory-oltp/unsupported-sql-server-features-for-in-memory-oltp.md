@@ -1,7 +1,7 @@
 ---
 title: "Features not supported - in-memory OLTP"
 ms.custom: ""
-ms.date: "05/29/2019"
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Unsupported SQL Server Features for In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This topic discusses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are not supported for use with memory-optimized objects.  
+This topic discusses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are not supported for use with memory-optimized objects. Plus, the final section lists features that were unsupported for In-Memory OLTP, but later became supported.
   
 ## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Features Not Supported for In-Memory OLTP  
 
@@ -38,7 +38,7 @@ The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 | Fiber mode | Fiber mode is not supported with memory-optimized tables:<br /><br />If fiber mode is active, you cannot create databases with memory-optimized filegroups, nor can you add memory-optimized filegroups to existing databases.<br /><br />You can enable fiber mode if there are databases with memory-optimized filegroups. However, enabling fiber mode requires a server restart. In that situation, databases with memory-optimized filegroups would fail to recover. Then you would see an error message suggesting that you disable fiber mode to use databases with memory-optimized filegroups.<br /><br />If fiber mode is active, attaching and restoring a databases which has a memory-optimized filegroup fails. The databases would be marked as suspect.<br /><br />For more information, see [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Service Broker limitation|Cannot access a queue from a natively compiled stored procedure.<br /><br /> Cannot access a queue in a remote database in a transaction that accesses memory-optimized tables.|  
 |Replication on subscribers|Transactional replication to memory-optimized tables on subscribers is supported, but with some restrictions. For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  
-
+|||
 
 #### Cross-database queries and transcations
 
@@ -49,7 +49,7 @@ With a few exceptions, cross-database transactions are not supported. The follow
 |---------------|-------------|-----------------|  
 | User databases, **model**, and **msdb**. | No | In most cases, cross-database queries and transactions are *not* supported.<br /><br />A query cannot access other databases if the query uses either a memory-optimized table or a natively compiled stored procedure. This restriction applies to transactions as well as to queries.<br /><br />The exceptions are the system databases **tempdb** and **master**. Here the **master** database is available for read-only access. |
 | **Resource** database, **tempdb** | Yes | In a transaction that touches In-Memory OLTP objects, the **Resource** and **tempdb** system databases can be used without added restriction.
-
+||||
 
 ## Scenarios Not Supported  
   
@@ -63,9 +63,7 @@ With a few exceptions, cross-database transactions are not supported. The follow
 - The ROWVERSION (TIMESTAMP) data type is not supported. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   
 - Auto-close is not supported with databases that have a MEMORY_OPTIMIZED_DATA filegroup  
-  
-- Database snapshots as not supported for databases that have a MEMORY_OPTIMIZED_DATA filegroup.  
-  
+
 - Transactional DDL, such as CREATE/ALTER/DROP of In-Memory OLTP objects, is not supported inside user transactions.  
   
 - Event notification.  
@@ -76,7 +74,17 @@ With a few exceptions, cross-database transactions are not supported. The follow
 - Database containment ([Contained Databases](../../relational-databases/databases/contained-databases.md)) is not supported with In-Memory OLTP.
     - Contained database authentication is supported. However, all In-Memory OLTP objects are marked as breaking containment in the dynamic management view (DMV) **dm_db_uncontained_entities**.
 
-  
-## See Also  
+## Recently added supports
+
+Sometimes a newer release of SQL Server adds support for a feature that was previously not supported. This section lists features that used to be unsupported for In-Memory OLTP, but which later became supported for In-Memory OLTP.
+
+In the following table, _version_ values such as `(15.x)` refer to the value that is returned by the Transact-SQL statement `SELECT @@Version;`.
+
+| Feature name | Version of SQL Server | Comments |
+| :----------- | :-------------------- | :------- |
+| Database snapshots | 2019 (15.x) | Database snapshots are now supported for databases that have a MEMORY_OPTIMIZED_DATA filegroup. |
+| &nbsp; | &nbsp; | &nbsp; |
+
+## See Also
 
 - [SQL Server Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

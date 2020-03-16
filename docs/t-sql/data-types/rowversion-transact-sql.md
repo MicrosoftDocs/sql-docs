@@ -59,7 +59,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
   
 A nonnullable **rowversion** column is semantically equivalent to a **binary(8)** column. A nullable **rowversion** column is semantically equivalent to a **varbinary(8)** column.
   
-You can use the **rowversion** column of a row to easily determine whether the row has had an update statement ran against it since the last time it was read. If an update statement is ran against the row, the rowversion value is updated. If no update statements are ran against the row, the rowversion value is the same as when it was previously read. To return the current rowversion value for a database, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
+You can use the **rowversion** column of a row to easily determine whether an update statement has been run against the row since the last time it was read. If an update statement is run against the row, the rowversion value is updated. If no update statements are run against the row, the rowversion value is the same as when it was previously read. To return the current rowversion value for a database, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
 You can add a **rowversion** column to a table to help maintain the integrity of the database when multiple users are updating rows at the same time. You may also want to know how many rows and which rows were updated without re-querying the table.
   
@@ -75,7 +75,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-You can then use the following sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to implement optimistic concurrency control on the `MyTest` table during the update.
+You can then use the following sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to implement optimistic concurrency control on the `MyTest` table during the update. The script uses `<myRv>` to represent the **rowversion** value from the last time you read the row. Replace the value with the actual **rowversion** value. An example of an actual **rowversion** value is `0x00000000000007D3`.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -83,7 +83,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -93,12 +93,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv` is the **rowversion** column value for the row that indicates the last time that you read the row. This value must be replaced by the actual **rowversion** value. An example of the actual **rowversion** value is 0x00000000000007D3.
-  
+
+
 You can also put the sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements into a transaction. By querying the `@t` variable in the scope of the transaction, you can retrieve the updated `myKey` column of the table without requerying the `MyTest` table.
-  
-The following is the same example using the **timestamp** syntax:
-  
+
+The following is the same example using the **timestamp** syntax. Replace `<myTS>` with an actual **timestamp**.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -112,7 +112,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

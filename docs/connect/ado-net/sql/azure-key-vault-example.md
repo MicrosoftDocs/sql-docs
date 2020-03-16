@@ -2,7 +2,7 @@
 title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/18/2019
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity

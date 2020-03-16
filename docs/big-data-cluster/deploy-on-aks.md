@@ -1,11 +1,12 @@
 ---
 title: Configure Azure Kubernetes Service
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -62,6 +63,12 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
    ```azurecli
    az account set --subscription <subscription id>
+   ```
+
+1. Identify the Azure region where you want to deploy the cluster and the resources by using this command:
+
+   ```azurecli
+   az account list-locations -o table
    ```
 
 1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbdcgroup` in the `westus2` location.
@@ -126,7 +133,7 @@ Choose the latest available version for your cluster. Record the version number.
    --kubernetes-version <version number>
    ```
 
-   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes.
+   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes. You can also change the `--node-vm-size` to select an appropriate virtual machine size that matches your workload requirements. Use the `az vm list-sizes --location westus2 -o table` command to list available virtual machine sizes in your region.
 
    After several minutes, the command completes and returns JSON-formatted information about the cluster.
 
@@ -155,6 +162,7 @@ If you have any problems creating an Azure Kubernetes Service with the previous 
 
 - Make sure that you have installed the [latest Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Try the same steps using a different resource group and cluster name.
+- Refer to the detailed [troubleshooting documentation for AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
 
 ## Next steps
 

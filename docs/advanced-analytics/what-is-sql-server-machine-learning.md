@@ -4,7 +4,7 @@ titleSuffix:
 description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft Python and R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/07/2019
+ms.date: 02/06/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -14,8 +14,6 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the [Microsoft Python and R packages](#packages) for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services.
-
-In Azure SQL Database, [Machine Learning Services](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) is currently in public preview.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
@@ -36,9 +34,9 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 
 ## What can I do with Machine Learning Services?
 
-You can use Machine Learning Services to build and training machine learning and deep learning models within SQL Server. You can also deploy existing models to Machine Learning Services and use relational data for predictions.
+You can use Machine Learning Services to build and train machine learning and deep learning models within SQL Server. You can also deploy existing models to Machine Learning Services and use relational data for predictions.
 
-Examples of the type of predictions that you can use SQL Server Machine Learning Services for, include:
+Examples of the type of predictions that you can use SQL Server Machine Learning Services for include:
 
 |||
 |-|-|
@@ -54,6 +52,19 @@ There are two ways to execute Python and R scripts in Machine Learning Services:
 + The most common way is to use the T-SQL stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 + You can also use your preferred Python or R client and write scripts that push the execution (referred to as a *remote compute context*) to a remote SQL Server. See how to set up a data science client for [Python development](python/setup-python-client-tools-sql.md) and [R development](r/set-up-a-data-science-client.md) for more information.
+
+<a name="versions"></a>
+
+## Python and R versions
+
+Which version of Python and R is included in Machine Learning Services, depends on which version of SQL Server you use. 
+
+| SQL Server version | Python version | R version |
+|-|-|-|
+| SQL Server 2017 | 3.5.2 | 3.3.3 |
+| SQL Server 2019 | 3.7.3 | 3.5.2 |
+
+For the R version in SQL Server 2016, see the [R version section in What is R Services?](r/sql-server-r-services.md#version)
 
 <a name="packages"></a>
 
@@ -89,11 +100,10 @@ For more information on which packages are installed with Machine Learning Servi
 
 1. Write your first Python or R script
 
-    + Quickstart: [Create and run simple R scripts in SQL](tutorials/quickstart-r-create-script.md)
-    + Quickstart: [Create and train a predictive model in R](tutorials/quickstart-r-train-score-model.md)
+    + Quickstart: [Run simple Python scripts](tutorials/quickstart-python-create-script.md)
+    + Quickstart: [Run simple R scripts](tutorials/quickstart-r-create-script.md)
     + Tutorial: [Use Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
     + Tutorial: [Use R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
-    + Tutorial: [Use Machine Learning Services in R tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)
 
 ## Next steps
 

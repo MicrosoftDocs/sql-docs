@@ -1,6 +1,7 @@
 ---
-title: Always On Availability Groups for SQL Server on Linux
-description: 
+title: Availability groups for SQL Server on Linux
+description: Learn about the characteristics of Always On availability groups for SQL Server on Linux. 
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto

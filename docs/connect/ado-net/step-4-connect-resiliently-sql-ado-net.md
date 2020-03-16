@@ -1,23 +1,22 @@
 ---
 title: "Step 4: Connect resiliently to SQL with ADO.NET | Microsoft Docs"
-description: "Describes how to connection reciliently to SQL"
+description: "Describes how to connection resiliently to SQL"
 ms.custom: ""
 ms.date: "08/15/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs: 
   - "CSharp"
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - Previous article:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-connect-sql-ado-net.md)  
 

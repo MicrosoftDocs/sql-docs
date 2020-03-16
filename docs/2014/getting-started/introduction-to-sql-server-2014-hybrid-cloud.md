@@ -21,7 +21,7 @@ manager: craigg
 ## SQL Server, Azure, and Hybrid Cloud 
  By using Microsoft technologies, you can run code both on-premises and in the cloud, run in the cloud using on-premises data, or run entirely in the cloud leveraging more than one data center. Therefore, you can move your applications to the cloud at your own pace while preserving the value of existing legacy IT investments. 
  
- In this article, we'll focus on the hybrid cloud scenarios that span from on-premises SQL Server to Azure public cloud offerings: [SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx) and [Azure Storage](http://www.azure.com/documentation/services/storage/). Specifically, we'll discuss the following scenarios: 
+ In this article, we'll focus on the hybrid cloud scenarios that span from on-premises SQL Server to Azure public cloud offerings: [SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx) and [Azure Storage](https://www.azure.com/documentation/services/storage/). Specifically, we'll discuss the following scenarios: 
  
 -  [Backup and Restore Databases to/from Azure Storage](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
  
@@ -54,7 +54,7 @@ manager: craigg
  
 -  The [Backup Compression (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) feature enables you to create a backup, which is smaller than an uncompressed backup of the same data. Compressing a backup needs less device I/O and therefore usually increases backup speed significantly. This can bring great benefits when storing backup files in Azure Storage. 
  
--  The [SQL Server Managed Backup to Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) feature enables you to automatically backup SQL Server databases to [Azure Storage](http://www.azure.com/documentation/services/storage/). With this feature, you can configure SQL Server to manage the backup strategy and schedule backups for a single database, or several databases, or set defaults at the instance level. 
+-  The [SQL Server Managed Backup to Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) feature enables you to automatically backup SQL Server databases to [Azure Storage](https://www.azure.com/documentation/services/storage/). With this feature, you can configure SQL Server to manage the backup strategy and schedule backups for a single database, or several databases, or set defaults at the instance level. 
  
 -  The [SQL Server Backup to Azure Tool](https://www.microsoft.com/download/details.aspx?id=40740) enables backup to Azure Blob Storage and encrypts and compresses SQL Server backups stored locally or in the cloud. This tool enables a single cloud backup strategy across for several versions of SQL Server, such as SQL Server 2005, 2008, 2008 R2, and 2014. 
  
@@ -106,5 +106,4 @@ manager: craigg
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Microsoft SQL Server Hybrid Cloud Blog Series](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [Migrating Data-Centric Applications to Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
- 
  

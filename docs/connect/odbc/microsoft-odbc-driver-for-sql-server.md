@@ -13,6 +13,8 @@ ms.author: genemi
 ---
 # Microsoft ODBC Driver for SQL Server
 
+[!INCLUDE[ODBC_Current_Version](../../includes/odbc-latest-release.md)]
+
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC is the primary native data access API for applications written in C and C++ for SQL Server. There is an ODBC driver for most data sources. Other languages that can use ODBC include COBOL, Perl, PHP, and Python. ODBC is widely used in data integration scenarios.
@@ -27,7 +29,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 
 ## Download
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
 
 ## Documentation
 
@@ -44,7 +46,8 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 
 ### Linux and macOS
 
-- [Installing the Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installing the driver on Linux](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installing the driver on macOS](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 - [Connecting to SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Connecting with **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Connecting with **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)

@@ -1,6 +1,6 @@
 ---
 title: "Replace in Files"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
@@ -148,4 +148,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  This toolbar tab changes the dialog box to a **Find in Symbols** dialog box.  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -1,7 +1,7 @@
 ---
-title: "Overview of Always On Availability Groups"
+title: "What is an Always On availability group?"
 description: "An introduction to the concepts that are central for configuring and managing Always On availability groups." 
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -27,7 +27,7 @@ ms.author: mathoma
 > [!TIP]  
 >  You can create any type of backup of a primary database. Alternatively, you can create log backups and copy-only full backups of secondary databases. For more information, see [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).   
 
- Each set of availability database is hosted by an *availability replica*. Two types of availability replicas exist: a single *primary replica*. which hosts the primary databases, and one to eight *secondary replicas*, each of which hosts a set of secondary databases and serves as a potential failover targets for the availability group. An availability group fails over at the level of an availability replica. An availability replica provides redundancy only at the database level-for the set of databases in one availability group. Failovers are not caused by database issues such as a database becoming suspect due to a loss of a data file or corruption of a transaction log.  
+ Each set of availability database is hosted by an *availability replica*. Two types of availability replicas exist: a single *primary replica*. which hosts the primary databases, and one to eight *secondary replicas*, each of which hosts a set of secondary databases and serves as a potential failover targets for the availability group. An availability group fails over at the level of an availability replica. An availability replica provides redundancy only at the database level for the set of databases in one availability group. Failovers are not caused by database issues such as a database becoming suspect due to a loss of a data file or corruption of a transaction log.  
   
  The primary replica makes the primary databases available for read-write connections from clients. The primary replica sends transaction log records of each primary database to every secondary database. This process - known as *data synchronization* - occurs at the database level. Every secondary replica caches the transaction log records (*hardens* the log) and then applies them to its corresponding secondary database. Data synchronization occurs between the primary database and each connected secondary database, independently of the other databases. Therefore, a secondary database can be suspended or fail without affecting other secondary databases, and a primary database can be suspended or fail without affecting other primary databases.  
   

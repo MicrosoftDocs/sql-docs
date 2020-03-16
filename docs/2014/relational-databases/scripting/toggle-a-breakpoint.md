@@ -1,6 +1,6 @@
 ---
-title: "Toggle a Breakpoint | Microsoft Docs"
-ms.custom: ""
+title: Toggle a Breakpoint
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

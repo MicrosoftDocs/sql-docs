@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18, sqlfreshmay19"
-ms.date: "10/15/2019"
+ms.date: "01/15/2020"
 ---
 
 # What is Azure Data Studio?
@@ -28,7 +28,7 @@ The source code for Azure Data Studio and its data providers is available on Git
 
 ## Smart SQL code snippets
 
-SQL code snippets generate the proper SQL syntax to create databases, tables, views, stored procedures, users, logins, roles, etc., and to update existing database objects. Use smart snippets to quickly create copies of your database for development or testing purposes, and to generate and execute CREATE and INSERT scripts.
+SQL code snippets generate the proper SQL syntax to create databases, tables, views, stored procedures, users, logins, roles, and to update existing database objects. Use smart snippets to quickly create copies of your database for development or testing purposes, and to generate and execute CREATE and INSERT scripts.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] also provides functionality to create custom SQL code snippets. To learn more, see [Create and use code snippets](code-snippets.md).
 
@@ -46,7 +46,7 @@ Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp
 
 ## Extensibility and extension authoring
 
-Enhance the [!INCLUDE[name-sos](../includes/name-sos-short.md)] experience by extending the functionality of the base installation. [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides extensibility points for data management activities, as well as support for extension authoring.
+Enhance the [!INCLUDE[name-sos](../includes/name-sos-short.md)] experience by extending the functionality of the base installation. [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides extensibility points for data management activities, and support for extension authoring.
 
 To learn about extensibility in [!INCLUDE[name-sos](../includes/name-sos-short.md)], see [Extensibility](extensibility.md).
 To learn about authoring extensions, see [Extension authoring](extension-authoring.md).
@@ -62,7 +62,6 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 - Can execute most administrative tasks via the integrated terminal using sqlcmd or Powershell
 - Have minimal need for wizard experiences
 - Don't need to do deep administrative configuration
-- Want to
 
 **Use SQL Server Management Studio if you:**
 
@@ -71,7 +70,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 - Are doing security management, including user management, vulnerability assessment, and configuration of security features
 - Make use of the Reports for SQL Server Query Store
 - Need to make use of performance tuning advisors and dashboards
-- Are doing import/export of DACPACs
+- Are doing Import/Export of DACPACs
 - Need access to Registered Servers and want to control SQL Server services on Windows
 
 ### Shell
@@ -91,12 +90,12 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Theming|Yes||
 |Dark Mode|Yes||
 |Azure Resource Explorer|Preview||
-|Generate Scripts Wizard||Yes|
-|Import\Export DACPAC||Yes|
-|Object Properties||Yes|
+|Generate Scripts Wizard||Preview|
+|Import/Export DACPAC||Yes|
+|Object Properties||Preview|
 |Table Designer||Yes|
 
-### Query Editor
+### Query editor
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -115,7 +114,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Notebooks|Yes||
 |Save Query as snippet|Yes||
 
-### Operating System Support
+### Operating system support
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -123,15 +122,15 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |macOS|Yes||
 |Windows|Yes|Yes|
 
-### Data Engineering
+### Data engineering
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Create External Table Wizard|Preview||
-|HDFS Integration|Preview||
-|Notebooks|Preview||
+|Create External Table Wizard|Yes||
+|HDFS Integration|Yes||
+|Notebooks|Yes||
 
-### Database Administration
+### Database administration
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -143,7 +142,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Always On||Yes|
 |Always Encrypted||Yes|
 |Copy Data Wizard||Yes|
-|Data Tuning Advisor||Yes|
+|Database Engine Tuning Advisor||Yes|
 |Error Log Viewer||Yes|
 |Maintenance Plans||Yes|
 |Multi-Server Query||Yes|

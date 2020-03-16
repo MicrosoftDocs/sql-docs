@@ -1,6 +1,6 @@
 ---
-title: "Alter an Extended Events Session | Microsoft Docs"
-ms.custom: ""
+title: "Alter an Extended Events Session"
+description: Use the SQL Server Extended Events Wizard to alter an Extended Events session. Changes you can make depend on whether the session is active and inactive.
 ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

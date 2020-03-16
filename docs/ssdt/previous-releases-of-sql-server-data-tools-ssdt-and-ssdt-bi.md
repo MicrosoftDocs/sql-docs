@@ -1,18 +1,22 @@
 ---
-title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/05/2018"
+title: Previous releases of SSDT
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 09/05/2018
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
+
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools (SSDT) provides project templates and design surfaces for building SQL Server content types - relational databases, Analysis Services models, Reporting Services reports, and Integration Services packages.  
   
@@ -27,6 +31,7 @@ The last few downloads are provided for the unlikely event that you experience i
 
 |SSDT release| Visual Studio 2017|
 |:---|:---|
+|15.9.2|[SSDT for VS2017 15.9.2](https://go.microsoft.com/fwlink/?linkid=2095463)|
 |15.9.1|[SSDT for VS2017 15.9.1](https://go.microsoft.com/fwlink/?linkid=2086373)|
 |15.9.0|[SSDT for VS2017 15.9.0](https://go.microsoft.com/fwlink/?linkid=2052454)|
 |15.8.2|[SSDT for VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|

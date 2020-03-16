@@ -110,16 +110,43 @@
         "t-sql/**/*.md": "GitHub"
       },
       "feedback_product_url": {
-        "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
+        "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/",
+        "big-data-cluster/**/*.md": "https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/"
       },
 
       "manager": {
         "**/*.md": "jroth",
         "advanced-analytics/**/*.md": "cgronlun",
-        "dmx/**/*.md": "kfile",
+        "dmx/**/*.md": "kfollis",
+        "kb-support/**/*.md": "ramakoni",
         "language-extensions/**/*.md": "cgronlun",
-        "mdx/**/*.md": "kfile",
-        "reporting-services/**/*.md": "kfile"
+        "mdx/**/*.md": "kfollis",
+        "reporting-services/**/*.md": "kfollis"
+      },
+
+      "audience": {
+        "kb-support/**/*.md": "itpro"
+      },
+      "author": {
+        "kb-support/**/*.md": "ramakoni1"
+      },
+      "ms.author": {
+        "kb-support/**/*.md": "ramakoni"
+      },
+      "ms.localizationpriority": {
+        "kb-support/**/*.md": "Normal"
+      },
+      "ms.prod": {
+        "kb-support/**/*.md": "sql"
+      },
+      "ms.technology": {
+        "kb-support/**/*.md": ""
+      },
+      "ms.reviewer": {
+        "kb-support/**/*.md": "DEV_Triage, DaleChe, RamaKoni, DelHan, SureshKa, SueHar"
+      },
+      "ms.topic": {
+        "kb-support/**/*.md": "kb-support"
       },
 
       "titleSuffix": {
@@ -133,6 +160,8 @@
         "2014/sql-server/failover-clusters/**/*.md": "SQL Server 2014 Always On",
         "2014/database-engine/database-mirroring/**/*.md": "SQL Server 2014 Database Mirroring",
         "2014/database-engine/log-shipping/windows/**/*.md": "SQL Server 2014 Log Shipping",
+        "2014/ssms/**/*.md": "SQL Server Management Studio (SSMS)",
+        "2014/data-quality-services/**/*.md": "Data Quality Services (DQS)",
 
     
         "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
@@ -141,6 +170,7 @@
         "azure-data-studio/**/*.md": "Azure Data Studio",
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
         "language-extensions/**/*.md": "SQL Server Language Extensions",
+        "kb-support/**/*.md": "SQL Server",
         "relational-database/replication/**/*.md": "SQL Server Replication",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "dea/**/*.md": "Database Experimentation Assistant",
@@ -150,7 +180,17 @@
         "database-engine/log-shipping/windows/**/*.md": "SQL Server Log Shipping",
         "sql-server/stretch-database/**/*.md": "SQL Server Stretch Database",
         "master-data-services/**/*.md": "SQL Server Master Data Services",
-        "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in"
+        "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in",
+        "ssdt/**/*.md": "SQL Server Data Tools (SSDT)",
+        "ssms/**/*.md": "SQL Server Management Studio (SSMS)",
+        "azure-data-studio/**/*.md": "Azure Data Studio",        
+        "ssms/agent/**/*.md": "SQL Server Agent",
+        "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
+        "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
+        "data-quality-services/**/*.md": "Data Quality Services (DQS)"
+
+
+
       },
 
       "breadcrumb_path": {
@@ -179,6 +219,7 @@
         "database-engine/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "dmx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions",
+        "kb-support/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sql-server-previousversions || = sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "mdx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",

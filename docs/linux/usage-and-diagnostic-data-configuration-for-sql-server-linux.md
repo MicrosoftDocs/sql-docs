@@ -1,6 +1,7 @@
 ---
-title: Configure Usage and Diagnostic Data Collection for SQL Server on Linux
+title: Configure usage & diagnostic data collection for SQL Server on Linux
 description: Describes how SQL Server customer usage and diagnostic data is collected and configured on Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT 
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ---
-# Configure Usage and Diagnostic Data Collection for SQL Server on Linux
+# Configure usage & diagnostic data collection for SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

@@ -1,7 +1,7 @@
 ---
-title: "Make a Target Server | Microsoft Docs"
+title: "Make a Target Server"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -14,11 +14,13 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], creating"
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ""
-ms.custom: ""
-ms.date: "01/19/2017"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 
 ---

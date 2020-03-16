@@ -2,7 +2,7 @@
 title: Capture a trace for SQL Server upgrades
 description: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
 ms.custom: "seo-lt-2019"
-ms.date: 12/05/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,7 +10,7 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
 ---
 
@@ -26,7 +26,7 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
 1. In DEA, on the left-hand navigation bar, select the camera icon, and then on the **All Captures** page, select **New Capture**.
 
-    ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
+    ![Create a capture in DEA](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
 2. On the **New Capture** page, under **Capture details**, enter or select the following information:
 
@@ -35,8 +35,8 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
     - **Duration**: Select the length of time (in minutes) that you want the trace capture to run.
     - **Capture Location**: Select the destination path for the trace file.
 
-           > [!NOTE]
-           > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
+        > [!NOTE]
+        > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
 
 3. Verify that you have taken a backup by selecting the **Yes, I have manually taken the backup…** check box.
 
@@ -128,7 +128,7 @@ If you see an error when you run a trace capture, confirm that:
 
 - The name of the computer running SQL Server is valid. To confirm, try to connect to the computer running SQL Server by using SQL Server Management Studio (SSMS).
 - Your firewall configuration doesn't block connections to the computer running SQL Server.
-- The user has the permissions that are listed in the blog posting [Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
+- The user has the permissions that are listed in the [Replay FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - The trace name doesn't follow the standard rollover convention (Capture\_1). Instead, try trace names like Capture\_1A or Capture1.
 
 Following are some possible errors you might see and solutions for resolving them:
@@ -144,4 +144,4 @@ If you see any other errors labeled *Sql Error Code*, see [Database Engine Error
 
 ## See also
 
-- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure replay in Database Experimentation Assistant](database-experimentation-assistant-configure-replay.md).
+- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure Distributed Replay for Database Experimentation Assistant](database-experimentation-assistant-configure-replay.md).

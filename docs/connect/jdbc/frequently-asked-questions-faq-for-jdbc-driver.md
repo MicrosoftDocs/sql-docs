@@ -1,7 +1,7 @@
 ---
-title: "Frequently asked questions (FAQ) for JDBC driver | Microsoft Docs"
+title: "Frequently asked questions (FAQ) for JDBC driver"
 ms.custom: ""
-ms.date: "10/28/2019"
+ms.date: "03/13/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -25,10 +25,19 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
 **Which versions of SQL Server and Java do the driver support?**  
 See the [Microsoft JDBC Driver for SQL Server support matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.
 
-**What is the difference between the JDBC driver packages available on the Microsoft Download Center and the JDBC driver available on GitHub?**  
-The JDBC driver files available on the GitHub repository for the Microsoft JDBC driver are the core of the JDBC driver and are under the open-source license listed in the repository. The driver packages on the Microsoft Download Center include additional libraries for Windows-integrated authentication and enabling XA transactions with the JDBC driver. Those additional libraries are under the license included with the downloadable package.
+**What is the difference between the JDBC driver packages available on the [Microsoft download page](download-microsoft-jdbc-driver-for-sql-server.md) and the JDBC driver available on GitHub?**  
+The JDBC driver files available on the GitHub repository for the Microsoft JDBC driver are the core of the JDBC driver and are under the open-source license listed in the repository. The driver packages on the [Microsoft download page](download-microsoft-jdbc-driver-for-sql-server.md) include additional libraries for Windows-integrated authentication and enabling XA transactions with the JDBC driver. Those additional libraries are under the license included with the downloadable package.
 
 **What should I know when upgrading my driver?**  
+The Microsoft JDBC Driver 8.2 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
+
+| JAR                        | JDBC Specification            | JDK Version |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (partially), and 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 The Microsoft JDBC Driver 7.4 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
 
 | JAR                        | JDBC Specification            | JDK Version |
@@ -109,6 +118,7 @@ The table below lists available authentication options. A pure Java Kerberos aut
 | Non-Windows | Pure Java Kerberos                    |
 | Non-Windows | SQL Server                            |
 | Non-Windows | Azure Active Directory Authentication |
+| Non-Windows | NTLM                                  |
 | Windows     | Pure Java Kerberos                    |
 | Windows     | SQL Server                            |
 | Windows     | Kerberos with NTLM backup             |

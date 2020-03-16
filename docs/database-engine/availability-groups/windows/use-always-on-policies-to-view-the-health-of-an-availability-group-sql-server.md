@@ -1,6 +1,7 @@
 ---
-title: "Use Always On Policies to View the Health of an Availability Group | Microsoft Docs"
-ms.custom: ""
+title: "Policies to view availability group health"
+description: Use the Always On policies or PowerShell to determine the operational health of an Always On availability group. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

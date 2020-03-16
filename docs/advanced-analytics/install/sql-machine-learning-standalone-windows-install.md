@@ -1,9 +1,9 @@
 ---
 title: Install Machine Learning Server (Standalone)
-description: Setup a non-instance-aware standalone machine learning server for R and Python development using RevoScaleR, revoscalepy, MicrosoftML, and other packages.
+description: Setup a standalone machine learning server for Python and R. A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of Microsoft Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -14,10 +14,10 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server Setup includes a **shared feature** option for installing a non-instance-aware, standalone machine learning server that runs outside of SQL Server. It's called **Machine Learning Server (Standalone)** and includes R and Python. 
+SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. It's called **Machine Learning Server (Standalone)** and includes Python and R. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server Setup includes a **shared feature** option for installing a non-instance-aware, standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**.  
+SQL Server Setup includes a **shared feature** option for installing a standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**.  
 ::: moniker-end
 
 A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), supporting the same use cases and scenarios, including:
@@ -192,11 +192,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 3. If you enabled operationalization to run as web nodes and compute nodes for web service deployments, back up the **AppSettings.json** file as a precaution. Applying SQL Server 2017 CU13 or later revises this file, so you might want a backup copy to preserve the original version.
 
-4. On an internet connected device, click the cumulative update link for your version of SQL Server.
-
-  + SQL Server 2019 updates *(no updates available yet)*
-  + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. On an internet connected machine, download the latest cumulative update for your version from the [Latest updates for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
 
 5. Download the latest cumulative update. It is an executable file.
 
@@ -210,7 +206,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
    + Double-click the .exe to run Setup. When installing a cumulate update on a server with no internet connectivity, you are prompted to select the location of the .cab files for R and Python.
 
-8. Post-install, on a server for which you have enabled operationalization with web nodes and compute nodes, edit **AppSettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath". For example:
+8. Post-install, on a server for which you have enabled deployment with web nodes and compute nodes, edit **AppSettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath". For example:
 
     ```json
     "ScorerParameters": {

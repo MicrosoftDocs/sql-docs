@@ -1,6 +1,6 @@
 ---
 title: "Use the sqlcmd Utility"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "06/06/2017"
 ms.prod: sql
 ms.technology: scripting
@@ -306,7 +306,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  `1> :Setvar LastName Achong`  
   
- `1> EXEC dbo.ContactEmailAddress $(Gustavo),$(Achong)`  
+ `1> EXEC dbo.ContactEmailAddress $(FirstName),$(LastName)`  
   
  `2> GO`  
   

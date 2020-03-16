@@ -1,6 +1,6 @@
 ---
-title: "Extended Events Tools | Microsoft Docs"
-ms.custom: ""
+title: "Extended Events Tools"
+description: These tools create and manage SQL Server Extended Events sessions. In addition to sessions you create, there is a default system health session on the server.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

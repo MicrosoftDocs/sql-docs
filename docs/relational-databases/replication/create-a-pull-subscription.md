@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Create a Pull Subscription
 

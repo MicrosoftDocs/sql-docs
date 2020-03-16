@@ -1,8 +1,7 @@
 ---
-title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
+title: Download SQL Server Management Studio (SSMS)
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 keywords: 
@@ -22,10 +21,9 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
-ms.custom: ""
-ms.date: 11/04/2019
+ms.custom: seo-lt-2019
+ms.date: 02/18/2020
 ---
-
 # Download SQL Server Management Studio (SSMS)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -40,7 +38,7 @@ SSMS is free!
 
 **[![download](media/download-icon.png) Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.4 upgrades it to 18.4. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.4.
+SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.4 upgrades it to 18.4.
 
 ### Version information
 
@@ -50,7 +48,7 @@ SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).
 
-The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
+The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions, so both versions are available for use. However, if you have a ***preview*** version of SSMS 18.x installed, you must **uninstall** it before installing SSMS 18.4. You can see if you have the *Preview* version by going to the Help > About window.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
@@ -67,25 +65,39 @@ SQL Server Management Studio 18.4:
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 
-## New in this release (SSMS 18.4)
+## What's new
 
-| New item | Details |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Classification | Added support for custom information protection policy for data classification. |
-| Query Store | Added the *Max Plan per query* value in the dialog properties. |
-| Query Store | Added support for the new Custom Capture Policies. |
-| SMO/Scripting | Support Script of materialized view in SQL DW. |
-| SMO/Scripting | Added support for *SQL On Demand*. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added 50 assessment rules (see details on GitHub). |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added base math expressions and comparisons to rules conditions. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added support for RegisteredServer object. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated how rules are stored in the JSON format and also updated the mechanism of applying overrides/customizations. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated rules to support SQL on Linux. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated the ruleset JSON format and added SCHEMA version. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated cmdlets output to improve readability of recommendations. |
-| XEvent Profiler | Added *error_reported* event to XEvent Profiler sessions. |
+For details and more information about what's new in this release, see [SSMS release notes](release-notes-ssms.md).
 
-For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
+There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
+
+## Previous versions
+
+This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
+
+## Unattended install
+
+You can also install SSMS using a command prompt script.
+
+If you want to install SSMS in the background with no GUI prompts, then follow the steps below.
+
+1. Launch the command prompt with elevated permissions.
+
+2. Type the command below in the command prompt.
+
+    ```console
+    start "" <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    ```
+
+    Example:
+
+    ```console
+    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    ```
+
+    You can also pass */Passive* instead of */Quiet* to see the setup UI.
+
+3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe” based on the example. If something went wrong, you could inspect the error code returned and take a peek at the %TEMP%\SSMSSetup for the log file.
 
 ## Supported SQL offerings (SSMS 18.4)
 
@@ -108,17 +120,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 <sup>*</sup> Requires version 1607 (10.0.14393) or later
 
 > [!NOTE]
-> SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
-
-## Release notes (SSMS 18.4)
-
-There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
-
-For details about this release, see [the SSMS release notes](release-notes-ssms.md).
-
-## Previous SSMS releases
-
-[Previous SQL Server Management Studio Releases](../ssms/release-notes-ssms.md#previous-ssms-releases)
+> SSMS runs on Windows (AMD or Intel) only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
@@ -126,7 +128,8 @@ For details about this release, see [the SSMS release notes](release-notes-ssms.
 
 - [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)
-- [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [Latest updates](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Azure Data Architecture Guide](https://docs.microsoft.com/azure/architecture/data-guide/)
 

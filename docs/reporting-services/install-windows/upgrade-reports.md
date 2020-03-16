@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Reports (SSRS) | Microsoft Docs"
+title: "Upgrade Reports | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

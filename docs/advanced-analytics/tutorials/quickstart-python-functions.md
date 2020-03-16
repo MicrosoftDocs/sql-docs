@@ -1,10 +1,9 @@
 ---
-title: "Quickstart: Write Python functions"
-description: In this quickstart, learn how to write a Python function for advanced statistical computation with SQL Server Machine Learning Services.
+title: "Quickstart: Python functions"
+description: In this quickstart, you'll learn how to use Python mathematical and utility functions with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 10/04/2019  
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -13,10 +12,10 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Quickstart: Write advanced Python functions with SQL Server Machine Learning Services
+# Quickstart: Python functions with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This quickstart describes how to embed Python mathematical and utility functions in a SQL stored procedure with SQL Server Machine Learning Services. Advanced statistical functions that are complicated to implement in T-SQL can be done in Python with only a single line of code.
+In this quickstart, you'll learn how to use Python mathematical and utility functions with SQL Server Machine Learning Services. Statistical functions are often complicated to implement in T-SQL, but can be done in Python with only a few lines of code.
 
 ## Prerequisites
 

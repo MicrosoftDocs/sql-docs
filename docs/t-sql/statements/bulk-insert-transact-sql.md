@@ -1,7 +1,7 @@
 ---
 title: "BULK INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -53,7 +53,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -172,7 +172,7 @@ Specifies that any insert triggers defined on the destination table execute duri
 
 If FIRE_TRIGGERS is not specified, no insert triggers execute.
 
-FORMATFILE_DATASOURCE **=** 'data_source_name'
+FORMATFILE_DATA_SOURCE **=** 'data_source_name'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
 Is a named external data source pointing to the Azure Blob storage location of the format file that will define the schema of imported data. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -359,7 +359,9 @@ When importing from Azure Blob storage and the data is not public (anonymous acc
 
 ### Permissions
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required. Additionally, ALTER TABLE permission is required if one or more of the following is true:
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required. ADMINISTER BULK OPERATIONS permissions or the bulkadmin role is not supported for SQL Server on Linux. Only the `sysadmin` can perform bulk inserts for SQL Server on Linux. 
+
+Additionally, ALTER TABLE permission is required if one or more of the following is true:
 
 - Constraints exist and the CHECK_CONSTRAINTS option is not specified.
 
@@ -467,7 +469,7 @@ WITH (FORMAT = 'CSV'
 The following example shows how to load data from a csv file in an Azure Blob storage location on which you have created a SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

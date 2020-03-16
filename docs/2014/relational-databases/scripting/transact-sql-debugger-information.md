@@ -1,6 +1,6 @@
 ---
-title: "Transact-SQL Debugger Information | Microsoft Docs"
-ms.custom: ""
+title: Transact-SQL Debugger Information
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

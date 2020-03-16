@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/28/2020"
+ms.date: "03/17/2020"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -319,7 +319,6 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 ||130\shared|Read, Execute|  
 ||Instid\MSSQL\Template Data ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] only)|Read|  
 |SQLServerAgent\*|Instid\MSSQL\binn|Full control|  
-||Instid\MSSQL\binn|Full control|  
 ||Instid\MSSQL\Log|Read, Write, Delete, Execute|  
 ||130\com|Read, Execute|  
 ||130\shared|Read, Execute|  

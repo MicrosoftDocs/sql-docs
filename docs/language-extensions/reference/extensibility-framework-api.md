@@ -249,7 +249,7 @@ There is a counter named script_executions which is sent by the framework. The e
 
 Each telemetry entry is a key-value pair. The keys are strings, the values are 64-bit integers - counters. Thus, the output comprises for two logical arrays: the names and their corresponding counters. Each array is output.
 
-The length of each array is RowsNumber, which is output. The first logical output contains pointers to strings, thus, it's represented by two arrays: CounterNames (the actual string data) and CounterNamesLength (the length of each string). The second logical output is stored in the CounterValues pointer. 
+The length of each array is **RowsNumber**, which is an output. The first logical output contains pointers to strings, thus, it's represented by two arrays: **CounterNames** (the actual string data) and **CounterNamesLength** (the length of each string). The second logical output is stored in the **CounterValues** pointer. 
 
 ```C++
 SQLRETURN GetTelemetryResults(
@@ -310,14 +310,14 @@ SQLRETURN UninstallExternalLibrary(
 );
 ```
 
-- LibraryName: \[Input\] The library name
-- LibraryNameLength: \[Input\] The length of the library name
-- LibraryFile: \[Input\] The path (as a string) to the library file containing the binary content specified by CREATE EXTERNAL LIBRARY
-- LibraryFileLength: \[Input\] The length of the LibraryFile string
-- LibraryInstallDirectory: \[Input\] The root directory to install the library
-- LibraryInstallDirectoryLength: \[Input\] The length of the LibraryInstallDirectory string.
-- LibraryError: \[Output\] The library error string.
-- LibraryErrorLength: \[Output\] The length of the LibraryError string.
+- **LibraryName:** \[Input\] The library name
+- **LibraryNameLength:** \[Input\] The length of the library name
+- **LibraryFile:** \[Input\] The path (as a string) to the library file containing the binary content specified by CREATE EXTERNAL LIBRARY
+- **LibraryFileLength:** \[Input\] The length of the LibraryFile string
+- **LibraryInstallDirectory:** \[Input\] The root directory to install the library
+- **LibraryInstallDirectoryLength:** \[Input\] The length of the LibraryInstallDirectory string.
+- **LibraryError:** \[Output\] The library error string.
+- **LibraryErrorLength:** \[Output\] The length of the LibraryError string.
 
 ## Next steps
 

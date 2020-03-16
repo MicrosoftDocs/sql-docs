@@ -1,6 +1,6 @@
 ---
 title: "Connection libraries for Microsoft SQL Databases | Microsoft Docs"
-description: "Provides download links for modules which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
+description: "Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
 author: RothJa
 ms.prod: sql
 ms.technology: 
@@ -14,12 +14,12 @@ ms.author: JRoth
 This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **OOP-to-relational mismatch:**
 
-*Relational*: Client programs that are written in an object-oriented programming (OOP) language often use SQL drivers which return queried data in a format that is more relational than object oriented. C# using ADO.NET is one example. The OOP-relational format mismatch sometimes makes the OOP code harder to write and understand.
+*Relational*: Client programs that are written in an object-oriented programming (OOP) language often use SQL drivers, which return queried data in a format that is more relational than object oriented. C# using ADO.NET is one example. The OOP-relational format mismatch sometimes makes the OOP code harder to write and understand.
 
 *ORM*: Other drivers or frameworks return queried data in the OOP format, avoiding the mismatch. These drivers work by expecting that classes have been defined to match the data columns of particular SQL tables. The driver then performs the *object-relational mapping* (ORM) to return queried data as an instance of a class. Microsoft's Entity Framework (EF) for C#, and Hibernate for Java, are two examples.
 
@@ -28,17 +28,6 @@ The present article devotes separate sections to these two kinds of connection d
 <a name="anchor-20-drivers-relational-access" />
 
 ## Drivers for relational access
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | Language | Download the SQL driver |
 | :------- | :---------------------- |
@@ -70,14 +59,15 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 <a name="anchor-60-build-an-app-webpages" />
 
 ## Build-an-app webpages
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** takes you to a set of *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
 
 - Details about how to get started from the very beginning, for each combination of language + operating system + driver.
-    - Instructions for installing the latest SQL connection drivers.
+  - Instructions for installing the latest SQL connection drivers.
 - Code examples for each of the following items:
-    - Object-relational code examples.
-    - ORM code examples.
-    - Columnstore index demonstrations for much faster performance.
+  - Object-relational code examples.
+  - ORM code examples.
+  - Columnstore index demonstrations for much faster performance.
 
 **First page, of Build-an-app webpages:**  
 ![Build-an-app webpages, first page screenshot](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -88,6 +78,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 &nbsp;
 
 ## Related links
+
 - [Code examples for connecting to Azure SQL Database in the cloud, with Java and other languages](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!--

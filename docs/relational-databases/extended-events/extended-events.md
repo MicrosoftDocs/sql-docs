@@ -1,5 +1,6 @@
 ---
 title: "XEvents overview - SQL Server"
+description: The SQL Server Extended Events architecture lets you collect data necessary to identify and troubleshoot a performance problem. It is configurable and scalable.
 ms.date: "07/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

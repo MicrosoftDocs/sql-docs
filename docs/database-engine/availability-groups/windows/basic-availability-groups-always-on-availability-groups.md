@@ -44,6 +44,21 @@ ms.author: mathoma
  An Always On basic availability group can be created on any two SQL Server 2016 Standard Edition servers. When you create a basic availability group, you must specify both replicas during creation.  
   
  To create a basic availability group, use the **CREATE AVAILABILITY GROUP** transact-SQL command and specify the **WITH BASIC** option (the default is **ADVANCED**). You can also create the basic availability group using the UI in SQL Server Management Studio starting with version 17.8. For more information, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). 
+
+See the following example for creating a basic availability group using Transact-SQL (T-SQL): 
+
+```sql
+ CREATE AVAILABILITY GROUP [BasicAG]
+WITH (AUTOMATED_BACKUP_PREFERENCE = PRIMARY,
+BASIC,
+DB_FAILOVER = OFF,
+DTC_SUPPORT = NONE,
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 0)
+FOR DATABASE [BasicAGTest]
+REPLICA ON N'SQLVM1\MSSQLSERVER' WITH (ENDPOINT_URL = N'TCP://SQLVM1.Contoso.com:5022', FAILOVER_MODE = MANUAL, AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, SEEDING_MODE = AUTOMATIC, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO)),
+    N'SQLVM2' WITH (ENDPOINT_URL = N'TCP://SQLVM2.Contoso.com:5022', AVAILABILITY_MODE = CONFIGURATION_ONLY);
+```
+
   
 > [!NOTE]  
 >  The limitations of basic availability groups apply to the **CREATE AVAILABILITY GROUP** command when **WITH BASIC** is specified. For example, you will get an error if you attempt to create a basic availability group that permits read access. Other limitations apply in the same manner. Refer to the Limitations section of this topic for details.  

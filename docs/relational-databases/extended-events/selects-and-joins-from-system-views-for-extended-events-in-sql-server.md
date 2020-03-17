@@ -1,5 +1,6 @@
 ---
 title: "SELECTs and JOINs from system views for extended events"
+description: There are system views of extended events in SQL Server and Azure SQL Database. Learn how event session information is represented in different perspectives.
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

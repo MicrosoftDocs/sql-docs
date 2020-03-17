@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -306,35 +306,44 @@ Alternatively, you might want to clear up only ad-hoc query data, since it is le
 
 **Delete ad-hoc queries**
 
-This deletes the queries that were only executed only once and that are more than 24 hours old.
+This purges adhoc and internal queries from the query store every 3 minutes so that the query store does not run out of space and remove queries we really need to track
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 You can define your own procedure with different logic for clearing up data you no longer want.

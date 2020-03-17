@@ -6534,10 +6534,6 @@
       items:
       - name: Configuring Storage Spaces with a NVDIMM-N write-back cache
         href: relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
-      - name: Troubleshoot known issues
-        items:
-        - name: Nonyielding resource monitor
-          href: relational-databases/performance/known-issue-resource-monitor-nonyielding-condition.md
     - name: Database Tuning Advisor
       href: relational-databases/performance/database-engine-tuning-advisor.md
       items:

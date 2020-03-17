@@ -4,7 +4,7 @@ titleSuffix: Azure Data Studio
 description: Learn how to use SQL Notebooks in Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "achatter; alayu; maghan; sstein"
+ms.reviewer: "achatter; alayu; maghan; mikeray"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
@@ -27,14 +27,14 @@ In Azure Data Studio, you can also press F1, and click **New Connection** and 
 
 There are multiple ways to launch a new notebook.
 
-1. Go to the **File Menu** in Azure Data Studio and then click on **New Notebook**.
+* Go to the **File Menu** in Azure Data Studio and then click on **New Notebook**.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. Right click on the **SQL Server** connection and then launch **New Notebook**. 
+* Right click on the **SQL Server** connection and then launch **New Notebook**.
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. Open the command palette (**Ctrl+Shift+P**)) and then type in **New Notebook**. A new file named `Notebook-1.ipynb` opens.
+* Open the command palette (**Ctrl+Shift+P**)) and then type in **New Notebook**. A new file named `Notebook-1.ipynb` opens.
 
 ## Supported kernels and attach to context
 

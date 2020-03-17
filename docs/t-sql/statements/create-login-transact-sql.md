@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/10/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -249,6 +249,18 @@ WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;
 
 SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
+```
+
+### G. Creating a login with multiple arguments
+
+The following example shows how to string multiple arguments together using commas between each argument.
+
+```sql
+CREATE LOGIN [MyUser] 
+WITH PASSWORD = 'MyPassword',      
+DEFAULT_DATABASE = MyDatabase,   
+CHECK_POLICY = OFF, 
+CHECK_EXPIRATION = OFF ;
 ```
 
 ## See Also

@@ -134,16 +134,19 @@ An X.509 certificate must be configured for each participating server node in th
 The format for the certificate values is: 
 
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,Listener1FQDN,Listener2FQDN
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
 ```
 
 For example, you have the following values: 
-Servername: Win2019
-Instance: SQL2019
-AG: AG2019
-Listener: Listener2019
-Domain: contoso.com
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
 
 For a WSFC that has a single availability group, the certificate should have the fully qualified domain name (FQDN) of the server, and the FQDN of the listener: 
 

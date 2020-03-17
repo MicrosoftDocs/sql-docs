@@ -73,7 +73,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property; {PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?. |
+|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property; {PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Extract /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False. |
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
@@ -272,7 +272,7 @@ A SqlPackage.exe Export action exports a live database from SQL Server or Azure 
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Export /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
@@ -312,7 +312,7 @@ A SqlPackage.exe Import action imports the schema and table data from a BACPAC p
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Import /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
@@ -357,7 +357,7 @@ A **SqlPackage.exe** report action creates an XML report of the changes that wou
 |**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Profile:**|**/pr**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property; {PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?. |
+|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property; {PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:DeployReport /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False. |
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
@@ -522,7 +522,7 @@ A **SqlPackage.exe** script action creates a Transact-SQL incremental update scr
 |**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Profile:**|**/pr**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs.|
-|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Script /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |

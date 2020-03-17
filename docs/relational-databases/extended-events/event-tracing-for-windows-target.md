@@ -1,5 +1,6 @@
 ---
 title: "Event Tracing for Windows Target"
+description: Learn how to use Event Tracing for Windows (ETW) as a target. Use ETW tracing either together with Extended Events or as an Extended Events event consumer.
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

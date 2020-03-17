@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
 ms.custom: ""
-ms.date: 02/07/2020
+ms.date: 03/16/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -69,7 +69,7 @@ In SQL Server, this statement creates a new database and the files used and thei
 
 Create a database.
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
 [ CONTAINMENT = { NONE | PARTIAL } ]
 [ ON
@@ -128,7 +128,7 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 
 Attach a database
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
     ON <filespec> [ ,...n ]
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }
@@ -145,7 +145,7 @@ CREATE DATABASE database_name
 
 Create a database snapshot
 
-```sql
+```syntaxsql
 CREATE DATABASE database_snapshot_name
     ON
     (
@@ -460,7 +460,7 @@ You can use one `CREATE DATABASE` statement to create a database and the files t
 
 A maximum of 32,767 databases can be specified on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Each database has an owner that can perform special activities in the database. The owner is the user that creates the database. The database owner can be changed by using [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md).
+Each database has an owner that can perform special activities in the database. The owner is the user that creates the database. The database owner can be changed by using [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).
 
 Some database features depend on features or capabilities present in the file system for full functionality of a database. Some examples of features that depend on file system feature set include:
 
@@ -865,7 +865,7 @@ GO
 - [Database Detach and Attach](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
-- [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
+- [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)
 - [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
 - [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
 - [Database Snapshots](../../relational-databases/databases/database-snapshots-sql-server.md)
@@ -892,7 +892,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database/elastic
 
 ### Create a database
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
@@ -928,7 +928,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ### Copy a database
 
-```
+```stntaxsql
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
@@ -1266,7 +1266,7 @@ In Azure SQL Database Managed Instance, this statement is used to create a datab
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]
 ```
@@ -1338,7 +1338,7 @@ In Azure Synapse, this statement can be used with an Azure SQL Database server t
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
     [ MAXSIZE = {
@@ -1454,7 +1454,7 @@ In Analytics Platform System, this statement is used to create a new database on
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE DATABASE database_name
 WITH (
     [ AUTOGROW = ON | OFF , ]

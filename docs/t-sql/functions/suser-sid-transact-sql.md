@@ -62,6 +62,11 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
+## [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Remarks  
+ SUSER_SID always return the login SID for the current security context. Use [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) to obtain the SID of a different login.
+  
+ The SUSER_SID statement does not support execution using an impersonated security context through EXECUTE AS.  
+
 ## Examples  
   
 ### A. Using SUSER_SID  

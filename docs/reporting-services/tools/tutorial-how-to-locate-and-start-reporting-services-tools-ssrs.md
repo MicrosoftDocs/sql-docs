@@ -174,12 +174,12 @@ You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 ## Next steps
 
-[Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)
-[Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138)
-[Download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
-[Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)
-[Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
-[Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)
-[Reporting Services Tutorials](../../reporting-services/reporting-services-tutorials-ssrs.md)
+[Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  
+[Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138)  
+[Download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
+[Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+[Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)  
+[Reporting Services Tutorials](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

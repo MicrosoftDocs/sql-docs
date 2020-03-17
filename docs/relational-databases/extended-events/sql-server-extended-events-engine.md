@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Extended Events Engine"
+description: The SQL Server Extended Events engine enables the definition of events and processing of event data, manages Extended Events, and maintains a list of sessions.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

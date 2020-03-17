@@ -321,3 +321,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Only one BDC per domain (Active Directory) is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
 
 - None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+
+- AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC, Enabling logins from other trusted domain is planned for a future release

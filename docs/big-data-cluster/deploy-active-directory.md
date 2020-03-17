@@ -73,19 +73,19 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. Click **Add...** and add the **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** user
+1. Click **Add...** and add the **bdcDSA** user
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. Select the **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** user and clear all permissions, then click **Advanced**
+1. Select the **bdcDSA** user and clear all permissions, then click **Advanced**
 
 1. Click **Add**
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 
@@ -109,7 +109,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 - Click **Add**
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 
@@ -123,7 +123,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 - Click **Add**
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 

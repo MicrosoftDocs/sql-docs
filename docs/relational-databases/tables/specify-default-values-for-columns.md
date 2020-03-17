@@ -1,7 +1,7 @@
 ---
 title: "Specify Default Values for Columns | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/20/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -78,7 +78,7 @@ There are various ways that you can specify a default value for a column, by usi
    INSERT INTO dbo.doc_exz (column_a) VALUES (7);
    GO
    ALTER TABLE dbo.doc_exz
-     ADD CONSTRAINT col_b_def
+     ADD CONSTRAINT DF_Doc_Exz_Column_B
      DEFAULT 50 FOR column_b;
    GO
    ```
@@ -100,7 +100,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
+      column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
 For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).

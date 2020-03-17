@@ -1,5 +1,6 @@
 ---
 title: "Find objects with the most locks using Extended Events"
+description: This article shows how to find objects that have the most locks. Database administrators may need to find most locked objects to improve database performance.
 ms.date: "10/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

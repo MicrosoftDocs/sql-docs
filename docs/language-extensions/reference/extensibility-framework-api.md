@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description:  
 author: dphansen
 ms.author: davidph 
-ms.date: 03/16/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
@@ -30,11 +30,25 @@ Initialize global, shared information. For example, jvm.
 
 ```C++
 SQLRETURN Init(
-    SQLPOINTER    PropertyBag
+    SQLCHAR *ExtensionParams,
+    SQLULEN ExtensionParamsLength,
+    SQLCHAR *ExtensionPath,
+    SQLULEN ExtensionPathLength,
+    SQLCHAR *PublicLibraryPath,
+    SQLULEN PublicLibraryPathLength,
+    SQLCHAR *PrivateLibraryPath,
+    SQLULEN PrivateLibraryPathLength
 );
 ```
 
-- **PropertyBag:** The property bag defined for the extension when it was registered.
+- **ExtensionParams:** Parameters for the extension provided during registration.
+- **ExtensionParamsLength:** Length in bytes of the ExtensionParams parameter.
+- **ExtensionPath:** Absolute path to the installation directory of the extension.
+- **ExtensionPathLength:** Length in bytes of the ExtensionPath parameter.
+- **PublicLibraryPath:** Absolute path to the public external libraries directory for this user's isolation context.
+- **PublicLibraryPathLength:** Length in bytes of the PublicLibraryPath parameter.
+- **PrivateLibraryPath:** Absolute path to the private external libraries directory for this user's isolation context.
+- **PrivateLibraryPathLength:** Length in bytes of the PrivateLibraryPath parameter.
 
 ### InitSession
 

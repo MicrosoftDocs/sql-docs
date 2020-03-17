@@ -343,26 +343,22 @@ ORDER BY
 #### Output
 
 
-Next is the actual output from running the preceding SELECT JOIN UNION. The output parameter names and values map to what is plainly visible in the preceding CREATE EVENT SESSION statement.
+The following table shows the output from running the preceding SELECT JOIN UNION. The output parameter names and values map to what is plainly visible in the preceding CREATE EVENT SESSION statement.
 
-
-```
-Session-Name          Clause-Type            Parameter-Name                  Parameter-Value
-------------          -----------            --------------                  ---------------
-event_session_test3   1_EVENT                Event-Name                      lock_deadlock
-event_session_test3   2_EVENT_SET            collect_database_name           1
-event_session_test3   3_EVENT_ACTION         sqlserver.client_hostname       (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.collect_system_time   (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.event_sequence        (Not_Applicable)
-event_session_test3   4_EVENT_PREDICATES     ([sqlserver].[equal_i_sql_unicode_string]([database_name],N'InMemTest2') AND [package0].[counter]<=(16))   (Not_Applicable)
-event_session_test3   5_TARGET               event_file                      (Not_Applicable)
-event_session_test3   6_TARGET_SET           filename                        C:\Junk\event_session_test3_EF.xel
-event_session_test3   6_TARGET_SET           max_file_size                   20
-event_session_test3   6_TARGET_SET           max_rollover_files              2
-event_session_test3   7_WITH_MAX_MEMORY      max_memory                      4096
-event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
-```
-
+| Session-Name | Clause-Type | Parameter-Name | Parameter-Value |
+|---|---|---|---|
+|event_session_test3  | 1_EVENT |                Event-Name |                       lock_deadlock |
+|event_session_test3  |  2_EVENT_SET |             collect_database_name |            1 |
+|event_session_test3  |  3_EVENT_ACTION |          sqlserver.client_hostname |       (Not_Applicable) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.collect_system_time |   (Not_Applicable) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.event_sequence |        (Not_Applicable) |
+|event_session_test3  |  4_EVENT_PREDICATES |     (\[sqlserver\].\[equal_i_sql_unicode_string\]\(\[database_name\],N'InMemTest2'\) AND \[package0\].\[counter\]<=\(16\)\) |   (Not_Applicable) |
+|event_session_test3  |  5_TARGET |               event_file |                      (Not_Applicable) |
+|event_session_test3  |  6_TARGET_SET |           filename  |                       C:\Junk\event_session_test3_EF.xel |
+|event_session_test3  |  6_TARGET_SET |           max_file_size |                   20 |
+|event_session_test3  |  6_TARGET_SET |           max_rollover_files |              2 |
+|event_session_test3  |  7_WITH_MAX_MEMORY |      max_memory |                      4096 |
+|event_session_test3  |  7_WITH_STARTUP_STATE |   startup_state |                   1 |
 
 This completes the section on catalog views.
 

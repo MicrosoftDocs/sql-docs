@@ -100,6 +100,7 @@ Complete the following steps to build the docker image:
 
    $ sudo docker ps -a
    ```
+
     Output:
 
     ```

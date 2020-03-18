@@ -70,10 +70,11 @@ OPENROWSET
 ## Arguments
 
 ### '*provider_name*'
-Is a character string that represents the friendly name (or PROGID) of the OLE DB provider as specified in the registry. *provider_name* has no default value.
+Is a character string that represents the friendly name (or PROGID) of the OLE DB provider as specified in the registry. *provider_name* has no default value. Provider name examples are `Microsoft.Jet.OLEDB.4.0`, `SQLNCLI`, or `MSDASQL`.
 
 '*datasource*'
 Is a string constant that corresponds to a particular OLE DB data source. *datasource* is the DBPROP_INIT_DATASOURCE property to be passed to the IDBProperties interface of the provider to initialize the provider. Typically, this string includes the name of the database file, the name of a database server, or a name that the provider understands to locate the database or databases.
+Data source can be file path `C:\SAMPLES\Northwind.mdb'` for `Microsoft.Jet.OLEDB.4.0` provider, or connection string `Server=Seattle1;Trusted_Connection=yes;` for `SQLNCLI` provider.
 
 '*user_id*'
 Is a string constant that is the user name passed to the specified OLE DB provider. *user_id* specifies the security context for the connection and is passed in as the DBPROP_AUTH_USERID property to initialize the provider. *user_id* cannot be a Microsoft Windows login name.
@@ -95,7 +96,8 @@ Is a provider-specific connection string that is passed in as the DBPROP_INIT_PR
 
 ```sql
 SELECT a.*
-FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;', Department) AS d;
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                            Department) AS d;
 ```
 
 *catalog*
@@ -313,7 +315,7 @@ To bulk export or import SQLXML data, use one of the following data types in you
 
 ## Permissions
 
-`OPENROWSET` permissions are determined by the permissions of the user name that is being passed to the OLE DB provider. To use the `BULK` option requires `ADMINISTER BULK OPERATIONS` permission.
+`OPENROWSET` permissions are determined by the permissions of the user name that is being passed to the OLE DB provider. To use the `BULK` option requires `ADMINISTER BULK OPERATIONS` or `ADMINISTER DATABASE BULK OPERATIONS` permission.
 
 ## Examples
 

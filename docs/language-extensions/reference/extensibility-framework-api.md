@@ -18,7 +18,7 @@ You can use the extensibility framework to write programming language extensions
 
 You can find the source code for the Java Language Extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
-## API Calls
+## API Calls 
 
 ### Return value for all the calls
 
@@ -335,4 +335,4 @@ SQLRETURN UninstallExternalLibrary(
 
 ## Next steps
 
-- [Microsoft Extensibility SDK for Java for SQL Server](../how-to/extensibility-sdk-java-sql-server.md)
+- [Microsoft Extensibility SDK for Java for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) 

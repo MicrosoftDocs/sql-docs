@@ -20,14 +20,13 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 - Git command-line interface.
 
-- [System requirements for SQL Server on Linux](sql-server-linux-setup.md).
-
- The following command clones the mssql git repository to a local directory.
- 
-## Clone the mssql-docker repository
-
 - Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/install/).
 
+- See also the [system requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+
+## Clone the mssql-docker repository
+
+The following command clones the `mssql-docker` git repository to a local directory.
 1. Open a Bash terminal on Linux or Mac, or open a Windows Subsystem for Linux terminal on Windows.
 
 2. Create a directory to hold a local copy of the mssql-docker repository.

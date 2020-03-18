@@ -36,7 +36,7 @@ Requires CONTROL permission on the database.
 
    ```sql
      -- Creates the master key.
-     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
+     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe".  
      CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
 
    ```

@@ -98,7 +98,7 @@ ms.author: mathoma
   
 -   The DBCC SHRINKFILE operation on files containing disk-based tables might fail on the primary replica if the file contains ghost records that are still needed on a secondary replica.  
   
--   Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], readable secondary replicas can remain online even when the primary replica is offline due to user action or a failure. However, read-only routing does not work in this situation because the availability group listener is offline as well. Clients must connect directly to the read-only secondary replicas for read-only workloads.  
+-   Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], readable secondary replicas can remain online even when the primary replica is offline due to user action or a failure, for example, synclonization was suspended due to a user command or a failure, or a replica is relolving status due to WSFC is offline. However, read-only routing does not work in this situation because the availability group listener is offline as well. Clients must connect directly to the read-only secondary replicas for read-only workloads.  
   
 > [!NOTE]  
 >  If you query the [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management view on a server instance that is hosting a readable secondary replica, you might encounter a REDO blocking issue. This is because this dynamic management view acquires an IS lock on the specified user table or view that can block requests by a REDO thread for an X lock on that user table or view.  

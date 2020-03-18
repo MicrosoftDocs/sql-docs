@@ -72,14 +72,14 @@ OPENROWSET
 ### '*provider_name*'
 Is a character string that represents the friendly name (or PROGID) of the OLE DB provider as specified in the registry. *provider_name* has no default value. Provider name examples are `Microsoft.Jet.OLEDB.4.0`, `SQLNCLI`, or `MSDASQL`.
 
-'*datasource*'
+### '*datasource*'
 Is a string constant that corresponds to a particular OLE DB data source. *datasource* is the DBPROP_INIT_DATASOURCE property to be passed to the IDBProperties interface of the provider to initialize the provider. Typically, this string includes the name of the database file, the name of a database server, or a name that the provider understands to locate the database or databases.
 Data source can be file path `C:\SAMPLES\Northwind.mdb'` for `Microsoft.Jet.OLEDB.4.0` provider, or connection string `Server=Seattle1;Trusted_Connection=yes;` for `SQLNCLI` provider.
 
-'*user_id*'
+### '*user_id*'
 Is a string constant that is the user name passed to the specified OLE DB provider. *user_id* specifies the security context for the connection and is passed in as the DBPROP_AUTH_USERID property to initialize the provider. *user_id* cannot be a Microsoft Windows login name.
 
-'*password*'
+### '*password*'
 Is a string constant that is the user password to be passed to the OLE DB provider. *password* is passed in as the DBPROP_AUTH_PASSWORD property when initializing the provider. *password* cannot be a Microsoft Windows password.
 
 ```sql
@@ -91,7 +91,7 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-'*provider_string*'
+### '*provider_string*'
 Is a provider-specific connection string that is passed in as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider. *provider_string* typically encapsulates all the connection information required to initialize the provider. For a list of keywords that are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, see [Initialization and Authorization Properties](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
 ```sql
@@ -115,7 +115,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
                  AdventureWorks2012.HumanResources.Department) AS d;
 ```
 
-'*query*'
+### '*query*'
 Is a string constant sent to and executed by the provider. The local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not process this query, but processes query results returned by the provider, a pass-through query. Pass-through queries are useful when used on providers that do not make available their tabular data through table names, but only through a command language. Pass-through queries are supported on the remote server, as long as the query provider supports the OLE DB Command object and its mandatory interfaces. For more information, see [SQL Server Native Client &#40;OLE DB&#41; Reference](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
 ```sql
@@ -140,57 +140,49 @@ The arguments of the BULK option allow for significant control over where to sta
 
 For information on preparing data for bulk import, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
-'*data_file*'
+### '*data_file*'
 Is the full path of the data file whose data is to be copied into the target table.
+
+```sql
+SELECT * FROM OPENROWSET(
+   BULK 'C:\DATA\inv-2017-01-19.csv',
+   SINGLE_CLOB) AS DATA;
+```
+
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the data_file can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-\<bulk_options>
-Specifies one or more arguments for the BULK option.
+#### BULK Error handling options
 
-CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }
-Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.
-
-> [!IMPORTANT]
-> CODEPAGE is not a supported option on Linux.
-
-> [!NOTE]
-> We recommend that you specify a collation name for each column in a format file, except when you want the 65001 option to have priority over the collation/code page specification.
-
-|CODEPAGE value|Description|
-|--------------------|-----------------|
-|ACP|Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|
-|OEM (default)|Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|
-|RAW|No conversion occurs from one code page to another. This is the fastest option.|
-|*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **Important** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|
-
-ERRORFILE ='*file_name*'
-Specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."
+##### ERRORFILE
+`ERRORFILE` ='*file_name*' specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."
 
 The error file is created at the start of the command execution. An error will be raised if the file already exists. Additionally, a control file that has the extension .ERROR.txt is created. This file references each row in the error file and provides error diagnostics. After the errors have been corrected, the data can be loaded.
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the `error_file_path` can be in Azure blob storage.
 
-'errorfile_data_source_name'
+##### ERRORFILE_DATA_SOURCE_NAME
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+
+#### MAXERRORS
+`MAXERRORS` =*maximum_errors* specifies the maximum number of syntax errors or nonconforming rows, as defined in the format file, that can occur before OPENROWSET throws an exception. Until MAXERRORS is reached, OPENROWSET ignores each bad row, not loading it, and counts the bad row as one error.
+
+The default for *maximum_errors* is 10.
+
+> [!NOTE]
+> `MAX_ERRORS` does not apply to CHECK constraints, or to converting **money** and **bigint** data types.
+
+### BULK Data processing options
 
 FIRSTROW =*first_row*
 Specifies the number of the first row to load. The default is 1. This indicates the first row in the specified data file. The row numbers are determined by counting the row terminators. FIRSTROW is 1-based.
 
 LASTROW =*last_row*
 Specifies the number of the last row to load. The default is 0. This indicates the last row in the specified data file.
-
-MAXERRORS =*maximum_errors*
-Specifies the maximum number of syntax errors or nonconforming rows, as defined in the format file, that can occur before OPENROWSET throws an exception. Until MAXERRORS is reached, OPENROWSET ignores each bad row, not loading it, and counts the bad row as one error.
-
-The default for *maximum_errors* is 10.
-
-> [!NOTE]
-> MAX_ERRORS does not apply to CHECK constraints, or to converting **money** and **bigint** data types.
 
 ROWS_PER_BATCH =*rows_per_batch*
 Specifies the approximate number of rows of data in the data file. This value should be of the same order as the actual number of rows.
@@ -231,7 +223,23 @@ SELECT *
    FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
 ```
 
-### Input file format options
+#### BULK Input file format options
+
+CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }
+Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.
+
+> [!IMPORTANT]
+> CODEPAGE is not a supported option on Linux.
+
+> [!NOTE]
+> We recommend that you specify a collation name for each column in a format file, except when you want the 65001 option to have priority over the collation/code page specification.
+
+|CODEPAGE value|Description|
+|--------------------|-----------------|
+|ACP|Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|
+|OEM (default)|Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|
+|RAW|No conversion occurs from one code page to another. This is the fastest option.|
+|*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **Important** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|
 
 FORMAT **=** 'CSV'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.

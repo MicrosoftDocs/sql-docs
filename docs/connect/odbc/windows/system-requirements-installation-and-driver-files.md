@@ -1,7 +1,7 @@
 ---
 title: "System Requirements, Installation, and Driver Files | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2019"
+ms.date: "03/18/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -17,17 +17,22 @@ ms.author: genemi
 
 This article discusses the ODBC drivers that connect to SQL Server.
 
-## Driver versions
+## SQL version compatibility
 
-| Driver version | Description of support |
-| :------------- | :--------------------- |
-| ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supports connections to SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)], and [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. |
-| ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows | Can be installed on a computer that also has one or more versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. |
-| ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supports connections to SQL Server 2016, SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]. |
-| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supports SQL Server 2017 in addition to the above for 13. |
-| ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Supports the same database versions as 13.1. |
-| ODBC Driver 17 for SQL Server | Supports SQL Server 2019 starting with driver version 17.3. |
-| &nbsp; | &nbsp; |
+Compatibility indicates that a driver was tested for compatibility against existing releases of SQL at the time of the driver's release. SQL Server releases generally try to maintain backwards compatibility with existing client drivers. But new features in SQL Server releases may not be available with older client drivers.
+
+|Driver Version|Azure SQL Database|Azure SQL DW|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|-|-|-|-|-|-|-|-|-|-|-|-|
+|17.5|Y|Y|Y|Y|Y|Y|Y|Y| | | |
+|17.4|Y|Y|Y|Y|Y|Y|Y|Y| | | |
+|17.3|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.2|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|17.1|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|17.0|Y|Y|Y| |Y|Y|Y|Y|Y|Y| |
+|13.1| | | | |Y|Y|Y|Y|Y|Y| |
+|13  | | | | | |Y|Y|Y|Y|Y| |
+|11  | | | | | | |Y|Y|Y|Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ### Connection string details
 
@@ -35,33 +40,31 @@ The driver name that you specify in a connection string is `ODBC Driver 11 for S
 
 ## Supported operating systems
 
-You can run applications with the driver on the following Windows operating systems:  
+The following matrix indicates driver version support for Windows operating system versions:
 
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Vista SP2 &nbsp; _(ODBC Driver 11 only.)_
-- Windows 7
-- Windows 8
-- Windows 8.1
-- Windows 10
+|Driver version|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
+|-|-|-|-|-|-|-|-|-|-|
+|17.5|Y|Y|Y|Y| |Y|Y| | |
+|17.4|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.3|Y|Y|Y|Y|Y|Y|Y|Y| |
+|17.2| |Y|Y|Y|Y|Y|Y|Y| |
+|17.1| |Y|Y|Y|Y|Y|Y|Y| |
+|17.0| |Y|Y|Y|Y|Y|Y|Y| |
+|13.1| |Y|Y|Y|Y|Y|Y|Y| |
+|13  | | | |Y|Y| |Y|Y| |
+|11  | | | |Y|Y| | |Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## Installing Microsoft ODBC Driver for SQL Server
 
-The driver is installed when you run `msodbcsql.msi` from one of the following links:
-
-- [Download the Microsoft ODBC Driver 17 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=56567)
-- [Download the Microsoft ODBC Driver 13.1 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=53339)
-- [Download the Microsoft ODBC Driver 13 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=50420)
-- [Download the Microsoft ODBC Driver 11 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=36434)
+The driver is installed when you run `msodbcsql.msi` from one of the [Downloads for Windows](../download-odbc-driver-for-sql-server.md#download-for-windows).
 
 > [!NOTE]
 > For those who have Driver 17.1.0.1 or below installed, it is recommended that it be uninstalled manually prior to installing the newer version of the Driver.
 
 ### Side-by-side with Native Client
 
-The driver can be installed side-by-side with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.
+The driver can be installed side-by-side with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Major versions of the driver (11, 13, 17) can all be installed side-by-side with each other, as well.
 
 When you invoke `msodbcsql.msi`, only the client components are installed by default. The client components are files that support running an application that was developed using the driver. To install the SDK components, specify `ADDLOCAL=ALL` on the command line. Here is an example.
   

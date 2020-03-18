@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
-ms.custom: seodec18
+ms.custom: seodec18 
 ms.date: 03/18/2020
 ---
 
@@ -109,7 +109,7 @@ November 4, 2019 &nbsp; / &nbsp; version: 1.13.0
 | Change | Details |
 | :----- | :------ |
 | New SQL Server 2019 support | &bull; &nbsp; Deploy SQL Server 2019 big data cluster with BDC Deploy wizard <br/>&bull; &nbsp; Manage cluster health with controller dashboard <br/>&bull; &nbsp; Manage HDFS access control lists using Security ACLs Dialog <br/> &bull; &nbsp; Add mounts using HDFS Tiering Dialog <br/> &bull; &nbsp; Troubleshoot using built-in Jupyter Book, SQL Server 2019 guide <br/> &bull; &nbsp; Renamed to SQL vNext extension Data virtualization extension <br/> &bull; &nbsp; Added Teradata and Mongo support in External Table Wizard|
-| New notebook features | &bull; &nbsp; Announcing Powershell notebooks <br/> &bull; &nbsp; Announcing collapsible code cells <br/>&bull; &nbsp; Perf improvements in Notebooks <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) |
+| New notebook features | &bull; &nbsp; Announcing PowerShell notebooks <br/> &bull; &nbsp; Announcing collapsible code cells <br/>&bull; &nbsp; Perf improvements in Notebooks <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) |
 | Announcing Jupyter Books  | Jupyter Books are a collection of notebooks and markdown files organized in a table of contents. |
 | New SQL Server Deploy wizard  | Now includes support for deploying: <br/> &bull; &nbsp; SQL Server 2019 on Windows <br/> &bull; &nbsp; SQL Server 2017 on Windows <br/> &bull; &nbsp; SQL Server 2019 on Docker <br/> &bull; &nbsp; SQL Server 2017 on Docker |
 | Announcing GA of Schema Compare extension| &bull; &nbsp; SQLCMD mode <br/> &bull; &nbsp; Localization support <br/> &bull; &nbsp; Accessibility fixes <br/> &bull; &nbsp; Security bugs  |
@@ -150,7 +150,7 @@ October 2, 2019 &nbsp; / &nbsp; version: 1.12.0
 | :----- | :------ |
 | Release of Query History extension | The SQL History extension saves all past queries executed in an Azure Data Studio session and lists them in execution order. Users can see open the query, execute the query, delete the query, pause query history, or delete all query history entries. |
 | New Copy/Paste Results | We have added additional ways to copy/paste results from the results grid. |
-| Update to Powershell extension |  |
+| Update to PowerShell extension |  |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -376,8 +376,8 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 | Introducing Paste the Plan extension. | &nbsp; |
 | Introducing High Color queries extension, including SSMS editor theme. | &nbsp; |
 | Fixes in SQL Server Agent, Profiler, and Import extensions. | &nbsp; |
-| Fix .Net Core Socket KeepAlive issue causing dropped inactive connections on macOS. | &nbsp; |
-| Upgrade SQL Tools Service to .Net Core 2.2 Preview 3 (for eventual AAD support). | &nbsp; |
+| Fix .NET Core Socket KeepAlive issue causing dropped inactive connections on macOS. | &nbsp; |
+| Upgrade SQL Tools Service to .NET Core 2.2 Preview 3 (for eventual AAD support). | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### Bug Fixes, November 2018

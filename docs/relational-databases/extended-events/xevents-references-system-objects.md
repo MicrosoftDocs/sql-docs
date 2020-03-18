@@ -1,5 +1,6 @@
 ---
 title: "XEvents related system objects"
+description: These resources relate to extended events, including how system objects support them, how SQL Server uses them, and aspects particular to Azure SQL Database.
 ms.date: 03/24/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

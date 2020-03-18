@@ -47,6 +47,9 @@ USER_NAME ( [ id ] )
   
 ## Remarks  
  When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word NULL will return NULL. When USER_NAME is called without specifying an *id* after an EXECUTE AS statement, USER_NAME returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, USER_NAME returns the name of the Windows principal instead of the group.  
+ 
+> [!NOTE]
+> Although the USER_NAME function is supported on Azure SQL Database, using *Execute as* with USER_NAME is not supported on Azure SQL Database. 
   
 ## Examples  
   

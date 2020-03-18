@@ -50,9 +50,9 @@ SQLRETURN Init(
 - **PrivateLibraryPath:** Absolute path to the private external libraries directory for this user's isolation context.
 - **PrivateLibraryPathLength:** Length in bytes of the PrivateLibraryPath parameter.
 
-### InitSession
+### InitSession 
 
-Initialize per-session information.
+Initialize per-session information. 
 
 ```C++
 SQLRETURN InitSession(

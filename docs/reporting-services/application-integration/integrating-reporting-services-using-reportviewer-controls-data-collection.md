@@ -1,6 +1,6 @@
 ---
 title: Data collection in ReportViewer Control
-description: Anonymous usage data is collected by the control to better understand how customers use the product. Usage data enables future development to focus on improvements that are most relevant to customers.
+description: ReportViewer collects anonymous usage data to understand how customers use the product and focus development on improvements most relevant to customers.
 author: maggiesMSFT
 ms.author: maggies
 ms.custom: seo-lt-2019

@@ -2,8 +2,8 @@
 title: Deploy in Active Directory mode
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how to upgrade SQL Server Big Data Clusters in an Active Directory domain.
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
@@ -73,19 +73,19 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. Click **Add...** and add the **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** user
+1. Click **Add...** and add the **bdcDSA** user
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. Select the **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** user and clear all permissions, then click **Advanced**
+1. Select the **bdcDSA** user and clear all permissions, then click **Advanced**
 
 1. Click **Add**
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 
@@ -109,7 +109,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 - Click **Add**
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 
@@ -123,7 +123,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 - Click **Add**
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 
@@ -162,7 +162,7 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: list of IP addresses of domain controllers
+- `security.activeDirectory.dnsIpAddresses`: contains the list of domain’s DNS servers IP addresses. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`
 
@@ -170,16 +170,27 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.domainDnsName`: Name of your domain (e.g. `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: This parameter takes **one AD group**. Members of this group will get administrator permissions in the cluster. This means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller. **Please note that this group needs to exist in AD before deployment begins. Also note that this group can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or domain global. Members of this group get administrator permissions in the cluster. This means that they have `sysadmin` permissions in SQL Server, superuser permissions in HDFS, and administrators in controller. 
 
-- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+  >[!IMPORTANT]
+  >Create this group in AD before deployment begins. If the scope for this AD group is domain local deployment fails.
 
-- `security.activeDirectory.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
 
-- `security.activeDirectory.appReaders` **Optional parameter**: list of the AD groups who have permissions to run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+  >[!IMPORTANT]
+  >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
-**How to check AD group scope:**
-[Click here for instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) for checking the scope of an AD group, to determine if it is DomainLocal.
+- `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+
+  >[!IMPORTANT]
+  >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+
+- `security.activeDirectory.appReaders` **Optional parameter**: List of the AD groups who have permissions to run any application. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+
+  >[!IMPORTANT]
+  >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+
+[Check AD group scope](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), to determine if it is DomainLocal.
 
 If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration.
 
@@ -235,7 +246,7 @@ You can find an example script here for [deploying a SQL Server big data cluster
 
 You should now have set all the required parameters for a deployment of BDC with Active Directory integration.
 
-For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [official documentation](deployment-guidance.md).
+You can now deploy the BDC cluster integrated with Active Directory using the `azdata` command and the kubeadm-prod deployment profile. For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md).
 
 ## Verify reverse DNS entry for domain controller
 
@@ -310,3 +321,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Only one BDC per domain (Active Directory) is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
 
 - None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+
+- AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC, Enabling logins from other trusted domain is planned for a future release

@@ -2,7 +2,7 @@
 title: "Reorganize and Rebuild Indexes | Microsoft Docs"
 description:: This article describes why index fragmentation is a bad thing and how to fix it using T-SQL and SQL Server Management Studio.
 ms.custom: ""
-ms.date: "03/10/2020"
+ms.date: "03/18/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: carlrab
@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
+This article discusses what index defragmentation is and why it affects performance. This article also explains the difference between reorganizing an index vs. rebuilding an index. Finally, it describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 ## Index fragmentation overview
 
@@ -218,7 +218,7 @@ Requires `ALTER` permission on the table or view. User must be a member of at le
 > [!NOTE]
 > [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] cannot be used to compute fragmentation of columnstore indexes in SQL Server and cannot be used to compute fragmentation of any indexes in Azure SQL Database. Use the folowing [!INCLUDE[tsql](../../includes/tsql-md.md)] [example](#TsqlProcedureFrag).
 
-1. In Object Explorer, Expand the database that contains the table on which you want to check an index's fragmentation.
+1. In Object Explorer, expand the database that contains the table on which you want to check an index's fragmentation.
 2. Expand the **Tables** folder.
 3. Expand the table on which you want to check an index's fragmentation.
 4. Expand the **Indexes** folder.

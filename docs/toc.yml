@@ -223,6 +223,10 @@
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
+    - name: Troubleshoot
+      items:
+      - name: Active directory deployment
+        href: big-data-cluster/troubleshoot-active-directory.md
   - name: Reference
     items:
     - name: Deployment reference
@@ -706,7 +710,7 @@
           href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
         - name: View listener properties
           href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-      - name: Operation
+      - name: Operate
         items:
         - name: Add Database
           items:
@@ -750,6 +754,8 @@
           href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
         - name: View health with policies
           href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: Connect to listener
+          href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
     - name: Concepts
       items:
       - name: Configuration
@@ -788,12 +794,12 @@
           href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
       - name: Connectivity
         items:
-        - name: Client connection
+        - name: Listener
+          href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+        - name: Client connection types
           href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-        - name: Client connectivity
+        - name: Driver & client support
           href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-        - name: Listeners, clients, & failover
-          href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
       - name: Interoperability
         items:
         - name: Replication, CT, & CDC
@@ -4195,7 +4201,7 @@
       items:
       - name: SQL Server 2019
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-      - name: SQL Server 2017 & prior
+      - name: SQL Server 2016 & 2017
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
     - name: Security considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md

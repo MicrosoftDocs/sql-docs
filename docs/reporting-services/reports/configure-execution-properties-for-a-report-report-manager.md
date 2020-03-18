@@ -1,5 +1,6 @@
 ---
 title: "Configure Execution Properties for a Report - Reporting Services | Microsoft Docs"
+description: Learn how to set report processing options to specify when to retrieve report data to avoid the overhead of retrieving the same data each time a report is requested. 
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

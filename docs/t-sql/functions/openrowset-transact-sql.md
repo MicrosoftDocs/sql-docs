@@ -51,20 +51,24 @@ OPENROWSET
 } )
 
 <bulk_options> ::=
-   [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
+
    [ , DATASOURCE = 'data_source_name' ]
+
    [ , ERRORFILE = 'file_name' ]
    [ , ERRORFILE_DATASOURCE = 'data_source_name' ]
+   [ , MAXERRORS = maximum_errors ]
+
    [ , FIRSTROW = first_row ]
    [ , LASTROW = last_row ]
-   [ , MAXERRORS = maximum_errors ]
    [ , ROWS_PER_BATCH = rows_per_batch ]
    [ , ORDER ( { column [ ASC | DESC ] } [ ,...n ] ) [ UNIQUE ] ]
   
    -- bulk_options related to input file format
+   [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
    [ , FORMAT = 'CSV' ]
    [ , FIELDQUOTE = 'quote_characters']
    [ , FORMATFILE = 'format_file_path' ]
+   [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
 ```
 
 ## Arguments
@@ -140,7 +144,7 @@ The arguments of the BULK option allow for significant control over where to sta
 
 For information on preparing data for bulk import, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
-### '*data_file*'
+#### BULK '*data_file*'
 Is the full path of the data file whose data is to be copied into the target table.
 
 ```sql
@@ -168,7 +172,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the `erro
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-#### MAXERRORS
+##### MAXERRORS
 `MAXERRORS` =*maximum_errors* specifies the maximum number of syntax errors or nonconforming rows, as defined in the format file, that can occur before OPENROWSET throws an exception. Until MAXERRORS is reached, OPENROWSET ignores each bad row, not loading it, and counts the bad row as one error.
 
 The default for *maximum_errors* is 10.
@@ -176,22 +180,26 @@ The default for *maximum_errors* is 10.
 > [!NOTE]
 > `MAX_ERRORS` does not apply to CHECK constraints, or to converting **money** and **bigint** data types.
 
-### BULK Data processing options
+#### BULK Data processing options
 
-FIRSTROW =*first_row*
+##### FIRSTROW
+`FIRSTROW` =*first_row*
 Specifies the number of the first row to load. The default is 1. This indicates the first row in the specified data file. The row numbers are determined by counting the row terminators. FIRSTROW is 1-based.
 
-LASTROW =*last_row*
+##### LASTROW
+`LASTROW` =*last_row*
 Specifies the number of the last row to load. The default is 0. This indicates the last row in the specified data file.
 
-ROWS_PER_BATCH =*rows_per_batch*
+##### ROWS_PER_BATCH
+`ROWS_PER_BATCH` =*rows_per_batch*
 Specifies the approximate number of rows of data in the data file. This value should be of the same order as the actual number of rows.
 
-OPENROWSET always imports a data file as a single batch. However, if you specify *rows_per_batch* with a value > 0, the query processor uses the value of *rows_per_batch* as a hint for allocating resources in the query plan.
+`OPENROWSET` always imports a data file as a single batch. However, if you specify *rows_per_batch* with a value > 0, the query processor uses the value of *rows_per_batch* as a hint for allocating resources in the query plan.
 
 By default, ROWS_PER_BATCH is unknown. Specifying ROWS_PER_BATCH = 0 is the same as omitting ROWS_PER_BATCH.
 
-ORDER ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] )
+##### ORDER
+`ORDER` ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] )
 An optional hint that specifies how the data in the data file is sorted. By default, the bulk operation assumes the data file is unordered. Performance might improve if the order specified can be exploited by the query optimizer to generate a more efficient query plan. Examples for when specifying a sort can be beneficial include the following:
 
 - Inserting rows into a table that has a clustered index, where the rowset data is sorted on the clustered index key.
@@ -199,23 +207,23 @@ An optional hint that specifies how the data in the data file is sorted. By defa
 - Aggregating the rowset data by the sort columns.
 - Using the rowset as a source table in the FROM clause of a query, where the sort and join columns match.
 
-UNIQUE specifies that the data file does not have duplicate entries.
+##### UNIQUE
+`UNIQUE` specifies that the data file does not have duplicate entries.
 
 If the actual rows in the data file are not sorted according to the order that is specified, or if the UNIQUE hint is specified and duplicates keys are present, an error is returned.
 
 Column aliases are required when ORDER is used. The column alias list must reference the derived table that is being accessed by the BULK clause. The column names that are specified in the ORDER clause refer to this column alias list. Large value types (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml**) and large object (LOB) types (**text**, **ntext**, and **image**) columns cannot be specified.
 
-SINGLE_BLOB
+##### SINGLE_BLOB
 Returns the contents of *data_file* as a single-row, single-column rowset of type **varbinary(max)**.
 
 > [!IMPORTANT]
 > We recommend that you import XML data only using the SINGLE_BLOB option, rather than SINGLE_CLOB and SINGLE_NCLOB, because only SINGLE_BLOB supports all Windows encoding conversions.
 
-SINGLE_CLOB
-
+##### SINGLE_CLOB
 By reading *data_file* as ASCII, returns the contents as a single-row, single-column rowset of type **varchar(max)**, using the collation of the current database.
 
-SINGLE_NCLOB
+##### SINGLE_NCLOB
 By reading *data_file* as UNICODE, returns the contents as a single-row, single-column rowset of type **nvarchar(max)**, using the collation of the current database.
 
 ```sql
@@ -225,11 +233,12 @@ SELECT *
 
 #### BULK Input file format options
 
-CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }
+##### CODEPAGE
+`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }
 Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.
 
 > [!IMPORTANT]
-> CODEPAGE is not a supported option on Linux.
+> `CODEPAGE` is not a supported option on Linux.
 
 > [!NOTE]
 > We recommend that you specify a collation name for each column in a format file, except when you want the 65001 option to have priority over the collation/code page specification.
@@ -241,7 +250,8 @@ Specifies the code page of the data in the data file. CODEPAGE is relevant only 
 |RAW|No conversion occurs from one code page to another. This is the fastest option.|
 |*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **Important** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|
 
-FORMAT **=** 'CSV'
+##### FORMAT
+`FORMAT` **=** 'CSV'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
@@ -253,7 +263,8 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMAT='CSV') AS cars;
 ```
 
-FORMATFILE ='*format_file_path*'
+##### FORMATFILE
+`FORMATFILE` ='*format_file_path*'
 Specifies the full path of a format file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two types of format files: XML and non-XML.
 
 A format file is required to define column types in the result set. The only exception is when SINGLE_CLOB, SINGLE_BLOB, or SINGLE_NCLOB is specified; in which case, the format file is not required.
@@ -263,7 +274,8 @@ For information about format files, see [Use a Format File to Bulk Import Data &
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the format_file_path can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
-FIELDQUOTE **=** 'field_quote'
+##### FIELDQUOTE
+`FIELDQUOTE` **=** 'field_quote'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifies a character that will be used as the quote character in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 

@@ -2,7 +2,7 @@
 title: "Detecting and resolving fragmented indexes | Microsoft Docs"
 description: This article describes how index fragmentation occurs, detect how much fragmentation exists, and determine to best option to resolve index fragmentation using T-SQL and SQL Server Management Studio.
 ms.custom: ""
-ms.date: "03/10/2020"
+ms.date: "03/19/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: carlrab
@@ -372,7 +372,7 @@ After performing data loads, you can have multiple small rowgroups in the delta 
 
 ### <a name="Restrictions"></a> Limitations and restrictions
 
-Rowstore indexes with more than 128 extents are rebuilt in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the index are marked for deallocation, the data rows are copied and sorted, then moved to new allocation units created to store the rebuilt index. In the physical phase, the allocation units previously marked for deallocation are physically dropped in short transactions that happen in the background, and do not require many locks. For more information about extents, refer to the [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md).
+Rowstore indexes with more than 128 extents are rebuilt in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the index are marked for deallocation, the data rows are copied and sorted, then moved to new allocation units created to store the rebuilt index. In the physical phase, the allocation units previously marked for deallocation are physically dropped in short transactions that happen in the background, and do not require many locks. For more information about extents, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md).
 
 The `ALTER INDEX REORGANIZE` statement requires the data file containing the index to have space available, because the operation can only allocate temporary work pages on the same file, not in another file within the filegroup. So although the filegroup might have free pages available, the user can still encounter error 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
 

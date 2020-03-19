@@ -1,6 +1,6 @@
 ---
 title: "Detecting and resolving fragmented indexes | Microsoft Docs"
-description:: This article describes how index fragmentation occurs, detect how much fragmentation exists, and determine to best option to resolve index fragmentation using T-SQL and SQL Server Management Studio.
+description: This article describes how index fragmentation occurs, detect how much fragmentation exists, and determine to best option to resolve index fragmentation using T-SQL and SQL Server Management Studio.
 ms.custom: ""
 ms.date: "03/10/2020"
 ms.prod: sql
@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the amount of fragmentation that exists for an index, you can defragment an index by either reorganizing or rebuilding the index. Finally, it describes how to reorganize or rebuild a fragmented index in SQL Server by using SQL Server Management Studio or Transact-SQL.
+This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](), you can defragment an index by either [reorganizing]() or [rebuilding]() the index. Finally, it describes how to reorganize or rebuild a fragmented index in SQL Server by using SQL Server Management Studio or Transact-SQL.
 
 This article describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

@@ -35,7 +35,7 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 * You should have a tool for running T-SQL commands. 
 
-* We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
+  * You can use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), a free database tool that runs on Linux, Windows, and macOS.
 
 
 <a name="mro"></a>

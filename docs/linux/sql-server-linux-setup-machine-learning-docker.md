@@ -47,13 +47,13 @@ Complete the following steps to build the docker image:
 2. In the same directory, run the following command:
 
     ```bash
-       docker builds -t mssql-server-mlservices
+    docker builds -t mssql-server-mlservices
     ```
 
 3. Run the command:
 
     ```bash
-       docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
     ```
 
     Change `<your_sa_password>` in `SA_PASSWORD=<your_sa_password>` and change the `-v` path. 
@@ -61,7 +61,7 @@ Complete the following steps to build the docker image:
 4. Confirm by running the following command:
 
     ```bash
-       docker ps -a
+    docker ps -a
     ```
 
    > [!NOTE]
@@ -72,10 +72,10 @@ Complete the following steps to build the docker image:
 1. Set your environment variables before running the container. Set the PATH_TO_MSSQL environment variable to a host directory:
 
    ```bash
-    export MSSQL_PID='Developer'
-    export ACCEPT_EULA='Y'
-    export ACCEPT_EULA_ML='Y'
-    export PATH_TO_MSSQL='/home/mssql/'
+   export MSSQL_PID='Developer'
+   export ACCEPT_EULA='Y'
+   export ACCEPT_EULA_ML='Y'
+   export PATH_TO_MSSQL='/home/mssql/'
    ```
 
 2. Run the run.sh script:

@@ -86,13 +86,13 @@ Installation Options for Python and R:
 ### Full installation
 
 Includes:
-*  Open-Source Python
-*  Open-Source R
-*  Extensibility Framework
+*  Open-source Python
+*  Open-source R
+*  Extensibility framework
 *  Microsoft-openmpi
 *  Extensions (Python, R)
-*  Machine Learning Libraries
-*  Pre-Trained Models for Python and R
+*  Machine learning libraries
+*  Pre-Trained models for Python and R
 
 ```bash
 # Install as root or sudo

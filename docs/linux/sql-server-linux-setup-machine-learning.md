@@ -54,7 +54,9 @@ Choose from the following two approaches to install MRO:
 
 <a name="RHEL"></a>
 
-## Install on RedHat
+## Install on RHEL
+
+Follow the steps below to install SQL Server Machine Learning Services on Red Hat Enterprise Linux (RHEL).
 
 ### Install (MRO) on RHEL
 

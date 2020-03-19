@@ -92,7 +92,6 @@ Complete the following steps to build the docker image:
 3. To view your Docker containers, run the `docker ps` command:
 
    ```bash
-
    sudo docker ps -a
    ```
 
@@ -100,7 +99,6 @@ Complete the following steps to build the docker image:
    in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
 
    ```bash
-
    $ sudo docker ps -a
    ```
 

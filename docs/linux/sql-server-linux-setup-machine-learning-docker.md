@@ -27,6 +27,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 ## Clone the mssql-docker repository
 
 The following command clones the `mssql-docker` git repository to a local directory.
+
 1. Open a Bash terminal on Linux or Mac, or open a Windows Subsystem for Linux terminal on Windows.
 
 2. Create a directory to hold a local copy of the mssql-docker repository.
@@ -36,6 +37,7 @@ The following command clones the `mssql-docker` git repository to a local direct
     ```bash
     git clone https://github.com/microsoft/mssql-docker mssql-docker
     ```
+
 ## Build a SQL Server Linux container image
 
 Complete the following steps to build the docker image:
@@ -51,7 +53,7 @@ Complete the following steps to build the docker image:
 3. Run the command:
 
     ```bash
-       docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD="<your_sa_password>"  -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+       docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
     ```
 
     Change `<your_sa_password>` in `SA_PASSWORD=<your_sa_password>` and change the `-v` path. 
@@ -61,6 +63,7 @@ Complete the following steps to build the docker image:
     ```bash
        docker ps -a
     ```
+
    > [!NOTE]
    > To build the Docker image, you must install packages that are several GBs in size. The script may take some time to finish running, depending on network bandwidth.
 
@@ -108,10 +111,9 @@ Complete the following steps to build the docker image:
     941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
     ```
 
-[Run SQL Server container images with Docker](quickstart-install-connect-docker.md).
-
-
 ## Enable Machine Learning Services
+
+To enable Machine Learning Services, connect to your SQL Server instance and run the following T-SQL statement:
 
 ```sql
 EXEC sp_configure  'external scripts enabled', 1;
@@ -122,12 +124,10 @@ RECONFIGURE WITH OVERRIDE
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Tutorial: Run Python in T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [Tutorial: In-database analytics for Python developers](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
-
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).
++ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-ski-rental-linear-regression.md)
++ [Tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-clustering-model.md)
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](..\advanced-analytics\tutorials\quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](..\advanced-analytics\tutorials\sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Run R in T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
++ [Tutorial: In-database analytics for R developers](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)

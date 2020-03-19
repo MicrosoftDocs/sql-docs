@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#detecting-fragmentation), you can defragment an index by either [reorganizing](#reorganize-an-index) or [rebuilding](#rebuild-an-index) the index by running Transact-SQL commands in your tool or choice or by using SQL Server Management Studio.
+This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#fragmentation), you can defragment an index by either [reorganizing](#reorganize-an-index) or [rebuilding](#rebuild-an-index) the index by running Transact-SQL commands in your tool or choice or by using SQL Server Management Studio.
 
 ## Index fragmentation overview
 
@@ -168,7 +168,7 @@ object_id   TableName                   index_id    IndexName                   
 (1 row(s) affected)
 ```
 
-### <a name="SSMSProcedureFrag"></a> Check index fragmentation using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### <a name="SSMSProcedureFrag"></a> Check index fragmentation using SQL Server Management Studio
 
 > [!NOTE]
 > [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] cannot be used to compute fragmentation of columnstore indexes in SQL Server and cannot be used to compute fragmentation of any indexes in Azure SQL Database. Use the preceding [!INCLUDE[tsql](../../includes/tsql-md.md)] [example](#TsqlProcedureFrag) for these scenarios.

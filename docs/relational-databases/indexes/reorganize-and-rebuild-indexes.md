@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#fragmentation), you can defragment an index by either [reorganizing](#reorganize-an-index) or [rebuilding](#rebuild-an-index) the index by running Transact-SQL commands in your tool or choice or by using SQL Server Management Studio.
+This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#detecting-fragmentation), you can defragment an index by either [reorganizing](#reorganize-an-index) or [rebuilding](#rebuild-an-index) the index by running Transact-SQL commands in your tool or choice or by using SQL Server Management Studio.
 
 ## Index fragmentation overview
 
@@ -47,7 +47,7 @@ What is index fragmentation and why should I care about it:
 - The database engine automatically modifies indexes whenever insert, update, or delete operations are made to the underlying data. For example, the addition of rows in a table may cause existing pages in rowstore indexes to split to make room for the insertion of new key values. Over time these modifications can cause the information in the index to become scattered in the database (fragmented). Fragmentation exists when indexes have pages in which the logical ordering, based on the key value, does not match the physical ordering inside the data file.
 - Heavily fragmented indexes can degrade query performance because additional IO is required to locate data to which the index points. More IO causes your application to respond slowly, especially when scan operations are involved.
 
-## <a name="Fragmentation"></a> Detecting fragmentation
+## Detecting fragmentation
 
 The first step in deciding which index defragmentation method to use is to analyze the index to determine the degree of fragmentation. You detect fragmentation differently for rowstore indexes and columnstore indexes.
 
@@ -63,21 +63,18 @@ The result set returned by **sys.dm_db_index_physical_stats** includes the follo
 |**fragment_count**|The number of fragments (physically consecutive leaf pages) in the index.|
 |**avg_fragment_size_in_pages**|Average number of pages in one fragment in an index.|
 
-After the degree of fragmentation is known, use the following table to determine the best method to correct the fragmentation.
+After the degree of fragmentation is known, use the following table to determine the best method to correct the fragmentation: [INDEX REORGANIZE](#reorganize-an-index) or [INDEX](#rebuild-an-index).
 
 |**avg_fragmentation_in_percent** value|Corrective statement|
 |-----------------------------------------------|--------------------------|
 |> 5% and < = 30%|ALTER INDEX REORGANIZE|
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
-<sup>1</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online. For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
+<sup>1</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online. For more information, see [INDEX](#rebuild-an-index) and [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
 These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment. For example, if a given index is used mainly for scan operations, removing fragmentation can improve performance of these operations. The performance benefit is less noticeable for indexes that are used primarily for seek operations. Similarly, removing fragmentation in a heap (a table with no clustered index) is especially useful for nonclustered index scan operations, but has little effect in lookup operations.
 
-Very low levels of fragmentation (less than 5 percent) should typically not be addressed by either of these commands, because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the CPU cost incurred to reorganize or rebuild the index.
-
-> [!NOTE]
-> Rebuilding or reorganizing small rowstore indexes often does not reduce fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it.
+Indexes with fragmentation or less than 5 percent do not need to be defragmented because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the CPU cost incurred to reorganize or rebuild the index. Also, rebuilding or reorganizing small rowstore indexes generally does not reduce actually fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it. See also [Considerations specific to rebuilding rowstore indexes](#considerations-specific-to-rebuilding-rowstore-indexes).
 
 ### Detecting fragmentation of columnstore indexes
 
@@ -168,7 +165,7 @@ object_id   TableName                   index_id    IndexName                   
 (1 row(s) affected)
 ```
 
-### <a name="SSMSProcedureFrag"></a> Check index fragmentation using SQL Server Management Studio
+### Check index fragmentation using SQL Server Management Studio
 
 > [!NOTE]
 > [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] cannot be used to compute fragmentation of columnstore indexes in SQL Server and cannot be used to compute fragmentation of any indexes in Azure SQL Database. Use the preceding [!INCLUDE[tsql](../../includes/tsql-md.md)] [example](#TsqlProcedureFrag) for these scenarios.
@@ -198,7 +195,7 @@ The following information is available on the **Fragmentation** page:
 |**Partition ID**|The partition ID of the b-tree containing the index.|
 |**Version ghost rows**|The number of ghost records that are being retained due to an outstanding snapshot isolation transaction.|
 
-## Defragmenting a fragmented index
+## Defragmenting indexes by rebuilding or reorganizing the index
 
 You defragment a fragmented index by using one of the following methods:
 
@@ -320,7 +317,7 @@ For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/state
 
 Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
 
-### Considerations specific to rebuilding rowstore indexes
+## Considerations specific to rebuilding rowstore indexes
 
 Rebuilding a clustered index automatically rebuilds any nonclustered index that reference the clustering key, if the physical or logical identifiers contained in the nonclustered index records need to change.
 
@@ -343,7 +340,7 @@ The following scenarios do not require all rowstore nonclustered indexes to be a
 
 When `ALL` is specified with the `ALTER INDEX` statement, relational indexes, both clustered and nonclustered, and XML indexes on the table are reorganized.
 
-### Considerations specific to rebuilding a columnstore index
+## Considerations specific to rebuilding a columnstore index
 
 When rebuilding a columnstore index, the database engine reads all data from the original columnstore index, including the delta store. It combines the data into new rowgroups, and compresses the rowgroups into the columnstore. The database engine defragments the columnstore by physically deleting rows that have been logically deleted from the table. The deleted bytes are reclaimed on the disk.
 
@@ -360,7 +357,7 @@ Rebuilding a partition defragments the partition and reduces disk storage. Rebui
 
 Rebuilding a partition after loading date ensures all data is stored in the columnstore. When concurrent processes each load less than 100,000 rows into the same partition at the same time, the partition can end up with multiple delta stores. Rebuilding moves all delta store rows into the columnstore.
 
-### Considerations specific to reorganizing a columnstore index
+## Considerations specific to reorganizing a columnstore index
 
 When reorganizing a columnstore index, the database engine compresses each CLOSED delta rowgroup into the columnstore as a compressed rowgroup. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in Azure SQL Database, the `REORGANIZE` command performs the following additional defragmentation optimizations online:
 
@@ -370,7 +367,7 @@ When reorganizing a columnstore index, the database engine compresses each CLOSE
 
 After performing data loads, you can have multiple small rowgroups in the delta store. You can use `ALTER INDEX REORGANIZE` to force all of the rowgroups into the columnstore, and then to combine the rowgroups into fewer rowgroups with more rows. The reorganize operation will also remove rows that have been deleted from the columnstore.
 
-### <a name="Restrictions"></a> Limitations and restrictions
+## <a name="Restrictions"></a> Limitations and restrictions
 
 Rowstore indexes with more than 128 extents are rebuilt in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the index are marked for deallocation, the data rows are copied and sorted, then moved to new allocation units created to store the rebuilt index. In the physical phase, the allocation units previously marked for deallocation are physically dropped in short transactions that happen in the background, and do not require many locks. For more information about extents, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md).
 

@@ -1,20 +1,35 @@
 ---
 title: Release notes
-titleSuffix: Azure Data Studio
-description: 'Azure Data Studio release notes'
+description: Azure Data Studio release notes
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
-ms.custom: "seodec18"
-ms.date: 02/19/2020
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
+ms.custom: seodec18 
+ms.date: 03/18/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## March 2020
+
+March 18, 2020 &nbsp; / &nbsp; version: 1.16.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Added charting support in SQL Notebooks | When running a SQL query in a code cell, users can now create and save charts. |
+| Added Create Jupyter Book experience | Users can now create their own Jupyter Books using a notebook. |
+| Added AAD support for Postgres extension | |
+| Fixed many accessibility bugs | [List of accessibility bugs](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| VS Code merge to 1.42 | This release includes updates to VS Code from the 3 previous VS Code releases. [Read their release notes](https://code.visualstudio.com/updates/v1_42) to learn more. |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## February (hotfix)
 
@@ -44,6 +59,7 @@ February 13, 2020 &nbsp; / &nbsp; version: 1.15.0
 | &nbsp; | &nbsp; |
 
 ### Known Issue
+
 - Users on macOS Catalina will need to right-click Azure Data Studio and then click open.
 
 ## December 2019 (hotfix)
@@ -93,7 +109,7 @@ November 4, 2019 &nbsp; / &nbsp; version: 1.13.0
 | Change | Details |
 | :----- | :------ |
 | New SQL Server 2019 support | &bull; &nbsp; Deploy SQL Server 2019 big data cluster with BDC Deploy wizard <br/>&bull; &nbsp; Manage cluster health with controller dashboard <br/>&bull; &nbsp; Manage HDFS access control lists using Security ACLs Dialog <br/> &bull; &nbsp; Add mounts using HDFS Tiering Dialog <br/> &bull; &nbsp; Troubleshoot using built-in Jupyter Book, SQL Server 2019 guide <br/> &bull; &nbsp; Renamed to SQL vNext extension Data virtualization extension <br/> &bull; &nbsp; Added Teradata and Mongo support in External Table Wizard|
-| New notebook features | &bull; &nbsp; Announcing Powershell notebooks <br/> &bull; &nbsp; Announcing collapsible code cells <br/>&bull; &nbsp; Perf improvements in Notebooks <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) |
+| New notebook features | &bull; &nbsp; Announcing PowerShell notebooks <br/> &bull; &nbsp; Announcing collapsible code cells <br/>&bull; &nbsp; Perf improvements in Notebooks <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) |
 | Announcing Jupyter Books  | Jupyter Books are a collection of notebooks and markdown files organized in a table of contents. |
 | New SQL Server Deploy wizard  | Now includes support for deploying: <br/> &bull; &nbsp; SQL Server 2019 on Windows <br/> &bull; &nbsp; SQL Server 2017 on Windows <br/> &bull; &nbsp; SQL Server 2019 on Docker <br/> &bull; &nbsp; SQL Server 2017 on Docker |
 | Announcing GA of Schema Compare extension| &bull; &nbsp; SQLCMD mode <br/> &bull; &nbsp; Localization support <br/> &bull; &nbsp; Accessibility fixes <br/> &bull; &nbsp; Security bugs  |
@@ -134,11 +150,12 @@ October 2, 2019 &nbsp; / &nbsp; version: 1.12.0
 | :----- | :------ |
 | Release of Query History extension | The SQL History extension saves all past queries executed in an Azure Data Studio session and lists them in execution order. Users can see open the query, execute the query, delete the query, pause query history, or delete all query history entries. |
 | New Copy/Paste Results | We have added additional ways to copy/paste results from the results grid. |
-| Update to Powershell extension |  |
+| Update to PowerShell extension |  |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
 | &nbsp; | &nbsp; |
 
 ### Known Issues
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
@@ -158,6 +175,7 @@ September 10, 2019 &nbsp; / &nbsp; version: 1.11.0
 | &nbsp; | &nbsp; |
 
 ### Known Issues
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
@@ -196,10 +214,9 @@ July 11, 2019 &nbsp; / &nbsp; version: 1.9.0
 | Resolved bugs and issues | In previous releases of Azure Data Studio, if a user database was selected when connecting from the Connection dialog, the resulting Object Explorer entry was scoped entirely to that single database. Beginning in this release, that behavior is being changed so that server level properties are also shown in the object explorer. <br/> For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
 
-
 ## June 2019
 
-June 6, 2019 &nbsp; / &nbsp; version: 1.8.0 
+June 6, 2019 &nbsp; / &nbsp; version: 1.8.0
 
 &nbsp;
 
@@ -215,9 +232,10 @@ June 6, 2019 &nbsp; / &nbsp; version: 1.8.0
 | &nbsp; | &nbsp; |
 
 ### Known Issues
+
 - Database Administration Tool Extensions for Windows
-    - Can’t launch properties from disconnected server node
-    - Can’t launch properties for Azure servers
+    - Can't launch properties from disconnected server node
+    - Can't launch properties for Azure servers
     - Not all objects have property dialogs
     - Dialogs take a long time to start up
     - Errors launching servers with some types of connections (such as AAD)
@@ -251,7 +269,7 @@ April 18, 2019 &nbsp; / &nbsp; version: 1.6.0
 | :----- | :------ |
 | Renamed **Servers** tab to **Connections** | |
 | Moved Azure Resource Explorer as an Azure viewlet under Connections | Users can now view their Azure SQL instances through Azure viewlet in the Connections view and expand to view objects under each server or database.|
-| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click auto-resize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to “select all” functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in ADS when ADS is started again |
+| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click auto-resize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to "select all" functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in ADS when ADS is started again |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -263,7 +281,7 @@ March 22, 2019 &nbsp; / &nbsp; version: 1.5.2 &nbsp; / &nbsp; Hotfix release
 
 | Change | Details |
 | :----- | :------ |
-| Fixed a few issues discovered in 1.5.1. | See [March Hotfix Release, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Fixed issue where user could not close notebook opened from the “Open Notebook” task in the Dashboard <br/>&bull; &nbsp; Fixed issue where Notebook JSON has extra } after save <br/>&bull; &nbsp; Fixed issue where notebook grids were not responding to theme changes <br/>&bull; &nbsp; Fixed issue where full notebook path was shown in the tab header. Now only the filename is shown. |
+| Fixed a few issues discovered in 1.5.1. | See [March Hotfix Release, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Fixed issue where user could not close notebook opened from the "Open Notebook" task in the Dashboard <br/>&bull; &nbsp; Fixed issue where Notebook JSON has extra } after save <br/>&bull; &nbsp; Fixed issue where notebook grids were not responding to theme changes <br/>&bull; &nbsp; Fixed issue where full notebook path was shown in the tab header. Now only the filename is shown. |
 | &nbsp; | &nbsp; |
 
 ## March 2019
@@ -297,7 +315,7 @@ March 18, 2019 &nbsp; / &nbsp; version: 1.5.1
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Dacpac Extract crashes SqlToolsService if invalid version is used <br/>
 **Workaround:** Restart Azure Data Studio and ensure correct version is used.
 - New Notebook and Open Notebook icons are lost <br/>
-**Workaround:** The legacy connection type is deprecated. We recommend connecting to the SQL Server endpoint and you’ll get all the actions (New Notebook, Spark Job) as expected. 
+**Workaround:** The legacy connection type is deprecated. We recommend connecting to the SQL Server endpoint and you'll get all the actions (New Notebook, Spark Job) as expected. 
 
 ## February 2019
 
@@ -358,8 +376,8 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 | Introducing Paste the Plan extension. | &nbsp; |
 | Introducing High Color queries extension, including SSMS editor theme. | &nbsp; |
 | Fixes in SQL Server Agent, Profiler, and Import extensions. | &nbsp; |
-| Fix .Net Core Socket KeepAlive issue causing dropped inactive connections on macOS. | &nbsp; |
-| Upgrade SQL Tools Service to .Net Core 2.2 Preview 3 (for eventual AAD support). | &nbsp; |
+| Fix .NET Core Socket KeepAlive issue causing dropped inactive connections on macOS. | &nbsp; |
+| Upgrade SQL Tools Service to .NET Core 2.2 Preview 3 (for eventual AAD support). | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### Bug Fixes, November 2018

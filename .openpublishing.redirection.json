@@ -253,7 +253,7 @@
     {
       "source_path": "docs/linux/sql-server-setup-machine-learning-docker.md",
       "redirect_url": "/docs/linux/sql-server-linux-setup-machine-docker",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/toc/redirectfrom-reference-10.md",

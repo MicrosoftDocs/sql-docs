@@ -130,5 +130,5 @@ To view examples of machine learning that are based on real-world scenarios, see
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
-+ [Tutorial: In-database analytics for R developers](..\advanced-analytics\tutorials\python-clustering-model.md)
++ [Tutorial: Run R in T-SQL](..\advanced-analytics\tutorials\quickstart-r-create-script.md)
++ [Tutorial: In-database analytics for R developers](..\advanced-analytics\tutorials\sqldev-in-database-r-for-sql-developers.md)

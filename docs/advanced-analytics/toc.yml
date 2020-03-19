@@ -30,7 +30,7 @@
   - name: Install pre-trained models
     href: ../advanced-analytics/install/sql-pretrained-models-install.md
   - name: Install SQL Server Machine Learning Services on Docker
-    href: linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+    href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
   - name: Offline install (no internet)
     items:
     - name: Install without internet access

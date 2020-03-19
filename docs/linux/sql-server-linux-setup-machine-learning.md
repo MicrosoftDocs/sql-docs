@@ -85,7 +85,7 @@ Installation Options for Python and R:
 > [!Tip]
 > If possible, run `yum clean all` to refresh packages on the system prior to installation.
 
-### Full installation
+### Full Installation
 
 Includes:
 *  Open-source Python
@@ -104,15 +104,15 @@ sudo yum install mssql-mlservices-mlm-py-9.4.7*
 sudo yum install mssql-mlservices-mlm-r-9.4.7*
 ```
 
-### Minimum installation
+### Minimum Installation
 
 Includes:
-*  open-source Python
-*  open-source R
-*  extensibility framework
-*  microsoft-openmpi
-*  core Revo* libraries
-*  machine learning libraries
+*  Open-source Python
+*  Open-source R
+*  Extensibility framework
+*  Microsoft-openmpi
+*  Core Revo* libraries
+*  Machine learning libraries
 
 ```bash
 # Install as root or sudo
@@ -154,17 +154,17 @@ Installation Options for Python and R:
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. 
 
-### Full installation 
+### Full Installation 
 
 Includes:
-*  open-source Python
-*  open-source R
-*  extensibility framework
-*  microsoft-openmpi
+*  Open-source Python
+*  Open-source R
+*  Extensibility framework
+*  Microsoft-openmpi
 *  Python extensions
 *  R extensions
-*  machine learning libraries
-*  pre-trained models for Python and R
+*  Machine learning libraries
+*  Pre-trained models for Python and R
 
 ```bash
 # Install as root or sudo
@@ -174,15 +174,15 @@ sudo apt-get install mssql-mlservices-mlm-py
 sudo apt-get install mssql-mlservices-mlm-r 
 ```
 
-### Minimum installation 
+### Minimum Installation 
 
 Includes:
-*  open-source Python
-*  open-source R
-*  extensibility framework
-*  microsoft-openmpi
-*  core Revo* libraries
-*  machine learning libraries
+*  Open-source Python
+*  Open-source R
+*  Extensibility framework
+*  Microsoft-openmpi
+*  Core Revo* libraries
+*  Machine learning libraries
 
 ```bash
 # Install as root or sudo
@@ -216,16 +216,16 @@ Installation Options for Python and R:
 *  The *full installation* provides all available features the including pre-trained machine learning models.
 *  The *minimal installation* excludes the models but still has all of the functionality.
 
-### Full installation 
+### Full Installation 
 
 Includes:
-*  open-source Python
-*  open-source R
-*  extensibility framework
-*  microsoft-openmpi
-*  extensions for Python and R
-*  machine learning libraries
-*  pre-trained models for Python and R
+*  Open-source Python
+*  Open-source R
+*  Extensibility framework
+*  Microsoft-openmpi
+*  Extensions for Python and R
+*  Machine learning libraries
+*  Pre-trained models for Python and R
 
 ```bash
 # Install as root or sudo
@@ -235,15 +235,15 @@ sudo zypper install mssql-mlservices-mlm-py-9.4.7*
 sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
-### Minimum installation 
+### Minimum Installation 
 
 Includes:
-*  open-source Python
-*  open-source R
-*  extensibility framework
-*  microsoft-openmpi
-*  core Revo* libraries
-*  machine learning libraries 
+*  Open-source Python
+*  Open-source R
+*  Extensibility framework
+*  Microsoft-openmpi
+*  Core Revo* libraries
+*  Machine learning libraries 
 
 ```bash
 # Install as root or sudo
@@ -301,7 +301,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 6. Restart the Launchpad service again.
 
-## Verify installation
+## Verify Installation
 
 R libraries (MicrosoftML, RevoScaleR, and others) can be found at `/opt/mssql/mlservices/libraries/RServer`.
 
@@ -336,7 +336,7 @@ To validate installation:
 
 <a name="install-all"></a>
 
-## Unattended installation
+## Unattended Installation
 
 Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) for the Database Engine, add the packages for mssql-mlservices and EULAs.
 
@@ -348,7 +348,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 The complete EULA is documented at [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-## Offline installation
+## Offline Installation
 
 Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for steps on installing the packages. Find your download site, and then download specific packages using the package list below.
 
@@ -356,7 +356,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 > Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
 
  
-### Download site
+### Download Site
 
 Download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for Python and R are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
@@ -383,7 +383,7 @@ Download packages from [https://packages.microsoft.com/](https://packages.micros
 | microsoft-r-open packages | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 
-## Package list
+## Package List
 
 Available installation Packages:
 
@@ -422,7 +422,7 @@ mssql-mlservices-packages-py-9.4.7.64
 mssql-mlservices-mlm-py-9.4.7.64
 ```
 
-## Next steps
+## Next Steps
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
@@ -433,5 +433,3 @@ Python developers can learn how to use Python with SQL Server by following these
 
 + [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
 + [Tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-clustering-model.md)
-
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).

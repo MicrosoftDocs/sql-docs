@@ -431,7 +431,7 @@ R developers can get started with some simple examples, and learn the basics of 
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Tutorial: Run R in T-SQL](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
++ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
 + [Tutorial: In-database analytics for Python developers](../advanced-analytics/tutorials/python-clustering-model.md)
 
 To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).

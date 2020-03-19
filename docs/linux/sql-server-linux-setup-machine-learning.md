@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 This article guides you in the installation of [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
->[!NOTE]
+> [!NOTE]
 > Machine Learning Services is installed by default on SQL Server Big Data Clusters. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md)
 
 ## Pre-install checklist

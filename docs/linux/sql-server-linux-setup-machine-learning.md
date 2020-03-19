@@ -18,12 +18,12 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 This article guides you in the installation of [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
->[!NOTE]
+> [!NOTE]
 > Machine Learning Services is installed by default on SQL Server Big Data Clusters. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md)
 
 ## Pre-install checklist
 
-[Install SQL Server on Linux](sql-server-linux-setup.md) and verify install.
+* [Install SQL Server on Linux](sql-server-linux-setup.md) and verify the installation.
 
 * Check the SQL Server Linux repositories for the Python and R extensions. 
   If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
@@ -35,7 +35,7 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 * You should have a tool for running T-SQL commands. 
 
-* We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
+  * You can use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), a free database tool that runs on Linux, Windows, and macOS.
 
 
 <a name="mro"></a>
@@ -54,7 +54,9 @@ Choose from the following two approaches to install MRO:
 
 <a name="RHEL"></a>
 
-## Install on RedHat
+## Install on RHEL
+
+Follow the steps below to install SQL Server Machine Learning Services on Red Hat Enterprise Linux (RHEL).
 
 ### Install (MRO) on RHEL
 
@@ -64,7 +66,6 @@ Choose from the following two approaches to install MRO:
 The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-
 
 # Set the location of the package repo at the "prod" directory
 # The following command is for version 7.x
@@ -84,16 +85,16 @@ Installation Options for Python and R:
 > [!Tip]
 > If possible, run `yum clean all` to refresh packages on the system prior to installation.
 
-### Example 1 - Full installation
+### Full installation
 
 Includes:
-*  Open-Source Python
-*  Open-Source R
-*  Extensibility Framework
+*  Open-source Python
+*  Open-source R
+*  Extensibility framework
 *  Microsoft-openmpi
 *  Extensions (Python, R)
-*  Machine Learning Libraries
-*  Pre-Trained Models for Python and R
+*  Machine learning libraries
+*  Pre-Trained models for Python and R
 
 ```bash
 # Install as root or sudo
@@ -103,7 +104,7 @@ sudo yum install mssql-mlservices-mlm-py-9.4.7*
 sudo yum install mssql-mlservices-mlm-r-9.4.7*
 ```
 
-### Example 2 - Minimum installation
+### Minimum installation
 
 Includes:
 *  open-source Python
@@ -153,7 +154,7 @@ Installation Options for Python and R:
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. 
 
-### Example 1 -  Full installation 
+### Full installation 
 
 Includes:
 *  open-source Python
@@ -173,7 +174,7 @@ sudo apt-get install mssql-mlservices-mlm-py
 sudo apt-get install mssql-mlservices-mlm-r 
 ```
 
-### Example 2 - Minimum installation 
+### Minimum installation 
 
 Includes:
 *  open-source Python
@@ -215,7 +216,7 @@ Installation Options for Python and R:
 *  The *full installation* provides all available features the including pre-trained machine learning models.
 *  The *minimal installation* excludes the models but still has all of the functionality.
 
-### Example 1 -  Full installation 
+### Full installation 
 
 Includes:
 *  open-source Python
@@ -234,7 +235,7 @@ sudo zypper install mssql-mlservices-mlm-py-9.4.7*
 sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
-### Example 2 - Minimum installation 
+### Minimum installation 
 
 Includes:
 *  open-source Python
@@ -269,9 +270,9 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
    # Use set + EULA 
    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
    ```
-3. Setup detects the mssql-mlservices packages and prompts for EULA acceptance (if not previously accepted) when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
+   Setup detects the mssql-mlservices packages and prompts for EULA acceptance (if not previously accepted) when `mssql-conf setup` is     run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-   conf.md#mlservices-eula).
 
-4. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using the mssql-conf tool. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using the mssql-conf tool. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -279,25 +280,26 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-5. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+4. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
    + Edit or create a file "named.bash_profile" in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
    + Execute this file by typing "source .bash_profile" at a bash command prompt.
 
-6. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A notification message is displayed when an extensibility-related setting is modified.  
+5. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A  
+   notification message is displayed when an extensibility-related setting is modified.  
 
    ```bash
    systemctl restart mssql-launchpadd
 
    systemctl restart mssql-server.service
    ```
-   ```bash
+   ```sql
    EXEC sp_configure 'external scripts enabled', 1 
    RECONFIGURE WITH OVERRIDE 
    ```
 
-7. Restart the Launchpad service again.
+6. Restart the Launchpad service again.
 
 ## Verify installation
 
@@ -307,30 +309,30 @@ Python libraries (microsoftml and revoscalepy) can be found at `/opt/mssql/mlser
 
 To validate installation:
 
-- Run a T-SQL script that executes a system stored procedure invoking Python or R using a query tool. 
+* Run a T-SQL script that executes a system stored procedure invoking Python or R using a query tool. 
 
-```
-EXEC sp_execute_external_script   
-@language =N'R', 
-@script=N' 
-OutputDataSet <- InputDataSet', 
-@input_data_1 =N'SELECT 1 AS hello' 
-WITH RESULT SETS (([hello] int not null)); 
-GO 
-```
+  ```sql
+  EXEC sp_execute_external_script   
+  @language =N'R', 
+  @script=N' 
+  OutputDataSet <- InputDataSet', 
+  @input_data_1 =N'SELECT 1 AS hello' 
+  WITH RESULT SETS (([hello] int not null)); 
+  GO 
+  ```
  
-Execute the following SQL command to test Python execution in SQL Server. 
+* Execute the following SQL command to test Python execution in SQL Server. 
  
-```python
-EXEC sp_execute_external_script  
-@language =N'Python', 
-@script=N' 
-OutputDataSet = InputDataSet; 
-', 
-@input_data_1 =N'SELECT 1 AS hello' 
-WITH RESULT SETS (([hello] int not null)); 
-GO 
-```
+  ```sql
+  EXEC sp_execute_external_script  
+  @language =N'Python', 
+  @script=N' 
+  OutputDataSet = InputDataSet; 
+  ', 
+  @input_data_1 =N'SELECT 1 AS hello' 
+  WITH RESULT SETS (([hello] int not null)); 
+  GO 
+  ```
 
 <a name="install-all"></a>
 
@@ -353,7 +355,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 > [!Tip]
 > Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
 
-
+ 
 ### Download site
 
 Download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for Python and R are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
@@ -429,7 +431,7 @@ R developers can get started with some simple examples, and learn the basics of 
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Tutorial: Run Python in T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [Tutorial: In-database analytics for Python developers](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
++ [Tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-clustering-model.md)
 
 To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).

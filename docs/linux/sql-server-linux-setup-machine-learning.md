@@ -23,7 +23,7 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 ## Pre-install checklist
 
-[Install SQL Server on Linux](sql-server-linux-setup.md) and verify install.
+* [Install SQL Server on Linux](sql-server-linux-setup.md) and verify the installation.
 
 * Check the SQL Server Linux repositories for the Python and R extensions. 
   If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.

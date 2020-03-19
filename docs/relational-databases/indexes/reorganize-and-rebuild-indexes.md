@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](), you can defragment an index by either [reorganizing]() or [rebuilding]() the index. Finally, it describes how to reorganize or rebuild a fragmented index in SQL Server by using SQL Server Management Studio or Transact-SQL.
+This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#detecting-fragmentation), you can defragment an index by either [reorganizing](#reorganize-an-index) or [rebuilding](#rebuild-an-index) the index by running Transact-SQL commands in your tool or choice or by using SQL Server Management Studio.
 
 ## Index fragmentation overview
 
@@ -49,9 +49,9 @@ What is index fragmentation and why should I care about it:
 
 ## <a name="Fragmentation"></a> Detecting fragmentation
 
-The first step in deciding which index defragmentation method to use is to analyze the index to determine the degree of fragmentation.
+The first step in deciding which index defragmentation method to use is to analyze the index to determine the degree of fragmentation. You detect fragmentation differently for rowstore indexes and columnstore indexes.
 
-### Detecting fragmentation on rowstore indexes
+### Detecting fragmentation of rowstore indexes
 
 By using [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), you can detect fragmentation in a specific index, all indexes on a table or indexed view, all indexes in a database, or all indexes in all databases. For partitioned indexes, **sys.dm_db_index_physical_stats** also provides fragmentation information for each partition.
 
@@ -79,7 +79,7 @@ Very low levels of fragmentation (less than 5 percent) should typically not be a
 > [!NOTE]
 > Rebuilding or reorganizing small rowstore indexes often does not reduce fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it.
 
-### Detecting fragmentation on columnstore indexes
+### Detecting fragmentation of columnstore indexes
 
 By using [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), you can determine the percentage of deleted rows in an index, which is a good measure for the fragmentation in a rowgroup in a columnstore index. Use this information to compute the fragmentation in a specific index, all indexes on a table, all indexes in a database, or all indexes in all databases.
 
@@ -103,9 +103,7 @@ After the degree of index fragmentation is known, use the following table to det
 |> = 20%|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|ALTER INDEX REBUILD|
 |> = 20%|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|ALTER INDEX REORGANIZE|
 
-### <a name="TsqlProcedureFrag"></a> Check index fragmentation using [!INCLUDE[tsql](../../includes/tsql-md.md)]
-
-#### To check the fragmentation of a rowstore index
+### To check the fragmentation of a rowstore index using [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 The following example finds the average fragmentation percentage of all indexes in the `HumanResources.Employee` table in the `AdventureWorks2016` database.
 
@@ -141,7 +139,7 @@ object_id   TableName    index_id    IndexName                                  
 
 For more information, see [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
-#### To check the fragmentation of a columnstore index
+### To check the fragmentation of a columnstore index using [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 The following example finds the average fragmentation percentage of all indexes in the `dbo.FactResellerSalesXL_CCI` table in the `AdventureWorksDW2016` database.
 

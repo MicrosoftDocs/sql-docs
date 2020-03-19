@@ -1,6 +1,6 @@
 ---
 title: Use SSMS to Manage SQL Server on Linux
-description: 
+description: This article introduces SQL Server Management Studio, an integrated environment to access, configure, manage, administer, and develop components of SQL Server.
 author: VanMSFT 
 ms.author: vanto
 ms.date: 05/21/2018

@@ -110,9 +110,8 @@ Complete the following steps to build the docker image:
 
 [Run SQL Server container images with Docker](quickstart-install-connect-docker.md).
 
-The following steps use sql to connect to SQL Server instance.
 
-## Connect to Linux SQL Server in the container
+## Enable Machine Learning Services
 
 ```sql
 EXEC sp_configure  'external scripts enabled', 1;

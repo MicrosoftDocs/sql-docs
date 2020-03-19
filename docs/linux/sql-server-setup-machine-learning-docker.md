@@ -19,7 +19,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 ## Prerequisites
 
 - Git command-line interface.
-- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/install/).
+- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/install/).
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Clone the mssql-docker repository

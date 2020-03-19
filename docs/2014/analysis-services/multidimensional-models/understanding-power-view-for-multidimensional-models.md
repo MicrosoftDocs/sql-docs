@@ -219,7 +219,7 @@ manager: craigg
   
  The return CSDL out document represents the model as a namespace, containing entities, associations, and properties.  
   
- For more detailed information about CSDLBI annotations for tabular models, see [Technical Reference for BI Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) on MSDN, and [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ For more detailed information about CSDLBI annotations for tabular models, see [Technical Reference for BI Annotations to CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl) on MSDN, and [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## Client Help on Office.com  
  The following articles are provided on Office.com to help users learn about how Multidimensional Model objects appear in Power View and how to create a sample report:  

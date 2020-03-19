@@ -39,8 +39,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](), you can defragment an index by either [reorganizing]() or [rebuilding]() the index. Finally, it describes how to reorganize or rebuild a fragmented index in SQL Server by using SQL Server Management Studio or Transact-SQL.
 
-This article describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
-
 ## Index fragmentation overview
 
 What is index fragmentation and why should I care about it:

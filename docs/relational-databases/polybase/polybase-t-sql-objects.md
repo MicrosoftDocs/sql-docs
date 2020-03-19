@@ -1,5 +1,6 @@
 ---
 title: "PolyBase Transact-SQL reference | Microsoft Docs"
+description: To use PolyBase, create external tables for your external data in Hadoop, Azure blob storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, and MongoDB.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase

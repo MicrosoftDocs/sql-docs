@@ -31,13 +31,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```  
--- Syntax for SQL Server  
+-- Syntax for SQL Server, Azure SQL Database  
   
 LOG ( float_expression [, base ] )  
 ```  
   
 ```  
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for Azure Synapse SQL 
   
 LOG ( float_expression )  
 ```  

@@ -30,8 +30,12 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
   You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
-* (R only) [Microsoft R Open](#mro) provides the base R distribution for the 
-  R feature in SQL Server
+* (R only) Microsoft R Open (MRO) provides the base R distribution for the R feature in SQL Server and is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
+    * The required version is MRO 3.5.2.
+    * Choose from the following two approaches to install MRO:
+        * Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.5.2) if you want this approach.
+        * Register the **packages.microsoft.com** repo as described below to install the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
+    * See the installation sections below for how to install MRO.
 
 * You should have a tool for running T-SQL commands. 
 
@@ -75,12 +79,11 @@ Available installation packages:
 
 Follow the steps below to install SQL Server Machine Learning Services on Red Hat Enterprise Linux (RHEL).
 
-### Install (MRO) on RHEL
-
-```bash
-# Import the Microsoft repository key
+### Install MRO on RHEL
 
 The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
+```bash
+# Import the Microsoft repository key
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
@@ -217,7 +220,11 @@ sudo apt-get install mssql-mlservices-packages-r
 
 ## Install on SLES
 
-### Install (MRO) on SLES
+Follow the steps below to install SQL Server Machine Learning Services on SUSE Linux Enterprise Server (SLES).
+
+### Install MRO on SLES
+
+The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
 
 ```bash
 # Install as root
@@ -291,7 +298,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
    # Use set + EULA 
    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
    ```
-   Setup detects the mssql-mlservices packages and prompts for EULA acceptance (if not previously accepted) when `mssql-conf setup` is     run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-   conf.md#mlservices-eula).
+   Setup detects the mssql-mlservices packages and prompts for EULA acceptance (if not previously accepted) when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
 3. Enable outbound network access. Outbound network access is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using the mssql-conf tool. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
@@ -303,9 +310,9 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 4. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
-   + Edit or create a file "named.bash_profile" in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
+   + Edit or create a file `.bash_profile` in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
-   + Execute this file by typing "source .bash_profile" at a bash command prompt.
+   + Execute this file by typing `source .bash_profile` at a bash command prompt.
 
 5. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A  
    notification message is displayed when an extensibility-related setting is modified.  
@@ -332,6 +339,7 @@ To validate installation:
 
 * Run a T-SQL script that executes a system stored procedure invoking Python or R using a query tool. 
 
+* Execute the following SQL command to test R execution in SQL Server. Errors? Try a service restart, `sudo systemctl restart mssql-server.service`.
   ```sql
   EXEC sp_execute_external_script   
   @language =N'R', 

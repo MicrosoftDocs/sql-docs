@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#detecting-fragmentation), you can defragment an index by either [reorganizing](#reorganize-an-index) or [rebuilding](#rebuild-an-index) the index by running Transact-SQL commands in your tool or choice or by using SQL Server Management Studio.
+This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#detecting-the-amount-of-fragmentation), you can defragment an index by either [reorganizing](#reorganize-an-index) or [rebuilding](#rebuild-an-index) the index by running Transact-SQL commands in your tool or choice or by using SQL Server Management Studio.
 
 ## Index fragmentation overview
 
@@ -47,7 +47,7 @@ What is index fragmentation and why should I care about it:
 - The database engine automatically modifies indexes whenever insert, update, or delete operations are made to the underlying data. For example, the addition of rows in a table may cause existing pages in rowstore indexes to split to make room for the insertion of new key values. Over time these modifications can cause the information in the index to become scattered in the database (fragmented). Fragmentation exists when indexes have pages in which the logical ordering, based on the key value, does not match the physical ordering inside the data file.
 - Heavily fragmented indexes can degrade query performance because additional IO is required to locate data to which the index points. More IO causes your application to respond slowly, especially when scan operations are involved.
 
-## Detecting fragmentation
+## Detecting the amount of fragmentation
 
 The first step in deciding which index defragmentation method to use is to analyze the index to determine the degree of fragmentation. You detect fragmentation differently for rowstore indexes and columnstore indexes.
 
@@ -63,7 +63,7 @@ The result set returned by **sys.dm_db_index_physical_stats** includes the follo
 |**fragment_count**|The number of fragments (physically consecutive leaf pages) in the index.|
 |**avg_fragment_size_in_pages**|Average number of pages in one fragment in an index.|
 
-After the degree of fragmentation is known, use the following table to determine the best method to correct the fragmentation: [INDEX REORGANIZE](#reorganize-an-index) or [INDEX](#rebuild-an-index).
+After the degree of fragmentation is known, use the following table to determine the best method to remove the fragmentation: [INDEX REORGANIZE](#reorganize-an-index) or [INDEX](#rebuild-an-index).
 
 |**avg_fragmentation_in_percent** value|Corrective statement|
 |-----------------------------------------------|--------------------------|
@@ -93,7 +93,7 @@ Use this information returned to compute index fragmentation using this formula:
 100*(ISNULL(deleted_rows,0))/NULLIF(total_rows,0)
 ```
 
-After the degree of index fragmentation is known, use the following table to determine the best method to correct the fragmentation.
+After the degree of index fragmentation is known, use the following table to determine the best method to remove the fragmentation: [INDEX REORGANIZE](#reorganize-an-index) or [INDEX](#rebuild-an-index).
 
 |**computed fragmentation in percent** value|Applies to version|Corrective statement|
 |-----------------------------------------------|--------------------------|--------------------------|

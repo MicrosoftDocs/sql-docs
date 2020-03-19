@@ -52,6 +52,23 @@ Choose from the following two approaches to install MRO:
 
 + Register the **packages.microsoft.com** repo as described below to install the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
 
+## Package List
+
+On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for R and Python, you specify packages that provide either the full feature installation or the minimum feature installation.
+
+Available installation packages:
+
+| Package name | Applies-to | Description |
+|--------------|----------|-------------|
+|mssql-server-extensibility  | All | Extensibility framework used to run Python and R. |
+| microsoft-openmpi  | Python, R | Message passing interface used by the Rev* libraries for parallelization on Linux. |
+| mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
+|mssql-mlservices-mlm-py  | Python | *Full install*. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
+|mssql-mlservices-packages-py  | Python | *Minimum install*. Provides revoscalepy and microsoftml. <br/>Excludes pre-trained models. | 
+| [microsoft-r-open*](#mro) | R | Open-source distribution of R, composed of three packages. |
+|mssql-mlservices-mlm-r  | R | *Full install*. Provides: RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
+|mssql-mlservices-packages-r  | R | *Minimum install*. Provides RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Excludes pre-trained models. |
+
 <a name="RHEL"></a>
 
 ## Install on RHEL
@@ -123,9 +140,13 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 ```
 <a name="ubuntu"></a>
 
+Follow the steps below to install SQL Server Machine Learning Services on Ubuntu
+
 ## Install on Ubuntu
 
-### Install (MRO) on Ubuntu
+### Install MRO on Ubuntu
+
+The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
 
 ```bash
 # Install as root
@@ -338,7 +359,7 @@ To validate installation:
 
 ## Unattended Installation
 
-Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) for the Database Engine, add the packages for mssql-mlservices and EULAs.
+Using the [unattended install](sql-server-linux-setup.md#unattended) for the Database Engine, add the packages for mssql-mlservices and EULAs.
 
  Use one of the mlservices-specific EULA parameters for the open-source R and Python distributions:
 
@@ -382,25 +403,11 @@ Download packages from [https://packages.microsoft.com/](https://packages.micros
 | mssql/mlservices packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
-
-## Package List
-
-Available installation Packages:
-
-| Package name | Applies-to | Description |
-|--------------|----------|-------------|
-|mssql-server-extensibility  | All | Extensibility framework used to run Python and R. |
-| microsoft-openmpi  | Python, R | Message passing interface used by the Rev* libraries for parallelization on Linux. |
-| mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
-|mssql-mlservices-mlm-py  | Python | *Full install*. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
-|mssql-mlservices-packages-py  | Python | *Minimum install*. Provides revoscalepy and microsoftml. <br/>Excludes pre-trained models. | 
-| [microsoft-r-open*](#mro) | R | Open-source distribution of R, composed of three packages. |
-|mssql-mlservices-mlm-r  | R | *Full install*. Provides: RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
-|mssql-mlservices-packages-r  | R | *Minimum install*. Provides RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Excludes pre-trained models. |
-
 Select extensions you want to use and download the packages necessary for a specific language. The filenames include platform information in the suffix.
 
-File List:
+### Package list
+
+Depending on which extensions you want to use, download the packages necessary for a specific language. Exact filenames include platform information in the suffix, but the file names below should be close enough for you to determine which files to get.
 
 ```
 # Core packages 

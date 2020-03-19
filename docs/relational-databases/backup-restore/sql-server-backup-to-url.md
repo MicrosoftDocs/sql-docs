@@ -112,6 +112,10 @@ Backup of a large database to blob storage is subject to the limitations listed 
 -   Specifying backupset options - **RETAINDAYS** and **EXPIREDATE** are not supported.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a maximum limit of 259 characters for a backup device name. The BACKUP TO URL consumes 36 characters for the required elements used to specify the URL - 'https://.blob.core.windows.net//.bak', leaving 223 characters for account, container, and blob names put together.  
+
+- If your server accesses Azure via a proxy server, you must use trace flag 1819 and then set the WinHTTP proxy configuration via one of the following methods:
+   - The [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) utility on Windows XP or Windows Server 2003 and earlier. 
+   - The [netsh.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) utility on Windows Vista and Windows Server 2008 or later. 
   
 ###  <a name="Support"></a> Support for Backup/Restore Statements  
   
@@ -259,7 +263,7 @@ The Restore Database task includes **URL** as a device to restore from.  The fol
       
     3.  **Add:**  Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
       
-    4.  **OK:**	SQL Server connects to Microsoft Azure storage using the SQL Credential information you provided and opens the **Locate Backup File in Microsoft Azure** dialog. The backup files residing in the storage container are displayed on this page. Select the file you want to use to restore and click **OK**. This takes you back to the **Select Backup Devices** dialog, and clicking **OK** on this dialog takes you back to the main **Restore** dialog where you will be able complete the restore. 
+    4.  **OK:**    SQL Server connects to Microsoft Azure storage using the SQL Credential information you provided and opens the **Locate Backup File in Microsoft Azure** dialog. The backup files residing in the storage container are displayed on this page. Select the file you want to use to restore and click **OK**. This takes you back to the **Select Backup Devices** dialog, and clicking **OK** on this dialog takes you back to the main **Restore** dialog where you will be able complete the restore. 
   
      [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   

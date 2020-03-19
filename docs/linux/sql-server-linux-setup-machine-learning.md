@@ -21,6 +21,8 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 > [!NOTE]
 > Machine Learning Services is installed by default on SQL Server Big Data Clusters. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md)
 
+<a name="mro"></a>
+
 ## Pre-install checklist
 
 * [Install SQL Server on Linux](sql-server-linux-setup.md) and verify the installation.
@@ -40,21 +42,6 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 * You should have a tool for running T-SQL commands. 
 
   * You can use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), a free database tool that runs on Linux, Windows, and macOS.
-
-
-<a name="mro"></a>
-
-### Microsoft R Open (MRO) installation
-
-Microsoft's base distribution of R is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
-
-The required version is MRO 3.5.2.A query editor is necessary for post-install configuration and validation.
-
-Choose from the following two approaches to install MRO:
-
-+ Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.5.2) if you want this approach.
-
-+ Register the **packages.microsoft.com** repo as described below to install the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
 
 ## Package List
 
@@ -143,9 +130,9 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 ```
 <a name="ubuntu"></a>
 
-Follow the steps below to install SQL Server Machine Learning Services on Ubuntu
-
 ## Install on Ubuntu
+
+Follow the steps below to install SQL Server Machine Learning Services on Ubuntu.
 
 ### Install MRO on Ubuntu
 
@@ -314,20 +301,22 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
    + Execute this file by typing `source .bash_profile` at a bash command prompt.
 
-5. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A  
-   notification message is displayed when an extensibility-related setting is modified.  
+5. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A notification message is displayed when an extensibility-related setting is modified.  
 
    ```bash
    systemctl restart mssql-launchpadd
 
    systemctl restart mssql-server.service
    ```
+
+6. Enable external script execution using Azure Data Studio or another tool like SQL Server Management Studio (Windows only) that runs Transact-SQL.
+
    ```sql
    EXEC sp_configure 'external scripts enabled', 1 
    RECONFIGURE WITH OVERRIDE 
    ```
 
-6. Restart the Launchpad service again.
+7. Restart the Launchpad service again.
 
 ## Verify Installation
 
@@ -396,7 +385,6 @@ Download packages from [https://packages.microsoft.com/](https://packages.micros
 | mssql/mlservices packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
-
 ### Ubuntu/16.04 paths
 
 |||
@@ -439,12 +427,12 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 ## Next Steps
 
-R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
-
-+ [Tutorial: Run R in T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
-
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
 + [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
 + [Tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-clustering-model.md)
+
+R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+
++ [Tutorial: Run R in T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
++ [Tutorial: In-database analytics for R developers](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)

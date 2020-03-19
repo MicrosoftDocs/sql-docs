@@ -445,7 +445,7 @@ WHERE name LIKE '%plans%';
   
      > [!NOTE]
      > In newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
-	 
+     
   -  What support objects must be created, such as [worktables](#worktables) or workfiles in tempdb. 
   No user context or runtime information is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism.   
   
@@ -532,8 +532,8 @@ Verify what can be found in the plan cache using the query below:
 
 ```sql
 SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
-	qs.query_plan_hash, qs.query_hash,
-	qs.plan_handle, qs.sql_handle
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
 FROM sys.dm_exec_cached_plans AS cp
 CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
 CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
@@ -545,9 +545,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060    	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -568,9 +568,9 @@ GO
 Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060    	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -594,10 +594,10 @@ GO
 Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060    	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060    	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -901,7 +901,7 @@ Parameter values are sniffed during compilation or recompilation for the followi
 -  Queries submitted via sp_executesql 
 -  Prepared queries
 
-For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems).
+For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview).
 
 > [!NOTE]
 > For queries using the `RECOMPILE` hint, both parameter values and current values of local variables are sniffed. The values sniffed (of parameters and local variables) are those that exist at the place in the batch just before the statement with the `RECOMPILE` hint. In particular, for parameters, the values that came along with the batch invocation call are not sniffed.
@@ -1284,12 +1284,12 @@ Although the above examples suggest a straightforward way to allocate worker thr
 
 To take another example, suppose that the table has four partitions on column A with boundary points (10, 20, 30), an index on column B, and the query has a predicate clause `WHERE B IN (50, 100, 150)`. Because the table partitions are based on the values of A, the values of B can occur in any of the table partitions. Thus, the query processor will seek for each of the three values of B (50, 100, 150) in each of the four table partitions. The query processor will assign worker threads proportionately so that it can execute each of these 12 query scans in parallel.
 
-|Table partitions based on column A	|Seeks for column B in each table partition |
+|Table partitions based on column A    |Seeks for column B in each table partition |
 |----|----|
-|Table Partition 1: A < 10	 |B=50, B=100, B=150 |
-|Table Partition 2: A >= 10 AND A < 20	 |B=50, B=100, B=150 |
-|Table Partition 3: A >= 20 AND A < 30	 |B=50, B=100, B=150 |
-|Table Partition 4: A >= 30	 |B=50, B=100, B=150 |
+|Table Partition 1: A < 10     |B=50, B=100, B=150 |
+|Table Partition 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|Table Partition 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|Table Partition 4: A >= 30     |B=50, B=100, B=150 |
 
 ### Best Practices
 

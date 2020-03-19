@@ -63,7 +63,7 @@ This article also discusses the following keywords that can be used on the FROM 
 [ FROM { <table_source> } [ ,...n ] ]   
 <table_source> ::=   
 {  
-    table_or_view_name [ [ AS ] table_alias ]   
+    table_or_view_name [ FOR SYSTEM_TIME <system_time> ] [ AS ] table_alias ]   
         [ <tablesample_clause> ]   
         [ WITH ( < table_hint > [ [ , ]...n ] ) ]   
     | rowset_function [ [ AS ] table_alias ]   
@@ -76,8 +76,7 @@ This article also discusses the following keywords that can be used on the FROM 
     | <unpivoted_table>  
     | @variable [ [ AS ] table_alias ]  
     | @variable.function_call ( expression [ ,...n ] )   
-        [ [ AS ] table_alias ] [ (column_alias [ ,...n ] ) ]  
-    | FOR SYSTEM_TIME <system_time>   
+        [ [ AS ] table_alias ] [ (column_alias [ ,...n ] ) ]     
 }  
 <tablesample_clause> ::=  
     TABLESAMPLE [SYSTEM] ( sample_number [ PERCENT | ROWS ] )   

@@ -1,5 +1,6 @@
 ---
 title: "What is PolyBase? | Microsoft Docs"
+description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure Blob Storage.
 ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: polybase

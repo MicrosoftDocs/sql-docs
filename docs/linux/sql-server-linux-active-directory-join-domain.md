@@ -1,7 +1,7 @@
 ---
 title: Join SQL Server on Linux to Active Directory
 titleSuffix: SQL Server
-description: 
+description: This article provides guidance joining a SQL Server Linux host machine to an AD domain. You can use a built-in SSSD package or use third-party AD providers.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto

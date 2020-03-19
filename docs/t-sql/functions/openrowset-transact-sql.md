@@ -42,13 +42,13 @@ Includes all connection information that is required to access remote data from 
 OPENROWSET
 ( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
    | 'provider_string' }
-   , {   [ catalog. ] [ schema. ] object
-       | 'query'
-     }
+   , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }
 } )
+
+<table_or_view> ::= [ catalog. ] [ schema. ] object
 
 <bulk_options> ::=
 
@@ -104,14 +104,11 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
                             Department) AS d;
 ```
 
-*catalog*
-Is the name of the catalog or database in which the specified object resides.
-
-*schema*
-Is the name of the schema or object owner for the specified object.
-
-*object*
-Is the object name that uniquely identifies the object to work with.
+### <table_or_view>
+Remote table or view containing the data that `OPENROWSET` should read. It can be three-part-name object with the following components:
+- *catalog* (optional) - the name of the catalog or database in which the specified object resides.
+- *schema* (optional) - the name of the schema or object owner for the specified object.
+- *object* - the object name that uniquely identifies the object to work with.
 
 ```sql
 SELECT d.*

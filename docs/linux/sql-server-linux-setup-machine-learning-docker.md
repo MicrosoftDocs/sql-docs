@@ -20,7 +20,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 - Git command-line interface.
 
-- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/install/).
+- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Get Docker](https://docs.docker.com/get-docker/).
 
 - See also the [system requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 

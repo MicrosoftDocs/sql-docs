@@ -1,5 +1,6 @@
 ---
 title: "Exporting to Microsoft Excel (Report Builder) | Microsoft Docs"
+description: In Report Builder, the Excel rendering extension renders a paginated report to the Office Open XML format to use with Microsoft Excel.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

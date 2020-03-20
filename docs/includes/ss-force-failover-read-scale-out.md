@@ -61,25 +61,14 @@ To manually fail over without data loss:
 
    The secondary replica is synchronized when `synchronization_state_desc` is `SYNCHRONIZED`.
 
-3. Update `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1.
-
-   The following script sets `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1 on an availability group named `ag1`. Before you run the following script, replace `ag1` with the name of your availability group:
-
-   ```SQL
-   ALTER AVAILABILITY GROUP [ag1] 
-        SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1);
-   ```
-
-   This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary replica. 
-
-4. Demote the primary replica to a secondary replica. After the primary replica is demoted, it's read-only. To update the role to `SECONDARY`, run the following command on the SQL Server instance that hosts the primary replica:
+3. Demote the primary replica to a secondary replica. After the primary replica is demoted, it's read-only. To update the role to `SECONDARY`, run the following command on the SQL Server instance that hosts the primary replica:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
         SET (ROLE = SECONDARY); 
    ```
 
-5. Promote the target secondary replica to primary. 
+4. Promote the target secondary replica to primary. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 

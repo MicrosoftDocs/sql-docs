@@ -1,5 +1,6 @@
 ---
 title: "Previewing Reports in Report Builder | Microsoft Docs"
+description: While you create a Reporting Services paginated report, you can preview the report to verify that the report displays what you want.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

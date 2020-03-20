@@ -95,7 +95,7 @@ Backup of a large database to blob storage is subject to the limitations listed 
 
 - If your server accesses Azure via a proxy server, you must use trace flag 1819 and then set the WinHTTP proxy configuration via one of the following methods:
    - The [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) utility on Windows XP or Windows Server 2003 and earlier. 
-   - The [netsh.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) utility on Windows Vista and Windows Server 2008 or later. 
+   - The [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) utility on Windows Vista and Windows Server 2008 or later. 
   
 ## Supported arguments & statements
 

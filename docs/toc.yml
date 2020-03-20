@@ -9847,7 +9847,7 @@
       - name: Install SQL Server Machine Learning Services
         href: linux/sql-server-linux-setup-machine-learning.md
       - name: Install SQL Server Machine Learning Services on Docker
-        href: linux/sql-server-setup-machine-learning-docker.md
+        href: linux/sql-server-linux-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
         href: linux/sql-server-linux-setup-language-extensions.md
       - name: Configure repositories

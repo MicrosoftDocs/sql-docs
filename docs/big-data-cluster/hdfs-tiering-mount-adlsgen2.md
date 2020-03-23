@@ -26,9 +26,9 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 The following section describes how to set up Azure Data Lake Storage Gen2 for testing HDFS tiering. If you already have data stored in Azure Data Lake Storage, you can skip this section to use your own data.
 
-1. [Create a storage account with Data Lake Storage Gen2 capabilities]/storage/blobs/data-lake-storage-quickstart-create-account).
+1. [Create a storage account with Data Lake Storage Gen2 capabilities](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Create a file system](/storage/blobs/data-lake-storage-explorer) in this storage account for your data.
+1. [Create a file system](/azure/storage/blobs/data-lake-storage-explorer) in this storage account for your data.
 
 1. Upload a CSV or Parquet file into the container. This is the external HDFS data that will be mounted to HDFS in the big data cluster.
 

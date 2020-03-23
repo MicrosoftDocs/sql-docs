@@ -72,7 +72,6 @@ ALTER DATABASE database_name
     <add_or_modify_files>
   | <add_or_modify_filegroups>
 }
-[;
 
 <add_or_modify_files>::=
 {

@@ -16569,6 +16569,21 @@
       "source_path": "docs/ssms/scripting/database-engine-query-editor-sql-server-management-studio.md",
       "redirect_url": "/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/kb-support/end-support-sql-server-2008.md",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-life-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/kb-support/resource-monitor-nonyielding-condition.md",
+      "redirect_url": "https://support.microsoft.com/help/2216485/resource-monitor-non-yielding-condition-server-sql-server-2008",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/kb-support/index.md",
+      "redirect_url": "/sql/sql-server/",
+      "redirect_document_id": false
     }
   ]
 }

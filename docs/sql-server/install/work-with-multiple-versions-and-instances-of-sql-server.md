@@ -89,13 +89,15 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer that is already running instances of an earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version. If a default instance already exists on the computer, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be installed as a named instance.  
 
-The following table shows side-by-side support for each version of SQL Server:
+The following table shows side-by-side support for each version of SQL Server on commonly supported versions of Windows:
 
 | Existing instance | Side by side support| 
 |-------------------|----------------------------|
-| SQL Server 2019 | SQL Server 2005 through SQL Server 2017| 
-| SQL Server 2017 | SQL Server 2005 through SQL Server 2016| 
-| SQL Server 2016 | SQL Server 2005 through SQL Server 2014| 
+| SQL Server 2019 | SQL Server 2008 through SQL Server 2017| 
+| SQL Server 2017 | SQL Server 2008 through SQL Server 2016| 
+| SQL Server 2016 | SQL Server 2008 through SQL Server 2014| 
+
+
 
   
 > [!CAUTION]  

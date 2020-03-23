@@ -25,7 +25,8 @@ ms.author: mathoma
 ###  <a name="blockbloborpageblob"></a> Backup to block blob vs. page blob 
  There are two types of blobs that can be stored in the Microsoft Azure Blob storage service: block and page blobs. SQL Server backup can use either blob type depending upon the Transact-SQL syntax used: If the storage key is used in the credential, page blob will be used; if the Shared Access Signature is used, block blob will be used.
  
- Backup to block blob is only available in SQL Server 2016 or later version. We recommend you to backup to block blob instead of page block if you are running SQL Server 2016 or later version. The main reasons are:
+ Backup to block blob is only available in SQL Server 2016 or later version. Backup to block blob instead of page blob if you are running SQL Server 2016 or later. 
+ The main reasons are:
 - Shared Access Signature is a safer way to authorize blob access compared to storage key.
 - You can backup to multiple block blobs to get better backup and restore performance, and support larger database backup.
 - [Block blob](https://azure.microsoft.com/pricing/details/storage/blobs/) is cheaper than [page blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 

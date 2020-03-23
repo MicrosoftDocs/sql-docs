@@ -17,20 +17,16 @@
     href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: Isolation changes in SQL Server 2019
-    href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
   - name: Install ML Services on Windows
     href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
   - name: Install ML Services on Linux
     href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
-  - name: Install R Services
-    href: ../advanced-analytics/install/sql-r-services-windows-install.md
-  - name: Install standalone server
-    href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
-  - name: Install pre-trained models
-    href: ../advanced-analytics/install/sql-pretrained-models-install.md
   - name: Install ML Services on Docker
     href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+  - name: Isolation changes in SQL Server 2019
+    href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
+  - name: Install R Services
+    href: ../advanced-analytics/install/sql-r-services-windows-install.md
   - name: Offline install (no internet)
     items:
     - name: Install without internet access
@@ -39,6 +35,8 @@
       href: ../advanced-analytics/install/sql-ml-cab-downloads.md
   - name: Command prompt setup
     href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
+  - name: Install pre-trained models
+    href: ../advanced-analytics/install/sql-pretrained-models-install.md
   - name: Upgrade Python and R
     href: ../advanced-analytics/install/upgrade-r-and-python.md
   - name: Azure Data Studio notebooks
@@ -49,6 +47,8 @@
     href: ../advanced-analytics/r/set-up-a-data-science-client.md
   - name: Install on Azure VM
     href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
+  - name: Install standalone server
+    href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
 - name: Quickstarts
   items:
   - name: Python

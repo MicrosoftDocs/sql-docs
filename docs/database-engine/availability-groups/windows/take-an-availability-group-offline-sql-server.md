@@ -20,7 +20,7 @@ ms.author: mathoma
   
   
 > [!CAUTION]  
->  Use the OFFLINE option only for a cross-cluster migration of availability group resources.  
+>  Use the OFFLINE option for a cross-cluster migration of availability group resources or for failing over a read-scale availability group.
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

@@ -6,13 +6,15 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 manager: cgronlun
-ms.date: 03/12/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Docker
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article explains how to install SQL Server Machine Learning Services on Docker. You can use Machine Learning Services to execute Python and R scripts in-database. We do not provide pre-built containers with Machine Learning Services. You can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 

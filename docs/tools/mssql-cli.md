@@ -21,7 +21,7 @@ mssql-cli is an interactive command-line tool for querying SQL Server, install i
 
 ## Install mssql-cli
 
-For detailed installation instructions, see the [Installation Guide](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md), or if you know pip, install by running the following command:
+For detailed installation instructions, see the [Installation Guide](https://github.com/dbcli/mssql-cli/tree/master/doc/installation), or if you know pip, install by running the following command:
 
 ```$ pip install mssql-cli```
 
@@ -30,7 +30,7 @@ For detailed installation instructions, see the [Installation Guide](https://git
 Documentation for mssql-cli is located in the [mssql-cli GitHub repository](https://github.com/dbcli/mssql-cli).
 
 - [Main page/readme](https://github.com/dbcli/mssql-cli)
-- [Installation Guide](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md)
+- [Installation Guide](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)
 - [Usage Guide](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 
 Additional documentation is located in the [doc folder](https://github.com/dbcli/mssql-cli/tree/master/doc).

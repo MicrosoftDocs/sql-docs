@@ -54,7 +54,7 @@ The SQL Kernel can also be used to connect to PostgreSQL server instances. If yo
 
 In the code cells within the Notebook, similar to our query editor, we support modern SQL coding experience that makes your everyday tasks easier with built-in features such as a rich SQL editor, IntelliSense, and built-in code snippets. Code snippets allow you to generate the proper SQL syntax to create databases, tables, views, stored procedures, and to update existing database objects. Use code snippets to quickly create copies of your database for development or testing purposes and to generate and execute scripts.
 
-Click **Run** to execute each cell.
+Select **Run** to execute each cell.
 
 SQL Kernel to connect to SQL Server instance
 
@@ -80,7 +80,7 @@ The cell changes to edit mode and now type markdown and you can see the preview 
 
 ![Markdown cell](media/notebooks-guidance/notebook-markdown-cell.png)
 
-Clicking outside the text cell shows the markdown text.
+Selecting outside the text cell shows the markdown text.
 
 ![Markdown text](media/notebooks-guidance/notebook-markdown-preview.png)
 
@@ -119,7 +119,7 @@ The cell changes to edit mode and now type markdown and you can see the preview 
 
 ![Markdown cell](media/notebooks-guidance/notebook-markdown-cell.png)
 
-Clicking outside the text cell shows the markdown text.
+Selecting outside the text cell shows the markdown text.
 
 ![Markdown text](media/notebooks-guidance/notebook-markdown-preview.png)
 
@@ -142,16 +142,16 @@ If you want to clear the results of all the executed cells in the Notebook, then
 To save the notebook, do one of the following.
 
 - Select Ctrl+S
-- Click **File** > **Save**
-- Click **File** > **Save As...**
-- Click **File** > **Save All**
+- Select **File** > **Save**
+- Select **File** > **Save As...**
+- Select **File** > **Save All**
 - In the command palette, enter **File: Save**
 
 ### Pyspark3/PySpark kernel
 
 Choose the `PySpark Kernel` and in the cell type in the following code.
 
-Click **Run**.
+Select **Run**.
 
 The Spark Application is started and returns the following output:
 
@@ -169,7 +169,7 @@ You can also view the "Cell Options" when you select the options icon below –
 
 ### Spark kernel | R language
 
-Choose the Spark | R in the dropdown for the kernels. In the cell, type or paste in the code. Click **Run** to see the following output.
+Choose the Spark | R in the dropdown for the kernels. In the cell, type or paste in the code. Select **Run** to see the following output.
 
 ![Spark R](media/notebooks-guidance/spark-r.png)
 

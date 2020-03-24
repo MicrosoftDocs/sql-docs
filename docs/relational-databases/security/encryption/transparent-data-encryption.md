@@ -1,7 +1,7 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
 ms.custom: ""
-ms.date: 05/09/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -239,7 +239,22 @@ ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
 To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the error log on startup indicating that there is an existing scan that has been paused.
-  
+
+## Remove Transparent Data Encryption
+
+Remove encryption from the database by using the ALTER DATABASE statement.
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
+```
+
+To view the state of the database, use the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+
+Wait for decryption to complete before removing the database encryption key, using [DROP DATABASE ENCRYPTION KEY](../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
+
+> [!IMPORTANT]  
+> Back up the master key and certificate that are used for TDE to a safe location. The master key and certificate are required to restore backups that were taken when the database was encrypted with TDE. After you remove the database encryption key, take a log backup followed by a fresh full backup of the decrypted database.  
+
 ## Transparent Data Encryption and Buffer Pool Extension  
  Files related to buffer pool extension (BPE) are not encrypted when database is encrypted using TDE. You must use file system level encryption tools like BitLocker or EFS for BPE related files.  
   

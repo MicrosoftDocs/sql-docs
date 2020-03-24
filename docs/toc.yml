@@ -200,7 +200,7 @@
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
-        href: big-data-cluster/notebooks-how-to-manage.md
+        href: big-data-cluster/notebooks-manage-bdc.md
       - name: Notebook tutorial using Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
       - name: Security
@@ -7814,7 +7814,7 @@
         - name: Notebook tutorial
           href: azure-data-studio/notebooks-tutorial.md
         - name: Manage existing notebooks
-          href: azure-data-studio/notebooks-how-to-manage-sql-server.md
+          href: azure-data-studio/notebooks-manage-sql-server.md
       - name: Usage data collection
         href: azure-data-studio/usage-data-collection.md
     - name: Extensions

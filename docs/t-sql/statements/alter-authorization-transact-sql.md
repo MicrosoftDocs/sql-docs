@@ -265,7 +265,7 @@ Instead of using Azure AD users as individual owners of the database, use an Azu
   ```    
   
 Now the `mydbogroup` members can centrally manage the database as members of the **db_owner** role.  
-- When members of this group are removed from the Azure AD group, they automatically loose the dbo permissions for this database.  
+- When members of this group are removed from the Azure AD group, they automatically lose the dbo permissions for this database.  
 - Similarly if new members are added to `mydbogroup` Azure AD group, they automatically gain the dbo access for this database.  
   
 To check if a specific user has the effective dbo permission, have the user execute the following statement:  

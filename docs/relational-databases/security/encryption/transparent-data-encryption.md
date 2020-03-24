@@ -239,7 +239,21 @@ ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
 To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the error log on startup indicating that there is an existing scan that has been paused.
-  
+
+## Remove Transparent Data Encryption
+ Remove encryption from the database by using the ALTER DATABASE statement.
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
+```
+
+To view the state of the database, use the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+
+Wait for decryption to complete before removing the database encryption key [DROP DATABASE ENCRYPTION KEY](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)
+
+> [!IMPORTANT]  
+>  Backup Master Key and Certificate used for TDE to protect Database Encryption Key to a safe location. Those are needed to restore the backups taken when database was Encrypted using TDE. Remember to take log backup after removing Database Encryption Key followed by a fresh Full Backup of the decrypted database. 
+
 ## Transparent Data Encryption and Buffer Pool Extension  
  Files related to buffer pool extension (BPE) are not encrypted when database is encrypted using TDE. You must use file system level encryption tools like BitLocker or EFS for BPE related files.  
   

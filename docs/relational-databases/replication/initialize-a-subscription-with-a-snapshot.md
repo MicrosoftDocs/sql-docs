@@ -40,6 +40,7 @@ The new snapshot is applied to the Subscriber by an agent. The applying occurs d
 The following table displays the contents of the snapshot, for each type of publication.
 
 &nbsp;
+
 | Publication type that the snapshot is for | Contents of the snapshot |
 | :---------------------------------------- | :----------------------- |
 | <ul> <li>Snapshot publication</li> <li>Transactional publication</li> <li>Merge publication that doesn't use parameterized filters</li> </ul> | <ul> <li>Schema</li> <li>Data, in files for the bulk copy program (BCP)</li> <li>Constraints</li> <li>Extended properties</li> <li>Indexes</li> <li>Triggers</li> <li>System tables needed for replication</li> </ul> <br/>See [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). |
@@ -64,6 +65,7 @@ For a merge publication that uses parameterized filters, the snapshot is created
 The file types contained in the snapshot depend on the type of replication, and on the articles in your publication.
 
 &nbsp;
+
 | Type of Replication | Common Snapshot Files |
 | :------------------ | :-------------------- |
 | Snapshot Replication, or<br/>Transactional Replication | &bullet; Schema (.sch) <br/>&bullet; Data (.bcp) <br/>&bullet; Constraints and indexes (.dri) <br/>&bullet; Compressed snapshot files (.cab) <br/>&bullet; Triggers (.tag), only to update a Subscriber <br/><br/>&bullet; Constraints (.idx). |

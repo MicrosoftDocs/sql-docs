@@ -49,7 +49,7 @@ You can choose to deploy Kubernetes in any of three ways:
 | **Single or Multiple machines (`kubeadm`)** | A Kubernetes cluster deployed on physical or virtual machines using `kubeadm` | [Instructions](deploy-with-kubeadm.md) |
 
 > [!TIP]
-> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](deploy-notebooks.md).
+> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](notebooks-deploy.md).
 
 ### Verify Kubernetes configuration
 

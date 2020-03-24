@@ -50,7 +50,7 @@ Other tools are required for different scenarios. Each article should explain th
 
 Big data clusters are deployed as a series of interrelated containers that are managed in [Kubernetes](https://kubernetes.io/docs/home). You can host Kubernetes in a variety of ways. Even if you already have an existing Kubernetes environment, you should review the related requirements for big data clusters.
 
-- **Azure Kubernetes Service (AKS)**: AKS allows you to deploy a managed Kubernetes cluster in Azure. You only manage and maintain the agent nodes. With AKS, you don't have to provision your own hardware for the cluster. It is also easy to use a [python script](quickstart-big-data-cluster-deploy.md) or a [deployment notebook](deploy-notebooks.md) to create the AKS cluster and deploy the big data cluster in one step. For more information about configuring AKS for a big data cluster deployment, see [Configure Azure Kubernetes Service for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments](deploy-on-aks.md).
+- **Azure Kubernetes Service (AKS)**: AKS allows you to deploy a managed Kubernetes cluster in Azure. You only manage and maintain the agent nodes. With AKS, you don't have to provision your own hardware for the cluster. It is also easy to use a [python script](quickstart-big-data-cluster-deploy.md) or a [deployment notebook](notebooks-deploy.md) to create the AKS cluster and deploy the big data cluster in one step. For more information about configuring AKS for a big data cluster deployment, see [Configure Azure Kubernetes Service for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments](deploy-on-aks.md).
 
 - **Multiple machines**: You can also deploy Kubernetes to multiple Linux machines, which could be physical servers or virtual machines. The [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) tool can be used to create the Kubernetes cluster. You can use a [bash script](deployment-script-single-node-kubeadm.md) to automate this type of deployment. This method works well if you already have existing infrastructure that you want to use for your big data cluster. For more information about using **kubeadm** deployments with big data clusters, see [Configure Kubernetes on multiple machines for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments](deploy-with-kubeadm.md).
 
@@ -78,7 +78,7 @@ The following deployment scripts are currently available:
 
 You can also deploy a big data cluster by running an Azure Data Studio notebook. For more information on how to use a notebook to deploy on AKS, see the following article:
 
-- [Deploy a big data cluster with Azure Data Studio Notebooks](deploy-notebooks.md).
+- [Deploy a big data cluster with Azure Data Studio Notebooks](notebooks-deploy.md).
 
 ## Next steps
 

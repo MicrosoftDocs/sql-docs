@@ -38,32 +38,58 @@ In addition to those prerequisites, to deploy SQL Server 2019 Big Data Clusters,
 * [Azure CLI](/cli/azure/install-azure-cli)
 
 ## Access troubleshooting notebooks
+
 There are three ways to access troubleshooting notebooks.
 
 ### Command Palette
+
 1. Select **View** > **Command Palette**.
+
 2. Enter **Jupyter Books: SQL Server 2019 Guide**.
 
 The Jupyter Books viewlet with the Jupyter Book that contains the troubleshooting notebooks related to SQL Server Big Data Clusters will open.
 
 ### SQL Master Dashboard
+
 1. After you install Azure Data Studio Insiders, connect to a SQL Server Big Data Clusters instance.
+
 2. After you're connected to the instance, right-click your server name under **CONNECTIONS** and select **Manage**.
+
 3. In the dashboard, select **SQL Server Big Data Cluster**. Select **SQL Server 2019 guide** to open the Jupyter Book that contains the notebooks you need.
     ![Jupyter notebooks in the dashboard](media/manage-notebooks/jupyter-book-button.png)
 
-1. Select the notebook for the task that you need to complete.
+4. Select the notebook for the task that you need to complete.
 
 ### Controller Dashboard
+
 1. In the **Connections** view, expand **SQL Server Big Data Clusters**.
+
 2. Add controller endpoint details.
+
 3. After you're connected to the controller, right-click the endpoint and select **Manage**.
+
 4. After the dashboard loads, select **troubleshoot** to open the Jupyter Book troubleshooting guides.
 
 ## Use troubleshooting notebooks
+
 1. Find the troubleshooting guide that you need in the Jupyter Book table of contents.
-1. The notebooks are optimized, so you just need to select **Run Cells**. This action will run each cell in the notebook individually until the notebook is complete.
-1. If an error is found, the Jupyter Book will suggest a notebook that you can run to fix the error. Follow the recommended steps, and then run the notebook again.
+
+2. The notebooks are optimized, so you just need to select **Run Cells**. This action will run each cell in the notebook individually until the notebook is complete.
+
+3. If an error is found, the Jupyter Book will suggest a notebook that you can run to fix the error. Follow the recommended steps, and then run the notebook again.
+
+## Change the big data cluster
+
+To change the SQL Server big data cluster for a notebook:
+
+1. Click the **Attach to** menu from the notebook toolbar.
+
+   ![Click the Attach to menu in the notebook toolbar](./media/notebooks-how-to-manage/select-attach-to-1.png)
+
+2. Click a server from the **Attach to** menu.
+
+   ![Select a server from the Attach to menu](./media/notebooks-how-to-manage/select-attach-to-2.png)
 
 ## Next steps
+
 For more information about notebooks in Azure Data Studio, see [How to use notebooks with SQL Server](../azure-data-studio/notebooks-guidance.md).

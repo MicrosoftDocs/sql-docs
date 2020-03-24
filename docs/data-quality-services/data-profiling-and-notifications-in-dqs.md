@@ -58,7 +58,9 @@ DQS profiling does not measure the quality of the knowledge base. Profiling meas
 
 ### Activity Context
 
-Profiling is always in the context of the specific activity that you are performing. You can click the profiling tab in a screen to display profiling data, without leaving the stage of the activity that you are performing. The profiling table is populated in real time as the process is performed. This prompt population enables you to assess data quality tasks as you are performing them. You can determine whether source data is better after cleansing or de-duplication, and by how much.
+Profiling is always in the context of the specific activity that you are performing. You can click the profiling tab in a screen to display profiling data. This click does not take you away from the stage of the activity that you are performing. The profiling table is populated in real time as the process is performed. Therefore you can assess data quality tasks as you are performing them.
+
+You can determine whether source data is better after cleansing or de-duplication, and by how much.
 
 ### Profiling is Based on Counts
 
@@ -66,7 +68,9 @@ All profiling numbers refer to the count of appearances of specific values. In m
 
 ### Knowledge-driven Solution
 
-Profiling is part of the DQS knowledge-driven solution. Profiling provides information on a knowledge base, matching, or data cleansing process. The information is based on the mapping between data source fields and knowledge base domains. Profiling is performed only after mapping is complete. No profiling is performed during the mapping stage of any activity. Profiling is always attached to an activity. The profiling process is performed on the data that is mapped to domains, not on the data in the domains.
+Profiling is part of the DQS knowledge-driven solution. Profiling provides information on a knowledge base, matching, or data cleansing process. The information is based on the mapping between data source fields and knowledge base domains. Profiling is performed only after mapping is complete. No profiling is performed during the mapping stage of any activity.
+
+Profiling is always attached to an activity. The profiling process is performed on the data that is _mapped_ to domains, not on the data _in_ the domains.
 
 Profiling is integrated into the following steps of activities:
 
@@ -134,7 +138,7 @@ For more information, see [DQS Administration](../data-quality-services/dqs-admi
 
 ## <a name="Notifications"></a> Notifications
 
-DQS generates notifications to indicate when you might want to take an action based on profiling statistics. DQS uses notifications for important facts about the data source. These facts show the effectiveness of the current activity relative to the purpose for which it was executed. Notifications provide tips and recommendations that indicate a condition. Notifications can also recommend how you can improve a knowledge discovery, data cleansing, or data matching activity.
+DQS generates notifications to indicate when you might want to take an action based on profiled statistics. DQS uses notifications for important facts about the data source. These facts show the effectiveness of the current activity relative to the purpose for which it was executed. Notifications provide tips and recommendations that indicate a condition. Notifications can also recommend how you can improve a knowledge discovery, data cleansing, or data matching activity.
 
 DQS sends a notification when it detects an issue that might matter to you. As an example situation, when completeness and accuracy are both 100%, the data cleansing activity might produce no corrected or suggested values. DQS might post a notification for that situation. This notification would indicate that the activity might not be needed. Whether to run the activity remains your decision.
 

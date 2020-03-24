@@ -1,9 +1,9 @@
 ---
-title: How to use notebooks with SQL Server in Azure Data Studio
-description: Learn how to use SQL Notebooks in Azure Data Studio.
+title: Use notebooks with SQL Server in Azure Data Studio
+description: Learn how to get started using SQL Notebooks in Azure Data Studio.
 author: yualan
 ms.author: alayu
-ms.reviewer: "achatter; maghan; mikeray"
+ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -212,4 +212,4 @@ To uninstall a package, use the following command from your terminal:
 
 ## Next steps
 
-To learn how to work with an existing notebook, see [How to manage notebooks in Azure Data Studio](notebooks-how-to-manage.md)
+To learn how to work with an existing notebook, see [How to manage notebooks in Azure Data Studio](notebooks-how-to-manage-sql-server.md).

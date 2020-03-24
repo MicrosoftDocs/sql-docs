@@ -201,7 +201,7 @@
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
         href: big-data-cluster/notebooks-manage-bdc.md
-      - name: Notebook tutorial using Spark
+      - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
       - name: Security
         items:
@@ -7813,7 +7813,7 @@
           href: azure-data-studio/notebooks-guidance.md
         - name: Notebook tutorial
           href: azure-data-studio/notebooks-tutorial.md
-        - name: Manage existing notebooks
+        - name: Manage notebooks
           href: azure-data-studio/notebooks-manage-sql-server.md
       - name: Usage data collection
         href: azure-data-studio/usage-data-collection.md

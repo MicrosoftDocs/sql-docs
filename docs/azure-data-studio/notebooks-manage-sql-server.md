@@ -52,9 +52,9 @@ There is currently one way to save a notebook. You must select **Save** from the
 > - **File Save**, **File Save As...** and **File Save All** commands from the File menu.
 > - **File: Save** commands entered in the command palette.
 
-## Change the SQL Server
+## Change the connection
 
-To change the SQL Server big data cluster for a notebook:
+To change the connection for a notebook:
 
 1. Select the **Attach to** menu from the notebook toolbar amd then select **Change Connection**.
 

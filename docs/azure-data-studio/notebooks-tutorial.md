@@ -48,34 +48,31 @@ Add a new code cell by selecting the **+Code** command in the toolbar.
 
 ![Notebook toolbar](media/notebooks-guidance/notebook-toolbar.png)
 
-This example uses a T-SQL script that creates a database.
+This example creates a new database.
 
-   ```tsql
-   -- =============================================
-   -- Create database template
-   -- =============================================
-   USE master
-   GO
+```sql
+USE master
+GO
 
    -- Drop the database if it already exists
-   IF  EXISTS (
-       SELECT name
-           FROM sys.databases
-           WHERE name = N'<Database_Name, sysname, Database_Name>'
+IF  EXISTS (
+        SELECT name
+        FROM sys.databases
+        WHERE name = N'TestNotebookDB'
    )
-   DROP DATABASE <Database_Name, sysname, Database_Name>
-   GO
+DROP DATABASE TestNotebookDB
+GO
 
-   -- Create the database
-   CREATE DATABASE <Database_Name, sysname, Database_Name>
-   GO
-   ```
+-- Create the database
+CREATE DATABASE TestNotebookDB
+GO
+```
 
    ![Run notebook cell](media/notebook-tutorial/run-notebook-cell.png)
 
-If you run a T-SQL script that returns a result, you can save that result in different formats.
+If you run a script that returns a result, you can save that result in different formats.
 
-In this case, we used T-SQL to return [PI](../t-sql/functions/pi-transact-sql.md).
+In this case, we return the result of [PI](../t-sql/functions/pi-transact-sql.md).
 
 - Save As CSV
 - Save As Excel
@@ -106,4 +103,4 @@ Learn more about notebooks:
 
 - [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md)
 
-- [Run a sample notebook on a SQL Server big data cluster](../big-data-cluster/notebooks-tutorial-spark.md)
+- [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md)

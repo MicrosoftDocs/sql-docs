@@ -1,5 +1,5 @@
 ---
-title: Run a sample notebook | Microsoft Docs
+title: Run a sample notebook using Spark
 titleSuffix: SQL Server big data clusters
 description: This tutorial shows how you can load an run a sample Spark notebook on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Run a sample notebook on a SQL Server big data cluster
+# Run a sample notebook using Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

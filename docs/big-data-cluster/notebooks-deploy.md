@@ -40,7 +40,7 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 2. On the **Connections** tab, select the ellipses (**...**), then select **Deploy SQL Server...**.
 
-   ![Deploy SQL Server](media/notebooks-deploy/notebooks-deploy.png)
+   ![Deploy SQL Server](media/notebooks-deploy/deploy-notebooks.png)
 
 3. From the deployment options, select **SQL Server Big Data Cluster**.
 

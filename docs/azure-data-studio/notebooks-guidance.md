@@ -212,4 +212,4 @@ To uninstall a package, use the following command from your terminal:
 
 ## Next steps
 
-To learn how to work with an existing notebook, see [How to manage notebooks in Azure Data Studio](notebooks-how-to-manage-sql-server.md).
+To learn how to work with an existing notebook, see [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md).

@@ -20,7 +20,7 @@ This article shows you how to open and save notebook files in Azure Data Studio 
 
 ## Prerequisites
 
-This article assumes that you already have a notebook that you want to use in Azure Data Studio. If you want to create a notebook, see [How to use notebooks in SQL Server](notebooks-guidance.md). To use notebooks in Azure Data Studio, you must meet the following prerequisites:
+This article assumes that you already have a notebook that you want to use in Azure Data Studio. If you want to create a notebook, see [How to use notebooks](../azure-data-studio/notebooks-guidance.md). To use notebooks in Azure Data Studio, you must meet the following prerequisites:
 
 - [Deploy a big data cluster](quickstart-big-data-cluster-deploy.md).
 - [SQL Server 2019 big data tools](deploy-big-data-tools.md):
@@ -76,4 +76,4 @@ To change the SQL Server big data cluster for a notebook:
 
 ## Next steps
 
-For more information about notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019](notebooks-guidance.md).
+For more information about notebooks in Azure Data Studio, see [How to use notebooks](../azure-data-studio/notebooks-guidance.md).

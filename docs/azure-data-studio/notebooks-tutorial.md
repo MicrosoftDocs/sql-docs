@@ -32,17 +32,17 @@ The following steps show how to open the notebook file in Azure Data Studio:
 
 1. Select on the connection in the **Servers** window. Then select **Open Notebook**.
 
-   ![Open notebook](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
+   ![Open notebook](media/notebook-tutorial/azure-data-studio-open-notebook.png)
 
 1. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Set the **Kernel** to **PySpark3**, and set **Attach to** to the IP address of your big data cluster endpoint.
 
-   ![Set Kernel and Attach to](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
+   ![Set Kernel and Attach to](media/notebook-tutorial/set-kernel-and-attach-to.png)
 
 ## Run the notebook cells
 
 You can run each notebook cell by pressing the play button to the left of the cell. The results are shown in the notebook after the cell finishes running.
 
-![Run notebook cell](media/tutorial-notebook-spark/run-notebook-cell.png)
+![Run notebook cell](media/notebook-tutorial/run-notebook-cell.png)
 
 Run each of the cells in the sample notebook in succession. For more information about using notebooks with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 

@@ -248,9 +248,9 @@ Remove encryption from the database by using the ALTER DATABASE statement.
 ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ```
 
-To view the state of the database, use the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+To view the state of the database, use the [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
-Wait for decryption to complete before removing the database encryption key, using [DROP DATABASE ENCRYPTION KEY](../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
+Wait for decryption to complete before removing the database encryption key, using [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
 
 > [!IMPORTANT]  
 > Back up the master key and certificate that are used for TDE to a safe location. The master key and certificate are required to restore backups that were taken when the database was encrypted with TDE. After you remove the database encryption key, take a log backup followed by a fresh full backup of the decrypted database.  

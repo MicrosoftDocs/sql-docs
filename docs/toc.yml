@@ -110,7 +110,7 @@
         - name: Single node kubeadm script
           href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks
-          href: big-data-cluster/deploy-notebooks.md         
+          href: big-data-cluster/notebooks-deploy.md
   - name: Concepts
     items:
     - name: Application deployment
@@ -200,9 +200,9 @@
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
-        href: azure-data-studio/notebooks-how-to-manage.md
+        href: big-data-clusters/notebooks-how-to-manage.md
       - name: Notebook tutorial using Spark
-        href: azure-data-studio/notebooks-tutorial-spark.md
+        href: big-data-clusters/notebooks-tutorial-spark.md
       - name: Security
         items:
         - name: Update AZDATA_PASSWORD

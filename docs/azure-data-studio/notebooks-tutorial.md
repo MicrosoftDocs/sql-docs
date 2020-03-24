@@ -46,8 +46,8 @@ You can run each notebook cell by pressing the play button to the left of the ce
 
 Run each of the cells in the sample notebook in succession. For more information about using notebooks with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 
-- [How to use notebooks in SQL Server](notebooks-guidance.md)
-- [How to manage notebooks in Azure Data Studio](notebooks-how-to-manage.md)
+- [How to use notebooks with SQL Server](notebooks-guidance.md)
+- [How to manage notebooks in Azure Data Studio](../big-data-cluster/notebooks-how-to-manage.md)
 
 ## Next steps
 

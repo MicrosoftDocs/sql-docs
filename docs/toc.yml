@@ -199,20 +199,16 @@
         href: big-data-cluster/manage-notebooks.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
+      - name: Manage existing notebooks
+        href: azure-data-studio/notebooks-how-to-manage.md
+      - name: Notebook tutorial using Spark
+        href: azure-data-studio/notebooks-tutorial-spark.md
       - name: Security
         items:
         - name: Update AZDATA_PASSWORD
           href: big-data-cluster/change-azdata-password.md
         - name: Manage user access
           href: big-data-cluster/manage-user-access.md
-    - name: Notebooks
-      items:
-      - name: Notebooks overview
-        href: big-data-cluster/notebooks-guidance.md
-      - name: Notebook tutorial
-        href: big-data-cluster/tutorial-notebook-spark.md
-      - name: Manage existing notebooks
-        href: big-data-cluster/notebooks-how-to-manage.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -7813,6 +7809,14 @@
         href: azure-data-studio/settings.md
       - name: Windows authentication (Kerberos)
         href: azure-data-studio/enable-kerberos.md
+      - name: Notebooks
+        items:
+        - name: Notebooks overview
+          href: azure-data-studio/notebooks-guidance.md
+        - name: Notebook tutorial
+          href: azure-data-studio/notebooks-tutorial.md
+        - name: Manage existing notebooks
+          href: azure-data-studio/notebooks-how-to-manage-sql-server.md
       - name: Usage data collection
         href: azure-data-studio/usage-data-collection.md
     - name: Extensions

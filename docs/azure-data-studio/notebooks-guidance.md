@@ -86,7 +86,7 @@ Clicking outside the text cell shows the markdown text.
 
 ### Configure Python for Notebooks
 
-When you select any of the other kernels apart from SQL from the kernel dropdown, then you get prompted to **Configure Python for Notebooks**. The Notebook dependencies get installed in a specified location but you can decide whether to set the installation location. This installation can take some time and it is recommended to not close the application until the installation is complete. Once the installation finishes, you can start writing code in the supported language.
+When you select any of the other kernels apart from SQL from the kernel dropdown, then you get prompted to **Configure Python for Notebooks**. The Notebook dependencies get installed in a specified location but you can decide whether to set the installation location. This installation can take some time and it's recommended to not close the application until the installation is complete. Once the installation finishes, you can start writing code in the supported language.
 
 ![Configure python](media/notebooks-guidance/configure-python.png)
 

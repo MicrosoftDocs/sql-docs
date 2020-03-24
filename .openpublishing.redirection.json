@@ -16604,6 +16604,11 @@
       "source_path": "docs/big-data-clusters/deploy-notebooks.md",
       "redirect_url": "/sql/big-data-clusters/notebooks-deploy.md",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-clusters/manage-notebooks.md",
+      "redirect_url": "/sql/big-data-clusters/notebooks-manage.md",
+      "redirect_document_id": false
     }
   ]
 }

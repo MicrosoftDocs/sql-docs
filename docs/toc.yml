@@ -7799,8 +7799,6 @@
         href: azure-data-studio/keyboard-shortcuts.md
       - name: Explorer Azure SQL resources
         href: azure-data-studio/azure-resource-explorer.md
-      - name: SQL Notebooks
-        href: azure-data-studio/sql-notebooks.md
       - name: Server groups
         href: azure-data-studio/server-groups.md
       - name: Source control

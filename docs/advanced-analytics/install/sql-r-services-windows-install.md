@@ -53,7 +53,7 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
 
 <a name="bkmk2016top"></a>
 
-## Run Setup
+## Run setup
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
@@ -157,8 +157,8 @@ Use the following steps to verify that all components used to launch external sc
     ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
-	OutputDataSet <- InputDataSet;
-	',
+    OutputDataSet <- InputDataSet;
+    ',
     @input_data_1 =N'SELECT 1 AS hello'
     WITH RESULT SETS (([hello] int not null));
     GO

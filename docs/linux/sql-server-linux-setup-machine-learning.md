@@ -43,7 +43,7 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
   * You can use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), a free database tool that runs on Linux, Windows, and macOS.
 
-## Package List
+## Package list
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for R and Python, you specify packages that provide either the full feature installation or the minimum feature installation.
 
@@ -92,7 +92,7 @@ Installation Options for Python and R:
 > [!Tip]
 > If possible, run `yum clean all` to refresh packages on the system prior to installation.
 
-### Full Installation
+### Full installation
 
 Includes:
 *  Open-source Python
@@ -111,7 +111,7 @@ sudo yum install mssql-mlservices-mlm-py-9.4.7*
 sudo yum install mssql-mlservices-mlm-r-9.4.7*
 ```
 
-### Minimum Installation
+### Minimum installation
 
 Includes:
 *  Open-source Python
@@ -165,7 +165,7 @@ Installation Options for Python and R:
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. 
 
-### Full Installation 
+### Full installation 
 
 Includes:
 *  Open-source Python
@@ -185,7 +185,7 @@ sudo apt-get install mssql-mlservices-mlm-py
 sudo apt-get install mssql-mlservices-mlm-r 
 ```
 
-### Minimum Installation 
+### Minimum installation 
 
 Includes:
 *  Open-source Python
@@ -231,7 +231,7 @@ Installation Options for Python and R:
 *  The *full installation* provides all available features the including pre-trained machine learning models.
 *  The *minimal installation* excludes the models but still has all of the functionality.
 
-### Full Installation 
+### Full installation 
 
 Includes:
 *  Open-source Python
@@ -250,7 +250,7 @@ sudo zypper install mssql-mlservices-mlm-py-9.4.7*
 sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
-### Minimum Installation 
+### Minimum installation 
 
 Includes:
 *  Open-source Python
@@ -318,7 +318,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 7. Restart the Launchpad service again.
 
-## Verify Installation
+## Verify installation
 
 R libraries (MicrosoftML, RevoScaleR, and others) can be found at `/opt/mssql/mlservices/libraries/RServer`.
 
@@ -354,7 +354,7 @@ To validate installation:
 
 <a name="install-all"></a>
 
-## Unattended Installation
+## Unattended installation
 
 Using the [unattended install](sql-server-linux-setup.md#unattended) for the Database Engine, add the packages for mssql-mlservices and EULAs.
 
@@ -366,7 +366,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 The complete EULA is documented at [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-## Offline Installation
+## Offline installation
 
 Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for steps on installing the packages. Find your download site, and then download specific packages using the package list below.
 
@@ -374,7 +374,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 > Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
 
  
-### Download Site
+### Download site
 
 Download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for Python and R are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
@@ -425,7 +425,7 @@ mssql-mlservices-packages-py-9.4.7.64
 mssql-mlservices-mlm-py-9.4.7.64
 ```
 
-## Next Steps
+## Next steps
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 

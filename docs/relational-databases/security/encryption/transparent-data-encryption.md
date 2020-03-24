@@ -1,7 +1,7 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
 ms.custom: ""
-ms.date: 05/09/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -58,17 +58,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  ![Displays the hierarchy described in the topic.](../../../relational-databases/security/encryption/media/tde-architecture.png "Displays the hierarchy described in the topic.")  
   
-## Using Transparent Data Encryption  
- To use TDE, follow these steps.  
+## Enable TDE  
+ To enable Transparent Data Protection follow these steps: 
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Create a master key  
-  
--   Create or obtain a certificate protected by the master key  
-  
--   Create a database encryption key and protect it by the certificate  
-  
+-   Create a master key    
+-   Create or obtain a certificate protected by the master key    
+-   Create a database encryption key and protect it by the certificate    
 -   Set the database to use encryption  
   
  The following example illustrates encrypting and decrypting the `AdventureWorks2012` database using a certificate installed on the server named `MyServerCert`.  
@@ -242,14 +239,29 @@ GO
  
  If a certificate is used to protect the database encryption key (DEK), [backup the certificate](../../../t-sql/statements/backup-certificate-transact-sql.md) created on the primary replica, and then [create the certificate from a file](../../../t-sql/statements/create-certificate-transact-sql.md) on all secondary replicas before creating the database encryption key on the primary replica. 
 
-### TDE and FILESTREAM DATA  
+## TDE and FILESTREAM DATA  
  FILESTREAM data is not encrypted even when TDE is enabled.  
 
 <a name="scan-suspend-resume"></a>
 
-  
+## Remove TDE
+
+Remove encryption from the database by using the ALTER DATABASE statement.
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
+```
+
+To view the state of the database, use the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+
+Wait for decryption to complete before removing the database encryption key, using [DROP DATABASE ENCRYPTION KEY](../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
+
+> [!IMPORTANT]  
+> Back up the master key and certificate that are used for TDE to a safe location. The master key and certificate are required to restore backups that were taken when the database was encrypted with TDE. After you remove the database encryption key, take a log backup followed by a fresh full backup of the decrypted database.  
+
 ## TDE and Buffer Pool Extension  
- Files related to buffer pool extension (BPE) are not encrypted when database is encrypted using TDE. You must use file system level encryption tools like BitLocker or EFS for BPE related files.  
+
+Files related to buffer pool extension (BPE) are not encrypted when database is encrypted using TDE. You must use file system level encryption tools like BitLocker or EFS for BPE related files.  
   
 ## TDE and In-Memory OLTP  
  TDE can be enabled on a database that has In-Memory OLTP objects. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] In-Memory OLTP log records and data are encrypted if TDE is enabled. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] In-Memory OLTP log records are encrypted if TDE is enabled, but files in the MEMORY_OPTIMIZED_DATA filegroup are not encrypted.  

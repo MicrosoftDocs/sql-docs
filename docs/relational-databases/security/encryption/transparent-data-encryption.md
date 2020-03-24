@@ -1,7 +1,7 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
 ms.custom: ""
-ms.date: 05/09/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -250,7 +250,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 
 To view the state of the database, use the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
-Wait for decryption to complete before removing the database encryption key [DROP DATABASE ENCRYPTION KEY](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)
+Wait for decryption to complete before removing the database encryption key, using [DROP DATABASE ENCRYPTION KEY](../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
 
 > [!IMPORTANT]  
 >  Backup the master key and certificate used for TDE to a safe location, as they are needed to restore backups that were taken when the database was encrypted with TDE. After removing the database encryption key, take a log backup followed by a fresh full backup of the decrypted database.  

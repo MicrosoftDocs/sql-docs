@@ -1,12 +1,10 @@
 ---
-title: "Data Profiling and Notifications in DQS"
-ms.date: "03/15/2020"
+title: Data Profiling and Notifications in DQS
+ms.date: 03/15/2020
 ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
+ms.reviewer: jroth
 ms.technology: data-quality-services
 ms.topic: conceptual
-ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
 ---
@@ -110,7 +108,7 @@ The DQS activities have different sets of profiling statistics, as follows:
   - Matching.
   - But _not_ for the Cleansing activity.
 
-For more information about the specific profiling statistics related to an activity, see the Profiling sections in the following topics:
+DQS offers specific profiling statistics that are related to an activity. For details, see the **Profiling** sections in the following topics:
 
 - [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)
 
@@ -138,7 +136,7 @@ For more information, see [DQS Administration](../data-quality-services/dqs-admi
 
 DQS generates notifications to indicate when you might want to take an action based on profiling statistics. DQS uses notifications for important facts about the data source. These facts show the effectiveness of the current activity relative to the purpose for which it was executed. Notifications provide tips and recommendations that indicate a condition. Notifications can also recommend how you can improve a knowledge discovery, data cleansing, or data matching activity.
 
-DQS sends a notification when it detects an issue that might matter to you. For example, DQS might post a notification when the data cleansing activity produces no corrected or suggested values, while completeness and accuracy are both 100%. This notification would indicate that the activity might not be needed. Whether to run the activity remains your decision.
+DQS sends a notification when it detects an issue that might matter to you. As an example situation, when completeness and accuracy are both 100%, the data cleansing activity might produce no corrected or suggested values. DQS might post a notification for that situation. This notification would indicate that the activity might not be needed. Whether to run the activity remains your decision.
 
 A notification is indicated by a tool tip having an exclamation point, in the **Profiling** tab. Statistics associated with the notification are colored red to indicate the statistical justification for the notification.
 
@@ -160,7 +158,7 @@ For specific conditions associated with notifications for an activity, see the f
 
 ## Related Tasks
 
-|Task Description|Topic|
-|----------------------|-----------|
-|Describes how to enable or disable notifications in DQS.|[Enable or Disable Profiling Notifications in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|
+| Task description | Topic |
+| :--------------- | :---- |
+| Describes how to enable or disable notifications in DQS. | [Enable or Disable Profiling Notifications in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md) |
 |||

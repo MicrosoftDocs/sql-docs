@@ -216,7 +216,14 @@ GO
   
 ### Transparent Data Encryption and Replication  
  Replication does not automatically replicate data from a TDE-enabled database in an encrypted form. You must separately enable TDE if you want to protect the distribution and subscriber databases. Snapshot replication, as well as the initial distribution of data for transactional and merge replication, can store data in unencrypted intermediate files; for example, the bcp files.  During transactional or merge replication, encryption can be enabled to protect the communication channel. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
-  
+
+### Transparent Data Encryption and AlwaysOn
+ You can [add encrypted database to AlwaysOn Availability Group.](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)
+ 
+ In order to encrypt database that is already part of AlwaysOn Availability Group, make sure to create Master Key, Certificate or Asymmetric Key (EKM) on all Secondary Replicas before [Creating Database Encryption Key](../../../t-sql/statements/create-database-encryption-key-transact-sql.md) on Primary Replica.
+
+ If Certificate is used to protect Database Encryption Key (DEK), [Backup the Certificate](../../../t-sql/statements/backup-certificate-transact-sql.md) created on Primary and [Create Certificate from File](../../../t-sql/statements/create-certificate-transact-sql.md) on all Secondary Replicas before Creating Database Encryption Key on Primary Replica.
+
 ### Transparent Data Encryption and FILESTREAM DATA  
  FILESTREAM data is not encrypted even when TDE is enabled.  
 

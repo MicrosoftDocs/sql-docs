@@ -178,7 +178,7 @@ The maximum size in bytes of the underlying data in this column.
 For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000 indicate this column represent LOBs object and with sizes up to 2GB.
 
 *DecimalDigits*  
-The decimal digits of underlying data in this column, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits].
+The decimal digits of underlying data in this column, as defined by [Decimal Digits](../../odbc/reference/appendixes/decimal-digits.md).
 
 *Nullable*  
 A value that indicates whether this column may contain NULL values. Possible values:

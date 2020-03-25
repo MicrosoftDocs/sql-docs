@@ -186,10 +186,10 @@ A value that indicates whether this column may contain NULL values. Possible val
     - SQL_NULLABLE: The column may contain NULL values.
 
 *PartitionByNumber*  
-A value that indicates the index of this column in the `@input_data_1_partition_by_columns` [todo: David add link] sequence. Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
+A value that indicates the index of this column in the `@input_data_1_partition_by_columns` sequence in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
 
 *OrderByNumber*  
-A value that indicates the index of this column in the `@input_data_1_order_by_columns` [todo: David add link] sequence. Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
+A value that indicates the index of this column in the `@input_data_1_order_by_columns` sequence in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
 
 ### InitParam
 

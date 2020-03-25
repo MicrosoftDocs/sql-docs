@@ -57,7 +57,7 @@ ms.author: maggies
   
 |Export Option|Support Information|  
 |-------------------|-------------------------|  
-|Preview/Report Viewer, HTML|For tabular repots, users click sort arrows on column to change how the data is sorted.|  
+|Preview/Report Viewer, HTML|For tabular reports, users click sort arrows on column to change how the data is sorted.|  
 |PDF|Not available in PDF.|  
 |Excel|Not available in Excel.|  
 |Word|Not available in Word.|  

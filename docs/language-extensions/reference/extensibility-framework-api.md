@@ -294,7 +294,7 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 *Data*  
 \[Input\] A 2-dimensional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-The total number of columns is [*InputSchemaColumnsNumber* that was received in the **InitSession** call](#initsession). Each column contains *RowsNumber* elements that should be interpreted according to the column type from [**InitColumn**](#initcolumn).
+The total number of columns is *InputSchemaColumnsNumber* that was received in the [InitSession](#initsession) call. Each column contains *RowsNumber* elements that should be interpreted according to the column type from [InitColumn](#initcolumn).
 
 Elements indicated to be NULL in *StrLen_or_Ind* are not guaranteed to be valid and should be ignored.
 
@@ -304,7 +304,7 @@ Elements indicated to be NULL in *StrLen_or_Ind* are not guaranteed to be valid 
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
 
-The total number of columns is [*InputSchemaColumnsNumber* that was received in the **InitSession** call](#initsession). Each column contains *RowsNumber* elements that should be interpreted according to the column type from [**InitColumn**](#initcolumn).
+The total number of columns is *InputSchemaColumnsNumber* that was received in the [InitSession](#initsession) call. Each column contains *RowsNumber* elements that should be interpreted according to the column type from [InitColumn](#initcolumn).
 
 StrLen_or_Ind\[col\] can be ignored, if one column is not nullable and doesn't represent one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP. Otherwise it points to a valid array with *RowsNumber* elements, each element contains its length or null indicator data.
 
@@ -397,7 +397,7 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 *Data*  
 \[Output\] A pointer to a 2-dimensional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-The total number of columns should be [OutputSchemaColumnsNumber that was retrieved in the Execute](#execute) call. Each column should contain \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
+The total number of columns should be *OutputSchemaColumnsNumber* that was retrieved in the [Execute](#execute) call. Each column should contain *RowsNumber* elements that should be interpreted according to the column type from [GetResultColumn](#getresultcolumn).
 
 *StrLen_or_Ind*  
 \[Output\] A pointer to a 2-dimensional array allocated by the extension that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
@@ -405,9 +405,9 @@ The total number of columns should be [OutputSchemaColumnsNumber that was retrie
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
 
-The total number of columns should be \[OutputSchemaColumnsNumber\] (that was received in the `Execute()` call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
+The total number of columns should be *OutputSchemaColumnsNumber* that was received in the [Execute](#execute) call. Each column contains *RowsNumber* elements that should be interpreted according to the column type from [GetResultColumn](#getresultcolumn).
 
-StrLen_or_Ind\[col\] will be ignored, if one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates]. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
+StrLen_or_Ind\[col\] will be ignored, if one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates]. Otherwise it points to a valid array with *RowsNumber* elements, each element contains its length or null indicator data.
 
 ## GetOutputParam
 

@@ -63,7 +63,7 @@ Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```

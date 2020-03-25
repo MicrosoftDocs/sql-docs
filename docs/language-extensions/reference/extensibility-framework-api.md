@@ -280,27 +280,34 @@ SQLRETURN Execute(
 
 #### Arguments
 
-- **SessionId:** GUID uniquely identifying this script session.
-- **TaskId:** An integer uniquely identifying this execution process. 
+*SessionId*  
+GUID uniquely identifying this script session.
 
-    When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+*TaskId* 
+An integer uniquely identifying this execution process.
 
-- **RowsNumber:** The number of rows in the **Data**.
-- **Data:** A 2 dimentional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+
+*RowsNumber*  
+The number of rows in the *Data*.
+
+*Data*  
+A 2 dimentional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 The total number of columns is \[InputSchemaColumnsNumber\] (that was received in the InitSession call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn [todo: Peter, add some link/highlight/reference?]).
 
-Elements indicated to be NULL in **StrLen_or_Ind** are not guaranteed to be valid and should be ignored.
+Elements indicated to be NULL in *StrLen_or_Ind* are not guaranteed to be valid and should be ignored.
 
-- **StrLen_or_Ind:** A 2 dimentional array that contains the length/NULL indicator for each value in **Data**.
-Possible values of each cell:
+*StrLen_or_Ind*  
+A 2 dimentional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
     - n, where n > 0. Indicating the length of the data in bytes
     - SQL_NULL_DATA, indicating a NULL value.
 
-    The total number of columns is \[InputSchemaColumnsNumber\] (that was received in the InitSession call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn [todo: Peter, add some link/highlight/reference?]).
+The total number of columns is \[InputSchemaColumnsNumber\] (that was received in the InitSession call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn [todo: Peter, add some link/highlight/reference?]).
 
-    If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP, StrLen_or_Ind\[col\] can be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
+If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP, StrLen_or_Ind\[col\] can be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
 
-- **OutputSchemaColumnsNumber:** [Output] Pointer to a buffer in which to return the number of columns in the expected result set of the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+*OutputSchemaColumnsNumber:*  
+[Output] Pointer to a buffer in which to return the number of columns in the expected result set of the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 ### GetResultColumn
 
@@ -325,19 +332,32 @@ SQLRETURN GetResultColumn(
 
 #### Arguments
 
-- **SessionId:** GUID uniquely identifying this script session.
-- **TaskId:** An integer uniquely identifying this execution process. 
+*SessionId*  
+GUID uniquely identifying this script session.
 
-    When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+*TaskId*  
+An integer uniquely identifying this execution process.
 
-- **ColumnNumber:** An integer identifying the index of this column in the output schema. Columns are numbered sequentially in increasing order starting at 0. 
-- **DataType:** \[Output\] A pointer to the buffer that contains the ODBC C type identifying this column's data type.
-- **ColumnSize:** \[Output\] A pointer to a buffer that contains the maximum size in bytes of the underlying data in this column.
-- **DecimalDigits:** \[Output\] A pointer to a buffer that contains the decimal digits of underlying data in this column, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits]. If the number of decimal digits cannot be determined or is not applicable, the value is discarded. 
-- **Nullable:** \[Output\] A pointer to a buffer that contains a value which indicates whether this column may contain NULL values. Possible values:
+When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+
+*ColumnNumber*  
+An integer identifying the index of this column in the output schema. Columns are numbered sequentially in increasing order starting at 0.
+
+*DataType*  
+\[Output\] A pointer to the buffer that contains the ODBC C type identifying this column's data type.
+
+*ColumnSize*  
+\[Output\] A pointer to a buffer that contains the maximum size in bytes of the underlying data in this column.
+
+*DecimalDigits*  
+\[Output\] A pointer to a buffer that contains the decimal digits of underlying data in this column, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits]. If the number of decimal digits cannot be determined or is not applicable, the value is discarded.
+
+*Nullable*  
+\[Output\] A pointer to a buffer that contains a value which indicates whether this column may contain NULL values. Possible values:
     - SQL_NO_NULLS: The column cannot contain NULL values.
     - SQL_NULLABLE: The column may contain NULL values.
-    If other values are passed then execution stops.
+
+If other values are passed then execution stops.
 
 ### GetResults
 
@@ -360,23 +380,30 @@ SQLRETURN GetResults(
 
 #### Arguments
 
-- **SessionId:** GUID uniquely identifying this script session.
-- **TaskId:** An integer uniquely identifying this execution process. 
+*SessionId*  
+GUID uniquely identifying this script session.
 
-    When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+*TaskId*  
+An integer uniquely identifying this execution process.
 
-- **RowsNumber:** \[Output\] A pointer to a buffer that contains the number of rows in the **Data**.
-- **Data:** \[Output\] A pointer to a 2 dimentional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+
+*RowsNumber*  
+\[Output\] A pointer to a buffer that contains the number of rows in the **Data**.
+
+*Data*  
+\[Output\] A pointer to a 2-dimentional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
 The total number of columns should be \[OutputSchemaColumnsNumber\] (that was retrieved in the `Execute()` call [todo: Peter, add some link/highlight/reference?]). Each column should contain \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
 
- - **StrLen_or_Ind:** \[Output\] A pointer to a 2 dimentional array allocated by the extension that contains the length/NULL indicator for each value in **Data**.
-Possible values of each cell:
+*StrLen_or_Ind*  
+\[Output\] A pointer to a 2-dimentional array allocated by the extension that contains the length/NULL indicator for each value in **Data**. Possible values of each cell:
     - n, where n > 0. Indicating the length of the data in bytes
     - SQL_NULL_DATA, indicating a NULL value.
 
-    The total number of columns should be \[OutputSchemaColumnsNumber\] (that was received in the `Execute()` call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
+The total number of columns should be \[OutputSchemaColumnsNumber\] (that was received in the `Execute()` call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
 
-    If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates], StrLen_or_Ind\[col\] will be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
+If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates], StrLen_or_Ind\[col\] will be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
 
 ### GetOutputParam
 
@@ -397,10 +424,14 @@ SQLRETURN GetOutputParam(
 
 #### Arguments
 
-- **SessionId:** GUID uniquely identifying this script session.
-- **ParamValue:** \[Output\] A pointer to a buffer containing the parameter's value.
+*SessionId*  
+GUID uniquely identifying this script session.
 
-- **StrLen_or_Ind:** \[Output\] A pointer to a buffer that contains an integer value indicating the length in bytes of **ParamValue**, or SQL_NULL_DATA to indicate that the data is NULL.
+*ParamValue*  
+\[Output\] A pointer to a buffer containing the parameter's value.
+
+*StrLen_or_Ind* 
+\[Output\] A pointer to a buffer that contains an integer value indicating the length in bytes of *ParamValue*, or SQL_NULL_DATA to indicate that the data is NULL.
 
 ### CleanupSession
 
@@ -417,10 +448,13 @@ SQLRETURN CleanupSession(
 
 #### Arguments
 
-- **SessionId:** GUID uniquely identifying this script session.
-- **TaskId:** An integer uniquely identifying this execution process. 
+*SessionId*  
+GUID uniquely identifying this script session.
 
-    When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+*TaskId*  
+An integer uniquely identifying this execution process.
+
+When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
 
 ### Cleanup
 
@@ -440,7 +474,7 @@ There is a counter named script_executions which is sent by the framework. The e
 
 Each telemetry entry is a key-value pair. The keys are strings, the values are 64-bit integers - counters. Thus, the output comprises for two logical arrays: the names and their corresponding counters. Each array is output.
 
-The length of each array is **RowsNumber**, which is an output. The first logical output contains pointers to strings, thus, it's represented by two arrays: **CounterNames** (the actual string data) and **CounterNamesLength** (the length of each string). The second logical output is stored in the **CounterValues** pointer. 
+The length of each array is *RowsNumber*, which is an output. The first logical output contains pointers to strings, thus, it's represented by two arrays: *CounterNames* (the actual string data) and *CounterNamesLength* (the length of each string). The second logical output is stored in the *CounterValues* pointer.
 
 #### Syntax
 
@@ -457,15 +491,25 @@ SQLRETURN GetTelemetryResults(
 
 #### Arguments
 
-- **SessionId:** GUID uniquely identifying this script session.
-- **TaskId:** An integer uniquely identifying this execution process. 
+*SessionId*  
+GUID uniquely identifying this script session.
 
-    When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+*TaskId*  
+An integer uniquely identifying this execution process.
 
-- **RowsNumber:** \[Output\] The number of key-value pairs.
-- **CounterNames:** \[Output\] The string data containing the keys.
-- **CounterNamesLength:** \[Output\] The length of each key string.
-- **CounterValues:** \[Output\] The 64-bit integer data containing the values.
+When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+
+*RowsNumber*  
+\[Output\] The number of key-value pairs.
+
+*CounterNames*  
+\[Output\] The string data containing the keys.
+
+*CounterNamesLength*  
+\[Output\] The length of each key string.
+
+*CounterValues*  
+\[Output\] The 64-bit integer data containing the values.
 
 ### InstallExternalLibrary
 
@@ -486,15 +530,35 @@ SQLRETURN InstallExternalLibrary(
     SQLINTEGER *LibraryErrorLength
 );
 ```
-- **SetupSessionId:** GUID uniquely identifying this script session.
-- **LibraryName:** \[Input\] The library name.
-- **LibraryNameLength:** \[Input\] The length of the library name.
-- **LibraryFile:** \[Input\] The path (as a string) to the library file containing the binary content specified by [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
-- **LibraryFileLength:** \[Input\] The length of the LibraryFile string.
-- **LibraryInstallDirectory:** \[Input\] The root directory to install the library.
-- **LibraryInstallDirectoryLength:** \[Input\] The length of the LibraryInstallDirectory string.
-- **LibraryError:** \[Output\] An optional output parameter. In case there was an error during the installation of the library, LibraryError would point to a string describing the error.
-- **LibraryErrorLength:** \[Output\] The length of the LibraryError string.
+
+#### Arguments
+
+*SetupSessionId*  
+GUID uniquely identifying this script session.
+
+*LibraryName*  
+\[Input\] The library name.
+
+*LibraryNameLength*  
+\[Input\] The length of the library name.
+
+*LibraryFile*  
+\[Input\] The path (as a string) to the library file containing the binary content specified by [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+*LibraryFileLength*  
+\[Input\] The length of the LibraryFile string.
+
+*LibraryInstallDirectory:*  
+\[Input\] The root directory to install the library.
+
+*LibraryInstallDirectoryLength*  
+\[Input\] The length of the LibraryInstallDirectory string.
+
+*LibraryError*  
+\[Output\] An optional output parameter. In case there was an error during the installation of the library, LibraryError would point to a string describing the error.
+
+*LibraryErrorLength*  
+\[Output\] The length of the LibraryError string.
 
 ### UninstallLibrary
 
@@ -516,15 +580,32 @@ SQLRETURN UninstallExternalLibrary(
 
 #### Arguments
 
-- **SetupSessionId:** GUID uniquely identifying this script session.
-- **LibraryName:** \[Input\] The library name
-- **LibraryNameLength:** \[Input\] The length of the library name
-- **LibraryFile:** \[Input\] The path (as a string) to the library file containing the binary content specified by CREATE EXTERNAL LIBRARY
-- **LibraryFileLength:** \[Input\] The length of the LibraryFile string
-- **LibraryInstallDirectory:** \[Input\] The root directory to install the library
-- **LibraryInstallDirectoryLength:** \[Input\] The length of the LibraryInstallDirectory string.
-- **LibraryError:** \[Output\] The library error string.
-- **LibraryErrorLength:** \[Output\] The length of the LibraryError string.
+*SetupSessionId*  
+GUID uniquely identifying this script session.
+
+*LibraryName*  
+\[Input\] The library name
+
+*LibraryNameLength*  
+\[Input\] The length of the library name
+
+*LibraryFile*  
+\[Input\] The path (as a string) to the library file containing the binary content specified by CREATE EXTERNAL LIBRARY
+
+*LibraryFileLength*  
+\[Input\] The length of the LibraryFile string
+
+*LibraryInstallDirectory*  
+\[Input\] The root directory to install the library
+
+*LibraryInstallDirectoryLength*  
+\[Input\] The length of the LibraryInstallDirectory string.
+
+*LibraryError*  
+\[Output\] The library error string.
+
+*LibraryErrorLength*  
+\[Output\] The length of the LibraryError string.
 
 ## Next steps
 

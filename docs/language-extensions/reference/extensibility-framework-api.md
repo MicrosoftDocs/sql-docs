@@ -22,7 +22,7 @@ You can find the source code for the Java Language Extension at [aka.ms/mssql-la
 
 ### Return value for all the calls
 
-All the functions return a **SQLRETURN** parameter. If the value is anything other than **SQL_SUCCESS**, the execution of the script stops.
+All the functions return a *SQLRETURN* parameter. If the value is anything other than *SQL_SUCCESS*, the execution of the script stops.
 
 ### Init
 
@@ -393,7 +393,7 @@ An integer uniquely identifying this execution process.
 When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
 
 *RowsNumber*  
-\[Output\] A pointer to a buffer that contains the number of rows in the **Data**.
+\[Output\] A pointer to a buffer that contains the number of rows in the *Data*.
 
 *Data*  
 \[Output\] A pointer to a 2-dimentional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
@@ -401,7 +401,7 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 The total number of columns should be \[OutputSchemaColumnsNumber\] (that was retrieved in the `Execute()` call [todo: Peter, add some link/highlight/reference?]). Each column should contain \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
 
 *StrLen_or_Ind*  
-\[Output\] A pointer to a 2-dimentional array allocated by the extension that contains the length/NULL indicator for each value in **Data**. Possible values of each cell:
+\[Output\] A pointer to a 2-dimentional array allocated by the extension that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
 
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
@@ -567,7 +567,7 @@ GUID uniquely identifying this script session.
 
 ### UninstallLibrary
 
-Uninstalls a library. The function is optional and doesn't require implementation. The default implementation is to undo the work done by the default Implementation of InstallExternalLibrary. The default implementation deletes the content of the **LibraryName** file under **LibraryInstallDirectory**.
+Uninstalls a library. The function is optional and doesn't require implementation. The default implementation is to undo the work done by the default Implementation of InstallExternalLibrary. The default implementation deletes the content of the *LibraryName* file under *LibraryInstallDirectory*.
 
 #### Syntax
 

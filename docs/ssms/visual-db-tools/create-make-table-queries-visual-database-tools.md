@@ -68,7 +68,7 @@ In order to use a Make Table query successfully:
   
 5.  If you want to copy rows in a particular order, specify a sort order. For details, see **Sorting and Grouping Query Results**.  
   
-6.  Specify the rows to copy by entering search conditions. For details, see [Specify Search Criteria(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+6.  Specify the rows to copy by entering search conditions. For details, see [Specify Search Criteria](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     If you do not specify a search condition, all rows from the source table will be copied to the destination table.  
   

@@ -45,28 +45,28 @@ SQLRETURN Init(
 
 #### Arguments
 
-*ExtensionParams*
+*ExtensionParams*  
 Null-terminated string containing `PARAMETERS` value provided during [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) or [ALTER EXTERNAL LANGUAGE](../../t-sql/statements/alter-external-language-transact-sql.md).
 
-*ExtensionParamsLength*
+*ExtensionParamsLength*  
 Length in bytes of *ExtensionParams* (excluding the null termination character).
 
-*ExtensionPath* 
+*ExtensionPath*  
 Null-terminated UTF-8 string containing the absolute path to the installation directory of the extension.
 
-*ExtensionPathLength*
+*ExtensionPathLength*  
 Length in bytes of *ExtensionPath* (excluding the null termination character).
 
-*PublicLibraryPath*
+*PublicLibraryPath*  
 Null-terminated UTF-8 string containing the absolute path to the public external libraries directory for this external language.
 
-*PublicLibraryPathLength*
+*PublicLibraryPathLength*  
 Length in bytes of *PublicLibraryPath* (excluding the null termination character).
 
-*PrivateLibraryPath*
+*PrivateLibraryPath*  
 Null-terminated UTF-8 string containing the absolute path to the private external libraries directory for this user and this external language.
 
-*PrivateLibraryPathLength*
+*PrivateLibraryPathLength*  
 Length in bytes of *PrivateLibraryPath* (excluding the null termination character).
 
 ### InitSession

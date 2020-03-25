@@ -103,7 +103,7 @@ ms.author: maggies
      The following hard page-break rendering extensions are supported: TIFF and PDF.  
   
 ##  <a name="ExportFormats"></a> Formats you can export while viewing reports  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides rendering extensions that render reports in different formats. You should optimize the report design for your chosen file format.  The followin table lists the formats you can export from the user interface.  There are additional formats you can use with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions or if you are exporting from URL access.  See the section [Other Ways of Exporting Reports](#OtherWaysExportingReports)in this topic.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides rendering extensions that render reports in different formats. You should optimize the report design for your chosen file format.  The following table lists the formats you can export from the user interface.  There are additional formats you can use with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions or if you are exporting from URL access.  See the section [Other Ways of Exporting Reports](#OtherWaysExportingReports)in this topic.  
   
 |Format|Rendering Extension Type|Description|  
 |------------|------------------------------|-----------------|  

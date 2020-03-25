@@ -14,15 +14,13 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 
-As a language extension author, you can use this reference together with the open sourced [Java language extension for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) to understand how to use the API for writing your own language extensions.
+As a language extension author, you can use this reference together with the open sourced [Java language extension for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) to understand how to use the API for writing your own language extensions. You can find the source code for the Java language extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
-You can find the source code for the Java language extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+Find information for all API functions below.
 
-Below you will find the API functions.
+## Return value
 
-## Return value for all API functions
-
-All the functions return a *SQLRETURN* parameter. If the value is anything other than *SQL_SUCCESS*, it is treated as an error and the execution of the script stops.
+All functions return a *SQLRETURN* parameter. If the value is anything other than *SQL_SUCCESS*, it is treated as an error and the execution of the script stops.
 
 ## Init
 

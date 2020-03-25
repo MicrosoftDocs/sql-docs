@@ -73,6 +73,8 @@ Length in bytes of *PrivateLibraryPath* (excluding the null termination characte
 
 This function is called once per session and initializing session specific settings.
 
+#### Syntax
+
 ```cpp
 SQLRETURN InitSession(
     SQLGUID         SessionId,
@@ -88,26 +90,49 @@ SQLRETURN InitSession(
 );
 ```
 
-- **SessionId:** GUID uniquely identifying this script session.
-- **TaskId:** An integer uniquely identifying this execution process. 
+#### Arguments
 
-    When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+*SessionId*  
+GUID uniquely identifying this script session.
 
-- **Script:** Null-terminated UTF-8 string containing the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-- **ScriptLength:** Length in bytes of **ScriptScript** (excluding the null termination character).
-- **InputSchemaColumnsNumber:** Number of columns in the result set from `@input_data_1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-- **ParametersNumber:** Number of input parameters from `@params` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-- **InputDataName:** Null-terminated UTF-8 string containing the `@input_data_1_name` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-- **InputDataNameLength:** Length in bytes of **InputDataName** (excluding the null termination character).
-- **OutputDataName:** Null-terminated UTF-8 string containing the `@output_data_1_name` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-- **OutputDataNameLength:** Length in bytes of **OutputDataName** (excluding the null termination character).
+*TaskId*  
+An integer uniquely identifying this execution process.
+
+When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+
+*Script*  
+Null-terminated UTF-8 string containing the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+*ScriptLength*  
+Length in bytes of *ScriptScript* (excluding the null termination character).
+
+*InputSchemaColumnsNumber*  
+Number of columns in the result set from `@input_data_1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+*ParametersNumber*  
+Number of input parameters from `@params` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+*InputDataName*  
+Null-terminated UTF-8 string containing the `@input_data_1_name` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+*InputDataNameLength*  
+Length in bytes of *InputDataName* (excluding the null termination character).
+
+*OutputDataName*  
+Null-terminated UTF-8 string containing the `@output_data_1_name` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+*OutputDataNameLength*  
+Length in bytes of *OutputDataName* (excluding the null termination character).
 
 ### InitColumn
 
 Initialize the information for a given column for a particular session.
 
 This function is called for each column in the result set from `@input_data_1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-The column structure of this result set will be referred to as the 'input schema'.
+
+The column structure of this result set will be referred to as the *input schema*.
+
+#### Syntax
 
 ```cpp
 SQLRETURN InitColumn(
@@ -124,29 +149,55 @@ SQLRETURN InitColumn(
     SQLSMALLINT   OrderByNumber
 );
 ```
-- **SessionId:** GUID uniquely identifying this script session.
-- **TaskId:** An integer uniquely identifying this execution process. 
 
-    When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+#### Arguments
 
-- **ColumnNumber:** An integer identifying the index of this column in the input schema. Columns are numbered sequentially in increasing order starting at 0.
-- **ColumnName:** Null-terminated UTF-8 string containing the column's name.
-- **ColumnNameLength:** Length in bytes of **ColumnName** (excluding the null termination character).
-- **DataType:** The ODBC C type identifying this column's data type.
-- **ColumnSize:** The maximum size in bytes of the underlying data in this column.
+*SessionId*  
+GUID uniquely identifying this script session.
+
+*TaskId*  
+An integer uniquely identifying this execution process.
+
+When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
+
+*ColumnNumber*  
+An integer identifying the index of this column in the input schema. Columns are numbered sequentially in increasing order starting at 0.
+
+*ColumnName*  
+Null-terminated UTF-8 string containing the column's name.
+
+*ColumnNameLength*  
+Length in bytes of *ColumnName* (excluding the null termination character).
+
+*DataType*  
+The ODBC C type identifying this column's data type.
+
+*ColumnSize*  
+The maximum size in bytes of the underlying data in this column.
+
 For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000 indicate this column represent LOBs object and with sizes up to 2GB.
-- **DecimalDigits:** The decimal digits of underlying data in this column, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits].
-- **Nullable:** A value that indicates whether this column may contain NULL values. Possible values:
+
+*DecimalDigits*  
+The decimal digits of underlying data in this column, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits].
+
+*Nullable*  
+A value that indicates whether this column may contain NULL values. Possible values:
     - SQL_NO_NULLS: The column cannot contain NULL values.
     - SQL_NULLABLE: The column may contain NULL values.
-- **PartitionByNumber:** A value that indicates the index of this column in the `@input_data_1_partition_by_columns` [todo: David add link] sequence. Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
-- **OrderByNumber:** A value that indicates the index of this column in the `@input_data_1_order_by_columns` [todo: David add link] sequence. Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
+
+*PartitionByNumber*  
+A value that indicates the index of this column in the `@input_data_1_partition_by_columns` [todo: David add link] sequence. Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
+
+*OrderByNumber*  
+A value that indicates the index of this column in the `@input_data_1_order_by_columns` [todo: David add link] sequence. Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
 
 ### InitParam
 
 Initialize the information regarding a given input parameter for a particular session.
 
 This function is called for each parameter from `@params` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+#### Syntax
 
 ```cpp
 SQLRETURN InitParam(
@@ -163,6 +214,9 @@ SQLRETURN InitParam(
     SQLSMALLINT  InputOutputType
 );
 ```
+
+#### Arguments
+
 - **SessionId:** GUID uniquely identifying this script session.
 - **TaskId:** An integer uniquely identifying this execution process. 
 

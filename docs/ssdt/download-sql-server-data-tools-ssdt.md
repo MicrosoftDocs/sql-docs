@@ -74,10 +74,10 @@ The installer lists available Visual Studio instances to add SSDT tools. If Visu
 
 ## SSDT for VS 2017 (standalone installer)
 
-[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
+[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.4)](https://go.microsoft.com/fwlink/?linkid=2124518 )
 
 > [!IMPORTANT]
-> * Before installing SSDT for Visual Studio 2017 (15.9.3), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
+> * Before installing SSDT for Visual Studio 2017 (15.9.4), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
 > * Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=100619).
 > * Removed the inbox component Microsoft Oracle Connector for SQL Server 2019. Now we have announced Microsoft Oracle Connector for SQL Server 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=58228).
 
@@ -93,17 +93,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](https://docs.micr
 
 This release of **SSDT for VS 2017** can be installed in the following languages:
 
-* [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
-* [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
-* [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
-* [French]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
-* [German]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
-* [Italian]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
-* [Japanese]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
-* [Korean]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
-* [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
-* [Russian]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
-* [Spanish]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
+* [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
+* [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
+* [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
+* [French]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
+* [German]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
+* [Italian]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
+* [Japanese]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
+* [Korean]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
+* [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
+* [Russian]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
+* [Spanish]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
 
 ### Considerations and limitations
 
@@ -124,8 +124,6 @@ First, complete the following steps while **online**:
 3. While still online, execute one of the following commands to download all the files required for installing offline. Using the `--layout` option is the key, it downloads the actual files for the offline installation. Replace `<filepath>` with the actual layouts path to save the files.
    1. For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang en-us` (a single language is ~1 GB).
    1. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>` (all languages are ~3.9 GB).
-
-4. Execute `SSDT-Setup-ENU.exe /layout c:\<filepath>` to extract the SSDT payload into the same `<filepath>` location where the VS2017 files were downloaded. This action ensures that all files from both are combined into a single layouts folder.
 
 After completing the previous steps, the following steps below can be done **offline**:
 

@@ -40,6 +40,39 @@ GeneMi , 2019/03/22.
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
 
+## 15.9.4,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; March 26, 2020  
+_Build Number:_ &nbsp; 14.0.16214.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Fixed an issue that VS may crash when moving control flow constraint lines inside a container. |
+| Integration Services (SSIS) | Fixed an issue that maintenance plan tasks’ UI cannot list ADO.NET connection managers created outside of the task UI. |
+| Integration Services (SSIS) | Fixed an issue that Azure interactive login page doesn't show up when deploying an SSAS project which belongs to a solution also having SSIS projects loaded. |
+| Integration Services (SSIS) | Fixed an issue that clicking on MSOLAP driver properties button makes DTS wizard crash when SQL Server is not installed. |
+| Integration Services (SSIS) | Fixed an issue that MSOLEDBSQL driver doesn't support AAD auth in DTS Wizard. |
+| Integration Services (SSIS) | Fixed an issue that XML Source and ADO.NET Destination cannot be correctly persisted when targeting to SQL Server 2012. |
+| Integration Services (SSIS) | Fixed an issue that the "Download WSDL" button in Web Service Task editor may not be properly displayed. |
+| Integration Services (SSIS) | Fixed an issue that table may not be able to be selected in Connection Manager page of LookUp Transformation editor. |
+| Integration Services (SSIS) | Fixed an issue that the layout of Cache Transformation editor may be messed. |
+| Integration Services (SSIS) | Fixed an issue that the "Connection Managers" area in package editor may not be properly displayed. |
+| Integration Services (SSIS) | Fixed an issue that the status icon may not be properly displayed in the Convert to Package Deployment Model wizard. |
+| Integration Services (SSIS) | Changed the installer to full installer that does not require downloading payload from internet. |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
+| Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source is not localized | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## 15.9.3,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; Jan 3, 2020  

@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 
-As a language extension author, you can use this reference together with the open sourced [Java language extension for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) to understand how to use the API for writing your own language extensions. You can find the source code for the Java language extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+As a language extension author, you can use this reference together with the open-sourced [Java language extension for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) to understand how to use the API for writing your own language extensions. You can find the source code for the Java language extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
 Find the syntax and arguments information about all API functions below.
 
@@ -173,7 +173,7 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 *ColumnSize*  
 \[Input\] The maximum size in bytes of the underlying data in this column.
 
-For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000 indicate this column represent LOBs object and with sizes up to 2GB.
+For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000 indicate this column represent LOBs object and with sizes up to 2 GB.
 
 *DecimalDigits*  
 \[Input\] The decimal digits of underlying data in this column, as defined by [Decimal Digits](../../odbc/reference/appendixes/decimal-digits.md).
@@ -239,7 +239,7 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 *ParamSize*  
 \[Input\] The maximum size in bytes of the underlying data in this parameter.
 
-For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000 indicate this parameter represent LOBs object and with sizes up to 2GB.
+For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000 indicate this parameter represent LOBs object and with sizes up to 2 GB.
 
 *DecimalDigits*  
 \[Input\] The decimal digits of underlying data in this parameter, as defined by [Decimal Digits](../../odbc/reference/appendixes/decimal-digits.md).
@@ -292,21 +292,21 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 \[Input\] The number of rows in the *Data*.
 
 *Data*  
-\[Input\] A 2-dimentional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Input\] A 2-dimensional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 The total number of columns is [*InputSchemaColumnsNumber* that was received in the **InitSession** call](#initsession). Each column contains *RowsNumber* elements that should be interpreted according to the column type from [**InitColumn**](#initcolumn).
 
 Elements indicated to be NULL in *StrLen_or_Ind* are not guaranteed to be valid and should be ignored.
 
 *StrLen_or_Ind*  
-\[Input\] A 2-dimentional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
+\[Input\] A 2-dimensional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
 
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
 
 The total number of columns is [*InputSchemaColumnsNumber* that was received in the **InitSession** call](#initsession). Each column contains *RowsNumber* elements that should be interpreted according to the column type from [**InitColumn**](#initcolumn).
 
-If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP, *StrLen_or_Ind\[col\]* can be ignored. Otherwise it points to a valid array with *RowsNumber* elements, each element contains its length or null indicator data.
+StrLen_or_Ind\[col\] can be ignored, if one column is not nullable and doesn't represent one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP. Otherwise it points to a valid array with *RowsNumber* elements, each element contains its length or null indicator data.
 
 *OutputSchemaColumnsNumber*  
 \[Output\] Pointer to a buffer in which to return the number of columns in the expected result set of the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
@@ -355,12 +355,12 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 \[Output\] A pointer to a buffer that contains the decimal digits of underlying data in this column, as defined by [Decimal Digits](../../odbc/reference/appendixes/decimal-digits.md). If the number of decimal digits cannot be determined or is not applicable, the value is discarded.
 
 *Nullable*  
-\[Output\] A pointer to a buffer that contains a value which indicates whether this column may contain NULL values. Possible values:
+\[Output\] A pointer to a buffer that contains a value, which indicates whether this column may contain NULL values. Possible values:
 
 - SQL_NO_NULLS: The column cannot contain NULL values.
 - SQL_NULLABLE: The column may contain NULL values.
 
-If other values are passed then execution stops.
+If other values are passed, then execution stops.
 
 ## GetResults
 
@@ -395,19 +395,19 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 \[Output\] A pointer to a buffer that contains the number of rows in the *Data*.
 
 *Data*  
-\[Output\] A pointer to a 2-dimentional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Output\] A pointer to a 2-dimensional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 The total number of columns should be [OutputSchemaColumnsNumber that was retrieved in the Execute](#execute) call. Each column should contain \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
 
 *StrLen_or_Ind*  
-\[Output\] A pointer to a 2-dimentional array allocated by the extension that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
+\[Output\] A pointer to a 2-dimensional array allocated by the extension that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
 
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
 
 The total number of columns should be \[OutputSchemaColumnsNumber\] (that was received in the `Execute()` call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
 
-If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates], StrLen_or_Ind\[col\] will be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
+StrLen_or_Ind\[col\] will be ignored, if one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates]. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
 
 ## GetOutputParam
 
@@ -462,7 +462,7 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 
 ## Cleanup
 
-Clean up global, shared information (e.g. jvm).
+Clean up global, shared information (for example, JVM).
 
 ### Syntax
 
@@ -474,7 +474,7 @@ SQLRETURN Cleanup();
 
 Retrieves telemetry (key-value pairs) data from the extension. The function is optional and doesn't require implementation. The telemetry is exposed by the `dm_db_external_script_execution_stats` dynamic management view (DMV).
 
-There is a counter named script_executions which is sent by the framework. The extension should not use this name.
+There is a counter named script_executions, which is sent by the framework. The extension should not use this name.
 
 Each telemetry entry is a key-value pair. The keys are strings, the values are 64-bit integers - counters. Thus, the output comprises for two logical arrays: the names and their corresponding counters. Each array is output.
 

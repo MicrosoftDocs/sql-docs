@@ -104,9 +104,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  Click the **Import** button.  
   
-5.  Navigate to the folder containing TryCatch.snippet, click on the TryCatch.snippet file, and click the **Open** button. You should not have a TryCatch snippet in your **My Code Snippets** folder.  
+5.  Navigate to the folder containing TryCatch.snippet, click on the TryCatch.snippet file, and click the **Open** button. You should now have a TryCatch snippet in your **My Code Snippets** folder.  
   
 ## See Also  
  [Insert Surround-with Transact-SQL snippets](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
-  
+    

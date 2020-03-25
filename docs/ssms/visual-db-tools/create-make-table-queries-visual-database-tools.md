@@ -75,11 +75,11 @@ In order to use a Make Table query successfully:
     > [!NOTE]  
     > When you add a column to search to the Criteria pane, the Query and View Designer also adds it to the list of columns to copy. If you want to use a column for searching but not copy it, clear the check box next to the column name in the rectangle representing the table or table-structured object.  
   
-7.  If you want to copy summary information, specify Group By options. For details, see [Summarize Query Results(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
+7.  If you want to copy summary information, specify Group By options. For details, see [Summarize Query Results](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
   
 When you execute a Make Table query, no results are reported in the [Results Pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Instead, a message appears indicating how many rows were copied.  
   
 ## See Also  
-[Design Queries and Views How-to Topics(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Types of Queries(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

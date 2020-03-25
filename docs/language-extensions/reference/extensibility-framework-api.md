@@ -181,7 +181,7 @@ For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000
 The decimal digits of underlying data in this column, as defined by [Decimal Digits](../../odbc/reference/appendixes/decimal-digits.md).
 
 *Nullable*  
-A value that indicates whether this column may contain NULL values. Possible values:
+A value that indicates whether this column may contain NULL values. Possible values:  
     - SQL_NO_NULLS: The column cannot contain NULL values.
     - SQL_NULLABLE: The column may contain NULL values.
 
@@ -255,6 +255,7 @@ If a column is not nullable and doesn't represents one of the following data typ
 
 *InputOutputType*  
 The type of the parameter. The *InputOutputType* argument is one of the following values:
+
     - SQL_PARAM_INPUT
     - SQL_PARAM_INPUT_OUTPUT
 
@@ -298,7 +299,7 @@ The total number of columns is \[InputSchemaColumnsNumber\] (that was received i
 Elements indicated to be NULL in *StrLen_or_Ind* are not guaranteed to be valid and should be ignored.
 
 *StrLen_or_Ind*  
-A 2 dimentional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
+A 2 dimentional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:  
     - n, where n > 0. Indicating the length of the data in bytes
     - SQL_NULL_DATA, indicating a NULL value.
 
@@ -354,6 +355,7 @@ An integer identifying the index of this column in the output schema. Columns ar
 
 *Nullable*  
 \[Output\] A pointer to a buffer that contains a value which indicates whether this column may contain NULL values. Possible values:
+
     - SQL_NO_NULLS: The column cannot contain NULL values.
     - SQL_NULLABLE: The column may contain NULL values.
 
@@ -398,6 +400,7 @@ The total number of columns should be \[OutputSchemaColumnsNumber\] (that was re
 
 *StrLen_or_Ind*  
 \[Output\] A pointer to a 2-dimentional array allocated by the extension that contains the length/NULL indicator for each value in **Data**. Possible values of each cell:
+
     - n, where n > 0. Indicating the length of the data in bytes
     - SQL_NULL_DATA, indicating a NULL value.
 

@@ -18,7 +18,7 @@ You can use the extensibility framework to write programming language extensions
 
 You can find the source code for the Java Language Extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
-## API Calls
+## API calls
 
 ### Return value for all the calls
 
@@ -27,6 +27,8 @@ All the functions return a **SQLRETURN** parameter. If the value is anything oth
 ### Init
 
 This function is only called once and is used to initialize the runtime for execution. For example, the Java Extension initializes the JVM.
+
+#### Syntax
 
 ```cpp
 SQLRETURN Init(
@@ -41,14 +43,31 @@ SQLRETURN Init(
 );
 ```
 
-- **ExtensionParams:** Null-terminated string containing `PARAMETERS` value provided during [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) or [ALTER EXTERNAL LANGUAGE](../../t-sql/statements/alter-external-language-transact-sql.md).
-- **ExtensionParamsLength:** Length in bytes of **ExtensionParams** (excluding the null termination character).
-- **ExtensionPath:** Null-terminated UTF-8 string containing the absolute path to the installation directory of the extension.
-- **ExtensionPathLength:** Length in bytes of **ExtensionPath** (excluding the null termination character).
-- **PublicLibraryPath:** Null-terminated UTF-8 string containing the absolute path to the public external libraries directory for this external language.
-- **PublicLibraryPathLength:** Length in bytes of **PublicLibraryPath** (excluding the null termination character).
-- **PrivateLibraryPath:** Null-terminated UTF-8 string containing the absolute path to the private external libraries directory for this user and this external language.
-- **PrivateLibraryPathLength:** Length in bytes of **PrivateLibraryPath** (excluding the null termination character).
+#### Arguments
+
+*ExtensionParams*
+Null-terminated string containing `PARAMETERS` value provided during [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) or [ALTER EXTERNAL LANGUAGE](../../t-sql/statements/alter-external-language-transact-sql.md).
+
+*ExtensionParamsLength*
+Length in bytes of *ExtensionParams* (excluding the null termination character).
+
+*ExtensionPath* 
+Null-terminated UTF-8 string containing the absolute path to the installation directory of the extension.
+
+*ExtensionPathLength*
+Length in bytes of *ExtensionPath* (excluding the null termination character).
+
+*PublicLibraryPath*
+Null-terminated UTF-8 string containing the absolute path to the public external libraries directory for this external language.
+
+*PublicLibraryPathLength*
+Length in bytes of *PublicLibraryPath* (excluding the null termination character).
+
+*PrivateLibraryPath*
+Null-terminated UTF-8 string containing the absolute path to the private external libraries directory for this user and this external language.
+
+*PrivateLibraryPathLength*
+Length in bytes of *PrivateLibraryPath* (excluding the null termination character).
 
 ### InitSession
 

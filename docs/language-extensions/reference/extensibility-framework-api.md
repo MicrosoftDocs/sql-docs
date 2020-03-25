@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description:  
 author: dphansen
 ms.author: davidph 
-ms.date: 03/18/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
@@ -28,8 +28,6 @@ All the functions return a **SQLRETURN** parameter. If the value is anything oth
 
 This function is only called once and is used to initialize the runtime for execution. For example, the Java Extension initializes the JVM.
 
-#### Syntax
-
 ```cpp
 SQLRETURN Init(
     SQLCHAR *ExtensionParams,
@@ -43,31 +41,14 @@ SQLRETURN Init(
 );
 ```
 
-#### Arguments
-
- *ExtensionParams*
- Null-terminated string containing *PARAMETERS* value provided during [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) or [ALTER EXTERNAL LANGUAGE](../../t-sql/statements/alter-external-language-transact-sql.md).
-
- *ExtensionParamsLength*
- Length in bytes of *ExtensionParams* (excluding the null termination character).
-
- *ExtensionPath*
- Null-terminated UTF-8 string containing the absolute path to the installation directory of the extension.
-
- *ExtensionPathLength*
- Length in bytes of *ExtensionPath* (excluding the null termination character).
-
- *PublicLibraryPath*
- Null-terminated UTF-8 string containing the absolute path to the public external libraries directory for this external language.
-
- *PublicLibraryPathLength*
- Length in bytes of *PublicLibraryPath* (excluding the null termination character).
-
- *PrivateLibraryPath*
- Null-terminated UTF-8 string containing the absolute path to the private external libraries directory for this user and this external language.
-
- *PrivateLibraryPathLength*
- Length in bytes of *PrivateLibraryPath* (excluding the null termination character).
+- **ExtensionParams:** Null-terminated string containing `PARAMETERS` value provided during [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) or [ALTER EXTERNAL LANGUAGE](../../t-sql/statements/alter-external-language-transact-sql.md).
+- **ExtensionParamsLength:** Length in bytes of **ExtensionParams** (excluding the null termination character).
+- **ExtensionPath:** Null-terminated UTF-8 string containing the absolute path to the installation directory of the extension.
+- **ExtensionPathLength:** Length in bytes of **ExtensionPath** (excluding the null termination character).
+- **PublicLibraryPath:** Null-terminated UTF-8 string containing the absolute path to the public external libraries directory for this external language.
+- **PublicLibraryPathLength:** Length in bytes of **PublicLibraryPath** (excluding the null termination character).
+- **PrivateLibraryPath:** Null-terminated UTF-8 string containing the absolute path to the private external libraries directory for this user and this external language.
+- **PrivateLibraryPathLength:** Length in bytes of **PrivateLibraryPath** (excluding the null termination character).
 
 ### InitSession
 
@@ -176,7 +157,10 @@ SQLRETURN InitParam(
 For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000 indicate this parameter represent LOBs object and with sizes up to 2GB.
 - **DecimalDigits:** The decimal digits of underlying data in this parameter, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits].
 - **ParamValue:** A pointer to a buffer containing the parameter's value.
-- **StrLen_or_Ind:** An integer value indicating the length in bytes of **ParamValue**, or SQL_NULL_DATA which indicates that the data is NULL.
+- **StrLen_or_Ind:** An integer value indicating the length in bytes of **ParamValue**, or SQL_NULL_DATA to indicate that the data is NULL.
+
+If a column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP, StrLen_or_Ind\[col\] can be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
+
 - **InputOutputType:** The type of the parameter. The **InputOutputType** argument is one of the following values:
     - SQL_PARAM_INPUT
     - SQL_PARAM_INPUT_OUTPUT
@@ -186,7 +170,7 @@ For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000
 Execute the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 This function may be called multiple times. Once for each steam chunk and for each partition in the `@input_data_1_partition_by_columns` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-[todo: UC to expand]
+[todo: UC/Nellie to expand]
 
 ```cpp
 SQLRETURN Execute(
@@ -204,19 +188,29 @@ SQLRETURN Execute(
 
     When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
 
-- **RowsNumber:** Number of rows in the input dataset passes in Data.
-- **Data:** A 2D array of the input dataset. The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column's array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn). Each such element is the value of row \[i\] of column\[j\].
-- **StrLen_or_Ind:** A 2D array the size of the input data that represents the length or null indicator value. Possible values of each cell:
+- **RowsNumber:** The number of rows in the **Data**.
+- **Data:** A 2 dimentional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+The total number of columns is \[InputSchemaColumnsNumber\] (that was received in the InitSession call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn [todo: Peter, add some link/highlight/reference?]).
+
+Elements indicated to be NULL in **StrLen_or_Ind** are not guaranteed to be valid and should be ignored.
+
+- **StrLen_or_Ind:** A 2 dimentional array that contains the length/NULL indicator for each value in **Data**.
+Possible values of each cell:
     - n, where n > 0. Indicating the length of the data in bytes
-    - SQL_NULL_DATA
+    - SQL_NULL_DATA, indicating a NULL value.
 
-    The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column's array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn).
+    The total number of columns is \[InputSchemaColumnsNumber\] (that was received in the InitSession call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn [todo: Peter, add some link/highlight/reference?]).
 
-    If column col is not nullable and represents a data type of fixed size, StrLen_or_Ind\[col\] is a null pointer. Otherwise it points to a valid array with \[RowsNumber\] elements, and for each element it contains its length or null indicator data.
+    If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP, StrLen_or_Ind\[col\] can be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
+
+- **OutputSchemaColumnsNumber:** [Output] Pointer to a buffer in which to return the number of columns in the expected result set of the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 ### GetResultColumn
 
-Get the information regarding a given column in the output dataset for a particular session:
+Retrieve the information regarding a given output column for a particular session.
+
+This function is called for each column in the result set from `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+The column structure of this result set will be referred to as the 'output schema'.
 
 ```cpp
 SQLRETURN GetResultColumn(
@@ -234,20 +228,21 @@ SQLRETURN GetResultColumn(
 
     When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
 
-- **ColumnNumber:** Number of the requested output schema column. Columns are numbered sequentially in increasing order starting at 0. 
-- **DataType:** \[Output\] A pointer to the buffer that contains the C type identifier of the column.
-- **ColumnSize:** \[Output\] The size of the column on the data source in bytes.
-- **DecimalDigits:** \[Output\] The number of decimal digits of the column on the data source. If the number of decimal digits cannot be determined or is not applicable, contains 0. 
-- **Nullable:** \[Output\] A value that indicates whether the column allows NULL values. Possible values: 
-    - SQL_NO_NULLS: The column does not allow NULL values. 
-    - SQL_NULLABLE: The column allows NULL values. 
-    - SQL_NULLABLE_UNKNOWN
-
-    If other values are passed, execution stops and errors out.
+- **ColumnNumber:** An integer identifying the index of this column in the output schema. Columns are numbered sequentially in increasing order starting at 0. 
+- **DataType:** \[Output\] A pointer to the buffer that contains the ODBC C type identifying this column's data type.
+- **ColumnSize:** \[Output\] A pointer to a buffer that contains the maximum size in bytes of the underlying data in this column.
+- **DecimalDigits:** \[Output\] A pointer to a buffer that contains the decimal digits of underlying data in this column, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits]. If the number of decimal digits cannot be determined or is not applicable, the value is discarded. 
+- **Nullable:** \[Output\] A pointer to a buffer that contains a value which indicates whether this column may contain NULL values. Possible values:
+    - SQL_NO_NULLS: The column cannot contain NULL values.
+    - SQL_NULLABLE: The column may contain NULL values.
+    If other values are passed then execution stops.
 
 ### GetResults
 
-Get output data
+Retrieve the result set from executing the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+This function may be called multiple times. Once for each steam chunk and for each partition in the `@input_data_1_partition_by_columns` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+[todo: UC/Nellie to expand]
 
 ```cpp
 SQLRETURN GetResults(
@@ -263,19 +258,24 @@ SQLRETURN GetResults(
 
     When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
 
-- **RowsNumber:** \[Output\] Number of rows in the output dataset being passes in Data.
-- **Data:** \[Output\] A 2D array of the output dataset allocated by the extension. The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column's array should have \[RowsNumber\] elements that should be interpreted according to the column type (known from `GetResultColumn()`). Each such element is the value of row \[i\] of column\[j\]. 
-- **StrLen_or_Ind:** \[Output\] A 2D array the size of the output data that represents the length or null indicator value. Possible values of each cell: 
-    - n, where n > 0. Indicating the length of the data in bytes 
-    - SQL_NULL_DATA 
- 
-    The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column's array has \[RowsNumber\] elements that should be interpreted according to the column type (known from GetResultColumn()). 
+- **RowsNumber:** \[Output\] A pointer to a buffer that contains the number of rows in the **Data**.
+- **Data:** \[Output\] A pointer to a 2 dimentional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+The total number of columns should be \[OutputSchemaColumnsNumber\] (that was retrieved in the `Execute()` call [todo: Peter, add some link/highlight/reference?]). Each column should contain \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
 
-    If column col is not nullable and represents a data type of fixed size, StrLen_or_Ind\[col\] is ignored.
+ - **StrLen_or_Ind:** \[Output\] A pointer to a 2 dimentional array allocated by the extension that contains the length/NULL indicator for each value in **Data**.
+Possible values of each cell:
+    - n, where n > 0. Indicating the length of the data in bytes
+    - SQL_NULL_DATA, indicating a NULL value.
+
+    The total number of columns should be \[OutputSchemaColumnsNumber\] (that was received in the `Execute()` call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from `GetResultColumn()` [todo: Peter, add some link/highlight/reference?]).
+
+    If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates], StrLen_or_Ind\[col\] will be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
 
 ### GetOutputParam
 
-Get output parameters at the end of the script.
+Retrieve the information regarding a given output parameter for a particular session.
+
+This function is called for each parameter from `@params` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) marked with OUTPUT.
 
 ```cpp
 SQLRETURN GetOutputParam(
@@ -286,11 +286,9 @@ SQLRETURN GetOutputParam(
 );
 ```
 - **SessionId:** GUID uniquely identifying this script session.
-- **ParamValue:** \[Output\] The value of the output parameter
+- **ParamValue:** \[Output\] A pointer to a buffer containing the parameter's value.
 
-- **StrLen_or_Ind:** \[Output\] The length or indicator value. Possible values:
-    - n, where n > 0. Indicating the length of the data in bytes.
-    - SQL_NULL_DATA 
+- **StrLen_or_Ind:** \[Output\] A pointer to a buffer that contains an integer value indicating the length in bytes of **ParamValue**, or SQL_NULL_DATA to indicate that the data is NULL.
 
 ### CleanupSession
 

@@ -12,23 +12,23 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Extensibility Framework API for Microsoft SQL Server
 
-## What is the Extensibility Framework API?
+You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 
-You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server. As a language extension author, you can use this reference together with the open sourced [Java language extension for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) to understand how to use the API for writing your own language extensions.
+As a language extension author, you can use this reference together with the open sourced [Java language extension for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) to understand how to use the API for writing your own language extensions.
 
-You can find the source code for the Java Language Extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+You can find the source code for the Java language extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
-## API calls
+Below you will find the API functions.
 
-### Return value for all the calls
+## Return value for all API functions
 
 All the functions return a *SQLRETURN* parameter. If the value is anything other than *SQL_SUCCESS*, the execution of the script stops.
 
-### Init
+## Init
 
 This function is only called once and is used to initialize the runtime for execution. For example, the Java Extension initializes the JVM.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN Init(
@@ -43,7 +43,7 @@ SQLRETURN Init(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *ExtensionParams*  
 Null-terminated string containing `PARAMETERS` value provided during [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) or [ALTER EXTERNAL LANGUAGE](../../t-sql/statements/alter-external-language-transact-sql.md).
@@ -69,11 +69,11 @@ Null-terminated UTF-8 string containing the absolute path to the private externa
 *PrivateLibraryPathLength*  
 Length in bytes of *PrivateLibraryPath* (excluding the null termination character).
 
-### InitSession
+## InitSession
 
 This function is called once per session and initializing session specific settings.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN InitSession(
@@ -90,7 +90,7 @@ SQLRETURN InitSession(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
@@ -124,7 +124,7 @@ Null-terminated UTF-8 string containing the `@output_data_1_name` in [sp_execute
 *OutputDataNameLength*  
 Length in bytes of *OutputDataName* (excluding the null termination character).
 
-### InitColumn
+## InitColumn
 
 Initialize the information for a given column for a particular session.
 
@@ -132,7 +132,7 @@ This function is called for each column in the result set from `@input_data_1` i
 
 The column structure of this result set will be referred to as the *input schema*.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN InitColumn(
@@ -150,7 +150,7 @@ SQLRETURN InitColumn(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
@@ -192,13 +192,13 @@ A value that indicates the index of this column in the `@input_data_1_partition_
 *OrderByNumber*  
 A value that indicates the index of this column in the `@input_data_1_order_by_columns` sequence in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Columns are numbered sequentially in increasing order starting at 0. If this column is not included in the sequence, the value is -1.
 
-### InitParam
+## InitParam
 
 Initialize the information regarding a given input parameter for a particular session.
 
 This function is called for each parameter from `@params` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN InitParam(
@@ -216,7 +216,7 @@ SQLRETURN InitParam(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
@@ -244,7 +244,7 @@ The maximum size in bytes of the underlying data in this parameter.
 For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000 indicate this parameter represent LOBs object and with sizes up to 2GB.
 
 *DecimalDigits*  
-The decimal digits of underlying data in this parameter, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits].
+The decimal digits of underlying data in this parameter, as defined by [Decimal Digits](../../odbc/reference/appendixes/decimal-digits.md).
 
 *ParamValue*  
 A pointer to a buffer containing the parameter's value.
@@ -252,7 +252,7 @@ A pointer to a buffer containing the parameter's value.
 *StrLen_or_Ind*  
 An integer value indicating the length in bytes of *ParamValue*, or SQL_NULL_DATA to indicate that the data is NULL.
 
-If a column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP, StrLen_or_Ind\[col\] can be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
+StrLen_or_Ind\[col\] can be ignored if a column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP. Otherwise it points to a valid array with \[RowsNumber\] elements, where each element contains its length or null indicator data.
 
 *InputOutputType*  
 The type of the parameter. The *InputOutputType* argument is one of the following values:
@@ -260,14 +260,14 @@ The type of the parameter. The *InputOutputType* argument is one of the followin
 - SQL_PARAM_INPUT
 - SQL_PARAM_INPUT_OUTPUT
 
-### Execute
+## Execute
 
 Execute the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 This function may be called multiple times. Once for each steam chunk and for each partition in the `@input_data_1_partition_by_columns` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 [todo: UC/Nellie to expand]
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN Execute(
@@ -280,12 +280,12 @@ SQLRETURN Execute(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
 
-*TaskId* 
+*TaskId*  
 An integer uniquely identifying this execution process.
 
 When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
@@ -294,13 +294,14 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 The number of rows in the *Data*.
 
 *Data*  
-A 2 dimentional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+A 2-dimentional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
 The total number of columns is \[InputSchemaColumnsNumber\] (that was received in the InitSession call [todo: Peter, add some link/highlight/reference?]). Each column contains \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn [todo: Peter, add some link/highlight/reference?]).
 
 Elements indicated to be NULL in *StrLen_or_Ind* are not guaranteed to be valid and should be ignored.
 
 *StrLen_or_Ind*  
-A 2 dimentional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
+A 2-dimentional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
 
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
@@ -310,16 +311,16 @@ The total number of columns is \[InputSchemaColumnsNumber\] (that was received i
 If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP, StrLen_or_Ind\[col\] can be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
 
 *OutputSchemaColumnsNumber:*  
-[Output] Pointer to a buffer in which to return the number of columns in the expected result set of the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Output\] Pointer to a buffer in which to return the number of columns in the expected result set of the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-### GetResultColumn
+## GetResultColumn
 
 Retrieve the information regarding a given output column for a particular session.
 
 This function is called for each column in the result set from `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 The column structure of this result set will be referred to as the 'output schema'.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN GetResultColumn(
@@ -333,7 +334,7 @@ SQLRETURN GetResultColumn(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
@@ -353,7 +354,7 @@ An integer identifying the index of this column in the output schema. Columns ar
 \[Output\] A pointer to a buffer that contains the maximum size in bytes of the underlying data in this column.
 
 *DecimalDigits*  
-\[Output\] A pointer to a buffer that contains the decimal digits of underlying data in this column, as defined by [Decimal Digits](https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits). If the number of decimal digits cannot be determined or is not applicable, the value is discarded.
+\[Output\] A pointer to a buffer that contains the decimal digits of underlying data in this column, as defined by [Decimal Digits](../../odbc/reference/appendixes/decimal-digits.md). If the number of decimal digits cannot be determined or is not applicable, the value is discarded.
 
 *Nullable*  
 \[Output\] A pointer to a buffer that contains a value which indicates whether this column may contain NULL values. Possible values:
@@ -363,14 +364,14 @@ An integer identifying the index of this column in the output schema. Columns ar
 
 If other values are passed then execution stops.
 
-### GetResults
+## GetResults
 
 Retrieve the result set from executing the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 This function may be called multiple times. Once for each steam chunk and for each partition in the `@input_data_1_partition_by_columns` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 [todo: UC/Nellie to expand]
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN GetResults(
@@ -382,7 +383,7 @@ SQLRETURN GetResults(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
@@ -410,13 +411,13 @@ The total number of columns should be \[OutputSchemaColumnsNumber\] (that was re
 
 If one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates], StrLen_or_Ind\[col\] will be ignored. Otherwise it points to a valid array with \[RowsNumber\] elements, each element contains its length or null indicator data.
 
-### GetOutputParam
+## GetOutputParam
 
 Retrieve the information regarding a given output parameter for a particular session.
 
 This function is called for each parameter from `@params` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) marked with OUTPUT.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN GetOutputParam(
@@ -427,7 +428,7 @@ SQLRETURN GetOutputParam(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
@@ -438,11 +439,11 @@ GUID uniquely identifying this script session.
 *StrLen_or_Ind* 
 \[Output\] A pointer to a buffer that contains an integer value indicating the length in bytes of *ParamValue*, or SQL_NULL_DATA to indicate that the data is NULL.
 
-### CleanupSession
+## CleanupSession
 
 Clean up per-session information.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN CleanupSession(
@@ -451,7 +452,7 @@ SQLRETURN CleanupSession(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
@@ -461,17 +462,17 @@ An integer uniquely identifying this execution process.
 
 When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), this value ranges from 0 to the degree of parallelism of the query.
 
-### Cleanup
+## Cleanup
 
 Clean up global, shared information (e.g. jvm).
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN Cleanup();
 ```
 
-### GetTelemetryResults
+## GetTelemetryResults
 
 Retrieves telemetry (key-value pairs) data from the extension. The function is optional and doesn't require implementation. The telemetry is exposed by the `dm_db_external_script_execution_stats` dynamic management view (DMV).
 
@@ -481,7 +482,7 @@ Each telemetry entry is a key-value pair. The keys are strings, the values are 6
 
 The length of each array is *RowsNumber*, which is an output. The first logical output contains pointers to strings, thus, it's represented by two arrays: *CounterNames* (the actual string data) and *CounterNamesLength* (the length of each string). The second logical output is stored in the *CounterValues* pointer.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN GetTelemetryResults(
@@ -494,7 +495,7 @@ SQLRETURN GetTelemetryResults(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SessionId*  
 GUID uniquely identifying this script session.
@@ -516,11 +517,11 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 *CounterValues*  
 \[Output\] The 64-bit integer data containing the values.
 
-### InstallExternalLibrary
+## InstallExternalLibrary
 
 Installs a library. The function is optional and doesn't require implementation. The default implementation is to copy the content of the library (see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)) to a file at the proper location. The file name is library name.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN InstallExternalLibrary(
@@ -536,7 +537,7 @@ SQLRETURN InstallExternalLibrary(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SetupSessionId*  
 GUID uniquely identifying this script session.
@@ -565,11 +566,11 @@ GUID uniquely identifying this script session.
 *LibraryErrorLength*  
 \[Output\] The length of the LibraryError string.
 
-### UninstallLibrary
+## UninstallLibrary
 
 Uninstalls a library. The function is optional and doesn't require implementation. The default implementation is to undo the work done by the default Implementation of InstallExternalLibrary. The default implementation deletes the content of the *LibraryName* file under *LibraryInstallDirectory*.
 
-#### Syntax
+### Syntax
 
 ```cpp
 SQLRETURN UninstallExternalLibrary(
@@ -583,7 +584,7 @@ SQLRETURN UninstallExternalLibrary(
 );
 ```
 
-#### Arguments
+### Arguments
 
 *SetupSessionId*  
 GUID uniquely identifying this script session.

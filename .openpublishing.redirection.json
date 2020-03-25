@@ -16591,7 +16591,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/azure-data-studio/sql-notebooks.md.md",
+      "source_path": "docs/azure-data-studio/sql-notebooks.md",
       "redirect_url": "/sql/azure-data-studio/notebooks-guidance.md",
       "redirect_document_id": false
     },

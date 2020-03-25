@@ -301,6 +301,7 @@ Elements indicated to be NULL in *StrLen_or_Ind* are not guaranteed to be valid 
 
 *StrLen_or_Ind*  
 A 2 dimentional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
+
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
 
@@ -352,7 +353,7 @@ An integer identifying the index of this column in the output schema. Columns ar
 \[Output\] A pointer to a buffer that contains the maximum size in bytes of the underlying data in this column.
 
 *DecimalDigits*  
-\[Output\] A pointer to a buffer that contains the decimal digits of underlying data in this column, as defined by [https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits]. If the number of decimal digits cannot be determined or is not applicable, the value is discarded.
+\[Output\] A pointer to a buffer that contains the decimal digits of underlying data in this column, as defined by [Decimal Digits](https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/decimal-digits). If the number of decimal digits cannot be determined or is not applicable, the value is discarded.
 
 *Nullable*  
 \[Output\] A pointer to a buffer that contains a value which indicates whether this column may contain NULL values. Possible values:

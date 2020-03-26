@@ -15,8 +15,6 @@ ms.author: genemi
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 
-[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
-
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
 <!--

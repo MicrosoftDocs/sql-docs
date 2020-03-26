@@ -1,5 +1,6 @@
 ---
 title: "Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server"
+description: Find out how to use Transact-SQL statements to bulk import data from a file to a SQL Server or Azure SQL Database table, including security considerations.
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

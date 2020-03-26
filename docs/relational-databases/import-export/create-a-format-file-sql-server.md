@@ -1,5 +1,6 @@
 ---
 title: "Create a Format File (SQL Server) | Microsoft Docs"
+description: To bulk import or export a SQL Server table, you can use a format file to a flexible system or to read data files from other software programs.
 ms.custom: ""
 ms.date: "02/23/2016"
 ms.prod: sql

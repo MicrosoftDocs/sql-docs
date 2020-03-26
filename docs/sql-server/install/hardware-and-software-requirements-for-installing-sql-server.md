@@ -131,12 +131,6 @@ The following table shows which editions of SQL Server 2016 and 2017 are compati
 
 For minimum version requirements to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on [!INCLUDE[win8srv](../../includes/win8srv-md.md)] or [!INCLUDE[win8](../../includes/win8-md.md)], see [Installing SQL Server on Windows Server 2012 or Windows 8](https://support.microsoft.com/kb/2681562). 
 
-> [!NOTE]  
-> Exceptions to the operating system support noted in this section are the following Business Intelligence features for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and earlier, which can be installed on Windows Server 2008 R2 SP1 or later:  
->  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products  
-
 
 ### Server Core support
 

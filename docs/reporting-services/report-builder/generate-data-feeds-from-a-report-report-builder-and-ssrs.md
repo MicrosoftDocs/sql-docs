@@ -1,5 +1,6 @@
 ---
 title: "Generate Data Feeds from a Report (Report Builder) | Microsoft Docs"
+description: You can generate Atom-compliant data feeds from paginated reports. Use the feeds in applications, such as Power Pivot, or Power BI, that can consume data feeds.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

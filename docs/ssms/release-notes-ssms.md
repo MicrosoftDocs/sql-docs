@@ -145,6 +145,12 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.4
 
+![download](../ssdt/media/download.png) [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2105412)
+
+Release number: 18.4
+Build number: 15.0.18206.0
+Release date: November 04, 2019
+
 | New item | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Data Classification | Added support for custom information protection policy for data classification. |

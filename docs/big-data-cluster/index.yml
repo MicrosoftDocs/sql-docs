@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Big Data Clusters
-summary: Manage your big data environment more easily with Big Data Clusters. They provide key elements of a data lake—Hadoop Distributed File System (HDFS), Apache Spark, and analytics tools—deeply integrated with SQL Server and fully supported by Microsoft. Easily deploy your database using Linux containers on a Kubernetes cluster.
+summary: SQL Server Big Data Clusters is the multi-cloud, open data platform for analytics at any scale. Big Data Clusters (BDC) unites SQL Server with Apache Spark to deliver the best compute engines available for analytics in a single, easy to use deployment. With these engines, BDC is the ideal data platform for AI, ML, M/R, Streaming, BI, T-SQL, and Spark. Delivered as part of the SQL Server 2019 release, BDC is a cloud-native solution orchestrated by Kubernetes. Our mission is to accelerate, delight and empower our users as they quench their thirst for data driven insights.
 
 metadata:
   title: Big Data Clusters - Learn how to manage, deploy, and use

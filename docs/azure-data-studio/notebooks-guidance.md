@@ -1,6 +1,6 @@
 ---
-title: Use notebooks with SQL Server in Azure Data Studio
-description: Learn how to get started using SQL Notebooks in Azure Data Studio.
+title: Use Jupyter Notebooks in Azure Data Studio with SQL Server
+description: Learn how to get started using Notebooks in Azure Data Studio.
 author: yualan
 ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray

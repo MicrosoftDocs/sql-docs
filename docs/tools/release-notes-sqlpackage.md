@@ -43,6 +43,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top-level token, cause parsing to fail.
 | &nbsp; | &nbsp; |
 
+### Known Issues 
+
+| Feature | Details |
+| :------ | :------ |
+| Deployment |  A regression was introduced in 18.4.1 causing there to be a “Object reference not set to an instance of an object.” error when deploying a dacpac or importing a bacpac with a user with external login. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| &nbsp; | &nbsp; |
 
 ## 18.4 sqlpackage
 

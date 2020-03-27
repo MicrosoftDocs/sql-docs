@@ -14,8 +14,6 @@ manager: kenvh
 ---
 # Release Notes for Microsoft ODBC Driver for SQL Server on Windows
 
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
-
 This release notes article describes what's new for the Microsoft ODBC driver for SQL Server on Windows.
 
 <!--

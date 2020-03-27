@@ -96,7 +96,7 @@ landingContent:
       - linkListType: tutorial
         links:
         - text: Virtualize CSV
-          url: ../relational-databases/polybase/data-virtualization-csv
+          url: ../relational-databases/polybase/data-virtualization-csv.md
         - text: Configure HDFS tiering
           url: hdfs-tiering.md
         - text: Mount ADLS Gen2
@@ -119,8 +119,6 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-        - text: Get started with Kubernetes
-          url: https://kubernetes.io/docs/setup/
         - text: Troubleshoot Kubernetes
           url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/
         - text: Apache Spark

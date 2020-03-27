@@ -84,9 +84,9 @@ landingContent:
           - text: Load HDFS (curl)
             url: data-ingestion-curl.md
           - text: Load with SQL
-            url: data-pool-ingest-sql.md
+            url: tutorial-data-pool-ingest-sql.md
           - text: Load with Spark
-            url: data-pool-ingest-spark.md
+            url: tutorial-data-pool-ingest-spark.md
           - text: Load with restore
             url: data-ingestion-restore-database.md
 
@@ -96,7 +96,7 @@ landingContent:
       - linkListType: tutorial
         links:
         - text: Virtualize CSV
-          url: data-virtualization-csv.md
+          url: ../relational-databases/polybase/data-virtualization-csv
         - text: Configure HDFS tiering
           url: hdfs-tiering.md
         - text: Mount ADLS Gen2

@@ -72,12 +72,17 @@ GO
 
 If you run a script that returns a result, you can save that result in different formats.
 
-In this case, we return the result of [PI](../t-sql/functions/pi-transact-sql.md).
-
 - Save As CSV
 - Save As Excel
 - Save As JSON
 - Save As XML
+
+In this case, we return the result of [PI](../t-sql/functions/pi-transact-sql.md).
+
+```sql
+SELECT PI() AS PI;
+GO
+```
 
 ![Run notebook cell](media/notebook-tutorial/run-notebook-cell-2.png)
 

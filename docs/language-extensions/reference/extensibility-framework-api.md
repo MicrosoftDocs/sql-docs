@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description:  
 author: dphansen
 ms.author: davidph 
-ms.date: 03/25/2020
+ms.date: 03/27/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
@@ -21,6 +21,11 @@ Find the syntax and arguments information about all API functions below.
 ## Return value
 
 All functions return a *SQLRETURN* parameter. If the value is anything other than *SQL_SUCCESS*, it is treated as an error and the execution of the script stops.
+
+## Standard output
+
+Any output by the extension to the standard output or error streams will be traced to the session's log file, and will eventually be traced back to SQL Server (Similar to anything displayed in the SSMS messages tab).
+
 
 ## Init
 
@@ -263,7 +268,7 @@ StrLen_or_Ind\[col\] can be ignored if a column is not nullable and doesn't repr
 Execute the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 This function may be called multiple times. Once for each steam chunk and for each partition in the `@input_data_1_partition_by_columns` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-[todo: UC/Nellie to expand]
+
 
 ### Syntax
 
@@ -367,7 +372,7 @@ If other values are passed, then execution stops.
 Retrieve the result set from executing the `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 This function may be called multiple times. Once for each steam chunk and for each partition in the `@input_data_1_partition_by_columns` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-[todo: UC/Nellie to expand]
+
 
 ### Syntax
 
@@ -436,6 +441,20 @@ SQLRETURN GetOutputParam(
 
 *StrLen_or_Ind* 
 \[Output\] A pointer to a buffer that contains an integer value indicating the length in bytes of *ParamValue*, or SQL_NULL_DATA to indicate that the data is NULL.
+
+## GetInterfaceVersion
+
+Retrieve the interface version.
+This function returns an integer representing the extension's interface version. 
+Supported values:
+1. Version 1 is the  initial API version. Supported at SQL Server 2019 RTM.
+1. Version 2 has added support for InstallExternalLibrary and UninstallExternalLibrary API and is supported from SQL Server 2019 CU3.                            
+
+### Syntax
+
+```cpp
+SQLUSMALLINT GetInterfaceVersion();
+```
 
 ## CleanupSession
 

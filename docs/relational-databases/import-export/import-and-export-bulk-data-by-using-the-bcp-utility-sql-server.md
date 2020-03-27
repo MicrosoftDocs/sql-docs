@@ -1,5 +1,6 @@
 ---
 title: "Import & export bulk data with bcp"
+description: Use bcp to export data from anywhere in a SQL Server database that SELECT works. Bulk export data from a table or from a query and bulk import from a file.
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.technology: data-movement

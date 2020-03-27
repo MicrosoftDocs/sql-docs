@@ -212,9 +212,9 @@ To uninstall a package, use the following command from your terminal:
 
 ## Next steps
 
-- To learn how to work with an existing notebook, see [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md).
-- To learn how to create and run a SQL Server notebook, see [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md).
-- To learn how to deploy a big data cluster, see [Deploy SQL Server big data cluster with Azure Data Studio notebook](../big-data-cluster/notebooks-deploy.md).
-- To learn how to manage a big data cluster using notebooks, see [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](../big-data-cluster/notebooks-manage-bdc.md).
-- To learn how to run a sample notebook using Spark, see [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md).
-- To learn how to run Python and R scripts in notebooks with SQL Server Machine Learning Services, see [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../advanced-analytics/install/sql-machine-learning-azure-data-studio.md).
+- [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md).
+- [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md).
+- [Deploy SQL Server big data cluster with Azure Data Studio notebook](../big-data-cluster/notebooks-deploy.md).
+- [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](../big-data-cluster/notebooks-manage-bdc.md).
+- [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md).
+- [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../advanced-analytics/install/sql-machine-learning-azure-data-studio.md).

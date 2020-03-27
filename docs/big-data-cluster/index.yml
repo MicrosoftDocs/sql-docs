@@ -1,0 +1,131 @@
+### YamlMime:Landing
+
+title: Big Data Clusters
+summary: Manage your big data environment more easily with Big Data Clusters. They provide key elements of a data lake—Hadoop Distributed File System (HDFS), Apache Spark, and analytics tools—deeply integrated with SQL Server and fully supported by Microsoft. Easily deploy your database using Linux containers on a Kubernetes cluster.
+
+metadata:
+  title: Big Data Clusters - Learn how to manage, deploy, and use
+  description: Learn how to use SQL Server Big Data Cluster. Tutorials, code examples, installation guides, and other documentation show you how.
+  ms.service: sql
+  ms.subservice: # big-data-cluster - waiting for this to be on the allowlist
+  ms.topic: landing-page
+  author: MikeRayMSFT
+  ms.author: mikeray
+  ms.date: 03/27/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About Big Data Clusters
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What are Big Data Clusters?
+            url: big-data-cluster-overview.md
+          - text: Release notes
+            url: release-notes-big-data-cluster.md
+      - linkListType: video
+        links:
+          - text: Architecture & deployment
+            url: https://www.youtube.com/watch?v=q7mxWcYqBMM
+
+  # Card (optional)
+  - title: Get started
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Plan
+            url: deployment-guidance.md
+          - text: Deploy
+            url: deploy-get-started.md
+          - text: Deploy tools
+            url: deploy-big-data-tools.md
+      - linkListType: concept
+        links:
+          - text: High-availability
+            url: deployment-high-availability.md
+          - text: Active Directory
+            url: deploy-active-directory.md
+          - text: Offline deployment
+            url: deploy-offline.md
+          - text: AKS
+            url: deploy-on-aks.md
+          - text: Configure custom deployment
+            url: deployment-custom-configuration.md
+
+  # Card
+  - title: Manage & Monitor
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Manage (Controller dashboard)
+            url: manage-with-controller-dashboard.md
+          - text: View status
+            url: view-cluster-status.md
+          - text: Manage HDFS permissions
+            url: hdfs-tiering-manage-permissions.md
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot
+            url: cluster-troubleshooting-commands.md
+          - text: Active Directory
+            url: troubleshoot-active-directory.md
+
+  # Card
+  - title: Load data
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Load sample data
+            url: tutorial-load-sample-data.md
+          - text: Load HDFS (curl)
+            url: data-ingestion-curl.md
+          - text: Load with SQL
+            url: data-pool-ingest-sql.md
+          - text: Load with Spark
+            url: data-pool-ingest-spark.md
+          - text: Load with restore
+            url: data-ingestion-restore-database.md
+
+  # Card
+  - title: Virtualize
+    linkLists:
+      - linkListType: tutorial
+        links:
+        - text: Virtualize CSV
+          url: data-virtualization-csv.md
+        - text: Configure HDFS tiering
+          url: hdfs-tiering.md
+        - text: Mount ADLS Gen2
+          url: hdfs-tiering-mount-adlsgen2.md
+
+  # Card
+  - title: Related technologies
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: Get started with Kubernetes
+          url: https://kubernetes.io/docs/setup/
+        - text: Troubleshoot Kubernetes
+          url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/
+        - text: Apache Spark
+          url: /azure/hdinsight/spark/apache-spark-overview
+
+  # Card
+  - title: Related resources
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: Get started with Kubernetes
+          url: https://kubernetes.io/docs/setup/
+        - text: Troubleshoot Kubernetes
+          url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/
+        - text: Apache Spark
+          url: https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview
+        - text: Samples (GitHub)
+          url: https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster
+        - text: Solution partners
+          url: ../sql-server/partner-big-data-cluster.md

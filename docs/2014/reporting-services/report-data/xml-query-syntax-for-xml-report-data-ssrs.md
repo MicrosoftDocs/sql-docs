@@ -81,7 +81,7 @@ manager: kfile
   
 |XML Query Element|Resulting fields in the dataset|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Value A: https://schemas.microsoft.com/...<br /><br /> Value B: https://schemas.microsoft.com/...<br /><br /> Value C: https://schemas.microsoft.com/...|  
+|\<Query/>|Value A: `https://schemas.microsoft.com/..`.<br /><br /> Value B: `https://schemas.microsoft.com/..`.<br /><br /> Value C: `https://schemas.microsoft.com/.`..|  
 |\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### XML document: DPNamespace.xml  

@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: 
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-This article will describe how to use a histogram along with Python to visualize data. A histogram can be plotted to summarize distributed data using Mataplotlib. Mataplotlib can be used for visualizations to make bar charts, line plots, scatter plots, area charts.
+# This article will describe how to use a histogram along with Python to visualize data. A histogram can be plotted to summarize distributed data using Mataplotlib. Mataplotlib can be used for visualizations to make bar charts, line plots, scatter plots, area charts.
 
 ## Install Python
 
@@ -17,7 +17,7 @@ Select the appropriate installation for Windows or Linux
 
 Installation of [Python](https://www.python.org/downloads/)
 
-## Install Matplotlib  
+## Install Matplotlib
 
 Windows
 ```cmd

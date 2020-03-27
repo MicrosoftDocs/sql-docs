@@ -39,7 +39,7 @@ GeneMi. 2019/04/02.
 
 ## SSMS 18.5
 
-Download: [Download SSMS 18.4](download-sql-server-management-studio-ssms.md)  
+Download: [Download SSMS 18.5](download-sql-server-management-studio-ssms.md)  
 Build number: 15.0.x.x  
 Release date: April 07, 2020  
 
@@ -51,7 +51,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 
 | New item | Details |
 |----------|---------|
-| Analysis Services | Added support for powerbi endpoint in AS - matching functionality of asazure. |
+| Analysis Services | Added support for Power BI endpoint in AS - matching functionality of asazure. |
 | Analysis Services | Profiler: added support for AS Trace Definition 15.1. |
 | Data Classification | Added a button to the VA scan result view, in order to remediate data classification rule by going to the data classification pane. |
 | Data Classification |Added support for sensitivity rank in Data Classification. |
@@ -86,7 +86,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | Data Clarification | The button just above the classified columns table now minimizes the recommendations panel, as it says. |
 | General SSMS | Updating the version of MSODBC and MSOLEDB drivers. |
 | General SSMS | Addressed at least two common sources hangs and crashes in SSMS. |
-| General SSMS | Addressed one more case where "Restore dialog" hangs when clicking Browse button. |
+| General SSMS | Addressed one more case where "Restore dialog" hangs when selecting the Browse button. |
 | General SSMS | Fixed "New Database GUI" for SQL On Demand. |
 | General SSMS | Fixed "New External Table..." and "New External Data Source..." templates for SQL On Demand. |
 | General SSMS | Fixed database properties, connection properties, hiding reports and rename for SQL On Demand. |
@@ -94,10 +94,11 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Cleaned up the "Database Property Options" grid which was showing two *Miscellaneous Categories*. |
 | General SSMS | Fixed an issue where the scroll bar started from middle in "Database Properties Options" grid. |
 | General SSMS | Fixed an issue that was causing SSMS to crash when opening .sql file while connected to Analysis Services server. |
-| General SSMS | Connection Dialog: fixed an issue where unchecking the "Remember Password" does not work. Also, fixed an issue where credentials associated to Server/Users are always. |remembered. See https://feedback.azure.com/forums/908035/suggestions/37875172 [Mark: we should probably update the F1 page to explain how to delete entries from this UI]. |
+| General SSMS | Connection Dialog: fixed an issue where unchecking the "Remember Password" does not work. |
+| General SSMS | Fixed an issue where credentials associated to Server/Users are always remembered. See https://feedback.azure.com/forums/908035/suggestions/37875172 [Mark: we should probably update the F1 page to explain how to delete entries from this UI]. |
 | High DPI/Scaling | Fixed an issue where the controls on the "Index properties" could be incorrectly rendered (buttons overlapping grid). See https://feedback.azure.com/forums/908035/suggestions/36030424
 | High DPI/Scaling | Fixed multiple issues in "Database Properties" dialog which might show clipped controls on 4K monitors. |
-| High DPI/Scaling | Fixed Publication and Subscription Wizards on 4k displays. |
+| High DPI/Scaling | Fixed Publication and Subscription Wizards on 4k displays. |"
 | High DPI/Scaling | Minor fix on New Audit Server Specification page. |
 | High DPI/Scaling | Fixed 4k display issue on High Availability Wizard. |
 | High DPI/Scaling | Fixed an issue where the user was not able to add a target in an Xevent New Session window + Set Session Event Filters in Xevent Session Wizard when display scaling at 125%. |
@@ -341,7 +342,7 @@ Release date: July 25, 2019
 
 | New Item | Details |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Accessibility | Improved accessibility of the Agent Job UI. |
+| Accessibility | Improved accessibility of the Agent Job UI. |'
 | Accessibility | Improved accessibility on the Stretch Monitor page by adding an accessible name for *Auto Refresh* button and also adding an intelligent Accessible Name that helps users know not only what button they're on but the impact of pressing it. |
 | ADS integration| Fixed a possible crash in SSMS when trying to use the ADS registered servers.|
 | Database designer | Added support for Latin1_General_100_BIN2_UTF8 collation (available in SQL Server 2019 CTP3.0) |
@@ -475,7 +476,7 @@ Release date: July 25, 2019
 |SMO| Exposed new ProductUpdateLevel property on the Server object, which maps to the servicing level for the version of SQL in use (for example, CU12, RTM).|
 |SMO| Exposed new LastGoodCheckDbTime property on  Database object, which maps to "lastgoodcheckdbtime" database property. If such property isn't available, a default value of 1/1/1900 12:00:00 AM is be returned.|
 |SMO|Moved location for RegSrvr.xml file (Registered Server configuration file) to "%AppData%\Microsoft\SQL Server Management Studio" (unversioned, so it can be shared across versions of SSMS).|
-|SMO|Added "Cloud Witness" as a new quorum type and as a new resource type.|
+|SMO|Added "Cloud Witness" as a new quorum type and as a new resource ty'e.|
 |SMO|Added support for "Edge Constraints" in both SMO and SSMS.|
 |SMO|Added cascade delete support to "Edge Constraints" in both SMO and SSMS.|
 |SMO|Added support for data classification "read-write" permissions.|
@@ -537,7 +538,7 @@ Release date: July 25, 2019
 |Backup/Restore/Attach/Detach DB|Fixed an issue where SSMS might not find a valid restore plan or might find one, which is suboptimal. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752). |
 |Backup/Restore/Attach/Detach DB|Fixed issue where the "Attach Database" wizard wasn't displaying secondary files that were renamed. Now, the file is displayed, and a comment about it is added (for example "Not Found"). For details, see [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434). |
 |Copy Database Wizard|Generate scripts/Transfer/Copy Database Wizard try to create a table with an in memory table doesn't force ansi_padding on.|
-|Copy Database Wizard|Transfer Database task/Copy Database Wizard broken on SQL Server 2017 and SQL Server 2019.|
+|Copy Database Wizard|Transfer Database task/Copy Database Wizard broken on SQL Server 2017 and SQL Server 2019.|""
 |Copy Database Wizard|Generate scripts/Transfer/Copy Database Wizard script table creation before creation of associated external data source.|
 |Connection dialog|Enabled the removal of usernames from previous username list by pressing the DEL key. For details, see [Allow deletion of users from SSMS login window](https://feedback.azure.com/forums/908035/suggestions/32897632).|
 |DAC Import Wizard|Fixed an issue DAC Import Wizard wasn't working when connected using AAD.|

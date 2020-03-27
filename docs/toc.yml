@@ -7800,9 +7800,9 @@
         items:
         - name: Notebooks overview
           href: azure-data-studio/notebooks-guidance.md
-        - name: Notebook tutorial
-          href: azure-data-studio/notebooks-tutorial.md
-        - name: Manage notebooks
+        - name: How to use SQL Kernel
+          href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+        - name: How to manage a notebook
           href: azure-data-studio/notebooks-manage-sql-server.md
       - name: Usage data collection
         href: azure-data-studio/usage-data-collection.md

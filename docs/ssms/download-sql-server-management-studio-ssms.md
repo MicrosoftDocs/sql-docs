@@ -22,8 +22,9 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 02/18/2020
+ms.date: 04/07/2020
 ---
+
 # Download SQL Server Management Studio (SSMS)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,9 +43,9 @@ SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a
 
 ### Version information
 
-- Release number: 18.4  
-- Build number: 15.0.18206.0  
-- Release date: November 04, 2019  
+- Release number: 18.5  
+- Build number: 15.0.x.x  
+- Release date: April 07, 2020  
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -97,7 +98,7 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
 
     You can also pass */Passive* instead of */Quiet* to see the setup UI.
 
-3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe” based on the example. If something went wrong, you could inspect the error code returned and take a peek at the %TEMP%\SSMSSetup for the log file.
+3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and take a peek at the %TEMP%\SSMSSetup for the log file.
 
 ## Supported SQL offerings (SSMS 18.4)
 

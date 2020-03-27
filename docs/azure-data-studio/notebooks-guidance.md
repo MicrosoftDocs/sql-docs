@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 03/30/2020
 ---
 
 # Notebooks with SQL Server in Azure Data Studio

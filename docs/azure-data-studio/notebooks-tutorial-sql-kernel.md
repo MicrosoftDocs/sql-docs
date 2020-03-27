@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""
-ms.date: 03/27/2020
+ms.date: 03/30/2020
 ---
 
 # Create and run a SQL Server notebook

@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""
-ms.date: 12/13/2019
+ms.date: 03/30/2020
 ---
 
 # How to manage notebooks in Azure Data Studio
@@ -38,13 +38,13 @@ Click **Open Notebook** in the dashboard to open the File Open dialog.
 
 Use command **File: Open** from command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
 
-![Open the Open File dialog by entering File:Open in the command palette](./media/notebooks-manage-sql-server/open-file-3.png)
+![Open the Open File dialog by entering File: Open in the command palette](./media/notebooks-manage-sql-server/open-file-3.png)
 
 ## Save a notebook
 
-There is currently one way to save a notebook. You must select **Save** from the notebook toolbar.
+Theres currently one way to save a notebook. Select **Save** from the notebook toolbar.
 
-![Save File by clicking Save in the notebook toolbar](./media/notebooks-manage-sql-server/save-file-1.png)
+![Save File by selecting Save in the notebook toolbar](./media/notebooks-manage-sql-server/save-file-1.png)
 
 > [!NOTE]
 > The following methods currently do not save changes to notebooks:
@@ -56,7 +56,7 @@ There is currently one way to save a notebook. You must select **Save** from the
 
 To change the connection for a notebook:
 
-1. Select the **Attach to** menu from the notebook toolbar amd then select **Change Connection**.
+1. Select the **Attach to** menu from the notebook toolbar and then select **Change Connection**.
 
    ![Click the Attach to menu in the notebook toolbar](./media/notebooks-manage-sql-server/select-attach-to-1.png)
 

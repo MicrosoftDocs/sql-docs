@@ -59,6 +59,7 @@ In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDS
   
  *newValue*  
  The new value for the property specified by *path*.  
+ The new value must be a [n]varchar or text.
   
  In lax mode, JSON_MODIFY deletes the specified key if the new value is NULL.  
   

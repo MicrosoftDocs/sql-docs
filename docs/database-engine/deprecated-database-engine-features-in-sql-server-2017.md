@@ -130,7 +130,7 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| SET ANSI_NULLS OFF and ANSI_NULLS OFF database option </br></br> SET ANSI_PADDING OFF and ANSI_PADDING OFF database option </br></br> SET CONCAT_NULL_YIELDS_NULL OFF and CONCAT_NULL_YIELDS_NULL OFF database option</br></br> SET OFFSETS | None. </br></br> ANSI_NULLS, ANSI_PADDING and CONCAT_NULLS_YIELDS_NULL are always set to ON. SET OFFSETS are unavailable. | SET ANSI_NULLS OFF </br></br> SET ANSI_PADDING OFF </br></br> SET CONCAT_NULL_YIELDS_NULL OFF </br></br> SET OFFSETS </br></br> ALTER DATABASE SET ANSI_NULLS OFF </br></br> ALTER DATABASE SET ANSI_PADDING OFF </br></br> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET ANSI_NULLS OFF and ANSI_NULLS OFF database option</br></br>SET ANSI_PADDING OFF and ANSI_PADDING OFF database option</br></br>SET CONCAT_NULL_YIELDS_NULL OFF and CONCAT_NULL_YIELDS_NULL OFF database option</br></br>SET OFFSETS | None. </br></br> ANSI_NULLS, ANSI_PADDING and CONCAT_NULLS_YIELDS_NULL are always set to ON. SET OFFSETS are unavailable. | SET ANSI_NULLS OFF </br></br> SET ANSI_PADDING OFF</br></br>SET CONCAT_NULL_YIELDS_NULL OFF</br></br>SET OFFSETS</br></br>ALTER DATABASE SET ANSI_NULLS OFF</br></br>ALTER DATABASE SET ANSI_PADDING OFF</br></br>ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
 
 ### Data types
 

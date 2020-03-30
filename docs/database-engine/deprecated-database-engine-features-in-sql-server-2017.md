@@ -47,57 +47,57 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 ## Features deprecated in the next version of SQL Server
 
-The following SQL Server Database Engine features are deprecated in the next version of SQL Server. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name.
+The following SQL Server Database Engine features are deprecated in the next version of SQL Server. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.
 
 ### Back up and Restore
 
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated.<br /><br />BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued. | None. | BACKUP DATABASE or LOG WITH PASSWORD<br /><br />BACKUP DATABASE or LOG WITH MEDIAPASSWORD |
+| Deprecated feature | Replacement | Feature name | Feature ID |
+|--------------------|-------------|--------------|------------|
+| RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated.<br /><br />BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued. | None. | BACKUP DATABASE or LOG WITH PASSWORD<br /><br />BACKUP DATABASE or LOG WITH MEDIAPASSWORD | 104<br /><br /> 103 |
 
 ### Compatibility levels
 
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL Server version goes out of [support](https://aka.ms/sqllifecycle), the associated Database Compatibility Level are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 |
+| Deprecated feature | Replacement | Feature name | Feature ID |
+|--------------------|-------------|--------------|------------|
+Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL Server version goes out of [support](https://aka.ms/sqllifecycle), the associated Database Compatibility Level are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
 
 ### Database objects
 
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| Ability to return result sets from triggers | None | Returning results from trigger |
+| Deprecated feature | Replacement | Feature name | Feature ID |
+|--------------------|-------------|--------------|------------|
+| Ability to return result sets from triggers | None | Returning results from trigger | 12 |
 
 ### Encryption
 
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 are not deprecated. | Use another encryption algorithm such as AES. | Deprecated encryption algorithm |
+| Deprecated feature | Replacement | Feature name | Feature ID |
+|--------------------|-------------|--------------|------------|
+| Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 are not deprecated. | Use another encryption algorithm such as AES. | Deprecated encryption algorithm | 253 |
 
 ### Hash algorithms
 
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. |Deprecated hash algorithm |
+| Deprecated feature | Replacement | Feature name | Feature ID |
+|--------------------|-------------|--------------|------------|
+| Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. |Deprecated hash algorithm | None |
 
 ### Remote servers
 
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption |
-| \@\@remserver | Replace remote servers by using linked servers. | None |
-| SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers. | SET REMOTE_PROC_TRANSACTIONS |
+| Deprecated feature | Replacement | Feature name | Feature ID |
+|--------------------|-------------|--------------|------------|
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| \@\@remserver | Replace remote servers by using linked servers. | None | None |
+| SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
 ### Set options
 
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| **SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements | TOP keyword | SET ROWCOUNT |
+| Deprecated feature | Replacement | Feature name | Feature ID |
+|--------------------|-------------|--------------|------------|
+| **SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements | TOP keyword | SET ROWCOUNT | 109 |
 
 ### Table hints
 
-| Category | Deprecated feature | Replacement | Feature name |
-|----------|--------------------|-------------|--------------|
-| HOLDLOCK table hint without parenthesis. | Use HOLDLOCK with parenthesis. | HOLDLOCK table hint without parenthesis |
+| Deprecated feature | Replacement | Feature name | Feature ID |
+|--------------------|-------------|--------------|------------|
+| HOLDLOCK table hint without parenthesis. | Use HOLDLOCK with parenthesis. | HOLDLOCK table hint without parenthesis | 167 |
 
 ## Features deprecated in a future version of SQL Server
 

@@ -47,7 +47,7 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |mgmtproxy-\<*nnnn*\>|1         |         |         |
 |[nmnode-\<*#*\>-\<*#*\>](#hdfs-namenode)|2         |         |HDFS node. |
 |operator-\<*nnnn*\>|1         |         |         |
-|sparkhead-\<*#*\>|2         |         |HDFS spark head. |
+|[sparkhead-\<*#*\>](#spark-head)|2         |         |HDFS spark head. |
 |storage-\<*#*\>-\<*#*\>|3         |         |Storage.|
 |zookeeper-\<*#*\>|3         |         |HDFS|
 
@@ -79,9 +79,9 @@ The compute pool provides compute resources for distributed queries.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`compute-0`| StatefulSet |- SQL Server instance<br><br>- Fluent Bit<br><br>- CollectD."
+|`compute-0`| StatefulSet |- SQL Server instance<br><br>- Fluent Bit<br><br>- CollectD.
 
-The compute pool SQL Server instances are stateless. Only require storage for `tempdb`. 
+The compute pool SQL Server instances are stateless. Only require storage for `tempdb`.
 
 SQL Server 2019 Big Data Cluster supports one compute pool. Compute pool can't be scaled or resized. You can not add or remove pods.
 
@@ -94,7 +94,7 @@ Number of pods in compute pool:
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`nmnode-0-#`| StatefulSet |- HDFS NameNode<br><br>- Fluent Bit"
+|`nmnode-0-#`| StatefulSet |- HDFS NameNode<br><br>- Fluent Bit
 
 HA deployment includes two NameNode pods.
 
@@ -106,21 +106,19 @@ Provides gateway access to HDFS and Spark.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`gateway-0`| StatefulSet |- Knox<br><br>- Fluent Bit"
+|`gateway-0`| StatefulSet |- Knox<br><br>- Fluent Bit
 
 Only one replica (one container) supported.
 
 ## Spark head
-
-- Controlled by: StatefulSet/`sparkhead`
-
-- Pod: `sparkehead-#`
-
-- Containers in each pod:<br><br>   YARN history server<br><br>   Spark history server<br><br>   Hive metastore<br><br>   Fluent Bit
-
 Provides YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service (internal use only).
 
-## Storage pool
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`sparkehead-#`| StatefulSet |- <br><br>YARN history server<br><br>Spark history server<br><br>Hive metastore<br><br>Fluent Bit
+
+
+# Storage pool
 
 - Controlled by: StatefulSet/`storage-0`
 

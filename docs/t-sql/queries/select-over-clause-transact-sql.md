@@ -1,6 +1,6 @@
 ---
 title: "OVER Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.description: "Transact-SQL reference for the OVER clause, which defines a user-specified set of rows within a query result set."
 ms.date: "08/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

@@ -40,7 +40,7 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |gateway-\<*#*\>|1         |         |         |
 |logsdb-\<*#*\>|1         |         |         |
 |logsui-\<*nnnn*\>|1         |         |         |
-|[master-\<*#*\>](sql-server-master-instance)|1-9         |         |Master SQL Server instance. 3 replicas provide HA with a contained availability group.|
+|[master-\<*#*\>](#sql-server-master-instance)|1-9         |         |Master SQL Server instance. 3 replicas provide HA with a contained availability group.|
 |metricsdb-\<*#*\>|1         |         |         |
 |metricsdc-\<*nnnn*\>|5         |Daemonset|One per node in the cluster|
 |metricsui-\<*nnnn*\>|1         |         |         |

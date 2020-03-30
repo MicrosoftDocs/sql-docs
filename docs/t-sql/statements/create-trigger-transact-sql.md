@@ -4,7 +4,6 @@ ms.description: "Transact-SQL reference for the CREATE TRIGGER statement, which 
 ms.date: "10/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 

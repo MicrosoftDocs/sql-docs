@@ -182,19 +182,19 @@ The following SQL Server Database Engine features are supported in the next vers
 |--------------------|-------------|--------------|
 | Level0type = 'type' and Level0type = 'USER' to add extended properties to level-1 or level-2 type objects. | Use Level0type = 'USER' only to add an extended property directly to a user or role.<br /><br /> Use Level0type = 'SCHEMA' to add an extended property to level-1 types such as TABLE or VIEW, or level-2 types such as COLUMN or TRIGGER. For more information, see [sp_addextendedproperty &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md). | EXTPROP_LEVEL0TYPE<br /><br /> EXTPROP_LEVEL0USER |
 
-### Extended stored procedures programming
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| Extended stored procedure programming | srv_alloc<br /><br /> srv_convert<br /><br /> srv_describe<br /><br /> srv_getbindtoken<br /><br /> srv_got_attention<br /><br /> srv_message_handler<br /><br /> srv_paramdata<br /><br /> srv_paraminfo<br /><br /> srv_paramlen<br /><br /> srv_parammaxlen<br /><br /> srv_paramname<br /><br /> srv_paramnumber<br /><br /> srv_paramset<br /><br /> srv_paramsetoutput<br /><br /> srv_paramstatus<br /><br /> srv_paramtype<br /><br /> srv_pfield<br /><br /> srv_pfieldex<br /><br /> srv_rpcdb<br /><br /> srv_rpcname<br /><br /> srv_rpcnumber<br /><br /> srv_rpcoptions<br /><br /> srv_rpcowner<br /><br /> srv_rpcparams<br /><br /> srv_senddone<br /><br /> srv_sendmsg<br /><br /> srv_sendrow<br /><br /> srv_setcoldata<br /><br /> srv_setcollen<br /><br /> srv_setutype<br /><br /> srv_willconvert<br /><br /> srv_wsendmsg | Use CLR Integration instead. | XP_API |
-| Extended stored procedure programming | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | Use CLR Integration instead. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
-| Extended stored procedures | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig |
-
 ### Extended stored procedures
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| Extended stored procedures | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig |
+| xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig |
+
+### Extended stored procedures programming
+
+| Deprecated feature | Replacement | Feature name |
+|--------------------|-------------|--------------|
+| srv_alloc<br /><br /> srv_convert<br /><br /> srv_describe<br /><br /> srv_getbindtoken<br /><br /> srv_got_attention<br /><br /> srv_message_handler<br /><br /> srv_paramdata<br /><br /> srv_paraminfo<br /><br /> srv_paramlen<br /><br /> srv_parammaxlen<br /><br /> srv_paramname<br /><br /> srv_paramnumber<br /><br /> srv_paramset<br /><br /> srv_paramsetoutput<br /><br /> srv_paramstatus<br /><br /> srv_paramtype<br /><br /> srv_pfield<br /><br /> srv_pfieldex<br /><br /> srv_rpcdb<br /><br /> srv_rpcname<br /><br /> srv_rpcnumber<br /><br /> srv_rpcoptions<br /><br /> srv_rpcowner<br /><br /> srv_rpcparams<br /><br /> srv_senddone<br /><br /> srv_sendmsg<br /><br /> srv_sendrow<br /><br /> srv_setcoldata<br /><br /> srv_setcollen<br /><br /> srv_setutype<br /><br /> srv_willconvert<br /><br /> srv_wsendmsg | Use CLR Integration instead. | XP_API |
+| sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | Use CLR Integration instead. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
+| xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig |
 
 ### Function
 
@@ -288,19 +288,19 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 
 ### Server Configuration Options
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| c2 audit option default trace enabled option|[common criteria compliance enabled Server Configuration Option](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br />[Extended Events](../relational-databases/extended-events/extended-events.md) | sp_configure 'c2 audit mode'<br /><br />sp_configure 'default trace enabled' |
+| c2 audit option default trace enabled option<br /><br /> default trace enabled option | [common criteria compliance enabled Server Configuration Option](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Extended Events](../relational-databases/extended-events/extended-events.md) | sp_configure 'c2 audit mode'<br /><br />sp_configure 'default trace enabled' |
 
 ### SMO classes
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| **Microsoft.SQLServer. Management.Smo.Information** class<br /><br />**Microsoft.SQLServer. Management.Smo.Settings** class<br /><br />**Microsoft.SQLServer.Management. Smo.DatabaseOptions** class<br /><br />**Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication** property|**Microsoft.SqlServer.  Management.Smo.Server** class<br /><br />**Microsoft.SqlServer.  Management.Smo.Server** class<br /><br />**Microsoft.SqlServer. Management.Smo.Database** class<br /><br />None | None |
+| *Microsoft.SQLServer. Management.Smo.Information* class<br /><br />*Microsoft.SQLServer. Management.Smo.Settings* class<br /><br />*Microsoft.SQLServer.Management. Smo.DatabaseOptions* class<br /><br />*Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication* property | *Microsoft.SqlServer.  Management.Smo.Server* class<br /><br />**Microsoft.SqlServer.  Management.Smo.Server* class<br /><br />*Microsoft.SqlServer. Management.Smo.Database* class<br /><br />None | None |
 
 ### SQL Server Agent
 
@@ -310,6 +310,8 @@ The following SQL Server Database Engine features are supported in the next vers
 
 ### SQL Server Management Studio
 
+| Deprecated feature | Replacement | Feature name |
+|--------------------|-------------|--------------|
 | Solution Explorer integration in SQL Server Management Studio | | None |
 
 ### System Stored Procedures
@@ -396,6 +398,8 @@ The following SQL Server Database Engine features are supported in the next vers
 
 ### Trace Management Objects
 
+| Deprecated feature | Replacement | Feature name |
+|--------------------|-------------|--------------|
 | Microsoft.SqlServer.Management.Trace namespace (contains the APIs for SQL Server Trace and Replay objects)|Trace Configuration: <xref:Microsoft.SqlServer.Management.XEvent><br /><br />Trace Reading: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br />Trace Replay: None | |
 
 ### XML

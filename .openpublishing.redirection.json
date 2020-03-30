@@ -16586,33 +16586,33 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/big-data-clusters/notebooks-guidance.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks-guidance.md",
+      "source_path": "docs/big-data-cluster/notebooks-guidance.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks-guidance",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/azure-data-studio/sql-notebooks.md",
-      "redirect_url": "/sql/azure-data-studio/notebooks-guidance.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks-guidance",
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/big-data-clusters/tutorial-notebook-spark.md",
-      "redirect_url": "/sql/big-data-clusters/notebooks-tutorial-spark.md",
+      "source_path": "docs/big-data-cluster/tutorial-notebook-spark.md",
+      "redirect_url": "/sql/big-data-clusters/notebooks-tutorial-spark",
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/big-data-clusters/deploy-notebooks.md",
-      "redirect_url": "/sql/big-data-clusters/notebooks-deploy.md",
+      "source_path": "docs/big-data-cluster/deploy-notebooks.md",
+      "redirect_url": "/sql/big-data-clusters/notebooks-deploy",
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/big-data-clusters/manage-notebooks.md",
-      "redirect_url": "/sql/big-data-clusters/notebooks-manage-bdc.md",
+      "source_path": "docs/big-data-cluster/manage-notebooks.md",
+      "redirect_url": "/sql/big-data-clusters/notebooks-manage-bdc",
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/big-data-clusters/notebooks-how-to-manage.md",
-      "redirect_url": "/sql/big-data-clusters/notebooks-manage-bdc.md",
+      "source_path": "docs/big-data-cluster/notebooks-how-to-manage.md",
+      "redirect_url": "/sql/big-data-clusters/notebooks-manage-bdc",
       "redirect_document_id": false
     }
   ]

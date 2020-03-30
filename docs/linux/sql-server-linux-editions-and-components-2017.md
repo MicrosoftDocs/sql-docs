@@ -223,6 +223,7 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | &nbsp; | Alerts |
 | &nbsp; | Log Reader Agent |
 | &nbsp; | Managed Backup |
+| &nbsp; | Multi-Server Administration using MSX/TSX |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
 | &nbsp; | AD Authentication for Linked Servers | 

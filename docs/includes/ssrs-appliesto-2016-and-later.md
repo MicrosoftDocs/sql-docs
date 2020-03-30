@@ -11,4 +11,4 @@
 ---
 
 
- ![Yes](media/yes.png)SQL Server 2016 Reporting Services and later
+ ![Yes](media/yes2.png)SQL Server 2016 Reporting Services and later

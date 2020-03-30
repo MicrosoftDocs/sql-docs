@@ -1,1 +1,1 @@
-**APPLIES TO:** ![Yes](media/yes.png)SQL Server  2016 and later (Windows only) ![No](media/no.png)Azure SQL Database ![No](media/no.png)Azure Synapse Analytics (SQL DW) ![No](media/no.png)Parallel Data Warehouse
+**APPLIES TO:** ![Yes](media/yes2.png)SQL Server  2016 and later (Windows only) ![No](media/no.png)Azure SQL Database ![No](media/no.png)Azure Synapse Analytics (SQL DW) ![No](media/no.png)Parallel Data Warehouse

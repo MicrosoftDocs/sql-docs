@@ -11,4 +11,4 @@
 ---
 
 
- ![Yes](media/yes.png)SQL Server Reporting Services (2017)
+ ![Yes](media/yes2.png)SQL Server Reporting Services (2017)

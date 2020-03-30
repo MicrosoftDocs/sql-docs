@@ -46,10 +46,10 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |metricsui-\<*nnnn*\>|1         |         |         |
 |mgmtproxy-\<*nnnn*\>|1         |         |         |
 |[nmnode-\<*#*\>-\<*#*\>](#hdfs-namenode)|2         |         |HDFS node. |
-|operator-\<*nnnn*\>|1         |         |         |
+|[operator-\<*nnnn*\>](#operator)|1         |         |         |
 |[sparkhead-\<*#*\>](#spark-head)|2         |         |HDFS spark head. |
 |[storage-\<*#*\>-\<*#*\>](#storage-pool)|3         |         |Storage.|
-|zookeeper-\<*#*\>|3         |         |HDFS|
+|[zookeeper-\<*#*\>](#zookeeper)|3         |         |HDFS|
 
 ## SQL Server master instance
 
@@ -131,21 +131,19 @@ Provides data ingestion through Spark, storage in HDFS, data access through HDFS
 
 ## ZooKeeper
 
-- Controlled by: StatefulSet/`zookeeper`
-
-- Pod: `zookeeper-0`
-
-- Containers in each pod:<br><br>   ZooKeeper<br><br>   Fluent Bit
-
 Manages failover for HA resources. For background, see [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) in the Kubernetes documentation.
+
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`zookeeper`| StatefulSet |- HDFS DataNode<br><br>- ZooKeeper<br><br>- Fluent Bit
 
 ## Operator
 
-- Controlled by: ReplicaSet/`operator`
-
-- Container: `mssql-ha-operator`
-
 The operator implements and registers the custom resource definition for SQL Server and the Availability Group resources. When the operator is deployed, it registers itself as a listener for notifications about SQL Server resources being deployed in the Kubernetes cluster
+
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`operator`| ReplicaSet |`mssql-ha-operator`
 
 ## MetricsDB
 

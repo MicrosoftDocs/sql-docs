@@ -48,7 +48,7 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |[nmnode-\<*#*\>-\<*#*\>](#hdfs-namenode)|2         |         |HDFS node. |
 |operator-\<*nnnn*\>|1         |         |         |
 |[sparkhead-\<*#*\>](#spark-head)|2         |         |HDFS spark head. |
-|storage-\<*#*\>-\<*#*\>|3         |         |Storage.|
+|[storage-\<*#*\>-\<*#*\>](#storage-pool)|3         |         |Storage.|
 |zookeeper-\<*#*\>|3         |         |HDFS|
 
 ## SQL Server master instance
@@ -115,16 +115,19 @@ Provides YARN history server, Spark history server for Livy jobs, Hive metastore
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`sparkehead-#`| StatefulSet |- <br><br>YARN history server<br><br>Spark history server<br><br>Hive metastore<br><br>Fluent Bit
+|`sparkehead-#`| StatefulSet |- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- Fluent Bit
 
+[Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
 
 # Storage pool
 
-- Controlled by: StatefulSet/`storage-0`
+Provides data ingestion through Spark, storage in HDFS, data access through HDFS and SQL Server endpoints.
 
-- Pod: `storage-0-#`
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`storage-0-#`| StatefulSet |- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- Fluent Bit<br><br>- Yarn (for on demand processes)
 
-- Containers in each pod:<br><br>   HDFS DataNode<br><br>   SQL Server storage instance<br><br>   Fluent Bit<br><br>   Yarn (for on demand processes)
+[What is the storage pool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?](concept-storage-pool.md)
 
 ## ZooKeeper
 

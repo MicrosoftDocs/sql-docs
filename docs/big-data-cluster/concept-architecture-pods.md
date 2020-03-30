@@ -5,7 +5,7 @@ description: A description of the pods typically deployed in a SQL Server Big Da
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 01/05/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -17,9 +17,13 @@ ms.technology: big-data-cluster
 
 This article describes the resources a SQL Server Big Data Cluster deploys.
 
+A Big Data Cluster cluster deploys pods based on the deployment configuration. This article describes the pods deployed with `aks-dev-test-ha` profile. 
+
+For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
+
 ## SQL Server master instance
 
-- StatefulSet: `master`
+- Controlled by: StatefulSet/`master`
 
 - Pod: `master-#` 
 
@@ -39,7 +43,7 @@ The SQL Server master instance:
 
 ## Data pool
 
-- StatefulSet: `data-0`
+- Controlled by: StatefulSet/`data-0`
 
 - Pod: `data-0-#`
 
@@ -52,7 +56,7 @@ The data pool SQL Server instances provide storage and compute.
 
 ## Compute pool
 
-- StatefulSet: `compute-0`
+- Controlled by: StatefulSet/`compute-0`
 
 - Pod: `compute-0-#`
 
@@ -74,7 +78,7 @@ The compute pool provides compute resources for distributed queries.
 
 ## HDFS NameNode
 
-- StatefulSet: `nmnode-0`
+- Controlled by: StatefulSet/`nmnode-0`
 
 - Pod: `nmnode-0-#`
 
@@ -88,7 +92,9 @@ A ZooKeeper pod support HA.
 
 ## Gateway service
 
-- StatefulSet: `gateway`
+Gateway access to HDFS and Spark
+
+- Controlled by: StatefulSet/`gateway`
 
 - Pod: `gateway-0`
 
@@ -100,7 +106,7 @@ Only one replica (one container) supported.
 
 ## Spark head
 
-- StatefulSet: `sparkhead`
+- Controlled by: StatefulSet/`sparkhead`
 
 - Pod: `sparkehead-#`
 
@@ -114,7 +120,7 @@ Provides YARN history server, Spark history server for Livy jobs, Hive metastore
 
 ## Storage pool
 
-- StatefulSet: `storage-0`
+- Controlled by: StatefulSet/`storage-0`
 
 - Pod: `storage-0-#`
 
@@ -126,7 +132,7 @@ Provides YARN history server, Spark history server for Livy jobs, Hive metastore
 
 ## ZooKeeper
 
-- StatefulSet: `zookeeper`
+- Controlled by: StatefulSet/`zookeeper`
 
 - Pod: `zookeeper-0`
 
@@ -138,7 +144,7 @@ Manages failover for HA resources. For background, see [ZooKeeper](https://kuber
 
 ## Operator
 
-- ReplicaSet: `operator`
+- Controlled by: ReplicaSet/`operator`
 
 - Container: `mssql-ha-operator`
 
@@ -146,32 +152,38 @@ The operator implements and registers the custom resource definition for SQL Ser
 
 ## MetricsDB
 
-- StatefulSet: `metricsdb`
+- Controlled by: StatefulSet/`metricsdb`
 
 - Pod: `metricsdb-0`
-
-- Pod: ``
 
 `metricsdb-0`: Runs influxdb
 
 
 ## Metricsdc
 
-- DaemonSet: `metricsdc`
+- Controlled by: DaemonSet/`metricsdc`
 
 - Pod: `metricsdc-****`
 
 ## Metricsui
 
-- ReplicaSet: `metricsui`.
+Dashboard for searching through cluster metrics.
+
+- Controlled by: ReplicaSet/`metricsui`.
 
 - Pod: `metricsui-****`
 
-Runs Grafana- 
-
 ## mgmtproxy
 
+Proxy for accessing services which monitor cluster health.
+
+- Controlled by: ReplicaSet/`mgmtproxy`
+
+- Pod: `mgmt--proxy-****`
+
 ## logsdb
+
+- Controlled by: StatefulSet/logsdb
 
 ## logsui
 
@@ -211,3 +223,4 @@ To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdatac
 
 - [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
 - [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile)

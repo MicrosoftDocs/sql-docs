@@ -42,7 +42,7 @@ Use command **File: Open** from command palette by typing Ctrl+Shift+P (in Windo
 
 ## Save a notebook
 
-Theres currently one way to save a notebook. Select **Save** from the notebook toolbar.
+There's currently one way to save a notebook. Select **Save** from the notebook toolbar.
 
 ![Save File by selecting Save in the notebook toolbar](./media/notebooks-manage-sql-server/save-file-1.png)
 

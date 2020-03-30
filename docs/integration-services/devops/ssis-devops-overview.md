@@ -159,7 +159,7 @@ Source of the SSIS catalog configuration JSON file. It can be "File path" or "In
 
 Refer to details on how to [define configuration JSON](#define-configuration-json):
 
-- Refer to [a sample configuration](#a-sample-configuration-json).
+- Refer to [a sample inline configuration JSON](#a-sample-configuration-json).
 - Check [JSON schema](#json-schema).
 
 #### Configuration JSON file path
@@ -214,7 +214,7 @@ The configuration JSON schema has three layers:
 
 ![catalog configuration schema](media/catalog-configuration-schema.png)
 
-#### A sample configuration JSON
+#### A sample inline configuration JSON
 
 ```json
 {

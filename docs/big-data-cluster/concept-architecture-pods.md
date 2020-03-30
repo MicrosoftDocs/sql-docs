@@ -177,19 +177,19 @@ Proxy for accessing services which monitor cluster health.
 
 ## logsdb
 
-|Pod name | Controller type | Elasticsearch |
+|Pod name | Controller type | Containers in a pod |
 |--------|----------|--------|
-|`logsdb-0`| StatefulSet | logsdb
+|`logsdb-0`| StatefulSet |- Elasticsearch<br><br>- logsdb
 
 ## logsui
 
-|Pod name | Controller type | Elasticsearch |
+|Pod name | Controller type | Containers in a pod |
 |--------|----------|--------|
-|`logsui`| ReplicaSet | Kibana
+|`logsui`| ReplicaSet |- Elasticsearch<br><br>- Kibana
 
 ## control
 
-|Pod name | Controller type | Elasticsearch |
+|Pod name | Controller type | Containers in a pod |
 |--------|----------|--------|
 |`control-*****`| ReplicaSet |- controller<br><br>- security-support<br><br>- `fluentbit`
 |`controldb`| StatefulSet |- mssql-server<br><br>- `fluentbit`
@@ -197,7 +197,7 @@ Proxy for accessing services which monitor cluster health.
 
 ## appproxy
 
-|Pod name | Controller type | Elasticsearch |
+|Pod name | Controller type |  Containers in a pod  |
 |--------|----------|--------|
 |`appproxy`| ReplicaSet |- `app-service-proxy`<br><br>- `fluentbit`
 

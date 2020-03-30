@@ -119,7 +119,7 @@ Provides YARN history server, Spark history server for Livy jobs, Hive metastore
 
 [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
 
-# Storage pool
+## Storage pool
 
 Provides data ingestion through Spark, storage in HDFS, data access through HDFS and SQL Server endpoints.
 

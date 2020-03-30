@@ -11,4 +11,4 @@
 ---
 
 
- ![Yes](media/yes.png)SharePoint 2013 & later
+ ![Yes](media/yes-icon.png)SharePoint 2013 & later

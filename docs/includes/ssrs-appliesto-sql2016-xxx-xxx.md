@@ -1,1 +1,1 @@
-**APPLIES TO:** ![Yes](media/yes.png)SQL Server 2016 ![No](media/no.png)SQL Server 2017 ![No](media/no.png)Power BI Report Server
+**APPLIES TO:** ![Yes](media/yes-icon.png)SQL Server 2016 ![No](media/no-icon.png)SQL Server 2017 ![No](media/no-icon.png)Power BI Report Server

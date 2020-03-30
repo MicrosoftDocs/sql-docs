@@ -1,7 +1,7 @@
 ---
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/01/2019"
+ms.date: "03/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -64,7 +64,7 @@ The command(s) completed successfully.
  **xp_cmdshell** can be enabled and disabled by using the Policy-Based Management or by executing **sp_configure**. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md) and [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 > [!IMPORTANT]
->  If **xp_cmdshell** is executed within a batch and returns an error, the batch will fail. This is a change of behavior. In earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the batch would continue to execute.  
+>  If **xp_cmdshell** is executed within a batch and returns an error, the batch will fail.
   
 ## xp_cmdshell Proxy Account  
  When it is called by a user that is not a member of the **sysadmin** fixed server role, **xp_cmdshell** connects to Windows by using the account name and password stored in the credential named **##xp_cmdshell_proxy_account##**. If this proxy credential does not exist, **xp_cmdshell** will fail.  

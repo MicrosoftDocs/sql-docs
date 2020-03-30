@@ -53,15 +53,13 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 
 ## SQL Server master instance
 
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`master-`| StatefulSet|- Containers in each pod:<br><br>  - SQL Server instance<br><br>  - Fluent Bit<br><br>  - Collectd<br><br>  - mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
+
 - Controlled by: StatefulSet/`master`
 
 - Pod: `master-#` 
-
-- Containers in each pod:
-  - SQL Server instance
-  - Fluent Bit
-  - Collectd
-  - mssql-ha-supervisor (if Big Data Cluster is deployed for HA)
 
 Each pod contains one instance of SQL Server. If the deployment is configured for high-availability (HA), it includes 3 instances with a SQL Server Always On Availability Group containing 3 replicas.
 

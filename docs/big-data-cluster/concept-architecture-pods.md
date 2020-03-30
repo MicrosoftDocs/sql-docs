@@ -33,18 +33,18 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |---------|---------|---------|---------|
 |appproxy-\<*nnnn*\>|1         |         |Application proxy. 1 per app.|
 |[compute-\<*#*\>-\<*#*\>](#compute-pool)|1         |         |Compute for SQL Server.|
-|control-\<*nnnn*\>|1         |         |Kubernetes control.|
-|controldb-\<*#*\>|1         |         |         |
-|controlwd-\<*nnnn*\>|1         |         |         |
+|[control-\<*nnnn*\>](#control)|1         |         |Kubernetes control.|
+|[controldb-\<*#*\>](#control)|1         |         |         |
+|[controlwd-\<*nnnn*\>](#control)|1         |         |         |
 |[data-\<*#*\>-\<*#*\>](#data-pool)|2         |         |Used by SQL Server|
-|gateway-\<*#*\>|1         |         |         |
-|logsdb-\<*#*\>|1         |         |         |
-|logsui-\<*nnnn*\>|1         |         |         |
+|[gateway-\<*#*\>](#gateway-service)|1         |         |         |
+|[logsdb-\<*#*\>](#logsdb)|1         |         |         |
+|[logsui-\<*nnnn*\>](#logsui)|1         |         |         |
 |[master-\<*#*\>](#sql-server-master-instance)|1-9         |         |Master SQL Server instance. 3 replicas provide HA with a contained availability group.|
-|metricsdb-\<*#*\>|1         |         |         |
-|metricsdc-\<*nnnn*\>|5         |Daemonset|One per node in the cluster|
-|metricsui-\<*nnnn*\>|1         |         |         |
-|mgmtproxy-\<*nnnn*\>|1         |         |         |
+|[metricsdb-\<*#*\>](#metricsdb)|1         |         |         |
+|[metricsdc-\<*nnnn*\>](#metricsdc)|5         |Daemonset|One per node in the cluster|
+|[metricsui-\<*nnnn*\>](#metricsui)|1         |         |         |
+|[mgmtproxy-\<*nnnn*\>](#mgmtproxy)|1         |         |         |
 |[nmnode-\<*#*\>-\<*#*\>](#hdfs-namenode)|2         |         |HDFS node. |
 |[operator-\<*nnnn*\>](#operator)|1         |         |         |
 |[sparkhead-\<*#*\>](#spark-head)|2         |         |HDFS spark head. |
@@ -61,7 +61,7 @@ The SQL Server master instance:
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`master-`| StatefulSet|- SQL Server instance<br><br>- Fluent Bit<br><br>- Collectd<br><br>- mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
+|`master-`| StatefulSet|- SQL Server instance<br><br>- `fluentbit`<br><br>- Collectd<br><br>- mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
 
 Each pod contains one instance of SQL Server. If the deployment is configured for high-availability (HA), it includes 3 pods. Each pod includes a SQL Server instance with databases in a SQL Server Always On Availability Group.
 
@@ -71,7 +71,7 @@ The data pool SQL Server instances provide storage and compute.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`data-0-#` | StatefulSet |SQL Server instance<br><br>Fluent Bit<br><br>CollectD.|
+|`data-0-#` | StatefulSet |SQL Server instance<br><br>`fluentbit`<br><br>CollectD.|
 
 ## Compute pool
 
@@ -79,7 +79,7 @@ The compute pool provides compute resources for distributed queries.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`compute-0`| StatefulSet |- SQL Server instance<br><br>- Fluent Bit<br><br>- CollectD.
+|`compute-0`| StatefulSet |- SQL Server instance<br><br>- `fluentbit`<br><br>- CollectD.
 
 The compute pool SQL Server instances are stateless. Only require storage for `tempdb`.
 
@@ -94,7 +94,7 @@ Number of pods in compute pool:
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`nmnode-0-#`| StatefulSet |- HDFS NameNode<br><br>- Fluent Bit
+|`nmnode-0-#`| StatefulSet |- HDFS NameNode<br><br>- `fluentbit`
 
 HA deployment includes two NameNode pods.
 
@@ -106,7 +106,7 @@ Provides gateway access to HDFS and Spark.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`gateway-0`| StatefulSet |- Knox<br><br>- Fluent Bit
+|`gateway-0`| StatefulSet |- Knox<br><br>- `fluentbit`
 
 Only one replica (one container) supported.
 
@@ -115,7 +115,7 @@ Provides YARN history server, Spark history server for Livy jobs, Hive metastore
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`sparkehead-#`| StatefulSet |- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- Fluent Bit
+|`sparkehead-#`| StatefulSet |- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- `fluentbit`
 
 [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
 
@@ -125,7 +125,7 @@ Provides data ingestion through Spark, storage in HDFS, data access through HDFS
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`storage-0-#`| StatefulSet |- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- Fluent Bit<br><br>- Yarn (for on demand processes)
+|`storage-0-#`| StatefulSet |- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
 
 [What is the storage pool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?](concept-storage-pool.md)
 
@@ -135,7 +135,7 @@ Manages failover for HA resources. For background, see [ZooKeeper](https://kuber
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`zookeeper`| StatefulSet |- HDFS DataNode<br><br>- ZooKeeper<br><br>- Fluent Bit
+|`zookeeper`| StatefulSet |- HDFS DataNode<br><br>- ZooKeeper<br><br>- `fluentbit`
 
 ## Operator
 
@@ -147,46 +147,59 @@ The operator implements and registers the custom resource definition for SQL Ser
 
 ## MetricsDB
 
-- Controlled by: StatefulSet/`metricsdb`
+Runs [InfluxDB](https://www.influxdata.com).
 
-- Pod: `metricsdb-0`
-
-`metricsdb-0`: Runs influxdb
-
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`metricsdb-0`| StatefulSet | InfluxDB
 
 ## Metricsdc
 
-- Controlled by: DaemonSet/`metricsdc`
-
-- Pod: `metricsdc-****`
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`metricsdc`| DaemonSet | Telegraf |
 
 ## Metricsui
 
 Dashboard for searching through cluster metrics.
 
-- Controlled by: ReplicaSet/`metricsui`.
-
-- Pod: `metricsui-****`
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`metricsui-****`| ReplicaSet |- Grafana |
 
 ## mgmtproxy
 
 Proxy for accessing services which monitor cluster health.
 
-- Controlled by: ReplicaSet/`mgmtproxy`
-
-- Pod: `mgmt--proxy-****`
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`mgmtproxy-****`| ReplicaSet |- Service proxy<br><br>- `fluentbit`|
 
 ## logsdb
 
-- Controlled by: StatefulSet/logsdb
+|Pod name | Controller type | Elasticsearch |
+|--------|----------|--------|
+|`logsdb-0`| StatefulSet | logsdb
 
 ## logsui
 
+|Pod name | Controller type | Elasticsearch |
+|--------|----------|--------|
+|`logsui`| ReplicaSet | Kibana
+
 ## control
+
+|Pod name | Controller type | Elasticsearch |
+|--------|----------|--------|
+|`control-*****`| ReplicaSet |- controller<br><br>- security-support<br><br>- `fluentbit`
+|`controldb`| StatefulSet |- mssql-server<br><br>- `fluentbit`
+|`controlwd`| ReplicaSet |ControlWatchDog
 
 ## appproxy
 
-
+|Pod name | Controller type | Elasticsearch |
+|--------|----------|--------|
+|`appproxy`| ReplicaSet |- `app-service-proxy`<br><br>- `fluentbit`
 
 ## Next steps
 

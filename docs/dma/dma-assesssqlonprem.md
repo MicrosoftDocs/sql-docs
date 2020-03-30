@@ -2,8 +2,7 @@
 title: "Perform a SQL Server migration assessment"
 titleSuffix: Data Migration Assistant
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
-ms.custom: ""
-ms.date: "12/10/2019"
+ms.date: "01/15/2020"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -20,7 +19,7 @@ ms.custom: "seo-lt-2019"
 
 # Perform a SQL Server migration assessment with Data Migration Assistant
 
-The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database, by using Data Migration Assistant.
+The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database by using Data Migration Assistant.
 
    > [!NOTE]
    > Data Migration Assistant v5.0 introduces support for analyzing database connectivity and embedded SQL queries in the application code. For more information, see the blog post [Using Data Migration Assistant to assess an application’s data access layer](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
@@ -110,6 +109,9 @@ The following step-by-step instructions help you perform your first assessment f
 
     ![Add sources and start assessment](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> You can run multiple assessments concurrently and view the state of the assessments by opening the **All Assessments** page.
+
 ## View results
 
 The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
@@ -152,4 +154,6 @@ Detailed, step-by-step guidance for target readiness assessments is available [h
 
 After all databases finish the assessment, select **Export report** to export the results to either a JSON file or a CSV file. You can then analyze the data at your own convenience.
 
-You can run multiple assessments concurrently and view the state of the assessments by opening the **All Assessments** page.
+## Save and load assessments
+
+In addition to exporting the results of an assessment, you can save assessment detail to a file and load an assessment file for later review.  For more information, see the article [Save and load assessments with Data Migration Assistant](../dma/dma-save-load-assessments.md).

@@ -91,7 +91,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in GrantPermissionsX...."<< endl;  
+      cout << "Error occurred in GrantPermissionsX...."<< endl;  
    }  
    ::CoUninitialize();  
 }  

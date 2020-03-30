@@ -1,5 +1,5 @@
 ---
-title: "URL Reservation Syntax  (SSRS Configuration Manager) | Microsoft Docs"
+title: "URL Reservation Syntax  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

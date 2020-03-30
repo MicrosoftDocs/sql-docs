@@ -173,7 +173,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in AttributesX...." << endl;  
+      cout << "Error occurred in AttributesX...." << endl;  
    }  
   
    if (m_pRstEmployees)  

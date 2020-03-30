@@ -145,7 +145,7 @@ if (length < 0)
             if ((start + length) <= 1)  
                 return (String.Empty);  
   
-// The 2 if statements below guarentee that the result will match the substring function in   
+// The 2 if statements below guarantee that the result will match the substring function in   
 // Transact-SQL which will initialize start to 1 by subtracting from the length.  
             if (start <= 0 && length > 0)  
                 length--;  
@@ -346,7 +346,7 @@ Public NotInheritable Class SurrogateStringFunction
             Return String.Empty  
         End If  
   
-        ' The 2 if statements below guarentee that the result will match the substring function in   
+        ' The 2 if statements below guarantee that the result will match the substring function in   
         ' Transact-SQL which will initialize start to 1 by subtracting from the length.  
         If start <= 0 AndAlso length > 0 Then  
             length -= 1  

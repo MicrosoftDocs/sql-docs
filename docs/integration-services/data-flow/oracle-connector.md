@@ -21,7 +21,7 @@ Microsoft Connector for Oracle enables to export data from and load data into Or
 The following Microsoft SQL Server products are supported by Microsoft Connector for Oracle:
 
 - Since SQL Server 2019
-- SQL Server Data Tools (SSDT)
+- SQL Server Data Tools (SSDT) since version 15.9.3
 
 The following Oracle database versions of data source are supported:
 
@@ -33,32 +33,24 @@ The following Oracle database versions of data source are supported:
 The Oracle database is supported on all operating systems and platforms.
 > [!NOTE]
 >
-> Oracle client is not required for Microsoft Connector for Oracle Database in SQL Server 2019.
+> Oracle client is not required for Microsoft Connector for Oracle database in SQL Server 2019.
 
 ## Installation
 
-If you need to run package in SQL Server, you can get the Microsoft Connector for Oracle Database installation program from [here](https://www.microsoft.com/download/details.aspx?id=58228). Then follow the directions in the installation wizard.
+To install the connector for Oracle database, download and run the installer from [the latest version of Microsoft connector for Oracle](https://www.microsoft.com/download/details.aspx?id=58228). Then follow the directions in the installation wizard.
 
-After you install the Connector, you must restart the SQL Server Integration Service to be sure that the Oracle source and destination works correctly.
+After you install the Connector, you must restart the SQL Server Integration Service to be sure that the Oracle source and destination can work correctly.
 
-If you need to design package with the Connector, you do not need download the Connector. SQL Server Data Tools (SSDT) has included it since version 15.9.0.
-
-## Uninstallation
-
-You can run uninstall wizard to remove Microsoft Connector for Oracle Database from SQL Server.
-
-## Design SSIS package with previous version
-
-Since version 15.9.0, SSDT already includes Microsoft Connector for Oracle Database, you do not need any installation when designing SSIS packages targeting SQL Server 2019.
-
-To design SSIS package targeting SQL Server 2017 and below, you need to install Connector for Oracle by Attunity with corresponding version.
-
-**Download links:**
+To execute SSIS package targeting SQL Server 2017 and below, in addition to **Microsoft Connector for Oracle**, you will need to install **Oracle client** and **Microsoft Connector for Oracle by Attunity** with corresponding version from below links:
 
 - [SQL Server 2017: Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## Uninstallation
+
+You can run uninstall wizard to remove Microsoft Connector for Oracle database from SQL Server.
 
 ## Next steps
 

@@ -325,6 +325,8 @@ The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL 
   
 ## See Also  
 [Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

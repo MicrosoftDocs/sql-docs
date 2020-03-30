@@ -14,7 +14,7 @@ ms.author: genemi
 # SQLServerCallableStatement Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Lets you specify the stored procedure name to call along with input and output parameters. This class also provides the ability to retrieve the return status value with the ? = call( ?, ..) syntax.  
+  Lets you specify the stored procedure name to call along with input and output parameters. This class also provides the ability to retrieve the return status value with the `? = call( ?, ..)` syntax.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

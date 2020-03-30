@@ -3,7 +3,7 @@ title: Restore a SQL Server database in Docker
 description: This tutorial shows how restore a SQL Server database backup in a new Linux Docker container.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -78,8 +78,8 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
    This command creates a SQL Server 2017 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
 
-   > [!NOTE]
-   > The process for running production SQL Server editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
+   > [!IMPORTANT]
+   > This example uses a data volume container within Docker. If you instead chose to map a host directory, note that there are limitations for this approach on Docker for Mac and Windows. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md#persist).
 
 1. To view your Docker containers, use the `docker ps` command.
 
@@ -109,11 +109,11 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 1. Pull the SQL Server 2019 Linux container image from Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    > [!TIP]
@@ -125,14 +125,14 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    This command creates a SQL Server 2019 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
@@ -486,13 +486,13 @@ In addition to taking database backups for protecting your data, you can also us
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
 1. The Wide World Importers database is now in the new container. Run a query to verify the previous change you made.

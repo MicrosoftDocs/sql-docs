@@ -1,5 +1,5 @@
 ---
-title: "RS.exe Utility (SSRS) | Microsoft Docs"
+title: "RS.exe Utility | Microsoft Docs"
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

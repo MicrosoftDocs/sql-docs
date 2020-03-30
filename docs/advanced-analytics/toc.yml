@@ -17,18 +17,16 @@
     href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: Isolation changes in SQL Server 2019
-    href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
   - name: Install ML Services on Windows
     href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
   - name: Install ML Services on Linux
     href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+  - name: Install ML Services on Docker
+    href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+  - name: Isolation changes in SQL Server 2019
+    href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
   - name: Install R Services
     href: ../advanced-analytics/install/sql-r-services-windows-install.md
-  - name: Install standalone server
-    href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
-  - name: Install pre-trained models
-    href: ../advanced-analytics/install/sql-pretrained-models-install.md
   - name: Offline install (no internet)
     items:
     - name: Install without internet access
@@ -37,23 +35,29 @@
       href: ../advanced-analytics/install/sql-ml-cab-downloads.md
   - name: Command prompt setup
     href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
+  - name: Install pre-trained models
+    href: ../advanced-analytics/install/sql-pretrained-models-install.md
   - name: Upgrade Python and R
     href: ../advanced-analytics/install/upgrade-r-and-python.md
+  - name: Azure Data Studio notebooks
+    href: ../advanced-analytics/install/sql-machine-learning-azure-data-studio.md
   - name: Set up a Python client
     href: ../advanced-analytics/python/setup-python-client-tools-sql.md
   - name: Set up an R client
     href: ../advanced-analytics/r/set-up-a-data-science-client.md
   - name: Install on Azure VM
     href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
+  - name: Install standalone server
+    href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
 - name: Quickstarts
   items:
   - name: Python
     items:
-    - name: Create Python scripts
+    - name: Run Python scripts
       href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-    - name: Handle data types and objects
+    - name: Data structures and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-    - name: Write Python functions
+    - name: Python functions
       href: ../advanced-analytics/tutorials/quickstart-python-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -61,9 +65,9 @@
     items:
     - name: Create R scripts
       href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-    - name: Handle data types and objects
+    - name: Data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-    - name: Write R functions
+    - name: R functions
       href: ../advanced-analytics/tutorials/quickstart-r-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
@@ -245,8 +249,10 @@
       items:
       - name: Get Python package information
         href: ../advanced-analytics/package-management/python-package-information.md
-      - name: Install Python packages
+      - name: Install with sqlmlutils
         href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+      - name: Install with Python tools
+        href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
     - name: Install new R packages
       items:
       - name: Get R package information

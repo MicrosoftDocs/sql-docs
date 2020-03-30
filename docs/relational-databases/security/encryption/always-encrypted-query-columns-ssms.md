@@ -156,7 +156,7 @@ DECLARE @Salary money = $30000;
 And, here are a few examples of variables SQL Server Management Studio won't attempt to parameterize:
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal

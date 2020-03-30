@@ -1,6 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2017 ~ Linux"
-ms.date: 10/23/2019
+description: This article describes features supported by the various editions of SQL Server 2017 on Linux. It helps you choose from available editions and components.
+ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -209,9 +210,7 @@ The following features and services are not available SQL Server 2017 on Linux. 
 
 | Area | Unsupported feature or service |
 |-----|-----|
-| **Database engine** | Transactional replication |
-| &nbsp; | Merge replication |
-| &nbsp; | Change Data Capture (see SQL Server Agent) |
+| **Database engine** | Merge replication |
 | &nbsp; | Stretch DB |
 | &nbsp; | PolyBase |
 | &nbsp; | Distributed query with 3rd-party connections |
@@ -223,7 +222,6 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Log Reader Agent |
-| &nbsp; | Change Data Capture (CDC) |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |

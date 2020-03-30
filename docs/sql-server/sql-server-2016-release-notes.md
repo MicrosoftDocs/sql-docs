@@ -92,7 +92,7 @@ The following features are available in the Standard, Web, Express, and Local DB
 - Compression
 - Dynamic data masking
 - Fine grain auditing
-- In Memory OLTP (not availabe in Local DB)
+- In Memory OLTP (not available in Local DB)
 - Multiple filestream containers (not available in Local DB)
 - Partitioning
 - PolyBase

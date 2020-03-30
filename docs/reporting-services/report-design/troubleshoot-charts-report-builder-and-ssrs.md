@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Troubleshoot Charts (Report Builder) | Microsoft Docs"
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

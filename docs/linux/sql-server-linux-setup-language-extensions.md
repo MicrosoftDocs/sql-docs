@@ -6,7 +6,7 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -256,19 +256,19 @@ You can download packages from [https://packages.microsoft.com/](https://package
 
 |||
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### Ubuntu/16.04 paths
 
 |||
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### SUSE/12 paths
 
 |||
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### Package list
 

@@ -1,5 +1,5 @@
 ---
-title: "Data Processing Extensions and .NET Framework Data Providers (SSRS) | Microsoft Docs"
+title: "Data Processing Extensions and .NET Framework Data Providers | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

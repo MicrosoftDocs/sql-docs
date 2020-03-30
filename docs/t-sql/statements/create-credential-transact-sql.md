@@ -97,7 +97,7 @@ GO
 
 ### B. Creating a Credential for EKM
 
-The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM's Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:
+The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM's Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
@@ -106,13 +106,8 @@ CREATE CREDENTIAL CredentialForEKM
 GO
 
 /* Modify the login to assign the cryptographic provider credential */
-ALTER LOGIN Login1
+ALTER LOGIN User1
 ADD CREDENTIAL CredentialForEKM;
-
-/* Modify the login to assign a non cryptographic provider credential */
-ALTER LOGIN Login1
-WITH CREDENTIAL = AlterEgo;
-GO
 ```
 
 ### C. Creating a Credential for EKM Using the Azure Key Vault

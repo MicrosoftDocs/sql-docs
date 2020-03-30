@@ -140,8 +140,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### C. Query Temporal Tables using local time zone  
- The following example selects data from a temporal table.  
+### C. Query Temporal Tables using a specific time zone  
+ The following example selects data from a temporal table using Pacific Standard Time.  
   
 ```sql
 USE AdventureWorks2016;  

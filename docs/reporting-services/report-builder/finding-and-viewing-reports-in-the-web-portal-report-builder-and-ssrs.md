@@ -1,5 +1,6 @@
 ---
-title: "Finding and Viewing Reports in the web portal (Report Builder and SSRS) | Microsoft Docs"
+title: "Finding and Viewing Reports in the web portal (Report Builder) | Microsoft Docs"
+description: Report Manager is a Web-based tool that includes features for viewing and managing reports. It is part of a report server installation.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

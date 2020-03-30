@@ -104,7 +104,7 @@ On a computer with Internet access:
     , @script = N'print(R.version)'
    ```
 
-1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/R/dist (don't unzip the file). For example, download the file to `c:\downloads\sqlmlutils_0.7.1.zip`.
+1. Download the latest **sqlmlutils** zip file from [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) (don't unzip the file). For example, download the file to `c:\downloads\sqlmlutils_0.7.1.zip`.
 
 1. Copy the entire **RODBCext** repository folder (`c:\downloads\rodbcext`) and the **sqlmlutils** zip file (`c:\downloads\sqlmlutils_0.7.1.zip`) to the client computer. For example, copy them to the folder `c:\temp\packages` on the client computer.
 
@@ -125,13 +125,15 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
 1. On the client computer, open RStudio and create a new **R Script** file.
 
-1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters).
+1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information.
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
-     server= "yourserver",
-     database = "yourdatabase")
+     server   = "server",
+     database = "database",
+     uid      = "username",
+     pwd      = "password")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```

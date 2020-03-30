@@ -92,7 +92,7 @@ ON
   
 -   In the current release of this feature, storing `FileStream` data in Azure Storage is not supported. You can store `Filestream` data in an Azure Storage integrated local database but you cannot move Filestream data between machines using Azure Storage. For `FileStream` data, we recommend that you continue using the traditional techniques to move the files (.mdf, .ldf) associated with Filestream between different machines.  
   
--   Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error code **5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**.  
+-   Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidentally started, and it also has a database which points to the same data file, the second server will fail to start the database with an error code **5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**.  
   
 -   Only .mdf, .ldf, and .ndf files can be stored in Azure Storage by using the SQL Server Data Files in Azure feature.  
   
@@ -157,7 +157,7 @@ ON
     Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: SQL Server Data Files in Azure Storage service](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 3.  *Error code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*   
-    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
+    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidentally started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   
      To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, simply remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
   

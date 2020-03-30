@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server Big Data Clusters to with high avail
 author: mihaelablendea
 ms.author: mihaelab 
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In addition to deploying SQL Server master instance in a highly available configuration using availability groups, you can deploy other mission critical services in the big data cluster to ensure an increased level of reliability. You can configure `HDFS name node` and the shared Spark services grouped under `SparkHead` with an additional replica. In this case, `Zookeeper` is also deployed in the big data cluster to server as cluster coordinator and metadata store for following services: 
+In addition to deploying SQL Server master instance in a highly available configuration using availability groups, you can deploy other mission critical services in the big data cluster to ensure an increased level of reliability. You can configure `HDFS name node` and the shared Spark services grouped under `sparkhead` with an additional replica. In this case, `Zookeeper` is also deployed in the big data cluster to server as cluster coordinator and metadata store for following services: 
 
 - HDFS name node
 - Livy and Yarn Resource Manager. 

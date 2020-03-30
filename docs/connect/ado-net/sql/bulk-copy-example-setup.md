@@ -15,7 +15,7 @@ ms.reviewer: v-kaywon
 ---
 # Bulk copy example setup
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 The <xref:Microsoft.Data.SqlClient.SqlBulkCopy> class can be used to write data only to SQL Server tables. The code samples shown in this topic use the SQL Server sample database, **AdventureWorks**. To avoid altering the existing tables code samples write data to tables that you must create first.  
   

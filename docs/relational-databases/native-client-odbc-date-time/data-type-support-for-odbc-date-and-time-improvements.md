@@ -87,7 +87,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Minute range is 0 through 59.  
   
--   Seconds range is 0 through 61.9(n). This allows up to two leap seconds to maintain synchronization with sideral time.  
+-   Seconds range is 0 through 61.9(n). This allows up to two leap seconds to maintain synchronization with sidereal time.  
   
      Note that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow leap seconds, so second values greater than 59 will cause a server error.  
   

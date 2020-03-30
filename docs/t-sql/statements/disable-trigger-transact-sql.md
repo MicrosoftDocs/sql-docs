@@ -79,7 +79,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 The following examples are described in the AdventureWorks2012 database.
   
 ### A. Disabling a DML trigger on a table  
- The following example disables trigger `uAddress` that was created on table `Address`.  
+ The following example disables trigger `uAddress` that was created on table `Person`.  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

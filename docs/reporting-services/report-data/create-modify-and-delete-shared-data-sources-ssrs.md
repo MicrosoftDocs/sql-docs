@@ -1,5 +1,5 @@
 ---
-title: "Create, Modify, and Delete Shared Data Sources (SSRS) | Microsoft Docs"
+title: "Create, Modify, and Delete Shared Data Sources | Microsoft Docs"
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

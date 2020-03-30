@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services Connection Type for DMX (SSRS) | Microsoft Docs"
+title: "Analysis Services Connection Type for DMX | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

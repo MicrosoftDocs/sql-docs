@@ -50,6 +50,12 @@ There are two ways to execute R scripts in R Services:
 
 + You can also use your preferred R client and write scripts that push the execution (referred to as a *remote compute context*) to a remote SQL Server. See how to [set up a data science client R development](../r/set-up-a-data-science-client.md) for more information.
 
+<a name="version"></a>
+
+## R version
+
+R version 3.2.2 is included in SQL Server 2016 R Services. For newer versions of R, use [Machine Learning Services for SQL Server 2017 and later](../what-is-sql-server-machine-learning.md).
+
 <a name="packages"></a>
 
 ## R packages

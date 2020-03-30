@@ -1,5 +1,5 @@
 ---
-title: "Store Encrypted Report Server Data (SSRS Configuration Manager) | Microsoft Docs"
+title: "Store Encrypted Report Server Data (Configuration Manager) | Microsoft Docs"
 ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

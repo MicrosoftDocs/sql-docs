@@ -28,7 +28,7 @@ In this multi-part tutorial series, you're introduced to a range of **RevoScaleR
 
 + An IDE such as RStudio or the built-in RGUI tool included with R
 
-To switch back and forth between local and remote compute contexts, you need two systems. Local is typically a development workstation with sufficent power for data science workloads. Remote in this case is SQL Server with the R feature enabled. 
+To switch back and forth between local and remote compute contexts, you need two systems. Local is typically a development workstation with sufficient power for data science workloads. Remote in this case is SQL Server with the R feature enabled. 
 
 Switching compute contexts is predicated on having the same-version **RevoScaleR** on both local and remote systems. On a local workstation, you can get the **RevoScaleR** packages and related providers by installing Microsoft R Client.
 

@@ -1,5 +1,5 @@
 ---
-title: "Create Invoices and Forms with Lists (Report Builder and SSRS) | Microsoft Docs"
+title: "Create Invoices and Forms with Lists (Report Builder) | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -40,7 +40,7 @@ Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG liste
 In order for a secondary replica to redirect read/write connection requests:
 * The secondary replica must be online. 
 * The replica spec `PRIMARY_ROLE` must include `READ_WRITE_ROUTING_URL`.
-* The connection string must define `ApplicationIntent` as `ReadWrite`- which is the default.
+* The connection string must be `ReadWrite` either by defining `ApplicationIntent` as `ReadWrite` or by not setting `ApplicationIntent` and letting the default (`ReadWrite`) take effect.
 
 ## Set READ_WRITE_ROUTING_URL option
 

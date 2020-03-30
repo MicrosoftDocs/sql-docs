@@ -1,5 +1,5 @@
 ---
-title: "Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS) | Microsoft Docs"
+title: "Customize the Data and Display of a Map or Map Layer (Report Builder) | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

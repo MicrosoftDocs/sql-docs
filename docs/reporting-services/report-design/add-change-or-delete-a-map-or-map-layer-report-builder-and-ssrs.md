@@ -1,5 +1,5 @@
 ---
-title: "Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS) | Microsoft Docs"
+title: "Add, Change, or Delete a Map or Map Layer (Report Builder) | Microsoft Docs"
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

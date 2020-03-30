@@ -76,7 +76,7 @@ manager: craigg
   
          SmartBackupAdminXevent with the following messages/message prefixes:  
   
-         *"An internal error occured while configuring SQL Server Managed Backup to Azure default settings for instance. Error might be transient."*  
+         *"An internal error occurred while configuring SQL Server Managed Backup to Azure default settings for instance. Error might be transient."*  
   
          *"Probably experiencing connectivity issues with SQL Server. Skipping database in the current iteration."*  
   

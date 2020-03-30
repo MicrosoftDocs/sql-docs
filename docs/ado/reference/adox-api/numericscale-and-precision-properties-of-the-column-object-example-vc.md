@@ -80,7 +80,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in NumericScalePrecX...." << endl;  
+      cout << "Error occurred in NumericScalePrecX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

@@ -77,7 +77,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 ;
 ```
 
-### To create a primary key with nonclustered index in a new table
+### To create a primary key with clustered index in a new table
 
 The following example creates a table and defines a primary key on the column `CustomerID` and a clustered index on `TransactionID` in the AdventureWorks database.
 

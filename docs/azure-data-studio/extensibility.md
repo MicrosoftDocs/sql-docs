@@ -1,5 +1,5 @@
 ---
-title: Adding additional functionality thru extensibility
+title: Adding additional functionality through extensibility
 titleSuffix: Azure Data Studio
 description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
 ms.prod: sql

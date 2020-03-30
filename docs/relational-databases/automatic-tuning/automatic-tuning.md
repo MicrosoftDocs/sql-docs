@@ -90,7 +90,7 @@ Manually forced plans should not be forced forever, because the [!INCLUDE[ssde_m
 unforce the plan using `sp_query_store_unforce_plan` procedure, and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find the optimal plan. 
 
 > [!TIP]
-> Alternativelly, use the **Queries With Forced Plans** Query Store view to locate and unforce plans.
+> Alternatively, use the **Queries With Forced Plans** Query Store view to locate and unforce plans.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides all necessary views and procedures required to monitor performance and fix problems in Query Store.
 

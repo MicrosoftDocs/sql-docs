@@ -185,8 +185,17 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
  Use the Foreach Loop Container with the Azure Blob Enumerator to process data in multiple blob files.
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
-  
+
 ## Release Notes
+
+### Version 1.17.0
+
+This is a hotfix version released for SQL Server 2019 only.
+
+#### Bugfixes
+
+1. When executing in Visual Studio 2019 and targeting SQL Server 2019, Flexible File Task/Source/Destination may fail with the error message `Attempted to access an element as a type incompatible with the array.`
+1. When executing in Visual Studio 2019 and targeting SQL Server 2019, Flexible File Source/Destination using ORC/Parquet format may fail with the error message `Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.`
 
 ### Version 1.16.0
 

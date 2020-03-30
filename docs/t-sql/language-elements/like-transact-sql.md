@@ -52,7 +52,9 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
   
 match_expression [ NOT ] LIKE pattern  
 ```  
-  
+>[!NOTE]
+> Currently ESCAPE and STRING_ESCAPE are not supported in Azure SQL Data Warehouse or Parallel Data Warehouse.
+
 ## Arguments  
  *match_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data type.  

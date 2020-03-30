@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**default_schema_name**|**sysname**|Name to be used when SQL name does not specify a schema. Null for principals not of type S, U, or A.|  
 |**create_date**|**datetime**|Time at which the principal was created.|  
 |**modify_date**|**datetime**|Time at which the principal was last modified.|  
-|**owning_principal_id**|**int**|ID of the principal that owns this principal. All principals except Database Roles must be owned by **dbo**.|  
+|**owning_principal_id**|**int**|ID of the principal that owns this principal. All fixed Database Roles are owned by **dbo** by default.|  
 |**sid**|**varbinary(85)**|SID (Security Identifier) of the principal.  NULL for SYS and INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|If 1, this row represents an entry for one of the fixed database roles: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Signifies authentication type. The following are the possible values and their descriptions.<br /><br /> 0 : No authentication<br />1 : Instance authentication<br />2 : Database authentication<br />3 : Windows Authentication|  

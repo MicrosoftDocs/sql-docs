@@ -30,7 +30,7 @@ The topics in this section describe how to use the JDBC driver data types to acc
 |-----------|-----------------|  
 |[Basic data types sample](../../connect/jdbc/basic-data-types-sample.md)|Describes how to use result set getter methods to retrieve basic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type values, and how to use result set update methods to update those values.|  
 |[SQLXML data type sample](../../connect/jdbc/sqlxml-data-type-sample.md)|Describes how to store an XML data in a relational database, how to retrieve an XML data from a database, and how to parse an XML data with the **SQLXML** Java data type.|  
-|[Spatial data types sample](../../connect/jdbc/spatial-data-types-sample.md)|Describes how to store and retreive data with Spatial Datatypes 'Geometry' and 'Geography' of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database with **Geometry** and **Geography** Java types defined by Microsoft JDBC Driver.|
+|[Spatial data types sample](../../connect/jdbc/spatial-data-types-sample.md)|Describes how to store and retrieve data with Spatial Datatypes 'Geometry' and 'Geography' of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database with **Geometry** and **Geography** Java types defined by Microsoft JDBC Driver.|
 
 ## See also
 

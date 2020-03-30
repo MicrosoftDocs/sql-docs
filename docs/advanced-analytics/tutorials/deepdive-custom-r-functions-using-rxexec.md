@@ -149,7 +149,7 @@ Although this exercise is simplistic, it demonstrates an important mechanism for
 
 + Open-source or third-party libraries used in your function, including any dependencies, must be installed on SQL Server. For more information, see [Install new R packages](../r/install-additional-r-packages-on-sql-server.md).
 
-+ Moving script from a development enviroment to a hardened production environment can introduce firewall and network restrictions. Test carefully to make sure your script is able to perform as expected.
++ Moving script from a development environment to a hardened production environment can introduce firewall and network restrictions. Test carefully to make sure your script is able to perform as expected.
 
 ## Next steps
 

@@ -38,7 +38,7 @@ The OLE DB Driver for SQL Server is a stand-alone data access application progra
   
  OLE DB Driver for SQL Server was designed to provide a simplified method of gaining native data access to SQL Server using OLE DB. It provides a way to innovate and evolve new data access features without changing the current Windows DAC components, which are now part of the Microsoft Windows platform.  
   
- While OLE DB Driver for SQL Server uses components in Windows DAC, it is not explicitly dependant on a particular version of Windows DAC. You can use OLE DB Driver for SQL Server with the version of Windows DAC that is installed with any operating system supported by OLE DB Driver for SQL Server.  
+ While OLE DB Driver for SQL Server uses components in Windows DAC, it is not explicitly dependent on a particular version of Windows DAC. You can use OLE DB Driver for SQL Server with the version of Windows DAC that is installed with any operating system supported by OLE DB Driver for SQL Server.  
 
  ## Different generations of OLE DB Drivers
 

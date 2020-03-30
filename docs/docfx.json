@@ -110,16 +110,17 @@
         "t-sql/**/*.md": "GitHub"
       },
       "feedback_product_url": {
-        "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
+        "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/",
+        "big-data-cluster/**/*.md": "https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/"
       },
 
       "manager": {
         "**/*.md": "jroth",
         "advanced-analytics/**/*.md": "cgronlun",
-        "dmx/**/*.md": "kfile",
+        "dmx/**/*.md": "kfollis",
         "language-extensions/**/*.md": "cgronlun",
-        "mdx/**/*.md": "kfile",
-        "reporting-services/**/*.md": "kfile"
+        "mdx/**/*.md": "kfollis",
+        "reporting-services/**/*.md": "kfollis"
       },
 
       "titleSuffix": {
@@ -155,6 +156,7 @@
         "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in",
         "ssdt/**/*.md": "SQL Server Data Tools (SSDT)",
         "ssms/**/*.md": "SQL Server Management Studio (SSMS)",
+        "azure-data-studio/**/*.md": "Azure Data Studio",        
         "ssms/agent/**/*.md": "SQL Server Agent",
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",

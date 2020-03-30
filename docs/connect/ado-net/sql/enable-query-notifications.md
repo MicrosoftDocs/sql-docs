@@ -15,7 +15,7 @@ ms.reviewer: v-kaywon
 ---
 # Enabling query notifications
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Applications that consume query notifications have a common set of requirements. Your data source must be correctly configured to support SQL query notifications and the user must have the correct client-side and server-side permissions.  
   

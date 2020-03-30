@@ -2634,6 +2634,9 @@
       href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
     - name: Using Always Encrypted with the JDBC Driver
       href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
+      items:
+      - name: Always Encrypted with secure enclaves
+        href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
     - name: Guide articles
       items:
       - name: Using Statements with SQL
@@ -2779,10 +2782,12 @@
     items:
     - name: System Requirements
       href: ../connect/odbc/linux-mac/system-requirements.md
-    - name: Installing the Driver Manager
+    - name: Install the Driver Manager
       href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-    - name: Installing the Microsoft ODBC Driver for SQL Server
+    - name: Install the ODBC Driver (Linux)
       href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+    - name: Install the ODBC Driver (macOS)
+      href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
     - name: Feature Guides
       items:
       - name: Connection String Keywords and Data Source Names (DSNs)
@@ -5603,6 +5608,10 @@
       href: ../connect/php/logging-activity.md
     - name: Using Always Encrypted with the PHP Drivers for SQL Server
       href: ../connect/php/using-always-encrypted-php-drivers.md
+    - name: Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server
+      href: ../connect/php/always-encrypted-secure-enclaves.md
+    - name: Non-System Locale Settings
+      href: ../connect/php/non-system-locale-settings.md
     - name: Constants (Microsoft Drivers for PHP for SQL Server)
       href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
     - name: SQLSRV Driver API Reference

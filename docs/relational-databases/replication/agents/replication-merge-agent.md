@@ -93,7 +93,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -352,7 +353,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  Specifies whether the Merge Agent is synchronizing between a Subscriber and an alternate Publisher. A value of **1** indicates that it is an alternate Publisher. The default is **0**.  
-  
+ 
+ **-T** [**101|102**]  
+ Trace flags that enable additional functionality for the Merge Agent. A value of **101** enables additional verbose logging information to help determine how much time each step of the merge replication synchronization process takes. A value of **102** writes the same statistics as trace flag **101** but to the <Distribution server>..msmerge_history table instead. Enable merge agent logging when you use trace flag 101 by using the `-output` and `-outputverboselevel` parameters.  For example,  add the following parameters to the merge agent, and then restart the agent: `-T 101, -output, -outputverboselevel`. 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Is the number of generations to be processed in a single batch while uploading changes from the Subscriber to the Publisher. A generation is defined as a logical group of changes per article. The default for a reliable communication link is **100**. The default for an unreliable communication link is **1**.  
   
@@ -388,7 +392,15 @@ replmerg [-?]
   
  To start the Merge Agent, execute **replmerg.exe** from the command prompt. For information, see [Replication Agent Executables](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
+ ### Troubleshooting Merge Agent performance 
  The merge agent history for the current session is not removed while running in continuous mode. A long running agent can result in a large number of entries in the merge history tables which could impact performance. To resolve this problem switch to scheduled mode, or continue to use continuous mode but create a dedicated job to periodically restart the merge agent, or reduce the verbosity of the history level to reduce the number of rows and therefor reduce the performance impact.  
+ 
+  In some cases, the Replication Merge Agent may take a long time to replicate changes. To determine which step of the merge replication synchronization process takes the most time, use trace flag 101 together with merge agent logging. To do this, use the following parameters for the merge agent parameters, and then restart the agent:
+  <br/>-T 101
+  <br/>-output
+  <br/>-outputverboselevel
+
+In addition, if you have to write statistics to the <Distribution server>..msmerge_history table, use trace flag -T 102.
   
 ## See Also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  

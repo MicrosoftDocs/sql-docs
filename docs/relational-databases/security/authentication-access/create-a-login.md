@@ -237,7 +237,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     ```  
   
-## Create a login using SQL Server Authentication with SSMS  
+## Create a login using SQL Server Authentication using T-SQL
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

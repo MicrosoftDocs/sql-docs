@@ -1,5 +1,5 @@
 ---
-title: "Specify an Axis Interval (Report Builder and SSRS) | Microsoft Docs"
+title: "Specify an Axis Interval (Report Builder) | Microsoft Docs"
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

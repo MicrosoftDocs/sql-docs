@@ -78,7 +78,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -227,7 +227,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  

@@ -1,5 +1,5 @@
 ---
-title: "Element Path Syntax for XML Report Data (SSRS) | Microsoft Docs"
+title: "Element Path Syntax for XML Report Data | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

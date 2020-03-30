@@ -86,7 +86,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

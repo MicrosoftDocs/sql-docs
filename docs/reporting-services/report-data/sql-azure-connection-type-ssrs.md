@@ -1,5 +1,5 @@
 ---
-title: "SQL Azure Connection Type (SSRS) | Microsoft Docs"
+title: "SQL Azure Connection Type | Microsoft Docs"
 description: The SQL Azure Connection data extension supports multivalued parameters, server aggregates, and credentials managed separately from the connection string.
 author: maggiesMSFT
 ms.author: maggies

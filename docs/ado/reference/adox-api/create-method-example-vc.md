@@ -64,7 +64,7 @@ void CreateDatabaseX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateDatabaseX...." << endl;  
+      cout << "Error occurred in CreateDatabaseX...." << endl;  
    }  
 }  
 ```  

@@ -84,7 +84,7 @@ void ProcedureParametersX() {
         printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
     }  
     catch(...) {  
-        cout << "Error occured in ProcedureParametersX...." << endl;  
+        cout << "Error occurred in ProcedureParametersX...." << endl;  
     }  
 }  
 ```

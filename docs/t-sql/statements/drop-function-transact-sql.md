@@ -1,7 +1,7 @@
 ---
 title: "DROP FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/28/2017"
+ms.date: "02/11/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
@@ -44,12 +44,12 @@ DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]
 ```  
  -- Azure SQL Data Warehouse, Parallel Data Warehouse 
 
-DROP FUNCTION [ schema_name. ] function_name
+DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 
 ```  
    
   
-## Arguments  
+## Arguments
  *IF EXISTS*    
  Conditionally drops the function only if it already exists. Available beginning with [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 and in [!INCLUDE[sssds_md](../../includes/sssds-md.md)].
   

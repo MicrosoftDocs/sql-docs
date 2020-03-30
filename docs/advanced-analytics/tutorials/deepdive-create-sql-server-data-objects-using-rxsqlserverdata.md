@@ -18,7 +18,7 @@ This is tutorial 2 of the [RevoScaleR tutorial series](deepdive-data-science-dee
 
 This tutorial is a continuation of database creation: adding tables and loading data. If a DBA created the database and login in [tutorial two](deepdive-work-with-sql-server-data-using-r.md), you can add tables using an R IDE like RStudio or a built-in tool like **Rgui**.
 
-From R, connect to SQL Server and use **RevoScaleR** functions to perform the folowing tasks:
+From R, connect to SQL Server and use **RevoScaleR** functions to perform the following tasks:
 
 > [!div class="checklist"]
 > * Create tables for training data and predictions

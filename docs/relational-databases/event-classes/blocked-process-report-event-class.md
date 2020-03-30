@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Data column name|Data type|Description|Column ID|Filterable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID of the database in which the lock was acquired. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
-|**Duration**|**bigint**|The amount of time (in milliseconds) that the process was blocked.|13|Yes|  
+|**Duration**|**bigint**|The amount of time (in microseconds) that the process was blocked.|13|Yes|  
 |**EndTime**|**datetime**|Time at which the event ended. This column is not populated for starting event classes, such as **SQL:BatchStarting** or **SP:Starting**.|15|Yes|  
 |**EventClass**|**int**|Type of event = 137.|27|No|  
 |**EventSequence**|**int**|The sequence of a given event within the request.|51|No|  

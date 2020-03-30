@@ -175,7 +175,7 @@ manager: craigg
         private static readonly char[] allowedDoublePatternChars = new char[] { 'g', '\\' };  
   
         /// <summary>  
-        ///     Each tick is 100 nanoseconds.  This conversion factor when multipled by the number of  
+        ///     Each tick is 100 nanoseconds.  This conversion factor when multiplied by the number of  
         ///     days yields the number of ticks which make up that day.  Ticks are interesting as they  
         ///     can be used to construct DateTime instances in order to perform various date based computations.  
         /// </summary>  

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Upgrade Replication Scripts (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -217,7 +217,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   

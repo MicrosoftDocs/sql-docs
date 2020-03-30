@@ -42,7 +42,7 @@ ms.author: maggies
   
  This article does not explain how to create a data-driven subscription. For instructions on how to create a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> To create a file share subscription  
+## <a name="bkmk_create_fileshare_subscription"></a> To create a file share subscription  
   
 1. Browse [the web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -82,7 +82,7 @@ ms.author: maggies
   
 The report is delivered as a static file. If the report includes interactive features (for example, links to additional rows and columns), those features are not available.  
   
-###  <a name="bkmk_create_email_subscription"></a> To create an e-mail subscription  
+##  <a name="bkmk_create_email_subscription"></a> To create an e-mail subscription  
   
 1. Browse [the web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -166,4 +166,3 @@ To cancel a subscription that is currently processing on the report server, see 
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [Use My Subscriptions &#40;Native Mode Report Server&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

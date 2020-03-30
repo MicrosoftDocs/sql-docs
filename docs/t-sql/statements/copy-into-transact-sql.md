@@ -206,7 +206,7 @@ The COPY command will autodetect the compression type based on the file extensio
 
 - .gz  - **GZIP**
 - .snappy – **Snappy**
-- .deflate - **DefaultCodec**
+- .deflate - **DefaultCodec**  (Parquet and ORC only)
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* applies to CSV and specifies a single character that will be used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the RFC 4180 standard. Extended ASCII characters are not supported with UTF-8 for FIELDQUOTE.
@@ -391,7 +391,7 @@ Guidance on the number of files is outlined in the table below. Once the recomme
 There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256MB or larger for best performance. 
 
 ### When will the COPY command be generally available?
-The COPY command will be generally available early next calendar year (2020). 
+The COPY command will be generally available by the end of this calendar year (2020). 
 
 ### Are there any known issues with the COPY command?
 

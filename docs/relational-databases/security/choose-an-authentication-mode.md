@@ -72,7 +72,7 @@ ms.author: vanto
   
 ### Disadvantages of SQL Server Authentication  
   
--   If a user is a Windows domain user who has a login and password for Windows, he must still provide another ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) login and password to connect. Keeping track of multiple names and passwords is difficult for many users. Having to provide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials every time that one connects to the database can be annoying.  
+-   If a user is a Windows domain user who has a login and password for Windows, they must still provide another ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) login and password to connect. Keeping track of multiple names and passwords is difficult for many users. Having to provide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials every time that one connects to the database can be annoying.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication cannot use Kerberos security protocol.  
   

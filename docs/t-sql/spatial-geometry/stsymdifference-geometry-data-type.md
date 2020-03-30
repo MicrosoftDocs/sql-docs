@@ -1,7 +1,7 @@
 ---
 title: "STSymDifference (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -32,7 +32,7 @@ ms.author: mlandzic
   
 ## Arguments  
  *other_geometry*  
- Is another **geometry** instance in addition to the instance on which `STSymDistance()` is being invoked.  
+ Is another **geometry** instance in addition to the instance on which `STSymDifference()` is being invoked.  
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  

@@ -1,5 +1,6 @@
 ---
 title: "Model Methods - Report Server Web Service | Microsoft Docs"
+description: Learn about these methods that you can use to manage models in the Report Server Web Service.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -80,7 +80,7 @@ DEFAULT <xml_namespace_uri>
   
 -   The XML namespace prefix `xsi` cannot be redeclared when the ELEMENTS XSINIL directive is being used on the query.  
 
--   It is not necesary to declare the 'http://www.w3.org/2001/XMLSchema-instance' to use xsi standard namespace. It is implicitly added by the XML/XPATH processor if not specified and xpath expressions can use the xsi prefix as long as the 'http://www.w3.org/2001/XMLSchema-instance' schema is properly declared in the xml document.
+-   It is not necessary to declare the 'http://www.w3.org/2001/XMLSchema-instance' to use xsi standard namespace. It is implicitly added by the XML/XPATH processor if not specified and xpath expressions can use the xsi prefix as long as the 'http://www.w3.org/2001/XMLSchema-instance' schema is properly declared in the xml document.
 
 -   URI string values are encoded according to the current database collation code page and are internally translated to Unicode.  
   

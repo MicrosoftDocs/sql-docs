@@ -16,7 +16,7 @@ ms.reviewer: v-kaywon
 ---
 # SqlClient driver support lifecycle
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 Microsoft.Data.SqlClient library follows the latest .NET Core support policy for all releases.
 

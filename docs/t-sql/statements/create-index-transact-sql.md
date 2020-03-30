@@ -1,7 +1,7 @@
 ---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -534,7 +534,7 @@ OFF
 Page locks are not used.
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](#sequential-keys) section for more information.
 
@@ -788,7 +788,7 @@ When `ALLOW_ROW_LOCKS = ON` and `ALLOW_PAGE_LOCK = ON`, row-, page-, and table-l
 When `ALLOW_ROW_LOCKS = OFF` and `ALLOW_PAGE_LOCK = OFF`, only a table-level lock is allowed when accessing the index.
 
 ## Sequential Keys
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Last-page insert contention is a common performance problem that occurs when a large number of concurrent threads attempt to insert rows into an index with a sequential key. An index is considered sequential when the leading key column contains values that are always increasing (or decreasing), such as an identity column or a date that defaults to the current date/time. Because the keys being inserted are sequential, all new rows will be inserted at the end of the index structure - in other words, on the same page. This leads to contention for the page in memory which can be observed as several threads waiting on PAGELATCH_EX for the page in question.
 
@@ -814,7 +814,7 @@ The following restrictions apply to partitioned indexes:
 To evaluate how changing the compression state will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.
 
 ## Permissions
-Requires `ALTER` permission on the table or view. User must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles.
+Requires `ALTER` permission on the table or view. User must be a member of the `sysadmin` fixed server role or the `db_ddladmin` or `db_owner` fixed database roles.
 
 ## Limitations and Restrictions
 In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you cannot create:

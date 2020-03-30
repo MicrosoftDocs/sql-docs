@@ -54,7 +54,7 @@ ms.author: "sstein"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Record all service packs and hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these updates after rebuilding the system databases.  
+2.  Record all hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these hotfixes after rebuilding the system databases.  
   
     ```  
     SELECT  
@@ -134,7 +134,7 @@ ms.author: "sstein"
 -   Verify the server-wide configuration values match the values you recorded previously.  
   
 ##  <a name="Resource"></a> Rebuild the resource Database  
- The following procedure rebuilds the resource system database. When you rebuild the resource database, all service packs and hot fixes are lost, and therefore must be reapplied.  
+ The following procedure rebuilds the resource system database. When you rebuild the resource database, all hot fixes are lost, and therefore must be reapplied.  
   
 #### To rebuild the resource system database:  
   
@@ -174,7 +174,7 @@ ms.author: "sstein"
   
 7.  Using the Windows Notepad, open the **instmsdb.out** file and check the output for any errors.  
   
-8.  Re-apply any service packs or hotfix installed on the instance.  
+8.  Re-apply any hotfix installed on the instance.  
   
 9. Recreate the user content stored in the **msdb** database, such as jobs, alert, etc.  
   

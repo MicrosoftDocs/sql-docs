@@ -177,7 +177,7 @@ void AppendChunkX() {
       while (lngOffSet < lngLogoSize) {  
          varChunk = pRstPubInfo->Fields->Item["logo"]->GetChunk(ChunkSize);  
   
-         // Copy the data only upto the Actual Size of Field.    
+         // Copy the data only up to the Actual Size of Field.    
          for (long index = 0 ; index <= (ChunkSize - 1) ; index++) {  
             hr = SafeArrayGetElement(varChunk.parray, &index, &chData);  
             if (SUCCEEDED(hr)) {  

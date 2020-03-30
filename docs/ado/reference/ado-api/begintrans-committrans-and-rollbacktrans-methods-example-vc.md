@@ -190,7 +190,7 @@ void BeginTransX() {
          printf("%s -  %s\n", titlrs.m_szT_title, titlrs.m_szT_type);  
          rstTitles->MoveNext();  
       }  
-      // Restore original data becasue this is a demonstration.  
+      // Restore original data because this is a demonstration.  
       rstTitles->MoveFirst();  
   
       while (VARIANT_FALSE == rstTitles->EndOfFile) {  

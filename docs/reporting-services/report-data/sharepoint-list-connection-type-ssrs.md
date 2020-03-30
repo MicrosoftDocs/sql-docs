@@ -1,5 +1,5 @@
 ---
-title: "SharePoint List Connection Type (SSRS) | Microsoft Docs"
+title: "SharePoint List Connection Type | Microsoft Docs"
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

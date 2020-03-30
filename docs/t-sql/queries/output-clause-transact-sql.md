@@ -1,7 +1,7 @@
 ---
 title: "OUTPUT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
+ms.date: "01/14/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -570,9 +570,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

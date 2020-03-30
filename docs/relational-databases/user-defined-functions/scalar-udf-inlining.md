@@ -1,8 +1,8 @@
 ---
-title: "Scalar UDF Inlining in Microsoft SQL databases | Microsoft Docs"
-description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019), and Azure SQL Database."
+title: "Scalar UDF Inlining in Microsoft SQL Server | Microsoft Docs"
+description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019)."
 ms.custom: ""
-ms.date: 09/13/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-a
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## T-SQL scalar User-Defined Functions
 User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries.
@@ -148,6 +148,7 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - The UDF does not reference user-defined types.
 - There are no signatures added to the UDF.
 - The UDF is not a partition function.
+- The UDF does not contain references to Common Table Expressions (CTEs)
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) is not supported for inlining.
 

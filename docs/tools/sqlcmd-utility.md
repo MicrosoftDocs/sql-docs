@@ -47,8 +47,8 @@ The utility uses ODBC to execute Transact-SQL batches.
 
 ## Download the latest version of sqlcmd Utility
 
-**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0.x for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0.x for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -63,11 +63,10 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 
 **System Requirements**
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
-This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+
+This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
  
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.1300.359 version or higher is in use.
-
-
 
 > [!NOTE]
 > You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)

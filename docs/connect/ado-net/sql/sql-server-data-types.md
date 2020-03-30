@@ -13,7 +13,7 @@ ms.reviewer: v-kaywon
 ---
 # SQL Server data types and ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server and the .NET are based on different type systems, which can result in potential data loss. To preserve data integrity, the Microsoft SqlClient Data Provider for SQL Server (<xref:Microsoft.Data.SqlClient>) provides typed accessor methods for working with SQL Server data. You can use the enumerations in the <xref:System.Data.SqlDbType> classes to specify <xref:Microsoft.Data.SqlClient.SqlParameter> data types.  
   

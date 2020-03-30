@@ -48,7 +48,9 @@ Returns a character expression of the same data type as `inputString` where char
 
 `TRANSLATE` will return an error if *characters* and *translations* expressions have different lengths. `TRANSLATE` will return NULL if any of the arguments are NULL.  
 
-The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions. `TRANSLATE` does not, however, replace a character more than once. This is dissimilar to multiple `REPLACE` functions, as each use would replace all relevant characters. 
+The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions. `TRANSLATE` does not, however, replace any individual character in `inputString` more than once. A single value in the `characters` parameter, can replace multiple characters in `inputString`. 
+
+This is dissimilar to the behavior of multiple `REPLACE` functions, as each function call would replace all relevant characters, even if they had been replaced by a previous nested `REPLACE` function call. 
 
 `TRANSLATE` is always SC collation aware.
 

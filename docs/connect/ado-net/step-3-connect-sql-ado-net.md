@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "08/15/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
@@ -15,7 +14,7 @@ ms.reviewer: v-kaywon
 ---
 # Step 3: Proof of concept connecting to SQL using ADO.NET
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - Previous article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](step-2-create-sql-database-ado-net-development.md)  
 - Next article:&nbsp;&nbsp;&nbsp;[Step 4: Connect resiliently to SQL with ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  

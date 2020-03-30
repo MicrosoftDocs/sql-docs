@@ -62,6 +62,11 @@ Encryption of communication between clients to the external endpoints, as well a
 
 All SQL Server to SQL Server communication, such as the SQL master instance communicating with a data pool, is secured using SQL logins.
 
+> [!IMPORTANT]
+>  Big data clusters uses etcd to store credentials. As a best practice, you must ensure your Kubernetes cluster is configured to use etcd encryption at rest. By default, secrets stored in etcd are unencrypted. Kubernetes documentation provides details on this administrative task: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ and 
+https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+
 ## Basic administrator login
 
 You can choose to deploy the cluster in either AD mode, or using only basic administrator login. Only using basic administrator login is not a production supported security mode, and intended for evaluation of the product.

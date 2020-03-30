@@ -1,6 +1,6 @@
 ---
 title: "Editions and supported features of SQL Server 2019 - Linux"
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -206,7 +206,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 
 ## <a name="Unsupported"></a> Unsupported features & services
 
-The following features and services are not available SQL Server 2019 on Linux. The support of these features will be increasingly enabled over time.
+The following features and services are not available for SQL Server 2019 on Linux. The support of these features will be increasingly enabled over time.
 
 | Area | Unsupported feature or service |
 |-----|-----|

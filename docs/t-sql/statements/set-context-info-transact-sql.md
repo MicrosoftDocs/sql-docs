@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SET CONTEXT_INFO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Associates up to 128 bytes of binary information with the current session or connection.  
   

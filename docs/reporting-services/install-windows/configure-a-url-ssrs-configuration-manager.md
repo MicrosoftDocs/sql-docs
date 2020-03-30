@@ -1,5 +1,5 @@
 ---
-title: "Configure a URL  (SSRS Configuration Manager) | Microsoft Docs"
+title: "Configure a URL  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -56,7 +56,7 @@ To install the connector for Teradata database, download and run the installer f
 
 After you install the connector, you must restart the SQL Server Integration Service to be sure that the Teradata source and destination works correctly.
 
-To design SSIS package targeting SQL Server 2017 and below, you will need to install **Microsoft Connector for Teradata by Attunity** with corresponding version from below link:
+To execute SSIS package targeting SQL Server 2017 and below, you will need to install **Microsoft Connector for Teradata by Attunity** with corresponding version from below link:
 
 - [SQL Server 2017: Microsoft Connector Version 5.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: Microsoft Connector Version 4.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)

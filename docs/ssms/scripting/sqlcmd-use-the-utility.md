@@ -306,7 +306,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  `1> :Setvar LastName Achong`  
   
- `1> EXEC dbo.ContactEmailAddress $(Gustavo),$(Achong)`  
+ `1> EXEC dbo.ContactEmailAddress $(FirstName),$(LastName)`  
   
  `2> GO`  
   

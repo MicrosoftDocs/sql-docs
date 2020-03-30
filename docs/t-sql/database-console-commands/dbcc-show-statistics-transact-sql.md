@@ -153,14 +153,16 @@ The query optimizer uses densities to enhance cardinality estimates for queries 
  DBCC SHOW_STATISTICS does not provide statistics for spatial or xVelocity memory optimized columnstore indexes.  
   
 ## Permissions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-In order to view the statistics object, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
-  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 modifies the permission restrictions and allows users with SELECT permission to use this command. Note that the following requirements exist for SELECT permissions to be sufficient to run the command:
+In order to view the statistics object, the user must have the SELECT permission on the table.
+Note that the following requirements exist for SELECT permissions to be sufficient to run the command:
 -   Users must have permissions on all columns in the statistics object  
 -   Users must have permission on all columns in a filter condition (if one exists)  
--   The table cannot have a row-level security policy.  
-  
-To disable this behavior, use traceflag 9485.
+-   The table cannot have a row-level security policy.
+-   If any of the columns within a statistics object is masked with Dynamic Data Masking rules, in addition to the SELECT permission, the user must have the UNMASK permission
+
+In versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
+[!NOTE]
+To change the behavior back to the pre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 behavior, use traceflag 9485.
   
 ## Permissions for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS requires SELECT permission on the table or membership in one of the following:

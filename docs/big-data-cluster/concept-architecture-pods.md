@@ -36,7 +36,7 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |control-\<*nnnn*\>|1         |         |Kubernetes control.|
 |controldb-\<*#*\>|1         |         |         |
 |controlwd-\<*nnnn*\>|1         |         |         |
-|data-\<*#*\>-\<*#*\>|2         |         |Used by SQL Server|
+|[data-\<*#*\>-\<*#*\>](#data-pool)|2         |         |Used by SQL Server|
 |gateway-\<*#*\>|1         |         |         |
 |logsdb-\<*#*\>|1         |         |         |
 |logsui-\<*nnnn*\>|1         |         |         |
@@ -53,52 +53,42 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 
 ## SQL Server master instance
 
-|Pod name | Controller type | Containers in a pod|
-|--------|----------|--------|
-|`master-`| StatefulSet|- Containers in each pod:<br><br>  - SQL Server instance<br><br>  - Fluent Bit<br><br>  - Collectd<br><br>  - mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
-
-Each pod contains one instance of SQL Server. If the deployment is configured for high-availability (HA), it includes 3 pods. Each pod includes a SQL Server instance with databases in a SQL Server Always On Availability Group.
-
 The SQL Server master instance:
 
 - Manages the data pool via DDL
 - Manipulates data in the data pool via DML
 - Off-loads analytic query execution to the data pool
 
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`master-`| StatefulSet|- SQL Server instance<br><br>- Fluent Bit<br><br>- Collectd<br><br>- mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
+
+Each pod contains one instance of SQL Server. If the deployment is configured for high-availability (HA), it includes 3 pods. Each pod includes a SQL Server instance with databases in a SQL Server Always On Availability Group.
+
 ## Data pool
 
-- Controlled by: StatefulSet/`data-0`
+The data pool SQL Server instances provide storage and compute.
 
-- Pod: `data-0-#`
-
-- Containers in each pod:
-  - SQL Server instance
-  - Fluent Bit
-  - Collectd
-
-The data pool SQL Server instances provide storage and compute. 
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`data-0-#` | StatefulSet |SQL Server instance<br><br>Fluent Bit<br><br>CollectD.|
 
 ## Compute pool
 
-- Controlled by: StatefulSet/`compute-0`
+The compute pool provides compute resources for distributed queries.
 
-- Pod: `compute-0-#`
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`compute-0`| StatefulSet |SQL Server instance<br><br>Fluent Bit<br><br>CollectD."
 
-- Containers in each pod:
-  - SQL Server instance
-  - Fluent Bit
-  - Collectd
-
-The compute pool SQL Server instances are stateless. Only require storage for tempdb. 
+The compute pool SQL Server instances are stateless. Only require storage for `tempdb`. 
 
 SQL Server 2019 Big Data Cluster supports one compute pool. Compute pool can't be scaled or resized. You can not add or remove pods.
 
-- Number of pods in compute pool.
-  - Default: 1
-  - Practical use limit: 8
-  - Maximum support: 60
-
-The compute pool provides compute resources for distributed queries.
+Number of pods in compute pool:
+- Default: 1
+- Practical use limit: 8
+- Maximum support: 60
 
 ## HDFS NameNode
 
@@ -106,9 +96,7 @@ The compute pool provides compute resources for distributed queries.
 
 - Pod: `nmnode-0-#`
 
-- Containers in each pod:
-  - HDFS NameNode
-  - Fluent Bit
+- Containers in each pod:<br><br>   HDFS NameNode<br><br>   Fluent Bit
 
 HA deployment includes two NameNode pods.
 
@@ -122,9 +110,7 @@ Gateway access to HDFS and Spark
 
 - Pod: `gateway-0`
 
-- Containers in each pod:
-  - Knox
-  - Fluent Bit
+- Containers in each pod:<br><br>   Knox<br><br>   Fluent Bit
 
 Only one replica (one container) supported.
 
@@ -134,11 +120,7 @@ Only one replica (one container) supported.
 
 - Pod: `sparkehead-#`
 
-- Containers in each pod:
-  - YARN history server
-  - Spark history server
-  - Hive metastore
-  - Fluent Bit
+- Containers in each pod:<br><br>   YARN history server<br><br>   Spark history server<br><br>   Hive metastore<br><br>   Fluent Bit
 
 Provides YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service (internal use only).
 
@@ -148,11 +130,7 @@ Provides YARN history server, Spark history server for Livy jobs, Hive metastore
 
 - Pod: `storage-0-#`
 
-- Containers in each pod:
-  - HDFS DataNode
-  - SQL Server storage instance
-  - Fluent Bit
-  - Yarn (for on demand processes)
+- Containers in each pod:<br><br>   HDFS DataNode<br><br>   SQL Server storage instance<br><br>   Fluent Bit<br><br>   Yarn (for on demand processes)
 
 ## ZooKeeper
 
@@ -160,9 +138,7 @@ Provides YARN history server, Spark history server for Livy jobs, Hive metastore
 
 - Pod: `zookeeper-0`
 
-- Containers in each pod:
-  - ZooKeeper
-  - Fluent Bit
+- Containers in each pod:<br><br>   ZooKeeper<br><br>   Fluent Bit
 
 Manages failover for HA resources. For background, see [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) in the Kubernetes documentation.
 

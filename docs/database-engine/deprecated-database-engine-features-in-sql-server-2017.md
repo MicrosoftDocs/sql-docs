@@ -178,7 +178,9 @@ The following SQL Server Database Engine features are supported in the next vers
 
 ### Extended properties
 
-| Level0type = 'type' and Level0type = 'USER' to add extended properties to level-1 or level-2 type objects.|Use Level0type = 'USER' only to add an extended property directly to a user or role.<br /><br /> Use Level0type = 'SCHEMA' to add an extended property to level-1 types such as TABLE or VIEW, or level-2 types such as COLUMN or TRIGGER. For more information, see [sp_addextendedproperty &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md). | EXTPROP_LEVEL0TYPE<br /><br /> EXTPROP_LEVEL0USER |
+| Deprecated feature | Replacement | Feature name |
+|--------------------|-------------|--------------|
+| Level0type = 'type' and Level0type = 'USER' to add extended properties to level-1 or level-2 type objects. | Use Level0type = 'USER' only to add an extended property directly to a user or role.<br /><br /> Use Level0type = 'SCHEMA' to add an extended property to level-1 types such as TABLE or VIEW, or level-2 types such as COLUMN or TRIGGER. For more information, see [sp_addextendedproperty &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md). | EXTPROP_LEVEL0TYPE<br /><br /> EXTPROP_LEVEL0USER |
 
 ### Extended stored procedures
 

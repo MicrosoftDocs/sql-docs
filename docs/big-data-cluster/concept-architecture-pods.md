@@ -32,7 +32,7 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |Name  |Count  |Type  |Description  |
 |---------|---------|---------|---------|
 |appproxy-\<*nnnn*\>|1         |         |Application proxy. 1 per app.|
-|compute-\<*#*\>-\<*#*\>|1         |         |Compute for SQL Server.|
+|[compute-\<*#*\>-\<*#*\>](#compute-pool)|1         |         |Compute for SQL Server.|
 |control-\<*nnnn*\>|1         |         |Kubernetes control.|
 |controldb-\<*#*\>|1         |         |         |
 |controlwd-\<*nnnn*\>|1         |         |         |
@@ -45,7 +45,7 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |metricsdc-\<*nnnn*\>|5         |Daemonset|One per node in the cluster|
 |metricsui-\<*nnnn*\>|1         |         |         |
 |mgmtproxy-\<*nnnn*\>|1         |         |         |
-|nmnode-\<*#*\>-\<*#*\>|2         |         |HDFS node. |
+|[nmnode-\<*#*\>-\<*#*\>](#hdfs-namenode)|2         |         |HDFS node. |
 |operator-\<*nnnn*\>|1         |         |         |
 |sparkhead-\<*#*\>|2         |         |HDFS spark head. |
 |storage-\<*#*\>-\<*#*\>|3         |         |Storage.|
@@ -79,7 +79,7 @@ The compute pool provides compute resources for distributed queries.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`compute-0`| StatefulSet |SQL Server instance<br><br>Fluent Bit<br><br>CollectD."
+|`compute-0`| StatefulSet |- SQL Server instance<br><br>- Fluent Bit<br><br>- CollectD."
 
 The compute pool SQL Server instances are stateless. Only require storage for `tempdb`. 
 
@@ -92,25 +92,21 @@ Number of pods in compute pool:
 
 ## HDFS NameNode
 
-- Controlled by: StatefulSet/`nmnode-0`
-
-- Pod: `nmnode-0-#`
-
-- Containers in each pod:<br><br>   HDFS NameNode<br><br>   Fluent Bit
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`nmnode-0-#`| StatefulSet |- HDFS NameNode<br><br>- Fluent Bit"
 
 HA deployment includes two NameNode pods.
 
-A ZooKeeper pod support HA.
+ZooKeeper pod supports HA.
 
 ## Gateway service
 
-Gateway access to HDFS and Spark
+Provides gateway access to HDFS and Spark.
 
-- Controlled by: StatefulSet/`gateway`
-
-- Pod: `gateway-0`
-
-- Containers in each pod:<br><br>   Knox<br><br>   Fluent Bit
+|Pod name | Controller type | Containers in a pod|
+|--------|----------|--------|
+|`gateway-0`| StatefulSet |- Knox<br><br>- Fluent Bit"
 
 Only one replica (one container) supported.
 

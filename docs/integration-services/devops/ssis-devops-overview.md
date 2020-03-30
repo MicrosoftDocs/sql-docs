@@ -16,7 +16,7 @@ ms.author: chugu
 
 If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops), then add **SSIS DevOps Tools** extension following [the steps](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension).
 
-**SSIS DevOps Tools** includes **SSIS Build** task and **SSIS Deploy** release task.
+**SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**..
 
 - **[SSIS Build](#ssis-build-task)** task supports building dtproj files in project deployment model or package deployment model.
 
@@ -291,7 +291,7 @@ The configuration JSON schema has three layers:
 |Property  |Description  |Notes  |
 |---------|---------|---------|
 |name  |Name of the catalog folder.|Folder will be created if not exists.|
-|description|Description of the catalog folder.|The value of *null* is invalid, the task will give a warning and skip this property.|
+|description|Description of the catalog folder.|The value of *null* will be skipped.|
 |projects|An array of project objects. Each object contains configuration information for a project.|See *Project Attributes* for the schema of a project object.|
 |environments|An array of environment objects. Each object contains configuration information for an environment.|See *Environment Attributes* for the schema of an environment object.|
 
@@ -308,8 +308,8 @@ The configuration JSON schema has three layers:
 |Property  |Description  |Notes  |
 |---------|---------|---------|
 |name|Name of the parameter.|The parameter can be *project parameter* or *package parameter*. <br> The parameter will be skipped if it does not exist in the parent project.|
-|container|Container of the parameter.|If the parameter is a project parameter, the *container* should be the project name. <br>If it's a package parameter, the *container* should be the package name with **.dtsx** extension. <br> If the parameter is a connection manager property, the name should be in such format: **CM.\<Connection Manager Name>.\<Property Name>**.|
-|value|Value of the parameter.|When *valueType* is *referenced*: The value is a reference to an environment variable in  *string* type. <br> When *valueType* is *literal*: This attribute supports any valid *boolean*, *number*, and *string* JSON values. <br> The value will be converted to the target parameter type. Error will occur if it cannot be converted.|
+|container|Container of the parameter.|<li>If the parameter is a project parameter, the *container* should be the project name. <li>If it's a package parameter, the *container* should be the package name with **.dtsx** extension. <li> If the parameter is a connection manager property, the name should be in such format: **CM.\<Connection Manager Name>.\<Property Name>**.|
+|value|Value of the parameter.|<li>When *valueType* is *referenced*: The value is a reference to an environment variable in  *string* type. <li> When *valueType* is *literal*: This attribute supports any valid *boolean*, *number*, and *string* JSON values. <br> The value will be converted to the target parameter type. Error will occur if it cannot be converted.<li> The value of *null* is invalid. The task will skip this parameter object, and give a warning.|
 |valueType|Type of the parameter value.|Valid types are: <br> *literal*: The *value* attribute represents a literal value. <br> *referenced*: The *value* attribute represents a reference to an environment variable.|
 
 ##### Reference Attributes
@@ -324,7 +324,7 @@ The configuration JSON schema has three layers:
 |Property  |Description  |Notes  |
 |---------|---------|---------|
 |name|Name of the environment.|Environment will be created if not exists.|
-|description|Description of the environment.|The value of *null* is invalid, the task will give a warning and skip this property.|
+|description|Description of the environment.|The value of *null* will be skipped.|
 |variables|An array of variable objects.|Each object contains configuration information for an environment variable.see *Variable Attributes* for the schema of a variable object.|
 
 ##### Variable Attributes
@@ -333,13 +333,13 @@ The configuration JSON schema has three layers:
 |---------|---------|---------|
 |name|Name of the environment variable.|Environment variable will be created if not exists.|
 |type|Data type of the environment variable.|Valid types are: <br> *boolean* <br> *byte* <br> *datetime* <br> decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *string* <br> *uint32* <br> *uint64*|
-|description|Description of the environment variable.|The value of *null* is invalid, the task will give a warning and skip this property.|
-|value|Value of the environment variable.|This attribute supports any valid boolean, number, and string JSON values.<br> The value will be converted to the type specified by **type** attribute. Error will occur if conversion fails.|
+|description|Description of the environment variable.|The value of *null* will be skipped.|
+|value|Value of the environment variable.|This attribute supports any valid boolean, number, and string JSON values.<br> The value will be converted to the type specified by **type** attribute. Error will occur if conversion fails.<br>The value of *null* is invalid. The task will skip this environment variable object, and give a warning.|
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
 
-### Version 0.1.4 Preview
+### Version 0.2.0 Preview
 
 Release Date: March 31, 2020
 

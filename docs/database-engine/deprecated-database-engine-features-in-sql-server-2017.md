@@ -53,7 +53,7 @@ The following SQL Server Database Engine features are deprecated in the next ver
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated. BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued. | None. | BACKUP DATABASE or LOG WITH PASSWORD </br></br> BACKUP DATABASE or LOG WITH MEDIAPASSWORD |
+| RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated.</br></br>BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued. | None. | BACKUP DATABASE or LOG WITH PASSWORD</br></br>BACKUP DATABASE or LOG WITH MEDIAPASSWORD |
 
 ### Compatibility levels
 
@@ -73,16 +73,18 @@ Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL
 |--------------------|-------------|--------------|
 | Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 are not deprecated. | Use another encryption algorithm such as AES. | Deprecated encryption algorithm |
 
+### Hash algorithms
+
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| Hash algorithms | Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. |Deprecated hash algorithm|
+| Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. |Deprecated hash algorithm|
 
 ### Remote servers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| Remote servers | sp_addremotelogin </br></br> sp_addserver </br></br> sp_dropremotelogin </br></br> sp_helpremotelogin </br></br> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option.|sp_addremotelogin </br></br> sp_addserver </br></br> sp_dropremotelogin </br></br> sp_helpremotelogin </br></br> sp_remoteoption |
-| Remote servers | \@\@remserver | Replace remote servers by using linked servers. | None |
+| sp_addremotelogin</br></br>sp_addserver </br></br> sp_dropremotelogin </br></br> sp_helpremotelogin </br></br> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option. | sp_addremotelogin</br></br>sp_addserver </br></br> sp_dropremotelogin </br></br> sp_helpremotelogin </br></br> sp_remoteoption |
+| \@\@remserver | Replace remote servers by using linked servers. | None |
 | Remote servers | SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers. | SET REMOTE_PROC_TRANSACTIONS |
 
 ### Set options

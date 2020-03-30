@@ -104,7 +104,4 @@ ms.author: chugu
  If you encounter an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error that does not have an accompanying description, you can locate the description in [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md) by looking up the error by its number. The list does not include troubleshooting information at this time.  
   
 ## Related Tasks  
- [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)  
-  
-## Related Content  
- Blog entry, [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546), on dougbert.com.  
+ [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)

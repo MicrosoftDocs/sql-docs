@@ -17,9 +17,39 @@ ms.technology: big-data-cluster
 
 This article describes the resources a SQL Server Big Data Cluster deploys.
 
-A Big Data Cluster cluster deploys pods based on the deployment configuration. This article describes the pods deployed with `aks-dev-test-ha` profile. 
+A Big Data Cluster cluster deploys pods based on the deployment configuration. This article describes the pods deployed with `aks-dev-test-ha` profile and includes a Spark pool.
 
 For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
+
+The following diagram displays the components deployed in a Big Data Cluster:
+
+:::image type="content" source="media/big-data-cluster-overview/architecture-diagram-overview.png" alt-text="big-data-cluster-diagram":::
+
+## Table summary of pods
+
+The following table lists the pods that are typically deployed in a Big Data Cluster. 
+
+|Name  |Count  |Type  |Description  |
+|---------|---------|---------|---------|
+|appproxy-\<*nnnn*\>|1         |         |Application proxy. 1 per app.|
+|compute-\<*#*\>-\<*#*\>|1         |         |Compute for SQL Server.|
+|control-\<*nnnn*\>|1         |         |Kubernetes control.|
+|controldb-\<*#*\>|1         |         |         |
+|controlwd-\<*nnnn*\>|1         |         |         |
+|data-\<*#*\>-\<*#*\>|2         |         |Used by SQL Server|
+|gateway-\<*#*\>|1         |         |         |
+|logsdb-\<*#*\>|1         |         |         |
+|logsui-\<*nnnn*\>|1         |         |         |
+|[master-\<*#*\>](sql-server-master-instance)|1-9         |         |Master SQL Server instance. 3 replicas provide HA with a contained availability group.|
+|metricsdb-\<*#*\>|1         |         |         |
+|metricsdc-\<*nnnn*\>|5         |Daemonset|One per node in the cluster|
+|metricsui-\<*nnnn*\>|1         |         |         |
+|mgmtproxy-\<*nnnn*\>|1         |         |         |
+|nmnode-\<*#*\>-\<*#*\>|2         |         |HDFS node. |
+|operator-\<*nnnn*\>|1         |         |         |
+|sparkhead-\<*#*\>|2         |         |HDFS spark head. |
+|storage-\<*#*\>-\<*#*\>|3         |         |Storage.|
+|zookeeper-\<*#*\>|3         |         |HDFS|
 
 ## SQL Server master instance
 
@@ -191,31 +221,7 @@ Proxy for accessing services which monitor cluster health.
 
 ## appproxy
 
-## Table summary of pods
 
-The following table lists the pods that are typically deployed in a Big Data Cluster. 
-
-|Name  |Count  |Type  |Description  |
-|---------|---------|---------|---------|
-|appproxy-\<*nnnn*\>|1         |         |Application proxy. 1 per app.|
-|compute-\<*#*\>-\<*#*\>|1         |         |Compute for SQL Server.|
-|control-\<*nnnn*\>|1         |         |Kubernetes control.|
-|controldb-\<*#*\>|1         |         |         |
-|controlwd-\<*nnnn*\>|1         |         |         |
-|data-\<*#*\>-\<*#*\>|2         |         |Used by SQL Server|
-|gateway-\<*#*\>|1         |         |         |
-|logsdb-\<*#*\>|1         |         |         |
-|logsui-\<*nnnn*\>|1         |         |         |
-|master-\<*#*\>|1-9         |         |Master SQL Server instance. 3 replicas provide HA with a contained availability group.|
-|metricsdb-\<*#*\>|1         |         |         |
-|metricsdc-\<*nnnn*\>|5         |Daemonset|One per node in the cluster|
-|metricsui-\<*nnnn*\>|1         |         |         |
-|mgmtproxy-\<*nnnn*\>|1         |         |         |
-|nmnode-\<*#*\>-\<*#*\>|2         |         |HDFS node. |
-|operator-\<*nnnn*\>|1         |         |         |
-|sparkhead-\<*#*\>|2         |         |HDFS spark head. |
-|storage-\<*#*\>-\<*#*\>|3         |         |Storage.|
-|zookeeper-\<*#*\>|3         |         |HDFS|
 
 ## Next steps
 

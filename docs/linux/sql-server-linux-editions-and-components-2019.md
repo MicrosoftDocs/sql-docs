@@ -221,6 +221,7 @@ The following features and services are not available for SQL Server 2019 on Lin
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
+| &nbsp; | Multi-Server Administration using MSX/TSX |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
 | &nbsp; | AD Authentication for Linked Servers | 

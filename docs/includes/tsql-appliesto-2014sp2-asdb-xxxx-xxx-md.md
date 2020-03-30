@@ -6,5 +6,5 @@ ms.date: 01/13/2020
 ms.author: mikeray
 ---
 
-**APPLIES TO:** ![yes](media/yes.png)SQL Server 2014 ![yes](media/yes.png)Azure SQL Database ![no](media/no.png)Azure Synapse Analytics (SQL DW) ![no](media/no.png)Parallel Data Warehouse 
+**APPLIES TO:** ![Yes](media/yes.png)SQL Server 2014 ![Yes](media/yes.png)Azure SQL Database ![No](media/no.png)Azure Synapse Analytics (SQL DW) ![No](media/no.png)Parallel Data Warehouse 
 

@@ -1,1 +1,1 @@
-<Token>**APPLIES TO:** ![no](media/no.png).NET Framework ![yes](media/yes.png).NET Core ![no](media/no.png).NET Standard </Token>
+<Token>**APPLIES TO:** ![No](media/no.png).NET Framework ![Yes](media/yes.png).NET Core ![No](media/no.png).NET Standard </Token>

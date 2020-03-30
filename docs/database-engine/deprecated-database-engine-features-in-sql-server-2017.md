@@ -77,7 +77,7 @@ Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. |Deprecated hash algorithm|
+| Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. |Deprecated hash algorithm |
 
 ### Remote servers
 
@@ -85,13 +85,13 @@ Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL
 |--------------------|-------------|--------------|
 | sp_addremotelogin</br></br>sp_addserver </br></br> sp_dropremotelogin </br></br> sp_helpremotelogin </br></br> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option. | sp_addremotelogin</br></br>sp_addserver </br></br> sp_dropremotelogin </br></br> sp_helpremotelogin </br></br> sp_remoteoption |
 | \@\@remserver | Replace remote servers by using linked servers. | None |
-| Remote servers | SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers. | SET REMOTE_PROC_TRANSACTIONS |
+| SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers. | SET REMOTE_PROC_TRANSACTIONS |
 
 ### Set options
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-|**SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements | TOP keyword | SET ROWCOUNT |
+| **SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements | TOP keyword | SET ROWCOUNT |
 
 ### Table hints
 
@@ -109,7 +109,7 @@ The following SQL Server Database Engine features are supported in the next vers
 |--------------------|-------------|--------------|
 | BACKUP { DATABASE &#124; LOG } TO TAPE </br></br> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK </br></br> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk* | BACKUP DATABASE or LOG TO TAPE |
 | sp_addumpdevice '**tape**' | sp_addumpdevice '**disk**' | ADDING TAPE DEVICE |
-| sp_helpdevice|sys.backup_devices | sp_helpdevice |
+| sp_helpdevice | sys.backup_devices | sp_helpdevice |
 
 ### Compatibility levels
 
@@ -136,11 +136,11 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| Data types | sp_addtype </br></br> sp_droptype|CREATE TYPE</br></br> DROP TYPE | sp_addtype</br></br> sp_droptype |
-| Data types | **timestamp** syntax for **rowversion** data type | **rowversion** data type syntax | TIMESTAMP |
-| Data types | Ability to insert null values into **timestamp** columns. | Use a DEFAULT instead. | INSERT NULL into TIMESTAMP columns |
-| Data types | 'text in row' table option|Use **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. For more information, see [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Text in row table option |
-|Data types|Data types:</br></br> **text**</br></br> **ntext**</br></br> **image**|Use **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types.|Data types: **text**, **ntext** or **image** |
+| sp_addtype </br></br> sp_droptype|CREATE TYPE</br></br> DROP TYPE | sp_addtype</br></br> sp_droptype |
+| **timestamp** syntax for **rowversion** data type | **rowversion** data type syntax | TIMESTAMP |
+| Ability to insert null values into **timestamp** columns. | Use a DEFAULT instead. | INSERT NULL into TIMESTAMP columns |
+| 'text in row' table option|Use **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. For more information, see [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Text in row table option |
+| Data types:</br></br> **text**</br></br> **ntext**</br></br> **image**|Use **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types.|Data types: **text**, **ntext** or **image** |
 
 ### Database management
 
@@ -240,6 +240,12 @@ xp_revokelogin</br></br> xp_loginconfig |
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
 | The CREATE ENDPOINT or ALTER ENDPOINT statement with the FOR SOAP option.</br></br> sys.endpoint_webmethods</br></br> sys.soap_endpoints|Use Windows Communications Foundation (WCF) or ASP.NET instead. | CREATE/ALTER ENDPOINT</br></br> sys.endpoint_webmethods</br></br> EXT_soap_endpoints</br></br> sys.soap_endpoints |
+
+### Other
+
+| Deprecated feature | Replacement | Feature name |
+|--------------------|-------------|--------------|
+| DB-Library</br></br>Embedded SQL for C|Although the Database Engine still supports connections from existing applications that use the DB-Library and Embedded SQL APIs, it does not include the files or documentation required to do programming work on applications that use these APIs. A future version of the SQL Server Database Engine drops support for connections from DB-Library or Embedded SQL applications. Do not use DB-Library or Embedded SQL to develop new applications. Remove any dependencies on either DB-Library or Embedded SQL when you are modifying existing applications. Instead of these APIs, use the SQLClient namespace or an API such as ODBC. SQL Server 2019 (15.x) does not include the DB-Library DLL required to run these applications. To run DB-Library or Embedded SQL applications, you must have available the DB-Library DLL from SQL Server version 6.5, SQL Server 7.0, or SQL Server 2000 (8.x). | None |
 
 ### Removable databases
 
@@ -374,18 +380,12 @@ xp_revokelogin</br></br> xp_loginconfig |
 | The indirect application of table hints to an invocation of a multi-statement table-valued function (TVF) through a view.|None.|Indirect TVF hints |
 | ALTER DATABASE syntax:</br></br>MODIFY FILEGROUP READONLY</br></br>MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY</br></br>MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY</br></br>MODIFY FILEGROUP READWRITE |
 
-### Other
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| DB-Library</br></br>Embedded SQL for C|Although the Database Engine still supports connections from existing applications that use the DB-Library and Embedded SQL APIs, it does not include the files or documentation required to do programming work on applications that use these APIs. A future version of the SQL Server Database Engine drops support for connections from DB-Library or Embedded SQL applications. Do not use DB-Library or Embedded SQL to develop new applications. Remove any dependencies on either DB-Library or Embedded SQL when you are modifying existing applications. Instead of these APIs, use the SQLClient namespace or an API such as ODBC. SQL Server 2019 (15.x) does not include the DB-Library DLL required to run these applications. To run DB-Library or Embedded SQL applications, you must have available the DB-Library DLL from SQL Server version 6.5, SQL Server 7.0, or SQL Server 2000 (8.x). | None |
-
 ### Tools
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
 | SQL Server Profiler for Trace Capture | Use Extended Events Profiler embedded in SQL Server Management Studio.|SQL Server Profiler |
-| SQL Server Profiler for Trace Replay | [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) | SQL Server Profiler |
+| SQL Server Profiler for Trace Replay | [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) |
 
 ### Trace Management Objects
 

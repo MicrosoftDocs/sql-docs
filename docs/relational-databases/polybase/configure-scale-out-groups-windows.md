@@ -81,7 +81,10 @@ After setup is complete, both machines can function as PolyBase Group head nodes
 3. Run services.msc on the compute node (PQTH4A-CMP02).
   
 4. Shutdown the PolyBase engine and restart the PolyBase data movement service.
-  
+
+> [!NOTE] 
+> When the Polybase Engine service gets restarted or stopped in the head node, the Data Movement Service (DMS) services gets stopped as soon as the communication channel is closed between DMS and Polybase Engine Service (DW). If the DW engine gets restarted more than 2 times, the DMS goes to a quiet period for 90 minutes and it must wait 90 minutes for the next auto start attempt. In such situation, you should start this service manually on all nodes.
+
 ## Optional: Remove a compute node  
   
 1. Connect to the compute node SQL Server (PQTH4A-CMP02).

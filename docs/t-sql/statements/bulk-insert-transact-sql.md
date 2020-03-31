@@ -1,6 +1,6 @@
 ---
 title: "BULK INSERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the BULK INSERT statement."
 ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

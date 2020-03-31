@@ -4,7 +4,7 @@ description: Generate predictions using sp_rxPredict, scoring data inputs agains
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/26/2019
+ms.date: 03/30/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Real-time scoring with sp_rxPredict in SQL Server machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Real-time scoring uses the [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) system stored procedure and the CLR extension capabilities in SQL Server for high-performance predictions or scores in forecasting workloads. Real-time scoring is language-agnostic and executes with no dependencies on R or Python run times. Assuming a model created and trained using Microsoft functions, and then serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
+Real-time scoring uses the [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) system stored procedure and the CLR extension capabilities in SQL Server for high-performance predictions or scores in forecasting workloads. Real-time scoring is language-agnostic and executes with no dependencies on R or Python run times. Assuming a model created and trained using Microsoft functions, and then serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
 
 ## How real-time scoring works
 
@@ -27,7 +27,7 @@ Real-time scoring is a multi-step process:
 1. The stored procedure that does scoring must be enabled on a per-database basis.
 2. You load the pre-trained model in binary format.
 3. You provide new input data to be scored, either tabular or single rows, as input to the model.
-4. To generate scores, call the [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) stored procedure.
+4. To generate scores, call the [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) stored procedure.
 
 ## Prerequisites
 
@@ -146,9 +146,9 @@ You must enable this feature for each database that you want to use for scoring.
 
 3. RegisterRExt.exe creates the following objects:
 
-	+ Trusted assemblies
-	+ The stored procedure `sp_rxPredict`
-	+ A new database role, `rxpredict_users`. The database administrator can use this role to grant permission to users who use the real-time scoring functionality.
+    + Trusted assemblies
+    + The stored procedure `sp_rxPredict`
+    + A new database role, `rxpredict_users`. The database administrator can use this role to grant permission to users who use the real-time scoring functionality.
 
 4. Add any users who need to run `sp_rxPredict` to the new role.
 

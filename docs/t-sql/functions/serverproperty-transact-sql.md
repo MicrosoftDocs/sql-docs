@@ -1,7 +1,7 @@
 ---
 title: "SERVERPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "03/31/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -61,6 +61,7 @@ Is an expression that contains the property information to be returned for the s
 |InstanceDefaultLogPath|**Applies to**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through current version in updates beginning in late 2015.<br /><br /> Name of the default path to the instance log files.|  
 |InstanceName|Name of the instance to which the user is connected.<br /><br /> Returns NULL if the instance name is the default instance, if the input is not valid, or error.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Returns 1 if the Advanced Analytics feature was installed during setup; 0 if Advanced Analytics was not installed.|  
+|IsBigDataCluster| Introduced in [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] beginning with CU4.<br /><br />Returns 1 if the instance is SQL Server Big Data Cluster; 0 if not.|  
 |IsClustered|Server instance is configured in a failover cluster.<br /><br /> 1 = Clustered.<br /><br /> 0 = Not Clustered.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |IsFullTextInstalled|The full-text and semantic indexing components are installed on the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Full-text and semantic indexing components are installed.<br /><br /> 0 = Full-text and semantic indexing components are not installed.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |IsHadrEnabled|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] is enabled on this server instance.<br /><br /> 0 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is disabled.<br /><br /> 1 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is enabled.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**<br /><br /> For availability replicas to be created and run on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] must be enabled on the server instance. For more information, see [Enable and Disable AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Note:** The IsHadrEnabled property pertains only to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Other high availability or disaster recovery features, such as database mirroring or log shipping, are unaffected by this server property.|  

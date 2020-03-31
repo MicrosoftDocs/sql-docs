@@ -1,6 +1,6 @@
 ---
 title: "FORMAT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.description: "Transact-SQL reference for the FORMAT function."
 ms.date: "08/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

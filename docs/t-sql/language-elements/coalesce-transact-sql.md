@@ -1,6 +1,6 @@
 ---
 title: "COALESCE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.description: "Transact-SQL reference for COALESCE, which returns the value of the first expression that does not evaluate to NULL."
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

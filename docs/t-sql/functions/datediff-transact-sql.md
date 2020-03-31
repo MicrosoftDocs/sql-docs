@@ -1,6 +1,6 @@
 ---
 title: "DATEDIFF (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.description: "Transact-SQL reference for the DATEDIFF function. Returns the numerical difference between a start and end date based on datepart."
 ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

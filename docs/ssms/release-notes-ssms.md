@@ -123,7 +123,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Wrong help link in XTPHashAvgChainBuckets rule. |
 | XEvent UI | Fixed an issue here items in the grid where being selected on hovering. See [UserVoice - SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124) and [UserVoice - SSMS 18.0 Extended Events New Session Data Storage UX loses focus on mouse move](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
-### Known issues (18.5)
+### Known issues (18.5) 
 
 - Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 

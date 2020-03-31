@@ -1,7 +1,7 @@
 ---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/15/2019"
+ms.date: "03/31/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -238,6 +238,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )
 }
 ```
+
+> [!NOTE]
+> For additional information, see:
+>
+> - [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md)
+> - [ALTER TABLE column_definition](alter-table-column-definition-transact-sql.md)
+> - [ALTER TABLE computed_column_definition](alter-table-computed-column-definition-transact-sql.md)
+> - [ALTER TABLE index_option](alter-table-index-option-transact-sql.md)
+> - [ALTER TABLE table_constraints](alter-table-table-constraint-transact-sql.md)
 
 ## Syntax for memory-optimized tables
 

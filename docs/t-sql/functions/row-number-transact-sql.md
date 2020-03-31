@@ -1,6 +1,6 @@
 ---
 title: "ROW_NUMBER (Transact-SQL) | Microsoft Docs"
-ms.description: "Transact-SQL reference for the ROW_NUMBER function. This function numbers the output of a result set."
+description: "Transact-SQL reference for the ROW_NUMBER function. This function numbers the output of a result set."
 ms.date: "09/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

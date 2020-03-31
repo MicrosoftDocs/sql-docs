@@ -72,31 +72,21 @@ Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
 | Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 are not deprecated. | Use another encryption algorithm such as AES. | Deprecated encryption algorithm | 253 |
-
-### Hash algorithms
-
-| Deprecated feature | Replacement | Feature name | Feature ID |
-|--------------------|-------------|--------------|------------|
 | Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated. | Use SHA2_256 or SHA2_512 instead. Older algorithms continue working, but they raise a deprecation event. |Deprecated hash algorithm | None |
 
 ### Remote servers
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | Replace remote servers by using linked servers. | None | None |
 | SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### Set options
+### Transact-SQL
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
 | **SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements | TOP keyword | SET ROWCOUNT | 109 |
-
-### Table hints
-
-| Deprecated feature | Replacement | Feature name | Feature ID |
-|--------------------|-------------|--------------|------------|
 | HOLDLOCK table hint without parenthesis. | Use HOLDLOCK with parenthesis. | HOLDLOCK table hint without parenthesis | 167 |
 
 ## Features deprecated in a future version of SQL Server
@@ -126,12 +116,6 @@ The following SQL Server Database Engine features are supported in the next vers
 | Hindi <br /><br /> Macedonian | These collations exist in  SQL Server 2005 (9.x) and higher, but are not visible through fn_helpcollations. Use Macedonian_FYROM_90 and Indic_General_90 instead.|Hindi <br /><br /> Macedonian |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### Configuration
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| SET ANSI_NULLS OFF and ANSI_NULLS OFF database option<br /><br />SET ANSI_PADDING OFF and ANSI_PADDING OFF database option<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF and CONCAT_NULL_YIELDS_NULL OFF database option<br /><br />SET OFFSETS | None. <br /><br /> ANSI_NULLS, ANSI_PADDING and CONCAT_NULLS_YIELDS_NULL are always set to ON. SET OFFSETS are unavailable. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### Data types
 
 | Deprecated feature | Replacement | Feature name |
@@ -147,6 +131,9 @@ The following SQL Server Database Engine features are supported in the next vers
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|CREATE DATABASE statement with the FOR ATTACH option. To rebuild multiple log files, when one or more have a new location, use the FOR ATTACH_REBUILD_LOG option. | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | MODIFY NAME in ALTER DATABASE | sp_renamedb |
 
 ### Database objects
 
@@ -156,7 +143,6 @@ The following SQL Server Database Engine features are supported in the next vers
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | CHECK keyword in CREATE TABLE and ALTER TABLE | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login | Use ALTER USER. | sp_change_users_login |
 | sp_depends | sys.dm_sql_referencing_entities and sys.dm_sql_referenced_entities | sp_depends |
-| sp_renamedb | MODIFY NAME in ALTER DATABASE | sp_renamedb |
 | sp_getbindtoken | Use MARS or distributed transactions. | sp_getbindtoken |
 
 ### Database options
@@ -196,12 +182,6 @@ The following SQL Server Database Engine features are supported in the next vers
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | Use CLR Integration instead. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig |
 
-### Function
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### High availability
 
 | Deprecated feature | Replacement | Feature name |
@@ -230,12 +210,6 @@ The following SQL Server Database Engine features are supported in the next vers
 |--------------------|-------------|--------------|
 | Specifying the SQLOLEDB provider for linked servers. | SQL Server Native Client (SQLNCLI) | SQLOLEDDB for linked servers |
 
-### Locking
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### Metadata
 
 | Deprecated feature | Replacement | Feature name |
@@ -253,13 +227,6 @@ The following SQL Server Database Engine features are supported in the next vers
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL for C|Although the Database Engine still supports connections from existing applications that use the DB-Library and Embedded SQL APIs, it does not include the files or documentation required to do programming work on applications that use these APIs. A future version of the SQL Server Database Engine drops support for connections from DB-Library or Embedded SQL applications. Do not use DB-Library or Embedded SQL to develop new applications. Remove any dependencies on either DB-Library or Embedded SQL when you are modifying existing applications. Instead of these APIs, use the SQLClient namespace or an API such as ODBC. SQL Server 2019 (15.x) does not include the DB-Library DLL required to run these applications. To run DB-Library or Embedded SQL applications, you must have available the DB-Library DLL from SQL Server version 6.5, SQL Server 7.0, or SQL Server 2000 (8.x). | None |
-
-### Removable databases
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
 
 ### Security
 
@@ -283,12 +250,6 @@ The following SQL Server Database Engine features are supported in the next vers
 | PERMISSIONS intrinsic function | Query sys.fn_my_permissions instead. | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | RC4 and DESX encryption algorithms|Use another algorithm such as AES. | DESX algorithm |
-
-### Set options
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 
 ### Server Configuration Options
 
@@ -314,11 +275,14 @@ The following SQL Server Database Engine features are supported in the next vers
 |--------------------|-------------|--------------|
 | Solution Explorer integration in SQL Server Management Studio | | None |
 
-### System Stored Procedures
+### System stored procedures and functions
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | None. Support for increased partitions is available by default in SQL Server 2019 (15.x). | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### System tables
 
@@ -333,12 +297,6 @@ The following SQL Server Database Engine features are supported in the next vers
 |--------------------|-------------|--------------|
 | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[Extended Events](../relational-databases/extended-events/extended-events.md) | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### System functions
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### System views
 
 | Deprecated feature | Replacement | Feature name |
@@ -352,14 +310,6 @@ The following SQL Server Database Engine features are supported in the next vers
 | The use of the vardecimal storage format. | Vardecimal storage format is deprecated. SQL Server 2019 (15.x) data compression, compresses decimal values as well as other data types. We recommend that you use data compression instead of the vardecimal storage format. | Vardecimal storage format |
 | Use of the sp_db_vardecimal_storage_format procedure.|Vardecimal storage format is deprecated. SQL Server 2019 (15.x) data compression, compresses decimal values as well as other data types. We recommend that you use data compression instead of the vardecimal storage format. | sp_db_vardecimal_storage_format |
 | Use of the sp_estimated_rowsize_reduction_for_vardecimal procedure.|Use data compression and the sp_estimate_data_compression_savings procedure instead. |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### Table hints
-
-| Deprecated feature | Replacement | Feature name |
-|--------------------|-------------|--------------|
-| Specifying NOLOCK or READUNCOMMITTED in the FROM clause of an UPDATE or DELETE statement. | Remove the NOLOCK or READUNCOMMITTED table hints from the FROM clause. | NOLOCK or READUNCOMMITTED in UPDATE or DELETE |
-| Specifying table hints without using the WITH keyword.|Use WITH.|Table hint without WITH |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### Text pointers
 
@@ -381,13 +331,18 @@ The following SQL Server Database Engine features are supported in the next vers
 | GROUP BY ALL|Use custom case-by-case solution with UNION or derived table. | GROUP BY ALL |
 | ROWGUIDCOL as a column name in DML statements.|Use $rowguid.|ROWGUIDCOL |
 | IDENTITYCOL as a column name in DML statements.|Use $identity.|IDENTITYCOL |
-| Use of #, ## as temporary table and temporary stored procedure names.|Use at least one additional character.|'#' and '##' as the name of temporary tables and stored procedures|185|  
-| Use of \@, \@\@, or \@\@ as  Transact-SQL  identifiers.|Do not use \@ or \@\@ or names that begin with \@\@ as identifiers.|'\@' and names that start with '\@\@' as  Transact-SQL  identifiers |
+| Use of #, ## as temporary table and temporary stored procedure names. | Use at least one additional character.|'#' and '##' as the name of temporary tables and stored procedures
+| Use of \@, \@\@, or \@\@ as  Transact-SQL  identifiers. | Do not use \@ or \@\@ or names that begin with \@\@ as identifiers. | '\@' and names that start with '\@\@' as  Transact-SQL identifiers |
 | Use of DEFAULT keyword as default value.|Do not use the word DEFAULT as a default value. | DEFAULT keyword as a default value |
 | Use of a space as a separator between table hints.|Use a comma to separate table hints. | Multiple table hints without comma |
-| The select list of an aggregate indexed view must contain COUNT_BIG (\*) in 90 compatibility mode | Use COUNT_BIG (\*). | Index view selects list without COUNT_BIG(\*)|2|  
+| The select list of an aggregate indexed view must contain COUNT_BIG (\*) in 90 compatibility mode | Use COUNT_BIG (\*). | Index view selects list without COUNT_BIG(\*) |
 | The indirect application of table hints to an invocation of a multi-statement table-valued function (TVF) through a view.|None.|Indirect TVF hints |
-| ALTER DATABASE syntax:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| ALTER DATABASE syntax:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| SET ANSI_NULLS OFF and ANSI_NULLS OFF database option<br /><br />SET ANSI_PADDING OFF and ANSI_PADDING OFF database option<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF and CONCAT_NULL_YIELDS_NULL OFF database option<br /><br />SET OFFSETS | None. <br /><br /> ANSI_NULLS, ANSI_PADDING and CONCAT_NULLS_YIELDS_NULL are always set to ON. SET OFFSETS are unavailable. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
+| Specifying NOLOCK or READUNCOMMITTED in the FROM clause of an UPDATE or DELETE statement. | Remove the NOLOCK or READUNCOMMITTED table hints from the FROM clause. | NOLOCK or READUNCOMMITTED in UPDATE or DELETE |
+| Specifying table hints without using the WITH keyword. | Use WITH. | Table hint without WITH |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### Tools
 

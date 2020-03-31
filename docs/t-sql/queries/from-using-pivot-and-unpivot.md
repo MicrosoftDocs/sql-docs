@@ -1,6 +1,6 @@
 ---
 title: "Using PIVOT and UNPIVOT | Microsoft Docs"
-ms.custom: ""
+ms.description: "Transact-SQL reference for PIVOT and UNPIVOT relational operators. Use these operators on SELECT statements to change a table-valued expression into another table."
 ms.date: "10/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

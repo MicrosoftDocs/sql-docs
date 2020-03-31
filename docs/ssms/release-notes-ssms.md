@@ -72,22 +72,21 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 
 | New Item | Details |
 |----------|---------|
-| Accessibility | SSIS ADF / New Schedule: fixed an issue where the focus order is not logical in the  scan mode of narrator under "New Schedule" wizard. |
+| Accessibility | SSIS ADF / New Schedule: fixed an issue where the focus order is not logical in the  scan mode of narrator under *New Schedule* wizard. |
 | Accessibility | Stretch database wizard: fixed an issue where the screen reader does not inform about the name of the query table when providing information about the table. |
 | Analysis Services | Fix cached connection when scripting in AS with AAD connection. |
 | Always On | Fixed an issue where the first database added to Always On AG does not join correctly.
 | Always On | Fixed an issue where an error was displayed when trying to display the dashboard when connected to a Big Data Cluster endpoint. |
 | Auditing | Fixed an issue where the Audit logs merges window crashes when there's a folder with an empty name in the root folder of the storage account. |
 | Auditing | Fixed an issue where the Audit logs merge window doesn't show all servers when there are too many items in the root of the container. |
-| Authentication | Fixed an issue where Azure Active Directory authentication was not working through a proxy. |
 | Data Clarification | Fixed an issue where the *Data Classification* wizard won't open for databases with large number of tables. |
-| Data Clarification | We are now enforcing different guids for every label/infoType and guid's structure in the validation process. |
+| Data Clarification | We are now enforcing different GUIDs for every label/infoType and GUID's structure in the validation process. |
 | Data Clarification | Remove classification process in SqlServer2019. |
-| Data Clarification | Correcting the previous validation tests (adding rank, removing the illegal property "InformationTypes") and adding new ones for the first two points. |
+| Data Clarification | Correcting the previous validation tests (adding rank, removing the illegal property *InformationTypes*) and adding new ones for the first two points. |
 | Data Clarification | The button just above the classified columns table now minimizes the recommendations panel, as it says. |
 | General SSMS | Updating the version of MSODBC and MSOLEDB drivers. |
 | General SSMS | Addressed at least two common sources hangs and crashes in SSMS. |
-| General SSMS | Addressed one more case where "Restore dialog" hangs when selecting the Browse button. |
+| General SSMS | Addressed one more case where *Restore dialog* hangs when selecting the Browse button. |
 | General SSMS | Fixed *New Database GUI* for SQL On Demand. |
 | General SSMS | Fixed *New External Table...* and *New External Data Source...* templates for SQL On Demand. |
 | General SSMS | Fixed database properties, connection properties, hiding reports and rename for SQL On Demand. |
@@ -96,22 +95,23 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed an issue where the scroll bar started from middle in "Database Properties Options" grid. |
 | General SSMS | Fixed an issue that was causing SSMS to crash when opening .sql file while connected to Analysis Services server. |
 | General SSMS | Connection Dialog: fixed an issue where unchecking the "Remember Password" does not work. |
-| General SSMS | Fixed an issue where credentials associated to Server/Users are always remembered. See https://feedback.azure.com/forums/908035/suggestions/37875172 [Mark: we should probably update the F1 page to explain how to delete entries from this UI]. |
+| General SSMS | Fixed an issue where credentials associated to Server/Users are always remembered. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37875172). |
 | General SSMS | Fixed issue where occasionally Editor windows was not properly refreshed. This is achieved by disabling the hardware acceleration in *Tools > Options > Environement*. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). |
-| High DPI/Scaling | Fixed an issue where the controls on the "Index properties" could be incorrectly rendered (buttons overlapping grid). See https://feedback.azure.com/forums/908035/suggestions/36030424
+| General SSMS | Fixed an issue where Azure Active Directory authentication was not working through a proxy. |
+| High DPI/Scaling | Fixed an issue where the controls on the *Index properties* could be incorrectly rendered (buttons overlapping grid). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/36030424). |
 | High DPI/Scaling | Fixed multiple issues in *Database Properties* dialog, which might show clipped controls on 4K monitors. |
 | High DPI/Scaling | Fixed Publication and Subscription Wizards on 4k displays. |
 | High DPI/Scaling | Minor fix on New Audit Server Specification page. |
 | High DPI/Scaling | Fixed 4k display issue on High Availability Wizard. |
 | High DPI/Scaling | Fixed an issue where the user was not able to add a target in an Xevent New Session window + Set Session Event Filters in Xevent Session Wizard when display scaling at 125%. |
-|Import flat file | Updated Flat File Import Wizard to allow check all for the allow null column. See https://feedback.azure.com/forums/908035/suggestions/38027137. |
+|Import flat file | Updated Flat File Import Wizard to allow check all for the allow null column. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38027137). |
 | Object Explorer | Fixed an issue where Object Explorer could display incorrect information when connection strings are used to connect in Connection Dialog. |
 | Object Explorer | Fixed an issue where OE was slow in expanding tables for databases with several thousands tables (20k+). |
 | Query Store UI | Fixed TRC report calculate execution count (for *wait time* metric) as the sum of execution counts for each individual wait category, which is incorrect. But for a single execution of query it will be registered for each of the wait category the query waited for. So, if TRC just sums it across the wait category it will bloat the execution count. Actually it should be the Max across the wait_category. |
 | Query Store UI | Fixed TRC detailed view returns incorrect data when result set is filtered on top x. This happens because the query uses multiple common table expressions, which are then joined together to create the final result set. If top x is pushed into CTE, it sometimes can filters out the required rows. This can sometimes make the result set non-deterministic. The fix is to not push top x clause to CTEs. |
 | Query Store UI | Fixed Plan summary in both - grid or chart view needs last query execution wait time. Absence of this column is breaking the query. This change set will add this column to the wait stats CTE. |
 | ShowPlan | Improved how SSMS displays estimated row counts for operators with multiple executions: (1) Modified *Estimated Number of Rows* in SSMS to "Estimated Number of Rows Per Execution"; (2) Added a new property *Estimated Number of Rows for All Executions*; (3) Modify the property *Actual Number of Rows* to *Actual Number of Rows for All Executions*. |
-| SQL Agent | Fixed an issue where trying to edit a SQL Agent job step could have resulted in the SSMS UI freezing. See https://feedback.azure.com/forums/908035/suggestions/39063124. SSMS is now allowing viewing (*View* button) an output_file whose name is tokenized (at least for the simple macros/tokens supported by SQL Agent that are not determined at runtime). Also SSMS is not disabling the "View" button when the user does not have access to the file (as far as SQL permissions go). |
+| SQL Agent | Fixed an issue where trying to edit a SQL Agent job step could have resulted in the SSMS UI freezing. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/39063124). SSMS is now allowing viewing (*View* button) an output_file whose name is tokenized (at least for the simple macros/tokens supported by SQL Agent that are not determined at runtime). Also SSMS is not disabling the "View" button when the user does not have access to the file (as far as SQL permissions go). |
 | SQL Agent | Fixed the tab ordering on the Job Step page. |
 | SQL Agent | Reversed the position of the "Next" and "Previous" buttons on the Job Step page to put them in a logical order. |
 | SQL Agent | Adjusted the Job Schedule window to not clip the UI. |
@@ -121,7 +121,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | Fixed an issue related to scripting External objects. |
 | SMO/Scripting | Fixed an issue where *Generate Scripts* was not allowing choosing the scripting option for Extended Properties against SQL DB. Also, fixed the scripting of such extended properties. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Wrong help link in XTPHashAvgChainBuckets rule. |
-| XEvent UI | Fixed an issue here items in the grid where being selected on hovering. See https://feedback.azure.com/forums/908035/suggestions/38262124 and https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921. |
+| XEvent UI | Fixed an issue here items in the grid where being selected on hovering. See [UserVoice - SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124) and [UserVoice - SSMS 18.0 Extended Events New Session Data Storage UX loses focus on mouse move](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
 ### Known issues (18.5)
 

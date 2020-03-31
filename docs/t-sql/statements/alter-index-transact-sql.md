@@ -95,7 +95,6 @@ ALTER INDEX { index_name | ALL } ON <object>
     | ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
     | MAXDOP = max_degree_of_parallelism  
-    | COMPRESSION_DELAY = {0 | delay [Minutes]}  
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }   
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]  
 }  
@@ -106,7 +105,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | MAXDOP = max_degree_of_parallelism  
     | RESUMABLE = { ON | OFF } 
     | MAX_DURATION = <time> [MINUTES}     
-    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE} }  
+    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE } }  
     | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
 }  
   
@@ -120,10 +119,10 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
-    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
-    | COMPRESSION_DELAY= {0 | delay [Minutes]}  
+    | COMPRESSION_DELAY= { 0 | delay [Minutes] }  
 }  
 
 <resumable_index_option> ::=
@@ -503,8 +502,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])  
   
- For a disk-based table, delay specifies the minimum number of minutes a delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to delta rowgroups in the CLOSED state.  
-The default is 0 minutes.  
+ For a disk-based table, delay specifies the minimum number of minutes a delta rowgroup in the CLOSED state must remain in the delta rowgroup before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applies the delay to delta rowgroups in the CLOSED state.  
   
  The default is 0 minutes.  
   

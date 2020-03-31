@@ -1,4 +1,4 @@
-**THIS TOPIC APPLIES TO:** ![yes](media/yes.png "yes")SQL Server \(starting with 2008\)
-![no](media/no.png "no")Azure SQL Database
-![no](media/no.png "no")Azure SQL Data Warehouse
-![no](media/no.png "no")Parallel Data Warehouse
+**THIS TOPIC APPLIES TO:** ![yes](media/yes-icon.png "yes")SQL Server \(starting with 2008\)
+![no](media/no-icon.png "no")Azure SQL Database
+![no](media/no-icon.png "no")Azure SQL Data Warehouse
+![no](media/no-icon.png "no")Parallel Data Warehouse

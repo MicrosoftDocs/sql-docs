@@ -82,7 +82,7 @@ Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL
 | \@\@remserver | Replace remote servers by using linked servers. | None | None |
 | SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### Transact-SQL Change
+### Transact-SQL
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
@@ -331,13 +331,13 @@ The following SQL Server Database Engine features are supported in the next vers
 | GROUP BY ALL|Use custom case-by-case solution with UNION or derived table. | GROUP BY ALL |
 | ROWGUIDCOL as a column name in DML statements.|Use $rowguid.|ROWGUIDCOL |
 | IDENTITYCOL as a column name in DML statements.|Use $identity.|IDENTITYCOL |
-| Use of #, ## as temporary table and temporary stored procedure names.|Use at least one additional character.|'#' and '##' as the name of temporary tables and stored procedures
-| Use of \@, \@\@, or \@\@ as  Transact-SQL  identifiers.|Do not use \@ or \@\@ or names that begin with \@\@ as identifiers. | '\@' and names that start with '\@\@' as  Transact-SQL identifiers |
+| Use of #, ## as temporary table and temporary stored procedure names. | Use at least one additional character.|'#' and '##' as the name of temporary tables and stored procedures
+| Use of \@, \@\@, or \@\@ as  Transact-SQL  identifiers. | Do not use \@ or \@\@ or names that begin with \@\@ as identifiers. | '\@' and names that start with '\@\@' as  Transact-SQL identifiers |
 | Use of DEFAULT keyword as default value.|Do not use the word DEFAULT as a default value. | DEFAULT keyword as a default value |
 | Use of a space as a separator between table hints.|Use a comma to separate table hints. | Multiple table hints without comma |
-| The select list of an aggregate indexed view must contain COUNT_BIG (\*) in 90 compatibility mode | Use COUNT_BIG (\*). | Index view selects list without COUNT_BIG(\*)|2|  
+| The select list of an aggregate indexed view must contain COUNT_BIG (\*) in 90 compatibility mode | Use COUNT_BIG (\*). | Index view selects list without COUNT_BIG(\*) |
 | The indirect application of table hints to an invocation of a multi-statement table-valued function (TVF) through a view.|None.|Indirect TVF hints |
-| ALTER DATABASE syntax:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| ALTER DATABASE syntax:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
 | SET ANSI_NULLS OFF and ANSI_NULLS OFF database option<br /><br />SET ANSI_PADDING OFF and ANSI_PADDING OFF database option<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF and CONCAT_NULL_YIELDS_NULL OFF database option<br /><br />SET OFFSETS | None. <br /><br /> ANSI_NULLS, ANSI_PADDING and CONCAT_NULLS_YIELDS_NULL are always set to ON. SET OFFSETS are unavailable. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
 | SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 | Specifying NOLOCK or READUNCOMMITTED in the FROM clause of an UPDATE or DELETE statement. | Remove the NOLOCK or READUNCOMMITTED table hints from the FROM clause. | NOLOCK or READUNCOMMITTED in UPDATE or DELETE |

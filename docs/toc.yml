@@ -110,7 +110,7 @@
         - name: Single node kubeadm script
           href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks
-          href: big-data-cluster/deploy-notebooks.md         
+          href: big-data-cluster/notebooks-deploy.md
   - name: Concepts
     items:
     - name: Application deployment
@@ -195,24 +195,18 @@
         href: big-data-cluster/view-cluster-status.md
       - name: Kubernetes troubleshooting
         href: big-data-cluster/cluster-troubleshooting-commands.md
-      - name: Manage with notebook
-        href: big-data-cluster/manage-notebooks.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
+      - name: Manage existing notebooks
+        href: big-data-cluster/notebooks-manage-bdc.md
+      - name: Run a notebook with Spark
+        href: big-data-cluster/notebooks-tutorial-spark.md
       - name: Security
         items:
         - name: Update AZDATA_PASSWORD
           href: big-data-cluster/change-azdata-password.md
         - name: Manage user access
           href: big-data-cluster/manage-user-access.md
-    - name: Notebooks
-      items:
-      - name: Notebooks overview
-        href: big-data-cluster/notebooks-guidance.md
-      - name: Notebook tutorial
-        href: big-data-cluster/tutorial-notebook-spark.md
-      - name: Manage existing notebooks
-        href: big-data-cluster/notebooks-how-to-manage.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -7798,8 +7792,6 @@
         href: azure-data-studio/keyboard-shortcuts.md
       - name: Explorer Azure SQL resources
         href: azure-data-studio/azure-resource-explorer.md
-      - name: SQL Notebooks
-        href: azure-data-studio/sql-notebooks.md
       - name: Server groups
         href: azure-data-studio/server-groups.md
       - name: Source control
@@ -7808,6 +7800,14 @@
         href: azure-data-studio/settings.md
       - name: Windows authentication (Kerberos)
         href: azure-data-studio/enable-kerberos.md
+      - name: Notebooks
+        items:
+        - name: Notebooks overview
+          href: azure-data-studio/notebooks-guidance.md
+        - name: How to use SQL Kernel
+          href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+        - name: How to manage a notebook
+          href: azure-data-studio/notebooks-manage-sql-server.md
       - name: Usage data collection
         href: azure-data-studio/usage-data-collection.md
     - name: Extensions

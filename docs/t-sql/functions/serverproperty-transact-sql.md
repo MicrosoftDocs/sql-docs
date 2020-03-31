@@ -1,7 +1,7 @@
 ---
 title: "SERVERPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2020"
+ms.date: "03/31/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

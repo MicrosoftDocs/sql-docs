@@ -245,7 +245,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 > - [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md)
 > - [ALTER TABLE column_definition](alter-table-column-definition-transact-sql.md)
 > - [ALTER TABLE computed_column_definition](alter-table-computed-column-definition-transact-sql.md)
-> - [ALTER TABLE index_option](alter-table-index-option-transact-sql)
+> - [ALTER TABLE index_option](alter-table-index-option-transact-sql.md)
 > - [ALTER TABLE table_constraints](alter-table-table-constraint-transact-sql.md)
 > -
 

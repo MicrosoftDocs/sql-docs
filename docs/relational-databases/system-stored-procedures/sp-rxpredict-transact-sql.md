@@ -1,6 +1,6 @@
 ---
 title: "sp_rxPredict | Microsoft Docs"
-ms.date: "07/24/2019"
+ms.date: 03/30/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -29,7 +29,7 @@ Although the model must be created using R or Python, once it is serialized and 
 
 ## Syntax
 
-```
+```syntaxsql
 sp_rxPredict  ( @model, @input )
 ```
 
@@ -59,7 +59,7 @@ The user needs `EXECUTE` permission on the database.
 
 ### Supported algorithms
 
-To create and train model, use one of the supported algorithms for R or Python, provided by [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [SQL Server 2017 Machine Learning Services (R or Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017), or [SQL Server 2017 Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
+To create and train model, use one of the supported algorithms for R or Python, provided by [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [SQL Server 2017 Machine Learning Services (R or Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md?view=sql-server-2017), or [SQL Server 2017 Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
 
 #### R: RevoScaleR models
 
@@ -127,7 +127,7 @@ FROM model_table
 WHERE model_name = 'rxLogit trained';
 
 EXEC sp_rxPredict @model = @model,
-@inputData = N'SELECT * FROM data';
+  @inputData = N'SELECT * FROM data';
 ```
 
 In addition to being a valid SQL query, the input data in *\@inputData* must include columns compatible with the columns in the stored model.

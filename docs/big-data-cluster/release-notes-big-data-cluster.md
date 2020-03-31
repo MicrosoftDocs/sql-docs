@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 03/30/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -54,7 +54,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release               | Version         | Release date |
 |-----------------------|-----------------|--------------|
-| [CU4](#cu4)           | 15.0.4033.1     | 2020-03-30   |
+| [CU4](#cu4)           | 15.0.4033.1     | 2020-03-31   |
 | [CU3](#cu3)           | 15.0.4023.6     | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23    | 2020-01-07   |

@@ -1,6 +1,6 @@
 ---
 title: "SUBSTRING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.description: "Transact-SQL reference for the SUBSTRING function. This function returns a portion of a specified character, binary, text, or image expression."
 ms.date: "10/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -81,10 +81,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master	 |m	 |st |
-|tempdb	 |t	 |mp |
-|model	 |m	 |de |
-|msdb	 |m	 |db |
+|master    |m    |st |
+|tempdb    |t    |mp |
+|model    |m    |de |
+|msdb    |m    |db |
 
 
   

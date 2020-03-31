@@ -1,6 +1,6 @@
 ---
 title: "STRING_SPLIT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
 ms.date: "11/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

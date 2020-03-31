@@ -79,6 +79,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | Always On | Fixed an issue where an error was displayed when trying to display the dashboard when connected to a Big Data Cluster endpoint. |
 | Auditing | Fixed an issue where the Audit logs merges window crashes when there's a folder with an empty name in the root folder of the storage account. |
 | Auditing | Fixed an issue where the Audit logs merge window doesn't show all servers when there are too many items in the root of the container. |
+| Authentication | Fixed an issue where Azure Active Directory authentication was not working through a proxy. |
 | Data Clarification | Fixed an issue where the *Data Classification* wizard won't open for databases with large number of tables. |
 | Data Clarification | We are now enforcing different guids for every label/infoType and guid's structure in the validation process. |
 | Data Clarification | Remove classification process in SqlServer2019. |
@@ -96,6 +97,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed an issue that was causing SSMS to crash when opening .sql file while connected to Analysis Services server. |
 | General SSMS | Connection Dialog: fixed an issue where unchecking the "Remember Password" does not work. |
 | General SSMS | Fixed an issue where credentials associated to Server/Users are always remembered. See https://feedback.azure.com/forums/908035/suggestions/37875172 [Mark: we should probably update the F1 page to explain how to delete entries from this UI]. |
+| General SSMS | Fixed issue where occasionally Editor windows was not properly refreshed. This is achieved by disabling the hardware acceleration in *Tools > Options > Environement*. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). |
 | High DPI/Scaling | Fixed an issue where the controls on the "Index properties" could be incorrectly rendered (buttons overlapping grid). See https://feedback.azure.com/forums/908035/suggestions/36030424
 | High DPI/Scaling | Fixed multiple issues in *Database Properties* dialog, which might show clipped controls on 4K monitors. |
 | High DPI/Scaling | Fixed Publication and Subscription Wizards on 4k displays. |

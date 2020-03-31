@@ -71,7 +71,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  **Potential Backward Compatibility Issue:** Currently, the stored procedure does not check whether a master key exists. This is permitted for backward compatibility, but displays a warning. This behavior is deprecated. In a future release the master key must exist and the password used in the stored procedure **sp_control_dbmasterkey_password** must be the same password as one of the passwords used to encrypt the database master key.  
   
 ## Permissions  
- Requires CONTROL permission on the database.  
+ Requires membership in the **sysadmin** fixed server role.  
   
 ## Examples  
   

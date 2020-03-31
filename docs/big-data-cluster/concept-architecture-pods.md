@@ -29,27 +29,27 @@ The following diagram displays the components deployed in a Big Data Cluster:
 
 The following table lists the pods that are typically deployed in a Big Data Cluster. 
 
-|Name  |Count  |Type  |Description  |
-|---------|---------|---------|---------|
-|appproxy-\<*nnnn*\>|1         |         |Application proxy. 1 per app.|
-|[compute-\<*#*\>-\<*#*\>](#compute-pool)|1         |         |Compute for SQL Server.|
-|[control-\<*nnnn*\>](#control)|1         |         |Kubernetes control.|
-|[controldb-\<*#*\>](#control)|1         |         |         |
-|[controlwd-\<*nnnn*\>](#control)|1         |         |         |
-|[data-\<*#*\>-\<*#*\>](#data-pool)|2         |         |Used by SQL Server|
-|[gateway-\<*#*\>](#gateway-service)|1         |         |         |
-|[logsdb-\<*#*\>](#logsdb)|1         |         |         |
-|[logsui-\<*nnnn*\>](#logsui)|1         |         |         |
-|[master-\<*#*\>](#sql-server-master-instance)|1-9         |         |Master SQL Server instance. 3 replicas provide HA with a contained availability group.|
-|[metricsdb-\<*#*\>](#metricsdb)|1         |         |         |
-|[metricsdc-\<*nnnn*\>](#metricsdc)|5         |Daemonset|One per node in the cluster|
-|[metricsui-\<*nnnn*\>](#metricsui)|1         |         |         |
-|[mgmtproxy-\<*nnnn*\>](#mgmtproxy)|1         |         |         |
-|[nmnode-\<*#*\>-\<*#*\>](#hdfs-namenode)|2         |         |HDFS node. |
-|[operator-\<*nnnn*\>](#operator)|1         |         |         |
-|[sparkhead-\<*#*\>](#spark-head)|2         |         |HDFS spark head. |
-|[storage-\<*#*\>-\<*#*\>](#storage-pool)|3         |         |Storage.|
-|[zookeeper-\<*#*\>](#zookeeper)|3         |         |HDFS|
+|Name  |Count  |Description  |
+|---------|---------|---------|
+|[appproxy-\<*nnnn*\>](#appproxy)|1         |Application proxy|
+|[compute-\<*#*\>-\<*#*\>](#compute-pool)|1         |SQL Server|
+|[control-\<*nnnn*\>](#control)|1         |Kubernetes control|
+|[controldb-\<*#*\>](#control)|1         |SQL Server|
+|[controlwd-\<*nnnn*\>](#control)|1         |Control watch dog|
+|[data-\<*#*\>-\<*#*\>](#data-pool)|2         |SQL Server|
+|[gateway-\<*#*\>](#gateway-service)|1         |Knox|
+|[logsdb-\<*#*\>](#logsdb)|1         |Elastic search|
+|[logsui-\<*nnnn*\>](#logsui)|1         |Kibana|
+|[master-\<*#*\>](#sql-server-master-instance)|1-9         |Master SQL Server instance. 3 replicas provide HA with a contained availability group.|
+|[metricsdb-\<*#*\>](#metricsdb)|1         |InfluxDB|
+|[metricsdc-\<*nnnn*\>](#metricsdc)|5         |Telegraf|
+|[metricsui-\<*nnnn*\>](#metricsui)|1         |Grafana|
+|[mgmtproxy-\<*nnnn*\>](#mgmtproxy)|1         |Service proxy|
+|[nmnode-\<*#*\>-\<*#*\>](#hdfs-namenode)|2            |HDFS node. |
+|[operator-\<*nnnn*\>](#operator)|1         |High availability|
+|[sparkhead-\<*#*\>](#spark-head)|2        |HDFS spark head|
+|[storage-\<*#*\>-\<*#*\>](#storage-pool)|3         |Manage storage.|
+|[zookeeper-\<*#*\>](#zookeeper)|3          |High availability|
 
 ## SQL Server master instance
 
@@ -97,8 +97,6 @@ Number of pods in compute pool:
 |`nmnode-0-#`| StatefulSet |- HDFS NameNode<br><br>- `fluentbit`
 
 HA deployment includes two NameNode pods.
-
-ZooKeeper pod supports HA.
 
 ## Gateway service
 

@@ -40,7 +40,7 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |Name  |Count  |Description  |
 |---------|---------|---------|
 |[`appproxy-<#m>`](#appproxy)        |1 <sup>*</sup> |Application proxy|
-|[`compute-<#n>-<#m>`](#compute-pool)|1              |SQL Server|
+|[`compute-<#n>-<#m>`](#compute-pool)|1 <sup>*</sup> |SQL Server|
 |[`control-<nnnn>`](#control)        |1              |Control service|
 |[`controldb-<#>`](#control)         |1              |Configuration store|
 |[`controlwd-<nnnn>`](#control)      |1              |Control watchdog|
@@ -81,8 +81,6 @@ Compute pool provides a SQL Server instance for computation.
 - `#m` identifies the instance id within the pool.
 
 The compute pool SQL Server instances are stateless. They only require storage for `tempdb`.
-
-SQL Server 2019 Big Data Cluster supports one compute pool. Compute pool can't be scaled or resized. You can not add or remove pods. SQL Server 2019 provides one SQL Server instance for the compute pool.
 
 ## Control
 

@@ -106,7 +106,7 @@ The sample performs the following tasks:
 
 ### Run the sample notebook
 
-To demonstrate the use of the MSSQL Spark Connector with this data in non-AD mode, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server](notebooks-guidance.md).
+To demonstrate the use of the MSSQL Spark Connector with this data in non-AD mode, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks with SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector_non_ad_pyspark.ipynb** sample notebook:
 

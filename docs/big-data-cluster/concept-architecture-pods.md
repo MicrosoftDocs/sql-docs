@@ -82,7 +82,7 @@ Storage pool provides data ingestion through Spark, storage in HDFS, data access
 |--------|----------|----------|--------|
 |`storage-0-#`| StatefulSet |[HDFS DataNode](concept-storage-pool.md)|- `hadoop`<br><br>- `mssql-server`<br><br>- `fluentbit`<br><br>
 |`nmnode-0-#`| StatefulSet |[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |- `hadoop`<br><br>- `fluentbit`
-|`sparkehead-#`| StatefulSet |[YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service](configure-spark-hdfs.md)|- `hadoop-yarn-jobhistory`<br><br>- `hadoop-livy-sparkhistory`<br><br>- `hadoop-hivemetastore`<br><br>-- `fluentbit`
+|`sparkehead-#`| StatefulSet |[Spark](configure-spark-hdfs.md)|- `hadoop-yarn-jobhistory`<br><br>- `hadoop-livy-sparkhistory`<br><br>- `hadoop-hivemetastore`<br><br>-- `fluentbit`
 
 ## Data pool
 

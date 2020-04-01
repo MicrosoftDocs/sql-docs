@@ -188,6 +188,10 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ## Release Notes
 
+### Version 1.18.0
+
+#### Improvements
+
 ### Version 1.17.0
 
 This is a hotfix version released for SQL Server 2019 only.

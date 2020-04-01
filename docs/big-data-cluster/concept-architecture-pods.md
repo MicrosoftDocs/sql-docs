@@ -37,25 +37,25 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 
 |Name  |Count  |Description  |
 |---------|---------|---------|
-|[appproxy-\<*#m*\>](#appproxy)|1         |Application proxy|
-|[compute-\<*#*\>-\<*#*\>](#compute-pool)|1         |SQL Server|
-|[control-\<*nnnn*\>](#control)|1         |Control service|
-|[controldb-\<*#*\>](#control)|1         |Configuration store|
-|[controlwd-\<*nnnn*\>](#control)|1         |Control watchdog|
-|[data-\<*#*\>-\<*#*\>](#data-pool)|2         |SQL Server|
-|[gateway-\<*#*\>](#gateway-service)|1         |Knox|
-|[logsdb-\<*#*\>](#logsdb)|1         |Elastic search|
-|[logsui-\<*nnnn*\>](#logsui)|1         |Kibana|
-|[master-\<*#*\>](#master-instance)|1-9         |Master SQL Server instance.|
-|[metricsdb-\<*#*\>](#metricsdb)|1         |InfluxDB|
-|[metricsdc-\<*nnnn*\>](#metricsdc)|5         |Telegraf|
-|[metricsui-\<*nnnn*\>](#metricsui)|1         |Grafana|
-|[mgmtproxy-\<*nnnn*\>](#mgmtproxy)|1         |Service proxy|
-|[nmnode-\<*#*\>-\<*#*\>](#hdfs-namenode)|2            |HDFS node. |
-|[operator-\<*nnnn*\>](#operator)|1         |High availability|
-|[sparkhead-\<*#*\>](#spark-head)|2        |HDFS spark head|
-|[storage-\<*#*\>-\<*#*\>](#storage-pool)|3         |Manage storage.|
-|[zookeeper-\<*#*\>](#zookeeper)|3          |High availability|
+|[`appproxy-<#m>`](#appproxy)|1         |Application proxy|
+|[`compute-<#n>-<#m>`](#compute-pool)|1         |SQL Server|
+|[`control-<nnnn>`](#control)|1         |Control service|
+|[`controldb-<#>`](#control)|1         |Configuration store|
+|[`controlwd-<nnnn>`](#control)|1         |Control watchdog|
+|[`data-<#>-<#>`](#data-pool)|2         |SQL Server|
+|[`gateway-<#>`](#gateway-service)|1         |Knox|
+|[`logsdb-<#>`](#logsdb)|1         |Elastic search|
+|[`logsui-<nnnn>`](#logsui)|1         |Kibana|
+|[`master-<#n>`](#master-instance)|1-9         |Master SQL Server instance.|
+|[`metricsdb-<#>`](#metricsdb)|1         |InfluxDB|
+|[`metricsdc-<nnnn>`](#metricsdc)|5         |Telegraf|
+|[`metricsui-<nnnn>`](#metricsui)|1         |Grafana|
+|[`mgmtproxy-<nnnn>`](#mgmtproxy)|1         |Service proxy|
+|[`nmnode-<#>-<#>`](#hdfs-namenode)|2            |HDFS node. |
+|[`operator-<nnnn>`](#operator)|1         |High availability|
+|[`sparkhead-<#>`](#spark-head)|2        |HDFS spark head|
+|[`storage-<#>-<#>`](#storage-pool)|3         |Manage storage.|
+|[`zookeeper-<#>`](#zookeeper)|3          |High availability|
 
 ## appproxy
 
@@ -71,7 +71,7 @@ Compute pool provides a SQL Server instance for computation.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`compute-\<*#n*\>-\<*#m*\>`| StatefulSet |- SQL Server instance<br><br>- `fluentbit`<br><br>- CollectD.
+|`compute-<#n>-<#m>`| StatefulSet |- SQL Server instance<br><br>- `fluentbit`<br><br>- CollectD.
 
 - `#n` identifies the compute pool.
 - `#m` identifies the instance id within the pool.
@@ -104,7 +104,7 @@ The data pool provides SQL Server instances for storage and compute.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`data-\<*#n*\>-\<*#m*\>` | StatefulSet |SQL Server instance<br><br>`fluentbit`<br><br>CollectD.|
+|`data-<#n>-<#m>` | StatefulSet |SQL Server instance<br><br>`fluentbit`<br><br>CollectD.|
 
 - `#n` identifies the data pool.
 - `#m` identifies the instance id within the pool.
@@ -115,7 +115,7 @@ Gateway services provides the Knox gateway to Spark, HDFS, [Yarn](https://hadoop
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`gateway-\<*#*\>`| StatefulSet |- Knox<br><br>- `fluentbit`
+|`gateway-<#>`| StatefulSet |- Knox<br><br>- `fluentbit`
 
 - `#` identifies the gateway.
 
@@ -141,7 +141,7 @@ HA deployment includes two NameNode pods.
 
 ## logsui
 
-`logsui` provides [Kibana](https://www.elastic.co/kibana)
+`logsui` provides [Kibana](https://www.elastic.co/kibana).
 
 |Pod name | Controller type | Containers in a pod |
 |--------|----------|--------|
@@ -149,7 +149,7 @@ HA deployment includes two NameNode pods.
 
 ## Master instance
 
-`master-\<*#n*\>` is the SQL Server master instance.
+`master-<#n>` is the SQL Server master instance.
 
 - Manages the data pool via DDL
 - Manipulates data in the data pool via DML
@@ -157,7 +157,7 @@ HA deployment includes two NameNode pods.
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`master-\<*#n*\>`| StatefulSet|- SQL Server instance<br><br>- `fluentbit`<br><br>- Collectd<br><br>- mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
+|`master-<#n>`| StatefulSet|- SQL Server instance<br><br>- `fluentbit`<br><br>- Collectd<br><br>- mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
 
 - `#n` identifies the instance number.
 
@@ -185,7 +185,7 @@ Each pod contains one instance of SQL Server. If the deployment is configured fo
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`metricsui-****`| ReplicaSet |- Grafana |
+|`metricsui-nnnn`| ReplicaSet |- Grafana |
 
 ## mgmtproxy
 
@@ -193,7 +193,7 @@ Mgmtproxy is a proxy for accessing services which monitor cluster health. Enable
 
 |Pod name | Controller type | Containers in a pod|
 |--------|----------|--------|
-|`mgmtproxy-****`| ReplicaSet |- Service proxy<br><br>- `fluentbit`|
+|`mgmtproxy-nnnn`| ReplicaSet |- Service proxy<br><br>- `fluentbit`|
 
 ## Operator
 

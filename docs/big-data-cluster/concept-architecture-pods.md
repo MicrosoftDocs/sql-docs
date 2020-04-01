@@ -59,9 +59,11 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 |[`storage-<#>-<#>`](#storage-pool)  |3 <sup>*</sup> |Manage storage.|
 |[`zookeeper-<#>`](#zookeeper)       |3              |High availability|
 
-<sup>*</sup> Adjust the number of instances at deployment time according to the size of the workload. 
+<sup>*</sup> Adjust the number of instances at deployment time according to the size of the workload.
 
-## appproxy
+## Application pool
+
+### appproxy
 
 `appproxy` is a web API that sits in front of the application pool applications. It authenticates users and then routes the requests through to the applications.
 
@@ -82,7 +84,9 @@ Compute pool provides a SQL Server instance for computation.
 
 The compute pool SQL Server instances are stateless. They only require storage for `tempdb`.
 
-## Control
+## Controller
+
+### Control
 
 Control pods provide the control service.
 
@@ -99,6 +103,62 @@ Control pods provide the control service.
 `controldb` is the configuration store. 
 
 `controlwd` orchestrates upgrades. 
+
+### logsdb
+
+`locgsdb` provides [Elasticsearch](https://www.elastic.co/).
+
+|Pod name | Kubernetes controller type | Containers in a pod |
+|--------|----------|--------|
+|`logsdb-0`| StatefulSet |- Elasticsearch<br><br>- logsdb
+
+### logsui
+
+`logsui` provides [Kibana](https://www.elastic.co/kibana).
+
+|Pod name | Kubernetes controller type | Containers in a pod |
+|--------|----------|--------|
+|`logsui`| ReplicaSet |- Elasticsearch<br><br>- Kibana
+
+### MetricsDB
+
+`metricsb` runs [InfluxDB](https://www.influxdata.com).
+
+|Pod name | Kubernetes controller type | Containers in a pod|
+|--------|----------|--------|
+|`metricsdb-0`| StatefulSet | InfluxDB
+
+### Metricsdc
+
+`metricsdc` collects node level metrics.
+
+|Pod name | Kubernetes controller type | Containers in a pod|
+|--------|----------|--------|
+|`metricsdc`| DaemonSet | Telegraf |
+
+### Metricsui
+
+`metrics` ui provides a dashboard for searching through cluster metrics.
+
+|Pod name | Kubernetes controller type | Containers in a pod|
+|--------|----------|--------|
+|`metricsui-nnnn`| ReplicaSet |- Grafana |
+
+### mgmtproxy
+
+Mgmtproxy is a proxy for accessing services which monitor cluster health. Enables access to Kibana and Grafana.
+
+|Pod name | Kubernetes controller type | Containers in a pod|
+|--------|----------|--------|
+|`mgmtproxy-nnnn`| ReplicaSet |- Service proxy<br><br>- `fluentbit`|
+
+## ZooKeeper
+
+Zookeeper manages failover for HA resources. For background, see [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) in the Kubernetes documentation.
+
+|Pod name | Kubernetes controller type | Containers in a pod|
+|--------|----------|--------|
+|`zookeeper`| StatefulSet |- HDFS DataNode<br><br>- ZooKeeper<br><br>- `fluentbit`
 
 ## Data pool
 
@@ -123,7 +183,17 @@ Gateway services provides the Knox gateway to Spark, HDFS, [Yarn](https://hadoop
 
 Only one replica (one container) supported.
 
-## HDFS NameNode
+## Storage pool
+
+Storage pool provides data ingestion through Spark, storage in HDFS, data access through HDFS and SQL Server endpoints.
+
+|Pod name | Kubernetes controller type | Containers in a pod|
+|--------|----------|--------|
+|`storage-0-#`| StatefulSet |- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
+
+[What is the storage pool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?](concept-storage-pool.md)
+
+### HDFS NameNode
 
 [HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) keeps the directory tree of all files.
 
@@ -133,21 +203,15 @@ Only one replica (one container) supported.
 
 HA deployment includes two NameNode pods.
 
-## logsdb
+### Spark head
 
-`locgsdb` provides [Elasticsearch](https://www.elastic.co/).
+Spark head provides YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service (internal use only).
 
-|Pod name | Kubernetes controller type | Containers in a pod |
+|Pod name | Kubernetes controller type | Containers in a pod|
 |--------|----------|--------|
-|`logsdb-0`| StatefulSet |- Elasticsearch<br><br>- logsdb
+|`sparkehead-#`| StatefulSet |- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- `fluentbit`
 
-## logsui
-
-`logsui` provides [Kibana](https://www.elastic.co/kibana).
-
-|Pod name | Kubernetes controller type | Containers in a pod |
-|--------|----------|--------|
-|`logsui`| ReplicaSet |- Elasticsearch<br><br>- Kibana
+[Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
 
 ## Master instance
 
@@ -165,73 +229,13 @@ HA deployment includes two NameNode pods.
 
 Each pod contains one instance of SQL Server. If the deployment is configured for high-availability (HA), it includes 3 pods. Each pod includes a SQL Server instance with databases in a SQL Server Always On Availability Group.
 
-## MetricsDB
-
-`metricsb` runs [InfluxDB](https://www.influxdata.com).
-
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`metricsdb-0`| StatefulSet | InfluxDB
-
-## Metricsdc
-
-`metricsdc` collects node level metrics.
-
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`metricsdc`| DaemonSet | Telegraf |
-
-## Metricsui
-
-`metrics` ui provides a dashboard for searching through cluster metrics.
-
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`metricsui-nnnn`| ReplicaSet |- Grafana |
-
-## mgmtproxy
-
-Mgmtproxy is a proxy for accessing services which monitor cluster health. Enables access to Kibana and Grafana.
-
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`mgmtproxy-nnnn`| ReplicaSet |- Service proxy<br><br>- `fluentbit`|
-
-## Operator
+### Operator
 
 The operator implements and registers the custom resource definition for SQL Server and the Availability Group resources. When the operator is deployed, it registers itself as a listener for notifications about SQL Server resources being deployed in the Kubernetes cluster
 
 |Pod name | Kubernetes controller type | Containers in a pod|
 |--------|----------|--------|
 |`operator`| ReplicaSet |`mssql-ha-operator`
-
-## Spark head
-
-Spark head provides YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service (internal use only).
-
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`sparkehead-#`| StatefulSet |- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- `fluentbit`
-
-[Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
-
-## Storage pool
-
-Storage pool provides data ingestion through Spark, storage in HDFS, data access through HDFS and SQL Server endpoints.
-
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`storage-0-#`| StatefulSet |- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
-
-[What is the storage pool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?](concept-storage-pool.md)
-
-## ZooKeeper
-
-Zookeeper manages failover for HA resources. For background, see [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) in the Kubernetes documentation.
-
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`zookeeper`| StatefulSet |- HDFS DataNode<br><br>- ZooKeeper<br><br>- `fluentbit`
 
 ## Next steps
 

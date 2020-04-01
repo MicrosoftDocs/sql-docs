@@ -1,7 +1,7 @@
 ---
 title: "Create and Manage Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/31/2020"
+ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search

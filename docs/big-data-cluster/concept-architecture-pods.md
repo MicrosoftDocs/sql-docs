@@ -61,14 +61,6 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 
 <sup>*</sup> Adjust the number of instances at deployment time according to the size of the workload.
 
-## Application pool
-
-`appproxy` is a web API that sits in front of the application pool applications. It authenticates users and then routes the requests through to the applications.
-
-|Pod name | Kubernetes controller type |Service or application| Containers in a pod  |
-|--------|----|------|--------|
-|`appproxy`| ReplicaSet |User defined|- `app-service-proxy`<br><br>- `fluentbit`
-
 ## Compute pool
 
 Compute pool provides a SQL Server instance for computation.
@@ -82,22 +74,15 @@ Compute pool provides a SQL Server instance for computation.
 
 The compute pool SQL Server instances are stateless. They only require storage for `tempdb`.
 
-## Control
+## Storage pool
 
-Control pods provide the control service.
+Storage pool provides data ingestion through Spark, storage in HDFS, data access through HDFS and SQL Server endpoints.
 
-|Pod name | Kubernetes controller type |Service or application| Containers in a pod |
-|--------|----------|-------|--------|
-|`control-#`| ReplicaSet |Controller service|- controller<br><br>- security-support<br><br>- `fluentbit`
-|`controldb`| StatefulSet |Configuration store|- mssql-server<br><br>- `fluentbit`
-|`controlwd`| ReplicaSet |Upgrade orchestration|ControlWatchDog
-|`logsdb-#`| StatefulSet |[Elasticsearch](https://www.elastic.co/)|- Elasticsearch<br><br>- logsdb
-|`logsui`| ReplicaSet |[Kibana](https://www.elastic.co/kibana)|- Elasticsearch<br><br>- Kibana
-|`metricsdb-#`| StatefulSet |[InfluxDB](https://www.influxdata.com)| InfluxDB
-|`metricsdc`| DaemonSet |Node level metrics| Telegraf |
-|`metricsui-nnnn`| ReplicaSet |[Grafana](https://grafana.com/)|- Grafana |
-|`mgmtproxy-nnnn`| ReplicaSet |Management proxy|- Service proxy<br><br>- `fluentbit`|
-|`zookeeper`| StatefulSet |[ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) high availability|- HDFS DataNode<br><br>- ZooKeeper<br><br>- `fluentbit`
+|Pod name | Kubernetes controller type |Service or application| Containers |
+|--------|----------|----------|--------|
+|`storage-0-#`| StatefulSet |[HDFS DataNode](concept-storage-pool.md)|- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
+|`nmnode-0-#`| StatefulSet |[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |- HDFS NameNode<br><br>- `fluentbit`
+|`sparkehead-#`| StatefulSet |[YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service](configure-spark-hdfs.md)|- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- `fluentbit`
 
 ## Data pool
 
@@ -109,28 +94,6 @@ The data pool provides SQL Server instances for storage and compute.
 
 - `#n` identifies the data pool.
 - `#m` identifies the instance id within the pool.
-
-## Gateway service
-
-Gateway services provides the Knox gateway to Spark, HDFS, [Yarn](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html), Yarn UI, and Spark UI.
-
-|Pod name | Kubernetes controller type |Service or application| Containers |
-|--------|-----|-----|--------|
-|`gateway-<#>`| StatefulSet | Knox gateway |- Knox<br><br>- `fluentbit`
-
-- `#` identifies the gateway.
-
-Only one replica (one container) supported.
-
-## Storage pool
-
-Storage pool provides data ingestion through Spark, storage in HDFS, data access through HDFS and SQL Server endpoints.
-
-|Pod name | Kubernetes controller type |Service or application| Containers |
-|--------|----------|----------|--------|
-|`storage-0-#`| StatefulSet |[HDFS DataNode](concept-storage-pool.md)|- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
-|`nmnode-0-#`| StatefulSet |[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |- HDFS NameNode<br><br>- `fluentbit`
-|`sparkehead-#`| StatefulSet |[YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service](configure-spark-hdfs.md)|- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- `fluentbit`
 
 ## Master instance
 
@@ -148,6 +111,43 @@ Storage pool provides data ingestion through Spark, storage in HDFS, data access
 Each `master` pod contains one instance of SQL Server. A high-availability deployment includes 3 pods. Each pod includes a SQL Server instance with databases in a SQL Server Always On Availability Group.
 
 `operator` is included in high availability deployments. The operator implements and registers the custom resource definition for SQL Server and the Availability Group resources. When the operator is deployed, it registers itself as a listener for notifications about SQL Server resources being deployed in the Kubernetes cluster.
+
+## Control
+
+Control pods provide the control service.
+
+|Pod name | Kubernetes controller type |Service or application| Containers |
+|--------|----------|-------|--------|
+|`control-#`| ReplicaSet |Controller service|- controller<br><br>- security-support<br><br>- `fluentbit`
+|`controldb`| StatefulSet |Configuration store|- mssql-server<br><br>- `fluentbit`
+|`controlwd`| ReplicaSet |Upgrade orchestration|ControlWatchDog
+|`logsdb-#`| StatefulSet |[Elasticsearch](https://www.elastic.co/)|- Elasticsearch<br><br>- logsdb
+|`logsui`| ReplicaSet |[Kibana](https://www.elastic.co/kibana)|- Elasticsearch<br><br>- Kibana
+|`metricsdb-#`| StatefulSet |[InfluxDB](https://www.influxdata.com)| InfluxDB
+|`metricsdc`| DaemonSet |Node level metrics| Telegraf |
+|`metricsui-nnnn`| ReplicaSet |[Grafana](https://grafana.com/)|- Grafana |
+|`mgmtproxy-nnnn`| ReplicaSet |Management proxy|- Service proxy<br><br>- `fluentbit`|
+|`zookeeper`| StatefulSet |[ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) high availability|- HDFS DataNode<br><br>- ZooKeeper<br><br>- `fluentbit`
+
+## Gateway service
+
+Gateway services provides the Knox gateway to Spark, HDFS, [Yarn](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html), Yarn UI, and Spark UI.
+
+|Pod name | Kubernetes controller type |Service or application| Containers |
+|--------|-----|-----|--------|
+|`gateway-<#>`| StatefulSet | Knox gateway |- Knox<br><br>- `fluentbit`
+
+- `#` identifies the gateway.
+
+Only one replica (one container) supported.
+
+## Application pool
+
+`appproxy` is a web API that sits in front of the application pool applications. It authenticates users and then routes the requests through to the applications.
+
+|Pod name | Kubernetes controller type |Service or application| Containers  |
+|--------|----|------|--------|
+|`appproxy`| ReplicaSet |User defined|- `app-service-proxy`<br><br>- `fluentbit`
 
 ## Next steps
 

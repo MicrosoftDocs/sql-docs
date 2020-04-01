@@ -105,7 +105,7 @@ You can specify a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> When using an Azure SQL Managed Instance to host Reporting Services 2019 databases, support is limited to using SQL Server login credentials for the connection.
+> When using Azure SQL Managed Instance to host Reporting Services 2019 databases for an external SSRS IaaS service, please note that SQL Server authentication only is support for the connection.
 
 ::: moniker-end
 

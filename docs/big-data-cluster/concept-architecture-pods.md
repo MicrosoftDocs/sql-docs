@@ -128,7 +128,7 @@ Storage pool provides data ingestion through Spark, storage in HDFS, data access
 
 |Pod name | Kubernetes controller type |Service or application| Containers in a pod|
 |--------|----------|----------|--------|
-|`storage-0-#`| StatefulSet |[HDFS DataNode](../includes/ssbigdataclusters-ss-nover.md)])?](concept-storage-pool.md|- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
+|`storage-0-#`| StatefulSet |[HDFS DataNode](concept-storage-pool.md|- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
 |`nmnode-0-#`| StatefulSet |[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |- HDFS NameNode<br><br>- `fluentbit`
 |`sparkehead-#`| StatefulSet |[YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service](configure-spark-hdfs.md)|- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- `fluentbit`
 

@@ -194,6 +194,6 @@ To create a full-text index on a **varbinary(max)** column, the Full-Text Engine
   
 2.  Select **Delete Full-Text index**.  
   
-3.  When prompted, click **OK** to confirm that you want to delete the full-text index.  
+3.  When prompted, click **OK** to confirm that you want to delete the full-text index.      
   
   

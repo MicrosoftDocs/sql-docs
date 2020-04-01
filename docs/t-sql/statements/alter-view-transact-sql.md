@@ -45,7 +45,7 @@ AS select_statement
 ```
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics(SQL DW) and Parallel Data Warehouse  
   
 ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   

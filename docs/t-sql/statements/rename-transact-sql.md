@@ -13,7 +13,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 # RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table, a column in a user-create table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
 > To rename a database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
@@ -90,7 +90,7 @@ You can't rename a table or database while it is in use. Renaming a table requir
 
 ### Rename column restrictions
 
-You can't rename a column that is used for the table distribution. You also can't rename any columns in a temp table. 
+You can't rename a column that is used for the table's distribution. You also can't rename any columns in a temp table. 
 
 ### Views are not updated
 
@@ -98,7 +98,7 @@ When renaming a database, all views that use the former database name will becom
 
 When renaming a table, views are not updated to reference the new table name. Each view, inside or outside of the database, that references the former table name will become invalid. To resolve this issue, you can update each view to reference the new table name.
 
-When renaming a column, views are not updated to reference the new column name. Views will keep showing the old column name until an alter view is performed. In certain cases, views can become invalid needing a drop and recreate of the view.
+When renaming a column, views are not updated to reference the new column name. Views will keep showing the old column name until an alter view is performed. In certain cases, views can become invalid needing a drop and recreate.
 
 ## Locking
 

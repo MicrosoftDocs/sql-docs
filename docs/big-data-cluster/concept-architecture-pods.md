@@ -65,17 +65,17 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 
 `appproxy` is a web API that sits in front of the application pool applications. It authenticates users and then routes the requests through to the applications.
 
-|Pod name | Kubernetes controller type |  Containers in a pod  |
-|--------|----------|--------|
-|`appproxy`| ReplicaSet |- `app-service-proxy`<br><br>- `fluentbit`
+|Pod name | Kubernetes controller type |Service or application| Containers in a pod  |
+|--------|----|------|--------|
+|`appproxy`| ReplicaSet |User defined|- `app-service-proxy`<br><br>- `fluentbit`
 
 ## Compute pool
 
 Compute pool provides a SQL Server instance for computation.
 
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`compute-<#n>-<#m>`| StatefulSet |- SQL Server instance<br><br>- `fluentbit`<br><br>- CollectD.
+|Pod name | Kubernetes controller type |Service or application| Containers |
+|--------|-----|-----|--------|
+|`compute-<#n>-<#m>`| StatefulSet |SQL Server|- mssql-server<br><br>- `fluentbit`<br><br>- CollectD.
 
 - `#n` identifies the compute pool.
 - `#m` identifies the instance id within the pool.
@@ -103,9 +103,9 @@ Control pods provide the control service.
 
 The data pool provides SQL Server instances for storage and compute.
 
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`data-<#n>-<#m>` | StatefulSet |SQL Server instance<br><br>`fluentbit`<br><br>CollectD.|
+|Pod name | Kubernetes controller type |Service or application| Containers |
+|--------|----|------|--------|
+|`data-<#n>-<#m>` | StatefulSet |SQL Server |- mssql-server <br><br>- `fluentbit`<br><br>CollectD.|
 
 - `#n` identifies the data pool.
 - `#m` identifies the instance id within the pool.
@@ -114,9 +114,9 @@ The data pool provides SQL Server instances for storage and compute.
 
 Gateway services provides the Knox gateway to Spark, HDFS, [Yarn](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html), Yarn UI, and Spark UI.
 
-|Pod name | Kubernetes controller type | Containers in a pod|
-|--------|----------|--------|
-|`gateway-<#>`| StatefulSet |- Knox<br><br>- `fluentbit`
+|Pod name | Kubernetes controller type |Service or application| Containers |
+|--------|-----|-----|--------|
+|`gateway-<#>`| StatefulSet | Knox gateway |- Knox<br><br>- `fluentbit`
 
 - `#` identifies the gateway.
 
@@ -126,9 +126,9 @@ Only one replica (one container) supported.
 
 Storage pool provides data ingestion through Spark, storage in HDFS, data access through HDFS and SQL Server endpoints.
 
-|Pod name | Kubernetes controller type |Service or application| Containers in a pod|
+|Pod name | Kubernetes controller type |Service or application| Containers |
 |--------|----------|----------|--------|
-|`storage-0-#`| StatefulSet |[HDFS DataNode](concept-storage-pool.md|- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
+|`storage-0-#`| StatefulSet |[HDFS DataNode](concept-storage-pool.md)|- HDFS DataNode<br><br>- SQL Server storage instance<br><br>- `fluentbit`<br><br>- Yarn (for on demand processes)
 |`nmnode-0-#`| StatefulSet |[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |- HDFS NameNode<br><br>- `fluentbit`
 |`sparkehead-#`| StatefulSet |[YARN history server, Spark history server for Livy jobs, Hive metastore, MapReduce service](configure-spark-hdfs.md)|- YARN history server<br><br>- Spark history server<br><br>- Hive metastore<br><br>- `fluentbit`
 
@@ -140,9 +140,9 @@ Storage pool provides data ingestion through Spark, storage in HDFS, data access
 - Manipulates data in the data pool via DML
 - Off-loads analytic query execution to the data pool
 
-|Pod name | Kubernetes controller type |Service or application| Containers in a pod|
+|Pod name | Kubernetes controller type |Service or application| Containers |
 |--------|----------|----------|--------|
-|`master-<#n>`| StatefulSet| SQL Server|- SQL Server instance<br><br>- `fluentbit`<br><br>- Collectd<br><br>- mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
+|`master-<#n>`| StatefulSet| SQL Server|- mssql-server<br><br>- `fluentbit`<br><br>- Collectd<br><br>- mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
 |`operator`| ReplicaSet | SQL Server operator |`mssql-ha-operator`
 
 Each `master` pod contains one instance of SQL Server. A high-availability deployment includes 3 pods. Each pod includes a SQL Server instance with databases in a SQL Server Always On Availability Group.

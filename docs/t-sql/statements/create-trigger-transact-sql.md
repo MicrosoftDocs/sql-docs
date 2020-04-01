@@ -1,6 +1,6 @@
 ---
 title: "CREATE TRIGGER (Transact-SQL) | Microsoft Docs"
-ms.description: "Transact-SQL reference for the CREATE TRIGGER statement, which is used to create a DML, DDL, or logon trigger."
+description: "Transact-SQL reference for the CREATE TRIGGER statement, which is used to create a DML, DDL, or logon trigger."
 ms.date: "10/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,6 +1,6 @@
 ---
 title: "SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs"
-ms.description: "Transact-SQL reference for the SET IDENTITY_INSERT statement. When set to ON, this permits inserting explicit values into the identity column of a table."
+description: "Transact-SQL reference for the SET IDENTITY_INSERT statement. When set to ON, this permits inserting explicit values into the identity column of a table."
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

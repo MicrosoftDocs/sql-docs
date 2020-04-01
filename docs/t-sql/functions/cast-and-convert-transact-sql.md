@@ -1,6 +1,6 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
-ms.description: "Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another."
+description: "Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another."
 ms.date: "08/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

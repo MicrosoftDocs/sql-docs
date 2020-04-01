@@ -8,7 +8,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: seo-lt-2019​, seo-mmd-2019
-ms.date: 12/04/2019
+ms.date: 01/04/2020
 ---
 
 # Configure a Report Server Database Connection (SSRS Configuration Manager)
@@ -100,12 +100,12 @@ You can specify a Windows user account for the report server connection to the r
 
 #### Using a SQL Server Login
 
-You can specify a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to connect to the report server database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and the report server database is on a remote computer, use IPSec to help secure the transmission of data between the servers. If you use a database login, you must update the report server database connection every time you change the password or the account.  
+You can specify a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to connect to the report server database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication and the report server database is on a remote computer, use IPSec to help secure the transmission of data between the servers. If you use a database login, you must update the report server database connection every time you change the password or the account.  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> When using an Azure SQL Managed Instance to host Reporting Services 2019 databases, support is limited to using SQL Server login credentials for the connection.
+> When using Azure SQL Managed Instance to host Reporting Services 2019 databases for an external SSRS IaaS service, please note that SQL Server authentication only is supported for the connection.
 
 ::: moniker-end
 

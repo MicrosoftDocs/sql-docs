@@ -145,9 +145,9 @@ GO
  The following example shows how to use the identifier of the unique key column to obtain the name of the column.  
   
 ```sql  
-USE AdventureWorks;  
+USE AdventureWorks;
 GO  
-DECLARE @key_column sysname  
+DECLARE @key_column sysname
 SET @key_column = Col_Name(Object_Id('Production.Document'),  
 ObjectProperty(Object_id('Production.Document'),  
 'TableFulltextKeyColumn')   

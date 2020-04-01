@@ -116,7 +116,7 @@ For more information, see [Configure and Manage Stopwords and Stoplists for Full
  
 Updating a full-text index immediately after each change in the base table is also resource-intensive. Therefore, if you have a high update/insert/delete rate, you may experience some degradation in query performance. If this occurs, consider scheduling manual change tracking updates to keep up with the numerous changes from time to time, rather than competing with queries for resources.  
   
-For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md). 
+For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).
 
 ## Next steps
 After you set up SQL Server Full-Text Search, you're ready to run full-text queries. For more info, see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).

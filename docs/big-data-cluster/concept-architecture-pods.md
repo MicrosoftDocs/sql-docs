@@ -17,7 +17,13 @@ ms.technology: big-data-cluster
 
 This article describes the resources a SQL Server Big Data Cluster deploys.
 
-A Big Data Cluster cluster deploys pods based on the deployment configuration. This article describes the pods deployed with `aks-dev-test-ha` profile and includes a Spark pool.
+A Big Data Cluster cluster deploys pods based on the deployment configuration. This article describes the pods deployed with `aks-dev-test-ha` profile and includes a Spark pool. Query Kubernetes to see the pods deployed in your cluster. The following example returns a list of pods under a specific namespace.
+
+```bash
+kubectl get pods -n <namespace>
+```
+
+Replace `<namespace>` with the Kubernetes namespace of your big data cluster. 
 
 For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
 

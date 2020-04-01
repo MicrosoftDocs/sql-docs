@@ -12,15 +12,27 @@ ms.author: chugu
 ---
 # SQL Server Integration Services (SSIS) DevOps Tools (Preview)
 
-[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** marketplace.
+[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
 
 If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops), then add **SSIS DevOps Tools** extension following [the steps](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension).
 
-**SSIS DevOps Tools** includes **SSIS Build** task and **SSIS Deploy** release task.
+**SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**..
 
-- **SSIS Build** task supports building dtproj files in project deployment model or package deployment model.
+- **[SSIS Build](#ssis-build-task)** task supports building dtproj files in project deployment model or package deployment model.
 
-- **SSIS Deploy** task supports deploying single or multiple ispac files to on-premises SSIS catalog and Azure-SSIS IR, or SSISDeploymentManifest files and their associated files to on-premises or Azure file share.
+- **[SSIS Deploy](#ssis-deploy-task)** task supports deploying single or multiple ispac files to on-premises SSIS catalog and Azure-SSIS IR, or SSISDeploymentManifest files and their associated files to on-premises or Azure file share.
+
+- **[SSIS Catalog Configuration](#ssis-catalog-configuration-task)** task supports configuring folder/project/environment of SSIS Catalog with a configuration file in JSON format. This task supports following scenarios:
+    - Folder
+        - Create folder.
+        - Update folder description.
+    - Project
+        - Configure value of parameters, both literal value and referenced value are supported.
+        - Add environment references.
+    - Environment
+        - Create environment.
+        - Update environment description.
+        - Create or update environment variable.
 
 ## SSIS Build task
 
@@ -58,8 +70,6 @@ cat log.txt
 
 - Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will hang and time out during execution.
 
-- **ConnectByProxy** is a new property added in SSDT recently. SSDT installed on Microsoft-hosted agent is not updated, so please use self-hosted agent as a work-around.
-
 ## SSIS Deploy task
 
 ![deploy task](media/ssis-deploy-task.png)
@@ -88,18 +98,18 @@ Path of the destination folder where the source file will be deployed to. For ex
 - /SSISDB/\<folderName\>
 - \\\\\<machineName\>\\\<shareFolderName\>\\\<optionalSubfolderName\>
 
-SSIS Deploy task will create the folder and subfolder if they don’t exist.
+SSIS Deploy task will create the folder and subfolder if they don't exist.
 
 #### Authentication type
 
-Authentication type to access the specified destination server. This property is only visible when Destination type is SSISDB. In general SSIS Deploy task supports four types:
+Authentication type to access the specified destination server. This property is only visible when Destination type is SSISDB. In general below authentication types are supported:
 
 - Windows Authentication
 - SQL Server Authentication
 - Active Directory - Password
 - Active Directory - Integrated
 
-But whether the specific authentication type is supported depends on destination server type and agent type. Detail support matrix is listed in below table.
+But whether a specific authentication type is supported depends on destination server type and agent type. Detail support matrix is listed in below table.
 
 | |Microsoft-hosted agent|Self-hosted agent|
 |---------|---------|---------|
@@ -131,13 +141,209 @@ Specify whether tp continue deployment for remaining projects or files when an e
 
 ### Limitations and known issues
 
-SSIS Deploy Task doesn’t support the following scenarios currently:
+SSIS Deploy Task doesn't support the following scenarios currently:
 
 - Configure environment in SSIS catalog.
 - Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
 - Deploy packages to MSDB or SSIS Package Store.
 
+## SSIS Catalog Configuration task
+
+![catalog configuration task](media/ssis-catalog-configuation-task.png)
+
+### Properties
+
+#### Configuration file source
+
+Source of the SSIS catalog configuration JSON file. It can be "File path" or "Inline".
+
+Refer to details on how to [define configuration JSON](#define-configuration-json):
+
+- Refer to [a sample inline configuration JSON](#a-sample-inline-configuration-json).
+- Check [JSON schema](#json-schema).
+
+#### Configuration JSON file path
+
+Path of the SSIS catalog configuration JSON file. This property is only visible when selecting "File path" as configuration file source.
+
+To use [pipeline variables](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) in configuration JSON file, you need to add a [File Transform task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+
+#### Inline configuration JSON
+
+Inline JSON of the SSIS catalog configuration. This property is only visible when selecting "Inline" as configuration file source. Pipeline variables can be directly used.
+
+#### Roll back configuration when error occurs
+
+Whether to roll back the configuration made by this task when error occurs.
+
+#### Target server
+
+Name of target SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Database managed instance.
+
+#### Authentication type
+
+Authentication type to access the specified target server. In general below authentication types are supported:
+
+- Windows Authentication
+- SQL Server Authentication
+- Active Directory - Password
+- Active Directory - Integrated
+
+But whether a specific authentication type is supported depends on destination server type and agent type. Detail support matrix is listed in below table.
+
+| |Microsoft-hosted agent|Self-hosted agent|
+|---------|---------|---------|
+|SQL server on-premises or VM |N/A|Windows Authentication|
+|Azure SQL|SQL Server Authentication <br> Active Directory - Password|SQL Server Authentication <br> Active Directory - Password <br> Active Directory - Integrated|
+
+#### Username
+
+Username to access the target SQL Server. This property is only visible when Authentication type is SQL Server Authentication or Active Directory - Password.
+
+#### Password
+
+Password to access the target SQL Server. This property is only visible when Authentication type is SQL Server Authentication or Active Directory - Password.
+
+### Define configuration JSON
+
+The configuration JSON schema has three layers:
+
+- catalog
+- folder
+- project and environment
+
+![catalog configuration schema](media/catalog-configuration-schema.png)
+
+#### A sample inline configuration JSON
+
+```json
+{
+  "folders": [
+    {
+      "name": "devopsdemo",
+      "description": "devops demo folder",
+      "projects": [
+        {
+          "name": "catalog devops",
+          "parameters": [
+            {
+              "name": "password",
+              "container": "Package.dtsx",
+              "value": "passwd",
+              "valueType": "referenced"
+            },
+            {
+              "name": "serverName",
+              "container": "catalog devops",
+              "value": "localhost",
+              "valueType": "literal"
+            }
+          ],
+          "references": [
+            {
+              "environmentName": "test",
+              "environmentFolder": "devopsdemo"
+            },
+            {
+              "environmentName": "test",
+              "environmentFolder": "."
+            }
+          ]
+        }
+      ],
+      "environments": [
+        {
+          "name": "test",
+          "description": "test",
+          "variables": [
+            {
+              "name": "passwd",
+              "type": "string",
+              "description": "",
+              "value": "$(SSISDBServerAdminPassword)",
+              "sensitive": true
+            },
+            {
+              "name": "serverName",
+              "type": "string",
+              "description": "",
+              "value": "$(TargetServerName)",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### JSON schema
+
+##### Catalog Attributes
+
+|Property  |Description  |Notes  |
+|---------|---------|---------|
+|folders  |An array of folder objects. Each object contains configuration information for a catalog folder.|See *Folder Attributes* for the schema of a folder object.|
+
+##### Folder Attributes
+
+|Property  |Description  |Notes  |
+|---------|---------|---------|
+|name  |Name of the catalog folder.|Folder will be created if not exists.|
+|description|Description of the catalog folder.|The value of *null* will be skipped.|
+|projects|An array of project objects. Each object contains configuration information for a project.|See *Project Attributes* for the schema of a project object.|
+|environments|An array of environment objects. Each object contains configuration information for an environment.|See *Environment Attributes* for the schema of an environment object.|
+
+##### Project Attributes
+
+|Property  |Description  |Notes  |
+|---------|---------|---------|
+|name|Name of the project. |Project object will be skipped if project does not exist in the parent folder.|
+|parameters|An array of parameter objects. Each object contains configuration information for a parameter.|See *Parameter Attributes* the schema of a parameter object.|
+|references|An array of reference objects. Each object represents an environment reference to the target project.|See *Reference Attributes* for the schema of a reference object.|
+
+##### Parameter Attributes
+
+|Property  |Description  |Notes  |
+|---------|---------|---------|
+|name|Name of the parameter.|The parameter can be *project parameter* or *package parameter*. <br> The parameter will be skipped if it does not exist in the parent project.|
+|container|Container of the parameter.|<li>If the parameter is a project parameter, the *container* should be the project name. <li>If it's a package parameter, the *container* should be the package name with **.dtsx** extension. <li> If the parameter is a connection manager property, the name should be in such format: **CM.\<Connection Manager Name>.\<Property Name>**.|
+|value|Value of the parameter.|<li>When *valueType* is *referenced*: The value is a reference to an environment variable in  *string* type. <li> When *valueType* is *literal*: This attribute supports any valid *boolean*, *number*, and *string* JSON values. <br> The value will be converted to the target parameter type. Error will occur if it cannot be converted.<li> The value of *null* is invalid. The task will skip this parameter object, and give a warning.|
+|valueType|Type of the parameter value.|Valid types are: <br> *literal*: The *value* attribute represents a literal value. <br> *referenced*: The *value* attribute represents a reference to an environment variable.|
+
+##### Reference Attributes
+
+|Property  |Description  |Notes  |
+|---------|---------|---------|
+|environmentFolder|Folder name of the environment.|Folder will be created if not exists. <br> Value can be ".", which  represents parent folder of the project, which references the environment.|
+|environmentName|Name of the referenced environment.|The specified environment will be created if not exists.|
+
+##### Environment Attributes
+
+|Property  |Description  |Notes  |
+|---------|---------|---------|
+|name|Name of the environment.|Environment will be created if not exists.|
+|description|Description of the environment.|The value of *null* will be skipped.|
+|variables|An array of variable objects.|Each object contains configuration information for an environment variable.see *Variable Attributes* for the schema of a variable object.|
+
+##### Variable Attributes
+
+|Property  |Description  |Notes  |
+|---------|---------|---------|
+|name|Name of the environment variable.|Environment variable will be created if not exists.|
+|type|Data type of the environment variable.|Valid types are: <br> *boolean* <br> *byte* <br> *datetime* <br> decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *string* <br> *uint32* <br> *uint64*|
+|description|Description of the environment variable.|The value of *null* will be skipped.|
+|value|Value of the environment variable.|This attribute supports any valid boolean, number, and string JSON values.<br> The value will be converted to the type specified by **type** attribute. Error will occur if conversion fails.<br>The value of *null* is invalid. The task will skip this environment variable object, and give a warning.|
+|sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
+
 ## Release notes
+
+### Version 0.2.0 Preview
+
+Release Date: March 31, 2020
+
+- Add SSIS Catalog Configuration task.
 
 ### Version 0.1.3 Preview
 

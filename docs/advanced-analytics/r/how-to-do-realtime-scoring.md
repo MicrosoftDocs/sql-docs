@@ -4,7 +4,7 @@ description: Use rxPredict, or sp_rxPredict for real-time scoring, or PREDICT T-
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/30/2018  
+ms.date: 03/30/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -23,7 +23,7 @@ The following table summarizes the scoring frameworks for forecasting and predic
 | Methodology           | Interface         | Library requirements | Processing speeds |
 |-----------------------|-------------------|----------------------|----------------------|
 | Extensibility framework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | None. Models can be based on any R or Python function | Hundreds of milliseconds. <br/>Loading a runtime environment has a fixed cost, averaging three to six hundred milliseconds, before any new data is scored. |
-| [Real-time scoring CLR extension](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) on a serialized model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
+| [Real-time scoring CLR extension](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) on a serialized model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
 | [Native scoring C++ extension](../sql-native-scoring.md) | [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) on a serialized model | R: RevoScaleR <br/>Python: revoscalepy | Less than 20 milliseconds, on average. | 
 
 Speed of processing and not substance of the output is the differentiating feature. Assuming the same functions and inputs, the scored output should not vary based on the approach you use.
@@ -80,7 +80,7 @@ To use a model with either of the fast scoring options, save the model using a s
 
 **Using SQL**
 
-From SQL code, you can train the model using [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and directly insert the trained models into a table, in a column of type **varbinary(max)**. For a simple example, see [Create a preditive model in R](../tutorials/quickstart-r-train-score-model.md)
+From SQL code, you can train the model using [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and directly insert the trained models into a table, in a column of type **varbinary(max)**. For a simple example, see [Create a preditive model in R](../tutorials/quickstart-r-train-score-model.md)
 
 **Using R**
 

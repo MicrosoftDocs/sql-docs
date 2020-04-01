@@ -192,7 +192,7 @@ To create a full-text index on a **varbinary(max)** column, the Full-Text Engine
   
 1.  In Object Explorer, right-click the table that has the full-text index that you want to delete.  
   
-2.  Select **Delete Full-Text index**.  
+2.  Select **Delete Full-Text index**.
   
 3.  When prompted, click **OK** to confirm that you want to delete the full-text index.      
   

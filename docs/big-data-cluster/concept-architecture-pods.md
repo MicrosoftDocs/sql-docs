@@ -67,8 +67,8 @@ Control pods provide the control service.
 
 |Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
 |--------|----|------|--------|-------|
-|`control-#`|1| ReplicaSet |Controller service|` controller`<br><br>- `security-support`<br><br>- `fluentbit`
-|`controldb`|1| StatefulSet |Configuration store|-` mssql-server`<br><br>- `fluentbit`
+|`control-#`|1| ReplicaSet |Controller service|- `controller`<br><br>- `security-support`<br><br>- `fluentbit`
+|`controldb`|1| StatefulSet |Configuration store|- `mssql-server`<br><br>- `fluentbit`
 |`controlwd`|1|  ReplicaSet |Upgrade orchestration|- `controlwatchdog`
 |`logsdb-#` |1| StatefulSet |[Elasticsearch](https://www.elastic.co/)|- `elasticsearch`
 |`logsui`   |1| ReplicaSet |[Kibana](https://www.elastic.co/kibana)|- `kibana`
@@ -76,7 +76,7 @@ Control pods provide the control service.
 |`metricsdc`|1 per Kubernetes node. | DaemonSet |Node level metrics|- `telegraf` |
 |`metricsui-nnnn`|1| ReplicaSet |[Grafana](https://grafana.com/)|- `grafana` |
 |`mgmtproxy-nnnn`|1| ReplicaSet |Management proxy|- `service-proxy`<br><br>- `fluentbit`|
-|`zookeeper`|0 or 3 for high availability. | StatefulSet |[ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) high availability|`zookeeper`<br><br>- `fluentbit`
+|`zookeeper`|0 or 3 for high availability. | StatefulSet |[ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) high availability|- `zookeeper`<br><br>- `fluentbit`
 
 ## Master instance
 
@@ -88,7 +88,7 @@ Control pods provide the control service.
 
 |Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
 |--------|----|------|--------|-------|
-|`master-<#n>`|1 or more for high availability.| StatefulSet| SQL Server|-` mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`<br><br>- `mssql-ha-supervisor` <sup>*</sup>|
+|`master-<#n>`|1 or more for high availability.| StatefulSet| SQL Server|- `mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`<br><br>- `mssql-ha-supervisor` <sup>*</sup>|
 |`operator`<sup>*</sup>| 0 or 1 for high availability | ReplicaSet | SQL Server operator |`mssql-ha-operator`
 
 <sup>*</sup> Only high availability deployments. The operator implements and registers the custom resource definition for SQL Server and the Availability Group resources. When the operator is deployed, it registers itself as a listener for notifications about SQL Server resources being deployed in the Kubernetes cluster. `mssql-ha-supervisor` supports the availability group.
@@ -103,7 +103,7 @@ Compute pool provides a SQL Server instance for computation.
 
 |Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
 |--------|----|------|--------|-------|
-|`compute-<#n>-<#m>`|1 or more.| StatefulSet |SQL Server|- `mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`.
+|`compute-<#n>-<#m>`|1 or more.| StatefulSet |SQL Server|- `mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`
 
 - `#n` identifies the compute pool.
 - `#m` identifies the instance id within the pool.
@@ -118,7 +118,7 @@ The data pool provides SQL Server instances for storage and compute.
 
 |Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
 |--------|----|------|--------|-------|
-|`data-<#n>-<#m>` | 0 or more | StatefulSet |SQL Server |-` mssql-server` <br><br>- `fluentbit`<br><br>- `collectd`.|
+|`data-<#n>-<#m>` | 0 or more | StatefulSet |SQL Server |-` mssql-server` <br><br>- `fluentbit`<br><br>- `collectd`|
 
 - `#n` identifies the data pool.
 - `#m` identifies the instance id within the pool.

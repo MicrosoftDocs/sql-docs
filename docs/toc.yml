@@ -8532,12 +8532,12 @@
         items:
         - name: Generate scripts
           items:
-        - name: Generate Scripts
-          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-        - name: Generate & Publish Scripts Wizard
-          href: ssms/scripting/generate-and-publish-scripts-wizard.md
-        - name: Objects Supported by the Generate Scripts Wizard
-          href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+          - name: Generate Scripts
+            href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+          - name: Generate & Publish Scripts Wizard
+            href: ssms/scripting/generate-and-publish-scripts-wizard.md
+          - name: Objects Supported by the Generate Scripts Wizard
+            href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Query & Text Editors
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           items:

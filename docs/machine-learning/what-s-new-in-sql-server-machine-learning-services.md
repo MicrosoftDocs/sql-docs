@@ -45,11 +45,11 @@ For feature announcements all-up, see [What's New in SQL Server 2017](../sql-ser
 
 The R component of SQL Server Machine Learning Services is the next generation of SQL Server 2016 R Services, with updated versions of base R, RevoScaler, and other packages.
 
-New capabilities for R include [**package management**](r/install-additional-r-packages-on-sql-server.md), with the following highlights: 
+New capabilities for R include [**package management**](package-management/install-r-packages-with-tsql.md), with the following highlights: 
 
 + Database roles help DBAs manage packages and assign permissions for package installation.
 + [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) helps DBAs manage packages in the familiar T-SQL language.
-+ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) functions help install, remove, or list packages owned by users. For more information, see [How to use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md).
++ [RevoScaleR](package-management/install-r-packages-with-revoscaler.md) functions help install, remove, or list packages owned by users. For more information, see [How to use RevoScaleR functions to find or install R packages on SQL Server](package-management/install-r-packages-with-revoscaler.md).
 
 ### R libraries
 
@@ -116,4 +116,3 @@ Machine Learning Services in Azure SQL Database is in public preview. For more i
 ## Next steps
 
 + [Install SQL Server Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
-+ [Machine learning tutorials and samples](tutorials/machine-learning-services-tutorials.md)

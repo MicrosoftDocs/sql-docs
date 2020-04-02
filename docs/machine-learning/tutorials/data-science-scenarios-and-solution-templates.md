@@ -105,8 +105,5 @@ To download the files included in each template, you can use GitHub commands, or
 
 ## Next steps
 
-+ [SQL Server machine learning tutorials](machine-learning-services-tutorials.md)
-
-
-
-
++ [Python tutorials](sql-server-python-tutorials.md)
++ [R tutorials](sql-server-r-tutorials.md)

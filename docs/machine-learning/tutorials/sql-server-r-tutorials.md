@@ -44,5 +44,3 @@ This article describes the R language tutorials for in-database analytics on [SQ
 ## See also
 
 + [R extension to SQL Server](../concepts/extension-r.md)
-+ [SQL Server Machine Learning Services tutorials](machine-learning-services-tutorials.md)
-

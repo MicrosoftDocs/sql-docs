@@ -94,7 +94,7 @@ Ask the database administrator to [configure the following permissions for your 
 + **db_owner** to create objects such as stored procedures, tables, functions. 
   You also need **db_owner** to create sample and test databases. 
 
-If your code requires packages that are not installed by default with SQL Server, arrange with the database administrator to have the packages installed with the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. For more information, see [Install new R packages on SQL Server](install-additional-r-packages-on-sql-server.md).
+If your code requires packages that are not installed by default with SQL Server, arrange with the database administrator to have the packages installed with the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. For more information, see [Install new R packages on SQL Server](../package-management/install-additional-r-packages-on-sql-server.md).
 
 ## 5 - Test connections
 

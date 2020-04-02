@@ -64,10 +64,10 @@ In your R environment, copy the following lines and execute the code in a Consol
 
 ### On the server
 
-You have several options for installing packages on SQL Server. For example, SQL Server provides [R package management](../r/install-additional-r-packages-on-sql-server.md) feature that lets database administrators create a package repository and assign user the rights to install their own packages. However, if you are an administrator on the computer, you can install new packages using R, as long as you install to the correct library.
+You have several options for installing packages on SQL Server. For example, SQL Server provides [R package management](../package-management/install-additional-r-packages-on-sql-server.md) feature that lets database administrators create a package repository and assign user the rights to install their own packages. However, if you are an administrator on the computer, you can install new packages using R, as long as you install to the correct library.
 
 > [!NOTE]
-> On the server, **do not** install to a user library even if prompted. If you install to a user library, the SQL Server instance cannot find or run the packages. For more information, see [Installing new R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+> On the server, **do not** install to a user library even if prompted. If you install to a user library, the SQL Server instance cannot find or run the packages. For more information, see [Installing new R Packages on SQL Server](../package-management/install-additional-r-packages-on-sql-server.md).
 
 1. On the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, open RGui.exe **as an administrator**.  If you have installed SQL Server R Services using the defaults, Rgui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).
 

@@ -147,7 +147,7 @@ Although this exercise is simplistic, it demonstrates an important mechanism for
 
 + SQL Server must be configured for machine learning and R integration: [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R feature, or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md).
 
-+ Open-source or third-party libraries used in your function, including any dependencies, must be installed on SQL Server. For more information, see [Install new R packages](../r/install-additional-r-packages-on-sql-server.md).
++ Open-source or third-party libraries used in your function, including any dependencies, must be installed on SQL Server. For more information, see [Install new R packages](../package-management/install-additional-r-packages-on-sql-server.md).
 
 + Moving script from a development environment to a hardened production environment can introduce firewall and network restrictions. Test carefully to make sure your script is able to perform as expected.
 

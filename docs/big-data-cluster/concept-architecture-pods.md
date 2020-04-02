@@ -35,9 +35,9 @@ The following diagram displays the components deployed in a Big Data Cluster:
 
 For additional information about the architecture, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md).
 
-## Table summary of pods
+## Deployed pods
 
-The following table lists the pods that are typically deployed in a Big Data Cluster.
+The following table lists pods deployed in a Big Data Cluster.
 
 |Name  |Area|
 |---------|---------|
@@ -76,7 +76,7 @@ Control pods provide the control service.
 |`metricsdc`|1 per Kubernetes node. | DaemonSet |Node level metrics|- `telegraf` |
 |`metricsui-nnnn`|1| ReplicaSet |[Grafana](https://grafana.com/)|- `grafana` |
 |`mgmtproxy-nnnn`|1| ReplicaSet |Management proxy|- `service-proxy`<br><br>- `fluentbit`|
-|`zookeeper`|0 or 1 for high availability. | StatefulSet |[ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) high availability|- HDFS DataNode<br><br>- `zookeeper`<br><br>- `fluentbit`
+|`zookeeper`|0 or 3 for high availability. | StatefulSet |[ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) high availability|`zookeeper`<br><br>- `fluentbit`
 
 ## Master instance
 

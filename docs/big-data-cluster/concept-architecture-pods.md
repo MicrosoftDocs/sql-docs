@@ -105,12 +105,12 @@ The data pool provides SQL Server instances for storage and compute.
 
 |Pod name | Kubernetes controller type |Service or application| Containers |
 |--------|----------|----------|--------|
-|`master-<#n>`| StatefulSet| SQL Server|-` mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`<br><br>- mssql-ha-supervisor (if Big Data Cluster is deployed for HA)|
-|`operator`| ReplicaSet | SQL Server operator |`mssql-ha-operator`
+|`master-<#n>`| StatefulSet| SQL Server|-` mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`<br><br>- `mssql-ha-supervisor` <sup>*</sup>|
+|`operator`<sup>*</sup>| ReplicaSet | SQL Server operator |`mssql-ha-operator`
+
+<sup>*</sup> Only high availability deployments. The operator implements and registers the custom resource definition for SQL Server and the Availability Group resources. When the operator is deployed, it registers itself as a listener for notifications about SQL Server resources being deployed in the Kubernetes cluster. `mssql-ha-supervisor` supports availability groups.
 
 Each `master` pod contains one instance of SQL Server. A high-availability deployment includes 3 pods. Each pod includes a SQL Server instance with databases in a SQL Server Always On Availability Group.
-
-`operator` is included in high availability deployments. The operator implements and registers the custom resource definition for SQL Server and the Availability Group resources. When the operator is deployed, it registers itself as a listener for notifications about SQL Server resources being deployed in the Kubernetes cluster.
 
 ## Control
 

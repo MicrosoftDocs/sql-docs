@@ -42,7 +42,7 @@ Alternatively, you can create custom **external resource pools**, with associate
 
 5. Execute queries and procedures using the objects you created.
 
-For a walkthrough, see [How to create a resource pool for external R and Python scripts](../../machine-learning/r/how-to-create-a-resource-pool-for-r.md) for step-by-step instructions.
+For a walkthrough, see [Create a resource pool for SQL Server Machine Learning Services](create-external-resource-pool.md.md) for step-by-step instructions.
 
 For an introduction to terminology and general concepts, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).
 

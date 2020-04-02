@@ -721,6 +721,666 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/advanced-analytics/index.yml",
+      "redirect_url": "/sql/machine-learning/",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/administration/create-external-resource-pool.md",
+      "redirect_url": "/sql/machine-learning/administration/create-external-resource-pool",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/administration/extended-events-predict-tsql.md",
+      "redirect_url": "/sql/machine-learning/administration/extended-events-predict-tsql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/administration/extended-events.md",
+      "redirect_url": "/sql/machine-learning/administration/extended-events",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md",
+      "redirect_url": "/sql/machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md",
+      "redirect_url": "/sql/machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/administration/resource-governor.md",
+      "redirect_url": "/sql/machine-learning/administration/resource-governor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/administration/scale-concurrent-execution-external-scripts.md",
+      "redirect_url": "/sql/machine-learning/administration/scale-concurrent-execution-external-scripts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/common-issues-external-script-execution.md",
+      "redirect_url": "/sql/machine-learning/common-issues-external-script-execution",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/concepts/extensibility-framework.md",
+      "redirect_url": "/sql/machine-learning/concepts/extensibility-framework",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/concepts/extension-python.md",
+      "redirect_url": "/sql/machine-learning/concepts/extension-python",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/concepts/extension-r.md",
+      "redirect_url": "/sql/machine-learning/concepts/extension-r",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/concepts/security.md",
+      "redirect_url": "/sql/machine-learning/concepts/security",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/connect/loopback-connection.md",
+      "redirect_url": "/sql/machine-learning/connect/loopback-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/data-collection-ml-troubleshooting-process.md",
+      "redirect_url": "/sql/machine-learning/data-collection-ml-troubleshooting-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-machine-learning-azure-data-studio.md",
+      "redirect_url": "/sql/machine-learning/install/sql-machine-learning-azure-data-studio",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md",
+      "redirect_url": "/sql/machine-learning/install/sql-machine-learning-azure-virtual-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-machine-learning-services-windows-install.md",
+      "redirect_url": "/sql/machine-learning/install/sql-machine-learning-services-windows-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-machine-learning-standalone-windows-install.md",
+      "redirect_url": "/sql/machine-learning/install/sql-machine-learning-standalone-windows-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-ml-cab-downloads.md",
+      "redirect_url": "/sql/machine-learning/install/sql-ml-cab-downloads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-ml-component-commandline-install.md",
+      "redirect_url": "/sql/machine-learning/install/sql-ml-component-commandline-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-ml-component-install-without-internet-access.md",
+      "redirect_url": "/sql/machine-learning/install/sql-ml-component-install-without-internet-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-pretrained-models-install.md",
+      "redirect_url": "/sql/machine-learning/install/sql-pretrained-models-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-r-services-windows-install.md",
+      "redirect_url": "/sql/machine-learning/install/sql-r-services-windows-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/sql-server-machine-learning-services-2019.md",
+      "redirect_url": "/sql/machine-learning/install/sql-server-machine-learning-services-2019",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/install/upgrade-r-and-python.md",
+      "redirect_url": "/sql/machine-learning/install/upgrade-r-and-python",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/known-issues-for-sql-server-machine-learning-services.md",
+      "redirect_url": "/sql/machine-learning/known-issues-for-sql-server-machine-learning-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/machine-learning-troubleshooting-faq.md",
+      "redirect_url": "/sql/machine-learning/machine-learning-troubleshooting-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md",
+      "redirect_url": "/sql/machine-learning/package-management/create-a-local-package-repository-using-minicran",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md",
+      "redirect_url": "/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md",
+      "redirect_url": "/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/install-python-packages-standard-tools.md",
+      "redirect_url": "/sql/machine-learning/package-management/install-python-packages-standard-tools",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/install-r-packages-standard-tools.md",
+      "redirect_url": "/sql/machine-learning/package-management/install-r-packages-standard-tools",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/install-r-packages-with-revoscaler.md",
+      "redirect_url": "/sql/machine-learning/package-management/install-r-packages-with-revoscaler",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/install-r-packages-with-tsql.md",
+      "redirect_url": "/sql/machine-learning/package-management/install-r-packages-with-tsql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/package-install-uninstall-and-sync.md",
+      "redirect_url": "/sql/machine-learning/package-management/package-install-uninstall-and-sync",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/python-package-information.md",
+      "redirect_url": "/sql/machine-learning/package-management/python-package-information",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/r-package-how-to-enable-or-disable.md",
+      "redirect_url": "/sql/machine-learning/package-management/r-package-how-to-enable-or-disable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/r-package-information.md",
+      "redirect_url": "/sql/machine-learning/package-management/r-package-information",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/package-management/tips-for-using-r-packages.md",
+      "redirect_url": "/sql/machine-learning/package-management/tips-for-using-r-packages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/python/python-libraries-and-data-types.md",
+      "redirect_url": "/sql/machine-learning/python/python-libraries-and-data-types",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/python/ref-py-microsoftml.md",
+      "redirect_url": "/sql/machine-learning/python/ref-py-microsoftml",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/python/ref-py-revoscalepy.md",
+      "redirect_url": "/sql/machine-learning/python/ref-py-revoscalepy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/python/setup-python-client-tools-sql.md",
+      "redirect_url": "/sql/machine-learning/python/setup-python-client-tools-sql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/converting-r-code-for-use-in-sql-server.md",
+      "redirect_url": "/sql/machine-learning/r/converting-r-code-for-use-in-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/creating-multiple-models-using-rxexecby.md",
+      "redirect_url": "/sql/machine-learning/r/creating-multiple-models-using-rxexecby",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md",
+      "redirect_url": "/sql/machine-learning/r/creating-workflows-that-use-r-in-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md",
+      "redirect_url": "/sql/machine-learning/r/data-exploration-and-predictive-modeling-with-r",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/how-to-create-a-stored-procedure-using-sqlrutils.md",
+      "redirect_url": "/sql/machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md",
+      "redirect_url": "/sql/machine-learning/r/how-to-create-mdx-queries-using-olapr",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/how-to-do-realtime-scoring.md",
+      "redirect_url": "/sql/machine-learning/r/how-to-do-realtime-scoring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/operationalizing-your-r-code.md",
+      "redirect_url": "/sql/machine-learning/r/operationalizing-your-r-code",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/performance-case-study-r-services.md",
+      "redirect_url": "/sql/machine-learning/r/performance-case-study-r-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/r-and-data-optimization-r-services.md",
+      "redirect_url": "/sql/machine-learning/r/r-and-data-optimization-r-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/r-libraries-and-data-types.md",
+      "redirect_url": "/sql/machine-learning/r/r-libraries-and-data-types",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/r-server-standalone.md",
+      "redirect_url": "/sql/machine-learning/r/r-server-standalone",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/ref-r-microsoftml.md",
+      "redirect_url": "/sql/machine-learning/r/ref-r-microsoftml",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/ref-r-olapr.md",
+      "redirect_url": "/sql/machine-learning/r/ref-r-olapr",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/ref-r-revoscaler.md",
+      "redirect_url": "/sql/machine-learning/r/ref-r-revoscaler",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/ref-r-sqlrutils.md",
+      "redirect_url": "/sql/machine-learning/r/ref-r-sqlrutils",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md",
+      "redirect_url": "/sql/machine-learning/r/save-and-load-r-objects-from-sql-server-using-odbc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/set-up-a-data-science-client.md",
+      "redirect_url": "/sql/machine-learning/r/set-up-a-data-science-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/sql-server-configuration-r-services.md",
+      "redirect_url": "/sql/machine-learning/r/sql-server-configuration-r-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/sql-server-r-services-performance-tuning.md",
+      "redirect_url": "/sql/machine-learning/r/sql-server-r-services-performance-tuning",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/sql-server-r-services.md",
+      "redirect_url": "/sql/machine-learning/r/sql-server-r-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md",
+      "redirect_url": "/sql/machine-learning/r/upgrade-and-installation-faq-sql-server-r-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/using-data-from-olap-cubes-in-r.md",
+      "redirect_url": "/sql/machine-learning/r/using-data-from-olap-cubes-in-r",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/using-r-code-profiling-functions.md",
+      "redirect_url": "/sql/machine-learning/r/using-r-code-profiling-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/r-script-execution-errors.md",
+      "redirect_url": "/sql/machine-learning/r-script-execution-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/real-time-scoring.md",
+      "redirect_url": "/sql/machine-learning/real-time-scoring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/security/create-a-login-for-sqlrusergroup.md",
+      "redirect_url": "/sql/machine-learning/security/create-a-login-for-sqlrusergroup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/security/firewall-configuration.md",
+      "redirect_url": "/sql/machine-learning/security/firewall-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/security/sql-server-launchpad-service-account.md",
+      "redirect_url": "/sql/machine-learning/security/sql-server-launchpad-service-account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/security/user-permission.md",
+      "redirect_url": "/sql/machine-learning/security/user-permission",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/sql-native-scoring.md",
+      "redirect_url": "/sql/machine-learning/sql-native-scoring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md",
+      "redirect_url": "/sql/machine-learning/tutorials/data-science-scenarios-and-solution-templates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-create-and-run-r-scripts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-create-models.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-create-models",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-custom-r-functions-using-rxexec",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-define-and-use-compute-contexts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-load-data-into-memory-using-rximport",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-move-data-between-sql-server-and-xdf-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-query-and-modify-the-sql-server-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-score-new-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-score-new-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-transform-data-using-r.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-transform-data-using-r",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-visualize-sql-server-data-using-r",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md",
+      "redirect_url": "/sql/machine-learning/tutorials/deepdive-work-with-sql-server-data-using-r",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/demo-data-airlinedemo-in-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/demo-data-airlinedemo-in-sql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/demo-data-iris-in-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/demo-data-iris-in-sql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/demo-data-nyctaxi-in-sql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/python-clustering-model-build.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-clustering-model-build",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/python-clustering-model-deploy.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-clustering-model-deploy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/python-clustering-model-prepare-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-clustering-model-prepare-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/python-clustering-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-clustering-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/python-ski-rental-linear-regression-prepare-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-train-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/python-ski-rental-linear-regression.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-python-create-script.md",
+      "redirect_url": "/sql/machine-learning/tutorials/quickstart-python-create-script",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-python-data-structures.md",
+      "redirect_url": "/sql/machine-learning/tutorials/quickstart-python-data-structures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-python-functions.md",
+      "redirect_url": "/sql/machine-learning/tutorials/quickstart-python-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-python-train-score-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/quickstart-python-train-score-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-create-script.md",
+      "redirect_url": "/sql/machine-learning/tutorials/quickstart-r-create-script",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md",
+      "redirect_url": "/sql/machine-learning/tutorials/quickstart-r-data-types-and-objects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-functions.md",
+      "redirect_url": "/sql/machine-learning/tutorials/quickstart-r-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-train-score-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/quickstart-r-train-score-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sql-server-python-tutorials.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sql-server-python-tutorials",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sql-server-r-tutorials.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sql-server-r-tutorials",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-create-data-features-using-t-sql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-explore-and-visualize-the-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-in-database-python-for-sql-developers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-in-database-r-for-sql-developers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-operationalize-the-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-operationalize-the-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-py6-operationalize-the-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/use-python-revoscalepy-to-create-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/walkthrough-build-and-save-the-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/walkthrough-build-and-save-the-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/walkthrough-create-data-features.md",
+      "redirect_url": "/sql/machine-learning/tutorials/walkthrough-create-data-features",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md",
+      "redirect_url": "/sql/machine-learning/tutorials/walkthrough-create-graphs-and-plots-using-r",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md",
+      "redirect_url": "/sql/machine-learning/tutorials/walkthrough-data-science-end-to-end-walkthrough",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/walkthrough-deploy-and-use-the-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md",
+      "redirect_url": "/sql/machine-learning/tutorials/walkthrough-view-and-summarize-data-using-r",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/what-is-sql-server-machine-learning.md",
+      "redirect_url": "/sql/machine-learning/what-is-sql-server-machine-learning",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md",
+      "redirect_url": "/sql/machine-learning/what-s-new-in-sql-server-machine-learning-services",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
       "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
       "redirect_document_id": false

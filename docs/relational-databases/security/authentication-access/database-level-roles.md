@@ -110,7 +110,7 @@ These database roles exist only in the virtual master database. Their permission
 
 **Applies to:** SQL Server starting with [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
-When R Services is installed, additional database roles are available for managing packages. For more information, see [R Package management for SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
+When R Services is installed, additional database roles are available for managing packages. For more information, see [R Package management for SQL Server](../../../machine-learning/r-services/r-package-management-for-sql-server-r-services.md).
 
 |Role name |Description|  
 |-------------|-----------------|

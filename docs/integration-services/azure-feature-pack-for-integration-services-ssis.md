@@ -192,6 +192,8 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 #### Improvements
 
+1. For Flexible File task, three are three improvements: (1) wildcard support for copy/delete operations is added; (2) user can enable/disable recursive searching for delete operation; and (3) the file name of Destination for copy operation can be empty to keep the source file name.
+
 ### Version 1.17.0
 
 This is a hotfix version released for SQL Server 2019 only.

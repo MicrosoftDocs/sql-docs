@@ -244,7 +244,7 @@ GO
 The following example creates a stored procedure that uses **sp_execute_external_script** to generate an iris model and return the model to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 > [!NOTE]
->  This example requires advance installation of the e1071 package. For more information, see [Install additional R packages on SQL Server](../../machine-learning/r/install-additional-r-packages-on-sql-server.md).
+>  This example requires advance installation of the e1071 package. For more information, see [Install additional R packages on SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md).
 
 ```sql
 DROP PROC IF EXISTS generate_iris_model;

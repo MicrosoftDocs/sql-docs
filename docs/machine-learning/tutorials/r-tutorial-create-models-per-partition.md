@@ -1,7 +1,6 @@
 ---
 title: Create partition-based models in R
 description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
-ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
@@ -79,20 +78,20 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE FUNCTION [dbo].[CalculateDistance] (
-	@Lat1 FLOAT
-	,@Long1 FLOAT
-	,@Lat2 FLOAT
-	,@Long2 FLOAT
-	)
-	-- User-defined function calculates the direct distance between two geographical coordinates.
+    @Lat1 FLOAT
+    ,@Long1 FLOAT
+    ,@Lat2 FLOAT
+    ,@Long2 FLOAT
+    )
+    -- User-defined function calculates the direct distance between two geographical coordinates.
 RETURNS TABLE
 AS
 RETURN
 
 SELECT COALESCE(3958.75 * ATAN(SQRT(1 - POWER(t.distance, 2)) / nullif(t.distance, 0)), 0) AS direct_distance
 FROM (
-	VALUES (CAST((SIN(@Lat1 / 57.2958) * SIN(@Lat2 / 57.2958)) + (COS(@Lat1 / 57.2958) * COS(@Lat2 / 57.2958) * COS((@Long2 / 57.2958) - (@Long1 / 57.2958))) AS DECIMAL(28, 10)))
-	) AS t(distance)
+    VALUES (CAST((SIN(@Lat1 / 57.2958) * SIN(@Lat2 / 57.2958)) + (COS(@Lat1 / 57.2958) * COS(@Lat2 / 57.2958) * COS((@Long2 / 57.2958) - (@Long1 / 57.2958))) AS DECIMAL(28, 10)))
+    ) AS t(distance)
 GO
  ```
 
@@ -111,30 +110,30 @@ USE NYCTaxi_Sample
 GO
 
 CREATE
-	OR
+    OR
 
 ALTER PROCEDURE [dbo].[train_rxLogIt_per_partition] (@input_query NVARCHAR(max))
 AS
 BEGIN
-	DECLARE @start DATETIME2 = SYSDATETIME()
-		,@model_generation_duration FLOAT
-		,@model VARBINARY(max)
-		,@instance_name NVARCHAR(100) = @@SERVERNAME
-		,@database_name NVARCHAR(128) = db_name();
+    DECLARE @start DATETIME2 = SYSDATETIME()
+        ,@model_generation_duration FLOAT
+        ,@model VARBINARY(max)
+        ,@instance_name NVARCHAR(100) = @@SERVERNAME
+        ,@database_name NVARCHAR(128) = db_name();
 
-	EXEC sp_execute_external_script @language = N'R'
-		,@script = 
-		N'
-	
-	# Make sure InputDataSet is not empty. In parallel mode, if one thread gets zero data, an error occurs
-	if (nrow(InputDataSet) > 0) {
-	# Define the connection string
-	connStr <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", database_name, ";Trusted_Connection=true;", sep="");
-	
-	# build classification model to predict a tip outcome
-	duration <- system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet))[3];
+    EXEC sp_execute_external_script @language = N'R'
+        ,@script = 
+        N'
+    
+    # Make sure InputDataSet is not empty. In parallel mode, if one thread gets zero data, an error occurs
+    if (nrow(InputDataSet) > 0) {
+    # Define the connection string
+    connStr <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", database_name, ";Trusted_Connection=true;", sep="");
+    
+    # build classification model to predict a tip outcome
+    duration <- system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet))[3];
 
-	# First, serialize a model to and put it into a database table
+    # First, serialize a model to and put it into a database table
     modelbin <- as.raw(serialize(logitObj, NULL));
 
     # Create the data source. To reduce data size, add rowsPerRead=500000 to cut the dataset by half.
@@ -143,19 +142,19 @@ BEGIN
     # Store the model in the database
     model_name <- paste0("nyctaxi.", InputDataSet[1,]$payment_type);
     
-	rxWriteObject(ds, model_name, modelbin, version = "v1",
+    rxWriteObject(ds, model_name, modelbin, version = "v1",
     keyName = "model_name", valueName = "model_object", versionName = "model_version", overwrite = TRUE, serialize = FALSE);
-	} 
-	
-	'
-		,@input_data_1 = @input_query
-		,@input_data_1_partition_by_columns = N'payment_type'
-		,@input_data_1_order_by_columns = N'passenger_count'
-		,@parallel = 1
-		,@params = N'@instance_name nvarchar(100), @database_name nvarchar(128)'
-		,@instance_name = @instance_name
-		,@database_name = @database_name
-	WITH RESULT SETS NONE
+    } 
+    
+    '
+        ,@input_data_1 = @input_query
+        ,@input_data_1_partition_by_columns = N'payment_type'
+        ,@input_data_1_order_by_columns = N'passenger_count'
+        ,@parallel = 1
+        ,@params = N'@instance_name nvarchar(100), @database_name nvarchar(128)'
+        ,@instance_name = @instance_name
+        ,@database_name = @database_name
+    WITH RESULT SETS NONE
 END;
 GO
 ```
@@ -221,68 +220,68 @@ GO
 -- Stored procedure that scores per partition. 
 -- Depending on the partition being processed, a model specific to that partition will be used
 CREATE
-	OR
+    OR
 
 ALTER PROCEDURE [dbo].[predict_per_partition]
 AS
 BEGIN
-	DECLARE @predict_duration FLOAT
-		,@instance_name NVARCHAR(100) = @@SERVERNAME
-		,@database_name NVARCHAR(128) = db_name()
-		,@input_query NVARCHAR(max);
+    DECLARE @predict_duration FLOAT
+        ,@instance_name NVARCHAR(100) = @@SERVERNAME
+        ,@database_name NVARCHAR(128) = db_name()
+        ,@input_query NVARCHAR(max);
 
-	SET @input_query = 'SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_distance, payment_type
-						  FROM dbo.nyctaxi_sample TABLESAMPLE (1 PERCENT) REPEATABLE (98074)
-						  CROSS APPLY [CalculateDistance](pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as d'
+    SET @input_query = 'SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_distance, payment_type
+                          FROM dbo.nyctaxi_sample TABLESAMPLE (1 PERCENT) REPEATABLE (98074)
+                          CROSS APPLY [CalculateDistance](pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as d'
 
-	EXEC sp_execute_external_script @language = N'R'
-		,@script = 
-		N'
-	
-	if (nrow(InputDataSet) > 0) {
+    EXEC sp_execute_external_script @language = N'R'
+        ,@script = 
+        N'
+    
+    if (nrow(InputDataSet) > 0) {
 
     #Get the partition that is currently being processed
-	current_partition <- InputDataSet[1,]$payment_type;
+    current_partition <- InputDataSet[1,]$payment_type;
 
-	#Create the SQL query to select the right model
-	query_getModel <- paste0("select model_object from ml_models where model_name = ", "''", "nyctaxi.",InputDataSet[1,]$payment_type,"''", ";")
-	
+    #Create the SQL query to select the right model
+    query_getModel <- paste0("select model_object from ml_models where model_name = ", "''", "nyctaxi.",InputDataSet[1,]$payment_type,"''", ";")
+    
 
-	# Define the connection string
-	connStr <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", database_name, ";Trusted_Connection=true;", sep="");
-		
-	#Define data source to use for getting the model
-	ds <- RxOdbcData(sqlQuery = query_getModel, connectionString = connStr)
+    # Define the connection string
+    connStr <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", database_name, ";Trusted_Connection=true;", sep="");
+        
+    #Define data source to use for getting the model
+    ds <- RxOdbcData(sqlQuery = query_getModel, connectionString = connStr)
 
-	# Load the model
-	modelbin <- rxReadObject(ds, deserialize = FALSE)
-	# unserialize model
-	logitObj <- unserialize(modelbin);
+    # Load the model
+    modelbin <- rxReadObject(ds, deserialize = FALSE)
+    # unserialize model
+    logitObj <- unserialize(modelbin);
 
-	# predict tipped or not based on model
-	predictions <- rxPredict(logitObj, data = InputDataSet, overwrite = TRUE, type = "response", writeModelVars = TRUE
-		, extraVarsToWrite = c("payment_type"));		
-	OutputDataSet <- predictions
-	
-	} else {
-		OutputDataSet <- data.frame(integer(), InputDataSet[,]);		
-	}
-	'
-		,@input_data_1 = @input_query
-		,@parallel = 1
-		,@input_data_1_partition_by_columns = N'payment_type'
-		,@params = N'@instance_name nvarchar(100), @database_name nvarchar(128)'
-		,@instance_name = @instance_name
-		,@database_name = @database_name
-	WITH RESULT SETS((
-				tipped_Pred INT
-				,payment_type VARCHAR(5)
-				,tipped INT
-				,passenger_count INT
-				,trip_distance FLOAT
-				,trip_time_in_secs INT
-				,direct_distance FLOAT
-				));
+    # predict tipped or not based on model
+    predictions <- rxPredict(logitObj, data = InputDataSet, overwrite = TRUE, type = "response", writeModelVars = TRUE
+        , extraVarsToWrite = c("payment_type"));        
+    OutputDataSet <- predictions
+    
+    } else {
+        OutputDataSet <- data.frame(integer(), InputDataSet[,]);        
+    }
+    '
+        ,@input_data_1 = @input_query
+        ,@parallel = 1
+        ,@input_data_1_partition_by_columns = N'payment_type'
+        ,@params = N'@instance_name nvarchar(100), @database_name nvarchar(128)'
+        ,@instance_name = @instance_name
+        ,@database_name = @database_name
+    WITH RESULT SETS((
+                tipped_Pred INT
+                ,payment_type VARCHAR(5)
+                ,tipped INT
+                ,passenger_count INT
+                ,trip_distance FLOAT
+                ,trip_time_in_secs INT
+                ,direct_distance FLOAT
+                ));
 END;
 GO
 ```
@@ -291,14 +290,14 @@ GO
 
 ```sql
 CREATE TABLE prediction_results (
-	tipped_Pred INT
-	,payment_type VARCHAR(5)
-	,tipped INT
-	,passenger_count INT
-	,trip_distance FLOAT
-	,trip_time_in_secs INT
-	,direct_distance FLOAT
-	);
+    tipped_Pred INT
+    ,payment_type VARCHAR(5)
+    ,tipped INT
+    ,passenger_count INT
+    ,trip_distance FLOAT
+    ,trip_time_in_secs INT
+    ,direct_distance FLOAT
+    );
 
 TRUNCATE TABLE prediction_results
 GO
@@ -308,14 +307,14 @@ GO
 
 ```sql
 INSERT INTO prediction_results (
-	tipped_Pred
-	,payment_type
-	,tipped
-	,passenger_count
-	,trip_distance
-	,trip_time_in_secs
-	,direct_distance
-	)
+    tipped_Pred
+    ,payment_type
+    ,tipped
+    ,passenger_count
+    ,trip_distance
+    ,trip_time_in_secs
+    ,direct_distance
+    )
 EXECUTE [predict_per_partition]
 GO
 ```

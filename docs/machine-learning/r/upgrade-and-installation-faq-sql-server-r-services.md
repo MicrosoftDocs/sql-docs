@@ -1,7 +1,6 @@
 ---
 title: Upgrade and installation FAQ
 description: Answers to some common questions about installation of machine learning features in SQL Server.
-ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   

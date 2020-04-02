@@ -40,7 +40,7 @@ Requires VIEW SERVER STATE permission.
 
 ## See also
 
-[Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
+[Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)
 
 [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 

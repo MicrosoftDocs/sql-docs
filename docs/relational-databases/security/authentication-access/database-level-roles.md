@@ -106,18 +106,6 @@ These database roles exist only in the virtual master database. Their permission
 > [!IMPORTANT]  
 >  Members of the **db_ssisadmin** role and the **dc_admin** role may be able to elevate their privileges to sysadmin. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages and [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages can be executed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the sysadmin security context of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add **sysadmin** members to the **db_ssisadmin** and **dc_admin** roles.  
 
-## Working with R Services  
-
-**Applies to:** SQL Server starting with [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
-
-When R Services is installed, additional database roles are available for managing packages. For more information, see [R Package management for SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
-|Role name |Description|  
-|-------------|-----------------|
-|**rpkgs-users** |Allows users to use any shared packages that were installed by members of the rpkgs-shared role.|
-|**rpkgs-private** |Provides access to shared packages with the same permissions as the rpkgs-users role. Members of this role can also install, remove and use privately scoped packages.|
-|**rpkgs-shared** |Provides the same permissions as the rpkgs-private role. Users who are members of this role can also install or remove shared packages.|
-  
 ## Working with Database-Level Roles  
  The following table explains the commands, views and functions for working with database-level roles.  
   

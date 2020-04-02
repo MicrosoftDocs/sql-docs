@@ -108,7 +108,7 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 - **Performance improvements** - The stored procedure `sp_execute_external_script` has been optimized to support batch mode execution for columnstore data.
 
 
-For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+For more information, see [What's new in SQL Server Machine Learning Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## Next steps
 - See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).

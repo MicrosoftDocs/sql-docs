@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversio
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../advanced-analytics/sql-native-scoring.md).
+Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/sql-native-scoring.md).
 
 ## Syntax
 
@@ -92,7 +92,7 @@ It is not necessary that R, Python, or another machine learning language be inst
 
 ### Supported algorithms
 
-The model that you use must have been created using one of the supported algorithms from the RevoScaleR package. For a list of currently supported models, see [Real-time scoring](../../advanced-analytics/real-time-scoring.md).
+The model that you use must have been created using one of the supported algorithms from the RevoScaleR package. For a list of currently supported models, see [Real-time scoring](../../machine-learning/real-time-scoring.md).
 
 ### Permissions
 
@@ -176,4 +176,4 @@ WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 
 ## Next steps
 
-- [Native scoring using the PREDICT T-SQL function](../../advanced-analytics/sql-native-scoring.md)
+- [Native scoring using the PREDICT T-SQL function](../../machine-learning/sql-native-scoring.md)

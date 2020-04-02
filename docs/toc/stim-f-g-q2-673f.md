@@ -7,7 +7,9 @@ ms.topic: conceptual
 ms.author: genemi
 author: MightyPen
 ms.custom: at-gm-code=f-g-Q2-673f
-ROBOTS: NOINDEX,NOFOLLOW
+ROBOTS: NOINDEX, NOFOLLOW
+ms.localizationpriority: "null"
+localization_priority: "None"
 ---
 # Data Profiling and Notifications in Data Quality Services (DQS)
 

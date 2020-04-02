@@ -8,7 +8,9 @@ ms.author: genemi
 author: MightyPen
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ms.custom: at-gm-code=f-g-J3-862a
-ROBOTS: NOINDEX,NOFOLLOW
+ROBOTS: NOINDEX, NOFOLLOW
+ms.localizationpriority: "null"
+localization_priority: "None"
 ---
 # Initialize a Subscription with a Snapshot
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

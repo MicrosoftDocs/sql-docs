@@ -343,7 +343,7 @@ To ensure that machine learning jobs are prioritized and resourced appropriately
   
 - To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).
 
-If you are using Standard Edition and don't have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources. For more information, see [Monitoring and managing R Services](../r/managing-and-monitoring-r-solutions.md) and [Monitoring and managing Python Services](../python/managing-and-monitoring-python-solutions.md).
+If you are using Standard Edition and don't have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources.
 
 ### Install additional Python and R packages
 
@@ -355,14 +355,12 @@ To install and manage additional packages, you can set up user groups to share p
 
 ## Next steps
 
-R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
-
-+ [Tutorial: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Tutorial: Run Python in T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: In-database analytics for Python developers](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)
 
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
+R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+
++ [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

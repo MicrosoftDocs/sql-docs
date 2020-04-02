@@ -85,9 +85,6 @@ The user also has to supply a user name and password to access their hosting pro
     - [Choose Objects Page](#ChooseObjects)
     - [Set Scripting Options Page](#SetScriptOpt)
     - [Advanced Scripting Options Page](#AdvScriptOpt)
-    - [Manage Providers Page](#MgProviders)
-    - [Advanced Publishing Options Page](#AdvPubOpts)
-    - [Provider Configuration Page](#ProvConfig)
     - [Summary Page](#Summary)
     - [Save or Publish Scripts Page](#SavePubScripts)
 

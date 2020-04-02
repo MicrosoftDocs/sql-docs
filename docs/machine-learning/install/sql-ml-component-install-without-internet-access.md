@@ -210,6 +210,4 @@ An initial offline installation of SQL Server R Services requires the same confi
 
 ## Next steps
 
-To check the installation status of the instance and fix common issues, see [Custom reports for SQL Server](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
-
 For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).

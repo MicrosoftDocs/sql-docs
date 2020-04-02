@@ -101,7 +101,6 @@ _SSDT for Visual Studio 2017._
 | Known issue | Details |
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
-| SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source is not localized | &nbsp; |
@@ -129,7 +128,6 @@ _SSDT for Visual Studio 2017._
 | Known issue | Details |
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
-| SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
 | Cannot create or Edit Data Sources in Package Deployment model. | Fails to open the Data Source Wizard. |
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
@@ -159,7 +157,6 @@ _SSDT for Visual Studio 2017._
 | Known issue | Details |
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
-| SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
 | Cannot create or Edit Data Sources in Package Deployment model. | Fails to open the Data Source Wizard. |
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
@@ -193,7 +190,6 @@ _SSDT for Visual Studio 2017._
 | Known issue | Details |
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
-| SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source is not localized. | &nbsp; |
@@ -213,7 +209,6 @@ Fixed an issue that deploying SSIS project, which contains packages containing S
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- SSDT for Visual Studio 2017 (15.8.2) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
 ## 15.8.1,&nbsp; SSDT for VS 2017
 
@@ -232,7 +227,6 @@ _SSDT for Visual Studio 2017._
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 - Deploying SSIS projects that have packages that contain Script Task/Flat file destination to Azure-SSIS will result in the packages failing to execute in Azure-SSIS.
-- SSDT for Visual Studio 2017 (15.8.1) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
 
 ## 15.8,&nbsp; SSDT for VS 2017

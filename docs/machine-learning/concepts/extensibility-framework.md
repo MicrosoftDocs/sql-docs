@@ -32,7 +32,7 @@ An external script can be run by calling a stored procedure, and the results are
 
 + External script execution is subject to SQL Server data security. A user running an external script can only access data that is equally available in a SQL query. If a query fails due to insufficient permission, a script run by the same user would also fail for the same reason. SQL Server security is enforced at the table, database, and instance level. Database administrators can manage user access, resources used by external scripts, and external code libraries added to the server.  
 
-+ Scale and optimization opportunities have a dual basis: gains through the database platform (ColumnStore indexes, [resource governance](../../machine-learning/r/resource-governance-for-r-services.md)); and extension-specific gains, for example when Microsoft libraries for R and Python are used for data science models. Whereas R is single-threaded, RevoScaleR functions are multi-threaded, capable of distributing a workload over multiple cores.
++ Scale and optimization opportunities have a dual basis: gains through the database platform (ColumnStore indexes, [resource governance](../../machine-learning/administration/resource-governor.md)); and extension-specific gains, for example when Microsoft libraries for R and Python are used for data science models. Whereas R is single-threaded, RevoScaleR functions are multi-threaded, capable of distributing a workload over multiple cores.
 
 + Deployment uses SQL Server methodologies. These can be stored procedures wrapping an external script, embedded SQL, or T-SQL queries calling functions like PREDICT to return results from forecasting models persisted on the server.
 
@@ -94,7 +94,7 @@ BxlServer uses SQL Satellite for these tasks:
 
 SQL Satellite uses a custom data format that is optimized for fast data transfer between SQL Server and external script languages. It performs type conversions and defines the schemas of the input and output datasets during communications between SQL Server and the external script runtime.
 
-The SQL Satellite can be monitored by using windows extended events (xEvents). For more information, see [Extended Events for R](../../machine-learning/r/extended-events-for-sql-server-r-services.md) and [Extended Events for Python](../../machine-learning/python/extended-events-for-python.md).
+The SQL Satellite can be monitored by using windows extended events (xEvents). For more information, see [Extended Events for SQL Server Machine Learning Services](../../machine-learning/administration/extended-events.md).
 
 ## Communication channels between components
 

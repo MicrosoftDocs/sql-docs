@@ -16,7 +16,7 @@ ms.author: chugu
 
 If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops), then add **SSIS DevOps Tools** extension following [the steps](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension).
 
-**SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**..
+**SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**.
 
 - **[SSIS Build](#ssis-build-task)** task supports building dtproj files in project deployment model or package deployment model.
 

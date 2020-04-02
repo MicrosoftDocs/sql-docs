@@ -37,7 +37,7 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## SSMS 18.5
+## 18.5
 
 Download: [Download SSMS 18.5](download-sql-server-management-studio-ssms.md)  
 Build number: 15.0.x.x  
@@ -127,7 +127,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 
 - Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
-- When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. A workaround is to remove the folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild".
+- When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. A workaround is to remove the folder *C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild*.
 
 - New Server Audit Specification dialog may cause SSMS to crash with an access violation error.
 

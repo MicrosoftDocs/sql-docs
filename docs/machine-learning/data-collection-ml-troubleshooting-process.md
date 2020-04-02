@@ -26,10 +26,7 @@ SQL Server 2017 and later has Python language integration. You cannot get Python
 For assistance getting edition and versions, see this article, which lists the build numbers for each of the
 [SQL Server versions](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
 
-Depending on the edition of SQL Server you're using, some machine learning functionality might be unavailable, or limited. The following articles list of machine learning features in Enterprise, Developer, Standard, and Express editions.
-
-* [Editions and supported features of SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
-* [R and Python features by editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
+Depending on the edition of SQL Server you're using, some machine learning functionality might be unavailable, or limited. 
 
 ## R language and tool versions
 

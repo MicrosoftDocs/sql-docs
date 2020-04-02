@@ -214,8 +214,6 @@ You can restart the service using the right-click **Restart** command for the in
 
 ## Verify installation
 
-Check the installation status of the instance in [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md) or setup logs.
-
 Use the following steps to verify that all components used to launch external script are running.
 
 1. In SQL Server Management Studio, open a new query window, and run the following command:

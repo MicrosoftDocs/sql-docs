@@ -72,4 +72,4 @@ The [SSMS Custom Reports repository in GitHub](https://github.com/Microsoft/sql-
 ## Next steps
 
 - [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
-- [Extended events for R Services](../r/extended-events-for-sql-server-r-services.md)
+- [Monitor Python and R scripts with extended events in SQL Server Machine Learning Services](extended-events.md)

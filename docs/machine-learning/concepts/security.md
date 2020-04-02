@@ -124,7 +124,7 @@ For more details, see [Extensibility architecture in SQL Server Machine Learning
 
 + Worker account names in the pool are of the format SQLInstanceName*nn*. For example, on a default instance, **SQLRUserGroup** contains accounts named MSSQLSERVER01, MSSQLSERVER02, and so forth on up to MSSQLSERVER20.
 
-Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Modify the user account pool for machine learning](../../machine-learning/administration/modify-user-account-pool.md).
+Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md).
 
 ### Permissions granted to SQLRUserGroup
 

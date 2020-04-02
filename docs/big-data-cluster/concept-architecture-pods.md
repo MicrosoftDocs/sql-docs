@@ -51,6 +51,7 @@ The following table lists pods deployed in a Big Data Cluster.
 |`metricsui-<nnnn>`      |[Control](#control)|
 |`mgmtproxy-<nnnn>`      |[Control](#control)|
 |`zookeeper-<#>`         |[Control](#control)|
+|`dns-<nnnn>`            |[Control](#control)|
 |`master-<#n>`           |[Master instance](#master-instance)|
 |`operator-<nnnn>`       |[Master instance](#master-instance)
 |`compute-<#n>-<#m>`     |[Compute pool](#compute-pool)|
@@ -61,22 +62,35 @@ The following table lists pods deployed in a Big Data Cluster.
 |`appproxy-<#m>`         |[Application pool](#application-pool)|
 |`gateway-<#>`           |[Gateway service](#gateway-service)|
 
+Not all pods are included in every BDC cluster. Deployments with high availability, or active directory integration include specific pods. 
+
+### High availability specific pods:
+
+- `operator-<nnnn>`
+- `zookeeper-<#>`
+
+### Active directory specific pods:
+
+- `dns-<nnnn>`
+
+The following sections describe describe the pods and containers in each pod.
+
 ## Control
 
 Control pods provide the control service.
 
-|Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
+|Pod name |Count| Kubernetes controller type | Containers |
 |--------|----|------|--------|-------|
-|`control-#`|1| ReplicaSet |Controller service|- `controller`<br><br>- `security-support`<br><br>- `fluentbit`
-|`controldb`|1| StatefulSet |Configuration store|- `mssql-server`<br><br>- `fluentbit`
-|`controlwd`|1|  ReplicaSet |Upgrade orchestration|- `controlwatchdog`
-|`logsdb-#` |1| StatefulSet |[Elasticsearch](https://www.elastic.co/)|- `elasticsearch`
-|`logsui`   |1| ReplicaSet |[Kibana](https://www.elastic.co/kibana)|- `kibana`
-|`metricsdb-#`|1| StatefulSet |[InfluxDB](https://www.influxdata.com)|- `influxdb`
-|`metricsdc`|1 per Kubernetes node. | DaemonSet |Node level metrics|- `telegraf` |
-|`metricsui-nnnn`|1| ReplicaSet |[Grafana](https://grafana.com/)|- `grafana` |
-|`mgmtproxy-nnnn`|1| ReplicaSet |Management proxy|- `service-proxy`<br><br>- `fluentbit`|
-|`zookeeper`|0 or 3 for high availability. | StatefulSet |[ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) high availability|- `zookeeper`<br><br>- `fluentbit`
+|`control-#`|1| ReplicaSet |- `controller`<br><br>- `security-support`<br><br>- `fluentbit`
+|`controldb`|1| StatefulSet |- `mssql-server`<br><br>- `fluentbit`
+|`controlwd`|1|  ReplicaSet |- `controlwatchdog`
+|`logsdb-#` |1| StatefulSet |- `elasticsearch`
+|`logsui`   |1| ReplicaSet |- `kibana`
+|`metricsdb-#`|1| StatefulSet |- `influxdb`
+|`metricsdc`|1 per Kubernetes node. | DaemonSet |- `telegraf` |
+|`metricsui-nnnn`|1| ReplicaSet |- `grafana` |
+|`mgmtproxy-nnnn`|1| ReplicaSet |- `service-proxy`<br><br>- `fluentbit`|
+|`dns-nnnn`|0 or 1 for Active Directory integration| ReplicaSet |- `dns`<br><br>- `fluentbit`|
 
 ## Master instance
 
@@ -86,10 +100,10 @@ Control pods provide the control service.
 - Manipulates data in the data pool via DML
 - Off-loads analytic query execution to the data pool
 
-|Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
-|--------|----|------|--------|-------|
-|`master-<#n>`|1 or more for high availability.| StatefulSet| SQL Server|- `mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`<br><br>- `mssql-ha-supervisor` <sup>*</sup>|
-|`operator`<sup>*</sup>| 0 or 1 for high availability | ReplicaSet | SQL Server operator |`mssql-ha-operator`
+|Pod name |Count| Kubernetes controller type | Containers |
+|--------|----|------|--------|
+|`master-<#n>`|1 or more for high availability.| StatefulSet|- `mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`<br><br>- `mssql-ha-supervisor` <sup>*</sup>|
+|`operator`<sup>*</sup>| 0 or 1 for high availability | ReplicaSet |- `mssql-ha-operator`
 
 <sup>*</sup> Only high availability deployments. The operator implements and registers the custom resource definition for SQL Server and the Availability Group resources. When the operator is deployed, it registers itself as a listener for notifications about SQL Server resources being deployed in the Kubernetes cluster. `mssql-ha-supervisor` supports the availability group.
 
@@ -101,9 +115,9 @@ Include additional pods at deployment time, depending on your workload.
 
 Compute pool provides a SQL Server instance for computation.
 
-|Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
-|--------|----|------|--------|-------|
-|`compute-<#n>-<#m>`|1 or more.| StatefulSet |SQL Server|- `mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`
+|Pod name |Count| Kubernetes controller type | Containers |
+|--------|----|------|--------|
+|`compute-<#n>-<#m>`|1 or more.| StatefulSet |- `mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`
 
 - `#n` identifies the compute pool.
 - `#m` identifies the instance id within the pool.
@@ -116,9 +130,9 @@ Include additional pods at deployment time, depending on your workload.
 
 The data pool provides SQL Server instances for storage and compute.
 
-|Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
+|Pod name |Count| Kubernetes controller type | Containers |
 |--------|----|------|--------|-------|
-|`data-<#n>-<#m>` | 0 or more | StatefulSet |SQL Server |-` mssql-server` <br><br>- `fluentbit`<br><br>- `collectd`|
+|`data-<#n>-<#m>` | 0 or more | StatefulSet | -` mssql-server` <br><br>- `fluentbit`<br><br>- `collectd`|
 
 - `#n` identifies the data pool.
 - `#m` identifies the instance id within the pool.
@@ -129,11 +143,12 @@ Include additional pods at deployment time, depending on workload.
 
 Storage pool provides data ingestion through Spark, storage in HDFS, data access through HDFS and SQL Server endpoints.
 
-|Pod name |Deployment count| Kubernetes controller type |Service or application| Containers |
-|--------|----|------|--------|-------|
-|`storage-0-#`|1 or more. Include additional pods at deployment time, depending on workload. | StatefulSet |[HDFS DataNode](concept-storage-pool.md)|- `hadoop`<br><br>- `mssql-server`<br><br>- `fluentbit`<br><br>
-|`nmnode-0-#`|1 or more for high availability| StatefulSet |[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |- `hadoop`<br><br>- `fluentbit`
-|`sparkehead-#`|1 or more for high availability| StatefulSet |[Spark](configure-spark-hdfs.md)|- `hadoop-yarn-jobhistory`<br><br>- `hadoop-livy-sparkhistory`<br><br>- `hadoop-hivemetastore`<br><br>-- `fluentbit`
+|Pod name |Count| Kubernetes controller type | Containers |
+|--------|----|------|--------|
+|`storage-0-#`|1 or more. Include additional pods at deployment time, depending on workload. | StatefulSet |- `hadoop`<br><br>- `mssql-server`<br><br>- `fluentbit`<br><br>
+|`nmnode-0-#`|1 or more for high availability| StatefulSet |- `hadoop`<br><br>- `fluentbit`
+|`sparkehead-#`|1 or more for high availability| StatefulSet |- `hadoop-yarn-jobhistory`<br><br>- `hadoop-livy-sparkhistory`<br><br>- `hadoop-hivemetastore`<br><br>-- `fluentbit`
+|`zookeeper`|0 or 3 for high availability. | StatefulSet |- `zookeeper`<br><br>- `fluentbit`
 
 ## Application pool
 
@@ -141,9 +156,9 @@ The application pool is included in some of the test configuration profiles. The
 
 `appproxy` is a web API that sits in front of the application pool applications. It authenticates users and then routes the requests through to the applications.
 
-|Pod name | Kubernetes controller type |Service or application| Containers  |
-|--------|----|------|--------|
-|`appproxy`| ReplicaSet |User defined|- `app-service-proxy`<br><br>- `fluentbit`
+|Pod name | Kubernetes controller type | Containers  |
+|--------|----|------|
+|`appproxy`| ReplicaSet |- `app-service-proxy`<br><br>- `fluentbit`
 
 For more information, see [What is Application Deployment on a Big Data Cluster?](concept-application-deployment.md).
 
@@ -153,11 +168,26 @@ Include additional pods at deployment time, depending on workload.
 
 Gateway services provides the Knox gateway to Spark, HDFS, [Yarn](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html), Yarn UI, and Spark UI.
 
-|Pod name | Kubernetes controller type |Service or application| Containers |
-|--------|-----|-----|--------|
-|`gateway-<#>`| StatefulSet | Knox gateway |- `knox`<br><br>- `fluentbit`
+|Pod name | Kubernetes controller type | Containers |
+|--------|-----|-----|
+|`gateway-<#>`| StatefulSet |- `knox`<br><br>- `fluentbit`
 
 Only one gateways supported.
+
+## Open source container references
+
+Some containers are developed by open source projects. For information about these, see:
+
+- [Elasticsearch](https://www.elastic.co/)
+- [Kibana](https://www.elastic.co/kibana)
+- [InfluxDB](https://www.influxdata.com)
+- [Grafana](https://grafana.com/)
+- [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit)
+- [HDFS DataNode](concept-storage-pool.md)
+- [HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |
+- [Spark](configure-spark-hdfs.md)
+- [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) 
+
 
 ## Next steps
 

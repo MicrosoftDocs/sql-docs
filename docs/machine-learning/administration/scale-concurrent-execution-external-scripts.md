@@ -61,5 +61,5 @@ The resources that can be used by Python or R scripts are governed by SQL Server
 
 ## Next steps
 
-- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
-- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
+- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](../../machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](../../machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

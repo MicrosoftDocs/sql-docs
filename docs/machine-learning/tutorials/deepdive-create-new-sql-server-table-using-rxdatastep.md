@@ -113,4 +113,4 @@ Once data exists in the table, you can load it by using a simple SQL query.
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Perform chunking analysis using rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
+> [Perform chunking analysis using rxDataStep](../../machine-learning/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

@@ -153,4 +153,4 @@ After the new table has been created, compute and display a histogram of the 10,
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Transform data using R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
+> [Transform data using R](../../machine-learning/tutorials/deepdive-transform-data-using-r.md)

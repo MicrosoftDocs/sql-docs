@@ -29,7 +29,7 @@ In this article, you will find the DMVs that are specific for SQL Server Machine
 For more general information about DMVs, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
 > [!TIP]
-> You can also use the custom reports to monitor SQL Server Machine Learning Services. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> You can also use the custom reports to monitor SQL Server Machine Learning Services. For more information, see [Monitor machine learning using custom reports in Management Studio](../../machine-learning/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## Dynamic management views
 
@@ -304,8 +304,8 @@ The columns returned are:
 
 ## Next steps
 
-+ [Managing and monitoring machine learning solutions](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
-+ [Extended events for machine learning](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)
++ [Managing and monitoring machine learning solutions](../../machine-learning/r/managing-and-monitoring-r-solutions.md)
++ [Extended events for machine learning](../../machine-learning/r/extended-events-for-sql-server-r-services.md)
 + [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 + [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-+ [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
++ [Monitor machine learning using custom reports in Management Studio](../../machine-learning/r/monitor-r-services-using-custom-reports-in-management-studio.md)

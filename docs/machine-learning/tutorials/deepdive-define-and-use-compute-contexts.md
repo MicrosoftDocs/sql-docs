@@ -141,4 +141,4 @@ Sometimes operations work on your local context, but have issues when running in
 Learn how to switch compute contexts to run R code on the server or locally.
 
 > [!div class="nextstepaction"]
-> [Compute summary statistics in local and remote compute contexts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+> [Compute summary statistics in local and remote compute contexts](../../machine-learning/tutorials/deepdive-create-and-run-r-scripts.md)

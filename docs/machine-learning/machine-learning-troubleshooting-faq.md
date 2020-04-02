@@ -21,7 +21,7 @@ Use this article as a starting point for working through known issues.
 
 The following articles describe known issues with the current and previous releases:
 
-+ [Known issues for R Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
++ [Known issues for R Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
 + [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
 + [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
 
@@ -45,6 +45,6 @@ Start here if you have not set up machine learning with SQL Server, or if you wa
 The following articles contain information about defaults, and how to customize the configuration for machine learning on an instance:
 
 + [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](administration/modify-user-account-pool.md)   
-+ [Configure and manage advanced analytics extensions](r/configure-and-manage-advanced-analytics-extensions.md)  
++ [Configure and manage advanced analytics extensions](r/configure-and-manage-machine-learning-extensions.md)  
 + [How to create a resource pool](r/how-to-create-a-resource-pool-for-r.md)
 + [Optimization for R workloads](r/operationalizing-your-r-code.md)

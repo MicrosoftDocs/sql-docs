@@ -116,4 +116,4 @@ This section lists some common issues that you might run across in the course of
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create SQL Server data objects using RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
+> [Create SQL Server data objects using RxSqlServerData](../../machine-learning/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

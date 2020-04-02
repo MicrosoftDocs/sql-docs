@@ -126,4 +126,4 @@ Number of iterations: 15
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Score new data](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
+> [Score new data](../../machine-learning/tutorials/deepdive-score-new-data.md)

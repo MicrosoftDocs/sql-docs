@@ -42,7 +42,7 @@ The login or user account identifies the *security principal*, who might need mu
 
 Each person who runs an external script using SQL Server as the execution context must be mapped to a user in the database. Rather than individually set database user permissions, you could create roles to manage sets of permissions, and assign users to those roles, rather than individually set user permissions.
 
-For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
+For more information, see [Give users permission to SQL Server Machine Learning Services](../../machine-learning/security/user-permission.md).
 
 ## Permissions when using an external client tool
 
@@ -124,7 +124,7 @@ For more details, see [Extensibility architecture in SQL Server Machine Learning
 
 + Worker account names in the pool are of the format SQLInstanceName*nn*. For example, on a default instance, **SQLRUserGroup** contains accounts named MSSQLSERVER01, MSSQLSERVER02, and so forth on up to MSSQLSERVER20.
 
-Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Modify the user account pool for machine learning](../../advanced-analytics/administration/modify-user-account-pool.md).
+Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Modify the user account pool for machine learning](../../machine-learning/administration/modify-user-account-pool.md).
 
 ### Permissions granted to SQLRUserGroup
 
@@ -132,7 +132,7 @@ By default, members of **SQLRUserGroup** have read and execute permissions on fi
 
 To protect sensitive resources on SQL Server, you can optionally define an access control list (ACL) that denies access to **SQLRUserGroup**. Conversely, you could also grant permissions to local data resources that exist on host computer, apart from SQL Server itself. 
 
-By design, **SQLRUserGroup** does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loopback connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
+By design, **SQLRUserGroup** does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loopback connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../machine-learning/security/create-a-login-for-sqlrusergroup.md).
 
 ## Identity mapping
 
@@ -148,7 +148,7 @@ During execution, launchpad creates temporary folders to store session data, del
 
 Isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when an external script is detected in a stored procedure or query, SQL Server calls launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
 
-As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls. For more information, see [Firewall configuration for SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
+As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls. For more information, see [Firewall configuration for SQL Server Machine Learning Services](../../machine-learning/security/firewall-configuration.md).
 
 ## Identity mapping
 
@@ -191,7 +191,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 Trusted connections are workable from external script, but only with additional configuration. In the extensibility architecture, external processes run under worker accounts, inheriting permissions from the parent **SQLRUserGroup**. When a connection string specifies `Trusted_Connection=True`, the identity of the worker account is presented on the connection request, which is unknown by default to SQL Server.
 
-To make trusted connections successful, you must create a database login for the **SQLRUserGroup**. After doing so, any trusted connection from any member of **SQLRUserGroup** has login rights to SQL Server. For step-by-step instructions, see [Add SQLRUserGroup to a database login](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
+To make trusted connections successful, you must create a database login for the **SQLRUserGroup**. After doing so, any trusted connection from any member of **SQLRUserGroup** has login rights to SQL Server. For step-by-step instructions, see [Add SQLRUserGroup to a database login](../../machine-learning/security/create-a-login-for-sqlrusergroup.md).
 
 Trusted connections are not the most widely used formulation of a connection request. When external script specifies a connection, it can be more common to use a SQL login, or a fully-specified user name and password if the connection is to an ODBC data source.
 
@@ -249,6 +249,6 @@ In the case of [Always Encrypted](../../relational-databases/security/encryption
 
 ## Next steps
 
-In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Key points covered in this article include the purpose of launchpad, SQLRUserGroup and worker accounts, process isolation of external scripts, and how user identities are mapped to worker accounts. 
+In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../machine-learning/concepts/extensibility-framework.md). Key points covered in this article include the purpose of launchpad, SQLRUserGroup and worker accounts, process isolation of external scripts, and how user identities are mapped to worker accounts. 
 
-As a next step, review the instructions for [granting permissions](../../advanced-analytics/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) to learn when additional configuration is required.
+As a next step, review the instructions for [granting permissions](../../machine-learning/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](../../machine-learning/security/create-a-login-for-sqlrusergroup.md) to learn when additional configuration is required.

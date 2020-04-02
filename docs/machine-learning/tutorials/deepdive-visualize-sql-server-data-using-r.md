@@ -142,4 +142,4 @@ For more information about the **rxCube** function and crosstabs in general, see
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create R models using SQL Server data](../../advanced-analytics/tutorials/deepdive-create-models.md)
+> [Create R models using SQL Server data](../../machine-learning/tutorials/deepdive-create-models.md)

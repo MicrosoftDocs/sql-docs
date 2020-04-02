@@ -23,7 +23,7 @@ Traditionally, integration of data science solutions has meant extensive recodin
 + [Create and run simple R scripts in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
+A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ## Guidelines for optimizing R code for SQl
 
@@ -61,7 +61,7 @@ If your R solution uses complex aggregations or involves large datasets, you can
 
 For more information about how to improve performance in SQL Server Machine Learning, see:
 
-+ [Performance tuning for SQL Server R Services](../../advanced-analytics/r/sql-server-r-services-performance-tuning.md)
++ [Performance tuning for SQL Server R Services](../../machine-learning/r/sql-server-r-services-performance-tuning.md)
 + [Performance optimization tips and tricks](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
 ## Adapt R code for other platforms or compute contexts

@@ -199,4 +199,4 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 
 ## See also
 
-[Using data from OLAP cubes in R](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)
+[Using data from OLAP cubes in R](../../machine-learning/r/using-data-from-olap-cubes-in-r.md)

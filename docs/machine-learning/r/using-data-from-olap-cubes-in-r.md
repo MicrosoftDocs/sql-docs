@@ -49,7 +49,7 @@ Here are some other terms that might be helpful when you start building MDX quer
 
 The following article provides detailed examples of the syntax for creating or executing queries against a cube:
 
-+ [How to create MDX queries using R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)
++ [How to create MDX queries using R](../../machine-learning/r/how-to-create-mdx-queries-using-olapr.md)
 
 ## olapR API
 
@@ -63,7 +63,7 @@ The **olapR** package supports two methods of creating MDX queries:
 
     After building your MDX using any client utility, such as SSMS or Excel, save the query string. Provide this MDX string as an argument to the *SSAS query handler* in the **olapR** package. The provider sends the query to the specified Analysis Services server, and passes back the results to R. 
 
-For examples of how to build an MDX query or run an existing MDX query, see [How to create MDX queries using R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md).
+For examples of how to build an MDX query or run an existing MDX query, see [How to create MDX queries using R](../../machine-learning/r/how-to-create-mdx-queries-using-olapr.md).
 
 ## Known issues
 

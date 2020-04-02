@@ -57,7 +57,7 @@ When you run Python "inside" SQL Server, you must encapsulate the Python script 
 
 After the script has been embedded in the stored procedure, any application that can make a stored procedure call can initiate execution of the Python code.  Thereafter SQL Server manages code execution as summarized in the following diagram.
 
-![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../machine-learning/python/media/script-in-db-python2.png)
 
 1. A request for the Python runtime is indicated by the parameter `@language='Python'` passed to the stored procedure. SQL Server sends this request to the launchpad service.
 In Linux, SQL uses a **launchpadd** service to communicate with a separate launchpad process for each user. See the [Extensibility architecture diagram](extensibility-framework.md#architecture-diagram) for details.
@@ -77,7 +77,7 @@ You can run Python scripts from a remote computer, such as a laptop, and have th
 
 The following diagram summarizes the overall workflow when scripts are sent from a remote computer.
 
-![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../machine-learning/python/media/remote-sqlcc-from-python3.png)
 
 1. For functions that are supported in **revoscalepy**, the Python runtime calls a linking function, which in turn calls BxlServer.
 2. BxlServer is included with Machine Learning Services (In-Database) and runs in a separate process from the Python runtime.

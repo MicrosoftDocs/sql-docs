@@ -100,4 +100,4 @@ Notice that the factor variables have been written to the table `ccScoreOutput2`
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Load data into memory using rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
+> [Load data into memory using rxImport](../../machine-learning/tutorials/deepdive-load-data-into-memory-using-rximport.md)

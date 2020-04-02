@@ -74,7 +74,7 @@ landingContent:
           - text: Install Machine Learning Services on Windows
             url: install/sql-machine-learning-services-windows-install.md
           - text: Install Machine Learning Services on Linux
-            url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+            url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
       - linkListType: how-to-guide
         links:
           - text: Set up a Python client

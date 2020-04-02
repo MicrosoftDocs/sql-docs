@@ -191,4 +191,4 @@ Optionally, you can specify transformations on the data, by using R functions in
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Query and modify the SQL Server data](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
+> [Query and modify the SQL Server data](../../machine-learning/tutorials/deepdive-query-and-modify-the-sql-server-data.md)

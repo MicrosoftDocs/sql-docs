@@ -71,7 +71,7 @@ Optimization of the SQL Server instance is the key to efficient execution of ext
 > [!NOTE]
 > The optimal settings differ depending on the size and type of your data, the number of columns you are using for scoring or training a model.
 > 
-> You can review the results of specific optimizations in the final article: [Performance Tuning - case study results](../../advanced-analytics/r/performance-case-study-r-services.md)
+> You can review the results of specific optimizations in the final article: [Performance Tuning - case study results](../../machine-learning/r/performance-case-study-r-services.md)
 > 
 > For sample scripts, see the separate [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning).
 

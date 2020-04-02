@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries.
 
-For more information, see the Launchpad sections in [Extensibility architecture in SQL Server Machine Learning Services](../../advanced-analytics/concepts/extensibility-framework.md#launchpad) and [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#launchpad).
+For more information, see the Launchpad sections in [Extensibility architecture in SQL Server Machine Learning Services](../../machine-learning/concepts/extensibility-framework.md#launchpad) and [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../machine-learning/concepts/security.md#launchpad).
 
 ## Account permissions
 

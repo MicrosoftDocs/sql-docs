@@ -78,4 +78,4 @@ By specifying additional operations in the *transforms* parameter, you can do el
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
+> [Create new SQL Server table using rxDataStep](../../machine-learning/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

@@ -127,4 +127,4 @@ Now the three variables you specified (*gender*, *state*, and *cardholder*) are 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Define and use compute contexts](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
+> [Define and use compute contexts](../../machine-learning/tutorials/deepdive-define-and-use-compute-contexts.md)

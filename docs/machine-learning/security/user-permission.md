@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 This article describes how you can give users permission to run external scripts in SQL Server Machine Learning Services and give read, write, or data definition language (DDL) permissions to databases.
 
-For more information, see the permissions section in [Security overview for the extensibility framework](../../advanced-analytics/concepts/security.md#permissions).
+For more information, see the permissions section in [Security overview for the extensibility framework](../../machine-learning/concepts/security.md#permissions).
 
 <a name="permissions-external-script"></a>
 

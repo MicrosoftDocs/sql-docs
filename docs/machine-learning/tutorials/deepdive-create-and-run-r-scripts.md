@@ -115,4 +115,4 @@ Number of valid observations: 10000
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Visualize SQL Server data using R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+> [Visualize SQL Server data using R](../../machine-learning/tutorials/deepdive-visualize-sql-server-data-using-r.md)

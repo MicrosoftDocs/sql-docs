@@ -47,7 +47,7 @@ In addition to the proprietary R libraries included with Microsoft Machine Learn
   
   For the Windows platform, R packages are provided as zip files and can be downloaded and installed under the GPL license.  
   
-  For information about how to install third-party packages for use with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], see [Install Additional R Packages on SQL Server](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
+  For information about how to install third-party packages for use with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], see [Install Additional R Packages on SQL Server](../../machine-learning/r/install-additional-r-packages-on-sql-server.md)  
   
 + Additional packages and libraries provided by [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].   
   
@@ -83,14 +83,14 @@ When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../inc
 
 For examples of how to create and work with data sources and execution contexts,  see these tutorials:
 
-+ [Data Science Deep Dive](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
++ [Data Science Deep Dive](../../machine-learning/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
 +  [Data Analysis using Microsoft R](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 
 ## Deploy R Code to Production
 
 An important part of data science is providing your analyses to others, or using predictive models to improve business results or processes. In [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], it is easy to move to production when your R script or model is ready.
 
-For more information about how you can move your code to run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Operationalizing Your R Code](../../advanced-analytics/r/operationalizing-your-r-code.md).
+For more information about how you can move your code to run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Operationalizing Your R Code](../../machine-learning/r/operationalizing-your-r-code.md).
 
 Typically the deployment process begins with cleaning up your script to eliminate code that is not needed in production. As you move computations closer to the data, you might find ways to  more efficiently move, summarize, or present data than doing everything in R.  We recommend that the data scientist consult with a database developer about ways to improve performance, especially if the solution does data cleansing or feature engineering that might be more effective in SQL. Changes to ETL processes might be needed to ensure that workflows for building or scoring a model don't fail, and that input data is available in the right format.
 

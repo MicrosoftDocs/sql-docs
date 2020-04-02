@@ -136,8 +136,6 @@ You can restart the service using the right-click **Restart** command for the in
 
 ## Verify installation
 
-Check the installation status of the instance using [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
-
 Use the following steps to verify that all components used to launch external script are running.
 
 1. In SQL Server Management Studio, open a new query window, and run the following command:
@@ -222,7 +220,7 @@ Now that you have everything working, you might also want to optimize the server
 
 ### Add more worker accounts
 
-If you think you might use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
+If you think you might use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).
 
 <a name="bkmk_optimize"></a>
 
@@ -236,9 +234,9 @@ To ensure that machine learning jobs are prioritized and resourced appropriately
   
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](../administration/modify-user-account-pool.md).
+- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).
 
-If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources that are used by R. For more information, see [Monitoring and managing R Services](../r/managing-and-monitoring-r-solutions.md).
+If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources that are used by R. 
 
 ### Install additional R packages
 
@@ -246,13 +244,11 @@ The R solutions you create for SQL Server can call basic R functions, functions 
 
 Packages that you want to use from SQL Server must be installed in the default library that is used by the instance. If you have a separate installation of R on the computer, or if you installed packages to user libraries, you won't be able to use those packages from T-SQL.
 
-The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages](../r/install-additional-r-packages-on-sql-server.md).
+The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install packages with R tools](../package-management/install-r-packages-standard-tools.md).
 
 ## Next steps
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).

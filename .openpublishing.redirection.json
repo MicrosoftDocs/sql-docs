@@ -16597,22 +16597,22 @@
     },
     {
       "source_path": "docs/big-data-cluster/tutorial-notebook-spark.md",
-      "redirect_url": "/sql/big-data-clusters/notebooks-tutorial-spark",
+      "redirect_url": "/sql/big-data-cluster/notebooks-tutorial-spark",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/big-data-cluster/deploy-notebooks.md",
-      "redirect_url": "/sql/big-data-clusters/notebooks-deploy",
+      "redirect_url": "/sql/big-data-cluster/notebooks-deploy",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/big-data-cluster/manage-notebooks.md",
-      "redirect_url": "/sql/big-data-clusters/notebooks-manage-bdc",
+      "redirect_url": "/sql/big-data-cluster/notebooks-manage-bdc",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/big-data-cluster/notebooks-how-to-manage.md",
-      "redirect_url": "/sql/big-data-clusters/notebooks-manage-bdc",
+      "redirect_url": "/sql/big-data-cluster/notebooks-manage-bdc",
       "redirect_document_id": false
     },
     {

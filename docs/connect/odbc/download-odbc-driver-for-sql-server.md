@@ -1,6 +1,6 @@
 ---
 title: Download ODBC Driver for SQL Server
-ms.date: 03/10/2020
+ms.date: 04/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -62,6 +62,10 @@ If you need to download the packages for offline installation, all versions are 
 
 > [!Note]
 > Packages named `msodbcsql17-*` are the latest version. Packages named `msodbcsql-*` are version 13 of the driver.
+
+### Alpine
+
+- [Alpine package](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
 
 ### Debian
 

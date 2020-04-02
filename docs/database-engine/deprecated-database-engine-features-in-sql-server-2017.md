@@ -19,25 +19,27 @@ ms.author: mikeray
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Deprecated Database Engine Features in SQL Server 2017
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Deprecated features should not be used in new applications.  
   
-When a feature is marked deprecated, it means:
--  The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
--  We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
--  For new development work, we do not recommend using deprecated features.      
-  
-You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
-  
-The value of these counters are also available by executing the following statement:  
-  
-```sql  
-SELECT * FROM sys.dm_os_performance_counters   
-WHERE object_name = 'SQLServer:Deprecated Features';  
-```  
+When a feature is marked deprecated, it means:\
 
-> [!NOTE]  
+- The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
+- We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
+- For new development work, we do not recommend using deprecated features.      
+
+You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
+
+The value of these counters are also available by executing the following statement:  
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name = 'SQLServer:Deprecated Features';
+```
+
+> [!NOTE]
 > This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)].
 
 ## Features deprecated in the next version of SQL Server

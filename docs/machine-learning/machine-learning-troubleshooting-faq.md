@@ -44,7 +44,6 @@ Start here if you have not set up machine learning with SQL Server, or if you wa
 
 The following articles contain information about defaults, and how to customize the configuration for machine learning on an instance:
 
-+ [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](administration/modify-user-account-pool.md)   
-+ [Configure and manage advanced analytics extensions](r/configure-and-manage-machine-learning-extensions.md)  
-+ [How to create a resource pool](r/how-to-create-a-resource-pool-for-r.md)
++ [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](administration/scale-concurrent-execution-external-scripts.md)   
++ [How to create a resource pool](administration/create-external-resource-pool.md)
 + [Optimization for R workloads](r/operationalizing-your-r-code.md)

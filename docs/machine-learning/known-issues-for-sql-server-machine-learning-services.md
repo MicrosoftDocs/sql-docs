@@ -180,7 +180,7 @@ It is possible to call the machine learning libraries that are installed for SQL
 
 For example, even if you are using the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
 
-In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same  libraries that are in SQL Server, you can install Microsoft R Client, [SQL Server 2017 Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md), or [SQL Server 2016 R Server (Standalone)](install/sql-r-standalone-windows-install.md).
+In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same  libraries that are in SQL Server, you can install Microsoft R Client or [SQL Server 2017 Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md).
 
 ### 12. SQL Server Data Tools does not support permissions required by external scripts
 
@@ -505,7 +505,7 @@ The previous long running external script against master will terminate with the
 
 **Workaround**
 
-Don’t run the library install in parallel to the long-running query. Or rerun the long running query after the installation is complete.
+Don't run the library install in parallel to the long-running query. Or rerun the long running query after the installation is complete.
 
 **Applies to:** SQL Server 2019 on Linux & Big Data Clusters only.
 

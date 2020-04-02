@@ -125,7 +125,9 @@ print(sys.version)
 
 ## Next steps
 
-+ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
-+ [Get R package information](r-package-information.md)
-+ [Install new R packages](../r/install-additional-r-packages-on-sql-server.md)
-+ [R and Python tutorials](../tutorials/machine-learning-services-tutorials.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [Install packages with Python tools](install-python-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [Install new Python packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
+::: moniker-end

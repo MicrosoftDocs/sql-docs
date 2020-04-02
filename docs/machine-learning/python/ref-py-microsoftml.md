@@ -133,6 +133,5 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 ## See also
 
 + [Python tutorials](../tutorials/sql-server-python-tutorials.md)
-+ [Tutorial: Embed Python code in T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Python Reference (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
 

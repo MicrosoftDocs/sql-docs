@@ -128,9 +128,8 @@ How much you change your code depends on whether you intend to submit the R code
 
 **Package your R code in a stored procedure**
 
-+ If your code is relatively simple, you can embed it in a T-SQL user-defined function without modification, as described in these samples:
++ If your code is relatively simple, you can embed it in a T-SQL user-defined function without modification, as described in this samples:
 
-    + [Create an R function that runs in rxExec](../tutorials/deepdive-create-a-simple-simulation.md)
     + [Feature engineering using T-SQL and R](../tutorials/sqldev-create-data-features-using-t-sql.md)
 
 + If the code is more complex, use the R package **sqlrutils** to convert your code. This package is designed to help experienced R users write good stored procedure code. 

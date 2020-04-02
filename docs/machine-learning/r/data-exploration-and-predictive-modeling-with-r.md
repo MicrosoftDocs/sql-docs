@@ -47,9 +47,9 @@ In addition to the proprietary R libraries included with Microsoft Machine Learn
   
   For the Windows platform, R packages are provided as zip files and can be downloaded and installed under the GPL license.  
   
-  For information about how to install third-party packages for use with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], see [Install Additional R Packages on SQL Server](../../machine-learning/r/install-additional-r-packages-on-sql-server.md)  
+  For information about how to install third-party packages for use with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], see [Install Additional R Packages on SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
   
-+ Additional packages and libraries provided by [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].   
++ Additional packages and libraries provided by [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
   
      The **RevoScaleR** package includes high performance big data analytics, improved versions of functions that support common data science tasks, optimized learners for Naive Bayes, linear regression, time series models, and neural networks, and advanced math libraries.  
   

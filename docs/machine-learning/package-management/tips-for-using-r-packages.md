@@ -91,5 +91,3 @@ Using the following guidelines will help you avoid "package not found" errors.
 ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
 + [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end
-+ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
-+ [Tutorials, samples, solutions](../tutorials/machine-learning-services-tutorials.md)

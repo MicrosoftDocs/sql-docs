@@ -39,25 +39,25 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 
 |Name  |Count  |Description  |
 |---------|---------|---------|
-|[`appproxy-<#m>`](#application-pool)        |1 <sup>*</sup> |Application proxy|
-|[`compute-<#n>-<#m>`](#compute-pool)|1 <sup>*</sup> |SQL Server|
-|[`control-<nnnn>`](#control)        |1              |Control service|
-|[`controldb-<#>`](#control)         |1              |Configuration store|
-|[`controlwd-<nnnn>`](#control)      |1              |Control watchdog|
-|[`data-<#>-<#>`](#data-pool)        |2 <sup>*</sup> |SQL Server|
-|[`gateway-<#>`](#gateway-service)   |1              |Knox|
-|[`logsdb-<#>`](#control)             |1              |Elastic search|
-|[`logsui-<nnnn>`](#control)          |1              |Kibana|
-|[`master-<#n>`](#master-instance)   |1-9 <sup>*</sup>|Master SQL Server instance.|
-|[`metricsdb-<#>`](#control)       |1              |InfluxDB|
-|[`metricsdc-<nnnn>`](#control)    |5              |Telegraf|
-|[`metricsui-<nnnn>`](#control)    |1              |Grafana|
-|[`mgmtproxy-<nnnn>`](#control)    |1              |Service proxy|
-|[`nmnode-<#>-<#>`](#storage-pool)  |2              |HDFS node. |
-|[`operator-<nnnn>`](#master-instance)      |1              |High availability|
-|[`sparkhead-<#>`](#storage-pool)      |2              |HDFS spark head|
-|[`storage-<#>-<#>`](#storage-pool)  |3 <sup>*</sup> |Manage storage.|
-|[`zookeeper-<#>`](#control)       |3              |High availability|
+|[`appproxy-<#m>`](#application-pool)|1 <sup>*</sup> |Depends on deployment. |
+|[`compute-<#n>-<#m>`](#compute-pool)|1 <sup>*</sup> ||
+|[`control-<nnnn>`](#control)        |1              ||
+|[`controldb-<#>`](#control)         |1              ||
+|[`controlwd-<nnnn>`](#control)      |1              ||
+|[`data-<#>-<#>`](#data-pool)        |2 <sup>*</sup> ||
+|[`gateway-<#>`](#gateway-service)   |1              ||
+|[`logsdb-<#>`](#control)             |1              ||
+|[`logsui-<nnnn>`](#control)          |1              ||
+|[`master-<#n>`](#master-instance)   |1-9 <sup>*</sup>|Master SQL Server instance. At least one is required. Additional nodes support high availability.|
+|[`metricsdb-<#>`](#control)       |1              ||
+|[`metricsdc-<nnnn>`](#control)    |1 per Kubernetes node ||
+|[`metricsui-<nnnn>`](#control)    |1              ||
+|[`mgmtproxy-<nnnn>`](#control)    |1              ||
+|[`nmnode-<#>-<#>`](#storage-pool)  |1 or 2              | Additional node for high availability. |
+|[`operator-<nnnn>`](#master-instance)      |0 or 1 |Supports high availability.|
+|[`sparkhead-<#>`](#storage-pool)      |0 or more      |Number depends on Spark and high availability configurations.|
+|[`storage-<#>-<#>`](#storage-pool)  |3 <sup>*</sup> ||
+|[`zookeeper-<#>`](#control)       |0 or 3|For high availability.|
 
 <sup>*</sup> Adjust the number of instances at deployment time according to the size of the workload.
 

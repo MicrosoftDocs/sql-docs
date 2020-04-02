@@ -213,14 +213,12 @@ To check the installation status of the instance and fix common issues, try thes
 
 ## Next steps
 
-R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
-
-+ [Tutorial: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Tutorial: Run Python in T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: In-database analytics for Python developers](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)
 
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
+R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+
++ [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

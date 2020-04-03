@@ -81,6 +81,8 @@
       items:
       - name: Deployment guidance
         href: big-data-cluster/deployment-guidance.md
+      - name: Deployed resources
+        href: big-data-cluster/concept-architecture-pods.md
       - name: Upgrade to a new release
         href: big-data-cluster/deployment-upgrade.md
       - name: Customize deployments
@@ -193,8 +195,6 @@
         href: big-data-cluster/connect-to-big-data-cluster.md
       - name: View cluster status
         href: big-data-cluster/view-cluster-status.md
-      - name: Kubernetes troubleshooting
-        href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
@@ -219,7 +219,9 @@
         href: big-data-cluster/spark-history-server.md
     - name: Troubleshoot
       items:
-      - name: Active directory deployment
+      - name: Troubleshoot Kubernetes
+        href: big-data-cluster/cluster-troubleshooting-commands.md
+      - name: Active directory group scope
         href: big-data-cluster/troubleshoot-active-directory.md
   - name: Reference
     items:

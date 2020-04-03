@@ -47,7 +47,7 @@ RECONFIGURE WITH OVERRIDE;
 
 You must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make this change effective.
 
-For more information, see [Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+For more information, see [Set up SQL Server Machine Learning](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 
 ## See also
 
@@ -57,4 +57,4 @@ For more information, see [Set up SQL Server Machine Learning](../../advanced-an
 
 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-[SQL Server Machine Learning Services](../../advanced-analytics/r/sql-server-r-services.md)
+[SQL Server Machine Learning Services](../../machine-learning/index.yml)

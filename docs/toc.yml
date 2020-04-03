@@ -7020,8 +7020,8 @@
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
-  - name: Advanced Analytics & Machine learning > 
-    href: advanced-analytics/
+  - name: Machine Learning Services > 
+    href: machine-learning/
   - name: Analytics Platform System > 
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md

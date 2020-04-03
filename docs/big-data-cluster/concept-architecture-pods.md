@@ -33,7 +33,7 @@ The following diagram displays the components deployed in a Big Data Cluster:
 
 :::image type="content" source="media/big-data-cluster-overview/architecture-diagram-overview.png" alt-text="big-data-cluster-diagram":::
 
-For additional information about the architecture, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md).
+For information about the architecture, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md).
 
 ## Deployed pods
 
@@ -73,7 +73,7 @@ Not all pods are included in every BDC cluster. Deployments with high availabili
 
 - `dns-<nnnn>`
 
-The following sections describe describe the pods and containers in each pod.
+The following sections describe the pods and list the containers in each pod.
 
 ## Control
 
@@ -120,7 +120,7 @@ Compute pool provides a SQL Server instance for computation.
 |`compute-<#n>-<#m>`|1 or more.| StatefulSet |- `mssql-server`<br><br>- `fluentbit`<br><br>- `collectd`
 
 - `#n` identifies the compute pool.
-- `#m` identifies the instance id within the pool.
+- `#m` identifies the instance ID within the pool.
 
 The compute pool SQL Server instances are stateless. They only require storage for `tempdb`.
 
@@ -135,7 +135,7 @@ The data pool provides SQL Server instances for storage and compute.
 |`data-<#n>-<#m>` | 0 or more | StatefulSet | -` mssql-server` <br><br>- `fluentbit`<br><br>- `collectd`|
 
 - `#n` identifies the data pool.
-- `#m` identifies the instance id within the pool.
+- `#m` identifies the instance ID within the pool.
 
 Include additional pods at deployment time, depending on workload.
 
@@ -172,11 +172,11 @@ Gateway services provides the Knox gateway to Spark, HDFS, [Yarn](https://hadoop
 |--------|-----|-----|
 |`gateway-<#>`| StatefulSet |- `knox`<br><br>- `fluentbit`
 
-Only one gateways supported.
+Only one gateway is supported.
 
-## Open source container references
+## Open-source container references
 
-Some containers are developed by open source projects. For information about these, see:
+Some containers are developed by open-source projects. For information about open-source containers used, see:
 
 - [Elasticsearch](https://www.elastic.co/)
 - [Kibana](https://www.elastic.co/kibana)

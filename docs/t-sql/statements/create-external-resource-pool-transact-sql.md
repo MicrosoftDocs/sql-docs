@@ -87,7 +87,7 @@ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements the resource pool whe
 
 For general information about resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), and [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).
 
-For information specific to managing external resource pools that are used for machine learning, see [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md). 
+For information specific to managing external resource pools that are used for machine learning, see [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md). 
 
 ## Permissions
 

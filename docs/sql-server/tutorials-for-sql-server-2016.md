@@ -29,7 +29,7 @@ ms.author: "craigg"
 |[Integration Services Tutorials](../integration-services/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../includes/ssis-md.md)] packages.|  
 |[Replication Tutorials](../relational-databases/replication/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
-|[SQL Server Machine Learning Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using R or Python. Run R or Python scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[SQL Server Machine Learning Tutorials](../machine-learning/tutorials/sql-server-r-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using R or Python. Run R or Python scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## Previously published tutorials 
   

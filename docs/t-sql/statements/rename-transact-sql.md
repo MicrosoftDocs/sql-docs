@@ -90,7 +90,7 @@ You can't rename a table or database while it is in use. Renaming a table requir
 
 ### Rename column restrictions
 
-You can't rename a column that is used for the table's distribution. You also can't rename any columns in a temp table. 
+You can't rename a column that is used for the table's distribution. You also can't rename any columns in an external table or a temp table. 
 
 ### Views are not updated
 

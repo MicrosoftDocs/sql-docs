@@ -15,7 +15,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Request schemas as results with XMLDATA & XMLSCHEMA
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The following query returns the XML-DATA schema that describes the document structure.  
   
 ## Example  

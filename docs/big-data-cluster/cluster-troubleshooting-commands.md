@@ -1,5 +1,5 @@
 ---
-title: Monitor and troubleshoot
+title: Troubleshoot Kubernetes
 titleSuffix: SQL Server big data clusters
 description: This article provides useful commands for monitoring and troubleshooting a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea 
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitoring and troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# Troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

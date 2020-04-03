@@ -195,8 +195,6 @@
         href: big-data-cluster/connect-to-big-data-cluster.md
       - name: View cluster status
         href: big-data-cluster/view-cluster-status.md
-      - name: Kubernetes troubleshooting
-        href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
@@ -221,8 +219,10 @@
         href: big-data-cluster/spark-history-server.md
     - name: Troubleshoot
       items:
-      - name: Active directory deployment
-        href: big-data-cluster/troubleshoot-active-directory.md
+      - name: Troubleshoot Kubernetes
+        href: big-data-cluster/cluster-troubleshooting-commands.md
+      - name: Active directory group scope
+        href: big-data-cluster/troubleshoot-active-directory-deploy-group-scope.md
   - name: Reference
     items:
     - name: Deployment reference

@@ -184,7 +184,7 @@ Some containers are developed by open source projects. For information about the
 - [Grafana](https://grafana.com/)
 - [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit)
 - [HDFS DataNode](concept-storage-pool.md)
-- [HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |
+- [HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) 
 - [Spark](configure-spark-hdfs.md)
 - [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) 
 

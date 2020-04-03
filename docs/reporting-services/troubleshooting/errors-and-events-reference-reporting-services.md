@@ -1,6 +1,6 @@
 ---
 title: "Errors and Events Reference (Reporting Services)"
-description: In this article, learn about different report server events. These events include error, warning, and information types.
+description: View the ID, type, category, source, and description for different report server events. These events include error, warning, and information types.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting

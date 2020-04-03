@@ -222,7 +222,7 @@
       - name: Troubleshoot Kubernetes
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Active directory group scope
-        href: big-data-cluster/troubleshoot-active-directory-deploy-group-scope.md
+        href: big-data-cluster/troubleshoot-active-directory.md
   - name: Reference
     items:
     - name: Deployment reference

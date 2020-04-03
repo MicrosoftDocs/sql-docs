@@ -81,7 +81,7 @@ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements the resource pool whe
 
 For general information about resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), and [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
 
-For information specific to the use of external resource pools to govern machine learning jobs, see [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)...
+For information specific to the use of external resource pools to govern machine learning jobs, see [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)...
 ## Permissions
 
 Requires `CONTROL SERVER` permission.
@@ -104,7 +104,7 @@ GO
 
 ## See also
 
-+ [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)
 + [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 + [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)

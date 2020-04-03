@@ -85,7 +85,7 @@ conceptualContent:
           url: https://docs.microsoft.com/azure/dms/dms-overview
           itemType: whats-new
         - text: SQL Server Machine Learning Services
-          url: advanced-analytics/index.yml
+          url: machine-learning/index.yml
           itemType: whats-new
     - title: Install 
       links:
@@ -178,7 +178,7 @@ additionalContent:
           - text: Microsoft Analytics Platform System
             url: analytics-platform-system/index.md
           - text: SQL Server Machine Learning Services (R & Python)
-            url: advanced-analytics/index.yml
+            url: machine-learning/index.yml
           - text: Azure Machine Learning
             url: https://docs.microsoft.com/azure/machine-learning/
 

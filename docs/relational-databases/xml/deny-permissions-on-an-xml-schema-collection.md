@@ -14,7 +14,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Deny Permissions on an XML Schema Collection
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Permission can be denied to either create a new XML schema collection or use an existing one.  
   
 ## Denying Permission to Create an XML Schema Collection  

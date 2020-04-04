@@ -15,7 +15,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   FOR XML does not support common language runtime (CLR) user-defined data types (UDTs).  
   
  To use FOR XML with CLR user-defined data types, make sure that the data type has an XML serialization, and use an explicit cast to XML in the FOR XML select clause.  

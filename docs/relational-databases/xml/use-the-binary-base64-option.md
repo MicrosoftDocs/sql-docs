@@ -1,7 +1,7 @@
 ---
 title: "Use the BINARY BASE64 Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/23/2019"
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "AUTO FOR XML mode, BINARY BASE64 option"
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+author: RothJa
+ms.author: jroth
+# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # Use the BINARY BASE64 Option
 

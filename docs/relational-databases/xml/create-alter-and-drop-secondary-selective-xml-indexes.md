@@ -12,7 +12,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Create, Alter, and Drop Secondary Selective XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Describes how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.  
   
 ##  <a name="create"></a> Creating a Secondary Selective XML Index  

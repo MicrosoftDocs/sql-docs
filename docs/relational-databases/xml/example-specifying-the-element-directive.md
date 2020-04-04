@@ -14,7 +14,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Specifying the ELEMENT Directive
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This retrieves employee information and generates element-centric XML as shown in the following:  
   
 ```  

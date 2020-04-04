@@ -39,9 +39,9 @@ GeneMi. 2019/04/02.
 
 ## 18.5
 
-Download: [Download SSMS 18.5](download-sql-server-management-studio-ssms.md)  
-Build number: 15.0.18330.0  
-Release date: April 07, 2020  
+- Download: [Download SSMS 18.5](download-sql-server-management-studio-ssms.md)
+- Build number: 15.0.18330.0
+- Release date: April 07, 2020
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
@@ -153,9 +153,9 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ![download](media/download-icon.png) [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2108895)
 
-Release number: 18.4
-Build number: 15.0.18206.0
-Release date: November 04, 2019
+- Release number: 18.4
+- Build number: 15.0.18206.0
+- Release date: November 04, 2019
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
 
@@ -210,9 +210,9 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 
 ![download](media/download-icon.png) [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
-Release number: 18.3.1  
-Build number: 15.0.18183.0  
-Release date: October 02, 2019
+- Release number: 18.3.1
+- Build number: 15.0.18183.0
+- Release date: October 02, 2019
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
 
@@ -266,9 +266,9 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 
 ![download](media/download-icon.png) [Download SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
-Release number: 18.2  
-Build number: 15.0.18142.0  
-Release date: July 25, 2019
+- Release number: 18.2
+- Build number: 15.0.18142.0
+- Release date: July 25, 2019
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
 
@@ -340,8 +340,8 @@ Release date: July 25, 2019
 
 ![download](media/download-icon.png) [Download SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
-- Release number: 18.1  
-- Build number: 15.0.18131.0  
+- Release number: 18.1
+- Build number: 15.0.18131.0
 - Release date: June 11, 2019
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)

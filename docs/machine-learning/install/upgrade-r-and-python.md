@@ -13,12 +13,12 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python and R integration in SQL Server includes open-source and Microsoft-proprietary packages.
-                                                                            
-                                                                            tandard SQL Server servicing:
-                                                                            
-                                                                             Packages are updated according to the SQL Server release cycle.
-                                                                             Bug fixes are applied to existing packages at the current version.
-                                                                             No major version upgrades.
+                                                                               
+                                                                               tandard SQL Server servicing:
+                                                                               
+                                                                                Packages are updated according to the SQL Server release cycle.
+                                                                                Bug fixes are applied to existing packages at the current version.
+                                                                                No major version upgrades.
 
 You can get [newer versions of Python and R](#version-map) by *binding* to **Microsoft Machine Learning Server**. The version applies to both SQL Server Machine Learning Services (In-Database) and SQL Server R Services (In-Database).
 
@@ -292,7 +292,7 @@ SqlBindR.exe fails to restore original packages or R components with upgrade to 
 
 Later version of SqlBindR automatically restores the original R features, eliminating the need for reinstallation of R components or repatch the server. However, you must install any R package updates that might have been added after the initial installation.
 
-Use R commands to synchronize installed packages to the file system using records in the database. For more information, see [R package management for SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+Use R commands to synchronize installed packages to the file system using records in the database. For more information, see [R package management for SQL Server](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server).
 
 ### Problems with multiple upgrades from SQL Server
 

@@ -13,12 +13,12 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python and R integration in SQL Server includes open-source and Microsoft-proprietary packages.
-                                        
-                                        tandard SQL Server servicing:
-                                        
-                                         Packages are updated according to the SQL Server release cycle.
-                                         Bug fixes are applied to existing packages at the current version.
-                                         No major version upgrades.
+                                                                            
+                                                                            tandard SQL Server servicing:
+                                                                            
+                                                                             Packages are updated according to the SQL Server release cycle.
+                                                                             Bug fixes are applied to existing packages at the current version.
+                                                                             No major version upgrades.
 
 You can get [newer versions of Python and R](#version-map) by *binding* to **Microsoft Machine Learning Server**. The version applies to both SQL Server Machine Learning Services (In-Database) and SQL Server R Services (In-Database).
 

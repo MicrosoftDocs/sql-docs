@@ -67,7 +67,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | Removed support for *Feature Restriction* (this preview feature has been removed from SQL Azure and SQL on-prem). |
 | SMO/Scripting | Added *Notebook* as a destination for Generate Scripts wizard. |
 | SMO/Scripting | Added support for *SQL On Demand*. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name, and engine Edition fields can now contain usual comma-separated lists ("platform": ["Windows", "Linux"]), not only regular expressions ("platform": "/Windows|Linux/"). |
+| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name, and engineEdition fields can now contain usual comma-separated lists ("platform": \[*Windows*, *Linux*\]), not only regular expressions ("platform": *\/Windows\|Linux\/*)
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added 13 assessment rules. For more details, go to [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)). |
 
 ### Bug fixes in 18.5
@@ -106,6 +106,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | High DPI/Scaling | Minor fix on New Audit Server Specification page. |
 | High DPI/Scaling | Fixed 4k display issue on High Availability Wizard. |
 | High DPI/Scaling | Fixed an issue where the user was not able to add a target in an Xevent New Session window + Set Session Event Filters in Xevent Session Wizard when display scaling at 125%. |
+| High DPI/Scaling | Fixing an issue where controls on the *Backup Database to URL* UI render out of sight under scaling above 100%. |
 |Import flat file | Updated Flat File Import Wizard to allow check all for the allow null column. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38027137). |
 | Object Explorer | Fixed an issue where Object Explorer could display incorrect information when connection strings are used to connect in Connection Dialog. |
 | Object Explorer | Fixed an issue where OE was slow in expanding tables for databases with several thousands tables (20k+). |
@@ -113,7 +114,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | Query Store UI | Fixed TRC detailed view returns incorrect data when result set is filtered on top x. This happens because the query uses multiple common table expressions, which are then joined together to create the final result set. If top x is pushed into CTE, it sometimes can filters out the required rows. This can sometimes make the result set non-deterministic. The fix is to not push top x clause to CTEs. |
 | Query Store UI | Fixed Plan summary in both - grid or chart view needs last query execution wait time. Absence of this column is breaking the query. This change set will add this column to the wait stats CTE. |
 | ShowPlan | Improved how SSMS displays estimated row counts for operators with multiple executions: (1) Modified *Estimated Number of Rows* in SSMS to "Estimated Number of Rows Per Execution"; (2) Added a new property *Estimated Number of Rows for All Executions*; (3) Modify the property *Actual Number of Rows* to *Actual Number of Rows for All Executions*. |
-| SQL Agent | Fixed an issue where trying to edit a SQL Agent job step could have resulted in the SSMS UI freezing. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/39063124). SSMS is now allowing viewing (*View* button) an output_file whose name is tokenized (at least for the simple macros/tokens supported by SQL Agent that are not determined at runtime). Also SSMS is not disabling the "View" button when the user does not have access to the file (as far as SQL permissions go). |
+| SQL Agent | Fixed an issue where trying to edit a SQL Agent job step could have resulted in the SSMS UI freezing. SSMS is now allowing viewing (*View* button) an output_file whose name is tokenized (at least for the simple macros/tokens supported by SQL Agent that are not determined at runtime). Also SSMS is not disabling the "View" button when the user does not have access to the file (as far as SQL permissions go). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/39063124). |
 | SQL Agent | Fixed the tab ordering on the Job Step page. |
 | SQL Agent | Reversed the position of the "Next" and "Previous" buttons on the Job Step page to put them in a logical order. |
 | SQL Agent | Adjusted the Job Schedule window to not clip the UI. |
@@ -123,7 +124,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | Fixed an issue related to scripting External objects. |
 | SMO/Scripting | Fixed an issue where *Generate Scripts* was not allowing choosing the scripting option for Extended Properties against SQL DB. Also, fixed the scripting of such extended properties. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Wrong help link in XTPHashAvgChainBuckets rule. |
-| XEvent UI | Fixed an issue here items in the grid where being selected on hovering. See [UserVoice - SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124) and [UserVoice - SSMS 18.0 Extended Events New Session Data Storage UX loses focus on mouse move](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
+| XEvent UI | Fixed an issue here items in the grid where being selected on hovering. See [UserVoice - SSMS Extended Events](https://feedback.azure.com/forums/908035/suggestions/38262124) and [UserVoice - SSMS 18.0 Extended Events](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
 ### Known issues (18.5)
 
@@ -132,6 +133,8 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 - When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. A workaround is to remove the folder *C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild*.
 
 - New Server Audit Specification dialog may cause SSMS to crash with an access violation error.
+
+- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on Nuget.org right after SSMS 18.5 is released)
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 

@@ -1,5 +1,6 @@
 ---
 title: Download SQL Server Management Studio (SSMS)
+description: Download the latest version of SQL Server Management Studio (SSMS).
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms

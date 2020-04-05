@@ -1,5 +1,6 @@
 ---
 title: Release notes for (SSMS)
+description: Release notes for SQL Server Management Studio (SSMS).
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms

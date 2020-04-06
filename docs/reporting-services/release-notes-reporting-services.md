@@ -45,7 +45,17 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
-## 14.0.600.1451 2019/11/13 
+## 14.0.600.1572, 2020/04/06 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Updated JQuery UI to 1.12  | &nbsp; |
+| Fixed URL case-sensitivity  | &nbsp; |
+| Fixed Parameter placement when there are many parameters  | &nbsp; |
+| Fixed FindString not working in HTML5 rendering  | &nbsp; |
+| Analysis Services Client Libraries updated to address TLS 1.0/1.1 deprecation | &nbsp; |
+
+## 14.0.600.1451, 2019/11/13 
 
 | Fixed issue | Details |
 | :---------- | :------ |

@@ -137,7 +137,7 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 - **Target database** - Select the target database where you want to publish the objects that you selected. You must select a provider before selecting a target database.
 
-### <a name="AdvScriptOpt"></a> Advanced Scripting Options Page
+### <a name="AdvScriptOpt"></a> Advanced Scripting Options Page 
 
 Use this page to specify how you want this wizard to generate scripts. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specified in **Database engine type**.
 

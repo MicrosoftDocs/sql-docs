@@ -127,7 +127,7 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 - **Save to file** - Save the script to one or more .sql files. Click the browse button (**...**) to specify a name and location for the file. Select the **Overwrite existing file** check box to replace the file if one already exists with the same name. Click **Single file** or **Single file per object** to specify how the scripts should be generated. Click **Unicode text** or **ANSI text** to specify the kind of text that should be used in the script.
 
-- **Save to Clipboard** - Save the Transact-SQL script to the Clipboard.
+- **Save to Clipboard** - Save the Transact-SQL script to the Clipboard. 
 
 - **Save to new query window** - Generate the script to a Database Engine Query Editor window. If no editor window is open, a new editor window is opened as the target for the script.
 

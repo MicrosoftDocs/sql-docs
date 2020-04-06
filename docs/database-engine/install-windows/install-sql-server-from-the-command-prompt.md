@@ -851,7 +851,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Worker|Includes Scale Out Worker for Integration Services Scale Out.| 
 |MDS||Installs [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |SQL_SHARED_MPY||Installs Python packages for [SQL Server 2017 Machine Learning Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-standalone-windows-install) |  
-|SQL_SHARED_MR||Installs R packages for [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/install/sql-r-standalone-windows-install) or SQL Server 2017 Machine Learning Server (Standalone) |  
+|SQL_SHARED_MR||Installs R packages for [SQL Server 2016 R Server (Standalone)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install) or SQL Server 2017 Machine Learning Server (Standalone) |  
 |Tools*||Installs client tools and SQL Server Books Online components.|  
 ||BC|Installs backward compatibility components.|  
 ||Conn|Installs connectivity components.|

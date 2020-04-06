@@ -145,7 +145,7 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 Use this page to specify how you want this wizard to generate scripts. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specified in **Database engine type**.
 
-![Advanced Options](media/generate-and-publish-scripts-wizard/advanced.png)
+![Advanced Options](media/generate-and-publish-scripts-wizard/advanced.png) 
 
 **Options** - Specify advanced options by selecting a value from the list of available settings to the right of each option.
 

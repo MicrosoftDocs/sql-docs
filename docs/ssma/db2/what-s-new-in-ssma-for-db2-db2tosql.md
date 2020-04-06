@@ -4,7 +4,7 @@ authors: "HJToland3;nahk-ivanov"
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "3/2/2020"
+ms.date: "4/2/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,6 +14,17 @@ ms.author: "jtoland;alexiva"
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.8
+
+The v8.8 release of SSMA for DB2 includes:
+
+* SQL Server objects synchronization stability improvements
+* GUI performance improvements during assessment and conversion
+* Updated mapping from `ROWID` to `varbinary(40)` to facilitate data migration
+* Improved conversion of `SELECT ... FROM NEW/OLD TABLE` statements
+* New conversion of `ALTER` statements for procedures and functions
+* New conversion of destructuring assignments
 
 ## SSMA v8.7
 

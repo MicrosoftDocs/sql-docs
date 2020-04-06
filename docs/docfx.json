@@ -97,7 +97,7 @@
     "fileMetadata": {
 
       "feedback_system": {
-        "advanced-analytics/**/*.md": "GitHub",
+        "machine-learning/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
         "big-data-cluster/**/*.md": "GitHub",
         "database-engine/**/*.md": "GitHub",
@@ -116,7 +116,7 @@
 
       "manager": {
         "**/*.md": "jroth",
-        "advanced-analytics/**/*.md": "cgronlun",
+        "machine-learning/**/*.md": "cgronlun",
         "dmx/**/*.md": "kfollis",
         "language-extensions/**/*.md": "cgronlun",
         "mdx/**/*.md": "kfollis",
@@ -138,7 +138,7 @@
         "2014/data-quality-services/**/*.md": "Data Quality Services (DQS)",
 
     
-        "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
+        "machine-learning/**/*.md": "SQL Server Machine Learning Services",
         "analysis-services/**/*.md": "",
         "analytics-platform-system/**/*.md": "Parallel Data Warehouse",
         "azure-data-studio/**/*.md": "Azure Data Studio",
@@ -185,7 +185,7 @@
         "sql-operations-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
 
-        "advanced-analytics/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "machine-learning/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "analysis-services/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
         "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
@@ -199,6 +199,7 @@
         "relational-databases/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions",
+        "relational-databases/xml/**/*.md": "azuresqldb-current || azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || sqlallproducts-allversions",
         "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017 || = sqlallproducts-allversions",
         "samples/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",

@@ -14,7 +14,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The following query specifies the `ELEMENTS` directive to generate element-centric XML from the query result.  
   
 ## Example  

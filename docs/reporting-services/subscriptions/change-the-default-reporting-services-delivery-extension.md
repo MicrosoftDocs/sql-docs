@@ -1,5 +1,6 @@
 ---
 title: "Change the Default Reporting Services Delivery Extension | Microsoft Docs"
+description: 'Learn to configure Reporting Services settings to re-order the delivery extensions shown in the "Delivered by" list, and to set the default delivery extension.'
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

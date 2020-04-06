@@ -4,7 +4,7 @@ authors: "HJToland3;nahk-ivanov"
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "3/2/2020"
+ms.date: "4/2/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,6 +14,18 @@ ms.author: "jtoland;alexiva"
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.8
+
+The v8.8 release of SSMA for Oracle includes:
+
+* SQL Server objects synchronization stability improvements
+* GUI performance improvements during assessment and conversion
+* Improved conversion of analytical `OVER PARTITION` clauses
+* New conversion for `LEAD` analytical function
+* New conversion for subquery factoring clauses
+* New `REPLICATE` distribution option for Azure SQL Data Warehouse
+* Brand new Oracle syntax parser to further improve conversion performance
 
 ## SSMA v8.7
 

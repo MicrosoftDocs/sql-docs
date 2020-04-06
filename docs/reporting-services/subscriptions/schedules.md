@@ -1,5 +1,6 @@
 ---
 title: "Schedules | Microsoft Docs"
+description: In this overview, learn how you can use shared schedules and report-specific schedules to control the processing and distribution of reports.
 ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

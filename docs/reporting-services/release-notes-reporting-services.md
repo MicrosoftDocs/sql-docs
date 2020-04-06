@@ -1,6 +1,6 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
-ms.date: 12/04/2019
+ms.date: 04/06/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services

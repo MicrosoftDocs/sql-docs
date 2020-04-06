@@ -11,7 +11,7 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
-ms.date: 09/05/2018
+ms.date: 03/26/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 
@@ -50,7 +50,7 @@ The last few downloads are provided for the unlikely event that you experience i
 <br>
 
 
-\* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2017, SSDT for VS2013 is no longer being updated. For additional information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+\* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT for VS2015 is no longer being updated. For additional information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
 ## Links to Download pages 

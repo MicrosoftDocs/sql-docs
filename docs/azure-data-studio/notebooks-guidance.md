@@ -217,4 +217,4 @@ To uninstall a package, use the following command from your terminal:
 - [Deploy SQL Server big data cluster with Azure Data Studio notebook](../big-data-cluster/notebooks-deploy.md).
 - [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](../big-data-cluster/notebooks-manage-bdc.md).
 - [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md).
-- [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../advanced-analytics/install/sql-machine-learning-azure-data-studio.md).
+- [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../machine-learning/install/sql-machine-learning-azure-data-studio.md).

@@ -125,15 +125,11 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 ![Save](media/generate-and-publish-scripts-wizard/save.png)
 
-- **Save to file** - Save the script to one or more .sql files. Click the browse button (**...**) to specify a name and location for the file. Select the **Overwrite existing file** check box to replace the file if one already exists with the same name. Click **Single file** or **Single file per object** to specify how the scripts should be generated. Click **Unicode text** or **ANSI text** to specify the kind of text that should be used in the script.
+- **Save as notebook** - Save the script to one or more .sql files. Click the browse button (**...**) to specify a name and location for the file.
 
-- **Save to Clipboard** - Save the Transact-SQL script to the Clipboard. 
+- **Save to Clipboard** - Save the Transact-SQL script to the Clipboard.
 
-- **Save to new query window** - Generate the script to a Database Engine Query Editor window. If no editor window is open, a new editor window is opened as the target for the script.
-
-**Publish to Web Service** - Publish the objects that you selected to a remote Web hosting service for which you have configured a provider.
-
-- **Manage Providers** - Display the **Manage Providers** dialog box. Use the **Manage Providers** dialog box to add, edit, and delete hosting providers. Each provider specifies the connection information to a Web hosting service and the target databases on that service.
+- **Save in new query window** - Generate the script to a Database Engine Query Editor window. If no editor window is open, a new editor window is opened as the target for the script.
 
 - **Advanced** - Display the **Advanced Publishing Options** dialog box where you can select advanced options for publishing scripts.
 

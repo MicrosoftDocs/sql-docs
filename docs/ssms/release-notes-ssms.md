@@ -99,7 +99,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed an issue that was causing SSMS to crash when opening .sql file while connected to Analysis Services server. |
 | General SSMS | Connection Dialog: fixed an issue where unchecking the "Remember Password" does not work. |
 | General SSMS | Fixed an issue where credentials associated to Server/Users are always remembered. See [UserVoice 37875172](https://feedback.azure.com/forums/908035/suggestions/37875172). |
-| General SSMS | Fixed issue where occasionally Editor windows was not properly refreshed. This is achieved by disabling the hardware acceleration in *Tools > Options > Environement*. See [UserVoice 37474042](https://feedback.azure.com/forums/908035/suggestions/37474042). |
+| General SSMS | Fixed issue where occasionally Editor windows was not properly refreshed. This is achieved by disabling the hardware acceleration in *Tools > Options > Environment*. See [UserVoice 37474042](https://feedback.azure.com/forums/908035/suggestions/37474042). |
 | General SSMS | Fixed an issue where Azure Active Directory authentication was not working through a proxy. |
 | High DPI/Scaling | Fixed an issue where the controls on the *Index properties* could be incorrectly rendered (buttons overlapping grid). See [UserVoice 36030424](https://feedback.azure.com/forums/908035/suggestions/36030424). |
 | High DPI/Scaling | Fixed multiple issues in *Database Properties* dialog, which might show clipped controls on 4K monitors. |

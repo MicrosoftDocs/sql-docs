@@ -42,52 +42,76 @@ landingContent:
           - text: Run a spark job
             url: spark-submit-job.md
 
-  # Card (Persona engineer)
-  - title: Get started (data engineer)
+  # Card (Architect)
+  - title: Architect
     linkLists:
       - linkListType: quickstart
         links:
-          - text: <engineer quickstart>
+          - text: <architect quickstart>
             url: deployment-guidance.md
-          - text: <engineer quickstart>
+          - text: <architect quickstart>
             url: deploy-get-started.md
-          - text: <engineer quickstart>
+          - text: <architect quickstart>
             url: deploy-big-data-tools.md
       - linkListType: tutorial
         links:
-          - text: <engineer tutorial>
+          - text: <architect tutorial>
             url: deployment-high-availability.md
-          - text: <engineer tutorial>
+          - text: <architect tutorial>
             url: deploy-active-directory.md
       - linkListType: sample
         links:
-          - text: <engineer sample>
+          - text: <architect sample>
             url: deploy-on-aks.md
-          - text: <engineer sample>
+          - text: <architect sample>
             url: deploy-on-aks.md
 
-  # Card (Persona data scientist)
-  - title: Get Started (data scientist)
+  # Card (Operate)
+  - title: Operate
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: <operate quickstart>
+            url: deployment-guidance.md
+          - text: <operate quickstart>
+            url: deploy-get-started.md
+          - text: <operate quickstart>
+            url: deploy-big-data-tools.md
+      - linkListType: tutorial
+        links:
+          - text: <operate tutorial>
+            url: deployment-high-availability.md
+          - text: <operate tutorial>
+            url: deploy-active-directory.md
+      - linkListType: sample
+        links:
+          - text: <operate sample>
+            url: deploy-on-aks.md
+          - text: <operate sample>
+            url: deploy-on-aks.md
+
+  # Program
+  - title: Program
     linkLists:
       - linkListType: quickstart
         links:
           - text: Install tools
             url: deploy-big-data-tools.md
-          - text: <data scientist quickstart>
+          - text: <program quickstart>
             url: deploy-get-started.md
-          - text: <data scientist quickstart>
+          - text: <program quickstart>
             url: deploy-big-data-tools.md
       - linkListType: tutorial
         links:
-          - text: <data scientist tutorial>
+          - text: <program tutorial>
             url: deployment-high-availability.md
-          - text: <data scientist tutorial>
+          - text: <program tutorial>
             url: deploy-active-directory.md
       - linkListType: sample
         links:
-          - text: <data scientist sample>
+          - text: <program sample>
             url: deploy-active-directory.md
-          - text: <data scientist sample>
+          - text: <program sample>
             url: deploy-active-directory.md
 
   # Card (Manage and monitor)

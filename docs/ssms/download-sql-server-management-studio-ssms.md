@@ -71,7 +71,7 @@ SQL Server Management Studio 18.5:
 
 For details and more information about what's new in this release, see [SSMS release notes](release-notes-ssms.md).
 
-There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
+There are a few [known issues](release-notes-ssms.md#known-issues-185) with this release.
 
 ## Previous versions
 

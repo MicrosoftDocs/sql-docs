@@ -38,7 +38,7 @@ landingContent:
           - text: Deploy
             url: deploy-get-started.md
           - text: Load data
-            url: data-ingestion-restore-database
+            url: data-ingestion-restore-database.md
           - text: Run a spark job
             url: spark-submit-job.md
 
@@ -144,7 +144,7 @@ landingContent:
       - linkListType: reference
         links:
         - text: Integration partners
-          url: partner-big-data-cluster
+          url: partner-big-data-cluster.md
 
   # Card (Related technologies)
   - title: Related technologies

@@ -77,17 +77,16 @@ The present article devotes separate sections to these two kinds of connection d
 
 &nbsp;
 
-   # Related links
-   
-      [Code examples for connecting to Azure SQL Database in the cloud, with Java and other languages](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
-      
-         -
-            e references, **obsolete** markdown syntax alternative:
-            
-            ild-an-app webpages, first page screenshot][image-ref-163-buildanapp-webpages-first-page]
-            ild-an-app webpages, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
-            
-         age-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
-            ge-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
-            
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+## Related links
+
+- [Code examples for connecting to Azure SQL Database in the cloud, with Java and other languages](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+
+<!--
+Image references, **obsolete** markdown syntax alternative:
+
+![Build-an-app webpages, first page screenshot][image-ref-163-buildanapp-webpages-first-page]
+![Build-an-app webpages, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+
+[image-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
+[image-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
+-->

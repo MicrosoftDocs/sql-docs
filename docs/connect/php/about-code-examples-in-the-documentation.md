@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # About Code Examples in the Documentation

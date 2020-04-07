@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Node.js Driver for SQL Server

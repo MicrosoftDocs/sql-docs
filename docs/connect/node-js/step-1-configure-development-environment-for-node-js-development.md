@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Step 1:  Configure development environment for Node.js development

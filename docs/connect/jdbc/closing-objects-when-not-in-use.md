@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Closing objects when not in use

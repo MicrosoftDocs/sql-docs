@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "default data types"
   - "converting data types"
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Default SQL Server Data Types

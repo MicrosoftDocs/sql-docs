@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "multiple active result sets, disabling"
   - "MARS, disabling"
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Disable Multiple Active Resultsets (MARS)

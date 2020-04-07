@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Diagnosing problems with the JDBC driver

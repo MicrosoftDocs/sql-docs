@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Python SQL Driver

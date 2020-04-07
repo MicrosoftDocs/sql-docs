@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "connection string keywords"
   - "DSNs"
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Connecting to SQL Server

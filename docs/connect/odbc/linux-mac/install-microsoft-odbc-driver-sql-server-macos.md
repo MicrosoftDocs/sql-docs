@@ -7,7 +7,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver, installing"
-author: rothja
+author: David-Engel
 ms.author: v-jizho2
 manager: jroth
 ---

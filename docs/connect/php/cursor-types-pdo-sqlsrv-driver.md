@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Cursor Types (PDO_SQLSRV Driver)

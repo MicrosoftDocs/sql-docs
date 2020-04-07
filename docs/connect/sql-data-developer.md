@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # SQL Data Developer

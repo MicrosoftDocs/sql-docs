@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Asynchronous Execution (Notification Method) Sample

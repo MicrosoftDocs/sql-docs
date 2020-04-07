@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 14be607f-f1dc-4201-a664-5fa4682cfaae
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Step 2: Create a SQL database for Node.js development

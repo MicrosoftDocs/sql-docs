@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "streaming data"
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Data Types with Stream Support Using the SQLSRV Driver

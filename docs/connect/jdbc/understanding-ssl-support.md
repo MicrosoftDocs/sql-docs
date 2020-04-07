@@ -8,7 +8,7 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Understanding encryption support

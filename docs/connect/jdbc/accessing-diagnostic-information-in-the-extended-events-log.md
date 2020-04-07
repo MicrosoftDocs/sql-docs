@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Accessing diagnostic information in the extended events log

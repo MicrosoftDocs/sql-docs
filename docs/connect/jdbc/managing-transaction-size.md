@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Managing transaction size

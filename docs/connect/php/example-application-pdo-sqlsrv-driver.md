@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Example Application (PDO_SQLSRV Driver)

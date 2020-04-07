@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "loading the driver"
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 

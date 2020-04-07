@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # System requirements, installation, and driver files

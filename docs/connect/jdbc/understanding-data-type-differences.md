@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Understanding data type differences

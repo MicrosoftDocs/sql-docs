@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Understanding cursor types

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "updating data"
   - "parameterized queries"
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Perform Parameterized Queries

@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "configuring, Internet Information Services"
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Configuring IIS for the Microsoft Drivers for PHP for SQL Server

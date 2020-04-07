@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Connecting and retrieving data

@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "date and time types, retrieving as strings"
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Retrieve Date and Time Types as Strings Using the SQLSRV Driver

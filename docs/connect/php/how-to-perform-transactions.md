@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction support"
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Perform Transactions

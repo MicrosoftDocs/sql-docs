@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Understanding the JDBC driver data types

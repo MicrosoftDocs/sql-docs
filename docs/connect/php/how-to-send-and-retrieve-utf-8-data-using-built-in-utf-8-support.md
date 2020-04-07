@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "converting data types"
   - "updating data"
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support

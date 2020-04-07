@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "retrieving data, as a binary stream"
   - "streaming data"
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver

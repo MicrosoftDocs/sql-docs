@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "connection pooling support"
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Connection Pooling (Microsoft Drivers for PHP for SQL Server)

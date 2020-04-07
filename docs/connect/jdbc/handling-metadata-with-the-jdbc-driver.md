@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Handling metadata with the JDBC driver

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Handling Errors and Warnings

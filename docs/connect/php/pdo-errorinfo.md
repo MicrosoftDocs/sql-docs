@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # PDO::errorInfo

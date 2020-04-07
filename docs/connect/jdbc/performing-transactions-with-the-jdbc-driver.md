@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Performing transactions with the JDBC driver

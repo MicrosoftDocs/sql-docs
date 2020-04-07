@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Release notes for the Microsoft JDBC Driver for SQL Server

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Supporting XML data

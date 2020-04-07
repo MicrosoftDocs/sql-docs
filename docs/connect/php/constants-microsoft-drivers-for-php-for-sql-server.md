@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "constants"
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Constants (Microsoft Drivers for PHP for SQL Server)

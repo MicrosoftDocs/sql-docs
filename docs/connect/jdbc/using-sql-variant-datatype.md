@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Using Sql_variant data type

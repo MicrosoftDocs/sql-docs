@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "updating data"
   - "streaming data"
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Send Data as a Stream

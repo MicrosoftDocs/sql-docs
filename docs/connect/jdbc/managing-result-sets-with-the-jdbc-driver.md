@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Managing result sets with the JDBC driver

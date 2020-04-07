@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp"
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Connecting with bcp

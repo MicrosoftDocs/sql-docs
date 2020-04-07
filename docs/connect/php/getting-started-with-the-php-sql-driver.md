@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Getting Started with the Microsoft Drivers for PHP for SQL Server

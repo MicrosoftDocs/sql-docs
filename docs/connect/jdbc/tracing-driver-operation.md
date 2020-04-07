@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Tracing driver operation

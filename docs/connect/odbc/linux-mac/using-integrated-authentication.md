@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "integrated authentication"
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Using Integrated Authentication

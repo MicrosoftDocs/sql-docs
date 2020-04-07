@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "converting data types"
   - "streaming data"
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Specify PHP Data Types

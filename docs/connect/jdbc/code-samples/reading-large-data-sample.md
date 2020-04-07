@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Always Encrypted API reference for the JDBC driver

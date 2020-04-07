@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Connecting to Microsoft Azure SQL Database

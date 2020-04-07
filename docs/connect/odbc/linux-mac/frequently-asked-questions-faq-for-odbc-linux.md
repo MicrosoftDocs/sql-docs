@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Frequently Asked Questions (FAQ) for ODBC Linux and macOS

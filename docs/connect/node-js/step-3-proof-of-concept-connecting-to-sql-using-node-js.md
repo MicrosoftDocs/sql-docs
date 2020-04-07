@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js

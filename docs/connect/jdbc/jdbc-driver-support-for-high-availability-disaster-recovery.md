@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # JDBC driver support for High Availability, disaster recovery

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Connecting to the Server

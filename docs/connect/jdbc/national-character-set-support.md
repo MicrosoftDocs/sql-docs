@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # National character set support

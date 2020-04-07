@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "default data types"
   - "converting data types"
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Default PHP Data Types

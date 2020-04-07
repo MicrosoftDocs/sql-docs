@@ -8,7 +8,7 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Connecting with encryption

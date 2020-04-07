@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Using advanced data types

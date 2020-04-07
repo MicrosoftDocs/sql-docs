@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9dd871b1-358f-4161-bb79-290bdb024d9d
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Step 2: Create a SQL database for pyodbc Python development

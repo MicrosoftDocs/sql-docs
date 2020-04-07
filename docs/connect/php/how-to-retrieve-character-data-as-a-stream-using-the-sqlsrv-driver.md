@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "retrieving data, as a character stream"
   - "streaming data"
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Retrieve Character Data as a Stream Using the SQLSRV Driver

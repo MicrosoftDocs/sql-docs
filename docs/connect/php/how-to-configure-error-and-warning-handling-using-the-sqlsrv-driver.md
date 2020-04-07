@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "errors and warnings"
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Configure Error and Warning Handling Using the SQLSRV Driver

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "converting data types"
   - "streaming data"
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # How to: Specify SQL Server Data Types When Using the SQLSRV Driver

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Connection Resiliency in the Windows ODBC Driver

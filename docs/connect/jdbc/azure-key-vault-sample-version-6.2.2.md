@@ -7,7 +7,7 @@ ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Azure Key Vault sample version 6.2.2

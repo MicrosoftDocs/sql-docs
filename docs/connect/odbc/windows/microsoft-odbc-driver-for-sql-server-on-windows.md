@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Microsoft ODBC Driver for SQL Server on Windows

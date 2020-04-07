@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ---
 # Getting started with the JDBC driver

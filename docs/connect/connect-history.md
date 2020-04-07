@@ -6,7 +6,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: David-Engel
 ms.author: genemi
 ms.reviewer: ""
 ---

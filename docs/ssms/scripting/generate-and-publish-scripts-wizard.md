@@ -215,6 +215,8 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 ### <a name="Summary"></a> Summary Page
 
+![Summary](media/generate-and-publish-scripts-wizard/summary.png)
+
 This page summarizes the options that you have selected in this wizard. To change an option, Select **Previous**. To begin generating scripts that are saved or published, Select **Next**.
 
 **Review your selections** - Displays the selections you have made for each page of the wizard. Expand a node to see the selected options for the corresponding page.

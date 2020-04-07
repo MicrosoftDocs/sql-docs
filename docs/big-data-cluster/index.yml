@@ -11,55 +11,89 @@ metadata:
   ms.topic: landing-page
   author: MikeRayMSFT
   ms.author: mikeray
-  ms.date: 03/27/2020 
+  ms.date: 04/06/2020 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
-  # Card (optional)
+  # Card (Get started)
   - title: About Big Data Clusters
     linkLists:
       - linkListType: overview
         links:
           - text: What are Big Data Clusters?
             url: big-data-cluster-overview.md
-          - text: Release notes
+      - linkListType: whats-new
+        links:
+          - text: What's new
             url: release-notes-big-data-cluster.md
       - linkListType: video
         links:
           - text: Architecture & deployment
             url: https://www.youtube.com/watch?v=q7mxWcYqBMM
-
-  # Card (optional)
-  - title: Get started
-    linkLists:
-      - linkListType: deploy
+      - linkListType: quickstart
         links:
-          - text: Plan
-            url: deployment-guidance.md
           - text: Deploy
             url: deploy-get-started.md
-          - text: Deploy tools
-            url: deploy-big-data-tools.md
-      - linkListType: concept
-        links:
-          - text: High-availability
-            url: deployment-high-availability.md
-          - text: Active Directory
-            url: deploy-active-directory.md
-          - text: Offline deployment
-            url: deploy-offline.md
-          - text: AKS
-            url: deploy-on-aks.md
-          - text: Configure custom deployment
-            url: deployment-custom-configuration.md
+          - text: Load data
+            url: data-ingestion-restore-database
+          - text: Run a spark job
+            url: spark-submit-job.md
 
-  # Card
-  - title: Manage & Monitor
+  # Card (Persona engineer)
+  - title: Engineer big data
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: quickstart
+        links:
+          - text: <engineer quickstart>
+            url: deployment-guidance.md
+          - text: <engineer quickstart>
+            url: deploy-get-started.md
+          - text: <engineer quickstart>
+            url: deploy-big-data-tools.md
+      - linkListType: tutorial
+        links:
+          - text: <engineer tutorial>
+            url: deployment-high-availability.md
+          - text: <engineer tutorial>
+            url: deploy-active-directory.md
+      - linkListType: sample
+        links:
+          - text: <engineer sample>
+            url: deploy-on-aks.md
+          - text: <engineer sample>
+            url: deploy-on-aks.md
+
+  # Card (Persona data scientist)
+  - title: Interpret data
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Install tools
+            url: deploy-big-data-tools.md
+          - text: <data scientist quickstart>
+            url: deploy-get-started.md
+          - text: <data scientist quickstart>
+            url: deploy-big-data-tools.md
+      - linkListType: tutorial
+        links:
+          - text: <data scientist tutorial>
+            url: deployment-high-availability.md
+          - text: <data scientist tutorial>
+            url: deploy-active-directory.md
+      - linkListType: sample
+        links:
+          - text: <data scientist sample>
+            url: deploy-active-directory.md
+          - text: <data scientist sample>
+            url: deploy-active-directory.md
+
+  # Card (Manage and monitor)
+  - title: Manage & monitor
+    linkLists:
+      - linkListType: how-to-guide 
         links:
           - text: Manage (Controller dashboard)
             url: manage-with-controller-dashboard.md
@@ -67,31 +101,33 @@ landingContent:
             url: view-cluster-status.md
           - text: Manage HDFS permissions
             url: hdfs-tiering-manage-permissions.md
-      - linkListType: how-to-guide
-        links:
           - text: Troubleshoot
             url: cluster-troubleshooting-commands.md
           - text: Active Directory
             url: troubleshoot-active-directory.md
 
-  # Card
-  - title: Load data
+  # Card (Deploy)
+  - title: Deploy cluster
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Plan
+            url: deployment-guidance.md
+          - text: Deploy
+            url: deploy-get-started.md
+          - text: Install tools
+            url: deploy-big-data-tools.md
+
+  # Card (Secure)
+  - title: Secure
     linkLists:
       - linkListType: tutorial
         links:
-          - text: Load sample data
-            url: tutorial-load-sample-data.md
-          - text: Load HDFS (curl)
-            url: data-ingestion-curl.md
-          - text: Load with SQL
-            url: tutorial-data-pool-ingest-sql.md
-          - text: Load with Spark
-            url: tutorial-data-pool-ingest-spark.md
-          - text: Load with restore
-            url: data-ingestion-restore-database.md
+        - text: Deploy - Active Directory
+          url: ../relational-databases/polybase/data-virtualization-csv.md
 
-  # Card
-  - title: Virtualize
+  # Card (Secure)
+  - title: Load data
     linkLists:
       - linkListType: tutorial
         links:
@@ -102,7 +138,15 @@ landingContent:
         - text: Mount ADLS Gen2
           url: hdfs-tiering-mount-adlsgen2.md
 
-  # Card
+  # Card (Integration partner)
+  - title: Integration partners
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: Integration partners
+          url: partner-big-data-cluster
+
+  # Card (Related technologies)
   - title: Related technologies
     linkLists:
       - linkListType: reference
@@ -114,7 +158,7 @@ landingContent:
         - text: Apache Spark
           url: /azure/hdinsight/spark/apache-spark-overview
 
-  # Card
+  # Card (Other resources)
   - title: Related resources
     linkLists:
       - linkListType: reference

@@ -127,9 +127,11 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 - **[Save as notebook](../../azure-data-studio/notebooks-guidance.md)** - Save the script to one or more .sql files. Select the browse button (**...**) to specify a name and location for the file.
 
+- **Save as script file** Save the script to one or more .sql files. Select the browse button **(...)** to specify a name and location for the file. Select the **Overwrite existing file** check box to replace the file if one already exists with the same name. Select **Single script file** or **One script file per object** to specify how the scripts should be generated. Select **Unicode text** or **ANSI text** to specify the kind of text that should be used in the script.
+
 - **Save to Clipboard** - Save the Transact-SQL script to the Clipboard.
 
-- **Save in new query window** - Generate the script to a Database Engine Query Editor window. If no editor window is open, a new editor window is opened as the target for the script.
+- **Open in new query window** - Generate the script to a Database Engine Query Editor window. If no editor window is open, a new editor window is opened as the target for the script.
 
 - **Advanced** - Display the **Advanced Publishing Options** dialog box where you can select advanced options for publishing scripts.
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-manager: jroth
 ---
 # Microsoft JDBC Driver for SQL Server support matrix
 

@@ -166,7 +166,7 @@ Refer to details on how to [define configuration JSON](#define-configuration-jso
 
 Path of the SSIS catalog configuration JSON file. This property is only visible when selecting "File path" as configuration file source.
 
-To use [pipeline variables](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) in configuration JSON file, you need to add a [File Transform task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+To use [pipeline variables](/azure/devops/pipelines/process/variables) in configuration JSON file, you need to add a [File Transform task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
 
 #### Inline configuration JSON
 

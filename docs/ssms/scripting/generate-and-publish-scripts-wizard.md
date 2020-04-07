@@ -143,7 +143,7 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 Use this page to specify how you want this wizard to generate scripts. Many different options are available. Options are greyed out if they are not supported by the version of SQL Server or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specified in **Database engine type**.
 
-![Advanced Options](media/generate-and-publish-scripts-wizard/advanced.png) 
+![Advanced Options](media/generate-and-publish-scripts-wizard/advanced.png)
 
 **Options** - Specify advanced options by selecting a value from the list of available settings to the right of each option.
 
@@ -213,7 +213,9 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 - **Script unique keys** - Scripts the creation of unique keys on tables. Unique keys prevent duplicate data from being entered. The default is **True**. For more information, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
 
-### <a name="Summary"></a> Summary Page  
+### <a name="Summary"></a> Summary Page
+
+![Summary](media/generate-and-publish-scripts-wizard/summary.png)
 
 This page summarizes the options that you have selected in this wizard. To change an option, Select **Previous**. To begin generating scripts that are saved or published, Select **Next**.
 
@@ -230,6 +232,12 @@ Use this page to monitor the progress of the wizard as it occurs.
 **Cancel** - Select to close the wizard before processing has completed, or if an error occurs.
 
 **Finish** - Select to close the wizard after processing has completed, or if an error occurs.
+
+### Save Scripts
+
+![Finish](media/generate-and-publish-scripts-wizard/save-scripts-finish.png)
+
+If all the settings are correct, your configuration finishes successfully.
 
 ## Generating Scripts on Azure SQL Data Warehouse
 

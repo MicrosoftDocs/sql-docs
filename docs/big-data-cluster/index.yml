@@ -43,7 +43,7 @@ landingContent:
             url: spark-submit-job.md
 
   # Card (Persona engineer)
-  - title: Engineer big data
+  - title: Get started (data engineer)
     linkLists:
       - linkListType: quickstart
         links:
@@ -67,7 +67,7 @@ landingContent:
             url: deploy-on-aks.md
 
   # Card (Persona data scientist)
-  - title: Interpret data
+  - title: Get Started (data scientist)
     linkLists:
       - linkListType: quickstart
         links:

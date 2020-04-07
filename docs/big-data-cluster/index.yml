@@ -42,6 +42,20 @@ landingContent:
           - text: Run a spark job
             url: spark-submit-job.md
 
+  # Class (Developer)
+  - title: Develop
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Deploy on AKS with Notebook
+            url: notebooks-deploy.md
+          - text: Connect
+            url: connect-to-big-data-cluster.md
+          - text: Deploy applications
+            url: concept-application-deployment.md
+          - text: Run or test applications
+            url: big-data-cluster-consume-apps.md
+
   # Card (Architect)
   - title: Architect
     linkLists:
@@ -90,7 +104,7 @@ landingContent:
           - text: <operate sample>
             url: deploy-on-aks.md
 
-  # Program
+  # Class (Program)
   - title: Program
     linkLists:
       - linkListType: quickstart

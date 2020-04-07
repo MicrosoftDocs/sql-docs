@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Download the Microsoft Drivers for PHP for SQL Server
 

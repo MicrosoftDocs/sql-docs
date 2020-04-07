@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "DSNs"
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Connecting to SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

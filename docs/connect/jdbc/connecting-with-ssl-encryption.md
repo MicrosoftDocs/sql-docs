@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Connecting with encryption
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

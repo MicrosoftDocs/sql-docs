@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # System requirements, installation, and driver files
 

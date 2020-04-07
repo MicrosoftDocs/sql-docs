@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "executing queries"
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Comparing Execution Functions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

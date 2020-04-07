@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Sparse columns

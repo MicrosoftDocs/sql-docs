@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "converting data types"
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Default SQL Server Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

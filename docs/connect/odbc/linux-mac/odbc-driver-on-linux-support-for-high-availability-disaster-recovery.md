@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

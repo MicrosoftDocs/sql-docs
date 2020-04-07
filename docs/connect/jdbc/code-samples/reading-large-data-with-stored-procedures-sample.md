@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Reading large data with stored procedures sample

@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Getting the driver version
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

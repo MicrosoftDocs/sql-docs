@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Frequently asked questions (FAQ) for JDBC driver
 

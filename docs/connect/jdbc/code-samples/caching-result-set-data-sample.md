@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Caching result set data sample
 

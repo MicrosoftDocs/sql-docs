@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Using table-valued parameters
 

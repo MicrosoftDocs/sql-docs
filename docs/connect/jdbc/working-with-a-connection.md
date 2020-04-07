@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Working with a connection

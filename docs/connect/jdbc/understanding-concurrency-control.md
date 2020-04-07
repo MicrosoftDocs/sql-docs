@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Understanding concurrency control
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

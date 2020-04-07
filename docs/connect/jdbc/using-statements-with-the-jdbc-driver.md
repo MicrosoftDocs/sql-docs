@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Using statements with the JDBC driver
 

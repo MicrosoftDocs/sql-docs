@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Handling Errors and Warnings
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

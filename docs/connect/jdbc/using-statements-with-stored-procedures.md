@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Using statements with stored procedures
 

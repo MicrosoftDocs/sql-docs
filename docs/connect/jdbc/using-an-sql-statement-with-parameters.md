@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Using an SQL statement with parameters

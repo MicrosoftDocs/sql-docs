@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Understanding XA transactions
 

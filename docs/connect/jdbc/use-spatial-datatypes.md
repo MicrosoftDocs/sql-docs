@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Using spatial datatypes
 

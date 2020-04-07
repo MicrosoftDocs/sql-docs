@@ -9,7 +9,7 @@ ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Homepage for client programming to Microsoft SQL Server
 

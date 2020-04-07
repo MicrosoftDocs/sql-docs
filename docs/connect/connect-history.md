@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ms.reviewer: ""
 ---
 # Driver history for Microsoft SQL Server

@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Modifying result set data sample

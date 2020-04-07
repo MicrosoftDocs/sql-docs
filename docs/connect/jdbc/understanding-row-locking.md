@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Understanding row locking

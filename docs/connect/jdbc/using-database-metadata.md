@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Using database metadata

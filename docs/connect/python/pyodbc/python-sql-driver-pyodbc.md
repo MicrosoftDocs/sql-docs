@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Python SQL Driver - pyodbc
 

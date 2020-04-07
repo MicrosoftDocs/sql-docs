@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Using a stored procedure with no parameters

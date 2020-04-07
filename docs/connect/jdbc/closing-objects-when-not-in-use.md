@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Closing objects when not in use
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

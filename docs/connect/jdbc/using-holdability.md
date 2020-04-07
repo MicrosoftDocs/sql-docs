@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Using holdability

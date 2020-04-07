@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Supporting XML data
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

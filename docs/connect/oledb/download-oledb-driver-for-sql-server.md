@@ -6,7 +6,7 @@ ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Download Microsoft OLE DB Driver for SQL Server
 

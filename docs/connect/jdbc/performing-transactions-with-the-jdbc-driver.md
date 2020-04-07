@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Performing transactions with the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

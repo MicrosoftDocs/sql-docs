@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "streaming data"
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # How to: Specify SQL Server Data Types When Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

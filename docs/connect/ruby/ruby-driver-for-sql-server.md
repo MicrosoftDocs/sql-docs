@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Ruby Driver for SQL Server
 

@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Using a stored procedure with an update count

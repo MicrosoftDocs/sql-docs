@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "connecting to the server, SQL Server Authentication"
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

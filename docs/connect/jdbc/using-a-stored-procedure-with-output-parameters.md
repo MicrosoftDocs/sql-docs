@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Using a stored procedure with output parameters

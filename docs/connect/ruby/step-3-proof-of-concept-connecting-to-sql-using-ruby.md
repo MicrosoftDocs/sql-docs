@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using Ruby
 

@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 
 # Using an SQL statement with no parameters

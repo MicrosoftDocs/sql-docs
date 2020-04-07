@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Tracing driver operation
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

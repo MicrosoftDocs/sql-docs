@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "bcp"
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Connecting with bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

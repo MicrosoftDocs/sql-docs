@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: David-Engel
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Handling errors
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

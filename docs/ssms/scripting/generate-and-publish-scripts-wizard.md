@@ -75,7 +75,7 @@ The user also has to supply a user name and password to access their hosting pro
 
 1. In **Object Explorer**, expand the node for the instance containing the database to be scripted.
 
-2. Point to **Tasks**, and then Select **Generate Scripts**.
+2. Point to **Tasks**, and then select **Generate Scripts**.
 
     ![Generate Scripts Wizard](media/generate-and-publish-scripts-wizard/generate-scripts.png)
 
@@ -217,7 +217,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 ![Summary](media/generate-and-publish-scripts-wizard/summary.png)
 
-This page summarizes the options that you have selected in this wizard. To change an option, Select **Previous**. To begin generating scripts that are saved or published, Select **Next**.
+This page summarizes the options that you have selected in this wizard. To change an option, select **Previous**. To begin generating scripts that are saved or published, select **Next**.
 
 **Review your selections** - Displays the selections you have made for each page of the wizard. Expand a node to see the selected options for the corresponding page.
 
@@ -257,10 +257,10 @@ In order to script objects with [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]
 
 If you set [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] as your default scripting option as shown above, these instructions can be ignored. However, if you choose to use different default scripting options, you may encounter an error. To avoid errors, follow these steps in order to Generate and Publish Scripts for [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]:
 
-1. Right Select on your SQL Data Warehouse database.
-2. Select **Generate Scripts...**.
+1. Right-click your SQL Data Warehouse database.
+2. Select **Generate Scripts**.
 3. Choose the Objects you wish to script.
-4. In **Scripting Options**, Select **Advanced**. Under **General** set:
+4. In **Scripting Options**, select **Advanced**. Under **General** set:
     1. Script for the database engine type: **Microsoft Azure SQL Database**.
     2. Script for the database engine edition: **Microsoft Azure SQL Data Warehouse Edition**.
 5. Select **Save or Publish Scripts** then **Finish**.

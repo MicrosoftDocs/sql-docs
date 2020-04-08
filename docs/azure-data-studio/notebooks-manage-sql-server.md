@@ -87,7 +87,7 @@ To change to a different installation of Python:
 1. Under **Use Existing Python**, uncheck the option "Local path to a preexisting python installation used by Notebooks."
 1. Restart Azure Data Studio.
 
-When the **Configure Python for Notebooks** page is displayed, you can select to create a new Python installation or specify a path to an existing installation.
+When the **Configure Python for Notebooks** page is displayed, you can choose to create a new Python installation or specify a path to an existing installation.
 
 ## Next steps
 

@@ -24,7 +24,7 @@ First, backup your existing SQL Server database from either SQL Server on Window
 This article shows how to restore the AdventureWorks database, but you can use any database backup. 
 
 > [!TIP]
-> You can download the AdventureWorks backup [here](https://www.microsoft.com/download/details.aspx?id=49502).
+> Download the [AdventureWorks backup](../samples/adventureworks-install-configure.md).
 
 ## Copy the backup file
 

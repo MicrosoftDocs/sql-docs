@@ -182,7 +182,7 @@ landingContent:
       - linkListType: reference
         links:
         - text: Integration partners
-          url: partner-big-data-cluster.md
+          url: ../sql-server/partner-big-data-cluster.md
 
   # Card (Related technologies)
   - title: Related technologies

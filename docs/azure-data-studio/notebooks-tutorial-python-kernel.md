@@ -25,21 +25,26 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
 
 The following steps show how to create a notebook file in Azure Data Studio:
 
-1. In Azure Data Studio, connect to the Python kernel.
+1. Open Azure Data Studio. If you're prompted to connect to a SQL Server, you may connect or click **Cancel**.
 
-2. Select **New Notebook** in the **File** menu.
+1. Select **New Notebook** in the **File** menu.
 
-3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to **Python 3**.
+1. Select **Python 3** for the **Kernel**.
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Set Kernel":::
 
+1. If you're prompted to configure Python, then in **Configure Python for Notebooks** select either:
+
+   - **New Python installation** to install a new copy of Python for Azure Data Studio, or
+   - **Use existing Python installation** to specify the path to an existing Python installation
+
 ## Run a notebook cell
 
-You can create cells containing code or text. You can run a code cell in place and the results are shown in the notebook after the cell finished running.
+You can create cells containing code or text. You can run a code cell in place and the results are shown in the notebook after the cell is finished running. Text cells allow you to intersperse formatted documentation with your code.
 
 ### Code
 
-Add a new code cell by selecting the **+Code** command in the toolbar.
+Add a new Python code cell by selecting the **+Code** command in the toolbar.
 
 :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Notebook toolbar":::
 
@@ -74,5 +79,7 @@ Selecting outside the text cell shows just the markdown text.
 Learn more about notebooks:
 
 - [How to use notebooks with SQL Server](notebooks-guidance.md)
+
+- [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md)
 
 - [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md)

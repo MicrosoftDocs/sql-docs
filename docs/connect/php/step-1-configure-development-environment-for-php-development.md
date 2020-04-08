@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 1: Configure environment for PHP development
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

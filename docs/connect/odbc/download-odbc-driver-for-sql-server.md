@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Download ODBC Driver for SQL Server

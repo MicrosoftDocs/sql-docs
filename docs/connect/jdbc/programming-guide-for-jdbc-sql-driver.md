@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Programming guide for JDBC SQL driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

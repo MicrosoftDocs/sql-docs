@@ -7,9 +7,8 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver, installing"
-author: rothja
-ms.author: v-jizho2
-manager: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (macOS)

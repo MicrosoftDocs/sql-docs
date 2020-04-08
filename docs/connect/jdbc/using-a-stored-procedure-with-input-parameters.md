@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Using a stored procedure with input parameters

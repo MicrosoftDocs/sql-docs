@@ -7,9 +7,8 @@ ms.prod_service: connectivity
 ms.reviewer: genemi
 ms.technology: connectivity
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
-manager: kenvh
+author: David-Engel
+ms.author: v-daenge
 ---
 # FIPS mode
 

@@ -8,9 +8,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "driver, installing"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-author: rothja
-ms.author: v-jizho2
-manager: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (Linux)

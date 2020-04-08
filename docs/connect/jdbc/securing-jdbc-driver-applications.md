@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Securing JDBC driver applications
 

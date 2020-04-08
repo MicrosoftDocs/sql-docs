@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Configuring how java.sql.Time values are sent to the server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

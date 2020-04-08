@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "converting data types"
   - "streaming data"
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Specify SQL Server Data Types When Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

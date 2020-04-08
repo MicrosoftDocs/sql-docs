@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDO_SQLSRV Driver Reference
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

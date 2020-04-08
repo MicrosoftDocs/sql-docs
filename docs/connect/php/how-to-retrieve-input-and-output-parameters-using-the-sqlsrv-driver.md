@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedure support"
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

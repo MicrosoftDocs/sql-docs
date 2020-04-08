@@ -5,8 +5,8 @@ ms.date: "02/27/2020"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Download Microsoft OLE DB Driver for SQL Server
 

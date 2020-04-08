@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "sqlsrv_rows_affected"
   - "API Reference, sqlsrv_rows_affected"
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

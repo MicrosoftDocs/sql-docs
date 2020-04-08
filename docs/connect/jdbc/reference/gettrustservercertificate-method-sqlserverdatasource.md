@@ -13,8 +13,8 @@ apilocation:
   - "getTrustServerCertificate Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getTrustServerCertificate Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

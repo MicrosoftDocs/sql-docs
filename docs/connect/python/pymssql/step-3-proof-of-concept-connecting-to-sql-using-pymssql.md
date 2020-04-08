@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

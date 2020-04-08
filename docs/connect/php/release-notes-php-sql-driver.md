@@ -46,7 +46,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 | New item | Details |
 | :------- | :------ |
-| Bug fix | Fixed default locale issues in Alpine Linux . |
+| Bug fix | Fixed default locale issues in Alpine Linux. |
 | Bug fix | Removed unnecessary data structure to support Client-Side Cursors feature in Alpine Linux. |
 | Bug fix | Fixed logging issues when both drivers are enabled in Alpine Linux. |
 | &nbsp; | &nbsp; |

@@ -33,7 +33,9 @@ For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
-## 5.8.1 - Linux and macOS only
+## 5.8.1
+
+This release only applies to Linux and macOS.
 
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.1)
 

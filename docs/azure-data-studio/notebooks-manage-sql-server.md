@@ -64,7 +64,7 @@ To change the SQL connection for a notebook:
 
    ![Select a server from the Attach to menu](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
-# Change the Python kernel
+## Change the Python kernel
 
 The first time you open Azure Data Studio, the **Configure Python for Notebooks** page is displayed. You can select either:
 

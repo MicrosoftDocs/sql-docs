@@ -1,6 +1,6 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: 12/12/2019
+ms.date: "04/15/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""

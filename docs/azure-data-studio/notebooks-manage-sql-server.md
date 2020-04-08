@@ -1,6 +1,6 @@
 ---
 title: How to manage a notebook
-description: Learn how to manage notebooks in Azure Data Studio. This includes opening notebooks, saving them, and changing your SQL connection.
+description: Learn how to manage notebooks in Azure Data Studio. This includes opening notebooks, saving them, and changing your SQL connection or Python kernel.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray

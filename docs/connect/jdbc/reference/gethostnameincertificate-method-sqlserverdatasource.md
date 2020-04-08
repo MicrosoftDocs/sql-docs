@@ -13,8 +13,8 @@ apilocation:
   - "getHostNameInCertificate Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getHostNameInCertificate Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

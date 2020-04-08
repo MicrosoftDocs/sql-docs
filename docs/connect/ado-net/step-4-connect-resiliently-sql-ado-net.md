@@ -10,8 +10,8 @@ ms.topic: conceptual
 dev_langs: 
   - "CSharp"
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET

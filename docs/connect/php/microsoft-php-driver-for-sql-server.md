@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft Drivers for PHP for SQL Server
 

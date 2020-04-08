@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ISQLServerCallableStatement Interface
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,8 +8,8 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Step 2: Create a SQL database for ADO.NET development

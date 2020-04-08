@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7fb68784-d60f-47cc-9e80-568e1bc5678c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ISQLServerConnection Fields
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

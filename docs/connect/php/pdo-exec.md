@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

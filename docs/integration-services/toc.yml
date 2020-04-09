@@ -65,6 +65,8 @@
     href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
   - name: Schedule packages in Azure with SSMS
     href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+  - name: Migrate to Azure process and tools 
+    href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Install Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Installing Integration Services Versions Side by Side

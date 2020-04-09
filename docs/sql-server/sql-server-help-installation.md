@@ -43,9 +43,11 @@ To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual 
 
 ## Use Help Viewer
 
-For this approach, Help Viewer 2.3 or later is recommended. The **Help** menu in the [latest version of SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md) offers 2.3 or later.
+The **Help** menu in the [latest version of SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md) offers 2.3 or later.
 
-### To download and install offline help content with Help Viewer
+### To download and install offline help content from Online
+
+For this approach, you use the *Online* Installation source.
 
 1. In SSMS or VS, select **Add and Remove Help Content** on the Help menu.
 

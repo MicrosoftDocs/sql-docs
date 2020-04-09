@@ -26,11 +26,10 @@ Internet access is required to download the Help Viewer content. You can then mi
 
 There are two major versions of the Microsoft Help Viewer.  Versions 1.x and 2.x. Each version supports different versions of SQL Server content.  The format of the offline books has changed over time, and the older versions of Help Viewer don't support the newer versions of the books.
 
-|**Content Set**|**Tools that install Help Viewer**|**Help Viewer version**|
-|-|-|-|
+|**Content Set** | **Tools that install Help Viewer** |
+|----------------|------------------------------------|
 |SQL Server 2019 <br><br><br>SQL Server 2017 <br>SQL Server 2016 | [Visual Studio 2019 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) <br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) <br><br>[Visual Studio 2017 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) <br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#1791) <br>[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) <br>Visual Studio 2015 | v2.3 <br><br><br>v2.2 |
-|SQL Server 2014<br>SQL Server 2012|SQL Server 2016 Setup (\*2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014 Setup (\*2)<br>SQL Server Management Studio 2012<br>SQL Server 2012 Setup (\*2)| v1.x|
-| | | |
+|SQL Server 2014<br>SQL Server 2012|SQL Server 2016 Setup (\*2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014 Setup (\*2)<br>SQL Server Management Studio 2012<br>SQL Server 2012 Setup (\*2) | v1.x |
 
 (\*1) To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
 
@@ -114,71 +113,20 @@ The Help Viewer opens to the Manage Content tab, with the installed help table o
 ### To view offline help content in VS with Help Viewer v2.x
 
 To view the installed help in Visual Studio:
-1. Point to **Set Help Preference** on the Help menu and choose **Launch in Help Viewer**. 
+
+1. Point to **Set Help Preference** on the Help menu and choose **Launch in Help Viewer**.
 
    ![VS Help View Set Preference Help Viewer](../sql-server/media/sql-server-help-installation/launchviewer.png)
 
-2. select **View Help** in the Help menu to display the content in the Help Viewer. 
+2. select **View Help** in the Help menu to display the content in the Help Viewer.
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    The help table of contents shows on the left, and the selected help article on the right.
-  
-## Use Help Viewer v1.x
-
-In this section, you do the following general steps:
-
-- Manually download the SQL Server 2014 Offline Books, which are a set of four.
-- Use the **Help** menu of SSMS or VS to start the Help Viewer.
-- Finally, you tell the Help Viewer where the SQL Server 2014 `*.msha` file is on your local hard drive.
-
-Earlier versions of SSMS and VS provided the 1.x versions of the Help Viewer. 1.x is able to display the Offline Books for SQL Server versions 2012 and 2014. But 1.x can't display the Offline Book for SQL Server 2016 or later.
-
-Help Viewer 2.3 is also able to display the SQL Server 2014 Offline Books, after you download the SQL Server 2014 Offline Books to your local hard drive.
-
-### To download and install offline help content with Help Viewer v1.x
-
-This process uses Help Viewer 1.x to download SQL Server 2014 help from the Microsoft Download Center and install it on your computer.
-
-1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) download site and select **Download**.
-
-2. select **Save** in the message box to save the *SQLServer2014Documentation\_\*.exe* file to your computer.
-
-   > [!NOTE]
-   > For firewall and proxy restricted environments, save the download to a USB drive or other portable media that can be carried into the environment.
-
-3. Double-select the .exe to unpack the help content file, and save the file to a local or shared folder.
-
-4. Open the **Help Library Manager** by launching SSMS or VS and selecting **Manage Help Settings** on the Help menu.
-
-5. select **Install content from disk**, and browse to the folder where you unpacked the help content file.
-
-   ![HelpLibraryManager_MainPage_InstallFromDisk](../sql-server/media/sql-server-help-installation/helplibrarymanager-mainpage-installfromdisk.png)
-
-   ![HelpLibraryManager_InstallContentFromDisk_dialog1](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog1.png)
-
-   > [!IMPORTANT]
-   > To avoid installing local help content that has only a partial table of contents, you must use the **Install content from disk** option in the **Help Library Manager**.  If you used **Install content from online** and the Help Viewer is displaying a partial table of contents, see this [blog post](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) for troubleshooting steps.
-
-6. select the `HelpContentSetup.msha` file, select **Open**, and then select **Next**.
-
-7. select **Add** next to the documentation you want to install, and then select **Update**.
-
-   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)
-
-8. select **Finish**, and then select **Exit**.
-
-### To view offline help content with Help Viewer v1.x
-
-1. To view installed help, open **Help Library Manager**, select **Choose online or local help**, and then select **I want to use local help**.
-
-2. Open the Help Viewer to see the content by selecting **View Help** on the **Help** menu. The content you installed is listed in the left pane.
-
-   ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
 
 ## View online help
 
-Online help always shows the most up-to-date content. 
+Online help always shows the most up-to-date content.
 
 ### To view SQL Server online help in SSMS 17.x
 
@@ -190,20 +138,6 @@ Online help always shows the most up-to-date content.
 
 1. Point to **Set Help Preference** on the Help menu and choose either **Launch in Browser** or **Launch in Help Viewer**.
 2. select **View Help** in the Help menu. The latest Visual Studio help displays in the chosen environment.
-
-**To view online help with Help Viewer v1.x**
-
-1. Open the **Help Library Manager** by selecting **Manage Help Settings** on the Help menu.
-
-2. In the Help Library Manager dialog box, select **Choose online or local help**.
-
-   ![HelpLibraryManager_MainPage_ChooseOnlineORLocal.png](../sql-server/media/sql-server-help-installation/helplibrarymanager-mainpage-chooseonlineorlocal.png.png)  
-
-3. select **I want to use online help**, select **OK**, and then select **Exit**.  
-
-   ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
-
-4. Open the Help Viewer to see the content by selecting **View Help** on the **Help** menu.
 
 ## View F1 help
 
@@ -231,7 +165,7 @@ After you download offline books on a system that has internet access, you can u
 3. Identify the physical path of the files on disk, which can be found under **Local store path**.
 
 4. Navigate to this location using your file system explorer.
-   1.  The default location is: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+   1. The default location is: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
 
 5. Select the three folders, **ContentStore**, **Incoming**, **IndexStore**, and copy them to the same location on your offline system. You may need to use an interim media device such as a USB or CD.
 

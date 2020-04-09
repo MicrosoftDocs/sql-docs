@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/19/2019
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -26,9 +26,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 > If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible. 
   
 ##  <a name="Enabling"></a> Enabling the Query Store  
- Query Store is not active for new databases by default.  
+ Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics (SQL DW) databases, and is enabled by default for new Azure SQL Database databases.  
   
-#### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  In Object Explorer, right-click a database, and then click **Properties**.  
   
@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  In the **Operation Mode (Requested)** box, select **Read Write**.  
 
-#### Use Transact-SQL Statements  
+### Use Transact-SQL Statements  
   
 Use the **ALTER DATABASE** statement to enable the query store. For example:  
   
@@ -477,10 +477,10 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  
  ```sql 
   SELECT TOP 10
-	qt.query_text_id,
-	q.query_id,
-	p.plan_id,
-	sum(total_query_wait_time_ms) AS sum_total_wait_ms
+    qt.query_text_id,
+    q.query_id,
+    p.plan_id,
+    sum(total_query_wait_time_ms) AS sum_total_wait_ms
 FROM sys.query_store_wait_stats ws
 JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
 JOIN sys.query_store_query q ON p.query_id = q.query_id

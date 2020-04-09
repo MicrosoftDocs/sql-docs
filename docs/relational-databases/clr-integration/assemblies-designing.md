@@ -1,5 +1,6 @@
 ---
 title: "Designing Assemblies | Microsoft Docs"
+description: This article describes factors to consider when you design an assembly to host on SQL Server, including packaging, managing, and restrictions on assemblies.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

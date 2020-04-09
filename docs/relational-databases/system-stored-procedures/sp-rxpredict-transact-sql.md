@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]

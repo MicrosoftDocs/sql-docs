@@ -19,7 +19,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # sp_rxPredict  
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database.
 

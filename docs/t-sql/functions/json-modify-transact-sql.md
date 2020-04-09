@@ -1,7 +1,7 @@
 ---
 title: "JSON_MODIFY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
+ms.date: "04/02/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -59,6 +59,7 @@ In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDS
   
  *newValue*  
  The new value for the property specified by *path*.  
+ The new value must be a [n]varchar or text.
   
  In lax mode, JSON_MODIFY deletes the specified key if the new value is NULL.  
   
@@ -126,21 +127,21 @@ PRINT @info
   
 ```json  
 {
-	"name": "John",
-	"skills": ["C#", "SQL"]
+    "name": "John",
+    "skills": ["C#", "SQL"]
 } {
-	"name": "Mike",
-	"skills": ["C#", "SQL"]
+    "name": "Mike",
+    "skills": ["C#", "SQL"]
 } {
-	"name": "Mike",
-	"skills": ["C#", "SQL"],
-	"surname": "Smith"
+    "name": "Mike",
+    "skills": ["C#", "SQL"],
+    "surname": "Smith"
 } {
-	"skills": ["C#", "SQL"],
-	"surname": "Smith"
+    "skills": ["C#", "SQL"],
+    "surname": "Smith"
 } {
-	"skills": ["C#", "SQL", "Azure"],
-	"surname": "Smith"
+    "skills": ["C#", "SQL", "Azure"],
+    "surname": "Smith"
 }
 ```  
   
@@ -166,12 +167,12 @@ PRINT @info
   
 ```json  
 {
-	"name": "John",
-	"skills": ["C#", "SQL"]
+    "name": "John",
+    "skills": ["C#", "SQL"]
 } {
-	"name": "Mike",
-	"skills": ["C#", "SQL", "Azure"],
-	"surname": "Smith"
+    "name": "Mike",
+    "skills": ["C#", "SQL", "Azure"],
+    "surname": "Smith"
 }
 ```  
   
@@ -201,9 +202,9 @@ PRINT @product
   
 ```json  
 {
-	"price": 49.99
+    "price": 49.99
 } {
-	"Price": 49.99
+    "Price": 49.99
 }
 ```  
   
@@ -232,9 +233,9 @@ PRINT @stats
   
 ```json  
 {
-	"click_count": 173
+    "click_count": 173
 } {
-	"click_count": 174
+    "click_count": 174
 }
 ```  
   
@@ -260,11 +261,11 @@ PRINT @info
   
 ```json  
 {
-	"name": "John",
-	"skills": ["C#", "SQL"]
+    "name": "John",
+    "skills": ["C#", "SQL"]
 } {
-	"name": "John",
-	"skills": "["C#","T-SQL","Azure"]"
+    "name": "John",
+    "skills": "["C#","T-SQL","Azure"]"
 }
 ```  
   
@@ -288,11 +289,11 @@ PRINT @info
   
 ```json  
 {
-	"name": "John",
-	"skills": ["C#", "SQL"]
+    "name": "John",
+    "skills": ["C#", "SQL"]
 } {
-	"name": "John",
-	"skills": ["C#", "T-SQL", "Azure"]
+    "name": "John",
+    "skills": ["C#", "T-SQL", "Azure"]
 }
 ```  
   

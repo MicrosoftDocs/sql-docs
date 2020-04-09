@@ -74,5 +74,5 @@ ms.author: chugu
 >  When using Microsoft Exchange as the SMTP server, you may need to set **Use Windows Authentication** to **True**. Exchange servers may be configured to disallow unauthenticated SMTP connections.  
   
  **Enable Secure Sockets Layer (SSL)**  
- Select to encrypt communication using TLS when sending e-mail messages.  
+ Select to encrypt communication using TLS/SSL when sending e-mail messages.  
   

@@ -1,6 +1,6 @@
 ---
 title: "Get Started with Full-Text Search | Microsoft Docs"
-ms.date: "08/22/2016"
+ms.date: "03/31/2020"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
@@ -49,7 +49,7 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
 2.  Before you can create a full-text index on the Document table, ensure that the table has a unique, single-column, non-nullable index. The following [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) statement creates a unique index, `ui_ukDoc`, on the DocumentID column of the Document table:  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
 3.  After you have a unique key, you can create a full-text index on the `Document` table by using the following [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) statement.  
@@ -116,7 +116,7 @@ For more information, see [Configure and Manage Stopwords and Stoplists for Full
  
 Updating a full-text index immediately after each change in the base table is also resource-intensive. Therefore, if you have a high update/insert/delete rate, you may experience some degradation in query performance. If this occurs, consider scheduling manual change tracking updates to keep up with the numerous changes from time to time, rather than competing with queries for resources.  
   
-For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).
+For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md). 
 
-## Next steps     
+## Next steps
 After you set up SQL Server Full-Text Search, you're ready to run full-text queries. For more info, see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).

@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: "v-chojas"
-author: MightyPen
+author: David-Engel
 ---
 # Custom Keystore Providers
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

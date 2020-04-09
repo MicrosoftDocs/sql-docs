@@ -7,8 +7,8 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "known issues"
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Known issues for the ODBC driver on Linux and macOS

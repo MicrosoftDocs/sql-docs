@@ -344,8 +344,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 ```
 
 ```
-
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -377,8 +376,12 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 
 <column_constraint>::=
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression
-
+    [ CONSTRAINT constraint_name ] 
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }

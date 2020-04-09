@@ -1,5 +1,6 @@
 ---
 title: "Use the PowerShell Provider for Extended Events"
+description: Use the SQL Server PowerShell provider to manage SQL Server Extended Events. This article shows examples of creating, altering, and managing sessions.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

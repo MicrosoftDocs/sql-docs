@@ -2,14 +2,16 @@
 title: Download and install sqlpackage
 description: 'Download and Install sqlpackage for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "06/20/2018"
 ms.prod: sql
-ms.reviewer: "alayu; sstein"
 ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 author: "pensivebrian"
 ms.author: "broneill"
+ms.reviewer: "alayu; sstein"
+ms.date: 06/20/2018
 ---
+
 # Download and install sqlpackage
 
 sqlpackage runs on Windows, macOS, and Linux.

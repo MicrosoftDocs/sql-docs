@@ -91,7 +91,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|Backup set description.|  
 |**BackupType**|**smallint**|Backup type:<br /><br /> **1** = Database<br /><br /> **2** = Transaction log<br /><br /> **4** = File<br /><br /> **5** = Differential database<br /><br /> **6** = Differential file<br /><br /> **7** = Partial<br /><br /> **8** = Differential partial|  
 |**ExpirationDate**|**datetime**|Expiration date for the backup set.|  
-|**Compressed**|**BYTE(1)**|Whether the backup set is compressed using software-based compression:<br /><br /> **0** = No<br /><br /> **1** = Yes|  
+|**Compressed**|**BIT(1)**|Whether the backup set is compressed using software-based compression:<br /><br /> **0** = No<br /><br /> **1** = Yes|  
 |**Position**|**smallint**|Position of the backup set in the volume (for use with the FILE = option).|  
 |**DeviceType**|**tinyint**|Number corresponding to the device used for the backup operation.<br /><br /> Disk:<br /><br /> **2** = Logical<br /><br /> **102** = Physical<br /><br /> Tape:<br /><br /> **5** = Logical<br /><br /> **105** = Physical<br /><br /> Virtual Device:<br /><br /> **7** = Logical<br /><br /> **107** = Physical<br /><br /> Logical device names and device numbers are in **sys.backup_devices**; for more information, see [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|User name that performed the backup operation.|  

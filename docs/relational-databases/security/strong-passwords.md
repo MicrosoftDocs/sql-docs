@@ -22,9 +22,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Strong Passwords
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Passwords can be the weakest link in a server security deployment. You should always take great care when you select a password. A strong password has the following characteristics:  
+  Passwords can be the weakest link in a server security deployment. Take great care when you select a password. A strong password has the following characteristics:  
   
--   Is at least 8 characters long.  
+-   Is at least eight characters long.  
   
 -   Combines letters, numbers, and symbol characters within the password.  
   
@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Is changed regularly.  
   
--   Is significantly different from previous passwords.  
+-   Is different from previous passwords.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passwords can contain up to 128 characters, including letters, symbols, and digits. Because logins, user names, roles, and passwords are frequently used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, certain symbols must be enclosed by double quotation marks (") or square brackets ([ ]). Use these delimiters in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, user, role, or password has the following characteristics:  
   
@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Starts with the $ or \@ character.  
   
- If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] {}() , ; ? * ! \@ =. These characters are used to either initialize a connection or separate connection values.  
+ If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] () , ; ? * ! \@ =. These characters are used to either initialize a connection or separate connection values.  
   
 ## Related Content  
  [Password Policy](../../relational-databases/security/password-policy.md)  

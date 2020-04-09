@@ -1,5 +1,6 @@
 ---
 title: "Quickstart: Extended events in SQL Server"
+description: This quickstart helps you use Extended Events, a lightweight performance monitoring system, to collect data to monitor and troubleshoot problems in SQL Server.
 ms.date: "05/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

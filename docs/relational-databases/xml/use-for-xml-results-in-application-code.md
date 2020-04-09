@@ -20,7 +20,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Use FOR XML Results in Application Code
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   By using FOR XML clauses with SQL queries, you can retrieve and even cast query results as XML data. This functionality allows you to do the following when FOR XML query results can be used in XML application code:  
   
 -   Query SQL tables for instances of [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md) values  

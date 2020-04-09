@@ -66,12 +66,11 @@ A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can 
 
 Management and monitoring are provided through a combination of command line tools, APIs, portals, and dynamic management views.
 
-You can use Azure Data Studio to perform a variety of tasks on the big data cluster. This is enabled by the new **SQL Server 2019 Extension**. This extension provides:
-
+You can use [Azure Data Studio](../azure-data-studio/what-is.md) to perform a variety of tasks on the big data cluster:
 - Built-in snippets for common management tasks.
 - Ability to browse HDFS, upload files, preview files, and create directories.
 - Ability to create, open, and run Jupyter-compatible notebooks.
-- Data virtualization wizard to simplify the creation of external data sources.
+- Data virtualization wizard to simplify the creation of external data sources (enabled by the **Data Virtualization Extension**).
 
 ## <a id="architecture"></a> Architecture
 

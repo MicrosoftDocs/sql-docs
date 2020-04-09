@@ -103,7 +103,7 @@ For more info, see [Populate Full-Text Indexes](../../relational-databases/searc
   
 Use a [SELECT](../../t-sql/queries/select-transact-sql.md) statement to call the [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) function. In the function call use the OBJECT_ID function to convert the name of the table (*table_name*) into the table ID, specify the name of a unique index for the table, and specify the **IsFulltextKey** index property, as follows:  
   
-```  
+```sql  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
 ```  
   
@@ -113,7 +113,7 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  The following example inquires whether the `PK_Document_DocumentID` index is used to enforce the uniqueness of the full-text key column, as follows:  
   
-```  
+```sql  
 USE AdventureWorks  
 GO  
 SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
@@ -127,7 +127,7 @@ Each full-text enabled table has a column that is used to enforce unique rows fo
  
 To obtain this identifier, you can use a SELECT statement to call the OBJECTPROPERTYEX function. Use the OBJECT_ID function to convert the name of the table (*table_name*) into the table ID and specify the **TableFulltextKeyColumn** property, as follows:  
   
-```  
+```sql  
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
@@ -135,7 +135,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  The following example returns the identifier of the full-text key column or NULL. NULL implies that you are using an invalid index name, the index name does not correspond to the table, the table does not exist, or so forth.  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -144,7 +144,7 @@ GO
   
  The following example shows how to use the identifier of the unique key column to obtain the name of the column.  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 DECLARE @key_column sysname  

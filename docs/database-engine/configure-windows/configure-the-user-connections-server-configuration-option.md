@@ -95,7 +95,7 @@ GO
  For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After you configure the user connections option  
- The server must be restarted before the setting can take effect.  
+ The SQL instance must be restarted before the setting can take effect.  
   
 ## See Also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

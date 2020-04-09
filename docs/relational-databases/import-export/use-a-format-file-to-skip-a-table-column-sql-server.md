@@ -1,5 +1,6 @@
 ---
 title: "Use a Format File to Skip a Table Column (SQL Server) | Microsoft Docs"
+description: This article describes how to use a format file to skip importing a table column when the data for the skipped column does not exist in the source data file.
 ms.custom: ""
 ms.date: "02/15/2018"
 ms.prod: sql

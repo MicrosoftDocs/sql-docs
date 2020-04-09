@@ -7026,7 +7026,7 @@
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md
   - name: SQL Server Analysis Services (SSAS) > 
-    href: https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview
+    href: https://docs.microsoft.com/analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) > 
     href: reporting-services/index.md
   - name: Master Data Services
@@ -7808,6 +7808,8 @@
           href: azure-data-studio/notebooks-guidance.md
         - name: How to use SQL Kernel
           href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+        - name: How to use Python Kernel
+          href: azure-data-studio/notebooks-tutorial-python-kernel.md
         - name: How to manage a notebook
           href: azure-data-studio/notebooks-manage-sql-server.md
       - name: Usage data collection

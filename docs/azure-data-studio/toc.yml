@@ -6,12 +6,12 @@
 
 - name: Overview
   items: 
-  - name: What is Azure Data Studio
-    href: ../azure-data-studio/what-is.md
   - name: Install
     href: ../azure-data-studio/download-azure-data-studio.md
   - name: Release notes
     href: ../azure-data-studio/release-notes-azure-data-studio.md
+  - name: What is Azure Data Studio
+    href: ../azure-data-studio/what-is.md
 - name: Quickstarts
   items:
   - name: Connect & query SQL Server
@@ -38,12 +38,12 @@
   items:
   - name: Notebooks
     items:
-  - name: Notebooks overview
-    href: ../azure-data-studio/notebooks-guidance.md
-  - name: How to use SQL Kernel
-    href: ../azure-data-studio/notebooks-tutorial-sql-kernel.md
-  - name: How to manage a notebook
-    href: ../azure-data-studio/notebooks-manage-sql-server.md
+    - name: Notebooks overview
+      href: ../azure-data-studio/notebooks-guidance.md
+    - name: How to use SQL Kernel
+      href: ../azure-data-studio/notebooks-tutorial-sql-kernel.md
+    - name: How to manage a notebook
+      href: ../azure-data-studio/notebooks-manage-sql-server.md
 - name: How-to guides
   items:
   - name: Dashboards & insight widgets

@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 author: dphansen
 ms.author: davidph
+# NOTE: sp_rxPredict is not supported on Linux.
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # sp_rxPredict  

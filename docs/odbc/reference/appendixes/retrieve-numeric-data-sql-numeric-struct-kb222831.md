@@ -7,7 +7,7 @@ ms.technology: connectivity
 ms.devlang: cpp
 ms.topic: conceptual
 ms.custom: ""
-ms.date: "07/13/2017"
+ms.date: "07/14/2017"
 ms.author: genemi
 author: MightyPen
 ---

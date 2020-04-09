@@ -15617,7 +15617,7 @@
     },
     {
       "source_path": "docs/azure-data-studio/index.md",
-      "redirect_url": "/sql/azure-data-studio/what-is",
+      "redirect_url": "/sql/azure-data-studio/index.yml",
       "redirect_document_id": false
     },
     {

@@ -24,8 +24,6 @@ landingContent:
         links:
           - text: Download Azure Data Studio
             url: download-azure-data-studio.md
-      - linkListType: video
-        links:
           - text: Azure Data Studio Release Notes
             url: release-notes-azure-data-studio.md
 
@@ -39,12 +37,6 @@ landingContent:
             url: notebooks-tutorial-sql-kernel.md
           - text: How to manage notebooks in Azure Data Studio
             url: notebooks-manage-sql-server.md
-      - linkListType: tutorial
-        links:
-          - text: Predict ski rental with linear regression
-            url: tutorials/python-ski-rental-linear-regression.md
-          - text: Categorizing customers using k-means clustering
-            url: tutorials/python-clustering-model.md
 
   - title: How to use Azure Data Studio features and extensions
     linkLists:

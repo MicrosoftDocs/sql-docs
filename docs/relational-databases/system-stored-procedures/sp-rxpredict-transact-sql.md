@@ -59,7 +59,7 @@ The user needs `EXECUTE` permission on the database.
 
 ### Supported algorithms
 
-To create and train model, use one of the supported algorithms for R or Python, provided by [SQL Server 2Machine Learning Services (R or Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone), or [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
+To create and train model, use one of the supported algorithms for R or Python, provided by [SQL Server Machine Learning Services (R or Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone), or [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
 
 #### R: RevoScaleR models
 

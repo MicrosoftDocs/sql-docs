@@ -19,7 +19,7 @@
   - name: Connect & query Azure SQL Database
     href: ../azure-data-studio/quickstart-sql-database.md
   - name: Connect & query Azure SQL Data Warehouse
-    href: ../azure-data-studio/ quickstart-sql-dw.md
+    href: ../azure-data-studio/quickstart-sql-dw.md
   - name: Connect & query PostgreSQL
     href: ../azure-data-studio/quickstart-postgres.md
 - name: Tutorials

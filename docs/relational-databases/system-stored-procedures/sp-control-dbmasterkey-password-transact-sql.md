@@ -1,7 +1,7 @@
 ---
 title: "sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/25/2016"
+ms.date: "04/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Adds or drops a credential containing the password needed to open a database master key.  
   

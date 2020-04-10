@@ -47,7 +47,7 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 ## <a id="install"></a>Install SQL Server
 
 > [!NOTE]
-> The following commands for SQL Server 2017 points to the RHEL 8 repository. RHEL 8 does not come preinstalled with python2, which is required by SQL Server. For more information, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+> RHEL 8 is supported for SQL Server 2017 starting with CU20. The following commands for SQL Server 2017 points to the RHEL 8 repository. RHEL 8 does not come preinstalled with python2, which is required by SQL Server. For more information, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 >
 > If you are using RHEL 7, change the path below to `/rhel/7` instead of `/rhel/8`.
 

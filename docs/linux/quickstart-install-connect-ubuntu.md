@@ -3,7 +3,7 @@ title: "Ubuntu: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
@@ -46,7 +46,9 @@ To install Ubuntu 16.04 on your own machine, go to <http://releases.ubuntu.com/x
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 > [!NOTE]
-> Ubuntu 18.04 is not yet officially supported, but running SQL Server is possible with [modifications](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
+> Ubuntu 18.04 is supported starting with SQL Server 2017 CU20. If you want to use the instructions on this article with Ubuntu 18.04, make sure you use the correct [repository path](sql-server-linux-change-repo.md), `18.04` instead of `16.04`.
+>
+> If you are running SQL Server on a lower version, the configuration is possible with [modifications](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
 
 ::: moniker-end
 

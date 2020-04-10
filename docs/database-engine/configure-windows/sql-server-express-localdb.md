@@ -34,7 +34,7 @@ LocalDB is a feature you select during SQL Server Express installation, and is a
 - [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
 - [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
-Alternatively, you can install LocalDB through the **Visual Studio Installer**, as part of the **Data Storage and Processing** workload, the **ASP.NET and web development** workload,  or as an individual component.
+Alternatively, you can install LocalDB through the [Visual Studio Installer](https://visualstudio.microsoft.com/downloads/), as part of the **Data Storage and Processing** workload, the **ASP.NET and web development** workload,  or as an individual component.
 
 
 ## Install LocalDB

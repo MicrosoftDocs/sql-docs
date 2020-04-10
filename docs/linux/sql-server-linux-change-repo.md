@@ -152,13 +152,13 @@ If necessary, remove the old repository. Use one of the following commands based
 If necessary, remove the old repository. Use one of the following commands based on the type of previously configured repository.
 
 > [!NOTE]
-> Starting with SQL Server 2019 CU3 and SQL Server 2017 CU20, Ubuntu 18.04 is supported. If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`.
+> Starting with SQL Server 2019 CU3 and SQL Server 2017 CU20, Ubuntu 18.04 is supported. If you are using Ubuntu 16.04, change the path below to `/ubuntu/16.04` instead of `/ubuntu/18.04`, and use the correct [distribution code name](https://releases.ubuntu.com/).
 
 | Repository | Command to remove |
 |---|---|
 | **Preview (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
-| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr bionic main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 

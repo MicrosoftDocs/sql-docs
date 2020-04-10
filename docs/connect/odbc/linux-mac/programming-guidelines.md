@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Programming Guidelines
 
@@ -33,7 +33,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 -   [Processing Results (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Running Stored Procedures](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Sparse Columns Support (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL encryption](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [Using Encryption Without Validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Table Valued Parameters](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 and UTF-16 for command and data API](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Using Catalog Functions](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  

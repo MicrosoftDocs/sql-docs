@@ -55,6 +55,7 @@ There are a few communities that can help you with your SQL Server issues.
 You can submit suggestions for improvement, as well as submit bugs for:
 
 - **SQL Server feedback**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
+- **SQL Server Big Data Clusters feedback**: [SQL Server Big Data Clusters feedback](https://aka.ms/sql-server-bdc-feedback)
 - **Azure Data Studio issues**: [Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 

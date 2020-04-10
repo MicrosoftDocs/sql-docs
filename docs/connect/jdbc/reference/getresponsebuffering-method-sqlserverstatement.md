@@ -13,8 +13,8 @@ apilocation:
   - "SQLServerStatement.getResponseBuffering()"
 apitype: "Assembly"
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getResponseBuffering Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

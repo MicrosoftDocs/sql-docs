@@ -10,12 +10,10 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
-
-[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 

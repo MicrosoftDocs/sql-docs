@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 03/12/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -19,7 +19,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
 ## Supported platforms
 
-This section explains platforms that are supported with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
+This section explains platforms that are supported with BDC.
 
 ### Kubernetes platforms
 
@@ -45,25 +45,34 @@ This section explains platforms that are supported with [!INCLUDE[big-data-clust
 
 |Platform|Supported versions|
 |---------|---------|
-|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/><br/>Run `azdata –-version` to validate the version.<br/><br/>As of SQL Server 2019 CU3, this version is `15.0.4023`.|
+|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 ## Release history
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release               | Version       | Release date |
-|-----------------------|---------------|--------------|
-| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
+| Release               | Version         | Release date |
+|-----------------------|-----------------|--------------|
+| [CU4](#cu4)           | 15.0.4033.1     | 2020-03-31   |
+| [CU3](#cu3)           | 15.0.4023.6     | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
-| [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
-| [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
+| [CU1](#cu1)           | 15.0.4003.23    | 2020-01-07   |
+| [GDR1](#rtm)          | 15.0.2070.34    | 2019-11-04   |
 
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu3"></a> CU3 (Mar 2020)
+## <a id="cu4"></a> CU4 (April 2020)
+
+Cumulative Update 4 (CU4) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4033.1.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
+
+## <a id="cu3"></a> CU3 (March 2020)
 
 Cumulative Update 3 (CU3) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4023.6.
 
@@ -78,7 +87,7 @@ SQL Server 2019 CU3 resolves the following issues from previous releases.
 - [Deployment with private repository](#deployment-with-private-repository)
 - [Upgrade may fail due to timeout](#upgrade-may-fail-due-to-timeout)
 
-## <a id="cu2"></a> CU2 (Feb 2020)
+## <a id="cu2"></a> CU2 (February 2020)
 
 Cumulative Update 2 (CU2) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4013.40.
 
@@ -86,7 +95,7 @@ Cumulative Update 2 (CU2) release for SQL Server 2019. The SQL Server Database E
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a id="cu1"></a> CU1 (Jan 2020)
+## <a id="cu1"></a> CU1 (January 2020)
 
 Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.23.
 
@@ -94,7 +103,7 @@ Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database E
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a id="rtm"></a> GDR1 (Nov 2019)
+## <a id="rtm"></a> GDR1 (November 2019)
 
 SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
 

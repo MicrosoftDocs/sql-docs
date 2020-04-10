@@ -14,7 +14,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Retrieving Product Model Information as XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The following query returns product model information. `RAW` mode is specified in the `FOR XML` clause.  
   
 ## Example  

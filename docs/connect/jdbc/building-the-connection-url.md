@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Building the Connection URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

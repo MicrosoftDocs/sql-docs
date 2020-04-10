@@ -12,7 +12,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how to specify node paths to index and optimization hints for indexing when you create or alter selective XML indexes.  
   
  You specify node paths and optimization hints at the same time in one of the following statements:  

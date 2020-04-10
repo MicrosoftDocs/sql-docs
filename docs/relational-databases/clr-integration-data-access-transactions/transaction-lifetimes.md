@@ -1,5 +1,6 @@
 ---
 title: "Transaction Lifetimes | Microsoft Docs"
+description: In SQL Server CRL integration, transactions started in Transact-SQL stored procedures differ from those started in managed code.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

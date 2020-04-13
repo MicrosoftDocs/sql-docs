@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data types"
   - "data types [ODBC], about data types"
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Usage

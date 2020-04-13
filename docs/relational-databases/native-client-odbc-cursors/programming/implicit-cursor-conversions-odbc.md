@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "implicit cursor conversions"
   - "cursors [ODBC], implicit cursor conversions"
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implicit Cursor Conversions (ODBC)

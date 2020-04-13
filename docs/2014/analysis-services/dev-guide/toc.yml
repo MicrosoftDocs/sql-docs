@@ -107,7 +107,7 @@
   - name: Developing with ADOMD.NET
     href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
   - name: ADOMD.NET Client Programming
-    href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming
+    href: https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming
     items:
     - name: ADOMD.NET Client Functionality
       href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-functionality
@@ -116,13 +116,13 @@
     - name: Establishing Connections in ADOMD.NET
       href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net
     - name: Establishing Secure Connections in ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections
+      href: https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections
     - name: Working with Connections and Sessions in ADOMD.NET
       href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions
     - name: Performing Transactions in ADOMD.NET
       href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions
     - name: Retrieving Metadata from an Analytical Data Source
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source
+      href: https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source
     - name: Working with the ADOMD.NET Object Model
       href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model
     - name: Working with Schema Rowsets in ADOMD.NET
@@ -145,9 +145,9 @@
     - name: ADOMD.NET Server Object Architecture
       href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
     - name: User Defined Functions and Stored Procedures
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
+      href: https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
   - name: Redistributing ADOMD.NET
-    href: https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net
+    href: https://docs.microsoft.com/analysis-services/adomd/redistributing-adomd-net
   - name: Developing with Analysis Management Objects (AMO)
     href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
   - name: AMO Concepts and Object Model

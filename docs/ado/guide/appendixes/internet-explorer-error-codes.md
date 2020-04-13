@@ -23,5 +23,5 @@ The following table lists Microsoft® Internet Explorer error codes related to R
 |**IDS_WinInet_ ConnectionReset**|12031 -2146816257 0x800A2EFF|Internet Client Error: Connection Reset.|
 |**IDS_WinInet_Error**|8193 -2146820095 0x800A2001|Internet Client Error.|
 |**IDS_WinInet_ InvalidServerResponse**|8430 -2146819858 0x800A20EE|Internet Client Error: Invalid Server Response.|
-|**IDS_WinInet_ SSLPostLimitation**|8196 -2146820092 0x800A2004|Internet Client Error: SSL Error (possibly 32K data upload limitation).|
+|**IDS_WinInet_ SSLPostLimitation**|8196 -2146820092 0x800A2004|Internet Client Error: TLS/SSL Error (possibly 32K data upload limitation).|
 |**IDS_WinInet_Timeout**|8194 -2146820094 0x800A2002|Internet Client Error: Request Timeout.|

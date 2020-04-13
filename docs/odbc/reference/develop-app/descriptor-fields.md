@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "header fields [ODBC]"
   - "record fields [ODBC]"
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Descriptor Fields
 Descriptors contain *header* and *record* fields that completely describe columns or parameters.  

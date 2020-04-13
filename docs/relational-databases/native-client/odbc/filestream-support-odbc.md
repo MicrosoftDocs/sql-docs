@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], ODBC"
   - "ODBC, FILESTREAM support"
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ---
 # FILESTREAM Support (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Service Principal Name (SPN) Support in Client Connections

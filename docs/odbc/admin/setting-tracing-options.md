@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ODBC data source administrator [ODBC], tracing options"
   - "tracing options [ODBC], ODBC data source administrator"
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Setting Tracing Options
 The **Tracing** tab of the **ODBC Data Source Administrator** dialog box enables you to configure the way ODBC function calls are traced.  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "compiling Unicode applications [ODBC]"
   - "functions [ODBC], Unicode functions"
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Unicode Applications
 You can recompile an application as a Unicode application in one of two ways:  

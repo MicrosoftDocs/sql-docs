@@ -43,7 +43,7 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
-[sentryone_website]:https://www.sentryone.com 
+[sentryone_website]:https://www.sentryone.com
 [quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
 [redgate_website]:https://www.red-gate.com/products/dba/sql-monitor/
 [solarwinds_website]:https://www.solarwinds.com/database-performance-analyzer

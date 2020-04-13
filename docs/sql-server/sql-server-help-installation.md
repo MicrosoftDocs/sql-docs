@@ -43,9 +43,11 @@ To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual 
 
 ## Use Help Viewer
 
+### Download and install help content
+
 The **Help** menu in the [latest version of SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md) offers 2.3 or later.
 
-### To download and install offline help content from Online
+#### To download and install offline help content from Online
 
 For this approach, you use the *Online* Installation source.
 
@@ -94,7 +96,7 @@ XQuery Language Reference (SQL Server) | XQuery Language Reference (SQL Server) 
 > [!NOTE]
 > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
-### To download and install offline help content from Disk
+#### To download and install offline help content from Disk
 
 For this approach, you use the *Online* Installation source.
 
@@ -133,7 +135,9 @@ For this approach, you use the *Online* Installation source.
 > [!NOTE]
 > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
-### To view offline help content in SSMS with Help Viewer
+### View offline help content
+
+#### To view offline help content in SSMS with Help Viewer
 
 To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Remove Content** from the Help menu, to launch the Help Viewer.
 
@@ -145,7 +149,7 @@ The Help Viewer opens to the Manage Content tab, with the installed help table o
 
    ![Help Viewer v2.x with content](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
 
-### To view offline help content in VS with Help Viewer
+#### To view offline help content in VS with Help Viewer
 
 To view the installed help in Visual Studio:
 
@@ -163,7 +167,7 @@ To view the installed help in Visual Studio:
 
 Online help always shows the most up-to-date content.
 
-### To view SQL Server online help in SSMS 17.x
+### To view SQL Server online help in SSMS
 
 - select **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) displays in a browser.
 

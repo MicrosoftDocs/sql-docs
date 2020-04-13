@@ -107,7 +107,7 @@ For this approach, you use the *Online* Installation source.
 
 3. In SSMS or VS, select **Add and Remove Help Content** on the Help menu.
 
-   ![HelpViewer Add Remove Content](../sql-server/media/sql-server-help-installation/addremovecontent.png)
+   ![HelpViewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
 
    The Help Viewer opens to the Manage Content tab.
 
@@ -137,7 +137,7 @@ For this approach, you use the *Online* Installation source.
 
 To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Remove Content** from the Help menu, to launch the Help Viewer.
 
-   ![HelpViewer2 Add Remove Content](../sql-server/media/sql-server-help-installation/addremovecontent.png)  
+   ![HelpViewer2 Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)  
 
 The Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. select articles in the table of contents to display them in the right pane.
 > [!TIP]

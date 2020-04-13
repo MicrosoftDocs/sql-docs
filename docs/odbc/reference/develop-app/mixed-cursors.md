@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "cursors [ODBC], key-set driven"
   - "cursors [ODBC], mixed"
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Mixed Cursors
 

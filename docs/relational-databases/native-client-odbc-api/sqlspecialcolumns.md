@@ -11,8 +11,8 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLSpecialColumns function"
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSpecialColumns

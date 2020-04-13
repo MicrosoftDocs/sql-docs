@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetCursorName function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetCursorName (Visual FoxPro ODBC Driver)
 > [!NOTE]  

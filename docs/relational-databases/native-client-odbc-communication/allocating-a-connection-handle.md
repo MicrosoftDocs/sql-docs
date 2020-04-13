@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "modifying passwords"
   - "SQLAllocHandle function"
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Allocating a Connection Handle

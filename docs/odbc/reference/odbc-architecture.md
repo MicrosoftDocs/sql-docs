@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC architecture [ODBC], components"
   - "ODBC architecture [ODBC]"
 ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Architecture
 The ODBC architecture has four components:  

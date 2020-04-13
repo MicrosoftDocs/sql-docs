@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data types"
   - "ODBC data types, autotranslating character data"
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Autotranslation of Character Data

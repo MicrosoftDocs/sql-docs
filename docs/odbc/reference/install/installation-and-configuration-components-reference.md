@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Installation and Configuration Components Reference
 > [!NOTE]  

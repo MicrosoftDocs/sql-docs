@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLExecDirect function"
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLExecDirect

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ODBC data-at-execution"
   - "image columns [ODBC]"
 ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data-at-Execution and Text, ntext, or Image Columns

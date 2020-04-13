@@ -11,8 +11,8 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLSetEnvAttr function"
 ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSetEnvAttr

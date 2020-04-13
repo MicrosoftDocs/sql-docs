@@ -58,7 +58,7 @@ To learn more about some of our other partners, see [High availability, and disa
 
 <!--YouTube links-->
 [dellemc_youtube]:https://www.youtube.com/watch?v=_52Y-qDKT-4
-[hpe_youtube]:https://www.hpe.com/h22228/video-gallery/us/en/products/data-storage-hybrid-cloud/storage-multi/95fd26db-e6ea-44ca-b727-c84d2ef1d446/big-data-clusters-and-hpe-storage-for-microsoft-sql-server-2019/video/
+[hpe_youtube]:https://www.hpe.com/h22228/video-gallery/us/en/products/data-storage-hybrid-cloud/storage-multi/95fd26db-e6ea-44ca-b727-c84d2ef1d446/big-data-clusters-and-hpe-storage-for-microsoft-sql-server-2019/video
 [netapp_youtube]:https://www.youtube.com/watch?v=304z8j7aLpc
 [streamsets_youtube]:https://www.youtube.com/watch?v=OtNrTBLooBw
 

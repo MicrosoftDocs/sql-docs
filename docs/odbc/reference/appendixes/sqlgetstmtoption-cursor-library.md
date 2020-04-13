@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetStmtOption function [ODBC], Cursor Library"
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetStmtOption (Cursor Library)
 > [!IMPORTANT]  

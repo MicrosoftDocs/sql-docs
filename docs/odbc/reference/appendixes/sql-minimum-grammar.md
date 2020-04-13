@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "minimum SQL syntax supported [ODBC]"
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL Minimum Grammar
 This section describes the minimum SQL syntax that an ODBC driver must support. The syntax described in this section is a subset of the Entry level syntax of SQL-92.  

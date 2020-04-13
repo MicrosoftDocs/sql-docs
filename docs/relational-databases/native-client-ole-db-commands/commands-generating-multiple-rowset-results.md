@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "commands [OLE DB]"
   - "multiple-rowset results"
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Commands Generating Multiple-Rowset Results

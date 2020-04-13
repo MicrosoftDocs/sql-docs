@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function"
   - "SQL_CUR_USE_ODBC option"
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC Cursor Library

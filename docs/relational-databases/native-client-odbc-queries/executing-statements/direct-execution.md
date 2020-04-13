@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLExecDirect function"
   - "statements [ODBC], direct execution"
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Direct Execution

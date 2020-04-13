@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Excel driver [ODBC], SQLStatistics"
   - "SQLStatistics function [ODBC], Excel Driver"
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLStatistics (Excel Driver)
 > [!NOTE]  

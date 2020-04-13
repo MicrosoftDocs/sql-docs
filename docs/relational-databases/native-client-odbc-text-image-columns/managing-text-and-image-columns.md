@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ODBC data types, text columns"
   - "image columns [ODBC]"
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Text and Image Columns

@@ -76,7 +76,7 @@
   - name: Python
     items:
     - name: Python tutorials
-      href: ../machine-learning/tutorials/sql-server-python-tutorials.md
+      href: ../machine-learning/tutorials/python-tutorials.md
     - name: Ski rental (linear regression)
       items:
       - name: 1 - Introduction
@@ -114,7 +114,7 @@
   - name: R
     items:
     - name: R tutorials
-      href: ../machine-learning/tutorials/sql-server-r-tutorials.md
+      href: ../machine-learning/tutorials/r-tutorials.md
     - name: Create partition-based models
       href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
     - name: Use R in T-SQL

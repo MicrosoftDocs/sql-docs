@@ -97,6 +97,8 @@
     "fileMetadata": {
 
       "feedback_system": {
+        "connect/**/*.md": "GitHub",
+        "odbc/**/*.md": "GitHub",
         "machine-learning/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
         "big-data-cluster/**/*.md": "GitHub",

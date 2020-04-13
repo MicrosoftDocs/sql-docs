@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLColAttribute function"
   - "SQLNumResultCols function"
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determining the Characteristics of a Result Set (ODBC)

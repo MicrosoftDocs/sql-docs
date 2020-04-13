@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveDSNFromIni function [ODBC]"
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRemoveDSNFromIni Function
 **Conformance**  

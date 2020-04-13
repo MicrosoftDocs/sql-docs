@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "DBase driver [ODBC], SQLTables"
   - "SQLTables function [ODBC], dBASE Driver"
 ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTables (dBASE Driver)
 > [!NOTE]  

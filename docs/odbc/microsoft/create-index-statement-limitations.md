@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "CREATE INDEX statement limitations [ODBC]"
   - "ODBC SQL grammar, CREATE INDEX statement limitations"
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # CREATE INDEX Statement Limitations
 The CREATE INDEX statement is not supported for the Microsoft Excel or Text drivers.  

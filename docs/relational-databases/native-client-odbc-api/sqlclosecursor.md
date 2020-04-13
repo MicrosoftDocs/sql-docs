@@ -11,8 +11,8 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLCloseCursor function"
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLCloseCursor

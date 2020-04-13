@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, commands"
   - "commands [OLE DB]"
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Commands

@@ -8,8 +8,8 @@ ms.devlang: cpp
 ms.topic: conceptual
 ms.custom: ""
 ms.date: "07/14/2017"
-ms.author: genemi
-author: MightyPen
+ms.author: v-daenge
+author: David-Engel
 ---
 # Retrieve numeric data with SQL\_NUMERIC\_STRUCT
 

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFetch function [ODBC], Cursor Library"
 ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFetch (Cursor Library)
 > [!IMPORTANT]  

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetStmtAttr function [ODBC], Cursor Library"
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetStmtAttr (Cursor Library)
 > [!IMPORTANT]  

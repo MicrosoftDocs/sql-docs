@@ -18,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeHandle function [ODBC]"
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFreeHandle Function
 **Conformance**  

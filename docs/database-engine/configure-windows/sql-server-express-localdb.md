@@ -89,9 +89,11 @@ Only an administrator on the computer can create a shared instance of LocalDB. A
 
 The easiest way to use LocalDB is to connect to the automatic instance owned by the current user by using the connection string `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. To connect to a specific database by using the file name, connect using a connection string similar to `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
+The naming convention and connection string for LocalDB format changed in SQL Server 2014. Previously, the instance name was a single v character followed by LocalDB and the version number. Starting with SQL Server 2014, this instance name format is no longer supported, and the connection string mentioned previously should be used instead.  
+
 >[!NOTE]
 > - The first time a user on a computer tries to connect to LocalDB, the automatic instance must be both created and started. The extra time for the instance to be created can cause the connection attempt to fail with a timeout message. When this happens, wait a few seconds to let the creation process complete, and then connect again.
-> - The naming convention and connection string for LocalDB format changed in SQL Server 2014. Previously, the instance name was a single v character followed by LocalDB and the version number. Starting with SQL Server 2014, this instance name format is no longer supported, and the connection string mentioned previously should be used instead.  
+
 
 ### Create and connect to a named instance
 

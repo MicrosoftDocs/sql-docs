@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Without a Format File (ODBC)

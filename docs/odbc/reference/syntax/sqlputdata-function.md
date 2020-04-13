@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLPutData function [ODBC]"
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLPutData Function
 **Conformance**  

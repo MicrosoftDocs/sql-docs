@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "arrays of parameter values [ODBC]"
   - "parameter arrays [ODBC]"
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Arrays of Parameters
 To use arrays of parameters, the application calls **SQLSetStmtAttr** with an *Attribute* argument of SQL_ATTR_PARAMSET_SIZE to specify the number of sets of parameters. It calls **SQLSetStmtAttr** with an *Attribute* argument of SQL_ATTR_PARAMS_PROCESSED_PTR to specify the address of a variable in which the driver can return the number of sets of parameters processed, including error sets. It calls **SQLSetStmtAttr** with an *Attribute* argument of SQL_ATTR_PARAM_STATUS_PTR to point to an array in which to return status information for each row of parameter values. The driver stores these addresses in the structure it maintains for the statement.  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC)"
   - "ODBC, table-valued parameters"
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameters (ODBC)

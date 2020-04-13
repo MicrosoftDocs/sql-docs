@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetConnectOption function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetConnectOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

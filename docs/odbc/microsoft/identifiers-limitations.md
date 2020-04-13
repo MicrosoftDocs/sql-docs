@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC]"
   - "desktop database drivers [ODBC]"
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Identifiers Limitations
 If an identifier contains a space or a special symbol, the identifier must be enclosed in back quotes. A valid name is a string of no more than 64 characters, of which the first character must not be a space. Valid names cannot include control characters or the following special characters: ` &#124; # * ? [ ] . ! $ .  

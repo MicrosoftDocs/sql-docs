@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "optimistic concurrency [ODBC]"
   - "read-only concurrency control [ODBC]"
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Concurrency Types
 To solve the problem of reduced concurrency in cursors, ODBC exposes four different types of cursor concurrency:  

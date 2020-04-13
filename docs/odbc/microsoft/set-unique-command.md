@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SET UNIQUE command [ODBC]"
 ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SET UNIQUE Command
 Specifies whether records with duplicate index key values are maintained in an index file.  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLDriverConnect function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLDriverConnect"
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDriverConnect (Paradox Driver)
 > [!NOTE]  

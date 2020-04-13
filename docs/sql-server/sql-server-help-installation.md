@@ -8,7 +8,7 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.custom: ""
-ms.date: 04/09/2020
+ms.date: 04/13/2020
 ---
 
 # SQL Server offline help and Help Viewer
@@ -71,7 +71,7 @@ For this approach, you use the *Online* Installation source.
 4. select **Update** at lower right.
    The help table of contents on the left automatically updates with the added books.
 
-   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)     
+   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
 
 > [!NOTE]
 > Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:

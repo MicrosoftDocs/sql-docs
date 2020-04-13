@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "allocating statement handles [ODBC]"
   - "handles [ODBC], statement"
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Allocating a Statement Handle ODBC
 Before the application can execute a statement, it must allocate a statement handle as follows:  

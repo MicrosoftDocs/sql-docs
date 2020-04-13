@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "large CLR user-defined types"
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Large CLR User-Defined Types

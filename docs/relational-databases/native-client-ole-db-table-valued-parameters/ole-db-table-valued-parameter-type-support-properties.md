@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (properties)"
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE DB Table-Valued Parameter Type Support (Properties)

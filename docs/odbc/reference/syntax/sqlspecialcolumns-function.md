@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSpecialColumns function [ODBC]"
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSpecialColumns Function
 **Conformance**  

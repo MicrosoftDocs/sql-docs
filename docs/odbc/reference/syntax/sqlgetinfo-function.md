@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetInfo function [ODBC]"
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetInfo Function
 **Conformance**  

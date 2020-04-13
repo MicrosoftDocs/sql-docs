@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ODBC error handling, message types"
   - "errors [ODBC], types"
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Error Messages

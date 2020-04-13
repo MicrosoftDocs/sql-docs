@@ -9,7 +9,7 @@ ms.topic: "language-reference"
 helpviewer_keywords: 
   - "17204 (Database Engine error)"
 ms.assetid: 
-author: MashaMSFT
+author: PijoCoder
 ms.author: mathoma
 ---
 # MSSQLSERVER_17207

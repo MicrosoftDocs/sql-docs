@@ -11,8 +11,8 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLBindParameter function"
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLBindParameter

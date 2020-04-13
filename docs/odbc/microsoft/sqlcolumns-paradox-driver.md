@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLColumns function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLColumns"
 ms.assetid: d7831c7d-8be9-40a7-bc70-8d89db8fe8c9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumns (Paradox Driver)
 > [!NOTE]  

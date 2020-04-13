@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC SQL grammar, ALTER TABLE statement limitations"
   - "ALTER TABLE statement limitations [ODBC]"
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ALTER TABLE Statement Limitations
 When the dBASE or Paradox driver is used, once an index has been created and a new record added, the structure of the table cannot be changed by the ALTER TABLE statement unless the index is dropped and the contents of the table are deleted.  

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "converting data from SQL to c types [ODBC], about converting"
   - "C data types [ODBC], converting from SQL types"
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Converting Data from SQL to C Data Types
 When an application calls **SQLFetch**, **SQLFetchScroll**, or **SQLGetData**, the driver retrieves the data from the data source. If necessary, it converts the data from the data type in which the driver retrieved it to the data type specified by the *TargetType* argument in **SQLBindCol** or **SQLGetData.** Finally, it stores the data in the location pointed to by the *TargetValuePtr* argument in **SQLBindCol** or **SQLGetData** (and the SQL_DESC_DATA_PTR field of the ARD).  

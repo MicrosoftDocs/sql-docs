@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "repeatable reads [ODBC]"
   - "transactions [ODBC], isolation"
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Transaction Isolation Levels (ODBC)
 *Transaction isolation levels* are a measure of the extent to which transaction isolation succeeds. In particular, transaction isolation levels are defined by the presence or absence of the following phenomena:  

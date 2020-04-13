@@ -63,7 +63,7 @@
       href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
   - name: R
     items:
-    - name: Create R scripts
+    - name: Run R scripts
       href: ../machine-learning/tutorials/quickstart-r-create-script.md
     - name: Data types and objects
       href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md

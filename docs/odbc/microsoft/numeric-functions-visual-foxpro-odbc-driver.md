@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "numeric functions [ODBC]"
   - "FoxPro ODBC driver [ODBC], numeric functions"
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Numeric Functions (Visual FoxPro ODBC Driver)
 The following table describes ODBC numeric functions supported by the Visual FoxPro ODBC Driver; when the Visual FoxPro grammar for the same function differs from the ODBC syntax, the Visual FoxPro equivalent is listed.  

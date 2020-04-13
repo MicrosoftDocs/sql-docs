@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Excel driver [ODBC], SQLDriverConnect"
   - "SQLDriverConnect function [ODBC], Excel Driver"
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDriverConnect (Excel Driver)
 > [!NOTE]  

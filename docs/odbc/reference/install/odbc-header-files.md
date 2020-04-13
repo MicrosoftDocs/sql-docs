@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "header files [ODBC]"
   - "application files [ODBC]"
 ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Header Files
 > [!NOTE]  

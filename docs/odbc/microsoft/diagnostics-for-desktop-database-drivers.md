@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], diagnostic information"
   - "diagnostic information [ODBC], desktop database drivers"
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Diagnostics for Desktop Database Drivers
 All errors and warnings not checked or partially checked by the Driver Manager are handled by the driver. The driver also maps native errors, or errors returned by the data source, to SQLSTATEs. Each function listed in the *ODBC Programmer's Reference* contains a "Diagnostics" section that specifies conditions and messages.  

@@ -31,8 +31,8 @@ The format of the offline books has changed over time.
 | SQL Server 2019 | Online | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) <br /> [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) |
 | SQL Server 2017 | Online | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) <br /> <br /> [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) |
 | SQL Server 2016 | Online | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) <br /> <br /> [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) |
-| SQL Server 2014 | [Disk](https://www.microsoft.com/en-us/download/details.aspx?id=42557) | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) <br /> <br /> [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) |
-| SQL Server 2012 | [Disk](https://www.microsoft.com/en-us/download/details.aspx?id=35750) | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) <br /> <br /> [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) |
+| SQL Server 2014 | [Disk - download](https://www.microsoft.com/en-us/download/details.aspx?id=42557) | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) <br /> <br /> [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) |
+| SQL Server 2012 | [Disk - download](https://www.microsoft.com/en-us/download/details.aspx?id=35750) | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) <br /> <br /> [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) |
 
 To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
 
@@ -51,27 +51,24 @@ For this approach, you use the *Online* Installation source.
 
 1. In SSMS or VS, select **Add and Remove Help Content** on the Help menu.
 
-   ![HelpViewer2 Add Remove Content](../sql-server/media/sql-server-help-installation/addremovecontent.png)
+   ![Help Viewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
 
    The Help Viewer opens to the Manage Content tab.  
 
 2. To install the latest help content package, choose **Online** under Installation source.
 
-   ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-onlinesource.png)  
-
-   >[!NOTE]
-   > To install from disk (SQL Server 2014 help), choose **Disk** under Installation source, and specify the disk location.
+   ![Help Viewer Manage Content Online Source](../sql-server/media/sql-server-help-installation/helpviewer2-manage-content-online-source.png)
 
    The Local store path on the Manage Content tab shows where on the local computer the content will be installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**.
    If the help installation fails after changing the Local store path, close and reopen the Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
-3. select **Add** next to each content package (book) that you want to install.
+3. Select **Add** next to each content package (book) that you want to install.
    To install all SQL Server help content, add all 13 books under SQL Server.
 
-4. select **Update** at lower right.
+4. Select **Update** at lower right.
    The help table of contents on the left automatically updates with the added books.
 
-   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
+   ![HelpViewer Manage Content Add Content](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
 
 > [!NOTE]
 > Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:
@@ -97,7 +94,46 @@ XQuery Language Reference (SQL Server) | XQuery Language Reference (SQL Server) 
 > [!NOTE]
 > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
-### To view offline help content in SSMS with Help Viewer v2.x
+### To download and install offline help content from Disk
+
+For this approach, you use the *Online* Installation source.
+
+1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/en-us/download/details.aspx?id=42557) content from the download center and save it to a folder.
+
+   > [!NOTE]
+   > Both 2012 and 2014 download content can be found in the [What tools Install the Help Viewer versions](#what-tools-install-the-help-viewer-versions) section.
+
+2. Next step is to unzip the file.
+
+3. In SSMS or VS, select **Add and Remove Help Content** on the Help menu.
+
+   ![HelpViewer Add Remove Content](../sql-server/media/sql-server-help-installation/addremovecontent.png)
+
+   The Help Viewer opens to the Manage Content tab.
+
+4. To install the latest help content package, choose **Disk** under Installation source and then the ellipses.
+
+   ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/helpviewer2-manage-content-disk-source.png)
+
+   > [!NOTE]
+   > The Local store path on the Manage Content tab shows where on the local computer the content is located. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**.
+   If the help installation fails after changing the Local store path, close and reopen the Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
+
+5. Then locate te folder where you unzipped the content. Look for the **HelpContentSetup.msha** file.  then select **Open**.
+
+   ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/choose-offline-content.png)
+
+6. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
+
+   ![See Content in Help Viewer](../sql-server/media/sql-server-help-installation/see-content-in-help-viewer.png)
+
+> [!NOTE]
+> Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:
+
+> [!NOTE]
+> If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
+
+### To view offline help content in SSMS with Help Viewer
 
 To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Remove Content** from the Help menu, to launch the Help Viewer.
 
@@ -109,7 +145,7 @@ The Help Viewer opens to the Manage Content tab, with the installed help table o
 
    ![Help Viewer v2.x with content](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
 
-### To view offline help content in VS with Help Viewer v2.x
+### To view offline help content in VS with Help Viewer
 
 To view the installed help in Visual Studio:
 

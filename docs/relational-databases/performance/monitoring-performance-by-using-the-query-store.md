@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -28,9 +28,9 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ## <a name="Enabling"></a> Enabling the Query Store
 
- Query Store is not active for new databases by default.
+ Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics (SQL DW) databases, and is enabled by default for new Azure SQL Database databases.
 
-## Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. In Object Explorer, right-click a database, and then click **Properties**.
 
@@ -41,7 +41,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 3. In the **Operation Mode (Requested)** box, select **Read Write**.
 
-## Use Transact-SQL Statements
+### Use Transact-SQL Statements
 
 Use the **ALTER DATABASE** statement to enable the query store for a given database. For example:
 

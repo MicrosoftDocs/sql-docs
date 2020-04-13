@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "transaction isolation [ODBC]"
   - "transactions [ODBC], isolation"
 ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Transaction Isolation
 *Transaction isolation* refers to the degree of interaction between multiple concurrent transactions. To see why this is important, you'll need to first look at the idea of serializability.  

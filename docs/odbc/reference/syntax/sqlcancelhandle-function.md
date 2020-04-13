@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLCancelHandle function [ODBC]"
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCancelHandle Function
 **Conformance**  

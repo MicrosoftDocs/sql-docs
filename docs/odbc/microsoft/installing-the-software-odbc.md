@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], installing"
   - "installing ODBC driver for Oracle [ODBC]"
 ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Installing the Software (ODBC)
 > [!IMPORTANT]  

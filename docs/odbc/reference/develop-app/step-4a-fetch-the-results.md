@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "application process [ODBC], fetching results"
   - "fetches [ODBC], fetching results"
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 4a: Fetch the Results
 The next step is to fetch the results, as shown in the following illustration.  

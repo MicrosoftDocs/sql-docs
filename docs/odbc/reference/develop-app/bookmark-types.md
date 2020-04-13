@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "bookmarks [ODBC]"
   - "fixed-length bookmarks [ODBC]"
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Bookmark Types
 All bookmarks in ODBC *3.x* are variable-length bookmarks. This allows a primary key or a unique index associated with a table to be used as a bookmark. The bookmark also can be a 32-bit value, as was used in ODBC *2.x*. To specify that a bookmark is used with a cursor, an ODBC *3.x* application sets the SQL_ATTR_USE_BOOKMARK statement attribute to SQL_UB_VARIABLE. A variable-length bookmark is automatically used.  

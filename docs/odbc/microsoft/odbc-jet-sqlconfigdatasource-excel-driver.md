@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLConfigDataSource function [ODBC], Excel Driver"
   - "Excel driver [ODBC], SqlConfigDataSource"
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Jet SQLConfigDataSource (Excel Driver)
 > [!NOTE]  

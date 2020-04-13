@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ODBC cursors, programming"
   - "cursors [ODBC], programming"
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursor Programming Details (ODBC)

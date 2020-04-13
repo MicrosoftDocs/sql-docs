@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "functions [ODBC], setup DLL functions"
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Setup DLL Function Summary
 The following table describes setup DLL functions. For more information about the syntax and semantics for each function, see [Setup DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md).  

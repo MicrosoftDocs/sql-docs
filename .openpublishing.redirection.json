@@ -1381,6 +1381,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/tutorials/sql-server-python-tutorials.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-tutorials",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sql-server-r-tutorials.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-tutorials",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
       "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
       "redirect_document_id": false

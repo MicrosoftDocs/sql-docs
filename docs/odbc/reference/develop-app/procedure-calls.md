@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "escape sequences [ODBC], procedure calls"
   - "procedure calls [ODBC]"
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Procedure Calls
 A *procedure* is an executable object stored on the data source. Generally, it is one or more SQL statements that have been precompiled. The escape sequence for calling a procedure is  

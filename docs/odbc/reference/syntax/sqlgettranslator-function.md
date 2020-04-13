@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetTranslator function [ODBC]"
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetTranslator Function
 **Conformance**  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLSTATEs"
   - "errors [ODBC], cause information"
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSTATE (ODBC Error Codes)

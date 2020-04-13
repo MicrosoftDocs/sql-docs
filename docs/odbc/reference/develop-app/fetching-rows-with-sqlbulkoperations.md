@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "updating data [ODBC], bookmarks"
   - "updating data [ODBC], SQLBulkOperations"
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Fetching Rows with SQLBulkOperations
 Data can be refetched into a rowset using bookmarks by a call to **SQLBulkOperations.** The rows to be fetched are identified by the bookmarks in a bound bookmark column. Columns with a value of SQL_COLUMN_IGNORE are not fetched.  

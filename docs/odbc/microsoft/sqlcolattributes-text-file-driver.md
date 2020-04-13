@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLColAttributes"
   - "SQLColAttribute function [ODBC], Text File Driver"
 ms.assetid: 132fd1c0-1921-4a7d-910e-aedf1bff5453
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColAttributes (Text File Driver)
 > [!NOTE]  

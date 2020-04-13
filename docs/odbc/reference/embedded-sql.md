@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ODBC [ODBC], SQL"
   - "embedded SQL [ODBC]"
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Embedded SQL
 The first technique for sending SQL statements to the DBMS is embedded SQL. Because SQL does not use variables and control-of-flow statements, it is often used as a database sublanguage that can be added to a program written in a conventional programming language, such as C or COBOL. This is a central idea of embedded SQL: placing SQL statements in a program written in a host programming language. Briefly, the following techniques are used to embed SQL statements in a host language:  

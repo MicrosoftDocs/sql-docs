@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLCancel function"
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLCancel

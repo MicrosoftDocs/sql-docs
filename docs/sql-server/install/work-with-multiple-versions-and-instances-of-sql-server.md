@@ -97,6 +97,8 @@ The following table shows side-by-side support for each version of SQL Server on
 | SQL Server 2017 | SQL Server 2008 through SQL Server 2016| 
 | SQL Server 2016 | SQL Server 2008 through SQL Server 2014| 
 
+For more information, see [Using SQL Server in Windows 8 and later](https://support.microsoft.com/help/2681562/using-sql-server-in-windows-8-and-later-versions-of-windows-operating). 
+
   
 > [!CAUTION]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep does not support side by side installation of prepared instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the same computer. For example, you cannot prepare a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance side by side with a prepared instance of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. However, you can install multiple prepared instances of the same major version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] side by side on the same computer. For more information, see [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  

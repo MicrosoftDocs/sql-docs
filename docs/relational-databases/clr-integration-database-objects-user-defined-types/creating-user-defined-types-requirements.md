@@ -1,5 +1,6 @@
 ---
 title: "User-Defined Type Requirements | Microsoft Docs"
+description: This article describes important design decisions you need to make when you create a UDT to install on SQL Server. 
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

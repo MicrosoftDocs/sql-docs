@@ -1,5 +1,6 @@
 ---
 title: "Manipulating UDT Data | Microsoft Docs"
+description: Transact-SQL has no syntax for INSERT, UPDATE, or DELETE to modify data in UDT columns in SQL Server. CAST or CONVERT cast native data types to the UDT type.
 ms.custom: ""
 ms.date: "12/05/2019"
 ms.prod: sql

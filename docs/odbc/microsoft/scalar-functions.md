@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "scalar functions [ODBC], desktop database drivers"
   - "SQL grammar [ODBC], scalar functions"
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Scalar Functions
 The Microsoft ODBC Desktop Database Drivers support the following scalar functions:  

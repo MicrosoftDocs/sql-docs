@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLColumns function [ODBC], Access Driver"
   - "Access driver [ODBC], SQLColumns"
 ms.assetid: 1eac255c-6110-4805-a1bc-feee1eec35d0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumns (Access Driver)
 > [!NOTE]  

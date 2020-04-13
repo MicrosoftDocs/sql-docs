@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetPoolID function [ODBC]"
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetPoolID Function
 **Conformance**  

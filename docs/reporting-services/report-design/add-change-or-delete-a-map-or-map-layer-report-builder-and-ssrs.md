@@ -216,7 +216,7 @@ ms.author: maggies
   
 3.  In the Properties pane, set UseSecureConnection to **True**.  
   
- The connection for the Bing Maps Web service will use the HTTP SSL (Secure Sockets Layer) service to retrieve Bing map tiles for this layer.  
+ The connection for the Bing Maps Web service will use the HTTP Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), service to retrieve Bing map tiles for this layer.  
   
 ##  <a name="Language"></a> To specify the language for tile labels  
   

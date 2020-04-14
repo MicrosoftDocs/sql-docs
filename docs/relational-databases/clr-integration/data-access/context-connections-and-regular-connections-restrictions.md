@@ -1,6 +1,6 @@
 ---
 title: "Restrictions on Regular and Context Connections | Microsoft Docs"
-description: There are restrictions associated with code running in the Microsoft SQL Server process through context and regular connections.
+description: This article describes the restrictions associated with code running in the Microsoft SQL Server process through context and regular connections.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

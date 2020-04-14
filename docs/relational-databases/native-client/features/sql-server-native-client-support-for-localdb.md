@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Native Client Support for LocalDB | Microsoft Docs"
+title: "Support for LocalDB"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Support Policies for SQL Server Native Client | Microsoft Docs"
+title: "Support Policies"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

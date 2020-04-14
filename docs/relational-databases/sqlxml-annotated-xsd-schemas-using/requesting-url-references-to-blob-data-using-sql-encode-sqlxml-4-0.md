@@ -1,5 +1,6 @@
 ---
 title: "Get URL references to BLOB data with sql:encode (SQLXML)"
+description: Learn how to request an URL reference to BLOB data by specifying the sql:encode annotation in SQLXML 4.0.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

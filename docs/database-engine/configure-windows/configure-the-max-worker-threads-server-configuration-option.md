@@ -49,25 +49,30 @@ ms.author: mikeray
   
 -   Thread pooling helps optimize performance when large numbers of clients are connected to the server. Usually, a separate operating system thread is created for each query request. However, with hundreds of connections to the server, using one thread per query request can consume large amounts of system resources. The **max worker threads** option enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to create a pool of worker threads to service a larger number of query requests, which improves performance.  
   
--   The following table shows the automatically configured number of max worker threads for various combinations of CPUs and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   The following table shows the automatically configured number of max worker threads for various combinations of CPUs and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], using the formula: ***Default Max Workers* + ((*logical CPUs* - 4) * *Workers per CPU*)**.  
   
-    |Number of CPUs|32-bit computer|64-bit computer|  
-    |------------|------------|------------|  
-    |\<= 4 processors|256|512|  
-    |8 processors|288|576|  
-    |16 processors|352|704|  
-    |32 processors|480|960|  
-    |64 processors|736|1472|  
-    |128 processors|4224|4480|  
-    |256 processors|8320|8576| 
+    |Number of CPUs|32-bit computer (up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64-bit computer (up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|64-bit computer (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
+    |------------|------------|------------|------------|  
+    |\<= 4 processors|256|512|512|  
+    |8 processors|288|576|576|  
+    |16 processors|352|704|704|  
+    |32 processors|480|960|960|  
+    |64 processors|736|1472|2432|  
+    |128 processors|1248|2496|4480|  
+    |256 processors|2272|4544|8576|  
     
-    Using the following formula:
-    
+    Up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the *Workers per CPU* only depend on the architecture (32-bit or 64-bit):
     |Number of CPUs|32-bit computer|64-bit computer|  
     |------------|------------|------------| 
     |\<= 4 processors|256|512|
-    |\> 4 processors and \<= 64 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU's - 4) * 16)|
-    |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 + ((logical CPU's - 4) * 32)|
+    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU's - 4) * 16)|    
+    
+    Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the *Workers per CPU* depend on the architecture and number of processors (between 4 and 64, or greater than 64):
+    |Number of CPUs|32-bit computer|64-bit computer|  
+    |------------|------------|------------| 
+    |\<= 4 processors|256|512|
+    |\> 4 processors and \<= 64 processors|256 + ((logical CPUs - 4) * 8)|512 + ((logical CPUs - 4) * 16)|
+    |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 + ((logical CPUs - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier. We recommend 1,024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  

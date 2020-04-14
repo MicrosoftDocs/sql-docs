@@ -1,5 +1,6 @@
 ---
 title: "Setting the connection properties"
+description: "The connection string properties for the Microsoft JDBC Driver for SQL Server can be specified in various ways."
 ms.custom: ""
 ms.date: "03/13/2020"
 ms.prod: sql

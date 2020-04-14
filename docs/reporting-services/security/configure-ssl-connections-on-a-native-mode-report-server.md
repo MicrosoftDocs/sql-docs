@@ -33,7 +33,7 @@ ms.author: maggies
   
 -   If IIS is installed, the World Wide Web (W3SVC) service must always be running. The HTTP SSL service will make a dependency on IIS if it detects that IIS is running. This means that the World Wide Web service (W3SVC) must be running whenever IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are installed on the same computer and you are configuring report server URLs for TLS connections.  
   
--   Uninstalling IIS can temporarily disrupt service to an TLS-bound report server URL. For this reason, it is recommended that you restart the computer after you uninstall IIS.  
+-   Uninstalling IIS can temporarily disrupt service to a TLS-bound report server URL. For this reason, it is recommended that you restart the computer after you uninstall IIS.  
   
      Rebooting the computer is necessary to clear all TLS sessions from cache. Some operating systems cache TLS sessions up to 10 hours, causing an https:// URL to continue to work even after the TLS binding has been removed from the URL reservation in HTTP.SYS. Rebooting the computer closes any open connections that use the channel.  
   
@@ -58,7 +58,7 @@ ms.author: maggies
   
  Report server database configuration is a requirement for testing the URL. If you have not yet created the report server database, do so before testing the URL.  
   
- URL reservations for Web Portal URL and the Report Server Web Services URL are configured independently. If you want to also configure the web portal access through an TLS-encrypted channel, continue with the following steps:  
+ URL reservations for Web Portal URL and the Report Server Web Services URL are configured independently. If you want to also configure the web portal access through a TLS-encrypted channel, continue with the following steps:  
   
 1.  Access the **Web Portal URL**.
   
@@ -74,7 +74,7 @@ ms.author: maggies
  Certificate bindings will be stored in HTTP.SYS. A representation of the bindings you defined will also be stored in the **URLReservations** section of the RSReportServer.config file. The settings in the configuration file are only a representation of actual values that are specified elsewhere. Do not modify the values in the configuration file directly. The configuration settings will appear in the file only after you use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool or the Report Server Windows Management Instrumentation (WMI) provider to bind a certificate.  
   
 > [!NOTE]  
->  If you configure a binding with an TLS/SSL certificate in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and you later want to remove the certificate from the computer, make sure to remove the binding from [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] before you remove the certificate from the computer. Otherwise, you will be unable to remove the binding by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool or WMI and you will receive an "Invalid parameter" error. If you have already removed the certificate from the computer, you can use the Httpcfg.exe tool to remove the binding from HTTP.SYS. For more information about Httpcfg.exe, see the Windows product documentation.  
+>  If you configure a binding with a TLS/SSL certificate in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and you later want to remove the certificate from the computer, make sure to remove the binding from [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] before you remove the certificate from the computer. Otherwise, you will be unable to remove the binding by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool or WMI and you will receive an "Invalid parameter" error. If you have already removed the certificate from the computer, you can use the Httpcfg.exe tool to remove the binding from HTTP.SYS. For more information about Httpcfg.exe, see the Windows product documentation.  
   
  TLS bindings are a shared resource in Microsoft Windows. Changes made by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager or other tools like IIS Manager can impact other applications on the same computer. It is a best practice to use the same tool to edit bindings that you used to create the bindings.  For example if you created TLS bindings using Configuration Manager, then it is recommended you use Configuration Manager to manage the life cycle of the bindings. If you use IIS manager to create bindings, then it is recommended you use IIS manager to manage the life cycle of the bindings. If IIS is installed on the computer before [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed, it is a good practice to review the TLS configuration in IIS before configuring [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   

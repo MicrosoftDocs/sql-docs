@@ -1,6 +1,6 @@
 ---
 title: "CLR Scalar-Valued Functions | Microsoft Docs"
-description: A scalar-valued function returns a single value. In SQL Server CRL integration, you can write scalar-valued user-defined functions in managed code.
+description: A scalar-valued function returns a single value. In SQL Server CLR integration, you can write scalar-valued user-defined functions in managed code.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

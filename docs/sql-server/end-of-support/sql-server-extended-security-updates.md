@@ -202,6 +202,18 @@ To download ESUs, follow these steps:
 
 1. Download security updates from here, if and when they are made available. 
 
+## Configure regional redundancy 
+
+Customers that require regional redundancy for their **SQL Server registry** can create registration data in two distinct regions. Customers can then download security updates from either region based on **SQL Server registry** service availability. 
+
+To configure regional redundancy, follow these steps:
+
+1. Split your SQL Server 2008 or 2008 R2 inventory into two files, such as upload1.csv and upload2.csv. 
+1. Bulk register each file into a different region by creating the **SQL Server registry** resource in each region, and then performing a bulk registration with one upload file for each region. For example, create your first **SQL Server registry** service in the **West US** region, and bulk register upload1.csv. Then create the second **SQL Server registry** service in the **East US** region, bulk registering upload2.csv. 
+
+Once your data has been registered with the two different **SQL Server registry** resources, you will be able to download security updates from either region, based ons service availability. 
+
+
 ## FAQ
 
 General frequently asked questions about Extended Security updates can be found at the [Extended security updates FAQ](https://www.microsoft.com/cloud-platform/extended-security-updates). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific frequently asked questions are listed below. 
@@ -212,7 +224,7 @@ The End of Support date for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 
 
 **What does End of Support mean?**
 
-Microsoft Lifecycle Policy offers 10 years of support (5 years for Mainstream Support and 5 years for Extended Support) for Business and Developer products (such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Server). As per the policy, after the end of the Extended Support period there will be no patches or security updates, which may cause security and compliance issues, and expose customers’ applications and business to serious security risks.
+Microsoft Lifecycle Policy offers 10 years of support (5 years for Mainstream Support and 5 years for Extended Support) for Business and Developer products (such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Server). As per the policy, after the end of the Extended Support period there will be no patches or security updates, which may cause security and compliance issues, and expose customers' applications and business to serious security risks.
 
 **What editions of SQL Server are eligible for Extended Security Updates?**
 
@@ -287,7 +299,7 @@ Azure does not currently support shared storage clustering. For advice on how to
 
 **Can customers leverage Extended Security Updates for SQL Server with a third-party hoster?**
 
-Customers cannot leverage Extended Security Updates if they move their [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] environment to a PaaS implementation on other cloud providers. If customers are looking to move to virtual machines (IaaS), they can leverage License Mobility for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via Software Assurance to make the move, and purchase Extended Security Updates from [!INCLUDE[msCoName](../../includes/msconame-md.md)] to manually apply patches to the [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] instances running in a VM (IaaS) on an authorized SPLA hoster’s server. However, free updates in Azure is the more attractive offer.
+Customers cannot leverage Extended Security Updates if they move their [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] environment to a PaaS implementation on other cloud providers. If customers are looking to move to virtual machines (IaaS), they can leverage License Mobility for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via Software Assurance to make the move, and purchase Extended Security Updates from [!INCLUDE[msCoName](../../includes/msconame-md.md)] to manually apply patches to the [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] instances running in a VM (IaaS) on an authorized SPLA hoster's server. However, free updates in Azure is the more attractive offer.
 
 **What are the best practices for enhancing performance of SQL Server in Azure virtual machines?** 
 

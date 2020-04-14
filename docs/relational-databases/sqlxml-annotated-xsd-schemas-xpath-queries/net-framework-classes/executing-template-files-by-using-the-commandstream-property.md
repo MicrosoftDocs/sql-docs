@@ -1,5 +1,6 @@
 ---
 title: "Run template files with the CommandStream Property"
+description: Learn how to execute template files that consist of SQL or XPath queries by using the CommandStream property of the SqlXmlCommand object.  
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

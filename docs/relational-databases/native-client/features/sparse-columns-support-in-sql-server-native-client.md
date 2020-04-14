@@ -1,5 +1,5 @@
 ---
-title: "Sparse columns support in SQL Native Client"
+title: "Sparse columns support"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

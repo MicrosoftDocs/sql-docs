@@ -1,5 +1,5 @@
 ---
-title: "Native Client, update app SQL from MDAC"
+title: "Update from MDAC"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "System Requirements for SQL Server Native Client | Microsoft Docs"
+title: "System Requirements"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Comparison Expressions (XQuery) | Microsoft Docs"
+description: Learn how to use XQuery comparison expressions that contain general, value, node, and node order comparison operators.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql

@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Drivers for PHP for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2020"
+ms.date: "04/15/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -126,7 +126,7 @@ The following Linux and Mac operating system versions (64-bit only) are supporte
 |macOS El Capitan (64-bit)           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> Alpine Linux support is experimental for version 5.8.
+<sup>1</sup> Alpine Linux support is experimental for version 5.8.0. Version 5.8.1 introduces production support.
 
 ## See Also
 

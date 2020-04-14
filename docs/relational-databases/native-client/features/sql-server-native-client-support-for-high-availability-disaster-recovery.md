@@ -1,5 +1,5 @@
 ---
-title: "Native Client, High Availability, Recovery"
+title: "High Availability, Recovery"
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: sql

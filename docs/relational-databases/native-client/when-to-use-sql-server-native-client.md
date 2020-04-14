@@ -1,5 +1,5 @@
 ---
-title: "When to Use SQL Server Native Client | Microsoft Docs"
+title: "When to Use"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

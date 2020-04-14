@@ -62,12 +62,14 @@ ms.author: mikeray
     |256 processors|2272|4544|8576|   
     
     Up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the *Workers per CPU* only depend on the architecture (32-bit or 64-bit):
+    
     |Number of CPUs|32-bit computer <sup>1</sup>|64-bit computer|   
     |------------|------------|------------|   
     |\<= 4 processors|256|512|   
     |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 <sup>2</sup> + ((logical CPU's - 4) * 16)|   
     
     Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the *Workers per CPU* depend on the architecture and number of processors (between 4 and 64, or greater than 64):
+    
     |Number of CPUs|32-bit computer <sup>1</sup>|64-bit computer|   
     |------------|------------|------------|   
     |\<= 4 processors|512|   

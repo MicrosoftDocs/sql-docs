@@ -53,26 +53,26 @@ ms.author: mikeray
   
     |Number of CPUs|32-bit computer (up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64-bit computer (up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|64-bit computer (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  
-    |\<= 4 processors|256|512|512|  
-    |8 processors|288|576|576|  
-    |16 processors|352|704|704|  
-    |32 processors|480|960|960|  
-    |64 processors|736|1472|2432|  
-    |128 processors|1248|2496|4480|  
-    |256 processors|2272|4544|8576|  
+    |\<= 4 processors|256|512|512|   
+    |8 processors|288|576|576|   
+    |16 processors|352|704|704|   
+    |32 processors|480|960|960|   
+    |64 processors|736|1472|2432|   
+    |128 processors|1248|2496|4480|   
+    |256 processors|2272|4544|8576|   
     
     Up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the *Workers per CPU* only depend on the architecture (32-bit or 64-bit):
-    |Number of CPUs|32-bit computer <sup>1</sup>|64-bit computer|  
-    |------------|------------|------------| 
-    |\<= 4 processors|256|512|
-    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 <sup>2</sup> + ((logical CPU's - 4) * 16)|    
+    |Number of CPUs|32-bit computer <sup>1</sup>|64-bit computer|   
+    |------------|------------|------------|   
+    |\<= 4 processors|256|512|   
+    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 <sup>2</sup> + ((logical CPU's - 4) * 16)|   
     
     Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the *Workers per CPU* depend on the architecture and number of processors (between 4 and 64, or greater than 64):
-    |Number of CPUs|32-bit computer <sup>1</sup>|64-bit computer|  
-    |------------|------------|------------| 
-    |\<= 4 processors|512|
-    |\> 4 processors and \<= 64 processors|256 + ((logical CPUs - 4) * 8)|512 <sup>2</sup> + ((logical CPUs - 4) * 16)|
-    |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 <sup>2</sup> + ((logical CPUs - 4) * 32)|
+    |Number of CPUs|32-bit computer <sup>1</sup>|64-bit computer|   
+    |------------|------------|------------|   
+    |\<= 4 processors|512|   
+    |\> 4 processors and \<= 64 processors|256 + ((logical CPUs - 4) * 8)|512 <sup>2</sup> + ((logical CPUs - 4) * 16)|   
+    |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 <sup>2</sup> + ((logical CPUs - 4) * 32)|   
   
     <sup>1</sup> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier. We recommend 1,024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.
     

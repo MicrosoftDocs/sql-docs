@@ -92,11 +92,11 @@ sysctl -w vm.max_map_count=262144
 #
 # A tuned configuration for SQL Server on Linux
 #
-	
+    
 [main]
 summary=Optimize for Microsoft SQL Server
 include=throughput-performance
-	
+    
 [cpu]
 force_latency=5
 
@@ -157,7 +157,7 @@ vm.transparent_hugepages=madvice
 and make the mssql profile active after the modification
 ```bash
 tuned-adm off
-tuned-amd profile mssql
+tuned-adm profile mssql
 ```
 
 ### swapfile

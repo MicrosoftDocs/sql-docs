@@ -14,7 +14,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # The &lt;xsd:redefine&gt; Element
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The W3C XSD **redefine** element provides support for redefining schema components. However, support for this directive is potentially costly to performance and also requires that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalidate all instances of the **xml** data type associated with the redefined schema. Therefore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support this element. XML schemas that include the **\<xsd:redefine>** element are rejected by the server.  
   
  To update a schema or its components, you can do the following instead:  

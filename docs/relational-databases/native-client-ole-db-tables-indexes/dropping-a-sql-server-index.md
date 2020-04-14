@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, indexes"
   - "indexes [OLE DB]"
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ---
 # Dropping a SQL Server Index
 

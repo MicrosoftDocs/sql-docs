@@ -32,11 +32,11 @@ ms.author: mathoma
   
 2.  Apply any unapplied transaction log backups in sequence to each secondary database. For more information, see [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-3.  If the primary database is accessible, back up the active transaction log and apply the log backup to the secondary databases.  
+3.  If the primary database is accessible back up the active transaction log and apply the log backup to the secondary databases. You may need to set the database to [single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md) to obtain exclusive access before issuing the restore command, and then switch it back to multi-user after the restore completes.  
   
      If the original primary server instance is not damaged, back up the tail of the transaction log of the primary database using WITH NORECOVERY. This leaves the database in the restoring state and therefore unavailable to users. Eventually you will be able to roll this database forward by applying transaction log backups from the replacement primary database.  
   
-     For more information, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+     For more information, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).   
   
 4.  After the secondary servers are synchronized, you can fail over to whichever one you prefer by recovering its secondary database and redirecting clients to that server instance. Recovering puts the database into a consistent state and brings it online.  
   

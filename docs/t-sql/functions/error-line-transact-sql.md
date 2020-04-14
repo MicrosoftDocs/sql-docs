@@ -68,20 +68,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
-Result 
------------
-
-(0 row(s) affected)
-
-ErrorLine
------------
-4
-
-(1 row(s) affected)
-```  
   
 ### B. Using ERROR_LINE in a CATCH block with a stored procedure  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_LINE` returns the line number where the error occurred.  
@@ -108,20 +94,7 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ``` 
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
------------
 
-(0 row(s) affected)
-
-ErrorLine
------------
-7
-
-(1 row(s) affected)  
-   
-```
 
 ### C. Using ERROR_LINE in a CATCH block with other error-handling tools  
 This code example shows a `SELECT` statement that generates a divide-by-zero error. `ERROR_LINE` returns the line number where the error occurred, and information relating to the error itself.  
@@ -142,20 +115,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ``` 
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
------------
-
-(0 row(s) affected)
-
-ErrorNumber ErrorSeverity ErrorState ErrorProcedure ErrorLine ErrorMessage
------------ ------------- ---------- -------------- --------- ---------------------------------
-8134        16            1          NULL           3         Divide by zero error encountered.
-
-(1 row(s) affected)
-  
-```
   
 ## See Also  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   

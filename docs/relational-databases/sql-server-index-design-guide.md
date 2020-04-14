@@ -202,7 +202,7 @@ ON Purchasing.PurchaseOrderDetail
   
  The [!INCLUDE[ssDE](../includes/ssde-md.md)] can move equally efficiently in either direction. An index defined as `(RejectedQty DESC, ProductID ASC)` can still be used for a query in which the sort direction of the columns in the ORDER BY clause are reversed. For example, a query with the ORDER BY clause `ORDER BY RejectedQty ASC, ProductID DESC` can use the index.  
   
- Sort order can be specified only for key columns. The [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) catalog view and the INDEXKEY_PROPERTY function report whether an index column is stored in ascending or descending order.  
+ Sort order can be specified only for the key columns in index. The [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) catalog view and the INDEXKEY_PROPERTY function report whether an index column is stored in ascending or descending order.  
 
 ## Metadata  
 Use these metadata views to see attributes of indexes. More architectural information is embedded in some of these views.

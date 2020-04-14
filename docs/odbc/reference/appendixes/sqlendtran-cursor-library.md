@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLEndTran function [ODBC], Cursor Library"
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLEndTran (Cursor Library)
 > [!IMPORTANT]  

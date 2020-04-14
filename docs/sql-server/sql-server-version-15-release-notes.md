@@ -1,5 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
+description: Find information about SQL Server 2019 (15.x) limitations, known issues, help resources, and other release notes.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
@@ -76,6 +77,6 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 ## Machine Learning Services
 
-For issues in SQL Server Machine Learning Services, see [Known issues in SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md).
+For issues in SQL Server Machine Learning Services, see [Known issues in SQL Server Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]

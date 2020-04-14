@@ -81,6 +81,8 @@
       items:
       - name: Deployment guidance
         href: big-data-cluster/deployment-guidance.md
+      - name: Deployed resources
+        href: big-data-cluster/concept-architecture-pods.md
       - name: Upgrade to a new release
         href: big-data-cluster/deployment-upgrade.md
       - name: Customize deployments
@@ -110,7 +112,7 @@
         - name: Single node kubeadm script
           href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks
-          href: big-data-cluster/deploy-notebooks.md         
+          href: big-data-cluster/notebooks-deploy.md
   - name: Concepts
     items:
     - name: Application deployment
@@ -193,26 +195,18 @@
         href: big-data-cluster/connect-to-big-data-cluster.md
       - name: View cluster status
         href: big-data-cluster/view-cluster-status.md
-      - name: Kubernetes troubleshooting
-        href: big-data-cluster/cluster-troubleshooting-commands.md
-      - name: Manage with notebook
-        href: big-data-cluster/manage-notebooks.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
+      - name: Manage existing notebooks
+        href: big-data-cluster/notebooks-manage-bdc.md
+      - name: Run a notebook with Spark
+        href: big-data-cluster/notebooks-tutorial-spark.md
       - name: Security
         items:
         - name: Update AZDATA_PASSWORD
           href: big-data-cluster/change-azdata-password.md
         - name: Manage user access
           href: big-data-cluster/manage-user-access.md
-    - name: Notebooks
-      items:
-      - name: Notebooks overview
-        href: big-data-cluster/notebooks-guidance.md
-      - name: Notebook tutorial
-        href: big-data-cluster/tutorial-notebook-spark.md
-      - name: Manage existing notebooks
-        href: big-data-cluster/notebooks-how-to-manage.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -223,6 +217,12 @@
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
+    - name: Troubleshoot
+      items:
+      - name: Troubleshoot Kubernetes
+        href: big-data-cluster/cluster-troubleshooting-commands.md
+      - name: Active directory group scope
+        href: big-data-cluster/troubleshoot-active-directory.md
   - name: Reference
     items:
     - name: Deployment reference
@@ -706,7 +706,7 @@
           href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
         - name: View listener properties
           href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-      - name: Operation
+      - name: Operate
         items:
         - name: Add Database
           items:
@@ -750,6 +750,8 @@
           href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
         - name: View health with policies
           href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: Connect to listener
+          href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
     - name: Concepts
       items:
       - name: Configuration
@@ -788,12 +790,12 @@
           href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
       - name: Connectivity
         items:
-        - name: Client connection
+        - name: Listener
+          href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+        - name: Client connection types
           href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-        - name: Client connectivity
+        - name: Driver & client support
           href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-        - name: Listeners, clients, & failover
-          href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
       - name: Interoperability
         items:
         - name: Replication, CT, & CDC
@@ -2552,7 +2554,11 @@
       - name: Java to SQL data types
         href: language-extensions/how-to/java-to-sql-data-types.md
       - name: Create a Java jar file
-        href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+        href: language-extensions/how-to/call-java-from-sql.md
+    - name: Reference
+      items:
+      - name: Extensibility Framework API
+        href: language-extensions/reference/extensibility-framework-api.md
   - name: SQL Server Native Client
     href: relational-databases/native-client/sql-server-native-client.md
     items:
@@ -4166,12 +4172,8 @@
   items:
   - name: Overview
     items:
-    - name: What's New
+    - name: What's new
       href: sql-server/install/what-s-new-in-sql-server-installation.md
-    - name: Maximum Capacity Specifications
-      href: sql-server/maximum-capacity-specifications-for-sql-server.md
-    - name: Compute capacity limits by edition
-      href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
   - name: Release notes
     items:
     - name: Discontinued functionality in SQL Server
@@ -4191,25 +4193,29 @@
   - name: Planning
     href: sql-server/install/planning-a-sql-server-installation.md
     items:
-    - name: Hardware & Software Requirements
+    - name: Maximum capacity specifications
+      href: sql-server/maximum-capacity-specifications-for-sql-server.md
+    - name: Compute capacity limits by edition
+      href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
+    - name: Hardware & software requirements
       items:
       - name: SQL Server 2019
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-      - name: SQL Server 2017 & prior
+      - name: SQL Server 2016 & 2017
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
-    - name: Security Considerations
+    - name: Security considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-    - name: Network Protocols & Network Libraries
+    - name: Network protocols & libraries
       href: sql-server/install/network-protocols-and-network-libraries.md
-    - name: Work with Multiple Versions & Instances
+    - name: Work with multiple Versions & Instances
       href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-    - name: Local Language Versions
+    - name: Language versions
       href: sql-server/install/local-language-versions-in-sql-server.md
-    - name: File Locations
+    - name: File locations
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: SQL Server Privacy supplement
+      - name: SQL Server privacy supplement
         items:
         - name: SQL Server 2017 and prior
           href: sql-server/sql-server-privacy.md
@@ -6165,15 +6171,6 @@
             href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
     - name: Transaction log management
       items:
-      - name: Log File Viewer
-        href: relational-databases/logs/log-file-viewer.md
-        items:
-        - name: Open
-          href: relational-databases/logs/open-log-file-viewer.md
-        - name: View Offline
-          href: relational-databases/logs/view-offline-log-files.md
-        - name: F1 Help
-          href: relational-databases/logs/log-file-viewer-f1-help.md
       - name: Transaction log
         href: relational-databases/logs/the-transaction-log-sql-server.md
         items:
@@ -7023,8 +7020,8 @@
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
-  - name: Advanced Analytics & Machine learning > 
-    href: advanced-analytics/
+  - name: Machine Learning Services > 
+    href: machine-learning/
   - name: Analytics Platform System > 
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md
@@ -7797,8 +7794,6 @@
         href: azure-data-studio/keyboard-shortcuts.md
       - name: Explorer Azure SQL resources
         href: azure-data-studio/azure-resource-explorer.md
-      - name: SQL Notebooks
-        href: azure-data-studio/sql-notebooks.md
       - name: Server groups
         href: azure-data-studio/server-groups.md
       - name: Source control
@@ -7807,6 +7802,14 @@
         href: azure-data-studio/settings.md
       - name: Windows authentication (Kerberos)
         href: azure-data-studio/enable-kerberos.md
+      - name: Notebooks
+        items:
+        - name: Notebooks overview
+          href: azure-data-studio/notebooks-guidance.md
+        - name: How to use SQL Kernel
+          href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+        - name: How to manage a notebook
+          href: azure-data-studio/notebooks-manage-sql-server.md
       - name: Usage data collection
         href: azure-data-studio/usage-data-collection.md
     - name: Extensions
@@ -8400,6 +8403,15 @@
         href: ssms/ssms-utility.md
       - name: SSMS Keyboard Shortcuts
         href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+      - name: Log File Viewer
+        href: relational-databases/logs/log-file-viewer.md
+        items:
+        - name: F1 Help
+          href: relational-databases/logs/log-file-viewer-f1-help.md
+        - name: Open
+          href: relational-databases/logs/open-log-file-viewer.md
+        - name: View Offline
+          href: relational-databases/logs/view-offline-log-files.md
       - name: SQL Server Agent
         items:
         - name: SQL Server Agent
@@ -8455,7 +8467,7 @@
           items:
           - name: Download Instructions Tab
             href: ssms/agent/target-servers-download-instructions-tab.md
-          - name: arget Server Status Tab
+          - name: Target Server Status Tab
             href: ssms/agent/target-servers-target-server-status-tab.md
         - name: Alerts Properties
           href: ssms/agent/alerts.md
@@ -8520,6 +8532,14 @@
           href: ssms/register-servers/registered-servers-f1-help.md
       - name: Scripting with SSMS
         items:
+        - name: Generate scripts
+          items:
+          - name: Generate Scripts
+            href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+          - name: Generate & Publish Scripts Wizard
+            href: ssms/scripting/generate-and-publish-scripts-wizard.md
+          - name: Objects Supported by the Generate Scripts Wizard
+            href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Query & Text Editors
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           items:
@@ -8641,14 +8661,6 @@
             items:
             - name: Spatial Results Window
               href: ssms/scripting/spatial-results-window.md
-            - name: Generate Scripts
-              href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-              items:
-              - name: Generate & Publish Scripts Wizard
-                href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                items:
-                - name: Objects Supported by the Generate Scripts Wizard
-                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
     - name: How-to
       items:
       - name: Install non-English SSMS
@@ -9840,6 +9852,8 @@
         href: linux/sql-server-linux-setup-ssis.md
       - name: Install SQL Server Machine Learning Services
         href: linux/sql-server-linux-setup-machine-learning.md
+      - name: Install SQL Server Machine Learning Services on Docker
+        href: linux/sql-server-linux-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
         href: linux/sql-server-linux-setup-language-extensions.md
       - name: Configure repositories
@@ -17065,5 +17079,3 @@
         href: xquery/string-search-in-xquery.md
       - name: Handling Namespaces in XQuery
         href: xquery/handling-namespaces-in-xquery.md
-- name: Knowledge Base support
-  href: kb-support/toc.yml

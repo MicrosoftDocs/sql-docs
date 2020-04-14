@@ -186,7 +186,7 @@ DELETE
  TOP cannot be used in a DELETE statement against partitioned views.  
   
 ## Locking Behavior  
- By default, a DELETE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive (X) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level. You can specify table hints to override this default behavior for the duration of the DELETE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ By default, a DELETE statement always acquires an intent exclusive (IX) lock on the table object it modifies, and holds that lock until the transaction completes. With an intent exclusive (IX) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level. You can specify table hints to override this default behavior for the duration of the DELETE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  When rows are deleted from a heap the [!INCLUDE[ssDE](../../includes/ssde-md.md)] may use row or page locking for the operation. As a result, the pages made empty by the delete operation remain allocated to the heap. When empty pages are not deallocated, the associated space cannot be reused by other objects in the database.  
   
@@ -194,7 +194,7 @@ DELETE
   
 -   Specify the TABLOCK hint in the DELETE statement. Using the TABLOCK hint causes the delete operation to take an exclusive lock on the table instead of a row or page lock. This allows the pages to be deallocated. For more information about the TABLOCK hint, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
--   Use TRUNCATE TABLE if all rows are to be deleted from the table.  
+-   Use `TRUNCATE TABLE` if all rows are to be deleted from the table.  
   
 -   Create a clustered index on the heap before deleting the rows. You can drop the clustered index after the rows are deleted. This method is more time consuming than the previous methods and uses more temporary resources.  
   
@@ -202,14 +202,14 @@ DELETE
 >  Empty pages can be removed from a heap at any time by using the `ALTER TABLE <table_name> REBUILD` statement.  
   
 ## Logging Behavior  
- The DELETE statement is always fully logged.  
+The DELETE statement is always fully logged.  
   
 ## Security  
   
 ### Permissions  
- DELETE permissions are required on the target table. SELECT permissions are also required if the statement contains a WHERE clause.  
+ `DELETE` permissions are required on the target table. `SELECT` permissions are also required if the statement contains a WHERE clause.  
   
- DELETE permissions default to members of the **sysadmin** fixed server role, the **db_owner** and **db_datawriter** fixed database roles, and the table owner. Members of the **sysadmin**, **db_owner**, and the **db_securityadmin** roles, and the table owner can transfer permissions to other users.  
+ DELETE permissions default to members of the `sysadmin` fixed server role, the `db_owner` and `db_datawriter` fixed database roles, and the table owner. Members of the `sysadmin`, `db_owner`, and the `db_securityadmin` roles, and the table owner can transfer permissions to other users.  
   
 ## Examples  
   

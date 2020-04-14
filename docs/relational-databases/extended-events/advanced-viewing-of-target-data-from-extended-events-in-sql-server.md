@@ -1,5 +1,6 @@
 ---
 title: "Advanced view of target data from extended events"
+description: Use the advanced features of SQL Server Management Studio to view target data from extended events in rich detail. You can view, export, and manipulate data.
 ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

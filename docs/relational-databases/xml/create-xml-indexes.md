@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Create XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how to create primary and secondary XML indexes.  
   
 ## Creating a Primary XML Index  

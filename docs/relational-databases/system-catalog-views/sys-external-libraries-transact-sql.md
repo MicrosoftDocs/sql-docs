@@ -45,5 +45,5 @@ The catalog view sys.external_libraries lists a row for each external library th
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [Install new R packages on SQL Server](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
-+ [Install new Python packages on SQL Server](../../advanced-analytics/python/install-additional-python-packages-on-sql-server.md)  
++ [Install new R packages on SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
++ [Install new Python packages on SQL Server](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  

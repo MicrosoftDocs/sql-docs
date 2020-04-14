@@ -64,5 +64,5 @@ ms.author: mlandzic
   
 ## See Also  
  [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+ [ShortestLineTo (geometry Data Type)](../../t-sql/spatial-geometry/shortestlineto-geometry-data-type.md)  
   

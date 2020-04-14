@@ -52,7 +52,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 ##  <a name="bkmk_sql2008sp2"></a> SQL Server 2008 SP2 Reporting Services Add-in for SharePoint 2007 Products and Technologies  
  Microsoft SQL Server 2008 SP2 Reporting Services Add-in is an updated version of the 2008 add-in that adds support integration of 2008 R2 report servers with SharePoint 2007 products.  
   
- The most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center, [Microsoft SQL Server 2008 SP2 Reporting Services Add-in for Microsoft SharePoint Technologies](https://www.microsoft.com/download/details.aspx?id=793).  
+ The most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center, [Microsoft SQL Server 2008 SP2 Reporting Services Add-in for Microsoft SharePoint Technologies](https://www.microsoft.com/download/details.aspx?id=43344).  
   
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services Add-in for SharePoint 2007 Products and Technologies  
  The Microsoft SQL Server 2008 Reporting Services Add-in for Microsoft SharePoint Technologies provides features for running a report server within a deployment of Windows SharePoint Services 3.0 or Microsoft Office SharePoint Server 2007.  

@@ -8,12 +8,12 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Python SQL Driver - pyodbc
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[To install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssms/media/download-icon.png)[To install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## Getting Started
 

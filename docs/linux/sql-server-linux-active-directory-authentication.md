@@ -119,6 +119,7 @@ Configuring AD authentication for SQL Server on Linux requires an AD account (MS
 
    > [!NOTE]
    > The commands above allow both AES and RC4 encryption ciphers for AD authentication. RC4 is an older encryption cipher and if a higher degree of security is required, you can choose to create the keytab entries with only the AES encryption cipher.
+   > The last two `UserName` entries must be in lowercase, or the permssion authentication might fail.
 
 1. After executing the above command, you should have a keytab file named mssql.keytab. Copy the file over to the SQL Server machine under the folder `/var/opt/mssql/secrets`.
 

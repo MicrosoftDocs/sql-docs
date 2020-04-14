@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLConnect function [ODBC]"
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLConnect Function
 **Conformance**  

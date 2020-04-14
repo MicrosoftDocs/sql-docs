@@ -24,7 +24,7 @@ Package location for the Java extensions is in the SQL Server Linux source repos
 
 Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Language Extensions and [Machine Learning Services](../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+Language Extensions and [Machine Learning Services](../machine-learning/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
 
 ## Uninstall preview version
 
@@ -48,9 +48,9 @@ Commands for removing packages appear in the following table.
 
 | Platform	| Package removal command(s) | 
 |-----------|----------------------------|
-| RHEL	| `sudo yum remove msssql-server-extensibility-java` |
-| SLES	| `sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu	| `sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL	| `sudo yum remove mssql-server-extensibility-java` |
+| SLES	| `sudo zypper remove mssql-server-extensibility-java` |
+| Ubuntu	| `sudo apt-get remove mssql-server-extensibility-java`|
 
 ### 3. Install SQL Server 2019
 

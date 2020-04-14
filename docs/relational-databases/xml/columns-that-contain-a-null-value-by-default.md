@@ -15,7 +15,7 @@ ms.author: genemi
 ---
 # Columns that Contain a Null Value By Default
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 By default, a null value in a column maps to the absence of the attribute, node, or element. This default behavior can be overridden by using the ELEMENTS XSINIL keyword phrase. This phrase requests element-centric XML. This means that null values are explicitly indicated in the returned results. These elements will have no value.
 

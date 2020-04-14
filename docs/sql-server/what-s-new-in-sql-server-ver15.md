@@ -1,5 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
+description: Learn about new features for SQL Server 2019 (15.x), which gives you choices of development languages, data types, environments, and operating systems.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
@@ -224,7 +225,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 
 |New feature or update | Details |
 |:---|:---|
-|Partition-based modeling | You can process external scripts per partition of your data by using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model. See [Create partition-based models](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
+|Partition-based modeling | You can process external scripts per partition of your data by using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model. See [Create partition-based models](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).|
 |Windows Server Failover Cluster| You can configure high availability for Machine Learning Services on a Windows Server Failover Cluster.|
 | &nbsp; | &nbsp; |
 

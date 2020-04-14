@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "multiple active result sets, disabling"
   - "MARS, disabling"
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Disable Multiple Active Resultsets (MARS)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

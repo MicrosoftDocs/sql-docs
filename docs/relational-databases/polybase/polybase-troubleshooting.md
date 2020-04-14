@@ -1,5 +1,6 @@
 ---
 title: "Monitor and troubleshoot PolyBase | Microsoft Docs"
+description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase

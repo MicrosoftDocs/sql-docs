@@ -1,5 +1,6 @@
 ---
 title: "Convert a SQL Trace script to Extended Events session"
+description: Use these procedures to create an Extended Events session equivalent to an existing SQL Trace script that you want to convert.
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

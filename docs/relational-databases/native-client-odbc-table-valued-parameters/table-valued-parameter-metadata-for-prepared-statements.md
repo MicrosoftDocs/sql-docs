@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), metadata for prepared statements"
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameter Metadata for Prepared Statements

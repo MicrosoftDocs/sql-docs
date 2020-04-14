@@ -3,12 +3,10 @@ title: "Driver history for Microsoft SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/04/2018
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.reviewer: ""
+author: David-Engel
+ms.author: v-daenge
 ---
 # Driver history for Microsoft SQL Server
 

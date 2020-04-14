@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "result sets [ODBC], binding columns"
   - "binding columns [ODBC]"
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Binding Result Set Columns
 Applications can bind as many or as few columns of the result set as they choose, including binding no columns at all. When a row of data is fetched, the driver returns the data for the bound columns to the application. Whether the application binds all of the columns in the result set depends on the application. For example, applications that generate reports usually have a fixed format; such applications create a result set containing all of the columns used in the report and then bind and retrieve the data for all of these columns. Applications that display screens full of data sometimes allow the user to decide which columns to display; such applications create a result set containing all columns the user might want, but bind and retrieve the data only for those columns chosen by the user.  

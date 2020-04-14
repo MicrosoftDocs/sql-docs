@@ -39,7 +39,8 @@ If you need to use a self-signed certificate for development or evaluation purpo
   
 For more information on enabling TLS, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-<a name="firewall"/>  
+<a name="firewall"/>
+  
 ## Review firewall settings  
 It is recommended that you review your firewall settings to ensure that all devices can connect successfully to Reporting Services.   
   

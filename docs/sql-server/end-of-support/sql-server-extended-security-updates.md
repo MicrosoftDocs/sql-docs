@@ -209,6 +209,9 @@ Customers that require regional redundancy for their **SQL Server registry** can
 To configure regional redundancy, follow these steps:
 
 1. Split your SQL Server 2008 or 2008 R2 inventory into two files, such as upload1.csv and upload2.csv. 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Example upload files":::
+
 1. Bulk register each file into a different region by creating the **SQL Server registry** resource in each region, and then performing a bulk registration with one upload file for each region. For example, create your first **SQL Server registry** service in the **West US** region, and bulk register upload1.csv. Then create the second **SQL Server registry** service in the **East US** region, bulk registering upload2.csv. 
 
 Once your data has been registered with the two different **SQL Server registry** resources, you will be able to download security updates from either region, based ons service availability. 

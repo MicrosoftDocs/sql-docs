@@ -1,5 +1,6 @@
 ---
 title: "Run SQL queries with the ExecuteXMLReader method"
+description: Learn how to run SQL queries using the ExecuteXmlReader method of the SqlXmlCommand object to execute commands.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

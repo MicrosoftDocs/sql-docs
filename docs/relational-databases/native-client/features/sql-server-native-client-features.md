@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Native Client Features | Microsoft Docs"
+title: "Features"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

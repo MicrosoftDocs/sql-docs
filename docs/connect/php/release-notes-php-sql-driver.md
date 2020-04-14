@@ -1,7 +1,7 @@
 ---
 title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/05/2020"
+ms.date: "04/15/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-dapugl, kenvh"
@@ -32,6 +32,26 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## 5.8.1
+
+This release only applies to Linux and macOS.
+
+[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.1)
+
+### Version information
+
+- Release number: 5.8.1
+- Released: April 15, 2020
+
+## What's new in 5.8.1
+
+| New item | Details |
+| :------- | :------ |
+| Bug fix | Fixed default locale issues in Alpine Linux. |
+| Bug fix | Removed unnecessary data structure to support Client-Side Cursors feature in Alpine Linux. |
+| Bug fix | Fixed logging issues when both drivers are enabled in Alpine Linux. |
+| &nbsp; | &nbsp; |
 
 ## 5.8
 

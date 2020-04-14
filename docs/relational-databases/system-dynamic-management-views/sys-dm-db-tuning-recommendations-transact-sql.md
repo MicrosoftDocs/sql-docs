@@ -78,7 +78,7 @@ JSON document in `state` column contains the reason that describes why is the re
 | `VerificationAborted`| Verification process is aborted due to the restart or Query Store cleanup. |
 | `VerificationForcedQueryRecompile`| Query is recompiled because there is no significant performance improvement. |
 | `PlanForcedByUser`| User manually forced the plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. Database engine will not apply the recommendation if user explicitly decided to force some plan. |
-| `PlanUnforcedByUser` | User manually unforced the plan using [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) procedure. |
+| `PlanUnforcedByUser` | User manually unforced the plan using [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) procedure. Since the user explicitly reverted the recommended plan, database engine will keep using the current plan and generate a new recommendation if some plan regression occurs in future. |
 
  Statistic in the details column do not show runtime plan statistics (for example, current CPU time). The recommendation details are taken at the time of regression detection and describe why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified performance regression. Use `regressedPlanId` and `recommendedPlanId` to query [Query Store catalog views](../../relational-databases/performance/how-query-store-collects-data.md) to find exact runtime plan statistics.
 

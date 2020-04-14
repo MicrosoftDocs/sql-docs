@@ -86,7 +86,7 @@ manager: craigg
 
      The SQL Server installation wizard installs two [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configurations tools. One of the configuration tools supports SharePoint 2013 and the other tool supports SharePoint 2010.
 
-     ![two powerpivot configuratoin tools](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")
+     ![two powerpivot configuratoin tools](../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")
 
 5.  Configure Excel Services in SharePoint Server 2013 to use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. For more information, see the section "Configure Basic Analysis Services SharePoint Integration" in [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).and [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).
 

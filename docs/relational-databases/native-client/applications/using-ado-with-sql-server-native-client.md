@@ -1,5 +1,5 @@
 ---
-title: "Using ADO with SQL Server Native Client | Microsoft Docs"
+title: "Using ADO"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

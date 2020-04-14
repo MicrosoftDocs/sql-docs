@@ -48,9 +48,9 @@ Commands for removing packages appear in the following table.
 
 | Platform	| Package removal command(s) | 
 |-----------|----------------------------|
-| RHEL	| `sudo yum remove msssql-server-extensibility-java` |
-| SLES	| `sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu	| `sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL	| `sudo yum remove mssql-server-extensibility-java` |
+| SLES	| `sudo zypper remove mssql-server-extensibility-java` |
+| Ubuntu	| `sudo apt-get remove mssql-server-extensibility-java`|
 
 ### 3. Install SQL Server 2019
 

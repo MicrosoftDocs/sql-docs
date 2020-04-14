@@ -1,5 +1,6 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (macOS)
+description: "Learn how to install the Microsoft ODBC Driver for SQL Server on macOS clients to enable database connectivity."
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity

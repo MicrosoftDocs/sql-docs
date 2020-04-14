@@ -62,22 +62,23 @@ ms.author: mikeray
     |256 processors|2272|4544|8576|  
     
     Up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the *Workers per CPU* only depend on the architecture (32-bit or 64-bit):
-    |Number of CPUs|32-bit computer|64-bit computer|  
+    |Number of CPUs|32-bit computer <sup>1</sup>|64-bit computer|  
     |------------|------------|------------| 
     |\<= 4 processors|256|512|
-    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU's - 4) * 16)|    
+    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 <sup>2</sup> + ((logical CPU's - 4) * 16)|    
     
     Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the *Workers per CPU* depend on the architecture and number of processors (between 4 and 64, or greater than 64):
-    |Number of CPUs|32-bit computer|64-bit computer|  
+    |Number of CPUs|32-bit computer <sup>1</sup>|64-bit computer|  
     |------------|------------|------------| 
-    |\<= 4 processors|256|512|
-    |\> 4 processors and \<= 64 processors|256 + ((logical CPUs - 4) * 8)|512 + ((logical CPUs - 4) * 16)|
-    |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 + ((logical CPUs - 4) * 32)|
+    |\<= 4 processors|512|
+    |\> 4 processors and \<= 64 processors|256 + ((logical CPUs - 4) * 8)|512 <sup>2</sup> + ((logical CPUs - 4) * 16)|
+    |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 <sup>2</sup> + ((logical CPUs - 4) * 32)|
   
-    > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier. We recommend 1,024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  
+    <sup>1</sup> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier. We recommend 1,024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.
+    
+    <sup>2</sup> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the *Default Max Workers* value is divided by 2 for machines with less than 2GB of memory.
   
-    > [!NOTE]  
+    > [!TIP]  
     > For recommendations on using more than 64 CPUs, refer to [Best Practices for Running SQL Server on Computers That Have More Than 64 CPUs](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   When all worker threads are active with long running queries, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might appear unresponsive until a worker thread completes and becomes available. Although this is not a defect, it can sometimes be undesirable. If a process appears to be unresponsive and no new queries can be processed, then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the dedicated administrator connection (DAC), and kill the process. To prevent this, increase the number of max worker threads.  

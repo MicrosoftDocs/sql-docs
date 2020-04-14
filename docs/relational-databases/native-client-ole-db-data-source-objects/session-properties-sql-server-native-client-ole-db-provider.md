@@ -1,5 +1,5 @@
 ---
-title: "Session Properties, SQL Native Client OLE DB"
+title: "Session Properties OLE DB"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

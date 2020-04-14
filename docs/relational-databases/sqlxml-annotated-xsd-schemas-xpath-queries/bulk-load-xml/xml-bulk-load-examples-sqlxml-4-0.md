@@ -1,5 +1,6 @@
 ---
 title: "XML Bulk Load Examples (SQLXML)"
+description: View detailed examples of the XML Bulk Load functionality in SQKXML 4.0 with XSD and XDR schemas for each example. 
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

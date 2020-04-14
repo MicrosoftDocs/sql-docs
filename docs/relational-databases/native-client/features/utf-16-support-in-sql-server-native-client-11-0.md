@@ -1,5 +1,5 @@
 ---
-title: "UTF-16 Support in SQL Server Native Client 11.0 | Microsoft Docs"
+title: "UTF-16 Support"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Specify XSINIL with the ELEMENTS Directive | Microsoft Docs"
+description: View an example that specifies XSINIL with the ELEMENTS directive to generate element-centric XML from the query result.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

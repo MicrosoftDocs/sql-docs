@@ -74,7 +74,7 @@ manager: craigg
   
     1.  From the Windows Start page, type **PowerPivot** and in the search results, click **PowerPivot for SharePoint 2013 Configuration**. Note the search may return both versions of the configuration tool.  
   
-         ![two powerpivot configuratoin tools](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
+         ![two powerpivot configuratoin tools](../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
          Or  
   

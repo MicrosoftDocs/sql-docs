@@ -1,5 +1,6 @@
 ---
 title: "The &lt;xsd:redefine&gt; Element | Microsoft Docs"
+description: Learn about support for the W3C XSD redefine element and how to update an XML schema or its components.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

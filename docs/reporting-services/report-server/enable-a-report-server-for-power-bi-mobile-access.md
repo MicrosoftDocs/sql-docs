@@ -18,17 +18,14 @@ You can use the Power BI Mobile app to consume Mobile Reports. There are a few t
 -   [Recommended to enable HTTPS along with a valid certificate trust for the client device](#https)  
 -   [Review firewall settings](#firewall)  
   
-<a name="nativemode"/>  
 ## Reporting Services Native Mode required  
 Mobile Reports are a feature of Native Mode. They are not available in SharePoint Integrated mode. The Power BI Mobile app will only work with a Native Mode instance.  
   
-<a name="basicauth"/>  
 ## Enable basic authentication  
 The iOS Power BI Mobile app requires basic authentication in order to connect and consume Mobile Reports. Reporting Services is not configured with basic authentication enabled by default. For information on how to configure basic authentication, see [Configure Basic Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
   
 You will also need to have Windows authentication enabled to allow the publisher app to publish Mobile Report.  
   
-<a name="https"/>  
 ## Enable HTTPS  
 It is recommended that you enable HTTPS in Reporting Services if you enable basic authentication. If you enable HTTPS, make sure that the certificates used can be trusted with the client devices running the iOS Power BI Mobile app. This means that the certification chain needs to be valid and available to the client device.  
   

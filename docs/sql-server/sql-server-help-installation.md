@@ -44,7 +44,7 @@ For this approach, you use the *Online* Installation source.
 
    ![Help Viewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
 
-   The Help Viewer opens to the Manage Content tab.  
+   The Help Viewer opens to the Manage Content tab.
 
 2. To install the latest help content package, choose **Online** under Installation source.
 

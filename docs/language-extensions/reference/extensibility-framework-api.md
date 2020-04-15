@@ -583,7 +583,7 @@ SQLRETURN InstallExternalLibrary(
 *LibraryErrorLength*  
 \[Output\] The length of the LibraryError string.
 
-## UninstallLibrary
+## UninstallExternalLibrary
 
 Uninstalls a library. The function is optional and doesn't require implementation. The default implementation is to undo the work done by the default Implementation of InstallExternalLibrary. The default implementation deletes the content of the *LibraryName* file under *LibraryInstallDirectory*.
 

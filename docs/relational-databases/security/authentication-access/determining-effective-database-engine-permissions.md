@@ -150,5 +150,5 @@ For the details of the syntax, see [HAS_PERMS_BY_NAME](../../../t-sql/functions/
 ## See Also:
 
 [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[Tutorial: Getting Started with Database Engine](../tutorial-getting-started-with-the-database-engine.md) 
+[Tutorial: Getting Started with Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 

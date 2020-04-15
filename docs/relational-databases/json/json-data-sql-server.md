@@ -2,7 +2,6 @@
 title: "Work with JSON data"
 ms.date: "05/14/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: quickstart
 helpviewer_keywords: 

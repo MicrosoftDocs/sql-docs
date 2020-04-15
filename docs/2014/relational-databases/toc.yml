@@ -208,9 +208,9 @@
       href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
       items:
       - name: Create the Finance Name Policy
-        href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
+        href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
       - name: Subscribe to and Check the Finance Name Policy
-        href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
+        href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
   - name: "Tutorial: Evaluating Best Practices by Using Policy-Based Management"
     href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
     items:

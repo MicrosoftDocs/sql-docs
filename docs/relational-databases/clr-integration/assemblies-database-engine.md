@@ -1,5 +1,6 @@
 ---
 title: "Assemblies (Database Engine) | Microsoft Docs"
+description: A SQL Server instance can host assemblies that deploy functions, procedures, triggers, and user-defined aggregates and types written in a CLR language.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

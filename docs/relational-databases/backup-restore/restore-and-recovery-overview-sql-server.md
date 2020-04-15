@@ -1,5 +1,6 @@
 ---
 title: "Restore and Recovery Overview (SQL Server) | Microsoft Docs"
+description: This article provides an overview of issues for recovering a SQL Server database from a failure by restoring a set of SQL Server backups in sequence.
 ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql

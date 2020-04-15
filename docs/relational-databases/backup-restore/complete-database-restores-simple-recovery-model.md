@@ -1,5 +1,6 @@
 ---
 title: "Restore database - simple recovery model"
+description: A complete database restore in SQL Server restores all data. The database is offline until all data is recovered to a consistent point.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Impersonation and Credentials for Connections | Microsoft Docs"
+description: In SQL Server CLR integration, you may want to impersonate the caller in Windows Authentication by using the SqlContext.WindowsIdentity property.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

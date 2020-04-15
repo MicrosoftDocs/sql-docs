@@ -27,7 +27,7 @@ Returns a row for each active worker account that is running an external script.
   
 > [!NOTE] 
 >  
-> This dynamic management view (DMV) is available only if you have installed and enabled the feature that supports external script execution. For more information, see [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) and [Machine Learning Services (R, Python) in SQL Server 2017 and later](../../machine-learning/what-is-sql-server-machine-learning.md).  
+> This dynamic management view (DMV) is available only if you have installed and enabled the feature that supports external script execution. For more information, see [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) and [Machine Learning Services (R, Python) in SQL Server 2017 and later](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

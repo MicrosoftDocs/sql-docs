@@ -66,7 +66,7 @@ Platform requirements often dictate which scoring methodology to use.
 
 | Product version and platform | Methodology |
 |------------------------------|-------------|
-| SQL Server 2017 on Windows, SQL Server 2017 Linux, and Azure SQL Database | **Native scoring** with T-SQL PREDICT |
+| SQL Server 2017 or later on Windows and Linux | **Native scoring** with T-SQL PREDICT |
 | SQL Server 2017 (Windows only), SQL Server 2016 R Services at SP1 or higher | **Real-time scoring** with sp\_rxPredict stored procedure |
 
 We recommend native scoring with the PREDICT function. Using sp\_rxPredict requires that you enable SQLCLR integration. Consider the security implications before you enable this option.

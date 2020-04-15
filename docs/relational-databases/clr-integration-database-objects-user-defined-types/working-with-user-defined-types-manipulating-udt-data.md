@@ -1,5 +1,6 @@
 ---
 title: "Manipulating UDT Data | Microsoft Docs"
+description: This article describes how to insert, select, and update data in UDT columns of a SQL Server database.
 ms.custom: ""
 ms.date: "12/05/2019"
 ms.prod: sql

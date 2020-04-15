@@ -29,7 +29,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
 
    ![New Notebook](media/notebooks-tutorial-kql-magic/new-notebook.png)
 
-2. When asked, select **Yes** to upgrade Python packages. This installs the Kqlmagic bits.
+2. When asked, select **Yes** to upgrade Python packages.
 
    ![Yes](media/notebooks-tutorial-kql-magic/python-yes-upgrade.png)
 
@@ -39,7 +39,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
    !pip list
    ```
 
-   If Kqlmagic is not listed, then run the command below.
+   If Kqlmagic isn't listed, then run the command below.
 
    ```python
    !pip install Kqlmagic --no-cache-dir --upgrade

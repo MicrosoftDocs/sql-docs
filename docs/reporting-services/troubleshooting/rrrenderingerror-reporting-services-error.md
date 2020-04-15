@@ -45,7 +45,7 @@ ms.author: maggies
   
  A message that indicates that the border style is not supported is typically caused when the border style specified is not valid. Specify a supported border style and then try again.  
   
- A message that indicates that the image mimetype is not supported is typically caused when the specified mimetype for an image report item is not valid. Specify a supported mimetype for the report item and then try again.  
+ A message that indicates that the image mime type is not supported is typically caused when the specified mime type for an image report item is not valid. Specify a supported mime type for the report item and then try again.  
   
  A message that indicates that the number of rows exceeds the maximum possible rows per sheet is typically caused when the number of rows in an Excel worksheet is exceeded. Excel supports up to 65,000 rows.  
   

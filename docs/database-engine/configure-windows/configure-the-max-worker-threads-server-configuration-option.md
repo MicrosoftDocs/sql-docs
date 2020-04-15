@@ -41,7 +41,7 @@ ms.author: mikeray
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When the actual number of query requests is less than the amount set in **max worker threads**, one thread handles each query request. However, if the actual number of query request exceeds the amount set in **max worker threads**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pools the worker threads so that the next available worker thread can handle the request.  
+-   When the actual number of query requests is less than the amount set in **max worker threads**, one thread handles each query request. However, if the actual number of query requests exceeds the amount set in **max worker threads**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pools the worker threads so that the next available worker thread can handle the request.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
@@ -85,7 +85,7 @@ ms.author: mikeray
   
 -   When all worker threads are active with long running queries, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might appear unresponsive until a worker thread completes and becomes available. Although this is not a defect, it can sometimes be undesirable. If a process appears to be unresponsive and no new queries can be processed, then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the dedicated administrator connection (DAC), and kill the process. To prevent this, increase the number of max worker threads.  
   
- The **max worker threads** server configuration option does not limit all threads that may be spanwed in the system. Threads required for tasks such as Availibility Groups, Service Broker, Lock Manager, or others are spawned outside this limit. If the number of threads configured is being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
+ The **max worker threads** server configuration option does not limit all threads that may be spawned in the system. Threads required for tasks such as Availability Groups, Service Broker, Lock Manager, or others are spawned outside this limit. If the number of threads configured is being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  

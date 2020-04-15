@@ -1,5 +1,6 @@
 ---
 title: "Download the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+description: "Download the Microsoft Drivers for PHP for SQL Server to develop PHP applications that connect to SQL Server and Azure SQL Database."
 ms.custom: ""
 ms.date: "05/05/2020"
 ms.prod: sql

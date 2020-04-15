@@ -14,7 +14,7 @@ manager: craigg
 # Task 16: Verifying with Master Data Manager
   In this task, you check the status of the batch job submitted by the SSIS package and verify that the data was uploaded to MDS server by using Master Data Manager.  
   
-1.  Launch **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)). If it is already open, click **Microsoft SQL Server Master Data Services** at the top to switch to the **home page**.  
+1.  Launch **Master Data Manager** (`http://localhost/MDS`). If it is already open, click **Microsoft SQL Server Master Data Services** at the top to switch to the **home page**.  
   
 2.  Click **Integration Management**.  
   

@@ -28,9 +28,9 @@ manager: craigg
   
     1.  Select **Create a new connection**, and click **New** button.  
   
-    2.  In the **Add New Connection** dialog box, type **Local MDS Server** for **Description** and **http://localhost/MDS** for **MDS server address**, and click **OK** to close the dialog box.  
+    2.  In the **Add New Connection** dialog box, type **Local MDS Server** for **Description** and **http:\//localhost/MDS** for **MDS server address**, and click **OK** to close the dialog box.  
   
-6.  In **Manage Connections** dialog box, select **Local MDS Server** (http://localhost/MDS), click **Test** to test the connection. Click **OK** on the message box.  
+6.  In **Manage Connections** dialog box, select **Local MDS Server** (`http://localhost/MDS`), click **Test** to test the connection. Click **OK** on the message box.  
   
 7.  Click **Connect** to connect to the MDS server.  
   

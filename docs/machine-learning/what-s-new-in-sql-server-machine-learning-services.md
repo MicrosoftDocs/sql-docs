@@ -37,7 +37,7 @@ Below are the new features for SQL Server Machine Learning Services:
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## New in SQL Server 2017
 
-This release adds [Python support and industry-leading machine learning algorithms](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), with language support for both Python and R. 
+This release adds [Python support and industry-leading machine learning algorithms](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](sql-server-machine-learning-services.md), with language support for both Python and R. 
 
 For feature announcements all-up, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 

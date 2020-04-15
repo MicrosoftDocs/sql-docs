@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # R tutorials for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes the R tutorials and quickstarts for [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+This article describes the R tutorials and quickstarts for [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 + Learn how to run R scripts.
 + Build, train, and deploy R models to SQL Server.

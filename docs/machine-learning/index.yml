@@ -19,7 +19,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is SQL Server Machine Learning Services (Python and R)?
-            url: what-is-sql-server-machine-learning.md
+            url: sql-server-machine-learning-services.md
       - linkListType: whats-new
         links:
           - text: What's new in Machine Learning Services?

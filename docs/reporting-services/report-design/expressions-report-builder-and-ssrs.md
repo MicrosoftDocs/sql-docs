@@ -106,6 +106,6 @@ Simple expressions use symbols to indicate whether the reference is to a field, 
 -   [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [Tutorial: Introducing Expressions](Tutorial:%20Introducing%20Expressions.md)
+-   [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md)
 -   [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

@@ -492,7 +492,7 @@ _0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https:/
 - Fix [issue #1836](https://github.com/Microsoft/azuredatastudio/issues/1836): .sql files not associated with SQL Operations Studio.
 - Fix [issue #1850](https://github.com/Microsoft/azuredatastudio/issues/1850): Typing N'' autocompletes to N'''.
 - Fix [issue #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Copy from query results grid is off by 1 column.
-- Fix [issue #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998): Add VS Code version to About dialog.
+- Fix [issue #1998](https://github.com/Microsoft/azuredatastudio/pull/1998): Add VS Code version to About dialog.
 - Fix [issue #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Agent: Enabled button to import queries from sql files.
 - Fix [issue #2091](https://github.com/Microsoft/azuredatastudio/issues/2091): Can't use Ctrl+C shortcut to copy from result pane.
 - Fix [issue #2099](https://github.com/Microsoft/azuredatastudio/pull/2099): Added more saveAsCsv options.

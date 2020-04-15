@@ -1,5 +1,6 @@
 ---
 title: "System Requirements for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+description: "The Microsoft Drivers for PHP for SQL Server support a wide range of PHP versions, operating systems, and SQL Server versions."
 ms.custom: ""
 ms.date: "01/31/2020"
 ms.prod: sql

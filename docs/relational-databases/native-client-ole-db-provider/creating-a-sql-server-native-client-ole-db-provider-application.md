@@ -1,5 +1,5 @@
 ---
-title: "SQL Native Client OLE DB provider app"
+title: "Create an OLE DB App"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

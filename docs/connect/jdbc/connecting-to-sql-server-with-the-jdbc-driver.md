@@ -1,5 +1,6 @@
 ---
 title: "Connecting to SQL Server with the JDBC driver | Microsoft Docs"
+description: "When connecting to the database using the Microsoft JDBC Driver for SQL Server, all interaction with the database goes through the SQLServerConnection object."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

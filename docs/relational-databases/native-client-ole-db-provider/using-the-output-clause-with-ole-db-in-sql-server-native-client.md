@@ -1,5 +1,5 @@
 ---
-title: "OUTPUT clause, OLE DB, SQL Native Client"
+title: "OUTPUT clause, OLE DB"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

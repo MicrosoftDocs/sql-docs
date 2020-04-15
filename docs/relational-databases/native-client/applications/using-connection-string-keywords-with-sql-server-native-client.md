@@ -1,5 +1,5 @@
 ---
-title: "Native Client, connection keywords SQL"
+title: "Using Connection String Keywords"
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

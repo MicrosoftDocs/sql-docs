@@ -26,7 +26,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
 
 1. Create a new notebook and change the **Kernel** to *Python 3*.
 
-2. Select **Yes** to upgrade Python packages which should install Kqlmagic bits.
+2. Select **Yes** to upgrade Python packages, which should install Kqlmagic bits.
 
    ![Yes](media/notebooks-tutorial-kql-magic/python-yes-upgrade.png)
 
@@ -66,7 +66,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
    %reload_ext Kqlmagic
    ```
 
-   - If this step fails, please close the file and reopen.
+   - If this step fails, close the file and reopen.
    - If Samples@help is asking for password, leave it blank and press [Enter].
 
    > [!Note]

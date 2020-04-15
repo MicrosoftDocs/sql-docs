@@ -370,7 +370,7 @@ The output of this query is JSON text that's fully compliant with the OData spec
   
 ## Test drive built-in JSON support with the AdventureWorks sample database
 
-To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49502).
+To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [GitHub](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).
 
 After you restore the sample database to an instance of SQL Server 2016, extract the samples file, and then open the *JSON Sample Queries procedures views and indexes.sql* file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, test sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
   

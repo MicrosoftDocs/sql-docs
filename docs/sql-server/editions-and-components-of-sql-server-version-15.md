@@ -56,7 +56,7 @@ For the latest release notes and what's new information, see the following:
 * [[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] release notes](../sql-server/sql-server-version-15-release-notes.md)
 * [What's new in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**Try SQL Server!: [Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!: [Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions
 
@@ -123,31 +123,35 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 ## <a name="Cross-BoxScaleLimits"></a> Scale limits
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
-|-------|:--------:|:------:|:-:|:    ---------------------------:|:-----:|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------|--------:|------:|---:|-------------------------------:|-----:|
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|
-|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|1410 MB|
-|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB| 352 MB|
-|Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB| 352 MB|
-|Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Operating System Maximum|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|N/A|N/A|N/A|
-|Maximum memory utilized per instance of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating System Maximum|64 GB|64 GB|4 GB|N/A|
-|Maximum relational database size|524 PB|524 PB|524 PB|10 GB|10 GB|
+|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 <nobr/>GB|64 <nobr/>GB|1410 <nobr/>MB|1410<nobr/> MB|
+|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 <nobr/>GB| 16 <nobr/>GB| 352 <nobr/>MB| 352 <nobr/>MB|
+|Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 <nobr/>GB| 16 <nobr/>GB| 352 <nobr/>MB| 352 <nobr/>MB|
+|Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Operating System Maximum|16 <nobr/>GB<sup>2</sup><br /><br /> 64 <nobr/>GB<sup>3</sup>|N/A|N/A|N/A|
+|Maximum memory utilized per instance of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating System Maximum|64 <nobr/>GB|64 <nobr/>GB|4 <nobr/>GB|N/A|
+|Maximum relational database size|524 PB|524 PB|524 PB|10 <nobr/>GB|10 <nobr/>GB|
 
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).
 
+<sup>2</sup> Tabular
+
+<sup>3</sup> MOLAP
+
 ## <a name="RDBMSHA"></a> RDBMS high availability
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|--------------------------------:|:-----:|
-|Server core support <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
+|Server core support<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
 |Log shipping|Yes|Yes|Yes|No|No|
-|Database mirroring|Yes|Yes<br /><br /> Full<br>safety<br>only|Witness<br>only|Witness<br>only|Witness<br>only|
+|Database mirroring|Yes|Yes<sup>2</sup>|Yes<sup>3</sup>|Yes<sup>3</sup>|Yes<sup>3</sup>|
 |Backup compression|Yes|Yes|No|No|No|
 |Database snapshot|Yes|Yes|Yes|Yes|Yes|
-|Always On failover cluster instances<sup>2</sup>|Yes|Yes|No|No|No|
-|Always On availability groups<sup>3</sup>|Yes|No|No|No|No|
-|Basic availability groups <sup>4</sup>|No|Yes|No|No|No|
+|Always On failover cluster instances<sup>4</sup>|Yes|Yes|No|No|No|
+|Always On availability groups<sup>5</sup>|Yes|No|No|No|No|
+|Basic availability groups<sup>6</sup>|No|Yes|No|No|No|
 |Automatic read write connection re-routing |Yes|No|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online index create and rebuild|Yes|No|No|No|No|
@@ -161,28 +165,32 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
 |Cluster-less availability group|Yes|Yes|No|No|No|
-|Failover servers for disaster recovery <sup>5</sup>|Yes|Yes|No|No|No|
-|Failover servers for high availability <sup>5</sup>|Yes|Yes|No|No|No|
-|Failover servers for disaster recovery in Azure <sup>5</sup>|Yes|Yes|No|No|No|
+|Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
+|Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|
+|Failover servers for disaster recovery in Azure<sup>7</sup>|Yes|Yes|No|No|No|
 
 <sup>1</sup> For more information on installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core,  see [Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).
 
-<sup>2</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
+<sup>2</sup> Full safety only
 
-<sup>3</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
+<sup>3</sup> Witness only
 
-<sup>4</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
+<sup>4</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
 
-<sup>5</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
+<sup>5</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
+
+<sup>6</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
+
+<sup>7</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
 
 ## <a name="RDBMSSP"></a> RDBMS scalability and performance
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
-|------:|:--------:|:------:|:-:|:-  ----------------------------:|:------:|
-|Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|------:|:--------:|:------:|:-:|:-------------------------------:|:------:|
+|Columnstore<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
-|In-Memory Database: In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes<sup>2</sup>|Yes|
+|In-Memory Database: In-Memory OLTP<sup>1</sup>|Yes|Yes|Yes|Yes<sup>2</sup>|Yes|
 |In-Memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
 |In-Memory Database: memory-optimized tempdb metadata|Yes|No|No|No|No|
 |In-Memory Database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
@@ -216,7 +224,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 ## <a name="RDBMSS"></a> RDBMS security
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-----:|:-----------------------:|:-----:|
 |Row-level security|Yes|Yes|Yes|Yes|Yes|
 |Always Encrypted|Yes|Yes|Yes|Yes|Yes|
@@ -233,7 +241,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 ## <a name="Replication"></a> Replication
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:---------:|:-------:|:--:|:--------------------------------:|:------:|
 |Heterogeneous subscribers|Yes|Yes|No|No|No|
 |Merge replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
@@ -274,7 +282,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 ## <a name="RDBMSM"></a> RDBMS manageability
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |User instances|No|No|No|Yes|Yes|
 |LocalDB|No|No|No|Yes|No|
@@ -307,7 +315,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 ## <a name="DevTools"></a> Development tools
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Microsoft Visual Studio integration|Yes|Yes|Yes|Yes|Yes|
 |Intellisense (Transact-SQL and MDX)|Yes|Yes|Yes|Yes|Yes|
@@ -316,15 +324,15 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 ## <a name="Programmability"></a> Programmability
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
-|Basic R integration <sup>1</sup>|Yes|Yes|Yes|Yes|No|
-|Advanced R integration <sup>2</sup>|Yes|No|No|No|No|
+|Basic R integration<sup>1</sup>|Yes|Yes|Yes|Yes|No|
+|Advanced R integration<sup>2</sup>|Yes|No|No|No|No|
 |Basic Python integration|Yes|Yes|Yes|Yes|No|
 |Advanced Python integration|Yes|No|No|No|No|
 |Machine Learning Server (Standalone)|Yes|No|No|No|No|
-|PolyBase compute node|Yes|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup> |
-|PolyBase head node <sup>4</sup>|Yes|Yes|No|No|No|
+|PolyBase compute node|Yes|Yes<sup>3</sup>|Yes<sup>3</sup>|Yes<sup>3</sup>|Yes<sup>3</sup> |
+|PolyBase head node<sup>4</sup>|Yes|Yes|No|No|No|
 |JSON|Yes|Yes|Yes|Yes|Yes|
 |Query Store|Yes|Yes|Yes|Yes|Yes|
 |Temporal|Yes|Yes|Yes|Yes|Yes|
@@ -364,7 +372,7 @@ For information about the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)
 
 ## <a name="DW"></a> Data warehouse
 
-|Feature|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Auto-generate staging and data warehouse schema|Yes|Yes|No|No|No|
 |Change data capture|Yes|Yes|No|No|No|
@@ -386,7 +394,7 @@ For information about the Business Intelligence Client features supported by the
 
 ## <a name="SLS"></a> Spatial and location services
 
-|Feature Name|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature Name|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------------|:-------:|:------:|:-:|:-------------------------------:|:-----:|
 |Spatial indexes|Yes|Yes|Yes|Yes|Yes|
 |Planar and geodetic datatypes|Yes|Yes|Yes|Yes|Yes|
@@ -395,19 +403,19 @@ For information about the Business Intelligence Client features supported by the
 
 ## <a name="ADS"></a> Additional database services
 
-|Feature Name|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature Name|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|
 |Database mail|Yes|Yes|Yes|No|No|
 
 ## <a name="Other"></a> Other components
 
-|Feature Name|Enterprise|Standard|Web|Express with<br>Advanced Services|Express|
+|Feature Name|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No|
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|
 
-> [![Download SSMS](https://docs.microsoft.com/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**
+[![Download SSMS](https://docs.microsoft.com/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**
 
 ## Next steps
 

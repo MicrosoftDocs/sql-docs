@@ -78,7 +78,7 @@ Of the categories of data types supported by the [SQL Server type system](../../
 
 ## Changes in data types between SQL Server 2016 and earlier versions
 
-Microsoft SQL Server 2016 and Microsoft Azure SQL Database include improvements in data type conversions and in several other operations. Most of these improvements offer increased precision when you deal with floating-point types, as well as minor changes to operations on classic **datetime** types.
+Microsoft SQL Server 2016 and later include improvements in data type conversions and in several other operations. Most of these improvements offer increased precision when you deal with floating-point types, as well as minor changes to operations on classic **datetime** types.
 
 These improvements are all available by default when you use a database compatibility level of 130 or later. However, if you use a different compatibility level, or connect to a database using an older version, you might see differences in the precision of numbers or other results. 
 

@@ -27,7 +27,7 @@ Write full-text queries by using the predicates **CONTAINS** and **FREETEXT** an
 
 ## <a name="examples_simple"></a> Examples of each predicate and function
 
-The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). To run the sample queries, you also have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
+The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). To run the sample queries, you also have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
 
 ### Example - CONTAINS  
 The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`:

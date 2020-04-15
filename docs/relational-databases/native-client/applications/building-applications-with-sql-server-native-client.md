@@ -1,5 +1,5 @@
 ---
-title: "Native Client, build SQL apps"
+title: "Building Applications"
 ms.custom: ""
 ms.date: 12/16/2019
 ms.prod: sql

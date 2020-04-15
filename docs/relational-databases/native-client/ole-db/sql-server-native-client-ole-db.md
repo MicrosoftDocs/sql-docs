@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Native Client (OLE DB) | Microsoft Docs"
+title: "OLE DB"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

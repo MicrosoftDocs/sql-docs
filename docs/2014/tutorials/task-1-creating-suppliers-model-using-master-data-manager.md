@@ -14,7 +14,7 @@ manager: craigg
 # Task 1: Creating Suppliers Model using Master Data Manager
   In this task, you create a model named **Suppliers** in MDS using **Master Data Manager**.  
   
-1.  Navigate to [http://localhost/mds](http://localhost/mds) to launch **Master Data Manager**. Replace the URL if you have configured Web Application with a different name or on a different a web site.  
+1.  Navigate to `http://localhost/MDS` to launch **Master Data Manager**. Replace the URL if you have configured Web Application with a different name or on a different a web site.  
   
      ![Master Data Manager - System Administation](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "Master Data Manager - System Administation")  
   

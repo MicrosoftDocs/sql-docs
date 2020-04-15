@@ -15,18 +15,21 @@ ms.date: 04/22/2020
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This tutorial demonstrates how to create and run a notebook in Azure Data Studio using KQL magic.
+This tutorial demonstrates how to create and run a notebook in Azure Data Studio using the KQL magic extension.
 
 ## Prerequisites
 
 - [Azure Data Studio](download-azure-data-studio.md)
 - [Python installed](https://www.python.org/downloads/)
+- [Azure Data Explorer cluster and database](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)
 
 ## Set up environment
 
 1. Create a new notebook and change the **Kernel** to *Python 3*.
 
-2. Select **Yes** to upgrade Python packages, which should install Kqlmagic bits.
+   ![New Notebook](media/notebooks-tutorial-kql-magic/new-notebook.png)
+
+2. When asked, select **Yes** to upgrade Python packages. This installs the Kqlmagic bits.
 
    ![Yes](media/notebooks-tutorial-kql-magic/python-yes-upgrade.png)
 
@@ -36,23 +39,27 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
    !pip list
    ```
 
-   > [1Note]
-   > If Kqlmagic is not listed, then run the command below.
+   If Kqlmagic is not listed, then run the command below.
 
-   > ```python
-   >      !pip install Kqlmagic --no-cache-dir --upgrade
-   > ```
+   ```python
+   !pip install Kqlmagic --no-cache-dir --upgrade
+   ```
+
+   ![List](media/notebooks-tutorial-kql-magic/list.png)
 
 4. Environment variables
 
    Setup environment variables, including such that Kqlmagic can render the charts using plotly.
 
    ```python
+   # Set environment variables using %env magic
    %env KQLMAGIC_NOTEBOOK_APP=AzureDataStudio
    %env KQLMAGIC_LOAD_MODE=silent
    %env KQLMAGIC_CONFIGURATION="show_query_time=False;plot_package='plotly';display_limit=100"
    %env KQLMAGIC_CONFIGURATION="show_init_banner=True;check_magic_version=False;show_what_new=False"
    ```
+
+   ![Environment variables](media/notebooks-tutorial-kql-magic/env-variables.png)
 
 5. Setup Azure Data Explorer connection
 
@@ -66,8 +73,11 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
    %reload_ext Kqlmagic
    ```
 
-   - If this step fails, close the file and reopen.
-   - If Samples@help is asking for password, leave it blank and press [Enter].
+   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/load-kql-magic-ext.png)
+
+   If this step fails, close the file and reopen.
+
+   If Samples@help is asking for password, leave it blank and press [Enter].
 
    > [!Note]
    > Test to ensure that Kqlmagic works by browsing the help documentation.
@@ -75,6 +85,8 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
    > ```python
    > %kql --help "help"
    > ```
+
+   ![Help](media/notebooks-tutorial-kql-magic/help.png)
 
 ## Next steps
 

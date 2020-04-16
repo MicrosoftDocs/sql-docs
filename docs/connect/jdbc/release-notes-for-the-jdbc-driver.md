@@ -1,5 +1,6 @@
 ---
 title: "Release notes for the JDBC Driver"
+description: "This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described."
 ms.custom: ""
 ms.date: "03/24/2020"
 ms.prod: sql

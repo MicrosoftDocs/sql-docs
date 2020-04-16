@@ -31,7 +31,7 @@ In this article, you'll learn how to:
 
 In [part one](python-ski-rental-linear-regression.md), you learned how to restore the sample database.
 
-In [part two](python-ski-rental-linear-regression-prepare-data.md), you learned how to load the data from SQL Server into a Python data frame, and prepare the data in Python.
+In [part two](python-ski-rental-linear-regression-prepare-data.md), you learned how to load the data from a database into a Python data frame, and prepare the data in Python.
 
 In [part three](python-ski-rental-linear-regression-train-model.md), you learned how to train a linear regression machine learning model in Python.
 

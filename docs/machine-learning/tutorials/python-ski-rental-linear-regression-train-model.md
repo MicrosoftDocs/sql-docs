@@ -29,9 +29,9 @@ In this article, you'll learn how to:
 
 In [part one](python-ski-rental-linear-regression.md), you learned how to restore the sample database.
 
-In [part two](python-ski-rental-linear-regression-prepare-data.md), you learned how to load the data from SQL Server into a Python data frame, and prepare the data in Python.
+In [part two](python-ski-rental-linear-regression-prepare-data.md), you learned how to load the data from a database into a Python data frame, and prepare the data in Python.
 
-In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.
+In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll learn how to store the model in a database, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in on the server to make predictions based on new data.
 
 ## Prerequisites
 

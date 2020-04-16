@@ -24,7 +24,7 @@ You can also use [run Python and R scripts with Machine Learning Services on SQL
 > For executing Java in SQL Server, see the [Language Extensions documentation](../language-extensions/language-extensions-overview.md).
 ::: moniker-end
 
-## What is Machine Learning Services?
+## Execute Python and R scripts in SQL Server
 
 SQL Server Machine Learning Services lets you execute Python and R scripts in-database. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminates transfer of the data across the network to another server.
 

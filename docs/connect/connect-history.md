@@ -1,5 +1,6 @@
 ---
 title: "Driver history for Microsoft SQL Server | Microsoft Docs"
+description: "This page describes Microsoft's historical data connection technologies for connecting to SQL Server."
 ms.custom: ""
 ms.date: 05/04/2018
 ms.prod: sql

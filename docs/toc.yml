@@ -223,10 +223,6 @@
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Active directory group scope
         href: big-data-cluster/troubleshoot-active-directory.md
-  - name: Partners
-    - items:
-      - name: BDC partners
-        href: sql-server/partner-big-data-cluster.md
   - name: Reference
     items:
     - name: Deployment reference
@@ -291,6 +287,10 @@
           href: big-data-cluster/reference-azdata-bdc-sql.md
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
+    - name: Partners
+      - items:
+        - name: BDC partners
+          href: sql-server/partner-big-data-cluster.md
 - name: Business continuity
   items:
   - name: Overview

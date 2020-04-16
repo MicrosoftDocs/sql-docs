@@ -225,6 +225,8 @@
         href: big-data-cluster/troubleshoot-active-directory.md
   - name: Reference
     items:
+    - name: BDC partners
+      href: sql-server/partner-big-data-cluster.md
     - name: Deployment reference
       items:
       - name: Deployment configuration file
@@ -287,8 +289,6 @@
           href: big-data-cluster/reference-azdata-bdc-sql.md
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
-    - name: BDC partners
-      href: sql-server/partner-big-data-cluster.md
 - name: Business continuity
   items:
   - name: Overview

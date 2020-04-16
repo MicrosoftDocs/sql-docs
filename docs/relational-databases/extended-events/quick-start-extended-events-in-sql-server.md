@@ -87,9 +87,10 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
     - Click the right arrow button **>** to move the event to the **Selected events** box.
 
 6. Staying on the **Events** page, click the **Configure** button at the far right.
-    - With the left side chopped off for better display, in the following screenshot you can see the **Event configuration options** area.
 
-   ![New Session > Events > Configure > Filter (Predicate) > Field](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
+   With the left side chopped off for better display, in the following screenshot you can see the **Event configuration options** area.
+
+    ![New Session > Events > Configure > Filter (Predicate) > Field](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
 7. Click the **Filter (Predicate)** tab. Next, click **Click here to add a clause**, for the intention of capturing all SQL SELECT statements that have a HAVING clause.
 

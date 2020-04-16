@@ -18,8 +18,6 @@ Machine Learning Services is a feature in SQL Server that gives the ability to r
 For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-You can also use [run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../big-data-cluster/machine-learning-services.md).
-
 > [!NOTE]
 > For executing Java in SQL Server, see the [Language Extensions documentation](../language-extensions/language-extensions-overview.md).
 ::: moniker-end
@@ -29,6 +27,10 @@ You can also use [run Python and R scripts with Machine Learning Services on SQL
 SQL Server Machine Learning Services lets you execute Python and R scripts in-database. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminates transfer of the data across the network to another server.
 
 You can execute Python and R scripts on a SQL Server instance with the stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+You can also use [run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+::: moniker-end
 
 Base distributions of Python and R are included in Machine Learning Services. You can install and use open-source packages and frameworks, such as PyTorch, TensorFlow, and scikit-learn, in addition to the Microsoft packages.
 

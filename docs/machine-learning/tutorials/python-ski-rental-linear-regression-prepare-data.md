@@ -39,7 +39,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 ## Explore and prepare the data
 
-To use the data in Python, you'll load the data from the SQL Server database into a pandas data frame.
+To use the data in Python, you'll load the data from the database into a pandas data frame.
 
 Create a new Python notebook in Azure Data Studio and run the script below. Replace `<SQL Server>` with your own SQL Server name.
 
@@ -92,7 +92,7 @@ Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
 
 In part two of this tutorial series, you completed these steps:
 
-* Load the data from the SQL Server database into a **pandas** data frame
+* Load the data from the database into a **pandas** data frame
 * Prepare the data in Python by removing some columns
 
 To train a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:

@@ -49,11 +49,11 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
     + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md)
+1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md).
 
 1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also use T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md).
 
-1. Write your first Python or R script
+1. Write your first Python or R script.
 
     + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
     + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)

@@ -1,5 +1,6 @@
 ---
-title: "Using a stored procedure with a return status | Microsoft Docs"
+title: "Using a stored procedure with a return status"
+description: "Learn how to call a stored procedure that returns a result and read the result using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

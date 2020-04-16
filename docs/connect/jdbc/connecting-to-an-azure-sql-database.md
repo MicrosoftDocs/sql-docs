@@ -1,5 +1,6 @@
 ---
-title: "Connecting to an Azure SQL database | Microsoft Docs"
+title: "Connecting to an Azure SQL database"
+description: "This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
+This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to as [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
   
 - [SQL Azure Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
@@ -25,12 +26,12 @@ This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../incl
   
 ## Details
 
-When connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+When connecting to as [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## Connections dropped
 
-When connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
+When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
 
 - Idle at the TCP layer, where connections can be dropped by any number of network devices.  
 

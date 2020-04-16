@@ -1,5 +1,6 @@
 ---
-title: "Understanding XA transactions | Microsoft Docs"
+title: "Understanding XA transactions"
+description: "The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

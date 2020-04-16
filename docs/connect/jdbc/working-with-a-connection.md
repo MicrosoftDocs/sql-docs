@@ -1,5 +1,6 @@
 ---
-title: "Working with a connection | Microsoft Docs"
+title: "Working with a JDBC connection"
+description: "Examples of the different ways to connect to a SQL Server database by using the SQLServerConnection class of the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

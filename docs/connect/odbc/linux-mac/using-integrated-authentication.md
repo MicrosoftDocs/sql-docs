@@ -127,4 +127,4 @@ For more information about authenticating Linux or macOS computers with Active D
 
 [Release Notes](release-notes-odbc-sql-server-linux-mac.md)
 
-[Using Azure Active Directory](using-azure-active-directory.md)
+[Using Azure Active Directory](../using-azure-active-directory.md)

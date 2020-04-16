@@ -42,7 +42,7 @@ This **OpenConnection** function is called near the top in all of the functions 
   
 ## Step 2:  Execute query  
   
-The [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set which can be iterated over with the use of [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+The [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set, which can be iterated over with the use of [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -74,8 +74,7 @@ The [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) functi
   
 ## Step 3:  Insert a row  
   
-In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
-  
+In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely and pass parameters. Parameter values protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md).
   
 ```php 
     function InsertData()  
@@ -104,7 +103,7 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
     }  
 ```  
   
-## Step 4:  Rollback a transaction  
+## Step 4:  Roll back a transaction  
   
   
 This code example demonstrates the use of transactions in which you:  
@@ -113,7 +112,7 @@ This code example demonstrates the use of transactions in which you:
   
 -Insert a row of data, Update another row of data  
   
--Commit your transaction if the insert and update were successful and rollback the transaction if one of them was not  
+-Commit your transaction if the insert and update were successful and roll back the transaction if one of them was not  
   
   
 ```php 

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ODBC applications, parameters"
   - "bound parameter markers [SQL Server Native Client]"
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Statement Parameters - Binding Parameters

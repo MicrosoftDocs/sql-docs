@@ -45,7 +45,7 @@ Consider the following when working with temporal tables:
 
   - **Always On:** Fully supported
   - **Change Data Capture and Change Data Tracking:** Supported only on the current table
-  - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including 'AS OF' querying). Use of multiple subscribers is not supported since this scenario may lead to inconsistent temporal data as each of them would depend on the local system clock.
+  - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including 'AS OF' querying). When the distribution agent starts, it opens a transaction that is held open until distribution agent stops. Due to this behavior SysStartTime and SysEndTime are populated to begin time of first transaction that distribution agent starts. Consequently, it may be preferable to run the distribution agent on a schedule rather than the default of running it continuously. Use of multiple subscribers is not supported as this may lead to inconsistent temporal data due to dependency on local system clock.
   - **Merge replication:** Not supported for temporal tables
 
 - Regular queries only affect data in the current table. To query data in the history table, you must use temporal queries. These are discussed later in this document in the section entitled Querying Temporal Data.

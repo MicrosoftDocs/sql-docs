@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "positioned updates [ODBC]"
   - "ODBC cursors, positioned updates"
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Positioned Updates (ODBC)

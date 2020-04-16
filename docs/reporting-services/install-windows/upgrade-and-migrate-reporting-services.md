@@ -78,7 +78,7 @@ ms.date: 08/17/2017
   
 -   Back up any customizations to existing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] virtual directories in IIS.  
   
--   Remove invalid SSL certificates.  This includes certificates that are expired and you do not plan to update prior to upgrading Reporting Services.  Invalid certificates will cause upgrade to fail and an error message similar to the following will be written to the Reporting Services Log file: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site.**.  
+-   Remove invalid TLS/SSL certificates.  This includes certificates that are expired and you do not plan to update prior to upgrading Reporting Services.  Invalid certificates will cause upgrade to fail and an error message similar to the following will be written to the Reporting Services Log file: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site.**.  
   
  Before you upgrade a production environment, always run a test upgrade in a pre-production environment that has the same configuration as your production environment.  
   

@@ -109,4 +109,4 @@ To create a machine learning model using R in SQL Server, follow this quickstart
 
 For more information on SQL Server Machine Learning Services, see:
 
-- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
+- [What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md)

@@ -38,7 +38,7 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 + [Python extension](concepts/extension-python.md)
 + [R extension](concepts/extension-r.md)
 
-## How do I get started with Machine Learning Services?
+## Get started with Machine Learning Services
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also use [Machine Learning Services on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
@@ -72,7 +72,7 @@ Which version of Python and R is included in Machine Learning Services, depends 
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-For the R version in SQL Server 2016, see the [R version section in What is R Services?](r/sql-server-r-services.md#version)
+For the R version in SQL Server 2016, see the [R version section in What is R Services?](r/sql-server-r-services.md?view=sql-server-2016#version)
 
 <a name="packages"></a>
 
@@ -92,18 +92,16 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 
 For more information on which packages are installed with Machine Learning Services and how to install other packages, see:
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Get Python package information](package-management/python-package-information.md)
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-+ [Install packages with Python tools on SQL Server](package-management/install-python-packages-standard-tools.md)
-::: moniker-end
 + [Get R package information](package-management/r-package-information.md)
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Install new R packages with sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
++ [Get Python package information](package-management/python-package-information.md)
++ [Install packages with Python tools on SQL Server](package-management/install-python-packages-standard-tools.md)
++ [Get R package information](package-management/r-package-information.md)
 + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server](package-management/install-r-packages-with-tsql.md).
 ::: moniker-end
 

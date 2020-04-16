@@ -2423,7 +2423,7 @@ ORDER BY message_id
 |    5115    |    16    |    No    |    Only SQL Server database files can be specified for database snapshots. '%.*ls' is not a SQL Server database file.    |
 |    5118    |    16    |    No    |    The file "%ls" is compressed but does not reside in a read-only database or filegroup. The file must be decompressed.    |
 |    5119    |    16    |    No    |    Cannot make the file "%.*ls" a sparse file. Make sure the file system supports sparse files.    |
-|    5120    |    16    |    No    |    Unable to open the physical file "%.*ls". Operating system error %d: "%ls".    |
+|    [5120](mssqlserver-5120-database-engine-error.md)    |    16    |    No    |    Unable to open the physical file "%.*ls". Operating system error %d: "%ls".    |
 |    5121    |    16    |    No    |    The path specified by "%.*ls" is not in a valid directory.    |
 |    5123    |    16    |    No    |    CREATE FILE encountered operating system error %ls while attempting to open or create the physical file '%.*ls'.    |
 |    5124    |    16    |    Yes    |    The file header in '%ls' does not match the expected contents for file '%ls' of database '%ls'. The mismatch is possibly between the full-text catalog files and the related database. Perform a restore if necessary.    |

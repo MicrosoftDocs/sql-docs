@@ -10357,6 +10357,8 @@
           href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
       - name: Errors 5000 to 8000
         items:
+        - name: 5120
+          href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
         - name: 5228
           href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
         - name: 5229

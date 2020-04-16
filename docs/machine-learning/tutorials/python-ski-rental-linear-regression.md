@@ -3,7 +3,7 @@ title: "Python tutorial: Ski rentals"
 description: In part three of this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -13,11 +13,16 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md), but you can also use your own Python integrated development environment (IDE).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
 
-In the first part of this series, you'll get set up with the prerequisites. In parts two and three, you'll develop some Python scripts in a Jupyter notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside SQL Server using T-SQL stored procedures.
+In the first part of this series, you'll get set up with the prerequisites. In parts two and three, you'll develop some Python scripts in a notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside SQL Server using T-SQL stored procedures.
 
 In this article, you'll learn how to:
 
@@ -32,13 +37,16 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 ## Prerequisites
 
-* SQL Server Machine Learning Services - For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+* SQL Server Machine Learning Services - For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also use [Machine Learning Services on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+* SQL Server Machine Learning Services - For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
 
-* Python IDE - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md). 
+* Python IDE - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
-    You can also use your own Python IDE, such as a Jupyter notebook or [Visual Studio Code](https://code.visualstudio.com/docs) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
-
-* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
+* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 * Additional Python packages - The examples in this tutorial series use the following Python packages that may not be installed by default:
 
@@ -63,6 +71,11 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 
    * Import from the **TutorialDB.bak** file you downloaded
    * Name the target database "TutorialDB"
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+   > [!NOTE]
+   > If you are using Machine Learning Services on Big Data Clusters, see how to [Restore a database into the SQL Server big data cluster master instance](../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
 
 1. You can verify that the restored database exists by querying the **dbo.rental_data** table:
 

@@ -74,7 +74,7 @@ c. Once downloaded, run the msi to install Node.js
 1. **Install Node.js runtime and npm package manager.**  
 a. Go to [Node.js](https://nodejs.org/en/download/)  
 b. Click on the appropriate macOS installer link.  
-c. Once downloaded, run the dmg to install Node.js  
+c. Once downloaded, run 'dmg' to install Node.js  
   
 2. **Open terminal**  
   

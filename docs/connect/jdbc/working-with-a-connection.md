@@ -61,29 +61,29 @@ ds.setDatabaseName("AdventureWorks");
 Connection con = ds.getConnection();  
 ```
 
-## Creating a connection that targets a very specific data source
+## Creating a connection that targets a specific data source
 
-If you have to make a database connection that targets a very specific data source, there are a number of approaches that you can take. Each approach depends on the properties that you set by using the connection URL.
+If you have to make a database connection that targets a specific data source, there are a number of approaches that you can take. Each approach depends on the properties that you set by using the connection URL.
 
-To connect to the default instance on a remote server, use the following:
+To connect to the default instance on a remote server, use the following example:
 
 ```java
 String url = "jdbc:sqlserver://MyServer;integratedSecurity=true;"
 ```
 
-To connect to a specific port on a server, use the following:
+To connect to a specific port on a server, use the following example:
 
 ```java
 String url = "jdbc:sqlserver://MyServer:1533;integratedSecurity=true;"
 ```
 
-To connect to a named instance on a server, use the following:
+To connect to a named instance on a server, use the following example:
 
 ```java
 String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSecurity=true;"
 ```
 
-To connect to a specific database on a server, use the following:
+To connect to a specific database on a server, use the following example:
 
 ```java
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
@@ -91,9 +91,9 @@ String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integrated
 
 For more connection URL examples, see [Building the connection URL](../../connect/jdbc/building-the-connection-url.md).
 
-## Creating a connection with a custom login time-out
+## Creating a connection with a custom login timeout
 
-If you have to adjust for server load or network traffic, you can create a connection that has a specific login time-out value described in seconds, as in the following:
+If you have to adjust for server load or network traffic, you can create a connection that has a specific login timeout value described in seconds, as in the following example:
 
 ```java
 String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"
@@ -101,7 +101,7 @@ String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;
 
 ## Create a connection with application-level identity
 
-If you have to use logging and profiling, you will have to identify your connection as originating from a specific application, as in the following:
+If you have to use logging and profiling, you will have to identify your connection as originating from a specific application, as in the following example:
 
 ```java
 String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"

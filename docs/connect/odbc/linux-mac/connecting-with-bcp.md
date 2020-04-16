@@ -32,7 +32,7 @@ The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available w
 > -   -r"\n"  
 > -   -r'\n'  
   
-The following is a sample command invocation of `bcp` to copy table rows to a text file:  
+The following example is a command invocation of `bcp` to copy table rows to a text file:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -80,7 +80,7 @@ Specifies a login timeout. The -l option specifies the number of seconds before 
 Specifies the number of the last row to export from a table or import from a data file.  
   
 - -m *max_errors*  
-Specifies the maximum number of syntax errors that can occur before the `bcp` operation is cancelled.  
+Specifies the maximum number of syntax errors that can occur before the `bcp` operation is canceled.  
   
 - -n  
 Uses the native (database) data types of the data to perform the bulk-copy operation.  

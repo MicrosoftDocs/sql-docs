@@ -17,7 +17,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure that you can call is one that returns a status or a result parameter. This is typically used to indicate the success or failure of the stored procedure. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class, which you can use to call this kind of stored procedure and to process the data that it returns.
+A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure that you can call is one that returns a status or a result parameter. This status is typically used to indicate the success or failure of the stored procedure. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class, which you can use to call this kind of stored procedure and to process the data that it returns.
 
 When you call this kind of stored procedure by using the JDBC driver, you have to use the `call` SQL escape sequence in conjunction with the [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) method of the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class. The syntax for the `call` escape sequence with a return status parameter is the following:
 
@@ -26,7 +26,7 @@ When you call this kind of stored procedure by using the JDBC driver, you have t
 > [!NOTE]  
 > For more information about the SQL escape sequences, see [Using SQL escape sequences](../../connect/jdbc/using-sql-escape-sequences.md).
 
-When you construct the `call` escape sequence, specify the return status parameter by using the ? (question mark) character. This character acts as a placeholder for the parameter value that will be returned from the stored procedure. To specify a value for a return status parameter, you must specify the data type of the parameter by using the [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) method of the SQLServerCallableStatement class, before executing the stored procedure.
+When you construct the `call` escape sequence, specify the return status parameter by using the `?` (question mark) character. This character acts as a placeholder for the parameter value that will be returned from the stored procedure. To specify a value for a return status parameter, you must specify the data type of the parameter by using the [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) method of the SQLServerCallableStatement class, before executing the stored procedure.
 
 > [!NOTE]  
 > When using the JDBC driver with a SQL Server database, the value that you specify for the return status parameter in the registerOutParameter method will always be an integer, which you can specify by using the java.sql.Types.INTEGER data type.

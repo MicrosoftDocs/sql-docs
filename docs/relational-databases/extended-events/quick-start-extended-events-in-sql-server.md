@@ -50,7 +50,7 @@ The following preliminaries would be required for you to actually perform the up
 2. Log in to Microsoft SQL Server 2014 or higher.
 3. Ensure that your account has the [server permission](../../t-sql/statements/grant-server-permissions-transact-sql.md) of **ALTER ANY EVENT SESSION**.
 
-  If interested, more details about security and permissons related to extended events are available at the end of this article in the [Appendix](#appendix1).
+  If interested, more details about security and permissions related to extended events are available at the end of this article in the [Appendix](#appendix1).
 
 ## Demo of SSMS integration
 

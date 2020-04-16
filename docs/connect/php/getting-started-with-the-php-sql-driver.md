@@ -18,8 +18,8 @@ ms.author: v-daenge
 This section provides information about the system requirements for using the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], and for loading the driver into the PHP process space.  
   
 ## Getting Started  
-* [Step 1: Configure development environment for PHP development](step-1-configure-development-environment-for-php-development.md)  
-* [Step 2: Create a database for PHP development](step-2-create-a-sql-database-for-php-development.md)  
+* [Step 1: Configure development environment for PHP development](../../connect/php/step-1-configure-development-environment-for-php-development.md)  
+* [Step 2: Create a database for PHP development](../../connect/php/step-2-create-a-sql-database-for-php-development.md)  
 * [Step 3: Proof of concept connecting to SQL using PHP](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [Step 4: Connect resiliently to SQL with PHP](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   

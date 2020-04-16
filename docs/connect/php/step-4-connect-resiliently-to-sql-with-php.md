@@ -1,5 +1,6 @@
 ---
-title: "Step 4: Connect resiliently to SQL with PHP | Microsoft Docs"
+title: "Step 4: Connect resiliently to SQL with PHP"
+description: "Step 4 is a demo program designed to showcase how transient errors during an attempt to connect leads to a retry."
 ms.custom: ""
 ms.date: "01/22/2018"
 ms.prod: sql

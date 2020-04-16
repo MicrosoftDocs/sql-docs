@@ -1,5 +1,6 @@
 ---
 title: "C++ ODBC app accessing a SQL database"
+description: "This C++ sample application demonstrates how to use the ODBC APIs to connect to and access a SQL database."
 ms.custom: ""
 ms.date: "07/08/2019"
 ms.prod: sql

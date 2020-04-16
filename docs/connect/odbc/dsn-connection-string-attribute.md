@@ -1,5 +1,6 @@
 ---
-title: "DSN and connection string keywords for the ODBC driver - SQL Server | Microsoft Docs"
+title: "ODBC DSN and connection string keywords"
+description: "This page lists the keywords for connection strings and DSNs, and connection attributes for SQLSetConnectAttr and SQLGetConnectAttr, available in the ODBC Driver for SQL Server."
 ms.custom: ""
 ms.date: 02/04/2019
 ms.prod: sql

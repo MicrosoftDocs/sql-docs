@@ -1,5 +1,6 @@
 ---
-title: "Using basic data types | Microsoft Docs"
+title: "Using basic JDBC data types"
+description: "The Microsoft JDBC Driver for SQL Server uses basic JDBC data types to convert SQL Server data types to a format that can be understood by Java."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "SQL Data Developer | Microsoft Docs"
+description: "Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud."
 ms.custom: ""
 ms.date: "03/28/2017"
 ms.prod: sql

@@ -365,7 +365,7 @@ WITH (
 The COPY command will have better performance by the time the feature is generally available. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Currently COPY is on par in terms of performance with PolyBase when using INSERT SELECT. 
 
 ### What is the file splitting guidance for the COPY command loading CSV files?
-Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. You won’t need to split your non-compressed files when the COPY command is generally available. 
+Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

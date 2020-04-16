@@ -159,6 +159,8 @@
           href: big-data-cluster/hdfs-tiering-mount-s3.md
         - name: Manage HDFS permissions
           href: big-data-cluster/hdfs-tiering-manage-permissions.md
+      - name: Partners
+        href: sql-server/partner-big-data-cluster.md
     - name: Data ingestion
       items:
       - name: Load data with curl
@@ -10076,8 +10078,6 @@
       href: sql-server/sql-server-docs-contribute.md
   - name: Partners
     items:
-    - name: Big Data Clusters
-      href: sql-server/partner-big-data-cluster.md
     - name: Monitoring
       href: sql-server/partner-monitor-sql-server.md
     - name: High availability & disaster recovery

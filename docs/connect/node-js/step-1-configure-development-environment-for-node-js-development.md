@@ -12,13 +12,13 @@ author: David-Engel
 ms.author: v-daenge
 ---
 # Step 1:  Configure development environment for Node.js development
-You will need to configure your development environment with the prerequisites in order to develop an application using the Node.js Driver for SQL Server.  The most common method is to use the node package manager (npm) to install the tedious module, but you can download the tedious module directly at [Github](https://github.com/pekim/tedious) if you prefer.  
+You will need to configure your development environment with the prerequisites in order to develop an application using the Node.js Driver for SQL Server.  The most common method is to use the node package manager (npm) to install the tedious module, but you can download the tedious module directly at [GitHub](https://github.com/pekim/tedious) if you prefer.  
   
-Note that the Node.js Driver uses the TDS protocol, which is enabled by default in SQL Server and Azure SQL Database.  No additional configuration is required.  
+The Node.js Driver uses the TDS protocol, which is enabled by default in SQL Server and Azure SQL Database.  No additional configuration is required.  
   
 ## Windows  
   
-1. **Install Node.js runtime and npm package manager**  
+1. **Install Node.js runtime and npm package manager.**  
 a. Go to [Node.js](https://nodejs.org/en/download/)  
 b. Click on the appropriate Windows installer msi link.   
 c. Once downloaded, run the msi to install Node.js  
@@ -48,7 +48,7 @@ c. Once downloaded, run the msi to install Node.js
 ```  
 >sudo apt-get install node  
 ```  
-3. **Install npm (node package manager)**  
+3. **Install npm (node package manager).**  
 ```  
 > sudo apt-get install npm  
 ```  
@@ -68,11 +68,11 @@ c. Once downloaded, run the msi to install Node.js
 > sudo npm install tedious  
 ```  
   
-## Mac  
+## macOS  
   
-1. **Install Node.js runtime and npm package manager**  
+1. **Install Node.js runtime and npm package manager.**  
 a. Go to [Node.js](https://nodejs.org/en/download/)  
-b. Click on the appropriate Mac OS installer link.  
+b. Click on the appropriate macOS installer link.  
 c. Once downloaded, run the dmg to install Node.js  
   
 2. **Open terminal**  

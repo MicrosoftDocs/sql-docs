@@ -36,10 +36,6 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 + [Python extension](concepts/extension-python.md)
 + [R extension](concepts/extension-r.md)
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-You can also [run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-
 ## Get started with Machine Learning Services
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"

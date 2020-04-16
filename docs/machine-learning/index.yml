@@ -95,9 +95,9 @@ landingContent:
           - text: Deploy and make predictions with an ONNX model in SQL Database Edge
             url: /azure/sql-database-edge/deploy-onnx
 
-  - title: ML on Synapse Analytics
+  - title: ML on Azure Synapse Analytics
     linkLists:
       - linkListType: get-started
         links:
-          - text: Analyze data with Azure Machine Learning and Synapse Analytics
+          - text: Analyze data with Azure Machine Learning and Azure Synapse Analytics
             url: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning

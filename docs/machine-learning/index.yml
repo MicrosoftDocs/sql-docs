@@ -84,13 +84,6 @@ landingContent:
           - text: Integrate Spark with SQL Server
             url: ../big-data-cluster/spark-mssql-connector.md
 
-  - title: ML on Synapse Analytics
-    linkLists:
-      - linkListType: get-started
-        links:
-          - text: Analyze data with Azure Machine Learning and Synapse Analytics
-            url: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning
-
   - title: ML on Azure SQL Database Edge
     linkLists:
       - linkListType: overview
@@ -101,3 +94,10 @@ landingContent:
         links:
           - text: Deploy and make predictions with an ONNX model in SQL Database Edge
             url: /azure/sql-database-edge/deploy-onnx
+
+  - title: ML on Synapse Analytics
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Analyze data with Azure Machine Learning and Synapse Analytics
+            url: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning

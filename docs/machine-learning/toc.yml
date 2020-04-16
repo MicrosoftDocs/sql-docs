@@ -1,8 +1,8 @@
 - name: SQL machine learning documentation
   href: ../machine-learning/index.yml
 
-- name: SQL Server documentation >
-  href: ../sql-server/index.yml
+- name: Microsoft SQL documentation >
+  href: ../index.yml
 
 - name: Overview
   expanded: true

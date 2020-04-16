@@ -1,6 +1,6 @@
 ---
 title: "Data Sources Supported by Reporting Services | Microsoft Docs"
-ms.date: 03/17/2017
+ms.date: 04/16/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data

@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/04/2017"
+ms.date: "04/15/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -67,7 +67,9 @@ ANSI_WARNINGS must be ON when you are creating or manipulating indexes on comput
 > [!IMPORTANT]
 > ANSI_WARNINGS should be set to ON for executing distributed queries.  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically set ANSI_WARNINGS to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, set in the application before connecting. The default for SET ANSI_WARNINGS is OFF for connections from DB-Library applications.  
+Clients, such as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically set ANSI_WARNINGS to ON when connecting. This can be configured in ODBC data sources, in ODBC connection attributes, set in the application before connecting. The default for SET ANSI_WARNINGS is OFF for connections from DB-Library applications.
+
+Other clients that may set the ODBC_ANSI_ON connection flag in the TDS stream to get ANSI_DEFAULTS set to ON.
   
 When ANSI_DEFAULTS is ON, ANSI_WARNINGS is enabled.  
   

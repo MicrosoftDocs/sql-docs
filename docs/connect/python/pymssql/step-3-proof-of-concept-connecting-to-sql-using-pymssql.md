@@ -29,7 +29,7 @@ The [pymssql.connect](https://pypi.org/project/pymssql/) function is used to con
   
 ## Step 2:  Execute query  
   
-The [cursor.execute](https://pypi.org/project/pymssql/) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and returns a result set which can be iterated over with the use of [cursor.fetchone()](https://pypi.org/project/pymssql/).  
+The [cursor.execute](https://pypi.org/project/pymssql/) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and returns a result set, which can be iterated over with the use of [cursor.fetchone()](https://pypi.org/project/pymssql/).  
   
   
 ```python
@@ -45,7 +45,7 @@ The [cursor.execute](https://pypi.org/project/pymssql/) function can be used to 
   
 ## Step 3:  Insert a row  
   
-In this example you will see how to execute an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
+In this example you will see how to execute an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely and pass parameters. Passing parameters as values protects your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
   
 ```python
@@ -61,13 +61,13 @@ In this example you will see how to execute an [INSERT](../../../t-sql/statement
     conn.close()
 ```  
   
-## Step 4:  Rollback a transaction  
+## Step 4: Roll back a transaction  
   
 This code example demonstrates the use of transactions in which you:  
   
 * Begin a transaction  
 * Insert a row of data  
-* Rollback your transaction to undo the insert  
+* Roll back your transaction to undo the insert  
   
 ```python
     import pymssql  

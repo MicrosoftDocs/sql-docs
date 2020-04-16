@@ -1,5 +1,6 @@
 ---
-title: "Feature dependencies of the Microsoft JDBC Driver for SQL Server | Microsoft Docs"
+title: "Feature dependencies of the Microsoft JDBC Driver"
+description: "Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them."
 ms.custom: ""
 ms.date: "03/24/2020"
 ms.prod: sql
@@ -111,7 +112,7 @@ Specific projects that require either of the preceding features need to explicit
 - JDBC Driver version 6.2.2 - Dependency versions: Adal4j (version 1.4.0) and its dependencies
 - JDBC Driver version 6.0.0 - Dependency versions: Adal4j (version 1.3.0), and its dependencies. In this version of the driver, you can connect by using _ActiveDirectoryIntegrated_ Authentication Mode only on a Windows operating system and by using sqljdbc_auth.dll and Active Directory Authentication Library for SQL Server (ADALSQL.DLL).
 
-From driver version 6.4.0 onward, applications don't necessarily require using ADALSQL.DLL on Windows operating systems. For *non-Windows operating systems*, the driver requires a Kerberos ticket to work with ActiveDirectoryIntegrated Authentication. For more information about how to connect to Active Directory by using Kerberos, see [Set Kerberos ticket on Windows, Linux, and Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
+From driver version 6.4.0 onward, applications don't necessarily require using ADALSQL.DLL on Windows operating systems. For *non-Windows operating systems*, the driver requires a Kerberos ticket to work with ActiveDirectoryIntegrated Authentication. For more information about how to connect to Active Directory by using Kerberos, see [Set Kerberos ticket on Windows, Linux, and macOS](connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-macos).
 
 For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by default and doesn't require Kerberos ticket setup or Azure library dependencies. If sqljdbc_auth.dll isn't available, the driver looks for the Kerberos ticket for authenticating to Active Directory as on other operating systems.
 

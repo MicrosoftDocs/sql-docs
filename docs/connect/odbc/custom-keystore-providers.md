@@ -1,5 +1,6 @@
 ---
-title: "Custom Keystore Providers | Microsoft Docs"
+title: "Custom Keystore Providers"
+description: "Learn about how to implement a custom key store provider for use with the ODBC Driver for SQL Server and the Always Encrypted feature."
 ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql
@@ -137,7 +138,7 @@ Placeholder name for a provider-defined ECEK decryption function. The driver cal
 |`alg`|[Input] The value of the [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) metadata attribute for the given ECEK. Null-terminated wide-character* string. This is intended to identify the encryption algorithm used to encrypt the given ECEK.|
 |`ecek`|[Input] Pointer to the ECEK to be decrypted.|
 |`ecekLen`|[Input] Length of the ECEK.|
-|`cekOut`|[Output] The provider shall allocate memory for the decrypted ECEK and write its address to the pointer pointed to by cekOut. It must be possible to free this block of memory using the [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *cekOut to a null pointer.|
+|`cekOut`|[Output] The provider shall allocate memory for the decrypted ECEK and write its address to the pointer pointed to by cekOut. It must be possible to free this block of memory using the [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) or free (Linux/macOS) function. If no memory was allocated due to an error or otherwise, the provider shall set *cekOut to a null pointer.|
 |`cekLen`|[Output] The provider shall write to the address pointed to by cekLen the length of the decrypted ECEK that it has written to **cekOut.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
@@ -154,7 +155,7 @@ Placeholder name for a provider-defined CEK encryption function. The driver does
 |`alg`|[Input] The value of the [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) metadata attribute for the given ECEK. Null-terminated wide-character* string. This is intended to identify the encryption algorithm used to encrypt the given ECEK.|
 |`cek`|[Input] Pointer to the CEK to be encrypted.|
 |`cekLen`|[Input] Length of the CEK.|
-|`ecekOut`|[Output] The provider shall allocate memory for the encrypted CEK and write its address to the pointer pointed to by ecekOut. It must be possible to free this block of memory using the [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *ecekOut to a null pointer.|
+|`ecekOut`|[Output] The provider shall allocate memory for the encrypted CEK and write its address to the pointer pointed to by ecekOut. It must be possible to free this block of memory using the [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) or free (Linux/macOS) function. If no memory was allocated due to an error or otherwise, the provider shall set *ecekOut to a null pointer.|
 |`ecekLen`|[Output] The provider shall write to the address pointed to by ecekLen the length of the encrypted CEK that it has written to **ecekOut.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
@@ -236,7 +237,7 @@ The following code is an example of a minimal keystore provider implementation.
 /* Custom Keystore Provider Example
 
 Windows:   compile with cl MyKSP.c /LD /MD /link /out:MyKSP.dll
-Linux/Mac: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
+Linux/macOS: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
 
  */
 
@@ -362,7 +363,7 @@ The following code is a demo application which uses the keystore provider above.
  Example application for demonstration of custom keystore provider usage
 
 Windows:   compile with cl /MD kspapp.c /link odbc32.lib
-Linux/Mac: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
+Linux/macOS: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
  
  usage: kspapp connstr
 

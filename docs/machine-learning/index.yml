@@ -97,7 +97,7 @@ landingContent:
         links:
           - text: Machine learning and AI with ONNX in SQL Database Edge
             url: ../../azure/sql-database-edge/onnx-overview.md
-      - linkListType: get-started
+      - linkListType: how-to-guide
         links:
           - text: Deploy and make predictions with an ONNX model in SQL Database Edge
             url: ../../azure/sql-database-edge/deploy-onnx.md

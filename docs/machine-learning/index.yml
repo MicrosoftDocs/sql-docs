@@ -69,7 +69,7 @@ landingContent:
           - text: Use Machine Learning Services in R tools
             url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
 
-  - title: Machine learning on Big Data Clusters
+  - title: ML on Big Data Clusters
     linkLists:
       - linkListType: get-started
         links:
@@ -84,14 +84,14 @@ landingContent:
           - text: Integrate Spark with SQL Server
             url: ../big-data-cluster/spark-mssql-connector.md
 
-  - title: Machine learning on Synapse Analytics
+  - title: ML on Synapse Analytics
     linkLists:
       - linkListType: get-started
         links:
           - text: Analyze data with Azure Machine Learning and Synapse Analytics
             url: ../../azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning.md
 
-  - title: Machine learning on Azure SQL Database Edge
+  - title: ML on Azure SQL Database Edge
     linkLists:
       - linkListType: overview
         links:

@@ -97,7 +97,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 
 >[!NOTE]
->After installation, you must [set the hadoop connectivity level](#setconnectivitylevel).
+>After installation, you must [set the hadoop connectivity level](../../relational-databases/polybase/polybase-configure-hadoop.md#configure-hadoop-connectivity).
 
 ## <a name="SLES">Install on SLES</a>
 
@@ -130,7 +130,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 
 >[!NOTE]
->After installation, you must [set the hadoop connectivity level](#setconnectivitylevel).
+>After installation, you must [set the hadoop connectivity level](../../relational-databases/polybase/polybase-configure-hadoop.md#configure-hadoop-connectivity).
 
 If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 

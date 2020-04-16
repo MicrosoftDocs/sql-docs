@@ -1,5 +1,6 @@
 ---
-title: "Step 1:  Configure development environment for Node.js development | Microsoft Docs"
+title: "Step 1: Configure development environment for Node.js"
+description: "You will need to configure your development environment with the prerequisites in order to develop an application using the Node.js Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

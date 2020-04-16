@@ -1,5 +1,6 @@
 ---
 title: "Node.js Driver for SQL Server | Microsoft Docs"
+description: "The tedious module is an open source, JavaScript implementation of the TDS protocol, which is supported by all modern versions of SQL Server."
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: sql

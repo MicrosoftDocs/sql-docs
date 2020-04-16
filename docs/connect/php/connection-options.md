@@ -1,5 +1,6 @@
 ---
-title: "Connection Options | Microsoft Docs"
+title: "Connection Options"
+description: "This topic lists the options that are permitted in the associative array of sqlsrv_connect in the SQLSRV driver or the keywords that are permitted in the data source name the PDO_SQLSRV driver."
 ms.custom: ""
 ms.date: 12/12/2019
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: v-daenge
 # Connection Options
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-This topic lists the options that are permitted in the associative array (when using [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) in the SQLSRV driver) or the keywords that are permitted in the data source name (dsn) (when using [PDO::__construct](../../connect/php/pdo-construct.md) in the PDO_SQLSRV driver).  
+This topic lists the options that are permitted in the associative array (when using [sqlsrv_connect](sqlsrv-connect.md) in the SQLSRV driver) or the keywords that are permitted in the data source name (dsn) (when using [PDO::__construct](pdo-construct.md) in the PDO_SQLSRV driver).  
 
 ## Table of Connection Options
 
@@ -68,4 +69,4 @@ This topic lists the options that are permitted in the associative array (when u
 Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## See Also  
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
+[Connecting to the Server](connecting-to-the-server.md)  

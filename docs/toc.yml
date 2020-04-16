@@ -287,8 +287,8 @@
           href: big-data-cluster/reference-azdata-bdc-sql.md
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
-        - name: BDC partners
-          href: sql-server/partner-big-data-cluster.md
+      - name: BDC partners
+        href: sql-server/partner-big-data-cluster.md
 - name: Business continuity
   items:
   - name: Overview

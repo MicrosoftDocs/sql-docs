@@ -87,10 +87,10 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 
 1. Enable external scripts by running the following SQL commands:
 
-  ```sql
-  sp_configure 'external scripts enabled', 1;
-  RECONFIGURE WITH override;
-  ```
+    ```sql
+    sp_configure 'external scripts enabled', 1;
+    RECONFIGURE WITH override;
+    ```
 
 ## Next steps
 

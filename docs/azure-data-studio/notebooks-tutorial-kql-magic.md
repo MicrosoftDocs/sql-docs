@@ -23,7 +23,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
 - [Python installed](https://www.python.org/downloads/)
 - [Azure Data Explorer cluster and database](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)
 
-## Set up and install KQL magicenvironment
+## Install and set up a KQL magic environment
 
 1. Create a new notebook and change the **Kernel** to *Python 3*.
 
@@ -39,7 +39,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
    !pip install Kqlmagic --no-cache-dir --upgrade
    ```
 
-   To check if you have it installed, run te command below.
+   To check if it's installed, run the command below.
 
    ```python
    !pip list
@@ -63,7 +63,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
 
    If this step fails, then close the file and reopen it.
 
-   If Samples@help is asking for a password, then you can leave it blank and press [Enter].
+   If `Samples@help` is asking for a password, then you can leave it blank and press **Enter**.
 
    You can test if kqlmagic is loaded properly by browsing the help documentation.
 
@@ -73,7 +73,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
 
    ![Help](media/notebooks-tutorial-kql-magic/help.png)
 
-   To see which version of kqlmagic you installed, run the command below.
+   To see which version of kqlmagic is installed, run the command below.
 
    ```python
    %kql --version
@@ -85,7 +85,7 @@ Learn more about KQL magic and notebooks:
 
 - [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/kqlmagic)
 
-- [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, ApplicationInsights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic)
+- [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic)
 
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 

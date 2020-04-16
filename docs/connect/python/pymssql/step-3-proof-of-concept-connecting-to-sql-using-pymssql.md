@@ -1,5 +1,6 @@
 ---
-title: "Step 3: Proof of concept connecting to SQL using pymssql | Microsoft Docs"
+title: "Step 3: Connecting to SQL using pymssql"
+description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pymssql. The basic examples demonstrate selecting and inserting data."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

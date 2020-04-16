@@ -1,6 +1,6 @@
 ---
 title: "Python tutorial: Ski rentals"
-description: In part three of this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals in SQL Server Machine Learning Services.
+description: In part three of this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals in machine learning on SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2020
@@ -65,17 +65,17 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 The sample database used in this tutorial has been saved to a **.bak** database backup file for you to download and use.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> If you are using Machine Learning Services on Big Data Clusters, see how to [Restore a database into the SQL Server big data cluster master instance](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
+
 1. Download the file [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
    * Import from the **TutorialDB.bak** file you downloaded
    * Name the target database "TutorialDB"
-
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-   > [!NOTE]
-   > If you are using Machine Learning Services on Big Data Clusters, see how to [Restore a database into the SQL Server big data cluster master instance](../big-data-cluster/data-ingestion-restore-database.md).
-::: moniker-end
 
 1. You can verify that the restored database exists by querying the **dbo.rental_data** table:
 
@@ -84,7 +84,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
    SELECT * FROM [dbo].[rental_data];
    ```
 
-Enable external scripts by running the following SQL commands:
+1. Enable external scripts by running the following SQL commands:
 
   ```sql
   sp_configure 'external scripts enabled', 1;

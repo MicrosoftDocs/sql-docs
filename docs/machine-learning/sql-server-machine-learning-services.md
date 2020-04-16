@@ -18,7 +18,7 @@ Machine Learning Services is a feature in SQL Server that gives the ability to r
 For machine
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-You can also use Machine Learning Services on SQL Server Big Data Clusters. For more information, see [Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../big-data-cluster/machine-learning-services.md)
+You can also use [run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../big-data-cluster/machine-learning-services.md).
 
 > [!NOTE]
 > For executing Java in SQL Server, see the [Language Extensions documentation](../language-extensions/language-extensions-overview.md).

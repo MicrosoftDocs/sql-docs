@@ -28,10 +28,6 @@ SQL Server Machine Learning Services lets you execute Python and R scripts in-da
 
 You can execute Python and R scripts on a SQL Server instance with the stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-You can also use [run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-
 Base distributions of Python and R are included in Machine Learning Services. You can install and use open-source packages and frameworks, such as PyTorch, TensorFlow, and scikit-learn, in addition to the Microsoft packages.
 
 Machine Learning Services uses an extensibility framework to run Python and R scripts in SQL Server. Learn more about how this works:
@@ -39,6 +35,10 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 + [Extensibility framework](concepts/extensibility-framework.md)
 + [Python extension](concepts/extension-python.md)
 + [R extension](concepts/extension-r.md)
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+You can also [run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+::: moniker-end
 
 ## Get started with Machine Learning Services
 

@@ -1391,6 +1391,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/what-is-sql-server-machine-learning.md",
+      "redirect_url": "/sql/machine-learning/sql-server-machine-learning-services",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
       "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
       "redirect_document_id": false

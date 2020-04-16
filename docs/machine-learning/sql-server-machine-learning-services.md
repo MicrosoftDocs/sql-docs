@@ -109,5 +109,6 @@ For more information on which packages are installed with Machine Learning Servi
 
 ## Next steps
 
-+ [Install SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md)
-+ Set up a data science client for [Python development](python/setup-python-client-tools-sql.md) and [R development](r/set-up-a-data-science-client.md)
++ [Install SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)
++ [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
++ [R tutorials for SQL machine learning](tutorials/r-tutorials.md)

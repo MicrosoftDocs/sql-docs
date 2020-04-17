@@ -21,13 +21,13 @@ ms.author: v-daenge
 
 This article lists the components that must be installed on your system to access data in a SQL Server or Azure SQL Database using the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
-Versions 3.2 and later of the Microsoft PHP Drivers for SQL Server are officially supported. For full details on support lifecycles and requirements of the PHP drivers, see the [support matrix](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md).
+Versions 3.2 and later of the Microsoft PHP Drivers for SQL Server are officially supported. For full details on support lifecycles and requirements of the PHP drivers, see the [support matrix](microsoft-php-drivers-for-sql-server-support-matrix.md).
 
 ## PHP
 
-For information about how to download and install the latest stable PHP binaries, see [the PHP web site](https://php.net).  The Microsoft Drivers for PHP for SQL Server require the right versions of PHP as detailed in [PHP Version support](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
+For information about how to download and install the latest stable PHP binaries, see [the PHP web site](https://php.net).  The Microsoft Drivers for PHP for SQL Server require the right versions of PHP as detailed in [PHP Version support](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
 
--   The correct version of the driver file must be enabled with its corresponding PHP version. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Download the Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+-   The correct version of the driver file must be enabled with its corresponding PHP version. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](loading-the-php-sql-driver.md).
 
 -   A Web server is required. Your Web server must be configured to run PHP. For information about hosting PHP applications with IIS, see the [tutorial on PHP's web site](http://docs.php.net/manual/da/install.windows.iis7.php).
 
@@ -38,7 +38,7 @@ For information about how to download and install the latest stable PHP binaries
 
 ## ODBC Driver
 
-The correct version of the Microsoft ODBC Driver for SQL Server is required on the computer on which PHP is running. You can download all supported versions of the driver for supported platforms on [this page](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
+The correct version of the Microsoft ODBC Driver for SQL Server is required on the computer on which PHP is running. You can download all supported versions of the driver for supported platforms on [this page](../odbc/download-odbc-driver-for-sql-server.md).
 
 If you are downloading the Windows version of the driver on a 64-bit version of Windows, the ODBC 64-bit installer installs both 32-bit and 64-bit ODBC drivers. If you use a 32-bit version of Windows, use the ODBC x86 installer. On non-Windows platforms, only 64-bit versions of the driver are available.
 

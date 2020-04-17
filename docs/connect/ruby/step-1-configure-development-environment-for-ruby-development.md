@@ -1,5 +1,6 @@
 ---
-title: "Step 1: Configure development environment for Ruby development | Microsoft Docs"
+title: "Step 1: Configure development environment for Ruby"
+description: "Learn how to configure your development environment for Ruby."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -82,9 +83,9 @@ For example, install version 2.3.0 of Ruby:
 > gem install tiny_tds  
 ```  
   
-## Mac  
+## macOS  
   
-Note that Mac OS X already has Ruby pre-installed, as the OS has a dependency.    
+Note that macOS already has Ruby pre-installed, as the OS has a dependency.
   
 1.  **Open terminal**  
   

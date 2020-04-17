@@ -39,13 +39,13 @@ Beginning in version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverph
   
 Also beginning in version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can specify a virtual network name, to connect to an AlwaysOn availability group. For more information about [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support for [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
   
-*$connectionInfo* [OPTIONAL]: An associative **array** that contains connection attributes (for example, **array**("Database" => "AdventureWorks")). See [Connection Options](../../connect/php/connection-options.md) for a list of the supported keys for the array.  
+*$connectionInfo* [OPTIONAL]: An associative **array** that contains connection attributes (for example, **array**("Database" => "AdventureWorks")). See [Connection Options](connection-options.md) for a list of the supported keys for the array.  
   
 ## Return Value  
 A PHP connection resource. If a connection cannot be successfully created and opened, **false** is returned.  
   
 ## Remarks  
-If values for the *UID* and *PWD* keys are not specified in the optional *$connectionInfo* parameter, the connection will be attempted using Windows Authentication. For more information about connecting to the server, see [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) and [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+If values for the *UID* and *PWD* keys are not specified in the optional *$connectionInfo* parameter, the connection will be attempted using Windows Authentication. For more information about connecting to the server, see [How to: Connect Using Windows Authentication](how-to-connect-using-windows-authentication.md) and [How to: Connect Using SQL Server Authentication](how-to-connect-using-sql-server-authentication.md).  
   
 ## Example  
 The following example creates and opens a connection using Windows Authentication. The example assumes that SQL Server and the [AdventureWorks](https://www.codeplex.com/SqlServerSamples) database are installed on the local computer. All output is written to the console when the example is run from the command line.  

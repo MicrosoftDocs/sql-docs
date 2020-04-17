@@ -36,7 +36,7 @@ Possible values are:
 
 *	**accessToken**: Use this connection property to connect to a SQL Database using an access token. accessToken can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It cannot be used in the connection URL.  
 
-For more information, see the authentication property on the [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) page.  
+For more information, see the authentication property on the [Setting the Connection Properties](setting-the-connection-properties.md) page.  
 
 
 ## Client setup requirements
@@ -106,7 +106,7 @@ With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrat
 For more information, see [Set Kerberos ticket on Windows, Linux And macOS](#set-kerberos-ticket-on-windows-linux-and-macos) for more details. Alternatively, on Windows, mssql-jdbc_auth-\<version>-\<arch>.dll can also be used for ActiveDirectoryIntegrated authentication with JDBC Driver.
 
 > [!NOTE]
->  If you are using an older version of the driver, check this [link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 
+>  If you are using an older version of the driver, check this [link](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 
 
 The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups you belong to, must exist in the database and must have the CONNECT permission. 
 
@@ -282,7 +282,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	11. Under section "Keys", create a key by filling in the name field, selecting the duration of the key, and saving the configuration (leave the value field empty). After saving, the value field should be filled automatically, copy the generated value. This is the client Secret.
 	12. Click Azure Active Directory on the left side panel. Under "App Registrations", find the "End points" tab. Copy the URL under "OATH 2.0 TOKEN ENDPOINT", this is your STS URL.
 	
-	![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
+	![JDBC_AAD_Token](media/jdbc_aad_token.png)  
 2. Sign in to your Azure SQL Server's user database as an Azure Active Directory admin and using a T-SQL command
 provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)
  for more details on how to create an Azure Active Directory admin and a contained database user.

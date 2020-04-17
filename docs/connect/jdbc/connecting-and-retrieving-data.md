@@ -16,7 +16,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-When you are working with the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], there are two primary methods for establishing a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. One is to set connection properties in the connection URL, and then call the getConnection method of the DriverManager class to return a [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
+When you are working with the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], there are two primary methods for establishing a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. One is to set connection properties in the connection URL, and then call the getConnection method of the DriverManager class to return a [SQLServerConnection](reference/sqlserverconnection-class.md) object.  
   
 > [!NOTE]  
 > For a list of the connection properties supported by the JDBC driver, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md).  

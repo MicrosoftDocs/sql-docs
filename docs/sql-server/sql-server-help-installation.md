@@ -194,7 +194,7 @@ For this approach, you use the **Disk** Installation source.
 
 6. Type in *sql server 2014* in the search bar. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
 
-   ![SQL Server 2014 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-search.png)
+   ![SQL Server 2014 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2012-search.png)
 
    ![SQL Server 2012 content add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2012-add-update.png)
 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server help content with Help Viewer
+title: Add SQL Server help content with Help Viewer
 ms.prod: sql
 ms.technology: 
 ms.reviewer: ""
@@ -282,8 +282,16 @@ After you download offline books on a system that has internet access, you can u
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
 
-## Next steps
+## Lifecycle policy
 
-[Microsoft Help Viewer - Visual Studio](/visualstudio/ide/microsoft-help-viewer)
+Review the Microsoft Product Lifecycle for information about how a specific product, service, or technology is supported:
+
+- [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle/selectindex)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+## Next steps
+
+[Microsoft Help Viewer - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)
+[SQL Server Documentation, start](../sql-server/index.yml?view=sql-server-2016)  
+[Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

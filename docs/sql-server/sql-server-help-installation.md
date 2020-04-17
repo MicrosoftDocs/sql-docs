@@ -11,31 +11,28 @@ ms.custom: ""
 ms.date: 04/20/2020
 ---
 
-# SQL Server offline help content using Help Viewer
+# Add different versions of SQL Server help documentation
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-You can use the Microsoft Help Viewer to download and install SQL Server help packages from online sources or local disk. You can then view the content offline. The Help Viewer is installed with several different tools. This article describes how to download and view offline SQL Server content with Help Viewer in SQL SErver Management Studio (SSMS).
+The documentation for several older versions of Microsoft SQL Server has been archived. Yet the archived documentation remains available at:
+
+- [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/).
+
+> [!TIP]
+> Use the [Versioning drop-down list control](../sql-server/versioning-system-monikers-ui-sql-server.md) to select the version of SQL Server you want to see documentation for. The control is available near the top of this webpage.
+>
+> In the dropdown list, the value labeled **SQL Server previous versions** allows this article to be displayed. This version value also hides most other articles. Almost every other version value hides this article.
+>
+> The documentation for a _newer_ version of SQL Server is available [here](../sql-server/index.yml?view=sql-server-2017).
+
+This article describes how to download and view offline SQL Server content in Help Viewer with [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 Internet access is required to download the Help Viewer content. You can then migrate the content to a computer that doesn't have internet access.
 
->[!NOTE]
-> To get local content for the current versions of SQL server, install the current version of SQL Server Management Studio [SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-
-## Where to get help content for different SQL Server versions
-
-- SQL Server 2019 - Online
-- SQL Server 2017 - Online
-- SQL Server 2016 - Online
-- SQL Server 2014 - [Download center](https://www.microsoft.com/download/details.aspx?id=42557)
-- SQL Server 2012 - [Download center](https://www.microsoft.com/download/details.aspx?id=35750)
+## How to download and configure offline content
 
 You can view the SQL Server help content by using the **HELP** menu in the latest version of Help Viewer in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-
-> [!Note]
-> You can also view the SQL Server help content by using Help viewer in [Visual Studio](https://visualstudio.microsoft.com/downloads/). To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
-
-## How to download and configure offline content
 
 Below are steps on how to load offline content for different versions of SQL Server.
 
@@ -281,6 +278,17 @@ After you download offline books on a system that has internet access, you can u
 6. Once these files have been moved, launch Help Viewer on the offline system and you can see the SQL Server technical documentation.
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
+
+### Help Viewer
+
+You can use the Microsoft Help Viewer to download and install SQL Server help packages from online sources or local disk. You can then view the content offline. The Help Viewer is installed with several different tools.
+
+- [Latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
+- [Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/installation?view=vs-2019)
+
+To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
+
+For additional details about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2016).
 
 ## Lifecycle policy
 

@@ -29,7 +29,7 @@ manager: craigg
   
 ## Explanation  
 An error was encountered while processing the log during rollback, recovery, or replication. This could indicate an error detected by the operating system or an internal consistency error detected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-The SQL Server Engine performs logical checks on the consistency of the transaction log contents as it reads and processes it. Not all aspects of the log header, log blocks, and log records are checked. The State number provides more information on the type of failure:
+The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] performs logical checks on the consistency of the transaction log contents as it reads and processes it. Not all aspects of the log header, log blocks, and log records are checked. The State number provides more information on the type of failure:
 
  - **State 1** The log file header of the Virtual Log File (VLF) was damaged.  If a damaged log file header is found as part of starting up the database on service startup, you may only see Error 9004 in the ERRORLOG. The Log File Header is the first portion of each VLF inside of a transaction log. The log file header is a not the same as the single file header, or the first 8 KB, of the log file. If the file header of the log file is damaged, you may get Msg 5172, similar to a database-file header-page corruption.
  - **State 2 and 3**  A log block was invalid when performing recovery during a RESTORE operation.

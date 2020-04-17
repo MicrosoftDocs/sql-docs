@@ -24,7 +24,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   

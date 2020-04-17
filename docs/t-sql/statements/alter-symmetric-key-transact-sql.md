@@ -31,7 +31,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SYMMETRIC KEY Key_name <alter_option>  
   

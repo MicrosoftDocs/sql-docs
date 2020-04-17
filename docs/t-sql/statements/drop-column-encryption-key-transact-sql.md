@@ -30,7 +30,7 @@ ms.author: jaszymas
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  

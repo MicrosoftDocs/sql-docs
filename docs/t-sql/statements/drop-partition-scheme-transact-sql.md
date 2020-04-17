@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  

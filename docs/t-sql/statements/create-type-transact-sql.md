@@ -41,7 +41,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
@@ -115,7 +115,7 @@ column_name AS computed_column_expression
      [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
-```  
+```syntaxsql
 -- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> [ ,... n ] }  

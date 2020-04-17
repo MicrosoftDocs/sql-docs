@@ -34,7 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE SYMMETRIC KEY key_name   
     [ AUTHORIZATION owner_name ]  
     [ FROM PROVIDER provider_name ]  

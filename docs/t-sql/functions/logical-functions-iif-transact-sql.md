@@ -27,7 +27,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 IIF ( boolean_expression, true_value, false_value )  
 ```  

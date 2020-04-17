@@ -32,7 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  

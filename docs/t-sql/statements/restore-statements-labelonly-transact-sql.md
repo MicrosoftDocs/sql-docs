@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RESTORE LABELONLY   
 FROM <backup_device>   

@@ -33,7 +33,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER QUEUE <object>   
    queue_settings  
    | queue_action  

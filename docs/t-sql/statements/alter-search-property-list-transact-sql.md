@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER SEARCH PROPERTY LIST list_name  
 {  
    ADD 'property_name'  

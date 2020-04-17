@@ -38,7 +38,7 @@ Changes the properties of a database master key.
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER MASTER KEY <alter_option>
@@ -55,7 +55,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { SERVICE MASTER KEY | PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 -- Note: DROP ENCRYPTION BY SERVICE MASTER KEY is not supported on Azure SQL Database.
 
@@ -73,7 +73,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
 ALTER MASTER KEY <alter_option>

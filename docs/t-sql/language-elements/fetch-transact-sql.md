@@ -33,7 +33,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   

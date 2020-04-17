@@ -56,7 +56,7 @@ Uses a character data type.
 Specifies the database to connect to.  
   
 - -D  
-Causes the value passed to the `bcp` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Causes the value passed to the `bcp` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *error_file*
 Specifies the full path of an error file used to store any rows that the `bcp` utility cannot transfer from the file to the database.  
@@ -143,4 +143,4 @@ Used with the format and -f format_file options, generates an XML-based format f
   
 ## See Also
 
-[Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Connecting with **sqlcmd**](connecting-with-sqlcmd.md)  

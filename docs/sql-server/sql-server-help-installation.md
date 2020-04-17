@@ -77,9 +77,9 @@ For this approach, you use the **Online** Installation source.
 
    The Help Viewer opens to the Manage Content tab.
 
-2. To find the latest help content for SQL Server 2014, under the **Manage Content** tab choose **Disk** under the Installation source and then 
+2. To find the latest help content for SQL Server 2017, under the **Manage Content** tab choose **Online** under the Installation source and then type in *sql server 2017* in the search bar.
 
-   ![SQL Server 2014 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-search.png)
+   ![SQL Server 2017 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2017-search.png)
 
    > [!Note]
    > The Local store path on the Manage Content tab shows where on the local computer the content will be installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
@@ -131,7 +131,7 @@ For this approach, you use the **Disk** Installation source.
 
 2. Next step is to unzip the file.
 
-3. In SSMS, select **Add and Remove Help Content** on the Help menu.
+3. In SSMS , select **Add and Remove Help Content** on the Help menu.
 
    ![HelpViewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
 

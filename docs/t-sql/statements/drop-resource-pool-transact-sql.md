@@ -27,7 +27,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP RESOURCE POOL pool_name  
 [ ; ]  

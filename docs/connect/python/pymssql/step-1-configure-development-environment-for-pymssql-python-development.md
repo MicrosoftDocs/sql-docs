@@ -54,11 +54,11 @@ c. Once downloaded run the msi to install Python runtime
 > sudo pip install pymssql  
 ```  
   
-## Mac  
+## macOS
   
 1. **Install Python runtime and pip package manager**  
 a. Go to [python.org](https://www.python.org/downloads/)  
-b. Click on the appropriate Mac installer pkg link.   
+b. Click on the appropriate macOS installer pkg link.   
 c. Once downloaded run the pkg to install Python runtime  
   
 2.  **Open terminal**  

@@ -225,6 +225,8 @@
         href: big-data-cluster/troubleshoot-active-directory.md
   - name: Reference
     items:
+    - name: BDC partners
+      href: sql-server/partner-big-data-cluster.md
     - name: Deployment reference
       items:
       - name: Deployment configuration file
@@ -10076,8 +10078,6 @@
       href: sql-server/sql-server-docs-contribute.md
   - name: Partners
     items:
-    - name: Big Data Clusters
-      href: sql-server/partner-big-data-cluster.md
     - name: Monitoring
       href: sql-server/partner-monitor-sql-server.md
     - name: High availability & disaster recovery

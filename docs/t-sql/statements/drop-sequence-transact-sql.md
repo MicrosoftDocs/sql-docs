@@ -28,7 +28,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_name.sequence_name | sequence_name } [ ,...n ]  
  [ ; ]  
 ```  

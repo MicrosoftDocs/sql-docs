@@ -47,7 +47,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE REMOTE SERVICE BINDING binding_name   
    [ AUTHORIZATION owner_name ]   

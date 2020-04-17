@@ -30,7 +30,7 @@ This function returns an integer value measuring the difference between the [SOU
   
 ## Syntax  
   
-```  
+```syntaxsql
 DIFFERENCE ( character_expression , character_expression )  
 ```  
   

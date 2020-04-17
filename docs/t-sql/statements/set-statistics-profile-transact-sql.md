@@ -33,7 +33,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET STATISTICS PROFILE { ON | OFF }  
 ```  

@@ -58,7 +58,7 @@ This setting is only available in Azure Synapse Analytics (Formerly SQL DW).
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 ALTER DATABASE SCOPED CONFIGURATION
@@ -104,7 +104,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
 
-```
+```syntaxsql
 -- Synatx for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION

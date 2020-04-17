@@ -36,7 +36,7 @@ Checks the integrity of all the pages and structures that make up the table or i
     
 ## Syntax    
     
-```    
+```syntaxsql
 DBCC CHECKTABLE     
 (    
     table_name | view_name    

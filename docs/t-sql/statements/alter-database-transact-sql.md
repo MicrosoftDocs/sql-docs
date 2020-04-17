@@ -77,7 +77,7 @@ Provides the syntax related to database scoped configurations used for individua
 
 ## Syntax
 
-```
+```syntaxsql
 -- SQL Server Syntax
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -301,7 +301,7 @@ Provides the syntax and related information for the SET options of ALTER DATABAS
 
 ## Syntax
 
-```
+```syntaxsql
 -- Azure SQL Database Syntax
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -736,7 +736,7 @@ Provides the syntax and related information for the SET options of ALTER DATABAS
 
 ## Syntax
 
-```
+```syntaxsql
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {
@@ -978,7 +978,7 @@ Modifies the maximum database size options for replicated tables, distributed ta
 
 ## Syntax
 
-```
+```syntaxsql
 -- Analytics Platform System
 ALTER DATABASE database_name
     SET ( <set_database_options> | <db_encryption_option> )

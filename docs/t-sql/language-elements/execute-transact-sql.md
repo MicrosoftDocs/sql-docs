@@ -45,7 +45,7 @@ Executes a command string or character string within a [!INCLUDE[tsql](../../inc
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 Execute a stored procedure or function  
@@ -103,7 +103,7 @@ Execute a pass-through command against a linked server
 }  
 ```  
   
-```  
+```syntaxsql
 -- In-Memory OLTP   
 
 Execute a natively compiled, scalar user-defined function  
@@ -127,7 +127,7 @@ Execute a natively compiled, scalar user-defined function
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Database   
   
 Execute a stored procedure or function  
@@ -176,7 +176,7 @@ Execute a character string
   
 ```  
   
-```sql  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  

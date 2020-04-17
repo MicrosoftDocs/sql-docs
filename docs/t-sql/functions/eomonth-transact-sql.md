@@ -28,7 +28,7 @@ This function returns the last day of the month containing a specified date, wit
   
 ## Syntax  
   
-```  
+```syntaxsql
 EOMONTH ( start_date [, month_to_add ] )  
 ```  
   

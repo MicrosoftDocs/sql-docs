@@ -34,7 +34,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Azure SQL Data Warehouse and Parallel Data Warehouse  
 GRANT   
     <permission> [ ,...n ]  

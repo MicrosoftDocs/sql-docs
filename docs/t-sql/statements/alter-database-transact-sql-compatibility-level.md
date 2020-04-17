@@ -35,7 +35,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ## Syntax
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 ```

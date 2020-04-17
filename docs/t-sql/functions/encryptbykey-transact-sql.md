@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }  
     [, { add_authenticator | @add_authenticator }  

@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 FIRST_VALUE ( [scalar_expression ] )   
     OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )  
   

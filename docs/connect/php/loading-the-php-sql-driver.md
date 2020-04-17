@@ -1,5 +1,6 @@
 ---
-title: "Loading the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+title: "Loading the Microsoft Drivers for PHP"
+description: "This page provides instructions for loading the Microsoft Drivers for PHP for SQL Server into the PHP process space."
 ms.custom: ""
 ms.date: "02/11/2019"
 ms.prod: sql
@@ -78,13 +79,13 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
 For more information about **php.ini** directives, see [Description of core php.ini directives](https://php.net/manual/en/ini.core.php).  
   
 ## See Also  
-[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
 
-[System Requirements for the Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[System Requirements for the Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)
 
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
 
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+[SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
 
-[PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[PDO_SQLSRV Driver API Reference](pdo-sqlsrv-driver-reference.md)  
   

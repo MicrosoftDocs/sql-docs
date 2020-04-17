@@ -347,7 +347,7 @@ The following are links to information, tools, and scripts used in the developme
 
 + Article describing the resume-matching solution: [Optimization tip and tricks for SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Scripts used in SQL optimization for resume-matching solution: [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Scripts used in SQL optimization for resume-matching solution: [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)
 
 ### Learn about Windows server management
 

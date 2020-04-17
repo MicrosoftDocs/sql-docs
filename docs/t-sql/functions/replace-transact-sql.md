@@ -32,7 +32,7 @@ Replaces all occurrences of a specified string value with another string value.
   
 ## Syntax  
   
-```  
+```syntaxsql
 REPLACE ( string_expression , string_pattern , string_replacement )  
 ```  
   

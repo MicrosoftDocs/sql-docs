@@ -40,7 +40,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 Create XML Index   
 CREATE [ PRIMARY ] XML INDEX index_name   

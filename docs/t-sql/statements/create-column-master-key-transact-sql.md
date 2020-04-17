@@ -40,7 +40,7 @@ Creates a column master key metadata object in a database. A column master key m
 
 ## Syntax  
 
-``` sql 
+```syntaxsql
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  

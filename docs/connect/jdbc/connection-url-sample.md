@@ -1,5 +1,6 @@
 ---
 title: "Connection URL sample | Microsoft Docs"
+description: "This Microsoft JDBC Driver for SQL Server sample application demonstrates how to connect to a SQL Server database by using a connection URL."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

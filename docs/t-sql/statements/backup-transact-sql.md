@@ -74,7 +74,7 @@ Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da
 
 ## Syntax
 
-```sql
+```syntaxsql
 --Backing Up a Whole Database
 BACKUP DATABASE { database_name | @database_name_var }
   TO <backup_device> [ ,...n ]
@@ -990,7 +990,7 @@ Backs up a SQL database placed/hosted in an Azure SQL Databae managed instance. 
 
 ## Syntax
 
-```sql
+```syntaxsql
 BACKUP DATABASE { database_name | @database_name_var }
   TO URL = { 'physical_device_name' | @physical_device_name_var }[ ,...n ]
   WITH COPY_ONLY [, { <general_WITH_options> } ]
@@ -1202,7 +1202,7 @@ For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] databas
 
 ## Syntax
 
-```sql
+```syntaxsql
 --Create a full backup of a user database or the master database.
 BACKUP DATABASE database_name
     TO DISK = '\\UNC_path\backup_directory'

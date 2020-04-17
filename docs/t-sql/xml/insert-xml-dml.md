@@ -24,7 +24,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 insert   
       Expression1 (  

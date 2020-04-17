@@ -27,7 +27,7 @@ This function decrypts data with a symmetric key. That symmetric key automatical
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByKeyAutoCert ( cert_ID , cert_password   
     , { 'ciphertext' | @ciphertext }  

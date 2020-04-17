@@ -1,5 +1,6 @@
 ---
 title: "SqlContext Object | Microsoft Docs"
+description: When you invoke managed code in SQL Server in a user connection, access to the context of the caller is abstracted in a SqlContext object.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

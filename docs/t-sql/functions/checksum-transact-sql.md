@@ -31,7 +31,7 @@ The `CHECKSUM` function returns the checksum value computed over a table row, or
   
 ## Syntax  
   
-```
+```syntaxsql
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   

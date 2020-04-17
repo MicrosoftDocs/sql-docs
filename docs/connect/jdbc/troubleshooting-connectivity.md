@@ -1,5 +1,6 @@
 ---
-title: "Troubleshooting connectivity | Microsoft Docs"
+title: "Troubleshooting connectivity"
+description: "Learn about JDBC connectivity and how to troubleshoot potential connection issues when using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

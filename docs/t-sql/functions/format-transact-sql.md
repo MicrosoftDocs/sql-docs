@@ -29,7 +29,7 @@ Returns a value formatted with the specified format and optional culture. Use th
   
 ## Syntax  
   
-```sql
+```syntaxsql
 FORMAT ( value, format [, culture ] )  
 ```  
   

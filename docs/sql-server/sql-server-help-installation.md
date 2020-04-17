@@ -15,7 +15,7 @@ ms.date: 04/20/2020
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-You can use the Microsoft Help Viewer to download and install SQL Server help packages from online sources or local disk. You can then view the content offline. The Help Viewer is installed with several different tools. This article describes how to download and view offline SQL Server content with Help Viewer in SSMS.
+You can use the Microsoft Help Viewer to download and install SQL Server help packages from online sources or local disk. You can then view the content offline. The Help Viewer is installed with several different tools. This article describes how to download and view offline SQL Server content with Help Viewer in SQL SErver Management Studio (SSMS).
 
 Internet access is required to download the Help Viewer content. You can then migrate the content to a computer that doesn't have internet access.
 
@@ -30,7 +30,7 @@ Internet access is required to download the Help Viewer content. You can then mi
 - SQL Server 2014 - [Download center](https://www.microsoft.com/download/details.aspx?id=42557)
 - SQL Server 2012 - [Download center](https://www.microsoft.com/download/details.aspx?id=35750)
 
-You can view the SQL Server help content by using the **HELP** menu in the latest version of Help Viewer in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
+You can view the SQL Server help content by using the **HELP** menu in the latest version of Help Viewer in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 > [!Note]
 > You can also view the SQL Server help content by using Help viewer in [Visual Studio](https://visualstudio.microsoft.com/downloads/). To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
@@ -51,21 +51,21 @@ For this approach, you use the **Online** Installation source.
 
 2. To find the latest help content for SQL Server 2019, under the **Manage Content** tab choose **Online** under the Installation source and then type in *sql server 2019* in the search bar.
 
-   ![SQL Server 2019 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2019-search.png)
+   ![SQL Server 2019 documentation search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2019-search.png)
 
    > [!Note]
-   > The Local store path on the Manage Content tab shows where on the local computer the content will be installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
+   > The Local store path on the Manage Content tab shows where on the local computer the content is installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
 3. To install the latest help content package for SQL Server 2019, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
 
-   ![SQL Server 2019 content add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2019-add-update.png)
+   ![SQL Server 2019 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2019-add-update.png)
 
    > [!NOTE]
    > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
 4. You can verify that the SQL Server 2019 content is loaded by searching under the content pane on the left for *sql server 2019*.
 
-   ![SQL Server 2019 content automatically updated](../sql-server/media/sql-server-help-installation/sql-2019-content.png)
+   ![SQL Server 2019 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2019-content.png)
 
 ### Configure SQL Server 2017 offline content
 
@@ -79,21 +79,21 @@ For this approach, you use the **Online** Installation source.
 
 2. To find the latest help content for SQL Server 2017, under the **Manage Content** tab choose **Online** under the Installation source and then type in *sql server 2017* in the search bar.
 
-   ![SQL Server 2017 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2017-search.png)
+   ![SQL Server 2017 books search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2017-search.png)
 
    > [!Note]
-   > The Local store path on the Manage Content tab shows where on the local computer the content will be installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
+   > The Local store path on the Manage Content tab shows where on the local computer the content is installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
 3. To install the latest help content package for SQL Server 2017, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
 
-   ![SQL Server 2017 content add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2017-add-update.png)
+   ![SQL Server 2017 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2017-add-update.png)
 
    > [!NOTE]
    > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
 4. You can verify that the SQL Server 2017 content is loaded by searching under the content pane on the left for *sql server 2017*.
 
-   ![SQL Server 2017 content automatically updated](../sql-server/media/sql-server-help-installation/sql-2017-content.png)
+   ![SQL Server 2017 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2017-content.png)
 
 ### Configure SQL Server 2016 offline content
 
@@ -107,21 +107,21 @@ For this approach, you use the **Online** Installation source.
 
 2. To find the latest help content for SQL Server 2016, under the **Manage Content** tab choose **Online** under the Installation source and then type in *sql server 2016* in the search bar.
 
-   ![SQL Server 2016 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2016-search.png)
+   ![SQL Server 2016 books search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2016-search.png)
 
    > [!Note]
-   > The Local store path on the Manage Content tab shows where on the local computer the content will be installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
+   > The Local store path on the Manage Content tab shows where on the local computer the content is installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
 3. To install the latest help content package for SQL Server 2016, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
 
-   ![SQL Server 2016 content add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2016-add-update.png)
+   ![SQL Server 2016 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2016-add-update.png)
 
    > [!NOTE]
    > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
 4. You can verify that the SQL Server 2016 content is loaded by searching under the content pane on the left for *sql server 2016*.
 
-   ![SQL Server 2016 content automatically updated](../sql-server/media/sql-server-help-installation/sql-2016-content.png)
+   ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2016-content.png)
 
 ### Configuring SQL Server 2014 offline content
 
@@ -129,11 +129,11 @@ For this approach, you use the **Disk** Installation source.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/en-us/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
-2. You need to unzip the file to view the .msha file.
+2. Unzip the file to view the.msha file.
 
-   ![SQL Server 2014 Help content setup file](../sql-server/media/sql-server-help-installation/sql-2014-help-content-setup-msha.png)
+   ![SQL Server 2014 Help documentation setup file](../sql-server/media/sql-server-help-installation/sql-2014-help-content-setup-msha.png)
 
-3. In SSMS , select **Add and Remove Help Content** on the Help menu.
+3. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
    ![HelpViewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
 
@@ -153,16 +153,16 @@ For this approach, you use the **Disk** Installation source.
 
 6. Type in *sql server 2014* in the search bar. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
 
-   ![SQL Server 2014 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-search.png)
+   ![SQL Server 2014 books search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-search.png)
 
-   ![SQL Server 2014 content add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-add-update.png)
+   ![SQL Server 2014 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-add-update.png)
 
     > [!NOTE]
     > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
 7. You can verify that the SQL Server 2014 content is loaded by searching under the content pane on the left for *sql server 2014*.
 
-   ![SQL Server 2014 content automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
+   ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
 
 ### Configure SQL Server 2012 offline content
 
@@ -170,11 +170,11 @@ For this approach, you use the **Disk** Installation source.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/en-us/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
-2. You need to unzip the file to view the .msha file.
+2. Unzip the file to view the.msha file.
 
    ![SQL Server 2014 Help content setup file](../sql-server/media/sql-server-help-installation/sql-2012-help-content-setup-msha.png)
 
-3. In SSMS , select **Add and Remove Help Content** on the Help menu.
+3. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
    ![HelpViewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
 
@@ -190,20 +190,20 @@ For this approach, you use the **Disk** Installation source.
 
 5. Locate the folder where you unzipped the content. Select the **HelpContentSetup.msha** file in the folder then select **Open**.
 
-   ![Open the SQL Server 2013 Help Content Setup.msha file](../sql-server/media/sql-server-help-installation/sql-2012-open-msha.png)
+   ![Open the SQL Server 2012 Help Content Setup.msha file](../sql-server/media/sql-server-help-installation/sql-2012-open-msha.png)
 
 6. Type in *sql server 2014* in the search bar. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
 
-   ![SQL Server 2014 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2012-search.png)
+   ![SQL Server 2012 books search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2012-search.png)
 
-   ![SQL Server 2012 content add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2012-add-update.png)
+   ![SQL Server 2012 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2012-add-update.png)
 
     > [!NOTE]
     > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
 7. You can verify that the SQL Server 2014 content is loaded by searching under the content pane on the left for *sql server 2014*.
 
-   ![SQL Server 2012 content automatically updated](../sql-server/media/sql-server-help-installation/sql-2012-content.png)
+   ![SQL Server 2012 documentation automatically updated](../sql-server/media/sql-server-help-installation/sql-2012-content.png)
 
 ### View offline help content
 
@@ -243,7 +243,7 @@ Online help always shows the most up-to-date content.
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-### To view Visual Studio Online help in Visual Studio
+### View Visual Studio Online help in Visual Studio
 
 1. Point to **Set Help Preference** on the Help menu and choose either **Launch in Browser** or **Launch in Help Viewer**.
 2. select **View Help** in the Help menu. The latest Visual Studio help displays in the chosen environment.
@@ -252,7 +252,7 @@ Online help always shows the most up-to-date content.
 
 When you press F1 or select **Help** or **?** icon in a dialog box in SSMS or VS, a context-sensitive online help article appears in the browser or Help Viewer.
 
-### To view F1 help
+### View F1 help
 
 1. In the Help menu, select **Set Help Preference**, and choose either **Launch in Browser** or **Launch in Help Viewer**.
 2. Press F1, or select **Help**, or **?** in dialog boxes where they're available, to see context-sensitive online articles in the chosen environment.
@@ -278,7 +278,7 @@ After you download offline books on a system that has internet access, you can u
 
 5. Select the three folders, **ContentStore**, **Incoming**, **IndexStore**, and copy them to the same location on your offline system. You may need to use an interim media device such as a USB or CD.
 
-6. Once these files have been moved, launch Help Viewer on the offline system and the SQL Server technical documentation will be available.
+6. Once these files have been moved, launch Help Viewer on the offline system and you can see the SQL Server technical documentation.
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
 

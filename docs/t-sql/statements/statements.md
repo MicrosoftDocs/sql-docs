@@ -20,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compiles successfully. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creates an *implicit* transaction for a SQL statement if a `BeginTransaction` command does not specify the start of a transaction. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] always commits an implicit transaction if the statement succeeds, and rolls back an implicit transaction if the command fails.  
 
-There are many types of statements. Perhaps the most important is the [SELECT](select-transact-sql.md) that retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This article summarizes the categories of statements for use with Transact-SQL (T-SQL) in addition to the `SELECT` statement. You can find all of the statements listed in the left-hand navigation.
+There are many types of statements. Perhaps the most important is the [SELECT](../queries/select-transact-sql.md) that retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This article summarizes the categories of statements for use with Transact-SQL (T-SQL) in addition to the `SELECT` statement. You can find all of the statements listed in the left-hand navigation.
 
 ## Backup and restore
 

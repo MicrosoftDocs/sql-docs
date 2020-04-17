@@ -28,7 +28,7 @@ This function returns a string resulting from the concatenation, or joining, of 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   

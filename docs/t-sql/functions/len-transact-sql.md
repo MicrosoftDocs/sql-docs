@@ -33,7 +33,7 @@ Returns the number of characters of the specified string expression, excluding t
   
 ## Syntax  
   
-```  
+```syntaxsql
 LEN ( string_expression )  
 ```  
   

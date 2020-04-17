@@ -32,7 +32,7 @@ This function returns the number of items found in a group. `COUNT_BIG` operates
   
 ## Syntax  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  

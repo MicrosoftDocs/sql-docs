@@ -28,7 +28,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-20
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  

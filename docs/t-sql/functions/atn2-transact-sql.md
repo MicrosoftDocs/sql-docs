@@ -30,7 +30,7 @@ Returns the angle, in radians, between the positive x-axis and the ray from the 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ATN2 ( float_expression , float_expression )  
 ```  
   

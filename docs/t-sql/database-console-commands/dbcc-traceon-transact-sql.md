@@ -30,7 +30,7 @@ Enables the specified trace flags.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   

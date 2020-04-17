@@ -78,7 +78,7 @@ Query hints specify that the indicated hints should be used throughout the query
   
 ## Syntax  
   
-```  
+```syntaxsql
 <query_hint > ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   

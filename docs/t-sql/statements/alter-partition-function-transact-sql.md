@@ -38,7 +38,7 @@ Alters a partition function by splitting or merging its boundary values. Running
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER PARTITION FUNCTION partition_function_name()  
 {   

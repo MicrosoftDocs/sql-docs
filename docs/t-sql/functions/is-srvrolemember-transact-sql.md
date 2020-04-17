@@ -29,7 +29,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  

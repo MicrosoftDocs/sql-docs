@@ -38,7 +38,7 @@ Displays fragmentation information for the data and indexes of the specified tab
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC SHOWCONTIG   
 [ (   
     { table_name | table_id | view_name | view_id }   

@@ -29,7 +29,7 @@ Returns the binary checksum value computed over a row of a table or over a list 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   

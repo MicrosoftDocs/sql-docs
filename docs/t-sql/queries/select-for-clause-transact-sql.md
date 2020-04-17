@@ -38,7 +38,7 @@ Use the FOR clause to specify one of the following options for query results.
   
 ## Syntax  
   
-```
+```syntaxsql
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  

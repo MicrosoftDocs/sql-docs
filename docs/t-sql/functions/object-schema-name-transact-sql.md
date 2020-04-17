@@ -31,7 +31,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  

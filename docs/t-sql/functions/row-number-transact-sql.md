@@ -37,7 +37,7 @@ Numbers the output of a result set. More specifically, returns the sequential nu
   
 ## Syntax  
   
-```  
+```syntaxsql
 ROW_NUMBER ( )   
     OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 ```  

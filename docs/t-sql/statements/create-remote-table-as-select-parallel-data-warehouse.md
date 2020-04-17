@@ -23,7 +23,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  

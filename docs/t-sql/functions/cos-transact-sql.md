@@ -29,7 +29,7 @@ A mathematical function that returns the trigonometric cosine of the specified a
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COS ( float_expression )  
 ```  
   

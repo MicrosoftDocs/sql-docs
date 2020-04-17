@@ -29,7 +29,7 @@ A mathematical function that returns the trigonometric cotangent of the specifie
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COT ( float_expression )  
 ```  
   

@@ -38,7 +38,7 @@ Defragments indexes of the specified table or view.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   

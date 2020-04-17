@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE CONTRACT contract_name  
    [ AUTHORIZATION owner_name ]  

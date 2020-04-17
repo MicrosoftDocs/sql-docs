@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER DATABASE ENCRYPTION KEY  
@@ -41,7 +41,7 @@ ALTER DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  

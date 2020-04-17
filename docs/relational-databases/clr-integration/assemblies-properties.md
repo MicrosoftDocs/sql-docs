@@ -1,5 +1,6 @@
 ---
 title: "Assembly Properties (General Page) | Microsoft Docs"
+description: You can view or modify properties for an assembly hosted on SQL Server. These include assembly name and owner, permission set, and other properties.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

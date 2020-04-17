@@ -61,7 +61,7 @@ ms.author: "mathoma"
  <sup>1</sup> Integrated authentication can be used only if all computers are in the same domain or are in multiple domains that have trust relationships with each other.  
   
 > [!NOTE]  
->  Delegation is required if you use Integrated Authentication. We recommend that you use Basic Authentication and SSL for connections from the Subscriber to IIS.  
+>  Delegation is required if you use Integrated Authentication. We recommend that you use Basic Authentication and TLS for connections from the Subscriber to IIS.  
   
 ## E. Connection to the Publisher  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener and Merge Replication Reconciler components are hosted on the computer that is running IIS. These components perform the following actions:  

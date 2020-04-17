@@ -1,5 +1,6 @@
 ---
 title: "Coding User-Defined Types | Microsoft Docs"
+description: This example shows how to implement a UDT to use in a SQL Server database. It implements the UDT as a structure. 
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

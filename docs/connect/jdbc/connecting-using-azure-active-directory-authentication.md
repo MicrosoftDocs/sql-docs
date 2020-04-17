@@ -1,5 +1,6 @@
 ---
-title: "Connecting using Azure Active Directory authentication | Microsoft Docs"
+title: "Connecting using Azure Active Directory authentication"
+description: "Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/29/2020"
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article provides information on how to develop Java applications to use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
+This article provides information on how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 
 You can use Azure Active Directory (AAD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL DB. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
@@ -102,7 +103,7 @@ You have successfully logged on as: <your MSI username>
 
 ## Connecting using ActiveDirectoryIntegrated authentication mode
 With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrated Authentication using a Kerberos ticket on multiple platforms (Windows, Linux, and macOS).
-For more information, see [Set Kerberos ticket on Windows, Linux And Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) for more details. Alternatively, on Windows, mssql-jdbc_auth-\<version>-\<arch>.dll can also be used for ActiveDirectoryIntegrated authentication with JDBC Driver.
+For more information, see [Set Kerberos ticket on Windows, Linux And macOS](#set-kerberos-ticket-on-windows-linux-and-macos) for more details. Alternatively, on Windows, mssql-jdbc_auth-\<version>-\<arch>.dll can also be used for ActiveDirectoryIntegrated authentication with JDBC Driver.
 
 > [!NOTE]
 >  If you are using an older version of the driver, check this [link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 
@@ -151,7 +152,7 @@ Running this example on a client machine automatically uses your Kerberos ticket
 You have successfully logged on as: <your domain user name>
 ```
 
-### Set Kerberos ticket on Windows, Linux And Mac
+### Set Kerberos ticket on Windows, Linux And macOS
 
 You need to set up a Kerberos ticket linking your current user to a Windows domain account. A summary of key steps is included below.
 
@@ -167,7 +168,7 @@ JDK comes with `kinit`, which you can use to get a TGT from Key Distribution Cen
 > [!NOTE]
 >  You may need to specify a `.ini` file with `-Djava.security.krb5.conf` for your application to locate KDC.
 
-#### Linux and Mac
+#### Linux and macOS
 
 ##### Requirements
 Access to a Windows domain-joined machine to query your Kerberos Domain Controller.
@@ -186,7 +187,7 @@ Access to a Windows domain-joined machine to query your Kerberos Domain Controll
   The DC name, in this case `co1-red-dc-33.domain.company.com`
 
 ##### Step 2: Configuring KDC in krb5.conf
-- **Run on**: Linux/Mac
+- **Run on**: Linux/macOS
 - **Action**: Edit the /etc/krb5.conf in an editor of your choice. Configure the following keys
   ```
   [libdefaults]
@@ -203,7 +204,7 @@ Access to a Windows domain-joined machine to query your Kerberos Domain Controll
 >  Domain must be in ALL CAPS.
 
 ##### Step 3: Testing the ticket granting ticket retrieval
-- **Run on**: Linux/Mac
+- **Run on**: Linux/macOS
 - **Action**:
   - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC, then it will prompt you for your domain password.
   - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.

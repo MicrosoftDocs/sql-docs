@@ -1,10 +1,11 @@
 ---
-title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+title: "Release Notes for the Microsoft Drivers for PHP"
+description: "This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server."
 ms.custom: ""
 ms.date: "04/15/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: "v-dapugl, kenvh"
+ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -190,11 +191,11 @@ This release only applies to Linux and macOS.
 - Support for macOS Sierra and macOS El Capitan
 - Support for Ubuntu 15.10, and Debian 8
 - Dropped support for Ubuntu 15.04
-- Support for Always On Availability groups via Transparent Network IP Resolution. For more information, see [Connection Options](../../connect/php/connection-options.md).
+- Support for Always On Availability groups via Transparent Network IP Resolution. For more information, see [Connection Options](connection-options.md).
 - Added support for sql_variant data type with limitation.
-- Idle Connection Resiliency support in Windows. For more information, see [Connection Options](../../connect/php/connection-options.md).
-- Connection pooling support for Linux and macOS. For more information, see [Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
-- Support for Azure Active Directory Authentication with ActiveDirectoryPassword and SqlPassword. For more information, see [Connection Options](../../connect/php/connection-options.md).
+- Idle Connection Resiliency support in Windows. For more information, see [Connection Options](connection-options.md).
+- Connection pooling support for Linux and macOS. For more information, see [Connection Pooling](connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
+- Support for Azure Active Directory Authentication with ActiveDirectoryPassword and SqlPassword. For more information, see [Connection Options](connection-options.md).
 
 ## 4.0
 
@@ -245,17 +246,17 @@ This release only applies to Linux and macOS.
 ## What's new in 3.0  
 
 - Support for PHP 5.4.  PHP 5.2 is not supported in version 3 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-- AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
-- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information, see [Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
-- AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
-- Support for the high-availability, disaster recovery features. For more information, see [Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
-- Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
-- The PDO::ATTR_EMULATE_PREPARES attribute has been added. For more information, see [PDO::prepare](../../connect/php/pdo-prepare.md).  
+- AttachDBFileName connection option is added. For more information, see [Connection Options](connection-options.md).  
+- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information, see [Support for LocalDB](php-driver-for-sql-server-support-for-localdb.md).
+- AttachDBFileName connection option is added. For more information, see [Connection Options](connection-options.md).  
+- Support for the high-availability, disaster recovery features. For more information, see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
+- Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](cursor-types-pdo-sqlsrv-driver.md).
+- The PDO::ATTR_EMULATE_PREPARES attribute has been added. For more information, see [PDO::prepare](pdo-prepare.md).  
 
 ## What's new in 2.0
 
-In version 2.0, support for the PDO_SQLSRV driver was added. For more information, see [PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md).  
+In version 2.0, support for the PDO_SQLSRV driver was added. For more information, see [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md).  
 
 ## See Also
 
-[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)

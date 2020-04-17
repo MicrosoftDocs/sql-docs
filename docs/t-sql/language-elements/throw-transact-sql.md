@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 THROW [ { error_number | @local_variable },  
         { message | @local_variable },  
         { state | @local_variable } ]   

@@ -34,7 +34,7 @@ Creates an object called a default. When bound to a column or an alias data type
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE DEFAULT [ schema_name . ] default_name   
 AS constant_expression [ ; ]  

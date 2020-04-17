@@ -29,7 +29,7 @@ This function uses an asymmetric key to decrypt encrypted data.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  

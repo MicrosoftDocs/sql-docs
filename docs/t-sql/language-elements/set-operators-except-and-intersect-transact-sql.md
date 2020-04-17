@@ -43,7 +43,7 @@ To combine the result sets of two queries that use EXCEPT or INTERSECT, the basi
   
 ## Syntax  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { EXCEPT | INTERSECT }  
 { <query_specification> | ( <query_expression> ) }  

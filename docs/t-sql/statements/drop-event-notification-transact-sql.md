@@ -31,7 +31,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP EVENT NOTIFICATION notification_name [ ,...n ]  
 ON { SERVER | DATABASE | QUEUE queue_name }  

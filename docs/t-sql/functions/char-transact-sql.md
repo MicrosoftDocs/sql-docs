@@ -37,7 +37,7 @@ This function converts an **int** ASCII code to a character value.
   
 ## Syntax  
   
-```
+```syntaxsql
 CHAR ( integer_expression )  
 ```  
   

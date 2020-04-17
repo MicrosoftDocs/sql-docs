@@ -40,7 +40,7 @@ Drops an existing user-defined Resource Governor workload group.
 
 ## Syntax
 
-```
+```syntaxsql
 DROP WORKLOAD GROUP group_name
 [;]
 ```

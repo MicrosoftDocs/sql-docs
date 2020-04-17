@@ -35,7 +35,7 @@ Removes all rows from a table or specified partitions of a table, without loggin
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -48,7 +48,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  

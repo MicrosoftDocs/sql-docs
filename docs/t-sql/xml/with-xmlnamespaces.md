@@ -31,7 +31,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 WITH XMLNAMESPACES ( <XML namespace declaration item>  
 [ { , <XML namespace declaration item> }...] )   
@@ -42,12 +42,12 @@ WITH XMLNAMESPACES ( <XML namespace declaration item>
 <xml_namespace_uri> ::= <character string literal>  
 ```  
   
-```  
+```syntaxsql
   
 <xml_namespace_prefix> ::= <identifier>  
 ```  
   
-```  
+```syntaxsql
   
 <XML default namespace declaration item> ::=  
 DEFAULT <xml_namespace_uri>  

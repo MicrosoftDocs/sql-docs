@@ -29,7 +29,7 @@ Encrypts data with the public key of a certificate.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  

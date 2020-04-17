@@ -33,7 +33,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER DATABASE database_name  
    SET HADR   

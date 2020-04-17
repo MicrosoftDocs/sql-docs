@@ -40,7 +40,7 @@ Specifies whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auto
 
 ## Syntax
 
-```
+```syntaxsql
 SET XACT_ABORT { ON | OFF }
 ```
 

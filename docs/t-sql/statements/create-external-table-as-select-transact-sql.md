@@ -30,7 +30,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] table_name   
     WITH (   

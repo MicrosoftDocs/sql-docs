@@ -15,20 +15,19 @@ ms.date: 04/20/2020
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-The documentation for several older versions of Microsoft SQL Server has been archived. Yet the archived documentation remains available at:
-
-- [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/).
-
-> [!TIP]
-> Use the [Versioning drop-down list control](../sql-server/versioning-system-monikers-ui-sql-server.md) to select the version of SQL Server you want to see documentation for. The control is available near the top of this webpage.
->
-> In the dropdown list, the value labeled **SQL Server previous versions** allows this article to be displayed. This version value also hides most other articles. Almost every other version value hides this article.
->
-> The documentation for a _newer_ version of SQL Server is available [here](../sql-server/index.yml?view=sql-server-2017).
+The documentation for several older versions of Microsoft SQL Server has been archived. Yet the archived documentation is still available.
 
 This article describes how to download and view offline SQL Server content in Help Viewer with [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 Internet access is required to download the Help Viewer content. You can then migrate the content to a computer that doesn't have internet access.
+
+Offline content is available for these SQL Server versions:
+
+- SQL Server 2019
+- SQL Server 2017
+- SQL Server 2016
+- SQL Server 2014
+- SQL Server 2012
 
 ## How to download and configure offline content
 
@@ -236,22 +235,24 @@ Online help always shows the most up-to-date content.
 
 ### To view SQL Server online help in SSMS
 
-- select **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) displays in a browser.
+- Select **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) displays in a browser.
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
 ### View Visual Studio Online help in Visual Studio
 
 1. Point to **Set Help Preference** on the Help menu and choose either **Launch in Browser** or **Launch in Help Viewer**.
-2. select **View Help** in the Help menu. The latest Visual Studio help displays in the chosen environment.
+
+2. Select **View Help** in the Help menu. The latest Visual Studio help displays in the chosen environment.
 
 ## View F1 help
 
 When you press F1 or select **Help** or **?** icon in a dialog box in SSMS or VS, a context-sensitive online help article appears in the browser or Help Viewer.
 
-### View F1 help
+### To View F1 help
 
 1. In the Help menu, select **Set Help Preference**, and choose either **Launch in Browser** or **Launch in Help Viewer**.
+
 2. Press F1, or select **Help**, or **?** in dialog boxes where they're available, to see context-sensitive online articles in the chosen environment.
 
 > [!NOTE]
@@ -290,7 +291,7 @@ To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual 
 
 For additional details about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2016).
 
-## Lifecycle policy
+## Life cycle policy
 
 Review the Microsoft Product Lifecycle for information about how a specific product, service, or technology is supported:
 
@@ -300,6 +301,9 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## Next steps
 
-[Microsoft Help Viewer - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)
-[SQL Server Documentation, start](../sql-server/index.yml?view=sql-server-2016)  
-[Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)
+To learn more about archived content and about Help viewer please reference the links below.
+
+- [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/)
+- [Microsoft Help Viewer - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)
+- [SQL Server Documentation, start](../sql-server/index.yml?view=sql-server-2016)
+- [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

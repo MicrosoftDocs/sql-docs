@@ -166,7 +166,7 @@ ms.author: vanto
         TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
 > [!NOTE]
-> Even though you may use a UNC path as the Auditing file Target, use caution. If there is network latency to that fileshare you may experience performance degradation in SQL Server as threads would be waiting for an auditing write to complete before proceeding. You may observe various error messages in the SQL Server error log such as 17894:
+> Even though you may use a UNC path as the Auditing file Target, use caution. If there is network latency to that fileshare, you may experience performance degradation in SQL Server as threads would be waiting for an auditing write to complete before proceeding. You may observe various error messages in the SQL Server error log such as 17894:
 >
 >   2020-02-07 12:21:35.100 Server Dispatcher (0x7954) from dispatcher pool 'XE Engine main dispatcher pool' Worker 0x00000058E7300000  appears to be non-yielding on Node 0.
 

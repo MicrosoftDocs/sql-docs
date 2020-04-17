@@ -1,5 +1,6 @@
 ---
-title: "Python SQL Driver - pymssql | Microsoft Docs"
+title: "Python SQL Driver - pymssql"
+description: "This guide describes installing Python, the Microsoft ODBC Driver for SQL Server, and pyODBC. Then using the sample code, connect to and interact with a SQL database."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
-title: "Connecting with bcp | Microsoft Docs"
+title: "Connecting with bcp"
+description: "Learn how to use the bcp utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: v-daenge
 # Connecting with bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
+The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
   
 - The field terminator is a tab ("\t").  
   
@@ -31,7 +32,7 @@ The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available i
 > -   -r"\n"  
 > -   -r'\n'  
   
-The following is a sample command invocation of `bcp` to copy table rows to a text file:  
+The following example is a command invocation of `bcp` to copy table rows to a text file:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -79,7 +80,7 @@ Specifies a login timeout. The -l option specifies the number of seconds before 
 Specifies the number of the last row to export from a table or import from a data file.  
   
 - -m *max_errors*  
-Specifies the maximum number of syntax errors that can occur before the `bcp` operation is cancelled.  
+Specifies the maximum number of syntax errors that can occur before the `bcp` operation is canceled.  
   
 - -n  
 Uses the native (database) data types of the data to perform the bulk-copy operation.  

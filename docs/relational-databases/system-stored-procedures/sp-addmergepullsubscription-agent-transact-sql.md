@@ -313,7 +313,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1** (default)|Windows Integrated Authentication is used.|  
   
 > [!NOTE]  
->  We recommend using Basic Authentication with Web synchronization. To use Web synchronization, you must make an SSL connection to the Web server. For more information, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+>  We recommend using Basic Authentication with Web synchronization. To use Web synchronization, you must make a TLS connection to the Web server. For more information, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
 `[ @internet_timeout = ] internet_timeout`
  Is the length of time, in seconds, before a Web synchronization request expires. *internet_timeout* is **int**, with a default of **300** seconds.  

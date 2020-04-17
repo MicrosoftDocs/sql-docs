@@ -1,5 +1,6 @@
 ---
-title: "Step 1: Configure development environment for PHP development | Microsoft Docs"
+title: "Step 1: Configure environment for PHP"
+description: "Step 1 of this getting started guide involves installing PHP, the Microsoft ODBC Driver for SQL Server, and configuring your development environment."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
@@ -28,7 +29,7 @@ ms.author: v-daenge
 * Configure loading the PHP driver, as noted here: [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 
 * Configure IIS to host PHP applications, as noted here: [Configuring IIS for the Microsoft Drivers for PHP for SQL Server](../../connect/php/configuring-iis-for-php-sql-driver.md)
 
-### Linux and Mac
+### Linux and macOS
 
 
-*	Configure loading the PHP driver and configure your web server to host PHP applications, as noted here: [PHP Linux and Mac Drivers Installation Tutorial](../../connect/php/installation-tutorial-linux-mac.md)
+*	Configure loading the PHP driver and configure your web server to host PHP applications, as noted here: [PHP Linux and macOS Drivers Installation Tutorial](../../connect/php/installation-tutorial-linux-mac.md)

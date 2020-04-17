@@ -33,7 +33,7 @@ Creates a database credential. A database credential is not mapped to a server l
 
 ## Syntax
 
-``` 
+```syntaxsql
 CREATE DATABASE SCOPED CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]

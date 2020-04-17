@@ -36,7 +36,7 @@ Creates a new queue in a database. Queues store messages. When a message arrives
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]

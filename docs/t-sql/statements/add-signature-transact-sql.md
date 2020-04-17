@@ -28,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
     BY <crypto_list> [ ,...n ]  
   

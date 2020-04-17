@@ -32,7 +32,7 @@ ms.author: "mikeray"
   
 ## Syntax  
   
-```SQL  
+```syntaxsql
   
 ALTER AVAILABILITY GROUP group_name   
   {  

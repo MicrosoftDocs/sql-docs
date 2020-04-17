@@ -21,7 +21,7 @@ When you are working with the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnovers
 > [!NOTE]  
 > For a list of the connection properties supported by the JDBC driver, see [Setting the connection properties](setting-the-connection-properties.md).  
   
-The second method involves setting the connection properties by using setter methods of the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) class, and then calling the [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) method to return a SQLServerConnection object.  
+The second method involves setting the connection properties by using setter methods of the [SQLServerDataSource](reference/sqlserverdatasource-class.md) class, and then calling the [getConnection](reference/getconnection-method-sqlserverdatasource.md) method to return a SQLServerConnection object.  
   
 The topics in this section describe the different ways in which you can connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, and they also demonstrate different techniques for retrieving data.  
   

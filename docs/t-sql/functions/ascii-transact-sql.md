@@ -31,7 +31,7 @@ Returns the ASCII code value of the leftmost character of a character expression
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASCII ( character_expression )  
 ```  
   

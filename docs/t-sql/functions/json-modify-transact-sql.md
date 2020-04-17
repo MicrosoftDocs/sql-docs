@@ -92,7 +92,7 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
   
  **Query**
   
-```sql  
+```syntaxsql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -151,7 +151,7 @@ PRINT @info
   
  **Query**
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -245,7 +245,7 @@ PRINT @stats
   
  **Query**  
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -273,7 +273,7 @@ PRINT @info
   
  **Query**  
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info

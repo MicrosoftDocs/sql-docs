@@ -1,5 +1,6 @@
 ---
-title: "Connecting with sqlcmd | Microsoft Docs"
+title: "Connecting with sqlcmd"
+description: "Learn how to use the sqlcmd utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: v-daenge
 # Connecting with sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+The [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
   
 The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, respectively:
   

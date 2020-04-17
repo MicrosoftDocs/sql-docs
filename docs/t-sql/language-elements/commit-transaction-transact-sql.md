@@ -39,14 +39,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Applies to SQL Server (starting with 2008) and Azure SQL Database
   
 COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 -- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 

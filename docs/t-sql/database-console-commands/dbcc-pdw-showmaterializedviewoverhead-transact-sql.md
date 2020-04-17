@@ -23,7 +23,7 @@ Displays the number of incremental changes in the base tables that are held for 
   
 ## Syntax
 
-```
+```syntaxsql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_name  " )
 [;]
 ```

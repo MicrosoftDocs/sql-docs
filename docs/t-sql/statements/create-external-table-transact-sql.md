@@ -58,7 +58,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
-```
+```syntaxsql
 -- Create a new external table
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )
@@ -593,7 +593,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
-```
+```syntaxsql
 -- Create a table for use with elastic query  
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -739,7 +739,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (
@@ -977,7 +977,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (

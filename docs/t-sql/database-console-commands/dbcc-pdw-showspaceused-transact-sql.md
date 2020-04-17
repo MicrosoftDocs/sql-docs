@@ -22,7 +22,7 @@ Displays the number of rows, disk space reserved, and disk space used for a spec
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Show the space used for all user tables and system tables in the current database  
 DBCC PDW_SHOWSPACEUSED  
 [;]  

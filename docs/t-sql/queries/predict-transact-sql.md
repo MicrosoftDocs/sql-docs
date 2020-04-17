@@ -25,7 +25,7 @@ Generates a predicted value or scores based on a stored model. For more informat
 
 ## Syntax
 
-```
+```syntaxsql
 PREDICT  
 (  
   MODEL = @model | model_literal,  

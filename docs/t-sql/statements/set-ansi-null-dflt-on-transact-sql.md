@@ -34,13 +34,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 SET ANSI_NULL_DFLT_ON {ON | OFF}
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_NULL_DFLT_ON ON

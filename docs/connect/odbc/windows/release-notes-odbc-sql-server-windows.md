@@ -1,5 +1,6 @@
 ---
 title: "Release Notes for ODBC Driver for SQL Server on Windows"
+description: "This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows."
 ms.custom: ""
 ms.date: "03/10/2020"
 ms.prod: sql

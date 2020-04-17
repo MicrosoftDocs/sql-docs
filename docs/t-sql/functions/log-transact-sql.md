@@ -30,13 +30,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database  
   
 LOG ( float_expression [, base ] )  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure Synapse SQL 
   
 LOG ( float_expression )  

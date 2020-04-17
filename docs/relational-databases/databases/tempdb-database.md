@@ -115,16 +115,16 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 |S7|32|6|192|
 |S9|32|12|384|
 |S12|32|12|384|
-|P1|13.9|12|166.8|
-|P2|13.9|12|166.8|
-|P4|13.9|12|166.8|
-|P6|13.9|12|166.8|
-|P11|13.9|12|166.8|
-|P15|13.9|12|166.8|
-|Premium Elastic Pools (all DTU configurations)|13.9|12|166.8|
-|Standard Elastic Pools (S0-S2)|13.9|12|166.8|
+|P1|13.9|12|166.7|
+|P2|13.9|12|166.7|
+|P4|13.9|12|166.7|
+|P6|13.9|12|166.7|
+|P11|13.9|12|166.7|
+|P15|13.9|12|166.7|
+|Premium Elastic Pools (all DTU configurations)|13.9|12|166.7|
+|Standard Elastic Pools (S0-S2)|13.9|12|166.7|
 |Standard Elastic Pools (S3 and above) |32|12|384|
-|Basic Elastic Pools (all DTU configurations)|13.9|12|166.8|
+|Basic Elastic Pools (all DTU configurations)|13.9|12|166.7|
 ||||
 
 ### TempDB sizes for vCore-based service tiers

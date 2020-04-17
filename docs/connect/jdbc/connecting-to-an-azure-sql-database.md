@@ -22,7 +22,7 @@ This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../incl
   
 - [How to: Connect to SQL Azure Using JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connecting using Azure Active Directory Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md)  
   
 ## Details
 
@@ -85,4 +85,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## See also
 
-[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  

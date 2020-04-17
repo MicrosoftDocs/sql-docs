@@ -1,5 +1,6 @@
 ---
-title: "Connecting and retrieving data | Microsoft Docs"
+title: "Connecting and retrieving data"
+description: "Learn how to connect to a SQL database and retrieve data using the Microsoft JDBC Driver for SQL Server and these code samples."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -29,9 +30,9 @@ The topics in this section describe the different ways in which you can connect 
 | Topic                                                                | Description                                                                                                                                                   |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Connection URL Sample](../../connect/jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and then use an SQL statement to retrieve data. |
-| [Data Source Sample](../../connect/jdbc/data-source-sample.md)       | Describes how to use a data source to connect to SQL Server and then use a stored procedure to retrieve data.                                                 |
+| [Data Source Sample](data-source-sample.md)       | Describes how to use a data source to connect to SQL Server and then use a stored procedure to retrieve data.                                                 |
   
 ## See also
 
-[Sample JDBC driver applications](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[Sample JDBC driver applications](sample-jdbc-driver-applications.md)  
   

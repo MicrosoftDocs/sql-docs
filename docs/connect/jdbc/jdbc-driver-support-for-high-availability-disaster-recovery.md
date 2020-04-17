@@ -1,5 +1,6 @@
 ---
-title: "JDBC driver support for High Availability, disaster recovery | Microsoft Docs"
+title: "JDBC driver support for High Availability, disaster recovery"
+description: "This topic discusses Microsoft JDBC Driver for SQL Server support for high-availability, disaster recovery (AlwaysOn Availability Groups)."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: v-daenge
 
   This topic discusses [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] support for high-availability, disaster recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Books Online.  
   
- Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you can specify the availability group listener of a (high-availability, disaster-recovery) availability group (AG) in the connection property. If a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] application is connected to an AlwaysOn database that fails over, the original connection is broken and the application must open a new connection to continue work after the failover. The following [connection properties](../../connect/jdbc/setting-the-connection-properties.md) were added in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
+  Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you can specify the availability group listener of a (high-availability, disaster-recovery) availability group (AG) in the connection property. If a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] application is connected to an AlwaysOn database that fails over, the original connection is broken and the application must open a new connection to continue work after the failover. The following [connection properties](../../connect/jdbc/setting-the-connection-properties.md) were added in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
   
 -   **multiSubnetFailover**  
   
@@ -47,7 +48,7 @@ Please note that:
   
  The **multiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
   
- For more information about connection string keywords in the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).  
+ For more information about connection string keywords in the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Setting the Connection Properties](setting-the-connection-properties.md).  
   
  Specifying **multiSubnetFailover=true** when connecting to something other than an availability group listener or Failover Cluster Instance may result in a negative performance impact, and is not supported.  
   
@@ -89,15 +90,15 @@ Please note that:
 ## New Methods supporting multiSubnetFailover and applicationIntent  
  The following methods give you programmatic access to the **multiSubnetFailover**, **applicationIntent** and **transparentNetworkIPResolution** connection string keywords:  
   
--   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.getApplicationIntent](reference/getapplicationintent-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.setApplicationIntent](../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.setApplicationIntent](reference/setapplicationintent-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.getMultiSubnetFailover](../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.getMultiSubnetFailover](reference/getmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.setMultiSubnetFailover](../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.setMultiSubnetFailover](reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [SQLServerDriver.getPropertyInfo](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
+-   [SQLServerDriver.getPropertyInfo](reference/getpropertyinfo-method-sqlserverdriver.md)  
 
 -   SQLServerDataSource.setTransparentNetworkIPResolution
 
@@ -106,10 +107,10 @@ Please note that:
  The **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** and **setTransparentNetworkIPResolution** methods are also added to [SQLServerDataSource Class](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource Class](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), and [SQLServerXADataSource Class](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
 ## TLS/SSL certificate validation  
- An availability group consists of multiple physical servers. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] added support for **Subject Alternate Name** in TLS/SSL certificates so multiple hosts can be associated with the same certificate. For more information on TLS, see [Understanding encryption support](../../connect/jdbc/understanding-ssl-support.md).  
+ An availability group consists of multiple physical servers. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] added support for **Subject Alternate Name** in TLS/SSL certificates so multiple hosts can be associated with the same certificate. For more information on TLS, see [Understanding encryption support](understanding-ssl-support.md).  
   
 ## See also  
- [Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
- [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md)  
+ [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [Setting the connection properties](setting-the-connection-properties.md)  
   
   

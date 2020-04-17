@@ -49,11 +49,11 @@ If you are downloading the Windows version of the driver on a 64-bit version of 
 |ODBC Driver 13  | | | | | |Y| |
 |ODBC Driver 11  |Y|Y|Y|Y|Y|Y|Y|
 
-If you are using the SQLSRV driver, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) returns information about which version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server is being used by the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. If you are using the PDO_SQLSRV driver, you can use [PDO::getAttribute](../../connect/php/pdo-getattribute.md) to discover the version.
+If you are using the SQLSRV driver, [sqlsrv_client_info](sqlsrv-client-info.md) returns information about which version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server is being used by the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. If you are using the PDO_SQLSRV driver, you can use [PDO::getAttribute](pdo-getattribute.md) to discover the version.
 
 ## SQL Server
 
-For information about using PHP with Azure SQL Database, see [Connecting to Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
+For information about using PHP with Azure SQL Database, see [Connecting to Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md).
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; SQL Server version|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -69,7 +69,7 @@ For information about using PHP with Azure SQL Database, see [Connecting to Micr
 
 ## Operating Systems
 
-See the [supported operating systems](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems) for details on which operating systems are supported.
+See the [supported operating systems](microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems) for details on which operating systems are supported.
 
 ## Driver Versions
 

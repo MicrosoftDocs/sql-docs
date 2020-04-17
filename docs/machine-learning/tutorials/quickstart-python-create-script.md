@@ -3,11 +3,11 @@ title: "Quickstart: Run Python scripts"
 description: Run a set of simple Python scripts using SQL Server Machine Learning Services. Learn how to use the stored procedure sp_execute_external_script to execute the script in a SQL Server instance.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/15/2020  
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
@@ -21,7 +21,7 @@ In this quickstart, you'll run a set of simple Python scripts using [SQL Server 
 
 - This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language installed.
 
-- You also need a tool for running SQL queries that contain Python scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- You also need a tool for running SQL queries that contain Python scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [Azure Data Studio)](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio).
 
 ## Run a simple script
 
@@ -38,7 +38,7 @@ d = a*b
 print(c, d)
 ```
 
-1. Open a new query window in **SQL Server Management Studio** connected to your SQL Server instance.
+1. Open a new query window in **Azure Data Studio** connected to your SQL Server instance.
 
 1. Pass the complete Python script to the `sp_execute_external_script` stored procedure.
 

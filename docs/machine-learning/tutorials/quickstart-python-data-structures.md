@@ -3,11 +3,11 @@ title: "Quickstart: Python data structures"
 description: In this quickstart, learn how to work with data structures and data objects in Python and SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/15/2020  
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
@@ -33,7 +33,7 @@ How would you expose the single result of a calculation as a data frame, if a da
 
 - This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language installed.
 
-- You also need a tool for running SQL queries that contain Python scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- You also need a tool for running SQL queries that contain Python scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [Azure Data Studio)](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio).
 
 ## Scalar value as a series
 

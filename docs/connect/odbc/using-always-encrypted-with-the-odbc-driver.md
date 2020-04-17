@@ -1,5 +1,6 @@
 ---
-title: "Using Always Encrypted with the ODBC Driver for SQL Server | Microsoft Docs"
+title: "Using Always Encrypted with the ODBC Driver"
+description: "Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
 ms.date: 09/01/2018
 ms.prod: sql
@@ -19,7 +20,7 @@ author: v-chojas
 
 ### Introduction
 
-This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
 Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. Always Encrypted *with secure enclaves* extends this feature to enable richer functionality on sensitive data while keeping the data confidential.
 
@@ -54,7 +55,7 @@ Note that enabling Always Encrypted is not sufficient for encryption or decrypti
 ### Enabling Always Encrypted with Secure Enclaves
 
 > [!NOTE]
-> On Linux and Mac, OpenSSL version 1.0.1 or later is required to use Always Encrypted with Secure Enclaves.
+> On Linux and macOS, OpenSSL version 1.0.1 or later is required to use Always Encrypted with Secure Enclaves.
 
 Beginning with version 17.4, the driver supports Always Encrypted with Secure Enclaves. To enable use of the enclave when connecting to SQL Server 2019 or later, set the `ColumnEncryption` DSN, connection string, or connection attribute to the name of the enclave type and attestation protocol, and associated attestation data, separated by a comma. In version 17.4, only the [Virtualization Based Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave type and [Host Guardian Service](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) attestation protocol, denoted by `VBS-HGS`, is supported; to use it, specify the URL of the attestation server, for example:
 
@@ -425,16 +426,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 No other ODBC application changes are required to use AKV for CMK storage.
 
 > [!NOTE]
-> The driver contains a list of AKV endpoints which it trusts. Starting with driver version 17.5.2, this list is configurable: set the `AKVTrustedEndpoints` property in the driver or DSN's ODBCINST.INI or ODBC.INI registry key (Windows) or `odbcinst.ini` or `odbc.ini` file section (Linux/Mac) to a semicolon-delimited list. Setting it in the DSN takes precedence over a setting in the driver. If the value begins with a semicolon, it extends the default list; otherwise, it replaces the default list. The default list (as of 17.5) is `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+> The driver contains a list of AKV endpoints which it trusts. Starting with driver version 17.5.2, this list is configurable: set the `AKVTrustedEndpoints` property in the driver or DSN's ODBCINST.INI or ODBC.INI registry key (Windows) or `odbcinst.ini` or `odbc.ini` file section (Linux/macOS) to a semicolon-delimited list. Setting it in the DSN takes precedence over a setting in the driver. If the value begins with a semicolon, it extends the default list; otherwise, it replaces the default list. The default list (as of 17.5) is `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
 
 
 ### Using the Windows Certificate Store Provider
 
-The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no additional configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. See [Create and Store Column Master Keys (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) for more information.
+The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no additional configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. See [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) for more information.
 
 ### Using Custom Keystore Providers
 
-The ODBC Driver for SQL Server also supports custom third-party keystore providers using the CEKeystoreProvider interface. This allows an application to load, query, and configure keystore providers so that they can be used by the driver to access encrypted columns. Applications may also directly interact with a keystore provider in order to encrypt CEKs for storage in SQL Server and perform tasks beyond accessing encrypted columns with ODBC; for more information, see [Custom Keystore Providers](../../connect/odbc/custom-keystore-providers.md).
+The ODBC Driver for SQL Server also supports custom third-party keystore providers using the CEKeystoreProvider interface. This allows an application to load, query, and configure keystore providers so that they can be used by the driver to access encrypted columns. Applications may also directly interact with a keystore provider in order to encrypt CEKs for storage in SQL Server and perform tasks beyond accessing encrypted columns with ODBC; for more information, see [Custom Keystore Providers](custom-keystore-providers.md).
 
 Two connection attributes are used to interact with custom keystore providers. They are:
 
@@ -537,7 +538,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 Additional detailed error information may be obtained via [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
 
 > [!NOTE]
-> The provider can use the connection handle to associate the written data to a specific connection, if it so desires. This is useful for implementing per-connection configuration. It may also ignore the connection context and treat the data identically regardless of the connection used to send the data. See [Context Association](../../connect/odbc/custom-keystore-providers.md#context-association) for more information.
+> The provider can use the connection handle to associate the written data to a specific connection, if it so desires. This is useful for implementing per-connection configuration. It may also ignore the connection context and treat the data identically regardless of the connection used to send the data. See [Context Association](custom-keystore-providers.md#context-association) for more information.
 
 #### Reading data from a provider
 
@@ -559,7 +560,7 @@ The caller must ensure that a buffer of sufficient length following the CEKEYSTO
 
 This interface places no additional requirements on the format of data transferred between an application and a keystore provider. Each provider can define its own protocol/data format, depending on its needs.
 
-For an example of implementing your own keystore provider, see [Custom Keystore Providers](../../connect/odbc/custom-keystore-providers.md)
+For an example of implementing your own keystore provider, see [Custom Keystore Providers](custom-keystore-providers.md)
 
 ## Limitations of the ODBC driver when using Always Encrypted
 

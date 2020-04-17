@@ -1,7 +1,7 @@
 ---
 title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/01/2019
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -25,7 +25,7 @@ Returns the string provided as a first argument after some characters specified 
 
 ## Syntax
 
-```sql
+```syntaxsql
 TRANSLATE ( inputString, characters, translations)
 ```
 
@@ -60,13 +60,13 @@ This is dissimilar to the behavior of multiple `REPLACE` functions, as each func
 
 The following query replaces square and curly braces in the input string with parentheses:
 
-```syntaxsql
+```sql
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-```plain_text
+```text
 2*(3+4)/(7-2)
 ```
 
@@ -74,7 +74,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 In the following SELECT statement, there is a group of four nested calls to the REPLACE function. This group is equivalent to the one call made to the TRANSLATE function in the preceding SELECT:
 
-```syntaxsql
+```sql
 SELECT
 REPLACE
 (
@@ -103,7 +103,7 @@ REPLACE
 
 GeoJSON is a format for encoding a variety of geographic data structures. With the `TRANSLATE` function, developers can easily convert GeoJSON points to WKT format and vice versa. The following query replaces square and curly braces in input  with regular braces:
 
-```syntaxsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```

@@ -46,7 +46,7 @@ In the current release, the following options are available:
   
 - -e Write input scripts to the standard output device (stdout).
 
-- -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](.using-integrated-authentication.md).
+- -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](using-integrated-authentication.md).
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
 Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Linux code page.

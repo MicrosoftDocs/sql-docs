@@ -46,7 +46,7 @@ In the current release, the following options are available:
   
 - -e Write input scripts to the standard output device (stdout).
 
-- -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+- -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](.using-integrated-authentication.md).
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
 Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Linux code page.
@@ -63,7 +63,7 @@ Specifies the input and output code pages. The codepage number is a numeric valu
 - -k  Remove or replace control characters.  
   
 - **-K**_application\_intent_  
-Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, `sqlcmd` does not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, `sqlcmd` does not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-K** is not supported in the CTP for SUSE Linux. You can, however, specify the **ApplicationIntent=ReadOnly** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
@@ -73,7 +73,7 @@ Declares the application workload type when connecting to a server. The only cur
 - -m *error_level* Control which error messages are sent to stdout.  
   
 - **-M**_multisubnet\_failover_  
-Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** is not supported in the CTP for SUSE Linux. You can, however, specify the **MultiSubnetFailover=Yes** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
@@ -157,7 +157,7 @@ In the current release, the following commands are available:
 ## Unavailable Options
 In the current release, the following options are not available:  
 
-- -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](programming-guidelines.md).  
   
 - -L  List the locally configured server computers, and the names of the server computers that are broadcasting on the network.  
   
@@ -223,5 +223,5 @@ If the same option is specified in both the DSN and the `sqlcmd` or `bcp` comman
 Existing scripts that invoke `isql` can be modified to use `sqlcmd` by defining the following alias: `alias isql="sqlcmd -D"`.  
 
 ## See Also  
-[Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[Connecting with **bcp**](connecting-with-bcp.md)  
  

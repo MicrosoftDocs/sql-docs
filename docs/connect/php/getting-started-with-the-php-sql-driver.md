@@ -24,7 +24,7 @@ This section provides information about the system requirements for using the [!
 * [Step 4: Connect resiliently to SQL with PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## See Also  
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[Example Application &#40;SQLSRV Driver&#41;](example-application-sqlsrv-driver.md)
 
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 

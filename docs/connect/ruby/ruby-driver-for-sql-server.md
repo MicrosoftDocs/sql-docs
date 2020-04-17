@@ -1,6 +1,6 @@
 ---
 title: "Ruby Driver"
-description: "Learn how to connecto to a SQL Database using Ruby on Windows, Linux, or macOS." 
+description: "Learn how to connect to a SQL Database using Ruby on Windows, Linux, or macOS." 
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: sql

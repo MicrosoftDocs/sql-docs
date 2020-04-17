@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Restore HDFS admin rights
 
-HDFS acls were modified that affected the /system and /tmp folders in HDFS
+HDFS access control lists (ACL) were modified that affected the /system and /tmp folders in HDFS
 
 ## Symptom
 
@@ -24,7 +24,7 @@ A spark job is submitted through ADS and it fails with SparkContext initializati
 org.apache.hadoop.security.AccessControlException: Permission denied: user=<UserAccount>, access=WRITE, inode="/system/spark-events":sph:BDCAdmin:drwxr-xr-x
 ```
 
-Yarn UI shows application id in KILLED status.
+Yarn UI shows application ID in KILLED status.
 
 When you try to write to the folder as the domain user, it also fails. You can test with the following example:
 
@@ -36,9 +36,9 @@ hdfs dfs -rm /system/spark-events/test
 
 ## Cause
 
-The HDFS access control lists (ACL) were modified for BDC user domain security group. Modifications included ACLs for /system and /tmp folders. Modifications of these folders are not supported.
+The HDFS ACLs were modified for BDC user domain security group. Modifications included ACLs for /system and /tmp folders. Modifications of these folders are not supported.
 
-Verify the effect in the livy logs:
+Verify the effect in the Livy logs:
 
 ```
 INFO utils.LineBufferedStream: <date time> ,858 INFO yarn.Client: Application report for application_1580771254352_0041 (state: ACCEPTED)
@@ -47,9 +47,9 @@ WARN rsc.RSCClient: Client RPC channel closed unexpectedly.
 INFO interactive.InteractiveSession: Failed to ping RSC driver for session <ID>. Killing application
 ```
 
-In YARN UI it shows applications in KILLED status for the application id.
+The YARN UI shows applications in KILLED status for the application ID.
 
-To get the root cause of RPC connection close, check the application log for app corresponding to the application. In the preceding example it refers to `application_1580771254352_0041`. Use `kubectl` to connect to the sparkhead-0 pod, and run this command:
+To get the root cause of RPC connection close, check the application log for app corresponding to the application. In the preceding example, it refers to `application_1580771254352_0041`. Use `kubectl` to connect to the sparkhead-0 pod, and run this command:
 
 ```bash
 yarn logs -applicationId application_1580771254352_0041

@@ -15,11 +15,11 @@ ms.date: 04/22/2020
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Jupyter Notebook supports magic functions that extend the capabilities of the kernel by supporting additional commands. **KQL (Kusto query language) magic** is a command that extends the capabilities of the Python kernel in [Jupyter Notebook](https://jupyter.org/) so you can run Kusto language queries natively. You can combine Python and Kusto query language to query and visualize data using rich Plot.ly library integrated with `render` commands. KQL magic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location.Data sources for running queries are supported. These data sources include **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)**, **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)** and **[Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)**.
+Jupyter Notebook supports magic functions that extend the capabilities of the kernel by supporting additional commands. **KQL magic** is a command that extends the capabilities of the Python kernel in [Jupyter Notebook](https://jupyter.org/). You can combine Python and Kusto query language to query and visualize data using rich Plot.ly library integrated with `render` commands. KQL magic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Data sources for running queries are supported. These data sources include **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)**, **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)**.
 
-The KQL magic extension is supported in **[Azure Data Studio notebooks](notebooks-guidance.md)**. It allows you to connect, query, and explore Azure Data Explorer, Application Insights and Azure Monitor logs data using KQL.
+The KQL magic extension is supported in **[Azure Data Studio notebooks](notebooks-guidance.md)**. It allows you to connect, query, and explore Azure Data Explorer, Application Insights, and Azure Monitor logs data using KQL (Kusto query Language).
 
-This tutorial demonstrates how to create and run a notebook in Azure Data Studio using the KQL magic extension for a Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
+This tutorial demonstrates how to create and run a notebook in Azure Data Studio using the KQL magic extension for an Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
 
 ## Prerequisites
 
@@ -83,9 +83,9 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![Check for version](media/notebooks-tutorial-kql-magic/install-check-version.png)
 
-## KQL magic with a Azure Data Explorer cluster
+## KQL magic with an Azure Data Explorer cluster
 
-This section explains how to run data analysis using KQL magic with a Azure Data Explorer cluster.
+This section explains how to run data analysis using KQL magic with an Azure Data Explorer cluster.
 
 ### <a name="ade-load-auth"></a> Load and authenticate KQL magic for Azure Data Explorer
 
@@ -112,7 +112,7 @@ This section explains how to run data analysis using KQL magic with a Azure Data
 
 ### Query and visualize for Azure Data Explorer
 
-Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL. Render is supported with all attributes except kind, ysplit, and accumulate.
+Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. Analyze top 10 storm events by state and frequency:
 
@@ -120,7 +120,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    %kql StormEvents | summarize count() by State | sort by count_ | limit 10
    ```
 
-   If you're familiar with the Kusto Query Language (KQL), you can simply type the query after `%kql`.
+   If you're familiar with the Kusto Query Language (KQL), you can type the query after `%kql`.
 
    ![Analyze storm events](media/notebooks-tutorial-kql-magic/ade-analyze-storm-events.png)
 
@@ -208,7 +208,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 ### Query and visualize for Application Insights
 
-Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL. Render is supported with all attributes except kind, ysplit, and accumulate.
+Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. Show Page Views:
 
@@ -256,7 +256,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 ### Query and visualize for Azure Monitor Logs
 
-Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL. Render is supported with all attributes except kind, ysplit, and accumulate.
+Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. View a timeline chart:
 

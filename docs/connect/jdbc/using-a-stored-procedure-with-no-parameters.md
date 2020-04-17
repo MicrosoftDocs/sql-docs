@@ -24,7 +24,7 @@ When you use the JDBC driver to call a stored procedure without parameters, you 
 `{call procedure-name}`
 
 > [!NOTE]  
-> For more information about the SQL escape sequences, see [Using SQL escape sequences](../../connect/jdbc/using-sql-escape-sequences.md).
+> For more information about the SQL escape sequences, see [Using SQL escape sequences](using-sql-escape-sequences.md).
 
 As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
 
@@ -39,7 +39,7 @@ END
 
 This stored procedure returns a single result set that contains one column of data, which is a combination of the title, first name, and last name of the top 10 contacts that are in the Person.Contact table.
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method is used to call the GetContactFormalNames stored procedure.
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [executeQuery](reference/executequery-method-sqlserverstatement.md) method is used to call the GetContactFormalNames stored procedure.
 
 ```java
 public static void executeSprocNoParams(Connection con) throws SQLException {  
@@ -55,4 +55,4 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 
 ## See also
 
-[Using statements with stored procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Using statements with stored procedures](using-statements-with-stored-procedures.md)

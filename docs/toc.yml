@@ -223,6 +223,8 @@
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Active directory group scope
         href: big-data-cluster/troubleshoot-active-directory.md
+      - name: HDFS admin rights
+        href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference
     items:
     - name: BDC partners

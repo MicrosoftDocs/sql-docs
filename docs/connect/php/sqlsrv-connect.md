@@ -83,9 +83,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+[SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
 
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
+[Connecting to the Server](connecting-to-the-server.md)
 
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+[About Code Examples in the Documentation](about-code-examples-in-the-documentation.md)  
   

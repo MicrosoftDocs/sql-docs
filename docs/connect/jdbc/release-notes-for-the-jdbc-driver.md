@@ -46,7 +46,7 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | Always Encrypted change | Details |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server now supports Always Encrypted with secure enclaves. The details can be found here: Always Encrypted with secure enclaves. |
-| More details and sample code. | See [Always Encrypted with Secure Enclaves](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
+| More details and sample code. | See [Always Encrypted with Secure Enclaves](always-encrypted-with-secure-enclaves.md). |
 | &nbsp; | &nbsp; |
 
 ### Performance Improvement when Retrieving Temporal Datatypes from SQL Server <sup>1</sup>
@@ -106,7 +106,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | NTLM change | Details |
 | :--------- | :------ |
 | Supports NTLM authentication mode. | This mode of authentication allows both Windows and non-Windows clients to authenticate themselves against SQL Server using Windows domain users. |
-| More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
+| More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](using-ntlm-authentication-to-connect-to-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### Introduces querying ParameterMetaData via _useFmtOnly_
@@ -114,7 +114,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | useFmtOnly change | Details |
 | :---------- | :------ |
 | **useFmtOnly** connection property added. | This feature allows users to optionally query ParameterMetaData via the `SET FMTONLY ON` legacy API. This is useful for scenarios where `sp_describe_undeclared_parameters` doesn't perform as expected. |
-| More details and limitations. | See [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| More details and limitations. | See [Using useFmtOnly](using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.1
@@ -335,7 +335,7 @@ The JDBC Driver now supports `sql_variant` datatypes to be used with SQL Server.
 
 ### Implemented prepared statement metadata caching
 
-The JDBC Driver has implemented prepared statement metadata caching for performance improvement. The driver now supports caching prepared statement metadata in the driver with `disableStatementPooling` and `statementPoolingCacheSize` connection properties. This feature is disabled by default. For more information, see [Prepared statement metadata caching for the JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md).
+The JDBC Driver has implemented prepared statement metadata caching for performance improvement. The driver now supports caching prepared statement metadata in the driver with `disableStatementPooling` and `statementPoolingCacheSize` connection properties. This feature is disabled by default. For more information, see [Prepared statement metadata caching for the JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md).
 
 ### Added support for Azure AD Integrated Authentication on Linux/macOS
 
@@ -343,7 +343,7 @@ The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authen
 
 ### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.4.0
 
-The JDBC Driver has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.4.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+The JDBC Driver has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.4.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## 6.2
 
@@ -419,11 +419,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### Always Encrypted
 
-The driver supports the Always Encrypted feature in SQL Server 2016. This feature ensures that sensitive data is never seen in plaintext in a SQL Server instance. Always Encrypted works by transparently encrypting the data in the application, so that SQL Server will handle only the encrypted data and not plaintext values. Even if the SQL Server instance or the host machine is compromised, all an attacker can get is ciphertext of sensitive data. For details, see [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).
+The driver supports the Always Encrypted feature in SQL Server 2016. This feature ensures that sensitive data is never seen in plaintext in a SQL Server instance. Always Encrypted works by transparently encrypting the data in the application, so that SQL Server will handle only the encrypted data and not plaintext values. Even if the SQL Server instance or the host machine is compromised, all an attacker can get is ciphertext of sensitive data. For details, see [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).
 
 ### Internationalized domain names
 
-The driver supports internationalized domain names (IDNs) for server names. For details, see "Using International Domain Names" in the [International features of the JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md) article.
+The driver supports internationalized domain names (IDNs) for server names. For details, see "Using International Domain Names" in the [International features of the JDBC Driver](international-features-of-the-jdbc-driver.md) article.
 
 ### Parameterized queries
 
@@ -433,11 +433,11 @@ The driver now supports retrieving parameter metadata with prepared statements f
 
 Azure AD authentication is a mechanism of connecting to Azure SQL Database v12 by using identities in Azure AD. Use Azure AD authentication to centrally manage identities of database users and as an alternative to SQL Server authentication.
 
-You can use JDBC Driver 6.0 to specify your Azure AD credentials in the JDBC connection string to connect to Azure SQL Database. For details, see the authentication property in the [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md) article.
+You can use JDBC Driver 6.0 to specify your Azure AD credentials in the JDBC connection string to connect to Azure SQL Database. For details, see the authentication property in the [Setting the connection properties](setting-the-connection-properties.md) article.
 
 ### Table-valued parameters
 
-TVPs provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use TVPs to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that you can then operate on by using Transact-SQL. For details, see [Using table-valued parameters](../../connect/jdbc/using-table-valued-parameters.md).
+TVPs provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use TVPs to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that you can then operate on by using Transact-SQL. For details, see [Using table-valued parameters](using-table-valued-parameters.md).
 
 ### Always On Availability Groups
 
@@ -470,19 +470,19 @@ The driver supports JDK version 8.0 in addition to JDK 7.0, 6.0, and 5.0.
 
 ### JDBC 4.1 and 4.2 compliance
 
-The driver supports Java Database Connectivity API 4.1 and 4.2 specifications, in addition to 4.0. For details, see [JDBC 4.1 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
+The driver supports Java Database Connectivity API 4.1 and 4.2 specifications, in addition to 4.0. For details, see [JDBC 4.1 compliance for the JDBC Driver](jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 compliance for the JDBC Driver](jdbc-4-2-compliance-for-the-jdbc-driver.md).
 
 ### Bulk copy
 
-You use the bulk copy feature to quickly copy large amounts of data into tables or views in SQL Server databases. For details, see [Using bulk copy with the JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
+You use the bulk copy feature to quickly copy large amounts of data into tables or views in SQL Server databases. For details, see [Using bulk copy with the JDBC Driver](using-bulk-copy-with-the-jdbc-driver.md).
 
 ### XA transaction rollback option
 
-The driver has new timeout options for existing automatic rollback of unprepared transactions. For details, see [Understanding XA transactions](../../connect/jdbc/understanding-xa-transactions.md).
+The driver has new timeout options for existing automatic rollback of unprepared transactions. For details, see [Understanding XA transactions](understanding-xa-transactions.md).
 
 ### New Kerberos principal connection property
 
-The driver uses a new connection property to facilitate flexibility with Kerberos connections. For details, see [Using Kerberos Integrated Authentication to connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
+The driver uses a new connection property to facilitate flexibility with Kerberos connections. For details, see [Using Kerberos Integrated Authentication to connect to SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
 
 ## 4.1
 
@@ -499,4 +499,4 @@ Microsoft JDBC Driver for SQL Server applications aren't supported to run on an 
 
 ## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Overview of the JDBC Driver](overview-of-the-jdbc-driver.md)

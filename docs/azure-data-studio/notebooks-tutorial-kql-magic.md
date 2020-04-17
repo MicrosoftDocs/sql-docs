@@ -71,7 +71,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    ```
 
    > [!Note]
-   >  .If `Samples@help` is asking for a password, then you can leave it blank and press **Enter**.
+   > If `Samples@help` is asking for a password, then you can leave it blank and press **Enter**.
 
    ![Help](media/notebooks-tutorial-kql-magic/install-help.png)
 
@@ -95,10 +95,10 @@ This section explains how to run data analysis using KQL magic with an Azure Dat
    %reload_ext Kqlmagic
    ```
 
+   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
+
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
-
-   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
 
 2. Connect to the cluster and authenticate:
 
@@ -195,10 +195,10 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    %reload_ext Kqlmagic
    ```
 
+   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
+
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
-
-   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
 
 2. Connect and authenticate
 
@@ -245,6 +245,9 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    ```
 
    ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
+
+   > [!Note]
+   > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
 
 2. Connect and authenticate:
 

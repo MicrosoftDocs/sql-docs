@@ -64,7 +64,7 @@ The following output shows the result:
 ### B. Using the query() method against an XML type column  
 In the following example, the **query()** method is used to specify an XQuery against the **CatalogDescription** column of **xml** type in the **AdventureWorks** database:  
   
-```  
+```syntaxsql
 SELECT CatalogDescription.query('  
 declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
@@ -94,7 +94,7 @@ The following output shows the partial result:
   
 Note the query() and exist() methods both declare the PD prefix. In these cases, you can use WITH XMLNAMESPACES to first define the prefixes and use it in the query.  
   
-```  
+```syntaxsql
 WITH XMLNAMESPACES 
 (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  

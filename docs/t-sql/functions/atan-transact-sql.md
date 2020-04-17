@@ -30,7 +30,7 @@ A function that returns the angle, in radians, whose tangent is a specified **fl
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ATAN ( float_expression )  
 ```  
   

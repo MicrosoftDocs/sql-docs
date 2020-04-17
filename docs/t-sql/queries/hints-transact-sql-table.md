@@ -61,7 +61,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   

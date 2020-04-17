@@ -45,7 +45,7 @@ void Read( BinaryReader r )
   
 ## Examples  
   
-```sql
+```syntaxsql
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  

@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -52,14 +52,14 @@ IF Boolean_expression
 ### A. Using a simple Boolean expression  
  The following example has a simple Boolean expression (`1=1`) that is true and, therefore, prints the first statement.  
   
-```  
+```syntaxsql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  The following example has a simple Boolean expression (`1=2`) that is false, and therefore prints the second statement.  
   
-```  
+```syntaxsql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  

@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
   
 ## Syntax  
   
-```  
+```syntaxsql
 Creating a new diagnostics session:  
 CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   

@@ -255,7 +255,7 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+   syntaxsql
   
     -   The constraints must be in such a way that any specified value of `<col>` can satisfy, at most, one of the constraints `C1, ..., Cn` so that the constraints form a set of disjointed or nonoverlapping intervals. The column `<col>` on which the disjointed constraints are defined is called the partitioning column. Note that the partitioning column may have different names in the underlying tables. The constraints must be in an enabled and trusted state for them to meet the previously mentioned conditions of the partitioning column. If the constraints are disabled, re-enable constraint checking by using the CHECK CONSTRAINT *constraint_name* option of ALTER TABLE, and using the WITH CHECK option to validate them.  
   

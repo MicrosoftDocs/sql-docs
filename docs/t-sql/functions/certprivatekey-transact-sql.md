@@ -31,7 +31,7 @@ Only users with access to the certificate private key can use this function. Thi
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CERTPRIVATEKEY   
     (  
           cert_ID   

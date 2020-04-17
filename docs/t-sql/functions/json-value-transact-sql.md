@@ -117,7 +117,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ### Example 2
  The following example extracts the value of the JSON property `town` into a local variable.  
   
-```sql  
+```syntaxsql
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 

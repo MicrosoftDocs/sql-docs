@@ -359,6 +359,35 @@ WITH (
 )
 ```
 
+### F. Load using MSI credentials
+
+Set the Synapse SQL to use “-AssignIdentity”
+
+Set-AzSqlServer -ResourceGroupName $resourcegroupname -ServerName $servername -AssignIdentity
+
+Create a Scoped credential on your Database
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
+```
+
+```sql
+COPY INTO dbo.myCOPYDemoTable
+
+FROM 'https://storlabarturv.blob.core.windows.net/test/bcpDemo.txt'
+
+WITH (
+
+    FILE_TYPE = 'CSV',
+
+    CREDENTIAL = (IDENTITY = 'Managed Identity'),
+
+    FIELDQUOTE = '"',
+
+    FIELDTERMINATOR=','
+
+)
+```
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?

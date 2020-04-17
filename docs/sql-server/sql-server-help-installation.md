@@ -129,7 +129,9 @@ For this approach, you use the **Disk** Installation source.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/en-us/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
-2. Next step is to unzip the file.
+2. You need to unzip the file to view the .msha file.
+
+   ![SQL Server 2014 Help content setup file](../sql-server/media/sql-server-help-installation/sql-2014-help-content-setup-msha.png)
 
 3. In SSMS , select **Add and Remove Help Content** on the Help menu.
 
@@ -137,66 +139,71 @@ For this approach, you use the **Disk** Installation source.
 
    The Help Viewer opens to the Manage Content tab.
 
-4. To install the latest help content package, choose **Disk** under Installation source and then the ellipses.
+4. To install the latest help content package, choose **Disk** under Installation source and then the ellipses (...).
 
-   ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/helpviewer2-manage-content-disk-source.png)
+   ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/install-source-disk.png)
 
    > [!NOTE]
    > The Local store path on the Manage Content tab shows where on the local computer the content is located. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**.
    If the help installation fails after changing the Local store path, close and reopen the Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
-5. Then locate te folder where you unzipped the content. Look for the **HelpContentSetup.msha** file.  then select **Open**.
+5. Locate the folder where you unzipped the content. Select the **HelpContentSetup.msha** file in the folder then select **Open**.
 
-   ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/choose-offline-content.png)
+   ![Open the SQL Server 2014 Help Content Setup.msha file](../sql-server/media/sql-server-help-installation/sql-2014-open-msha.png)
 
-6. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
+6. Type in *sql server 2014* in the search bar. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
 
-   ![See Content in Help Viewer](../sql-server/media/sql-server-help-installation/see-content-in-help-viewer.png)
+   ![SQL Server 2014 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-search.png)
 
-> [!NOTE]
-> Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:
+   ![SQL Server 2014 content add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-add-update.png)
 
-> [!NOTE]
-> If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
+    > [!NOTE]
+    > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
-### Configuring SQL Server 2012 offline content
+7. You can verify that the SQL Server 2014 content is loaded by searching under the content pane on the left for *sql server 2014*.
 
-For this approach, you use the *Online* Installation source.
+   ![SQL Server 2014 content automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
+
+### Configure SQL Server 2012 offline content
+
+For this approach, you use the **Disk** Installation source.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/en-us/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
-   > [!NOTE]
-   > Both 2012 and 2014 download content can be found in the [What tools Install the Help Viewer versions](#what-tools-install-the-help-viewer-versions) section.
+2. You need to unzip the file to view the .msha file.
 
-2. Next step is to unzip the file.
+   ![SQL Server 2014 Help content setup file](../sql-server/media/sql-server-help-installation/sql-2012-help-content-setup-msha.png)
 
-3. In SSMS or VS, select **Add and Remove Help Content** on the Help menu.
+3. In SSMS , select **Add and Remove Help Content** on the Help menu.
 
    ![HelpViewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
 
    The Help Viewer opens to the Manage Content tab.
 
-4. To install the latest help content package, choose **Disk** under Installation source and then the ellipses.
+4. To install the latest help content package, choose **Disk** under Installation source and then the ellipses (...).
 
-   ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/helpviewer2-manage-content-disk-source.png)
+   ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/install-source-disk.png)
 
    > [!NOTE]
    > The Local store path on the Manage Content tab shows where on the local computer the content is located. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**.
    If the help installation fails after changing the Local store path, close and reopen the Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
-5. Then locate te folder where you unzipped the content. Look for the **HelpContentSetup.msha** file.  then select **Open**.
+5. Locate the folder where you unzipped the content. Select the **HelpContentSetup.msha** file in the folder then select **Open**.
 
-   ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/choose-offline-content.png)
+   ![Open the SQL Server 2013 Help Content Setup.msha file](../sql-server/media/sql-server-help-installation/sql-2012-open-msha.png)
 
-6. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
+6. Type in *sql server 2014* in the search bar. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
 
-   ![See Content in Help Viewer](../sql-server/media/sql-server-help-installation/see-content-in-help-viewer.png)
+   ![SQL Server 2014 content search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2014-search.png)
 
-> [!NOTE]
-> Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:
+   ![SQL Server 2012 content add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2012-add-update.png)
 
-> [!NOTE]
-> If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
+    > [!NOTE]
+    > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
+
+7. You can verify that the SQL Server 2014 content is loaded by searching under the content pane on the left for *sql server 2014*.
+
+   ![SQL Server 2012 content automatically updated](../sql-server/media/sql-server-help-installation/sql-2012-content.png)
 
 ### View offline help content
 

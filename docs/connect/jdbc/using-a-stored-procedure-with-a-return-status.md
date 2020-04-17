@@ -19,7 +19,7 @@ ms.author: v-daenge
 
 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure that you can call is one that returns a status or a result parameter. This status is typically used to indicate the success or failure of the stored procedure. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides the [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) class, which you can use to call this kind of stored procedure and to process the data that it returns.
 
-When you call this kind of stored procedure by using the JDBC driver, you have to use the `call` SQL escape sequence in conjunction with the [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) method of the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class. The syntax for the `call` escape sequence with a return status parameter is the following:
+When you call this kind of stored procedure by using the JDBC driver, you have to use the `call` SQL escape sequence in conjunction with the [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) method of the [SQLServerConnection](reference/sqlserverconnection-class.md) class. The syntax for the `call` escape sequence with a return status parameter is the following:
 
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
@@ -51,10 +51,10 @@ END
 
 This stored procedure returns a status value of 1 or 0, depending on whether the city that is specified in the cityName parameter is found in the Person.Address table.
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) method is used to call the CheckContactCity stored procedure:
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [execute](reference/execute-method-sqlserverstatement.md) method is used to call the CheckContactCity stored procedure:
 
-[!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]
+[!code[JDBC#UsingSprocWithReturnStatus1](codesnippet/Java/using-a-stored-procedure_1_1.java)]
 
 ## See also
 
-[Using statements with stored procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Using statements with stored procedures](using-statements-with-stored-procedures.md)

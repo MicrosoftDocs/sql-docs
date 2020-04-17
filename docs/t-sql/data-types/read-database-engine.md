@@ -1,7 +1,7 @@
 ---
 title: "Read (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/16/2020
+ms.date: "04/16/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

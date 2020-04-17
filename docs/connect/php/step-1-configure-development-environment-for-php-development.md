@@ -29,7 +29,7 @@ ms.author: v-daenge
 * Configure loading the PHP driver, as noted here: [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 
 * Configure IIS to host PHP applications, as noted here: [Configuring IIS for the Microsoft Drivers for PHP for SQL Server](../../connect/php/configuring-iis-for-php-sql-driver.md)
 
-### Linux and Mac
+### Linux and macOS
 
 
-*	Configure loading the PHP driver and configure your web server to host PHP applications, as noted here: [PHP Linux and Mac Drivers Installation Tutorial](../../connect/php/installation-tutorial-linux-mac.md)
+*	Configure loading the PHP driver and configure your web server to host PHP applications, as noted here: [PHP Linux and macOS Drivers Installation Tutorial](../../connect/php/installation-tutorial-linux-mac.md)

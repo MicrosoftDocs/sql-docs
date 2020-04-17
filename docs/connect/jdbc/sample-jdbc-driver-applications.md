@@ -1,5 +1,6 @@
 ---
-title: "Sample JDBC driver applications | Microsoft Docs"
+title: "Sample JDBC driver applications"
+description: "The JDBC Driver for SQL Server sample applications demonstrate various features and good programming practices that you can follow when using the JDBC driver."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

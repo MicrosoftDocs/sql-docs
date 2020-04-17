@@ -45,7 +45,7 @@ Creates a new SQL graph table as either a `NODE` or an `EDGE` table.
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } 

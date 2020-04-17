@@ -23,7 +23,7 @@ Removes all result set cache entries from an Azure [!INCLUDE[ssSDW](../../includ
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC DROPRESULTSETCACHE
 [;]  
 ```  

@@ -21,7 +21,7 @@ Reduces the size of the transaction log *across the appliance* for the current [
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC SHRINKLOG   
     [ ( SIZE = { target_size [ MB | GB | TB ]  } | DEFAULT ) ]   
     [ WITH NO_INFOMSGS ]   

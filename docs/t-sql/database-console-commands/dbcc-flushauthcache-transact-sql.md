@@ -28,7 +28,7 @@ Empties the database authentication cache containing information about logins  a
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC FLUSHAUTHCACHE [ ; ]  
 ```  
   

@@ -1,7 +1,7 @@
 ---
 title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/01/2019
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -25,7 +25,7 @@ Returns the string provided as a first argument after some characters specified 
 
 ## Syntax
 
-```sql
+```syntaxsql
 TRANSLATE ( inputString, characters, translations)
 ```
 
@@ -66,7 +66,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-```plain_text
+```text
 2*(3+4)/(7-2)
 ```
 

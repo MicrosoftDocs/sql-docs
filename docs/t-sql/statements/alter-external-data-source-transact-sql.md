@@ -26,7 +26,7 @@ ms.author: carlrab
 
 ## Syntax  
 
-```  
+```syntaxsql
 -- Modify an external data source
 -- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET

@@ -1,7 +1,7 @@
 ---
 title: "SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -36,7 +36,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -72,7 +72,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**Type**|Node type. For the parent node of each query, this is the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement type (for example, SELECT, INSERT, EXECUTE, and so on). For subnodes representing execution plans, the type is PLAN_ROW.|  
 |**Parallel**|**0** = Operator is not running in parallel.<br /><br /> **1** = Operator is running in parallel.|  
 |**EstimateExecutions**|Estimated number of times this operator will be executed while running the current query.|  
-  
+|||
+
  *Cost units are based on an internal measurement of time, not wall-clock time. They are used for determining the relative cost of a plan in comparison to other plans.  
   
 ## Permissions  
@@ -95,7 +96,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  The values in the **EstimateRows** and the **TotalSubtreeCost** columns are smaller for the first indexed query, indicating that it is processed much faster and uses fewer resources than the nonindexed query.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

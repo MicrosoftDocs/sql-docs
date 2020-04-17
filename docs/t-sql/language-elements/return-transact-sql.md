@@ -34,7 +34,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RETURN [ integer_expression ]   
 ```  

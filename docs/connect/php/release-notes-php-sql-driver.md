@@ -146,7 +146,7 @@ This release only applies to Linux and macOS.
 
 - Support for Microsoft ODBC Driver 17.2 on all platforms
 - Support for macOS High Sierra (requires ODBC Driver 17 and above)
-- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
 - Support Ubuntu 18.04 LTS (requires ODBC Driver 17.2)
 - Support for Connection Resiliency in Linux or macOS as well (requires ODBC Driver 17.2)
 
@@ -167,7 +167,7 @@ This release only applies to Linux and macOS.
   - Version 17 is now the default on all platforms
 - Support for Ubuntu 17.10, Debian 9, and Suse Enterprise Linux 12
 - Dropped support for Ubuntu 15.10
-- Support for Always Encrypted with CRUD functionalities on Windows. For more information, see [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Support for Always Encrypted with CRUD functionalities on Windows. For more information, see [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
   - Support for Windows Certificate Store
   - Always Encrypted is only supported with Microsoft ODBC Driver 17 and above
 - Support for non-UTF8 locales on Linux and macOS

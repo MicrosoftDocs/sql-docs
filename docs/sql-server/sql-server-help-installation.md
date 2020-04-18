@@ -11,13 +11,13 @@ ms.custom: ""
 ms.date: 04/20/2020
 ---
 
-# Different versions of SQL Server help documentation in Help Viewer
+# Different versions of SQL Server help content in Help Viewer
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Offline documentation for older versions of Microsoft SQL Server has been archived. Yet the archived documentation is still available.
-
 This article describes how to download and view offline SQL Server content in Help Viewer with [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+
+Offline documentation for older versions of Microsoft SQL Server has been archived. Yet the archived documentation is still available.
 
 Internet access is required to download the Help Viewer content. You can then migrate the content to a computer that doesn't have internet access.
 
@@ -31,7 +31,7 @@ Offline content is available for these SQL Server versions:
 
 ## How to download and configure offline content
 
-You can view SQL Server help content using the **HELP** menu in the latest version of Help Viewer from [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+You can use the Microsoft Help Viewer to download and install SQL Server help packages from online sources or local disk.
 
 Below are steps on how to load offline content for different versions of SQL Server.
 
@@ -123,7 +123,7 @@ For this approach, you use the **Online** Installation source.
 
 For this approach, you use the **Disk** Installation source.
 
-1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/en-us/download/details.aspx?id=42557) content from the download center and save it to a folder.
+1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
 2. Unzip the file to view the.msha file.
 
@@ -164,11 +164,11 @@ For this approach, you use the **Disk** Installation source.
 
 For this approach, you use the **Disk** Installation source.
 
-1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/en-us/download/details.aspx?id=42557) content from the download center and save it to a folder.
+1. Download the [Product Documentation for Microsoft SQL Server 2012 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=35750) content from the download center and save it to a folder.
 
 2. Unzip the file to view the.msha file.
 
-   ![SQL Server 2014 Help content setup file](../sql-server/media/sql-server-help-installation/sql-2012-help-content-setup-msha.png)
+   ![SQL Server 2012 Help content setup file](../sql-server/media/sql-server-help-installation/sql-2012-help-content-setup-msha.png)
 
 3. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
@@ -188,7 +188,7 @@ For this approach, you use the **Disk** Installation source.
 
    ![Open the SQL Server 2012 Help Content Setup.msha file](../sql-server/media/sql-server-help-installation/sql-2012-open-msha.png)
 
-6. Type in *sql server 2014* in the search bar. Once you see the 2014 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
+6. Type in *sql server 2012* in the search bar. Once you see the 2012 content available, select **Add** next to each content package (book) that you want to install to Help Viewer and then select **Update**.
 
    ![SQL Server 2012 books search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2012-search.png)
 
@@ -197,9 +197,22 @@ For this approach, you use the **Disk** Installation source.
     > [!NOTE]
     > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
-7. You can verify that the SQL Server 2014 content is loaded by searching under the content pane on the left for *sql server 2014*.
+7. You can verify that the SQL Server 2012 content is loaded by searching under the content pane on the left for *sql server 2012*.
 
    ![SQL Server 2012 documentation automatically updated](../sql-server/media/sql-server-help-installation/sql-2012-content.png)
+
+## Help Viewer
+
+You can view SQL Server help content using the **HELP** menu in the latest version of Help Viewer from [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+
+Help Viewer is installed with several different tools.
+
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
+- [Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/installation?view=vs-2019)
+
+To install the Help Viewer with Visual Studio 2019 or 2017, go to the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
+
+For more information about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2016).
 
 ### View offline help content
 
@@ -229,11 +242,11 @@ To view the installed help in Visual Studio:
 
    The help table of contents shows on the left, and the selected help article on the right.
 
-## View online help
+### View online help
 
 Online help always shows the most up-to-date content.
 
-### To view SQL Server online help in SSMS
+#### To view SQL Server online help in SSMS
 
 - Select **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) displays in a browser.
 
@@ -279,17 +292,6 @@ After you download offline books on a system that has internet access, you can u
 6. Once these files have been moved, launch Help Viewer on the offline system and you can see the SQL Server technical documentation.
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-
-### Help Viewer
-
-You can use the Microsoft Help Viewer to download and install SQL Server help packages from online sources or local disk. You can then view the content offline. The Help Viewer is installed with several different tools.
-
-- [Latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
-- [Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/installation?view=vs-2019)
-
-To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
-
-For more information about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2016).
 
 ## Life-cycle policy
 

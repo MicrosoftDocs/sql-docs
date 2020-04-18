@@ -4,22 +4,20 @@ description: This tutorial shows how you can create and run KQL magic in Azure D
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
-ms.topic: tutorial
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""
 ms.date: 04/22/2020
 ---
 
-# Use a Jupyter Notebook and the Kqlmagic extension to analyze data in Azure Data Studio
+# KQL magic extension in Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Jupyter Notebook supports magic functions that extend the capabilities of the kernel by supporting additional commands. **KQL magic** is a command that extends the capabilities of the Python kernel in [Jupyter Notebook](https://jupyter.org/). You can combine Python and Kusto query language to query and visualize data using rich Plot.ly library integrated with `render` commands. KQL magic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Data sources for running queries are supported. These data sources include **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)**, **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)**.
+**KQL magic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](notebooks-guidance.md)**. You can combine Python and Kusto query language (KQL) to query and visualize data using rich Plot.ly library integrated with `render` commands. KQL magic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with KQL magic include **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)**, **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)**.
 
-The KQL magic extension is supported in **[Azure Data Studio notebooks](notebooks-guidance.md)**. It allows you to connect, query, and explore Azure Data Explorer, Application Insights, and Azure Monitor logs data using KQL (Kusto query Language).
-
-This tutorial demonstrates how to create and run a notebook in Azure Data Studio using the KQL magic extension for an Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
+This article shows you how to create and run a notebook in Azure Data Studio using the KQL magic extension for an Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
 
 ## Prerequisites
 
@@ -134,7 +132,9 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
    ![visualize timechart](media/notebooks-tutorial-kql-magic/ade-visualize-timechart.png)
 
-3. Assign a kql query bar chart to a Python variable:
+### Python and KQL magic integration
+
+1. Assign a kql query bar chart to a Python variable:
 
    ```python
    %kql my_bar_chart << StormEvents | summarize count() by State | sort by count_ | limit 10 | render barchart title='my bar chart'
@@ -147,7 +147,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    > [!Note]
    > Ability to assign KQL result to Python is super useful when there is additional data manipulation / analysis / visualization to be done in Python.
 
-4. Print vs Display function
+2. Print vs Display function
 
    ```python
    %kql bar_chart << StormEvents | summarize count() by State | sort by count_ | limit 10 | render barchart title='my bar chart'
@@ -160,20 +160,20 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
    ![Print vs display function](media/notebooks-tutorial-kql-magic/ade-print-vs-display-function.png)
 
-5. Multiline Query sample using `<code>%%kql</code>`.
+3. Multiline Query sample using `<code>%%kql</code>`.
 
    ```python
    %%kql
-    StormEvents
-    | summarize count() by State
-    | sort by count_
-    | limit 10
-    | render columnchart title='Top 10 States by Storm Event count'
+   StormEvents
+   | summarize count() by State
+   | sort by count_
+   | limit 10
+   | render columnchart title='Top 10 States by Storm Event count'
    ```
 
    ![Multiline Query sample](media/notebooks-tutorial-kql-magic/ade-multiline-query-sample.png)
 
-6. Show last "x" output
+4. Show last "x" output
 
    ```python
    _.show_table()

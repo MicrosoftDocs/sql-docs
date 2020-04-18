@@ -223,6 +223,7 @@ To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Re
    ![HelpViewer2 Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)  
 
 Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. select articles in the table of contents to display them in the right pane.
+
 > [!TIP]
 > If the contents pane is not visible, select Contents on the left margin. select the pushpin icon to keep the contents pane open.  
 
@@ -258,25 +259,12 @@ Online help always shows the most up-to-date content.
 
 2. Select **View Help** in the Help menu. The latest Visual Studio help displays in the chosen environment.
 
-## View F1 help
-
-When you press F1 or select **Help** or **?** icon in a dialog box in SSMS or VS, a context-sensitive online help article appears in the browser or Help Viewer.
-
-### To View F1 help
-
-1. In the Help menu, select **Set Help Preference**, and choose either **Launch in Browser** or **Launch in Help Viewer**.
-
-2. Press F1, or select **Help**, or **?** in dialog boxes where they're available, to see context-sensitive online articles in the chosen environment.
-
-> [!NOTE]
-> F1 help only works when you are online. There are no offline sources for F1 help.
-
-## Systems without internet access
+### Systems without internet access
 
 After you download offline books on a system that has internet access, you can use the following steps to migrate the content to a system that doesn't have internet access.
 
-  >[!NOTE]
-  >Software that supports the Help Viewer, such as SQL Server Management Studio, must be installed on the offline system.
+  > [!NOTE]
+  > Software that supports the Help Viewer, such as SQL Server Management Studio, must be installed on the offline system.
 
 1. Open Help Viewer (Ctrl + Alt + F1).
 
@@ -292,6 +280,19 @@ After you download offline books on a system that has internet access, you can u
 6. Once these files have been moved, launch Help Viewer on the offline system and you can see the SQL Server technical documentation.
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
+
+## View F1 help
+
+When you press F1 or select **Help** or **?** icon in a dialog box in SSMS or VS, a context-sensitive online help article appears in the browser or Help Viewer.
+
+### To View F1 help
+
+1. In the Help menu, select **Set Help Preference**, and choose either **Launch in Browser** or **Launch in Help Viewer**.
+
+2. Press F1, or select **Help**, or **?** in dialog boxes where they're available, to see context-sensitive online articles in the chosen environment.
+
+> [!NOTE]
+> F1 help only works when you are online. There are no offline sources for F1 help.
 
 ## Life-cycle policy
 

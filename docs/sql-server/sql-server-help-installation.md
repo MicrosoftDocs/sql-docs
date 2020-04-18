@@ -11,11 +11,11 @@ ms.custom: ""
 ms.date: 04/20/2020
 ---
 
-# Add different versions of SQL Server help documentation
+# Different versions of SQL Server help documentation in Help Viewer
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-The documentation for several older versions of Microsoft SQL Server has been archived. Yet the archived documentation is still available.
+Offline documentation for older versions of Microsoft SQL Server has been archived. Yet the archived documentation is still available.
 
 This article describes how to download and view offline SQL Server content in Help Viewer with [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -31,7 +31,7 @@ Offline content is available for these SQL Server versions:
 
 ## How to download and configure offline content
 
-You can view the SQL Server help content by using the **HELP** menu in the latest version of Help Viewer in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+You can view SQL Server help content using the **HELP** menu in the latest version of Help Viewer from [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 Below are steps on how to load offline content for different versions of SQL Server.
 
@@ -52,7 +52,7 @@ For this approach, you use the **Online** Installation source.
    > [!Note]
    > The Local store path on the Manage Content tab shows where on the local computer the content is installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
-3. To install the latest help content package for SQL Server 2019, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
+3. To install the latest help content for SQL Server 2019, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
 
    ![SQL Server 2019 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2019-add-update.png)
 
@@ -80,7 +80,7 @@ For this approach, you use the **Online** Installation source.
    > [!Note]
    > The Local store path on the Manage Content tab shows where on the local computer the content is installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
-3. To install the latest help content package for SQL Server 2017, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
+3. To install the latest help content for SQL Server 2017, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
 
    ![SQL Server 2017 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2017-add-update.png)
 
@@ -108,7 +108,7 @@ For this approach, you use the **Online** Installation source.
    > [!Note]
    > The Local store path on the Manage Content tab shows where on the local computer the content is installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
-3. To install the latest help content package for SQL Server 2016, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
+3. To install the latest help content for SQL Server 2016, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
 
    ![SQL Server 2016 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2016-add-update.png)
 
@@ -135,7 +135,7 @@ For this approach, you use the **Disk** Installation source.
 
    The Help Viewer opens to the Manage Content tab.
 
-4. To install the latest help content package, choose **Disk** under Installation source and then the ellipses (...).
+4. To install the latest help content, choose **Disk** under Installation source and then the ellipses (...).
 
    ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/install-source-disk.png)
 
@@ -156,7 +156,7 @@ For this approach, you use the **Disk** Installation source.
     > [!NOTE]
     > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
-7. You can verify that the SQL Server 2014 content is loaded by searching under the content pane on the left for *sql server 2014*.
+7. You can verify that the SQL Server 2014 content installed by searching under the content pane on the left for *sql server 2014*.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
 
@@ -176,7 +176,7 @@ For this approach, you use the **Disk** Installation source.
 
    The Help Viewer opens to the Manage Content tab.
 
-4. To install the latest help content package, choose **Disk** under Installation source and then the ellipses (...).
+4. To install the latest help content, choose **Disk** under Installation source and then the ellipses (...).
 
    ![Help Viewer Manage Content Disk Source](../sql-server/media/sql-server-help-installation/install-source-disk.png)
 
@@ -209,7 +209,7 @@ To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Re
 
    ![HelpViewer2 Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)  
 
-The Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. select articles in the table of contents to display them in the right pane.
+Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. select articles in the table of contents to display them in the right pane.
 > [!TIP]
 > If the contents pane is not visible, select Contents on the left margin. select the pushpin icon to keep the contents pane open.  
 
@@ -289,9 +289,9 @@ You can use the Microsoft Help Viewer to download and install SQL Server help pa
 
 To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
 
-For additional details about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2016).
+For more information about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2016).
 
-## Life cycle policy
+## Life-cycle policy
 
 Review the Microsoft Product Lifecycle for information about how a specific product, service, or technology is supported:
 
@@ -301,7 +301,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## Next steps
 
-To learn more about archived content and about Help viewer please reference the links below.
+To learn more about archived content and about Help viewer, please reference the links below.
 
 - [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/)
 - [Microsoft Help Viewer - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)

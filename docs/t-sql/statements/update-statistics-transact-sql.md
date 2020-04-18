@@ -33,7 +33,7 @@ Updating statistics ensures that queries compile with up-to-date statistics. How
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 UPDATE STATISTICS table_or_indexed_view_name   
@@ -65,7 +65,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_contant ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
@@ -206,7 +206,7 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### PDW / SQL Data Warehouse  
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
-```sql  
+```syntaxsql
 update statistics t1 (a,b);   
 ```  
   

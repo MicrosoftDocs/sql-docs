@@ -30,7 +30,7 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 
 ## Syntax  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]

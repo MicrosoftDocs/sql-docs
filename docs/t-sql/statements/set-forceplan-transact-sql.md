@@ -33,7 +33,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET FORCEPLAN { ON | OFF }  
 ```  
@@ -51,7 +51,7 @@ SET FORCEPLAN { ON | OFF }
 ## Examples  
  The following example performs a join of four tables. The `SHOWPLAN_TEXT` setting is enabled, so [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns information about how it is processing the query differently after the `SET FORCE_PLAN` setting is enabled.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Make sure FORCEPLAN is set to OFF.  

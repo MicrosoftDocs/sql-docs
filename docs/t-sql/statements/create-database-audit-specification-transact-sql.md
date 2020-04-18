@@ -34,7 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  

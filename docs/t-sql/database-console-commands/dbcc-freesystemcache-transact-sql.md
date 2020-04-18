@@ -33,7 +33,7 @@ Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-```sql
+```syntaxsql
 DBCC FREESYSTEMCACHE   
     ( 'ALL' [, pool_name ] )   
     [WITH   

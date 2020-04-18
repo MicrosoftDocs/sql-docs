@@ -30,7 +30,7 @@ ms.author: jaszymas
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 ALTER COLUMN ENCRYPTION KEY key_name   
     [ ADD | DROP ] VALUE   
     (  

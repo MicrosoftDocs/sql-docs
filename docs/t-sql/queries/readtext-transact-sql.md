@@ -32,7 +32,7 @@ Reads **text**, **ntext**, or **image** values from a **text**, **ntext**, or **
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  

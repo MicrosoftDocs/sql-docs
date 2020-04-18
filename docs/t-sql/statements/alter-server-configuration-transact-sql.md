@@ -30,7 +30,7 @@ Modifies global configuration settings for the current server in [!INCLUDE[ssNoV
   
 ## Syntax  
 
-```  
+```syntaxsql
 ALTER SERVER CONFIGURATION  
 SET <optionspec>   
 [;]  

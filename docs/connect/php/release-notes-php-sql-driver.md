@@ -1,17 +1,18 @@
 ---
-title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+title: "Release Notes for the Microsoft Drivers for PHP"
+description: "This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server."
 ms.custom: ""
-ms.date: "03/05/2020"
+ms.date: "04/15/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: "v-dapugl, kenvh"
+ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 
@@ -32,6 +33,26 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## 5.8.1
+
+This release only applies to Linux and macOS.
+
+[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.1)
+
+### Version information
+
+- Release number: 5.8.1
+- Released: April 15, 2020
+
+## What's new in 5.8.1
+
+| New item | Details |
+| :------- | :------ |
+| Bug fix | Fixed default locale issues in Alpine Linux. |
+| Bug fix | Removed unnecessary data structure to support Client-Side Cursors feature in Alpine Linux. |
+| Bug fix | Fixed logging issues when both drivers are enabled in Alpine Linux. |
+| &nbsp; | &nbsp; |
 
 ## 5.8
 
@@ -125,7 +146,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 - Support for Microsoft ODBC Driver 17.2 on all platforms
 - Support for macOS High Sierra (requires ODBC Driver 17 and above)
-- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
 - Support Ubuntu 18.04 LTS (requires ODBC Driver 17.2)
 - Support for Connection Resiliency in Linux or macOS as well (requires ODBC Driver 17.2)
 
@@ -146,7 +167,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - Version 17 is now the default on all platforms
 - Support for Ubuntu 17.10, Debian 9, and Suse Enterprise Linux 12
 - Dropped support for Ubuntu 15.10
-- Support for Always Encrypted with CRUD functionalities on Windows. For more information, see [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Support for Always Encrypted with CRUD functionalities on Windows. For more information, see [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
   - Support for Windows Certificate Store
   - Always Encrypted is only supported with Microsoft ODBC Driver 17 and above
 - Support for non-UTF8 locales on Linux and macOS
@@ -170,11 +191,11 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Support for macOS Sierra and macOS El Capitan
 - Support for Ubuntu 15.10, and Debian 8
 - Dropped support for Ubuntu 15.04
-- Support for Always On Availability groups via Transparent Network IP Resolution. For more information, see [Connection Options](../../connect/php/connection-options.md).
+- Support for Always On Availability groups via Transparent Network IP Resolution. For more information, see [Connection Options](connection-options.md).
 - Added support for sql_variant data type with limitation.
-- Idle Connection Resiliency support in Windows. For more information, see [Connection Options](../../connect/php/connection-options.md).
-- Connection pooling support for Linux and macOS. For more information, see [Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
-- Support for Azure Active Directory Authentication with ActiveDirectoryPassword and SqlPassword. For more information, see [Connection Options](../../connect/php/connection-options.md).
+- Idle Connection Resiliency support in Windows. For more information, see [Connection Options](connection-options.md).
+- Connection pooling support for Linux and macOS. For more information, see [Connection Pooling](connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
+- Support for Azure Active Directory Authentication with ActiveDirectoryPassword and SqlPassword. For more information, see [Connection Options](connection-options.md).
 
 ## 4.0
 
@@ -225,17 +246,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## What's new in 3.0  
 
 - Support for PHP 5.4.  PHP 5.2 is not supported in version 3 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-- AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
-- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information, see [Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
-- AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
-- Support for the high-availability, disaster recovery features. For more information, see [Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
-- Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
-- The PDO::ATTR_EMULATE_PREPARES attribute has been added. For more information, see [PDO::prepare](../../connect/php/pdo-prepare.md).  
+- AttachDBFileName connection option is added. For more information, see [Connection Options](connection-options.md).  
+- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information, see [Support for LocalDB](php-driver-for-sql-server-support-for-localdb.md).
+- AttachDBFileName connection option is added. For more information, see [Connection Options](connection-options.md).  
+- Support for the high-availability, disaster recovery features. For more information, see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
+- Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](cursor-types-pdo-sqlsrv-driver.md).
+- The PDO::ATTR_EMULATE_PREPARES attribute has been added. For more information, see [PDO::prepare](pdo-prepare.md).  
 
 ## What's new in 2.0
 
-In version 2.0, support for the PDO_SQLSRV driver was added. For more information, see [PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md).  
+In version 2.0, support for the PDO_SQLSRV driver was added. For more information, see [PDO_SQLSRV Driver Reference](pdo-sqlsrv-driver-reference.md).  
 
 ## See Also
 
-[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)

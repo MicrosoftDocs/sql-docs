@@ -35,7 +35,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  

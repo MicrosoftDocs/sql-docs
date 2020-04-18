@@ -1,5 +1,6 @@
 ---
 title: "Regular vs. Context Connections | Microsoft Docs"
+description: In SQL Server, sometimes you must use regular connections for Transact-SQL statements, but context connections offer performance and resource usage advantages.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

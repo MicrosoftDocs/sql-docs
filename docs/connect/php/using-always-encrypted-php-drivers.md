@@ -7,8 +7,8 @@ ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-kaywon
-ms.author: jroth
-author: rothja
+ms.author: v-daenge
+author: David-Engel
 manager: v-mabarw
 ---
 # Using Always Encrypted with the PHP Drivers for SQL Server

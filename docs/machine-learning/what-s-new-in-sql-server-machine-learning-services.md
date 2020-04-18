@@ -37,7 +37,7 @@ Below are the new features for SQL Server Machine Learning Services:
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## New in SQL Server 2017
 
-This release adds [Python support and industry-leading machine learning algorithms](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), with language support for both Python and R. 
+This release adds [Python support and industry-leading machine learning algorithms](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](sql-server-machine-learning-services.md), with language support for both Python and R. 
 
 For feature announcements all-up, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
@@ -106,12 +106,6 @@ SQL Server 2019 adds Linux support for R and Python when you install the machine
 
 On Linux, SQL Server 2017 does not have R or Python integration, but you can use [Native scoring](sql-native-scoring.md) on Linux because that functionality is available through T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), which runs on Linux. Native scoring enables high-performance scoring from a pretrained model, without calling or even requiring an R runtime.
 ::: moniker-end
-
-<a name="azure-sql-database-roadmap"></a>
-
-## Machine Learning Services in Azure SQL Database
-
-Machine Learning Services in Azure SQL Database is in public preview. For more information, see [Azure SQL Database Machine Learning Services (preview)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview).
 
 ## Next steps
 

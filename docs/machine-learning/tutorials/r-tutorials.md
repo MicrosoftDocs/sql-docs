@@ -1,25 +1,24 @@
 ---
 title: R tutorials
-description: Introduction to the R language tutorials for SQL Server in-database analytics.
+description: This article describes the R tutorials and quickstarts for SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 12/18/2018  
+ms.date: 04/13/2020  
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# SQL Server R language tutorials
+# R tutorials for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes the R language tutorials for in-database analytics on [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
+This article describes the R tutorials and quickstarts for [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
-+ Learn how to wrap and run R code in stored procedures.
-+ Serialize and save r-based models to SQL Server databases.
-+ Learn about remote and local compute contexts, and when to use them.
-+ Explore the Microsoft R libraries for data science and machine learning tasks.
++ Learn how to run R scripts.
++ Build, train, and deploy R models to SQL Server.
++ Learn about remote and local compute contexts.
++ Explore the Microsoft R  packages for data science and machine learning.
 
 <a name="bkmk_sqltutorials"></a>
 

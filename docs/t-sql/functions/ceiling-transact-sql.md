@@ -30,7 +30,7 @@ This function returns the smallest integer greater than, or equal to, the specif
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CEILING ( numeric_expression )  
 ```  
   

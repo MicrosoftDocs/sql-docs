@@ -38,7 +38,7 @@ Includes all connection information that is required to access remote data from 
 
 ## Syntax
 
-```
+```syntaxsql
 OPENROWSET
 ( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
    | 'provider_string' }

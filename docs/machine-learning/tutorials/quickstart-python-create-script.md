@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Quickstart: Run simple Python scripts with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
+In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
 
 ## Prerequisites
 
@@ -245,4 +245,4 @@ For more information on using Python in SQL Server Machine Learning Services, se
 
 - [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
 - [Create and score a predictive model in Python with SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
-- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
+- [What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md)

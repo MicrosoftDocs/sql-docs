@@ -1,6 +1,6 @@
 ---
-title: "Microsoft ADO.NET for SQL Server | Microsoft Docs"
-description: "Introduction to Microsoft ADO.NET for SQL Server."
+title: "Microsoft ADO.NET"
+description: "Microsoft ADO.NET for SQL Server is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient namespace to access SQL Server."
 ms.custom: ""
 ms.date: "09/30/2019"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Microsoft ADO.NET for SQL Server

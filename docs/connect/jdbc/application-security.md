@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Application security
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -53,9 +53,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  The code "file:/install_dir/lib/-" refers to the installation directory of the JDBC driver.  
   
 ## Protecting server communication  
- When you use the JDBC driver to communicate with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you can secure the communication channel by using either Internet Protocol Security (IPSEC) or Secure Sockets Layer (SSL); or you can use both.  
+ When you use the JDBC driver to communicate with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you can secure the communication channel by using either Internet Protocol Security (IPSEC) or Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL); or you can use both.  
   
- SSL support can be used to provide an additional level of protection besides IPSEC. For more information about using SSL, see [Using SSL encryption](../../connect/jdbc/using-ssl-encryption.md).  
+ TLS support can be used to provide an additional level of protection besides IPSEC. For more information about using TLS, see [Using encryption](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## See also  
  [Securing JDBC driver applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  

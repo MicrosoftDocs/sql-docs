@@ -30,7 +30,7 @@ A function that returns the angle, in radians, whose cosine is the specified flo
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ACOS ( float_expression )  
 ```  
   

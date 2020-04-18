@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   
        TO database_principal [ ,...n ]  

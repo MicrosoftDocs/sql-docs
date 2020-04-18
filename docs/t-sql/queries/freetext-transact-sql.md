@@ -42,7 +42,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 FREETEXT ( { column_name | (column_list) | * }   
           , 'freetext_string' [ , LANGUAGE language_term ] )  

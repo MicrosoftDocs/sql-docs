@@ -28,7 +28,7 @@ Denies permissions on a schema.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  

@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 LAST_VALUE ( [ scalar_expression ] )   
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   

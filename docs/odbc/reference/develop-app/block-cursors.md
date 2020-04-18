@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "block cursors [ODBC]"
   - "result sets [ODBC], block cursors"
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Block Cursors
 Many applications spend a significant amount of time bringing data across the network. Part of this time is spent actually bringing the data across the network, and part of it is spent on network overhead, such as the call made by the driver to request a row of data. The latter time can be reduced if the application makes efficient use of *block,* or *fat,* *cursors,* which can return more than one row at a time.  

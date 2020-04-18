@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  

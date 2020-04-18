@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB, stored procedures"
   - "SQL Server Native Client OLE DB provider, stored procedures"
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures - Running

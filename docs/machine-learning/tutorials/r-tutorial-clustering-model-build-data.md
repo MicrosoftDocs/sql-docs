@@ -113,7 +113,7 @@ Within cluster sum of squares by cluster:
     0.0000  1329.0160 18561.3157   363.2188
 ```
 
-The four cluster means are given using the variables defined in [part one](sql-database-tutorial-clustering-model-prepare-data.md#separate-customers):
+The four cluster means are given using the variables defined in [part one](r-tutorial-clustering-model-prepare-data.md#separate-customers):
 
 * *orderRatio* = return order ratio (total number of orders partially or fully returned versus the total number of orders)
 * *itemsRatio* = return item ratio (total number of items returned versus the number of items purchased)

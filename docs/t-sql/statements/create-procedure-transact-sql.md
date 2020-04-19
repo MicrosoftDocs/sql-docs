@@ -768,7 +768,8 @@ GO
   
 ```sql  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
-@NewHours smallint  
+@NewHours smallint,
+@RowCount int OUT
 AS   
 SET NOCOUNT ON;  
 UPDATE HumanResources.Employee  
@@ -779,6 +780,7 @@ SET VacationHours =
        END  
     )  
 WHERE CurrentFlag = 1;  
+SET @RowCount = @@ROWCOUNT;
 GO  
   
 EXEC HumanResources.Update_VacationHours 40;  

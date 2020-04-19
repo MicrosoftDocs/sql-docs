@@ -1,5 +1,5 @@
 ---
-title: "OUTPUT clause, OLE DB, SQL Native Client"
+title: "OUTPUT clause, OLE DB"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 53deeb99-c088-4fde-844b-b2d91d6de1eb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the OUTPUT Clause with OLE DB in SQL Server Native Client

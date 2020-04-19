@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]   
@@ -78,7 +78,7 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
     START_DATE = 'datetime' | EXPIRY_DATE = 'datetime'  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   

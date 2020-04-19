@@ -82,7 +82,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ## Syntax for disk-based tables
 
-```
+```syntaxsql
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
@@ -250,7 +250,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ## Syntax for memory-optimized tables
 
-```
+```syntaxsql
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
@@ -343,9 +343,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
-```
-
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -377,8 +376,12 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 
 <column_constraint>::=
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression
-
+    [ CONSTRAINT constraint_name ] 
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
@@ -866,7 +869,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* )
 
 Specifies the Windows-compatible FileTable directory name. This name should be unique among all the FileTable directory names in the database. Uniqueness comparison is case-insensitive, despite the SQL collation settings. Can only be used with a FileTable.
 
-```sql
+```syntaxsql
  SET (
         REMOTE_DATA_ARCHIVE
         {

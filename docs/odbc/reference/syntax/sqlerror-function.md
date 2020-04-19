@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLError function [ODBC]"
 ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLError Function
 **Conformance**  

@@ -41,7 +41,7 @@ Evaluates a list of conditions and returns one of multiple possible result expre
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 Simple CASE expression:   
@@ -56,7 +56,7 @@ CASE
 END  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CASE  

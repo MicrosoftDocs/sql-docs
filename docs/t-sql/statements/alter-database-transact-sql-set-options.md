@@ -62,7 +62,7 @@ Database scoped configurations are used to set several database configurations a
 
 ## Syntax
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 SET
 {
@@ -1415,7 +1415,7 @@ Compatibility levels are `SET` options but are described in [ALTER DATABASE Comp
 
 ## Syntax
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2209,7 +2209,7 @@ Compatibility levels are `SET` options but are described in [ALTER DATABASE Comp
 
 ## Syntax
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2905,7 +2905,7 @@ SET QUERY_STORE = ON
 
 ## Syntax
 
-```
+```syntaxsql
 ALTER DATABASE { database_name }
 SET
 {

@@ -41,8 +41,15 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <column_options> ::=
     [ COLLATE Windows_collation_name ]  
     [ NULL | NOT NULL ] -- default is NULL  
-    [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression  ]
-  
+    [ <column_constraint> ]
+
+<column_constraint>::=
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
+
 <table_option> ::=
     {
        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 

@@ -35,7 +35,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET STATISTICS IO { ON | OFF }  
 ```  
@@ -69,7 +69,7 @@ SET STATISTICS IO { ON | OFF }
 ## Examples  
  This example shows how many logical and physical reads are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as it processes the statements.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS IO ON;  

@@ -1,5 +1,6 @@
 ---
 title: "Working with User-Defined Types in SQL Server | Microsoft Docs"
+description: You can access UDT functionality in SQL Server from the Transact-SQL language using regular query syntax. Define UDT tables and columns and manipulate UDT data.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

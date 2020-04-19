@@ -8,8 +8,8 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Step 1: Configure development environment for ADO.NET development
@@ -20,7 +20,7 @@ ms.reviewer: v-kaywon
 
 ## Download a .NET SQL driver
 
-Our current code example uses ADO.NET of the .NET Framework, for Windows. The .NET Core is available for Linux and MacOS (in addition to Windows).
+Our current code example uses ADO.NET of the .NET Framework, for Windows. The .NET Core is available for Linux and macOS (in addition to Windows).
 
 ### ADO.NET, for Windows
 
@@ -31,7 +31,7 @@ Our current code example uses ADO.NET of the .NET Framework, for Windows. The .N
     - [More options for free Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### .NET Core, for Linux-Ubuntu and MacOS
+### .NET Core, for Linux-Ubuntu and macOS
 
 Links to download .NET Core, for a variety of operating systems, are available at:
 

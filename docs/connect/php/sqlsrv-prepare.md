@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_prepare"
   - "sqlsrv_prepare"
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

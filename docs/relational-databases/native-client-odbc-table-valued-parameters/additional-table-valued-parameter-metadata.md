@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), catalog functions to retrieve metadata"
   - "table-valued parameters (ODBC), metadata"
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Additional Table-Valued Parameter Metadata

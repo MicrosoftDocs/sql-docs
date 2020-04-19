@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "prompting user for connection information [ODBC]"
   - "SQLDriverConnect function [ODBC], prompting user for connection information"
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Prompting the User for Connection Information
 If the application uses **SQLConnect** and needs to prompt the user for any connection information, such as a user name and password, it must do so itself. While this allows the application to control its "look and feel," it might force the application to contain driver-specific code. This occurs when the application needs to prompt the user for driver-specific connection information. This presents an impossible situation for generic applications, which are designed to work with any and all drivers, including drivers that do not exist when the application is written.  

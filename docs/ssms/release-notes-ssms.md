@@ -62,7 +62,7 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | Integration Services | Support executing SSIS Package from file system in MI Agent Job. |
 | Integration Services | Made user-friendly improvements in configuring Azure-enabled DTExec to invoke SSIS package executions on Azure-SSIS Integration Runtime.
 | Integration Services | Support connecting Azure-SSIS integration runtime and managing or executing SSIS packages in package stores.
-| Integration Services | Support migrating on-premise SSIS agent jobs to ADF pipelines and triggers.
+| Integration Services | Support migrating on-premises SSIS agent jobs to ADF pipelines and triggers.
 | Integration Services | Made an improvement for the user experience of exporting SSIS projects from SSIS DB. Compared with the old Export, which loaded and upgraded packages in the SSIS project, the new version-independent Export won't load and upgrade packages in the SSIS project. Instead, it keeps packages in the projects as they are in SSIS DB except changing protection level to EncryptSensitiveWithUserKey. |
 | SMO/Scripting | Added new DwMaterializedViewDistribution property to View object. |
 | SMO/Scripting | Removed support for *Feature Restriction* (this preview feature has been removed from SQL Azure and SQL on-prem). |

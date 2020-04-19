@@ -1,6 +1,6 @@
 ---
 title: "Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
-description: "Microsoft OLE DB Driver for SQL Server"
+description: "The Microsoft OLE DB Driver for SQL Server provides connectivity to SQL Server and Azure SQL Database via standard OLE DB APIs."
 ms.custom: ""
 ms.date: "02/12/2019"
 ms.prod: sql

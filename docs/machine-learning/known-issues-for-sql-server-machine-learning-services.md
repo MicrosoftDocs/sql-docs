@@ -11,7 +11,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Known issues in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
+This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
 
 ## Setup and configuration issues
 

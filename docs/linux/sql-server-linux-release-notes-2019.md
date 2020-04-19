@@ -24,7 +24,7 @@ The following release notes apply to SQL Server 2019 running on Linux. This arti
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, or 8 Server | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3, SP4, or SP5 | XFS or EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS, 18.04 | XFS or EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Ubuntu 16.04 LTS, 18.04 LTS | XFS or EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -200,19 +200,19 @@ The following sections describe known issues with the General Availability (GA) 
 
       1. Add the following to /var/opt/mssql/mssql.conf.
 
-      ```
-      [network]
-      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
-      ```
+          ```
+          [network]
+          tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+          ```
 
-         >[!NOTE]
-         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
+         > [!NOTE]
+         > In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
 
       1. Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with the following command.
 
-      ```bash
-      sudo systemctl restart mssql-server
-      ```
+          ```bash
+          sudo systemctl restart mssql-server
+          ```
 
 - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] databases on Windows that use In-memory OLTP cannot be restored on SQL Server 2019 (15.x) on Linux. To restore a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] database that uses in-memory OLTP, first upgrade the databases to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], SQL Server 2017, or SQL Server 2019 on Windows before moving them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux via backup/restore or detach/attach.
 

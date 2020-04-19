@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Native Client ODBC Data Sources | Microsoft Docs"
+title: "ODBC Data Sources"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data sources"
   - "ODBC data sources"
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client ODBC Data Sources

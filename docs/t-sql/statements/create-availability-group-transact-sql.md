@@ -37,7 +37,7 @@ ms.author: "mikeray"
   
 ## Syntax  
   
-```SQL  
+```syntaxsql
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  

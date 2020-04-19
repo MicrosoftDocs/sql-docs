@@ -18,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetPos function [ODBC]"
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetPos Function
 **Conformance**  

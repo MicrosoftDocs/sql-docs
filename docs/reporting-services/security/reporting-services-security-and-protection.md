@@ -29,6 +29,6 @@ ms.author: maggies
   
 |Task Descriptions|Links|  
 |-----------------------|-----------|  
-|Configure the Secure Socket Layer (SSL) to secure client connections to the report server.|[Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
+|Configure the Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), to secure client connections to the report server.|[Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   

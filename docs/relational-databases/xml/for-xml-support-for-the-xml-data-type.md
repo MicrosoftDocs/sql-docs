@@ -1,5 +1,6 @@
 ---
 title: "FOR XML Support for the xml Data Type | Microsoft Docs"
+description: Learn about the use of FOR XML queries on SQL database columns of the xml data type. 
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "date/time [ODBC]"
   - "ODBC, date/time improvements"
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Date and Time Improvements (ODBC)

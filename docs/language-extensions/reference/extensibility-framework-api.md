@@ -1,16 +1,16 @@
 ---
-title: Extensibility Framework API for Microsoft SQL Server
+title: Extensibility Framework API
 titleSuffix: SQL Server Language Extensions
-description:  
+description: You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 author: dphansen
 ms.author: davidph 
-ms.date: 03/30/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Extensibility Framework API for Microsoft SQL Server
+# Extensibility Framework API for SQL Server
 
 You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 
@@ -583,7 +583,7 @@ SQLRETURN InstallExternalLibrary(
 *LibraryErrorLength*  
 \[Output\] The length of the LibraryError string.
 
-## UninstallLibrary
+## UninstallExternalLibrary
 
 Uninstalls a library. The function is optional and doesn't require implementation. The default implementation is to undo the work done by the default Implementation of InstallExternalLibrary. The default implementation deletes the content of the *LibraryName* file under *LibraryInstallDirectory*.
 

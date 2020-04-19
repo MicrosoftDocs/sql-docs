@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [OLE DB], server to client"
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

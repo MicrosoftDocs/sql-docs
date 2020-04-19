@@ -27,7 +27,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  

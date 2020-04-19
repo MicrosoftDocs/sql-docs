@@ -29,7 +29,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  

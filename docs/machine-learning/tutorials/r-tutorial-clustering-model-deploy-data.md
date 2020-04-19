@@ -32,7 +32,7 @@ In [part two](r-tutorial-clustering-model-build-data.md), you learned how to cre
 
 ## Prerequisites
 
-* Part three of this tutorial series assumes you have completed [**part one**](r-tutorial-clustering-model-introduction.md) and [**part two**](r-tutorial-clustering-model-build.md).
+* Part three of this tutorial series assumes you have completed [**part one**](r-tutorial-clustering-model-introduction.md) and [**part two**](r-tutorial-clustering-model-build-data.md).
 
 ## Create a stored procedure that generates the model
 
@@ -201,7 +201,7 @@ cluster  customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 Because you stored the clustering procedure in the database, it can perform clustering efficiently against customer data stored in the same database. You can execute the procedure whenever your customer data is updated and use the updated clustering information.
 
-Suppose you want to send a promotional email to customers in cluster 3, the group that has more active return behavior (you can see how the four clusters were described in [part two](sql-database-tutorial-clustering-model-build.md#analyze-the-results)). The following code selects the email addresses of customers in cluster 3.
+Suppose you want to send a promotional email to customers in cluster 3, the group that has more active return behavior (you can see how the four clusters were described in [part two](r-tutorial-clustering-model-build-data.md#analyze-the-results)). The following code selects the email addresses of customers in cluster 3.
 
 ```sql
 USE [tpcxbb_1gb]

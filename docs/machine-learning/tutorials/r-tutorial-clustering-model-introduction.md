@@ -80,5 +80,5 @@ To prepare the data for the machine learning model, follow part two of this tuto
 
 [!div class="nextstepaction"]
 
-[R tutorial: Prepare data to perform clustering](r-clustering-model-prepare-data.md)
+[R tutorial: Prepare data to perform clustering](r-tutorial-clustering-model-prepare-data.md)
 

@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 # Tutorial: Build a clustering model in R with SQL machine learning services
 
-In part two of this three-part tutorial series, you'll build a K-Means model in R to perform clustering. In the next part of this series, you'll deploy this model in a SQL database with SQL Database Machine Learning Services.
+In part two of this four-part tutorial series, you'll build a K-Means model in R to perform clustering. In the next part of this series, you'll deploy this model in a SQL database with SQL Database Machine Learning Services.
 
 In this article, you'll learn how to:
 

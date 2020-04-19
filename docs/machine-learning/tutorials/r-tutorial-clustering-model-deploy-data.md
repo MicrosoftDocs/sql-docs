@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 # Tutorial: Deploy a clustering model in R with SQL machine learning services
 
-In part three of this three-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL machine learning services.
+In part three of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL machine learning services.
 
 You'll create a stored procedure with an embedded R script that performs clustering. Because your model executes in the SQL database, it can easily be trained against data stored in the database.
 

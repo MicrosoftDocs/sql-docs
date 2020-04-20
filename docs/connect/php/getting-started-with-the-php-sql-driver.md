@@ -26,7 +26,7 @@ This section provides information about the system requirements for using the [!
 ## See Also  
 [Example Application &#40;SQLSRV Driver&#41;](example-application-sqlsrv-driver.md)
 
-[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](programming-guide-for-php-sql-driver.md)
 
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
   

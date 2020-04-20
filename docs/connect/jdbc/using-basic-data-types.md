@@ -95,20 +95,20 @@ If you have to update the value of a field in a data source, use one of the upda
 
 If you have to update data in a data source by using a parameterized query, you can set the data type of the parameters by using one of the set\<Type> methods of the [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) class, also known as the *setter methods*. In the following example, the [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) method is used to pre-compile the parameterized query, and then the [setString](reference/setstring-method-sqlserverpreparedstatement.md) method is used to set the string value of the parameter before the [executeUpdate](reference/executeupdate-method.md) method is called.  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-For more information about parameterized queries, see [Using an SQL statement with parameters](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+For more information about parameterized queries, see [Using an SQL statement with parameters](using-an-sql-statement-with-parameters.md).  
 
 ## Passing parameters to a stored procedure
 
 If you have to pass typed parameters into a stored procedure, you can set the parameters by index or name by using one of the set\<Type> methods of the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class. In the following example, the [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) method is used to set up the call to the stored procedure, and then the [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) method is used to set the parameter for the call before the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method is called.  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > In this example, a result set is returned with the results of running the stored procedure.
 
-For more information about using the JDBC driver with stored procedures and input parameters, see [Using a stored procedure with input parameters](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+For more information about using the JDBC driver with stored procedures and input parameters, see [Using a stored procedure with input parameters](using-a-stored-procedure-with-input-parameters.md).  
 
 ## Retrieving parameters from a stored procedure
 

@@ -1,6 +1,6 @@
 ---
 title: Notebooks with KQL (Kusto Query Language) magic in Azure Data Studio
-description: This tutorial shows how you can create and run KQL magic in Azure Data Studio.
+description: This tutorial shows how you can create and run Kqlmagic in Azure Data Studio.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
@@ -11,18 +11,18 @@ ms.custom: ""
 ms.date: 04/22/2020
 ---
 
-# KQL magic extension in Azure Data Studio
+# Kqlmagic extension in Azure Data Studio
 
-**KQL magic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](notebooks-guidance.md)**. You can combine Python and Kusto query language (KQL) to query and visualize data using rich Plot.ly library integrated with `render` commands. KQL magic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with KQL magic include **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)**, **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)**.
+**Kqlmagic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](notebooks-guidance.md)**. You can combine Python and Kusto query language (KQL) to query and visualize data using rich Plot.ly library integrated with `render` commands. Kqlmagic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with Kqlmagic include **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)**, **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)**.
 
-This article shows you how to create and run a notebook in Azure Data Studio using the KQL magic extension for an Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
+This article shows you how to create and run a notebook in Azure Data Studio using the Kqlmagic extension for an Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
 
 ## Prerequisites
 
 - [Azure Data Studio](download-azure-data-studio.md)
 - [Python](https://www.python.org/downloads/)
 
-## Install and set up KQL magic in a notebook
+## Install and set up Kqlmagic in a notebook
 
 The steps in this section all run within an Azure Data Studio notebook.
 
@@ -34,10 +34,10 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![Yes](media/notebooks-kql-magic/install-python-yes.png)
 
-3. Install KQL magic:
+3. Install Kqlmagic:
 
    ```python
-   !pip install kqlmagic --no-cache-dir --upgrade
+   !pip install Kqlmagic --no-cache-dir --upgrade
    ```
 
    Verify it's installed:
@@ -48,18 +48,18 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![List](media/notebooks-kql-magic/install-list.png)
 
-4. Load KQL magic:
+4. Load Kqlmagic:
 
    ```python
-   %reload_ext kqlmagic
+   %reload_ext Kqlmagic
    ```
 
    > [!Note]
    > If this step fails, then close the file and reopen it.
 
-   ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the Kqlmagic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
-5. You can test if KQL magic is loaded properly by browsing the help documentation or by checking for the version.
+5. You can test if Kqlmagic is loaded properly by browsing the help documentation or by checking for the version.
 
    ```python
    %kql --help "help"
@@ -70,32 +70,32 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![Help](media/notebooks-kql-magic/install-help.png)
 
-   To see which version of kqlmagic is installed, run the command below.
+   To see which version of Kqlmagic is installed, run the command below.
 
    ```python
    %kql --version
    ```
 
-## KQL magic with an Azure Data Explorer cluster
+## Kqlmagic with an Azure Data Explorer cluster
 
-This section explains how to run data analysis using KQL magic with an Azure Data Explorer cluster.
+This section explains how to run data analysis using Kqlmagic with an Azure Data Explorer cluster.
 
-### <a name="ade-load-auth"></a> Load and authenticate KQL magic for Azure Data Explorer
+### <a name="ade-load-auth"></a> Load and authenticate Kqlmagic for Azure Data Explorer
 
    > [!Note]
-   > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
+   > Every time you create a new notebook in Azure Data Studio you must load the Kqlmagic extension.
 
 1. Verify the kernel is set to *Python3*.
 
    ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
 
-2. Load KQL magic:
+2. Load Kqlmagic:
 
    ```python
    %reload_ext Kqlmagic
    ```
 
-   ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the Kqlmagic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
 3. Connect to the cluster and authenticate:
 
@@ -144,24 +144,24 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
    ![Multiline Query sample](media/notebooks-kql-magic/ade-multiline-query-sample.png)
 
-## KQL magic with Application Insights
+## Kqlmagic with Application Insights
 
-### <a name="appin-load-auth"></a> Load and authenticate KQL magic for Application Insights
+### <a name="appin-load-auth"></a> Load and authenticate Kqlmagic for Application Insights
 
 1. Verify the kernel is set to *Python3*.
 
    ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
 
-2. Load KQL magic:
+2. Load Kqlmagic:
 
    ```python
    %reload_ext Kqlmagic
    ```
 
-   ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the Kqlmagic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
    > [!Note]
-   > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
+   > Every time you create a new notebook in Azure Data Studio you must load the Kqlmagic extension.
 
 3. Connect and authenticate
 
@@ -197,24 +197,24 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
    ![Timeline Chart](media/notebooks-kql-magic/appin-timechart.png)
 
-## KQL magic with Azure Monitor logs
+## Kqlmagic with Azure Monitor logs
 
-### <a name="aml-load-auth"></a> Load and authenticate KQL magic for Azure Monitor logs
+### <a name="aml-load-auth"></a> Load and authenticate Kqlmagic for Azure Monitor logs
 
 1. Verify the kernel is set to *Python3*.
 
    ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
 
-2. Load KQL magic:
+2. Load Kqlmagic:
 
    ```python
    %reload_ext Kqlmagic
    ```
 
-   ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the Kqlmagic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
    > [!Note]
-   > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
+   > Every time you create a new notebook in Azure Data Studio you must load the Kqlmagic extension.
 
 3. Connect and authenticate:
 
@@ -241,12 +241,12 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 ## Next steps
 
-Learn more about notebooks and KQL magic:
+Learn more about notebooks and Kqlmagic:
 
-- [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/kqlmagic)
+- [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/Kqlmagic)
 - [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
-- [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
+- [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [How to use notebooks with SQL Server](notebooks-guidance.md)
 - [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md)
 - [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md)

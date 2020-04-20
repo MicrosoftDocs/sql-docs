@@ -5,7 +5,6 @@ ms.custom: "sqlfreshmay19"
 ms.date: "09/12/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 

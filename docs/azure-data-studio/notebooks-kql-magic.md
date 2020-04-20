@@ -31,11 +31,11 @@ The steps in this section all run within an Azure Data Studio notebook.
 
 1. Create a new notebook and change the **Kernel** to *Python 3*.
 
-   ![New Notebook](media/notebooks-tutorial-kql-magic/install-new-notebook.png)
+   ![New Notebook](media/notebooks-kql-magic/install-new-notebook.png)
 
 2. When asked, select **Yes** to upgrade the Python packages.
 
-   ![Yes](media/notebooks-tutorial-kql-magic/install-python-yes.png)
+   ![Yes](media/notebooks-kql-magic/install-python-yes.png)
 
 3. Install KQL magic:
 
@@ -49,7 +49,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    !pip list
    ```
 
-   ![List](media/notebooks-tutorial-kql-magic/install-list.png)
+   ![List](media/notebooks-kql-magic/install-list.png)
 
 4. Load KQL magic:
 
@@ -60,7 +60,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    > [!Note]
    > If this step fails, then close the file and reopen it.
 
-   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
 5. You can test if KQL magic is loaded properly by browsing the help documentation or by checking for the version.
 
@@ -71,7 +71,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    > [!Note]
    > If `Samples@help` is asking for a password, then you can leave it blank and press **Enter**.
 
-   ![Help](media/notebooks-tutorial-kql-magic/install-help.png)
+   ![Help](media/notebooks-kql-magic/install-help.png)
 
    To see which version of kqlmagic is installed, run the command below.
 
@@ -79,7 +79,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    %kql --version
    ```
 
-   ![Check for version](media/notebooks-tutorial-kql-magic/install-check-version.png)
+   ![Check for version](media/notebooks-kql-magic/install-check-version.png)
 
 ## KQL magic with an Azure Data Explorer cluster
 
@@ -93,7 +93,7 @@ This section explains how to run data analysis using KQL magic with an Azure Dat
    %reload_ext Kqlmagic
    ```
 
-   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
@@ -106,7 +106,7 @@ This section explains how to run data analysis using KQL magic with an Azure Dat
 
    This uses Device Login to authenticate. Copy the code from the output and select **authenticate** which opens a browser where you need to paste the code. Once you authenticate successfully, you can come back to Azure Data Studio to continue with the rest of the script.
 
-   ![Azure Data Explorer authentication](media/notebooks-tutorial-kql-magic/ade-auth.png)
+   ![Azure Data Explorer authentication](media/notebooks-kql-magic/ade-auth.png)
 
 ### Query and visualize for Azure Data Explorer
 
@@ -120,7 +120,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
    If you're familiar with the Kusto Query Language (KQL), you can type the query after `%kql`.
 
-   ![Analyze storm events](media/notebooks-tutorial-kql-magic/ade-analyze-storm-events.png)
+   ![Analyze storm events](media/notebooks-kql-magic/ade-analyze-storm-events.png)
 
 2. Visualize a timeline chart:
 
@@ -130,7 +130,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | render timechart title= 'Daily Storm Events'
    ```
 
-   ![visualize timechart](media/notebooks-tutorial-kql-magic/ade-visualize-timechart.png)
+   ![visualize timechart](media/notebooks-kql-magic/ade-visualize-timechart.png)
 
 ### Python and KQL magic integration
 
@@ -142,7 +142,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    my_bar_chart
    ```
 
-   ![Bar chart](media/notebooks-tutorial-kql-magic/ade-bar-chart.png)
+   ![Bar chart](media/notebooks-kql-magic/ade-bar-chart.png)
 
    > [!Note]
    > Ability to assign KQL result to Python is super useful when there is additional data manipulation / analysis / visualization to be done in Python.
@@ -158,7 +158,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    display(pie_chart)
    ```
 
-   ![Print vs display function](media/notebooks-tutorial-kql-magic/ade-print-vs-display-function.png)
+   ![Print vs display function](media/notebooks-kql-magic/ade-print-vs-display-function.png)
 
 3. Multiline Query sample using `<code>%%kql</code>`.
 
@@ -171,7 +171,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | render columnchart title='Top 10 States by Storm Event count'
    ```
 
-   ![Multiline Query sample](media/notebooks-tutorial-kql-magic/ade-multiline-query-sample.png)
+   ![Multiline Query sample](media/notebooks-kql-magic/ade-multiline-query-sample.png)
 
 4. Show last "x" output
 
@@ -183,7 +183,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    _.popup()
    ```
 
-   ![Multiline Query sample](media/notebooks-tutorial-kql-magic/ade-show-last-output.png)
+   ![Multiline Query sample](media/notebooks-kql-magic/ade-show-last-output.png)
 
 ## KQL magic with Application Insights
 
@@ -195,7 +195,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    %reload_ext Kqlmagic
    ```
 
-   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
@@ -218,7 +218,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | limit 10
    ```
 
-   ![Page Views](media/notebooks-tutorial-kql-magic/appin-page-views.png)
+   ![Page Views](media/notebooks-kql-magic/appin-page-views.png)
 
    > [!Note]
    > Use your mouse to drag on an area of the chart to zoom in to the specific date(s).
@@ -232,7 +232,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | render timechart title= 'Daily Page Views'
    ```
 
-   ![Timeline Chart](media/notebooks-tutorial-kql-magic/appin-timechart.png)
+   ![Timeline Chart](media/notebooks-kql-magic/appin-timechart.png)
 
 ## KQL magic with Azure Monitor logs
 
@@ -244,7 +244,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    %reload_ext Kqlmagic
    ```
 
-   ![Load the KQL Magic extension](media/notebooks-tutorial-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
@@ -255,7 +255,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    %kql loganalytics://workspace='DEMO_WORKSPACE';appkey='DEMO_KEY';alias='myworkspace'
    ```
 
-   ![Log Analytics auth](media/notebooks-tutorial-kql-magic/aml-auth.png)
+   ![Log Analytics auth](media/notebooks-kql-magic/aml-auth.png)
 
 ### Query and visualize for Azure Monitor Logs
 
@@ -270,7 +270,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | render timechart title= 'Daily Kubernetes Nodes'
    ```
 
-   ![Log Analytics Daily Kubernetes Nodes timechart](media/notebooks-tutorial-kql-magic/aml-timechart-daily-kubernetes-nodes.png)
+   ![Log Analytics Daily Kubernetes Nodes timechart](media/notebooks-kql-magic/aml-timechart-daily-kubernetes-nodes.png)
 
 ## Next steps
 

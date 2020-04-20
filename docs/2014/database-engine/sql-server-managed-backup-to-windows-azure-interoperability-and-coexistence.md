@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Managed Backup to Azure: Interoperability and Coexistence | Microsoft Docs"
+description: This article describes SQL Server Managed Backup to Microsoft Azure interoperability and coexistence with several features in SQL Server 2014.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"

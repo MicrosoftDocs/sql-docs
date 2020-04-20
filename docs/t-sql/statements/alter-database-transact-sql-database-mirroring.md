@@ -36,7 +36,7 @@ For ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-da
 
 ## Syntax
 
-```
+```syntaxsql
 
 ALTER DATABASE database_name
 SET { <partner_option> | <witness_option> }

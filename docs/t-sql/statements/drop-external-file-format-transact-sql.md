@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Drop an external file format  
 DROP EXTERNAL FILE FORMAT external_file_format_name  
 [;]  

@@ -39,7 +39,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
        -   [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-       -   SSL Security update  
+       -   TLS Security update  
 
    >[!NOTE]
    >The preceding list also applies to [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].

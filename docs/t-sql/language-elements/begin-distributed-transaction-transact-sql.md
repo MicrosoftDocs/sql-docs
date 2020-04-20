@@ -37,7 +37,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 BEGIN DISTRIBUTED { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable ]   

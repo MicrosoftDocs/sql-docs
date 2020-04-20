@@ -29,7 +29,7 @@ Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVers
 
 ## Syntax
 
-```
+```syntaxsql
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -228,6 +228,7 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Macedonian|Macedonian|
+||||
 
 <sup>1</sup> Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
 

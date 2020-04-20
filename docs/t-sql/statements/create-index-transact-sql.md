@@ -97,7 +97,7 @@ For additional types of indexes, see:
 
 ### Syntax for SQL Server and Azure SQL Database
 
-```
+```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )
     [ INCLUDE ( column_name [ ,...n ] ) ]
@@ -125,13 +125,13 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }
   | DROP_EXISTING = { ON | OFF }
   | ONLINE = { ON | OFF }
-  | RESUMABLE = {ON | OF }
+  | RESUMABLE = { ON | OFF }
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
-  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
   | MAXDOP = max_degree_of_parallelism
-  | DATA_COMPRESSION = { NONE | ROW | PAGE}
+  | DATA_COMPRESSION = { NONE | ROW | PAGE }
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
      [ , ...n ] ) ]
 }
@@ -162,7 +162,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 > Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature.
 > Use the syntax structure specified in <relational_index_option> instead.
 
-```
+```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )
     [ WITH <backward_compatible_index_option> [ ,...n ] ]
@@ -187,7 +187,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 ### Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
-```
+```syntaxsql
 
 CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name

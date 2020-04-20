@@ -34,7 +34,7 @@ Creates a classifier object for use in workload management.  The classifier assi
   
 ## Syntax
 
-```
+```syntaxsql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     (   WORKLOAD_GROUP = 'name'  

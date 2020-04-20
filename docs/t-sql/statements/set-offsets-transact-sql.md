@@ -35,7 +35,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET OFFSETS keyword_list { ON | OFF }  
 ```  

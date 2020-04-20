@@ -7830,7 +7830,7 @@
         - name: Manage a notebook
           href: azure-data-studio/notebooks-manage-sql-server.md
         - name: KQL magic
-          href: azure-data-studio/notebooks-tutorial-kql-magic.md
+          href: azure-data-studio/notebooks-kql-magic.md
     - name: How-to guides
       items:
       - name: Dashboards & insight widgets

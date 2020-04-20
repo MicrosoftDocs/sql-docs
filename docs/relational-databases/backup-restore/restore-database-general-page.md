@@ -1,5 +1,6 @@
 ---
 title: "Restore Database (General Page) | Microsoft Docs"
+description: While restoring a database in SQL Server, use the General page to specify information about the target and source databases for a database-restore operation.
 ms.custom: ""
 ms.date: "07/01/2016"
 ms.prod: sql

@@ -39,7 +39,7 @@ ms.author: lle
 |**Reply email address**|Optional setting. Type the email address to use for replies to email messages sent from this account. An example reply email address is admin@contoso.com.|  
 |**SMTP server**|Type the name or IP address of the SMTP server the account uses to send email. An example SMTP server format is **smtp.***<company_name>***.com**. For help with this, consult your mail administrator.|  
 |**Port number**|Type the port number of the SMTP server for this account. The default SMTP port is 25.|  
-|**This server requires a secure connection (SSL)**|Encrypts communication using Secure Sockets Layer (SSL).|  
+|**This server requires a secure connection (SSL)**|Encrypts communication using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL).|  
   
 ## SMTP Authentication  
  Database Mail can be sent by using the credentials of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], by using other credentials that you supply, or anonymously. As a best practice, if your email server requires authentication, create a specific user account to use for Database Mail. This user account should have minimal permissions, and should not be used for any other purpose.  

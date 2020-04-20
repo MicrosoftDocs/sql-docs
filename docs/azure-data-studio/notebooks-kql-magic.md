@@ -13,8 +13,6 @@ ms.date: 04/22/2020
 
 # KQL magic extension in Azure Data Studio
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
 **KQL magic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](notebooks-guidance.md)**. You can combine Python and Kusto query language (KQL) to query and visualize data using rich Plot.ly library integrated with `render` commands. KQL magic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with KQL magic include **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)**, **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)**.
 
 This article shows you how to create and run a notebook in Azure Data Studio using the KQL magic extension for an Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
@@ -22,8 +20,7 @@ This article shows you how to create and run a notebook in Azure Data Studio usi
 ## Prerequisites
 
 - [Azure Data Studio](download-azure-data-studio.md)
-- [Python installed](https://www.python.org/downloads/)
-- [Azure Data Explorer cluster and database](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)
+- [Python](https://www.python.org/downloads/)
 
 ## Install and set up KQL magic in a notebook
 
@@ -40,7 +37,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 3. Install KQL magic:
 
    ```python
-   !pip install Kqlmagic --no-cache-dir --upgrade
+   !pip install kqlmagic --no-cache-dir --upgrade
    ```
 
    Verify it's installed:
@@ -54,7 +51,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 4. Load KQL magic:
 
    ```python
-   %reload_ext Kqlmagic
+   %reload_ext kqlmagic
    ```
 
    > [!Note]
@@ -79,15 +76,20 @@ The steps in this section all run within an Azure Data Studio notebook.
    %kql --version
    ```
 
-   ![Check for version](media/notebooks-kql-magic/install-check-version.png)
-
 ## KQL magic with an Azure Data Explorer cluster
 
 This section explains how to run data analysis using KQL magic with an Azure Data Explorer cluster.
 
 ### <a name="ade-load-auth"></a> Load and authenticate KQL magic for Azure Data Explorer
 
-1. Load KQL magic:
+   > [!Note]
+   > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
+
+1. Verify the kernel is set to *Python3*.
+
+   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+
+2. Load KQL magic:
 
    ```python
    %reload_ext Kqlmagic
@@ -95,10 +97,7 @@ This section explains how to run data analysis using KQL magic with an Azure Dat
 
    ![Load the KQL Magic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
 
-   > [!Note]
-   > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
-
-2. Connect to the cluster and authenticate:
+3. Connect to the cluster and authenticate:
 
    ```python
    %kql azureDataExplorer://code;cluster='help';database='Samples'
@@ -132,35 +131,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
    ![visualize timechart](media/notebooks-kql-magic/ade-visualize-timechart.png)
 
-### Python and KQL magic integration
-
-1. Assign a kql query bar chart to a Python variable:
-
-   ```python
-   %kql my_bar_chart << StormEvents | summarize count() by State | sort by count_ | limit 10 | render barchart title='my bar chart'
-
-   my_bar_chart
-   ```
-
-   ![Bar chart](media/notebooks-kql-magic/ade-bar-chart.png)
-
-   > [!Note]
-   > Ability to assign KQL result to Python is super useful when there is additional data manipulation / analysis / visualization to be done in Python.
-
-2. Print vs Display function
-
-   ```python
-   %kql bar_chart << StormEvents | summarize count() by State | sort by count_ | limit 10 | render barchart title='my bar chart'
-   print(bar_chart)
-   display(bar_chart)
-
-   %kql pie_chart << StormEvents | summarize count() by State | sort by count_ | limit 10 | render piechart title='my pie chart'
-   display(pie_chart)
-   ```
-
-   ![Print vs display function](media/notebooks-kql-magic/ade-print-vs-display-function.png)
-
-3. Multiline Query sample using `<code>%%kql</code>`.
+3. Multiline Query sample using `%%kql`.
 
    ```python
    %%kql
@@ -173,23 +144,15 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
    ![Multiline Query sample](media/notebooks-kql-magic/ade-multiline-query-sample.png)
 
-4. Show last "x" output
-
-   ```python
-   _.show_table()
-   ```
-
-   ```python
-   _.popup()
-   ```
-
-   ![Multiline Query sample](media/notebooks-kql-magic/ade-show-last-output.png)
-
 ## KQL magic with Application Insights
 
 ### <a name="appin-load-auth"></a> Load and authenticate KQL magic for Application Insights
 
-1. Load KQL magic:
+1. Verify the kernel is set to *Python3*.
+
+   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+
+2. Load KQL magic:
 
    ```python
    %reload_ext Kqlmagic
@@ -200,7 +163,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
 
-2. Connect and authenticate
+3. Connect and authenticate
 
    ```python
    %kql appinsights://appid='DEMO_APP';appkey='DEMO_KEY'
@@ -238,7 +201,11 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 ### <a name="aml-load-auth"></a> Load and authenticate KQL magic for Azure Monitor logs
 
-1. Load KQL magic:
+1. Verify the kernel is set to *Python3*.
+
+   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+
+2. Load KQL magic:
 
    ```python
    %reload_ext Kqlmagic
@@ -249,7 +216,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the KQL magic extension.
 
-2. Connect and authenticate:
+3. Connect and authenticate:
 
    ```python
    %kql loganalytics://workspace='DEMO_WORKSPACE';appkey='DEMO_KEY';alias='myworkspace'

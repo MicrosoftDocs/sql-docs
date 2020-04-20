@@ -30,7 +30,7 @@ manager: kfile
 |------------|-----------------|  
 |**Edit As Text**|Disabled for this data source type.|  
 |**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Change to MDX query view](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Switch to the MDX query designer mode.|  
+|![Change to MDX query view](../media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Switch to the MDX query designer mode.|  
 |![Change to DMX query language view](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Switch to the DMX query designer mode.|  
 |![Refresh result data](../media/rsqdicon-refresh.gif "Refresh result data")|Refresh metadata from the data source.|  
 |![Delete](../media/rsqdicon-delete.gif "Delete")|Delete the selected column in the Data pane from the query.|  

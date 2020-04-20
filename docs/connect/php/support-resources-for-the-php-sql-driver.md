@@ -20,7 +20,7 @@ ms.author: v-daenge
 This topic lists resources that may be helpful when you are developing applications that use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Support Resources  
-For the latest documentation, see the [Microsoft PHP Driver for SQL Server](../../connect/php/microsoft-php-driver-for-sql-server.md) for the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+For the latest documentation, see the [Microsoft PHP Driver for SQL Server](microsoft-php-driver-for-sql-server.md) for the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 For peer-to-peer support, visit the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
@@ -49,4 +49,4 @@ For PHP documentation, visit [http://www.php.net/docs.php](http://www.php.net/do
 For support questions related to the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can contact [Microsoft Support](https://support.microsoft.com/contactus/), or ask on the [GitHub project page](https://github.com/Microsoft/msphpsql/issues).  
   
 ## See Also  
-[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)

@@ -1,5 +1,6 @@
 ---
-title: "Securing JDBC driver applications | Microsoft Docs"
+title: "Securing JDBC driver applications"
+description: "The topics in this section describe some common security concerns including connection strings, validating user input, and general application security."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

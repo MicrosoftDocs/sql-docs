@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Restore HDFS admin rights
 
-HDFS access control lists (ACL) were modified that affected the /system and /tmp folders in HDFS
+HDFS access control lists (ACLs) modifications may have affected the `/system` and `/tmp` folders in HDFS.
 
 ## Symptom
 
@@ -36,7 +36,7 @@ hdfs dfs -rm /system/spark-events/test
 
 ## Cause
 
-The HDFS ACLs were modified for BDC user domain security group. Modifications included ACLs for /system and /tmp folders. Modifications of these folders are not supported.
+The HDFS ACLs were modified for BDC user domain security group. Possible modifications included ACLs for /system and /tmp folders. Modifications of these folders are not supported.
 
 Verify the effect in the Livy logs:
 
@@ -49,11 +49,10 @@ INFO interactive.InteractiveSession: Failed to ping RSC driver for session <ID>.
 
 The YARN UI shows applications in KILLED status for the application ID.
 
-To get the root cause of RPC connection close, check the application log for app corresponding to the application. In the preceding example, it refers to `application_1580771254352_0041`. Use `kubectl` to connect to the sparkhead-0 pod, and run this command:
+To get the root cause of RPC connection close, check the YARN application log for app corresponding to the application. In the preceding example, it refers to `application_1580771254352_0041`. Use `kubectl` to connect to the sparkhead-0 pod, and run this command:
 
 ```bash
 yarn logs -applicationId application_1580771254352_0041
-
 ```
 
 ## Resolution

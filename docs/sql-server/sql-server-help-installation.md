@@ -218,9 +218,9 @@ For more information about the Help Viewer tool, see [SQL Server offline help an
 
 #### To view offline help content in SSMS with Help Viewer
 
-To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Remove Content** from the Help menu, to launch the Help Viewer.
+To view the installed help in SSMS, select **Launch in Help Viewer** from the Help menu, to launch the Help Viewer.
 
-   ![HelpViewer2 Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)  
+   ![Launch in Help Viewer](../sql-server/media/sql-server-help-installation/helpviewer-view-offline.png)  
 
 Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. select articles in the table of contents to display them in the right pane.
 

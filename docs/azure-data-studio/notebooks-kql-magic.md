@@ -85,7 +85,7 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the Kqlmagic extension.
 
-1. Verify the kernel is set to *Python3*.
+1. Verify the **Kernel** is set to *Python3*.
 
    ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
 
@@ -148,7 +148,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 ### <a name="appin-load-auth"></a> Load and authenticate Kqlmagic for Application Insights
 
-1. Verify the kernel is set to *Python3*.
+1. Verify the **Kernel** is set to *Python3*.
 
    ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
 
@@ -201,7 +201,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 ### <a name="aml-load-auth"></a> Load and authenticate Kqlmagic for Azure Monitor logs
 
-1. Verify the kernel is set to *Python3*.
+1. Verify the **Kernel** is set to *Python3*.
 
    ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
 

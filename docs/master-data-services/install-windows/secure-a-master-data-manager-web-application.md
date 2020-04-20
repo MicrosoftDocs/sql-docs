@@ -38,7 +38,7 @@ ms.author: lle
   
 5.  From the list, select **https**.  
   
-6.  Select the SSL certificate.  
+6.  Select the TLS/SSL certificate.  
   
 7.  Click **OK**.  
   

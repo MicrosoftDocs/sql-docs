@@ -36,7 +36,7 @@ Rebuilds one or more indexes for a table in the specified database.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC DBREINDEX   
 (   
     table_name   

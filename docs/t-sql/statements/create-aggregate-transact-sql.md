@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE AGGREGATE [ schema_name . ] aggregate_name  
         (@param_name <input_sqltype>   

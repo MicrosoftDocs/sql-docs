@@ -73,19 +73,19 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. Click **Add...** and add the **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** user
+1. Click **Add...** and add the **bdcDSA** user
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. Select the **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** user and clear all permissions, then click **Advanced**
+1. Select the **bdcDSA** user and clear all permissions, then click **Advanced**
 
 1. Click **Add**
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 
@@ -109,7 +109,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 - Click **Add**
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 
@@ -123,7 +123,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 - Click **Add**
 
-    - Click **Select a Principal**, insert **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**, and click Ok
+    - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
     - Set **Type** to **Allow**
 
@@ -162,7 +162,7 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: list of IP addresses of domain controllers
+- `security.activeDirectory.dnsIpAddresses`: contains the list of domain’s DNS servers IP addresses. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`
 
@@ -246,7 +246,7 @@ You can find an example script here for [deploying a SQL Server big data cluster
 
 You should now have set all the required parameters for a deployment of BDC with Active Directory integration.
 
-For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [official documentation](deployment-guidance.md).
+You can now deploy the BDC cluster integrated with Active Directory using the `azdata` command and the kubeadm-prod deployment profile. For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md).
 
 ## Verify reverse DNS entry for domain controller
 
@@ -321,3 +321,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Only one BDC per domain (Active Directory) is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
 
 - None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+
+- AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC, Enabling logins from other trusted domain is planned for a future release

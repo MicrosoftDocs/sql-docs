@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ] [ WITH GRANT OPTION ]  

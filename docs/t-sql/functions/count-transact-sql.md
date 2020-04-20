@@ -33,7 +33,7 @@ This function returns the number of items found in a group. `COUNT` operates lik
   
 ## Syntax  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  

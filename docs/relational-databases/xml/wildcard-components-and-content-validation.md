@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Wildcard Components and Content Validation
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Wildcard components are used to increase flexibility in what is allowed to appear in a content model. These components are supported in the XSD language in the following ways:  
   
 -   Element wildcard components. These are represented by the **\<xsd:any>** element.  

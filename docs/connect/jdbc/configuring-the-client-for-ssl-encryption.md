@@ -8,8 +8,8 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Configuring the client for encryption
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

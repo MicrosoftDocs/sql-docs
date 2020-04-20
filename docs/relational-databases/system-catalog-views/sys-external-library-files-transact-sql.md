@@ -35,4 +35,4 @@ Lists a row for each file that makes up an external library.
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
-[Package management for SQL Server Machine Learning Service](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+

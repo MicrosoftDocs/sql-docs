@@ -12,8 +12,6 @@ ms.author: v-makmie
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
-
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 
 <!--

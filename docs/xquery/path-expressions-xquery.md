@@ -1,5 +1,6 @@
 ---
 title: "Path Expressions (XQuery) | Microsoft Docs"
+description: Learn how XQuery path expressions locate nodes, such as element, attribute, and text nodes, in a document.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

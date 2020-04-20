@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Retrieve and Query XML Data
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that are not preserved when they are stored in databases.  
   
 ##  <a name="features"></a> Features of an XML Instance That Are Not Preserved  

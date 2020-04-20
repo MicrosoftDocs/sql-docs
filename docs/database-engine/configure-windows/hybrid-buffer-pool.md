@@ -90,9 +90,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
 
-Use the large page memory allocation model, which can be enabled with [trace flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Trace flag 834 is a startup trace flag.
-
-Using the large page memory allocation model requires the use of [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
+Use [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
 
 Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
 

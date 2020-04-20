@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ]    
     ON DATABASE SCOPED CREDENTIAL :: credential_name   
     TO principal [ ,...n ] [ WITH GRANT OPTION ]   

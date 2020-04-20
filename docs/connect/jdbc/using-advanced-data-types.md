@@ -1,5 +1,6 @@
 ---
-title: "Using advanced data types | Microsoft Docs"
+title: "Using advanced data types"
+description: "Learn how to use JDBC advanced data types to convert from SQL Server data types to Java data types using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using advanced data types
 

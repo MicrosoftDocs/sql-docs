@@ -47,7 +47,7 @@ This host name is the Scale Out Master endpoint, which is created as a clustered
 ## 3. Install Scale Out Master on the secondary node
 Install SQL Server Database Engine Services, Integration Services, and Scale Out Master on the secondary node for Scale Out Master. 
 
-Use the same Scale Out Master certificate that you used on the primary node. Export the Scale Out Master SSL certificate on the primary node with a private key and install it to the Root certificate store of the local computer on the secondary node. Select this certificate when installing Scale Out Master on the secondary node.
+Use the same Scale Out Master certificate that you used on the primary node. Export the Scale Out Master TLS/SSL certificate on the primary node with a private key and install it to the Root certificate store of the local computer on the secondary node. Select this certificate when installing Scale Out Master on the secondary node.
 
 ![HA master config 2](media/ha-master-config2.PNG)
 

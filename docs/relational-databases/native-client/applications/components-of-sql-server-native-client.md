@@ -1,5 +1,5 @@
 ---
-title: "Components of SQL Server Native Client | Microsoft Docs"
+title: "Components"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "components [SQL Server Native Client]"
   - "SQLNCLI, about SQL Server Native Client"
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Components of SQL Server Native Client

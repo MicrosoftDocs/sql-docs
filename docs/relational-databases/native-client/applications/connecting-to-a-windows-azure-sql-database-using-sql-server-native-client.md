@@ -1,5 +1,5 @@
 ---
-title: "Native Client, connect to Azure SQL DB"
+title: "Connect to Azure SQL DB"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
@@ -7,8 +7,8 @@ ms.prod: sql
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Connecting to an Azure SQL Database Using SQL Server Native Client

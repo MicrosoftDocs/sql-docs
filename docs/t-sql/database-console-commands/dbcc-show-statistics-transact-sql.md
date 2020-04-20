@@ -49,7 +49,7 @@ For more information, see [Statistics](../../relational-databases/statistics/sta
   
 ## Syntax  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )   
@@ -58,7 +58,7 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
     STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM  
 ```  
   
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   

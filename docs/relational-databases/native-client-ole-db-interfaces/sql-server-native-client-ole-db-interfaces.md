@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Native Client (OLE DB) Reference | Microsoft Docs"
+title: "OLE DB Reference"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLNCLI, OLE DB"
   - "SQL Server Native Client, OLE DB"
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client (OLE DB) Interfaces

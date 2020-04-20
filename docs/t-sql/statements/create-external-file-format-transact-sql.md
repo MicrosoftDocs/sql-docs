@@ -42,7 +42,7 @@ To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](
   
 ## Syntax
   
-```
+```syntaxsql
 -- Create an external file format for PARQUET files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  

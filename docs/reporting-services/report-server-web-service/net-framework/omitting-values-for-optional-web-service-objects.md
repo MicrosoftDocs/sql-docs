@@ -1,5 +1,6 @@
 ---
 title: "Omitting Values for Optional Web Service Objects | Microsoft Docs"
+description: Some properties of Report Server Web service complex types support the Specified property, which allows you to omit a value for some writable properties.
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

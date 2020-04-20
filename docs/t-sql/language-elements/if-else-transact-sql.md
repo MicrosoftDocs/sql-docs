@@ -1,6 +1,6 @@
 ---
 title: "IF...ELSE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQl language reference for IF-ELSE statements to provide control flow in Transact-SQL statements."
 ms.date: "07/11/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -31,7 +31,7 @@ Imposes conditions on the execution of a [!INCLUDE[tsql](../../includes/tsql-md.
   
 ## Syntax  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   

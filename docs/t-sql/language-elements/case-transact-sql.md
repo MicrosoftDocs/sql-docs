@@ -1,6 +1,6 @@
 ---
 title: "CASE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
 ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -41,7 +41,7 @@ Evaluates a list of conditions and returns one of multiple possible result expre
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 Simple CASE expression:   
@@ -56,7 +56,7 @@ CASE
 END  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CASE  

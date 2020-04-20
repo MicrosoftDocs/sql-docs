@@ -39,7 +39,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  

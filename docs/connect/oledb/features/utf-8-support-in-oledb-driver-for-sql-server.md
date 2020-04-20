@@ -8,8 +8,8 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: reference
 ms.reviewer: v-kaywon
-ms.author: jroth
-author: rothja
+ms.author: v-daenge
+author: David-Engel
 ---
 # UTF-8 Support in OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

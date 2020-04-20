@@ -1,7 +1,7 @@
 ---
 title: "sys.credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/27/2017"
+ms.date: "04/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -22,7 +22,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.credentials (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
 
   Returns one row for each server-level credential.  
   

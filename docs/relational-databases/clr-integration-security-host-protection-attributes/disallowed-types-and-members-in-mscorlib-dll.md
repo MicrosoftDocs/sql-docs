@@ -1,5 +1,6 @@
 ---
 title: "Disallowed Types and Members in mscorlib.dll | Microsoft Docs"
+description: SQL Server CLR programming disallows a type or member with some values for the HostProtectionResource enum. This article lists mscorlib.dll disallowed values.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

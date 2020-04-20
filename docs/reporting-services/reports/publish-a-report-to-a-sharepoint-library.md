@@ -1,5 +1,6 @@
 ---
 title: "Publish a Report to a SharePoint Library | Microsoft Docs"
+description: Learn how to publish a report to a SharePoint library by setting the project properties in Report Designer.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

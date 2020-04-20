@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "fast forward-only cursors"
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Obtain a FAST_FORWARD Cursor

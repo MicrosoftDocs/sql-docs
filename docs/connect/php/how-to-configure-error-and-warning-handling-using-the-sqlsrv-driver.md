@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "errors and warnings"
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Configure Error and Warning Handling Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

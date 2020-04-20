@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "stored procedures [ODBC]"
   - "ODBC CALL syntax"
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute Stored Procedure with ODBC CALL and Process Output

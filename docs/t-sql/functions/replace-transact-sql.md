@@ -1,6 +1,6 @@
 ---
 title: "REPLACE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the REPLACE function, which replaces all occurrences of a specified string value with another string value."
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -32,7 +32,7 @@ Replaces all occurrences of a specified string value with another string value.
   
 ## Syntax  
   
-```  
+```syntaxsql
 REPLACE ( string_expression , string_pattern , string_replacement )  
 ```  
   

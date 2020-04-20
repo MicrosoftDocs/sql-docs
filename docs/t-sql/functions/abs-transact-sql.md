@@ -31,7 +31,7 @@ A mathematical function that returns the absolute (positive) value of the specif
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ABS ( numeric_expression )  
 ```  
   

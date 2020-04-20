@@ -30,7 +30,7 @@ This article shows maximum sizes and numbers of various objects defined in [!INC
 >[!NOTE]
 >In addition to the information in this article, you might also find the following links helpful:
 >
->* [Download SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [Download SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 >* [Hardware and software requirements for installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 >* [Check parameters for system configuration checker](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 >

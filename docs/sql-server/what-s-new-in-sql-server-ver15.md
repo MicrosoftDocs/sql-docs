@@ -225,7 +225,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 
 |New feature or update | Details |
 |:---|:---|
-|Partition-based modeling | You can process external scripts per partition of your data by using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model. See [Create partition-based models](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
+|Partition-based modeling | You can process external scripts per partition of your data by using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model. See [Create partition-based models](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).|
 |Windows Server Failover Cluster| You can configure high availability for Machine Learning Services on a Windows Server Failover Cluster.|
 | &nbsp; | &nbsp; |
 

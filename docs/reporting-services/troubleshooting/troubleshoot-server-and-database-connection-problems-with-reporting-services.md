@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot Server & Database Connection Problems | Microsoft Docs"
-description: "Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about 'Unexpected error' messages."
+title: "Troubleshoot Server & Database Connection Problems"
+description: "In this article, diagnose and fix problems you experience when connecting to a report server. Also learn about 'Unexpected error' messages."
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

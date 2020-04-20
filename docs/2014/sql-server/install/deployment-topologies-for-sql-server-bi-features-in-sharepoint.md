@@ -66,7 +66,7 @@ manager: craigg
 |**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server in SharePoint Mode. Configure the Excel Services Application **Data Model Settings** to use this server.|  
 |**(7)**|The SharePoint content, configuration, and service application databases.|  
   
- ![SharePoint Settings](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a> PowerPivot for SharePoint 2013 Single Server Deployment  
  A single server deployment is useful for testing purposes but it is not recommended for production deployments.  
@@ -89,7 +89,7 @@ manager: craigg
   
  The installer package is available as part of the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] feature pack. The feature pack can be downloaded from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] download center at [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) ( HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
   
- ![SSAS PowerPivot Mode 2 Server Deployment](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
+ ![SSAS PowerPivot Mode 2 Server Deployment](../../analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
   
 |||  
 |-|-|  

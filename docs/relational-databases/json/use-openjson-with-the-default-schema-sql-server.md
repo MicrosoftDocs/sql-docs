@@ -2,7 +2,6 @@
 title: "Use OPENJSON with the Default Schema"
 ms.date: "06/02/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 

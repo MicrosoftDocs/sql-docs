@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "10/16/2019"
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "server audit [SQL Server]"
   - "audits [SQL Server], specification"
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
-author: VanMSFT
-ms.author: vanto
+author: DavidTrigano
+ms.author: datrigan
 ---
 # Create a Server Audit and Server Audit Specification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

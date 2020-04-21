@@ -136,9 +136,9 @@ For named pipes and shared memory connections, an SPN in the format *MSSQLSvc/\<
   
 Service accounts can be used as an SPN. They are specified through the connection attribute for the Kerberos authentication and take the following formats:  
   
--   **username@domain** or **domain\username** for a domain user account  
+-   **username\@domain** or **domain\username** for a domain user account  
   
--   **machine$@domain** or **host\FQDN** for a computer domain account such as Local System or NETWORK SERVICES.  
+-   **machine$\@domain** or **host\FQDN** for a computer domain account such as Local System or NETWORK SERVICES.  
   
 To determine the authentication method of a connection, execute the following query.  
   

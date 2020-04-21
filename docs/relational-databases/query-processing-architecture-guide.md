@@ -928,7 +928,7 @@ Constructs that inhibit parallelism include:
     For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions
 ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
 
--   **Multi-statement Table Valued Functions (MSTVFs)**        
+-   **Multi-statement table-valued functions (MSTVFs)**        
     For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
 -   **TOP keyword**        

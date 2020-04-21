@@ -17294,6 +17294,11 @@
       "source_path": "docs/database-engine/deprecated-database-engine-features-in-sql-server-2019.md",
       "redirect_url": "/sql/database-engine/deprecated-database-engine-features-in-sql-server-version-15",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/toc/previous-versions-sql-server.md",
+      "redirect_url": "/sql/sql-server/sql-server-help-installation",
+      "redirect_document_id": false
     }
   ]
 }

@@ -11,15 +11,13 @@ ms.custom: ""
 ms.date: 04/20/2020
 ---
 
-# Different versions of SQL Server help content in Help Viewer
+# Install previous versions of SQL Server help content to view offline
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
-This article describes how to download and view offline SQL Server content in Help Viewer with [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+Offline documentation for older versions of Microsoft SQL Server is still available.
 
-Offline documentation for older versions of Microsoft SQL Server has been archived. Yet the archived documentation is still available.
-
-Internet access is required to download the Help Viewer content. You can then migrate the content to a computer that doesn't have internet access.
+Internet access is required to download the SQL Server content. You can then migrate the content to a computer that doesn't have internet access.
 
 Offline content is available for these SQL Server versions:
 
@@ -31,11 +29,11 @@ Offline content is available for these SQL Server versions:
 
 ## How to download and configure offline content
 
-You can use the Microsoft Help Viewer to download and install SQL Server help packages from online sources or local disk.
+You can use download and install SQL Server help packages from online sources or local disk.
 
 Below are steps on how to load offline content for different versions of SQL Server.
 
-### Configure SQL Server 2019 offline content
+### Add SQL Server 2019 offline content
 
 For this approach, you use the **Online** Installation source.
 
@@ -63,7 +61,7 @@ For this approach, you use the **Online** Installation source.
 
    ![SQL Server 2019 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2019-content.png)
 
-### Configure SQL Server 2017 offline content
+### Add SQL Server 2017 offline content
 
 For this approach, you use the **Online** Installation source.
 
@@ -91,7 +89,7 @@ For this approach, you use the **Online** Installation source.
 
    ![SQL Server 2017 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2017-content.png)
 
-### Configure SQL Server 2016 offline content
+### Add SQL Server 2016 offline content
 
 For this approach, you use the **Online** Installation source.
 
@@ -119,7 +117,7 @@ For this approach, you use the **Online** Installation source.
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2016-content.png)
 
-### Configuring SQL Server 2014 offline content
+### Add SQL Server 2014 offline content
 
 For this approach, you use the **Disk** Installation source.
 
@@ -160,7 +158,7 @@ For this approach, you use the **Disk** Installation source.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
 
-### Configure SQL Server 2012 offline content
+### Add SQL Server 2012 offline content
 
 For this approach, you use the **Disk** Installation source.
 
@@ -201,22 +199,11 @@ For this approach, you use the **Disk** Installation source.
 
    ![SQL Server 2012 documentation automatically updated](../sql-server/media/sql-server-help-installation/sql-2012-content.png)
 
-## Help Viewer
+## View offline SQL Server docs
 
-You can view SQL Server help content using the **HELP** menu in the latest version of Help Viewer from [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+You can view SQL Server help content using the **HELP** menu in the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
-Help Viewer is installed with several different tools.
-
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
-- [Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/installation?view=vs-2019)
-
-To install the Help Viewer with Visual Studio 2019 or 2017, go to the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
-
-For more information about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2016).
-
-### View offline help content
-
-#### To view offline help content in SSMS with Help Viewer
+### View offline help content in SSMS
 
 To view the installed help in SSMS, select **Launch in Help Viewer** from the Help menu, to launch the Help Viewer.
 
@@ -227,72 +214,7 @@ Help Viewer opens to the Manage Content tab, with the installed help table of co
 > [!TIP]
 > If the contents pane is not visible, select Contents on the left margin. select the pushpin icon to keep the contents pane open.  
 
-   ![Help Viewer v2.x with content](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
-
-#### To view offline help content in VS with Help Viewer
-
-To view the installed help in Visual Studio:
-
-1. Point to **Set Help Preference** on the Help menu and choose **Launch in Help Viewer**.
-
-   ![VS Help View Set Preference Help Viewer](../sql-server/media/sql-server-help-installation/launchviewer.png)
-
-2. select **View Help** in the Help menu to display the content in the Help Viewer.
-
-   ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
-
-   The help table of contents shows on the left, and the selected help article on the right.
-
-### View online help
-
-Online help always shows the most up-to-date content.
-
-#### To view SQL Server online help in SSMS
-
-- Select **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) displays in a browser.
-
-   ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
-
-### View Visual Studio Online help in Visual Studio
-
-1. Point to **Set Help Preference** on the Help menu and choose either **Launch in Browser** or **Launch in Help Viewer**.
-
-2. Select **View Help** in the Help menu. The latest Visual Studio help displays in the chosen environment.
-
-### Systems without internet access
-
-After you download offline books on a system that has internet access, you can use the following steps to migrate the content to a system that doesn't have internet access.
-
-  > [!NOTE]
-  > Software that supports the Help Viewer, such as SQL Server Management Studio, must be installed on the offline system.
-
-1. Open Help Viewer (Ctrl + Alt + F1).
-
-2. Select the documentation you're interested in. For example, filter by SQL and select the SQL Server Technical Documentation.
-
-3. Identify the physical path of the files on disk, which can be found under **Local store path**.
-
-4. Navigate to this location using your file system explorer.
-   1. The default location is: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
-
-5. Select the three folders, **ContentStore**, **Incoming**, **IndexStore**, and copy them to the same location on your offline system. You may need to use an interim media device such as a USB or CD.
-
-6. Once these files have been moved, launch Help Viewer on the offline system and you can see the SQL Server technical documentation.
-
-![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-
-## View F1 help
-
-When you press F1 or select **Help** or **?** icon in a dialog box in SSMS or VS, a context-sensitive online help article appears in the browser or Help Viewer.
-
-### To View F1 help
-
-1. In the Help menu, select **Set Help Preference**, and choose either **Launch in Browser** or **Launch in Help Viewer**.
-
-2. Press F1, or select **Help**, or **?** in dialog boxes where they're available, to see context-sensitive online articles in the chosen environment.
-
-> [!NOTE]
-> F1 help only works when you are online. There are no offline sources for F1 help.
+   ![Help Viewer with content](../sql-server/media/sql-server-help-installation/view-offline-all.png)
 
 ## Life-cycle policy
 

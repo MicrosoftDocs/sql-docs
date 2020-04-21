@@ -56,7 +56,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |-**0x08**|Result set caching is disabled due to row level security predicates.|  
 |-**0x10**|Result set caching is disabled due to the use of system table, temporary table, or external table in the query.|  
 |-**0x20**|Result set caching is disabled because the query contains runtime constants, user-defined functions, or non-deterministic functions.|  
-|-**0x40**|Result set caching is disabled due to estimated result set size being too large.|  
+|-**0x40**|Result set caching is disabled due to estimated result set size is >10GB.|  
 |-**0x80**|Result set caching is disabled because the result set contains rows with large size (>64kb).|  
   
 ## Permissions

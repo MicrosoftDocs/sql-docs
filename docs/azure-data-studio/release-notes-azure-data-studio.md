@@ -8,12 +8,27 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18 
-ms.date: 03/18/2020
+ms.date: 04/22/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## April 2020
+
+April 22, 2020 &nbsp; / &nbsp; version: 1.17.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Improved welcome page | UI update on the welcome page to make it easier to see common actions and highlighting extensions. |
+| New notebook features | &bull; &nbsp; Added Markdown toolbar when editing text cells to help write with Markdown <br/> &bull; &nbsp; Revamped Jupyter Books viewlet to become a Notebooks viewlet where you can manage Jupyter Books and notebooks together <br/>&bull; &nbsp; Added support for persisting charts when saving a notebook <br/> &bull; &nbsp; Added support for KQL magic in Python notebooks|
+| Improved dashboards | Dashboards throughout Azure Data Studio have been updated with latest design patterns, including an actions toolbar. This also applies to many extensions. |
+| Support for Always Encrypted and Always Encrypted with secure enclaves | |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
 
 ## March 2020
 

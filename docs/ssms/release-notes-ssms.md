@@ -82,11 +82,11 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | Always On | Fixed an issue where an error was displayed when trying to display the dashboard when connected to a Big Data Cluster endpoint. |
 | Auditing | Fixed an issue where the Audit logs merges window crashes when there's a folder with an empty name in the root folder of the storage account. |
 | Auditing | Fixed an issue where the Audit logs merge window doesn't show all servers when there are too many items in the root of the container. |
-| Data Clarification | Fixed an issue where the *Data Classification* wizard won't open for databases with large number of tables. |
-| Data Clarification | We are now enforcing different GUIDs for every label/infoType and GUID's structure in the validation process. |
-| Data Clarification | Remove classification process in SqlServer2019. |
-| Data Clarification | Correcting the previous validation tests (adding rank, removing the illegal property *InformationTypes*) and adding new ones for the first two points. |
-| Data Clarification | The button just above the classified columns table now minimizes the recommendations panel, as it says. |
+| Data Classification | Fixed an issue where the *Data Classification* wizard won't open for databases with large number of tables. |
+| Data Classification | We are now enforcing different GUIDs for every label/infoType and GUID's structure in the validation process. |
+| Data Classification | Remove classification process in SqlServer2019. |
+| Data Classification | Correcting the previous validation tests (adding rank, removing the illegal property *InformationTypes*) and adding new ones for the first two points. |
+| Data Classification | The button just above the classified columns table now minimizes the recommendations panel, as it says. |
 | General SSMS | Updating the version of MSODBC and MSOLEDB drivers. |
 | General SSMS | Addressed at least two common sources hangs and crashes in SSMS. |
 | General SSMS | Addressed one more case where *Restore dialog* hangs when selecting the Browse button. |

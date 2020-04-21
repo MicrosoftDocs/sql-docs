@@ -1,5 +1,5 @@
 ---
-title: Add SQL Server help content with Help Viewer
+title: Install previous versions of SQL Server help content to view offline
 ms.prod: sql
 ms.technology: 
 ms.reviewer: ""
@@ -12,6 +12,8 @@ ms.date: 04/20/2020
 ---
 
 # Install previous versions of SQL Server help content to view offline
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 

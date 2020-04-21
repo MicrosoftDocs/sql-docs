@@ -17302,13 +17302,13 @@
     }
     {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md",
-      "redirect_url": "",
-      "redirect_document_id": false
+      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-connect-with-windows-auth",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-files-file-shares.md",
-      "redirect_url": "",
-      "redirect_document_id": false
+      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-files-file-shares",
+      "redirect_document_id": true
     }
   ]
 }

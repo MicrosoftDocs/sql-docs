@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/14/2020
+ms.date: 04/20/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -269,7 +269,7 @@ If a workload group is created with `min_percentage_resource` greater than zero,
 
 The parameters `min_percentage_resource`, `cap_percentage_resource`, `request_min_resource_grant_percent` and `request_max_resource_grant_percent` have effective values that are adjusted in the context of the current service level and the configuration of other workload groups.
 
-The supported concurrency per service level remains the same as when resource classes were used to define resource grants per query, hence, the supported values for request_min_resource_grant_percent is dependent on the service level the instance is set to. At the lowest service level, DW100c, a minimum 25% resources per request is needed. At DW100c, the effective request_min_resource_grant_percent for a configured workload group can be 25% or higher. See the below table for further details on how effective values are derived.
+The `request_min_resource_grant_percent` parameter has an effective value because there are minimum resources needed per query depending on the service level.  For example, at the lowest service level, DW100c, a minimum 25% resources per request is needed.  If the workload group is configured with 3% `request_min_resource_grant_percent` and `request_max_resource_grant_percent`, the effective values for both parameters adjusts to 25% when the instance is started.  If the instance is scaled up to DW1000c the configured and effective values for both parameters is 3% because 3% is the minimum supported value at that service level.  If the instance is scaled higher than DW1000c, the configured and effective values for both parameters will stay at 3%.  See the below table for further details on effective values at the different service levels.
 
 |Service Level|Lowest effective value for REQUEST_MIN_RESOURCE_GRANT_PERCENT|Maximum concurrent queries|
 |---|---|---|
@@ -291,9 +291,9 @@ The supported concurrency per service level remains the same as when resource cl
 |DW30000c|0.75%|128|
 ||||
 
-Similarly, request_min_resource_grant_percent, min_percentage_resource must be greater than or equal to the effective request_min_resource_grant_percent. A workload group with `min_percentage_resource` configured that is less than effective `min_percentage_resource` has the value adjusted to zero at run time. When this happens, the resources configured for `min_percentage_resource` are sharable across all workload groups. For example, the workload group `wgAdHoc` with a `min_percentage_resource` of 10% running at DW1000c would have an effective `min_percentage_resource` of 10% (3.25% is the minimum supported value at DW1000c). `wgAdhoc` at DW100c would have an effective min_percentage_resource of 0%. The 10% configured for `wgAdhoc` would be shared across all workload groups.
+The `min_percentage_resource` parameter must be greater than or equal to the effective `request_min_resource_grant_percent`. A workload group with `min_percentage_resource` configured less than effective `min_percentage_resource` has the value adjusted to zero at run time. When this happens, the resources configured for `min_percentage_resource` are sharable across all workload groups. For example, the workload group `wgAdHoc` with a `min_percentage_resource` of 10% running at DW1000c would have an effective `min_percentage_resource` of 10% (3% is the minimum supported value at DW1000c). `wgAdhoc` at DW100c would have an effective min_percentage_resource of 0%. The 10% configured for `wgAdhoc` would be shared across all workload groups.
 
-`cap_percentage_resource` also has an effective value. If a workload group `wgAdhoc` is configured with a `cap_percentage_resource` of 100% and another workload group `wgDashboards` is created with 25% `min_percentage_resource`, the effective `cap_percentage_resource` for `wgAdhoc` becomes 75%.
+The `cap_percentage_resource` parameter also has an effective value. If a workload group `wgAdhoc` is configured with a `cap_percentage_resource` of 100% and another workload group `wgDashboards` is created with 25% `min_percentage_resource`, the effective `cap_percentage_resource` for `wgAdhoc` becomes 75%.
 
 The easiest way to understand the run-time values for your workload groups is to query the system view [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md).
 

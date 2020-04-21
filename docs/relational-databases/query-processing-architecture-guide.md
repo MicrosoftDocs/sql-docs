@@ -934,6 +934,30 @@ Constructs that inhibit parallelism include:
 -   **TOP keyword**        
     For more information, see [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
+A query execution plan may contain the **NonParallelPlanReason** attribute in the **QueryPlan** element which describes why parallelism was not used.  Values for this attribute include:
+
+|NonParallelPlanReason Value|Description|
+|----|----|
+|MaxDOPSetToOne|Maximum degree of parallelism set to 1.|
+|EstimatedDOPIsOne|Estimated degree of parallelism is 1.|
+|NoParallelWithRemoteQuery|Parallelism is not supported for remote queries.|
+|NoParallelDynamicCursor|Parallel plans not supported for dynamic cursors.|
+|NoParallelFastForwardCursor|Parallel plans not supported for fast forward cursors.|
+|NoParallelCursorFetchByBookmark|Parallel plans not supported for cursors that fetch by bookmark.|
+|NoParallelCreateIndexInNonEnterpriseEdition|Parallel index creation not supported for non-Enterprise edition.|
+|NoParallelPlansInDesktopOrExpressEdition|Parallel plans not supported for Desktop and Express edition.|
+|NonParallelizableIntrinsicFunction|Query is referencing a non-parallelizable intrinsic function.|
+|CLRUserDefinedFunctionRequiresDataAccess|Parallelism not supported for a CLR UDF that requires data access.|
+|TSQLUserDefinedFunctionsNotParallelizable|Query is referencing a T-SQL User Defined Function that was not parallelizable.|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|Table variable transactions do not support parallel nested transactions.|
+|DMLQueryReturnsOutputToClient|DML query returns output to client and is not parallelizable.|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|Unsupported mix of serial and parallel plans for a single online index build.|
+|CouldNotGenerateValidParallelPlan|Verifying parallel plan failed, failing back to serial.|
+|NoParallelForMemoryOptimizedTables|Parallelism not supported for referenced In-Memory OLTP tables.|
+|NoParallelForDmlOnMemoryOptimizedTable|Parallelism not supported for DML on an In-Memory OLTP table.|
+|NoParallelForNativelyCompiledModule|Parallelism not supported for referenced natively compiled modules.|
+|NoRangesResumableCreate|Range generation failed for a resumable create operation.|
+
 After exchange operators are inserted, the result is a parallel-query execution plan. A parallel-query execution plan can use more than one worker thread. A serial execution plan, used by a non-parallel (serial) query, uses only one worker thread for its execution. The actual number of worker threads used by a parallel query is determined at query plan execution initialization and is determined by the complexity of the plan and the degree of parallelism. 
 
 Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it does not mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). More processors than specififed by the MAXDOP may be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).

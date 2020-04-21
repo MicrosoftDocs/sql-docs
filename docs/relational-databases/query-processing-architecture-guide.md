@@ -940,7 +940,7 @@ A query execution plan may contain the **NonParallelPlanReason** attribute in th
 |----|----|
 |MaxDOPSetToOne|Maximum degree of parallelism set to 1.|
 |EstimatedDOPIsOne|Estimated degree of parallelism is 1.|
-|NoParallelWithRemoteQuery|Remote parallelism is not supported for remote queries.|
+|NoParallelWithRemoteQuery|Parallelism is not supported for remote queries.|
 |NoParallelDynamicCursor|Parallel plans not supported for dynamic cursors.|
 |NoParallelFastForwardCursor|Parallel plans not supported for fast forward cursors.|
 |NoParallelCursorFetchByBookmark|Parallel plans not supported for cursors that fetch by bookmark.|
@@ -948,7 +948,7 @@ A query execution plan may contain the **NonParallelPlanReason** attribute in th
 |NoParallelPlansInDesktopOrExpressEdition|Parallel plans not supported for Desktop and Express edition.|
 |NonParallelizableIntrinsicFunction|Query is referencing a non-parallelizable intrinsic function.|
 |CLRUserDefinedFunctionRequiresDataAccess|Parallelism not supported for a CLR UDF that requires data access.|
-|TSQLUserDefinedFunctionsNotParallelizable|Query is referencing a T-SQL User Defined Functions that was not parallelizable.|
+|TSQLUserDefinedFunctionsNotParallelizable|Query is referencing a T-SQL User Defined Function that was not parallelizable.|
 |TableVariableTransactionsDoNotSupportParallelNestedTransaction|Table variable transactions do not support parallel nested transactions.|
 |DMLQueryReturnsOutputToClient|DML query returns output to client and is not parallelizable.|
 |MixedSerialAndParallelOnlineIndexBuildNotSupported|Unsupported mix of serial and parallel plans for a single online index build.|

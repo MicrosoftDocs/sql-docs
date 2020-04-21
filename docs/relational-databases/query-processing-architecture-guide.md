@@ -1,7 +1,7 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2020"
+ms.date: "02/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -892,13 +892,13 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute m
 * The application can control when the execution plan is created and when it is reused.
 * The prepare/execute model is portable to other databases, including earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="ParamSniffing"></a> Parameter Sniffing
-"Parameter sniffing" refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
+### <a name="ParamSniffing"></a> Parameter Sensitivity
+Parameter sensitivity, also known as "parameter sniffing", refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
 
 Parameter values are sniffed during compilation or recompilation for the following types of batches:
 
 -  Stored procedures
--  Queries submitted via sp_executesql 
+-  Queries submitted via `sp_executesql` 
 -  Prepared queries
 
 For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview).
@@ -928,8 +928,8 @@ Constructs that inhibit parallelism include:
     For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions
 ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
 
--   **Table Valued Functions (TVFs)**        
-    For more information on TVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-   **Multi-statement Table Valued Functions (MSTVFs)**        
+    For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
 -   **TOP keyword**        
     For more information, see [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).

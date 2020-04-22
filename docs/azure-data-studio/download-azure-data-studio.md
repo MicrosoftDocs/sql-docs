@@ -30,9 +30,9 @@ For details about the latest release, see the [release notes](release-notes.md).
 
 ## Get Azure Data Studio for Windows
 
-This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip file.
+This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows Installer experience, and a .zip file.
 
-The *user installer* is recommended because it does not require administrator privileges, which simplifies both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+The *user installer* is recommended because it does not require administrator privileges, which simplify both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
 **User Installer** (recommended)
 
@@ -121,7 +121,7 @@ In general, users should download the stable release of Azure Data Studio above.
 
 ## Uninstall Azure Data Studio
 
-If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows installer, then uninstall the same way you remove any Windows application.
+If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows Installer, then uninstall the same way you remove any Windows application.
 
 If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with a .zip or other archive, then simply delete the files.
 

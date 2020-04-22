@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 04/22/2020
+ms.date: 04/23/2020
 ---
 
 # Release notes for Azure Data Studio
@@ -17,7 +17,7 @@ ms.date: 04/22/2020
 
 ## April 2020
 
-April 22, 2020 &nbsp; / &nbsp; version: 1.17.0 
+April 23, 2020 &nbsp; / &nbsp; version: 1.17.0
 
 &nbsp;
 

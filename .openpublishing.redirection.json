@@ -17299,6 +17299,16 @@
       "source_path": "docs/toc/previous-versions-sql-server.md",
       "redirect_url": "/sql/sql-server/sql-server-help-installation",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md",
+      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-connect-with-windows-auth",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/lift-shift/ssis-azure-files-file-shares.md",
+      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-files-file-shares",
+      "redirect_document_id": false
     }
   ]
 }

@@ -56,7 +56,7 @@ Permissions statements determine which users and logins can access data and perf
 
 ## Service Broker statements
 
-Service Broker is a feature that provides native support for messaging and queuing applications. For more information, see [Service Broker](../../relational-databases/service-broker/event-notifications.md).
+Service Broker is a feature that provides native support for messaging and queuing applications. For more information, see [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).
 
 ## Session settings
 

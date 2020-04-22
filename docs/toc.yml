@@ -10086,7 +10086,7 @@
       href: sql-server/partner-management-sql-server.md
     - name: Development
       href: sql-server/partner-dev-sql-server.md
-  - name: Local content with Help Viewer
+  - name: Offline SQL Server documentation
     href: sql-server/sql-server-help-installation.md
 - name: Reference
   items:

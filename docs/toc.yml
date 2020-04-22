@@ -7825,11 +7825,13 @@
         items:
         - name: Notebooks overview
           href: azure-data-studio/notebooks-guidance.md
-        - name: How to use SQL Kernel
+        - name: Use SQL Kernel
           href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-        - name: How to use Python Kernel
+        - name: Use Python Kernel
           href: azure-data-studio/notebooks-tutorial-python-kernel.md
-        - name: How to manage a notebook
+        - name: Kqlmagic
+          href: azure-data-studio/notebooks-kql-magic.md
+        - name: Manage a notebook
           href: azure-data-studio/notebooks-manage-sql-server.md
     - name: How-to guides
       items:
@@ -7847,12 +7849,17 @@
         href: azure-data-studio/server-groups.md
       - name: Source control
         href: azure-data-studio/source-control.md
+      - name: Usage data collection
+        href: azure-data-studio/usage-data-collection.md
       - name: Workspace & user settings
         href: azure-data-studio/settings.md
       - name: Windows authentication (Kerberos)
         href: azure-data-studio/enable-kerberos.md
+<<<<<<< HEAD
       - name: Usage data collection
         href: azure-data-studio/usage-data-collection.md
+=======
+>>>>>>> 2d9c57777934db7a2b43657502c119f92d3c0831
     - name: Resources
       items:
       - name: FAQ

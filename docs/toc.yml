@@ -10087,7 +10087,7 @@
     - name: Development
       href: sql-server/partner-dev-sql-server.md
   - name: Offline SQL Server documentation
-    href: sql-server/sql-server-help-installation.md
+    href: sql-server/sql-server-offline-documentation.md
 - name: Reference
   items:
   - name: Archived Content (SQL 2005 - 2012) >

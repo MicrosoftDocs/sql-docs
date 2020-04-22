@@ -28,7 +28,7 @@ You can use download and install SQL Server help packages from online sources or
 - [SQL Server 2014](#sql2014)
 - [SQL Server 2012](#sql2012)
 
-## <a id="sql2019"></a> SQL Server 2019 offline docs
+## <a id="sql2019"></a> SQL Server 2019 offline documentation
 
 Use the following steps to load the offline documentation for SQL Server 2019.
 
@@ -56,7 +56,7 @@ Use the following steps to load the offline documentation for SQL Server 2019.
 
    ![SQL Server 2019 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2019-content.png)
 
-## <a id="sql2017"></a> SQL Server 2017 offline docs
+## <a id="sql2017"></a> SQL Server 2017 offline documentation
 
 Use the following steps to load the offline documentation for SQL Server 2017.
 
@@ -84,7 +84,7 @@ Use the following steps to load the offline documentation for SQL Server 2017.
 
    ![SQL Server 2017 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2017-content.png)
 
-## <a id="sql2016"></a> SQL Server 2016 offline docs
+## <a id="sql2016"></a> SQL Server 2016 offline documentation
 
 Use the following steps to load the offline documentation for SQL Server 2016.
 
@@ -112,7 +112,7 @@ Use the following steps to load the offline documentation for SQL Server 2016.
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2016-content.png)
 
-## <a id="sql2014"></a> SQL Server 2014 offline docs
+## <a id="sql2014"></a> SQL Server 2014 offline documentation
 
 Use the following steps to load the offline documentation for SQL Server 2014.
 
@@ -153,7 +153,7 @@ Use the following steps to load the offline documentation for SQL Server 2014.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
 
-## <a id="sql2012"></a> SQL Server 2012 offline docs
+## <a id="sql2012"></a> SQL Server 2012 offline documentation
 
 Use the following steps to load the offline documentation for SQL Server 2012.
 

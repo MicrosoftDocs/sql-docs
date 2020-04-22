@@ -7028,7 +7028,7 @@
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md
   - name: SQL Server Analysis Services (SSAS) > 
-    href: https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview
+    href: https://docs.microsoft.com/analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) > 
     href: reporting-services/index.md
   - name: Master Data Services
@@ -7827,10 +7827,12 @@
           href: azure-data-studio/notebooks-guidance.md
         - name: Use SQL Kernel
           href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+        - name: Use Python Kernel
+          href: azure-data-studio/notebooks-tutorial-python-kernel.md
+        - name: Kqlmagic
+          href: azure-data-studio/notebooks-kql-magic.md
         - name: Manage a notebook
           href: azure-data-studio/notebooks-manage-sql-server.md
-        - name: KQL magic
-          href: azure-data-studio/notebooks-kql-magic.md
     - name: How-to guides
       items:
       - name: Dashboards & insight widgets
@@ -7853,6 +7855,8 @@
         href: azure-data-studio/settings.md
       - name: Windows authentication (Kerberos)
         href: azure-data-studio/enable-kerberos.md
+      - name: Usage data collection
+        href: azure-data-studio/usage-data-collection.md
     - name: Resources
       items:
       - name: FAQ

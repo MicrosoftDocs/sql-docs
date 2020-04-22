@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""
-ms.date: 04/22/2020
+ms.date: 04/23/2020
 ---
 
 # Kqlmagic extension in Azure Data Studio

@@ -7855,11 +7855,8 @@
         href: azure-data-studio/settings.md
       - name: Windows authentication (Kerberos)
         href: azure-data-studio/enable-kerberos.md
-<<<<<<< HEAD
       - name: Usage data collection
         href: azure-data-studio/usage-data-collection.md
-=======
->>>>>>> 2d9c57777934db7a2b43657502c119f92d3c0831
     - name: Resources
       items:
       - name: FAQ

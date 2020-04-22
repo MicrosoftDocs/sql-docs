@@ -315,7 +315,6 @@ However, starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and dat
 Parallelism for the statement above has the following requirements, which are similar to the requirements for minimal logging:  
 -   The target table is an empty or non-empty heap.  
 -   The target table has a clustered columnstore index (CCI) but no non-clustered indexes.  
--   The target table cannot have an identity column specified.
 -   The `TABLOCK` hint is specified for the target table.
 
 For scenarios where requirements for minimal logging and parallel insert are met, both improvements will work together to ensure maximum throughput of your data load operations.

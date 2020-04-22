@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SET ROWCOUNT { number | @number_var }   
 ```  
   
@@ -64,7 +64,7 @@ SET ROWCOUNT { number | @number_var }
 ## Examples  
  SET ROWCOUNT stops processing after the specified number of rows. In the following example, note that over 500 rows meet the criteria of `Quantity` less than `300`. However, after applying SET ROWCOUNT, you can see that not all rows were returned.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT count(*) AS Count  
@@ -85,20 +85,20 @@ GO
   
  Now, set `ROWCOUNT` to `4` and return all rows to demonstrate that only 4 rows are returned.  
   
-```  
+```sql
 SET ROWCOUNT 4;  
 SELECT *  
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
   
-(4 row(s) affected)
+-- (4 row(s) affected)
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT stops processing after the specified number of rows. In the following example, note that more than 20 rows meet the criteria of `AccountType = 'Assets'`. However, after applying SET ROWCOUNT, you can see that not all rows were returned.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 5;  
@@ -108,7 +108,7 @@ WHERE AccountType = 'Assets';
   
  To return all rows, set ROWCOUNT to 0.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 0;  

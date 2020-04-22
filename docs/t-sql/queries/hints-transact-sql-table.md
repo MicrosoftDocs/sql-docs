@@ -1,7 +1,7 @@
 ---
 title: "Table Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/31/2017"
+ms.date: "04/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -40,10 +40,10 @@ ms.author: vanto
 # Hints (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Table hints override the default behavior of the query optimizer for the duration of the data manipulation language (DML) statement by specifying a locking method, one or more indexes, a query-processing operation such as a table scan or index seek, or other options. Table hints are specified in the FROM clause of the DML statement and affect only the table or view referenced in that clause.  
+  Table hints override the default behavior of the Query Optimizer for the duration of the data manipulation language (DML) statement by specifying a locking method, one or more indexes, a query-processing operation such as a table scan or index seek, or other options. Table hints are specified in the FROM clause of the DML statement and affect only the table or view referenced in that clause.  
   
 > [!CAUTION]  
->  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
+>  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
   
  **Applies to:**  
   
@@ -61,7 +61,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -121,7 +121,7 @@ With some exceptions, table hints are supported in the FROM clause only when the
 > [!IMPORTANT]  
 > Omitting the WITH keyword is a deprecated feature: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-The following table hints are allowed with and without the WITH keyword: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT, and NOEXPAND. When these table hints are specified without the WITH keyword, the hints should be specified alone. For example:  
+The following table hints are allowed with and without the `WITH` keyword: `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT`, and `NOEXPAND`. When these table hints are specified without the WITH keyword, the hints should be specified alone. For example:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -256,7 +256,7 @@ Is equivalent to READUNCOMMITTED. For more information, see READUNCOMMITTED late
 > For UPDATE or DELETE statements: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-Instructs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to return a message as soon as a lock is encountered on the table. NOWAIT is equivalent to specifying SET LOCK_TIMEOUT 0 for a specific table. The NOWAIT hint does not work when the TABLOCK hint is also included. To terminate a query without waiting when using the TABLOCK hint, preface the query with `SETLOCK_TIMEOUT 0;` instead.  
+Instructs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to return a message as soon as a lock is encountered on the table. NOWAIT is equivalent to specifying `SET LOCK_TIMEOUT 0` for a specific table. The NOWAIT hint does not work when the TABLOCK hint is also included. To terminate a query without waiting when using the TABLOCK hint, preface the query with `SETLOCK_TIMEOUT 0;` instead.  
   
 PAGLOCK  
 Takes page locks either where individual locks are ordinarily taken on rows or keys, or where a single table lock is ordinarily taken. By default, uses the lock mode appropriate for the operation. When specified in transactions operating at the SNAPSHOT isolation level, page locks are not taken unless PAGLOCK is combined with other table hints that require locks, such as UPDLOCK and HOLDLOCK.  
@@ -334,7 +334,7 @@ This option allows for fine-tuning of query execution time by adjusting the trad
 TABLOCK  
 Specifies that the acquired lock is applied at the table level. The type of lock that is acquired depends on the statement being executed. For example, a SELECT statement may acquire a shared lock. By specifying TABLOCK, the shared lock is applied to the entire table instead of at the row or page level. If HOLDLOCK is also specified, the table lock is held until the end of the transaction.  
   
-When importing data into a heap by using the INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> statement, you can enable optimized logging and locking for the statement by specifying the TABLOCK hint for the target table. In addition, the recovery model of the database must be set to simple or bulk-logged. For more information, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+When importing data into a heap by using the `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` statement, you can enable minimal logging and optimized locking for the statement by specifying the TABLOCK hint for the target table. In addition, the recovery model of the database must be set to simple or bulk-logged. The TABLOCK hint also enables parallel inserts to heaps or clustered columnstore indexes. For more information, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
 When used with the [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) bulk rowset provider to import data into a table, TABLOCK enables multiple clients to concurrently load data into the target table with optimized logging and locking. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   

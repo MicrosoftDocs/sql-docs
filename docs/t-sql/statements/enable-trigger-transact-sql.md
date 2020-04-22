@@ -32,7 +32,7 @@ Enables a DML, DDL, or logon trigger.
   
 ## Syntax  
   
-```  
+```syntaxsql
 ENABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  

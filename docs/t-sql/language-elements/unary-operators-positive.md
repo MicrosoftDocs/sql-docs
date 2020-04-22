@@ -38,7 +38,7 @@ Returns the value of a numeric expression (a unary operator). Unary operators pe
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 + numeric_expression  
 ```  

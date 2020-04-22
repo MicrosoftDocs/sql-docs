@@ -53,7 +53,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -400,7 +400,7 @@ Creates an external data source for elastic queries. External data sources are u
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -617,7 +617,7 @@ Creates an external data source for PolyBase. External data sources are used to 
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -867,7 +867,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 
 ## Syntax
 
-```sql
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]

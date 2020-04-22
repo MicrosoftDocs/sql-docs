@@ -31,7 +31,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql
 FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )  
 ```  
   

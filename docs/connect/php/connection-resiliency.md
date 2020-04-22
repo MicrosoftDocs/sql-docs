@@ -1,14 +1,14 @@
 ---
 title: "Idle Connection Resiliency"
+description: "Learn what idle connection resiliency is and how it behaves within the Microsoft Drivers for PHP for SQL Server."
 ms.date: "07/13/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: "david-puglielli"
-ms.author: "v-dapugl"
-manager: v-mabarw
+author: "David-Engel"
+ms.author: "v-daenge"
 ---
 # Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

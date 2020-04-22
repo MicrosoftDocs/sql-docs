@@ -35,7 +35,7 @@ ms.author: jroth
 
  ## Syntax  
   
-```  
+```syntaxsql
   
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  

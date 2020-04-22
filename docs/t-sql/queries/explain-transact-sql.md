@@ -21,7 +21,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
   
 ## Syntax  
   
-```
+```syntaxsql
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  

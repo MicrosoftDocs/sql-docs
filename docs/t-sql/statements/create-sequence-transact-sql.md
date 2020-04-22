@@ -36,7 +36,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE SEQUENCE [schema_name . ] sequence_name  
     [ AS [ built_in_integer_type | user-defined_integer_type ] ]  
     [ START WITH <constant> ]  

@@ -26,7 +26,7 @@ Concatenates the values of string expressions and places separator values betwee
   
 ## Syntax  
   
-```  
+```syntaxsql
 STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
@@ -44,7 +44,7 @@ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of
 <order_clause>   
 Optionally specify order of concatenated results using `WITHIN GROUP` clause:
 
-```
+```syntaxsql
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   

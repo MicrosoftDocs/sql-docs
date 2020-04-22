@@ -23,9 +23,9 @@ ms.date: 04/21/2020
 
 - **Upgrade *to* Reporting Services 2017 and later *from* Reporting Services 2016 and older** isn’t the same upgrade scenario as in previous versions. When upgrading *to* Reporting Services 2016 and older versions, you could following an in-place upgrade process using SQL Server installation media. When upgrading *to* Reporting Services 2017 and later *from* Reporting Services 2016 and older, you can’t follow the same steps because the new Reporting Services installation is a standalone product. It's no longer part of the SQL Server installation media. 
 
-    To upgrade *from Reporting Services 2016* and older versions *to Reporting Services 2017* and later, follow the [Migrate a Reporting Services Installation (Native Mode)](migrate-a-reporting-services-installation-native-mode.md) article, with Reporting Services 2017 or later as your destination instance. 
+    To upgrade from Reporting Services 2016 and older versions to Reporting Services 2017 and later, follow the [Migrate a Reporting Services Installation (Native Mode)](migrate-a-reporting-services-installation-native-mode.md) article, with Reporting Services 2017 or later as your destination instance. 
 
-    Upgrading *from Reporting Services 2017* to future versions is again an in-place upgrade scenario, because the product installation GUIDs are the same.
+- **Upgrade *from* Reporting Services 2017 to future versions** is again an in-place upgrade scenario, because the product installation GUIDs are the same.
   
 - **Migrate**: You install and configure a new SharePoint environment, copy your report items and resources to the new environment, and configure the new environment to use existing content. A lower level form of migration is to copy the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] databases, configuration files, and if you are using SharePoint mode, the SharePoint content databases.  
 

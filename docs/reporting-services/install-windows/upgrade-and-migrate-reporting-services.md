@@ -37,9 +37,7 @@ ms.date: 04/21/2020
  For a detailed list of the supported editions and versions you can upgrade, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  For the latest information regarding issues with SQL Server, see the following:  
->   
->  -   [SQL Server 2016 Release Notes](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  For the latest information regarding issues with SQL Server, see [SQL Server 2016 Release Notes](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="bkmk_side_by_side"></a> Side By Side Installations  

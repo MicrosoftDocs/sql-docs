@@ -1,7 +1,6 @@
 ---
 title: "Quickstart: Run R scripts"
 titleSuffix: SQL machine learning
-titleSuffix: SQL machine learning
 description: Run a set of simple R scripts with SQL machine learning. Learn how to use the stored procedure sp_execute_external_script to execute the script.
 ms.prod: sql
 ms.technology: machine-learning
@@ -248,8 +247,3 @@ To learn how to use data structures when using R with SQL machine learning, foll
 
 > [!div class="nextstepaction"]
 > [Handle data types and objects using R with SQL machine learning](quickstart-r-data-types-and-objects.md)
-
-For more information on using R with SQL machine learning, see the following articles:
-
-- [Write advanced R functions with SQL machine learning](quickstart-r-functions.md)
-- [Create and score a predictive model in R with SQL machine learning](quickstart-r-train-score-model.md)

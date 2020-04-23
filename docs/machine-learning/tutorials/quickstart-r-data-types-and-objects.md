@@ -306,7 +306,3 @@ To learn about writing advanced R functions with SQL machine learning, follow th
 
 > [!div class="nextstepaction"]
 > [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
-
-For more information on using R with SQL machine learning, see the following article:
-
-- [Create and score a predictive model in R with SQL machine learning](quickstart-r-train-score-model.md)

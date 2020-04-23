@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Restore HDFS admin rights
 
-HDFS access control lists (ACLs) modifications may have affected the `/system` and `/tmp` folders in HDFS. The most likely cause of ACL modification is a user manually manipulating the folder ACLs.
+HDFS access control lists (ACLs) modifications may have affected the `/system` and `/tmp` folders in HDFS. The most likely cause of ACL modification is a user manually manipulating the folder ACLs. Directly modifying permissions in /system folder and /tmp/logs folder are not supported.
 
 ## Symptom
 
@@ -41,7 +41,7 @@ The HDFS ACLs were modified for BDC user domain security group. Possible modific
 Verify the effect in the Livy logs:
 
 ```
-INFO utils.LineBufferedStream: <date time> ,858 INFO yarn.Client: Application report for application_1580771254352_0041 (state: ACCEPTED)
+INFO utils.LineBufferedStream: YYYY-MM-DD-HH:MM:SS,858 INFO yarn.Client: Application report for application_1580771254352_0041 (state: ACCEPTED)
 ...
 WARN rsc.RSCClient: Client RPC channel closed unexpectedly.
 INFO interactive.InteractiveSession: Failed to ping RSC driver for session <ID>. Killing application
@@ -51,13 +51,22 @@ The YARN UI shows applications in KILLED status for the application ID.
 
 To get the root cause of RPC connection close, check the YARN application log for app corresponding to the application. In the preceding example, it refers to `application_1580771254352_0041`. Use `kubectl` to connect to the sparkhead-0 pod, and run this command:
 
+The following command queries the YARN log for the application.
+
 ```bash
 yarn logs -applicationId application_1580771254352_0041
 ```
 
-## Resolution
+In the results below the permission is denied for the user. 
 
-Do not modify permissions in /system folder and /tmp/logs folder.
+```
+YYYY-MM-DD-HH:MM:SS,583 ERROR spark.SparkContext: Error initializing SparkContext.
+org.apache.hadoop.security.AccessControlException: Permission denied: user=user1, access=WRITE, inode="/system/spark-events":sph:BDCAdmin:drwxr-xr-x
+```
+
+The cause may be that the BDC User was recursivly added to the HDFS root folder. This may have affected the default permissions.
+
+## Resolution
 
 Restore the permissions with the following script: Use `kinit` with admin:
 

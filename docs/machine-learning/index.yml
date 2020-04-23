@@ -1,7 +1,6 @@
 ### YamlMime:Landing
 
 title: SQL machine learning documentation
-titleSuffix: ""
 summary: Learn how to use machine learning on SQL to run Python and R scripts on relational data, both on-premises and in the cloud. Tutorials, code examples, installation guides, and other documentation show you how.
 
 metadata:

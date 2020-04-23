@@ -1,5 +1,6 @@
 ---
 title: "Copy Databases with Backup and Restore | Microsoft Docs"
+description: In SQL Server, you can create a new database by restoring a backup of a user database created by using some previous versions.
 ms.custom: ""
 ms.date: "07/15/2016"
 ms.prod: sql

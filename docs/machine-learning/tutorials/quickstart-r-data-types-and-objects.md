@@ -22,6 +22,9 @@ In this quickstart, you'll learn how to use data structures and data types when 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
 ::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server R Services](../r/sql-server-r-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
+::: moniker-end
 
 Common issues to know up front include:
 
@@ -37,6 +40,9 @@ Common issues to know up front include:
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
 ::: moniker-end
 
 - You also need a tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).

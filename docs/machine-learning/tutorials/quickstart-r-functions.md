@@ -22,6 +22,9 @@ In this quickstart, you'll learn how to use R mathematical and utility functions
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this quickstart, you'll learn how to use R mathematical and utility functions with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Statistical functions are often complicated to implement in T-SQL, but can be done in R with only a few lines of code.
 ::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use R mathematical and utility functions with [SQL Server R Services](../r/sql-server-r-services.md). Statistical functions are often complicated to implement in T-SQL, but can be done in R with only a few lines of code.
+::: moniker-end
 
 ## Prerequisites
 
@@ -30,6 +33,9 @@ In this quickstart, you'll learn how to use R mathematical and utility functions
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
 ::: moniker-end
 
 - You also need a tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).

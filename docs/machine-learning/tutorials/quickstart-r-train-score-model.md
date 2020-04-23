@@ -29,7 +29,7 @@ In this quickstart, you'll create and train a predictive model using T. You'll s
 You'll create and execute two stored procedures running in SQL. The first one uses the **mtcars** dataset included with R and generates a simple generalized linear model (GLM) that predicts the probability that a vehicle has been fitted with a manual transmission. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing R code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
 
 > [!TIP]
-> If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod: [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
 By completing this quickstart, you'll learn:
 
@@ -232,6 +232,6 @@ It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predi
 
 ## Next steps
 
-For more information on SQL Server Machine Learning Services, see:
+For more information on tutorials for R with SQL machine learning, see:
 
-- [What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md)
+- [R tutorials](r-tutorials.md)

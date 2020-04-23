@@ -56,11 +56,11 @@ You need the following prerequisites to run this quickstart.
 
 ## Create the model
 
-To create the model, you'll create source data for training, create the model and train it using the data, then store the model in a SQL database where it can be used to generate predictions with new data.
+To create the model, you'll create source data for training, create the model and train it using the data, then store the model in a database where it can be used to generate predictions with new data.
 
 ### Create the source data
 
-1. Open SSMS, connect to your SQL Server instance, and open a new query window.
+1. Open Azure Data Studio, connect to your instance, and open a new query window.
 
 1. Create a table to save the training data.
 
@@ -120,9 +120,9 @@ GO
 - The first argument to `glm` is the *formula* parameter, which defines `am` as dependent on `hp + wt`.
 - The input data is stored in the variable `MTCarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
 
-### Store the model in the SQL database
+### Store the model in the database
 
-Next, store the model in a SQL database so you can use it for prediction or retrain it. 
+Next, store the model in a database so you can use it for prediction or retrain it. 
 
 1. Create a table to store the model.
 

@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table, and then use the model to predict values from new data with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020  
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye

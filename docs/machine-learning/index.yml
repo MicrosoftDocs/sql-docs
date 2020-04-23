@@ -88,17 +88,6 @@ landingContent:
           - text: Integrate Spark with SQL Server
             url: ../big-data-cluster/spark-mssql-connector.md
 
-  - title: ML on Azure SQL Database Edge
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Machine learning and AI with ONNX in SQL Database Edge
-            url: /azure/sql-database-edge/onnx-overview
-      - linkListType: how-to-guide
-        links:
-          - text: Deploy and make predictions with an ONNX model in SQL Database Edge
-            url: /azure/sql-database-edge/deploy-onnx
-
   - title: ML on Azure Synapse Analytics
     linkLists:
       - linkListType: overview
@@ -113,3 +102,14 @@ landingContent:
         links:
           - text: Create, develop, and maintain Azure Synapse Studio notebooks
             url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
+
+  - title: ML on Azure SQL Database Edge
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Machine learning and AI with ONNX in SQL Database Edge
+            url: /azure/sql-database-edge/onnx-overview
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy and make predictions with an ONNX model in SQL Database Edge
+            url: /azure/sql-database-edge/deploy-onnx

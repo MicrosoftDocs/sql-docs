@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: Run a set of simple R scripts with SQL machine learning. Learn how to use the stored procedure sp_execute_external_script to execute the script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020  
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -193,7 +193,12 @@ For now, let's use the default input and output variables of `sp_execute_externa
 
 ## Check R version
 
-If you would like to see which version of R is installed with SQL machine learning, run the following script.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+If you would like to see which version of R is installed with SQL Server Machine Learning Services, run the following script.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+If you would like to see which version of R is installed with SQL Server 2016 R Services, run the following script.
+::: moniker-end
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'

@@ -64,7 +64,7 @@ YYYY-MM-DD-HH:MM:SS,583 ERROR spark.SparkContext: Error initializing SparkContex
 org.apache.hadoop.security.AccessControlException: Permission denied: user=user1, access=WRITE, inode="/system/spark-events":sph:BDCAdmin:drwxr-xr-x
 ```
 
-The cause may be that the BDC User was recursivly added to the HDFS root folder. This may have affected the default permissions.
+The cause may be that the BDC User was recursively added to the HDFS root folder. This may have affected the default permissions.
 
 ## Resolution
 

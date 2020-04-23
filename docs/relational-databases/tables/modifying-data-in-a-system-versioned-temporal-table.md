@@ -44,7 +44,7 @@ You can construct your **INSERT** statement when you have visible **PERIOD** col
          ) ;
    ```
 
-- If you do specify the**PERIOD** columns in the column list in your **INSERT** statement, then you need to specify **DEFAULT** as their value.
+- If you do specify the **PERIOD** columns in the column list in your **INSERT** statement, then you need to specify **DEFAULT** as their value.
 
   ```sql
   INSERT INTO [dbo].[Department]

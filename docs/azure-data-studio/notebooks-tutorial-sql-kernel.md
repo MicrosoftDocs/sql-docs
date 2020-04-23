@@ -4,7 +4,7 @@ description: This tutorial shows how you can create and run a SQL Server noteboo
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray, alayu
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""

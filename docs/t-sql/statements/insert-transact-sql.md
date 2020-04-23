@@ -315,6 +315,7 @@ However, starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and dat
 Parallelism for the statement above has the following requirements, which are similar to the requirements for minimal logging:  
 -   The target table is an empty or non-empty heap.  
 -   The target table has a clustered columnstore index (CCI) but no non-clustered indexes.  
+-   The target table does not have an identity column with IDENTITY_INSERT set to OFF.  
 -   The `TABLOCK` hint is specified for the target table.
 
 For scenarios where requirements for minimal logging and parallel insert are met, both improvements will work together to ensure maximum throughput of your data load operations.
@@ -406,9 +407,9 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
 ### Permissions  
  INSERT permission is required on the target table.  
   
- INSERT permissions default to members of the **sysadmin** fixed server role, the **db_owner** and **db_datawriter** fixed database roles, and the table owner. Members of the **sysadmin**, **db_owner**, and the **db_securityadmin** roles, and the table owner can transfer permissions to other users.  
+ INSERT permissions default to members of the `sysadmin` fixed server role, the `db_owner` and `db_datawriter` fixed database roles, and the table owner. Members of the `sysadmin`, `db_owner`, and the `db_securityadmin` roles, and the table owner can transfer permissions to other users.  
   
- To execute INSERT with the OPENROWSET function BULK option, you must be a member of the **sysadmin** fixed server role or of the **bulkadmin** fixed server role.  
+ To execute INSERT with the OPENROWSET function BULK option, you must be a member of the `sysadmin` fixed server role or of the `bulkadmin` fixed server role.  
   
 ##  <a name="InsertExamples"></a> Examples  
   

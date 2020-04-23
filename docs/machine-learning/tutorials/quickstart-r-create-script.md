@@ -225,8 +225,12 @@ nickname       Someone to Lean On
 ```
 
 ## List R packages
-
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Microsoft provides a number of R packages pre-installed with Machine Learning Services.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Microsoft provides a number of R packages pre-installed with R Services.
+::: moniker-end
 
 To see a list of which R packages are installed, including version, dependencies, license, and library path information, run the following script.
 

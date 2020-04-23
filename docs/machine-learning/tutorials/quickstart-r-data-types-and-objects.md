@@ -313,4 +313,4 @@ For more information on supported and unsupported data types, see [R libraries a
 To learn about writing advanced R functions with SQL machine learning, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
+> [Write advanced R functions with SQL machine learning](quickstart-r-functions.md)

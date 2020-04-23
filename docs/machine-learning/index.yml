@@ -97,7 +97,15 @@ landingContent:
 
   - title: ML on Azure Synapse Analytics
     linkLists:
-      - linkListType: get-started
+      - linkListType: overview
         links:
-          - text: Analyze data with Azure Machine Learning and Azure Synapse Analytics
-            url: /azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-get-started-analyze-with-azure-machine-learning
+          - text: What is Azure Synapse Analytics?
+            url: /azure/synapse-analytics/overview-what-is
+      - linkListType: tutorial
+        links:
+          - text: Build a machine learning app with Apache Spark MLlib and Azure Synapse Analytics
+            url: /azure/synapse-analytics/spark/apache-spark-machine-learning-mllib-notebook
+      - linkListType: how-to-guide
+        links:
+          - text: Create, develop, and maintain Azure Synapse Studio notebooks
+            url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks

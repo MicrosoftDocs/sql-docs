@@ -7,31 +7,13 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
-ms.custom: seodec18
-ms.date: 04/23/2020
+ms.custom: seodec18 
+ms.date: 03/18/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
-
-## April 2020
-
-April 23, 2020 &nbsp; / &nbsp; version: 1.17.0
-
-&nbsp;
-
-| Change | Details |
-| :----- | :------ |
-| Improved welcome page | UI update on the welcome page to make it easier to see common actions and highlighting extensions. |
-| New notebook features | &bull; &nbsp; Added Markdown toolbar when editing text cells to help write with Markdown <br/> &bull; &nbsp; Revamped Jupyter Books viewlet to become a Notebooks viewlet where you can manage Jupyter Books and notebooks together <br/>&bull; &nbsp; Added support for persisting charts when saving a notebook <br/> &bull; &nbsp; Added support for KQL magic in Python notebooks|
-| Improved dashboards | Dashboards throughout Azure Data Studio have been updated with latest design patterns, including an actions toolbar. This also applies to many extensions. |
-| Added Cloud Shell integration in the Azure view. | |
-| Support for Always Encrypted and Always Encrypted with secure enclaves. | |
-| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
-| &nbsp; | &nbsp; |
-| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
-| &nbsp; | &nbsp; |
 
 ## March 2020
 
@@ -63,7 +45,7 @@ February 19, 2020 &nbsp; / &nbsp; version: 1.15.1
 
 ## February 2020
 
-February 13, 2020 &nbsp; / &nbsp; version: 1.15.0
+February 13, 2020 &nbsp; / &nbsp; version: 1.15.0 
 
 &nbsp;
 
@@ -241,7 +223,7 @@ June 6, 2019 &nbsp; / &nbsp; version: 1.8.0
 | Change | Details |
 | :----- | :------ |
 | Release of Central Management Servers (CMS) extension | Central Management Servers store a list of instances of SQL Server that is organized into one or more central management server groups. Users can connect to their own existing CMS servers and manage their servers like adding and removing servers. To learn more, you can read [here](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
-| Release of Database Administration Tool Extensions for Windows | This extension launches two of the most used experiences in SQL Server Management Studio from Azure Data Studio. Users can right-click on many different objects (such as Databases, Tables, Columns, Views, and more) and select Properties to view the SSMS Properties Dialog for that object. In addition, users can right-click on a database and select Generate Scripts to launch the well-known SSMS Generate Scripts Wizard. 
+| Release of Database Administration Tool Extensions for Windows | This extension launches two of the most used experiences in SQL Server Management Studio from Azure Data Studio. Users can right click on many different objects (such as Databases, Tables, Columns, Views, and more) and select Properties to view the SSMS Properties Dialog for that object. In addition, users can right click on a database and select Generate Scripts to launch the well known SSMS Generate Scripts Wizard. 
 | Schema Compare Improvements | &bull; &nbsp; Added Exclude/Include Options <br/>&bull; &nbsp; Generate Script opens script after being generated <br/>&bull; &nbsp; Removed double scroll bars  <br/>&bull; &nbsp; Formatting and layout improvements <br/>&bull; &nbsp; Complete changes can be found [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Moved Messages section to own tab | When users ran SQL queries, results and messages were on stacked panels. Now they are in separate tabs in one panel like in SSMS. |
 | SQL Notebook Improvements | &bull; &nbsp; Users can now choose to use their own Python 3 or Anaconda installs in notebooks <br/>&bull; &nbsp; Multiple Stability + fit/finish fixes <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
@@ -260,7 +242,7 @@ June 6, 2019 &nbsp; / &nbsp; version: 1.8.0
 - Notebooks
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) Allow users to use system Python for Notebooks
 - Schema Compare
-    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Schema Compare tasks show default cancel context menu, which does nothing
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Schema Compare tasks show default cancel context menu which does nothing
 
 ## May 2019
 
@@ -287,7 +269,7 @@ April 18, 2019 &nbsp; / &nbsp; version: 1.6.0
 | :----- | :------ |
 | Renamed **Servers** tab to **Connections** | |
 | Moved Azure Resource Explorer as an Azure viewlet under Connections | Users can now view their Azure SQL instances through Azure viewlet in the Connections view and expand to view objects under each server or database.|
-| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click autoresize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to "select all" functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in ADS when ADS is started again |
+| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click auto-resize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to "select all" functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in ADS when ADS is started again |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -315,7 +297,7 @@ March 18, 2019 &nbsp; / &nbsp; version: 1.5.1
 | Added PowerShell Extension  | Brings over the [PowerShell extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) experience from VS Code.  |
 | Added SQL Server dacpac extension  | Removes Data-Tier Application Wizard from SQL Server Import extension into a new extension.  |
 | Added Community extension QueryPlan.show | Adds integration support to visualize query plans  |
-| Updated SQL Server 2019 Preview extension | &bull; &nbsp; Jupyter Notebook support, specifically Python3, and Spark kernels, have moved into the core Azure Data Studio tool. <br/>&bull; &nbsp; Bug fixes to External Data Wizard  |
+| Updated SQL Server 2019 Preview extension | &bull; &nbsp; Jupyter Notebook support, specifically Python3 and Spark kernels, have moved into the core Azure Data Studio tool. <br/>&bull; &nbsp; Bug fixes to External Data Wizard  |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -406,7 +388,7 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 - Fix [issue #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Fix Edit Data document name when table name contains special characters
 - Fix [issue #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): Built in extension changelog says to check the VSCode Release Notes for changes
 - Fix [issue #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): High Contrast theme doubles/triples icons
-- Fix [issue #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Add a command-line interface for connecting to a SQL Server
+- Fix [issue #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Add a command line interface for connecting to a SQL Server
 - Fix [issue #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Add query plan theme support
 
 ## October 2018
@@ -472,7 +454,7 @@ For detailed information, see the [Change Log](https://github.com/Microsoft/azur
 
 August 30, 2018 &nbsp; / &nbsp; version: 0.32.8 &nbsp; / &nbsp; Public Preview
 
-The *August Public Preview* focuses on bug fixes, product stabilization, and filling in gaps existing scenarios.
+The *August Public Preview* focuses on bug fixes, product stabilization, and filling gaps in existing scenarios.
 
 _0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372))_
 
@@ -555,7 +537,7 @@ The *July Public Preview* focuses on the following items:
 - Fix [issue 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): BUG: HTML data in a column gets interpreted
 - Fix [issue 1789](https://github.com/Microsoft/azuredatastudio/issues/1789): Extensibility: if you add a connection provider uninstall will never remove it from the list
 - Fix [issue 1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops Extensions: queryeditor.connect() connects to the target database, but UI does not show the editor is connected
-- Fix [issue 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Top 10 DB Size chart does not work on case-sensitive instances
+- Fix [issue 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Top 10 DB Size chart does not work on case sensitive instances
 - Fix [issue 1814](https://github.com/Microsoft/azuredatastudio/issues/1814): sqlops.d.ts typo causing implicit 'any' type definition
 - Fix [issue 1817](https://github.com/Microsoft/azuredatastudio/issues/1817): Error de Ortografia
 - Fix [issue 1830](https://github.com/Microsoft/azuredatastudio/issues/1830): Setting iconPath in ButtonComponent after component() is called does not change icon
@@ -674,7 +656,7 @@ A highlight for the April Public Preview is the refresh of the source code for t
 | [Horizontal search results (preview)](https://code.visualstudio.com/updates/v1_21#_horizontal-search). | You can now view search results in a horizontal panel. |
 | &nbsp; | &nbsp; |
 
-For additional details, check out the [Visual Studio Code February Release Notes](https://code.visualstudio.com/updates/v1_21), and the [Visual Studio Code January Release Notes](https://code.visualstudio.com/updates/v1_20).
+For additional details, checkout the [Visual Studio Code February Release Notes](https://code.visualstudio.com/updates/v1_21), and the [Visual Studio Code January Release Notes](https://code.visualstudio.com/updates/v1_20).
 
 For more information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).
 
@@ -707,7 +689,7 @@ The *February Public Preview* includes some feature suggestions and high-priorit
 | The Connection Dialog **Database** field is now a dynamically populated drop-down list that will contain a list of databases populated from the specified server. | &nbsp; |
 | Introduce Connection extensibility API. | &nbsp; |
 | VS Code Editor 1.19 integration. | &nbsp; |
-| Update JustinPealing/html-query-plan component to pick up several Query Plan viewer improvements. | &nbsp; |
+| Update JustinPealing/html-query-plan component to pick-up several Query Plan viewer improvements. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### Fixed Issues, February 2018

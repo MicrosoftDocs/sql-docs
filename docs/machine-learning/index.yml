@@ -71,6 +71,10 @@ landingContent:
 
   - title: ML on Big Data Clusters
     linkLists:
+      - linkListType: overview
+        links:
+          - text: What are SQL Server Big Data Clusters?
+            url: ../big-data-cluster/big-data-cluster-overview.md
       - linkListType: get-started
         links:
           - text: Enable Machine Learning Services on SQL Server Big Data Clusters

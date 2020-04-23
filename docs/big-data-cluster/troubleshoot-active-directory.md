@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Active Directory mode deployment
+title: Troubleshoot Active Directory integration
 titleSuffix: SQL Server Big Data Cluster
 description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Active Directory domain.
 author: rl-msft
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Troubleshoot SQL Server Big Data Cluster Active Directory mode deployment
+# Troubleshoot SQL Server Big Data Cluster Active Directory integration
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

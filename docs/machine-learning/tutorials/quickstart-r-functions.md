@@ -28,6 +28,8 @@ In this quickstart, you'll learn how to use R mathematical and utility functions
 
 ## Prerequisites
 
+You need the following prerequisites to run this quickstart.
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
@@ -35,10 +37,10 @@ In this quickstart, you'll learn how to use R mathematical and utility functions
 - SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
+- SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md).
 ::: moniker-end
 
-- You also need a tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
+- A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## Create a stored procedure to generate random numbers
 

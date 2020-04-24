@@ -29,15 +29,17 @@ To protect server assets, the default instance library can be modified only by a
 The default path of the binaries for Python is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+
+This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
 ::: moniker-end
 
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 The default path of the binaries for Python is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
-::: moniker-end
 
 This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
+::: moniker-end
 
 Run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory and the standard library path.
 
@@ -110,17 +112,15 @@ print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "instal
 
 <a name="get-package-vers"></a>
 
-The following example returns the versions of the revoscalepy package and of Python.
+The following example returns the version of Python.
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-import revoscalepy
 import sys
-print(revoscalepy.__version__)
 print(sys.version)
-  '
+'
 ```
 
 ## Next steps

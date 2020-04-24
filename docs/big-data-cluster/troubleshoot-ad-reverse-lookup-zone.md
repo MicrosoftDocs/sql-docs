@@ -33,8 +33,9 @@ Developer: https://go.microsoft.com/fwlink/?linkid=2104079
 Cluster deployment documentation can be viewed at:
 https://aka.ms/bdc-deploy
  
-NOTE: Cluster creation can take a significant amount of time depending on
-configuration, network speed, and the number of nodes in the cluster.
+> [!NOTE]
+> Cluster creation can take a significant amount of time depending on
+> configuration, network speed, and the number of nodes in the cluster.
  
 Starting cluster deployment.
 Cluster controller endpoint is available at bdc-control.contoso.com:30080, 193.168.5.14:30080.

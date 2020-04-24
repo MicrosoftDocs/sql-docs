@@ -2,7 +2,7 @@
 title: "List of bugs fixed"
 description: "This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server."
 ms.custom: ""
-ms.date: "06/29/2018"
+ms.date: "04/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -18,6 +18,10 @@ manager: kenvh
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Alpine Linux only)
+
+- Fix a crash when using Always Encrypted with secure enclaves on Alpine Linux
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

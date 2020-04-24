@@ -51,7 +51,7 @@ for (i in 2:20)
 plot(1:20, wss, type = "b", xlab = "Number of Clusters", ylab = "Within groups sum of squares")
 ```
 
-![Elbow graph](./media/r-tutorial-clustering-model-build-data/r-elbow-graph.png)
+![Elbow graph](./media/r-tutorial-clustering-model-build-data/elbow-graph.png)
 
 Based on the graph, it looks like *k = 4* would be a good value to try. That *k* value will group the customers into four clusters.
 

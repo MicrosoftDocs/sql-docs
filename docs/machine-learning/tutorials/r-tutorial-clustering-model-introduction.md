@@ -46,6 +46,7 @@ In [part three](r-tutorial-clustering-model-deploy-data.md), you'll learn how to
 * [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md)
 
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
+* RODBC - This driver is necessary to run R scripts. [Install ODBC for R](https://CRAN.R-project.org/package=RODBC)
 
 
 

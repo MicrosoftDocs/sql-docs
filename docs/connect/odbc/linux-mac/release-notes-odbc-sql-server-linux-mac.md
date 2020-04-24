@@ -30,6 +30,13 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## 17.5.2.2, April 2020 (Alpine Linux only)
+
+| Feature added | Details |
+| :------------ | :------ |
+| Bug fixed. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.5.2, March 2020
 
 | Feature added | Details |

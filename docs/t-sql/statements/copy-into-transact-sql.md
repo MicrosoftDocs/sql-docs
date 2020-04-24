@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (preview) 
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 12/13/2019
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -23,7 +23,17 @@ monikerRange: "=sqlallproducts-allversions||=azure-sqldw-latest"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-This article explains how to use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into SQL Data Warehouse.
+This article explains how to use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into SQL Data Warehouse. Use COPY for the following capabilities:
+
+- Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse
+- Execute a single T-SQL statement without having to create any additional database objects
+- Properly parse and load CSV files where **delimiters** (string, field, row) **are** **escaped within string delimited columns**
+- Specify a finer permission model without exposing storage account keys using Share Access Signatures (SAS)
+- Use a different storage account for the ERRORFILE location (REJECTED_ROW_LOCATION)
+- Customize default values for each target column and specify source data fields to load into specific target columns
+- Specify a custom row terminator for CSV files (if required)
+- Leverage SQL Server Date formats for CSV files
+- Specify wildcards and multiple files in the storage location path
 
 > [!NOTE]  
 > The COPY statement is currently in public preview.
@@ -209,21 +219,20 @@ The COPY command will autodetect the compression type based on the file extensio
 - .deflate - **DefaultCodec**  (Parquet and ORC only)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* applies to CSV and specifies a single character that will be used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the RFC 4180 standard. Extended ASCII characters are not supported with UTF-8 for FIELDQUOTE.
+*FIELDQUOTE* applies to CSV and specifies a single character that will be used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the RFC 4180 standard. Extended ASCII and multi-byte characters and are not supported with UTF-8 for FIELDQUOTE.
 
 > [!NOTE]  
 > FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter). 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that will be used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,).
-For more information, see [Specify Field and Row Terminators (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
+*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that will be used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters and are not supported with UTF-8 for FIELDTERMINATOR.
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* Only applies to CSV. Specifies the row terminator that will be used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. By default, the row terminator is \r\n. 
 
 The COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal notation (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
 
-Please review the following [documentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) for additional guidance on specifying row terminators.
+Extended ASCII and multi-byte characters and are not supported with UTF-8 for ROW TERMINATOR.
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.
@@ -362,10 +371,10 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance by the time the feature is generally available. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Currently COPY is on par in terms of performance with PolyBase when using INSERT SELECT. 
+The COPY command will have better performance depending on your workload. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Share your performance results with our team during preview! sqldwcopypreview@service.microsoft.com
 
 ### What is the file splitting guidance for the COPY command loading CSV files?
-Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. 
+Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. For a simple file splitting experience, refer to the following [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

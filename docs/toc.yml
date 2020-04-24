@@ -221,8 +221,10 @@
       items:
       - name: Troubleshoot Kubernetes
         href: big-data-cluster/cluster-troubleshooting-commands.md
-      - name: Active directory integration
+      - name: Active directory domain group scope
         href: big-data-cluster/troubleshoot-active-directory.md
+      - name: Active directory DNS
+        href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
       - name: HDFS admin rights
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference

@@ -85,7 +85,6 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 Extract the logs and locate `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
 
 > [!TIP]
-> Optional information to help a user be more successful
 > There are multiple ways to collect the logs. Instead of copying the logs with `azdata`, you can use a notebook in Azure Data Studio.
 > In Azure Data Studio, connect to the Kubernetes cluster, and run an appropriate troubleshooting notebook. The following are examples of notebooks.
 >
@@ -140,5 +139,6 @@ catch {
 $DcControllerDnsPtr_Result
 ```
 
+## Next steps
+
 [Verify reverse DNS entry (PTR record) for domain controller](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).
-```

@@ -197,7 +197,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@**_variable_ = *column* = *expression* sets the variable to the same value as the column. This differs from SET **@**_variable_ = _column_, _column_ = _expression_, which sets the variable to the pre-update value of the column.  
   
  \<OUTPUT_Clause>  
- Returns updated data or expressions based on it as part of the UPDATE operation. The OUTPUT clause is not supported in any DML statements that target remote tables or views. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Returns updated data or expressions based on it as part of the UPDATE operation. The OUTPUT clause is not supported in any DML statements that target remote tables or views. For more information on the behavior of the OUTPUT clause, see [OUTPUT Clause (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  Specifies that a table, view, or derived table source is used to provide the criteria for the update operation. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  

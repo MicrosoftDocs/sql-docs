@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "docs/relational-databases/polybase/data-virtualization-csv.md",
+      "redirect_url": "/sql/big-data-cluster/data-virtualization-csv",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/sql-server/sql-server-help-installation.md",
       "redirect_url": "/sql/sql-server/sql-server-offline-documentation",
       "redirect_document_id": true

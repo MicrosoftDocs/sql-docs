@@ -14,13 +14,12 @@ ms.metadata: seo-lt-2019
 
 # Use the External Table Wizard with CSV files in a SQL Server Big Data Cluster
 
-SQL Server 2019 Big Data Cluster has the ability to **virtualize data** from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table in SQL Server. This feature is made possible due to the use of Polybase connectors, and minimizes the need for ETL processes. For more information on Data Virtualization, refer to our [Get started with PolyBase](polybase-guide.md) document.
+SQL Server 2019 Big Data Cluster has the ability to **virtualize data** from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table in SQL Server. This feature is made possible due to the use of PolyBase connectors, and minimizes the need for ETL processes. For more information on Data Virtualization, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md) document.
 
 ## Prerequisites
 
 - [A deployed big data cluster](deployment-guidance.md)
-
-- [Azure Data Studio](download-azure-data-studio)
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 ## Select or upload a CSV file for data virtualization 
 
@@ -83,4 +82,4 @@ Once created the table can now be queried directly using T-SQL from the SQL Serv
 
 ## Next steps
 
-For more information on SQL Server Big Data Cluster and related scenarios, see [What is SQL Server Big Data Cluster?](../../big-data-cluster/big-data-cluster-overview.md).
+For more information on SQL Server Big Data Cluster and related scenarios, see [What is SQL Server Big Data Cluster?](big-data-cluster-overview.md).

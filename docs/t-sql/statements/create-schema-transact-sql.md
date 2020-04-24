@@ -155,7 +155,7 @@ GO
   
 ```  
 CREATE SCHEMA Sales;  
-GO;  
+GO
   
 CREATE TABLE Sales.Region   
 (Region_id int NOT NULL,  

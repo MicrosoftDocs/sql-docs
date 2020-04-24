@@ -1,7 +1,7 @@
 ---
 title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
 ms.custom: ""
-ms.date: "03/10/2020"
+ms.date: "04/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-jizho2"
@@ -29,6 +29,13 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 17.5.2.2, April 2020 (Alpine Linux only)
+
+| Feature added | Details |
+| :------------ | :------ |
+| Bug fixed. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.5.2, March 2020
 

@@ -53,7 +53,7 @@ Check the current deployed pods.
 kubectl get pods -n mssql-cluster
 ```
 
-The folllowing list shows only pods that belong to the controller have been deployed. No Compute, data or storage pool pods are being created
+The following list shows only pods that belong to the controller have been deployed. No Compute, data or storage pool pods are being created
 
 ```
 NAME              READY   STATUS    RESTARTS   AGE

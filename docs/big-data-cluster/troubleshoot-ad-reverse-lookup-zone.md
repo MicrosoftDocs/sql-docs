@@ -70,7 +70,7 @@ metricsui-lvdpt   1/1     Running   0          16m
 mgmtproxy-mkmxp   2/2     Running   0          16m
 ```
 
-Inspect the security support container adn look for LDAP errors. 
+Inspect the security support container logs. Look for LDAP errors. 
 
 ## Check security-support container 
 
@@ -88,9 +88,9 @@ Extract the logs and locate `\mssql-cluster\control-<identifier>\controller\cont
 > There are multiple ways to collect the logs. Instead of copying the logs with `azdata`, you can use a notebook in Azure Data Studio.
 > In Azure Data Studio, connect to the Kubernetes cluster, and run an appropriate troubleshooting notebook. The following are examples of notebooks.
 >
-> - Azure data Studio notebook - TSG027 - Observe cluster deployment
-> - Azure data Studio notebook - TSG061 - Get tail of all container logs for pods in BDC namespace
-> - Azure data Studio notebook - TSG001 - Run azdata copy-logs
+> - TSG027 - Observe cluster deployment
+> - TSG061 - Get tail of all container logs for pods in BDC namespace
+> - TSG001 - Run `azdata` copy-logs
 >
 
 ## Inspect the logs

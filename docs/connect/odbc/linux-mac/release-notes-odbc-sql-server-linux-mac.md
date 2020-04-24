@@ -1,7 +1,7 @@
 ---
 title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
 ms.custom: ""
-ms.date: "03/10/2020"
+ms.date: "04/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-jizho2"

@@ -35,8 +35,9 @@ Developer: https://go.microsoft.com/fwlink/?linkid=2104079
 Cluster deployment documentation can be viewed at:
 https://aka.ms/bdc-deploy
  
-NOTE: Cluster creation can take a significant amount of time depending on
-configuration, network speed, and the number of nodes in the cluster.
+> [!NOTE]
+> Cluster creation can take a significant amount of time depending on
+> configuration, network speed, and the number of nodes in the cluster.
  
 Starting cluster deployment.
 Cluster controller endpoint is available at bdc-control.contoso.com:30080, 193.168.5.14:30080.
@@ -53,7 +54,7 @@ Check the current deployed pods.
 kubectl get pods -n mssql-cluster
 ```
 
-The following list shows only pods that belong to the controller have been deployed. No Compute, data or storage pool pods are being created
+The following list shows only pods that belong to the controller have been deployed. No Compute, data or storage pool pods are being created.
 
 ```
 NAME              READY   STATUS    RESTARTS   AGE

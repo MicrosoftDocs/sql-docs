@@ -1,6 +1,6 @@
 ---
-title: "Create a Server audit & database audit specification"
-description: Learn to create a SQL Server audit and a database audit specification using SQL Server Management Studio or Transact-SQL (T-SQL)
+title: "Create a server audit & database audit specification"
+description: Learn to create a SQL Server audit and a database audit specification by using SQL Server Management Studio or Transact-SQL (T-SQL).
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,40 +17,26 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 ---
-# Create a Server Audit and Database Audit Specification
+# Create a server audit and database audit specification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to create a server audit and database audit specification in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  This topic describes how to create a server audit and a database audit specification in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- *Auditing* an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database involves tracking and logging events that occur on the system. The *SQL Server Audit* object collects a single instance of server- or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. The *Database-Level Audit Specification* object belongs to an audit. You can create one database audit specification per SQL Server database per audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ Auditing an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database involves tracking and logging events that occur on the system. The *SQL Server Audit* object collects a single instance of server-level or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. The *Database-Level Audit Specification* object belongs to an audit. You can create one database audit specification per SQL Server database per audit. For more information, see [SQL Server audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- **In This Topic**  
+ ##  <a name="BeforeYouBegin"></a> Before you begin  
   
--   **Before you begin:**  
+###  <a name="Restrictions"></a> Limitations and restrictions  
+ Database audit specifications are non-securable objects that reside in a given database. When a database audit specification is created, it's in a disabled state.  
   
-     [Limitations and Restrictions](#Restrictions)  
+ When you're creating or modifying a database audit specification in a user database, don't include audit actions on server-scope objects, like the system views. If you include server-scoped objects, the audit will be created. But the server-scoped objects won't be included, and no error will return. To audit server-scoped objects, use a database audit specification in the master database.  
   
-     [Security](#Security)  
-  
--   **To create a server audit and database audit specification, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
- Database audit specifications are non-securable objects that reside in a given database. When a database audit specification is created, it is in a disabled state.  
-  
- When you are creating or modifying a database audit specification in a user database, do not include audit actions on server-scope objects, such as the system views. If server-scoped objects are included, the audit will be created. However, the server-scoped objects will not be included, and no error will be returned. To audit server-scope objects, use a database audit specification in the master database.  
-  
- Database audit specifications reside in the database where they are created, with the exception of the **tempdb** system database.  
+ Database audit specifications reside in the database where they're created, except for the **TempDB** system database.  
   
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
   
--   Users with the ALTER ANY DATABASE AUDIT permission can create database audit specifications and bind them to any audit.  
+-   Users who have the Alter Any Database Audit permission can create database audit specifications and bind them to any audit.  
   
 -   After a database audit specification is created, it can be viewed by principals with the CONTROL SERVER,  ALTER ANY DATABASE AUDIT permissions, or the sysadmin account.  
   

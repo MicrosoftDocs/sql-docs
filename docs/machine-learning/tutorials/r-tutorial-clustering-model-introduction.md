@@ -45,8 +45,6 @@ In [part three](r-tutorial-clustering-model-deploy-data.md), you'll learn how to
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md)
 
-* RevoScaleR package - See [RevoScaleR](https://docs.microsoft.com/sql/advanced-analytics/r/ref-r-revoscaler?view=sql-server-2017#versions-and-platforms) for options to install this package locally.
-
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 
 

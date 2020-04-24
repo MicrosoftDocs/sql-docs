@@ -31,7 +31,7 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 - Specify a finer permission model without exposing storage account keys using Share Access Signatures (SAS)
 - Use a different storage account for the ERRORFILE location (REJECTED_ROW_LOCATION)
 - Customize default values for each target column and specify source data fields to load into specific target columns
-- Specify a custom row terminator for CSV files (if required)
+- Specify a custom row terminator for CSV files
 - Leverage SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
 

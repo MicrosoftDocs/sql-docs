@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Active Directory integration
+title: Troubleshoot Active Directory domain group scope
 titleSuffix: SQL Server Big Data Cluster
 description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Active Directory domain.
 author: rl-msft
@@ -112,56 +112,3 @@ catch {
 $ClusterUsersGroupScope_Result
 ```
 
-## Check security-support container 
-
-Review the security-support container logs.
-
-The following command collects the security-support logs in a cluster at namespace `mssql-cluster`.
-
-```console
-azdata bdc debug copy-logs -n mssql-cluster -c security-support
-```
-
-Extract the logs and locate `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
-
-Look for the following entries in the log:
-
-```
-ERROR    | Failed to create AD user account 'cntrl-controller'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=cntrl-controller,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'ldap-user'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=ldap-user,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=nginx-mgmtproxy,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform.
-```
-
-These entries can happen when the domain controller DNS server is missing reverse DNS entry (PTR record).
-
-## Verify reverse lookup (PTR record)
-    
-Run the following PowerShell script to confirm if you have reverse DNS entry (PTR record) configured.
-
-```powershell
-#Domain Controller FQDN 'DCserver01.contoso.local'
-$Domain_controller_FQDN = 'DCserver01.contoso.local'
-
-#Performing Domain Controller DNS record, reverse PTR Checks...
-$DcControllerDnsPtr_Result = New-Object System.Collections.ArrayList
-try {
-    $Domain_controller_DNS_Record = Resolve-DnsName $Domain_controller_FQDN -Type A -Server $Domain_DNS_IP_address -ErrorAction Stop
-    foreach ($ip in $Domain_controller_DNS_Record.IPAddress) {
-        #resolving hostname by IP address to make sure we have reverse PTR record 
-        if ((Resolve-DnsName $ip).NameHost -eq $Domain_controller_FQDN) {
-            [void]$DcControllerDnsPtr_Result.add("OK - $Domain_controller_FQDN has an A record with an IP $ip, Reverse PTR record is in place") 
-        }
-        else {
-            [void]$DcControllerDnsPtr_Result.add("Missing - $Domain_controller_FQDN has an A record with an IP $ip, But no reverse PTR record was found for the host")
-        }
-    }
-}
-catch {
-    [void]$DcControllerDnsPtr_Result.add("Error - " + $_.exception.message)
-}
-
-#show the results 
-$DcControllerDnsPtr_Result
-```
-
-[Verify reverse DNS entry (PTR record) for domain controller](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).

@@ -1,5 +1,6 @@
 ---
-title: "Virtualize external data in SQL Server 2019 Big Data Clusters using Azure Data Studio: comma separated values (csv)"
+title: Virtualize external data using Azure Data Studio (csv)
+subtitle: SQL Server Big Data Clusters 
 description: Steps detailing the create external table wizard for virtualization of a CSV file in a Big Data Cluster
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,9 +13,9 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ms.metadata: seo-lt-2019
 ---
 
-# Use the External Table Wizard with CSV files in a SQL Server Big Data Cluster
+# Virtualize data from CSV - External Table Wizard - SQL Server Big Data Cluster
 
-SQL Server 2019 Big Data Cluster has the ability to **virtualize data** from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table in SQL Server. This feature is made possible due to the use of PolyBase connectors, and minimizes the need for ETL processes. For more information on Data Virtualization, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md) document.
+SQL Server Big Data Clusters can virtualize data from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes. For more information on data virtualization, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md).
 
 ## Prerequisites
 
@@ -23,9 +24,24 @@ SQL Server 2019 Big Data Cluster has the ability to **virtualize data** from CSV
 
 ## Select or upload a CSV file for data virtualization 
 
-In Azure Data Studio (ADS) [connect to the SQL Server master instance](connect-to-big-data-cluster.md#master) of your Big Data Cluster. Once connected, expand the HDFS elements in the object explorer to locate the CSV file(s) you would like to data virtualize. For the purposes of this tutorial, a new directory named **Data** was created by right-clicking on the HDFS root directory context menu. A sample csv data file, **airline_delay_causes.csv**, obtained from the [US Department of Transportation](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1) was then uploaded to the **Data** directory for virtualization (right-click on the **Data** directory and select **Upload files** from the context menu). 
+In Azure Data Studio (ADS) [connect to the SQL Server master instance](connect-to-big-data-cluster.md#master) of your Big Data Cluster. Once connected, expand the HDFS elements in the object explorer to locate the CSV file(s) you would like to data virtualize. 
+
+For the purposes of this tutorial, create a new directory named **Data**.
+
+1. Right-click on the HDFS root directory context menu.
+2. Click **New directory**.
+3. Name the new directory *Data*.
+
+Upload sample data. For a simple walk through, you can use a sample csv data file. This article uses airline delay cause data from the [US Department of Transportation](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1). Download the raw data, and extract the data to your computer. Name the file *airline_delay_causes.csv*.
+
+To upload the sample file after you extract it:
+
+1. In Azure Data Studio, *right-click* the new directory you created. 
+2. Click **Upload files**.
 
 ![example csv file in HDFS](media/data-virtualization/100-csv-sample-file-hdfs.png)
+
+Azure Data Studio uploads the files to HDFS on the Big Data Cluster.
 
 ## Create the Storage Pool External Data Source in your target database
 

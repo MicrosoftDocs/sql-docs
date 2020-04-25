@@ -137,6 +137,6 @@ print(sys.version)
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Install packages with Python tools](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Install new Python packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

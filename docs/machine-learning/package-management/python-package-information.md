@@ -21,7 +21,13 @@ This article describes how to get information about installed Python packages, i
 
 ## Default Python library location
 
-When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. On Windows, the instance library is a secured folder registered with SQL Server.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. The instance library is a secured folder registered with SQL Server.
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install.
+::: moniker-end
 
 All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any Python code running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.

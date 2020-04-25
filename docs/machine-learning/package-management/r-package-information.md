@@ -9,6 +9,7 @@ ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
+ms.reviewer: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
@@ -101,13 +102,7 @@ R support includes open-source R so that you can call base R functions and insta
 
 The distribution of open-source R included in your installation is [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-The version of R provided by MRO using SQL Server R Services Setup is 3.2.2.
-::: moniker-end
-
-::: moniker range="=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-The version of R provided by MRO using SQL Server Machine Learning Services Setup is 3.3.3.
-::: moniker-end
+For information on which version of R is included with each SQL Server version, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
 
 > [!IMPORTANT]
 > You should never manually overwrite the version of R installed by SQL Server Setup with newer versions on the web. Microsoft R packages are based on specific versions of R. Modifying your installation could destabilize it.

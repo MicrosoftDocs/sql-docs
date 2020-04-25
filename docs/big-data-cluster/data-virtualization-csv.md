@@ -15,7 +15,7 @@ ms.metadata: seo-lt-2019
 
 # Virtualize data from CSV - External Table Wizard - SQL Server Big Data Cluster
 
-SQL Server Big Data Clusters can virtualize data from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes. For more information on data virtualization, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md).
+SQL Server Big Data Clusters can virtualize data from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes. For more information on data virtualization, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md)
 
 ## Prerequisites
 

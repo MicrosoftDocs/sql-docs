@@ -4,7 +4,7 @@ description: Learn how to use Python pip to install new Python packages on an in
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 01/30/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -21,7 +21,7 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
 > [!NOTE]
-> The standard Python `pip install` command is not recommended for adding Python packages on SQL Server 2019. Instead, use **sqlmlutils** as described in this article.
+> The standard Python `pip install` command is not recommended for adding Python packages on SQL Server 2019 and later. Instead, use **sqlmlutils** as described in this article.
 
 ## Prerequisites
 
@@ -29,11 +29,11 @@ For more information about package location and installation paths, see [Get Pyt
 
 + Install [python](https://www.python.org/) on the client computer you use to connect to SQL Server. You also may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
 
-+ Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) or [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio or SSMS.
++ Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio.
 
 ### Other considerations
 
-+ Packages must be compliant with the version of Python you have. For more information on which version of Python is included with each SQL Server version, see the [Python and R versions in What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md#versions)
++ Packages must be compliant with the version of Python you have. For information on which version of Python is included with each SQL Server version, see the [Python and R versions](../sql-server-machine-learning-services.md#versions).
 
 + The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 
@@ -131,7 +131,7 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## Use the package in SQL Server
+## Use the package
 
 You can now use the package in a Python script in SQL Server. For example:
 

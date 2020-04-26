@@ -5,10 +5,11 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/22/2019
+ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
+ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
@@ -20,7 +21,13 @@ This article describes how to get information about installed Python packages, i
 
 ## Default Python library location
 
-When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. On Windows, the instance library is a secured folder registered with SQL Server.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. The instance library is a secured folder registered with SQL Server.
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install.
+::: moniker-end
 
 All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any Python code running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.
@@ -29,15 +36,17 @@ To protect server assets, the default instance library can be modified only by a
 The default path of the binaries for Python is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+
+This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
 ::: moniker-end
 
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 The default path of the binaries for Python is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
-::: moniker-end
 
 This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
+::: moniker-end
 
 Run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory and the standard library path.
 
@@ -57,6 +66,8 @@ The following Python packages are installed with SQL Server Machine Learning Ser
 | ---------|---------|--------------|
 | [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Adds machine learning algorithms in Python. |
+
+For information on which version of Python is included with each SQL Server version, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
 
 ### Component upgrades
 
@@ -110,17 +121,15 @@ print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "instal
 
 <a name="get-package-vers"></a>
 
-The following example returns the versions of the revoscalepy package and of Python.
+The following example returns the version of Python.
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-import revoscalepy
 import sys
-print(revoscalepy.__version__)
 print(sys.version)
-  '
+'
 ```
 
 ## Next steps
@@ -128,6 +137,6 @@ print(sys.version)
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Install packages with Python tools](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Install new Python packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

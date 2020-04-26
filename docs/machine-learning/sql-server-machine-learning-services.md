@@ -63,7 +63,7 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 
 ## Python and R versions
 
-Which version of Python and R is included in Machine Learning Services, depends on which version of SQL Server you use. 
+The following lists the versions of Python and R that are included in Machine Learning Services.
 
 | SQL Server version | Python version | R version |
 |-|-|-|

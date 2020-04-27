@@ -9,7 +9,7 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: garye
 ms.custom: seo-lt-2019
-ms.date: 04/27/2020
+ms.date: 04/24/2020
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 

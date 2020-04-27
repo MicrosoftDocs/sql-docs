@@ -15,13 +15,14 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current|
 
 # Tutorial: Prepare data to perform clustering in R with SQL machine learning services
 
-In part two of this four-part tutorial series, you'll import and prepare the data from an SQL database using R. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL machine learning services.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-
-*Clustering* can be explained as organizing data into groups where members of a group are similar in some way.
-You'll use the **K-Means** algorithm to perform the clustering of customers in a dataset of product purchases and returns. By clustering customers, you can focus your marketing efforts more effectively by targeting specific groups.
-K-Means clustering is an *unsupervised learning* algorithm that looks for patterns in data based on similarities.
-
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll restore and prepare the data from a database using R. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL Server Machine Learning Services or on Big Data Clusters.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll restore and prepare the data from a database using R. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL Server Machine Learning Services.
+::: moniker-end
 In parts one and two of this series, you'll develop some R scripts in RStudio to prepare your data and train a machine learning model. Then, in part three, you'll run those R scripts inside a SQL database using stored procedures.
 
 In this article, you'll learn how to:
@@ -31,29 +32,19 @@ In this article, you'll learn how to:
 > * Separate customers along different dimensions using R
 > * Load the data from the SQL database into an R data frame
 
-In [part two](r-tutorial-clustering-model-build-data.md), you'll learn how to create and train a K-Means clustering model in R.
+In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part three](r-tutorial-clustering-model-deploy-data.md), you'll learn how to create a stored procedure in an SQL database that can perform clustering in R based on new data.
+In [part three](r-tutorial-clustering-model-build-data.md), you'll learn how to create and train a K-Means clustering model in R.
+
+In [part four](r-tutorial-clustering-model-deploy-data.md), you'll learn how to create a stored procedure in an SQL database that can perform clustering in R based on new data.
 
 
 ## Prerequisites
-
-* RevoScaleR package - See [RevoScaleR](https://docs.microsoft.com/sql/advanced-analytics/r/ref-r-revoscaler?view=sql-server-2017#versions-and-platforms) for options to install this package locally.
 
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 
 * SQL query tool - This tutorial assumes you're using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is).
 
-## Import the sample database
-
-The sample dataset used in this tutorial has been saved to a **.bacpac** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/default.asp).
-
-1. Download the file [tpcxbb_1gb.bacpac](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bacpac).
-
-1. Follow the directions in [Import a BACPAC file to create an SQL database](https://docs.microsoft.com/azure/sql-database/sql-database-import), using these details:
-
-   * Import from the **tpcxbb_1gb.bacpac** file you downloaded
-   * Name the new database "tpcxbb_1gb"
 
 ## Separate customers
 
@@ -185,11 +176,10 @@ You should see results similar to the following.
 
 In part one of this tutorial series, you completed these steps:
 
-* Import a sample database into an SQL database
 * Separate customers along different dimensions using R
 * Load the data from the SQL database into an R data frame
 
-To create a machine learning model that uses this customer data, follow part two of this tutorial series:
+To create a machine learning model that uses this customer data, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create a predictive model in R with SQL machine learning services)](r-tutorial-clustering-model-introduction.md)
+> [Tutorial: Create a predictive model in R with SQL machine learning services)](r-tutorial-clustering-model-build-data.md)

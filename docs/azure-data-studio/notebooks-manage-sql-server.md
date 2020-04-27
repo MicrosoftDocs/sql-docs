@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""
-ms.date: 04/08/2020
+ms.date: 04/27/2020
 ---
 
 # How to manage notebooks in Azure Data Studio

@@ -51,6 +51,9 @@ What is index fragmentation and why should I care about it:
 
 The first step in deciding which index defragmentation method to use is to analyze the index to determine the degree of fragmentation. You detect fragmentation differently for rowstore indexes and columnstore indexes.
 
+> [!NOTE]
+> It's especially important to review index or heap fragmentation after large amounts of data are deleted. For heaps, if there are frequent updates, it may also be needed to review fragmentation to avoid proliferation of forwarding records. For more information about heaps, see [Heaps (Tables without Clustered Indexes)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures). 
+
 ### Detecting fragmentation of rowstore indexes
 
 By using [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), you can detect fragmentation in a specific index, all indexes on a table or indexed view, all indexes in a database, or all indexes in all databases. For partitioned indexes, **sys.dm_db_index_physical_stats** also provides fragmentation information for each partition.
@@ -67,18 +70,22 @@ After the degree of fragmentation is known, use the following table to determine
 
 |**avg_fragmentation_in_percent** value|Corrective statement|
 |-----------------------------------------------|--------------------------|
-|> 5% and < = 30%|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5% and < = 30% <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30% <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online. For more information, see [INDEX](#rebuild-an-index) and [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
+<sup>1</sup> These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment.      
 
-These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment. For example, if a given index is used mainly for scan operations, removing fragmentation can improve performance of these operations. The performance benefit is less noticeable for indexes that are used primarily for seek operations. Similarly, removing fragmentation in a heap (a table with no clustered index) is especially useful for nonclustered index scan operations, but has little effect in lookup operations.
+> [!TIP] For example, if a given index is used mainly for scan operations, removing fragmentation can improve performance of these operations. The performance benefit may not be noticeable for indexes that are used primarily for seek operations.    
+Similarly, removing fragmentation in a heap (a table with no clustered index) is especially useful for nonclustered index scan operations, but has little effect in lookup operations.
 
-Indexes with fragmentation or less than 5 percent do not need to be defragmented because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the CPU cost incurred to reorganize or rebuild the index. Also, rebuilding or reorganizing small rowstore indexes generally does not reduce actually fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it. See also [Considerations specific to rebuilding rowstore indexes](#considerations-specific-to-rebuilding-rowstore-indexes).
+<sup>2</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online. For more information, see [INDEX](#rebuild-an-index) and [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
+
+Indexes with fragmentation or less than 5 percent do not need to be defragmented because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the CPU cost incurred to reorganize or rebuild the index. Also, rebuilding or reorganizing small rowstore indexes generally does not reduce actually fragmentation. 
+Up to, and including, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] allocates space using mixed extents. Therefore, pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it. See also [Considerations specific to rebuilding rowstore indexes](#considerations-specific-to-rebuilding-rowstore-indexes). For more information about extents, see the [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### Detecting fragmentation of columnstore indexes
 
-By using [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), you can determine the percentage of deleted rows in an index, which is a good measure for the fragmentation in a rowgroup in a columnstore index. Use this information to compute the fragmentation in a specific index, all indexes on a table, all indexes in a database, or all indexes in all databases.
+By using [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), you can determine the percentage of deleted rows in an index, which is a reasonable measure for fragmentation in a rowgroup of a columnstore index. Use this information to compute the fragmentation in a specific index, all indexes on a table, all indexes in a database, or all indexes in all databases.
 
 The result set returned by **sys.dm_db_column_store_row_group_physical_stats** includes the following columns:
 

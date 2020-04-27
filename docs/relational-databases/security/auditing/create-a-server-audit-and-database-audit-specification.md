@@ -61,7 +61,7 @@ ms.author: vanto
      These options are available in the **Create Database Audit Specification** dialog box:  
   
      **Name**  
-     The name of the database audit specification. A name is generated automatically when you create a server audit specification, but it's editable.  
+     The name of the database audit specification. A name is generated automatically when you create a server audit specification. The name is editable.  
   
      **Audit**  
      The name of an existing server audit object. Either type in the name of the audit or select it from the list.  

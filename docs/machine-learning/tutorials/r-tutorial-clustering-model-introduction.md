@@ -8,7 +8,7 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye
-ms.date: 04/16/2020
+ms.date: 04/27/2020
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
 ---

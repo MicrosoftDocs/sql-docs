@@ -57,7 +57,7 @@ There are two ways to execute Python and R scripts in Machine Learning Services:
 
 ## Python and R versions
 
-The following list shows the version of Python and R included in Machine Learning Services with each version of SQL Server.
+The following lists the versions of Python and R included in Machine Learning Services with each version of SQL Server.
 
 | SQL Server version | Python version | R version |
 |-|-|-|

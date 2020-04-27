@@ -37,7 +37,7 @@ In [part one](r-tutorial-clustering-model-introduction.md), you learned how to p
 
 In [part two](r-tutorial-clustering-model-prepare-data.md), you learned how to create and train a K-Means clustering model in R.
 
-In [part three](r-clustering-model-build-data.md), you learned how to create and train a K-Means clustering model in R.
+In [part three](r-tutorial-clustering-model-build-data.md), you learned how to create and train a K-Means clustering model in R.
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 ---
-title: Virtualize external data using Azure Data Studio (csv)
+title: Virtualize CSV data from storage pool
 subtitle: SQL Server Big Data Clusters 
-description: Steps detailing the create external table wizard for virtualization of a CSV file in a Big Data Cluster
+description: Steps detailing the create external table for virtualization of a CSV file in a Big Data Cluster
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -13,7 +13,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ms.metadata: seo-lt-2019
 ---
 
-# Virtualize data from CSV - External Table Wizard - SQL Server Big Data Cluster
+# Virtualize CSV data from storage pool (Big Data Clusters)
 
 SQL Server Big Data Clusters can virtualize data from CSV files in HDFS. This process allows the data to stay in its original location, but can be queried from a SQL Server instance like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes. For more information on data virtualization, see [What is PolyBase?](../relational-databases/polybase/polybase-guide.md)
 
@@ -43,9 +43,9 @@ To upload the sample file after you extract it:
 
 Azure Data Studio uploads the files to HDFS on the Big Data Cluster.
 
-## Create the Storage Pool External Data Source in your target database
+## Create the storage pool external data source in your target database
 
-The Storage Pool External Data Source is not created in a database by default in your Big Data Cluster. Before using the external table wizard, create the default **SqlStoragePool** External Data Source in your target database with the following Transact-SQL query. Make sure you first change the context of the query to your target database.
+The storage pool external data source is not created in a database by default in your Big Data Cluster. Before you can create the external table, create the default **SqlStoragePool** External Data Source in your target database with the following Transact-SQL query. Make sure you first change the context of the query to your target database.
 
 ```sql
 -- Create the default storage pool source for SQL Big Data Cluster
@@ -54,47 +54,41 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePo
     WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 ```
 
-## Launch the External Table wizard
+## Create the external table
 
-From ADS, right-click on the CSV file and select **Create External Table From CSV File** from the context menu. You can also create external tables from CSV files from a directory in HDFS if the files under the directory follow the same schema. This would allow the virtualization of the data at a directory level without the need to process individual files and get a joined result set over the combined data. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
+From ADS, right-click on the CSV file and select **Create External Table From CSV File** from the context menu. You can also create external tables from CSV files from a directory in HDFS if the files under the directory follow the same schema. This would allow the virtualization of the data at a directory level without the need to process individual files and get a joined result set over the combined data.Azure data studio guides you through the steps to create the external table.
 
-![Virtualize data wizard](media/data-virtualization/110-csv-virtualize-data-wizard.png)
+Specify the database, the data source, a table name, the schema, and the name for the table's external file format.
 
-## Select Destination Database
-
-In this step, you choose the destination database you wish to virtualize the data into. The drop-down field will contain all acceptable databases in the SQL Master instance. Here you can also name the new external table, its external file format and select the schema.
-
-![Select destination database](media/data-virtualization/120-csv-select-destination.png)
+Click **Next**.
 
 ## Preview Data
 
-On this window, you will be able to see a preview of the first 50 rows of your CSV file for validation.
-
-Once done viewing the preview, click **Next** to continue
+Azure Data Studio provides a preview of the imported data.
 
 ![External Data Source credentials](media/data-virtualization/130-csv-preview-data.png)
 
+Once done viewing the preview, click **Next** to continue
+
 ## Modify Columns
 
-In the next window, you will be able to modify the columns of the external table you intend to create. You are able to alter the column name, change the data type and allow for nullable rows. 
+In the next window, you may modify the columns of the external table you intend to create. You are able to alter the column name, change the data type and allow for nullable rows. 
 
 ![External Data Source credentials](media/data-virtualization/140-csv-modify-columns.png)
 
+After you verify the destination columns, click **Next**.
+
 ## Summary
 
-This step provides a summary of your selections. It provides the SQL Server name, database name, table name, table schema and external table information. In this step, you have the option to **Generate Script**, which will script out in T-SQL the syntax to create the External Data Source or **Create Table** which will create the External Data Source object.
+This step provides a summary of your selections. It provides the SQL Server name, database name, table name, table schema, and external table information. In this step, you have the option to generate a script or create a table. **Generate Script**  creates a script in T-SQL to create the external data source. **Create Table** creates the external data source.
 
 ![Summary screen](media/data-virtualization/150-csv-virtualize-data-summary.png)
 
-If you click **Create Table** you will be able to see the External table created in the Destination database.
+If you click **Create Table**, SQL Server creates the external table in the destination database.
 
-![External Data Sources](media/data-virtualization/160-csv-external-data-sources.png)
+If you click, **Generate Script**, you Azure Data Studio creates the T-SQL query for creating the external table.
 
-If you click, **Generate Script** you will see the T-SQL query being generated for creating the External Data Source object.
-
-![Generate script](media/data-virtualization/170-csv-generated-script.png)
-
-Once created the table can now be queried directly using T-SQL from the SQL Server instance. 
+Once created the table can now be queried directly using T-SQL from the SQL Server instance.
 
 ## Next steps
 

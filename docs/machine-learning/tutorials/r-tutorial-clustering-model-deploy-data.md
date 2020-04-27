@@ -1,23 +1,30 @@
 ---
 title: "Tutorial: Deploy a clustering model in R"
 titleSuffix: SQL Database Machine Learning Services
-description: In part three of this four-part tutorial series, you'll deploy a clustering model in R with SQL machine learning services.
+description: In part four of this four-part tutorial series, you'll deploy a clustering model in R with SQL machine learning services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye
-ms.date: 04/16/2020
+ms.date: 04/27/2020
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 
 # Tutorial: Deploy a clustering model in R with SQL machine learning services
 
-In part three of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL machine learning services.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-You'll create a stored procedure with an embedded R script that performs clustering. Because your model executes in the SQL database, it can easily be trained against data stored in the database.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services or on Big Data Clusters.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services.
+::: moniker-end
+
+In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the Python script from any App. To do that, you can deploy the R script in a database by putting the R script inside a SQL stored procedure. Because your model executes in the database, it can easily be trained against data stored in the database.
 
 In this article, you'll learn how to:
 
@@ -28,7 +35,9 @@ In this article, you'll learn how to:
 
 In [part one](r-tutorial-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
 
-In [part two](r-tutorial-clustering-model-build-data.md), you learned how to create and train a K-Means clustering model in R.
+In [part two](r-tutorial-clustering-model-prepare-data.md), you learned how to create and train a K-Means clustering model in R.
+
+In [part three](r-clustering-model-build-data.md), you learned how to create and train a K-Means clustering model in R.
 
 ## Prerequisites
 
@@ -201,27 +210,27 @@ cluster  customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 Because you stored the clustering procedure in the database, it can perform clustering efficiently against customer data stored in the same database. You can execute the procedure whenever your customer data is updated and use the updated clustering information.
 
-Suppose you want to send a promotional email to customers in cluster 3, the group that has more active return behavior (you can see how the four clusters were described in [part two](r-tutorial-clustering-model-build-data.md#analyze-the-results)). The following code selects the email addresses of customers in cluster 3.
+Suppose you want to send a promotional email to customers in cluster 0, the group that was inactive (you can see how the four clusters were described in [part three](r-tutorial-clustering-model-build-data.md#analyze-the-results) of this tutorial). The following code selects the email addresses of customers in cluster 0.
 
 ```sql
 USE [tpcxbb_1gb]
-
-SELECT customer.[c_email_address],
-    customer.c_customer_sk
-FROM dbo.customer
-JOIN [dbo].[customer_return_clusters] AS r ON r.customer = customer.c_customer_sk
-WHERE r.cluster = 3
+--Get email addresses of customers in cluster 0 for a promotion campaign
+SELECT customer.[c_email_address], customer.c_customer_sk
+  FROM dbo.customer
+  JOIN
+  [dbo].[py_customer_clusters] as c
+  ON c.Customer = customer.c_customer_sk
+  WHERE c.cluster = 0
 ```
 
-You can change the **r.cluster** value to return email addresses for customers in other clusters.
+You can change the **c.cluster** value to return email addresses for customers in other clusters.
 
 ## Clean up resources
 
-When you're finished with this tutorial, you can delete the tpcxbb_1gb database from your SQL Database.
+When you're finished with this tutorial, you can delete the tpcxbb_1gb database.
 
 ## Next steps
-
-In part three of this tutorial series, you completed these steps:
+In part four of this tutorial series, you completed these steps:
 
 * Create a stored procedure that generates the model
 * Perform clustering in SQL Database

@@ -61,7 +61,6 @@ The following list shows the version of Python and R included in Machine Learnin
 
 | SQL Server version | Python version | R version |
 |-|-|-|
-| SQL Server 2016 | N/A   | 3.2.2 |
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 

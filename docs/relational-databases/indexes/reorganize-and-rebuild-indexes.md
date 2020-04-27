@@ -75,7 +75,8 @@ After the degree of fragmentation is known, use the following table to determine
 
 <sup>1</sup> These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment.      
 
-> [!TIP] For example, if a given index is used mainly for scan operations, removing fragmentation can improve performance of these operations. The performance benefit may not be noticeable for indexes that are used primarily for seek operations.    
+> [!TIP] 
+> For example, if a given index is used mainly for scan operations, removing fragmentation can improve performance of these operations. The performance benefit may not be noticeable for indexes that are used primarily for seek operations.    
 Similarly, removing fragmentation in a heap (a table with no clustered index) is especially useful for nonclustered index scan operations, but has little effect in lookup operations.
 
 <sup>2</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online. For more information, see [INDEX](#rebuild-an-index) and [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).

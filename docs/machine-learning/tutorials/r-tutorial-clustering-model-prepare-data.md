@@ -32,7 +32,7 @@ In this article, you'll learn how to:
 > * Separate customers along different dimensions using R
 > * Load the data from the SQL database into an R data frame
 
-In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
+In [part one](r-tutorial-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
 
 In [part three](r-tutorial-clustering-model-build-data.md), you'll learn how to create and train a K-Means clustering model in R.
 

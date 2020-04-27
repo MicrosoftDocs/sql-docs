@@ -38,9 +38,9 @@ If a table is a heap and does not have any nonclustered indexes, then the entire
   
  Do not use a heap when ranges of data are frequently queried from the table. A clustered index on the range column will avoid sorting the entire heap.  
   
- Do not use a heap when there are no nonclustered indexes and the table is large, unless you intend to return the entore table content without any specified order. In a heap, all rows of the heap must be read to find any row.  
+ Do not use a heap when there are no nonclustered indexes and the table is large, unless you intend to return the entire table content without any specified order. In a heap, all rows of the heap must be read to find any row.  
  
- Do not use a heap if the data is frequently updated. If an updated record uses more space in the data pages than they are currently using, the record has to be moved to a data page that has enough free space. This creates a **forwarded record** pointing to the new location of the data, and **forwarding pointer** has to be written in the page that held that record previously, to indicate the new physical location of the record. This introduces gfragmentation in the heap. When scanning a heap, these pointers must be followed which limits read-ahead performance, and can incur additional I/O which reduces scan performance. 
+ Do not use a heap if the data is frequently updated. If an updated record uses more space in the data pages than they are currently using, the record has to be moved to a data page that has enough free space. This creates a **forwarded record** pointing to the new location of the data, and **forwarding pointer** has to be written in the page that held that record previously, to indicate the new physical location of the record. This introduces fragmentation in the heap. When scanning a heap, these pointers must be followed which limits read-ahead performance, and can incur additional I/O which reduces scan performance. 
   
 ## Managing Heaps  
  To create a heap, create a table without a clustered index. If a table already has a clustered index, drop the clustered index to return the table to a heap.  

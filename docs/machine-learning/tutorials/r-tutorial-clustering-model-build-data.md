@@ -138,7 +138,7 @@ Here are a couple ways you could interpret these results:
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your SQL Database server.
+***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database.
 
 ## Next steps
 

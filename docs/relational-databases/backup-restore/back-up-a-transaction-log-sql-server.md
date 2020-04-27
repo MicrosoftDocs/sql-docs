@@ -1,5 +1,6 @@
 ---
 title: "Back Up a Transaction Log | Microsoft Docs"
+description: This article describes how to back up a transaction log in SQL Server by using SQL Server Management Studio, Transact-SQL, or PowerShell.
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: sql

@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""
-ms.date: 04/23/2020
+ms.date: 04/27/2020
 ---
 
 # Create and run a Python notebook

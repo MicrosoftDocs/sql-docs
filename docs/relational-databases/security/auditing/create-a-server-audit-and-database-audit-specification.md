@@ -19,7 +19,7 @@ ms.author: vanto
 ---
 # Create a server audit and database audit specification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to create a server audit and a database audit specification in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  This article describes how to create a server audit and a database audit specification in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Auditing an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database involves tracking and logging events that occur on the system. The *SQL Server Audit* object collects a single instance of server-level or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. The *Database-Level Audit Specification* object belongs to an audit. You can create one database audit specification per SQL Server database per audit. For more information, see [SQL Server audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -84,7 +84,7 @@ ms.author: vanto
      **Ellipsis (...)**  
      Opens the **Select Objects** dialog box so you can browse for and select an available object, based on the specified **Object Name**.  
   
-4.  When finish selecting options, select **OK**.  
+4.  When you finish selecting options, select **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

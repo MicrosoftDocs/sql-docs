@@ -1,21 +1,28 @@
 ---
 title: "Tutorial: Build a clustering model in R"
 titleSuffix: SQL Database Machine Learning Services
-description: In part two of this four-part tutorial series, you'll build a K-Means model to perform clustering in R with SQL Database Machine Learning Services.
+description: In part three of this four-part tutorial series, you'll build a K-Means model to perform clustering in R with SQL Database Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye
-ms.date: 04/16/2020
+ms.date: 04/27/2020
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 
 # Tutorial: Build a clustering model in R with SQL machine learning services
 
-In part two of this four-part tutorial series, you'll build a K-Means model in R to perform clustering. In the next part of this series, you'll deploy this model in a SQL database with SQL Database Machine Learning Services.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part three of this four-part tutorial series, you'll build a K-Means model in R to perform clustering. In the next part of this series, you'll deploy this model in a database with SQL Server Machine Learning Services or on Big Data Clusters.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In part three of this four-part tutorial series, you'll build a K-Means model in R to perform clustering. In the next part of this series, you'll deploy this model in a database with SQL Server Machine Learning Services.
+::: moniker-end
 
 In this article, you'll learn how to:
 
@@ -24,13 +31,16 @@ In this article, you'll learn how to:
 > * Perform clustering
 > * Analyze the results
 
-In [part one](r-tutorial-clustering-model-introduction.md), you learned how to prepare the data from an Azure SQL database to perform clustering.
+In [part one](r-tutorial-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
 
-In [part three](r-tutorial-clustering-model-deploy-data.md), you'll learn how to create a stored procedure in an Azure SQL database that can perform clustering in R based on new data.
+In [part two](r-tutorial-clustering-model-prepare-data.md),you'll learn how to prepare the data from a database to perform clustering.
+
+In [part four](r-tutorial-clustering-model-deploy-data.md),  you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
+
 
 ## Prerequisites
 
-* Part two of this tutorial assumes you have completed [**part one**](r-tutorial-clustering-model-prepare-data.md) and its prerequisites.
+* Part two of this tutorial assumes you have completed [**part one**](r-tutorial-clustering-model-introduction.md) and [part two](r-tutorial-clustering-model-prepare-data.md) along with its prerequisites.
 
 ## Define the number of clusters
 
@@ -128,7 +138,7 @@ Here are a couple ways you could interpret these results:
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your Azure SQL Database server.
+***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your SQL Database server.
 
 ## Next steps
 
@@ -141,4 +151,4 @@ In part two of this tutorial series, you completed these steps:
 To deploy the machine learning model you've created, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Deploy a clustering model in R with Azure SQL Database Machine Learning Services](r-tutorial-clustering-model-deploy-data.md)
+> [Tutorial: Deploy a clustering model in R with SQL machine learning services](r-tutorial-clustering-model-deploy-data.md)

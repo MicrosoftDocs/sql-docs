@@ -193,7 +193,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 OUTPUT Clause  
  Returns inserted rows as part of the insert operation. The results can be returned to the processing application or inserted into a table or table variable for further processing.  
   
- The [OUTPUT clause](../../t-sql/queries/output-clause-transact-sql.md) is not supported in DML statements that reference local partitioned views, distributed partitioned views, or remote tables, or INSERT statements that contain an *execute_statement*. The OUTPUT INTO clause is not supported in INSERT statements that contain a \<dml_table_source> clause. 
+ The OUTPUT clause is not supported in DML statements that reference local partitioned views, distributed partitioned views, or remote tables, or INSERT statements that contain an *execute_statement*. The OUTPUT INTO clause is not supported in INSERT statements that contain a \<dml_table_source> clause. For more information about the arguments and behavior of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Introduces the list or lists of data values to be inserted. There must be one data value for each column in *column_list*, if specified, or in the table. The value list must be enclosed in parentheses.  

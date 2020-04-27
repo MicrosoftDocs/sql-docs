@@ -170,7 +170,7 @@ You should see results similar to the following.
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your database.
+***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database.
 
 ## Next steps
 

@@ -386,20 +386,19 @@ ORDER BY DepartmentID
 ```  
   
 #### B. Specifying variables for OFFSET and FETCH values  
- The following example declares the variables `@StartingRowNumber` and `@FetchRows` and specifies these variables in the OFFSET and FETCH clauses.  
+ The following example declares the variables `@RowsToSkip` and `@FetchRows` and specifies these variables in the OFFSET and FETCH clauses.  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @StartingRowNumber tinyint = 1  
+DECLARE @RowsToSkip tinyint = 2
       , @FetchRows tinyint = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @StartingRowNumber ROWS   
+    OFFSET @RowsToSkip ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
-  
 ```  
   
 #### C. Specifying expressions for OFFSET and FETCH values  

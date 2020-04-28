@@ -19,30 +19,24 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-
-In part two of this four-part tutorial series, you'll import and prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive machine learning model in R with SQL Machine Learning Services or Big Data Clusters.
-
+In part two of this four-part tutorial series, you'll prepare data from a database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll import and prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive machine learning model in R with SQL Machine Learning Services or Big Data Clusters.
-::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll import and prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive machine learning model in R with SQL Machine Learning Services.
+In part two of this four-part tutorial series, you'll prepare data from a database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services.
 ::: moniker-end
 
-In part two, you'll learn how to:
+In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Import a sample database into a database
 > * Load the data from the SQL database into an R data frame
 > * Prepare the data in R by identifying some columns as categorical
 
-In [part two](r-tutorial-predictive-model-prepare-data.md), you'll learn how to load the data from from a backup file and prepare the data in R.
+In [part one](r-tutorial-predictive-model-introduction.md), you learned how to restore the sample database.
 
-In [part three](r-tutorial-predictive-model-train.md), you'll learn how to create and train multiple machine learning models in R, and then choose the most accurate one.
+In [part three](r-tutorial-predictive-model-train.md), you'll learn how to train a linear regression machine learning model in R.
 
-In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts one and two. The stored procedures will run in a SQL database to make predictions based on new data.
+In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
 
 ## Prerequisites
 
@@ -52,6 +46,8 @@ In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store
 
 In this sample database, most of the preparation has already been done, but you'll do one more preparation here.
 Use the following R script to identify three columns as *categories* by changing the data types to *factor*.
+
+
 
 ```r
 #Changing the three factor columns to factor types

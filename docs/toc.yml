@@ -6762,7 +6762,7 @@
         href: relational-databases/partitions/modify-a-partition-function.md
       - name: Modify a Scheme
         href: relational-databases/partitions/modify-a-partition-scheme.md
-      - name: Manage Partition Wizard F1 Help
+      - name: Manage Partition Wizard
         href: relational-databases/partitions/manage-partition-wizard-f1-help.md
     - name: Plan guides
       href: relational-databases/performance/plan-guides.md

@@ -17,12 +17,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In part three of this four-part tutorial series, you'll create two predictive models in R and select the most accurate model. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services or on Big Data Clusters.
-::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In part three of this four-part tutorial series, you'll create two predictive models in R and select the most accurate model. In the next part of this series, you'll deploy this model in SQL Server 2016 R Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part three of this four-part tutorial series, you'll train a linear regression model in R. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part three of this four-part tutorial series, you'll train a linear regression model in R. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services.
@@ -30,17 +28,20 @@ In part three of this four-part tutorial series, you'll train a linear regressio
 
 In this article, you'll learn how to:
 
+
+In this article, you'll learn how to:
+
 > [!div class="checklist"]
->
-> * Train two machine learning models
-> * Make predictions from both models
-> * Compare the results to choose the most accurate model
+> * Train a linear regression model
+> * Make predictions using the linear regression model
 
-In [part two](r-tutorial-predictive-model-prepare-data.md), you'll learn how to load the data from from a backup file and prepare the data in R.
+In [part one](r-tutorial-predictive-model-introduction.md),, you learned how to restore the sample database.
 
-In [part three](r-tutorial-predictive-model-train.md), you'll learn how to create and train multiple machine learning models in R, and then choose the most accurate one.
+In [part two](r-tutorial-predictive-prepare-data.md), you learned how to load the data from a database into a Python data frame, and prepare the data in R.
 
-In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts one and two.The stored procedures will run in on the server to make predictions based on new data.
+In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in on the server to make predictions based on new data.
+
+
 
 ## Prerequisites
 

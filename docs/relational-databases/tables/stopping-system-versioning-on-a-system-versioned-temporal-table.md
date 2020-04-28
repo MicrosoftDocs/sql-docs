@@ -1,7 +1,7 @@
 ---
 title: "Stopping System-Versioning on a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/28/2020
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

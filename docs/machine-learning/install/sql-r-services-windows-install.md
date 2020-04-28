@@ -1,10 +1,10 @@
 ---
-title: Install SQL Server 2016 R Services (In-Database)
+title: Install SQL Server 2016 R Services
+titleSuffix: 
 description: Add R programming language support to a database engine on SQL Server 2016 R Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
-  
-ms.date: 11/06/2019
+ms.date: 04/27/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -15,7 +15,8 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 
 This article explains how to install and configure **SQL Server 2016 R Services**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server.
 
-In SQL Server 2017, R integration is offered in [Machine Learning Services](../r/r-server-standalone.md), reflecting the addition of Python. If you want R integration and have SQL Server 2017 installation media, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature. 
+> [!NOTE]
+> In SQL Server 2017 and later, R integration is offered in [Machine Learning Services](../sql-server-machine-learning-services.md), reflecting the addition of Python. If you want R integration and have SQL Server 2017 or later, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature. 
 
 <a name="bkmk_prereqs"> </a> 
 

@@ -55,6 +55,8 @@ rentaldata$Holiday <- factor(rentaldata$Holiday);
 rentaldata$Snow    <- factor(rentaldata$Snow);
 rentaldata$WeekDay <- factor(rentaldata$WeekDay);
 
+
+
 #Visualize the dataset after the change
 str(rentaldata);
 ```

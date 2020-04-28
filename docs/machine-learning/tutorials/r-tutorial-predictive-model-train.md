@@ -37,7 +37,7 @@ In this article, you'll learn how to:
 
 In [part one](r-tutorial-predictive-model-introduction.md),, you learned how to restore the sample database.
 
-In [part two](r-tutorial-predictive-prepare-data.md), you learned how to load the data from a database into a Python data frame, and prepare the data in R.
+In [part two](r-tutorial-predictive-model-prepare-data.md), you learned how to load the data from a database into a Python data frame, and prepare the data in R.
 
 In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in on the server to make predictions based on new data.
 

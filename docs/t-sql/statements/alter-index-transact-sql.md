@@ -258,7 +258,7 @@ PARTITION
 -   Not rolled back when it is performed within a transaction and the transaction is rolled back.  
 
 > [!NOTE]
-> If using explicit transactions instead of the default implicit transaction mode (e.g., ALTER INDEX within BEGIN TRAN ... COMMIT/ROLLBACK), the locking behavior of REORGANIZE becomes more restrictive. For more information on implicit transactions, see [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)
+> When ALTER INDEX REORGANIZE uses explicit transactions (e.g., ALTER INDEX inside a BEGIN TRAN ... COMMIT/ROLLBACK) instead of the default implicit transaction mode, the locking behavior of REORGANIZE becomes more restrictive, potentially causing blocking. For more information on implicit transactions, see [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)
 
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 

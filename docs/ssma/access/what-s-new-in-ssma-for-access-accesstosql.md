@@ -4,7 +4,7 @@ authors: "HJToland3;nahk-ivanov"
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "4/2/2020"
+ms.date: "4/27/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,6 +14,13 @@ ms.author: "jtoland;alexiva"
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v8.9
+
+The v8.9 release of SSMA for Access contains the following changes:
+
+* Improved conversion for self-referencing queries
+* Fix for the issue with special characters in project name
 
 ## SSMA v8.8
 

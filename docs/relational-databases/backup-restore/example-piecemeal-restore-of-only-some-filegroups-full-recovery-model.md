@@ -1,5 +1,6 @@
 ---
 title: "Piecemeal restore: some filegroups (full recovery model)"
+description: This example shows a piecemeal restore of only some filegroups in SQL Server of a database using the full recovery model.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

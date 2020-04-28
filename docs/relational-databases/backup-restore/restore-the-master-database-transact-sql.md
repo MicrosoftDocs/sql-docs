@@ -1,5 +1,6 @@
 ---
 title: "Restore the master Database (Transact-SQL) | Microsoft Docs"
+description: This article shows you how to restore the master database in SQL Server from a full database backup by using Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -57,14 +57,15 @@ To find the best model for the ski rental data, create two different models (lin
 train_data = rentaldata[rentaldata$Year < 2015,];
 test_data  = rentaldata[rentaldata$Year == 2015,];
 
+
 #Use the RentalCount column to check the quality of the prediction against actual values
 actual_counts <- test_data$RentalCount;
 
-#Model 1: Use rxLinMod to create a linear regression model, trained with the training data set
-model_linmod <- rxLinMod(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
+#Model 1: Use lm to create a linear regression model, trained with the training data set
+model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
-#Model 2: Use rxDTree to create a decision tree model, trained with the training data set
-model_dtree  <- rxDTree(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
+#Model 2: Use rpart to create a decision tree model, trained with the training data set
+model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 
 ## Make predictions from both models
@@ -73,13 +74,21 @@ Use a predict function to predict the rental counts using each trained model.
 
 ```r
 #Use both models to make predictions using the test data set.
-predict_linmod <- rxPredict(model_linmod, test_data, writeModelVars = TRUE, extraVarsToWrite = c("Year"));
+predict_lm <- predict(model_lm, test_data)
+predict_lm <- data.frame(RentalCount_Pred = predict_lm, RentalCount = test_data$RentalCount, 
+                         Year = test_data$Year, Month = test_data$Month,
+                         Day = test_data$Day, Weekday = test_data$WeekDay,
+                         Snow = test_data$Snow, Holiday = test_data$Holiday)
 
-predict_dtree  <- rxPredict(model_dtree,  test_data, writeModelVars = TRUE, extraVarsToWrite = c("Year"));
+predict_rpart  <- predict(model_rpart,  test_data)
+predict_rpart <- data.frame(RentalCount_Pred = predict_rpart, RentalCount = test_data$RentalCount, 
+                         Year = test_data$Year, Month = test_data$Month,
+                         Day = test_data$Day, Weekday = test_data$WeekDay,
+                         Snow = test_data$Snow, Holiday = test_data$Holiday)
 
 #To verify it worked, look at the top rows of the two prediction data sets.
-head(predict_linmod);
-head(predict_dtree);
+head(predict_lm);
+head(predict_rpart);
 ```
 
 ```results
@@ -105,9 +114,9 @@ Now you want to see which of the models gives the best predictions. A quick and 
 
 ```r
 #Use the plotting functionality in R to visualize the results from the predictions
-par(mfrow = c(2, 1));
-plot(predict_linmod$RentalCount_Pred - predict_linmod$RentalCount, main = "Difference between actual and predicted. rxLinmod");
-plot(predict_dtree$RentalCount_Pred  - predict_dtree$RentalCount,  main = "Difference between actual and predicted. rxDTree");
+par(mfrow = c(1, 1));
+plot(predict_linmod$RentalCount_Pred - predict_linmod$RentalCount, main = "Difference between actual and predicted. lm")
+plot(predict_dtree$RentalCount_Pred  - predict_dtree$RentalCount,  main = "Difference between actual and predicted. rpart")
 ```
 
 ![Comparing the two models](./media/compare-models.png)
@@ -116,7 +125,7 @@ It looks like the decision tree model is the more accurate of the two models.
 
 ## Clean up resources
 
-If you're not going to continue with this tutorial, delete the TutorialDB database from your SQL Database server.
+If you're not going to continue with this tutorial, delete the TutorialDB database.
 
 ## Next steps
 

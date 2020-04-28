@@ -40,10 +40,10 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### Features
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Data Sensitivity classification support for SQL versions up to 2019 and Azure SQL Data Warehouse |
+| Deployment | Data Sensitivity classification now supported for SQL Server 2008 and up, Azure SQL Database, and Azure SQL Data Warehouse |
 | Deployment | Add Azure SQL Data Warehouse support for table constraints |
 | Deployment | Add Azure SQL Data Warehouse support for ordered clustered column store index |
-| Deployment | Add support for External Data Source (for Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for Big Data Cluster |
+| Deployment | Add support for External Data Source (for Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
 | Deployment | Add SQL Database Edge Instance as supported edition |
 | Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
 | Deployment | Add support for copy command in Azure SQL Data Warehouse |
@@ -64,7 +64,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Deployment | Fix update script should move data to a new table when changing the distribution column type (data loss scenario) for Azure SQL Data Warehouse |
 | ScriptDom | Fix ScriptDom bug where it couldn't recognize inline constraints defined after an inline index |
 | ScriptDom | Fix ScriptDom SYSTEM_TIME missing closing parenthesis when in a batch statement |
-| Always Encrypted | Fix #tmpErrors table failing to drop if SqlPackage reconnects and the temp table is already gone because the temporary table goes away when the connection dies |
+| Always Encrypted | Fix #tmpErrors table failing to drop if sqlpackage reconnects and the temp table is already gone because the temporary table goes away when the connection dies |
 | &nbsp; | &nbsp; |
 
 ## 18.4.1 sqlpackage

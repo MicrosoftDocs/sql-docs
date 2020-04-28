@@ -45,7 +45,7 @@ ms.author: "jroth"
 
 <!--
 Any modifications to the list above should be duplicated on the following page:
-https://docs.microsoft.com/en-us/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
+https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
 -->
 
 ## Unsupported Libraries  

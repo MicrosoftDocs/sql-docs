@@ -31,7 +31,7 @@ Install PolyBase for your operating system:
 
 
 
-## <a name="RHEL">Install on RHEL</a>
+## <a name="RHEL"></a>Install on RHEL
 
 Use the following command to install the **mssql-server-polybase** on Red Hat Enterprise Linux. 
 
@@ -65,7 +65,7 @@ sudo systemctl restart mssql-launchpadd
 
 If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Install on Ubuntu</a>
+## <a name="ubuntu"></a>Install on Ubuntu
 
 Use the following command to install the **mssql-server-polybase** on Ubuntu. 
 
@@ -99,7 +99,7 @@ sudo systemctl restart mssql-launchpadd
 >[!NOTE]
 >After installation, you must [set the hadoop connectivity level](../../relational-databases/polybase/polybase-configure-hadoop.md#configure-hadoop-connectivity).
 
-## <a name="SLES">Install on SLES</a>
+## <a name="SLES"></a>Install on SLES
 
 Use the following commands to install the **mssql-server-polybase** on SUSE Linux Enterprise Server. 
 
@@ -119,7 +119,7 @@ sudo systemctl restart mssql-server
 If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 
-## <a name="enable">Enable PolyBase</a> 
+## <a name="enable"></a> Enable PolyBase
 
 After installation, PolyBase must be enabled to access its features. Connect to the installed SQL Server instance and use the following Transact-SQL command to enable.
 

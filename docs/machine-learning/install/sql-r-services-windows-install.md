@@ -4,7 +4,7 @@ titleSuffix:
 description: Add R programming language support to a database engine on SQL Server 2016 R Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/27/2020
+ms.date: 04/29/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -26,7 +26,7 @@ This article explains how to install and configure **SQL Server 2016 R Services*
 
 + For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for R Services. You have to install R Services, and configure packages, on each node.
 
-+ Do not install R Services on a SQL failover cluster (FCI). The security mechanism used for isolating R processes is not compatible with a SQL failover cluster (FCI) environment.
++ Do not install R Services on a SQL Server Always On Failover Cluster Instance (FCI). The security mechanism used for isolating R processes is not compatible with a SQL Server Always On Failover Cluster Instance (FCI) environment.
 
 + Do not install R Services on a domain controller. The R Services portion of setup will fail.
 

@@ -1,6 +1,7 @@
 ---
 title: Considerations for Replaying Traces
 titleSuffix: SQL Server Profiler
+description: Learn how to use Data Migration Assistant to assess an application’s data access layer. (needs editing)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

@@ -17,13 +17,14 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current|
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this article, using the R scripts you developed in parts one and two, you'll learn how to:
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a linear regression model developed in R into a SQL Server database using Machine Learning Services or Big Data Clusters.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a linear regression model developed in R into a SQL Server database using Machine Learning Services.
+::: moniker-end
 
-In part four of this four-part tutorial, you'll deploy a predictive model, developed in R, into a SQL database using SQL machine learning services.
-
-You'll create a stored procedure with an embedded R script that makes predictions using the model. Because your model executes in the SQL database, it can easily be trained against data stored in the database.
-
-In this article, using the R scripts you developed in parts two and three, you'll learn how to:
+In this article, you'll learn how to:
 
 > [!div class="checklist"]
 
@@ -32,13 +33,15 @@ In this article, using the R scripts you developed in parts two and three, you'l
 > * Create a stored procedure that makes predictions using the model
 > * Execute the model with new data
 
+In [part one](r-tutorial-predictive-introduction.md), you learned how to restore the sample database.
+
 In [part two](r-tutorial-predictive-model-prepare-data.md), you learned how to import a sample database and then prepare the data to be used for training a predictive model in R.
 
 In [part three](r-tutorial-predictive-model-train.md), you learned how to create and train multiple machine learning models in R, and then choose the most accurate one.
 
 ## Prerequisites
 
-* Part four of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-tutorial-predictive-model-introduction.md), and completed the steps in [**part two**](r-tutorial-predictive-model-prepare-data.md) and [**part three**](r-tutorial-predictive-model-train.md).
+* Part four of this tutorial assumes you have completed [part one](r-tutorial-predictive-model-introduction.md) and its prerequisites.
 
 ## Create a stored procedure that generates the model
 

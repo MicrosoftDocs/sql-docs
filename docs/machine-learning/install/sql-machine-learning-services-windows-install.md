@@ -3,7 +3,7 @@ title: Install on Windows
 description: Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
@@ -22,7 +22,7 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
 
 + For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node.
 
-+ Installing Machine Learning Services *isn't supported* on a failover cluster in SQL Server 2017. It's supported with SQL Server 2019.
++ Installing Machine Learning Services *isn't supported* on an Always On Failover Cluster Instance (FCI) in SQL Server 2017. It's supported with SQL Server 2019 and later.
  
 + Don't install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 

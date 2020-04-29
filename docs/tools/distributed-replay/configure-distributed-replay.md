@@ -1,6 +1,7 @@
 ---
 title: Configure distributed replay
 titleSuffix: SQL Server Distributed Replay
+description: The SQL Server Distributed Replay configuration details are specified in XML files on the controller, clients, and where the administration tool is installed.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

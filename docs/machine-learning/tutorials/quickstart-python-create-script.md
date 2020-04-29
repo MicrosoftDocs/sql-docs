@@ -92,8 +92,9 @@ Inputs to the `sp_execute_external_script` stored procedure include:
 |-|-|
 | @language | defines the language extension to call, in this case Python |
 | @script | defines the commands passed to the Python runtime<br>Your entire Python script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable |
-| @input_data_1 | data returned by the query, passed to the Python runtime, which returns the data to SQL Server as a data frame |
-|WITH RESULT SETS | clause defines the schema of the returned data table for SQL Server, in this case adding "Hello World" as the column name and **int** for the data type |
+| @input_data_1 | data returned by the query, passed to the Python runtime, which returns the data as a data frame |
+|WITH RESULT SETS | clause defines the schema of the returned data table for SQL Server, adding "Hello World" as the column name, **int** for the data type |	|WITH RESULT SETS | clause defines the schema of the returned data table, adding "Hello World" as the column name, **int** for the data type |
+
 
 The command outputs the following text:
 
@@ -244,13 +245,8 @@ The list is from `pkg_resources.working_set` in Python and returned to SQL as a 
 
 ## Next steps
 
-To learn how to use data structures when using Python in SQL Server Machine Learning Services, follow this quickstart:
+To learn how to use data structures when using Python in SQL machine learning services, follow this quickstart:
 
 > [!div class="nextstepaction"]
 > [Quickstart: Data structures and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
-For more information on using Python in SQL Server Machine Learning Services, see the following articles:
-
-- [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
-- [Create and score a predictive model in Python with SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
-- [What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md)

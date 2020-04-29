@@ -616,10 +616,11 @@
             - name: SignalAbort
               href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
   - name: Always On availability groups
-    href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
     items:
     - name: Overview
       items:
+      - name: What is an Always On availability group?
+        href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       - name: Availability modes
         href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
       - name: Technology & capabilities

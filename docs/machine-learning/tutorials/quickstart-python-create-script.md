@@ -15,11 +15,19 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Quickstart: Run simple Python scripts with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
+::: moniker-end
 
 ## Prerequisites
 
-- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language installed.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
 
 - You also need a tool for running SQL queries that contain Python scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [Azure Data Studio)](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 

@@ -148,7 +148,7 @@
       - name: HDFS data
         items:
         - name: Virtualize CSV data
-          href: relational-databases/polybase/data-virtualization-csv.md
+          href: big-data-cluster/data-virtualization-csv.md
         - name: Query HDFS data
           href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
         - name: HDFS tiering

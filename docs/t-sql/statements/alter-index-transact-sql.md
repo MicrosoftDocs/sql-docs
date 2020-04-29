@@ -251,10 +251,13 @@ PARTITION
  REORGANIZE a **rowstore** index  
  For rowstore indexes, REORGANIZE specifies to reorganize the index leaf level. The REORGANIZE operation is:  
   
--   Always performed online. This means long-term blocking table locks are not held and queries or updates to the underlying table can continue during the ALTER INDEX REORGANIZE transaction.  
--   Not allowed for a disabled index  
--   Not allowed when ALLOW_PAGE_LOCKS is set to OFF  
--   Not rolled back when it is performed within a transaction and the transaction is rolled back.  
+-   Always performed online. This means long-term blocking table locks are not held and queries or updates to the underlying table can continue during the ALTER INDEX REORGANIZE transaction.
+-   Not allowed for a disabled index.
+-   Not allowed when ALLOW_PAGE_LOCKS is set to OFF.
+-   Not rolled back when it is performed within a transaction and the transaction is rolled back.
+
+> [!NOTE]
+> When ALTER INDEX REORGANIZE uses explicit transactions (for example, ALTER INDEX inside a BEGIN TRAN ... COMMIT/ROLLBACK) instead of the default implicit transaction mode, the locking behavior of REORGANIZE becomes more restrictive, potentially causing blocking. For more information about implicit transactions, see [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).
 
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 

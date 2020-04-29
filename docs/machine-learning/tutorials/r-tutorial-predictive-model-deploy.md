@@ -33,7 +33,7 @@ In this article, you'll learn how to:
 > * Create a stored procedure that makes predictions using the model
 > * Execute the model with new data
 
-In [part one](r-tutorial-predictive-introduction.md), you learned how to restore the sample database.
+In [part one](r-tutorial-predictive-model-introduction.md), you learned how to restore the sample database.
 
 In [part two](r-tutorial-predictive-model-prepare-data.md), you learned how to import a sample database and then prepare the data to be used for training a predictive model in R.
 

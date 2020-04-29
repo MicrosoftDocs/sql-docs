@@ -19,10 +19,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Transact-SQL Reference (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-This topic gives the basics about how to find and use the Microsoft [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) reference topics. T-SQL is central to using Microsoft SQL products and services. All tools and applications that communicate with a SQL database do so by sending T-SQL commands.  
+This topic gives the basics about how to find and use the Microsoft [!INCLUDE[tsql](../includes/tsql-md.md)] (T-SQL) reference topics. T-SQL is central to using Microsoft SQL products and services. All tools and applications that communicate with a SQL database do so by sending T-SQL commands.  
 
 ## T-SQL compliance to SQL Standard
-For detailed technical documents about how certain standards are implemented in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the [Microsoft SQL Server Standards Support documentation](https://docs.microsoft.com/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2).
+For detailed technical documents about how certain standards are implemented in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the [Microsoft SQL Server Standards Support documentation](https://docs.microsoft.com/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2).
 
 ## Tools that use T-SQL
 Some of the Microsoft tools that issue T-SQL commands are:

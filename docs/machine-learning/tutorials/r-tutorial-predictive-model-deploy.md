@@ -45,27 +45,25 @@ In [part three](r-tutorial-predictive-model-train.md), you learned how to create
 
 ## Create a stored procedure that generates the model
 
-In part three of this tutorial series, you decided that a decision tree (dtree) model was the most accurate. Now, using the R scripts you developed, create a stored procedure (`generate_rental_rx_model`) that trains and generates the dtree model using rpart from the R package.
+In part three of this tutorial series, you decided that a decision tree (dtree) model was the most accurate. Now, using the R scripts you developed, create a stored procedure (`generate_rental_model`) that trains and generates the dtree model using rpart from the R package.
 
 Run the following commands in Azure Data Studio.
 
 ```sql
--- Stored procedure that trains and generates an R model using the rental_data and a decision tree algorithm
-DROP PROCEDURE IF EXISTS generate_rental_rx_model;
+USE [TutorialDB]
+DROP PROCEDURE IF EXISTS generate_rental_model;
 GO
-CREATE PROCEDURE generate_rental_rx_model (@trained_model VARBINARY(max) OUTPUT)
+CREATE PROCEDURE generate_rental_model (@trained_model VARBINARY(max) OUTPUT)
 AS
 BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
-require("rxdtree");
-
 rental_train_data$Holiday <- factor(rental_train_data$Holiday);
 rental_train_data$Snow    <- factor(rental_train_data$Snow);
 rental_train_data$WeekDay <- factor(rental_train_data$WeekDay);
 
 #Create a dtree model and train it using the training data set
-model_dtree <- rxDTree(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = rental_train_data);
+model_dtree <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = rental_train_data);
 #Serialize the model before saving it to the database table
 trained_model <- as.raw(serialize(model_dtree, connection=NULL));
 '
@@ -91,13 +89,13 @@ GO
 
 Create a table in the TutorialDB database and then save the model to the table.
 
-1. Create a table (`rental_rx_models`) for storing the model.
+1. Create a table (`rental_models`) for storing the model.
 
     ```sql
     USE TutorialDB;
     DROP TABLE IF EXISTS rental_rx_models;
     GO
-    CREATE TABLE rental_rx_models (
+    CREATE TABLE rental_models (
           model_name VARCHAR(30) NOT NULL DEFAULT('default model') PRIMARY KEY
         , model VARBINARY(MAX) NOT NULL
         );
@@ -108,13 +106,13 @@ Create a table in the TutorialDB database and then save the model to the table.
 
     ```sql
     -- Save model to table
-    TRUNCATE TABLE rental_rx_models;
+    TRUNCATE TABLE rental_models;
     
     DECLARE @model VARBINARY(MAX);
     
-    EXECUTE generate_rental_rx_model @model OUTPUT;
+    EXECUTE generate_rental_model @model OUTPUT;
     
-    INSERT INTO rental_rx_models (
+    INSERT INTO rental_models (
           model_name
         , model
         )
@@ -124,7 +122,7 @@ Create a table in the TutorialDB database and then save the model to the table.
         );
     
     SELECT *
-    FROM rental_rx_models;
+    FROM rental_models;
     ```
 
 ## Create a stored procedure that makes predictions
@@ -133,6 +131,7 @@ Create a stored procedure (`predict_rentalcount_new`) that makes predictions usi
 
 ```sql
 -- Stored procedure that takes model name and new data as input parameters and predicts the rental count for the new data
+USE [TutorialDB]
 DROP PROCEDURE IF EXISTS predict_rentalcount_new;
 GO
 CREATE PROCEDURE predict_rentalcount_new (
@@ -141,32 +140,31 @@ CREATE PROCEDURE predict_rentalcount_new (
     )
 AS
 BEGIN
-    DECLARE @rx_model VARBINARY(MAX) = (
+    DECLARE @model VARBINARY(MAX) = (
             SELECT model
-            FROM rental_rx_models
+            FROM rental_models
             WHERE model_name = @model_name
             );
 
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
-require("RevoScaleR");
-
 #Convert types to factors
 rentals$Holiday <- factor(rentals$Holiday);
 rentals$Snow    <- factor(rentals$Snow);
 rentals$WeekDay <- factor(rentals$WeekDay);
 
 #Before using the model to predict, we need to unserialize it
-rental_model <- unserialize(rx_model);
+rental_model <- unserialize(model);
 
 #Call prediction function
-rental_predictions <- rxPredict(rental_model, rentals);
+rental_predictions <- predict(rental_model, rentals);
+rental_predictions <- data.frame(rental_predictions);
 '
         , @input_data_1 = @input_query
         , @input_data_1_name = N'rentals'
         , @output_data_1_name = N'rental_predictions'
-        , @params = N'@rx_model varbinary(max)'
-        , @rx_model = @rx_model
+        , @params = N'@model varbinary(max)'
+        , @model = @model
     WITH RESULT SETS(("RentalCount_Predicted" FLOAT));
 END;
 GO
@@ -178,7 +176,7 @@ Now you can use the stored procedure `predict_rentalcount_new` to predict the re
 
 ```sql
 -- Use the predict_rentalcount_new stored procedure with the model name and a set of features to predict the rental count
-EXECUTE dbo.predict_rentalcount_new @model_name = 'rxDTree'
+EXECUTE dbo.predict_rentalcount_new @model_name = 'DTree'
     , @input_query = '
         SELECT CONVERT(INT,  3) AS Month
              , CONVERT(INT, 24) AS Day

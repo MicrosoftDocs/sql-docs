@@ -114,7 +114,11 @@ Each load balancer is a master replica endpoint.
 
 The following image demonstrates this process.
 
+<!---
 :::image type="content" source="media/machine-learning-services/example-kube-enable-scripts.png" alt-text="demonstrate-configure-external-script-availability-group":::
+-->
+
+[![demonstrate-configure-external-script-availability-group](media/machine-learning-services/example-kube-enable-scripts.png)](/machine-learning-services/example-kube-enable-scripts-expanded.png#lightbox)
 
 You are now ready to run Python and R scripts on the master instance of Big Data Clusters. See the quickstarts under [Next steps](#next-steps) to run your first script.
 

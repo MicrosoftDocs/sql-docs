@@ -115,8 +115,8 @@ Now you want to see which of the models gives the best predictions. A quick and 
 ```r
 #Use the plotting functionality in R to visualize the results from the predictions
 par(mfrow = c(1, 1));
-plot(predict_linmod$RentalCount_Pred - predict_linmod$RentalCount, main = "Difference between actual and predicted. lm")
-plot(predict_dtree$RentalCount_Pred  - predict_dtree$RentalCount,  main = "Difference between actual and predicted. rpart")
+plot(predict_lm$RentalCount_Pred - predict_lm$RentalCount, main = "Difference between actual and predicted. lm")
+plot(predict_rpart$RentalCount_Pred  - predict_rpart$RentalCount,  main = "Difference between actual and predicted. rpart")
 ```
 
 ![Comparing the two models](./media/compare-models.png)

@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
-ms.date: 4/27/2020
+ms.date: 4/30/2020
 ms.reviewer: maghan, sstein
 ---
 
@@ -22,9 +22,9 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2127556)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2127555)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2127476) | April 27, 2020 | 1.17.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2127554) | April 27, 2020 | 1.17.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2127551)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2127552)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127553) | April 27, 2020| 1.17.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2127556)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2127555)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2127476) | April 30, 2020 | 1.17.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2127554) | April 30, 2020 | 1.17.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2127551)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2127552)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127553) | April 30, 2020| 1.17.1 |
 
 For details about the latest release, see the [release notes](release-notes.md).
 

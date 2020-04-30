@@ -1,6 +1,5 @@
 ---
 title: "Tutorial: Create an extension"
-titleSuffix: Azure Data Studio
 description: This tutorial demonstrates how to create an extension to add custom functionality to Azure Data Studio.
 ms.custom: "seodec18"
 ms.date: 12/10/2019

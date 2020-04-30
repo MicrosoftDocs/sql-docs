@@ -1,6 +1,5 @@
 ---
 title: "Quickstart: Connect and query SQL Server"
-titleSuffix: Azure Data Studio
 description: This quickstart shows how to use Azure Data Studio to connect to SQL Server and run a query
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,15 +10,15 @@ ms.reviewer: "alayu; sstein"
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
 ---
-# Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Quickstart: Use Azure Data Studio to connect and query SQL Server
 
-This quickstart shows how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to SQL Server, and then use Transact-SQL (T-SQL) statements to create the *TutorialDB* used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+This quickstart shows how to use Azure Data Studio to connect to SQL Server, and then use Transact-SQL (T-SQL) statements to create the *TutorialDB* used in Azure Data Studio tutorials.
 
 ## Prerequisites
 
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and access to SQL Server.
+To complete this quickstart, you need Azure Data Studio, and access to SQL Server.
 
-- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Install Azure Data Studio](download.md).
 
 If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
 
@@ -29,9 +28,9 @@ If you don't have access to a SQL Server, select your platform from the followin
 
 ## Connect to a SQL Server
 
-1. Start **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Start **Azure Data Studio**.
 
-2. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
+2. The first time you run Azure Data Studio the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
 
    ![New Connection Icon](media/quickstart-sql-server/new-connection-icon.png)
 

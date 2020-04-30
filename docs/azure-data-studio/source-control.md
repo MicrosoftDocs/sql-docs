@@ -1,6 +1,5 @@
 ---
 title: Source control
-titleSuffix: Azure Data Studio
 description: Learn how to configure source control in Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,14 +11,14 @@ ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
 
-#  Using source control in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  Using source control in Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] supports Git for version/source control.
+Azure Data Studio supports Git for version/source control.
 
 
-## Git support in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## Git support in Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ships with a Git source control manager (SCM), but you still need to [install Git (version 2.0.0 or later)](https://git-scm.com/download) before these features are available. 
+Azure Data Studio ships with a Git source control manager (SCM), but you still need to [install Git (version 2.0.0 or later)](https://git-scm.com/download) before these features are available. 
 
 
 
@@ -41,7 +40,7 @@ ms.date: "09/24/2018"
 
 ## Working with Git repositories
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its Git implementation from VS Code, but does not currently support additional SCM providers. For the details about working with Git after you open or initialize a repository, see [Git support in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
+Azure Data Studio inherits its Git implementation from VS Code, but does not currently support additional SCM providers. For the details about working with Git after you open or initialize a repository, see [Git support in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
 ## Additional resources

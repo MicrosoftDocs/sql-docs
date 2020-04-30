@@ -1,6 +1,5 @@
 ---
 title: PowerShell extension
-titleSuffix: Azure Data Studio
 description: Install and use the PowerShell for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "04/19/2019"

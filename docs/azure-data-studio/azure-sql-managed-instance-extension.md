@@ -1,6 +1,5 @@
 ---
 title: Azure SQL Database managed instance extension
-titleSuffix: Azure Data Studio
 description: Use Azure Data Studio with Azure SQL managed instance
 ms.custom: "seodec18"
 ms.date: "10/07/2019"

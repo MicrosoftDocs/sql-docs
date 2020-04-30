@@ -1,6 +1,5 @@
 ---
 title: Create and customize keyboard shortcuts
-titleSuffix: Azure Data Studio
 description: Learn how to create and customize keyboard shortcuts in Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,18 +11,18 @@ ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
 
-# Keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos.md)]
+# Keyboard shortcuts in Azure Data Studio
 
-This article provides the steps to quickly view, edit, and create keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+This article provides the steps to quickly view, edit, and create keyboard shortcuts in Azure Data Studio.
 
-Because [!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its key binding functionality from Visual Studio Code, detailed information about advanced customizations, using different keyboard layouts, etc., is in the [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings) article. Some key binding features may not be available (for example, Keymap extensions are not supported in [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
+Because Azure Data Studio inherits its key binding functionality from Visual Studio Code, detailed information about advanced customizations, using different keyboard layouts, etc., is in the [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings) article. Some key binding features may not be available (for example, Keymap extensions are not supported in Azure Data Studio).
 
 
 ## Open the Keyboard Shortcuts editor
 
 To view all currently defined keyboard shortcuts:
 
-Open the **Keyboard Shortcuts** editor from the **File** menu: **File** > **Preferences** > **Keyboard Shortcuts** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **Preferences** > **Keyboard Shortcuts** on Mac).
+Open the **Keyboard Shortcuts** editor from the **File** menu: **File** > **Preferences** > **Keyboard Shortcuts** (**Azure Data Studio** > **Preferences** > **Keyboard Shortcuts** on Mac).
 
 In addition to displaying current key bindings, the **Keyboard Shortcuts** editor lists the available commands that do not have keyboard shortcuts defined. The **Keyboard Shortcuts** editor enables you to easily change, remove, reset, and define new key bindings.  
 

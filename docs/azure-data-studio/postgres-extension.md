@@ -1,6 +1,5 @@
 ---
 title: PostgreSQL extension (preview)
-titleSuffix: Azure Data Studio
 description: PostgreSQL extension (preview) for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "03/19/2019"

@@ -1,6 +1,5 @@
 ---
 title: FAQ
-titleSuffix: Azure Data Studio
 description: Frequently asked questions (FAQ) about Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio

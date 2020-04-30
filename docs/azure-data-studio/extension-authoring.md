@@ -1,6 +1,5 @@
 ---
 title: Create extensions
-titleSuffix: Azure Data Studio
 description: Learn about creating and adding extensions to Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -14,7 +13,7 @@ ms.date: "09/24/2018"
 
 # Extend the functionality by creating Azure Data Studio extensions
 
-Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation.
+Extensions in Azure Data Studio provide an easy way to add more functionality to the base Azure Data Studio installation.
 
 Extensions are provided by the Azure Data Studio team (Microsoft), as well as the 3rd party community (you!).
 

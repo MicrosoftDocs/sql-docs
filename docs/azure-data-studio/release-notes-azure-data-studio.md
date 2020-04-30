@@ -767,7 +767,7 @@ The *December Public Preview* includes several bugs fixes across all feature are
 
 November 15, 2017 &nbsp; / &nbsp; version: 0.23.6
 
-- Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+- Initial release of Azure Data Studio.
 
 ## Next Steps
 
@@ -777,6 +777,6 @@ See one of the following quickstarts to get started:
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
 
-Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+Contribute to Azure Data Studio:
 
 - [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio)

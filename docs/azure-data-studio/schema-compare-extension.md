@@ -1,6 +1,5 @@
 ---
 title: Schema Compare extension
-titleSuffix: Azure Data Studio
 description: Install and use the Schema Compare extension for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: 11/04/2019

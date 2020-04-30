@@ -1,6 +1,5 @@
 ---
 title: Explore Azure SQL resources with Azure Resource Explorer
-titleSuffix: Azure Data Studio
 description: Learn how to explore and manage Azure SQL Server, Azure SQL Database, and Azure SQL Managed Instance through Azure Resource Explorer.
 ms.custom: "seodec18"
 author: yanancai 

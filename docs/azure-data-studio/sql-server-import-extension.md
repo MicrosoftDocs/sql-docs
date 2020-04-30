@@ -1,6 +1,5 @@
 ---
 title: SQL Server Import Extension
-titleSuffix: Azure Data Studio
 description: Install and use the SQL Server Import extension (preview) for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "09/24/2018"

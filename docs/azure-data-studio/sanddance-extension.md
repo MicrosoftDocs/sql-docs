@@ -1,6 +1,5 @@
 ---
 title: SandDance for Azure Data Studio
-titleSuffix: Azure Data Studio
 description: How to use SandDance in Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "07/03/2019"

@@ -31,6 +31,11 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
+You are now ready to run Python and R scripts on the master instance of Big Data Clusters. See the quickstarts under [Next steps](#next-steps) to run your first script.
+
+>[!NOTE]
+>The configuration setting cannot be set on an availability group listener connection. If Big Data Clusters is deployed with high availability, the set `external scripts enabled` on each replica. See [Enable on cluster with high availability](#enable-on-cluster-with-high-availability).
+
 ## Enable on cluster with high availability
 
 When you [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md), the deployment creates an availability group for the master instance. To enable Machine Learning Services, set `external scripts enabled` on each instance of the availability group. For a Big Data Cluster, you need to run `sp_configure` on each replica of the SQL Server master instance
@@ -111,7 +116,7 @@ The following image demonstrates this process.
 
 :::image type="content" source="media/machine-learning-services/example-kube-enable-scripts.png" alt-text="demonstrate-configure-external-script-availability-group":::
 
-You are now ready to run Python and R scripts on the master instance of Big Data Clusters. See the quickstarts below to run your first script.
+You are now ready to run Python and R scripts on the master instance of Big Data Clusters. See the quickstarts under [Next steps](#next-steps) to run your first script.
 
 ### Delete the master replica endpoints
 
@@ -121,7 +126,7 @@ The following command deletes load-balancing service.
 
 `kubectl delete svc <load-balancer-name> -n mssql-cluster`
 
-For the examples in this article, run the following command.
+For the examples in this article, run the following commands.
 
 ```bash
 kubectl delete svc mymaster-0 -n mssql-cluster

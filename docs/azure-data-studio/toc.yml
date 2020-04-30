@@ -10,8 +10,8 @@
   href: release-notes-azure-data-studio.md
 - name: Overview
   items:
-- name: Azure Data Studio
-  href: what-is.md
+  - name: Azure Data Studio
+    href: what-is.md
   items:
 - name: Quickstarts
   items:

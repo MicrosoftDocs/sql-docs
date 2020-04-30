@@ -71,65 +71,64 @@ In the following R script, you'll use the function **rxKmeans**, which is the K-
 
 ```r
 # Output table to hold the customer group mappings.
-# This is a table where the cluster mappings will be saved in the database.
-return_cluster = RxSqlServerData(table = "return_cluster", connectionString = connStr);
-# Set the seed for the random number generator for predictability
-set.seed(10);
-# Generate clusters using rxKmeans and output key / cluster to a table in SQL database
+# Generate clusters using Kmeans and output key / cluster to a table in SQL database
 # called return_cluster
-clust <- rxKmeans( ~ orderRatio + itemsRatio + monetaryRatio + frequency,
-                   customer_returns,
-                   numClusters=4,
-                   outFile=return_cluster,
-                   outColName="cluster",
-                   extraVarsToWrite=c("customer"),
-                   overwrite=TRUE);
+sqlDrop(ch, "return_cluster")
+
+## create clustering model
+clust <- kmeans(customer_data[,2:5],4)
+
+## create clustering ouput for table
+customer_cluster <- data.frame(cluster=clust$cluster,customer=customer_data$customer,orderRatio=customer_data$orderRatio,
+        itemsRatio=customer_data$itemsRatio,monetaryRatio=customer_data$monetaryRatio,frequency=customer_data$frequency)
+
+## write cluster output to DB table
+sqlSave(ch, customer_cluster, tablename = "return_cluster")
 
 # Read the customer returns cluster table from the database
 customer_cluster_check <- sqlFetch(ch, "return_cluster")
 
 head(customer_cluster_check)
-
-#Look at the clustering details to analyze results
-clust
-
-# close ODBC connection when done
-odbcClose(ch)
+## Analyze the results
 
 ```
-
-## Analyze the results
 
 Now that you've done the clustering using K-Means, the next step is to analyze the result and see if you can find any actionable information.
 
-The **clust** object contains the results from the K-Means clustering.
-
 ```r
 #Look at the clustering details to analyze results
-clust
+clust[-1]
 ```
 
 ```results
-Call:
-rxKmeans(formula = ~orderRatio + itemsRatio + monetaryRatio + 
-    frequency, data = customer_returns, outFile = return_cluster, 
-    outColName = "cluster", extraVarsToWrite = c("customer"), 
-    overwrite = TRUE, numClusters = 4)
-Data: customer_returns
-Number of valid observations: 37336
-Number of missing observations: 0 
-Clustering algorithm:  
+$centers
+   orderRatio itemsRatio monetaryRatio frequency
+1 0.621835791  0.1701519    0.35510836  1.009025
+2 0.074074074  0.0000000    0.05886575  2.363248
+3 0.004807692  0.0000000    0.04618708  5.050481
+4 0.000000000  0.0000000    0.00000000  0.000000
 
-K-means clustering with 4 clusters of sizes 31675, 671, 2851, 2139
-Cluster means:
-   orderRatio   itemsRatio monetaryRatio frequency
-1 0.000000000 0.0000000000    0.00000000  0.000000
-2 0.007451565 0.0000000000    0.04449653  4.271237
-3 1.008067345 0.2707821817    0.49515232  1.031568
-4 0.000000000 0.0004675082    0.10858272  1.186068
-Within cluster sum of squares by cluster:
-         1          2          3          4
-    0.0000  1329.0160 18561.3157   363.2188
+$totss
+[1] 40191.83
+
+$withinss
+[1] 19867.791   215.714   660.784     0.000
+
+$tot.withinss
+[1] 20744.29
+
+$betweenss
+[1] 19447.54
+
+$size
+[1]  4543   702   416 31675
+
+$iter
+[1] 3
+
+$ifault
+[1] 0
+
 ```
 
 The four cluster means are given using the variables defined in [part one](r-tutorial-clustering-model-prepare-data.md#separate-customers):

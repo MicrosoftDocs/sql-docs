@@ -1,5 +1,6 @@
 ---
 title: "XQuery Basics | Microsoft Docs"
+description: Learn the fundamentals of the XQuery language including, sequence and QNames, expression context, atomization, type system, error handling, and comments.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

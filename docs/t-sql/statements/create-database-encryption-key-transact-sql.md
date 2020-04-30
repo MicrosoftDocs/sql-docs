@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
 
 CREATE DATABASE ENCRYPTION KEY  
@@ -51,7 +51,7 @@ CREATE DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
 
 CREATE DATABASE ENCRYPTION KEY  

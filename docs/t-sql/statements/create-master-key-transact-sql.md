@@ -35,7 +35,7 @@ Creates a database master key in the master database.
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```

@@ -1,5 +1,5 @@
 ---
-title: "Finding More SQL Server Native Client Information | Microsoft Docs"
+title: "Finding More Information"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

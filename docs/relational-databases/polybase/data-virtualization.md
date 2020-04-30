@@ -59,7 +59,7 @@ The next step is to configure a credential. Enter a name for the credential. Thi
 
 On the next page, select the tables for which you want to create external views. When you select parent databases, the child tables are included, too. After you select tables, a mapping table appears on the right. Here, you can make changes to types. You also can change the name of the selected external table itself.
 
-![External data source credentials](media/data-virtualization/data-table-mapping.png)
+![External data source credentials](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >To change the mapping view, double-click another selected table.

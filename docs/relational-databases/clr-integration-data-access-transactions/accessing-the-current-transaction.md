@@ -1,5 +1,6 @@
 ---
 title: "Accessing the Current Transaction | Microsoft Docs"
+description: In SQL Server CLR integration, the Current property of the System.Transactions.Transaction class allows you to access the current transaction.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

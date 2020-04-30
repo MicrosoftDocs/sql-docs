@@ -30,7 +30,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT permission [ ,...n ] ON  
     FULLTEXT   
         {  

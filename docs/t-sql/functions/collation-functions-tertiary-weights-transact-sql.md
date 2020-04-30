@@ -30,7 +30,7 @@ For each character in a non-Unicode string expression - defined with a SQL terti
   
 ## Syntax  
   
-```sql
+```syntaxsql
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   

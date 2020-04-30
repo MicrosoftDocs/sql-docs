@@ -29,7 +29,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   

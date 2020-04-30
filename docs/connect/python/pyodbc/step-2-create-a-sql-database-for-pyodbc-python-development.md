@@ -1,5 +1,6 @@
 ---
-title: "Step 2: Create a SQL database for pyodbc Python development | Microsoft Docs"
+title: "Step 2: Create a SQL database for pyodbc"
+description: "Step 2 of this getting started guide involves creating a database in SQL Server or Azure SQL Database."
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: sql

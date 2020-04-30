@@ -32,7 +32,7 @@ Replaces NULL with the specified replacement value.
   
 ## Syntax  
   
-```  
+```syntaxsql
 ISNULL ( check_expression , replacement_value )  
 ```  
   

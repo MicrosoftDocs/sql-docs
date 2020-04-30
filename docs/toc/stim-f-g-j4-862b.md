@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: genemi
 author: MightyPen
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
-ms.custom: at-gm-code=f-g-J3-862a
+ms.custom: at-gm-code=f-g-J4-862b
 ROBOTS: NOINDEX, NOFOLLOW
 ms.localizationpriority: "null"
 localization_priority: "None"
@@ -33,5 +33,9 @@ localization_priority: "None"
  There are a number of options available when initializing a subscription with a snapshot. You can:  
 
 _**(The remainder of the article has been cut from this test. You are done reading.)**_
+
+<!--
+docs\relational-databases\replication\  ,  initialize-a-subscription-with-a-snapshot.md
+-->
 
 &nbsp;

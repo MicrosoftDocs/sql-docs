@@ -34,7 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SERVICE MASTER KEY   
     [ { <regenerate_option> | <recover_option> } ] [;]  

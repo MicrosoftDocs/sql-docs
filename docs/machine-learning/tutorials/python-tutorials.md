@@ -42,5 +42,5 @@ If you are new to SQL Server Machine Learning Services, you can also try the Pyt
 
 ## Next steps
 
-+ [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
++ [What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md)
 + [Python extension to SQL Server](../concepts/extension-python.md)

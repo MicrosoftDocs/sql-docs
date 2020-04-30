@@ -1,5 +1,6 @@
 ---
-title: "Connecting to SQL Server | Microsoft Docs"
+title: "Connecting using ODBC"
+description: "Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -22,7 +23,7 @@ This topic discusses how you can create a connection to a [!INCLUDE[ssNoVersion]
   
 ## Connection Properties  
 
-See [DSN and Connection String Keywords and Attributes](../../../connect/odbc/dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and Mac
+See [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and macOS.
 
 > [!IMPORTANT]  
 > When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use** _database_name_ command to connect to the database before executing your queries.  
@@ -109,6 +110,6 @@ settings in the driver's section in `odbcinst.ini`. If the setting is not presen
 
 ## See Also
 
-- [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Installing the Microsoft ODBC Driver for SQL Server on Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installing the Microsoft ODBC Driver for SQL Server on macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+- [Programming Guidelines](programming-guidelines.md)

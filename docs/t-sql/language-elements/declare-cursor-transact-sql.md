@@ -34,7 +34,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
 ISO Syntax  
 DECLARE cursor_name [ INSENSITIVE ] [ SCROLL ] CURSOR   
      FOR select_statement   

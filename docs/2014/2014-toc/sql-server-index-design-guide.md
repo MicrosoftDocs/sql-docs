@@ -261,7 +261,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Columns that undergo frequent changes  
   
-     This causes in the whole row to move, because the [!INCLUDE[ssDE](../includes/ssde-md.md)] must keep the data values of a row in physical order. This is an important consideration in high-volume transaction processing systems in which data is typically volatile.  
+     This causes the whole row to move, because the [!INCLUDE[ssDE](../includes/ssde-md.md)] must keep the data values of a row in physical order. This is an important consideration in high-volume transaction processing systems in which data is typically volatile.  
   
 -   Wide keys  
   

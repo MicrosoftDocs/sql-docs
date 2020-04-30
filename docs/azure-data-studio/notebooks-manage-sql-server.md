@@ -1,6 +1,6 @@
 ---
-title: Manage a SQL Server notebook
-description: Learn how to manage notebooks in Azure Data Studio. This includes opening notebooks, saving them, and changing your big data cluster connection.
+title: How to manage a notebook
+description: Learn how to manage notebooks in Azure Data Studio. This includes opening notebooks, saving them, and changing your SQL connection or Python kernel.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""
-ms.date: 03/30/2020
+ms.date: 04/27/2020
 ---
 
 # How to manage notebooks in Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article shows you how to open and save notebook files in Azure Data Studio with SQL Server. It also demonstrates how to change your connection to your SQL Server.
+This article shows you how to open and save notebook files in Azure Data Studio. It also demonstrates how to change your connection to your SQL Server or Python kernel.
 
 ## Open a notebook
 
@@ -52,9 +52,9 @@ There's currently one way to save a notebook. Select **Save** from the notebook 
 > - **File Save**, **File Save As...** and **File Save All** commands from the File menu.
 > - **File: Save** commands entered in the command palette.
 
-## Change the connection
+## Change the SQL connection
 
-To change the connection for a notebook:
+To change the SQL connection for a notebook:
 
 1. Select the **Attach to** menu from the notebook toolbar and then select **Change Connection**.
 
@@ -64,6 +64,31 @@ To change the connection for a notebook:
 
    ![Select a server from the Attach to menu](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## Change the Python kernel
+
+The first time you open Azure Data Studio, the **Configure Python for Notebooks** page is displayed. You can select either:
+
+- **New Python installation** to install a new copy of Python for Azure Data Studio, or
+- **Use existing Python installation** to specify the path to an existing Python installation for Azure Data Studio to use
+
+To view the location and version of the active Python kernel, create a code cell and run the following Python commands:
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+To change to a different installation of Python:
+
+1. From the **File** menu, select **Preferences** and then **Settings**.
+1. Scroll to **Notebook configuration** under **Extensions**.
+1. Under **Use Existing Python**, uncheck the option "Local path to a preexisting python installation used by Notebooks."
+1. Restart Azure Data Studio.
+
+When the **Configure Python for Notebooks** page is displayed, you can choose to create a new Python installation or specify a path to an existing installation.
+
 ## Next steps
 
-For more information about notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019](notebooks-guidance.md).
+For more information about SQL notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019](notebooks-guidance.md).

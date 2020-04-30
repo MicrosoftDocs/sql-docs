@@ -41,13 +41,13 @@ The following section describes how to enable external scripts on each instance.
 
 For each replica on the availability group, create a load balancer to allow you to connect to the instance. 
 
-`kubectl expose pod <pod-name> --port=<connection port number> --name=<load balancer name> --type=LoadBalancer -n <kubernetes namespace>`
+`kubectl expose pod <pod-name> --port=<connection port number> --name=<load-balancer-name> --type=LoadBalancer -n <kubernetes namespace>`
 
-The exampl in this article uses the following values:
+The examples in this article uses the following values:
 
 - `<pod-name>`: `master-#`
 - `<connection port number>`: `1533`
-- `<load balancer name>`: `mymaster-#`
+- `<load-balancer-name>`: `mymaster-#`
 - `<kubernetes namespace>`: `mssql-cluster`
 
 Update the following script for your environment, and run the commands:
@@ -58,7 +58,7 @@ kubectl expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer -n
 kubectl expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer -n mssql-cluster 
 ```
 
-You should see an output similar to this:
+`kubectl` returns the following output.
 
 ```bash
 service/mymaster-0 exposed
@@ -66,7 +66,7 @@ service/mymaster-1 exposed
 service/mymaster-2 exposed
 ```
 
-The each load balancer is a master replica endpoint.
+Each load balancer is a master replica endpoint.
 
 ### Enable script execution on each replica
 
@@ -74,7 +74,7 @@ The each load balancer is a master replica endpoint.
 
    The following command returns the external IP address for the replica endpoint. 
 
-   `kubectl get services <load balancer name> -n <kubernetes namespace>`
+   `kubectl get services <load-balancer-name> -n <kubernetes namespace>`
 
    To get the external IP address for each replica in this scenario, run the following commands:
 
@@ -115,11 +115,11 @@ You are now ready to run Python and R scripts on the master instance of Big Data
 
 ### Delete the master replica endpoints
 
-On the Kubernetes cluster, delete the endpoint for each replica. The endpoint is exposed in Kubernetes as a load balancing service.
+On the Kubernetes cluster, delete the endpoint for each replica. The endpoint is exposed in Kubernetes as a load-balancing service.
 
-The following command deletes load balancing service.
+The following command deletes load-balancing service.
 
-`kubectl delete svc <load balancer name> -n mssql-cluster`
+`kubectl delete svc <load-balancer-name> -n mssql-cluster`
 
 For the examples in this article, run the following command.
 

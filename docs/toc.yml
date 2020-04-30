@@ -7763,10 +7763,6 @@
   items:
   - name: Overview
     href: tools/overview-sql-tools.md
-<<<<<<< HEAD
-  - name: Azure Data Studio >
-    href: azure-data-studio/index.yml
-=======
   - name: Azure Data Studio
     href: azure-data-studio/what-is.md
     items:
@@ -7842,7 +7838,7 @@
         - name: Use Python Kernel
           href: azure-data-studio/notebooks-tutorial-python-kernel.md
         - name: Kqlmagic
-          href: azure-data-studio/notebooks-kql-magic.md
+          href: azure-data-studio/notebooks-kqlmagic.md
         - name: Manage a notebook
           href: azure-data-studio/notebooks-manage-sql-server.md
     - name: How-to guides
@@ -7879,7 +7875,6 @@
         href: https://blogs.technet.microsoft.com/dataplatforminsider/
       - name: Report issues & make suggestions >>
         href: https://github.com/microsoft/azuredatastudio/issues
->>>>>>> 74c8a5ac8ad02473104e58c216527fa299013aeb
   - name: Command prompt utilities
     href: tools/command-prompt-utility-reference-database-engine.md
     items:

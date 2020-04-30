@@ -49,7 +49,7 @@ landingContent:
           - text: Connect and query Azure SQL database
             url: quickstart-sql-database.md
           - text: Connect and query data in Azure SQL data warehouse
-            url: quickstart-azure-sql-dw.md
+            url: quickstart-sql-dw.md
           - text: Connect and query data in  PostgreSQL
             url: quickstart-postgres.md
 

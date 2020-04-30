@@ -33,7 +33,7 @@ GO
 
 ## Enable on cluster with high availability
 
-When you [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md), the deployment creates an availability group for the master instance. To enable Machine Learning Services, you need set `external scripts enabled` on each instance of the availability group. For a Big Data Cluster, this means that you need to run `sp_configure` on each replica of the SQL Server master instance
+When you [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md), the deployment creates an availability group for the master instance. To enable Machine Learning Services, set `external scripts enabled` on each instance of the availability group. For a Big Data Cluster, this means that you need to run `sp_configure` on each replica of the SQL Server master instance
 
 The following section describes how to enable external scripts on each instance.
 

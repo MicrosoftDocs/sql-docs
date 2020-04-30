@@ -1,6 +1,7 @@
 ---
 title: Set a Maximum File Size for a Trace File
 titleSuffix: SQL Server Profiler
+description: In SQL Server Profiler, you can limit the trace file size. Learn how to set a maximum file size and how to specify whether the file rolls over at maximum size.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

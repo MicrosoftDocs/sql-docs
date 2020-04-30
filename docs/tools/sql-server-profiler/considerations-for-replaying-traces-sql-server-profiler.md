@@ -1,7 +1,7 @@
 ---
 title: Considerations for Replaying Traces
 titleSuffix: SQL Server Profiler
-description: Learn how to use Data Migration Assistant to assess an application’s data access layer. (needs editing)
+description: SQL Server Profile cannot replay certain traces. Learn what operations, stored procedures, templates, and log activities cause traces to be skipped.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

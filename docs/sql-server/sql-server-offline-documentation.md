@@ -18,75 +18,11 @@ This article describes how to download and view offline SQL Server content in [S
 
 Offline documentation is available for several previous versions of SQL Server. Although you can also [view content for previous versions online](https://docs.microsoft.com/previous-versions/sql/), an offline option provides a convenient way to access the older content.
 
-## How to download and configure offline content
+You can use download and install SQL Server help packages from online sources or local disk.
 
-You can use download and install SQL Server help packages from online sources or local disk. The following sections explain how to load offline content for different versions of SQL Server:
+## How to download and configure offline content for SQL Server 2016 and later
 
-- [SQL Server 2019](#sql2019)
-- [SQL Server 2017](#sql2017)
-- [SQL Server 2016](#sql2016)
-- [SQL Server 2014](#sql2014)
-- [SQL Server 2012](#sql2012)
-
-## <a id="sql2019"></a> SQL Server 2019
-
-Use the following steps to load the offline documentation for SQL Server 2019.
-
-1. In SSMS, select **Add and Remove Help Content** on the Help menu.
-
-   ![Help Viewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
-
-   The Help Viewer opens to the Manage Content tab.
-
-2. To find the latest help content for SQL Server 2019, under the **Manage Content** tab choose **Online** under the Installation source and then type in *sql server 2019* in the search bar.
-
-   ![SQL Server 2019 documentation search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2019-search.png)
-
-   > [!Note]
-   > The Local store path on the Manage Content tab shows where on the local computer the content is installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
-
-3. To install the latest help content for SQL Server 2019, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
-
-   ![SQL Server 2019 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2019-add-update.png)
-
-   > [!NOTE]
-   > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
-
-4. You can verify that the SQL Server 2019 content is loaded by searching under the content pane on the left for *sql server 2019*.
-
-   ![SQL Server 2019 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2019-content.png)
-
-## <a id="sql2017"></a> SQL Server 2017
-
-Use the following steps to load the offline documentation for SQL Server 2017.
-
-1. In SSMS, select **Add and Remove Help Content** on the Help menu.
-
-   ![Help Viewer Add Remove Content](../sql-server/media/sql-server-help-installation/add-remove-content.png)
-
-   The Help Viewer opens to the Manage Content tab.
-
-2. To find the latest help content for SQL Server 2017, under the **Manage Content** tab choose **Online** under the Installation source and then type in *sql server 2017* in the search bar.
-
-   ![SQL Server 2017 books search in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2017-search.png)
-
-   > [!Note]
-   > The Local store path on the Manage Content tab shows where on the local computer the content is installed. To change the location, select **Move**, enter a different folder path in the **To** field, and then select **OK**. If the help installation fails after changing the Local store path, close and reopen Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
-
-3. To install the latest help content for SQL Server 2017, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
-
-   ![SQL Server 2017 books add and update in Help Viewer](../sql-server/media/sql-server-help-installation/sql-2017-add-update.png)
-
-   > [!NOTE]
-   > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
-
-4. You can verify that the SQL Server 2017 content is loaded by searching under the content pane on the left for *sql server 2017*.
-
-   ![SQL Server 2017 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2017-content.png)
-
-## <a id="sql2016"></a> SQL Server 2016
-
-Use the following steps to load the offline documentation for SQL Server 2016.
+The following steps explain how to load offline content from an online source.
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
@@ -112,9 +48,9 @@ Use the following steps to load the offline documentation for SQL Server 2016.
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2016-content.png)
 
-## <a id="sql2014"></a> SQL Server 2014
+## How to download and configure offline content for SQL Server 2014
 
-Use the following steps to load the offline documentation for SQL Server 2014.
+The following steps explain how to load offline content from local disk.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
@@ -153,9 +89,9 @@ Use the following steps to load the offline documentation for SQL Server 2014.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
 
-## <a id="sql2012"></a> SQL Server 2012
+## How to download and configure offline content for SQL Server 2012
 
-Use the following steps to load the offline documentation for SQL Server 2012.
+The following steps explain how to load offline content from local disk.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2012 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=35750) content from the download center and save it to a folder.
 

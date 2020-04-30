@@ -60,13 +60,8 @@ In the **paste** function, replace **Server**, **UID**, and **PWD** with your ow
 
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
-connStr <- paste("Driver=SQL Server",
-               "; Server=", "<SQL Database Server>",
-               "; Database=tpcxbb_1gb",
-               "; UID=", "<user>",
-               "; PWD=", "<password>",
-                  sep = "");
 
+connStr <- "Driver=SQL Server;Server=516798-0911;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
 
 #Define the query to select data from SQL Server
 input_query <- "
@@ -128,7 +123,6 @@ LEFT OUTER JOIN (
     FROM store_returns
     GROUP BY sr_customer_sk
     ) returned ON ss_customer_sk = sr_customer_sk
-"
 ```
 
 ## Load the data into a data frame

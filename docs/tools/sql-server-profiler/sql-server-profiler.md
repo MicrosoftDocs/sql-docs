@@ -27,6 +27,12 @@ ms.date: 11/27/2018
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services workloads is NOT deprecated, and will continue to be supported.
 
+> [!NOTE] When you try to connect to a SQL Azure database from SQL server profiler, it incorrectly throws a misleading error message as follows:
+
+> In order to run a trace against SQL Server, you must be a member of sysadmin fixed server role or have the ALTER TRACE permission.
+
+> The message should have explained that SQL Azure Database instances are not supported by SQL Server profiler.
+
  ## Where is the Profiler?
  
 You can start the Profiler in a number of ways from within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Here is a topic that lists the ways to start the Profiler.](start-sql-server-profiler.md)

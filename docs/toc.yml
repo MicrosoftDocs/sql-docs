@@ -616,10 +616,11 @@
             - name: SignalAbort
               href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
   - name: Always On availability groups
-    href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
     items:
     - name: Overview
       items:
+      - name: What is an Always On availability group?
+        href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       - name: Availability modes
         href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
       - name: Technology & capabilities
@@ -948,10 +949,13 @@
           - name: SQL Server error log
             href: database-engine/availability-groups/windows/sql-server-error-log-always-on-availability-groups.md
   - name: Always On failover cluster instance
-    href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     items:
     - name: Overview
-      href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+      items:
+        - name: What is a failover cluster instance?
+          href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+        - name: Windows Server failover cluster
+          href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     - name: How-to
       items:
       - name: Deployment

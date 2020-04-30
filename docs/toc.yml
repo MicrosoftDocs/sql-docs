@@ -7764,7 +7764,7 @@
   - name: Overview
     href: tools/overview-sql-tools.md
   - name: Azure Data Studio >
-    href: azure-data-studio/
+    href: azure-data-studio/index.yml
   - name: Command prompt utilities
     href: tools/command-prompt-utility-reference-database-engine.md
     items:

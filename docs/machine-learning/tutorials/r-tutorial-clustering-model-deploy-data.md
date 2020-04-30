@@ -213,7 +213,7 @@ USE [tpcxbb_1gb]
 SELECT customer.[c_email_address], customer.c_customer_sk
   FROM dbo.customer
   JOIN
-  [dbo].[py_customer_clusters] as c
+  [dbo].[customer_clusters] as c
   ON c.Customer = customer.c_customer_sk
   WHERE c.cluster = 0
 ```

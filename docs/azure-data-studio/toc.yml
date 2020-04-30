@@ -4,15 +4,15 @@
 - name: SQL Server documentation >
   href: ../sql-server/index.yml
 
-  - name: Install
-    href: azure-data-studio/download-azure-data-studio.md
-  - name: Release notes
-    href: azure-data-studio/release-notes-azure-data-studio.md
-  - name: Overview
-    items:
-  - name: Azure Data Studio
-    href: azure-data-studio/what-is.md
-    items:
+    - name: Install
+      href: azure-data-studio/download-azure-data-studio.md
+    - name: Release notes
+      href: azure-data-studio/release-notes-azure-data-studio.md
+    - name: Overview
+      items:
+    - name: Azure Data Studio
+      href: azure-data-studio/what-is.md
+      items:
     - name: Quickstarts
       items:
       - name: Connect & query SQL Server

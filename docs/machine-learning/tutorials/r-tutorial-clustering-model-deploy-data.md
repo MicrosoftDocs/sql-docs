@@ -138,31 +138,26 @@ connStr <- paste("Driver=SQL Server; Server=", instance_name,
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
-customer_returns <- RxSqlServerData(
-                     sqlQuery=input_query,
-                     colClasses=c(customer ="numeric",
-                                  orderRatio="numeric",
-                                  itemsRatio="numeric",
-                                  monetaryRatio="numeric",
-                                  frequency="numeric" ),
-                     connectionString=connStr);
-# Output table to hold the customer cluster mappings
-return_cluster = RxSqlServerData(table = "customer_return_clusters",
-                                 connectionString = connStr);
+library(RODBC)
 
-# Set seed for random number generator for predictability
-set.seed(10);
+ch <- odbcDriverConnect(connStr);
 
-# Generate clusters using rxKmeans and output clusters to a table
-# called "customer_return_clusters"
-clust <- rxKmeans( ~ orderRatio + itemsRatio + monetaryRatio + frequency,
-                   customer_returns,
-                   numClusters = 4,
-                   outFile = return_cluster,
-                   outColName = "cluster",
-                   writeModelVars = TRUE ,
-                   extraVarsToWrite = c("customer"),
-                   overwrite = TRUE);
+customer_data <- sqlQuery(ch, input_query)
+
+sqlDrop(ch, "customer_return_clusters")
+
+## create clustering model
+clust <- kmeans(customer_data[,2:5],4)
+
+## create clustering output for table
+customer_cluster <- data.frame(cluster=clust$cluster,customer=customer_data$customer,orderRatio=customer_data$orderRatio,
+			itemsRatio=customer_data$itemsRatio,monetaryRatio=customer_data$monetaryRatio,frequency=customer_data$frequency)
+
+## write cluster output to DB table
+sqlSave(ch, customer_cluster, tablename = "customer_return_clusters")
+
+## clean up
+odbcClose(ch)
 '
     , @input_data_1 = N''
     , @params = N'@instance_name nvarchar(100), @database_name nvarchar(128), @input_query nvarchar(max), @duration float OUTPUT'

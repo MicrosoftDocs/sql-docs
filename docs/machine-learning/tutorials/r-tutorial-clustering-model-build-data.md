@@ -86,7 +86,16 @@ clust <- rxKmeans( ~ orderRatio + itemsRatio + monetaryRatio + frequency,
                    overwrite=TRUE);
 
 # Read the customer returns cluster table from the database
-customer_cluster <- rxDataStep(return_cluster);
+customer_cluster_check <- sqlFetch(ch, "return_cluster")
+
+head(customer_cluster_check)
+
+#Look at the clustering details to analyze results
+clust
+
+# close ODBC connection when done
+odbcClose(ch)
+
 ```
 
 ## Analyze the results

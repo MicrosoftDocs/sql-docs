@@ -54,6 +54,8 @@ In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store
 
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 
+* RODBC - This driver is necessary to run R scripts. [Install ODBC for R](https://CRAN.R-project.org/package=RODBC)
+
 * SQL query tool - This tutorial assumes you're using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md)..
 
 ## Restore the sample database

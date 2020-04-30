@@ -93,7 +93,7 @@ Create a table in the TutorialDB database and then save the model to the table.
 
     ```sql
     USE TutorialDB;
-    DROP TABLE IF EXISTS rental_rx_models;
+    DROP TABLE IF EXISTS rental_models;
     GO
     CREATE TABLE rental_models (
           model_name VARCHAR(30) NOT NULL DEFAULT('default model') PRIMARY KEY
@@ -102,7 +102,7 @@ Create a table in the TutorialDB database and then save the model to the table.
     GO
     ```
 
-1. Save the model to the table as a binary object, with the model name "rxDTree".
+1. Save the model to the table as a binary object, with the model name "DTree".
 
     ```sql
     -- Save model to table
@@ -117,7 +117,7 @@ Create a table in the TutorialDB database and then save the model to the table.
         , model
         )
     VALUES (
-         'rxDTree'
+         'DTree'
         , @model
         );
     

@@ -8,12 +8,23 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 04/27/2020
+ms.date: 04/30/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## April 2020 (hotfix)
+
+April 30, 2020 &nbsp; / &nbsp; version: 1.17.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #10197 Can't connect via MFA | [#10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
 
 ## April 2020
 

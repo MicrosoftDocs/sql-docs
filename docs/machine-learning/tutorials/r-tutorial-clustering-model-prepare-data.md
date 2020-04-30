@@ -133,19 +133,12 @@ As part of the process, you'll define the type for the selected columns (using c
 ```r
 # Query SQL Server using input_query and get the results back
 # to data frame customer_returns
-# Define the types for selected columns (using colClasses),
-# to make sure that the types are correctly transferred to R
-customer_returns <- rxSqlServerData(
-                     sqlQuery=input_query,
-                     colClasses=c(customer ="numeric",
-                                  orderRatio="numeric",
-                                  itemsRatio="numeric",
-                                  monetaryRatio="numeric",
-                                  frequency="numeric" ),
-                     connectionString=connStr);
 
-# Transform the data from an input dataset to an output dataset
-customer_data <- rxDataStep(customer_returns);
+library(RODBC)
+
+ch <- odbcDriverConnect(connStr)
+
+customer_data <- sqlQuery(ch, input_query)
 
 # Take a look at the data just loaded from SQL Server
 head(customer_data, n = 5);

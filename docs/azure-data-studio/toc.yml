@@ -1,117 +1,117 @@
 - name: Azure Data Studio
-  href: ../azure-data-studio/index.yml
+  href: ../index.yml
 
 - name: SQL Server documentation >
   href: ../sql-server/index.yml
 
 - name: Install
-  href: azure-data-studio/download-azure-data-studio.md
+  href: download-azure-data-studio.md
 - name: Release notes
-  href: azure-data-studio/release-notes-azure-data-studio.md
+  href: release-notes-azure-data-studio.md
 - name: Overview
   items:
 - name: Azure Data Studio
-  href: azure-data-studio/what-is.md
+  href: what-is.md
   items:
 - name: Quickstarts
   items:
   - name: Connect & query SQL Server
-    href: azure-data-studio/quickstart-sql-server.md
+    href: quickstart-sql-server.md
   - name: Connect & query Azure SQL Database
-    href: azure-data-studio/quickstart-sql-database.md
+    href: quickstart-sql-database.md
   - name: Connect & query Azure SQL Data Warehouse
-    href: azure-data-studio/quickstart-sql-dw.md
+    href: quickstart-sql-dw.md
   - name: Connect & query PostgreSQL
-    href: azure-data-studio/quickstart-postgres.md
+    href: quickstart-postgres.md
 - name: Tutorials
   items:
   - name: T-SQL Editor
-    href: azure-data-studio/tutorial-sql-editor.md
+    href: tutorial-sql-editor.md
   - name: "Sample insight: slow queries"
-    href: azure-data-studio/tutorial-qds-sql-server.md
+    href: tutorial-qds-sql-server.md
   - name: "Sample insight: table space usage"
-    href: azure-data-studio/tutorial-table-space-sql-server.md
+    href: tutorial-table-space-sql-server.md
   - name: Build a custom insight
-    href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
+    href: tutorial-build-custom-insight-sql-server.md
   - name: Backup & restore
-    href: azure-data-studio/tutorial-backup-restore-sql-server.md
+    href: tutorial-backup-restore-sql-server.md
 - name: Concepts
   items:
   - name: Extensions
-    href: azure-data-studio/extensions.md
+    href: extensions.md
     items:
     - name: PostgreSQL extension
-      href: azure-data-studio/postgres-extension.md
+      href: postgres-extension.md
     - name: Data Virtualization extension
-      href: azure-data-studio/data-virtualization-extension.md
+      href: data-virtualization-extension.md
     - name: SQL Server Agent
-      href: azure-data-studio/sql-server-agent-extension.md
+      href: sql-server-agent-extension.md
     - name: SQL Server Central Management Servers extension
-      href: azure-data-studio/sql-server-cms-extension.md        
+      href: sql-server-cms-extension.md        
     - name: SQL Server dacpac extension
-      href: azure-data-studio/sql-server-dacpac-extension.md
+      href: sql-server-dacpac-extension.md
     - name: SQL Server Import
-      href: azure-data-studio/sql-server-import-extension.md
+      href: sql-server-import-extension.md
     - name: SQL Server Profiler
-      href: azure-data-studio/sql-server-profiler-extension.md
+      href: sql-server-profiler-extension.md
     - name: Schema Compare extension
-      href: azure-data-studio/schema-compare-extension.md        
+      href: schema-compare-extension.md        
     - name: PowerShell extension
-      href: azure-data-studio/powershell-extension.md        
+      href: powershell-extension.md        
     - name: Managed Instance extension
-      href: azure-data-studio/azure-sql-managed-instance-extension.md        
+      href: azure-sql-managed-instance-extension.md        
     - name: SandDance extension
-      href: azure-data-studio/sanddance-extension.md
+      href: sanddance-extension.md
   - name: Extension Authoring
     items:
     - name: Extensibility overview
-      href: azure-data-studio/extensibility.md
+      href: extensibility.md
     - name: Extension authoring
-      href: azure-data-studio/extension-authoring.md
+      href: extension-authoring.md
     - name: Create an extension
-      href: azure-data-studio/tutorial-create-extension.md
+      href: tutorial-create-extension.md
     - name: Extensibility APIs
-      href: azure-data-studio/extensibility-apis.md
+      href: extensibility-apis.md
   - name: Notebooks
     items:
     - name: Notebooks overview
-      href: azure-data-studio/notebooks-guidance.md
+      href: notebooks-guidance.md
     - name: Use SQL Kernel
-      href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+      href: notebooks-tutorial-sql-kernel.md
     - name: Use Python Kernel
-      href: azure-data-studio/notebooks-tutorial-python-kernel.md
+      href: notebooks-tutorial-python-kernel.md
     - name: Kqlmagic
-      href: azure-data-studio/notebooks-kqlmagic.md
+      href: notebooks-kqlmagic.md
     - name: Manage a notebook
-      href: azure-data-studio/notebooks-manage-sql-server.md
+      href: notebooks-manage-sql-server.md
 - name: How-to guides
   items:
   - name: Dashboards & insight widgets
-    href: azure-data-studio/insight-widgets.md
+    href: insight-widgets.md
   - name: Code snippets
-    href: azure-data-studio/code-snippets.md
+    href: code-snippets.md
   - name: Integrated terminal (PowerShell, Bash)
-    href: azure-data-studio/integrated-terminal.md
+    href: integrated-terminal.md
   - name: Keyboard shortcuts
-    href: azure-data-studio/keyboard-shortcuts.md
+    href: keyboard-shortcuts.md
   - name: Explorer Azure SQL resources
-    href: azure-data-studio/azure-resource-explorer.md
+    href: azure-resource-explorer.md
   - name: Server groups
-    href: azure-data-studio/server-groups.md
+    href: server-groups.md
   - name: Source control
-    href: azure-data-studio/source-control.md
+    href: source-control.md
   - name: Usage data collection
-    href: azure-data-studio/usage-data-collection.md
+    href: usage-data-collection.md
   - name: Workspace & user settings
-    href: azure-data-studio/settings.md
+    href: settings.md
   - name: Windows authentication (Kerberos)
-    href: azure-data-studio/enable-kerberos.md
+    href: enable-kerberos.md
   - name: Usage data collection
-    href: azure-data-studio/usage-data-collection.md
+    href: usage-data-collection.md
 - name: Resources
   items:
   - name: FAQ
-    href: azure-data-studio/faq.md
+    href: faq.md
   - name: Azure Data Studio GitHub repo >>
     href: https://www.github.com/Microsoft/azuredatastudio
   - name: SQL Server Blog >>

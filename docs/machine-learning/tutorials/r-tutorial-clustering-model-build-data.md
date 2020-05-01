@@ -99,7 +99,7 @@ Now that you've done the clustering using K-Means, the next step is to analyze t
 #Look at the clustering details to analyze results
 clust[-1]
 ```
-#analyze-the-results
+
 ```results
 $centers
    orderRatio itemsRatio monetaryRatio frequency

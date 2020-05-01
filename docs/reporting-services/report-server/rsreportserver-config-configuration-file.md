@@ -1,6 +1,6 @@
 ---
 title: "RsReportServer.config Configuration File | Microsoft Docs"
-ms.date: 06/12/2017
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server

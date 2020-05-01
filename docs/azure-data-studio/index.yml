@@ -44,10 +44,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Enable Kerberos
+            url: enable-kerberos.md
           - text: Manage servers and databases with Insight widgets in Azure Data Studio
             url: insight-widgets.md
-          - text: Integrated Terminal
-            url: integrated-terminal.md
           - text: Modify User and Workspace Settings
             url: settings.md
 

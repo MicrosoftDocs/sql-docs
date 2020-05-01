@@ -1,6 +1,6 @@
 ---
 title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: 10/02/2019
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 

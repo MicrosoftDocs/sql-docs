@@ -5,7 +5,7 @@ ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 04/21/2020
+ms.date: 05/01/2020
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

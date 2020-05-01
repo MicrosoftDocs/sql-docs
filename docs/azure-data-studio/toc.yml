@@ -109,9 +109,7 @@
   items:
   - name: FAQ
     href: faq.md
-  - name: Azure Data Studio GitHub repo >>
+  - name: Azure Data Studio GitHub repo >
     href: https://www.github.com/Microsoft/azuredatastudio
-  - name: SQL Server Blog >>
-    href: https://blogs.technet.microsoft.com/dataplatforminsider/
-  - name: Report issues & make suggestions >>
+  - name: Report issues & make suggestions >
     href: https://github.com/microsoft/azuredatastudio/issues

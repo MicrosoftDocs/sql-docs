@@ -1,5 +1,5 @@
 - name: Azure Data Studio
-  href: ../index.yml
+  href: ../azure-data-studio/index.yml
 
 - name: SQL Server documentation >
   href: ../sql-server/index.yml

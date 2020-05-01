@@ -143,7 +143,8 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 ##  <a name="bkmk_service"></a> Service (RSReportServer.config file)  
  **Service** specifies the application settings that apply to the service as a whole.  
   
- The last column of the following table indicates if the setting applies to a Native mode report server (N) or a SharePoint mode report server (S) or a Power BI Report Server (P).  
+ The last column of the following table indicates if the setting applies to a Native mode report server (N), a SharePoint mode report server (S), or Power BI Report Server (P).  
+
   
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  

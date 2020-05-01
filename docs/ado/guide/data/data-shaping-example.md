@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data shaping [ADO], about data shaping"
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Data Shaping Example
 The following data shaping command demonstrates how to build a hierarchical **Recordset** from the **Customers** and **Orders** tables in the Northwind database.  

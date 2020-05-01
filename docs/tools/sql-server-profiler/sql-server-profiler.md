@@ -32,7 +32,7 @@ ms.date: 11/27/2018
 >
 > - In order to run a trace against SQL Server, you must be a member of sysadmin fixed server role or have the ALTER TRACE permission.
 >
-> - The message should have explained that SQL Azure Database instances are not supported by SQL Server profiler.
+> The message should have explained that SQL Azure Database instances are not supported by SQL Server profiler.
 
 ## Where is the Profiler?
 

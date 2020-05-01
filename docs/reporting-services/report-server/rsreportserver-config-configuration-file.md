@@ -167,7 +167,8 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |**FileShareStorageLocation**|Specifies a single folder on the file system for storing temporary snapshots. Although you can specify the folder path as a UNC path, doing so is not recommended. The default value is empty.<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S,P|  
 |**IsRdceEnabled**|Specifies whether Report Definition Customization Extension (RDCE) is enabled. Valid values are **True** and **False**.|N,S,P|
 |**IsDataModelRefreshService**|Specifies whether the Server should process Power BI Reports refresh. Valid values are **True** and **False**.|P|
-|**MaxCatalogConnectionPoolSizePerProcess**|Specifies the maximun size of the connection pool when connecting to the server catalog. The default value is 0. If you choose 0, the report server determines the maximun number of connections for the reportingservices.exe process, for the other processes it is the .[Sql Client Default](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize).|P|  
+|**MaxCatalogConnectionPoolSizePerProcess**|Specifies the maximun size of the connection pool when connecting to the server catalog. The default value is 0. If you choose 0, the report server determines the maximun number of connections for the reportingservices.exe process, for the other processes it is the .[Sql Client Default](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize).|P|  
+
   
 ##  <a name="bkmk_UI"></a> UI (RSReportServer.config file)  
  **UI** specifies configuration settings that apply to the web portal application.  

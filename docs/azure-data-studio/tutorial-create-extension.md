@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: "tutorial"
 author: rothja
 ms.author: jroth

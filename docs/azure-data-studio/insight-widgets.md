@@ -5,7 +5,7 @@ ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: "05/14/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein

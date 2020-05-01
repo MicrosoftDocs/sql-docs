@@ -3,7 +3,7 @@ title: SQL Server Profiler extension
 description: Install and use the SQL Server Profiler extension (preview) for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual

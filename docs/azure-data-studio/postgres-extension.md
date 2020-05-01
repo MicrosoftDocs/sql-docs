@@ -3,7 +3,7 @@ title: PostgreSQL extension (preview)
 description: PostgreSQL extension (preview) for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "03/19/2019"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual

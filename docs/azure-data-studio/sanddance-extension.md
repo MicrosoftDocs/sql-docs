@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"

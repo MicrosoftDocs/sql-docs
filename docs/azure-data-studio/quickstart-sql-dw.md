@@ -3,7 +3,7 @@ title: Connect and query with Azure SQL data warehouse
 description: This quickstart shows how to use Azure Data Studio to connect to an Azure SQL Data Warehouse and run a query
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: quickstart
 author: yualan
 ms.author: alayu

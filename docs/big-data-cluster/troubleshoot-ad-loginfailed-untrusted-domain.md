@@ -5,15 +5,15 @@ description: Fix behavior - clients fail to Authenticate when endpoints DNS entr
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 04/21/2020
+ms.date: 05/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# AD mode login fails - Login from untrusted domain
+# AD mode login fails - Login from untrusted domain (Big Data Clusters)
 
-In Active Directory mode, if clients fail to log in and returnr the following error:
+On a SQL Server Big Data Cluster (BDC) in Active Directory mode, if clients fail to log in and the connection attempt returns the following error:
 
 `Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.`
 
@@ -59,7 +59,7 @@ IP4Address : 193.168.5.10
 >[!NOTE]
 >The following section references  [`tshark`](https://www.wireshark.org/docs/man-pages/tshark.html). `tshark` is a command line utility installed as part of [Wireshark](https://www.wireshark.org/docs/) network tracing utility).
 
-To see the SPN requested from active directory, use `tshark`. The following command limits network tracing capture to Kerberos protocol communication and shows only `krb-error (30)` messages type which should contain SPN request messages that failed:
+To see the SPN requested from active directory, use `tshark`. The following command limits network tracing capture to Kerberos protocol communication and shows only `krb-error (30)` messages. These messages should contain failed SPN request messages.
 
 ```bash
 tshark -Y "kerberos && kerberos.msg_type == 30" -T fields -e kerberos.error_code -e kerberos.SNameString
@@ -95,9 +95,12 @@ Capturing on 'Ethernet 3'
 2 packets captured
 ```
 
-Notice the client requests `SPN MSSQLSvc,ReverseProxyServer.mydomain.com:31433` which doesn’t exists and eventually fails with error 7. Error 7 means `KRB5KDC_ERR_S_PRINCIPAL_UNKNOWN Server not found in Kerberos database`.
+Notice the client requests `SPN MSSQLSvc,ReverseProxyServer.mydomain.com:31433` which doesn’t exist. The connection attempt eventually fails with error 7. Error 7 means `KRB5KDC_ERR_S_PRINCIPAL_UNKNOWN Server not found in Kerberos database`.
 
-If the configuration were correct, the client would have requested the SPN registered by BDC. In the example the correct SPN would have been `MSSQLSvc,bdc-sql.mydomain.com:31433`.
+In the correct configuration, the client requests the SPN registered by BDC. In the example, the correct SPN would have been `MSSQLSvc,bdc-sql.mydomain.com:31433`.
+
+>[!NOTE]
+>Error 25 means `KDC_ERR_PREAUTH_REQUIRED` - additional pre-authentication required. It can safely be ignored. `KDC_ERR_PREAUTH_REQUIRED` is returned on the initial Kerberos AD request. By default, the Windows Kerberos Client is not including pre-authentication information in this first request.
 
 To see the list of SPN registered by BDC for master endpoint, run `setspn -L mssql-master`. 
 
@@ -106,7 +109,7 @@ See the following example output:
 ```bash
 Registered ServicePrincipalNames for CN=mssql-master,OU=bdc,DC=mydomain,DC=com:
         MSSQLSvc/bdc-sqlread.mydomain.com:31436
-        MSSQLSvc/bdc-sqlread:31436
+        MSSQLSvc/-sqlread:31436
         MSSQLSvc/bdc-sqlread.mydomain.com
         MSSQLSvc/bdc-sqlread
         MSSQLSvc/bdc-sql.mydomain.com:31433
@@ -131,13 +134,16 @@ In the results above the reverse proxy address should not be registered.
 
 ## Resolution
 
-This section shows two ways to resolve the issue. After making the appropriate changes run `ipconfig -flushdns` and `klist purge` in your client before attempting to connect again.
+This section shows two ways to resolve the issue. After making the appropriate changes, run `ipconfig -flushdns` and `klist purge` in your client. Then attempt to connect again.
 
 ### Option 1
 
-Remove the CNAME record for each bdc endpoint in DNS and replace with multiple A record that points to each Kubernetes nodes or each Kubernetes master if you have more than one master.
+Remove the CNAME record for each BDC endpoint in DNS and replace with multiple `A` records that points to each Kubernetes node or each Kubernetes master if you have more than one master.
 
-You can use the following PowerShell Script to check DNS endpoints records
+>[!TIP]
+>The script described below uses PowerShell. See [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-core-on-linux) for more information.
+
+You can use the following PowerShell Script to check DNS endpoints records:
 
 ```powershell
 #Specify the DNS server, example contoso.local

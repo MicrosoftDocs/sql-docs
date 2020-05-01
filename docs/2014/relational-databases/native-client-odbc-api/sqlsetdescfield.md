@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLSetDescField function"
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLSetDescField

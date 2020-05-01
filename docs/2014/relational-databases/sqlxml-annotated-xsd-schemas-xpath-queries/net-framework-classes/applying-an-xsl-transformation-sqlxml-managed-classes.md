@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, applying XSL transformations"
   - "XSL Transformations [SQLXML]"
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)

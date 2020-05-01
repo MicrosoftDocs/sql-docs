@@ -13,8 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "BCPDone method"
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # IBCPSession::BCPDone (OLE DB)

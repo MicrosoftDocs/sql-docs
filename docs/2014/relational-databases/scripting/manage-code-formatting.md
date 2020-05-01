@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "text [SQL Server]"
   - "unindenting code"
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Manage Code Formatting

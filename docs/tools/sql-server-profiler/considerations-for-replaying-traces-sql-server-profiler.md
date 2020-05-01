@@ -1,7 +1,7 @@
 ---
 title: Considerations for Replaying Traces
 titleSuffix: SQL Server Profiler
-description: SQL Server Profile cannot replay certain traces. Learn what operations, stored procedures, templates, and log activities cause traces to be skipped.
+description: SQL Server Profiler cannot replay certain traces. Learn which operations, stored procedures, templates, and log activities cause traces to be skipped.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

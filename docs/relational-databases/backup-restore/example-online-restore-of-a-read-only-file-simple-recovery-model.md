@@ -1,5 +1,6 @@
 ---
 title: "Online restore: read-only file (simple recovery model)"
+description: This example shows an online restore in SQL Server of a read-only file for a database using the simple recovery model with multiple filegroups.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Manage the suspect_pages Table (SQL Server) | Microsoft Docs"
+description: Learn how to manage the suspect_pages table in SQL Server by using SQL Server Management Studio or Transact-SQL. Pages that produce certain errors are suspect.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

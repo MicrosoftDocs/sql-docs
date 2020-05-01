@@ -1,41 +1,36 @@
 ---
-title: Add SQL Server help content with Help Viewer
+title: Install previous versions of SQL Server documentation offline
+description: Learn how to install offline documentation for SQL Server 2019, 2017, 2016, 2014, and 2012. Use SQL Server Management Studio (SSMS) to view the offline content. 
 ms.prod: sql
 ms.technology: 
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
 ms.date: 04/20/2020
 ---
 
-# Install previous versions of SQL Server help content to view offline
+# Install previous versions of SQL Server documentation to view offline in SSMS
 
-This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Offline documentation for older versions of Microsoft SQL Server is still available.
+This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). Offline content enables you to access the documentation without an internet connection (although an internet connection is initially required to download it).
 
-Internet access is required to download the SQL Server content. You can then migrate the content to a computer that doesn't have internet access.
-
-Offline content is available for these SQL Server versions:
-
-- SQL Server 2019
-- SQL Server 2017
-- SQL Server 2016
-- SQL Server 2014
-- SQL Server 2012
+Offline documentation is available for several previous versions of SQL Server. Although you can also [view content for previous versions online](https://docs.microsoft.com/previous-versions/sql/), an offline option provides a convenient way to access the older content.
 
 ## How to download and configure offline content
 
-You can use download and install SQL Server help packages from online sources or local disk.
+You can use download and install SQL Server help packages from online sources or local disk. The following sections explain how to load offline content for different versions of SQL Server:
 
-Below are steps on how to load offline content for different versions of SQL Server.
+- [SQL Server 2019](#sql2019)
+- [SQL Server 2017](#sql2017)
+- [SQL Server 2016](#sql2016)
+- [SQL Server 2014](#sql2014)
+- [SQL Server 2012](#sql2012)
 
-### Add SQL Server 2019 offline content
+## <a id="sql2019"></a> SQL Server 2019
 
-For this approach, you use the **Online** Installation source.
+Use the following steps to load the offline documentation for SQL Server 2019.
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
@@ -61,9 +56,9 @@ For this approach, you use the **Online** Installation source.
 
    ![SQL Server 2019 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2019-content.png)
 
-### Add SQL Server 2017 offline content
+## <a id="sql2017"></a> SQL Server 2017
 
-For this approach, you use the **Online** Installation source.
+Use the following steps to load the offline documentation for SQL Server 2017.
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
@@ -89,9 +84,9 @@ For this approach, you use the **Online** Installation source.
 
    ![SQL Server 2017 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2017-content.png)
 
-### Add SQL Server 2016 offline content
+## <a id="sql2016"></a> SQL Server 2016
 
-For this approach, you use the **Online** Installation source.
+Use the following steps to load the offline documentation for SQL Server 2016.
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
@@ -117,9 +112,9 @@ For this approach, you use the **Online** Installation source.
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2016-content.png)
 
-### Add SQL Server 2014 offline content
+## <a id="sql2014"></a> SQL Server 2014
 
-For this approach, you use the **Disk** Installation source.
+Use the following steps to load the offline documentation for SQL Server 2014.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
@@ -158,9 +153,9 @@ For this approach, you use the **Disk** Installation source.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
 
-### Add SQL Server 2012 offline content
+## <a id="sql2012"></a> SQL Server 2012
 
-For this approach, you use the **Disk** Installation source.
+Use the following steps to load the offline documentation for SQL Server 2012.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2012 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=35750) content from the download center and save it to a folder.
 
@@ -199,7 +194,7 @@ For this approach, you use the **Disk** Installation source.
 
    ![SQL Server 2012 documentation automatically updated](../sql-server/media/sql-server-help-installation/sql-2012-content.png)
 
-## View offline SQL Server docs
+## View offline documentation
 
 You can view SQL Server help content using the **HELP** menu in the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 

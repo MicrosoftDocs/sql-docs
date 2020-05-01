@@ -1,5 +1,6 @@
 ---
 title: "Backup & restore: feature interoperability"
+description: This article describes backup-and-restore features in SQL Server, including database startup, online restore and disabled indexes, and database mirroring.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

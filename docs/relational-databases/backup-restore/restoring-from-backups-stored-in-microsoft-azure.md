@@ -1,5 +1,6 @@
 ---
 title: "Restoring From Backups Stored in Microsoft Azure | Microsoft Docs"
+description: Understand considerations for restoring a SQL Server database using a backup stored in Azure Blob storage. 
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql

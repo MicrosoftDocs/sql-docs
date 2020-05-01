@@ -107,6 +107,8 @@
     href: usage-data-collection.md
 - name: Resources
   items:
+  - name: Azure Developer tools
+    href: https://docs.microsoft.com/azure/?product=developer-tools
   - name: FAQ
     href: faq.md
   - name: Azure Data Studio GitHub repo >

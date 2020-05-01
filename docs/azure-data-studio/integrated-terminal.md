@@ -10,6 +10,7 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ---
+
 # Integrated Terminal
 
 In Azure Data Studio, you can open an integrated terminal, initially starting at the root of your workspace. This can be convenient as you don't have to switch windows or alter the state of an existing terminal to perform a quick command-line task.

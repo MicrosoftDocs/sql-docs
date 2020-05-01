@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLExecDirect function"
   - "statements [ODBC], direct execution"
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Direct Execution

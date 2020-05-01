@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLSetStmtAttr function"
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLSetStmtAttr

@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLGetCursorName function"
 ms.assetid: 3a427a23-28ef-49aa-b9ec-6cab0914bdf3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLGetCursorName

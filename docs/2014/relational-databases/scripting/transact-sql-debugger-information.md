@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, QuickWatch"
   - "Transact-SQL debugger, viewing information"
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Transact-SQL Debugger Information

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "catalog functions [ODBC]"
   - "functions [ODBC]"
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using Catalog Functions

@@ -48,7 +48,7 @@ The following table shows the features we recommend using in [!INCLUDE[ssCurrent
 |**Trace Capture**|[Extended Events](../../relational-databases/extended-events/extended-events.md) graphical user interface in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**Trace Replay**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|
 
-## Use SQL Server Profiler 
+## Use SQL Server Profiler
 
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a graphical user interface to SQL Trace for monitoring an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or Analysis Services. You can capture and save data about each event to a file or table to analyze later. For example, you can monitor a production environment to see which stored procedures are affecting performance by executing too slowly. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is used for activities such as:
 

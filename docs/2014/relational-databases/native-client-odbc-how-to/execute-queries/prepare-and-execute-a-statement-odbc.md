@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "statement execution"
   - "statement preparation"
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Prepare and Execute a Statement (ODBC)

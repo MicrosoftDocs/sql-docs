@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "processing results [ODBC]"
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Process Results (ODBC)

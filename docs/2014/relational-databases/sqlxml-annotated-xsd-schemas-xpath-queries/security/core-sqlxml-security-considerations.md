@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "security [SQLXML], about security"
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Core SQLXML Security Considerations

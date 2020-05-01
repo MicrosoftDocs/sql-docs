@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "bulk copy using format file [ODBC]"
   - "ODBC, bulk copy operations"
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Bulk Copy by Using a Format File (ODBC)

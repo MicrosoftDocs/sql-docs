@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Bulk Copy Without a Format File (ODBC)

@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.swb.nativecompilationwizard.f1"
   - "swb.nativecompilationwizard.f1"
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Native Compilation Advisor

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "data source objects [OLE DB]"
   - "CLSID"
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Data Source Objects (OLE DB)

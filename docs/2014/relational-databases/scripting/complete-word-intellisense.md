@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "text completion [IntelliSense]"
   - "Complete Word option [IntelliSense]"
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Complete Word (IntelliSense)

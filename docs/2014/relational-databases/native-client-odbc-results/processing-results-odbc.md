@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "result sets [ODBC]"
   - "COMPUTE BY clause"
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Processing Results (ODBC)

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
   - "queries [SQL Server], SQL Server Management Studio"
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Query and Text Editors (SQL Server Management Studio)

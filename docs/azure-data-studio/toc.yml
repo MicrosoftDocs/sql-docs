@@ -1,9 +1,6 @@
 - name: Azure Data Studio
   href: ../azure-data-studio/index.yml
 
-- name: SQL Server documentation >
-  href: ../sql-server/index.yml
-
 - name: Download Azure Data Studio
   href: download-azure-data-studio.md
 - name: Release notes

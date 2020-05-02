@@ -21,7 +21,7 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
 > [!NOTE]
-> To add Python packages to SQL Server 2019 or later, use the **sqlmlutils** package described in this article. For SQL Server 2017 and earlier, see [Install packages with Python tools](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
+> The **sqlmlutils** package described in this article is used for adding Python packages to SQL Server 2019 or later. For SQL Server 2017 and earlier, see [Install packages with Python tools](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
 
 ## Prerequisites
 

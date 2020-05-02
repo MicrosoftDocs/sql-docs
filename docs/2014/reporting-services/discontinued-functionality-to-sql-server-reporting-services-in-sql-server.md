@@ -5,9 +5,7 @@ ms.author: maggies
 manager: kfile
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.prod: sql-server-2014
 ms.technology: reporting-services
-ms.prod_service: reporting-services-native, reporting-services-sharepoint 
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018

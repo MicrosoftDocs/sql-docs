@@ -10,11 +10,8 @@ ms.author: chadam
 ms.reviewer: garye
 ms.date: 04/27/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
+
 ---
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
 
 # Tutorial: Prepare data to perform clustering in R with SQL machine learning services
 
@@ -30,6 +27,7 @@ In this four-part tutorial series, you'll use R to develop and deploy a K-Means 
 In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a database. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL machine learning.
 
 In parts two and three of this series, you'll develop some R scripts in an Azure Data Studio notebook to analyze and prepare your data and train a machine learning model. Then, in part four, you'll run those R scripts inside a database using stored procedures.
+
 *Clustering* can be explained as organizing data into groups where members of a group are similar in some way. For this tutorial series, imagine you own a retail business. You'll use the **K-Means** algorithm to perform the clustering of customers in a dataset of product purchases and returns. By clustering customers, you can focus your marketing efforts more effectively by targeting specific groups. K-Means clustering is an *unsupervised learning* algorithm that looks for patterns in data based on similarities.
 
 
@@ -38,7 +36,7 @@ In this article, you'll learn how to:
 > [!div class="checklist"]
 > * Restore a sample database
 > 
-In [part two](r-tutorial-clustering-model-prepare-data.md),you'll learn how to prepare the data from a database to perform clustering.
+In [part two](r-tutorial-clustering-model-prepare-data.md), you'll learn how to prepare the data from a database to perform clustering.
 
 In [part three](r-tutorial-clustering-model-build-data.md), you'll learn how to create and train a K-Means clustering model in R.
 

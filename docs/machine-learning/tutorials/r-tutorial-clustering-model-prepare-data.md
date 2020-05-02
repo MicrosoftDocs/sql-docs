@@ -22,7 +22,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current|
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into an SQL database
 > * Separate customers along different dimensions using R
 > * Load the data from the SQL database into an R data frame
 
@@ -35,10 +34,7 @@ In [part four](r-tutorial-clustering-model-deploy-data.md), you'll learn how to 
 
 ## Prerequisites
 
-* R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
-
-* SQL query tool - This tutorial assumes you're using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is).
-
+** Part two of this tutorial assumes you have completed [**part one**](r-tutorial-clustering-model-introduction.md).
 
 ## Separate customers
 

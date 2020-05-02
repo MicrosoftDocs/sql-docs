@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # AD mode login fails - Login from untrusted domain (Big Data Clusters)
 
-On a SQL Server Big Data Cluster (BDC) in Active Directory mode, if clients fail to log in and the connection attempt returns the following error:
+On a SQL Server Big Data Cluster (BDC) in Active Directory mode, a connection attempt may fail and the connection attempt returns the following error:
 
 `Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.`
 

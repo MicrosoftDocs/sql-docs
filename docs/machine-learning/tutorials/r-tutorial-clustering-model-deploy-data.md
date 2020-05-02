@@ -24,7 +24,7 @@ In part four of this four-part tutorial series, you'll deploy a clustering model
 In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services.
 ::: moniker-end
 
-In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the Python script from any App. To do that, you can deploy the R script in a database by putting the R script inside a SQL stored procedure. Because your model executes in the database, it can easily be trained against data stored in the database.
+In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the R script from any app. To do that, you can deploy the R script in a database by putting the R script inside a SQL stored procedure. Because your model executes in the database, it can easily be trained against data stored in the database.
 
 In this article, you'll learn how to:
 
@@ -48,11 +48,11 @@ In [part three](r-tutorial-clustering-model-build-data.md), you learned how to c
 
 ## Prerequisites
 
-* Part three of this tutorial series assumes you have completed [**part one**](r-tutorial-clustering-model-introduction.md) and [**part two**](r-tutorial-clustering-model-build-data.md).
+* Part four of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-tutorial-clustering-model-introduction.md) and completed the steps in [**part two**](r-tutorial-clustering-model-build-data.md) and [**part three**](r-tutorial-clustering-model-build-data.md).
 
 ## Create a stored procedure that generates the model
 
-Run the following T-SQL script to create the stored procedure. The procedure recreates the steps you developed in parts one and two of this tutorial series:
+Run the following T-SQL script to create the stored procedure. The procedure recreates the steps you developed in parts two and three of this tutorial series:
 
 * classify customers based on their purchase and return history
 * generate four clusters of customers using a K-Means algorithm
@@ -177,7 +177,7 @@ END;
 GO
 ```
 
-## Perform clustering in SQL Database
+## Perform clustering in SQL database
 
 Now that you've created the stored procedure, execute the following script to perform clustering.
 

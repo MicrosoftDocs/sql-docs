@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB extensions for XML"
   - "SQL Server Native Client OLE DB provider, command execution"
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Executing a Command

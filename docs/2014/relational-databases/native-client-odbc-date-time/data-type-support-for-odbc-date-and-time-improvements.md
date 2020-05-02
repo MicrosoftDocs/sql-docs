@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "date/time [ODBC], data type support"
   - "ODBC, date/time improvements"
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Data Type Support for ODBC Date and Time Improvements

@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_control function"
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_control

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "statement handles [ODBC]"
   - "SQLAllocHandle function"
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Allocating a Statement Handle

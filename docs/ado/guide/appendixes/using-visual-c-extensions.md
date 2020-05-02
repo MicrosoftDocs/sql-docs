@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Visual C++ [ADO], using VC++ extensions"
   - "ADO, Visual C++"
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Visual C++ Extensions
 ## The IADORecordBinding Interface

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "program variables [ODBC]"
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Bulk Copying from Program Variables

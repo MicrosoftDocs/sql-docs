@@ -8,8 +8,8 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Step 2: Initialize the Main List Box
 To declare global Record and Recordset objects, insert the following code into the (General) (Declarations) for Form1:  

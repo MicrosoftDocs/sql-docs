@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, ISO options"
   - "statements [ODBC], ISO options"
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Effects of ISO Options

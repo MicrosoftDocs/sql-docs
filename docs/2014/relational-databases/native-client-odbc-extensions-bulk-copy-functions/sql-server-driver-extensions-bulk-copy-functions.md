@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "functions [ODBC]"
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Bulk Copy Functions

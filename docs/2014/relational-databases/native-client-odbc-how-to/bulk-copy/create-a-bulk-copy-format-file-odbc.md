@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC], file formats"
   - "bulk copy [ODBC], data files"
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Create a Bulk Copy Format File (ODBC)

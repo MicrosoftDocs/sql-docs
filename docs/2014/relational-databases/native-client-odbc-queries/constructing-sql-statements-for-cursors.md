@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ODBC applications, statements"
   - "statements [ODBC], cursors"
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Constructing SQL Statements for Cursors

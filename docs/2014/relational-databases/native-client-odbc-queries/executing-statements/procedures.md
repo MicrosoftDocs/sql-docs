@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "statements [ODBC], stored procedures"
   - "ODBC applications, stored procedures"
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Procedures

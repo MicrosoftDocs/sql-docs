@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, persisted data source objects"
   - "persisted data source objects"
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Persisted Data Source Objects

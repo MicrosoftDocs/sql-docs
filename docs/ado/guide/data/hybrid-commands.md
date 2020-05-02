@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "hybrid commands [ADO]"
   - "data shaping [ADO], hybrid commands"
 ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Hybrid Commands
 Hybrid commands are partially parameterized commands. For example:  

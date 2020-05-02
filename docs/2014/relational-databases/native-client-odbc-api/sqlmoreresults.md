@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLMoreResults function"
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLMoreResults

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "GetColumns method"
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using IRow::GetColumns

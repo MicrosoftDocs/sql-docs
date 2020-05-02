@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "IDREF directive"
   - "ID directive"
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Example: Specifying the ID and IDREF Directives

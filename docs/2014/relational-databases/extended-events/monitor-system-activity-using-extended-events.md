@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "xe"
   - "extended events [SQL Server], monitoring system activity"
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Monitor System Activity Using Extended Events

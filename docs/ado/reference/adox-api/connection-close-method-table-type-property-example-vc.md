@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Type property [ADOX], VC++ example"
   - "Close method [ADOX], VC++ example"
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connection Close Method, Table Type Property Example (VC++)
 Setting the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property to **Nothing** should "close" the catalog. Associated collections will be empty. Any objects that were created from schema objects in the catalog will be orphaned. Any properties on those objects that have been cached will still be available, but attempting to read properties that require a call to the provider will fail.  

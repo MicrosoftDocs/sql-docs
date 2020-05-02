@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Command collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command (Visual C++ Syntax Index with #import)
 ## Methods  

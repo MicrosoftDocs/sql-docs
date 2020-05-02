@@ -5,7 +5,7 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/24/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -60,11 +60,11 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-## Default R packages
+## Default Microsoft R packages
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-The following R packages are installed with SQL Server R Services.
+The following Microsoft R packages are installed with SQL Server R Services.
 
 |Packages | Version | Description |
 |---------|---------|-------------|
@@ -73,15 +73,28 @@ The following R packages are installed with SQL Server R Services.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-The following R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
+The following Microsoft R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
 
 |Packages | Version | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
 | [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Adds machine learning algorithms in R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
+
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+The following Microsoft R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
+
+|Packages | Version | Description |
+|---------|---------|-------------|
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | Adds machine learning algorithms in R. |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
 
 ::: moniker-end
@@ -132,24 +145,25 @@ For more information about the optional and default fields for the R package DES
 If you've installed an R package and want to make sure that it's available to a particular SQL Server instance, you can execute a stored procedure to load the package and return messages.
 
 For example, the following statement looks for and loads the [glue](https://cran.r-project.org/web/packages/glue/) package, if available.
-If the package cannot be located or loaded, you get an error containing the text, "there is no package called 'glue'."
+If the package cannot be located or loaded, you get an error.
 
 ```sql
 EXECUTE sp_execute_external_script  
   @language =N'R',
-  @script=N'require("glue")'
-GO
+  @script=N'
+require("glue")
+'
 ```
 
 To see more information about the package, view the `packageDescription`.
-The following statement returns information for the **glue** package.
+The following statement returns information for the **MicrosoftML** package.
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'R',
   @script = N'
-print(packageDescription("glue"))
-  '
+print(packageDescription("MicrosoftML"))
+'
 ```
 
 ## Next steps
@@ -157,6 +171,6 @@ print(packageDescription("glue"))
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Install packages with R tools](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

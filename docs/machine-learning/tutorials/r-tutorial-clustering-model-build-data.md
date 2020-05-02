@@ -89,9 +89,9 @@ sqlSave(ch, customer_cluster, tablename = "return_cluster")
 customer_cluster_check <- sqlFetch(ch, "return_cluster")
 
 head(customer_cluster_check)
-## Analyze the results
 
 ```
+## Analyze the results
 
 Now that you've done the clustering using K-Means, the next step is to analyze the result and see if you can find any actionable information.
 

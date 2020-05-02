@@ -1,13 +1,10 @@
 ---
 title: "Read Method | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.prod: sql  
-ms.prod_service: connectivity
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 

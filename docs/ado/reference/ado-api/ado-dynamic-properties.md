@@ -1,13 +1,10 @@
 ---
 title: "ADO Dynamic Properties | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: 
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.prod: sql  
-ms.prod_service: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dynamic properties [ADO]"
@@ -30,8 +27,9 @@ Dynamic properties can be added to the [Properties](../../../ado/reference/ado-a
 |[Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Specifies a name for the **Recordset** object.|  
 |[Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Specifies a user-supplied command string that the **Resync** method issues to refresh the data in the table named in the **Unique Table** dynamic property.|  
 |[Unique Table, Unique Schema, Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Unique Table** Specifies the name of the base table upon which updates, insertions, and deletions are allowed.<br /><br /> **Unique Schema** Specifies the schema, or name of the owner of the table.<br /><br /> **Unique Catalog** Specifies the catalog, or name of the database that contains the table.|  
-|[Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Specifies whether the **UpdateBatch** method is followed by an implicit **Resync** method operation, and if so, the scope of that operation.|  
-  
+|[Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Specifies whether the **UpdateBatch** method is followed by an implicit **Resync** method operation, and if so, the scope of that operation.|
+| &nbsp; | &nbsp; |
+
 ## See Also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)   

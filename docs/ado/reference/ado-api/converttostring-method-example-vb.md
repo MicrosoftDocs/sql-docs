@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ConvertToString method [ADO], Visual Basic example"
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ConvertToString Method Example (VB)
 ```  

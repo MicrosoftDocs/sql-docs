@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Recordset collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Recordset (ADO for Visual C++ Syntax)
 ## Methods  

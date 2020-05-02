@@ -38,7 +38,7 @@ To learn more about using R in Machine Learning Services, see:
 
 [Run R scripts](quickstart-r-create-script.md]
 [R data structures, data types, and objects](quickstart-r-data-types-and-objects.md)
-[R functions](quickstart-r-tutorials.md)
+[R functions](quickstart-r-functions.md)
 
 In [part one](r-tutorial-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
 

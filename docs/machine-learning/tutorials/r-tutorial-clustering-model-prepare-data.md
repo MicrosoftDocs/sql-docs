@@ -15,15 +15,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current|
 
 # Tutorial: Prepare data to perform clustering in R with SQL machine learning services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll restore and prepare the data from a database using R. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL Server Machine Learning Services or on Big Data Clusters.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll restore and prepare the data from a database using R. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL Server Machine Learning Services.
-::: moniker-end
-In parts one and two of this series, you'll develop some R scripts in RStudio to prepare your data and train a machine learning model. Then, in part three, you'll run those R scripts inside a SQL database using stored procedures.
+
+
 
 In this article, you'll learn how to:
 
@@ -161,7 +155,7 @@ You should see results similar to the following.
 
 ## Next steps
 
-In part one of this tutorial series, you completed these steps:
+In part two of this tutorial series, you completed these steps:
 
 * Separate customers along different dimensions using R
 * Load the data from the SQL database into an R data frame

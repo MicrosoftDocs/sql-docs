@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new R packages to an instance of SQL Server Machine Learning Services or SQL Server R Services. The packages you install can be used in R scripts running in-database using the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL statement.
 
 > [!NOTE]
-> To add R packages to SQL Server 2019 or later, use the **sqlmlutils** package described in this article. For SQL Server 2017 and earlier, see [Install packages with R tools](install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
+> To add R packages to SQL Server 2019 or later, use the **sqlmlutils** package described in this article. For SQL Server 2017 and earlier, see [Install packages with R tools](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
 
 ## Prerequisites
 

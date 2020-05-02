@@ -29,9 +29,16 @@ In order to perform clustering on a regular basis, as new customers are register
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
+
 > * Create a stored procedure that generates the model
 > * Perform clustering in SQL Database
 > * Use the clustering information
+
+To learn more about using R in Machine Learning Services, see:
+
+[Run R scripts](quickstart-r-create-script.md]
+[R data structures, data types, and objects](quickstart-r-data-types-and-objects.md)
+[R functions](quickstart-r-tutorials.md)
 
 In [part one](r-tutorial-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
 

@@ -18,10 +18,10 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In this quickstart, you'll learn how to use Python mathematical and utility functions with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). Statistical functions are often complicated to implement in T-SQL, but can be done in R with only a few lines of code.
+In this quickstart, you'll learn how to use Python mathematical and utility functions with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). Statistical functions are often complicated to implement in T-SQL, but can be done in Python with only a few lines of code.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In this quickstart, you'll learn how to use R mathematical and utility functions with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Statistical functions are often complicated to implement in T-SQL, but can be done in Python with only a few lines of code.
+In this quickstart, you'll learn how to use Python mathematical and utility functions with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Statistical functions are often complicated to implement in T-SQL, but can be done in Python with only a few lines of code.
 ::: moniker-end
 
 ## Prerequisites

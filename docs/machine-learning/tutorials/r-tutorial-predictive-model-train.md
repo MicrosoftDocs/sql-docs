@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Train and compare predictive models in R"
-titleSuffix: SQL Database Machine Learning Services
-description: In part three of this four-part tutorial series, you'll create two predictive models in R with SQL machine learning services, and then select the most accurate model.
+titleSuffix: SQL machine learning 
+description: In part three of this four-part tutorial series, you'll develop two predictive models in R with SQL machine learning services, and then select the most accurate model.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
@@ -25,9 +25,9 @@ In part three of this four-part tutorial series, you'll train a linear regressio
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part three of this four-part tutorial series, you'll train a linear regression model in R. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services.
 ::: moniker-end
-
-In this article, you'll learn how to:
-
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In part three of this four-part tutorial series, you'll train a linear regression model in R. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services.
+::: moniker-end
 
 In this article, you'll learn how to:
 

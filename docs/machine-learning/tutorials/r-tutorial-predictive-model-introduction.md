@@ -1,7 +1,7 @@
 ---
-title: "Tutorial: SQL Database predictive model in R"
-titleSuffix: SQL Database Machine Learning Services
-description: In this four-part tutorial series, you'll prepare the data to train a predictive model in R with  SQL machine learning services.
+title: "Tutorial: Develop predictive model in R"
+titleSuffix: SQL machine learning
+description: In this four-part tutorial series, you'll develop data to train a predictive model in R with  SQL machine learning services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
@@ -19,7 +19,12 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In this four-part tutorial series, you will use R and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+In this four-part tutorial series, you will use R and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
+
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In this four-part tutorial series, you will use R and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"

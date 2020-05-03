@@ -24,6 +24,9 @@ In part two of this four-part tutorial series, you'll prepare data from a databa
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services.
 ::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services.
+::: moniker-end
 
 In this article, you'll learn how to:
 
@@ -78,7 +81,7 @@ The data is now prepared for training.
 
 ## Clean up resources
 
-If you're not going to continue with this tutorial, delete the TutorialDB database from your Azure SQL Database server.
+If you're not going to continue with this tutorial, delete the TutorialDB database.
 
 ## Next steps
 

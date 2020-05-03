@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current|
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll develop a linear regression model developed in R into a SQL Server database using Machine Learning Services or Big Data Clusters.
+In part four of this four-part tutorial series, you'll develop a linear regression model developed in R into a SQL Server or Big Data Clusters using Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll develop a linear regression model developed in R into a SQL Server database using Machine Learning Services.
@@ -41,7 +41,7 @@ In [part three](r-tutorial-predictive-model-train.md), you learned how to create
 
 ## Prerequisites
 
-* Part four of this tutorial assumes you have completed [part one](r-tutorial-predictive-model-introduction.md) and its prerequisites.
+* Part four of this tutorial assumes you fulfilled the prerequisites of [part one](r-tutorial-predictive-model-introduction.md) and completed the steps in [part two](r-tutorial-predictive-model-prepare-data.md) and [part three](r-tutorial-predictive-model-train.md).
 
 ## Create a stored procedure that generates the model
 
@@ -207,5 +207,11 @@ In part four of this tutorial series, you completed these steps:
 * Store the model in a database table
 * Create a stored procedure that makes predictions using the model
 * Execute the model with new data
+
+To learn more about using R in Machine Learning Services, see:
+
+[Run simple R scripts](quickstart-r-create-script.md)
+[R data structures,types and objects](quickstart-r-data-types-and-objects.md)[
+[R functions](quickstart-r-functions.md]
 
 

@@ -39,7 +39,8 @@ In [part four](r-tutorial-clustering-model-deploy-data.md),  you'll learn how to
 
 ## Prerequisites
 
-* Part two of this tutorial assumes you have completed [**part one**](r-tutorial-clustering-model-introduction.md) and [part two](r-tutorial-clustering-model-prepare-data.md) along with its prerequisites.
+
+* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-tutorial-clustering-model-introduction.md) and  completed the steps in [part two](r-tutorial-clustering-model-prepare-data.md) along with its prerequisites.
 
 ## Define the number of clusters
 

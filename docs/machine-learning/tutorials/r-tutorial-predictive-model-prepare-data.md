@@ -53,22 +53,23 @@ Create a new RScript file in RStudio and run the following script. Replace **Ser
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- paste("Driver=SQL Server",
-               "; Server=", "<Azure SQL Database Server>",
-               "; Database=TutorialDB",
-               "; UID=", "<user>",
-               "; PWD=", "<password>",
-                  sep = "");
+connStr <- "Driver=SQL Server;Server=SQL Database Server;Database=TutorialDB;Trusted_Connection=TRUE"
 
 #Get the data from the table
-SQL_rentaldata <- RxSqlServerData(table = "dbo.rental_data", connectionString = connStr, returnDataFrame = TRUE);
+library(RODBC)
 
-#Import the data into a data frame
-rentaldata <- rxImport(SQL_rentaldata);
+ch <- odbcDriverConnect(connStr)
 
 #Take a look at the structure of the data and the top rows
-head(rentaldata);
-str(rentaldata);
+head(rentaldata)
+str(rentaldata)
+
+#Import the data from the table
+rentaldata <- sqlFetch(ch, "dbo.rental_data")
+
+#Take a look at the structure of the data and the top rows
+head(rentaldata)
+str(rentaldata)
 ```
 
 You should see results similar to the following.

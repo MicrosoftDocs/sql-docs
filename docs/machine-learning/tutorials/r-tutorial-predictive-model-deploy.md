@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Deploy a predictive model in R"
-titleSuffix: SQL Database Machine Learning Services
+titleSuffix: SQL machine learning
 description: In part four of this four-part tutorial, you'll deploy a predictive model in R with SQL machine learning services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -18,10 +18,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current|
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a linear regression model developed in R into a SQL Server database using Machine Learning Services or Big Data Clusters.
+In part four of this four-part tutorial series, you'll develop a linear regression model developed in R into a SQL Server database using Machine Learning Services or Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a linear regression model developed in R into a SQL Server database using Machine Learning Services.
+In part four of this four-part tutorial series, you'll develop a linear regression model developed in R into a SQL Server database using Machine Learning Services.
 ::: moniker-end
 
 In this article, you'll learn how to:
@@ -199,9 +199,7 @@ You have successfully created, trained, and deployed a model in an SQL database.
 
 ## Clean up resources
 
-When you've finished using the TutorialDB database, delete it from your SQL Database server.
-
-## Next steps
+When you've finished using the TutorialDB database, delete it from your SQL server.
 
 In part four of this tutorial series, you completed these steps:
 
@@ -209,3 +207,5 @@ In part four of this tutorial series, you completed these steps:
 * Store the model in a database table
 * Create a stored procedure that makes predictions using the model
 * Execute the model with new data
+
+

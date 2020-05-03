@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Develop a clustering model in R"
-titleSuffix: SQL Database Machine Learning Services
+titleSuffix: SQL Machine Learning
 description: In part one of this four-part tutorial series, you'll develop a model to perform clustering in R with SQL machine learning services.
 ms.prod: sql
 ms.technology: machine-learning

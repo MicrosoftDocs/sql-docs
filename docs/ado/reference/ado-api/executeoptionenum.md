@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ExecuteOptionEnum enumeration [ADO]"
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ExecuteOptionEnum
 Specifies how a provider should execute a command.  

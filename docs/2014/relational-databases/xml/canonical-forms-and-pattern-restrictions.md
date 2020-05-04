@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "pattern restrictions"
   - "canonical forms"
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Canonical Forms and Pattern Restrictions

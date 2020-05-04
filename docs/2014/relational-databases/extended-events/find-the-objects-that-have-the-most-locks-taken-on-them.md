@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], locks"
   - "objects [SQL Server], locks"
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Find the Objects That Have the Most Locks Taken on Them

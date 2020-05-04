@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "FOR XML clause, EXPLICIT mode"
   - "FOR XML EXPLICIT mode"
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Use EXPLICIT Mode with FOR XML

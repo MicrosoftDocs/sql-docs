@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConnectionString property [ADO]"
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ConnectionString Property (ADO)
 Indicates the information used to establish a connection to a data source.  

@@ -1,5 +1,6 @@
 ---
 title: "Deploying the JDBC driver"
+description: "Learn how you can redistribute and deploy the Microsoft JDBC Driver for SQL Server with your application and what files are required."
 ms.custom: ""
 ms.date: 03/13/2020
 ms.prod: sql
@@ -50,4 +51,4 @@ The JDBC Driver versions 4.x are old and obsolete. Support for 4.x expired befor
 
 ## See also
 
-[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  

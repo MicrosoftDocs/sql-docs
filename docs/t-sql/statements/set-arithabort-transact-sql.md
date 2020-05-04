@@ -37,13 +37,13 @@ Ends a query when an overflow or divide-by-zero error occurs during query execut
   
 ## Syntax  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET ARITHABORT { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ARITHABORT ON

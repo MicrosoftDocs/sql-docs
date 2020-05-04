@@ -32,7 +32,7 @@ Reads **text**, **ntext**, or **image** values from a **text**, **ntext**, or **
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
@@ -67,7 +67,7 @@ READTEXT permissions default to users that have SELECT permissions on the specif
 The following example reads the second through 26th characters of the `pr_info` column in the `pub_info` table.  
   
 > [!NOTE]  
->  To run this example, you must install the **pubs** sample database.  
+>  To run this example, you must install the [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) sample database.  
   
 ```  
 USE pubs;  

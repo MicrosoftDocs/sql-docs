@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "XML [SQL Server], SQL Server Native Client"
   - "COLUMNS rowset"
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using XML Data Types

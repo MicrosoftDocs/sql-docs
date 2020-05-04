@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SET DATEFORMAT { format | @format_var }   
 ```  
   
@@ -64,7 +64,7 @@ SET DATEFORMAT { format | @format_var }
 ## Examples  
  The following example uses different date strings as inputs in sessions with the same `DATEFORMAT` setting.  
   
-```  
+```sql
 -- Set date format to day/month/year.  
 SET DATEFORMAT dmy;  
 GO  

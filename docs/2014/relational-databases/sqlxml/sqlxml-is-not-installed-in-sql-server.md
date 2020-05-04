@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: "reference"
 ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLXML Is Not Installed in SQL Server

@@ -29,7 +29,7 @@ This function returns the corresponding angle, in degrees, for an angle specifie
   
 ## Syntax  
   
-```  
+```syntaxsql
 DEGREES ( numeric_expression )  
 ```  
   

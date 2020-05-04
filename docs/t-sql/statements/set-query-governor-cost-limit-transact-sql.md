@@ -32,7 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  

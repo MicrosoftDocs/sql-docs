@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "connection strings [SQL Server Native Client]"
   - "SQL Server Native Client, connection string keywords"
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using Connection String Keywords with SQL Server Native Client

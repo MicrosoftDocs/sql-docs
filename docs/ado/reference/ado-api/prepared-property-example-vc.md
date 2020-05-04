@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Prepared property [ADO], VC++ example"
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Prepared Property Example (VC++)
 This example demonstrates the [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) property by opening two [Command](../../../ado/reference/ado-api/command-object-ado.md) objects - one prepared and one not prepared.  

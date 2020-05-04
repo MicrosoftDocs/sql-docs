@@ -1,5 +1,6 @@
 ---
 title: "Select Backup Device | Microsoft Docs"
+description: For SQL Server restore, use the Select Backup Device dialog box to select a logical backup device for the restore operation.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

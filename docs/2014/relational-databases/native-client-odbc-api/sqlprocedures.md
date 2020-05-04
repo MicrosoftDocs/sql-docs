@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLProcedures function"
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLProcedures

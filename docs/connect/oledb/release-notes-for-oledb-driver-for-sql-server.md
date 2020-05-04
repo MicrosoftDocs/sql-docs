@@ -1,5 +1,6 @@
 ---
-title: "Release notes (OLE DB Driver for SQL Server)"
+title: "Release notes for OLE DB Driver"
+description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
 ms.date: "02/27/2020"
 ms.prod: sql
 ms.technology: connectivity

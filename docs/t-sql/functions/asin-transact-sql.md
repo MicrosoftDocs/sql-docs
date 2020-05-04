@@ -30,7 +30,7 @@ A function that returns the angle, in radians, whose sine is the specified **flo
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASIN ( float_expression )  
 ```  
   

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "AbsolutePage property [ADO], Visual Basic example"
   - "PageSize property [ADO], Visual Basic example"
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VB)
 ```  

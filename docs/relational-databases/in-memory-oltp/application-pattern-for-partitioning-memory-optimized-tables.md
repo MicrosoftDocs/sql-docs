@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports an application design pattern that lavishes performance resources on relatively current data. This pattern can apply when current data is read or updated far more frequently than older data is. In this case we say the current data is *active* or *hot*, and the older data is *cold*.
+[!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports an application design pattern that lavishes performance resources on relatively current data. This pattern can apply when current data is read or updated far more frequently than older data is. In this case, we say the current data is *active* or *hot*, and the older data is *cold*.
 
 The main idea is to store *hot* data in a memory-optimized table. On a perhaps weekly or monthly basis, older data that has become *cold* is moved to a partitioned table. The partitioned table has its data stored on a disk or other hard drive, not in memory.
 
@@ -23,7 +23,7 @@ Typically, this design uses a **datetime** key to enable the move process to eff
 
 ## Advanced partitioning
 
-The design intends to mimic having a partitioned table that also has one memory-optimized partition. For this to work, you must ensure that the tables all share a common schema. The code sample later in this article shows the technique.
+The design intends to mimic having a partitioned table that also has one memory-optimized partition. For this design to work, you must ensure that the tables all share a common schema. The code sample later in this article shows the technique.
 
 New data is presumed to be hot by definition. Hot data is inserted and updated in the memory-optimized table. Cold data is maintained in the traditional partitioned table. Periodically, a stored procedure adds a new partition. The partition contains the latest cold data that has been moved out of the memory-optimized table.
 
@@ -164,7 +164,7 @@ GO
 
 ### Create the stored procedure
 
-This section creates the stored procedure that is run periodically, to move newly cold data from the memory-optimized table into the partitioned table.
+This section creates the stored procedure that you run periodically. The procedure moves newly cold data from the memory-optimized table into the partitioned table.
 
 ```sql
 -- A stored procedure to move all newly cold sales orders data
@@ -219,7 +219,7 @@ GO
 
 ### Prepare sample data, and demo the stored procedure
 
-This sections generates and inserts sample data, and then runs the stored procedure as a demonstration.
+This section generates and inserts sample data, and then runs the stored procedure as a demonstration.
 
 ```sql
 -- Insert sample values into the hot table.

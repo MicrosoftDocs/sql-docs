@@ -10102,13 +10102,13 @@
       href: sql-server/partner-management-sql-server.md
     - name: Development
       href: sql-server/partner-dev-sql-server.md
-  - name: Offline SQL Server documentation
-    href: sql-server/sql-server-offline-documentation.md
 - name: Reference
   items:
   - name: Archived Content (SQL 2005 - 2012) >
     displayName: 2005, 2008, 2008 r2, 2012, previous-versions
     href: https://docs.microsoft.com/previous-versions/sql/
+  - name: Offline SQL Server documentation
+    href: sql-server/sql-server-offline-documentation.md
   - name: Database samples
     items:
     - name: Samples Overview

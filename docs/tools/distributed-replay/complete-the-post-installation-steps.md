@@ -1,6 +1,7 @@
 ---
 title: Complete the post-installation steps
 titleSuffix: SQL Server Distributed Replay
+description: After you install Distributed Replay you must modify the Distributed Replay controller and client services accounts.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

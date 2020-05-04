@@ -1,6 +1,7 @@
 ---
 title: "Editions and supported features"
 titleSuffix: SQL Server 2016
+description: This article describes features supported by the various editions of SQL Server 2016, which accommodate different performance, runtime, and price requirements.
 ms.custom: 
    - seo-lt-2019
    - sqlfreshmay19

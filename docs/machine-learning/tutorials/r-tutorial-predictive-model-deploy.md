@@ -43,7 +43,7 @@ In [part three](r-tutorial-predictive-model-train.md), you learned how to create
 
 ## Prerequisites
 
-* Part four of this tutorial assumes you fulfilled the prerequisites of [part one](r-tutorial-predictive-model-introduction.md) and completed the steps in [part two](r-tutorial-predictive-model-prepare-data.md) and [part three](r-tutorial-predictive-model-train.md).
+Part four of this tutorial assumes you fulfilled the prerequisites of [part one](r-tutorial-predictive-model-introduction.md) and completed the steps in [part two](r-tutorial-predictive-model-prepare-data.md) and [part three](r-tutorial-predictive-model-train.md).
 
 ## Create a stored procedure that generates the model
 

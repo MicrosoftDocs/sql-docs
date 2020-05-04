@@ -51,7 +51,7 @@ In the **paste** function, replace **Server**, **UID**, and **PWD** with your ow
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=516798-0911;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
 
 #Define the query to select data from SQL Server
 input_query <- "

@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 ---
 
-# Tutorial: Prepare data to train a predictive model in R with SQL machine learning Services
+# Tutorial: Prepare data to train a predictive model in R with SQL machine learning services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -43,7 +43,7 @@ In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store
 
 ## Prerequisites
 
-* Part two of this tutorial assumes you have completed [part one](r-tutorial-predictive-model-introduction.md) and its prerequisites.
+Part two of this tutorial assumes you have completed [part one](r-tutorial-predictive-model-introduction.md) and its prerequisites.
 
 ## Load the data into a data frame
 

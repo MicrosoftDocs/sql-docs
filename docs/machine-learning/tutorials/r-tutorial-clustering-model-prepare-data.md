@@ -117,12 +117,12 @@ LEFT OUTER JOIN (
 
 ## Load the data into a data frame
 
-Now use the following script to return the results from the query to an R data frame using the **rxSqlServerData** function.
-As part of the process, you'll define the type for the selected columns (using colClasses) to make sure that the types are correctly transferred to R.
+Now use the following script to return the results from the query to an R data frame using the **SqlServerData** function.
+Now use the following script to return the results from the query to an R data frame.
 
 ```r
 # Query SQL Server using input_query and get the results back
-# to data frame customer_returns
+# to data frame customer_data
 
 library(RODBC)
 

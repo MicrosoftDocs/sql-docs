@@ -17,15 +17,11 @@ ms.date: 05/05/2020
 
 This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). Offline content enables you to access the documentation without an internet connection (although an internet connection is initially required to download it).
 
-Offline documentation is available for several previous versions of SQL Server. Although you can view content for [previous versions online](https://docs.microsoft.com/previous-versions/sql/), an offline option provides a convenient way to access the older content.
+Offline documentation is available for versions of SQL Server 2012 and later. Although you can view content for [previous versions online](https://docs.microsoft.com/previous-versions/sql/), an offline option provides a convenient way to access the older content.
 
 - [SQL Server 2016 and later](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
 - [SQL Server 2012](#sql-server-2012-offline-content)
-
-You can use download and install SQL Server help packages from online sources or local disk.
-
-
 
 ## SQL Server 2016 and later offline content
 

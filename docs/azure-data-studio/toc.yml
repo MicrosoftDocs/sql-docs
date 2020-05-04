@@ -105,13 +105,15 @@
     href: enable-kerberos.md
   - name: Usage data collection
     href: usage-data-collection.md
-- name: Resources
+- name: References
   items:
   - name: Azure Developer tools
     href: https://docs.microsoft.com/azure/?product=developer-tools
-  - name: FAQ
-    href: faq.md
   - name: Azure Data Studio GitHub repo >
     href: https://www.github.com/Microsoft/azuredatastudio
   - name: Report issues & make suggestions >
     href: https://github.com/microsoft/azuredatastudio/issues
+- name: Resources
+  items:
+  - name: FAQ
+    href: faq.md

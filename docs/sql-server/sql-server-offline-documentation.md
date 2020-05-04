@@ -2,13 +2,13 @@
 title: Install previous versions of SQL Server documentation offline
 description: Learn how to install offline documentation for SQL Server 2019, 2017, 2016, 2014, and 2012. Use SQL Server Management Studio (SSMS) to view the offline content. 
 ms.prod: sql
-ms.technology: 
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 04/20/2020
+ms.date: 05/08/2020
 ---
 
 # Install previous versions of SQL Server documentation to view offline in SSMS
@@ -17,13 +17,13 @@ ms.date: 04/20/2020
 
 This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). Offline content enables you to access the documentation without an internet connection (although an internet connection is initially required to download it).
 
-Offline documentation is available for several previous versions of SQL Server. Although you can also [view content for previous versions online](https://docs.microsoft.com/previous-versions/sql/), an offline option provides a convenient way to access the older content.
+Offline documentation is available for several previous versions of SQL Server. Although you can view content for [previous versions online](https://docs.microsoft.com/previous-versions/sql/), an offline option provides a convenient way to access the older content.
 
 You can use download and install SQL Server help packages from online sources or local disk.
 
-## How to download and configure offline content for SQL Server 2016 and later
+## Download offline content for SQL Server 2016 and later
 
-The following steps explain how to load offline content from an online source.
+The following steps explain how to load offline content for SQL Server 2016 and later.
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
@@ -45,11 +45,11 @@ The following steps explain how to load offline content from an online source.
    > [!NOTE]
    > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
-4. You can verify that the SQL Server 2016 content is loaded by searching under the content pane on the left for *sql server 2016*.
+4. You can verify that the SQL Server 2016 content loaded by searching under the left content pane for *sql server 2016*.
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2016-content.png)
 
-## How to download and configure offline content for SQL Server 2014
+## Download offline content for SQL Server 2014
 
 The following steps explain how to load offline content from local disk.
 
@@ -90,7 +90,7 @@ The following steps explain how to load offline content from local disk.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-help-installation/sql-2014-content.png)
 
-## How to download and configure offline content for SQL Server 2012
+## Download offline content for SQL Server 2012
 
 The following steps explain how to load offline content from local disk.
 
@@ -158,7 +158,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## Next steps
 
-To learn more about archived content and about Help viewer, please reference the links below.
+To learn more about archived content and Help viewer, reference the links below.
 
 - [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/)
 - [Microsoft Help Viewer - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)

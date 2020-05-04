@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "bulk load [SQLXML], annotation interpretations"
   - "annotated XDR schemas, XML Bulk Load"
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Annotation Interpretation (SQLXML 4.0)

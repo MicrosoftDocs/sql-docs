@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_done function"
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_done

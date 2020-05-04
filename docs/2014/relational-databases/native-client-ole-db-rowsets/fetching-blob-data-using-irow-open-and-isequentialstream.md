@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ISequentialStream interface"
   - "BLOBs, fetching"
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Fetching BLOB Data Using IRow::Open and ISequentialStream

@@ -3,7 +3,6 @@ title: "Set or Change the Server Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/05/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 

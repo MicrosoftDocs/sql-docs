@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "record location [ADO]"
   - "current record [ADO]"
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Sample Recordset for Examining Data
 First, let's look at the **Recordset** object as returned using the following SQL query, executed against the Northwind sample data base in Microsoft SQL Server.  

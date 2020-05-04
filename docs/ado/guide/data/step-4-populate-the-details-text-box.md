@@ -8,8 +8,8 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Step 4: Populate the Details Text Box
 To populate the Details text box, create a new subroutine named **recFields** and insert the following code:  

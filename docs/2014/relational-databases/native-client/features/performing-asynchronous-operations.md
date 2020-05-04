@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLNCLI, asynchronous operations"
   - "SQL Server Native Client, asynchronous operations"
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Performing Asynchronous Operations

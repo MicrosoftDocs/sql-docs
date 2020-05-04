@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "key ordering rules [SQLXML]"
   - "relationship annotation"
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # sql:relationship and the Key Ordering Rule (SQLXML 4.0)

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
+description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2016 releases.
 ms.date: "04/25/2018"
 ms.prod: sql
 ms.reviewer: ""

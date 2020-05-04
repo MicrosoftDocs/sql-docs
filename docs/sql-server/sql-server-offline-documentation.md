@@ -31,7 +31,7 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
    The Help Viewer opens to the Manage Content tab.
 
-2. To find the latest help content for SQL Server 2016 and later, under the **Manage Content** tab choose **Online** under the Installation source and then type in *sql server 2016* in the search bar.
+2. To find the latest help content for SQL Server 2016 and later, under the **Manage Content** tab choose **Online** under the Installation source and then type in *sql server* in the search bar.
 
    ![SQL Server books search](../sql-server/media/sql-server-offline-documentation/sql-online-search.png)
 
@@ -40,7 +40,7 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
 3. To install the latest help content for SQL Server 2016 and later, select **Add** next to each content package (book) that you want to install and then select **Update** in the lower right.
 
-   ![SQL Server 2016 books add and update in Help Viewer](../sql-server/media/sql-server-offline-documentation/sql-2016-add-update.png)
+   ![SQL Server online books add and update](../sql-server/media/sql-server-offline-documentation/sql-add-update.png)
 
    > [!NOTE]
    > If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
@@ -49,7 +49,7 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-offline-documentation/sql-2016-content.png)
 
-## SQL Server 2014 offline content 
+## SQL Server 2014 offline content
 
 The following steps explain how to load offline content for SQL Server 2014.
 

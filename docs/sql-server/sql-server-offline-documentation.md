@@ -51,7 +51,7 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
 ## Download offline content for SQL Server 2014
 
-The following steps explain how to load offline content from local disk.
+The following steps explain how to load offline content for SQL Server 2014.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
@@ -92,7 +92,7 @@ The following steps explain how to load offline content from local disk.
 
 ## Download offline content for SQL Server 2012
 
-The following steps explain how to load offline content from local disk.
+The following steps explain how to load offline content for SQL Server 2012
 
 1. Download the [Product Documentation for Microsoft SQL Server 2012 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=35750) content from the download center and save it to a folder.
 

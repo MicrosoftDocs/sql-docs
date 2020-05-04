@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Parameter object [ADO], members"
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameter Object Properties, Methods, and Events
 ## Properties/Collections  

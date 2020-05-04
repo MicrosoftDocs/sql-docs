@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Save method [ADO], Visual Basic example"
   - "Open method [ADO]"
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Save and Open Methods Example (VB)
 These three examples demonstrate how the [Save](../../../ado/reference/ado-api/save-method.md) and [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) methods can be used together.  

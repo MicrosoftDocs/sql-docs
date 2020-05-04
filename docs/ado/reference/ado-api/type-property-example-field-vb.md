@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Type property [field] [ADO], Visual Basic example"
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Type Property Example (Field) (VB)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the [Type](../../../ado/reference/ado-api/type-property-ado.md) property of all the [Field](../../../ado/reference/ado-api/field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  

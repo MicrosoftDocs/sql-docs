@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# AD mode login fails - Login from untrusted domain (Big Data Clusters)
+# Symptom: AD mode login fails - Login from untrusted domain (Big Data Clusters)
 
 On a SQL Server Big Data Cluster (BDC) in Active Directory mode, a connection attempt may fail and the connection attempt returns the following error:
 
@@ -19,14 +19,14 @@ On a SQL Server Big Data Cluster (BDC) in Active Directory mode, a connection at
 
 This can happens when you have configured DNS entries as CNAME pointing to an alias name of reverse proxy that distributes the traffic to Kubernetes nodes.
 
-## Cause
+## Root cause
 
 When the endpoints are configured with DNS entries with CNAME pointing to an alias name of reverse proxy that distributes the traffic to Kubernetes nodes:
 
 - Kerberos authentication process looks for a service principal name (SPN) that matches the entry for CNAME; not the true SPN registered by BDC in active directory
 - Authentication fails 
 
-## Verify
+## Confirm root cause
 
 After authentication fails, check the cache of Kerberos tickets. 
 
@@ -132,7 +132,7 @@ Registered ServicePrincipalNames for CN=mssql-master,OU=bdc,DC=mydomain,DC=com:
 
 In the results above the reverse proxy address should not be registered.
 
-## Resolution
+## Resolve
 
 This section shows two ways to resolve the issue. After making the appropriate changes, run `ipconfig -flushdns` and `klist purge` in your client. Then attempt to connect again.
 
@@ -191,6 +191,10 @@ $BdcEndpointsDns_Result
 ### Option 2
 
 Alternatively, it's possible to work around the issue by modifying the CNAME to point to the IP address of the reverse proxy rather than the name of the reverse proxy.
+
+## Confirm Resolution
+
+After resoling the fix with one of the options above, confirm the fix by connecting to Big Data Cluster with active directory.
 
 ## Next steps
 

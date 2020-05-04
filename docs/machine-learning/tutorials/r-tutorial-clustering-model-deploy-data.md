@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current|
 In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services.
+In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to cluster customer data.
 ::: moniker-end
 
 In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the R script from any app. To do that, you can deploy the R script in a database by putting the R script inside a SQL stored procedure. Because your model executes in the database, it can easily be trained against data stored in the database.

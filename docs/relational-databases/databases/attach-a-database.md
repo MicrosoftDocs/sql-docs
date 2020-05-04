@@ -1,5 +1,6 @@
 ---
 title: "Attach a Database | Microsoft Docs"
+description: Learn how to attach a database in SQL Server by using SQL Server Management Studio or Transact-SQL. Use this feature to copy, move, or upgrade a database.
 ms.custom: ""
 ms.date: "10/24/2016"
 ms.prod: sql

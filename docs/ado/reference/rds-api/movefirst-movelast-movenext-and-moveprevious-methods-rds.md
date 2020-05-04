@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "MoveFirst method [RDS]"
   - "MoveNext method [RDS]"
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)
 Moves to the first, last, next, or previous record in a specified [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_batch function"
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_batch

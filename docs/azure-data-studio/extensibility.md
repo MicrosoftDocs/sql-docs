@@ -234,7 +234,7 @@ There are currently four supported container types:
 				"icon": {
 					"light": "./icons/tab1Icon.svg",
 					"dark": "./icons/tab1Icon_dark.svg"
-				}
+				},
 				"container": {
 					...
 				}
@@ -245,7 +245,7 @@ There are currently four supported container types:
 				"icon": {
 					"light": "./icons/tab2Icon.svg",
 					"dark": "./icons/tab2Icon_dark.svg"
-				}
+				},
 				"container": {
 					...
 				}

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "RAW mode"
   - "XMLDATA option"
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Use RAW Mode with FOR XML

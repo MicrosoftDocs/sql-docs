@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLProcedureColumns function"
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLProcedureColumns

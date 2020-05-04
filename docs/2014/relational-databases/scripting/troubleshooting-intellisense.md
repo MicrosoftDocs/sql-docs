@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], unavailable options"
   - "troubleshooting [IntelliSense]"
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Troubleshooting IntelliSense (SQL Server Management Studio)

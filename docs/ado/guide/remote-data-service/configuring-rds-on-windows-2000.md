@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS configuration [ADO], Windows 2000"
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Configuring RDS on Windows 2000
 If you experience difficulties getting RDS to function correctly after you upgrade to Windows 2000, follow these steps to troubleshoot the issue:  

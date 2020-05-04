@@ -3,7 +3,7 @@ title: Configure Linux repositories for SQL Server 2017 and 2019
 description: Check and configure source repositories for SQL Server 2019 and SQL Server 2017 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -175,7 +175,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 >
 > Starting with SQL Server 2017 CU20, RHEL 8 is supported.
 >
-> If you are using RHEL 7 or RHEL 8, ensure the paths match `/rhel/7` or `/rhel/8`.
+> If you are using RHEL 7 or RHEL 8, ensure the paths match `/rhel/7` or `/rhel/8`. Our packages are agnostic to RHEL minor versions. This means that if you are using RHEL 7.6, you will need to use the path `/rhel/7` to configure your repository.
 
 | Repository | Version | Command |
 |---|---|---|

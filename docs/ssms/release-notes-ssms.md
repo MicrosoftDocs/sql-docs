@@ -82,11 +82,11 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | Always On | Fixed an issue where an error was displayed when trying to display the dashboard when connected to a Big Data Cluster endpoint. |
 | Auditing | Fixed an issue where the Audit logs merges window crashes when there's a folder with an empty name in the root folder of the storage account. |
 | Auditing | Fixed an issue where the Audit logs merge window doesn't show all servers when there are too many items in the root of the container. |
-| Data Clarification | Fixed an issue where the *Data Classification* wizard won't open for databases with large number of tables. |
-| Data Clarification | We are now enforcing different GUIDs for every label/infoType and GUID's structure in the validation process. |
-| Data Clarification | Remove classification process in SqlServer2019. |
-| Data Clarification | Correcting the previous validation tests (adding rank, removing the illegal property *InformationTypes*) and adding new ones for the first two points. |
-| Data Clarification | The button just above the classified columns table now minimizes the recommendations panel, as it says. |
+| Data Classification | Fixed an issue where the *Data Classification* wizard won't open for databases with large number of tables. |
+| Data Classification | We are now enforcing different GUIDs for every label/infoType and GUID's structure in the validation process. |
+| Data Classification | Remove classification process in SqlServer2019. |
+| Data Classification | Correcting the previous validation tests (adding rank, removing the illegal property *InformationTypes*) and adding new ones for the first two points. |
+| Data Classification | The button just above the classified columns table now minimizes the recommendations panel, as it says. |
 | General SSMS | Updating the version of MSODBC and MSOLEDB drivers. |
 | General SSMS | Addressed at least two common sources hangs and crashes in SSMS. |
 | General SSMS | Addressed one more case where *Restore dialog* hangs when selecting the Browse button. |
@@ -588,7 +588,7 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 |Object Explorer|Fixed an issue where SSMS was throwing an "Object cannot be cast from DBNull to other types" exception when trying to expand "Management" node in OE (misconfigured DataCollector).|
 |Object Explorer|Fixed an issue where OE wasn't escaping quotes before invoking the "Edit Top N..." causing the designer to get confused.|
 |Object Explorer|Fixed an issue where the "Import Data-Tier application" wizard was failing to launch from the Azure Storage tree.|
-|Object Explorer|Fixed an issue in "Database Mail Configuration" where the status of the SSL checkbox wasn't persisted. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
+|Object Explorer|Fixed an issue in "Database Mail Configuration" where the status of the TLS/SSL checkbox wasn't persisted. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
 |Object Explorer|Fixed an issue where SSMS grayed out option to close existing connections when trying to restore database with is_auto_update_stats_async_on.|
 |Object Explorer|Fixed an issue where right-clicking on nodes in OE the (for example "Tables" and wanting to perform an action such as filtering tables by going to Filter > Filter Settings, the filter settings form can appear on the other screen than where SSMS is currently active). For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106). |
 |Object Explorer|Fixed a long outstanding issue where the DELETE key wasn't working in OE while trying to rename an object. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510), [https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) and other duplicates.|

@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLGetData function"
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLGetData

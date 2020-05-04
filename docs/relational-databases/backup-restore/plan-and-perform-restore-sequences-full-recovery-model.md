@@ -1,5 +1,6 @@
 ---
 title: "Restore sequences (Full Recovery Model) | Microsoft Docs"
+description: Learn how to plan and perform a restore sequence, consisting of RESTORE statements, for a SQL Server database that ordinarily uses the full recovery model.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

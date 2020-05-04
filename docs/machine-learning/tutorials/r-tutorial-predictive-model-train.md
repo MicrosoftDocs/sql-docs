@@ -35,7 +35,7 @@ In this article, you'll learn how to:
 > * Train a linear regression model
 > * Make predictions using the linear regression model
 
-In [part one](r-tutorial-predictive-model-introduction.md),, you learned how to restore the sample database.
+In [part one](r-tutorial-predictive-model-introduction.md), you learned how to restore the sample database.
 
 In [part two](r-tutorial-predictive-model-prepare-data.md), you learned how to load the data from a database into a Python data frame, and prepare the data in R.
 
@@ -45,7 +45,7 @@ In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store
 
 ## Prerequisites
 
-* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-tutorial-predictive-model-introduction.md), and completed the steps in [**part two**](r-tutorial-predictive-model-prepare-data.md).
+Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-tutorial-predictive-model-introduction.md), and completed the steps in [**part two**](r-tutorial-predictive-model-prepare-data.md).
 
 ## Train two models
 

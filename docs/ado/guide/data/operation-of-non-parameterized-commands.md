@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "non-parameterized commands [ADO]"
   - "data shaping [ADO], non-parameterized commands"
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Operation of Non-Parameterized Commands
 For non-parameterized commands, all the provider commands are executed and the **Recordsets** are created during command execution. If the command is executed synchronously, all the **Recordsets** will be fully populated. If an asynchronous population mode was selected, the populated state of the **Recordsets** will depend on the population mode and the size of the **Recordsets**.  

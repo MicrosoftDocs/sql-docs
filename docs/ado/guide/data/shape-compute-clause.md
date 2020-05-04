@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "compute clause [ADO]"
   - "data shaping [ADO], COMPUTE clause"
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Shape COMPUTE Clause
 A shape COMPUTE clause generates a parent **Recordset**, whose columns consist of a reference to the child **Recordset**; optional columns whose contents are chapter, new, or calculated columns, or the result of executing aggregate functions on the child **Recordset** or a previously shaped **Recordset**; and any columns from the child **Recordset** listed in the optional BY clause.  

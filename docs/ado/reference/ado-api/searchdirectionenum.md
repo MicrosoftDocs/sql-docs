@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SearchDirectionEnum enumeration [ADO]"
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SearchDirectionEnum
 Specifies the direction of a record search within a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

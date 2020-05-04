@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Stream collection [ADO]"
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Stream (ADO for Visual C++ Syntax)
 ## Methods  

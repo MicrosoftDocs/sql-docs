@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "VBScript code examples [ADO], about VBScript code examples"
   - "VBScript code examples [ADO]"
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Code Examples VBScript
 Use the following code examples to learn about how to use the ADO methods when writing in Microsoft® Visual Basic® Scripting Edition (VBScript).  

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Append Method (ADOX Views)
 Creates a new [View](../../../ado/reference/adox-api/view-object-adox.md) object and appends it to the [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection.  

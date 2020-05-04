@@ -100,7 +100,7 @@ GO
 
 &nbsp;
 
-## Azure Synapse Analytics (Preview)
+## Azure Synapse Analytics 
 
 Drops a workload group.  Once the statement completes, the settings are in effect.
 

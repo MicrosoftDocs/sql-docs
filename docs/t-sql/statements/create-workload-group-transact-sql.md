@@ -191,7 +191,7 @@ GO
 
 &nbsp;
 
-## Azure Synapse Analytics (preview)
+## Azure Synapse Analytics 
 
 Creates a workload group. Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system. Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules. Once the statement completes, the settings are in effect.
 

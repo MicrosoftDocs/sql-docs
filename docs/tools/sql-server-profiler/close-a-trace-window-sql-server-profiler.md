@@ -1,6 +1,7 @@
 ---
 title: Close a Trace Window
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler captures event data in a trace window. Learn how to close that window when the trace is still running and when it has already finished.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: 

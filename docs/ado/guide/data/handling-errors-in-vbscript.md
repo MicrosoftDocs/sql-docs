@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "VBScript error handling [ADO]"
   - "errors [ADO], VBScript"
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Handling Errors in VBScript
 There is little difference between the methods used in Visual Basic and those used with VBScript. The primary difference is that VBScript does not support the concept of error handling by continuing execution at a label. In other words, you cannot use `On Error GoTo` in VBScript. Instead, use `On Error Resume Next` and then check both **Err.Number** and the **Count** property of the **Errors** collection, as shown in the following example:  

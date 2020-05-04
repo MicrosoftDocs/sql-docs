@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ColumnAttributesEnum enumeration [ADOX]"
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ColumnAttributesEnum
 Specifies characteristics of a [Column](../../../ado/reference/adox-api/column-object-adox.md).  

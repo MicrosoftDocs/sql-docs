@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLTables function"
 ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLTables

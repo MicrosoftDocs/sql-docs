@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "queries [XML in SQL Server], nested AUTO mode"
   - "nested AUTO mode query"
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Generate Siblings with a Nested AUTO Mode Query

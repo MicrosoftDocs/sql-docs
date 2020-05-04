@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SetObjectOwner method [ADOX]"
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SetObjectOwner Method
 Specifies the owner of an object in a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md).  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Visual C++ RDS examples [ADO]"
   - "RDS samples [ADO], Visual C++"
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Code Examples in Visual C++
 Use the following code examples to learn how to use RDS properties when writing in Microsoft Visual C++.  

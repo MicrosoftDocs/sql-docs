@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, updating applications"
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Updating an Application from SQL Server 2005 Native Client

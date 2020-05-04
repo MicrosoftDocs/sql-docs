@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, stored procedures"
   - "stored procedures [ODBC], results"
 ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Processing Stored Procedure Results

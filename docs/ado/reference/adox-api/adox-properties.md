@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "properties [ADOX]"
   - "ADOX, properties"
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADOX Properties
 

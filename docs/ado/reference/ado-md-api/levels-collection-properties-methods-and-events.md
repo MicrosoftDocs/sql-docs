@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Levels collection [ADO MD], members"
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Levels Collection Properties, Methods, and Events
 ## Properties  

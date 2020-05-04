@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "ADO for Visual C++ syntax with #import [ADO]"
   - "#import [ADO]"
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO for Visual C++ Syntax Index with #import
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++ and the **#import** directive.  

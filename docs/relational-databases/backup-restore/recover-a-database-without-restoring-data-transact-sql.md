@@ -1,6 +1,6 @@
 ---
 title: "Recover database - no restore (Transact-SQL)"
-description: In SQL Server, a recovery-only restore recovers a database without restoring a backup. You might recover a read-only file that is consistent with the database.
+description: In SQL Server, a recovery-only restore recovers a database without restoring a backup, typically as the last step when restoring a sequence of backups.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Symptom: AD mode login fails - Login from untrusted domain (Big Data Clusters)
+# Symptom: AD mode login fails - untrusted domain (Big Data Clusters)
 
 On a SQL Server Big Data Cluster (BDC) in Active Directory mode, a connection attempt may fail and the connection attempt returns the following error:
 

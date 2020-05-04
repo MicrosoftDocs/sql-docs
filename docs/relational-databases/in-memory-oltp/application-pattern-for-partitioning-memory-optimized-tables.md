@@ -1,6 +1,6 @@
 ---
 title: "Application pattern - partitioning memory-optimized tables"
-ms.custom: seo-dt-2019,issue=4700
+ms.custom: seo-dt-2019,issue-PR=4700-14820
 ms.date: 05/03/2020
 ms.prod: sql
 ms.reviewer: ""
@@ -17,45 +17,45 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports an application design pattern that lavishes performance resources on relatively current data. This pattern can apply when current data is read or updated far more frequently than older data is. In this case we say the current data is *active* or *hot*, and the older data is *cold*.
 
-The main idea is to store *hot* data in a memory-optimized table. On a perhaps weekly or monthly basis, older data that has become *cold* is moved to a more standard table. The more standard table has its data stored on a disk or other hard drive, not in memory.
+The main idea is to store *hot* data in a memory-optimized table. On a perhaps weekly or monthly basis, older data that has become *cold* is moved to a partitioned table. The partitioned table has its data stored on a disk or other hard drive, not in memory.
 
 Typically, this design uses a **datetime** key to enable the move process to efficiently distinguish between hot versus cold data.
 
 ## Advanced partitioning
 
-You can mimic having a partitioned table that also has one memory-optimized partition. You must ensure they all share a common schema. The code sample shows the technique.
+The design intends to mimic having a partitioned table that also has one memory-optimized partition. For this to work, you must ensure that the tables all share a common schema. The code sample later in this article shows the technique.
 
-Then hot data is inserted and updated in the memory-optimized table. Cold data is maintained in the traditional partitioned table. Periodically, a stored procedure adds a new partition. The partition contains the latest cold data that has been moved out of the memory-optimized table.
+New data is presumed to be hot by definition. Hot data is inserted and updated in the memory-optimized table. Cold data is maintained in the traditional partitioned table. Periodically, a stored procedure adds a new partition. The partition contains the latest cold data that has been moved out of the memory-optimized table.
 
 If an operation needs only hot data, it can use natively compiled stored procedures to access the data. Operations that might access hot or cold data must use interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], to join the memory-optimized table with the partitioned table.
 
 ### Add a partition
 
-Periodically, data that has recently become cold must be moved into the partitioned table. The steps for this partition swap are as follows:
+Data that has recently become cold must be moved into the partitioned table. The steps for this periodic partition swap are as follows:
 
 1. For the data in the memory-optimized table, determine the datetime that is the boundary or cutoff between hot versus newly cold data.
-2. Insert the cold data from the In-Memory OLTP table into a *cold\_staging* table, using the cutoff datetime.
-3. Delete the same data from the memory-optimized table.
+2. Insert the newly cold data, from the In-Memory OLTP table, into a *cold\_staging* table.
+3. Delete the same cold data from the memory-optimized table.
 4. Swap the cold\_staging table into a partition.
 5. Add the partition.
 
 #### Maintenance window
 
-One of the preceding steps is to delete the newly cold data from the memory-optimized table. There is a time interval between this step and the final step that adds the new partition. During this interval, any application that attempts to read the newly cold data will fail.
+One of the preceding steps is to delete the newly cold data from the memory-optimized table. There is a time interval between this deletion and the final step that adds the new partition. During this interval, any application that attempts to read the newly cold data will fail.
 
 For a related sample, see [Application-Level Partitioning](../../relational-databases/in-memory-oltp/application-level-partitioning.md).
 
 ## Code Sample
 
-The following Transact-SQL sample is displayed in a series of smaller code block, only for the ease of presentation. You could append them all into one large code block for your testing.
+The following Transact-SQL sample is displayed in a series of smaller code blocks, only for the ease of presentation. You could append them all into one large code block for your testing.
 
-As a whole, the T-SQL sample shows how to use a memory-optimized table with a partitioned disk-based table. Hot data is stored in memory. To save the data to disk, create a new partition, and then copy the data to the partitioned table.
+As a whole, the T-SQL sample shows how to use a memory-optimized table with a partitioned disk-based table.
 
 The first phases of the T-SQL sample create the database, and then create objects such as tables in the database. Later phases show how to move data from a memory-optimized table into a partitioned table.
 
 ### Create a database
 
-This section of the T-SQL sample merely creates a database. The database is configured to support both memory-optimized tables and partitioned tables.
+This section of the T-SQL sample creates a test database. The database is configured to support both memory-optimized tables and partitioned tables.
 
 ```sql
 CREATE DATABASE PartitionSample;
@@ -76,9 +76,9 @@ ALTER DATABASE PartitionSample
 GO
 ```
 
-### Create a table for hot data, memory-optimized
+### Create a memory-optimized table for hot data
 
-This section create the memory-optimized table that holds the latest data.
+This section creates the memory-optimized table that holds the latest data, which is mostly still hot data.
 
 ```sql
 USE PartitionSample;
@@ -97,7 +97,7 @@ CREATE TABLE dbo.SalesOrders_hot (
 GO
 ```
 
-### Create a table for cold data, partitioned
+### Create a partitioned table for cold data
 
 This section creates the partitioned table that holds the cold data.
 
@@ -127,7 +127,7 @@ GO
 
 ### Create a table to store cold data during move
 
-This section creates the *cold\_staging* table, and a view that unions hot and cold data from the two tables.
+This section creates the cold\_staging table. A view that unions the hot and cold data from the two tables is also created.
 
 ```sql
 -- A table used to briefly stage the newly cold data, during moves to a partition.
@@ -219,7 +219,7 @@ GO
 
 ### Prepare sample data, and demo the stored procedure
 
-This sections generates and inserts sample data, and then runs the stored procedure.
+This sections generates and inserts sample data, and then runs the stored procedure as a demonstration.
 
 ```sql
 -- Insert sample values into the hot table.
@@ -277,7 +277,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count
 
 ### Drop all the demo objects
 
-Remember to clean the demo database off of your test system.
+Remember to clean the demo test database off of your test system.
 
 ```sql
 -- You must first leave the context of the PartitionSample database.

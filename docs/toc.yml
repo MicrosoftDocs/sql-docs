@@ -2693,7 +2693,7 @@
         href: relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
       - name: Properties
         href: relational-databases/native-client-ole-db-provider/about-ole-db-properties.md
-      - name: Estable a connection
+      - name: Establish a connection
         href: relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
       - name: Execute a command
         href: relational-databases/native-client-ole-db-provider/executing-a-command.md

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Source property [ADO], VBScript example"
   - "Recordset property [ADO], VBScript example"
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Recordset and SourceRecordset Properties Example (VBScript)
 > [!IMPORTANT]

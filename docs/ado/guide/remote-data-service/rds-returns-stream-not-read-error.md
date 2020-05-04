@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "stream not read error in RDS [ADO]"
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Returns &quot;Stream Not Read&quot; Error
 "The Stream object could not be read because it is empty, or the current position is at the end of the Stream. For non-empty Streams, set the current position with the Position property. To determine if a Stream is empty, check the Size property."  

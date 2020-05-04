@@ -27,7 +27,6 @@ Use the following topics to install the Distributed Replay feature.
 |[Complete the Post-Installation Steps](../../tools/distributed-replay/complete-the-post-installation-steps.md)|Procedural topic for completing a Distributed Replay installation.|  
 |[Modify the Controller and Client Services Accounts](../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md)|Procedural topic for how to start and stop the Distributed Replay controller and client services, and modify the service accounts.|  
   
-## See Also  
- [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
-  
-  
+## See Also
+
+-[Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "records-provided fields [ADO]"
   - "provider-supplied fields [ADO]"
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Records and Provider-Supplied Fields
 When a [Record](../../../ado/reference/ado-api/record-object-ado.md) object is opened, its source can be the current row of an open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), an absolute URL, or a relative URL in conjunction with an open [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

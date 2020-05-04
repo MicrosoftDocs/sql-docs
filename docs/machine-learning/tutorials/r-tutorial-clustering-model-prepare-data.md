@@ -46,7 +46,7 @@ In the SQL query, you're separating customers along the following dimensions:
 * **monetaryRatio** = return amount ratio (total monetary amount of items returned versus the amount purchased)
 * **frequency** = return frequency
 
-In the **paste** function, replace **Server**, **UID**, and **PWD** with your own connection information.
+In the **connStr** function, replace **ServerName** with your own connection information.
 
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database

@@ -23,7 +23,9 @@ In part four of this four-part tutorial series, you'll develop a linear regressi
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll develop a linear regression model developed in R into a SQL Server database using Machine Learning Services.
 ::: moniker-end
-
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In this four-part tutorial series, you will use R and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
 In this article, you'll learn how to:
 
 > [!div class="checklist"]

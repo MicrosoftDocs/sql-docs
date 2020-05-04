@@ -38,7 +38,7 @@ The documentation for SQL Server 2014 is online, and is indexed by Bing.com and 
 
 - [SQL Server 2014 online documentation](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
-## Offline books
+## Offline books 
 
 For details about offline books, see [Install previous versions of SQL Server documentation to view offline in SSMS](../sql-server/sql-server-offline-documentation.md).
 

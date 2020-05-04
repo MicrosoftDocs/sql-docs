@@ -143,7 +143,7 @@ Remove the CNAME record for each BDC endpoint in DNS and replace with multiple `
 >[!TIP]
 >The script described below uses PowerShell. See [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-core-on-linux) for more information.
 
-You can use the following PowerShell Script to check DNS endpoints records:
+You can use the following PowerShell Script to update DNS endpoints records. Run the script from any computer connected to the same domain:
 
 ```powershell
 #Specify the DNS server, example contoso.local

@@ -49,11 +49,11 @@ In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store
 
 To use the data in R, you'll load the data from the Azure SQL database into a data frame (`rentaldata`).
 
-Create a new RScript file in RStudio and run the following script. Replace **Server**, **UID**, and **PWD** with your own connection information.
+Create a new RScript file in RStudio and run the following script. Replace **ServerName** with your own connection information.
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=SQL Database Server;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
 
 #Get the data from the table
 library(RODBC)

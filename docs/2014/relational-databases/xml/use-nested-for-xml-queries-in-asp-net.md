@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "nested FOR XML queries in ASP.NET"
   - "ASP.NET [SQL Server]"
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Use Nested FOR XML Queries in ASP.NET

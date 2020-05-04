@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined functions [OLE DB]"
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)

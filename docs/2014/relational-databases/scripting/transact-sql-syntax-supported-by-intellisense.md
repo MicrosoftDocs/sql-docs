@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Transact-SQL IntelliSense"
   - "IntelliSense [SQL Server], Transact-SQL syntax"
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Transact-SQL Syntax Supported by IntelliSense

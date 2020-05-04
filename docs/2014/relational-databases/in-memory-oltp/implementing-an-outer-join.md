@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Implementing an Outer Join

@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Start the sqlcmd Utility

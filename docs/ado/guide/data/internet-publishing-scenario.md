@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "publishing to Internet [ADO]"
   - "Internet publishing [ADO]"
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Internet Publishing Scenario
 This code example demonstrates how to use ADO with the Microsoft OLE DB Provider for Internet Publishing. In this scenario, you will create a Visual Basic application that uses **Recordset**, **Record**, and **Stream** objects to display the contents of resources published with the Internet Publishing Provider.  

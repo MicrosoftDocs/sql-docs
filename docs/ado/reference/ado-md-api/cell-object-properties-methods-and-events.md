@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Cell object [ADO MD], members"
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Cell Object Properties, Methods, and Events
 ## Properties/Collections  

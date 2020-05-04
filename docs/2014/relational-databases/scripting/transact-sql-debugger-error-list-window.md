@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "error list window"
   - "SQL Server Management Studio [SQL Server], error list window"
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Error List Window (Management Studio)

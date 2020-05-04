@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [OLE DB], enhanced behavior with earlier SQL Server versions"
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # New Date and Time Features with Previous SQL Server Versions (OLE DB)

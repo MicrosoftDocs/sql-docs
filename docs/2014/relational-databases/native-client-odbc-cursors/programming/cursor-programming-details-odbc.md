@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ODBC cursors, programming"
   - "cursors [ODBC], programming"
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Cursor Programming Details (ODBC)

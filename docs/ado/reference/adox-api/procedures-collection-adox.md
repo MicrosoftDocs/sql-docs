@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Procedures collection [ADOX]"
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Procedures Collection (ADOX)
 Contains all [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) objects of a catalog.  

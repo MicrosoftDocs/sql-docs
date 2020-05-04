@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Transact-SQL Code Snippets

@@ -38,8 +38,8 @@ helpviewer_keywords:
   - "SQL Server assistance"
   - "SQL Server Solution Center"
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Getting SQL Server Assistance

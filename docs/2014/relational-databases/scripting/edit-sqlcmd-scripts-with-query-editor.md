@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Query Editor [Database Engine], SQLCMD scripts"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Edit SQLCMD Scripts with Query Editor

@@ -184,11 +184,11 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT stmt using OPENXML rowset provider  
 SELECT *  
 FROM   OPENXML (@idoc, '/ROOT/Customer/Order/OrderDetail',2)   
-         WITH (OrderID       int         '../@OrderID',   &euro;&e&euro;ro;
-               CustomerID  varchar(10) '../@CustomerID',   &euro;&&euro;uro;
-               OrderDate   datetime    '../@OrderDate',   &euro;&e&euro;ro;
-               ProdID      int         '@ProductID',   &euro;&euro&euro;
-               Qty         int         '@Quantity');  &euro;&euro;&euro;
+         WITH (OrderID       int         '../@OrderID',
+               CustomerID  varchar(10) '../@CustomerID',
+               OrderDate   datetime    '../@OrderDate',
+               ProdID      int         '@ProductID',
+               Qty         int         '@Quantity');
   
 ```  
   

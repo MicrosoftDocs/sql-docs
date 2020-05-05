@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "NCHAR function"
   - "Unicode [SQL Server], NCHAR function"
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NCHAR (Transact-SQL)

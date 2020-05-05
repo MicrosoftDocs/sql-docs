@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorunprepare"
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cursorunprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

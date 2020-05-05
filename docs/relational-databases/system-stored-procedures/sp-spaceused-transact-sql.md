@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_spaceused"
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_spaceused (Transact-SQL)

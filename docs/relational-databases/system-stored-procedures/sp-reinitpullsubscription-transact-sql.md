@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_reinitpullsubscription"
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

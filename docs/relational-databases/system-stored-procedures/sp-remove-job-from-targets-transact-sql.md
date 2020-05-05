@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_remove_job_from_targets"
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

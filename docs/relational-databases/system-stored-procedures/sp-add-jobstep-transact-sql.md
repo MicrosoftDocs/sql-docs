@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_jobstep"
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_add_jobstep (Transact-SQL)
 

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_generation_partition_mappings system table"
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

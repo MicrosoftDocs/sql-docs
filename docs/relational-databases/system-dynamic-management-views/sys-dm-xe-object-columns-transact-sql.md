@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sys.dm_xe_object_columns dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

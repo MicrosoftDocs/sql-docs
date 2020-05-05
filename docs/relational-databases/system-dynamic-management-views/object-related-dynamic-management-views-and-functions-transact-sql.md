@@ -11,8 +11,8 @@ dev_langs:
 helpviewer_keywords: 
   - "dynamic management views [SQL Server], object"
 ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Object Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

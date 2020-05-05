@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_server_diagnostics"
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

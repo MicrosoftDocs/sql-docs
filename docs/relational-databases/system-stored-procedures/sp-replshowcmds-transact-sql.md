@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replshowcmds"
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_replshowcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

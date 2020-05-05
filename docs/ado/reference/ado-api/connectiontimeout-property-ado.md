@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConnectionTimeout property [ADO]"
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ConnectionTimeout Property (ADO)
 Indicates how long to wait while establishing a connection before terminating the attempt and generating an error.  

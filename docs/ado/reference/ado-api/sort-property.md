@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ASC [ADO]"
   - "Sort property [ADO]"
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Sort Property
 Indicates one or more field names on which the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) is sorted, and whether each field is sorted in ascending or descending order.  

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_category"
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

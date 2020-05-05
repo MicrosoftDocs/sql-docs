@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], managing fonts"
   - "text fonts [SQL Server Management Studio]"
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Change Font Color, Size, and Style

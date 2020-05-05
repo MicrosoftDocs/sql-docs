@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "LoadFromFile method [ADO]"
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # LoadFromFile Method (ADO)
 Loads the contents of an existing file into a [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  

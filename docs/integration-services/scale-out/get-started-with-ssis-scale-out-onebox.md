@@ -4,8 +4,6 @@ description: "This article shows you everything you need to know to get started 
 ms.custom: performance
 ms.date: "12/13/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"

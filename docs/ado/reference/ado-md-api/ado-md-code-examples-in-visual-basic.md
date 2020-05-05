@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ADO MD code examples, Visual Basic"
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO MD Code Examples in Visual Basic
 The following examples require Microsoft Visual Basic version 5.0 with Service Pack 3 or Visual Basic version 6.0.  

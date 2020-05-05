@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "large data"
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Set Large Data (OLE DB)

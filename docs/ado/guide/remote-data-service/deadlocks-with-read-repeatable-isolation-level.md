@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "deadlocks in RDS [ADO]"
   - "read repeatable in RDS [ADO]"
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Deadlocks with Read Repeatable Isolation Level
 If a custom business object uses an isolation level of read repeatable to access a SQL Server, and the business object is called simultaneously by two clients that send a query and update in the same transaction, a deadlock is possible. Remote Data Service is designed to allow one of the processes to time out to release the deadlock, but the update will fail for that client.  

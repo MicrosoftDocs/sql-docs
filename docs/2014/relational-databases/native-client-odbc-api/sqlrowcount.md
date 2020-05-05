@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLRowCount function"
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLRowCount

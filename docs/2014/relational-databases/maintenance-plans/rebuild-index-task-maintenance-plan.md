@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Rebuild Index Task dialog box"
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Rebuild Index Task (Maintenance Plan)

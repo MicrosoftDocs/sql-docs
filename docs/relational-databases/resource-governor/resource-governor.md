@@ -15,7 +15,7 @@ ms.author: jrasnick
 ---
 # Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor is a feature than you can use to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical I/O, and memory that incoming application requests can use.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor is a feature that you can use to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical I/O, and memory that incoming application requests can use.  
   
 ## Benefits of Resource Governor  
  Resource Governor enables you to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workloads and resources by specifying limits on resource consumption by incoming requests. In the Resource Governor context, workload is a set of similarly sized queries or requests that can, and should be, treated as a single entity. This is not a requirement, but the more uniform the resource usage pattern of a workload is, the more benefit you are likely to derive from Resource Governor. Resource limits can be reconfigured in real time with minimal impact on workloads that are executing.  
@@ -35,13 +35,13 @@ ms.author: jrasnick
 ## Resource Governor Constraints  
  This release of Resource Governor has the following constraints:  
   
--   Resource management is limited to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Resource Governor can not be used for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Resource management is limited to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Resource Governor cannot be used for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 -   There is no workload monitoring or workload management between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances.  
   
 -   Resource Governor can manage OLTP workloads but these types of queries, which are typically very short in duration, are not always on the CPU long enough to apply bandwidth controls. This may skew in the statistics returned for CPU usage percent.  
   
--   The ability to govern physical I/O only applies to user operations and not system tasks. System tasks include write operations to the transaction log and Lazy Writer I/O operations. The Resource Govenor applies primarily to user read operations because most write operations are typically performed by system tasks.  
+-   The ability to govern physical I/O only applies to user operations and not system tasks. System tasks include write operations to the transaction log and Lazy Writer I/O operations. The Resource Governor applies primarily to user read operations because most write operations are typically performed by system tasks.  
   
 -   You cannot set I/O thresholds on the internal resource pool.  
   

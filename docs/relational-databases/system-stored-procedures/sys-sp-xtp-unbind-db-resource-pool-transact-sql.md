@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_xtp_unbind_db_resource_pool"
   - "sys.sp_xtp_unbind_db_resource_pool"
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

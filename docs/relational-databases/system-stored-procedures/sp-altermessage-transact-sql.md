@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_altermessage"
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

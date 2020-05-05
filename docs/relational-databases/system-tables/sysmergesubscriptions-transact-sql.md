@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergesubscriptions system table"
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

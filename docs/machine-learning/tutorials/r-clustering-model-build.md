@@ -10,7 +10,7 @@ ms.author: chadam
 ms.reviewer: garye, davidph
 ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Tutorial: Build a clustering model in R with SQL machine learning

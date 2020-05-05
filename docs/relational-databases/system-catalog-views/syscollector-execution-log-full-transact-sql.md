@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_execution_log_full view"
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

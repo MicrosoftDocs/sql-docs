@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Members collection [ADO MD], members"
 ms.assetid: da2c0761-fe23-421b-acbf-d97dfa02d2b9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Members Collection Properties, Methods, and Events
 ## Properties  

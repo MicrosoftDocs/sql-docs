@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_backuphistory"
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sp_syscollector_set_cache_window stored procedure"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "properties [ADO]"
   - "ADO properties"
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Properties
 

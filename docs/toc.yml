@@ -225,6 +225,8 @@
         href: big-data-cluster/troubleshoot-active-directory.md
       - name: Active directory DNS
         href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+      - name: Active directory login fails
+        href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
       - name: HDFS admin rights
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference
@@ -2691,7 +2693,7 @@
         href: relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
       - name: Properties
         href: relational-databases/native-client-ole-db-provider/about-ole-db-properties.md
-      - name: Estable a connection
+      - name: Establish a connection
         href: relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
       - name: Execute a command
         href: relational-databases/native-client-ole-db-provider/executing-a-command.md

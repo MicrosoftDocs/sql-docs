@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.time_zone_info system table"
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.time_zone_info (Transact-SQL)

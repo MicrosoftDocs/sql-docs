@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trigger_event_types catalog view"
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.trigger_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

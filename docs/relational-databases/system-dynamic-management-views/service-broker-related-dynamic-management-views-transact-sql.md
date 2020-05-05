@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Service Broker, dynamic management views"
   - "dynamic management views [SQL Server], Service Broker"
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Service Broker Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

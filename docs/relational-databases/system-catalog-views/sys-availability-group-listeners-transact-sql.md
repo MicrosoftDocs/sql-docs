@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.availability_group_listeners catalog view"
   - "Availability Groups [SQL Server], listeners"
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

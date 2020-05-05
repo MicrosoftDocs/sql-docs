@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "catalog views [SQL Server], partition function"
   - "partition function catalog views [SQL Server]"
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Partition Function Catalog Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

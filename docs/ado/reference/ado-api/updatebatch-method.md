@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "UpdateBatch method [ADO]"
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # UpdateBatch Method
 Writes all pending batch updates to disk.  

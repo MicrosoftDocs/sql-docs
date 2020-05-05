@@ -15,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "ASYMKEYPROPERTY"
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-author: MikeRayMSFT
 author: VanMSFT
 ms.author: vanto
 ---

@@ -6,8 +6,8 @@ ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "language-reference"
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_event_sessions (Azure SQL Database)

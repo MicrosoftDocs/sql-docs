@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.system_views catalog view"
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.system_views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS API reference [ADO]"
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS API Reference
 > [!IMPORTANT]

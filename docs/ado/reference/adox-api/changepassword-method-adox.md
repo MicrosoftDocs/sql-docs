@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ChangePassword method [ADOX]"
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ChangePassword Method (ADOX)
 Changes the password for a [user](../../../ado/reference/adox-api/user-object-adox.md) account.  

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replrestart"
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_replrestart (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

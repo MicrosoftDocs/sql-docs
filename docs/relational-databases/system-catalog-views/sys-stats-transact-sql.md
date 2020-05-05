@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.stats catalog view"
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.stats (Transact-SQL)

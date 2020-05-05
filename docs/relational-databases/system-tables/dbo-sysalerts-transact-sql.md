@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysalerts system table"
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

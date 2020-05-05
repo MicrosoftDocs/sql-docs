@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_enumdsn"
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

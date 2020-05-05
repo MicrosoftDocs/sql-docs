@@ -46,7 +46,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
  Specifies the maximum amount of memory that a single request can take from the pool. *value* is a percentage relative to the resource pool size specified by MAX_MEMORY_PERCENT.  
 
-*value* is an integer up to [!INCLUDE[ssSQL17](/sssql17-md.md)] and a float starting with [!INCLUDE[sql-server-2019](/sssqlv15-md.md)]. Default value is 25. The allowed range for *value* is from 1 through 100.
+*value* is an integer up to [!INCLUDE[ssSQL17](sssql17-md.md)] and a float starting with [!INCLUDE[sql-server-2019](sssqlv15-md.md)]. Default value is 25. The allowed range for *value* is from 1 through 100.
   
 > [!NOTE]  
 > The amount specified only refers to query execution grant memory.  
@@ -72,7 +72,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL15](/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](/sssql17-md.md)] CU3, and using [trace flag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
+> Starting with [!INCLUDE[ssSQL15](sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](sssql17-md.md)] CU3, and using [trace flag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifies the maximum time, in seconds, that a query can wait for memory grant (work buffer memory) to become available.  
@@ -86,7 +86,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum degree of parallelism (DOP) for parallel requests. *value* must be 0 or a positive integer, 1 though 255. When *value* is 0, the server chooses the max degree of parallelism. This is the default and recommended setting.  
   
 > [!NOTE]  
-> The actual value that the [!INCLUDE[ssDE](/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
+> The actual value that the [!INCLUDE[ssDE](ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
   
 > [!CAUTION]  
 > Changing MAX_DOP can adversely affect a server's performance. If you must change MAX_DOP, we recommend that it be set to a value that is less than or equal to the maximum number of hardware schedulers that are present in a single NUMA node. We recommend that you do not set MAX_DOP to a value greater than 8.  
@@ -128,11 +128,11 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  When executing DDL statements, we recommend that you be familiar with Resource Governor states. For more information, see [Resource Governor](../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](/ssversion2005-md.md)], index creation is allowed to use more workspace memory than initially granted for improved performance. This special handling is supported by Resource Governor in later versions, however, the initial grant and any additional memory grant are limited by resource pool and workload group settings.  
+ REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](ssversion2005-md.md)], index creation is allowed to use more workspace memory than initially granted for improved performance. This special handling is supported by Resource Governor in later versions, however, the initial grant and any additional memory grant are limited by resource pool and workload group settings.  
   
  **Index Creation on a Partitioned Table**  
   
- The memory consumed by index creation on non-aligned partitioned table is proportional to the number of partitions involved.  If the total required memory exceeds the per-query limit (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposed by the Resource Governor workload group setting, this index creation may fail to execute. Because the "default" workload group allows a query to exceed the per-query limit with the minimum required memory to start for [!INCLUDE[ssVersion2005](/ssversion2005-md.md)] compatibility, the user may be able to run the same index creation in "default" workload group, if the "default" resource pool has enough total memory configured to run such query.  
+ The memory consumed by index creation on non-aligned partitioned table is proportional to the number of partitions involved.  If the total required memory exceeds the per-query limit (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposed by the Resource Governor workload group setting, this index creation may fail to execute. Because the "default" workload group allows a query to exceed the per-query limit with the minimum required memory to start for [!INCLUDE[ssVersion2005](ssversion2005-md.md)] compatibility, the user may be able to run the same index creation in "default" workload group, if the "default" resource pool has enough total memory configured to run such query.  
   
 ## Permissions  
  Requires `CONTROL SERVER` permission.  

@@ -1,19 +1,19 @@
 ---
 title: "Tutorial: Develop a clustering model in R"
 titleSuffix: SQL Machine Learning
-description: In part one of this four-part tutorial series, you'll develop a model to perform clustering in R with SQL machine learning services.
+description: In this four-part tutorial series, you'll develop a model to perform clustering in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
-ms.date: 04/27/2020
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Prepare data to perform clustering in R with SQL machine learning services
+# Tutorial: Prepare data to perform clustering in R with SQL machine learning
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -22,6 +22,9 @@ In this four-part tutorial series, you'll use R to develop and deploy a K-Means 
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to cluster customer data.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server R Services](../sql-server-r-services.md) to cluster customer data.
 ::: moniker-end
 
 In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a database. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL machine learning.
@@ -36,12 +39,12 @@ In this article, you'll learn how to:
 > [!div class="checklist"]
 > * Restore a sample database
 > 
-In [part two](r-tutorial-clustering-model-prepare-data.md), you'll learn how to prepare the data from a database to perform clustering.
+In [part two](r-clustering-model-prepare-data.md), you'll learn how to prepare the data from a database to perform clustering.
 
-In [part three](r-tutorial-clustering-model-build-data.md), you'll learn how to create and train a K-Means clustering model in R.
+In [part three](r-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in R.
 
 
-In [part four](r-tutorial-clustering-model-deploy-data.md),  you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
+In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
 
 ## Prerequisites
 
@@ -52,13 +55,10 @@ In [part four](r-tutorial-clustering-model-deploy-data.md),  you'll learn how to
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the R language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+* [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).
 
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 * RODBC - This driver is necessary to run R scripts. [Install ODBC for R](https://CRAN.R-project.org/package=RODBC)
-
-
-
 
 ## Restore the sample database
 
@@ -95,7 +95,6 @@ In part one of this tutorial series, you completed these steps:
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 
-[!div class="nextstepaction"]
-
-[R tutorial: Prepare data to perform clustering](r-tutorial-clustering-model-prepare-data.md)
+> [!div class="nextstepaction"]
+> [R tutorial: Prepare data to perform clustering](r-clustering-model-prepare-data.md)
 

@@ -1,26 +1,30 @@
 ---
 title: "Tutorial: Build a clustering model in R"
-titleSuffix: SQL machine learning services
-description: In part three of this four-part tutorial series, you'll build a K-Means model to perform clustering in R with SQL Database Machine Learning Services.
+titleSuffix: SQL machine learning
+description: In part three of this four-part tutorial series, you'll build a K-Means model to perform clustering in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
-ms.date: 04/27/2020
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Build a clustering model in R with SQL machine learning services
+# Tutorial: Build a clustering model in R with SQL machine learning
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In part three of this four-part tutorial series, you'll build a K-Means model in R to perform clustering. In the next part of this series, you'll deploy this model in a database with SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part three of this four-part tutorial series, you'll build a K-Means model in R to perform clustering. In the next part of this series, you'll deploy this model in a database with SQL Server Machine Learning Services.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In part three of this four-part tutorial series, you'll build a K-Means model in R to perform clustering. In the next part of this series, you'll deploy this model in a database with SQL Server R Services.
 ::: moniker-end
 
 In this article, you'll learn how to:
@@ -30,17 +34,17 @@ In this article, you'll learn how to:
 > * Perform clustering
 > * Analyze the results
 
-In [part one](r-tutorial-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
+In [part one](r-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
 
-In [part two](r-tutorial-clustering-model-prepare-data.md), you learned how to prepare the data from a database to perform clustering.
+In [part two](r-clustering-model-prepare-data.md), you learned how to prepare the data from a database to perform clustering.
 
-In [part four](r-tutorial-clustering-model-deploy-data.md),  you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
+In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
 
 
 ## Prerequisites
 
 
-* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-tutorial-clustering-model-introduction.md) and  completed the steps in [part two](r-tutorial-clustering-model-prepare-data.md) along with its prerequisites.
+* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and  completed the steps in [part two](r-clustering-model-prepare-data.md) along with its prerequisites.
 
 ## Define the number of clusters
 
@@ -131,7 +135,7 @@ $ifault
 
 ```
 
-The four cluster means are given using the variables defined in [part one](r-tutorial-clustering-model-prepare-data.md#separate-customers):
+The four cluster means are given using the variables defined in [part one](r-clustering-model-prepare-data.md#separate-customers):
 
 * *orderRatio* = return order ratio (total number of orders partially or fully returned versus the total number of orders)
 * *itemsRatio* = return item ratio (total number of items returned versus the number of items purchased)
@@ -146,7 +150,7 @@ Here are a couple ways you could interpret these results:
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database.
+If you're not going to continue with this tutorial, delete the tpcxbb_1gb database.
 
 ## Next steps
 
@@ -159,4 +163,4 @@ In part three of this tutorial series, you completed these steps:
 To deploy the machine learning model you've created, follow part four of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Deploy a clustering model in R with SQL machine learning services](r-tutorial-clustering-model-deploy-data.md)
+> [Tutorial: Deploy a clustering model in R with SQL machine learning](r-clustering-model-deploy.md)

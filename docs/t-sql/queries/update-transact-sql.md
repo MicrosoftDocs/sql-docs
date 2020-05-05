@@ -1150,8 +1150,8 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### AH. ANSI join for update and delete statements
-This example shows how to update or delete data based on the result from joining another table.
+### AH. ANSI join for update statements
+This example shows how to update data based on the result from joining another table.
 
 ```
 CREATE TABLE dbo.Table1   
@@ -1175,13 +1175,6 @@ GO
 SELECT ColA, ColB   
 FROM dbo.Table2;
 GO
-
-DELETE dbo.Table2   
-FROM dbo.Table2   
-    INNER JOIN dbo.Table1   
-    ON (dbo.Table2.ColA = dbo.Table1.ColA)
-    WHERE dbo.Table2.ColA = 1;  
-
 ```
 
 ## See Also  

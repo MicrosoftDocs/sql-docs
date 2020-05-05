@@ -98,7 +98,7 @@ UPDATE
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse 
+-- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name

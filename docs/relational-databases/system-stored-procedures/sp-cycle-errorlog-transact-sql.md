@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cycle_errorlog"
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

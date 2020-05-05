@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Prepared property [ADO]"
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Prepared Property (ADO)
 Indicates whether to save a compiled version of a [Command](../../../ado/reference/ado-api/command-object-ado.md) before execution.  

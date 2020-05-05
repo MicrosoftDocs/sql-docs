@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replsetoriginator"
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

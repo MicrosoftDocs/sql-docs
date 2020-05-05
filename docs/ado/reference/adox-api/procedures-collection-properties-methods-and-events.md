@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Procedures collection [ADOX], members"
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Procedures Collection Properties, Methods, and Events
 ## Properties  

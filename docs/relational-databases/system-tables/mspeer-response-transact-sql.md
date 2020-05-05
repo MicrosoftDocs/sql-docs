@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_response system table"
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

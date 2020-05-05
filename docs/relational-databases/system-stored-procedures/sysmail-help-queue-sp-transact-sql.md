@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_queue_sp"
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "automatic page repair"
   - "sys.dm_hadr_auto_page_repair dynamic management view"
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

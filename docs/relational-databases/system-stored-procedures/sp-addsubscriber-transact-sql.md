@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addsubscriber"
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addsubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

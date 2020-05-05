@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpindex"
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpindex (Transact-SQL)

@@ -1,5 +1,6 @@
 ---
 title: "File Restores (Full Recovery Model) | Microsoft Docs"
+description: A file restore in SQL Server is a single restore sequence that copies, rolls forward, and recovers one or more data files without restoring the whole database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

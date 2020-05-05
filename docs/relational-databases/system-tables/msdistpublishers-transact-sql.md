@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistpublishers system table"
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSdistpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

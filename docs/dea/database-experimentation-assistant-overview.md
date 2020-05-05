@@ -1,10 +1,8 @@
 ---
 title: Overview of the Database Experimentation Assistant 
 description: Overview of Database Experimentation Assistant
-ms.custom: ""
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
@@ -14,7 +12,6 @@ ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: "seo-lt-2019"
 ---
-
 # Overview of Database Experimentation Assistant
 
 Database Experimentation Assistant (DEA) is an experimentation solution for SQL Server upgrades. DEA can help you evaluate a targeted version of SQL Server for a specific workload. Customers upgrading from earlier versions of SQL Server (starting with 2005) to more recent versions of SQL Server can use the analysis metrics that the tool provides.

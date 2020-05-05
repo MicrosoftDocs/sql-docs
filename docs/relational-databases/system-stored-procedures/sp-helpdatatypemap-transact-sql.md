@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpdatatypemap"
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

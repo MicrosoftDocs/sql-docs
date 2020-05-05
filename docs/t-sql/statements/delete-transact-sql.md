@@ -74,7 +74,7 @@ DELETE
 ```  
   
 ```
--- Syntax for Azure Synapse Analytics (formerly SQL DW)
+-- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
 [ WITH <common_table_expression> [ ,...n ] ] 
 DELETE [database_name . [ schema ] . | schema. ] table_name  
 FROM [database_name . [ schema ] . | schema. ] table_name 
@@ -496,7 +496,7 @@ SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 ```
 
 ### P. Delete based on the result of joining with another table
-This example shows how to delete from a table based on the result of joining wiht another table.
+This example shows how to delete from a table based on the result from joining wiht another table.
 ```
 CREATE TABLE dbo.Table1   
     (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
@@ -509,26 +509,12 @@ INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);
 INSERT INTO dbo.Table2 VALUES(1, 0.0);  
 GO  
 
-UPDATE dbo.Table2   
-SET dbo.Table2.ColB = dbo.Table2.ColB + dbo.Table1.ColB  
-FROM dbo.Table2   
-    INNER JOIN dbo.Table1   
-    ON (dbo.Table2.ColA = dbo.Table1.ColA);  
-GO  
-
-SELECT ColA, ColB   
-FROM dbo.Table2;
-GO
-
 DELETE dbo.Table2   
 FROM dbo.Table2   
     INNER JOIN dbo.Table1   
     ON (dbo.Table2.ColA = dbo.Table1.ColA)
     WHERE dboTable2.ColA = 1;  
-
 ```
-```
-  
 ## See Also  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

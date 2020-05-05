@@ -234,7 +234,7 @@ ms.author: jrasnick
   
 ## Best practices for using Lookup Tables in a classifier function  
   
-1.  Do not use a lookup table unless it is absolutely necessary. If you need to use a lookup table, it can be hard coded into the function itself; however, this needs to be balanced with the complexity and dynamic changes of the classifier function.  
+1.  Do not use a lookup table unless it is absolutely necessary. If you need to use a lookup table, it can be hard-coded into the function itself; however, this needs to be balanced with the complexity and dynamic changes of the classifier function.  
   
 2.  Limit the I/O performed for lookup tables.  
   
@@ -250,11 +250,11 @@ ms.author: jrasnick
   
 3.  Prevent blocking on the lookup table.  
   
-    1.  Use the `NOLOCK` hint to prevent blocking or use `SET LOCK_TIMEOUT` in the function with a maximum value of 1000 milliseconds.  
+    1.  Use the `NOLOCK` hint to prevent blocking or use `SET LOCK_TIMEOUT` in the function with a maximum value of 1,000 milliseconds.  
   
     2.  Table(s) must exist in the master database. (The master database is the only database that is guaranteed to be recovered when the client computers attempt to connect).  
   
-    3.  Always fully-qualify the table name with the schema. The database name is not necessary since it has to be the master database.  
+    3.  Always fully qualify the table name with the schema. The database name is not necessary since it has to be the master database.  
   
     4.  No triggers on the table.  
   

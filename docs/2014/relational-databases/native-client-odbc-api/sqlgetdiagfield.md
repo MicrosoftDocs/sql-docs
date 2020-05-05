@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLGetDiagField function"
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLGetDiagField

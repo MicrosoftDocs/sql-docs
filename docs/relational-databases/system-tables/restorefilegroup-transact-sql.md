@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], restorefilegroup system table"
   - "restorefilegroup system table"
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # restorefilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_notification"
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLEndTran function"
 ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLEndTran

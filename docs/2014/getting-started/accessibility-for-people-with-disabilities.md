@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL Server Books Online, accessibility features"
   - "customer service [SQL Server]"
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Accessibility for People with Disabilities

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ADOX code examples"
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADOX Code Examples
 Use the following code examples to learn how to use the ADOX objects, methods, properties, and events.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ISQLErrorInfo interface"
   - "errors [OLE DB], error interfaces"
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Information in Error Interfaces

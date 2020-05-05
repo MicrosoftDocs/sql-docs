@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ODBC applications, statements"
   - "statement handles [ODBC]"
 ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Freeing a Statement Handle

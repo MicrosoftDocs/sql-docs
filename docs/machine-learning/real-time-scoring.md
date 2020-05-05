@@ -18,7 +18,7 @@ Real-time scoring uses the [sp_rxPredict](https://docs.microsoft.com/sql/relatio
 
 ## How real-time scoring works
 
-Real-time scoring is supported  on specific model types based on RevoScaleR or MicrosoftML functions such as  [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
+Real-time scoring is supported  on specific model types based on RevoScaleR or MicrosoftML functions such as  [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) and [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
 
 Because a trained model can be used for scoring without having to call an external language runtime, the overhead of multiple processes is reduced. This supports much faster prediction performance for production scoring scenarios. Because the data never leaves SQL Server, results can be generated and inserted into a new table without any data translation between R and SQL.
 

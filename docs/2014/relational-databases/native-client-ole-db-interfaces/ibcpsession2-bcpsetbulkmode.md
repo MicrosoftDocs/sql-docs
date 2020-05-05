@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "BCPSetBulkMode function"
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # IBCPSession2::BCPSetBulkMode

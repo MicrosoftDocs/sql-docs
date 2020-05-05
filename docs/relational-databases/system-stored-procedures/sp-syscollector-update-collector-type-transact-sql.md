@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sp_syscollector_update_collector_type"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

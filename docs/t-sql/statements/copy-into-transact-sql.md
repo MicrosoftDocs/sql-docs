@@ -368,7 +368,7 @@ Set-AzSqlServer -ResourceGroupName $resourcegroupname -ServerName $servername -A
 ```sql
 COPY INTO dbo.myCOPYDemoTable
 
-FROM 'https://storlabarturv.blob.core.windows.net/test/bcpDemo.txt'
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt'
 
 WITH (
 

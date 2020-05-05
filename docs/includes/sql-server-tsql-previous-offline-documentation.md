@@ -1,1 +1,0 @@
-To view Transact-SQL syntax for previous versions of SQL Server, see the [previous versions content](sql-server-tsql-previous-offline-documentation.md).

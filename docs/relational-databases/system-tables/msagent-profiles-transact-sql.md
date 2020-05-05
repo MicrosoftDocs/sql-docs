@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSagent_profiles system table"
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSagent_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_register_custom_scripting"
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

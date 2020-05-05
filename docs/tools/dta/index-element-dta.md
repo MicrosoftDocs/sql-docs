@@ -1,5 +1,6 @@
 ---
 title: "Index Element (DTA)"
+description: In the dta utility, the Index element contains information about an index that you want to create or drop for a user-specified configuration.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

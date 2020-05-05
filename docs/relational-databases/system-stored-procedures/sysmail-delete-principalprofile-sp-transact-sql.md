@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_principalprofile_sp"
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

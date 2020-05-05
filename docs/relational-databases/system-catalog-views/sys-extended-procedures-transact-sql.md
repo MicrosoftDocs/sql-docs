@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.extended_procedures catalog view"
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

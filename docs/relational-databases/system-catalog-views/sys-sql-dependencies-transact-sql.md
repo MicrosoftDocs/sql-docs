@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sql_dependencies catalog view"
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

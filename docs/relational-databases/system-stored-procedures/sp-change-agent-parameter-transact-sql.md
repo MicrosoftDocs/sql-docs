@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_change_agent_parameter"
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

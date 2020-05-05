@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursoroption"
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

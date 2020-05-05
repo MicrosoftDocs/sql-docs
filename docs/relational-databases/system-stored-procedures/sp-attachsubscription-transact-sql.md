@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_attachsubscription"
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_attachsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_MSchange_logreader_agent_properties"
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

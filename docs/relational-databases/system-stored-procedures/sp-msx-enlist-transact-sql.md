@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_enlist"
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -10054,6 +10054,8 @@
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Resources
   items:
+  - name: Offline SQL Server documentation
+    href: sql-server/sql-server-offline-documentation.md
   - name: Learn
     items:
     - name: Educational resources 
@@ -10106,11 +10108,6 @@
       href: sql-server/partner-dev-sql-server.md
 - name: Reference
   items:
-  - name: Archived Content (SQL 2005 - 2012) >
-    displayName: 2005, 2008, 2008 r2, 2012, previous-versions
-    href: https://docs.microsoft.com/previous-versions/sql/
-  - name: Offline SQL Server documentation
-    href: sql-server/sql-server-offline-documentation.md
   - name: Database samples
     items:
     - name: Samples Overview

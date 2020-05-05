@@ -1,6 +1,6 @@
 ---
 title: "Spatial Data Types Overview | Microsoft Docs"
-ms.date: "11/01/2016"
+ms.date: "05/04/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -64,7 +64,7 @@ In the ellipsoidal, or round-earth system, coordinates are given in degrees of l
 ### Orientation of spatial data  
 In the planar system, the ring orientation of a polygon is not an important factor. For example, a polygon described by ((0, 0), (10, 0), (0, 20), (0, 0)) is the same as a polygon described by ((0, 0), (0, 20), (10, 0), (0, 0)). The OGC Simple Features for SQL Specification does not dictate a ring ordering, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not enforce ring ordering.  
 
-In an ellipsoidal system, a polygon has no meaning, or is ambiguous, without an orientation. For example, does a ring around the equator describe the northern or southern hemisphere? If we use the **geography** data type to store the spatial instance, we must specify the orientation of the ring and accurately describe the location of the instance. The interior of the polygon in an ellipsoidal system is defined by the left-hand rule.  
+In an ellipsoidal system, a polygon has no meaning, or is ambiguous, without an orientation. For example, does a ring around the equator describe the northern or southern hemisphere? If we use the **geography** data type to store the spatial instance, we must specify the orientation of the ring and accurately describe the location of the instance. The interior of the polygon in an ellipsoidal system is defined by the "left-hand rule": if you imagine yourself walking along the ring of a geography Polygon, following the points in the order in which they are listed, the area on the left is being treated as the interior of the Polygon, and the area on the right as the exterior of the Polygon.
 
 When the compatibility level is 100 or below in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] then the **geography** data type has the following restrictions:  
 -   Each **geography** instance must fit inside a single hemisphere. No spatial objects larger than a hemisphere can be stored.  

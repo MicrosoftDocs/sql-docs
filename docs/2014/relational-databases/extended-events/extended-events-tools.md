@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], using"
   - "extended events [SQL Server], options for using"
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Extended Events Tools

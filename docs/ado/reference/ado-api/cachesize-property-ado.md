@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CacheSize property [ADO]"
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CacheSize Property (ADO)
 Indicates the number of records from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object that are cached locally in memory.  

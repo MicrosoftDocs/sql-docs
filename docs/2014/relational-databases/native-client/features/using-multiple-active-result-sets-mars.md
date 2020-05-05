@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "MARS [SQL Server]"
   - "SQL Server Native Client ODBC driver, MARS"
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using Multiple Active Result Sets (MARS)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "IRowset interface"
   - "SQL Server Native Client OLE DB provider, fetching"
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Fetching Rows

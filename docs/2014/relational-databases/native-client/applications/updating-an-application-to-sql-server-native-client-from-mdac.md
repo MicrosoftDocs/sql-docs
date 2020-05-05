@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], vs. MDAC"
   - "SQL Server Native Client, updating applications"
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Updating an Application to SQL Server Native Client from MDAC

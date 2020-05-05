@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLGetDescField function"
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLGetDescField

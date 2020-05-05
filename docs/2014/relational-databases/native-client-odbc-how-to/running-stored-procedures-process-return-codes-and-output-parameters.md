@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "return codes [ODBC]"
   - "output parameters [ODBC]"
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Process Return Codes and Output Parameters (ODBC)

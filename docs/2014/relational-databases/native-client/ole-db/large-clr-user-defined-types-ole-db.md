@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "large CLR user-defined types [OLE DB]"
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Large CLR User-Defined Types (OLE DB)

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DECOMPRESS function"
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

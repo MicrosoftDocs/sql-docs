@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, stored procedures"
   - "stored procedures [OLE DB], about OLE DB stored procedures"
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Stored Procedures

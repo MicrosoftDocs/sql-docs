@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "annotations [SQLXML]"
   - "DiffGrams [SQLXML], about DiffGrams"
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Introduction to DiffGrams in SQLXML 4.0

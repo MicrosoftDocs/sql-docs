@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ODBC, SQL Server-specific behaviors"
   - "functions [ODBC]"
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # ODBC API Implementation Details

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_browsesnapshotfolder"
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

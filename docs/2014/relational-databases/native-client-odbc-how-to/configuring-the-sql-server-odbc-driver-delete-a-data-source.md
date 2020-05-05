@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "data sources [ODBC]"
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Delete a Data Source (ODBC)

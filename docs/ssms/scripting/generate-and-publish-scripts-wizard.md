@@ -45,7 +45,7 @@ ms.date: 04/07/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Generate and Publish Scripts Wizard 
+# Generate and Publish Scripts Wizard
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -152,6 +152,8 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 - **ANSI Padding** - Includes **ANSI PADDING ON** in the script. The default is **True**.
 
 - **Append to file** - When **True**, this script is added to the bottom of an existing script, specified on the **Set Scripting Options** page. When **False**, the new script overwrites a previous script. The default is **False**.
+
+- **Check for object existence** - When **True**, adds the existence check before generating the create statement for you SQL Objects. For example: tables, views, functions or stored procedures. The CREATE statement is wrapped in an IF statement. If you know your target is clean, the script is a lot cleaner. If you do NOT expect the objects to exists on the target, you get an error. The default is **False**.
 
 - **Continue scripting on error** - When **False**, scripting stops when an error occurs. When **True**, scripting continues. The default is **False**.
 

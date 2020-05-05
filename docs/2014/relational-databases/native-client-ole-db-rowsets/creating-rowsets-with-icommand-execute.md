@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, creating"
   - "Execute method"
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Creating Rowsets with ICommand::Execute

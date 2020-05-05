@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ODBC cursors, scrolling rows"
   - "bookmarks [ODBC]"
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Bookmarking Rows in ODBC

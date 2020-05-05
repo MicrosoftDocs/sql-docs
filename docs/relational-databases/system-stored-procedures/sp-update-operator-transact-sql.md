@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_operator"
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

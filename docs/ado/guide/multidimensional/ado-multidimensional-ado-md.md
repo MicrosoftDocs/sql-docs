@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO (Multidimensional) [ADO MD]"
 ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO (Multidimensional) (ADO MD)
 This section contains the following topic.  

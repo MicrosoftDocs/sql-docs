@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobsteps system table"
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: "Restore database - simple recovery model"
+description: Learn about a complete database restore in SQL Server that restores all data to the point in time that the backup was made.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

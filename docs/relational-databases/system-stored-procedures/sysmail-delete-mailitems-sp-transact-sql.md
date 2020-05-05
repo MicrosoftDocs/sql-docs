@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_mailitems_sp"
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

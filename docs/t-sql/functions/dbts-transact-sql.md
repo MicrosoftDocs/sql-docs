@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "@@DBTS function"
   - "timestamp data type"
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

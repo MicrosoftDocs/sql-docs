@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_server_services dynamic management view"
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

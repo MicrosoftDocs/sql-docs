@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helppublication_snapshot"
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

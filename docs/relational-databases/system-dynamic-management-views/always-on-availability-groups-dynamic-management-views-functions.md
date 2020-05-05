@@ -11,8 +11,8 @@ dev_langs:
 helpviewer_keywords: 
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Always On Availability Groups Dynamic Management Views - Functions
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

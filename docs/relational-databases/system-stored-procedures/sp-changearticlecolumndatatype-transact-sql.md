@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changearticlecolumndatatype"
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

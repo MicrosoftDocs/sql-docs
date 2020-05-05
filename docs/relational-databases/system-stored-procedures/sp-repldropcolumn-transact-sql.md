@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_repldropcolumn"
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

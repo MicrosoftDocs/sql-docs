@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "10/19/2016"
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 

@@ -1,5 +1,6 @@
 ---
 title: "Monitor SQL Server Managed Backup to Azure | Microsoft Docs"
+description: This article describes tools that you can use to determine the overall health of backups using SQL Server Managed Backup to Azure and identify errors.
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"

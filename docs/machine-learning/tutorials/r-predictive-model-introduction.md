@@ -26,7 +26,7 @@ In this four-part tutorial series, you will use R and linear regression in [SQL 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In this four-part tutorial series, you will use R and linear regression in [SQL Server R Services](../sql-server-r-services.md) to predict the number of ski rentals.
+In this four-part tutorial series, you will use R and linear regression in [SQL Server R Services](../r/sql-server-r-services.md) to predict the number of ski rentals.
 ::: moniker-end
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.

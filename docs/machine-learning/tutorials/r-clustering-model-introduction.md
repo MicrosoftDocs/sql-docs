@@ -24,7 +24,7 @@ In this four-part tutorial series, you'll use R to develop and deploy a K-Means 
 In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to cluster customer data.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server R Services](../sql-server-r-services.md) to cluster customer data.
+In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server R Services](../r/sql-server-r-services.md) to cluster customer data.
 ::: moniker-end
 
 In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a database. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL machine learning.

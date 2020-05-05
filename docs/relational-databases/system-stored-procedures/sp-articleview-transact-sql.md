@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_articleview"
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_articleview (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -24,8 +24,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_check_dynamic_filters"
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

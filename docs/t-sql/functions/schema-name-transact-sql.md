@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SCHEMA_NAME function"
   - "schemas [SQL Server], names"
 ms.assetid: 20071b77-2b6e-4ce7-a8e3-fa71480baf73
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SCHEMA_NAME (Transact-SQL)

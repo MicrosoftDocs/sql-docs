@@ -39,7 +39,7 @@ ms.author: jrasnick
   
 1.  Create and configure the new resource pools and workload groups. Assign each workload group to the appropriate resource pool.  
   
-    ```  
+    ```sql  
     --- Create a resource pool for production processing  
     --- and set limits.  
     USE master;  
@@ -51,6 +51,7 @@ ms.author: jrasnick
          MIN_CPU_PERCENT = 50  
     );  
     GO  
+    
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gProductionProcessing  
@@ -58,13 +59,14 @@ ms.author: jrasnick
     (  
          IMPORTANCE = MEDIUM  
     );  
+    
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
     GO  
+    
     --- Create a resource pool for off-hours processing  
     --- and set limits.  
-  
     CREATE RESOURCE POOL pOffHoursProcessing  
     WITH  
     (  
@@ -72,6 +74,7 @@ ms.author: jrasnick
          MIN_CPU_PERCENT = 0  
     );  
     GO  
+    
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gOffHoursProcessing  
@@ -87,14 +90,14 @@ ms.author: jrasnick
   
 2.  Update the in-memory configuration.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  Create a table and define the start and end times for the production processing time range.  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
@@ -107,7 +110,7 @@ ms.author: jrasnick
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
     INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
-    go  
+    GO  
     ```  
   
 4.  Create the classifier function that uses time functions and values that can be evaluated against the times in the lookup table. For information about using Lookup Tables in a classifier function, see "Best practices for using Lookup Tables in a classifier function" in this topic.  
@@ -115,7 +118,7 @@ ms.author: jrasnick
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced an expanded set of date and time data types and functions. For more information, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
-    ```  
+    ```sql  
     CREATE FUNCTION fnTimeClassifier()  
     RETURNS sysname  
     WITH SCHEMABINDING  
@@ -143,7 +146,7 @@ ms.author: jrasnick
   
 5.  Register the classifier function and update the in-memory configuration.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
@@ -153,7 +156,7 @@ ms.author: jrasnick
   
 1.  Obtain the resource pool and workload group configuration by using the following query.  
   
-    ```  
+    ```sql  
     USE master;  
     SELECT * FROM sys.resource_governor_resource_pools;  
     SELECT * FROM sys.resource_governor_workload_groups;  
@@ -162,7 +165,7 @@ ms.author: jrasnick
   
 2.  Verify that the classifier function exists and is enabled by using the following queries.  
   
-    ```  
+    ```sql  
     --- Get the classifier function Id and state (enabled).  
     SELECT * FROM sys.resource_governor_configuration;  
     GO  
@@ -176,7 +179,7 @@ ms.author: jrasnick
   
 3.  Obtain the current runtime data for the resource pools and workload groups by using the following query.  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.dm_resource_governor_resource_pools;  
     SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
@@ -184,7 +187,7 @@ ms.author: jrasnick
   
 4.  Find out what sessions are in each group by using the following query.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
         CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
     FROM sys.dm_exec_sessions AS s  
@@ -196,7 +199,7 @@ ms.author: jrasnick
   
 5.  Find out which requests are in each group by using the following query.  
   
-    ```  
+    ```sql  
     SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
         r.start_time, r.command, r.sql_handle, t.text   
     FROM sys.dm_exec_requests AS r  
@@ -209,7 +212,7 @@ ms.author: jrasnick
   
 6.  Find out what requests are running in the classifier by using the following query.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
     FROM sys.dm_exec_sessions AS s  
     INNER JOIN sys.dm_resource_governor_workload_groups AS g  
@@ -235,7 +238,7 @@ ms.author: jrasnick
   
 2.  Limit the I/O performed for lookup tables.  
   
-    1.  Use the TOP 1 to return only one row.  
+    1.  Use the `TOP 1` to return only one row.  
   
     2.  Minimize the number of rows in the table.  
   

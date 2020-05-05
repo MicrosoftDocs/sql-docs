@@ -222,8 +222,6 @@ GO
 
 &nbsp;
 
-# ALTER WORKLOAD GROUP
-
 Alters an existing workload group.
 
 See the ALTER WORKLOAD GROUP Behavior section in this doc for further details on how ALTER WORKLOAD GROUP behaves on a system with running and queued requests. 

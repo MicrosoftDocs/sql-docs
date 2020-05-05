@@ -1,6 +1,6 @@
   Changes an existing Resource Governor workload group configuration, and optionally assigns it to a Resource Governor resource pool.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
   
@@ -24,9 +24,9 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Is the name of an existing user-defined workload group or the Resource Governor default workload group.  
   
 > [!NOTE]  
-> Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
+> Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](ssnoversion-md.md)] is installed.  
   
- The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
 > Predefined workload groups and resource pools all use lowercase names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.  
@@ -46,7 +46,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
  Specifies the maximum amount of memory that a single request can take from the pool. *value* is a percentage relative to the resource pool size specified by MAX_MEMORY_PERCENT.  
 
-*value* is an integer up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and a float starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Default value is 25. The allowed range for *value* is from 1 through 100.
+*value* is an integer up to [!INCLUDE[ssSQL17](/sssql17-md.md)] and a float starting with [!INCLUDE[sql-server-2019](/sssqlv15-md.md)]. Default value is 25. The allowed range for *value* is from 1 through 100.
   
 > [!NOTE]  
 > The amount specified only refers to query execution grant memory.  
@@ -69,10 +69,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum amount of CPU time, in seconds, that a request can use. *value* must be 0 or a positive integer. The default setting for *value* is 0, which means unlimited.  
   
 > [!NOTE]  
-> By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+> By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and using [trace flag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
+> Starting with [!INCLUDE[ssSQL15](/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](/sssql17-md.md)] CU3, and using [trace flag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifies the maximum time, in seconds, that a query can wait for memory grant (work buffer memory) to become available.  
@@ -86,7 +86,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum degree of parallelism (DOP) for parallel requests. *value* must be 0 or a positive integer, 1 though 255. When *value* is 0, the server chooses the max degree of parallelism. This is the default and recommended setting.  
   
 > [!NOTE]  
-> The actual value that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
+> The actual value that the [!INCLUDE[ssDE](/ssde-md.md)] sets for MAX_DOP by might be less than the specified value. The final value is determined by the formula min(255, *number of CPUs)*.  
   
 > [!CAUTION]  
 > Changing MAX_DOP can adversely affect a server's performance. If you must change MAX_DOP, we recommend that it be set to a value that is less than or equal to the maximum number of hardware schedulers that are present in a single NUMA node. We recommend that you do not set MAX_DOP to a value greater than 8.  
@@ -109,7 +109,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  USING { *pool_name* | "**default**" }      
  Associates the workload group with the user-defined resource pool identified by *pool_name*, which in effect puts the workload group in the resource pool. If *pool_name* is not provided or if the USING argument is not used, the workload group is put in the predefined Resource Governor default pool.  
   
- The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
 > The option "default" is case-sensitive.  
@@ -126,13 +126,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!CAUTION]  
 > Clearing cached plans from a resource pool that is associated with more than one workload group will affect all workload groups with the user-defined resource pool identified by *pool_name*.  
   
- When executing DDL statements, we recommend that you be familiar with Resource Governor states. For more information, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
+ When executing DDL statements, we recommend that you be familiar with Resource Governor states. For more information, see [Resource Governor](../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], index creation is allowed to use more workspace memory than initially granted for improved performance. This special handling is supported by Resource Governor in later versions, however, the initial grant and any additional memory grant are limited by resource pool and workload group settings.  
+ REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](/ssversion2005-md.md)], index creation is allowed to use more workspace memory than initially granted for improved performance. This special handling is supported by Resource Governor in later versions, however, the initial grant and any additional memory grant are limited by resource pool and workload group settings.  
   
  **Index Creation on a Partitioned Table**  
   
- The memory consumed by index creation on non-aligned partitioned table is proportional to the number of partitions involved.  If the total required memory exceeds the per-query limit (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposed by the Resource Governor workload group setting, this index creation may fail to execute. Because the "default" workload group allows a query to exceed the per-query limit with the minimum required memory to start for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] compatibility, the user may be able to run the same index creation in "default" workload group, if the "default" resource pool has enough total memory configured to run such query.  
+ The memory consumed by index creation on non-aligned partitioned table is proportional to the number of partitions involved.  If the total required memory exceeds the per-query limit (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposed by the Resource Governor workload group setting, this index creation may fail to execute. Because the "default" workload group allows a query to exceed the per-query limit with the minimum required memory to start for [!INCLUDE[ssVersion2005](/ssversion2005-md.md)] compatibility, the user may be able to run the same index creation in "default" workload group, if the "default" resource pool has enough total memory configured to run such query.  
   
 ## Permissions  
  Requires `CONTROL SERVER` permission.  
@@ -159,10 +159,10 @@ GO
 ```  
   
 ## See Also  
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [Resource Governor](../relational-databases/resource-governor/resource-governor.md)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../t-sql/statements/create-workload-group-transact-sql.md)   
+ [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../t-sql/statements/drop-workload-group-transact-sql.md)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../t-sql/statements/create-resource-pool-transact-sql.md)   
+ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../t-sql/statements/alter-resource-pool-transact-sql.md)   
+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../t-sql/statements/drop-resource-pool-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../t-sql/statements/alter-resource-governor-transact-sql.md)  

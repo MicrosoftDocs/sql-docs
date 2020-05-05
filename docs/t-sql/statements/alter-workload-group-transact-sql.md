@@ -1,7 +1,7 @@
 ---
-title: "ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
+title: ALTER WORKLOAD GROUP (Transact-SQL) 
 ms.custom: ""
-ms.date: "08/23/2019"
+ms.date: "05/05/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -207,6 +207,17 @@ GO
 
 > ||||
 > |---|---|---|
+> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||**_\*SQL Database<br />managed instance\*_**&nbsp;||[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)||||
+
+&nbsp;
+
+[!INCLUDE [ALTER workload group](../../includes/alter-workload-group.md)]
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
 > |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />managed instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
 
 &nbsp;
@@ -299,3 +310,4 @@ Changing min_percentage_resource and cap_percentage_resource requires draining o
 Altering a workload group requires a global lock across all workload groups.  A request to alter a workload group would queue behind already submitted create or drop workload group requests.  If a batch of alter statements is submitted at once, they are processed in the order in which they are submitted.  
 
 ## Next steps
+::: moniker-end

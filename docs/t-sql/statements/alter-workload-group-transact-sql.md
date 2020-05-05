@@ -29,9 +29,11 @@ In the following row, click whichever product name you're interested in. The cli
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;||[SQL Database<br />managed instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
+
+## SQL Server 
 
   Changes an existing Resource Governor workload group configuration, and optionally assigns it to a Resource Governor resource pool.  
   
@@ -211,6 +213,8 @@ GO
 
 &nbsp;
 
+## SQL Database managed instance
+
 [!INCLUDE [ALTER workload group](../../includes/alter-workload-group.md)]
 
 ::: moniker-end
@@ -221,6 +225,8 @@ GO
 > |[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />managed instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
 
 &nbsp;
+
+## Azure Synapse Analytics
 
 Alters an existing workload group.
 

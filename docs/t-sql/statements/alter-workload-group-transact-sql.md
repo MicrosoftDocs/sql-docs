@@ -34,7 +34,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 &nbsp;
 
-## SQL Server 
+## SQL Server and SQL Database managed instance
 
 [!INCLUDE [ALTER workload group](../../includes/alter-workload-group.md)]
   
@@ -48,7 +48,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 &nbsp;
 
-## SQL Database managed instance
+## SQL Server and SQL Database managed instance
 
 [!INCLUDE [ALTER workload group](../../includes/alter-workload-group.md)]
 

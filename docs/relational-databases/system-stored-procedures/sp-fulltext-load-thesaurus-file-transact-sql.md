@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], thesaurus files"
   - "thesaurus [full-text search], editing"
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_fulltext_load_thesaurus_file (Transact-SQL)
 

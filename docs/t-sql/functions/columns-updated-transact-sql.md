@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "column testing [SQL Server]"
   - "updated columns"
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

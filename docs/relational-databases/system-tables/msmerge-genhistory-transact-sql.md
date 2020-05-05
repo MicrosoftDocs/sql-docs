@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_genhistory system table"
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSmerge_genhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpmergeconflictrows"
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

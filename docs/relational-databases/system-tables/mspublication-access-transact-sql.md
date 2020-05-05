@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpublication_access system table"
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSpublication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

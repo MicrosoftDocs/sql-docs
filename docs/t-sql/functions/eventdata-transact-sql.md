@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "status information [SQL Server], events"
   - "DDL triggers, returning event data"
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

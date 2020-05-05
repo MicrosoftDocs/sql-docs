@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_server_memory_dumps dynamic management view"
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

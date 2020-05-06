@@ -238,5 +238,5 @@ In part four of this tutorial series, you learned how to:
 To learn more about using R in Machine Learning Services, see:
 
 * [Run simple R scripts](quickstart-r-create-script.md)
-* [R data structures,types and objects](quickstart-r-data-types-and-objects.md)
+* [R data structures, types and objects](quickstart-r-data-types-and-objects.md)
 * [R functions](quickstart-r-functions.md)

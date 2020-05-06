@@ -42,7 +42,7 @@ In [part four](r-predictive-model-deploy.md), you'll learn how to store the mode
 
 ## Prerequisites
 
-Part two of this tutorial assumes you have completed [part one](r-predictive-model-introduction.md) and its prerequisites.
+Part two of this tutorial assumes you have completed [**part one**](r-predictive-model-introduction.md) and its prerequisites.
 
 ## Load the data into a data frame
 

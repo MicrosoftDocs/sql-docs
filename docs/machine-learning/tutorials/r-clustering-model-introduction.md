@@ -56,7 +56,8 @@ In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stor
 * [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).
 
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
-* RODBC - This driver is necessary to run R scripts. [Install ODBC for R](https://CRAN.R-project.org/package=RODBC)
+
+* RODBC - This driver is used in the R scripts you'll develop in this tutorial. If it's not already installed, install it using the R command `install.packages("RODBC")`. For more information on RODBC, see [CRAN - Package RODBC](https://CRAN.R-project.org/package=RODBC).
 
 ## Restore the sample database
 

@@ -38,7 +38,7 @@ In [part one](r-clustering-model-introduction.md), you installed the prerequisit
 
 In [part three](r-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in R.
 
-In [part four](r-clustering-model-deploy.md), you'll learn how to create a stored procedure in an SQL database that can perform clustering in R based on new data.
+In [part four](r-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in R based on new data.
 
 ## Prerequisites
 

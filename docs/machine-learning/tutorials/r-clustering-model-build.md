@@ -34,17 +34,15 @@ In this article, you'll learn how to:
 > * Perform clustering
 > * Analyze the results
 
-In [part one](r-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
+In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
 
 In [part two](r-clustering-model-prepare-data.md), you learned how to prepare the data from a database to perform clustering.
 
 In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
 
-
 ## Prerequisites
 
-
-* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and  completed the steps in [part two](r-clustering-model-prepare-data.md) along with its prerequisites.
+* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and completed the steps in [part two](r-clustering-model-prepare-data.md) along with its prerequisites.
 
 ## Define the number of clusters
 
@@ -95,6 +93,7 @@ customer_cluster_check <- sqlFetch(ch, "return_cluster")
 head(customer_cluster_check)
 
 ```
+
 ## Analyze the results
 
 Now that you've done the clustering using K-Means, the next step is to analyze the result and see if you can find any actionable information.

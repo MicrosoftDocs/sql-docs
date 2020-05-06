@@ -43,7 +43,6 @@ In [part two](r-clustering-model-prepare-data.md), you'll learn how to prepare t
 
 In [part three](r-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in R.
 
-
 In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
 
 ## Prerequisites

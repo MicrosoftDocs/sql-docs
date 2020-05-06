@@ -197,7 +197,7 @@ RentalCount_Predicted
 332.571428571429
 ```
 
-You have successfully created, trained, and deployed a model in an SQL database. You then used that model in a stored procedure to predict values based on new data.
+You have successfully created, trained, and deployed a model in a SQL database. You then used that model in a stored procedure to predict values based on new data.
 
 
 ## Clean up resources

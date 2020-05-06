@@ -36,15 +36,9 @@ In this article, you'll learn how to:
 > * Perform clustering in SQL Database
 > * Use the clustering information
 
-To learn more about using R in Machine Learning Services, see:
+In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
 
-[Run R scripts](quickstart-r-create-script.md]
-[R data structures, data types, and objects](quickstart-r-data-types-and-objects.md)
-[R functions](quickstart-r-functions.md)
-
-In [part one](r-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
-
-In [part two](r-clustering-model-prepare-data.md), you learned how to create and train a K-Means clustering model in R.
+In [part two](r-clustering-model-prepare-data.md), you learned how to prepare the data from a database to perform clustering.
 
 In [part three](r-clustering-model-build.md), you learned how to create and train a K-Means clustering model in R.
 

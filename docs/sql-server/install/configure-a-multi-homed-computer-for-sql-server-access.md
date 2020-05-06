@@ -1,5 +1,6 @@
 ---
 title: "Configure multi-homed computer for access"
+description: Learn how to configure SQL Server and Windows Firewall to provide for network connections to an instance of SQL Server in a multi-homed environment.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

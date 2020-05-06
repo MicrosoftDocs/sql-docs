@@ -1,5 +1,6 @@
 ---
 title: "Uninstall SQL Server 2016 | Microsoft Docs"
+description: Follow the articles below to uninstall an instance of SQL Server 2019 completely and prepare the system so that you can reinstall SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_articlehistory system table"
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "hellodata sample application [ADO]"
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Comments on HelloData
 The HelloData application steps through the basic operations of a typical ADO application: getting, examining, editing, and updating data. When you start the application, click the first button, **Get Data**. This will run the **GetData** subroutine.  

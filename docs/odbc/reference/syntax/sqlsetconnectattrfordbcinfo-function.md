@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetConnectAttrForDbcInfo function [ODBC]"
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectAttrForDbcInfo Function
 **Conformance**  

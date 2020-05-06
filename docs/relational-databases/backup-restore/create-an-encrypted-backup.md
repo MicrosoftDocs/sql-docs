@@ -1,5 +1,6 @@
 ---
 title: "Create an Encrypted Backup | Microsoft Docs"
+description: This article shows you how to create an encrypted backup in SQL Server using Transact-SQL. You can back up to disk or to Azure Storage.
 ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: sql

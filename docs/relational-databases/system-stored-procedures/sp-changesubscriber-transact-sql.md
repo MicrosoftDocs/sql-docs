@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubscriber"
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

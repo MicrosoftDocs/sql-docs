@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "analytic functions, PERCENTILE_CONT"
   - "PERCENTILE_CONT function"
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PERCENTILE_CONT (Transact-SQL)
@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 PERCENTILE_CONT ( numeric_literal )   
     WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )  
     OVER ( [ <partition_by_clause> ] )  

@@ -1,5 +1,6 @@
 ---
-title: "Connecting to SQL Server | Microsoft Docs"
+title: "Connecting using ODBC"
+description: "Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "connection string keywords"
   - "DSNs"
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting to SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -22,7 +23,7 @@ This topic discusses how you can create a connection to a [!INCLUDE[ssNoVersion]
   
 ## Connection Properties  
 
-See [DSN and Connection String Keywords and Attributes](../../../connect/odbc/dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and Mac
+See [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and macOS.
 
 > [!IMPORTANT]  
 > When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use** _database_name_ command to connect to the database before executing your queries.  
@@ -56,8 +57,8 @@ Alternatively, you can add the DSN information to a template file, and execute t
 You can verify that your driver is working by using `isql` to test the connection, or you can use this command:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
-## Using Secure Sockets Layer (SSL)  
-You can use Secure Sockets Layer (SSL) to encrypt connections to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. SSL protects [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] user names and passwords over the network. SSL also verifies the identity of the server to protect against man-in-the-middle (MITM) attacks.  
+## Using TLS/SSL  
+You can use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), to encrypt connections to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. TLS protects [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] user names and passwords over the network. TLS also verifies the identity of the server to protect against man-in-the-middle (MITM) attacks.  
 
 Enabling encryption increases security at the expense of performance.
 
@@ -68,7 +69,7 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 ||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Server certificate is not checked.<br /><br />Data sent between client and server is not encrypted.|Server certificate is not checked.<br /><br />Data sent between client and server is not encrypted.|  
-|**Encrypt=yes**|Server certificate is checked.<br /><br />Data sent between client and server is encrypted.<br /><br />The name (or IP address) in a Subject Common Name (CN) or Subject Alternative Name (SAN) in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL certificate should exactly match the server name (or IP address) specified in the connection string.|Server certificate is not checked.<br /><br />Data sent between client and server is encrypted.|  
+|**Encrypt=yes**|Server certificate is checked.<br /><br />Data sent between client and server is encrypted.<br /><br />The name (or IP address) in a Subject Common Name (CN) or Subject Alternative Name (SAN) in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TLS/SSL certificate should exactly match the server name (or IP address) specified in the connection string.|Server certificate is not checked.<br /><br />Data sent between client and server is encrypted.|  
 
 By default, encrypted connections always verify the server's certificate. However, if you connect to a server that has a self-signed certificate, also add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
 
@@ -76,7 +77,7 @@ By default, encrypted connections always verify the server's certificate. Howeve
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
-SSL uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:
+TLS uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:
 
 |Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  
 |------------|---------------------------|--------------------------------------------|
@@ -109,6 +110,6 @@ settings in the driver's section in `odbcinst.ini`. If the setting is not presen
 
 ## See Also
 
-- [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Installing the Microsoft ODBC Driver for SQL Server on Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installing the Microsoft ODBC Driver for SQL Server on macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+- [Programming Guidelines](programming-guidelines.md)

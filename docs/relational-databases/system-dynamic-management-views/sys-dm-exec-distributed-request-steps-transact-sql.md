@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "dm_exec_distributed_request_steps"
   - "sys.dm_exec_distributed_request_steps management view"
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_request_steps (Transact-SQL)

@@ -1,5 +1,6 @@
 ---
 title: "Backup Device (General Page) | Microsoft Docs"
+description: In SQL Server, use the General page to specify or view the general properties of a logical backup device, including specifying the device name.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

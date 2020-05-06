@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RESTORE HEADERONLY   
 FROM <backup_device>   
@@ -164,8 +164,7 @@ FROM <backup_device>
   
 ```  
 RESTORE HEADERONLY   
-FROM DISK = N'C:\AdventureWorks-FullBackup.bak'   
-WITH NOUNLOAD;  
+FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  
 ```  
   

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "IMultipleResults interface"
   - "multiple-rowset results"
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using IMultipleResults to Process Multiple Result Sets

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "cursors [OLE DB]"
   - "data updates [SQL Server], OLE DB"
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating Data in SQL Server Cursors

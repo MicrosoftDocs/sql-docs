@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
   - "adding indexes"
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Creating SQL Server Indexes

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], SQL Server Agent"
   - "SQL Server Agent, stored procedures"
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # SQL Server Agent Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

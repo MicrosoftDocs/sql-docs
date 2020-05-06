@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "functions [ODBC], diagnostic information"
   - "diagnostic information [ODBC], about diagnostic information"
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Diagnostics
 Functions in ODBC return diagnostic information in two ways. The return code indicates the overall success or failure of the function, while diagnostic records provide detailed information about the function. At least one diagnostic record - the header record - is returned even if the function succeeds.  

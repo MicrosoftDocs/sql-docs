@@ -34,7 +34,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
 DROP TRIGGER [ IF EXISTS ] [schema_name.]trigger_name [ ,...n ] [ ; ]  

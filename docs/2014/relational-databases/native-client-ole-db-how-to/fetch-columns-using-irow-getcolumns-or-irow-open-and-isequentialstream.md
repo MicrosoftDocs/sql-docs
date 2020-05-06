@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ISequentialStream interface, samples"
   - "GetColumns method"
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream

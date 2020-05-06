@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "RollbackTransComplete event [ADO]"
   - "BeginTransComplete event [ADO]"
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO)
 These events will be called after the associated operation on the [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object finishes executing.  

@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLGetFunctions function"
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLGetFunctions

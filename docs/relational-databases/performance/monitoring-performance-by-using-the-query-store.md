@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -28,9 +28,9 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ## <a name="Enabling"></a> Enabling the Query Store
 
- Query Store is not active for new databases by default.
+ Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics (SQL DW) databases, and is enabled by default for new Azure SQL Database databases.
 
-## Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. In Object Explorer, right-click a database, and then click **Properties**.
 
@@ -41,7 +41,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 3. In the **Operation Mode (Requested)** box, select **Read Write**.
 
-## Use Transact-SQL Statements
+### Use Transact-SQL Statements
 
 Use the **ALTER DATABASE** statement to enable the query store for a given database. For example:
 
@@ -529,12 +529,12 @@ hist AS
 (
     SELECT
         p.query_id query_id,
-        CONVERT(float, SUM(rs.avg_duration*rs.count_executions)) total_duration,
-        SUM(rs.count_executions) count_executions,
-        COUNT(distinct p.plan_id) num_plans
+        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
+        SUM(rs.count_executions) AS count_executions,
+        COUNT(distinct p.plan_id) AS num_plans
      FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id
-    WHERE  (rs.first_execution_time >= @history_start_time
+        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
+    WHERE (rs.first_execution_time >= @history_start_time
                AND rs.last_execution_time < @history_end_time)
         OR (rs.first_execution_time <= @history_start_time
                AND rs.last_execution_time > @history_start_time)
@@ -546,11 +546,11 @@ recent AS
 (
     SELECT
         p.query_id query_id,
-        CONVERT(float, SUM(rs.avg_duration*rs.count_executions)) total_duration,
-        SUM(rs.count_executions) count_executions,
-        COUNT(distinct p.plan_id) num_plans
+        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
+        SUM(rs.count_executions) AS count_executions,
+        COUNT(distinct p.plan_id) AS num_plans
     FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id
+        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
     WHERE  (rs.first_execution_time >= @recent_start_time
                AND rs.last_execution_time < @recent_end_time)
         OR (rs.first_execution_time <= @recent_start_time
@@ -560,25 +560,25 @@ recent AS
     GROUP BY p.query_id
 )
 SELECT
-    results.query_id query_id,
-    results.query_text query_text,
-    results.additional_duration_workload additional_duration_workload,
-    results.total_duration_recent total_duration_recent,
-    results.total_duration_hist total_duration_hist,
-    ISNULL(results.count_executions_recent, 0) count_executions_recent,
-    ISNULL(results.count_executions_hist, 0) count_executions_hist
+    results.query_id AS query_id,
+    results.query_text AS query_text,
+    results.additional_duration_workload AS additional_duration_workload,
+    results.total_duration_recent AS total_duration_recent,
+    results.total_duration_hist AS total_duration_hist,
+    ISNULL(results.count_executions_recent, 0) AS count_executions_recent,
+    ISNULL(results.count_executions_hist, 0) AS count_executions_hist
 FROM
 (
     SELECT
-        hist.query_id query_id,
-        qt.query_sql_text query_text,
+        hist.query_id AS query_id,
+        qt.query_sql_text AS query_text,
         ROUND(CONVERT(float, recent.total_duration/
                    recent.count_executions-hist.total_duration/hist.count_executions)
                *(recent.count_executions), 2) AS additional_duration_workload,
-        ROUND(recent.total_duration, 2) total_duration_recent,
-        ROUND(hist.total_duration, 2) total_duration_hist,
-        recent.count_executions count_executions_recent,
-        hist.count_executions count_executions_hist
+        ROUND(recent.total_duration, 2) AS total_duration_recent,
+        ROUND(hist.total_duration, 2) AS total_duration_hist,
+        recent.count_executions AS count_executions_recent,
+        hist.count_executions AS count_executions_hist
     FROM hist
         JOIN recent
             ON hist.query_id = recent.query_id

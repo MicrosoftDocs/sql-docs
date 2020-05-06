@@ -41,7 +41,7 @@ Next, a series of data flow tasks loads each dimension. Then, they load each fac
 
 For the latest release of the sample, see [wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630). Download the *Daily ETL.ispac* Integration Services package file.
 
-For the source code to re-create the sample database, see [wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl).
+For the source code to re-create the sample database, see [wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-ssis).
 
 ## Install
 

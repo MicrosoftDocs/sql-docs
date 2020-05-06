@@ -1,7 +1,7 @@
 ---
 title: "AUTO Mode Heuristics in Shaping Returned XML | Microsoft Docs"
 ms.custom: "fresh2019may"
-ms.date: "05/22/2019"
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "AUTO FOR XML mode, heuristics in shaping returned XML"
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+author: RothJa
+ms.author: jroth
+# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # AUTO Mode Heuristics in Shaping Returned XML
 

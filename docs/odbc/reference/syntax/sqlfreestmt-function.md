@@ -18,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeStmt function [ODBC]"
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFreeStmt Function
 **Conformance**  

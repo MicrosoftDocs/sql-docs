@@ -146,7 +146,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |Dynamic data masking|Yes|Yes|Yes|Yes|   
 |Basic auditing|Yes|Yes|Yes|Yes| 
 |Fine grained auditing|Yes|Yes|Yes|Yes| 
-|Transparent database encryption|Yes|No|No|No|   
+|Transparent database encryption|Yes|Yes|No|No|   
 |User-defined roles|Yes|Yes|Yes|Yes| 
 |Contained databases|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|  
@@ -221,7 +221,6 @@ The following features and services are not available for SQL Server 2019 on Lin
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
-| &nbsp; | Multi-Server Administration using MSX/TSX |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
 | &nbsp; | AD Authentication for Linked Servers | 

@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 test_expression [ NOT ] IN   
     ( subquery | expression [ ,...n ]  
     )   

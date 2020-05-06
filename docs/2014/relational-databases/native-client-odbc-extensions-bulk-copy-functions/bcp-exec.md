@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_exec function"
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_exec

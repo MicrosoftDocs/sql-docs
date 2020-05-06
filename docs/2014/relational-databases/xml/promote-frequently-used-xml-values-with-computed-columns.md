@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "promoting properties [XML in SQL Server]"
   - "property promotion [XML in SQL Server]"
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Promote Frequently Used XML Values with Computed Columns

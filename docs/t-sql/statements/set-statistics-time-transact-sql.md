@@ -34,7 +34,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET STATISTICS TIME { ON | OFF }  
 ```  
@@ -56,7 +56,7 @@ SET STATISTICS TIME { ON | OFF }
 ## Examples  
  This example shows the server execution, parse, and compile times.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS TIME ON;  

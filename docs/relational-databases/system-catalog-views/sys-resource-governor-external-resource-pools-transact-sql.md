@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sys.resource_governor_external_resource_pools"
   - "resource_governor_external_resource_pools"
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Requires VIEW SERVER STATE permission.
 
 ## See also
 
-[Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
+[Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)
 
 [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 

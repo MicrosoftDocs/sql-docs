@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "date/time [ODBC]"
   - "ODBC, date/time improvements"
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Date and Time Improvements (ODBC)

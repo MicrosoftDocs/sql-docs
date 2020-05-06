@@ -1,5 +1,6 @@
 ---
-title: "Programming Guidelines (ODBC Driver for SQL Server) | Microsoft Docs"
+title: "Programming Guidelines (ODBC Driver)"
+description: "The programming features of the Microsoft ODBC Driver for SQL Server on macOS and Linux are based on ODBC in SQL Server Native Client (ODBC)."
 ms.custom: ""
 ms.date: "01/12/2018"
 ms.prod: sql
@@ -8,7 +9,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Programming Guidelines
 
@@ -33,7 +34,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 -   [Processing Results (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Running Stored Procedures](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Sparse Columns Support (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL encryption](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [Using Encryption Without Validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Table Valued Parameters](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 and UTF-16 for command and data API](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Using Catalog Functions](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
@@ -43,7 +44,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 The following features have not been verified to work correctly in this release of the ODBC driver on macOS and Linux:
 
 -   Failover Cluster Connection
--   [Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
+-   [Transparent Network IP Resolution](../using-transparent-network-ip-resolution.md) (before ODBC Driver 17)
 -   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 The following features are not available in this release of the ODBC driver on macOS and Linux: 
@@ -102,7 +103,7 @@ For ODBC Driver 17, SQLCHAR data in one of the following character sets/encoding
 
 Upon connection, the driver detects the current locale of the process it is loaded in. If it uses one of the encodings above, the driver uses that encoding for SQLCHAR (narrow-character) data; otherwise, it defaults to UTF-8. Since all processes start in the "C" locale by default (and thus cause the driver to default to UTF-8), if an application needs to use one of the encodings above, it should use the **setlocale** function to set the locale appropriately before connecting; either by specifying the desired locale explicitly, or using an empty string for example `setlocale(LC_ALL, "")` to use the locale settings of the environment.
 
-Thus, in a typical Linux or Mac environment where the encoding is UTF-8, users of ODBC Driver 17 upgrading from 13 or 13.1 will not observe any differences. However, applications that use a non-UTF-8 encoding in the above list via `setlocale()` need to use that encoding for data to/from the driver instead of UTF-8.
+Thus, in a typical Linux or macOS environment where the encoding is UTF-8, users of ODBC Driver 17 upgrading from 13 or 13.1 will not observe any differences. However, applications that use a non-UTF-8 encoding in the above list via `setlocale()` need to use that encoding for data to/from the driver instead of UTF-8.
 
 SQLWCHAR data must be UTF-16LE (Little Endian).
 
@@ -141,8 +142,8 @@ At the time of this writing the default stack size in MUSL is 128K, which is eno
 3.  When using the driver with highly multithreaded applications, unixODBC's handle validation may become a performance bottleneck. In such scenarios, significantly more performance may be obtained by compiling unixODBC with the `--enable-fastvalidate` option. However, beware that this may cause applications which pass invalid handles to ODBC APIs to crash instead of returning `SQL_INVALID_HANDLE` errors.
 
 ## See Also  
-[Frequently Asked Questions](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[Frequently Asked Questions](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[Known Issues in this Version of the Driver](known-issues-in-this-version-of-the-driver.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Release Notes](release-notes-odbc-sql-server-linux-mac.md)

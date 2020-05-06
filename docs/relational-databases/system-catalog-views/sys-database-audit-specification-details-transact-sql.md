@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_audit_specification_details catalog view"
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

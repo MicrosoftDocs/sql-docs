@@ -36,7 +36,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   

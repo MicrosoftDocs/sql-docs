@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Java (Microsoft SDK for)"
   - "Microsoft SDK for Java [ADO]"
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using the Microsoft SDK for Java
 

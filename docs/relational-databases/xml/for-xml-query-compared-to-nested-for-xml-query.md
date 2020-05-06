@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # FOR XML Query Compared to Nested FOR XML Query
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic compares a single-level FOR XML query to a nested FOR XML query. One of the benefits of using nested FOR XML queries is that you can specify a combination of attribute-centric and element-centric XML for query results. The example demonstrates this.  
   
 ## Example  

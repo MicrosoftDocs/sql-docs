@@ -8,8 +8,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "privacy statement [SQL Server]"
 ms.assetid: 57769f4a-5689-49a1-8298-e3c0db5106f8
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Microsoft SQL Server Privacy Statement

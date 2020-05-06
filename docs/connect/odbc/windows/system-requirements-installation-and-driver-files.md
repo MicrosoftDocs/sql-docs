@@ -1,5 +1,6 @@
 ---
 title: "System Requirements, Installation, and Driver Files | Microsoft Docs"
+description: "This article describes the system requirements for the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "03/18/2020"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # System requirements, installation, and driver files
 

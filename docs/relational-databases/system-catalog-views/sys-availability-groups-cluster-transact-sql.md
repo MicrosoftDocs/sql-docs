@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.availability_groups_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
 ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.availability_groups_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

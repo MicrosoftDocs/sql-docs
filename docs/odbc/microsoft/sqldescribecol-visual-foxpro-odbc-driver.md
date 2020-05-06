@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDescribeCol function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDescribeCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  

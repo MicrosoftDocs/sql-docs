@@ -39,7 +39,7 @@ Classifying sensitive data in your database environment helps achieve extended v
 
 ## Syntax  
 
-```
+```syntaxsql
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
     WITH ( <sensitivity_option> [, ...n ] )     

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CHOOSE function"
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # Logical Functions - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  

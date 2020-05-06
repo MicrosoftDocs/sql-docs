@@ -1,5 +1,6 @@
 ---
 title: "Registering User-Defined Types in SQL Server | Microsoft Docs"
+description: You must register a UDT before you install it in SQL Server. You must register the assembly and create the type in the database where you wish to use it.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

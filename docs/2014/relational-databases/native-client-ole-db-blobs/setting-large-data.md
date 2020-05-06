@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, BLOBs"
   - "large data, OLE objects"
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Setting Large Data

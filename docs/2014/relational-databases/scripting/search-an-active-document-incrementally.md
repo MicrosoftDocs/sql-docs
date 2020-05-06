@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], incremental search"
   - "incremental searches [SQL Server Management Studio]"
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Search an Active Document Incrementally

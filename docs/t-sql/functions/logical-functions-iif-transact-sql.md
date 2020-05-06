@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IIF function"
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # Logical Functions - IIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 IIF ( boolean_expression, true_value, false_value )  
 ```  

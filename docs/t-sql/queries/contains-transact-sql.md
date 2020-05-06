@@ -1,6 +1,6 @@
 ---
 title: "CONTAINS (Transact-SQL) | Microsoft Docs"
-ms.description: "Transact-SQL reference for the CONTAINS language element. Used to search for words or phrases within another expression."
+description: "Transact-SQL reference for the CONTAINS language element. Used to search for words or phrases within another expression."
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -59,7 +59,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 CONTAINS (   
      {   
         column_name | ( column_list )   

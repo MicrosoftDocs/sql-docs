@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Replace in Files dialog box"
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Replace in Files

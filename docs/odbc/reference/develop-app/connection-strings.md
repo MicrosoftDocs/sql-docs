@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "connection functions [ODBC]"
   - "ODBC drivers [ODBC], connection functions"
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connection Strings
 A connection string contains information used for establishing a connection. A complete connection string contains all the information needed to establish a connection. The connection string is a series of keyword/value pairs separated by semicolons. (For the complete syntax of a connection string, see the [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) function description.) The connection string is used by:  

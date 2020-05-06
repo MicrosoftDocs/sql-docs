@@ -41,7 +41,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE FULLTEXT CATALOG catalog_name  
      [ON FILEGROUP filegroup ]  

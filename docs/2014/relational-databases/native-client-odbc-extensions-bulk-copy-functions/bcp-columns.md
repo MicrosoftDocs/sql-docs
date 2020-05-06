@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_columns function"
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_columns

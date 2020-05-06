@@ -1,5 +1,6 @@
 ---
 title: "Recover to a Log Sequence Number (SQL Server) | Microsoft Docs"
+description: In SQL Server, you can use the log sequence number (LSN) to recover to a certain point. This feature is intended for tools vendors.
 ms.custom: ""
 ms.date: "10/23/2019"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
 title: "BULK INSERT (Transact-SQL) | Microsoft Docs"
-ms.description: "Transact-SQL reference for the BULK INSERT statement."
+description: "Transact-SQL reference for the BULK INSERT statement."
 ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -37,7 +37,7 @@ Imports a data file into a database table or view in a user-specified format in 
 
 ## Syntax
 
-```
+```syntaxsql
 BULK INSERT
    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'

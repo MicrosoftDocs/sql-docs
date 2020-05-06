@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, creating"
   - "Execute method"
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Rowsets with ICommand::Execute

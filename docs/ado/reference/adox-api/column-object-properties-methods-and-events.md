@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Column object [ADOX], members"
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Column Object Properties, Methods, and Events
 ## Properties/Collections  

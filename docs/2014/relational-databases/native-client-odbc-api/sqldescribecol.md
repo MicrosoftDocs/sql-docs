@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLDescribeCol function"
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLDescribeCol

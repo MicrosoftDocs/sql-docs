@@ -1,14 +1,15 @@
 ---
 title: Download ODBC Driver for SQL Server
-ms.date: 03/10/2020
+description: "Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to SQL Server and Azure SQL Database."
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Download ODBC Driver for SQL Server
@@ -62,6 +63,12 @@ If you need to download the packages for offline installation, all versions are 
 
 > [!Note]
 > Packages named `msodbcsql17-*` are the latest version. Packages named `msodbcsql-*` are version 13 of the driver.
+
+### Alpine
+
+- [17.5.2.2 Alpine package](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.sig))
+- [17.5.2.1 Alpine package](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
+- [17.5.1.1 Alpine package](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk) ([PGP Signature](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig))
 
 ### Debian
 

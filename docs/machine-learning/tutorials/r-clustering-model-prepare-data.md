@@ -165,4 +165,4 @@ In part two of this tutorial series, you learned how to:
 To create a machine learning model that uses this customer data, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create a predictive model in R with SQL machine learning](r-clustering-model-build.md)
+> [Create a predictive model in R with SQL machine learning](r-clustering-model-build.md)

@@ -472,7 +472,7 @@ ID     Value
 ```  
 
 ## Locking behavior  
- An UPDATE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive lock, no other transactions can modify data. You can specify table hints to override this default behavior for the duration of the UPDATE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ An UPDATE statement acquires an exclusive (X) lock on any rows that it modifies, and holds these locks until the transaction completes. Depending on the query plan for the UPDATE statement, the number of rows being modified, and the isolation level of the transaction, locks may be acquired at the PAGE level or TABLE level rather than the ROW level. To avoid these higher level locks, consider dividing update statements that affect thousands of rows or more into batches, and ensure that any join and filter conditions are supported by indexes. See the article on [Locking in the Database Engine](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) for more details on locking mechanics in SQL Server.  
   
 ## Logging behavior  
  The UPDATE statement is logged; however, partial updates to large value data types using the **\.WRITE** clause are minimally logged. For more information, see "Updating Large Value Data Types" in the earlier section "Data Types".  

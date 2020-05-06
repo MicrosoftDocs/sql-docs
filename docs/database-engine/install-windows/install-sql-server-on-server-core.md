@@ -281,13 +281,9 @@ To enable remote connections, use SQLCMD.exe locally and execute the following s
 ### Enable TCP/IP on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The TCP/IP protocol can be enabled through Windows PowerShell for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Server Core. Follow these steps:  
   
-1.  On the server, launch Task Manager.  
+1.  In PowerShell: Import-Module SQLPS.  
   
-2.  On the **Applications** tab, click **New Task**.  
-  
-3.  In the **Create New Task** dialog box, type **sqlps.exe** in the **Open** field and then click **OK**. This opens the **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** window.  
-  
-4.  In the **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** window, run the following script to enable the TCP/IP protocol:  
+2.  In the **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** window, run the following script to enable the TCP/IP protocol:  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  

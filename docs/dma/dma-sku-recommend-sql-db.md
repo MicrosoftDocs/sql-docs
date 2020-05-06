@@ -12,8 +12,8 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ---
 
 # Identify the right Azure SQL Database/Managed Instance SKU for your on-premises database

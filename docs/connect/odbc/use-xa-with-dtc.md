@@ -2,7 +2,7 @@
 title: "Using XA with Microsoft ODBC Driver"
 description: "The Microsoft ODBC Driver for SQL Server provides support for XA transactions with the Distributed Transaction Coordinator (DTC) on Windows, Linux, and macOS."
 ms.custom: ""
-ms.date: "02/04/2019"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -20,7 +20,7 @@ manager: kenvh
 
 ## Overview
 
-The Microsoft ODBC Driver for SQL Server starting from version 17.3 provides support for XA transactions with the Distributed Transaction Coordinator (DTC) on Windows, Linux, and macOS. The XA implementation on the driver side enables the client application to send serial operations (such as start, commit, rollback a transaction branch, etc.) to the Transaction Manager (TM). And then the TM will communicate with the Resource Manager (RM) according to these operations. For more information about the XA Specification and the Microsoft implementation for DTC (MS DTC), see [How It Works: SQL Server DTC(MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+The Microsoft ODBC Driver for SQL Server starting from version 17.3 provides support for XA transactions with the Distributed Transaction Coordinator (DTC) on Windows, Linux, and macOS. The XA implementation on the driver side enables the client application to send serial operations (such as start, commit, rollback a transaction branch, etc.) to the Transaction Manager (TM). And then the TM will communicate with the Resource Manager (RM) according to these operations. For more information about the XA Specification and the Microsoft implementation for DTC (MS DTC), see [How It Works: SQL Server DTC(MSDTC and XA Transactions)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions).
 
 
 

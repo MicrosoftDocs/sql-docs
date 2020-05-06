@@ -42,7 +42,7 @@ In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stor
 
 ## Prerequisites
 
-* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and completed the steps in [part two](r-clustering-model-prepare-data.md).
+* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and completed the steps in [**part two**](r-clustering-model-prepare-data.md).
 
 ## Define the number of clusters
 

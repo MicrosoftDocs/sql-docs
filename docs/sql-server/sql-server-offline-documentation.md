@@ -1,5 +1,5 @@
 ---
-title: Install previous versions of SQL Server documentation offline
+title: Install SQL Server documentation to view offline
 description: Learn how to install offline documentation for SQL Server 2019, 2017, 2016, 2014, and 2012. Use SQL Server Management Studio (SSMS) to view the offline content. 
 ms.prod: sql
 ms.technology: install
@@ -8,10 +8,10 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/05/2020
+ms.date: 05/08/2020
 ---
 
-# Install previous versions of SQL Server documentation to view offline in SSMS
+# Install SQL Server documentation to view offline in SSMS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -92,6 +92,9 @@ The following steps explain how to load offline content for SQL Server 2014.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
+> [!Tip]
+> SQL 2014 Transact-SQL content is only available offline.
+
 ## SQL Server 2012 offline content
 
 The following steps explain how to load offline content for SQL Server 2012
@@ -162,7 +165,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 To learn more about archived content and Help viewer, reference the links below.
 
-- [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/)
-- [Microsoft Help Viewer - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)
-- [SQL Server Documentation, start](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server Documentation](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 documentation](../2014/database-engine/install-windows/installation-for-sql-server.md)
+- [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

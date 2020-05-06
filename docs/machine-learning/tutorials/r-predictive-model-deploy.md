@@ -1,31 +1,32 @@
 ---
 title: "Tutorial: Deploy a predictive model in R"
 titleSuffix: SQL machine learning
-description: In part four of this four-part tutorial, you'll deploy a predictive model in R with SQL machine learning services.
+description: In part four of this four-part tutorial, you'll deploy a predictive model in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
-ms.date: 04/24/2020
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Deploy a predictive model in R with SQL machine learning services
+# Tutorial: Deploy a predictive model in R with SQL machine learning
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll develop a linear regression model developed in R into a SQL Server or Big Data Clusters using Machine Learning Services.
+In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll develop a linear regression model developed in R into a SQL Server database using Machine Learning Services.
+In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In this four-part tutorial series, you will use R and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using SQL Server R Services.
 ::: moniker-end
+
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
@@ -35,15 +36,15 @@ In this article, you'll learn how to:
 > * Create a stored procedure that makes predictions using the model
 > * Execute the model with new data
 
-In [part one](r-tutorial-predictive-model-introduction.md), you learned how to restore the sample database.
+In [part one](r-predictive-model-introduction.md), you learned how to restore the sample database.
 
-In [part two](r-tutorial-predictive-model-prepare-data.md), you learned how to import a sample database and then prepare the data to be used for training a predictive model in R.
+In [part two](r-predictive-model-prepare-data.md), you learned how to import a sample database and then prepare the data to be used for training a predictive model in R.
 
-In [part three](r-tutorial-predictive-model-train.md), you learned how to create and train multiple machine learning models in R, and then choose the most accurate one.
+In [part three](r-predictive-model-train.md), you learned how to create and train multiple machine learning models in R, and then choose the most accurate one.
 
 ## Prerequisites
 
-Part four of this tutorial assumes you fulfilled the prerequisites of [part one](r-tutorial-predictive-model-introduction.md) and completed the steps in [part two](r-tutorial-predictive-model-prepare-data.md) and [part three](r-tutorial-predictive-model-train.md).
+Part four of this tutorial assumes you fulfilled the prerequisites of [**part one**](r-predictive-model-introduction.md) and completed the steps in [**part two**](r-predictive-model-prepare-data.md) and [**part three**](r-predictive-model-train.md).
 
 ## Create a stored procedure that generates the model
 
@@ -196,14 +197,16 @@ RentalCount_Predicted
 332.571428571429
 ```
 
-You have successfully created, trained, and deployed a model in an SQL database. You then used that model in a stored procedure to predict values based on new data.
+You have successfully created, trained, and deployed a model in a SQL database. You then used that model in a stored procedure to predict values based on new data.
 
 
 ## Clean up resources
 
 When you've finished using the TutorialDB database, delete it from your SQL server.
 
-In part four of this tutorial series, you completed these steps:
+## Next steps
+
+In part four of this tutorial series, you learned how to:
 
 * Create a stored procedure that generates the machine learning model
 * Store the model in a database table
@@ -212,8 +215,6 @@ In part four of this tutorial series, you completed these steps:
 
 To learn more about using R in Machine Learning Services, see:
 
-[Run simple R scripts](quickstart-r-create-script.md)
-[R data structures,types and objects](quickstart-r-data-types-and-objects.md)[
-[R functions](quickstart-r-functions.md]
-
-
+* [Run simple R scripts](quickstart-r-create-script.md)
+* [R data structures, types and objects](quickstart-r-data-types-and-objects.md)
+* [R functions](quickstart-r-functions.md)

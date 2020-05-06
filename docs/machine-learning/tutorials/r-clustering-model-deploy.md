@@ -1,19 +1,19 @@
 ---
 title: "Tutorial: Deploy a clustering model in R"
-titleSuffix: SQL Database Machine Learning Services
-description: In part four of this four-part tutorial series, you'll deploy a clustering model in R with SQL machine learning services.
+titleSuffix: SQL machine learning
+description: In part four of this four-part tutorial series, you'll deploy a clustering model in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
-ms.date: 04/27/2020
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Deploy a clustering model in R with SQL machine learning services
+# Tutorial: Deploy a clustering model in R with SQL machine learning
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -21,7 +21,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-current|
 In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to cluster customer data.
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server R Services.
 ::: moniker-end
 
 In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the R script from any app. To do that, you can deploy the R script in a database by putting the R script inside a SQL stored procedure. Because your model executes in the database, it can easily be trained against data stored in the database.
@@ -29,26 +32,19 @@ In order to perform clustering on a regular basis, as new customers are register
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-
 > * Create a stored procedure that generates the model
 > * Perform clustering in SQL Database
 > * Use the clustering information
 
-To learn more about using R in Machine Learning Services, see:
+In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
 
-[Run R scripts](quickstart-r-create-script.md]
-[R data structures, data types, and objects](quickstart-r-data-types-and-objects.md)
-[R functions](quickstart-r-functions.md)
+In [part two](r-clustering-model-prepare-data.md), you learned how to prepare the data from a database to perform clustering.
 
-In [part one](r-tutorial-clustering-model-introduction.md), you learned how to prepare the data from an SQL database to perform clustering.
-
-In [part two](r-tutorial-clustering-model-prepare-data.md), you learned how to create and train a K-Means clustering model in R.
-
-In [part three](r-tutorial-clustering-model-build-data.md), you learned how to create and train a K-Means clustering model in R.
+In [part three](r-clustering-model-build.md), you learned how to create and train a K-Means clustering model in R.
 
 ## Prerequisites
 
-* Part four of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-tutorial-clustering-model-introduction.md) and completed the steps in [**part two**](r-tutorial-clustering-model-build-data.md) and [**part three**](r-tutorial-clustering-model-build-data.md).
+* Part four of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and completed the steps in [**part two**](r-clustering-model-build.md) and [**part three**](r-clustering-model-build.md).
 
 ## Create a stored procedure that generates the model
 
@@ -212,7 +208,7 @@ cluster  customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 Because you stored the clustering procedure in the database, it can perform clustering efficiently against customer data stored in the same database. You can execute the procedure whenever your customer data is updated and use the updated clustering information.
 
-Suppose you want to send a promotional email to customers in cluster 0, the group that was inactive (you can see how the four clusters were described in [part three](r-tutorial-clustering-model-build-data.md#analyze-the-results) of this tutorial). The following code selects the email addresses of customers in cluster 0.
+Suppose you want to send a promotional email to customers in cluster 0, the group that was inactive (you can see how the four clusters were described in [part three](r-clustering-model-build.md#analyze-the-results) of this tutorial). The following code selects the email addresses of customers in cluster 0.
 
 ```sql
 USE [tpcxbb_1gb]
@@ -232,8 +228,15 @@ You can change the **c.cluster** value to return email addresses for customers i
 When you're finished with this tutorial, you can delete the tpcxbb_1gb database.
 
 ## Next steps
-In part four of this tutorial series, you completed these steps:
+
+In part four of this tutorial series, you learned how to:
 
 * Create a stored procedure that generates the model
-* Perform clustering in SQL Database
+* Perform clustering in SQL Server
 * Use the clustering information
+
+To learn more about using R in Machine Learning Services, see:
+
+* [Run simple R scripts](quickstart-r-create-script.md)
+* [R data structures, types and objects](quickstart-r-data-types-and-objects.md)
+* [R functions](quickstart-r-functions.md)

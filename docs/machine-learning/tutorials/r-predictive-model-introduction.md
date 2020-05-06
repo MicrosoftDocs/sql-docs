@@ -1,29 +1,32 @@
 ---
 title: "Tutorial: Develop predictive model in R"
 titleSuffix: SQL machine learning
-description: In this four-part tutorial series, you'll develop data to train a predictive model in R with  SQL machine learning services.
+description: In this four-part tutorial series, you'll develop data to train a predictive model in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-ms.reviewer: garye
-ms.date: 04/27/2020
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Tutorial: Prepare data to train a predictive model in R with SQL machine learning.
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-
-
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In this four-part tutorial series, you will use R and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial uses a [Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+In this four-part tutorial series, you will use R and a machine learning model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In this four-part tutorial series, you will use R and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+In this four-part tutorial series, you will use R and a machine learning model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals.
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In this four-part tutorial series, you will use R and a machine learning model in [SQL Server R Services](../r/sql-server-r-services.md) to predict the number of ski rentals.
 ::: moniker-end
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
@@ -33,15 +36,13 @@ In the first part of this series, you'll get set up with the prerequisites. In p
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into SQL Server 
+> * Restore a sample database into SQL Server 
 
+In [part two](r-predictive-model-prepare-data.md), you'll learn how to load the data from a database into a Python data frame, and prepare the data in R.
 
-In [part two](r-tutorial-predictive-model-prepare-data.md), you'll learn how to load the data from a database into a Python data frame, and prepare the data in R.
+In [part three](r-predictive-model-train.md), you'll learn how to train a machine learning model model in R.
 
-In [part three](r-tutorial-predictive-model-train.md), you'll learn how to train a linear regression model in R.
-
-In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
-
+In [part four](r-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
 
 ## Prerequisites
 
@@ -55,9 +56,9 @@ In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store
 
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 
-* RODBC - This driver is necessary to run R scripts. [Install ODBC for R](https://CRAN.R-project.org/package=RODBC)
+* RODBC - This driver is used in the R scripts you'll develop in this tutorial. If it's not already installed, install it using the R command `install.packages("RODBC")`. For more information on RODBC, see [CRAN - Package RODBC](https://CRAN.R-project.org/package=RODBC).
 
-* SQL query tool - This tutorial assumes you're using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md)..
+* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
 ## Restore the sample database
 
@@ -94,9 +95,9 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 In part one of this tutorial series, you completed these steps:
 
 * Installed the prerequisites
-* Import a sample database into an SQL Server
+* Restored a sample database into SQL Server
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 
-[!div class="nextstepaction"]
-[R tutorial: Prepare data to train a predictive model in R](r-tutorial-predictive-model-prepare-data.md)
+> [!div class="nextstepaction"]
+> [Prepare data to train a predictive model in R](r-predictive-model-prepare-data.md)

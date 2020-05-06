@@ -1,53 +1,52 @@
 ---
 title: "Tutorial: Prepare data to train a predictive model in R"
-titleSuffix: SQL Database Machine Learning Services
+titleSuffix: SQL machine learning
 description: In part two of this four-part tutorial series, you'll prepare the data to train a predictive model in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
-ms.date: 04/27/2020
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"	
-
 ---
 
-# Tutorial: Prepare data to train a predictive model in R with SQL machine learning services
+# Tutorial: Prepare data to train a predictive model in R with SQL machine learning
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a linear regression model in R with SQL Server Machine Learning Services or on Big Data Clusters.
+In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive model in R with SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services.
+In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive model in R with SQL Server Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services.
+In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive model in R with SQL Server R Services.
 ::: moniker-end
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into a database
+> * Restore a sample database into a database
 > * Load the data from the SQL database into an R data frame
 > * Prepare the data in R by identifying some columns as categorical
 
-In [part one](r-tutorial-predictive-model-introduction.md), you learned how to restore the sample database.
+In [part one](r-predictive-model-introduction.md), you learned how to restore the sample database.
 
-In [part three](r-tutorial-predictive-model-train.md), you'll learn how to train a linear regression machine learning model in R.
+In [part three](r-predictive-model-train.md), you'll learn how to train a machine learning model in R.
 
-In [part four](r-tutorial-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
+In [part four](r-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
 
 ## Prerequisites
 
-Part two of this tutorial assumes you have completed [part one](r-tutorial-predictive-model-introduction.md) and its prerequisites.
+Part two of this tutorial assumes you have completed [**part one**](r-predictive-model-introduction.md) and its prerequisites.
 
 ## Load the data into a data frame
 
-To use the data in R, you'll load the data from the Azure SQL database into a data frame (`rentaldata`).
+To use the data in R, you'll load the data from the SQL database into a data frame (`rentaldata`).
 
 Create a new RScript file in RStudio and run the following script. Replace **ServerName** with your own connection information.
 
@@ -132,13 +131,12 @@ If you're not going to continue with this tutorial, delete the TutorialDB databa
 
 ## Next steps
 
-In part two of this tutorial series, you learned:
+In part two of this tutorial series, you learned how to:
 
-* Import a sample database
-* Load the data from SQL Server into an R data frame
+* Load the sample data from SQL Server into an R data frame
 * Prepare the data in R by identifying some columns as categorical
 
 To create a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create a predictive model in R with SQL machine learning services](r-tutorial-predictive-model-train.md)
+> [Create a predictive model in R with SQL machine learning](r-predictive-model-train.md)

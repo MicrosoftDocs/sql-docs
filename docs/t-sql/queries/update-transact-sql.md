@@ -1,7 +1,7 @@
 ---
 title: "UPDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2019"
+ms.date: "05/19/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -97,7 +97,7 @@ UPDATE
     table_or_view_name}  
 ```  
   
-```  
+```syntaxsql 
 -- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
 
 [ WITH <common_table_expression> [ ,...n ] ]
@@ -118,8 +118,9 @@ ON <join_condition>
 }  
 ```
 
-```
--- Syntax for Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Parallel Data Warehouse
+
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 SET { column_name = { expression | NULL } } [ ,...n ]  
 [ FROM from_clause ]  
@@ -1153,7 +1154,7 @@ SELECT * FROM YearlyTotalSales;
 ### AH. ANSI join for update statements
 This example shows how to update data based on the result from joining another table.
 
-```
+```sql
 CREATE TABLE dbo.Table1   
     (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
 GO  

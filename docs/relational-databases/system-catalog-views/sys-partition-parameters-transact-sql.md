@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.partition_parameters catalog view"
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_parameters (Transact-SQL)

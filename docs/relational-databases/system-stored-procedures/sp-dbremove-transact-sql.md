@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbremove"
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

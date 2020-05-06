@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_unbindrule"
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dm_os_cluster_properties"
   - "sys.dm_os_cluster_properties"
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

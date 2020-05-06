@@ -129,9 +129,9 @@ ALTER WORKLOAD GROUP wgDataLoads WITH
 ## ALTER WORKLOAD GROUP Behavior
 
 At any point in time there are 3 types of requests in the system
-- Requests which have not been classified yet
-- Requests which are classified - and waiting - for object locks or system resources
-- Requests which are classified - and running
+- Requests which have not been classified yet.
+- Requests which are classified - and waiting - for object locks or system resources.
+- Requests which are classified - and running.
 
 Based on the properties of a workload group being altered, the timing of when the settings take effect will differ.
 

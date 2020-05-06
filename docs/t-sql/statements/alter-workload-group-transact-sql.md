@@ -105,7 +105,7 @@ IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }
 Alters the default importance of a request for the workload group.
 
 QUERY_EXECUTION_TIMEOUT_SEC = value  
-Alters the maximum time, in seconds, that a query can execute before it is cancelled.  value must be 0 or a positive integer.  The default setting for value is 0, which means unlimited.   
+Alters the maximum time, in seconds, that a query can execute before it is canceled. Value must be 0 or a positive integer. The default setting for value is 0, which means unlimited.   
 
 ## Permissions
 

@@ -17,7 +17,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In part two of this four-part tutorial series, you'll build a K-Means model in R to perform clustering.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In part two of this four-part tutorial series, you'll prepare the data from a SQL database to perform clustering in R with SQL Database Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
@@ -42,7 +41,7 @@ In [part four](r-clustering-model-deploy.md), you'll learn how to create a store
 
 ## Prerequisites
 
-** Part two of this tutorial assumes you have completed [**part one**](r-clustering-model-introduction.md).
+* Part two of this tutorial assumes you have completed [**part one**](r-clustering-model-introduction.md).
 
 ## Separate customers
 
@@ -125,7 +124,6 @@ LEFT OUTER JOIN (
 
 ## Load the data into a data frame
 
-Now use the following script to return the results from the query to an R data frame using the **SqlServerData** function.
 Now use the following script to return the results from the query to an R data frame.
 
 ```r

@@ -42,7 +42,7 @@ In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stor
 
 ## Prerequisites
 
-* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and completed the steps in [part two](r-clustering-model-prepare-data.md) along with its prerequisites.
+* Part three of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](r-clustering-model-introduction.md) and completed the steps in [part two](r-clustering-model-prepare-data.md).
 
 ## Define the number of clusters
 
@@ -69,7 +69,7 @@ Based on the graph, it looks like *k = 4* would be a good value to try. That *k*
 
 ## Perform clustering
 
-In the following R script, you'll use the function **rxKmeans**, which is the K-Means function in the RevoScaleR package.
+In the following R script, you'll use the function **kmeans** to perform clustering.
 
 ```r
 # Output table to hold the customer group mappings.
@@ -91,7 +91,6 @@ sqlSave(ch, customer_cluster, tablename = "return_cluster")
 customer_cluster_check <- sqlFetch(ch, "return_cluster")
 
 head(customer_cluster_check)
-
 ```
 
 ## Analyze the results
@@ -134,7 +133,7 @@ $ifault
 
 ```
 
-The four cluster means are given using the variables defined in [part one](r-clustering-model-prepare-data.md#separate-customers):
+The four cluster means are given using the variables defined in [part two](r-clustering-model-prepare-data.md#separate-customers):
 
 * *orderRatio* = return order ratio (total number of orders partially or fully returned versus the total number of orders)
 * *itemsRatio* = return item ratio (total number of items returned versus the number of items purchased)

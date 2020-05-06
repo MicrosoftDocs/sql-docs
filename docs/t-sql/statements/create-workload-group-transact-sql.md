@@ -71,7 +71,7 @@ Creates a workload group. Workload groups are containers for a set of requests a
 
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name
-[ WITH
+( WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
   [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
   [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
@@ -79,7 +79,7 @@ CREATE WORKLOAD GROUP group_name
   [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } ]
   [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )
   [ ; ]
-]
+
 ```
 
 *group_name*</br>

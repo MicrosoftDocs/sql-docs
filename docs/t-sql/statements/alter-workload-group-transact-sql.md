@@ -68,7 +68,7 @@ Alters an existing workload group.
 
 See the ALTER WORKLOAD GROUP Behavior section in this doc for further details on how ALTER WORKLOAD GROUP behaves on a system with running and queued requests. 
 
-Restrictions in place for CREATE WORKLOAD GROUP also apply to ALTER WORKLOAD GROUP.  Prior to modifying parameters, query sys.workload_management_workload_groups to ensure the values are within acceptable ranges.
+Restrictions in place for [CREATE WORKLOAD GROUP](create-workload-group-transact-sql.md) also apply to ALTER WORKLOAD GROUP.  Prior to modifying parameters, query [sys.workload_management_workload_groups](sys-workload-management-workload-groups-transact-sql.md) to ensure the values are within acceptable ranges.
 
 ## Syntax
 
@@ -89,22 +89,22 @@ ALTER WORKLOAD GROUP group_name
 group_name
 Is the name of the existing user-defined workload group being altered.  group_name is not alterable. 
 
-MIN_PERCENTAGE_RESOURCE = value 
-value is an integer range from 0 to 100.  When altering min_percentage_resource, the sum of min_percentage_resource across all workload groups cannot exceed 100.  Altering min_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the ALTER WORKLOAD GROUP Behavior section in this doc for further details.
+MIN_PERCENTAGE_RESOURCE = value  
+Value is an integer range from 0 to 100.  When altering min_percentage_resource, the sum of min_percentage_resource across all workload groups cannot exceed 100.  Altering min_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the ALTER WORKLOAD GROUP Behavior section in this doc for further details.
 
-CAP_PERCENTAGE_RESOURCE = value
-value is an integer range from 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  Altering cap_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the ALTER WORKLOAD GROUP Behavior section in this doc for further details. 
+CAP_PERCENTAGE_RESOURCE = value  
+Value is an integer range from 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  Altering cap_percentage_resource requires all running queries to complete in the workload group before the command will complete.  See the ALTER WORKLOAD GROUP Behavior section in this doc for further details. 
 
-REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
-value is a decimal with a range between 0.75 to 100.00.  The value for request_min_resource_grant_percent needs to be a factor of min_percentage_resource and be less than cap_percentage_resource. 
+REQUEST_MIN_RESOURCE_GRANT_PERCENT = value  
+Value is a decimal with a range between 0.75 to 100.00.  The value for request_min_resource_grant_percent needs to be a factor of min_percentage_resource and be less than cap_percentage_resource. 
   
-REQUEST_MAX_RESOURCE_GRANT_PERCENT = value
-value is a decimal and must be greater than request_min_resource_grant_percent
+REQUEST_MAX_RESOURCE_GRANT_PERCENT = value  
+Value is a decimal and must be greater than request_min_resource_grant_percent.
 
-IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }
+IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
 Alters the default importance of a request for the workload group.
 
-QUERY_EXECUTION_TIMEOUT_SEC = value
+QUERY_EXECUTION_TIMEOUT_SEC = value  
 Alters the maximum time, in seconds, that a query can execute before it is cancelled.  value must be 0 or a positive integer.  The default setting for value is 0, which means unlimited.   
 
 ## Permissions
@@ -149,5 +149,12 @@ Changing min_percentage_resource and cap_percentage_resource requires draining o
 **Locking Behavior**
 Altering a workload group requires a global lock across all workload groups.  A request to alter a workload group would queue behind already submitted create or drop workload group requests.  If a batch of alter statements is submitted at once, they are processed in the order in which they are submitted.  
 
-## Next steps
+## See also
+
+- [CREATE WORKLOAD GROUP (Transact-SQL)](create-workload-group-transact-sql.md)
+- [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
+- [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
+- [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
+- Quickstart on how to create and use a [workload group](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
+
 ::: moniker-end

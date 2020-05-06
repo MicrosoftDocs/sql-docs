@@ -68,7 +68,7 @@ Alters an existing workload group.
 
 See the `ALTER WORKLOAD GROUP` behavior section below for further details on how `ALTER WORKLOAD GROUP` behaves on a system with running and queued requests. 
 
-Restrictions in place for [CREATE WORKLOAD GROUP](create-workload-group-transact-sql.md) also apply to ALTER WORKLOAD GROUP.  Prior to modifying parameters, query [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) to ensure the values are within acceptable ranges.
+Restrictions in place for [CREATE WORKLOAD GROUP](create-workload-group-transact-sql.md) also apply to `ALTER WORKLOAD GROUP`.  Prior to modifying parameters, query [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) to ensure the values are within acceptable ranges.
 
 ## Syntax
 
@@ -126,7 +126,7 @@ ALTER WORKLOAD GROUP wgDataLoads WITH
  ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 10 )
  ```
 
-## ALTER WORKLOAD GROUP Behavior
+## ALTER WORKLOAD GROUP behavior
 
 At any point in time there are 3 types of requests in the system
 - Requests which have not been classified yet.
@@ -135,18 +135,18 @@ At any point in time there are 3 types of requests in the system
 
 Based on the properties of a workload group being altered, the timing of when the settings take effect will differ.
 
-**Importance or Query_execution_timeout**
+**Importance or query_execution_timeout**
 For the importance and query_execution_timeout properties, non-classified requests pick up the new config values.  Waiting and running requests execute with the old configuration.  The `ALTER WORKLOAD GROUP` request executes immediately regardless if there are running queries in the workload group.
 
-**Request_min_resource_grant_percent or Request_max_resource_grant_percent**
+**Request_min_resource_grant_percent or request_max_resource_grant_percent**
 For request_min_resource_grant_percent and request_max_resource_grant_percent, running requests execute with the old configuration.  Waiting requests and non-classified requests pick up the new config values.  The `ALTER WORKLOAD GROUP` request executes immediately regardless if there are running queries in the workload group.
 
-**Min_percentage_resource or Cap_percentage_resource**
+**Min_percentage_resource or cap_percentage_resource**
 For min_percentage_resource and cap_percentage_resource, running requests execute with the old configuration.  Waiting requests and non-classified requests pick up the new config values. 
 
 Changing min_percentage_resource and cap_percentage_resource requires draining of running requests in the workload group that is being altered.  When decreasing min_percentage_resource, the freed resources are returned to the share pool allowing requests from other workload groups the ability to utilize.  Conversely, increasing the min_percentage_resource will wait until requests utilizing only the needed resources from the shared pool to complete.  Alter workload group operation will have prioritized access to shared resources over other requests waiting to be executed on shared pool.  If the sum of min_percentage_resource exceeds 100%, the ALTER WORKLOAD GROUP request fails immediately. 
 
-**Locking Behavior**
+**Locking behavior**
 Altering a workload group requires a global lock across all workload groups.  A request to alter a workload group would queue behind already submitted create or drop workload group requests.  If a batch of alter statements is submitted at once, they are processed in the order in which they are submitted.  
 
 ## See also

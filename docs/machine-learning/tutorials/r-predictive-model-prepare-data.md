@@ -46,7 +46,7 @@ Part two of this tutorial assumes you have completed [part one](r-predictive-mod
 
 ## Load the data into a data frame
 
-To use the data in R, you'll load the data from the Azure SQL database into a data frame (`rentaldata`).
+To use the data in R, you'll load the data from the SQL database into a data frame (`rentaldata`).
 
 Create a new RScript file in RStudio and run the following script. Replace **ServerName** with your own connection information.
 

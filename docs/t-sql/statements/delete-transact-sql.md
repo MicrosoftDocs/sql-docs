@@ -1,7 +1,7 @@
 ---
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/30/2019"
+ms.date: "05/19/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -73,8 +73,9 @@ DELETE
 }  
 ```  
   
-```
+```syntaxsql
 -- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+
 [ WITH <common_table_expression> [ ,...n ] ] 
 DELETE [database_name . [ schema ] . | schema. ] table_name  
 FROM [database_name . [ schema ] . | schema. ] table_name 
@@ -92,7 +93,7 @@ ON <join_condition>
 }  
 ```
 
-```
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 DELETE 
@@ -453,7 +454,8 @@ GO
 DELETE FROM Table1;  
 ```  
   
-### L. DELETE a set of rows from a table  
+### L. DELETE a set of rows from a table
+
  The following example deletes all rows from the  `Table1` table that have a value greater than 1000.00 in the  `StandardCost` column.  
   
 ```sql
@@ -461,7 +463,8 @@ DELETE FROM Table1
 WHERE StandardCost > 1000.00;  
 ```  
   
-### M. Using LABEL with a DELETE statement  
+### M. Using LABEL with a DELETE statement
+
  The following example uses a label with the DELETE statement.  
   
 ```sql
@@ -470,7 +473,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### N. Using a label and a query hint with the DELETE statement  
+### N. Using a label and a query hint with the DELETE statement
+
  This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION Clause (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
@@ -496,8 +500,10 @@ SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 ```
 
 ### P. Delete based on the result of joining with another table
+
 This example shows how to delete from a table based on the result from joining wiht another table.
-```
+
+```sql
 CREATE TABLE dbo.Table1   
     (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
 GO  
@@ -515,7 +521,9 @@ FROM dbo.Table2
     ON (dbo.Table2.ColA = dbo.Table1.ColA)
     WHERE dboTable2.ColA = 1;  
 ```
-## See Also  
+
+## See Also
+
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

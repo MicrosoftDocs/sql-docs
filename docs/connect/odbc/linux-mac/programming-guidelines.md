@@ -15,12 +15,12 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkID=45250)).  
+The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](../../../odbc/reference/odbc-programmer-s-reference.md)).  
 
 An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific items that you would use in your Windows ODBC applications.
 
 ## Available Features  
-The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS and Linux:  
+The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)) are valid when using the ODBC driver on macOS and Linux:  
 
 -   [Communicating with SQL Server (ODBC)](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
 -   [Connection and query timeout support](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
@@ -52,7 +52,7 @@ The following features are not available in this release of the ODBC driver on m
 -   Distributed Transactions (SQL_ATTR_ENLIST_IN_DTC attribute is not supported)  
 -   Database Mirroring  
 -   FILESTREAM  
--   Profiling ODBC driver performance, discussed in [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099), and the following performance-related connection attributes:  
+-   Profiling ODBC driver performance, discussed in [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), and the following performance-related connection attributes:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -128,7 +128,7 @@ At the time of this writing the default stack size in MUSL is 128K, which is eno
 
 ## Additional Notes  
 
-1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
+1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](../../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
 
     ```
     sqlcmd -U <user> -P <pwd> -S <host>,33000

@@ -48,7 +48,8 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentOverwriteResult`     | Overwrite the result file    | N
 |`/AssessmentResultJson`     | Full path to the JSON result file     | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
 |`/AssessmentResultCsv`    | Full path to the CSV result file   | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
-|`/Action`    | Use SkuRecommendation to get SKU recommendations, use AssessTargetReadiness to perform target readiness assessment.   | N
+|`/AssessmentResultDma`    | Full path to the dma result file   | N
+|`/Action`    | Use SkuRecommendation to get SKU recommendations. <br> Use AssessTargetReadiness to perform target readiness assessment. <br> Use AzureMigrateUpload to upload all DMA assessment files in the AzzessmentResultInputFolder to bulk upload to Azure Migrate.Action type usage /Action= AzureMigrateUpload   | N
 |`/SourceConnections`    | Space delimited list of connection strings. Database name (Initial Catalog) is optional. If no database name is provided, then all databases on the source are assessed.   | Y <br> (Required if Action is 'AssessTargetReadiness')
 |`/TargetReadinessConfiguration`    | Full path to the XML file describing values for the name, source connections and result file.   | Y <br> (Either TargetReadinessConfiguration or SourceConnections is required)
 |`/FeatureDiscoveryReportJson`    | Path to the feature discovery JSON report. If this file is generated, then it can be used to run target readiness assessment again without connecting to source. | N
@@ -58,7 +59,6 @@ DmaCmd.exe /AssessmentName="string"
 |`/SubscriptionId`    |Azure subscription id.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/AzureMigrateProjectName`    |The Azure Migrate Project name to upload assessment results to.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/ResourceGroupName`    |Azure Migrate resource group name.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
-|`/AzureMigrateUpload`    |Action type used to upload all DMA assessment files in the AzzessmentResultInputFolder to bulk upload to Azure Migrate.Action type usage /Action= AzureMigrateUpload   | N
 |`/AssessmentResultInputFolder`    |The input folder path containing .DMA assessment files to upload to Azure Migrate.   | Y <br> (Required if Action is AzureMigrateUpload)
 
 

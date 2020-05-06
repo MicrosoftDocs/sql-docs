@@ -100,4 +100,4 @@ In part one of this tutorial series, you completed these steps:
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [R tutorial: Prepare data to train a predictive model in R](r-predictive-model-prepare-data.md)
+> [Tutorial: Prepare data to train a predictive model in R](r-predictive-model-prepare-data.md)

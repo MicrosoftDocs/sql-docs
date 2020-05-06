@@ -21,7 +21,7 @@ There is online documentation for several older versions of SQL Server.
 
 To access online content for SQL Server versions 2005 – 2012, see [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
 
-To access online content for SQL Server version 2014, see [Installation for SQL Server 2014](../2014/database-engine/install-windows/installation-for-sql-server.md).
+To access online content for SQL Server version 2014, see [SQL Server 2014 documentation](../2014/2014-toc/index.yml).
 
 To access online content for SQL Server 2016 and later, see the latest [SQL Server Documentation](../sql-server/index.yml).
 

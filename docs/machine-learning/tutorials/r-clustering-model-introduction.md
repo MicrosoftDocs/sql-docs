@@ -27,9 +27,8 @@ In this four-part tutorial series, you'll use R to develop and deploy a K-Means 
 In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server R Services](../r/sql-server-r-services.md) to cluster customer data.
 ::: moniker-end
 
-In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a database. Later in this series, you'll use this data to train and deploy a clustering model in R with SQL machine learning.
-
-In parts two and three of this series, you'll develop some R scripts in an Azure Data Studio notebook to analyze and prepare your data and train a machine learning model. Then, in part four, you'll run those R scripts inside a database using stored procedures.
+In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a database. 
+In parts two and three, you'll develop some R scripts in an Azure Data Studio notebook to analyze and prepare this sample data and train a machine learning model. Then, in part four, you'll run those R scripts inside a database using stored procedures.
 
 *Clustering* can be explained as organizing data into groups where members of a group are similar in some way. For this tutorial series, imagine you own a retail business. You'll use the **K-Means** algorithm to perform the clustering of customers in a dataset of product purchases and returns. By clustering customers, you can focus your marketing efforts more effectively by targeting specific groups. K-Means clustering is an *unsupervised learning* algorithm that looks for patterns in data based on similarities.
 

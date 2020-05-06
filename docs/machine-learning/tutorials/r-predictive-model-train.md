@@ -135,4 +135,4 @@ In part three of this tutorial series, you learned how to:
 To deploy the machine learning model you've created, follow part four of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Deploy a predictive model in R with SQL machine learning](r-predictive-model-deploy.md)
+> [Deploy a predictive model in R with SQL machine learning](r-predictive-model-deploy.md)

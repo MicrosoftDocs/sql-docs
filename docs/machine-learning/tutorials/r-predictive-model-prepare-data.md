@@ -30,13 +30,13 @@ In part two of this four-part tutorial series, you'll prepare data from a databa
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into a database
+> * Restore a sample database into a database
 > * Load the data from the SQL database into an R data frame
 > * Prepare the data in R by identifying some columns as categorical
 
 In [part one](r-predictive-model-introduction.md), you learned how to restore the sample database.
 
-In [part three](r-predictive-model-train.md), you'll learn how to train a linear regression machine learning model in R.
+In [part three](r-predictive-model-train.md), you'll learn how to train a machine learning model in R.
 
 In [part four](r-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the R scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
 

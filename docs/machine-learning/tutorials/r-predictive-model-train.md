@@ -30,16 +30,15 @@ In part three of this four-part tutorial series, you'll train a predictive model
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Train a linear regression model
-> * Make predictions using the linear regression model
+> * Train two machine learning models
+> * Make predictions from both models
+> * Compare the results to choose the most accurate model
 
 In [part one](r-predictive-model-introduction.md), you learned how to restore the sample database.
 
 In [part two](r-predictive-model-prepare-data.md), you learned how to load the data from a database into a Python data frame, and prepare the data in R.
 
 In [part four](r-predictive-model-deploy.md), you'll learn how to store the model in a database, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in on the server to make predictions based on new data.
-
-
 
 ## Prerequisites
 

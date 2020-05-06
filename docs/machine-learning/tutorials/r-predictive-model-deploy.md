@@ -18,13 +18,13 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a linear regression model developed in R into a SQL Server or Big Data Clusters using Machine Learning Services.
+In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a linear regression model developed in R into a SQL Server database using Machine Learning Services.
+In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a linear regression model developed in R into a SQL Server database using SQL Server R Services.
+In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using SQL Server R Services.
 ::: moniker-end
 
 In this article, you'll learn how to:

@@ -2,7 +2,7 @@
 title: "Programming Guidelines (ODBC Driver)"
 description: "The programming features of the Microsoft ODBC Driver for SQL Server on macOS and Linux are based on ODBC in SQL Server Native Client (ODBC)."
 ms.custom: ""
-ms.date: "01/12/2018"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -22,21 +22,21 @@ An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLU
 ## Available Features  
 The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS and Linux:  
 
--   [Communicating with SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Communicating with SQL Server (ODBC)](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
 -   [Connection and query timeout support](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [Cursors](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [Date/Time Improvements (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
--   [Executing Queries (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
+-   [Date/Time Improvements (ODBC)](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Executing Queries (ODBC)](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
 -   [Handling Errors and Messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Kerberos authentication](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [Large CLR User-Defined Types (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
--   [Performing Transactions (ODBC) (except distributed transactions)](https://msdn.microsoft.com/library/ms131706.aspx)  
--   [Processing Results (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Large CLR User-Defined Types (ODBC)](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [Performing Transactions (ODBC) (except distributed transactions)](../../../relational-databases/native-client/odbc/performing-transactions-in-odbc.md)  
+-   [Processing Results (ODBC)](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
 -   [Running Stored Procedures](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [Sparse Columns Support (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
+-   [Sparse Columns Support (ODBC)](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)
 -   [Using Encryption Without Validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
--   [Table Valued Parameters](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [UTF-8 and UTF-16 for command and data API](https://msdn.microsoft.com/library/ff878241.aspx)
+-   [Table Valued Parameters](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)
+-   [UTF-8 and UTF-16 for command and data API](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)
 -   [Using Catalog Functions](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## Unsupported Features
@@ -45,7 +45,7 @@ The following features have not been verified to work correctly in this release 
 
 -   Failover Cluster Connection
 -   [Transparent Network IP Resolution](../using-transparent-network-ip-resolution.md) (before ODBC Driver 17)
--   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
+-   [Advanced Driver Tracing](/archive/blogs/mattn/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers)
 
 The following features are not available in this release of the ODBC driver on macOS and Linux: 
 
@@ -60,7 +60,7 @@ The following features are not available in this release of the ODBC driver on m
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect (before version 17.2)
--   C interval types such as SQL_C_INTERVAL_YEAR_TO_MONTH (documented in [Data Type Identifiers and Descriptors](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
+-   C interval types such as SQL_C_INTERVAL_YEAR_TO_MONTH (documented in [Data Type Identifiers and Descriptors](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md))
 -   The SQL_CUR_USE_ODBC value of the SQL_ATTR_ODBC_CURSORS attribute of the SQLSetConnectAttr function.
 
 ## Character Set Support

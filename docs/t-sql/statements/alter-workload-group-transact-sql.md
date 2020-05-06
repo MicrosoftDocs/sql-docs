@@ -66,9 +66,9 @@ In the following row, click whichever product name you're interested in. The cli
 
 Alters an existing workload group.
 
-See the ALTER WORKLOAD GROUP Behavior section in this doc for further details on how ALTER WORKLOAD GROUP behaves on a system with running and queued requests. 
+See the `ALTER WORKLOAD GROUP` behavior section below for further details on how `ALTER WORKLOAD GROUP` behaves on a system with running and queued requests. 
 
-Restrictions in place for [CREATE WORKLOAD GROUP](create-workload-group-transact-sql.md) also apply to ALTER WORKLOAD GROUP.  Prior to modifying parameters, query [sys.workload_management_workload_groups](sys-workload-management-workload-groups-transact-sql.md) to ensure the values are within acceptable ranges.
+Restrictions in place for [CREATE WORKLOAD GROUP](create-workload-group-transact-sql.md) also apply to ALTER WORKLOAD GROUP.  Prior to modifying parameters, query [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) to ensure the values are within acceptable ranges.
 
 ## Syntax
 
@@ -86,7 +86,7 @@ ALTER WORKLOAD GROUP group_name
 
 ## Arguments
 
-group_name
+group_name  
 Is the name of the existing user-defined workload group being altered.  group_name is not alterable. 
 
 MIN_PERCENTAGE_RESOURCE = value  
@@ -136,10 +136,10 @@ At any point in time there are 3 types of requests in the system
 Based on the properties of a workload group being altered, the timing of when the settings take effect will differ.
 
 **Importance or Query_execution_timeout**
-For the importance and query_execution_timeout properties, non-classified requests pick up the new config values.  Waiting and running requests execute with the old configuration.  The ALTER WORKLOAD GROUP request executes immediately regardless if there are running queries in the workload group.
+For the importance and query_execution_timeout properties, non-classified requests pick up the new config values.  Waiting and running requests execute with the old configuration.  The `ALTER WORKLOAD GROUP` request executes immediately regardless if there are running queries in the workload group.
 
 **Request_min_resource_grant_percent or Request_max_resource_grant_percent**
-For request_min_resource_grant_percent and request_max_resource_grant_percent, running requests execute with the old configuration.  Waiting requests and non-classified requests pick up the new config values.  The ALTER WORKLOAD GROUP request executes immediately regardless if there are running queries in the workload group.
+For request_min_resource_grant_percent and request_max_resource_grant_percent, running requests execute with the old configuration.  Waiting requests and non-classified requests pick up the new config values.  The `ALTER WORKLOAD GROUP` request executes immediately regardless if there are running queries in the workload group.
 
 **Min_percentage_resource or Cap_percentage_resource**
 For min_percentage_resource and cap_percentage_resource, running requests execute with the old configuration.  Waiting requests and non-classified requests pick up the new config values. 
@@ -155,6 +155,6 @@ Altering a workload group requires a global lock across all workload groups.  A 
 - [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
 - [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
-- Quickstart on how to create and use a [workload group](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
+- [Quickstart: Configure workload isolation using T-SQL](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end

@@ -188,6 +188,6 @@ Requires `CONTROL DATABASE` permission
 - [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
 - [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
-- Quickstart on how to create and use a [workload group](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
+- [Quickstart: Configure workload isolation using T-SQL](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end

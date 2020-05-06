@@ -234,8 +234,15 @@ You can change the **c.cluster** value to return email addresses for customers i
 When you're finished with this tutorial, you can delete the tpcxbb_1gb database.
 
 ## Next steps
-In part four of this tutorial series, you completed these steps:
+
+In part four of this tutorial series, you learned how to:
 
 * Create a stored procedure that generates the model
-* Perform clustering in SQL Database
+* Perform clustering in SQL Server
 * Use the clustering information
+
+To learn more about using R in Machine Learning Services, see:
+
+* [Run simple R scripts](quickstart-r-create-script.md)
+* [R data structures,types and objects](quickstart-r-data-types-and-objects.md)
+* [R functions](quickstart-r-functions.md)

@@ -97,7 +97,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 In part one of this tutorial series, you completed these steps:
 
 * Installed the prerequisites
-* Import a sample database into an SQL Server
+* Restored a sample database into SQL Server
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 

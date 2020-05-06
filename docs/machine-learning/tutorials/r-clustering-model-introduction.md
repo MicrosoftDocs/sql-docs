@@ -91,7 +91,8 @@ If you're not going to continue with this tutorial, delete the tpcxbb_1gb databa
 
 In part one of this tutorial series, you completed these steps:
 
-* Restore a sample database
+* Installed the prerequisites
+* Restored a sample database into SQL Server
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 

@@ -206,7 +206,7 @@ When you've finished using the TutorialDB database, delete it from your SQL serv
 
 ## Next steps
 
-In part four of this tutorial series, you completed these steps:
+In part four of this tutorial series, you learned how to:
 
 * Create a stored procedure that generates the machine learning model
 * Store the model in a database table
@@ -215,7 +215,6 @@ In part four of this tutorial series, you completed these steps:
 
 To learn more about using R in Machine Learning Services, see:
 
-[Run simple R scripts](quickstart-r-create-script.md)
-[R data structures,types and objects](quickstart-r-data-types-and-objects.md)[
-[R functions](quickstart-r-functions.md]
-
+* [Run simple R scripts](quickstart-r-create-script.md)
+* [R data structures,types and objects](quickstart-r-data-types-and-objects.md)
+* [R functions](quickstart-r-functions.md)

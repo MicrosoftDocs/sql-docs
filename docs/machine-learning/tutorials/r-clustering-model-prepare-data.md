@@ -159,7 +159,7 @@ If you're not going to continue with this tutorial, delete the tpcxbb_1gb databa
 
 ## Next steps
 
-In part two of this tutorial series, you completed these steps:
+In part two of this tutorial series, you learned how to:
 
 * Separate customers along different dimensions using R
 * Load the data from the SQL database into an R data frame

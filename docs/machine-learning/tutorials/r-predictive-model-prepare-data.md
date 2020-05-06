@@ -131,10 +131,9 @@ If you're not going to continue with this tutorial, delete the TutorialDB databa
 
 ## Next steps
 
-In part two of this tutorial series, you learned:
+In part two of this tutorial series, you learned how to:
 
-* Import a sample database
-* Load the data from SQL Server into an R data frame
+* Load the sample data from SQL Server into an R data frame
 * Prepare the data in R by identifying some columns as categorical
 
 To create a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:

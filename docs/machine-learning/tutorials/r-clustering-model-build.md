@@ -154,7 +154,7 @@ If you're not going to continue with this tutorial, delete the tpcxbb_1gb databa
 
 ## Next steps
 
-In part three of this tutorial series, you completed these steps:
+In part three of this tutorial series, you learned how to:
 
 * Define the number of clusters for a K-Means algorithm
 * Perform clustering

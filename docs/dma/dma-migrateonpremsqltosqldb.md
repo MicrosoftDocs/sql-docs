@@ -11,7 +11,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, on-premises SQL Server"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: "seo-lt-2019"
 ---

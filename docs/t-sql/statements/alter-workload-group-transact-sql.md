@@ -36,7 +36,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 ## SQL Server and SQL Database managed instance
 
-[!INCLUDE [ALTER workload group](../../includes/alter-workload-group.md)]
+[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
   
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -50,7 +50,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 ## SQL Server and SQL Database managed instance
 
-[!INCLUDE [ALTER workload group](../../includes/alter-workload-group.md)]
+[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

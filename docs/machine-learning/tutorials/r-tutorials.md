@@ -27,11 +27,6 @@ This article describes the R tutorials and quickstarts for [SQL Server Machine L
 This article describes the R tutorials and quickstarts for [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 ::: moniker-end
 
-+ Learn how to run R scripts.
-+ Build, train, and deploy R models to SQL Server.
-+ Learn about remote and local compute contexts.
-+ Explore the Microsoft R  packages for data science and machine learning.
-
 <a name="bkmk_sqltutorials"></a>
 
 ## R tutorials

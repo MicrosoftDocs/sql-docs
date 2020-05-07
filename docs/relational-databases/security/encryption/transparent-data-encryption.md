@@ -1,17 +1,17 @@
 ---
-title: Transparent Data Encryption (TDE) | Microsoft Docs
+title: Transparent data encryption | Microsoft Docs
 ms.custom: ""
 ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Transparent Data Encryption"
+  - "transparent data encryption"
   - "database encryption key, about"
   - "TDE"
   - "database encryption key"
   - "TDE, about"
-  - "Transparent Data Encryption, about"
+  - "transparent data encryption, about"
   - "encryption [SQL Server], transparent data encryption"
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: jaszymas
@@ -20,11 +20,11 @@ ms.reviewer: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Transparent Data Encryption (TDE)
+# Transparent data encryption
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-*Transparent Data Encryption* (TDE) encrypts [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] data files. This encryption is known as encrypting data at rest.
+*Transparent data encryption* encrypts [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] data files. This encryption is known as encrypting data at rest.
 
 To help secure a database, you can take precautions like:
 
@@ -36,49 +36,49 @@ But a malicious party who steals physical media like drives or backup tapes can 
 
 One solution is to encrypt sensitive data in a database and use a certificate to protect the keys that encrypt the data. This solution prevents anyone without the keys from using the data. But you must plan this kind of protection in advance.
 
-TDE does real-time I/O encryption and decryption of data and log files. The encryption uses a database encryption key (DEK). The database boot record stores the key for availability during recovery. The DEK is a symmetric key. It's secured by a certificate that the server's master database stores or by an asymmetric key that an EKM module protects.
+Transparent data encryption does real-time I/O encryption and decryption of data and log files. The encryption uses a database encryption key (DEK). The database boot record stores the key for availability during recovery. The DEK is a symmetric key. It's secured by a certificate that the server's master database stores or by an asymmetric key that an EKM module protects.
 
-TDE protects data at rest, which is the data and log files. It lets you follow many laws, regulations, and guidelines established in various industries. This ability lets software developers encrypt data by using AES and 3DES encryption algorithms without changing existing applications.
+Transparent data encryption protects data at rest, which is the data and log files. It lets you follow many laws, regulations, and guidelines established in various industries. This ability lets software developers encrypt data by using AES and 3DES encryption algorithms without changing existing applications.
 
 > [!IMPORTANT]
-> TDE doesn't provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
+> Transparent data encryption doesn't provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 >
 >**Related topics:**
 >
-> - [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)
-> - [Get started with Transparent Data Encryption (TDE) on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)
-> - [Move a TDE Protected Database to Another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
-> - [Enable TDE on SQL Server Using EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
+> - [Transparent data encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)
+> - [Get started with transparent data encryption on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)
+> - [Move a database protected by transparent data encryption to another SQL server instance](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
+> - [Enable transparent data encryption on SQL Server using EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
-> - [The SQL Server Security Blog on TDE with FAQ](https://blogs.msdn.microsoft.com/sqlsecurity/2016/10/05/feature-spotlight-transparent-data-encryption-tde/)
+> - [The SQL Server security blog on transparent data encryption with FAQ](https://blogs.msdn.microsoft.com/sqlsecurity/2016/10/05/feature-spotlight-transparent-data-encryption-tde/)
 
-## About TDE
+## About transparent data encryption
 
-Encryption of a database file is done at the page level. The pages in an encrypted database are encrypted before they're written to disk and are decrypted when read into memory. TDE doesn't increase the size of the encrypted database.
+Encryption of a database file is done at the page level. The pages in an encrypted database are encrypted before they're written to disk and are decrypted when read into memory. Transparent data encryption doesn't increase the size of the encrypted database.
 
 ### Information applicable to [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]
 
-When you use TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] automatically creates for you the server-level certificate stored in the master database. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], you don't have to decrypt the database for the move operation. For more information on using TDE with [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+When you use transparent data encryption with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] automatically creates for you the server-level certificate stored in the master database. To move a database with transparent data encryption on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], you don't have to decrypt the database for the move operation. For more information on using transparent data encryption with [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent data encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
 ### Information applicable to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 After you secure a database, you can restore it by using the correct certificate. For more information about certificates, see [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 
-After you enable TDE, immediately back up the certificate and its associated private key. If the certificate becomes unavailable, or if you restore or attach the database on another server, you need backups of the certificate and private key. Otherwise, you can't open the database.
+After you enable transparent data encryption, immediately back up the certificate and its associated private key. If the certificate becomes unavailable, or if you restore or attach the database on another server, you need backups of the certificate and private key. Otherwise, you can't open the database.
 
-Keep the encrypting certificate even if you've disabled TDE on the database. Although the database isn't encrypted, parts of the transaction log might remain protected. You also might need the certificate for some operations until you do a full database backup.
+Keep the encrypting certificate even if you've disabled transparent data encryption on the database. Although the database isn't encrypted, parts of the transaction log might remain protected. You also might need the certificate for some operations until you do a full database backup.
 
-You can still use a certificate that exceeds its expiration date to encrypt and decrypt data with TDE.
+You can still use a certificate that exceeds its expiration date to encrypt and decrypt data with transparent data encryption.
 
 ### Encryption hierarchy
 
-The following illustration shows the architecture of TDE encryption. Only the database-level items (the database encryption key and ALTER DATABASE portions) are user-configurable when you use TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].
+The following illustration shows the architecture of encryption that transparent data encryption uses. Only the database-level items (the database encryption key and ALTER DATABASE portions) are user-configurable when you use transparent data encryption on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].
 
-![The Transparent Database Encryption architecture](../../../relational-databases/security/encryption/media/tde-architecture.png)
+![The transparent database encryption architecture](../../../relational-databases/security/encryption/media/tde-architecture.png)
 
-## Using Transparent Data Encryption
+## Using transparent data encryption
 
-To use TDE, follow these steps.
+To use transparent data encryption, follow these steps.
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
@@ -113,29 +113,29 @@ GO
 The encryption and decryption operations are scheduled on background threads by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To view the status of these operations, use the catalog views and dynamic management views in the table that appears later in this article.
 
 > [!CAUTION]
-> Backup database files that have TDE enabled are also encrypted with the database encryption key. As a result, when you restore these backups, the certificate that protects the database encryption key must be available. Therefore, in addition to backing up the database, make sure to maintain backups of the server certificates. Data loss results if the certificates are no longer available.
+> Backup database files that have transparent data encryption enabled are also encrypted with the database encryption key. As a result, when you restore these backups, the certificate that protects the database encryption key must be available. Therefore, in addition to backing up the database, make sure to maintain backups of the server certificates. Data loss results if the certificates are no longer available.
 >
 > For more information, see [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 
 ## Commands and functions
 
-For the following statements to accept TDE certificates, use a database master key to encrypt them. If you encrypt them by password only, the statements reject them as encryptors.
+For the following statements to accept certificates for transparent data encryption, use a database master key to encrypt them. If you encrypt them by password only, the statements reject them as encryptors.
 
 > [!IMPORTANT]
-> If you make the certificates password protected after TDE uses them, the database becomes inaccessible after a restart.
+> If you make the certificates password protected after transparent data encryption uses them, the database becomes inaccessible after a restart.
 
-The following table provides links and explanations of TDE commands and functions:
+The following table provides links and explanations of commands and functions for transparent data encryption:
 
 |Command or function|Purpose|
 |-------------------------|-------------|
 |[CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|Creates a key that encrypts a database| 
 |[ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Changes the key that encrypts a database|
 |[DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Removes the key that encrypts a database|
-|[ALTER DATABASE SET Options (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql-set-options.md)|Explains the **ALTER DATABASE** option that is used to enable TDE|
+|[ALTER DATABASE SET Options (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql-set-options.md)|Explains the **ALTER DATABASE** option that is used to enable transparent data encryption|
 
 ## Catalog views and dynamic management views
 
- The following table shows TDE catalog views and dynamic management views.
+ The following table shows catalog views and dynamic management views of transparent data encryption.
 
 |Catalog view or dynamic management view|Purpose|
 |---------------------------------------------|-------------|
@@ -145,9 +145,9 @@ The following table provides links and explanations of TDE commands and function
 
 ## Permissions
 
-Each TDE feature and command has individual permission requirements as described in the tables shown earlier.
+Each feature and command of transparent data encryption has individual permission requirements as described in the tables shown earlier.
 
-Viewing the metadata involved with TDE requires the VIEW DEFINITION permission on a certificate.
+Viewing the metadata involved with transparent data encryption requires the VIEW DEFINITION permission on a certificate.
 
 ## Considerations
 
@@ -155,15 +155,16 @@ While a re-encryption scan for a database encryption operation is in progress, m
 
 Use the sys.dm_database_encryption_keys dynamic management view to find the state of database encryption. For more information, see the "Catalog views and dynamic management views" section earlier in this article.
 
-In TDE, all files and filegroups in a database are encrypted. If any filegroup in a database is marked READ ONLY, the database encryption operation fails.
+In transparent data encryption, all files and filegroups in a database are encrypted. If any filegroup in a database is marked READ ONLY, the database encryption operation fails.
 
 If you use a database in database mirroring or log shipping, both databases are encrypted. The log transactions are encrypted when sent between them.
 
 > [!IMPORTANT]
-> Full-text indexes are encrypted when a database is set for encryption. Such indexes created in a SQL Server version earlier than SQL Server 2008 are imported into the database by SQL Server 2008 or later and are encrypted by TDE.
+> Full-text indexes are encrypted when a database is set for encryption. Such indexes created in a SQL Server version earlier than SQL Server 2008 are imported into the database by SQL Server 2008 or later and are encrypted by transparent data encryption.
 
 > [!TIP]
-> To monitor changes in the TDE status of a database, use SQL Server Audit or SQL Database auditing. For SQL Server, TDE is tracked under the audit action group DATABASE_CHANGE_GROUP, which you can find in [SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
+
+> To monitor changes in a database's status of transparent data encryption, use SQL Server Audit or SQL Database auditing. For SQL Server, transparent data encryption is tracked under the audit action group DATABASE_CHANGE_GROUP, which you can find in [SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
 
 ### Restrictions
 
@@ -213,13 +214,13 @@ The following operations or conditions prevent the CREATE DATABASE ENCRYPTION KE
 
 - Database maintenance tasks are running.
 
-When database files are created, instant file initialization is unavailable when TDE is enabled.
+When database files are created, instant file initialization is unavailable when transparent data encryption is enabled.
 
 To encrypt a database encryption key with an asymmetric key, the asymmetric key must be on an extensible key-management provider.
 
-### Transparent Data Encryption and transaction logs
+### Transparent data encryption and transaction logs
 
-Letting a database use TDE removes the remaining part of the current virtual transaction log. The removal forces creation of the next transaction log. This behavior guarantees that no clear text is left in the logs after the database is set for encryption.
+Letting a database use transparent data encryption removes the remaining part of the current virtual transaction log. The removal forces creation of the next transaction log. This behavior guarantees that no clear text is left in the logs after the database is set for encryption.
 
 To find the status of log-file encryption, see the `encryption_state` column in the `sys.dm_database_encryption_keys` view, as in this example:
 
@@ -240,37 +241,37 @@ Before a database encryption key changes, the previous database encryption key e
 
 If you change a database encryption key twice, you must do a log backup before you can change the database encryption key again.
 
-### Transparent Data Encryption and the tempdb system database
+### Transparent data encryption and the tempdb system database
 
-The **tempdb** system database is encrypted if any other database on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is encrypted by using TDE. This encryption might have a performance effect for unencrypted databases on the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. For more information about the **tempdb** system database, see [tempdb Database](../../../relational-databases/databases/tempdb-database.md).
+The **tempdb** system database is encrypted if any other database on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is encrypted by using transparent data encryption. This encryption might have a performance effect for unencrypted databases on the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. For more information about the **tempdb** system database, see [tempdb Database](../../../relational-databases/databases/tempdb-database.md).
 
-### Transparent Data Encryption and replication
+### Transparent data encryption and replication
 
-Replication doesn't automatically replicate data from a TDE-enabled database in an encrypted form. Separately enable TDE if you want to protect distribution and subscriber databases.
+For a database with transparent data encryption enabled, replication doesn't automatically replicate data in an encrypted form. Separately enable transparent data encryption if you want to protect distribution and subscriber databases.
 
 Snapshot replication can store data in unencrypted intermediate files like BCP files. The initial data distribution for transactional and merge replication can too. During such replication, you can enable encryption to protect the communication channel.
 
 For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
-### Transparent Data Encryption and FILESTREAM data
+### Transparent data encryption and FILESTREAM data
 
-**FILESTREAM** data isn't encrypted even when you enable TDE.
+**FILESTREAM** data isn't encrypted even when you enable transparent data encryption.
 
 <a name="scan-suspend-resume"></a>
 
-## Transparent Data Encryption scan
+## Scan for transparent data encryption
 
-To enable TDE on a database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must do an encryption scan. The scan reads each page from the data files into the buffer pool and then writes the encrypted pages back out to disk.
+To enable transparent data encryption on a database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must do an encryption scan. The scan reads each page from the data files into the buffer pool and then writes the encrypted pages back out to disk.
 
-To give you more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduces TDE scan, which has a suspend and resume syntax. You can pause the scan while the workload on the system is heavy or during business-critical hours and then resume the scan later.
+To give you more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduces scanning for transparent data encryption. Scanning has a suspend and resume syntax. You can pause the scan while the workload on the system is heavy or during business-critical hours and then resume the scan later.
 
-Use the following syntax to pause the TDE encryption scan:
+Use the following syntax to pause the encryption scan for transparent data encryption:
 
 ```sql
 ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 ```
 
-Similarly, use the following syntax to resume the TDE encryption scan:
+Similarly, use the following syntax to resume the encryption scan for transparent data encryption:
 
 ```sql
 ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
@@ -280,24 +281,24 @@ The encryption_scan_state column has been added to the sys.dm_database_encryptio
 
 If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance restarts while its encryption scan is suspended, a message is logged in the error log on startup. The message indicates that an existing scan has been paused.
 
-## Transparent Data Encryption and buffer pool extension
+## Transparent data encryption and buffer pool extension
 
-When you encrypt a database using TDE, files related to buffer pool extension (BPE) aren't encrypted. For those files, use encryption tools like BitLocker or EFS at the file-system level.
+When you encrypt a database using transparent data encryption, files related to buffer pool extension (BPE) aren't encrypted. For those files, use encryption tools like BitLocker or EFS at the file-system level.
 
-## Transparent Data Encryption and In-Memory OLTP
+## Transparent data encryption and In-Memory OLTP
 
-You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], In-Memory OLTP log records and data are encrypted if you enable TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable TDE, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
+You can enable transparent data encryption on a database that has In-Memory OLTP objects. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], In-Memory OLTP log records and data are encrypted if you enable transparent data encryption. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable transparent data encryption, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
 
 ## Related tasks
 
-[Move a TDE Protected Database to Another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
-[Enable TDE on SQL Server Using EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
+[Move a database protected by transparent data encryption to another SQL server instance](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
+[Enable transparent data encryption on SQL Server using EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
 [Extensible Key Management Using Azure Key Vault (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
 
 ## Related content
 
-[Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-[Get started with Transparent Data Encryption (TDE) on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
+[Transparent data encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
+[Get started with transparent data encryption on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
 [SQL Server Encryption](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [SQL Server and Database Encryption Keys (Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 

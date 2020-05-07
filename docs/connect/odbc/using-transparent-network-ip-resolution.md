@@ -21,7 +21,7 @@ TransparentNetworkIPResolution is a revision of the existing MultiSubnetFailover
 * 1: All IPs are attempted in parallel
 * 2: All IPs are attempted one after another
 
-|TransparentNetworkIPResolution|MultiSubnetFailover|Behaviour|
+|TransparentNetworkIPResolution|MultiSubnetFailover|Behavior|
 |:-:|:-:|:-:|
 |(default)|(default)|0|
 |(default)|Enabled|1|

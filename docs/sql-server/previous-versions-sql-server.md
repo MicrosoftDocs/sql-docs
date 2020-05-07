@@ -19,11 +19,9 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 There is online documentation for several older versions of SQL Server.
 
-To access online content for SQL Server versions 2005 – 2012, see [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
-
-To access online content for SQL Server version 2014, see [SQL Server 2014 documentation](../2014/2014-toc/index.yml).
-
-To access online content for SQL Server 2016 and later, see the latest [SQL Server Documentation](../sql-server/index.yml).
+[2005 – 2012](https://docs.microsoft.com/previous-versions/sql/).
+[2014](../2014/2014-toc/index.yml?view=sql-server-2014).
+[2016 and later](../sql-server/index.yml?view=sql-server-2016).
 
 ## Offline documentation
 
@@ -43,6 +41,6 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 ## Next steps
 
 - [SQL Server Documentation](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 documentation](../2014/2014-toc/index.yml).
+- [SQL Server 2014 documentation](../2014/2014-toc/index.yml?view=sql-server-2014).
 - [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

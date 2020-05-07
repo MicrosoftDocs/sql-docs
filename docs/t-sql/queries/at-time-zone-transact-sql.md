@@ -34,6 +34,8 @@ Converts an *inputdate* to the corresponding *datetimeoffset* value in the targe
 inputdate AT TIME ZONE timezone  
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *inputdate*  
@@ -55,7 +57,7 @@ The **datetimeoffset** value in the target time zone.
 **AT TIME ZONE** applies specific rules for converting input values in **smalldatetime**, **datetime**, and **datetime2** data types that fall into an interval affected by a DST change:
 
 - When the clock's set ahead, there's a gap in local time equal to the duration of the clock adjustment. This duration is usually 1 hour, but it can be 30 or 45 minutes, depending on time zone. Points in time that are in this gap are converted with the offset *after* DST change.  
-  
+
     ```sql
     /*  
         Moving to DST in "Central European Standard Time" zone: 
@@ -63,7 +65,7 @@ The **datetimeoffset** value in the target time zone.
         Change occurred on March 29th, 2015 at 02:00:00.   
         Adjusted local time became 2015-03-29 03:00:00.  
     */  
-    
+
     --Time before DST change has standard time offset (+01:00)
     SELECT CONVERT(datetime2(0), '2015-03-29T01:01:00', 126)     
     AT TIME ZONE 'Central European Standard Time';  
@@ -77,14 +79,16 @@ The **datetimeoffset** value in the target time zone.
     SELECT CONVERT(datetime2(0), '2015-03-29T02:01:00', 126)   
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-03-29 03:01:00 +02:00
-      
+
     --Time after 03:00 is presented with the summer time offset (+02:00)
     SELECT CONVERT(datetime2(0), '2015-03-29T03:01:00', 126)   
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-03-29 03:01:00 +02:00  
   
-    ```  
-  
+    ```
+
+    [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 - When the clock is set back, then 2 hours of local time are overlapped onto one hour.  In that case, points in time that belong to the overlapped interval are presented with the offset *before* the clock change:  
   
     ```sql
@@ -95,12 +99,12 @@ The **datetimeoffset** value in the target time zone.
         Change occurred on October 25th, 2015 at 03:00:00.
         Adjusted local time became 2015-10-25 02:00:00
     */  
-    
+
     --Time before the change has DST offset (+02:00)
     SELECT CONVERT(datetime2(0), '2015-10-25T01:01:00', 126)
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-10-25 01:01:00 +02:00  
-    
+
     /*
       Time from the "overlapped interval" is presented with standard time 
       offset (before the change)
@@ -108,14 +112,16 @@ The **datetimeoffset** value in the target time zone.
     SELECT CONVERT(datetime2(0), '2015-10-25T02:00:00', 126)
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-10-25 02:00:00 +02:00  
-    
-    
+
+
     --Time after 03:00 is regularly presented with the standard time offset (+01:00)
     SELECT CONVERT(datetime2(0), '2015-10-25T03:01:00', 126)
     AT TIME ZONE 'Central European Standard Time';
     --Result: 2015-10-25 03:01:00 +01:00
   
-    ```  
+    ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 Since some information (such as timezone rules) is maintained outside of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and are subject to occasional change, the **AT TIME ZONE** function is classed as nondeterministic. 
 
@@ -134,20 +140,24 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ### B. Convert values between different time zones  
 
 The following example converts values between different time zones:  
 
 ```sql
-USE AdventureWorks2016;  
-GO  
-  
+USE AdventureWorks2016;
+GO
+
 SELECT SalesOrderID, OrderDate,
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,
     OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET
 FROM Sales.SalesOrderHeader;
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ### C. Query Temporal Tables using a specific time zone
 
 The following example selects data from a temporal table using Pacific Standard Time.  
@@ -160,12 +170,12 @@ DECLARE @ASOF datetimeoffset;
 SET @ASOF = DATEADD (month, -1, GETDATE()) AT TIME ZONE 'UTC';
 
 -- Query state of the table a month ago projecting period
--- columns as Pacific Standard Time  
+-- columns as Pacific Standard Time
 SELECT BusinessEntityID, PersonType, NameStyle, Title,
-    FirstName, MiddleName,  
+    FirstName, MiddleName,
     ValidFrom AT TIME ZONE 'Pacific Standard Time'
-FROM  Person.Person_Temporal  
-FOR SYSTEM_TIME AS OF @ASOF;  
+FROM  Person.Person_Temporal
+FOR SYSTEM_TIME AS OF @ASOF;
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

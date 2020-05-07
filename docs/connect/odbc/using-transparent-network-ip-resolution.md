@@ -1,7 +1,8 @@
 ---
-title: "Using Transparent Network IP Resolution | Microsoft Docs"
+title: "Using Transparent Network IP Resolution"
+description: "Learn about Transparent Network IP Resolution in the ODBC Driver for SQL Server and how it affects the MultiSubnetFailover feature."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -20,7 +21,7 @@ TransparentNetworkIPResolution is a revision of the existing MultiSubnetFailover
 * 1: All IPs are attempted in parallel
 * 2: All IPs are attempted one after another
 
-|TransparentNetworkIPResolution|MultiSubnetFailover|Behaviour|
+|TransparentNetworkIPResolution|MultiSubnetFailover|Behavior|
 |:-:|:-:|:-:|
 |(default)|(default)|0|
 |(default)|Enabled|1|
@@ -44,8 +45,8 @@ Connection Attribute|	Size/Type|	Default| Value|	Description
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` or `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Enables or disables TNIR.
 
-For more information about MultiSubnetFailover, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+For more information about MultiSubnetFailover, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 --------------------------------------------------
 ## See Also  
-* [Microsoft ODBC Driver for SQL Server on Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
-* [SQL Server Multi-Subnet Clustering (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)
+* [Microsoft ODBC Driver for SQL Server on Windows](windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
+* [SQL Server Multi-Subnet Clustering (SQL Server)](../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)

@@ -1,8 +1,8 @@
 ---
-title: "Errors | Microsoft Docs"
-description: "Errors"
+title: "OLE DB Errors"
+description: "Learn about how errors are returned in the OLE DB Driver for SQL Server and how you can get information about them."
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

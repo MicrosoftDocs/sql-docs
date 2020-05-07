@@ -577,7 +577,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 ###  <a name="prereq"></a> Prerequisites  
 Do the following prerequisite steps before enabling Always On support for the SSISDB database.  
   
-1.  Set up a Windows failover cluster. See [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) blog post for instructions. Install the feature and tools on all cluster nodes.  
+1.  Set up a Windows failover cluster. See [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) blog post for instructions. Install the feature and tools on all cluster nodes.  
   
 2.  Install SQL Server 2016 with Integration Services (SSIS) feature on each node of the cluster.  
   

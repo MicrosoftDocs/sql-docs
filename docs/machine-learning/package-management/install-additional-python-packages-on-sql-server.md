@@ -59,7 +59,6 @@ To use **sqlmlutils**, you first need to install it on the client computer that 
 1. Open a **Command Prompt** and run the following commands to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded - this example assumes the downloaded file is `c:\temp\sqlmlutils-1.0.0.zip`.
 
    ```console
-   pip install "pymssql<3.0"
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
 

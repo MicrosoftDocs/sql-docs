@@ -582,7 +582,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## See Also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Always Encrypted blog](https://docs.microsoft.com/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 

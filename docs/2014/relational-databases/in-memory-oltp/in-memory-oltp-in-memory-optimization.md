@@ -81,7 +81,7 @@ manager: craigg
 
 -   [Microsoft?? SQL Server?? 2014 Product Guide](https://www.microsoft.com/download/confirmation.aspx?id=39269)
 
--   [In-Memory OLTP Blog](https://go.microsoft.com/fwlink/?LinkId=311696)
+-   [In-Memory OLTP Blog](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)
 
 -   [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)
 

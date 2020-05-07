@@ -28,12 +28,12 @@ manager: craigg
   
  
   
-##  <a name="DotNetHotfixes"></a> .Net Hotfixes that Support AlwaysOn Availability Groups  
- Depending on the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .Net hotfixes identified in the following table. The hotfixes can be installed in any order.  
+##  <a name="DotNetHotfixes"></a> .NET Hotfixes that Support AlwaysOn Availability Groups  
+ Depending on the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .NET hotfixes identified in the following table. The hotfixes can be installed in any order.  
   
 ||Dependent Feature|Hotfix|Link|  
 |------|-----------------------|------------|----------|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .Net 3.5 SP1 adds support to SQL Client for AlwaysOn features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for AlwaysOn features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .NET 3.5 SP1 adds support to SQL Client for AlwaysOn features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .NET 3.5 SP1 to add support for AlwaysOn features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="SystemReqsForAOAG"></a> Windows System Requirements and Recommendations  
   

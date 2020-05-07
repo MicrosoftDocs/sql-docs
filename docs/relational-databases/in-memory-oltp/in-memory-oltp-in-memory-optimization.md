@@ -76,7 +76,7 @@ This section provides links to other websites that contain information about In-
   
 -   [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [In-Memory OLTP Blog](https://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [In-Memory OLTP Blog](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)  
 
 ## <a name="anchorname-17minute-video"></a>17 minute video, indexed
 

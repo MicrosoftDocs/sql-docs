@@ -5,7 +5,7 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/24/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -48,6 +48,13 @@ The default path of the binaries for Python is:
 This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
 ::: moniker-end
 
+Enable external scripts by running the following SQL commands:
+
+```sql
+sp_configure 'external scripts enabled', 1;
+RECONFIGURE WITH override;
+```
+
 Run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory and the standard library path.
 
 ```sql
@@ -58,16 +65,16 @@ EXECUTE sp_execute_external_script
 
 For more information about the variable `sys.path` and how it's used to set the interpreter's search path for modules, see [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
 
-## Default Python packages
+## Default Microsoft Python packages
 
-The following Python packages are installed with SQL Server Machine Learning Services when you select the Python feature during setup.
+The following Microsoft Python packages are installed with SQL Server Machine Learning Services when you select the Python feature during setup.
 
 | Packages | Version |  Description |
 | ---------|---------|--------------|
-| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Adds machine learning algorithms in Python. |
+| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Adds machine learning algorithms in Python. |
 
-For information on which version of Python is included with each SQL Server version, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
+For information on which version of Python is included, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
 
 ### Component upgrades
 
@@ -84,7 +91,7 @@ When you select the Python language option during setup, Anaconda 4.2 distributi
 
 ## List all installed Python packages
 
-The following example script displays a list of installed packages and their versions.
+The following example script displays a list of all Python packages installed in the SQL Server instance.
 
 ```sql
 EXECUTE sp_execute_external_script 
@@ -96,30 +103,48 @@ installed_packages = pkg_resources.working_set
 installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
 df = pd.DataFrame(installed_packages_list)
 OutputDataSet = df
-  '
+'
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
 ## Find a single Python package
 
-If you've installed a Python package and want to make sure that it's available to a particular SQL Server instance, you can execute a stored procedure to load the package and return messages.
+If you've installed a Python package and want to make sure that it's available to a particular SQL Server instance, you can execute a stored procedure to look for the package and return messages.
 
 For example, the following code looks for the `scikit-learn` package.
-If the package is found, the code returns the message "Package scikit-learn is installed".
+If the package is found, the code prints the package version.
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
 import pkg_resources
-pckg_name = "scikit-learn"
-pckgs = pandas.DataFrame([(i.key) for i in pkg_resources.working_set], columns = ["key"])
-installed_pckg = pckgs.query(''key == @pckg_name'')
-print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
-  '
+pkg_name = "pandas"
+try:
+    version = pkg_resources.get_distribution(pkg_name).version
+    print("Package " + pkg_name + " is version " + version)
+except:
+    print("Package " + pkg_name + " not found")
+'
 ```
 
-<a name="get-package-vers"></a>
+Result:
+
+```text
+STDOUT message(s) from external script: Package pandas is version 0.23.4
+```
+
+The following example prints the version of the package `pandas`.
+
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+import pkg_resources
+pkg_name = "pandas"
+print(pkg_name + " package is version " + pkg_resources.get_distribution(pkg_name).version)
+'
+```
 
 The following example returns the version of Python.
 

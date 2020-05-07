@@ -1,7 +1,8 @@
 ---
-title: "Frequently Asked Questions (FAQ) for ODBC Linux and macOS | Microsoft Docs"
+title: "Frequently Asked Questions (FAQ) for ODBC Linux and macOS"
+description: "Find answers to common questions about the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -33,7 +34,7 @@ UTF-8 for SQL_CHAR data and UTF-16 for SQL_WCHAR data. Depending on the system l
 
 **Are there ODBC samples that I can download and run with the driver to experiment with or evaluate it?**
 
-See [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) for a sample. This is also applicable to the macOS ODBC driver. 
+See [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](/archive/blogs/sqlblog/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver) for a sample. This is also applicable to the macOS ODBC driver.
 
 **Is the ODBC driver on Linux or macOS open source?**
 

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "conflict_<schema>_<table>"
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -225,6 +225,8 @@
         href: big-data-cluster/troubleshoot-active-directory.md
       - name: Active directory DNS
         href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+      - name: Active directory login fails
+        href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
       - name: HDFS admin rights
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference
@@ -2691,7 +2693,7 @@
         href: relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
       - name: Properties
         href: relational-databases/native-client-ole-db-provider/about-ole-db-properties.md
-      - name: Estable a connection
+      - name: Establish a connection
         href: relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
       - name: Execute a command
         href: relational-databases/native-client-ole-db-provider/executing-a-command.md
@@ -10052,6 +10054,8 @@
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Resources
   items:
+  - name: Offline SQL Server documentation
+    href: sql-server/sql-server-offline-documentation.md
   - name: Learn
     items:
     - name: Educational resources 
@@ -10102,13 +10106,8 @@
       href: sql-server/partner-management-sql-server.md
     - name: Development
       href: sql-server/partner-dev-sql-server.md
-  - name: Offline SQL Server documentation
-    href: sql-server/sql-server-offline-documentation.md
 - name: Reference
   items:
-  - name: Archived Content (SQL 2005 - 2012) >
-    displayName: 2005, 2008, 2008 r2, 2012, previous-versions
-    href: https://docs.microsoft.com/previous-versions/sql/
   - name: Database samples
     items:
     - name: Samples Overview

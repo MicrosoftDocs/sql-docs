@@ -20,6 +20,11 @@ ms.author: rajpo
 
 This article lists the additions in each release of Data Migration Assistant.
 
+## Data Migration Assistant v 5.2
+The v5.2 release of the Data Migration Assistant provides support for:
+- Uploading assessments to Azure Migrate with support for Azure Government and national clouds (sovereign offering).  This feature enables to assess the readiness of SQL Server data estate migrating to Azure SQL.
+- Command line support for uploading assessments to Azure Migrate with support for Azure Government and national clouds.  Now, you can completely automate uploading the assessments to Azure migrate project to get a consolidated Azure SQL readiness report. 
+
 ## Data Migration Assistant v 5.0
 
 The v5.0 release of the Data Migration Assistant provides support for:

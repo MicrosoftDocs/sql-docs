@@ -1,5 +1,5 @@
 ---
-title: "AT TIME ZONE (Transact-SQL) | Microsoft Docs"
+title: AT TIME ZONE (Transact-SQL)
 ms.date: "06/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -121,7 +121,7 @@ The **datetimeoffset** value in the target time zone.
   
     ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+    [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 Since some information (such as timezone rules) is maintained outside of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and are subject to occasional change, the **AT TIME ZONE** function is classed as nondeterministic. 
 

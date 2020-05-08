@@ -1,6 +1,7 @@
 ---
 title: Replay Traces
 titleSuffix: SQL Server Profiler
+description: Learn how to replay SQL Server Profiler data from a single computer. Use breakpoints and simulated user connections during replay to troubleshoot problems.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

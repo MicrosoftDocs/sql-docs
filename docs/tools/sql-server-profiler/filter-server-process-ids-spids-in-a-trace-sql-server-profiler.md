@@ -1,7 +1,7 @@
 ---
 title: Filter Server Process IDs (SPIDs) in a Trace File
 titleSuffix: SQL Server Profiler
-description: In SQL Server Profiler, you can filter Server Process IDs (SPIDs) in a trace. Learn how to limit trace output to a specific SPID.
+description: In SQL Server Profiler, learn how to limit trace output by applying a filter on the Server Process ID (SPID).
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

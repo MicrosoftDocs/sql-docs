@@ -1,7 +1,7 @@
 ---
 title: Start a Trace
 titleSuffix: SQL Server Profiler
-description: SQL Server Profiler can capture event data after traces are defined or templates are created. Learn how to start a trace and locate its data.
+description: Learn how to start a trace and locate its data. Because you can access SQL Trace in multiple ways, you can also start traces in multiple ways.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

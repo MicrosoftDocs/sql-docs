@@ -1,6 +1,7 @@
 ---
 title: View Filter Information
 titleSuffix: SQL Server Profiler
+description: In SQL Server Profiler, learn how to view the filters that are being applied to data columns to limit the events that are traced.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

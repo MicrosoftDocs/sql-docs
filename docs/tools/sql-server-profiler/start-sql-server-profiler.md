@@ -1,7 +1,7 @@
 ---
 title: Run SQL Server Profiler
 titleSuffix: SQL Server Profiler
-description: You can run SQL Server Profiler in several different ways. Learn how to gather trace output in a variety of scenarios.
+description: Learn which programs and menus you can start SQL Server Profiler from and which connection contexts, templates, and filters are used with trace output.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

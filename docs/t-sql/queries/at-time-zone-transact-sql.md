@@ -140,8 +140,6 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ### B. Convert values between different time zones  
 
 The following example converts values between different time zones:  
@@ -155,8 +153,6 @@ SELECT SalesOrderID, OrderDate,
     OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET
 FROM Sales.SalesOrderHeader;
 ```
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ### C. Query Temporal Tables using a specific time zone
 
@@ -177,8 +173,6 @@ SELECT BusinessEntityID, PersonType, NameStyle, Title,
 FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;
 ```
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Next steps
 

@@ -87,8 +87,6 @@ The **datetimeoffset** value in the target time zone.
   
     ```
 
-    [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 - When the clock is set back, then 2 hours of local time are overlapped onto one hour.  In that case, points in time that belong to the overlapped interval are presented with the offset *before* the clock change:  
   
     ```sql
@@ -120,8 +118,6 @@ The **datetimeoffset** value in the target time zone.
     --Result: 2015-10-25 03:01:00 +01:00
   
     ```
-
-    [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 Since some information (such as timezone rules) is maintained outside of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and are subject to occasional change, the **AT TIME ZONE** function is classed as nondeterministic. 
 

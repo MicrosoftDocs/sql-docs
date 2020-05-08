@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "technical reference [SQL Server Database Engine]"
   - "Database Engine [SQL Server], getting assistance"
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Technical Reference (Database Engine)

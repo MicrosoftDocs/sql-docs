@@ -1,3 +1,16 @@
+---
+title: Troubleshoot `pyspark` notebook
+titleSuffix: SQL Server Big Data Cluster
+description: Troubleshoot `pyspark` notebook
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mikeray
+ms.date: 04/21/2020
+ms.topic: how-to
+ms.prod: sql
+ms.technology: big-data-cluster
+---
+
 # Troubleshoot `pyspark` notebook
 
 This article demonstrates how to troubleshoot a `pyspark` notebook that fails with error message.

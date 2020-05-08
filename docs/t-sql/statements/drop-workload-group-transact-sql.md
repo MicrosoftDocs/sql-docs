@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 In the following row, click whichever product name you're interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
 
-::: moniker range=">=sql-server-2016|>=sql-server-linux-2017|=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 ||||
 |---|---|---|

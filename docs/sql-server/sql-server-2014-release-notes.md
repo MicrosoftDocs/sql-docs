@@ -1,5 +1,6 @@
 ---
 title: "SQL Server 2014 Release Notes | Microsoft Docs"
+description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2014 (12.x) releases.
 ms.custom: ""
 ms.date: "03/15/2018"
 ms.prod: sql

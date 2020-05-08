@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 In the following row, click whichever product name you're interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016|>=sql-server-linux-2017|=sqlallproducts-allversions"
 
 ||||
 |---|---|---|
@@ -35,10 +35,10 @@ In the following row, click whichever product name you're interested in. The cli
 
 ## SQL Server and SQL Database managed instance
 
-[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/drop-workload-group.md)]
+[!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
 ::: moniker-end
-::: moniker range==azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 ||||
 |---|---|---|
@@ -49,20 +49,19 @@ In the following row, click whichever product name you're interested in. The cli
 
 ##  SQL Server and SQL Database managed instance
 
-[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/drop-workload-group.md)]
-
+[!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ||||
 |---|---|---|
-|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|[SQL Database<br />managed instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)| Azure Synapse<br />Analytics \*_** &nbsp;|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|[SQL Database<br />managed instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_** &nbsp;|
 ||||
 
 &nbsp;
 
-## Azure Synapse Analytics (Preview)
+## Azure Synapse Analytics (preview)
 
 Drops a workload group.  Once the statement completes, the settings are in effect.
 
@@ -70,7 +69,7 @@ Drops a workload group.  Once the statement completes, the settings are in effec
 
 ## Syntax
 
-```
+```syntaxsql
 DROP WORKLOAD GROUP group_name  
 ```
 

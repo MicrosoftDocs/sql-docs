@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Banyan VINES"
   - "protocols [SQL Server], client configuration"
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Choosing a Network Protocol

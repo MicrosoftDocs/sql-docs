@@ -371,27 +371,17 @@ WITH (
 
 ### F. Load using MSI credentials
 
-Set the Synapse SQL to use “-AssignIdentity”
-
-Set-AzSqlServer -ResourceGroupName $resourcegroupname -ServerName $servername -AssignIdentity
-
 ```sql
 COPY INTO dbo.myCOPYDemoTable
-
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt'
-
 WITH (
-
     FILE_TYPE = 'CSV',
-
     CREDENTIAL = (IDENTITY = 'Managed Identity'),
-
     FIELDQUOTE = '"',
-
     FIELDTERMINATOR=','
-
 )
 ```
+
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?

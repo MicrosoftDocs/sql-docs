@@ -85,6 +85,8 @@ Provides the connectivity protocol and path to the external data source.
 | MongoDB or CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] - Windows only        |
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
+| Edge Hub         | `edgehub`         | Not Applicable | EdgeHub is always local to the instance of Azure SQL Edge. As such there is no need to specify a path or port value. Only available in Azure SQL Edge                      |
+| Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Only available in Azure SQL Edge                      |
 
 Location path:
 
@@ -319,12 +321,36 @@ WITH (
 ) ;
 ```
 
+### G. Create external data source to reference Kafka
+
+In this example, the external data source is a Kafak server with IP address xxx.xxx.xxx.xxx and listenning on port 1234. The kafka external data source is only for data streaming and does not support predicate push down.
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyKafkaServer WITH (
+    LOCATION = 'kafka://xxx.xxx.xxx.xxx:1900'
+)
+go
+```
+
+### H. Create external data source to reference EdgeHub
+
+In this example, the external data source is a EdgeHub running on the same edge device as Azure SQL Edge. The edgeHub external data source is only for data streaming and does not support predicate push down.
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyEdgeHub WITH (
+    LOCATION = 'edgehub://'
+)
+go
+```
+
 ## Examples: Bulk Operations
 
 > [!IMPORTANT]
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### G. Create an external data source for bulk operations retrieving data from Azure Blob storage
+### I. Create an external data source for bulk operations retrieving data from Azure Blob storage
 
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
@@ -1047,6 +1073,7 @@ WITH
     TYPE = BLOB_STORAGE
   ) ;
 ```
+
 
 ## See Also
 

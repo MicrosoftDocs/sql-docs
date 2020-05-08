@@ -18,7 +18,7 @@ ms.author: jroth
 ## Generate cluster log  
  You can generate the cluster logs in two ways:  
   
-1.  Use the `cluster /log /g` command at the command prompt. This command generates the cluster logs to the \windows\cluster\reports directory on each WSFC node. The advantage of this method is that you can specify the level of detail in the generated logs by using the `/level` option. The disadvantage is that you cannot specify the destination directory for the generated cluster logs. For more information, see [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx).  
+1.  Use the `cluster /log /g` command at the command prompt. This command generates the cluster logs to the \windows\cluster\reports directory on each WSFC node. The advantage of this method is that you can specify the level of detail in the generated logs by using the `/level` option. The disadvantage is that you cannot specify the destination directory for the generated cluster logs. For more information, see [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
 2.  Use the [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet. The advantage of this method is that you can generate the cluster log from all nodes to one destination directory on the node that you run the cmdlet. The disadvantage is that you cannot specify the level of detail in the generated logs.  
   

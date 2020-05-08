@@ -316,7 +316,7 @@ WITH (
     ENCODING = 'UTF8',
     DATEFORMAT = 'ymd',
 	MAXERRORS = 10,
-	ERRORFILE = '/errorsfolder/',--path starting from the storage container
+	ERRORFILE = '/errorsfolder',--path starting from the storage container
 	IDENTITY_INSERT = 'ON'
 )
 ```

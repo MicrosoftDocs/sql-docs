@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "build notes"
   - "release issues"
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 

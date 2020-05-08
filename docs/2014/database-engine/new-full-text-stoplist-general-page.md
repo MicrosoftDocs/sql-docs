@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftstoplist.general.f1"
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # New Full-Text Stoplist (General Page)

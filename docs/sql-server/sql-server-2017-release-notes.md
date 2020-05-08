@@ -1,5 +1,6 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
+description: This article describes limitations and issues with SQL Server 2017 and provides links to related information.
 ms.custom: ""
 ms.date: "11/01/2017"
 ms.prod: sql

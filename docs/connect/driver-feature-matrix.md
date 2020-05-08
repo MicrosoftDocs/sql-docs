@@ -88,7 +88,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 
 <a id="note1"></a><sup>1</sup> Active Directory federated authentication without password hash synchronization or pass-through authentication isn't supported on Linux and macOS.
 
-<a id="note2"></a><sup>2</sup> Since these drivers rely on the Microsoft ODBC Driver for SQL Server, a version of that driver which supports the feature must also be used.
+<a id="note2"></a><sup>2</sup> Since these drivers rely on the Microsoft ODBC Driver for SQL Server, a version of that driver that supports the feature must also be used.
 
 <a id="note3"></a><sup>3</sup> Only on Windows.
 

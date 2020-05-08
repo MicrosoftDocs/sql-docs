@@ -662,18 +662,17 @@ The columnstore index groups rows into manageable units. Each of these units is 
 For example, the columnstore index performs these operations on rowgroups:
 
 * Compresses rowgroups into the columnstore. Compression is performed on each column segment within a rowgroup.
-* Merges rowgroups during an `ALTER INDEX ... REORGANIZE` operation.
+* Merges rowgroups during an `ALTER INDEX ... REORGANIZE` operation, including removing deleted data.
 * Creates new rowgroups during an `ALTER INDEX ... REBUILD` operation.
 * Reports on rowgroup health and fragmentation in the dynamic management views (DMVs).
 
-The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B-tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time the rowgroup transitions from an OPEN to CLOSED state, and a **background merge** task will compress the rowgroup. 
-When a delta rowgroup contains 1,048,576 rows it is marked as CLOSED, and waits for a process called the **tuple-mover** to compress it into the columnstore. When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later when there is no reference to it, and the new compressed rowgroup is marked as COMPRESSED. For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B-tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time the rowgroup transitions from an OPEN to CLOSED state. When a delta rowgroup is marked as CLOSED, a process called the **tuple-mover** automatically compresses the closed rowgroup into the columnstore. When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later when there is no reference to it, and the new compressed rowgroup is marked as COMPRESSED. For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
 
-Executing an index rebuild or a forced reorganize operation also compresses open delta rowgroups. A normal reorganize operation only compresses already closed delta rowgroups. A reorganize operation will combine smaller rowgroups, following an internal threshold  policy on how it chooses to remove deleted rows or combine the compressed rowgroups.
+Executing an index rebuild or a forced reorganize operation also compresses open delta rowgroups. A normal reorganize operation only compresses already closed delta rowgroups. Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved.
 
 > [!NOTE]
-> Until [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], the tuple-mover background merge only works when the rowgroup is marked as CLOSED, to compress it into the columnstore.     
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover background merge task also works when smaller open delta rowgroups have existed for some time, or when a large number of rows has been deleted from a closed rowgroup. Deleting a large number of rows in a short period of time will increase demand more resources for the background merge and may cause increased log space requirements.
+> Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or on CLOSED rowgroups from where a large number of rows has been deleted.      
+> Deleting a large number of rows in a short period of time will increase demand more resources for the background merge and may cause increased log space requirements.
 
 Each column has some of its values in each rowgroup. These values are called **column segments**. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.
 

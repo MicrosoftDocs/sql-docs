@@ -40,7 +40,8 @@ If you are getting the ```Access is Denied``` operating system error = 5, consid
    -  Depending on the type of operation - opening databases during server startup, attaching a database, database restore, etc. - the account that is used for impersonation and accessing the database file may vary. Review the topic [Securing Data and Log Files](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) to understand which operation sets what permission and to which accounts. Use a tool like Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to understand if the file access is happening under the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance service startup account [or Service SID] or an impersonated account.
 
       If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is impersonating the user credentials of the login that executes the ALTER DATABASE or CREATE DATABASE operation, you will notice the following information in the Process Monitor tool (an example):
-        ```Date & Time:      3/27/2010 8:26:08 PM
+        ```
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -53,7 +54,8 @@ If you are getting the ```Access is Denied``` operating system error = 5, consid
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
   
 ### Attaching Files that Reside on a Network-attached storage  

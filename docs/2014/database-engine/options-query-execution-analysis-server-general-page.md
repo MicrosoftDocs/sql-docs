@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryExecution.AnalysisServer.AnalysisServicesExecutionGeneral"
 ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Query Execution-Analysis Server-General Page)

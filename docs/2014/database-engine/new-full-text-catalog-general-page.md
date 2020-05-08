@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalog.general.f1"
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # New Full-Text Catalog (General Page)

@@ -1,5 +1,6 @@
 ---
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
+description: This article discusses compute capacity limits for SQL Server 2019 and how they differ in physical and virtualized environments with hyperthreaded processors.
 ms.custom: ""
 ms.date: "11/07/2017"
 ms.prod: sql

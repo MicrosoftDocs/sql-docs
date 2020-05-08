@@ -339,6 +339,14 @@ The configuration JSON schema has three layers:
 
 ## Release notes
 
+### Version 1.0.0
+
+Release Date: May 8, 2020
+
+- General Availability (GA) release.
+- Added a restriction of minimum .NET framework version on agent. Currently the minimum .NET framework version is 4.6.2.
+- Refined description of SSIS Build task and SSIS Deploy task.
+
 ### Version 0.2.0 Preview
 
 Release Date: March 31, 2020

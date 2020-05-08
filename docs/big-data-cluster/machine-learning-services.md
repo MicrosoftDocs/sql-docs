@@ -136,7 +136,7 @@ kubectl delete svc mymaster-2 -n mssql-cluster
 
 ## Next steps
 
-+ [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-create-script.md)
-+ [Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-train-score-model.md)
-+ [Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Quickstart: Create and score a predictive model in R with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-r-train-score-model.md)
++ [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json)
++ [Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json)
++ [Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json)
++ [Quickstart: Create and score a predictive model in R with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json)

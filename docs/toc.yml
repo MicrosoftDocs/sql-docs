@@ -181,6 +181,96 @@
       items:
       - name: Use Machine Learning Services (Python, R)
         href: big-data-cluster/machine-learning-services.md
+
+      - name: Machine learning quickstarts
+        items:
+        - name: Python
+          items:
+          - name: Run Python scripts
+            href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json
+          - name: Data structures and objects
+            href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json
+          - name: Python functions
+            href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json
+          - name: Train and score a model
+            href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json
+        - name: R
+          items:
+          - name: Run R scripts
+            href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json
+          - name: Data types and objects
+            href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json
+          - name: R functions
+            href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json
+          - name: Train and score a model
+            href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json
+
+      - name: Machine learning tutorials
+        items:
+        - name: Python
+          items:
+          - name: Ski rental (linear regression)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json
+            - name: 2 - Prepare data
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json
+            - name: 3 - Train model
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json
+            - name: 4 - Deploy model
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json
+          - name: Categorize customers (k-means clustering)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json
+            - name: 2 - Prepare the data
+              href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json
+            - name: 3 - Create the model
+              href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json
+            - name: 4 - Deploy the model
+              href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json
+        - name: R
+          items:
+          - name: Ski rental (decision tree)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json
+            - name: 2 - Prepare data
+              href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json
+            - name: 3 - Train model
+              href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json
+            - name: 4 - Deploy model
+              href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json
+          - name: Categorize customers (k-means clustering)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json
+            - name: 2 - Prepare the data
+              href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json
+            - name: 3 - Create the model
+              href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json
+            - name: 4 - Deploy the model
+              href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json
+
+      - name: Manage Python, R packages
+        items:
+        - name: Python
+          items:
+          - name: Get Python package information
+            href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json
+          - name: Install with sqlmlutils
+            href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json
+        - name: R
+          items:
+          - name: Get R package information
+            href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json
+          - name: Install with sqlmlutils
+            href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json
+          - name: Create a miniCRAN repo
+            href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json
+          - name: Tips for using R packages
+            href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json
+
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap

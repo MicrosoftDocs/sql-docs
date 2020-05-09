@@ -654,6 +654,8 @@ When discussing columnstore indexes, we use the terms *rowstore* and *columnstor
   A columnstore index also physically stores some rows in a rowstore format called a deltastore. The deltastore,also called delta rowgroups, is a holding place for rows that are too few in number to qualify for compression into the columnstore. Each delta rowgroup is implemented as a clustered B-tree index. 
 
 - The **deltastore** is a holding place for rows that are too few in number to be compressed into the columnstore. The deltastore stores the rows in rowstore format. 
+
+For more information about columnstore terms and concepts, see [Columnstore indexes: Overview](../relational-databases/indexes/columnstore-indexes-overview).
   
 #### Operations are performed on rowgroups and column segments
 
@@ -666,19 +668,23 @@ For example, the columnstore index performs these operations on rowgroups:
 * Creates new rowgroups during an `ALTER INDEX ... REBUILD` operation.
 * Reports on rowgroup health and fragmentation in the dynamic management views (DMVs).
 
-The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B-tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time the rowgroup transitions from an OPEN to CLOSED state. When a delta rowgroup is marked as CLOSED, a process called the **tuple-mover** automatically compresses the closed rowgroup into the columnstore. When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later by the tuple-mover when there is no reference to it, and the new compressed rowgroup is marked as COMPRESSED. A rowgroup from where all data has been deleted also transitions into TOMBSTONE state and is removed by the tuple-mover. For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B-tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, at which time a process called the **tuple-mover** automatically compresses the closed rowgroup into the columnstore. 
 
-Executing an index rebuild or a forced reorganize operation also compresses open delta rowgroups. A normal reorganize operation only compresses already closed delta rowgroups. Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved.
+For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!TIP]
+> Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved. 
 
 > [!NOTE]
 > Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted.      
-> Deleting a large number of rows in a short period of time will increase demand more resources for the background merge and may cause increased log space requirements.
 
 Each column has some of its values in each rowgroup. These values are called **column segments**. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.
 
 ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
  
-When the columnstore index compresses a rowgroup, it compresses each column segment separately. To uncompress an entire column, the columnstore index only needs to uncompress one column segment from each rowgroup.   
+When the columnstore index compresses a rowgroup, it compresses each column segment separately. To uncompress an entire column, the columnstore index only needs to uncompress one column segment from each rowgroup. 
+
+For more information about columnstore terms and concepts, see [Columnstore indexes: Overview](../relational-databases/indexes/columnstore-indexes-overview). 
 
 #### Small loads and inserts go to the deltastore
 A columnstore index improves columnstore compression and performance by compressing at least 102,400 rows at a time into the columnstore index. To compress rows in bulk, the columnstore index accumulates small loads and inserts in the deltastore. The deltastore operations are handled behind the scenes. To return the correct query results, the clustered columnstore index combines query results from both the columnstore and the deltastore. 
@@ -690,11 +696,19 @@ Rows go to the deltastore when they are:
 
 The deltastore also stores a list of IDs for deleted rows that have been marked as deleted but not yet physically deleted from the columnstore. 
 
+For more information about columnstore terms and concepts, see [Columnstore indexes: Overview](../relational-databases/indexes/columnstore-indexes-overview). 
+
 #### When delta rowgroups are full they get compressed into the columnstore
 
-Clustered columnstore indexes collect up to 1,048,576 rows in each delta rowgroup before compressing the rowgroup into the columnstore. This improves the compression of the columnstore index. When a delta rowgroup  contains 1,048,576 rows, the columnstore index marks the rowgroup as closed. A background process, called the *tuple-mover*, finds each closed rowgroup and compresses it into the columnstore. 
+Clustered columnstore indexes collect up to 1,048,576 rows in each delta rowgroup before compressing the rowgroup into the columnstore. This improves the compression of the columnstore index. When a delta rowgroup reaches the maximum number of rows, it transitions from an OPEN to CLOSED state. A background process named the tuple-mover checks for closed row groups. If the process finds a closed rowgroup, it compresses the rowgroup and stores it into the columnstore.  
 
-You can force delta rowgroups into the columnstore by using [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) to rebuild or reorganize the index.  Note that if there is memory pressure during compression, the columnstore index might reduce the number of rows in the compressed rowgroup.
+When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later by the tuple-mover when there is no reference to it, and the new compressed rowgroup is marked as COMPRESSED. 
+
+For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+You can force delta rowgroups into the columnstore by using [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) to rebuild or reorganize the index. Note that if there is memory pressure during compression, the columnstore index might reduce the number of rows in the compressed rowgroup.   
+
+For more information about columnstore terms and concepts, see [Columnstore indexes: Overview](../relational-databases/indexes/columnstore-indexes-overview). 
 
 #### Each table partition has its own rowgroups and delta rowgroups
 
@@ -702,8 +716,11 @@ The concept of partitioning is the same in both a clustered index, a heap, and a
 
 Rowgroups are always defined within a table partition. When a columnstore index is partitioned, each partition has its own compressed rowgroups and delta rowgroups.
 
+> [!TIP]
+> Consider using table partitioning if there's a need to remove data from the columnstore. Switching out and truncating partitions that are not needed anymore is an efficient strategy to delete data without generating fragmentation introduced by having smaller rowgroups.
+
 ##### Each partition can have multiple delta rowgroups
-Each partition can have more than one delta rowgroups. When the columnstore index needs to add data to a delta rowgroup and the delta rowgroup is locked, the columnstore index will try to obtain a lock on a different delta rowgroup. If there are no delta rowgroups available, the columnstore index will create a new delta rowgroup.  For example, a table with 10 partitions could easily have 20 or more delta rowgroups. 
+Each partition can have more than one delta rowgroups. When the columnstore index needs to add data to a delta rowgroup and the delta rowgroup is locked, the columnstore index will try to obtain a lock on a different delta rowgroup. If there are no delta rowgroups available, the columnstore index will create a new delta rowgroup. For example, a table with 10 partitions could easily have 20 or more delta rowgroups. 
 
 #### You can combine columnstore and rowstore indexes on the same table
 A nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table, and has an optional condition that filters the rows. 

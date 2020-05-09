@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Text_Editor.XML.Tabs"
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Text Editor:XML:Tabs Page)

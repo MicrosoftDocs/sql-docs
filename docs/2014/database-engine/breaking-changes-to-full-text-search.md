@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "breaking changes [full-text search]"
   - "full-text indexes [SQL Server], breaking changes"
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Breaking Changes to Full-Text Search

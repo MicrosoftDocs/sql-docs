@@ -1,6 +1,7 @@
 ---
 title: SQL Server Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: The SQL Server Distributed Replay feature helps you assess the impact of future upgrades to SQL Server, hardware, and operating system, and SQL Server tuning.
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual

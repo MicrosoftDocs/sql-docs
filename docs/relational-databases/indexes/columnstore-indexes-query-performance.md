@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     > [!NOTE]
     > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.   
     > If deleting large amounts of data from the columnstore index is required, consider spliting that operation into smaller delete batches over time, allowing the background merge task to handle the task of merging smaller rowgroups and improve index quality, eliminating the need to schedule index reorganization maintenance windows after data deletion.    
-    > For more information about columnstore terms and concepts, see [Columnstore indexes: Overview](../../relational-databases/indexes/columnstore-indexes-overview).
+    > For more information about columnstore terms and concepts, see [Columnstore indexes: Overview](../../relational-databases/indexes/columnstore-indexes-overview.md).
     
 ### 2. Plan for enough memory to create columnstore indexes in parallel    
  Creating a columnstore index is by default a parallel operation unless memory is constrained. Creating the index in parallel requires more memory than creating the index serially. When there is ample memory, creating a columnstore index takes on the order of 1.5 times as long as building a B-tree on the same columns.    

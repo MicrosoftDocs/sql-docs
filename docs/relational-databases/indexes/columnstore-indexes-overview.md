@@ -55,7 +55,7 @@ A rowgroup from where all data has been deleted also transitions into TOMBSTONE 
 > Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved.
 
 > [!NOTE]
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted.      
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.         
 
 #### Column segment
 A column segment is a column of data from within the rowgroup.  

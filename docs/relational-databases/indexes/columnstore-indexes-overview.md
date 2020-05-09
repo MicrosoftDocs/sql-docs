@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes: Overview | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/08/2018"
+ms.date: "05/08/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -65,9 +65,20 @@ A clustered columnstore index is the physical storage for the entire table.
 To reduce fragmentation of the column segments and improve performance, the columnstore index might store some data temporarily into a clustered index called a *deltastore* and a btree list of IDs for deleted rows. The deltastore operations are handled behind the scenes. To return the correct query results, the clustered columnstore index combines query results from both the columnstore and the deltastore.  
   
 #### Delta rowgroup
-A delta rowgroup is a clustered index that's used only with columnstore indexes. It improves columnstore compression and performance by storing rows until the number of rows reaches a threshold and are then moved into the columnstore.  
+A delta rowgroup is a clustered B-tree index that's used only with columnstore indexes. It improves columnstore compression and performance by storing rows until the number of rows reaches a threshold (1,048,576 rows) and are then moved into the columnstore.  
 
-When a delta rowgroup reaches the maximum number of rows, it becomes closed. A tuple-mover process checks for closed row groups. If the process finds a closed rowgroup, it compresses the rowgroup and stores it into the columnstore.  
+When a delta rowgroup reaches the maximum number of rows, it transitions from an OPEN to CLOSED state. A tuple-mover process checks for closed row groups. If the process finds a closed rowgroup, it compresses the rowgroup and stores it into the columnstore.  
+
+When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later by the tuple-mover when there is no reference to it, and the new compressed rowgroup is marked as COMPRESSED. A rowgroup from where all data has been deleted also transitions into TOMBSTONE state and is removed by the tuple-mover. 
+
+> [!TIP]
+> Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved.
+
+For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!NOTE]
+> Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted.      
+> Deleting a large number of rows in a short period of time will increase demand more resources for the background merge and may cause increased log space requirements.
   
 #### Deltastore
 A columnstore index can have more than one delta rowgroup. All of the delta rowgroups are collectively called the deltastore.   

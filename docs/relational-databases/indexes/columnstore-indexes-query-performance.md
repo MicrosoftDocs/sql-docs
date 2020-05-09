@@ -29,7 +29,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 -   **Leverage the rowstore clustered index.** If the common query predicate is on a column (e.g. C1) that is unrelated to insert order of the row, you can create a rowstore clustered index on columns C1 and then create clustered columnstore index by dropping the rowstore clustered index. if you create the clustered columnstore index explicitly using `MAXDOP = 1`, the resulting clustered columnstore index is perfectly ordered on column C1. If you specify `MAXDOP = 8`, then you will see overlap of values across 8 rowgroups. A common case of this strategy when you initially create columnstore index with large set of data. Note, for nonclustered columnstore index (NCCI), if the base rowstore table has a clustered index, the rows are already ordered. In this case, the resultant nonclustered columnstore index will automatically be ordered. One important point to note is that columnstore index does not inherently maintain the order of rows. As new rows are inserted or older rows are updated, you may need to repeat the process as the analytics query performance may deteriorate    
     
--   **Leverage table partitioning.** You can partition the columnstore index and then use partition elimination to reduce number of rowgroups to scan. For example, a fact table stores purchases made by customers and a common query pattern is to find quarterly purchases done by a specific customer, you can combine the insert order with partitioning on customer column. Each  partition will contain rows in time order for specific customer.    
+-   **Leverage table partitioning.** You can partition the columnstore index and then use partition elimination to reduce number of rowgroups to scan. For example, a fact table stores purchases made by customers and a common query pattern is to find quarterly purchases done by a specific customer, you can combine the insert order with partitioning on customer column. Each  partition will contain rows in time order for specific customer. Also, consider using table partitioning if there's a need to remove data from the columnstore. Switching out and truncating partitions that are not needed anymore is an efficient strategy to delete data without generating fragmentation introduced by having smaller rowgroups.    
+
+-   **Avoid deleting large amounts of data**. Removing compressed rows from a rowgroup is not a synchronous operation. It would be expensive to uncompress a rowgroup, delete the row and then re-compress it. Therefore, if you delete data from compressed rowgroups, these rowgroups will still be scanned even though they return less rows. If the number of deleted rows for several rowgroups is large enough for these to be merged into fewer rowgroups, then reorganizing the columnstore increases the quality of the index and query performance improves. If the deleted data empties entire rowgroups, consider using table partitioning, switch out partitions that are not needed anymore, and truncate them instead. 
     
 ### 2. Plan for enough memory to create columnstore indexes in parallel    
  Creating a columnstore index is by default a parallel operation unless memory is constrained. Creating the index in parallel requires more memory than creating the index serially. When there is ample memory, creating a columnstore index takes on the order of 1.5 times as long as building a B-tree on the same columns.    
@@ -41,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the query will always operate in batch mode. In previous releases, batch execution is only used when DOP is greater than one.    
     
 ## Columnstore Performance Explained    
- Columnstore indexes achieve high query performance by combining high-speed in-memory batch mode processing with techniques that greatly reduce I/O requirements.  Since analytics queries scan large numbers of rows, they are typically IO-bound, and therefore reducing I/O during query execution is critical to the design of columnstore indexes.  Once data has been read into memory, it is critical to reduce the number of  in-memory operations.    
+ Columnstore indexes achieve high query performance by combining high-speed in-memory batch mode processing with techniques that greatly reduce I/O requirements. Since analytics queries scan large numbers of rows, they are typically IO-bound, and therefore reducing I/O during query execution is critical to the design of columnstore indexes. Once data has been read into memory, it is critical to reduce the number of in-memory operations.    
     
  Columnstore indexes reduce I/O and optimize in-memory operations through high data compression, columnstore elimination, rowgroup elimination, and batch processing.    
     
@@ -68,7 +70,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
  **When does a columnstore index need to perform a full table scan?**    
     
- Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create one or more regular nonclustered B-tree indexes on a clustered columnstore index just like you can on a rowstore heap. The nonclustered B-tree indexes can speed up a query that has an equality predicate or  a predicate with a small range of values.  For more complicated predicates, the query optimizer might choose a full table scan. Without the ability to skip rowgroups, a full table scan would be very time-consuming, especially for large tables.    
+ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create one or more regular nonclustered B-tree indexes on a clustered columnstore index just like you can on a rowstore heap. The nonclustered B-tree indexes can speed up a query that has an equality predicate or a predicate with a small range of values. For more complicated predicates, the query optimizer might choose a full table scan. Without the ability to skip rowgroups, a full table scan would be very time-consuming, especially for large tables.    
     
  **When does an analytics query benefit from rowgroup elimination for a full-table scan?**    
     
@@ -78,7 +80,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
  To determine which rows groups to eliminate, the columnstore index uses metadata to store the minimum and maximum values of each column segment for each rowgroup. When none of the column segment ranges meet the query predicate criteria, the entire rowgroup is skipped without doing any actual IO. This works because the data is usually loaded in a sorted order and although rows are not guaranteed to be sorted, similar data values are often located within the same rowgroup or a neighboring rowgroup.    
     
- For more details about rowgroups, see Columnstore Indexes Guide    
+ For more details about rowgroups, see [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### Batch Mode Execution    
  Batch mode  execution refers to processing a set of rows, typically up to 900 rows, together for execution efficiency. For example, the query `SELECT SUM (Sales) FROM SalesData` aggregates the total sales from the table SalesData. In batch mode execution, the query execution engine computes the aggregate in group of 900 values. This spreads metadata  the access costs and other types of overhead over all the rows in a batch, rather than paying the cost for each row thereby significantly reducing the code path. Batch mode processing operates on compressed data when possible and eliminates some of the exchange operators used by row mode processing. This speeds up execution of analytics queries by orders of magnitude.    
@@ -128,10 +130,10 @@ For example, aggregate pushdown is done in both of the queries below:
 ```sql     
 SELECT  productkey, SUM(TotalProductCost)    
 FROM FactResellerSalesXL_CCI    
-GROUP BY productkey    
+GROUP BY productkey;    
     
 SELECT  SUM(TotalProductCost)    
-FROM FactResellerSalesXL_CCI    
+FROM FactResellerSalesXL_CCI;    
 ```    
     
 ### String predicate pushdown    
@@ -154,7 +156,7 @@ With string predicate pushdown, the query execution computes the predicate again
     -   Expression evaluating NULLs are not supported.    
     
 ## See Also    
- [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
+ [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)
  [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   

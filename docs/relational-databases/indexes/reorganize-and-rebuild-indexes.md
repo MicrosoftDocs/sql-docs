@@ -218,6 +218,7 @@ You defragment a fragmented index by using one of the following methods:
 Reorganizing an index uses minimal system resources and is an online operation. This means long-term blocking table locks are not held and queries or updates to the underlying table can continue during the `ALTER INDEX REORGANIZE` transaction.
 
 - For [rowstore indexes](clustered-and-nonclustered-indexes-described.md), the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical order of the leaf nodes (left to right). Reorganizing also compacts the index pages based on the index's fill factor value. To view the fill factor setting, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). For syntax examples, see [Examples: Rowstore reorganize](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
+
 - When using [columnstore indexes](columnstore-indexes-overview.md), the delta store may end up with multiple small rowgroups after inserting, updating, and deleting data over time. Reorganizing a columnstore index forces all of the rowgroups into the columnstore, and then combines the rowgroups into fewer rowgroups with more rows. The reorganize operation also removes rows that have been deleted from the columnstore. Reorganizing initially requires additional CPU resources to compress the data, which may slow overall system performance. However, as soon as the data is compressed, query performance improves. For syntax examples, see [Examples: ColumnStore reorganize](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### Rebuild an index
@@ -225,7 +226,13 @@ Reorganizing an index uses minimal system resources and is an online operation. 
 Rebuilding an index drops and re-creates the index. Depending on the type of index and [!INCLUDE[ssde_md](../../includes/ssde_md.md)] version, a rebuild operation can be done online or offline. For the T-SQL syntax, see [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - For [rowstore indexes](clustered-and-nonclustered-indexes-described.md), rebuilding removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When `ALL` is specified, all indexes on the table are dropped and rebuilt in a single transaction. Foreign key constraints do not have to be dropped in advance. When indexes with 128 extents or more are rebuilt, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. For syntax examples, see [Examples: Rowstore reorganize](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
-- For  [columnstore indexes](columnstore-indexes-overview.md), rebuilding removes fragmentation, moves all rows into the columnstore, and reclaims disk space by physically deleting rows that have been logically deleted from the table. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], rebuilding the columnstore index is usually not needed since `REORGANIZE` performs the essentials of a rebuild in the background as an online operation. For syntax examples, see [Examples: ColumnStore reorganize](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
+
+- For  [columnstore indexes](columnstore-indexes-overview.md), rebuilding removes fragmentation, moves all rows into the columnstore, and reclaims disk space by physically deleting rows that have been logically deleted from the table. 
+  
+  > [!TIP]
+  > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], rebuilding the columnstore index is usually not needed since `REORGANIZE` performs the essentials of a rebuild in the background as an online operation. 
+  
+  For syntax examples, see [Examples: ColumnStore rebuild](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### <a name="Permissions"></a> Permissions
 
@@ -354,7 +361,7 @@ When rebuilding a columnstore index, the [!INCLUDE[ssde_md](../../includes/ssde_
 > To forcibly compress all rowgroups, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] example [below](#TsqlProcedureReorg).
 
 > [!NOTE]
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted. 
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.    
 > For more information about columnstore terms and concepts, see [Columnstore indexes: Overview](../../relational-databases/indexes/columnstore-indexes-overview).
 
 ### Rebuild a partition instead of the entire table
@@ -375,7 +382,9 @@ Rebuilding a partition after loading date ensures all data is stored in the colu
 When reorganizing a columnstore index, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compresses each CLOSED delta rowgroup into the columnstore as a compressed rowgroup. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the `REORGANIZE` command performs the following additional defragmentation optimizations online:
 
 - Physically removes rows from a rowgroup when 10% or more of the rows have been logically deleted. The deleted bytes are reclaimed on the physical media. For example, if a compressed row group of 1 million rows has 100K rows deleted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will remove the deleted rows and recompress the rowgroup with 900k rows. It saves on the storage by removing deleted rows.
+
 - Combines one or more compressed rowgroups to increase rows per rowgroup up to the maximum of 1,048,576 rows. For example, if you bulk import 5 batches of 102,400 rows you will get 5 compressed rowgroups. If you run REORGANIZE, these rowgroups will get merged into 1 compressed rowgroup of size 512,000 rows. This assumes there were no dictionary size or memory limitations.
+
 - For rowgroups in which 10% or more of the rows have been logically deleted, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tries to combine this rowgroup with one or more rowgroups. For example, rowgroup 1 is compressed with 500,000 rows and rowgroup 21 is compressed with the maximum of 1,048,576 rows. Rowgroup 21 has 60% of the rows deleted which leaves 409,830 rows. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] favors combining these two rowgroups to compress a new rowgroup that has 909,830 rows.
 
 After performing data loads, you can have multiple small rowgroups in the delta store. You can use `ALTER INDEX REORGANIZE` to force all of the rowgroups into the columnstore, and then to combine the rowgroups into fewer rowgroups with more rows. The reorganize operation will also remove rows that have been deleted from the columnstore.

@@ -357,11 +357,11 @@ When `ALL` is specified with the `ALTER INDEX` statement, relational indexes, bo
 When rebuilding a columnstore index, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reads all data from the original columnstore index, including the delta store. It combines the data into new rowgroups, and compresses the rowgroups into the columnstore. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] defragments the columnstore by physically deleting rows that have been logically deleted from the table. The deleted bytes are reclaimed on the disk.
 
 > [!NOTE]
-> Reorganizing a columnstore index using [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] will combine COMPRESSED rowgroups together, but does not force all rowgroups to be compressed into the columnstore. CLOSED rowgroups will be compressed but before OPEN rowgroups will not be compressed into the columnstore. 
+> Reorganizing a columnstore index using [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] will combine COMPRESSED rowgroups together, but does not force all rowgroups to be compressed into the columnstore. CLOSED rowgroups will be compressed but OPEN rowgroups will not be compressed into the columnstore. 
 > To forcibly compress all rowgroups, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] example [below](#TsqlProcedureReorg).
 
 > [!NOTE]
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.    
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.    
 > For more information about columnstore terms and concepts, see [Columnstore indexes: Overview](../../relational-databases/indexes/columnstore-indexes-overview.md).
 
 ### Rebuild a partition instead of the entire table
@@ -409,11 +409,11 @@ Statistics:
 An index cannot be reorganized when `ALLOW_PAGE_LOCKS` is set to OFF.
 
 Up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], rebuilding a clustered columnstore index is an offline operation. The database engine has to acquire an exclusive lock on the table or partition while the rebuild occurs. The data is offline and unavailable during the rebuild even when using `NOLOCK`, Read-committed Snapshot Isolation (RCSI), or Snapshot Isolation.
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], a clustered columnstore index can be rebuilt using the `ONLINE=ON` option.
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], a clustered columnstore index can be rebuilt using the `ONLINE = ON` option.
 
-For an Azure Synapse Analytics (formerly Azure SQL Data Warehouse) table with an ordered clustered columnstore index, `ALTER INDEX REBUILD` will re-sort the data using TempDB. Monitor TempDB during rebuild operations. If you need more TempDB space, scale up the data warehouse. Scale back down once the index rebuild is complete.
+For an Azure Synapse Analytics (formerly [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) table with an ordered clustered columnstore index, `ALTER INDEX REBUILD` will re-sort the data using TempDB. Monitor TempDB during rebuild operations. If you need more TempDB space, scale up the data warehouse. Scale back down once the index rebuild is complete.
 
-For an Azure Synapse Analytics (formerly Azure SQL Data Warehouse) table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort the data use `ALTER INDEX REBUILD`.
+For an Azure Synapse Analytics (formerly [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort the data use `ALTER INDEX REBUILD`.
 
 ## Using INDEX REBUILD to recover from hardware failures
 

@@ -151,7 +151,7 @@ Always Encrypted with secure enclaves addresses some limitations of Always Encry
 - Pattern matching (LIKE) and comparison operators on column encrypted using randomized encryption.
     > [!NOTE]
     > The above operations are supported for character string columns that use collations with a binary2 sort order (BIN2 collations). Character string columns using non-BIN2 collations can be encrypted using randomized encryption and enclave-enabled column encryption keys. However, the only new functionality that is enabled for such columns is in-place encryption.
-- Creating nonclustered indexes on columns using randomized encryption.
+- Creating nonclustered indexes and statistics on columns using randomized encryption.
 
 All other limitations for Always Encrypted listed at [Feature Details](always-encrypted-database-engine.md#feature-details) also apply to Always Encrypted with secure enclaves.
 

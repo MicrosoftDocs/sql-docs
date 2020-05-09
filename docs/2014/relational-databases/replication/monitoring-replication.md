@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "replication [SQL Server], monitoring"
   - "administering replication, monitoring"
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Monitoring (Replication)

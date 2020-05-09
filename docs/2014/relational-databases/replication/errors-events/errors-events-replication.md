@@ -6,8 +6,8 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: replication
 ms.topic: conceptual
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Errors and Events (Replication)

@@ -375,6 +375,10 @@ When reorganizing a columnstore index, the [!INCLUDE[ssde_md](../../includes/ssd
 
 After performing data loads, you can have multiple small rowgroups in the delta store. You can use `ALTER INDEX REORGANIZE` to force all of the rowgroups into the columnstore, and then to combine the rowgroups into fewer rowgroups with more rows. The reorganize operation will also remove rows that have been deleted from the columnstore.
 
+> [!NOTE]
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted.      
+> For more information about columnstore terms and concepts, see [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) and [Columnstore indexes: Overview](../../relational-databases/indexes/columnstore-indexes-overview).
+
 ## <a name="Restrictions"></a> Limitations and restrictions
 
 Rowstore indexes with more than 128 extents are rebuilt in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the index are marked for deallocation, the data rows are copied and sorted, then moved to new allocation units created to store the rebuilt index. In the physical phase, the allocation units previously marked for deallocation are physically dropped in short transactions that happen in the background, and do not require many locks. For more information about extents, see [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md).

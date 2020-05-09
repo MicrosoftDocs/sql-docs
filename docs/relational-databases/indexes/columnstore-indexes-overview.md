@@ -49,6 +49,14 @@ A rowgroup is a group of rows that are compressed into columnstore format at the
   
 For high performance and high compression rates, the columnstore index slices the table into rowgroups, and then compresses each rowgroup in a column-wise manner. The number of rows in the rowgroup must be large enough to improve compression rates, and small enough to benefit from in-memory operations.    
 
+A rowgroup from where all data has been deleted also transitions into TOMBSTONE state and is removed by a background process named the tuple-mover. 
+
+> [!TIP]
+> Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved.
+
+> [!NOTE]
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted.      
+
 #### Column segment
 A column segment is a column of data from within the rowgroup.  
   
@@ -67,18 +75,14 @@ To reduce fragmentation of the column segments and improve performance, the colu
 #### Delta rowgroup
 A delta rowgroup is a clustered B-tree index that's used only with columnstore indexes. It improves columnstore compression and performance by storing rows until the number of rows reaches a threshold (1,048,576 rows) and are then moved into the columnstore.  
 
-When a delta rowgroup reaches the maximum number of rows, it transitions from an OPEN to CLOSED state. A tuple-mover process checks for closed row groups. If the process finds a closed rowgroup, it compresses the rowgroup and stores it into the columnstore.  
+When a delta rowgroup reaches the maximum number of rows, it transitions from an OPEN to CLOSED state. A background process named the tuple-mover checks for closed row groups. If the process finds a closed rowgroup, it compresses the rowgroup and stores it into the columnstore.  
 
-When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later by the tuple-mover when there is no reference to it, and the new compressed rowgroup is marked as COMPRESSED. A rowgroup from where all data has been deleted also transitions into TOMBSTONE state and is removed by the tuple-mover. 
+When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later by the tuple-mover when there is no reference to it, and the new compressed rowgroup is marked as COMPRESSED. 
 
-> [!TIP]
-> Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved.
-
-For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
 
 > [!NOTE]
-> Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted.      
-> Deleting a large number of rows in a short period of time will increase demand more resources for the background merge and may cause increased log space requirements.
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges CLOSED rowgroups from where a large number of rows has been deleted.      
   
 #### Deltastore
 A columnstore index can have more than one delta rowgroup. All of the delta rowgroups are collectively called the deltastore.   
@@ -93,7 +97,7 @@ The nonclustered index contains a copy of part or all of the rows and columns in
 A nonclustered columnstore index enables real-time operational analytics where the OLTP workload uses the underlying clustered index while analytics run concurrently on the columnstore index. For more information, see [Get started with columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 #### Batch mode execution
-Batch mode execution is a query processing method that's used to process multiple rows together. Batch mode execution is closely integrated with, and optimized around, the columnstore storage format. Batch mode execution is sometimes known as *vector-based* or *vectorized* execution. Queries on columnstore indexes use batch mode execution, which improves query performance typically by two to four times. For more information, see the [Query processing architecture guide](../query-processing-architecture-guide.md#execution-modes). 
+Batch mode execution is a query processing method that's used to process multiple rows together. Batch mode execution is closely integrated with, and optimized around, the columnstore storage format. Batch mode execution is sometimes known as *vector-based* or *vectorized* execution. Queries on columnstore indexes use batch mode execution, which improves query performance typically by two to four times. For more information, see the [Query processing architecture guide](../../query-processing-architecture-guide.md#execution-modes). 
   
 ##  <a name="benefits"></a> Why should I use a columnstore index?  
 A columnstore index can provide a very high level of data compression, typically by 10 times, to significantly reduce your data warehouse storage cost. For analytics, a columnstore index offers an order of magnitude better performance than a btree index. Columnstore indexes are the preferred data storage format for data warehousing and analytics workloads. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can use columnstore indexes for real-time analytics on your operational workload.  

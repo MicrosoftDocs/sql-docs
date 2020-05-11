@@ -49,7 +49,7 @@ Complete the following steps to build the docker image:
 2. In the same directory, run the following command:
 
     ```bash
-    docker builds -t mssql-server-mlservices
+    docker build -t mssql-server-mlservices
     ```
 
 3. Run the command:

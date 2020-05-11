@@ -11,8 +11,8 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Text Editor - Transact-SQL - Tabs Page)

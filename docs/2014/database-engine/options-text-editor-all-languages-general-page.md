@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Text Editor - All Languages - General Page)

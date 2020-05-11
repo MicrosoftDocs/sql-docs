@@ -1,5 +1,6 @@
 ---
 title: "sqlcmd Utility"
+description: The sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes, and uses ODBC to run Transact-SQL batches.
 ms.custom: seo-lt-2019
 ms.date: "11/27/2018"
 ms.prod: sql

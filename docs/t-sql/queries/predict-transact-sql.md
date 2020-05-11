@@ -21,7 +21,11 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/sql-native-scoring.md).
+Generates a predicted value or scores based on a stored model.
+
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+For more information, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/sql-native-scoring.md).
+::: moniker-end
 
 ## Syntax
 
@@ -95,7 +99,7 @@ The `PREDICT` function is supported in all editions of SQL Server 2017 or later,
 
 ### Supported algorithms
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 The model that you use must have been created using one of the supported algorithms from the RevoScaleR package. For a list of currently supported models, see [Real-time scoring](../../machine-learning/real-time-scoring.md).
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

@@ -40,7 +40,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## Next steps
 
-- [SQL Server Documentation](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 documentation](../2014/2014-toc/index.yml?view=sql-server-2014).
-- [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/)
+- [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 online documentation](../2014/2014-toc/index.yml?view=sql-server-2014).
+- [SQL Server previous versions online documentation](https://docs.microsoft.com/previous-versions/sql/)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

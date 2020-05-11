@@ -151,4 +151,9 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
 
 ## Next steps
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 - [Native scoring using the PREDICT T-SQL function](../../machine-learning/sql-native-scoring.md)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+-	[Learn more about ONNX models](/azure/machine-learning/concept-onnx#get-onnx-models)
+::: moniker-end

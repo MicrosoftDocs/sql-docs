@@ -1,7 +1,7 @@
 ---
 title: Stop a Trace
 titleSuffix: SQL Server Profiler
-description: In SQL Server Profiler, learn how to stop a trace that is running, change any properties you want to adjust, and save the captured data.
+description: Discover how to stop a trace that is running in SQL Server Profiler, change any properties you want to adjust, and save the captured data.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

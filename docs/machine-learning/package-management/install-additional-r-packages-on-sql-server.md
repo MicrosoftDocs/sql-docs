@@ -78,12 +78,12 @@ On a computer with Internet access:
 
 1. Install **miniCRAN**. See [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) for details.
 
-1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example creates the repository in the folder `c:\downloads\rodbcext`.
+1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example creates the repository in the folder `rodbcext`.
 
    ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
@@ -94,7 +94,7 @@ On a computer with Internet access:
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
@@ -111,7 +111,7 @@ On a computer with Internet access:
 
 1. Download the latest **sqlmlutils** file (`.zip` for Windows, `.tar.gz` for Linux) from [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist). Don't expand the file.
 
-1. Copy the entire **RODBCext** repository folder (`c:\downloads\rodbcext`) and the **sqlmlutils** file to the client computer.
+1. Copy the entire **RODBCext** repository folder and the **sqlmlutils** file to the client computer.
 
 On the client computer you use to connect to SQL Server:
 

@@ -10,7 +10,7 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ---
-# SQL Server Integration Services (SSIS) DevOps Tools (Preview)
+# SQL Server Integration Services (SSIS) DevOps Tools
 
 [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
 
@@ -338,6 +338,12 @@ The configuration JSON schema has three layers:
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
+
+### Version 1.0.1
+
+Release Date: May 9, 2020
+
+- Fixed an issue that SSIS Build task always build the whole solution even if only single dtproj file is specified as project path.
 
 ### Version 1.0.0
 

@@ -13,8 +13,8 @@ f1_keywords:
   - "MISCELLANEOUSFILESPROJECT"
   - "DevLang-TSQL"
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Query Results-SQL Server-General Page)

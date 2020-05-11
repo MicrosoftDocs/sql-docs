@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], getting assistance"
   - "F1 Help [SQL Server Database Engine]"
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Feature Reference (Database Engine)

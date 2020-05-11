@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Getting Started (SQL Server 2014)

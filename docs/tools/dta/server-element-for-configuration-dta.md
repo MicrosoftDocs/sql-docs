@@ -1,5 +1,6 @@
 ---
 title: "Server Element for Configuration (DTA)"
+description: In the dta utility, the Server element for Configuration contains the identifying information for the server where you want to evaluate a configuration.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

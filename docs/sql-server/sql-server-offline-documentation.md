@@ -95,7 +95,7 @@ The following steps explain how to load offline content for SQL Server 2014.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
-> [!Tip]
+> [!IMPORTANT]
 > SQL 2014 Transact-SQL content is only available offline.
 
 ## SQL Server 2012 offline content

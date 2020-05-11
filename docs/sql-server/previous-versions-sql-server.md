@@ -29,7 +29,7 @@ There is offline documentation for several older versions of SQL Server.
 
 To access offline content for SQL Server versions 2012 and later, see [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md).
 
-> [!Important]
+> [!IMPORTANT]
 > SQL 2014 Transact-SQL content is only available offline.
 
 ## Lifecycle policy

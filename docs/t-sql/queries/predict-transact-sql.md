@@ -116,71 +116,34 @@ This example references the `PREDICT` function in the `FROM` clause of a `SELECT
 
 ```sql
 SELECT d.*, p.Score
-FROM PREDICT(MODEL = @model, 
-  DATA = dbo.mytable AS d) WITH (Score float) AS p;
+FROM PREDICT(MODEL = @model,
+    DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-The alias **d** specified for table source in the `DATA` parameter is used to reference the columns belonging to dbo.mytable. The alias **p** specified for the **PREDICT** function is used to reference the columns returned by the PREDICT function.
+The alias **d** specified for table source in the `DATA` parameter is used to reference the columns belonging to `dbo.mytable`. The alias **p** specified for the `PREDICT` function is used to reference the columns returned by the `PREDICT` function.
+
+- The model is stored as `varbinary(max)` column in table call **Models**. Additional information such as **ID** and **description** is saved in the table to identify the mode.
+- The alias **d** specified for table source in the `DATA` parameter is used to reference the columns belonging to `dbo.mytable`. The input data column names should match the name of inputs for the model.
+- The alias **p** specified for the `PREDICT` function is used to reference the predicted column returned by the `PREDICT` function. The column name should have the same name as the output name for the model.
+- All input data columns and the predicted columns are available to display in the SELECT statement.
 
 ### Combining PREDICT with an INSERT statement
 
-One of the common use cases for prediction is to generate a score for input data, and then insert the predicted values into a table. The following example assumes that the calling application uses a stored procedure to insert a row containing the predicted value into a table:
+A common use case for prediction is to generate a score for input data, and then insert the predicted values into a table. The following example assumes the calling application uses a stored procedure to insert a row containing the predicted value into a table:
 
 ```sql
-CREATE PROCEDURE InsertLoanApplication
-(@p1 varchar(100), @p2 varchar(200), @p3 money, @p4 int)
-AS
-BEGIN
-  DECLARE @model varbinary(max) = (select model
-  FROM scoring_model
-  WHERE model_name = 'ScoringModelV1');
-  WITH d as ( SELECT * FROM (values(@p1, @p2, @p3, @p4)) as t(c1, c2, c3, c4) )
+DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
-  INSERT INTO loan_applications (c1, c2, c3, c4, score)
-  SELECT d.c1, d.c2, d.c3, d.c4, p.score
-  FROM PREDICT(MODEL = @model, DATA = d) WITH(score float) as p;
-END;
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
 ```
 
-If the procedure takes multiple rows via a table-valued parameter, then it can be written as follows:
-
-```sql
-CREATE PROCEDURE InsertLoanApplications (@new_applications dbo.loan_application_type)
-AS
-BEGIN
-  DECLARE @model varbinary(max) = (SELECT model_bin FROM scoring_models WHERE model_name = 'ScoringModelV1');
-  INSERT INTO loan_applications (c1, c2, c3, c4, score)
-  SELECT d.c1, d.c2, d.c3, d.c4, p.score
-  FROM PREDICT(MODEL = @model, DATA = @new_applications as d)
-  WITH (score float) as p;
-END;
-```
-
-### Creating an R model and generating scores using optional model parameters
-
-This example assumes that you have created a logistic regression model fitted with a covariance matrix, using a call to RevoScaleR such as this:
-
-```R
-logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = TRUE)
-```
-
-If you store the model in SQL Server in binary format, you can use the PREDICT function to generate not just predictions, but additional information supported by the model type, such as error or confidence intervals.
-
-The following code shows the equivalent call from R to [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict):
-
-```R
-rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
-```
-
-The equivalent call using the `PREDICT` function also provides the score (predicted value), error, and confidence intervals:
-
-```sql
-SELECT d.Age, d.Start, d.Number, p.pred AS Kyphosis_Pred, p.stdErr, p.pred_lower, p.pred_higher
-FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
-  PARAMETERS = N'computeStdErr bit, interval varchar(30)',
-  computeStdErr = 1, interval = 'confidence')
-WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
-```
+- The results of `PREDICT` are stored in a table called PredictionResults. 
+- The model is stored as `varbinary(max)` column in table call **Models**. Additional information such as ID and description can be saved in the table to identify the model.
+- The alias **d** specified for table source in the `DATA` parameter is used to reference the columns in `dbo.mytable`.The input data column names should match the name of inputs for the model.
+- The alias **p** specified for the `PREDICT` function is used to reference the predicted column returned by the `PREDICT` function. The column name should have the same name as the output name for the model.
+- All input columns and the predicted column are available to display in the SELECT statement.
 
 ## Next steps
 

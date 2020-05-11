@@ -394,7 +394,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' 
 ```
 
 ```PowerShell
-sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
    -d mcr.microsoft.com/mssql/server:2017-latest 
@@ -412,7 +412,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' 
 ```
 
 ```PowerShell
-sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
    -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04

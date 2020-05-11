@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "PREDICT clause"
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -52,17 +52,25 @@ MODEL = @model | model_literal
 
 The `MODEL` parameter is used to specify the model used for scoring or prediction. The model is specified as a variable or a literal or a scalar expression.
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 The model object can be created by using R or Python or another tool.
+::: moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+[Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) is the supported model format for Azure Synapse.
+::: moniker-end
 
 **data**
 
 The DATA parameter is used to specify the data used for scoring or prediction. Data is specified in the form of a table source in the query. Table source can be a table, table alias, CTE alias, view, or table-valued function.
 
+<!-- This should likely be removed - TBD
 **parameters**
 
 The PARAMETERS parameter is used to specify optional user-defined parameters used for scoring or prediction.
 
 The name of each parameter is specific to the model type. For example, the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in RevoScaleR supports the parameter `@computeResiduals`, which indicates whether residuals should be computed when scoring a logistic regression model. If you are calling a compatible model, you could pass that parameter name and a TRUE or FALSE value to the `PREDICT` function.
+-->
 
 **WITH ( <result_set_definition> )**
 
@@ -72,27 +80,27 @@ In addition to the columns returned by the `PREDICT` function itself, all the co
 
 ### Return values
 
-No predefined schema is available; SQL Server does not validate the contents of the model and does not validate the returned column values.
+No predefined schema is available; the contents of the model is not validated and the returned column values are not validated either.
 
 - The `PREDICT` function passes through columns as input.
 - The `PREDICT` function also generates new columns, but the number of columns and their data types depends on the type of model that was used for prediction.
 
 Any error messages related to the data, the model, or the column format are returned by the underlying prediction function associated with the model.
 
-- For RevoScaleR, the equivalent function is [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)  
-- For MicrosoftML, the equivalent function is [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)  
-
-It is not possible to view the internal model structure using `PREDICT`. If you want to understand the contents of the model itself, you must load the model object, deserialize it, and use appropriate R code to parse the model.
-
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## Remarks
 
-The `PREDICT` function is supported in all editions of SQL Server 2017 or later, on Windows and Linux. `PREDICT` is also supported in Azure SQL Database in the cloud. All these supports are active regardless of whether other machine learning features are enabled.
-
-It is not necessary that R, Python, or another machine learning language be installed on the server to use the `PREDICT` function. You can train the model in another environment and save it to a SQL Server table for use with `PREDICT`, or call the model from another instance of SQL Server that has the saved model.
+The `PREDICT` function is supported in all editions of SQL Server 2017 or later, on Windows and Linux. [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) does not need to be enabled to use `PREDICT`.
+::: moniker-end
 
 ### Supported algorithms
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 The model that you use must have been created using one of the supported algorithms from the RevoScaleR package. For a list of currently supported models, see [Real-time scoring](../../machine-learning/real-time-scoring.md).
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+Algorithms that can be converted to [ONNX](https://onnx.ai/) model format are supported.
+::: moniker-end
 
 ### Permissions
 
@@ -108,7 +116,7 @@ This example references the `PREDICT` function in the `FROM` clause of a `SELECT
 
 ```sql
 SELECT d.*, p.Score
-FROM PREDICT(MODEL = @logit_model, 
+FROM PREDICT(MODEL = @model, 
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 

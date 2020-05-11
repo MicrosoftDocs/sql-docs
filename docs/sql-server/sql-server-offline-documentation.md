@@ -151,7 +151,7 @@ To view the installed help in SSMS, select **Launch in Help Viewer** from the He
 
 Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. select articles in the table of contents to display them in the right pane.
 
-> [!TIP]
+> [!Important]
 > If the contents pane is not visible, select Contents on the left margin. select the pushpin icon to keep the contents pane open.  
 
    ![Help Viewer with content](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)

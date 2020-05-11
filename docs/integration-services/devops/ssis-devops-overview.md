@@ -339,6 +339,12 @@ The configuration JSON schema has three layers:
 
 ## Release notes
 
+### Version 1.0.1
+
+Release Date: May 9, 2020
+
+- Fixed an issue that SSIS Build task always build the whole solution even if only single dtproj file is specified as project path.
+
 ### Version 1.0.0
 
 Release Date: May 8, 2020

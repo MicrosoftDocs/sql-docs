@@ -49,7 +49,7 @@ If the client computer has Internet access, you can download and install **sqlml
 
 1. Download the latest **sqlmlutils** file (`.zip` for Windows, `.tar.gz` for Linux) from https://github.com/Microsoft/sqlmlutils/tree/master/R/dist to the client computer. Don't expand the file.
 
-1. Open a **Command Prompt** and run the following commands to install the packages **sqlmlutils** and **RODBCext**. Substitute the path to the **sqlmlutils** file you downloaded. The **RODBCext** package is found online and installed.
+1. Open a **Command Prompt** and run the following commands to install the packages **RODBCext** and **sqlmlutils**. Substitute the path to the **sqlmlutils** file you downloaded. The **RODBCext** package is found online and installed.
 
    ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
@@ -67,7 +67,7 @@ If the client computer has Internet access, you can download and install **sqlml
 
 ### Install sqlmlutils offline
 
-If the client computer doesn't have an Internet connection, you need to download the packages **sqlmlutils** and **RODBCext** in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
+If the client computer doesn't have an Internet connection, you need to download the packages **RODBCext** and **sqlmlutils** in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
 
 The **RODBCext** package has a number of dependent packages, and identifying all dependencies for a package gets complicated. We recommend that you use [**miniCRAN**](https://andrie.github.io/miniCRAN/) to create a local repository folder for the package that includes all the dependent packages.
 For more information, see [Create a local R package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
@@ -78,11 +78,11 @@ On a computer with Internet access:
 
 1. Install **miniCRAN**. See [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) for details.
 
-1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example creates the repository in the folder `rodbcext`.
+1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example assumes the repository will be created in the folder `rodbcext`.
 
    ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
    local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -93,7 +93,7 @@ On a computer with Internet access:
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
    local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -117,7 +117,7 @@ On the client computer you use to connect to SQL Server:
 
 1. Open a command prompt.
 
-1. Run the following commands to install **RODBCext** and then **sqlmlutils**. Substitute the full paths to the **RODBCext** folder and the **sqlmlutils** file you copied to this computer.
+1. Run the following commands to install **RODBCext** and then **sqlmlutils**. Substitute the full paths to the **RODBCext** repository folder and the **sqlmlutils** file you copied to this computer.
 
    ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console

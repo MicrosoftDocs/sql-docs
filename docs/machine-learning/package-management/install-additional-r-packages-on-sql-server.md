@@ -51,7 +51,7 @@ If the client computer has Internet access, you can download and install **sqlml
 
 1. Open a **Command Prompt** and run the following commands to install the packages **sqlmlutils** and **RODBCext**. Substitute the path to the **sqlmlutils** file you downloaded. The **RODBCext** package is found online and installed.
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
    R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
    R CMD INSTALL sqlmlutils_0.7.1.zip
@@ -80,7 +80,7 @@ On a computer with Internet access:
 
 1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example creates the repository in the folder `c:\downloads\rodbcext`.
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/rodbcext"
@@ -119,7 +119,7 @@ On the client computer you use to connect to SQL Server:
 
 1. Run the following commands to install **RODBCext** and then **sqlmlutils**. Substitute the full paths to the **RODBCext** folder and the **sqlmlutils** file you copied to this computer.
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
    R -e "install.packages('RODBCext', repos='rodbcext')"
    R CMD INSTALL sqlmlutils_0.7.1.zip
@@ -168,7 +168,7 @@ On a computer with Internet access:
 
 1. Run the following R script to create a local repository for **glue**. This example creates the repository folder in `c:\downloads\glue`.
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"

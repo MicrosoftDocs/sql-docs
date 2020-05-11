@@ -54,7 +54,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
    ```bash
    $ mkdir sqlpackage
-   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
+   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip -d ~/sqlpackage 
    $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    $ source ~/.bash_profile
    $ sqlpackage
@@ -66,7 +66,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    ```bash
-   cd ~
+   $ cd ~
    $ mkdir sqlpackage
    $ unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
    $ echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc

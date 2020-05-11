@@ -52,13 +52,6 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
   
  Snapshot transaction XSN-60 ignores data modifications made by XSN-57 and XSN-58 and also XSN 59.  
   
-## Syntax  
-  
-```  
-  
-dm_tran_transactions_snapshot  
-```  
-  
 ## Table Returned  
   
 |Column name|Data type|Description|  

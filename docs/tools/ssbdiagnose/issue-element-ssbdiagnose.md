@@ -1,5 +1,6 @@
 ---
 title: Issue Element
+description: In SQL Server, the Issue element reports an issue found by the ssbdiagnose utility. The XML output file has one Issue element per issue reported.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

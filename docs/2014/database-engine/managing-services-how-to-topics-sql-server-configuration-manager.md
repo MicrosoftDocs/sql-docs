@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, managing services"
 ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Managing Services How-to Topics (SQL Server Configuration Manager)

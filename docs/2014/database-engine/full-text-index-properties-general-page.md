@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.fulltextindexproperties.general.f1"
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Full-Text Index Properties (General Page)

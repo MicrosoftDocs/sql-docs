@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid"
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Query Results-SQL Server-Results to Grid Page)

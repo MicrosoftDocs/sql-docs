@@ -1,6 +1,7 @@
 ---
 title: Distributed Replay security
 titleSuffix: SQL Server Distributed Replay
+description: This article describes security configuration steps for SQL Server Distributed Replay and important considerations for data protection and removal steps.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

@@ -1,7 +1,7 @@
 ---
 title: What is the controller?
 titleSuffix: SQL Server big data clusters
-description: This article describes the controller of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: This article describes the controller of a SQL Server big data cluster.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray

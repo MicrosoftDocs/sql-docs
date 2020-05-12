@@ -1,6 +1,6 @@
 ---
 title: "Generating Dump Files for SSIS Package Execution"
-ms.description: Lean how to troubleshoot SQL Server Integration Services using dump flag. 
+ms.description: Learn how to troubleshoot SQL Server Integration Services "Dump on errors" options to generage a .mdmp debug dump file and a text .tmp debug dump file. Explains the debug dump file format.
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: "integration-services"

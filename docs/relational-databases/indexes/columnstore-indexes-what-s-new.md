@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2018"
+ms.date: "05/11/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -43,6 +43,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Columnstore index can have a non-persisted computed column||||yes|||   
   
  <sup>1</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.  
+
+## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] adds these new features.
+
+### Functional
+- Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. Previously, an index reorganize operation was needed to merge rowgroups with partially deleted data. This improves the columnstore index quality over time. 
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adds these new features.

@@ -53,7 +53,7 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
 ## SQL Server 2014 offline content
 
-> [!Tip]
+> [!IMPORTANT]
 > SQL 2014 Transact-SQL content is only available offline.
 
 The following steps explain how to load offline content for SQL Server 2014.
@@ -94,9 +94,6 @@ The following steps explain how to load offline content for SQL Server 2014.
 7. You can verify that the SQL Server 2014 content installed by searching under the content pane on the left for *sql server 2014*.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
-
-> [!IMPORTANT]
-> SQL 2014 Transact-SQL content is only available offline.
 
 ## SQL Server 2012 offline content
 

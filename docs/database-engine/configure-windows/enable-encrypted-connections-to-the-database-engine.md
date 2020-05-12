@@ -92,7 +92,7 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
   > [!WARNING]  
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-## Install on single server
+## <a name="single-server"></a>Install on single server
 
 With [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate on a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
@@ -122,7 +122,7 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
 
 With [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate in a Failover Cluster configuration or in an Availability Group configuration.
 
-If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], and SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] is not available, follow the steps in section [To provision (install) a certificate on a single server](#to-provision-install-a-certificate-on-a-single-server) for every server.
+If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], and SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] is not available, follow the steps in section [To provision (install) a certificate on a single server](#single-server) for every server.
 
 ## Export server certificate  
   
@@ -146,9 +146,9 @@ Configure the server to force encrypted connections.
 4. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
 
 > [!NOTE]
-> To ensure secure connectivity between client and server, configure the client to request encrypted connections. More details are explained [later in this article](#to-configure-the-client-to-request-encrypted-connections).
+> To ensure secure connectivity between client and server, configure the client to request encrypted connections. More details are explained [later in this article](#configure-client).
 
-## Configure client
+## <a name="configure-client"></a>Configure client
 
 Configure the client to request encrypted connections.
 

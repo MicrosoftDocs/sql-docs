@@ -1,8 +1,8 @@
-- name: SQL Server Machine Learning Services documentation
+- name: SQL machine learning documentation
   href: ../machine-learning/index.yml
 
-- name: SQL Server documentation >
-  href: ../sql-server/index.yml
+- name: Microsoft SQL documentation >
+  href: ../index.yml
 
 - name: Overview
   expanded: true
@@ -115,6 +115,26 @@
     items:
     - name: R tutorials
       href: ../machine-learning/tutorials/r-tutorials.md
+    - name: Ski rental (decision tree)
+      items:
+      - name: 1 - Introduction
+        href: ../machine-learning/tutorials/r-predictive-model-introduction.md
+      - name: 2 - Prepare data
+        href: ../machine-learning/tutorials/r-predictive-model-prepare-data.md
+      - name: 3 - Train model
+        href: ../machine-learning/tutorials/r-predictive-model-train.md
+      - name: 4 - Deploy model
+        href: ../machine-learning/tutorials/r-predictive-model-deploy.md
+    - name: Categorize customers (k-means clustering)
+      items:
+      - name: 1 - Introduction
+        href: ../machine-learning/tutorials/r-clustering-model-introduction.md
+      - name: 2 - Prepare the data
+        href: ../machine-learning/tutorials/r-clustering-model-prepare-data.md
+      - name: 3 - Create the model
+        href: ../machine-learning/tutorials/r-clustering-model-build.md
+      - name: 4 - Deploy the model
+        href: ../machine-learning/tutorials/r-clustering-model-deploy.md
     - name: Create partition-based models
       href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
     - name: Use R in T-SQL

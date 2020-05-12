@@ -227,7 +227,7 @@
         href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
       - name: Active directory login fails
         href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-      - name: HDFS admin rights
+      - name: HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference
     items:

@@ -6,7 +6,7 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 manager: cgronlun
-ms.date: 03/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -47,13 +47,13 @@ Complete the following steps to build the docker image:
 1. Change the directory to the mssql-mlservices directory:
     
     ```bash
-    /opt/mssql/mlservices
+    /mssql-docker/linux/preview/examples/mssql-mlservices
     ```
 
 2. In the same directory, run the following command:
 
     ```bash
-    docker build -t mssql-server-mlservices
+    docker build -t mssql-server-mlservices .
     ```
 
 3. Run the command:

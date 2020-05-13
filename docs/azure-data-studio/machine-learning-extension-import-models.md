@@ -1,7 +1,7 @@
 ---
-title: Machine Learning extension
+title: Import models with Machine Learning extension
 titleSuffix: Azure Data Studio
-description: Install and use the Machine Learning extension for Azure Data Studio
+description: 
 ms.date: "05/12/2020"
 ms.reviewer: "sstein"
 ms.prod: sql
@@ -11,6 +11,6 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Machine learning extension for Azure Data Studio
+# Import models with Machine learning extension for Azure Data Studio
 
 This extension provides machine learning support in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).

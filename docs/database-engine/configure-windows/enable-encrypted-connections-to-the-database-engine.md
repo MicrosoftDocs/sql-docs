@@ -31,7 +31,7 @@ ms.author: vanto
 
   Learn how to encrypt data across communication channels.  You enable encrypted connections for an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to specify a certificate.
  
- The server computer must have a certificate provisioned. To provision the certificate on the server computer, you import it into Windows. The client machine must be set up to trust the certificate's root authority.  
+ The server computer must have a certificate provisioned. To provision the certificate on the server computer, you [import it into Windows](#single-server). The client machine must be set up to [trust the certificate's root authority](#configure-client).  
   
 > [!IMPORTANT]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Secure Sockets Layer (SSL) has been discontinued. Use Transport Layer Security (TLS) instead.

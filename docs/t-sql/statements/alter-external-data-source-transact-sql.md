@@ -57,7 +57,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  Specifies the user-defined name for the data source. The name must be unique.
 
  LOCATION = '<prefix>://<path>[:<port>]'
- Provides the connectivity protocol, path, and port to the external data source. See [CREATE EXTERNAL DATA SOURCE;](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=sql-server-ver15#location--prefixpathport) for valid location options.
+ Provides the connectivity protocol, path, and port to the external data source. See [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport) for valid location options.
 
  RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Does not apply to Azure SQL Data Warehouse)
  Specifies the Hadoop Resource Manager location. When specified, the query optimizer might choose to pre-process data for a PolyBase query by using Hadoop's computation capabilities. This is a cost-based decision. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.

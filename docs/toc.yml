@@ -7808,7 +7808,7 @@
           - name: Make predictions
             href: azure-data-studio/machine-learning-extension-predictions.md
           - name: Import models
-            href: azure-data-studio/machine-learning-extension-import models.md
+            href: azure-data-studio/machine-learning-extension-import-models.md
         - name: PostgreSQL extension
           href: azure-data-studio/postgres-extension.md
         - name: Data Virtualization extension

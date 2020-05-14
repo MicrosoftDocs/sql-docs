@@ -206,7 +206,7 @@ This step requires a server restart. If you are about to enable script execution
 
 ## Restart the service
 
-When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
+When the installation is complete, restart the database engine.
 
 Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 

@@ -20,7 +20,7 @@ Microsoft Connector for Oracle enables to export data from and load data into Or
 
 The following Microsoft SQL Server products are supported by Microsoft Connector for Oracle:
 
-- Since SQL Server 2019
+- Since SQL Server 2019 CU1
 - SQL Server Data Tools (SSDT) since version 15.9.3
 
 The following Oracle database versions of data source are supported:

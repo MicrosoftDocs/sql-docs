@@ -23,7 +23,7 @@ Azure Data Studio communicates with the `livy` endpoint which in turn issues `sp
 
 1. Review the stack and error messages in the `pyspark`.
 
-   Get the application ID from the first cell in the notebook that you can use to investigate the `livy`, YARN, and spark logs with. This is the YARN application ID that the `SparkContext` uses. 
+   Get the application ID from the first cell in the notebook. Use this application ID to investigate the `livy`, YARN, and spark logs. `SparkContext` uses uses this YARN application ID.
 
    :::image type="content" source="../big-data-cluster/media/troubleshoot-pyspark-notebook/1-failed-cell.png" alt-text="Failed cell":::
 
@@ -60,12 +60,12 @@ Azure Data Studio communicates with the `livy` endpoint which in turn issues `sp
    Log files are archived in /home/<user>/copy_logs/debuglogs-kube-system-YYYYMMDD-HHMMSS-dumps.tar.gz.
    ```
 
-1. Review the livy logs. The livy logs are at `<namespace>\sparkhead-0\hadoop-livy-sparkhistory\supervisor\log`.
+1. Review the Livy logs. The Livy logs are at `<namespace>\sparkhead-0\hadoop-livy-sparkhistory\supervisor\log`.
 
    - Search for the YARN application ID from the pyspark notebook first cell.
    - Search for `ERR` status.
    
-   Example of livy log that has a `YARN ACCEPTED` state. Livy has submitted the yarn application.
+   Example of Livy log that has a `YARN ACCEPTED` state. Livy has submitted the yarn application.
 
    ```output
    HH:MM:SS INFO utils.LineBufferedStream: YYY-MM-DD HH:MM:SS INFO impl.YarnClientImpl: Submitted application application_<application_id>
@@ -119,7 +119,7 @@ Azure Data Studio communicates with the `livy` endpoint which in turn issues `sp
 
 1. Review the YARN application logs.
 
-   Get application log for app 1. You can `kubectl` to the `sparkhead-0` pod, and run this command:
+   Get application log for the app. Use `kubectl` to connect to the `sparkhead-0` pod, and run this command:
 
    ```console
    yarn logs -applicationId application_<application_id>

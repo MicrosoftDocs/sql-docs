@@ -100,10 +100,13 @@ HRESULT BCPColFmt(
  If more than one means of specifying a user-file column length is used (such as a terminator and a length indicator, or a terminator and a maximum column length), bulk copy chooses the one that results in the least amount of data being copied.  
   
  The bulk copy API performs Unicode-to-MBCS character conversion as required. Care must be taken to ensure that both the terminator byte string and the length of the byte string are set correctly.  
-  
+
  *cbUserDataTerm*[in]  
  The length, in bytes, of the terminator sequence to be used for the column. If no terminator is present or desired in the data, set this value to 0.  
-  
+
+> [!IMPORTANT]
+> Using the terminator sequence on clients configured to use UTF-8 code page is not supported. Hence, on UTF-8 clients, *pbUserDataTerm* must be set to `nullptr` and *cbUserDataTerm* must be set to `0`.
+
  *idxServerCol*[in]  
  The ordinal position of the column in the database table. The first column number is 1. The ordinal position of a column is reported by **IColumnsInfo::GetColumnInfo** or similar methods. If this value is 0, bulk copy ignores the field in the data file.  
   

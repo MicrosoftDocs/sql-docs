@@ -22,8 +22,10 @@ ms.author: pelopes
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  The OLE DB Driver for SQL Server exposes the **ISequentialStream** interface to support consumer access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and xml data types as binary large objects (BLOBs). The **Read** method on **ISequentialStream** lets the consumer retrieve much data in manageable chunks.  
-  
+  The OLE DB Driver for SQL Server exposes the **ISequentialStream** interface to support consumer access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**<a href="#text_note"><sup>**1**</sup></a>, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and xml data types as binary large objects (BLOBs). The **Read** method on **ISequentialStream** lets the consumer retrieve much data in manageable chunks.
+
+ <b id="text_note">[1]:</b> If client is configured to use UTF-8 code page, inserting into legacy `text` data type using the **ISequentialStream** interface is only supported if server supports UTF-8.
+
  For a sample demonstrating this feature, see [Set Large Data &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  The OLE DB Driver for SQL Server can use a consumer-implemented **IStorage** interface when the consumer provides the interface pointer in an accessor bound for data modification.  

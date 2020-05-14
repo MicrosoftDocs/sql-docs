@@ -26,9 +26,11 @@ ms.author: pelopes
   
  The consumer-implemented ISequentialStream object can be used with rowset data (IRowsetChange::InsertRow, IRowsetChange::SetData) and with parameters by binding a parameter as DBTYPE_IUNKNOWN.  
   
- Because DBTYPE_IUNKNOWN is specified as the data type in the binding, it must match the type of the column or target parameter. Conversions are not possible when sending data through ISequentialStream from rowset interfaces. For parameters, you should avoid using ICommandWithParameters::SetParameterInfo and specify a different type to force a conversion; this would require the provider to cache all the BLOB data locally, to convert it before sending to SQL Server. Caching a large BLOB and converting it locally does not provide good performance.  
-  
- For more information, see [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Because DBTYPE_IUNKNOWN is specified as the data type in the binding, it must match the type of the column or target parameter. Conversions are not possible when sending data through ISequentialStream from rowset interfaces <a href="#conversion_note"><sup>**1**</sup></a>. For parameters, you should avoid using ICommandWithParameters::SetParameterInfo and specify a different type to force a conversion; this would require the provider to cache all the BLOB data locally, to convert it before sending to SQL Server. Caching a large BLOB and converting it locally does not provide good performance.  
+
+ For more information, see [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).
+
+ <b id="conversion_note">[1]:</b> While conversions are not possible, if client is configured to use UTF-8 code page, translations can occur from UTF-8 to the database code page if server does not support UTF-8. For more information please see [UTF-8 Support in OLE DB Driver for SQL Server](features\utf-8-support-in-oledb-driver-for-sql-server.md).
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  

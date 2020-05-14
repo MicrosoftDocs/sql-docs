@@ -23,7 +23,7 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 04/07/2020
+ms.date: 05/19/2020
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -107,19 +107,25 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
 - Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 - SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side by side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
-## Supported operating systems (SSMS 18.5)
+## SSMS System Requirements
 
 This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
 
-- Windows 10 (64-bit) <sup>*</sup>
+Supported Operating Systems:
+
+- Windows 10 (64-bit) version 1607 (10.0.14393) or later
 - Windows 8.1 (64-bit)
 - Windows Server 2019 (64-bit)
-- Windows Server 2016 (64-bit) <sup>*</sup>
+- Windows Server 2016 (64-bit)
 - Windows Server 2012 R2 (64-bit)
 - Windows Server 2012 (64-bit)
 - Windows Server 2008 R2 (64-bit)
 
-<sup>*</sup> Requires version 1607 (10.0.14393) or later
+Supported hardware:
+
+- 1.8 GHz or faster processor. Dual-core or better recommended
+- 2 GB of RAM; 4 GB of RAM recommended (2.5 GB minimum if running on a virtual machine)
+- Hard disk space: Takes up 1 MB
 
 > [!NOTE]
 > SSMS runs on Windows (AMD or Intel) only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).

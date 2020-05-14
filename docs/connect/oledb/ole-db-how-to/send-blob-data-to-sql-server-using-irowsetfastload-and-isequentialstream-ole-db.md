@@ -30,7 +30,7 @@ ms.author: pelopes
 
  For more information, see [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).
 
- <b id="conversion_note">[1]:</b> While conversions are not possible, if client is configured to use UTF-8 code page, translations can occur from UTF-8 to the database code page if server does not support UTF-8. For more information please see [UTF-8 Support in OLE DB Driver for SQL Server](features\utf-8-support-in-oledb-driver-for-sql-server.md).
+ <b id="conversion_note">[1]:</b> While conversions are not possible, if client is configured to use UTF-8 code page, translations can occur from UTF-8 to the database code page if server does not support UTF-8. For more information please see [UTF-8 Support in OLE DB Driver for SQL Server](../features/utf-8-support-in-oledb-driver-for-sql-server.md).
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  

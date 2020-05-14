@@ -16,7 +16,7 @@ author: David-Engel
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Microsoft OLE DB Driver for SQL Server (version 18.4.0) supports UTF-8 encoding on client and server. For information about the SQL Server UTF-8 support, see:
+Microsoft OLE DB Driver for SQL Server supports UTF-8 encoding on client and server. For information about the SQL Server UTF-8 support, see:
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 support](#ctp23)
 

@@ -47,7 +47,7 @@ The following table lists which operating systems are supported by OLE DB Driver
 <sup>3</sup> Supported on Windows 8.1 with [April 2014 update](https://go.microsoft.com/fwlink/?linkid=2073785) and [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 
 > [!NOTE]  
-> Use of the UTF-8 code page on Windows ("Use Unicode UTF-8 for worldwide language support") is not supported.
+> As of version 18.4.0, OLE DB Driver for SQL Server supports use of the UTF-8 code page on Windows. For more information please see [UTF-8 Support in OLE DB Driver for SQL Server](../features/utf-8-support-in-oledb-driver-for-sql-server.md).
 
 ## ADO support policies  
 

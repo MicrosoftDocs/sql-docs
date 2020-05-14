@@ -5,7 +5,7 @@ description: Troubleshoot `pyspark` notebook
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 04/21/2020
+ms.date: 05/15/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,32 +13,38 @@ ms.technology: big-data-cluster
 
 # Troubleshoot `pyspark` notebook
 
-This article demonstrates how to troubleshoot a `pyspark` notebook that fails with error message.
+This article demonstrates how to troubleshoot a `pyspark` notebook that fails.
 
 ## Background
 
-Azure data studio communicates with the `livy` endpoint which in turn issues `spark-submit` commands. The `spark-submit` command will have a parameter to use YARN as the spark cluster manager.
+Azure Data Studio communicates with the `livy` endpoint which in turn issues `spark-submit` commands. The `spark-submit` command has a parameter to use YARN as the spark cluster manager.
 
-## Troubleshooting Steps
+## Troubleshooting steps
 
 1. Review the stack and error messages in the `pyspark`.
 
-   Get the application ID from the first cell in the notebook that you can use to investigate the `livy`, YARN, and spark logs\UI with. This is the YARN application ID that the `SparkContext` uses. 
+   Get the application ID from the first cell in the notebook that you can use to investigate the `livy`, YARN, and spark logs with. This is the YARN application ID that the `SparkContext` uses. 
 
    :::image type="content" source="../big-data-cluster/media/troubleshoot-pyspark-notebook/1-failed-cell.png" alt-text="Failed cell":::
 
 1. Get the logs.
 
-   Use azdata copy-logs to investigate
+   Use `azdata bdc debug copy-logs` to investigate
 
-   ```bash
+   The following example connects a big data cluster endpoint to copy the logs. Update the following values in the example before running.
+   - `<ip_address>`: Big data cluster endpoint
+   - `<username>`: Your big data cluster username
+   - `<namespace>`: The Kubernetes namespace for your cluster
+   - `<folder_to_copy_logs>`: The path where you want your logs copied to
+
+   ```console
    azdata login --auth basic --username <username> --endpoint https://<ip_address>:30080
    azdata bdc debug copy-logs -n <namespace> -d <folder_to_copy_logs>
    ```
 
-   Output example
+   Example output
 
-   ```
+   ```output
    <user>@<server>:~$ azdata bdc debug copy-logs -n <namespace> -d copy_logs
    Collecting the logs for cluster '<namespace>'.
    Collecting logs for containers...
@@ -61,34 +67,34 @@ Azure data studio communicates with the `livy` endpoint which in turn issues `sp
    
    Example of livy log that has a `YARN ACCEPTED` state. Livy has submitted the yarn application.
 
-   ```
-   HH:MM:SS INFO utils.LineBufferedStream: YYY-MM-DD HH:MM:SS INFO impl.YarnClientImpl: Submitted application application_1580771254352_0001
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream: YYY-MM-DD HH:MM:SS INFO yarn.Client: Application report for application_1580771254352_0001 (state: ACCEPTED)
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream: YYY-MM-DD HH:MM:SS INFO yarn.Client: 
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      client token: N/A
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      diagnostics: N/A
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      ApplicationMaster host: N/A
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      ApplicationMaster RPC port: -1
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      queue: default
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      start time: ############
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      final status: UNDEFINED
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      tracking URL: https://sparkhead-1.fnbm.corp:8090/proxy/application_1580771254352_0001/
-   20/02/10 HH:MM:SS INFO utils.LineBufferedStream:      user: <account>
+   ```output
+   HH:MM:SS INFO utils.LineBufferedStream: YYY-MM-DD HH:MM:SS INFO impl.YarnClientImpl: Submitted application application_<application_id>
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream: YYY-MM-DD HH:MM:SS INFO yarn.Client: Application report for application_<application_id> (state: ACCEPTED)
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream: YYY-MM-DD HH:MM:SS INFO yarn.Client: 
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      client token: N/A
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      diagnostics: N/A
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      ApplicationMaster host: N/A
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      ApplicationMaster RPC port: -1
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      queue: default
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      start time: ############
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      final status: UNDEFINED
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      tracking URL: https://sparkhead-1.fnbm.corp:8090/proxy/application_<application_id>/
+   YY/MM/DD HH:MM:SS INFO utils.LineBufferedStream:      user: <account>
    ```
 
-1. Review the YARN UI 
+1. Review the YARN UI
 
    Get YARN endpoint from Azure Data Studio big data cluster. or run `azdata bdc endpoint list –o table`.
 
    For example:
 
-   ```bash
+   ```console
    azdata bdc endpoint list -o table
    ```
 
    Returns
 
-   ```
+   ```output
    Description                                             Endpoint                                                          Name                        Protocol
    ------------------------------------------------------  ----------------------------------------------------------------  --------------------------  ----------
    Gateway to access HDFS files, Spark                     https://knox.<namespace-value>.local:30443                               gateway                     https
@@ -107,22 +113,23 @@ Azure data studio communicates with the `livy` endpoint which in turn issues `sp
 
 1. Check the application ID and individual application_master and container logs.
 
-1. Review the YARN application logs
+   :::image type="complex" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Check application ID":::
+
+:::image-end:::
+
+1. Review the YARN application logs.
 
    Get application log for app 1. You can `kubectl` to the `sparkhead-0` pod, and run this command:
 
-   ```bash
-   yarn logs -applicationId application_1580771254352_0001
+   ```console
+   yarn logs -applicationId application_<application_id>
    ```
-
-   `Workitem` has been submitted to add this to the azdata copy_logs command for the future.
-   
 
 1. Search for errors or stacks.
 
    An example of permission error against hdfs. In the java stack look for the `Caused by:`
 
-   ```
+   ```output
    YYYY-MM-DD HH:MM:SS,MMM ERROR spark.SparkContext: Error initializing SparkContext.
    org.apache.hadoop.security.AccessControlException: Permission denied: user=<account>, access=WRITE, inode="/system/spark-events":sph:<bdc-admin>:drwxr-xr-x
         at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.check(FSPermissionChecker.java:399)
@@ -138,8 +145,11 @@ Azure data studio communicates with the `livy` endpoint which in turn issues `sp
    Caused by: org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.AccessControlException): Permission denied: user=<account>, access=WRITE, inode="/system/spark-events":sph:<bdc-admin>:drwxr-xr-x
    ```
 
-1. Review the SPARK UI
-   Drill down into the stages tasks looking for errors. 
+1. Review the SPARK UI.
+
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Spark UI":::
+
+   Drill down into the stages tasks looking for errors.
 
 ## Next steps
 

@@ -1,7 +1,7 @@
 ---
 title: Filter Events Based on the Event End Time
 titleSuffix: SQL Server Profiler
-description: Limit the events that SQL Server Profiler captures during a trace by learning how to set a filter on the event ending time.
+description: Limit the events that SQL Server Profiler captures during a trace by setting a filter on the event ending time.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

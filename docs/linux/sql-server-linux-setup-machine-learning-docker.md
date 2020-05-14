@@ -30,7 +30,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 The following command clones the `mssql-docker` git repository to a local directory.
 
-1. Open a Bash terminal on Linux or Mac, or open a Windows Subsystem for Linux terminal on Windows.
+1. Open a Bash terminal on Linux or Mac.
 
 2. Create a directory to hold a local copy of the mssql-docker repository.
 
@@ -59,10 +59,12 @@ Complete the following steps to build the docker image:
 3. Run the command:
 
     ```bash
-    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -p 1433:1433 mssql-server-mlservices
     ```
 
-    Change `<your_sa_password>` in `SA_PASSWORD=<your_sa_password>` and change the `-v` path. 
+    Change `<your_sa_password>` in `SA_PASSWORD=<your_sa_password>`. The -v flag can be added to create a volume path in the container. 
+    
+    
 
 4. Confirm by running the following command:
 

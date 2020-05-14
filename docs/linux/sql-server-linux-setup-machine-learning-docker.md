@@ -59,10 +59,10 @@ Complete the following steps to build the docker image:
 3. Run the command:
 
     ```bash
-    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -p 1433:1433 mssql-server-mlservices
     ```
 
-    Change `<your_sa_password>` in `SA_PASSWORD=<your_sa_password>` and change the `-v` path. 
+    Change `<your_sa_password>` in `SA_PASSWORD=<your_sa_password>` add `-v` to map volume to a directory in the container. 
 
 4. Confirm by running the following command:
 

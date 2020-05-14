@@ -3,11 +3,11 @@ title: "Quickstart: Run Python scripts"
 description: Run a set of simple Python scripts using SQL Server Machine Learning Services. Learn how to use the stored procedure sp_execute_external_script to execute the script in a SQL Server instance.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/17/2020  
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
@@ -15,13 +15,25 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Quickstart: Run simple Python scripts with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
+::: moniker-end
 
 ## Prerequisites
 
-- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language installed.
 
-- You also need a tool for running SQL queries that contain Python scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+
+- You also need a tool for running SQL queries that contain Python scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [Azure Data Studio)](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 
 ## Run a simple script
 
@@ -38,7 +50,7 @@ d = a*b
 print(c, d)
 ```
 
-1. Open a new query window in **SQL Server Management Studio** connected to your SQL Server instance.
+1. Open a new query window in **Azure Data Studio** connected to your SQL Server instance.
 
 1. Pass the complete Python script to the `sp_execute_external_script` stored procedure.
 
@@ -84,8 +96,9 @@ Inputs to the `sp_execute_external_script` stored procedure include:
 |-|-|
 | @language | defines the language extension to call, in this case Python |
 | @script | defines the commands passed to the Python runtime<br>Your entire Python script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable |
-| @input_data_1 | data returned by the query, passed to the Python runtime, which returns the data to SQL Server as a data frame |
-|WITH RESULT SETS | clause defines the schema of the returned data table for SQL Server, in this case adding "Hello World" as the column name and **int** for the data type |
+| @input_data_1 | data returned by the query, passed to the Python runtime, which returns the data as a data frame |
+|WITH RESULT SETS | clause defines the schema of the returned data table for SQL Server, adding "Hello World" as the column name, **int** for the data type |
+
 
 The command outputs the following text:
 
@@ -236,13 +249,8 @@ The list is from `pkg_resources.working_set` in Python and returned to SQL as a 
 
 ## Next steps
 
-To learn how to use data structures when using Python in SQL Server Machine Learning Services, follow this quickstart:
+To learn how to use data structures when using Python in SQL machine learning, follow this quickstart:
 
 > [!div class="nextstepaction"]
 > [Quickstart: Data structures and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
-For more information on using Python in SQL Server Machine Learning Services, see the following articles:
-
-- [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
-- [Create and score a predictive model in Python with SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
-- [What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md)

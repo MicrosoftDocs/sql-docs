@@ -1,7 +1,6 @@
 ---
 title: Filter Events in a Trace
 titleSuffix: SQL Server Profiler
-description: Find out how to set a filter to limit the events that SQL Server Profiler captures during a trace. Read about the formats required for certain filters.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

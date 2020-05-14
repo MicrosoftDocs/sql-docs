@@ -115,8 +115,6 @@ Azure Data Studio communicates with the `livy` endpoint which in turn issues `sp
 
    :::image type="complex" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Check application ID":::
 
-:::image-end:::
-
 1. Review the YARN application logs.
 
    Get application log for the app. Use `kubectl` to connect to the `sparkhead-0` pod, and run this command:

@@ -1,5 +1,6 @@
 ---
 title: "StorageBoundInMB Element (DTA)"
+description: In the dta utility, the StorageBoundInMB element specifies the maximum space that can be consumed by the Database Engine Tuning Advisor tuning recommendation.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

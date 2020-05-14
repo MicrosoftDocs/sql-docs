@@ -44,7 +44,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
      [ , [ @active_end_date = ] active_end_date ]  
      [ , [ @active_start_time = ] active_start_time ]  
      [ , [ @active_end_time = ] active_end_time ]  
-     [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+     [ , [ @schedule_id = ] schedule_id OUTPUT ]
+     [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
 ```  
   
 ## Arguments  

@@ -125,7 +125,7 @@ Supported hardware:
 
 - 1.8 GHz or faster processor. Dual-core or better recommended
 - 2 GB of RAM; 4 GB of RAM recommended (2.5 GB minimum if running on a virtual machine)
-- Hard disk space: Takes up 1 MB
+- Hard disk space: Minimum of 800 KB up to 10 MB of available space, depending on features installed.
 
 > [!NOTE]
 > SSMS runs on Windows (AMD or Intel) only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).

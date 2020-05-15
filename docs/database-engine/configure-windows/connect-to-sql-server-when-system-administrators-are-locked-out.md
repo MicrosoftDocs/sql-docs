@@ -31,14 +31,13 @@ This topic describes how you can regain access to the [!INCLUDE[ssDEnoversion](.
   
 ## Resolution
 
-In order to resolve your access issue, we recommend that you start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode. This mode prevents other connections from occurring, while you try to regain access. From here 
+In order to resolve your access issue, we recommend that you start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode. This mode prevents other connections from occurring, while you try to regain access. From here, you can connect your instance to SQL Server, and  configure your login to the **sysadmin** server role. Detailed steps for this solution are provided in the [step-by-step-instructions](#Step-by-step-instructions) section.
 
-When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, first stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first and prevent you from connecting as a second user. 
-
-You can start the instance in single-user mode with either the **-m** or **-f** options on the command line.
+When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, first stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first and prevent you from connecting as a second user.
 
 > [!IMPORTANT]  
->  Do not use any of the `-m options` as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.
+> Do not use any of the `-m options` as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.
+You can start the instance in single-user mode with either the **-m** or **-f** options on the command line.
 
 The following table summarizes the different ways to start your instance in single-user mode in the command line.
 
@@ -52,9 +51,7 @@ Any member of the computer's local Administrators group can then connect to the 
   
 For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 
-For additional detail on other start up options, see [Configure server startup options](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).
-
-## Step-by-step instructions
+## Step by step instructions
 
 The following step by step instructions describe how to grant system administrator permissions to a SQL Server login that mistakenly no longer has access.
 

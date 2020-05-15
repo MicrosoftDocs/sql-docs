@@ -254,9 +254,6 @@ In addition to the above information, you also need to provide DNS names for the
  > [!IMPORTANT]
  > Prior to SQL Server 2019 CU5 release, the DNS name will not include the subdomain portion, so for the above example the DNS name you will use to connect to SQL Server master instance is `mastersql.contoso.local`.
 
-> [!NOTE]
-> Make sure to create DNS entries in the DNS Server for the names you are defining below. For `kubeadm` deployments, you can for example use the IP address of the Kubernetes master node when creating the DNS entries.
-
 ```bash
 # DNS names for BDC services
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.<subdomain e.g. mssql-cluster>.contoso.local"

@@ -76,16 +76,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Value|Description|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Active Script<br /><br /> **\*\* Important \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
-|'**CMDEXEC**'|Operating-system command or executable program|  
-|'**DISTRIBUTION**'|Replication Distribution Agent job|  
-|'**SNAPSHOT**'|Replication Snapshot Agent job|  
-|'**LOGREADER**'|Replication Log Reader Agent job|  
-|'**MERGE**'|Replication Merge Agent job|  
+|'**ActiveScripting**'|Active Script<br /><br /> **\*\* Important \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**CmdExec**'|Operating-system command or executable program|  
+|'**Distribution**'|Replication Distribution Agent job|  
+|'**Snapshot**'|Replication Snapshot Agent job|  
+|'**LogReader**'|Replication Log Reader Agent job|  
+|'**Merge**'|Replication Merge Agent job|  
 |'**QueueReader**'|Replication Queue Reader Agent job|  
 |'**ANALYSISQUERY**'|Analysis Services query (MDX, DMX).|  
 |'**ANALYSISCOMMAND**'|Analysis Services command (XMLA).|  
-|'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package execution|  
+|'**SSIS**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package execution|  
 |'**PowerShell**'|PowerShell Script|  
 |'**TSQL**' (default)|[!INCLUDE[tsql](../../includes/tsql-md.md)] statement|  
   

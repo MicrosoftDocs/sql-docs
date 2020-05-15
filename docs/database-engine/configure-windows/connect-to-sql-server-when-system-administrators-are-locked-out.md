@@ -1,7 +1,8 @@
 ---
 title: "Connect to SQL Server when system administrators are locked out | Microsoft Docs"
+description: Learn how to regain access to SQL Server as a system administrators if you've been mistakenly locked out. 
 ms.custom: contperfq4
-ms.date: "03/14/2017"
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -18,7 +19,7 @@ ms.author: mikeray
 # Connect to SQL Server when system administrators are locked out 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
-This topic describes how you can regain access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] as a system administrator. A system administrator can lose access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] due to one of the following reasons:  
+This topic describes how you can regain access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] as a system administrator if you've been locked out.  A system administrator can lose access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] due to one of the following reasons:  
   
 -   All logins that are members of the sysadmin fixed server role have been removed by mistake.  
   
@@ -28,31 +29,43 @@ This topic describes how you can regain access to the [!INCLUDE[ssDEnoversion](.
   
 -   The sa account is disabled or no one knows the password.  
   
-One way in which you can regain access is to reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and attach all the databases to the new instance. This solution is time-consuming; and might require restoring the master database from a backup to recover the logins.
-
-Be aware of the following scenarios, 
-
- * If the backup of the master database is older, it might not have all the information. 
- * If the backup of the master database is more recent, it might have the same logins as the previous instance; therefore, administrators will still be locked out.  
-
 ## Resolution
 
- Start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode by using either the **-m** or **-f** options. Any member of the computer's local Administrators group can then connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the **sysadmin** fixed server role.  
-  
+In order to resolve your access issue, we recommend that you start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode. This mode prevents other connections from occurring, while you try to regain access. From here 
+
+When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, first stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first and prevent you from connecting as a second user. 
+
+You can start the instance in single-user mode with either the **-m** or **-f** options on the command line.
+
 > [!IMPORTANT]  
->  When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, first stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first and prevent you from connecting as a second user.  
+>  Do not use any of the `-m options` as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.
+
+The following table summarizes the different ways to start your instance in single-user mode in the command line.
+
+Option | Description | When to use
+---|---|---
+`-m"sqlcmd"`| Limits connections to a single connection and that connection must identify itself as the **sqlcmd** client program| When you are starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode and an unknown client application is taking the only available connection.
+`-m"Microsoft SQL Server Management Studio - Query"`| Limits connections to a single connection| To connect through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+`-f`| Limits connections to a single connection and starts the instance in minimal configuration | When some other configuration is preventing you from starting.
+
+Any member of the computer's local Administrators group can then connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the **sysadmin** fixed server role.  
   
- When you use the **-m** option with **sqlcmd** or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can limit the connections to a specified client application. For example, **-m"sqlcmd"** limits connections to a single connection and that connection must identify itself as the **sqlcmd** client program. Use this option when you are starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode and an unknown client application is taking the only available connection. To connect through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"**.  
-  
-> [!IMPORTANT]  
->  Do not use this option as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.  
-  
- For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Configure Server Startup Options &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).
-  
+For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
+
+For additional detail on other start up options, see [Configure server startup options](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).
+
 ## Step-by-step instructions
 
-The following step by step instructions describe the process for connecting to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] running on Windows 8 or higher. Slight adjustments for earlier versions of SQL Server or Windows are provided where applicable. These instructions must be performed while logged in to Windows as a member of the local administrators group, and they assume that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is installed on the computer.  
-  
+The following step by step instructions describe how to grant system administrator permissions to a SQL Server login that mistakenly no longer has access.
+
+These instructions assume,
+
+* [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] running on Windows 8 or higher. Slight adjustments for earlier versions of SQL Server or Windows are provided where applicable.
+
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is installed on the computer.  
+
+Perform these instructions while logged in to Windows as a member of the local administrators group.
+
 1.  From the Start page, start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. On the **View** menu, select **Registered Servers**. (If your server is not already registered, right-click **Local Server Groups**, point to **Tasks**, and then click **Register Local Servers**.)  
   
 2.  In the Registered Servers area, right-click your server, and then click **SQL Server Configuration Manager**. This should ask for permission to run as administrator, and then open the Configuration Manager program.  
@@ -104,13 +117,12 @@ The following step by step instructions describe the process for connecting to [
   
         > [!WARNING]  
         >  Replace ************ with a strong password.  
-  
-### Change [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] back to multi-user mode.
-After successful completion of the steps in the [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]](#connect-to-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) section, change back to multi-user mode with the following steps.
 
 1. Close SSMS.  
   
-1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, in the left pane, select **SQL Server Services**. In the right-pane, right-click the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then click **Properties**.  
+1. These next few steps change SQL Server back to multi-user mode. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, in the left pane, select **SQL Server Services**.
+
+1. In the right-pane, right-click the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then click **Properties**.  
   
 1. On the **Startup Parameters** tab, in the **Existing parameters** box, select `-m` and then click **Remove**.  
   
@@ -123,5 +135,5 @@ Now you should be able to connect normally with one of the accounts which is now
   
 ## See Also  
 
-* [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)
+* [Configure server startup options](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
 * [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)  

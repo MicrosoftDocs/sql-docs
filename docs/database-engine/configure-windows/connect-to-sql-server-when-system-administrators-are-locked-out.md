@@ -1,6 +1,6 @@
 ---
 title: "Connect to SQL Server when system administrators are locked out | Microsoft Docs"
-description: Learn how to regain access to SQL Server as a system administrators if you've been mistakenly locked out. 
+description: Learn how to regain access to SQL Server as a system administrator if you've been mistakenly locked out. 
 ms.custom: contperfq4
 ms.date: 05/20/2020
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.author: mikeray
 # Connect to SQL Server when system administrators are locked out 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
-This topic describes how you can regain access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] as a system administrator if you've been locked out.  A system administrator can lose access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] due to one of the following reasons:  
+This article describes how you can regain access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] as a system administrator if you've been locked out.  A system administrator can lose access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] due to one of the following reasons:  
   
 -   All logins that are members of the sysadmin fixed server role have been removed by mistake.  
   
@@ -31,7 +31,7 @@ This topic describes how you can regain access to the [!INCLUDE[ssDEnoversion](.
   
 ## Resolution
 
-In order to resolve your access issue, we recommend that you start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode. This mode prevents other connections from occurring, while you try to regain access. From here, you can connect your instance to SQL Server, and  configure your login to the **sysadmin** server role. Detailed steps for this solution are provided in the [step-by-step-instructions](#Step-by-step-instructions) section.
+In order to resolve your access issue, we recommend that you start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode. This mode prevents other connections from occurring, while you try to regain access. From here, you can connect your instance to SQL Server, and  configure your login to the **sysadmin** server role. Detailed steps for this solution are provided in the [step-by-step-instructions](#step-by-step-instructions) section.
 
 When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, first stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first and prevent you from connecting as a second user.
 

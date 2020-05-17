@@ -86,7 +86,9 @@ Enabling Always Encrypted for a database connection instructs the [Microsoft .NE
 
 If you don't enable Always Encrypted for a connection, the Microsoft .NET Data Provider for SQL Server, Azure Data Studio uses, won't try to encrypt query parameters or decrypt results.
 
-You can enable or disable Always Encrypted when you connect to a database.
+You can enable or disable Always Encrypted when you connect to a database. On general information on how to connect to a database see:
+- [Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](../../../azure-data-studio/quickstart-sql-server.md)
+- [Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database](../../../azure-data-studio/quickstart-sql-database.md)
 
 To enable (disable) Always Encrypted:
 1. In the **Connection** dialog, click **Advanced...**.

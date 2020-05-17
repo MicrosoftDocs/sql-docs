@@ -17,7 +17,7 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ---
 
-# Build Database Projects by Using SQL Server Management Studio
+# Build Database Projects Using SQL Server Management Studio
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -57,7 +57,7 @@ Solution Explorer is a utility to store and reopen database solutions. Solutions
   
 -   Save connection information with scripts.  
   
-Solution Explorer is a tool for developers who are creating and reusing scripts that are related to the same project. If a similar task is required later, you can use group of scripts that were stored in a project. If you have created applications by using [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], you will find Solution Explorer very familiar.  
+Solution Explorer is a tool for developers creating and reusing scripts related to the same project. If a similar task is required later, you can use a group of scripts stored in a project. If you have created applications using [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], you will find the Solution Explorer very familiar.  
   
 A solution consists of one or more script projects. A project consists of one or more scripts or connections. A project may also include nonscript files.  
   

@@ -99,7 +99,8 @@ To enable (disable) Always Encrypted:
 > [!TIP]
 > To toggle between Always Encrypted being enabled and disabled for an existing query window, click **Disconnect** and then click **Connnect** and complete the above steps to reconnect to your database with the desired values of the **Always Encrypted** field. 
 
-> [!NOTE] The **Change Connection** button in a query window does not currently support toggling between Always Encrypted being enabled and disabled.
+> [!NOTE] 
+> The **Change Connection** button in a query window does not currently support toggling between Always Encrypted being enabled and disabled.
 
 ## Parameterization for Always Encrypted
 

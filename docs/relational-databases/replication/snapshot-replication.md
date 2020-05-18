@@ -1,5 +1,6 @@
 ---
 title: "Snapshot Replication | Microsoft Docs"
+description: Snapshot replication distributes data as it appears at a moment in time. It does not monitor for updates. A snapshot is generated and sent to Subscribers.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

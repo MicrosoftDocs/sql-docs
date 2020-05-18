@@ -1,5 +1,6 @@
 ---
 title: Installation Tasks
+description: This article provides an overview of installation of Master Data Services, including installation and pre-installation and post-installation tasks.
 ms.custom: ""
 ms.date: "03/24/2017"
 ms.prod: sql

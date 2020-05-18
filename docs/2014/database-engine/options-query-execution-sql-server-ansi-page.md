@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi"
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Query Execution-SQL Server-ANSI Page)

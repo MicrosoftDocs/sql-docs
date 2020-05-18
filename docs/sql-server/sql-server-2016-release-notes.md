@@ -1,5 +1,6 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
+description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2016 releases.
 ms.date: "04/25/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -10,8 +11,8 @@ helpviewer_keywords:
   - "build notes"
   - "release issues"
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
@@ -20,7 +21,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
   This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
-- [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
+- [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
 - [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)

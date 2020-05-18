@@ -3617,7 +3617,7 @@
     },
     {
       "source_path": "docs/relational-databases/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md",
-      "redirect_url": "/sql/relational-databases/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy",
+      "redirect_url": "/sql/relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy",
       "redirect_document_id": false
     },
     {
@@ -17314,6 +17314,11 @@
       "source_path": "docs/integration-services/lift-shift/ssis-azure-files-file-shares.md",
       "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-files-file-shares",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/toc/previous-versions-sql-server.md",
+      "redirect_url": "/sql/sql-server/previous-versions-sql-server",
+      "redirect_document_id": true
     }
   ]
 }

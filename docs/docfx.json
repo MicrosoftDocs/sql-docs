@@ -141,6 +141,7 @@
 
     
         "machine-learning/**/*.md": "SQL Server Machine Learning Services",
+        "machine-learning/index.yml": "",
         "analysis-services/**/*.md": "",
         "analytics-platform-system/**/*.md": "Parallel Data Warehouse",
         "azure-data-studio/**/*.md": "Azure Data Studio",

@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced"
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Query Execution:SQL Server:Advanced Page)

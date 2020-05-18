@@ -1,5 +1,6 @@
 ---
 title: Secure a Master Data Manager Web Application
+description: In SQL Server, you can secure the Master Data Manager web application with HTTPS. You must be an administrator and MDS must be installed on the web server.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

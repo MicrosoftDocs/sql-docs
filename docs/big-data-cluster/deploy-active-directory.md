@@ -15,8 +15,8 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This document describes Deploy a SQL Server 2019 big data cluster (BDC) in the Active Directory
-authentication mode, which will use an existing AD domain for authentication.
+This document explains how to deploy a SQL Server big data cluster (BDC) in the Active Directory
+authentication mode. The cluster uses an existing AD domain for authentication.
 
 >[!Note]
 >Before SQL Server 2019 CU5 release, there is a restriction in big data clusters so that only one cluster could be deployed against an Active Directory domain. This restriction is removed with the CU5 release, see [Deploy multiple clusters in a domain](deploy-multiple-active-directory.md) for details on the new capabilities. Examples in this article are adjusted to accommodate both deployment use cases.
@@ -271,12 +271,12 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoin
 ```
 
 > [!IMPORTANT]
-> Above example assume you are deploying a big data cluster as of SQL Server CU5 release. If you have an existing cluster deployed before this release or if you are deploying a new cluster with an pre-CU5 Docker image tag, you should not include the `subdomain` portion in the DNS names values provided for each service. E.g.:
-
-```bash
-# DNS names for BDC services for a cluster deployed before CU5 release can not include the subdomain value
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.contoso.local"
-```
+> The example above applies to big data cluster as of SQL Server 2019 CU5 release. If you have an existing cluster deployed before this release or if you are deploying a new cluster with pre-CU5 Docker image tag, you should not include the `subdomain` portion in the DNS names values provided for each service. For example,
+>
+> ```bash
+> # DNS names for BDC services for a cluster deployed before CU5 release can not include the subdomain value
+> azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.contoso.local"
+> ```
 
 You can find an example script here for [deploying a SQL Server big data cluster on single node Kubernetes cluster (kubeadm) with AD integration](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
 

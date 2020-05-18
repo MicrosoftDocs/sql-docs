@@ -90,6 +90,6 @@ Follow the links under **Next steps** to see how you can use the Machine Learnin
 
 - [Manage packages in database](machine-learning-extension-manage-packages.md)
 - [Make predictions](machine-learning-extension-predictions.md)
-- [Import models](machine-learning-extension-import-models.md)
+- [Import and view models](machine-learning-extension-import-view-models.md)
 - [Notebooks in Azure Data Studio](notebooks-guidance.md)
 - [SQL machine learning documentation](../machine-learning/index.yml)

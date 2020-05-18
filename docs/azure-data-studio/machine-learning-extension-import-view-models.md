@@ -64,5 +64,5 @@ Follow the steps below to import an ONNX model in your database.
 - [Machine Learning extension in Azure Data Studio](machine-learning-extension.md)
 - [Manage packages in database](machine-learning-extension-manage-packages.md)
 - [Make predictions](machine-learning-extension-predictions.md)
-- [Import models](machine-learning-extension-import-models.md)
+- [Import and view models](machine-learning-extension-import-view-models.md)
 - [SQL machine learning documentation](../machine-learning/index.yml)

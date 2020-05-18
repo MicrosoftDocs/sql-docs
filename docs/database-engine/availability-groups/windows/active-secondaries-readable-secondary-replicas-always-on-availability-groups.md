@@ -59,7 +59,7 @@ ms.author: mathoma
      For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
     >[!WARNING]
-    >  Only replicas that are on the same major build of SQL Server will be readable. Please see [Rolling Upgrade Basics for more information](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances?view=sql-server-ver15#rolling-upgrade-basics-for-always-on-ags).
+    >  Only replicas that are on the same major build of SQL Server will be readable. See [Rolling upgrade basics](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags) for more information.
   
   
 -   **Availability group listener**  

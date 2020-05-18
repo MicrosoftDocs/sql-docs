@@ -1,6 +1,6 @@
 ---
 title: "Cells, Rows, & Columns in a Tablix | Microsoft Docs"
-description: To control how the rows and columns of a tablix data region display data in a SQL Server Reporting Services paginated report, you must understand how to specify rows and columns for detail data, for group data, and for labels and totals.
+description: Understand how to specify rows and columns for data, labels, and totals, enabling you to control the display in a SQL Server report. 
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

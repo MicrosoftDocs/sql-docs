@@ -234,8 +234,11 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 ```
 
 Optionaly, only starting SQL Server 2019 CU5 release, you can override the default values for the `subdomain` and `accountPrefix` settings.
+
+```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.subdomain=[\"bdctest\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.accountPrefix=[\"bdctest\"]"
+```
 
 Similarly, in releases before SQL Server 2019 CU2, you can run:
 
@@ -249,26 +252,30 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clu
 #Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
-In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql` and considering the subdomain will use the default value of the cluster name in *control.json*, you will use `mastersql.mssql-cluster.contoso.local,31433` to connect to the master instance from the tools.
+In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql` and considering the subdomain will use the default value of the cluster name in *control.json*, you will either use `mastersql.contoso.local,31433` or `mastersql.mssql-cluster.contoso.local,31433`  (depending on the values you provided in the deployment configuration files for the endpoint DNS names) to connect to the master instance from the tools. 
 
- > [!IMPORTANT]
- > Prior to SQL Server 2019 CU5 release, the DNS name will not include the subdomain portion, so for the above example the DNS name you will use to connect to SQL Server master instance is `mastersql.contoso.local`.
+```bash
+# DNS names for BDC services
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[1].dnsName=<monitoring services DNS name>.<Domain name. e.g. contoso.local>"
+azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.master.spec.endpoints[0].dnsName=<SQL Master Primary DNS name>.<Domain name. e.g. contoso.local>"
+azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.master.spec.endpoints[1].dnsName=<SQL Master Secondary DNS name>.<Domain name. e.g. contoso.local>"
+azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.gateway.spec.endpoints[0].dnsName=<Gateway (Knox) DNS name>.<Domain name. e.g. contoso.local>"
+azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.appproxy.spec.endpoints[0].dnsName=<app proxy DNS name>.<Domain name. e.g. contoso.local>"
+```
+
+Optionally, you can include the `subdomain` in the DNS name provided for the endpoints configuration. For example:
 
 ```bash
 # DNS names for BDC services
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.<subdomain e.g. mssql-cluster>.contoso.local"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[1].dnsName=<monitoring services DNS name>.<subdomain e.g. mssql-cluster>.<Domain name. e.g. contoso.local>"
-azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.master.spec.endpoints[0].dnsName=<SQL Master Primary DNS name>.<subdomain e.g. mssql-cluster>.<Domain name. e.g. contoso.local>"
-azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.master.spec.endpoints[1].dnsName=<SQL Master Secondary DNS name>.<subdomain e.g. mssql-cluster>.<Domain name. e.g. contoso.local>"
-azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.gateway.spec.endpoints[0].dnsName=<Gateway (Knox) DNS name>.<subdomain e.g. mssql-cluster>.<Domain name. e.g. contoso.local>"
-azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.appproxy.spec.endpoints[0].dnsName=<app proxy DNS name>.<subdomain e.g. mssql-cluster>.<Domain name. e.g. contoso.local>"
 ```
 
 > [!IMPORTANT]
-> Above examples assume you are deploying a big data cluster as of SQL Server CU5 release. If you have an existing cluster deployed before this release or if you are deploying a new cluster with an pre-CU5 Docker image tag, you must remove the `subdomain` portion for the DNS names values provided for each service. E.g.:
+> Above example assume you are deploying a big data cluster as of SQL Server CU5 release. If you have an existing cluster deployed before this release or if you are deploying a new cluster with an pre-CU5 Docker image tag, you should not include the `subdomain` portion in the DNS names values provided for each service. E.g.:
 
 ```bash
-# DNS names for BDC services for a cluster deployed before CU5 release are not using the subdomain value
+# DNS names for BDC services for a cluster deployed before CU5 release can not include the subdomain value
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.contoso.local"
 ```
 
@@ -353,10 +360,10 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Currently, the Log Search Dashboard and Metrics Dashboard do not support AD authentication. AD support for this endpoint is planned for a future release. Basic username and password set upon deployment can be used for authentication to these dashboards. All other cluster endpoint support AD authentication.
 
-- The secure AD mode will only work on `kubeadm` deployment environments and not on AKS right now. The `kubeadm-prod` deployment profile includes the security sections by default.
+- The secure AD mode will only work on `kubeadm` and `openshift` deployment environments and not on AKS or ARO right now. The `kubeadm-prod` and `openshift-prod` deployment profiles includes the security sections by default.
 
-- Only one BDC per domain (Active Directory) is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
+- Before SQL Server 2019 CU5 release, only one BDC per domain (Active Directory) is allowed. Enabling multiple BDCs per domain is available starting with CU5 release.
 
 - None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
-- AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC, Enabling logins from other trusted domain is planned for a future release
+- AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC. Enabling logins from other trusted domain is not supported.

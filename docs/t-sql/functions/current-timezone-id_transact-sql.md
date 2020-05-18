@@ -30,7 +30,7 @@ ms.author: mlandzic
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-This function returns the id of the time zone observed by a server or an instance. For SQL Database Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
+This function returns the ID of the time zone observed by a server or an instance. For Azure SQL Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
   
 > [!NOTE]  
 > For single and pooled SQL Databases time zone is always set to UTC and `CURRENT_TIMEZONE_ID` returns the id of the UTC time zone.
@@ -55,7 +55,7 @@ This function takes no arguments.
   
 ## Example
 
-Note that the value returned will reflect the actual time zone and language settings of the server or the instance.
+The value returned will reflect the actual time zone and language settings of the server or the instance.
 
 ```sql
 SELECT CURRENT_TIMEZONE_ID();  

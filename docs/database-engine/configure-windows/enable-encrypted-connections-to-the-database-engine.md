@@ -25,13 +25,13 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
 ---
-# Enable Encrypted Connections to the Database Engine
+# Enable encrypted connections to the Database Engine
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Learn how to encrypt data across communication channels.  You enable encrypted connections for an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to specify a certificate.
  
- The server computer must have a certificate provisioned. To provision the certificate on the server computer, you [import it into Windows](#single-server). The client machine must be set up to trust the certificate's root authority.  
+ The server computer must have a certificate provisioned. To provision the certificate on the server computer, you [import it into Windows](#single-server). The client machine must be set up to [trust the certificate's root authority](#about).  
   
 > [!IMPORTANT]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Secure Sockets Layer (SSL) has been discontinued. Use Transport Layer Security (TLS) instead.
@@ -56,7 +56,7 @@ Enabling TLS encryption increases the security of data transmitted across networ
 -  Packets sent from the application to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be encrypted by the client TLS stack and decrypted by the server TLS stack.
 -  Packets sent from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the application must be encrypted by the server TLS stack and decrypted by the client TLS stack.
 
-## About certificates
+## <a href="about"></a> About certificates
 
  The certificate must be issued for **Server Authentication**. The name of the certificate must be the fully qualified domain name (FQDN) of the computer.  
   

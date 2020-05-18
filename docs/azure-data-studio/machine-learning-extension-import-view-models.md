@@ -11,7 +11,7 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Import and view models in a database with Machine Learning extension for Azure Data Studio
+# Import and view models in a database with Machine Learning extension (preview) for Azure Data Studio
 
 Learn how to use [Machine Learning extension for Azure Data Studio](machine-learning-extension.md) to import an ONNX model and view already imported models in your database.
 

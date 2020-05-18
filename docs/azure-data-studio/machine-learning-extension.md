@@ -64,7 +64,7 @@ To use the Machine Learning extension as well as the Python package management i
 
 1. Ensure that **Machine Learning: Enable Python** is enabled. This setting is enabled by default.
 
-1. Provide the path to your preexisting Python installation under **Machine Learning: Python Path**. This can either be the full path to the Python executable or the folder the executable is in. If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
+1. Provide the path to your pre-existing Python installation under **Machine Learning: Python Path**. This can either be the full path to the Python executable or the folder the executable is in. If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
 
 ### Enable R
 
@@ -72,7 +72,7 @@ To use the Machine Learning extension for R package management in your database,
 
 1. Ensure that **Machine Learning: Enable R** is enabled. This setting is disabled by default.
 
-1. Provide the path to your preexisting R installation under **Machine Learning: R Path**. This has to be the full path to the R executable. For example on Windows, this could be `
+1. Provide the path to your pre-existing R installation under **Machine Learning: R Path**. This has to be the full path to the R executable. For example on Windows, this could be `
 
 ## Use the Machine Learning extension
 

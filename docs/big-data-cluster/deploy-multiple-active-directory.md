@@ -11,6 +11,8 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
+# Deploy multiple BDCs in the same Active Directory domain
+
 SQL Server 2019 CU5 introduces support for more than one SQL Server Big Data Cluster in a single Active Directory domain. For an overview of the end-to-end deployment process with Active Directory integration, see [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md).
 
 <!---Deploy multiple BDCs against the same Active Directory domain - if this is too long to fit in the existing topic, we can add a small section/note in the existing topic, and add the below as a subtopic -->

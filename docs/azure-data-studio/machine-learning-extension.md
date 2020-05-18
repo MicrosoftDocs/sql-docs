@@ -32,7 +32,7 @@ To install the Machine Learning extension in Azure Data Studio, follow the steps
 1. Click **Install**.
 1. Click **Reload** to enable the extension. This is only required the first time you install an extension).
 
-<a name="settings">
+<a name="settings"></a>
 
 ## Extension settings
 

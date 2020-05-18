@@ -1,8 +1,8 @@
 ---
 title: Make predictions with Machine Learning extension
 titleSuffix: Azure Data Studio
-description: 
-ms.date: "05/12/2020"
+description: Learn how to use Machine Learning extension for Azure Data Studio to make predictions with an ONNX model in your database.
+ms.date: "05/19/2020"
 ms.reviewer: "sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -16,7 +16,7 @@ manager: cgronlun
 Learn how to use [Machine Learning extension for Azure Data Studio](machine-learning-extension.md) to make predictions with an ONNX model in your database.
 
 > [!IMPORTANT]
-> Manage packages in database with the Machine Learning extension currently only supports [Azure SQL Edge with ONNX](/azure/azure-sql-edge/onnx-overview).
+> Make pridictions with the Machine Learning extension currently only supports [Azure SQL Edge with ONNX](/azure/azure-sql-edge/onnx-overview).
 
 ## Prerequisites
 
@@ -49,3 +49,4 @@ Azure Data Studio will create a new T-SQL query with the [PREDICT](../t-sql/quer
 - [Manage packages in database](machine-learning-extension-manage-packages.md)
 - [Import models](machine-learning-extension-import-models.md)
 - [Notebooks in Azure Data Studio](notebooks-guidance.md)
+- [SQL machine learning documentation](../machine-learning/index.yml)

@@ -1,8 +1,8 @@
 ---
 title: Manage packages with Machine Learning extension
 titleSuffix: Azure Data Studio
-description: 
-ms.date: "05/12/2020"
+description: Learn how to manage Python or R packages in your database with the [Machine Learning extension for Azure Data Studio.
+ms.date: "05/19/2020"
 ms.reviewer: "sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -118,3 +118,4 @@ Follow the steps below to uninstall R packages in your database.
 - [Make predictions](machine-learning-extension-predictions.md)
 - [Import models](machine-learning-extension-import-models.md)
 - [Notebooks in Azure Data Studio](notebooks-guidance.md)
+- [SQL machine learning documentation](../machine-learning/index.yml)

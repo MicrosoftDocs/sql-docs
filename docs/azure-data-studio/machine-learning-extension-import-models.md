@@ -1,8 +1,8 @@
 ---
-title: Import models with Machine Learning extension
+title: Import and view models with Machine Learning extension
 titleSuffix: Azure Data Studio
-description: 
-ms.date: "05/12/2020"
+description: Learn how to use Machine Learning extension for Azure Data Studio to import an ONNX model and view already imported models in your database.
+ms.date: "05/19/2020"
 ms.reviewer: "sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,6 +11,54 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Import models with Machine learning extension for Azure Data Studio
+# Import and view models in a database with Machine learning extension for Azure Data Studio
 
-This extension provides machine learning support in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
+Learn how to use [Machine Learning extension for Azure Data Studio](machine-learning-extension.md) to import an ONNX model and view already imported models in your database.
+
+> [!IMPORTANT]
+> Import and view in a database with the Machine Learning extension currently only supports [Azure SQL Edge with ONNX](/azure/azure-sql-edge/onnx-overview).
+
+## Prerequisites
+
+- Install and configure [Machine Learning extension for Azure Data Studio](machine-learning-extension.md). You need to specify the [Python installation paths in the Extension Settings](machine-learning-extension.md#settings).
+
+- The **onnxruntime**, **mlflow**, and **mlflow-dbstore** Python packages. If the packages are not already installed, the Machine Learning extension will prompt you to install them.
+
+## View models
+
+Follow the steps below to view ONNX models that are stored in your database.
+
+1. Click on **Import or view models**.
+
+1. Select the **Models database** and **Models table** where your models are stored in.
+
+This will show a list of your models. You can edit the model name and description, or delete a model from the list.
+
+## Import a new model
+
+Follow the steps below to import an ONNX model in your database.
+
+1. Click on **Import or view models**.
+
+1. Click **Import models**.
+
+1. Select the **Models database** you want to store the imported model in.
+
+1. Select the **Models table** you want to store the imported model in. You can either choose an **Existing table** or create a **New table**. Click **Next**.
+
+1. Select where your model is located and click **Next**. You can use:
+    - **File upload**. Choose this to use a model from a file. Select the model file under **Source files** and click **Next**.
+    - **Azure Machine Learning**. Choose this to use a model from Azure Machine Learning. First, **Sign in to Azure**. Then select your **Azure account**, **Azure subscription**, **Azure resource group**, and **Azure ML workspace**. Select the model you want to use and click **Next**.
+
+1. Enter the model **Name** and **Description** and click **Deploy** to store the model in your database.
+
+> [!NOTE]
+> The Machine Learning extension is currently in preview. Therefore, the table schema for where the models are stored might change in the future.
+
+## Next steps
+
+- [Machine Learning extension in Azure Data Studio](machine-learning-extension.md)
+- [Manage packages in database](machine-learning-extension-manage-packages.md)
+- [Make predictions](machine-learning-extension-predictions.md)
+- [Import models](machine-learning-extension-import-models.md)
+- [SQL machine learning documentation](../machine-learning/index.yml)

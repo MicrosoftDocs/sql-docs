@@ -51,7 +51,7 @@ To change the settings for the Machine Learning extension, follow the steps belo
 
 1. Click on the **Extension Settings** icon.
 
-The setting will look like this:
+The extensions settings look like this:
 
 :::image type="content" source="media/machine-learning-extension/ml-extension-settings.png" alt-text="Machine Learning extension settings":::
 

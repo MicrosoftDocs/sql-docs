@@ -13,4 +13,32 @@ manager: cgronlun
 ---
 # Make predictions in database with Machine learning extension for Azure Data Studio
 
-This extension provides machine learning support in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
+Learn how to use [Machine Learning extension for Azure Data Studio](machine-learning-extension.md) to make predictions with an ONNX model in your database.
+
+> [!IMPORTANT]
+> Manage packages in database with the Machine Learning extension currently only supports [Azure SQL Edge with ONNX](/azure/azure-sql-edge/onnx-overview).
+
+## Prerequisites
+
+- Install and configure [Machine Learning extension for Azure Data Studio](machine-learning-extension.md). You need to specify the [Python installation paths in the Extension Settings](machine-learning-extension.md#settings).
+
+- The **onnxruntime**, **mlflow**, and **mlflow-dbstore** Python packages. If the packages are not already installed, the Machine Learning extension will prompt you to install them.
+
+## Make predictions from ONNX model
+
+Follow the steps below to use an ONNX model to make predictions.
+
+1. Click on **Make predictions**.
+
+1. Choose where your model is located and click **Next**. You can use:
+    - **Imported models**. Choose this to use a model that is already stored in your database. Choose the **Model database** and **Model table** where your model is located, select the model you want to use, and click **Next**.
+    - **File upload**. Choose this to use a model from a file. Select the model file under **Source files** and click **Next**.
+    - **Azure Machine Learning**. Choose this to use a model from Azure Machine Learning.
+
+1. Map the source data to your model.
+    - Select the **Source database** and **Source table** containing the data set for which you want to apply the prediction.
+    - Map the columns under **Model Input mapping** and **Model output**. The extension will automatically map columns that has the same name and data type.
+
+1. Click **Predict**.
+
+Azure Data Studio will create a new T-SQL query with the [PREDICT](../t-sql/queries/predict-transact-sql.md), which you can use to make predictions on your data.

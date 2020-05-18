@@ -20,7 +20,11 @@ Learn how to manage Python or R packages in your database with the [Machine Lear
 
 ## Prerequisites
 
-To manage Python or R packages, you need the [Machine Learning extension for Azure Data Studio installed and configured](machine-learning-extension.md).
+- Install and configure [Machine Learning extension for Azure Data Studio](machine-learning-extension.md). You need to specify the [Python or R installation paths in the Extension Settings](machine-learning-extension.md#settings) for the package management to work.
+
+- The **sqlmlutils** package. If the package is not already installed, the Machine Learning extension will prompt you to install this.
+
+- For SQL Server on Linux, Windows authentication is not supported. Therefore, you need to use SQL authentication to connect to your SQL Server on Linux.
 
 ## Manage Python packages
 
@@ -81,7 +85,7 @@ Follow the steps below to install Python packages in your database.
 
 1. Click the **Add new** tab.
 
-1. Enter the Python package you like to install in **Search Python packages** and click **Search**.
+1. Enter the R package you like to install in **Search R packages** and click **Search**.
 
 1. Verify the package is listed under **Package Name** and the desired version is listed under **Package Version**.
 

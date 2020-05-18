@@ -23,7 +23,7 @@ The following prerequisites need to be installed on the computer you run Azure D
 
 - [Microsoft ODBC driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) for Windows, macOS, or Linux.
 
-- [R 3.5](https://www.r-project.org/) (optional). Once you have installed R, you need to enable R and specify the local path to a the R installation under [Extension Settings](#settings). This is only required if you want to manage R packages in your database.
+- [R 3.5](https://www.r-project.org/) (optional). Other version than 3.5 is currently not supported. Once you have installed R 3.5, you need to enable R and specify the local path to a the R installation under [Extension Settings](#settings). This is only required if you want to manage R packages in your database.
 
 ## Install the extension
 
@@ -51,6 +51,8 @@ To change the settings for the Machine Learning extension, follow the steps belo
 
 1. Click on the **Extension Settings** icon.
 
+The setting will look like this:
+
 :::image type="content" source="media/machine-learning-extension/ml-extension-settings.png" alt-text="Machine Learning extension settings":::
 
 ### Enable Python
@@ -71,6 +73,18 @@ To use the Machine Learning extension for R package management in your database,
 1. Ensure that **Machine Learning: Enable R** is enabled. This setting is disabled by default.
 
 1. Provide the path to your preexisting R installation under **Machine Learning: R Path**.
+
+## Use the Machine Learning extension
+
+To use the Machine Learning extension in Azure Data Studio, follow the steps below.
+
+1. Open the connections in Azure Data Studio.
+
+1. Right click on your server and select **Manage**.
+
+1. Click **Machine Learning** in the left side menu under **General**.
+
+Follow the links under **Next steps** to see how you can use the Machine Learning extension for manage packages, make predictions, and import models in your database.
 
 ## Next steps
 

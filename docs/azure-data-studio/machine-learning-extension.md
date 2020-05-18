@@ -60,4 +60,11 @@ To use the Machine Learning extension as well as the Python package management i
 To use the Machine Learning extension for R package management in your database, follow the steps below.
 
 1. Ensure that **Machine Learning: Enable R** is enabled. This setting is disnabled by default.
-1. Provide the path to your preexisting R installation under **Machine Learning: R Path**. 
+1. Provide the path to your preexisting R installation under **Machine Learning: R Path**.
+
+## Next steps
+
+- [Manage packages in database](machine-learning-extension-manage-packages.md)
+- [Make predictions](machine-learning-extension-predictions.md)
+- [Import models](machine-learning-extension-import-models.md)
+- [Notebooks in Azure Data Studio](notebooks-guidance.md)

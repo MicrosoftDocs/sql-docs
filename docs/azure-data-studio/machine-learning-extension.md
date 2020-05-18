@@ -20,7 +20,9 @@ The Machine Learning extension for [Azure Data Studio](what-is.md) enables you t
 The following prerequisites need to be installed on the computer you run Azure Data Studio on.
 
 - [Python 3](https://www.python.org/downloads/). Once you have installed Python, you need to specify the local path to a the Python installation under [Extension Settings](#settings). If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
+
 - [Microsoft ODBC driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) for Windows, macOS, or Linux.
+
 - [R 3.5](https://www.r-project.org/) (optional). Once you have installed R, you need to enable R and specify the local path to a the R installation under [Extension Settings](#settings). This is only required if you want to manage R packages in your database.
 
 ## Install the extension
@@ -28,8 +30,11 @@ The following prerequisites need to be installed on the computer you run Azure D
 To install the Machine Learning extension in Azure Data Studio, follow the steps below.
 
 1. Open the extensions manager in Azure Data Studio. You can either select the extensions icon or select Extensions in the View menu.
+
 1. Select the **Machine Learning** extension and view its details.
+
 1. Click **Install**.
+
 1. Click **Reload** to enable the extension. This is only required the first time you install an extension).
 
 <a name="settings"></a>
@@ -39,8 +44,11 @@ To install the Machine Learning extension in Azure Data Studio, follow the steps
 To change the settings for the Machine Learning extension, follow the steps below.
 
 1. Open the extension manager in Azure Data Studio. You can either select the extensions icon or select Extensions in the View menu.
+
 1. Find the **Machine Learning** extension under **enabled** extensions.
+
 1. Click on the **Manage** icon.
+
 1. Click on the **Extension Settings** icon.
 
 :::image type="content" source="media/machine-learning-extension/ml-extension-settings.png" alt-text="Machine Learning extension settings":::
@@ -53,6 +61,7 @@ To use the Machine Learning extension as well as the Python package management i
 > The Machine Learning extension requires Python to be enabled and configured to most functionality to work, even if you do not wish to use the Python package management in database functionality.
 
 1. Ensure that **Machine Learning: Enable Python** is enabled. This setting is enabled by default.
+
 1. Provide the path to your preexisting Python installation under **Machine Learning: Python Path**. If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
 
 ### Enable R
@@ -60,6 +69,7 @@ To use the Machine Learning extension as well as the Python package management i
 To use the Machine Learning extension for R package management in your database, follow the steps below.
 
 1. Ensure that **Machine Learning: Enable R** is enabled. This setting is disabled by default.
+
 1. Provide the path to your preexisting R installation under **Machine Learning: R Path**.
 
 ## Next steps

@@ -33,7 +33,7 @@ Follow the steps below to use an ONNX model to make predictions.
 1. Choose where your model is located and click **Next**. You can use:
     - **Imported models**. Choose this to use a model that is already stored in your database. Choose the **Model database** and **Model table** where your model is located, select the model you want to use, and click **Next**.
     - **File upload**. Choose this to use a model from a file. Select the model file under **Source files** and click **Next**.
-    - **Azure Machine Learning**. Choose this to use a model from Azure Machine Learning.
+    - **Azure Machine Learning**. Choose this to use a model from Azure Machine Learning. First, **Sign in to Azure**. Then select your **Azure account**, **Azure subscription**, **Azure resource group**, and **Azure ML workspace**. Select the model you want to use and click **Next**.
 
 1. Map the source data to your model.
     - Select the **Source database** and **Source table** containing the data set for which you want to apply the prediction.
@@ -42,3 +42,10 @@ Follow the steps below to use an ONNX model to make predictions.
 1. Click **Predict**.
 
 Azure Data Studio will create a new T-SQL query with the [PREDICT](../t-sql/queries/predict-transact-sql.md), which you can use to make predictions on your data.
+
+## Next steps
+
+- [Machine Learning extension in Azure Data Studio](machine-learning-extension.md)
+- [Manage packages in database](machine-learning-extension-manage-packages.md)
+- [Import models](machine-learning-extension-import-models.md)
+- [Notebooks in Azure Data Studio](notebooks-guidance.md)

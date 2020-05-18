@@ -43,7 +43,7 @@ This section describes how to retrieve data stored in encrypted columns as ciphe
 1.	Run your `SELECT` query. Any data retrieved from encrypted columns will be returned as plaintext values of the original data types.
  
 ### Example
-Assuming SSN is an encrypted `char(11)` column in the `Patients` table, the query, shown below, will return plaintext values, if Always Encrypted is enabled for the database connection and if you have access to the column master key configured for the `SSN` column.   
+Assuming SSN is an encrypted column in the `Patients` table, the query, shown below, will return plaintext values, if Always Encrypted is enabled for the database connection and if you have access to the column master key configured for the `SSN` column.   
 
 ![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
@@ -62,7 +62,7 @@ This section describes how to run a query that sends values that target an encry
 1. Run your query sending the value of the Transact-SQL variable to the database. Azure Data Studio will convert the variable to a query parameter and it will encrypt its value before sending it to the database.   
 
 ### Example
-Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the below script will attempt to find a row containing `'795-73-9838'` in the SSN column and return the value of the `LastName` column, providing Always Encrypted is enabled for the database connection, Parameterization for Always Encrypted is enabled for the query window, and you have access to the column master key configured for the `SSN` column.   
+Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the below script will attempt to find a row containing `'795-73-9838'` in the SSN column, providing Always Encrypted is enabled for the database connection, Parameterization for Always Encrypted is enabled for the query window, and you have access to the column master key configured for the `SSN` column.   
 
 ![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
@@ -72,7 +72,7 @@ To run any queries against encrypted columns, including queries that retrieve da
 
 In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need access to the column master key protecting the target columns:
 
-- **Certificate Store - Local computer** You must have `Read` access to the certificate that is used a column master key, or be the administrator on the computer.   
+- **Certificate Store - Local computer** You must have `Read` access to the certificate that is used as a column master key, or be the administrator on the computer.   
 - **Azure Key Vault** You need the `get`, `unwrapKey`, and `verify` permissions on the vault containing the column master key.
 
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).

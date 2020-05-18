@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/28/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,9 +18,8 @@ ms.technology: big-data-cluster
 This document describes Deploy a SQL Server 2019 big data cluster (BDC) in the Active Directory
 authentication mode, which will use an existing AD domain for authentication.
 
-
-  >[!Note]
-  Before SQL Server 2019 CU5 release, there is a restriction in big data clusters so that only one cluster could be deployed against an Active Directory domain. This restriction is removed with the CU5 release, see [this topic](//TODO Add link) for details on the new capabilities. Examples in this article are adjusted to accomodate both deployemnt use cases.
+>[!Note]
+Before SQL Server 2019 CU5 release, there is a restriction in big data clusters so that only one cluster could be deployed against an Active Directory domain. This restriction is removed with the CU5 release, see [Deploy multiple clusters in a domain](deploy-multiple-active-directory.md) for details on the new capabilities. Examples in this article are adjusted to accommodate both deployment use cases.
 
 ## Background
 
@@ -194,8 +193,8 @@ AD integration requires the following parameters. Add these parameters to the `c
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
-- `security.activeDirectory.subdomain`: **Optional parameter** This parameter is introduced in SQL Server 2019 CU5 release to support deploying multiple big data clusters against the same domain. Using this setting, you can specify different DNS names for each of the big data cluster deployed. See [here](//TODO add link) for more details regarding deploying multiple big data clusters in the same Active Directory domain. If the value of this parameter is not specified in the active directory section of the `control.json` file, by default, the big data cluster name (same as Kubernetes namespace name) will be used to compute the value of subdomain setting. 
-			
+- `security.activeDirectory.subdomain`: **Optional parameter** This parameter is introduced in SQL Server 2019 CU5 release to support deploying multiple big data clusters against the same domain. Using this setting, you can specify different DNS names for each of the big data cluster deployed. See [Deploy multiple clusters in a domain](deploy-multiple-active-directory.md) for more details regarding deploying multiple big data clusters in the same Active Directory domain. If the value of this parameter is not specified in the active directory section of the `control.json` file, by default, the big data cluster name (same as Kubernetes namespace name) will be used to compute the value of subdomain setting. 
+
   >[!NOTE]
   >The value passed through the subdomain setting is not a new AD domain but only a DNS domain.
 

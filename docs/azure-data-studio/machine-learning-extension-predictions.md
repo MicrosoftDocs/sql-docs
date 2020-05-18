@@ -30,6 +30,8 @@ Follow the steps below to use an ONNX model to make predictions.
 
 1. Click on **Make predictions**.
 
+1. If you're asked to install **onnxruntime**, **mlflow**, and **mlflow-dbstore**, click **Yes**.
+
 1. Choose where your model is located and click **Next**. You can use:
     - **Imported models**. Choose this to use a model that is already stored in your database. Choose the **Model database** and **Model table** where your model is located, select the model you want to use, and click **Next**.
     - **File upload**. Choose this to use a model from a file. Select the model file under **Source files** and click **Next**.
@@ -37,7 +39,7 @@ Follow the steps below to use an ONNX model to make predictions.
 
 1. Map the source data to your model.
     - Select the **Source database** and **Source table** containing the data set for which you want to apply the prediction.
-    - Map the columns under **Model Input mapping** and **Model output**. The extension will automatically map columns that has the same name and data type.
+    - Map the columns under **Model Input mapping** and **Model output**. The extension will automatically map columns that have the same name and data type.
 
 1. Click **Predict**.
 

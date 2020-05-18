@@ -36,7 +36,7 @@ Follow the steps below to install Python packages in your database.
 
 1. Click **Manage packages in database**.
 
-1. If asked to install **sqlmlutils**, click **Yes**.
+1. If you're asked to install **sqlmlutils**, click **Yes**.
 
 1. Under the **Installed** tab, select **Python** under the **Package Type** and select your database under **Location**.
 
@@ -59,7 +59,7 @@ Follow the steps below to uninstall Python packages in your database.
 
 1. Click **Manage packages in database**.
 
-1. If asked to install **sqlmlutils**, click **Yes**.
+1. If you're asked to install **sqlmlutils**, click **Yes**.
 
 1. Under the **Installed** tab, select **Python** under the **Package Type** and select your database under **Location**.
 

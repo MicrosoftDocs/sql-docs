@@ -19,11 +19,11 @@ The Machine Learning extension for [Azure Data Studio](what-is.md) enables you t
 
 The following prerequisites need to be installed on the computer you run Azure Data Studio on.
 
-- [Python 3](https://www.python.org/downloads/). Once you have installed Python, you need to specify the local path to a the Python installation under [Extension Settings](#settings). If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
+- [Python 3](https://www.python.org/downloads/). Once you have installed Python, you need to specify the local path to a Python installation under [Extension Settings](#settings). If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
 
 - [Microsoft ODBC driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) for Windows, macOS, or Linux.
 
-- [R 3.5](https://www.r-project.org/) (optional). Other version than 3.5 is currently not supported. Once you have installed R 3.5, you need to enable R and specify the local path to a the R installation under [Extension Settings](#settings). This is only required if you want to manage R packages in your database.
+- [R 3.5](https://www.r-project.org/) (optional). Other version than 3.5 is currently not supported. Once you have installed R 3.5, you need to enable R and specify the local path to an R installation under [Extension Settings](#settings). This is only required if you want to manage R packages in your database.
 
 ## Install the extension
 

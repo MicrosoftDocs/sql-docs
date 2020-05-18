@@ -11,8 +11,106 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Manage packages in database with Machine learning extension for Azure Data Studio
+# Manage packages in database with the Machine Learning extension for Azure Data Studio
 
 Learn how to manage Python or R packages in your database with the [Machine Learning extension for Azure Data Studio](machine-learning-extension.md).
 
+> [!IMPORTANT]
+> Manage packages in database with the Machine Learning extension currently only supports [SQL Server Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md).
 
+## Prerequisites
+
+To manage Python or R packages, you need the [Machine Learning extension for Azure Data Studio installed and configured](machine-learning-extension.md).
+
+## Manage Python packages
+
+You can install and uninstall Python packages with the Machine Learning extension.
+
+### Install new Python package
+
+Follow the steps below to install Python packages in your database.
+
+1. Click **Manage packages in database**.
+
+1. If asked to install **sqlmlutils**, click **Yes**.
+
+1. Under the **Installed** tab, select **Python** under the **Package Type** and select your database under **Location**.
+
+1. Click the **Add new** tab.
+
+1. Enter the Python package you like to install in **Search Python packages** and click **Search**.
+
+1. Verify the package is listed under **Package Name** and the desired version is listed under **Package Version**.
+
+1. Click **Install**.
+
+1. Click **Close** and verify that the package was installed successfully under **Tasks**.
+
+### Uninstall a Python package
+
+Follow the steps below to uninstall Python packages in your database.
+
+> [!NOTE]
+> You can only uninstall packages that have been installed in your database. It is not possible to uninstall a package that has been pre-installed with SQL Server Machine Learning Services.
+
+1. Click **Manage packages in database**.
+
+1. If asked to install **sqlmlutils**, click **Yes**.
+
+1. Under the **Installed** tab, select **Python** under the **Package Type** and select your database under **Location**.
+
+1. Select the package(s) you would like to uninstall.
+
+1. Click **Uninstall selected packages**.
+
+1. Click **Close** and verify that the package was installed successfully under **Tasks**.
+
+## Manage R packages
+
+You can install and uninstall R packages with the Machine Learning extension.
+
+### Install new R package
+
+Follow the steps below to install Python packages in your database.
+
+1. Click **Manage packages in database**.
+
+1. If asked to install **sqlmlutils**, click **Yes**.
+
+1. Under the **Installed** tab, select **R** under the **Package Type** and select your database under **Location**.
+
+1. Click the **Add new** tab.
+
+1. Enter the Python package you like to install in **Search Python packages** and click **Search**.
+
+1. Verify the package is listed under **Package Name** and the desired version is listed under **Package Version**.
+
+1. Click **Install**.
+
+1. Click **Close** and verify that the package was installed successfully under **Tasks**.
+
+### Uninstall an R package
+
+Follow the steps below to uninstall R packages in your database.
+
+> [!NOTE]
+> You can only uninstall packages that have been installed in your database. It is not possible to uninstall a package that has been pre-installed with SQL Server Machine Learning Services.
+
+1. Click **Manage packages in database**.
+
+1. If asked to install **sqlmlutils**, click **Yes**.
+
+1. Under the **Installed** tab, select **R** under the **Package Type** and select your database under **Location**.
+
+1. Select the package(s) you would like to uninstall.
+
+1. Click **Uninstall selected packages**.
+
+1. Click **Close** and verify that the package was installed successfully under **Tasks**.
+
+## Next steps
+
+- [Machine Learning extension in Azure Data Studio](machine-learning-extension.md)
+- [Make predictions](machine-learning-extension-predictions.md)
+- [Import models](machine-learning-extension-import-models.md)
+- [Notebooks in Azure Data Studio](notebooks-guidance.md)

@@ -67,7 +67,7 @@ Teradata connection manager is displayed as "TERADATA".
 
 ![The Teradata connection manager type](media/teradata-connection-manager-type.png)
 
-Existing SSIS packages which have been designed with Attunity Teradata Connector will be automatically upgraded to use Microsoft Connector for Teradata. The icons will be changed as well.
+Existing SSIS packages that have been designed with Attunity Teradata Connector will be automatically upgraded to use Microsoft Connector for Teradata. The icons will be changed as well.
 
 To execute SSIS package *targeting SQL Server 2017 and below*, you will need to install **Microsoft Connector for Teradata by Attunity** with corresponding version from below link:
 

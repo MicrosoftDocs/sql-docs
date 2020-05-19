@@ -1,6 +1,7 @@
 ---
 title: Filter Traces
 titleSuffix: SQL Server Profiler
+description: Find out how to define a filter so that SQL Server Profiler gathers the information you need during traces. Read about other advantages of trace filters.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

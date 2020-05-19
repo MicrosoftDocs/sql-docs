@@ -30,7 +30,6 @@ May 20, 2020 &nbsp; / &nbsp; version: 1.18.0
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
 
-
 ## April 2020 (hotfix)
 
 April 30, 2020 &nbsp; / &nbsp; version: 1.17.1

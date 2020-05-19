@@ -316,7 +316,7 @@ WITH (
     ENCODING = 'UTF8',
     DATEFORMAT = 'ymd',
 	MAXERRORS = 10,
-	ERRORFILE = '/errorsfolder/',--path starting from the storage container
+	ERRORFILE = '/errorsfolder',--path starting from the storage container
 	IDENTITY_INSERT = 'ON'
 )
 ```
@@ -366,6 +366,19 @@ WITH (
 	FILE_TYPE = 'CSV'
 	CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
 	FIELDTERMINATOR = '|'
+)
+```
+
+### F. Load using MSI credentials
+
+```sql
+COPY INTO dbo.myCOPYDemoTable
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt'
+WITH (
+    FILE_TYPE = 'CSV',
+    CREDENTIAL = (IDENTITY = 'Managed Identity'),
+    FIELDQUOTE = '"',
+    FIELDTERMINATOR=','
 )
 ```
 

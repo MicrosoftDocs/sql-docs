@@ -5,7 +5,7 @@
 - name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
 - name: Previous versions 2005-2014
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 
 - name: Overview
   items:
@@ -1713,7 +1713,7 @@
         href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
       - name: Disable constraints with INSERT & UPDATE
         href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-    - name: Unique constraints
+    - name: Unique constraints and check constraints
       href: relational-databases/tables/unique-constraints-and-check-constraints.md
       items:
       - name: Create

@@ -8,12 +8,28 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 04/30/2020
+ms.date: 05/20/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## May 2020
+
+May 20, 2020 &nbsp; / &nbsp; version: 1.18.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Announcing Redgate SQL Prompt extension | This extension lets you manage formatting styles directly within Azure Data Studio, so you can create and edit your styles without leaving the IDE. |
+| Announcing Machine Learning Extension | This extension enables you to: <br/> &bull; &nbsp; Manage Python and R packages with SQL Server machine learning services with Azure Data Studio.<br/> &bull; &nbsp; Use ONNX model to make predictions in Azure SQL Edge.<br/> &bull; &nbsp; View ONNX models in an Azure SQL Edge database. <br/> &bull; &nbsp; Import ONNX models from a file or Azure Machine Learning into Azure SQL Edge database. <br/> &bull; &nbsp; Create a notebook to run experiments. |
+| New notebook features | &bull; &nbsp; Added new Python Dependencies Wizard to make it easier to install Python dependencies <br/> &bull; &nbsp; Added underline support for Markdown Toolbar |
+| Parameterization for Always Encrypted | Allows you to run queries that insert, update or filter by encrypted database columns.|
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
 
 ## April 2020 (hotfix)
 
@@ -186,7 +202,7 @@ October 2, 2019 &nbsp; / &nbsp; version: 1.12.0
 ### Known Issues
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
 ## September 2019
 
@@ -206,8 +222,7 @@ September 10, 2019 &nbsp; / &nbsp; version: 1.11.0
 ### Known Issues
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
-
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
 ## August 2019
 

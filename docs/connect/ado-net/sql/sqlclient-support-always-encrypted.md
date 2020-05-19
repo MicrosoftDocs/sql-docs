@@ -1,6 +1,7 @@
 ---
-title: "Using Always Encrypted with the **Microsoft .NET Data Provider for SQL Server** | Microsoft Docs"
-ms.date: "11/18/2019"
+title: "Using Always Encrypted with SqlClient"
+description: "Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure."
+ms.date: "05/06/2020"
 ms.assetid: 
 ms.prod: sql
 ms.prod_service: connectivity
@@ -555,7 +556,6 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## See also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Example: Azure Key Vault working with Always Encrypted](azure-key-vault-example.md)

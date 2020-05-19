@@ -1,5 +1,5 @@
 ---
-title: "Versioning system SQL docs | Microsoft Docs"
+title: Versioning system SQL docs
 ms.date: "10/15/2019"
 ms.prod: sql
 ms.technology: ""
@@ -10,6 +10,7 @@ author: MightyPen
 ms.author: genemi
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
 ---
+
 # Versioning system for SQL documentation
 
 [!INCLUDE[includes_appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

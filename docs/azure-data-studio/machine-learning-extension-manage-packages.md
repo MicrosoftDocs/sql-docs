@@ -16,7 +16,7 @@ manager: cgronlun
 Learn how to manage Python or R packages in your database with the [Machine Learning extension for Azure Data Studio](machine-learning-extension.md).
 
 > [!IMPORTANT]
-> Manage packages in database with the Machine Learning extension currently only supports [SQL Server Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md).
+> Manage packages in database with the Machine Learning extension currently only supports [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md) on SQL Server 2019.
 
 ## Prerequisites
 

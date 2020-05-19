@@ -35,8 +35,9 @@
 - name: Concepts
   items:
   - name: Extensions
-    href: extensions.md
     items:
+    - name: Extensions
+      href: extensions.md
     - name: Machine Learning extension
       items:
       - name: Machine Learning extension overview

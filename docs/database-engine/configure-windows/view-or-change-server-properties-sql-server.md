@@ -1,6 +1,5 @@
 ---
 title: "View or Change Server Properties (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability

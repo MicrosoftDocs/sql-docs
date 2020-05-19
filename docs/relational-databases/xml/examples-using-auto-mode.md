@@ -1,5 +1,6 @@
 ---
 title: "Examples: Using AUTO Mode | Microsoft Docs"
+description: View examples of queries that use FOR XML AUTO mode.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Specify Synchronization Schedules | Microsoft Docs"
+description: Learn how to specify synchronization schedules in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -72,7 +72,7 @@ To use the Machine Learning extension for R package management in your database,
 
 1. Ensure that **Machine Learning: Enable R** is enabled. This setting is disabled by default.
 
-1. Provide the path to your pre-existing R installation under **Machine Learning: R Path**. This has to be the full path to the R executable. For example on Windows, this could be `
+1. Provide the path to your pre-existing R installation under **Machine Learning: R Path**. This has to be the full path to the R executable. 
 
 ## Use the Machine Learning extension
 

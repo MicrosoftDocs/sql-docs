@@ -57,7 +57,7 @@ Follow the steps below to import an ONNX model in your database.
 1. Enter the model **Name** and **Description** and click **Deploy** to store the model in your database.
 
 > [!NOTE]
-> The Machine Learning extension is currently in preview. Therefore, the table schema for where the models are stored might change in the future.
+> The Machine Learning extension is currently in preview. Therefore, the table schema where the models are stored might change in the future.
 
 ## Next steps
 

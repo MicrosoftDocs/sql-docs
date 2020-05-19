@@ -136,7 +136,7 @@ GO
   
 4.  In the **SQL Server (\<**_instancename_**>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
   
-##<a name="FollowUp"></a> Restart after changes
+## <a name="FollowUp"></a>Restart after changes
 
 For some properties, you may need to restart the server before the change can take effect.  
   

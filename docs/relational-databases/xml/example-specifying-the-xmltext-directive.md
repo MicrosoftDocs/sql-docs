@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the XMLTEXT Directive | Microsoft Docs"
+description: Learn how to address the unconsumed part of an XML document by specifying the XMLTEXT directive in a SELECT statement using EXPLICIT mode. 
 ms.custom: ""
 ms.date: "04/05/2017"
 ms.prod: sql

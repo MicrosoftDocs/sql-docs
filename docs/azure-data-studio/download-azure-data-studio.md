@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
-ms.date: 5/20/2020
+ms.date: 4/30/2020
 ms.reviewer: maghan, sstein
 ---
 
@@ -22,9 +22,9 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2127522)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2127432)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2127716) | May 20, 2020 | 1.18.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2127431) | May 20, 2020 | 1.18.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2127524)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2127433)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127523) | May 20, 2020| 1.18.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2127556)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2127555)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2127476) | April 30, 2020 | 1.17.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2127554) | April 30, 2020 | 1.17.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2127551)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2127552)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127553) | April 30, 2020| 1.17.1 |
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -36,32 +36,32 @@ The *user installer* is recommended because it does not require administrator pr
 
 **User Installer** (recommended)
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2127522).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2127556).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2127432).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2127555).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2127716).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2127476).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2127431).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2127554).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2127524)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2127433)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127523)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2127551)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2127552)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127553)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**
@@ -97,19 +97,16 @@ The *user installer* is recommended because it does not require administrator pr
    > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
 
    **Debian:**
-
    ```bash
    sudo apt-get install libunwind8
    ```
 
    **Redhat:**
-
    ```bash
    yum install libXScrnSaver
    ```
 
    **Ubuntu:**
-
    ```bash
    sudo apt-get install libxss1
 

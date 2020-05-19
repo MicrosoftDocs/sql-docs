@@ -41,7 +41,7 @@ To complete this tutorial, you must have the following:
 
 + SQL Server 2019 database engine instance, with Machine Learning Services and R integration.
 
-+ The tutorial uses [loopback connection to SQL Server from an R script over ODBC](../connect/loopback-connection.md]. Therefore, you need to [create a login for SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
++ The tutorial uses [loopback connection to SQL Server from an R script over ODBC](../connect/loopback-connection.md). Therefore, you need to [create a login for SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool.
 

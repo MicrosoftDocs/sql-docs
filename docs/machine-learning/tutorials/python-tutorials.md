@@ -1,23 +1,24 @@
 ---
 title: Python tutorials
-description: This article describes Python tutorials for SQL Server Machine Learning Services. Learn how to run scripts and build machine learning  models in SQL Server.
+titleSuffix: SQL machine learning
+description: This article describes Python tutorials for SQL machine learning. Learn how to run scripts and build machine learning models.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/04/2019
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Python tutorials for SQL Server Machine Learning Services
+# Python tutorials for SQL machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes the Python tutorials and quickstarts for [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
-
-+ Learn how to run Python scripts.
-+ Build, train, and deploy Python models to SQL Server.
-+ Learn about remote and local compute contexts.
-+ Explore the Microsoft Python packages for data science and machine learning.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+This article describes the Python tutorials and quickstarts for [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+This article describes the Python tutorials and quickstarts for [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+::: moniker-end
 
 <a name="bkmk_pythontutorials"></a>
 
@@ -32,15 +33,14 @@ This article describes the Python tutorials and quickstarts for [SQL Server Mach
 
 ## Python quickstarts
 
-If you are new to SQL Server Machine Learning Services, you can also try the Python quickstarts.
+If you are new to SQL machine learning, you can also try the Python quickstarts.
 
 | Quickstart | Description |
 |-|-|
-| [Hello World in Python and SQL Server](quickstart-python-create-script.md) | Learn the basics of how to call Python in T-SQL using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
-| [Handle data types and objects using Python in SQL Server](quickstart-python-data-structures.md) | Shows how SQL Server uses the Python pandas package to handle data structures. |
+| [Run simple Python scripts](quickstart-python-create-script.md) | Learn the basics of how to call Python in T-SQL using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Data structures and objects using Python](quickstart-python-data-structures.md) | Shows how SQL uses the Python pandas package to handle data structures. |
 | [Create and score a predictive model in Python](quickstart-python-train-score-model.md) | Explains how to create, train, and use a Python model to make predictions from new data. |
 
 ## Next steps
 
-+ [What is SQL Server Machine Learning Services (Python and R)?](../sql-server-machine-learning-services.md)
 + [Python extension to SQL Server](../concepts/extension-python.md)

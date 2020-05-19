@@ -1,5 +1,6 @@
 ---
 title: "Load XML Data | Microsoft Docs"
+description: Learn several methods for transferring XML data into SQL Server databases.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

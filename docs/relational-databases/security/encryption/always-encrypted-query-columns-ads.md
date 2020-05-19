@@ -72,8 +72,8 @@ To run any queries against encrypted columns, including queries that retrieve da
 
 In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need access to the column master key protecting the target columns:
 
-- **Certificate Store - Local computer** You must have **Read** access to the certificate that is used as a column master key, or be the administrator on the computer.   
-- **Azure Key Vault** You need the **get**, **unwrapKey**, and **verify** permissions on the key vault containing the column master key.
+- **Certificate Store - Local computer:** You must have **Read** access to the certificate that is used as a column master key, or be the administrator on the computer.   
+- **Azure Key Vault:** You need the **get**, **unwrapKey**, and **verify** permissions on the key vault containing the column master key.
 
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 

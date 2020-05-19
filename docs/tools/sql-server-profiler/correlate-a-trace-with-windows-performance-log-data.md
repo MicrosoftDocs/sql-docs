@@ -1,6 +1,7 @@
 ---
 title: Correlate a Trace with Windows Performance Log Data
 titleSuffix: SQL Server Profiler
+description: Find out how to correlate Windows performance logs with a trace so that you can view data from System Monitor objects and counters in SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

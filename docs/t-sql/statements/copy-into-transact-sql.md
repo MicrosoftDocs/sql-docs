@@ -43,23 +43,23 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 ```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
-FROM ‘<external_location>’ [,...n]
+FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
  [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]	
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [,MAXERRORS = max_errors ] 
- [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
- [,FIELDQUOTE = ‘string_delimiter’] 
- [,FIELDTERMINATOR =  ‘field_terminator’]  
- [,ROWTERMINATOR = ‘row_terminator’]
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'| 'Snappy'}] 
+ [,FIELDQUOTE = 'string_delimiter'] 
+ [,FIELDTERMINATOR =  'field_terminator']  
+ [,ROWTERMINATOR = 'row_terminator']
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘date_format’] 
+ [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 

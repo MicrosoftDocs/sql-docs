@@ -35,8 +35,18 @@
 - name: Concepts
   items:
   - name: Extensions
-    href: extensions.md
+    href: azure-data-studio/extensions.md
     items:
+    - name: Machine Learning extension
+      items:
+      - name: Machine Learning extension overview
+        href: azure-data-studio/machine-learning-extension.md
+      - name: Manage packages in database
+        href: azure-data-studio/machine-learning-extension-manage-packages.md
+      - name: Make predictions
+        href: azure-data-studio/machine-learning-extension-predictions.md
+      - name: Import and view models
+        href: azure-data-studio/machine-learning-extension-import-view-models.md
     - name: PostgreSQL extension
       href: postgres-extension.md
     - name: Data Virtualization extension

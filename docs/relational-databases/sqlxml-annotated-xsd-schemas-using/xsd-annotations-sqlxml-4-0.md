@@ -1,5 +1,6 @@
 ---
 title: "XSD Annotations (SQLXML)"
+description: View a list of XSD annotations (SQLXML 4.0) introduced in SQL Server 2005 (9.x), with a comparison to the XDR annotations introduced in SQL Server 2000 (8.x).
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

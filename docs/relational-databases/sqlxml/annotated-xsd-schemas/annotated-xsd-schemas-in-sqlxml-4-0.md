@@ -1,5 +1,6 @@
 ---
 title: "Annotated XSD Schemas in SQLXML 4.0"
+description: View information about using annotated XSD schemas in SQLXML 4.0.
 ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql

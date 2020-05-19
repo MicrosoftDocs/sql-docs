@@ -53,11 +53,14 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
 ## SQL Server 2014 offline content
 
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL content is only available offline.
+
 The following steps explain how to load offline content for SQL Server 2014.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
-2. Unzip the file to view the.msha file.
+2. Unzip the file to view the *.msha* file.
 
    ![SQL Server 2014 Help documentation setup file](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -92,16 +95,13 @@ The following steps explain how to load offline content for SQL Server 2014.
 
    ![SQL Server 2014 books automatically updated](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
-> [!Tip]
-> SQL 2014 Transact-SQL content is only available offline.
-
 ## SQL Server 2012 offline content
 
 The following steps explain how to load offline content for SQL Server 2012
 
 1. Download the [Product Documentation for Microsoft SQL Server 2012 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=35750) content from the download center and save it to a folder.
 
-2. Unzip the file to view the.msha file.
+2. Unzip the file to view the *.msha* file.
 
    ![SQL Server 2012 Help content setup file](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -148,7 +148,7 @@ To view the installed help in SSMS, select **Launch in Help Viewer** from the He
 
 Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. select articles in the table of contents to display them in the right pane.
 
-> [!TIP]
+> [!Important]
 > If the contents pane is not visible, select Contents on the left margin. select the pushpin icon to keep the contents pane open.  
 
    ![Help Viewer with content](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -165,7 +165,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 To learn more about archived content and Help viewer, reference the links below.
 
-- [SQL Server Documentation](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 documentation](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/)
+- [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 online documentation](../2014/database-engine/install-windows/installation-for-sql-server.md)
+- [Previous versions of SQL Server online documentation](previous-versions-sql-server.md)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

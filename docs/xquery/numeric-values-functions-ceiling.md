@@ -1,5 +1,6 @@
 ---
 title: "ceiling Function (XQuery) | Microsoft Docs"
+description: Learn how to use the XQuery ceiling() function to return the smallest number without a fractional part that is not less than the value of the function argument.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

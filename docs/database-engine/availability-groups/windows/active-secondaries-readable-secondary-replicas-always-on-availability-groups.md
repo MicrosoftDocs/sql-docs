@@ -54,9 +54,13 @@ ms.author: mathoma
      The database administrator needs to configure one or more replicas so that, when running under the secondary role, they allow either all connections (just for read-only access) or only read-intent connections.  
   
     > [!NOTE]  
-    >  Optionally, the database administrator can configure any of the availability replicas to exclude read-only connections when running under the primary role.  
+    >  Optionally, the database administrator can configure any of the availability replicas to exclude read-only connections when running under the primary role.
   
      For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+  
+    >[!WARNING]
+    >  Only replicas that are on the same major build of SQL Server will be readable. See [Rolling upgrade basics](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags) for more information.
+  
   
 -   **Availability group listener**  
   

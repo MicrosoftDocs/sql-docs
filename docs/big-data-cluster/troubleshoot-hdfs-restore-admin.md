@@ -1,5 +1,5 @@
 ---
-title: Restore HDFS admin rights
+title: Restore HDFS permissions
 titleSuffix: SQL Server Big Data Cluster
 description: TRestore HDFS admin rights.
 author: MikeRayMSFT
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Restore HDFS admin rights
+# Restore HDFS permissions
 
 HDFS access control lists (ACLs) modifications may have affected the `/system` and `/tmp` folders in HDFS. The most likely cause of ACL modification is a user manually manipulating the folder ACLs. Directly modifying permissions in /system folder and /tmp/logs folder are not supported.
 

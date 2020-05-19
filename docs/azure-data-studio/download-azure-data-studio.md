@@ -97,16 +97,19 @@ The *user installer* is recommended because it does not require administrator pr
    > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
 
    **Debian:**
+
    ```bash
    sudo apt-get install libunwind8
    ```
 
    **Redhat:**
+
    ```bash
    yum install libXScrnSaver
    ```
 
    **Ubuntu:**
+
    ```bash
    sudo apt-get install libxss1
 

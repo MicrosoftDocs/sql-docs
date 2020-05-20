@@ -7809,7 +7809,7 @@
             href: azure-data-studio/machine-learning-extension-manage-packages.md
           - name: Make predictions
             href: azure-data-studio/machine-learning-extension-predictions.md
-          - name: Import and view models
+          - name: Import or view models
             href: azure-data-studio/machine-learning-extension-import-view-models.md
         - name: PostgreSQL extension
           href: azure-data-studio/postgres-extension.md

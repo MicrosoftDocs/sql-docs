@@ -261,7 +261,7 @@ on how to contribute to this extension!
 This extension is [licensed under the MIT License](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). For details on the third-party
 binaries that we include with releases of this project, see the [third-party notices](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) file.
 
-## [Code of Conduct][conduct-md]
+## Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct][conduct-code].
 For more information, see the [Code of Conduct FAQ][conduct-FAQ] or contact [opencode@microsoft.com][conduct-email] with any additional questions or comments.

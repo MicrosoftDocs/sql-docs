@@ -41,6 +41,6 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 ## Next steps
 
 - [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 online documentation](../2014/2014-toc/index.yml?view=sql-server-2014).
+- [SQL Server 2014 online documentation](../2014/2014-toc/index.yml?view=sql-server-2014)
 - [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

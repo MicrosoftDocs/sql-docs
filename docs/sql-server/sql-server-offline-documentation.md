@@ -166,6 +166,6 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 To learn more about archived content and Help viewer, reference the links below.
 
 - [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 online documentation](../2014/database-engine/install-windows/installation-for-sql-server.md)
+- [SQL Server 2014 online documentation](../2014/2014-toc/index.yml?view=sql-server-2014)
 - [Previous versions of SQL Server online documentation](previous-versions-sql-server.md)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

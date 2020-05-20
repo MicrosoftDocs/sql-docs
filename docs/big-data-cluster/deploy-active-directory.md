@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/28/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,12 +15,15 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This document describes Deploy a SQL Server 2019 big data cluster (BDC) in the Active Directory
-authentication mode, which will use an existing AD domain for authentication.
+This document explains how to deploy a SQL Server big data cluster (BDC) in the Active Directory
+authentication mode. The cluster uses an existing AD domain for authentication.
+
+>[!Note]
+>Before SQL Server 2019 CU5 release, there is a restriction in big data clusters so that only one cluster could be deployed against an Active Directory domain. This restriction is removed with the CU5 release, see [Deploy multiple clusters in a domain](#technical-background) for details on the new capabilities. Examples in this article are adjusted to accommodate both deployment use cases.
 
 ## Background
 
-To enable Active Directory (AD) authentication, the BDC automatically creates the users, groups, machine accounts, and service principal names (SPN) that the various services in the cluster need. To provide some containment of these accounts and allow scoping permissions, nominate an organizational unit (OU) during deployment, where all BDC-related AD objects will be created. Create this OU before cluster deployment.
+To enable Active Directory (AD) authentication, the BDC automatically creates the users, groups, machine accounts, and service principal names (SPN) that the various services in the cluster need. To provide some containment of these accounts and allow scoping permissions, choose an organizational unit (OU) during deployment where all BDC-related AD objects will be created. Create this OU before cluster deployment.
 
 To automatically create all the required objects in Active Directory, the BDC needs an AD account during deployment. This account needs to have permissions to create users, groups, and machine accounts inside the provided OU.
 
@@ -30,7 +33,7 @@ The steps below assume you already have an Active Directory domain controller. I
 
 Do the following things before you deploy a BDC with AD integration:
 
-1. Create an organizational unit (OU) where all BDC AD objects will be stored. You can also choose to nominate an existing OU upon deployment.
+1. Create an organizational unit (OU) where all BDC AD objects will be stored. Alternatively you can choose an existing OU upon deployment.
 1. Create an AD account for BDC, or use an existing account, and provide this BDC AD account the right permissions.
 
 ### Create a user in AD for BDC domain service account
@@ -45,13 +48,13 @@ This user will be referred to as the *BDC domain service account* in this articl
 
 ### Creating an OU
 
-On the domain controller, open **Active Directory Users and Computers**. On the left panel, right click the directory under which you want to create your OU and select New -\> **Organizational Unit**, then follow the prompts from the wizard to create the OU. Alternatively, you can create an OU with PowerShell:
+On the domain controller, open **Active Directory Users and Computers**. On the left panel, right-click the directory under which you want to create your OU and select **New** \> **Organizational Unit**, then follow the prompts from the wizard to create the OU. Alternatively, you can create an OU with PowerShell:
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
 ```
 
-In the examples in this article, we are naming the OU: `bdc`
+The examples in this article use `bdc` for the OU name.
 
 ![image13](./media/deploy-active-directory/image13.png)
 
@@ -67,7 +70,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 1. In the left panel, navigate to your domain, then the OU which `bdc` will use
 
-1. Right click the OU, and select **Properties**.
+1. Right-click the OU, and select **Properties**.
 
 1. Go to the Security tab (Make sure that you have selected **Advanced Features** by right-clicking on the OU, and selecting **View**)
 
@@ -141,7 +144,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 For deployment of BDC with AD integration, there is some additional information that needs to be provided for creating the BDC-related objects in AD.
 
-By using the `kubeadm-prod` profile, you will automatically have the placeholders for the security-related information and endpoint-related information that is required for AD integration.
+By using the `kubeadm-prod` profile (or `openshift-prod` starting with CU5 release), you will automatically have the placeholders for the security-related information and endpoint-related information that is required for AD integration.
 
 Furthermore, you need to provide credentials that [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] will use to create the necessary objects in AD. These credentials are provided as environment variables.
 
@@ -156,7 +159,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 ## Provide security and endpoint parameters
 
-In addition to environment variables for credentials, you also need to provide security and endpoint information for AD integration to work. The parameters needed are automatically part of the `kubeadm-prod` [deployment profile](deployment-guidance.md#configfile).
+In addition to environment variables for credentials, you also need to provide security and endpoint information for AD integration to work. The parameters needed are automatically part of the `kubeadm-prod`/`openshift-prod` [deployment profile](deployment-guidance.md#configfile).
 
 AD integration requires the following parameters. Add these parameters to the `control.json` and `bdc.json` files using `config replace` commands shown further down in this article. All the examples below are using the example domain `contoso.local`.
 
@@ -170,29 +173,42 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.domainDnsName`: Name of your domain (e.g. `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or domain global. Members of this group get administrator permissions in the cluster. This means that they have `sysadmin` permissions in SQL Server, superuser permissions in HDFS, and administrators in controller. 
+- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or global. Members of this group get administrator permissions in the cluster. This means that they have `sysadmin` permissions in SQL Server, superuser permissions in HDFS, and administrators in controller. 
 
   >[!IMPORTANT]
   >Create this group in AD before deployment begins. If the scope for this AD group is domain local deployment fails.
 
-- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
 
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
-- `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+- `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
 
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
-- `security.activeDirectory.appReaders` **Optional parameter**: List of the AD groups who have permissions to run any application. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+- `security.activeDirectory.appReaders` **Optional parameter**: List of the AD groups who have permissions to run any application. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
 
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+
+- `security.activeDirectory.subdomain`: **Optional parameter** This parameter is introduced in SQL Server 2019 CU5 release to support deploying multiple big data clusters against the same domain. Using this setting, you can specify different DNS names for each of the big data cluster deployed. See [Technical background](#technical-background) for more details regarding deploying multiple big data clusters in the same Active Directory domain. If the value of this parameter is not specified in the active directory section of the `control.json` file, by default, the big data cluster name (same as Kubernetes namespace name) will be used to compute the value of subdomain setting. 
+
+  >[!NOTE]
+  >The value passed through the subdomain setting is not a new AD domain but only a DNS domain used by the BDC cluster internally.
+
+  >[!IMPORTANT]
+  >You need to install or upgrade latest version of **azdata CLI** as of SQL Server 2019 release to leverage these new capabilties and deploy multiple big data clusters in the same domain.
+
+- `security.activeDirectory.accountPrefix`: **Optional parameter** This parameter is introduced in SQL Server 2019 CU5 release to support deploying multiple big data clusters against the same domain. This setting guarantees uniqueness of the account names for various big data clusters services, that must differ between any two clusters. Customizing the account prefix name is optional, by default, the subdomain name is used as the account prefix. If the subdomain name is longer than the 12 characters, the first 12-characters of the subdomain name are used as the account prefix.  
+
+  >[!NOTE]
+  >Active Directory requires the account names to be limited to 20 characters. BDC cluster needs to use 8 of the characters for distinguishing pods and StatefulSets. This leaves us 12 characters as a limit for the account prefix
 
 [Check AD group scope](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), to determine if it is DomainLocal.
 
-If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration.
+If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration. Examples below use the `kubeadm-prod` profile, same applies to `openshift-prod`.
 
 ```bash
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
@@ -200,8 +216,11 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 To set the above parameters in the `control.json` file, use the following `azdata` commands. The commands replace the config and provide your own values before deployment.
 
- > [!IMPORTANT]
- > In the SQL Server 2019 CU2 release, the structure of the security configuration section in the deployment profile changed sightly and all the Active Directory related settings are in the new *activeDirectory* in the json tree under *security* in the *control.json* file.
+> [!IMPORTANT]
+> In the SQL Server 2019 CU2 release, the structure of the security configuration section in the deployment profile changed sightly and all the Active Directory related settings are in the new *activeDirectory* in the json tree under *security* in the *control.json* file.
+
+>[!NOTE]
+> In addition to providing different values for the subdomain as described in this section, you must also use different port numbers for BDC endpoints when deploying multiple BDCs in the same Kubernetes cluster. These port numbers are configurable at deployment time through the [deployment configuration](deployment-custom-configuration.md) profiles.
 
 The example below is based on using SQL Server 2019 CU2. It shows how to replace the AD-related parameter values in deployment config. The domain details below are example values.
 
@@ -213,6 +232,13 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
 #Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+Optionally, only starting SQL Server 2019 CU5 release, you can override the default values for the `subdomain` and `accountPrefix` settings.
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.subdomain=[\"bdctest\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.accountPrefix=[\"bdctest\"]"
 ```
 
 Similarly, in releases before SQL Server 2019 CU2, you can run:
@@ -227,10 +253,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clu
 #Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
-In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql`, you will use `mastersql.contoso.local,31433` to connect to the master instance from the tools.
-
-> [!NOTE]
-> Make sure to create DNS entries in the DNS Server for the names you are defining below. For `kubeadm` deployments, you can for example use the IP address of the Kubernetes master node when creating the DNS entries.
+In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql` and considering the subdomain will use the default value of the cluster name in *control.json*, you will either use `mastersql.contoso.local,31433` or `mastersql.mssql-cluster.contoso.local,31433`  (depending on the values you provided in the deployment configuration files for the endpoint DNS names) to connect to the master instance from the tools. 
 
 ```bash
 # DNS names for BDC services
@@ -242,7 +265,29 @@ azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.g
 azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.appproxy.spec.endpoints[0].dnsName=<app proxy DNS name>.<Domain name. e.g. contoso.local>"
 ```
 
+Optionally, you can include the `subdomain` in the DNS name provided for the endpoints configuration. For example:
+
+```bash
+# DNS names for BDC services
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.<subdomain e.g. mssql-cluster>.contoso.local"
+```
+
+> [!IMPORTANT]
+> The example above applies to big data cluster as of SQL Server 2019 CU5 release. If you have an existing cluster deployed before this release or if you are deploying a new cluster with pre-CU5 Docker image tag, you should not include the `subdomain` portion in the DNS names values provided for each service. For example,
+>
+> ```bash
+> # DNS names for BDC services for a cluster deployed before CU5 release cannot include the subdomain value
+> azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.contoso.local"
+> ```
+
 You can find an example script here for [deploying a SQL Server big data cluster on single node Kubernetes cluster (kubeadm) with AD integration](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
+
+> [!Note]
+> There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example you must deploy an a pre-CU5 release and you already upgraded **azdata CLI**, or you are deploying a new cluster using the latest CU5 release, but can't modify an already existing application connection string or the DNS names. This is highly unlikely, but if you need to revert to the pre-CU5 behavior, you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.  Here is the command to do so:
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
+```
 
 You should now have set all the required parameters for a deployment of BDC with Active Directory integration.
 
@@ -316,10 +361,139 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Currently, the Log Search Dashboard and Metrics Dashboard do not support AD authentication. AD support for this endpoint is planned for a future release. Basic username and password set upon deployment can be used for authentication to these dashboards. All other cluster endpoint support AD authentication.
 
-- The secure AD mode will only work on `kubeadm` deployment environments and not on AKS right now. The `kubeadm-prod` deployment profile includes the security sections by default.
+- The secure AD mode will only work on `kubeadm` and `openshift` deployment environments and not on AKS or ARO right now. The `kubeadm-prod` and `openshift-prod` deployment profiles includes the security sections by default.
 
-- Only one BDC per domain (Active Directory) is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
+- Before SQL Server 2019 CU5 release, only one BDC per domain (Active Directory) is allowed. Enabling multiple BDCs per domain is available starting with CU5 release.
 
 - None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
-- AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC, Enabling logins from other trusted domain is planned for a future release
+- AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC. Enabling logins from other trusted domain is not supported.
+
+## Technical background
+
+Prior to CU5 there were two issues preventing deployment of multiple BDCs in an AD domain.
+
+- Naming conflict for service principal names and DNS domain
+- Domain account principal names
+
+#### Service principal names (SPN) and DNS domain naming conflict
+
+The domain name provided at deployment time is used as AD DNS domain. This means the pods can connect to each other in the internal network using this DNS domain. Additionally, users connect to the BDC endpoints using this DNS domain. As a result, any Service Principal Name (SPN) created for a service within BDC is going to have the Kubernetes pod, service, or endpoint name qualified with this AD DNS domain. If a user deploys a second cluster in the domain, the SPNs being generated will have the same FQDN since the pod names as well as the DNS domain name do not differ between the two clusters. As an example, consider a case where tan AD DNS domain is `contoso.local`. One of the SPNs generated for master pool SQL Server in pod `master-0` would be `MSSQLSvc/master-0.contoso.local:1433`. In the second cluster the user would attempt to deploy, the pod name for `master-0` is the same and the user will provide the same AD DNS domain (``contoso.local``) resulting in the same SPN string. Active Directory would forbid creation of a conflicting SPN leading to a deployment failure for the second cluster.
+
+#### Domain account principal names
+
+During a deployment of BDC with an Active Directory domain, multiple account principals are generated for services running inside the BDC. These are essentially AD user accounts. Prior to CU5 the names for them would not be not unique between clusters. This manifests in an attempt to create the same user account name for a particular service in BDC in two different clusters. The cluster that is being deployed second will run into a conflict in AD and cannot create their account.
+
+#### Solution to solve the problem with SPNs and DNS domain - CU5
+
+Since SPNs must differ in any two clusters, the DNS domain name passed in at deployment time must be different. You can specify different DNS names using the newly introduced setting in the deployment configuration file: `subdomain`. If the subdomain differs between two clusters and internal communication can happen over this subdomain, the SPNs will include the subdomain achieving the required uniqueness.
+
+>[!NOTE]
+>The value passed through the subdomain setting is not a new AD domain, but a DNS domain that is used internally.
+
+As an example, consider the case of a master pool SQL Server SPN again. If the subdomain is `bdc`, the previously discussed SPN will change to M`SSQLSvc/master-0.bdc.contoso.local:1433`.  
+
+Customizing the value of the newly introduced subdomain parameter in the  active directory configuration spec is optional. By default, the BDC cluster name or namespace name will be used to compute the value of subdomain setting. When users want to override the subdomain name, they can do so using the new subdomain parameter being introduced in the active directory configuration spec.
+
+#### Solution to solve the problem regarding account names uniqueness
+
+In order to update the account names to a scheme that guarantees uniqueness we introduced the concept of account prefix. The account prefix is a portion of the account name that is unique between any two clusters. The remaining portion of the account name is constant for a given service. The new format of the account name will look like `<prefix>-<name>-<podId>`. 
+
+>[!NOTE]
+>Active Directory requires the account names to be limited to 20 characters. BDC cluster needs to use 8 of the characters for distinguishing pods and StatefulSets. This leaves us 12 characters as a limit for the account prefix
+
+Customizing the account name is optional. Use the `accountPrefix` parameter in the active directory configuration spec. SQL Server 2019 CU5 introduces `accountPrefix` in the configuration spec. By default, the subdomain name is used as the account prefix. If the subdomain name is longer than the 12 characters, the initial 12-characters substring of the subdomain name are used as account prefix.
+
+The subdomain only applies to DNS. Hence the new LDAP user account name is `bdc-ldap@contoso.local`. The account name would not be  not `bdc-ldap@bdc.contoso.local`.
+
+In summary, these are the semantics of the parameters added in CU5 for multiple clusters in a domain:
+
+#### `subdomain`
+
+- Optional field
+- Data type: string
+- Definition: A unique DNS subdomain to use for this BDC cluster. This value should be different for each cluster deployed in the Active Directory domain.  
+- Default value: When not provided, cluster name will be used as the default value
+- Maximum length: 63 characters per label (label being each string separated by a dot).
+- Remarks: The endpoint DNS names should use the subdomain in their FQDN.
+
+#### `accountPrefix`
+
+- Optional field
+- Data type: string
+- Definition: A unique prefix for AD accounts BDC cluster will generate. This value should be different for each cluster deployed in the Active Directory domain.
+- Default value: When not provided, subdomain name will be used as the default value. When subdomain is not provided, cluster name will be used as the subdomain name, and hence cluster name will be inherited as accountPrefix as well. If the subdomain is provided and is a multipart name (contains one or more dots), user must provide an accountPrefix. 
+- Maximum length: 12 characters 
+
+### Impact on AD domain and DNS server 
+
+There are no change required in the AD domain or domain controller to accommodate deploying multiple BDCs against the same Active Directory domain. The DNS subdomain will be automatically created in the DNS server when registering external endpoint DNS names. 
+
+### Impact on setting up the deployment configuration file used for the BDC deployment 
+
+The activeDirectory section in the control plane configuration will have two new optional parameters: `subdomain` and `accountPrefix`. Only provide values for these settings if you want to override the default behavior, which is to use the cluster name for each of them. The cluster name is the same as namespace name.
+
+Additionally, provide endpoint DNS names that include the appropriate DNS domain including the subdomain. As an example, consider the gateway endpoint. If you want to use the name `gateway` for the endpoint and register it in the DNS server automatically as part of BDC deployment, use `gateway.bdc.contoso.local` as the DNS name. If `bdc` is the subdomain and `contoso.local` is the AD DNS domain name.
+
+#### Examples
+
+Below is an example of active directory security configuration, in case you want to override subdomain and accountPrefix. 
+
+```json
+    "security": { 
+        "activeDirectory": { 
+            "ouDistinguishedName":"OU=contosoou,DC=contoso,DC=local", 
+            "dnsIpAddresses": [ "10.10.10.10" ], 
+            "domainControllerFullyQualifiedDns": [ "contoso-win2016-dc.contoso.local" ], 
+            "domainDnsName":"contoso.local", 
+            "subdomain": "bdc", 
+            "accountPrefix": "myprefix", 
+            "clusterAdmins": [ "contosoadmins" ], 
+            "clusterUsers": [ "contosousers1", "contosousers2" ] 
+        } 
+    } 
+  
+```
+
+Below is an example of endpoint spec for control plane endpoints for updated DNS names in the deployment configuration file. Similarly, all the endpoints in bdc.json configuration file need to be updated. 
+
+  
+```json
+        "endpoints": [ 
+            { 
+                "serviceType": "NodePort", 
+                "port": 30080, 
+                "name": "Controller", 
+                "dnsName": "control.bdc.contoso.local" 
+            }, 
+            { 
+                "serviceType": "NodePort", 
+                "port": 30777, 
+                "name": "ServiceProxy", 
+                "dnsName": "monitor.bdc.contoso.local" 
+            } 
+        ] 
+  
+```
+
+## Questions
+
+### Do you need to create separate OUs for different clusters?
+
+It is not required, but is recommended. Providing separate OUs for separate clusters helps you manage the generated user accounts.
+
+### How to revert back to the pre-CU5 behavior?
+
+There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter.
+
+For example you must deploy a pre-CU5 release and you already upgraded `azdata` CLI, or you are deploying a new cluster using the latest CU5 release but can't modify an already existing application connection string or the DNS names. This is highly unlikely but if you need to revert to the pre-CU5 behavior you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.
+
+The following example sets `useSubdomain` to `false` for this scenario.
+
+```console
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false" 
+```
+
+## Next steps
+
+- [Troubleshoot SQL Server Big Data Cluster Active Directory integration](troubleshoot-active-directory.md)

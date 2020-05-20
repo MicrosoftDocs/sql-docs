@@ -13,7 +13,7 @@ ms.date: 08/02/2019
 
 # Tutorial: Add the *five slowest queries* sample widget to the database dashboard
 
-This tutorial demonstrates the process of adding one of Azure Data Studio's built-in sample widgets to the *database dashboard* to quickly view a database's five slowest queries. You also learn how to view the details of the slow queries and query plans using Azure Data Studio's features. During this tutorial, you learn how to:
+This tutorial demonstrates the process of adding one of the built-in Azure Data Studio sample widgets to the *database dashboard* to quickly view a database's five slowest queries. You also learn how to view the details of the slow queries and query plans using Azure Data Studio features. During this tutorial, you learn how to:
 
 > [!div class="checklist"]
 > * Enable Query Store on a database

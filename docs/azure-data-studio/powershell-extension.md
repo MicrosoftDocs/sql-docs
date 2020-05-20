@@ -11,13 +11,13 @@ author: "SQLvariant"
 ms.author: "aanelson"
 manager: matthend
 ---
+
 # PowerShell Editor Support for Azure Data Studio
 
 This extension provides rich PowerShell editor support in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
 Now you can write and debug PowerShell scripts using the excellent IDE-like interface that Azure Data Studio provides.
 
 ![PowerShell extension](media/powershell-extension/powershell-extension.png)
-
 
 ## Features
 
@@ -31,7 +31,6 @@ Now you can write and debug PowerShell scripts using the excellent IDE-like inte
 - Run selected selection of PowerShell code using <kbd>F8</kbd>
 - Launch online help for the symbol under the cursor using <kbd>Ctrl</kbd>+<kbd>F1</kbd>
 - Basic interactive console support!
-
 
 ## Installing the Extension
 
@@ -56,10 +55,10 @@ Read the [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) for ans
 
 ## Installing PowerShell Core
 
-If you are running Azure Data Studio on MacOS or Linux, you may also need to install PowerShell Core.
+If you are running Azure Data Studio on macOS or Linux, you may also need to install PowerShell Core.
 
 PowerShell Core is an Open Source project on [GitHub](https://github.com/powershell/powershell).
-For more information on installing PowerShell Core on MacOS or Linux platforms, see the following articles:
+For more information on installing PowerShell Core on macOS or Linux platforms, see the following articles:
 
 - [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [Installing PowerShell Core on macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
@@ -144,7 +143,7 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-The `SqlServer` module contains a Provider called `SQLRegistration` which allows you to programatically access the follwing types of saved SQL Server connections:
+The `SqlServer` module contains a Provider called `SQLRegistration` which allows you to programatically access the following types of saved SQL Server connections:
 
 + Database Engine Server (Registered Servers)
 + Central Management Server (CMS)

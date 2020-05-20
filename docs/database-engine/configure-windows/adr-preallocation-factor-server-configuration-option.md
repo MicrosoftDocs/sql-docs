@@ -34,7 +34,7 @@ While the background thread takes workload patterns into consideration, this fac
 
 The following example sets the preallocation factor to 4.
 
-```  
+```tsql
 sp_configure 'show advanced options', 1;
 RECONFIGURE;
 GO 

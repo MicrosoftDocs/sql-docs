@@ -27,7 +27,7 @@ The cleaner is single threaded in SQL Server 2019 and so one SQL Server instance
 
 The following examples sets the cleaner retry timeout.
 
-```  
+```tsql
 sp_configure 'show advanced options', 1;  
 RECONFIGURE;
 GO 

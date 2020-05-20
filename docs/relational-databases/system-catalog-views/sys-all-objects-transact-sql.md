@@ -1,7 +1,7 @@
 ---
 title: "sys.all_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/20/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |type|**char(2)**|Object type:<br /><br /> AF = Aggregate function (CLR)<br /><br /> C = CHECK constraint<br /><br /> D = DEFAULT (constraint or stand-alone)<br /><br /> F = FOREIGN KEY constraint<br /><br /> FN = SQL scalar function<br /><br /> FS = Assembly (CLR) scalar-function<br /><br /> FT = Assembly (CLR) table-valued function<br /><br /> IF = SQL inline table-valued function<br /><br /> IT = Internal table<br /><br /> P = SQL Stored Procedure<br /><br /> PC = Assembly (CLR) stored-procedure<br /><br /> PG = Plan guide<br /><br /> PK = PRIMARY KEY constraint<br /><br /> R = Rule (old-style, stand-alone)<br /><br /> RF = Replication-filter-procedure<br /><br /> S = System base table<br /><br /> SN = Synonym<br /><br /> SO = Sequence object<br /><br /> SQ = Service queue<br /><br /> TA = Assembly (CLR) DML trigger<br /><br /> TF = SQL table-valued-function<br /><br /> TR = SQL DML trigger<br /><br /> TT = Table type<br /><br /> U = Table (user-defined)<br /><br /> UQ = UNIQUE constraint<br /><br /> V = View<br /><br /> X = Extended stored procedure|  
 |type_desc|**nvarchar(60)**|Description of the object type. AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> DEFAULT_CONSTRAINT<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> INTERNAL_TABLE<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> RULE<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> SYSTEM_TABLE<br /><br /> SYNONYM<br /><br /> SERVICE_QUEUE<br /><br /> CLR_TRIGGER<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> TABLE_TYPE<br /><br /> USER_TABLE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> VIEW<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |create_date|**datetime**|Date the object was created.|  
-|modify_date|**datetime**|Date the object was last modified by using an ALTER statement. If the object is a table or a view, modify_date also changes when a clustered index on the table or view is created or modified.|  
+|modify_date|**datetime**|Date the object was last modified by using an ALTER statement. If the object is a table or a view, modify_date also changes when an index on the table or view is created or modified.|  
 |is_ms_shipped|**bit**|Object created by an internal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component.|  
 |is_published|**bit**|Object is published.|  
 |is_schema_published|**bit**|Only the schema of the object is published.|  

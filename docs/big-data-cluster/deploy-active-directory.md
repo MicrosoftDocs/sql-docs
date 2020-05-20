@@ -173,22 +173,22 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.domainDnsName`: Name of your domain (e.g. `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or domain global. Members of this group get administrator permissions in the cluster. This means that they have `sysadmin` permissions in SQL Server, superuser permissions in HDFS, and administrators in controller. 
+- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or global. Members of this group get administrator permissions in the cluster. This means that they have `sysadmin` permissions in SQL Server, superuser permissions in HDFS, and administrators in controller. 
 
   >[!IMPORTANT]
   >Create this group in AD before deployment begins. If the scope for this AD group is domain local deployment fails.
 
-- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+- `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. The list can include AD groups that are scoped as either universal or global groups. They can not be domain local groups.
 
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
-- `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+- `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or global groups. They can not be domain local groups.
 
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
-- `security.activeDirectory.appReaders` **Optional parameter**: List of the AD groups who have permissions to run any application. The list can include AD groups that are scoped as either universal or domain global groups. They can not be domain local groups.
+- `security.activeDirectory.appReaders` **Optional parameter**: List of the AD groups who have permissions to run any application. The list can include AD groups that are scoped as either universal or global groups. They can not be domain local groups.
 
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
@@ -196,7 +196,7 @@ AD integration requires the following parameters. Add these parameters to the `c
 - `security.activeDirectory.subdomain`: **Optional parameter** This parameter is introduced in SQL Server 2019 CU5 release to support deploying multiple big data clusters against the same domain. Using this setting, you can specify different DNS names for each of the big data cluster deployed. See [Deploy multiple clusters in a domain](deploy-multiple-active-directory.md) for more details regarding deploying multiple big data clusters in the same Active Directory domain. If the value of this parameter is not specified in the active directory section of the `control.json` file, by default, the big data cluster name (same as Kubernetes namespace name) will be used to compute the value of subdomain setting. 
 
   >[!NOTE]
-  >The value passed through the subdomain setting is not a new AD domain but only a DNS domain.
+  >The value passed through the subdomain setting is not a new AD domain but only a DNS domain used by the BDC cluster internally.
 
   >[!IMPORTANT]
   >You need to install or upgrade latest version of **azdata CLI** as of SQL Server 2019 release to leverage these new capabilties and deploy multiple big data clusters in the same domain.
@@ -205,7 +205,7 @@ AD integration requires the following parameters. Add these parameters to the `c
 These setting is used to guarantees uniqueness of the account names for various big data clusters services, that must differ between any two clusters. Customizing the account prefix name is optional, by default, the subdomain name is used as the account prefix. If the subdomain name is longer than the 12 characters, the initial 12-character substring of the subdomain name are used as account prefix.  
 
   >[!NOTE]
-  > Active Directory requires the names to be limited to 20 characters. We allocate 2 characters for pod id, 4 characters for the static name in the middle, 2 hyphens – thus leaving us 12 characters as a limit for the account prefix.
+  >Active Directory requires the account names to be limited to 20 characters. BDC cluster needs to use 8 of the characters for distinguishing pods and StatefulSets. This leaves us 12 characters as a limit for the account prefix
 
 [Check AD group scope](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), to determine if it is DomainLocal.
 

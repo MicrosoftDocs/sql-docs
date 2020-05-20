@@ -119,7 +119,7 @@ EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
 import pkg_resources
-pkg_name = "pandas"
+pkg_name = "scikit-learn"
 try:
     version = pkg_resources.get_distribution(pkg_name).version
     print("Package " + pkg_name + " is version " + version)
@@ -132,18 +132,6 @@ Result:
 
 ```text
 STDOUT message(s) from external script: Package pandas is version 0.23.4
-```
-
-The following example prints the version of the package `pandas`.
-
-```sql
-EXECUTE sp_execute_external_script
-  @language = N'Python',
-  @script = N'
-import pkg_resources
-pkg_name = "pandas"
-print(pkg_name + " package is version " + pkg_resources.get_distribution(pkg_name).version)
-'
 ```
 
 The following example returns the version of Python.

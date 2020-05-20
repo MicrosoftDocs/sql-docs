@@ -1,6 +1,6 @@
 ---
 title: "sp_droppublication (Transact-SQL) | Microsoft Docs"
-description: Drops a publication and its associated Snapshot Agent. This stored procedure run at the Publisher on the publication database.
+description: Drops a publication and its associated Snapshot Agent. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

@@ -31,7 +31,8 @@ The following example disables line numbers in the editor and configures lines o
 
 Changes to settings are reloaded by Azure Data Studio after the modified `settings.json` file is saved.
 
->**Note:** Workspace settings are useful for sharing project-specific settings across a team.
+> [!NOTE] 
+> Workspace settings are useful for sharing project-specific settings across a team.
 
 ## Settings File Locations
 

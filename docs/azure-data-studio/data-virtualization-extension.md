@@ -62,14 +62,14 @@ To install the Data Virtualization extension, open Azure Data Studio and downloa
 * Jupyter Notebook support, specifically support for the Python3 and Spark kernels, has been moved into Azure Data Studio. This extension is no longer required in order to use Notebooks.
 * Multiple bug fixes in the External Data wizards:
   * Oracle type mappings have been updated to match changes shipped in SQL Server 2019 CTP 2.3.
-  * Fixed an issue where new schemas typed into the table mapping controls were being lost.
-  * Fixed an issue where checking a Database node in the table mappings did not result in all tables and views being checked.
+  * Fixed an issue where new schemas typed into the table-mapping controls were being lost.
+  * Fixed an issue where checking a Database node in the table-mappings did not result in all tables and views being checked.
 
 ## Release Notes (v0.10.2)
 
 ### SQL Server 2019 support
 
-Support for SQL Server 2019 has been updated. After connecting to a SQL Server Big Data Cluster instance, a new _Data Services_ folder appears in the explorer tree. The folder has launch points for actions such as opening a new notebook against the connection, submitting Spark jobs, and working with HDFS. Some actions, such as _Create External Data_ over a HDFS file/folder, the _SQL Server 2019_ extension must be installed.
+Support for SQL Server 2019 has been updated. After connecting to a SQL Server Big Data Cluster instance, a new _Data Services_ folder appears in the explorer tree. The folder has launch points for actions such as opening a new notebook against the connection, submitting Spark jobs, and working with HDFS. Some actions, such as _Create External Data_ over an HDFS file/folder, the _SQL Server 2019_ extension must be installed.
 
 ### Notebook support
 
@@ -81,12 +81,12 @@ Other improvements and fixes include:
 * Support for launching a new notebook from the command-line has been added. Launch with the arguments `--command=notebook.command.new --server=myservername` should open a new notebook and connect to this server.
 * Performance fixes for notebooks with a large code length in cells. If code cells are over 250 lines, a scrollbar is added.
 * Improved .ipynb file support. Version 3 or higher is now supported. Please note that on saving files will be updated to version 4 or higher.
-* The `notebook.enabled` user setting has been removed now that the built in Notebook viewer is stable
+* The `notebook.enabled` user setting has been removed now that the built-in Notebook viewer is stable
 * High Contrast theme is now supported with a number of fixes to object layout in this case.
 * Fixed #3680 where outputs sometimes showed a number of `,,,` characters incorrectly
-* Fixed #3602 Editor disappears for cells after navigating away from azure data studio
+* Fixed #3602 Editor disappears for cells after navigating away from Azure Data Studio
 * Support has been added to use Grid views for the `application/vnd.dataresource+json` output MIME type. This means many Notebooks that use this (for example by setting `pd.options.display.html.table_schema` in a Python notebook) will have nicer tabular outputs
-Fixed #3959 Azure Data Studio tries to shutdown notebook server twice after closing notebook
+Fixed #3959 Azure Data Studio tries to shut down notebook server twice after closing notebook
 
 #### Known issues
 

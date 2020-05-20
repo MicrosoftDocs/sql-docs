@@ -1,5 +1,6 @@
 ---
 title: "Add a Background Image (Report Builder) | Microsoft Docs"
+description: Discover how to embed an image in the report definition to add the image to a variety of report items including text boxes, lists, and page header.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

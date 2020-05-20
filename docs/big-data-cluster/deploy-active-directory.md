@@ -19,7 +19,7 @@ This document explains how to deploy a SQL Server big data cluster (BDC) in the 
 authentication mode. The cluster uses an existing AD domain for authentication.
 
 >[!Note]
->Before SQL Server 2019 CU5 release, there is a restriction in big data clusters so that only one cluster could be deployed against an Active Directory domain. This restriction is removed with the CU5 release, see [Deploy multiple clusters in a domain](deploy-multiple-active-directory.md) for details on the new capabilities. Examples in this article are adjusted to accommodate both deployment use cases.
+>Before SQL Server 2019 CU5 release, there is a restriction in big data clusters so that only one cluster could be deployed against an Active Directory domain. This restriction is removed with the CU5 release, see [Deploy multiple clusters in a domain](#technical-background) for details on the new capabilities. Examples in this article are adjusted to accommodate both deployment use cases.
 
 ## Background
 

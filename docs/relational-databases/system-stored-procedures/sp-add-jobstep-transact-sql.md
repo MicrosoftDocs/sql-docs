@@ -1,5 +1,5 @@
 ---
-title: "sp_add_jobstep (Transact-SQL) | Microsoft Docs"
+title: sp_add_jobstep (Transact-SQL)
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -31,31 +31,32 @@ ms.author: carlrab
   
 ## Syntax  
   
-```
-sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
-     [ , [ @step_id = ] step_id ]   
-     { , [ @step_name = ] 'step_name' }   
-     [ , [ @subsystem = ] 'subsystem' ]   
-     [ , [ @command = ] 'command' ]   
-     [ , [ @additional_parameters = ] 'parameters' ]   
-          [ , [ @cmdexec_success_code = ] code ]   
-     [ , [ @on_success_action = ] success_action ]   
-          [ , [ @on_success_step_id = ] success_step_id ]   
-          [ , [ @on_fail_action = ] fail_action ]   
-          [ , [ @on_fail_step_id = ] fail_step_id ]   
-     [ , [ @server = ] 'server' ]   
-     [ , [ @database_name = ] 'database' ]   
-     [ , [ @database_user_name = ] 'user' ]   
-     [ , [ @retry_attempts = ] retry_attempts ]   
-     [ , [ @retry_interval = ] retry_interval ]   
-     [ , [ @os_run_priority = ] run_priority ]   
-     [ , [ @output_file_name = ] 'file_name' ]   
-     [ , [ @flags = ] flags ]   
-     [ , { [ @proxy_id = ] proxy_id   
+```sql
+sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
+     [ , [ @step_id = ] step_id ]
+     { , [ @step_name = ] 'step_name' }
+     [ , [ @subsystem = ] 'subsystem' ]
+     [ , [ @command = ] 'command' ]
+     [ , [ @additional_parameters = ] 'parameters' ]
+          [ , [ @cmdexec_success_code = ] code ]
+     [ , [ @on_success_action = ] success_action ]
+          [ , [ @on_success_step_id = ] success_step_id ]
+          [ , [ @on_fail_action = ] fail_action ]
+          [ , [ @on_fail_step_id = ] fail_step_id ]
+     [ , [ @server = ] 'server' ]
+     [ , [ @database_name = ] 'database' ]
+     [ , [ @database_user_name = ] 'user' ]
+     [ , [ @retry_attempts = ] retry_attempts ]
+     [ , [ @retry_interval = ] retry_interval ]
+     [ , [ @os_run_priority = ] run_priority ]
+     [ , [ @output_file_name = ] 'file_name' ]
+     [ , [ @flags = ] flags ]
+     [ , { [ @proxy_id = ] proxy_id
          | [ @proxy_name = ] 'proxy_name' } ]  
 ```  
   
-## Arguments  
+## Arguments
+
 `[ @job_id = ] job_id`
  The identification number of the job to which to add the step. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
@@ -63,7 +64,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  The name of the job to which to add the step. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
->  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
+> Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
 `[ @step_id = ] step_id`
  The sequence identification number for the job step. Step identification numbers start at **1** and increment without gaps. If a step is inserted in the existing sequence, the sequence numbers are adjusted automatically. A value is provided if *step_id* is not specified. *step_id* is **int**, with a default of NULL.  
@@ -93,16 +94,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  The commands to be executed by **SQLServerAgent** service through *subsystem*. *command* is **nvarchar(max)**, with a default of NULL. SQL Server Agent provides token substitution that gives you the same flexibility that variables provide when you write software programs.  
   
 > [!IMPORTANT]  
->  An escape macro must now accompany all tokens used in job steps, or else those job steps will fail. In addition, you must now enclose token names in parentheses and place a dollar sign (`$`) at the beginning of the token syntax. For example:  
->   
->  `$(ESCAPE_` *macro name* `(DATE))`  
+> An escape macro must now accompany all tokens used in job steps, or else those job steps will fail. In addition, you must now enclose token names in parentheses and place a dollar sign (`$`) at the beginning of the token syntax. For example:  
+>
+> `$(ESCAPE_` *macro name* `(DATE))`  
   
  For more information about these tokens and updating your job steps to use the new token syntax, see [Use Tokens in Job Steps](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Any Windows user with write permissions on the Windows Event Log can access job steps that are activated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts or WMI alerts. To avoid this security risk, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tokens that can be used in jobs activated by alerts are disabled by default. These tokens are: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., and **WMI(**_property_**)**. Note that in this release, use of tokens is extended to all alerting.  
->   
->  If you need to use these tokens, first ensure that only members of trusted Windows security groups, such as the Administrators group, have write permissions on the Event Log of the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resides. Then, right-click **SQL Server Agent** in Object Explorer, select **Properties**, and on the **Alert System** page, select **Replace tokens for all job responses to alerts** to enable these tokens.  
+> Any Windows user with write permissions on the Windows Event Log can access job steps that are activated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts or WMI alerts. To avoid this security risk, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tokens that can be used in jobs activated by alerts are disabled by default. These tokens are: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., and **WMI(**_property_**)**. Note that in this release, use of tokens is extended to all alerting.  
+>
+> If you need to use these tokens, first ensure that only members of trusted Windows security groups, such as the Administrators group, have write permissions on the Event Log of the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resides. Then, right-click **SQL Server Agent** in Object Explorer, select **Properties**, and on the **Alert System** page, select **Replace tokens for all job responses to alerts** to enable these tokens.  
   
 `[ @additional_parameters = ] 'parameters'`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *parameters* is **ntext**, with a default of NULL.  
@@ -176,13 +177,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 `[ @proxy_name = ] 'proxy_name'`
  The name of the proxy that the job step runs as. *proxy_name* is type **sysname**, with a default of NULL. If no *proxy_id* is specified, no *proxy_name* is specified, and no *user_name* is specified, the job step runs as the service account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-## Return Code Values  
+## Return Code Values
+
  **0** (success) or **1** (failure)  
   
-## Result Sets  
+## Result Sets
+
  None  
   
-## Remarks  
+## Remarks
+
  **sp_add_jobstep** must be run from the **msdb** database.  
   
  SQL Server Management Studio provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.  
@@ -191,24 +195,26 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  A proxy may be identified by *proxy_name* or *proxy_id*.  
   
-## Permissions  
+## Permissions
+
  By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the **msdb** database:  
   
--   **SQLAgentUserRole**  
+- **SQLAgentUserRole**  
   
--   **SQLAgentReaderRole**  
+- **SQLAgentReaderRole**  
   
--   **SQLAgentOperatorRole**  
+- **SQLAgentOperatorRole**  
   
  For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  The creator of the job step must have access to the proxy for the job step. Members of the **sysadmin** fixed server role have access to all proxies. Other users must be explicitly granted access to a proxy.  
   
-## Examples  
- The following example creates a job step that changes database access to read-only for the Sales database. In addition, this example specifies 5 retry attempts, with each retry to occur after a 5 minute wait.  
+## Examples
+
+The following example creates a job step that changes database access to read-only for the Sales database. In addition, this example specifies 5 retry attempts, with each retry to occur after a 5 minute wait.  
   
 > [!NOTE]  
->  This example assumes that the `Weekly Sales Data Backup` job already exists.  
+> This example assumes that the `Weekly Sales Data Backup` job already exists.  
   
 ```sql
 USE msdb;  
@@ -223,14 +229,15 @@ EXEC sp_add_jobstep
 GO  
 ```  
   
-## See Also  
- [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)   
- [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## See Also
+
+- [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)   
+- [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)
+- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)
+- [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)
+- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)
+- [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)
+- [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)
+- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

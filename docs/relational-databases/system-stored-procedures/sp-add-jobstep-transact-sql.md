@@ -1,7 +1,5 @@
 ---
 title: sp_add_jobstep (Transact-SQL)
-ms.custom: ""
-ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,14 +8,16 @@ ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_jobstep_TSQL"
   - "sp_add_jobstep"
-dev_langs: 
-  - "TSQL"
+dev_langs: "TSQL"
 helpviewer_keywords: 
   - "sp_add_jobstep"
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
+ms.custom: ""
+ms.date: 03/15/2017
 ---
+
 # sp_add_jobstep (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

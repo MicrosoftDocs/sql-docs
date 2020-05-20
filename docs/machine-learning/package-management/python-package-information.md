@@ -131,7 +131,7 @@ except:
 Result:
 
 ```text
-STDOUT message(s) from external script: Package pandas is version 0.23.4
+STDOUT message(s) from external script: Package scikit-learn is version 0.20.2
 ```
 
 The following example returns the version of Python.

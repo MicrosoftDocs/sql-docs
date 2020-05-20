@@ -158,7 +158,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Resumable online index rebuilds|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|
-|Accelerated database recovery|Yes|Yes|No|No|No|
+|Accelerated database recovery|Yes|Yes|Yes|No|No|
 |Mirrored backups|Yes|No|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|

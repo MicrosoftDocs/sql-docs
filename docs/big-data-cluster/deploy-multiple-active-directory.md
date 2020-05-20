@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Deploy multiple BDCs in the same Active Directory domain
+## Technical background
 
 SQL Server 2019 CU5 introduces support for more than one SQL Server Big Data Cluster in a single Active Directory domain. For an overview of the end-to-end deployment process with Active Directory integration, see [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md).
 
@@ -23,19 +23,22 @@ SQL Server 2019 CU5 introduces support for more than one SQL Server Big Data Clu
 >[!NOTE]
 > In addition to providing different values for the subdomain as described in this section, you must also use different port numbers for BDC endpoints when deploying multiple BDCs in the same Kubernetes cluster. These port numbers are configurable at deployment time through the [deployment configuration](deployment-custom-configuration.md) profiles.
 
-## Technical background
+### Technical background
 
-Why two or more big data clusters could not be deployed in one domain until CU5? 
+Prior to CU5 there were two issues preventing deployment of multiple BDCs in an AD domain.
 
-### Service principal Names (SPN) and DNS domain: 
+* Naming conflict for service principal names and DNS domain
+* Domain account prinicpal names
 
-The domain name provided at deployment time is used as AD DNS domain. This means the pods can connect to each other in the internal network using this DNS domain. Additionally, users connect to the BDC endpoints using this DNS domain. As a result, any Service Principal Name (SPN) created for a service within BDC is going to have the Kubernetes pod, service, or endpoint name qualified with this AD DNS domain. If a user deploys a second cluster in the domain, the SPNs being generated will have the same FQDN since the pod names as well as the DNS domain name do not differ between the two clusters. As an example, consider a case where the user’s AD DNS domain is `contoso.local`. One of the SPNs generated for master pool SQL Server in pod `master-0` will be `MSSQLSvc/master-0.contoso`.local:1433. In the second cluster the user would attempt to deploy, the pod name for master-0 is the same and the user will provide the same AD DNS domain (``contoso.local``) resulting in the same SPN string. Active Directory will forbid creation of a conflicting SPN leading to a deployment failure for the second cluster.
+#### Service principal names (SPN) and DNS domain naming conflict
 
-### Account Names
+The domain name provided at deployment time is used as AD DNS domain. This means the pods can connect to each other in the internal network using this DNS domain. Additionally, users connect to the BDC endpoints using this DNS domain. As a result, any Service Principal Name (SPN) created for a service within BDC is going to have the Kubernetes pod, service, or endpoint name qualified with this AD DNS domain. If a user deploys a second cluster in the domain, the SPNs being generated will have the same FQDN since the pod names as well as the DNS domain name do not differ between the two clusters. As an example, consider a case where tan AD DNS domain is `contoso.local`. One of the SPNs generated for master pool SQL Server in pod `master-0` would be `MSSQLSvc/master-0.contoso.local:1433`. In the second cluster the user would attempt to deploy, the pod name for `master-0` is the same and the user will provide the same AD DNS domain (``contoso.local``) resulting in the same SPN string. Active Directory would forbid creation of a conflicting SPN leading to a deployment failure for the second cluster.
 
-During a deployment of BDC with an Active Directory domain, multiple account principals are generated for services running inside the BDC. These are essentially AD user accounts and the names for them are currently not unique between clusters. This manifests in an attempt to create the same user account name for a particular service in BDC in two different clusters. The cluster that is being deployed second will run into a conflict in AD and cannot create their account. 
+#### Domain account principal names
 
-### Solution to solve the problem with SPNs and DNS domain 
+During a deployment of BDC with an Active Directory domain, multiple account principals are generated for services running inside the BDC. These are essentially AD user accounts. Prior to CU5 the names for them would not be not unique between clusters. This manifests in an attempt to create the same user account name for a particular service in BDC in two different clusters. The cluster that is being deployed second will run into a conflict in AD and cannot create their account.
+
+#### Solution to solve the problem with SPNs and DNS domain - CU5
 
 Since SPNs must differ in any two clusters, the DNS domain name passed in at deployment time must be different. You can specify different DNS names using the newly introduced setting in the deployment configuration file: `subdomain`. If the subdomain differs between two clusters and internal communication can happen over this subdomain, the SPNs will include the subdomain achieving the required uniqueness.
 
@@ -46,18 +49,12 @@ As an example, consider the case of a master pool SQL Server SPN again. If the s
 
 Customizing the value of the newly introduced subdomain parameter in the  active directory configuration spec is optional. By default, the BDC cluster name or namespace name will be used to compute the value of subdomain setting. When users want to override the subdomain name, they can do so using the new subdomain parameter being introduced in the active directory configuration spec.
 
-### Solution to solve the problem regarding account names uniqueness 
+#### Solution to solve the problem regarding account names uniqueness
 
 In order to update the account names to a scheme that guarantees uniqueness we introduced the concept of account prefix. The account prefix is a portion of the account name that is unique between any two clusters. The remaining portion of the account name is constant for a given service. The new format of the account name will look like `<prefix>-<name>-<podId>`. 
 
 >[!NOTE]
-> Active Directory requires the names to be limited to 20 characters. 
-> Big Data Clusters assign:
->
-> - 2 characters for pod id
-> - 4 characters for the static name in the middle
-> - 2 hyphens
-> - 12 characters for the account prefix.
+>Active Directory requires the account names to be limited to 20 characters. BDC cluster needs to use 8 of the characters for distinguishing pods and StatefulSets. This leaves us 12 characters as a limit for the account prefix
 
 Customizing the account name is optional. Use the `accountPrefix` parameter in the active directory configuration spec. SQL Server 2019 CU5 introduces `accountPrefix` in the configuration spec. By default, the subdomain name is used as the account prefix. If the subdomain name is longer than the 12 characters, the initial 12-characters substring of the subdomain name are used as account prefix.
 
@@ -98,74 +95,46 @@ Below is an example of active directory security configuration, in case you want
 
 ```json
     "security": { 
-
         "activeDirectory": { 
-
             "ouDistinguishedName":"OU=contosoou,DC=contoso,DC=local", 
-
             "dnsIpAddresses": [ "10.10.10.10" ], 
-
             "domainControllerFullyQualifiedDns": [ "contoso-win2016-dc.contoso.local" ], 
-
             "domainDnsName":"contoso.local", 
-
             "subdomain": "bdc", 
-
             "accountPrefix": "myprefix", 
-
             "clusterAdmins": [ "contosoadmins" ], 
-
             "clusterUsers": [ "contosousers1", "contosousers2" ] 
-
         } 
-
     } 
-
   
 ```
-
 
 Below is an example of endpoint spec for control plane endpoints for updated DNS names in the deployment configuration file. Similarly, all the endpoints in bdc.json configuration file need to be updated. 
 
   
 ```json
         "endpoints": [ 
-
             { 
-
                 "serviceType": "NodePort", 
-
                 "port": 30080, 
-
                 "name": "Controller", 
-
                 "dnsName": "control.bdc.contoso.local" 
-
             }, 
-
             { 
-
                 "serviceType": "NodePort", 
-
                 "port": 30777, 
-
                 "name": "ServiceProxy", 
-
                 "dnsName": "monitor.bdc.contoso.local" 
-
             } 
-
         ] 
-
   
-
 ```
 
 ## Questions
 
-### Do you need to create separate OUs for different clusters? 
+### Do you need to create separate OUs for different clusters?
 
-It is not required but recommended. Providing separate OUs for separate clusters will help you manage the generated user accounts. 
+It is not required, but is recommended. Providing separate OUs for separate clusters helps you manage the generated user accounts.
 
 ### How to revert back to the pre-CU5 behavior?
 

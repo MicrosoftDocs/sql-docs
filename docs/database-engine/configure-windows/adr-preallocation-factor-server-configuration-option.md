@@ -21,11 +21,11 @@ Accelerated Database Recovery (ADR) maintains versions of data for recovery purp
 
 ## Remarks  
 
-Performance can degrade if pages are allocated for the PVS table as part of foreground user DML operations. To address this, there is a background thread which pre-allocates pages and keeps it readily available for DML transactions. Performance is best when the background thread preallocates enough pages and the percentage of foreground PVS allocations is close to 0. The error log contains entires with the tag `PreallocatePVS` if the percentage goes high and is affecting performance.
+Performance can degrade if pages are allocated for the PVS table as part of foreground user DML operations. To address this, there is a background thread which pre-allocates pages and keeps them readily available for DML transactions. Performance is best when the background thread preallocates enough pages and the percentage of foreground PVS allocations is close to 0. The error log contains entires with the tag `PreallocatePVS` if the percentage goes high and is affecting performance.
 
 The number of pages the background thread pre-allocates is based on various workload heuristics, but largely allocates pages in chunks of 512 pages. The ADR preallocation factor is a multiple of the chunk. By default, the factor is 4. This means it preallocates 2048 pages at once when required. 
 
-While the background thread takes workload pattern into consideration, this factor can be increased if necessary to improve performance. 
+While the background thread takes workload patterns into consideration, this factor can be increased if necessary to improve performance. 
 
 > [!CAUTION]
 > If PVS preallocation is increased too much, it will contend with other allocations in the system and might actually reduce overall performance

@@ -1,5 +1,6 @@
 ---
 title: "false Function (XQuery) | Microsoft Docs"
+description: Learn about the false() function that returns the boolean value False.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

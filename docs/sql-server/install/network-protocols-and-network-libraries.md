@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "network protocols [SQL Server], about network protocols"
   - "configuration options [SQL Server], libraries"
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Network Protocols and Network Libraries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

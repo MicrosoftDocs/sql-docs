@@ -21,7 +21,7 @@ Occasionally the cleaner runs into issues while acquiring object level locks due
 
 ## Remarks  
 
-The cleaner is single threaded in SQL Server 2019 and so one SQL Server instance can work on one database at a time. If the instance has more than one user database with ADR enabled, then do not increase the timeout to a very large value as that could delay cleanup on one database while the retry is happening on another database.
+The cleaner is single threaded in SQL Server 2019 and so one SQL Server instance can work on one database at a time. If the instance has more than one user database with ADR enabled, then do not increase the timeout to a large value as that could delay cleanup on one database while the retry is happening on another database.
 
 ## Examples
 

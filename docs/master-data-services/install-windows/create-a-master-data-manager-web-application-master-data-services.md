@@ -1,5 +1,6 @@
 ---
 title: Create master data manager web application
+description: The Master Data Manager web application provides an interface for users to work with master data and for administrators to configure and administer MDS.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

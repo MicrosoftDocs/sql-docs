@@ -1,5 +1,6 @@
 ---
 title: Enable Data Quality Services Integration
+description: In the Master Data Services add-in for Excel, matching functionality is provided by Data Quality Services (DQS).
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

@@ -229,7 +229,7 @@
         href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
       - name: Active Directory login fails
         href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-      - name: HDFS admin rights
+      - name: HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference
     items:
@@ -7559,6 +7559,8 @@
           items:
           - name: Query columns using Always Encrypted with SSMS
             href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+          - name: Query columns using Always Encrypted with Azure Data Studio
+            href: relational-databases/security/encryption/always-encrypted-query-columns-ads.md
         - name: Migrate sensitive data protected with Always Encrypted
           items:
           - name: Export and import 
@@ -7801,6 +7803,16 @@
       - name: Extensions
         href: azure-data-studio/extensions.md
         items:
+        - name: Machine Learning extension
+          items:
+          - name: Machine Learning extension overview
+            href: azure-data-studio/machine-learning-extension.md
+          - name: Manage packages in database
+            href: azure-data-studio/machine-learning-extension-manage-packages.md
+          - name: Make predictions
+            href: azure-data-studio/machine-learning-extension-predictions.md
+          - name: Import and view models
+            href: azure-data-studio/machine-learning-extension-import-view-models.md
         - name: PostgreSQL extension
           href: azure-data-studio/postgres-extension.md
         - name: Data Virtualization extension
@@ -15439,6 +15451,8 @@
           href: t-sql/functions/current-timestamp-transact-sql.md
         - name: CURRENT_TIMEZONE
           href: t-sql/functions/current-timezone-transact-sql.md
+        - name: CURRENT_TIMEZONE_ID
+          href: t-sql/functions/current-timezone-id-transact-sql.md
         - name: DATEADD
           href: t-sql/functions/dateadd-transact-sql.md
         - name: DATEDIFF

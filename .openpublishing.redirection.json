@@ -4587,7 +4587,7 @@
     },
     {
       "source_path": "docs/ssms/f1-help/connection-properties-dialog-box.md",
-      "redirect_url": "/sql/database-engine/configure-windows/view-or-change-server-properties-sql-server",
+      "redirect_url": "/sql/ssms/f1-help/connect-to-server-connection-properties-page-database-engine",
       "redirect_document_id": false
     },
     {

@@ -1,5 +1,6 @@
 ---
 title: Create a Master Data Services Database
+description: Create a Master Data Services database when you need a new database to support the Master Data Manager web application and Master Data Services web service.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

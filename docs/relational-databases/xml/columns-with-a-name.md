@@ -1,5 +1,6 @@
 ---
 title: "Columns with a Name | Microsoft Docs"
+description: Learn about columns with a name in SQL queries and the specific conditions in which rowset columns with a name are mapped to the resulting XML.
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql

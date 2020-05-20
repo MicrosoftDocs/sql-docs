@@ -38,6 +38,9 @@ NOTE , GeneMi , 2020/May/20:
 
 1611957:  This NOTE relates to SEO content bug 1611957 about metadata 'title:' value duplication:
     https://mseng.visualstudio.com/TechnicalContent/_workitems/edit/1611957
+
+PR 15068:  This HTML comment is being added by PR...
+    https://github.com/MicrosoftDocs/sql-docs-pr/pull/15068
 -->
 
   Consumers set property values to request specific object behavior. For example, consumers use properties to specify the interfaces to be exposed by a rowset. Consumers get the property values to determine the capabilities of an object, such as a rowset, a session, or a data source object.  

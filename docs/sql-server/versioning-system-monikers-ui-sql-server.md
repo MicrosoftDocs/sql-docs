@@ -2,10 +2,8 @@
 title: Versioning system SQL docs
 ms.date: "10/15/2019"
 ms.prod: sql
-ms.technology: ""
-ms.custom: ""
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ""
 author: MightyPen
 ms.author: genemi
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"

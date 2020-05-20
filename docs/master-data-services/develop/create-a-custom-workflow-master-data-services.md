@@ -5,7 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: master-data-services
 
 ms.topic: "reference"
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d

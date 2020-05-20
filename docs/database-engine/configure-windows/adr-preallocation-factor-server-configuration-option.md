@@ -1,5 +1,5 @@
 ---
-title: "ADR Preallocation Factor Configuration Option | Microsoft Docs"
+title: "ADR Preallocation Factor configuration option | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/19/2020"
 ms.prod: sql
@@ -11,7 +11,7 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# ADR Preallocation Factor Configuration Option
+# ADR Preallocation Factor configuration option
 
 Introduced in SQL Server 2019.
 

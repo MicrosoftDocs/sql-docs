@@ -118,7 +118,7 @@ After the query completes, the new **Customers** table appears in the list of ta
      ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
      ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
     GO
- ```
+    ```
 
 ## View the data returned by a query
 

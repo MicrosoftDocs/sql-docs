@@ -120,7 +120,7 @@ To identify why deployment quit without creating compute, data, or storage pods,
 
 In the example above, the deployment fails to create a login for the domain user because the domain group is scoped as domain local. Use global or universal scoped groups. [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md) explains AD group scope requirements.
 
-## Resolution
+## Verify
 
 Check the scope of the domain group (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 

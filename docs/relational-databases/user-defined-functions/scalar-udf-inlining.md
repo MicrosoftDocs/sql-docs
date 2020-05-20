@@ -162,6 +162,9 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 
 <sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
 
+> [!NOTE]
+> For information on the latest T-SQL Scalar UDF Inlining fixes and changes to inlining eligibility scenarios, see the Knowledge Base article: [FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
+
 ### Checking whether or not a UDF can be inlined
 For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether a UDF is inlineable or not. 
 

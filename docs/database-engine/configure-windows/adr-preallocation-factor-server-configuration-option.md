@@ -32,11 +32,13 @@ While the background thread takes workload pattern into consideration, this fact
 
 ## Examples  
 
+The following example sets the preallocation factor to 4.
+
 ```  
 sp_configure 'show advanced options', 1;
 RECONFIGURE;
 GO 
-sp_configure 'ADR Preallocation Factor', 1;
+sp_configure 'ADR Preallocation Factor', 4;
 RECONFIGURE;
 GO
 ```

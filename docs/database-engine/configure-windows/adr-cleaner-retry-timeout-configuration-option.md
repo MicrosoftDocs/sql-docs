@@ -23,15 +23,15 @@ Occasionally the cleaner runs into issues while acquiring object level locks due
 
 The cleaner is single threaded in SQL Server 2019 and so one SQL Server instance can work on one database at a time. If the instance has more than one user database with ADR enabled, then do not increase the timeout to a very large value as that could delay cleanup on one database while the retry is happening on another database.
 
-## Examples  
+## Examples
 
-The following example enables ad hoc distributed queries and then queries a server named `Seattle1` using the `OPENROWSET` function.  
+The following examples sets the cleaner retry timeout.
 
 ```  
-sp_configure 'show advanced options', 15;  
+sp_configure 'show advanced options', 1;  
 RECONFIGURE;
 GO 
-sp_configure 'ADR cleaner retry timeout', 1;  
+sp_configure 'ADR cleaner retry timeout', 15;  
 RECONFIGURE;  
 GO  
 ```  

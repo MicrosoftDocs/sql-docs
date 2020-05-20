@@ -193,10 +193,10 @@ For now, let's use the default input and output variables of `sp_execute_externa
   ```text
   EXECUTE sp_execute_external_script @language = N'Python'
       , @script = N'
-      import pandas as pd
-      mytextvariable = pandas.Series(["hello", " ", "world"]);
-      OutputDataSet = pd.DataFrame(mytextvariable);
-      '
+  import pandas as pd
+  mytextvariable = pandas.Series(["hello", " ", "world"]);
+  OutputDataSet = pd.DataFrame(mytextvariable);
+  '
       , @input_data_1 = N''
   WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
   ```

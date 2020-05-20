@@ -36,15 +36,18 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-|Support for Transparent Network IP Resolution (TNIR)|[Transparent Network IP Resolution (TNIR)](features/using-transparent-network-ip-resolution.md)|
-| &nbsp; | &nbsp; |
+| Support for Transparent Network IP Resolution (TNIR) |[Transparent Network IP Resolution (TNIR)](features/using-transparent-network-ip-resolution.md)|
+| Support for UTF-8 client encoding | [UTF-8 Support in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md). |
 
 ### Bugs fixed
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed drop index logic in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Previous versions of the OLE DB driver can't drop a primary key index when the schema ID and the user ID of the owner of the index aren't equal. |
-| &nbsp; | &nbsp; |
+| Fixed various bugs in [ISequentialStream](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-isequentialstream) interface | A few bugs affecting multibyte code pages resulted in the interface reporting end of stream before all data were returned to client application.|
+| Fixed a memory leak in [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed memory leak inside IOpenRowset::OpenRowset interface when SSPROP_IRowsetFastLoad property was enabled. |
+| Fixed retrieval and insertion of [SSVARIANT](ole-db-data-types/ssvariant-structure.md) containing non-ASCII strings | When the SSVARIANT structure was of type `VT_SS_VARSTRING` or `VT_SS_STRING`, OLE DB driver did not perform any translations to server/client code page. This resulted in corruption of non-ASCII characters in strings even if client or server was configured with the correct code page to represent these characters. |
+
+## Previous Releases
 
 ## 18.3.0
 
@@ -71,8 +74,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :-------- | :------ |
 | Fixed drop index logic in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Previous versions of the OLE DB driver can't drop a primary key index when the schema ID and the user ID of the owner of the index aren't equal. |
 | &nbsp; | &nbsp; |
-
-## Previous Releases
 
 Download previous OLE DB Driver versions by clicking the download links in the following sections:
 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "crawls [full-text search]"
   - "max full-text crawl range option"
 ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # max full-text crawl range Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

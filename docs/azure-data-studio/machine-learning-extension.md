@@ -90,7 +90,7 @@ Follow the links under **Next steps** to see how you can use the Machine Learnin
 
 - [Manage packages in database](machine-learning-extension-manage-packages.md)
 - [Make predictions](machine-learning-extension-predictions.md)
-- [Import and view models](machine-learning-extension-import-view-models.md)
+- [Import or view models](machine-learning-extension-import-view-models.md)
 - [Notebooks in Azure Data Studio](notebooks-guidance.md)
 - [SQL machine learning documentation](../machine-learning/index.yml)
 - [Machine learning and AI with ONNX in SQL Edge (Preview)](/azure/azure-sql-edge/onnx-overview)

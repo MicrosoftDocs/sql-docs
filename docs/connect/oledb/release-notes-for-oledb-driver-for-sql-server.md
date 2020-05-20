@@ -22,6 +22,30 @@ See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
 
+## 18.4.0
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+Released: May 2020
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+|Support for Transparent Network IP Resolution (TNIR)|[Transparent Network IP Resolution (TNIR)](features/using-transparent-network-ip-resolution.md)|
+| &nbsp; | &nbsp; |
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed drop index logic in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Previous versions of the OLE DB driver can't drop a primary key index when the schema ID and the user ID of the owner of the index aren't equal. |
+| &nbsp; | &nbsp; |
+
 ## 18.3.0
 
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2117515)  

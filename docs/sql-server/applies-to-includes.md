@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology:
+ms.technology: release-landing
 author: MashaMSFT
 ms.author: mathoma
 ms.topic: conceptual

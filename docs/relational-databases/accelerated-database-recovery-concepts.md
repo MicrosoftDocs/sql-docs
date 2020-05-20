@@ -134,4 +134,4 @@ The following types of customers should consider enabling ADR:
 
 ## See Also  
 
-  
+[Manage accelerated database recovery](accelerated-database-recovery-management.md)

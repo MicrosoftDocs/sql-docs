@@ -1,5 +1,6 @@
 ---
 title: "Administer multiple servers using Central Management Servers"
+description: Learn to administer multiple servers in SQL Server by designating Central Management Servers and creating server groups.
 ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

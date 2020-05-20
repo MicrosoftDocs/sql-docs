@@ -1,5 +1,6 @@
 ---
 title: "View size of sparse file of a Database Snapshot (T-SQL)"
+description: Use Transact-SQL to verify that a SQL Server database file is a sparse file and find its actual and maximum sizes. Database snapshots use sparse files.
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -193,7 +193,7 @@ AD integration requires the following parameters. Add these parameters to the `c
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
-- `security.activeDirectory.subdomain`: **Optional parameter** This parameter is introduced in SQL Server 2019 CU5 release to support deploying multiple big data clusters against the same domain. Using this setting, you can specify different DNS names for each of the big data cluster deployed. See [Deploy multiple clusters in a domain](deploy-multiple-active-directory.md) for more details regarding deploying multiple big data clusters in the same Active Directory domain. If the value of this parameter is not specified in the active directory section of the `control.json` file, by default, the big data cluster name (same as Kubernetes namespace name) will be used to compute the value of subdomain setting. 
+- `security.activeDirectory.subdomain`: **Optional parameter** This parameter is introduced in SQL Server 2019 CU5 release to support deploying multiple big data clusters against the same domain. Using this setting, you can specify different DNS names for each of the big data cluster deployed. See [Technical background](#technical-background) for more details regarding deploying multiple big data clusters in the same Active Directory domain. If the value of this parameter is not specified in the active directory section of the `control.json` file, by default, the big data cluster name (same as Kubernetes namespace name) will be used to compute the value of subdomain setting. 
 
   >[!NOTE]
   >The value passed through the subdomain setting is not a new AD domain but only a DNS domain used by the BDC cluster internally.
@@ -217,8 +217,11 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 To set the above parameters in the `control.json` file, use the following `azdata` commands. The commands replace the config and provide your own values before deployment.
 
- > [!IMPORTANT]
- > In the SQL Server 2019 CU2 release, the structure of the security configuration section in the deployment profile changed sightly and all the Active Directory related settings are in the new *activeDirectory* in the json tree under *security* in the *control.json* file.
+> [!IMPORTANT]
+> In the SQL Server 2019 CU2 release, the structure of the security configuration section in the deployment profile changed sightly and all the Active Directory related settings are in the new *activeDirectory* in the json tree under *security* in the *control.json* file.
+
+>[!NOTE]
+> In addition to providing different values for the subdomain as described in this section, you must also use different port numbers for BDC endpoints when deploying multiple BDCs in the same Kubernetes cluster. These port numbers are configurable at deployment time through the [deployment configuration](deployment-custom-configuration.md) profiles.
 
 The example below is based on using SQL Server 2019 CU2. It shows how to replace the AD-related parameter values in deployment config. The domain details below are example values.
 
@@ -368,18 +371,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC. Enabling logins from other trusted domain is not supported.
 
 ## Technical background
-
-SQL Server 2019 CU5 introduces support for more than one SQL Server Big Data Cluster in a single Active Directory domain. For an overview of the end-to-end deployment process with Active Directory integration, see [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md).
-
-<!---Deploy multiple BDCs against the same Active Directory domain - if this is too long to fit in the existing topic, we can add a small section/note in the existing topic, and add the below as a subtopic -->
-
->[!NOTE]
->This capability is introduced starting with SQL Server 2019 CU5. It is only available for new deployments. It requires latest version of `azdata`. If you are using an older version of `azdata` and deploy BDC using the CU5 Docker image tag, you will get the same behavior as before CU5.
-
->[!NOTE]
-> In addition to providing different values for the subdomain as described in this section, you must also use different port numbers for BDC endpoints when deploying multiple BDCs in the same Kubernetes cluster. These port numbers are configurable at deployment time through the [deployment configuration](deployment-custom-configuration.md) profiles.
-
-### Technical background
 
 Prior to CU5 there were two issues preventing deployment of multiple BDCs in an AD domain.
 

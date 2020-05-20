@@ -93,8 +93,6 @@
         href: big-data-cluster/deploy-offline.md
       - name: Active Directory mode
         href: big-data-cluster/deploy-active-directory.md
-      - name: Active Directory (multiple)
-        href: big-data-cluster/deploy-multiple-active-directory.md
       - name: Deploy with high availability
         items:
         - name: Master instance

@@ -359,7 +359,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 **Limitations to be aware of in this release:**
 
-- Currently, the Log Search Dashboard and Metrics Dashboard do not support AD authentication. AD support for this endpoint is planned for a future release. Basic username and password set upon deployment can be used for authentication to these dashboards. All other cluster endpoint support AD authentication.
+- Currently, the Log Search Dashboard and Metrics Dashboard do not support AD authentication. Basic username and password set upon deployment can be used for authentication to these dashboards. All other cluster endpoint support AD authentication.
 
 - The secure AD mode will only work on `kubeadm` and `openshift` deployment environments and not on AKS or ARO right now. The `kubeadm-prod` and `openshift-prod` deployment profiles includes the security sections by default.
 
@@ -496,4 +496,4 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 ## Next steps
 
-- [Troubleshoot SQL Server Big Data Cluster Active Directory integration](troubleshoot-active-directory.md)
+[Troubleshoot SQL Server Big Data Cluster Active Directory integration](troubleshoot-active-directory.md)

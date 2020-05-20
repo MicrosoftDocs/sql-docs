@@ -13,7 +13,7 @@ ms.reviewer: maghan, sstein
 
 # Download and install Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
+Azure Data Studio runs on Windows, macOS, and Linux.
 
 Download and install the latest release:
 
@@ -30,7 +30,7 @@ For details about the latest release, see the [release notes](release-notes.md).
 
 ## Get Azure Data Studio for Windows
 
-This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows Installer experience, and a .zip file.
+This release of Azure Data Studio includes a standard Windows Installer experience, and a .zip file.
 
 The *user installer* is recommended because it does not require administrator privileges, which simplify both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
@@ -54,7 +54,7 @@ The *user installer* is recommended because it does not require administrator pr
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2127431).
 2. To expand the contents of the zip, double-click it.
-3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
+3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ## Get Azure Data Studio for Linux
 
@@ -130,7 +130,7 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 
 ## Supported Operating Systems
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux, and is supported on the following platforms:
+Azure Data Studio runs on Windows, macOS, and Linux, and is supported on the following platforms:
 
 ### Windows
 

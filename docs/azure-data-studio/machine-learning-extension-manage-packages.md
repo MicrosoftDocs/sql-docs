@@ -116,6 +116,6 @@ Follow the steps below to uninstall R packages in your database.
 
 - [Machine Learning extension in Azure Data Studio](machine-learning-extension.md)
 - [Make predictions](machine-learning-extension-predictions.md)
-- [Import and view models](machine-learning-extension-import-view-models.md)
+- [Import or view models](machine-learning-extension-import-view-models.md)
 - [Notebooks in Azure Data Studio](notebooks-guidance.md)
 - [SQL machine learning documentation](../machine-learning/index.yml)

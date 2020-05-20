@@ -2,7 +2,7 @@
 title: "SQL Server 2012 Release Notes | Microsoft Docs"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ""
 ms.date: "02/01/2017"
 ms.reviewer: ""

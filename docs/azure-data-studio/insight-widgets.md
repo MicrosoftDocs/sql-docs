@@ -7,8 +7,8 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # Manage servers and databases with Insight widgets in Azure Data Studio
 

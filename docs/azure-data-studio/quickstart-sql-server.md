@@ -36,12 +36,12 @@ If you don't have access to a SQL Server, select your platform from the followin
 
 3. This article uses *SQL Login*, but *Windows Authentication* is supported. Fill in the fields as follows:
 
-- **Server Name:** Enter server name here. For example, localhost.
-- **Authentication Type:** SQL Login
-- **User name:** User name for the SQL Server
-- **Password:** Password for the SQL Server
-- **Database Name:** \<Default\>
-- **Server Group:** \<Default\>
+   - **Server Name:** Enter server name here. For example, localhost.
+   - **Authentication Type:** SQL Login
+   - **User name:** User name for the SQL Server
+   - **Password:** Password for the SQL Server
+   - **Database Name:** \<Default\>
+   - **Server Group:** \<Default\>
 
    ![New Connection Screen](media/quickstart-sql-server/new-connection-screen.png)
 
@@ -53,22 +53,22 @@ The following steps create a database named **TutorialDB**:
 
 2. Paste the following snippet into the query window: and then select **Run**.
 
- ```sql
- USE master
- GO
- IF NOT EXISTS (
-  SELECT name
-  FROM sys.databases
-  WHERE name = N'TutorialDB'
- )
-  CREATE DATABASE [TutorialDB];
- GO
- IF SERVERPROPERTY('ProductVersion') > '12'
-  ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
- GO
- ```
+    ```sql
+    USE master
+    GO
+    IF NOT EXISTS (
+     SELECT name
+     FROM sys.databases
+     WHERE name = N'TutorialDB'
+    )
+     CREATE DATABASE [TutorialDB];
+    GO
+    IF SERVERPROPERTY('ProductVersion') > '12'
+     ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
+    GO
+    ```
 
-After the query completes, the new **TutorialDB** appears in the list of databases. If you don't see it, right-click the **Databases** node and select **Refresh**.
+   After the query completes, the new **TutorialDB** appears in the list of databases. If you don't see it, right-click the **Databases** node and select **Refresh**.
 
    ![Create database](media/quickstart-sql-server/create-database.png)
 
@@ -85,22 +85,22 @@ The query editor is still connected to the *master* database, but we want to cre
    > [!NOTE]
    > You can append this too, or overwrite the previous query in the editor. Note that clicking **Run** executes only the query that is selected. If nothing is selected, clicking **Run** executes all queries in the editor.
 
- ```sql
- -- Create a new table called 'Customers' in schema 'dbo'
- -- Drop the table if it already exists
- IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-  DROP TABLE dbo.Customers;
- GO
- -- Create the table in the specified schema
- CREATE TABLE dbo.Customers
- (
-  CustomerId int NOT NULL PRIMARY KEY, -- primary key column
-  Name nvarchar(50) NOT NULL,
-  Location nvarchar(50) NOT NULL,
-  Email nvarchar(50) NOT NULL
- );
- GO
- ```
+    ```sql
+    -- Create a new table called 'Customers' in schema 'dbo'
+    -- Drop the table if it already exists
+    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+     DROP TABLE dbo.Customers;
+    GO
+    -- Create the table in the specified schema
+    CREATE TABLE dbo.Customers
+    (
+     CustomerId int NOT NULL PRIMARY KEY, -- primary key column
+     Name nvarchar(50) NOT NULL,
+     Location nvarchar(50) NOT NULL,
+     Email nvarchar(50) NOT NULL
+    );
+    GO
+    ```
 
 After the query completes, the new **Customers** table appears in the list of tables. You might need to right-click the **TutorialDB > Tables** node and select **Refresh**.
 
@@ -108,26 +108,26 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 - Paste the following snippet into the query window and click **Run**:
 
- ```sql
- -- Insert rows into table 'Customers'
- INSERT INTO dbo.Customers
-  ([CustomerId], [Name], [Location], [Email])
- VALUES
-  ( 1, N'Orlando', N'Australia', N''),
-  ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
-  ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
-  ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
- GO
+    ```sql
+    -- Insert rows into table 'Customers'
+    INSERT INTO dbo.Customers
+     ([CustomerId], [Name], [Location], [Email])
+    VALUES
+     ( 1, N'Orlando', N'Australia', N''),
+     ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
+     ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
+     ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
+    GO
  ```
 
 ## View the data returned by a query
 
-1. Paste the following snippet into the query window and click **Run**:
+ - Paste the following snippet into the query window and click **Run**:
 
- ```sql
- -- Select rows from table 'Customers'
- SELECT * FROM dbo.Customers;
- ```
+   ```sql
+   -- Select rows from table 'Customers'
+   SELECT * FROM dbo.Customers;
+   ```
 
    ![Select results](media/quickstart-sql-server/select-results.png)
 

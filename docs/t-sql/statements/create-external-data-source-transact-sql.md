@@ -85,8 +85,8 @@ Provides the connectivity protocol and path to the external data source.
 | MongoDB or CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | ODBC                    | `odbc`          | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] - Windows only        |
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
-| Edge Hub         | `edgehub`         | Not Applicable | EdgeHub is always local to the instance of Azure SQL Edge. As such there is no need to specify a path or port value. Only available in Azure SQL Edge                      |
-| Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Only available in Azure SQL Edge                      |
+| Edge Hub         | `edgehub`         | Not Applicable | EdgeHub is always local to the instance of [Azure SQL Edge](/azure/azure-sql-edge/overview/). As such there is no need to specify a path or port value. Only available in Azure SQL Edge.                      |
+| Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Only available in Azure SQL Edge.                      |
 
 Location path:
 

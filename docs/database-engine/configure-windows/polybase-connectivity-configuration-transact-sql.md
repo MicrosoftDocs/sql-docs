@@ -5,13 +5,13 @@ ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
+ms.technology: polybase
+ms.topic: reference
 helpviewer_keywords: 
   - "PolyBase"
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # PolyBase Connectivity Configuration (Transact-SQL)

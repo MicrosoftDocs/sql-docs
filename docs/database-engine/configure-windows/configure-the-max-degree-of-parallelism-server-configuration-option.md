@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "max degree of parallelism option"
   - "MaxDop"
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: contperfq4
 ---
 # Configure the max degree of parallelism Server Configuration Option

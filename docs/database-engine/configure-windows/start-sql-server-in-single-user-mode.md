@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "starting SQL Server, single-user mode"
   - "single-user mode [SQL Server]"
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Start SQL Server in Single-User Mode
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

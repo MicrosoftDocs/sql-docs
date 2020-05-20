@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "administering SQL Server, services"
   - "SQL Server services"
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Manage the Database Engine Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

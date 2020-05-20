@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "07/22/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 keywords: 
   - "new sql server"

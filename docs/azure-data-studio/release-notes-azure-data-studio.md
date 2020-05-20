@@ -30,7 +30,6 @@ May 20, 2020 &nbsp; / &nbsp; version: 1.18.0
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
 
-
 ## April 2020 (hotfix)
 
 April 30, 2020 &nbsp; / &nbsp; version: 1.17.1
@@ -202,7 +201,7 @@ October 2, 2019 &nbsp; / &nbsp; version: 1.12.0
 ### Known Issues
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
 ## September 2019
 
@@ -222,8 +221,7 @@ September 10, 2019 &nbsp; / &nbsp; version: 1.11.0
 ### Known Issues
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
-
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
 ## August 2019
 
@@ -794,7 +792,7 @@ The *December Public Preview* includes several bugs fixes across all feature are
 
 November 15, 2017 &nbsp; / &nbsp; version: 0.23.6
 
-- Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+- Initial release of Azure Data Studio.
 
 ## Next Steps
 
@@ -804,6 +802,6 @@ See one of the following quickstarts to get started:
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
 
-Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+Contribute to Azure Data Studio:
 
 - [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio)

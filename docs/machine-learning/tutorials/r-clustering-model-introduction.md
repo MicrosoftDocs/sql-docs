@@ -25,7 +25,7 @@ In this four-part tutorial series, you'll use R to develop and deploy a K-Means 
 In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server R Services](../r/sql-server-r-services.md) to cluster customer data.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [Azure SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview) to cluster customer data.
+In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to cluster customer data.
 ::: moniker-end
 
 In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a database. 
@@ -53,7 +53,7 @@ In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stor
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the R language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
+* Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).

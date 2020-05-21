@@ -103,7 +103,7 @@ landingContent:
           - text: Create, develop, and maintain Azure Synapse Studio notebooks
             url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
 
-  - title: ML extension for Azure Data Studio
+  - title: Azure Data Studio ML extension
     linkLists:
       - linkListType: overview
         links:

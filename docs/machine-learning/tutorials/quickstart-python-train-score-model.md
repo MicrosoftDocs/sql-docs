@@ -102,7 +102,7 @@ In this step, you'll create a stored procedure that generates a model for predic
 
 In this step, you execute the procedure to run the embedded code, creating a trained and serialized model as an output. 
 
-Models that are stored for reuse in SQL Server are serialized as a byte stream and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) function in scoring workloads.
+Models that are stored for reuse in your database are serialized as a byte stream and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) function in scoring workloads.
 
 1. Run the following script to execute the procedure. The specific statement for executing a stored procedure is `EXECUTE` on the fourth line.
 
@@ -185,13 +185,11 @@ Now that you have created, trained, and saved a model, move on to the next step:
 
 ## Conclusion
 
-In this exercise, you learned how to create stored procedures dedicated to different tasks, where each stored procedure used the system stored procedure `sp_execute_external_script` to start a Python process. Inputs to the Python process are passed to `sp_execute_external` as parameters. Both the Python script itself and data variables in a SQL Server database are passed as inputs.
+In this exercise, you learned how to create stored procedures dedicated to different tasks, where each stored procedure used the system stored procedure `sp_execute_external_script` to start a Python process. Inputs to the Python process are passed to `sp_execute_external` as parameters. Both the Python script itself and data variables in a database are passed as inputs.
 
 Generally, you should only plan on using Azure Data Studio with polished Python code, or simple Python code that returns row-based output. As a tool, Azure Data Studio supports query languages like T-SQL and returns flattened rowsets. If your code generates visual output like a scatterplot or histogram, you need a separate tool or end-user application that can render the image outside of the stored procedure.
 
 For some Python developers who are used to writing all-inclusive script handling a range of operations, organizing tasks into separate procedures might seem unnecessary. But training and scoring have different use cases. By separating them, you can put each task on a different schedule and scope permissions to each operation.
-
-Likewise, you can also leverage resourcing features of SQL Server, such as parallel processing, resource governance, or by writing your script to use algorithms in [microsoftml](../python/ref-py-microsoftml.md) that supports streaming and parallel execution. By separating training and scoring, you can target optimizations for specific workloads.
 
 A final benefit is that the processes can be modified using parameters. In this exercise, Python code that created the model (named "Naive Bayes" in this example) was passed as an input to a second stored procedure calling the model in a scoring process. This exercise only uses one model, but you can imagine how parameterizing the model in a scoring task would make that script more useful.
 

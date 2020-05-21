@@ -43,7 +43,7 @@ By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use memory dynamically; however, you can set the memory options manually and restrict the amount of memory that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can access. Before you set the amount of memory for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine the appropriate memory setting by subtracting, from the total physical memory, the memory required for the OS, memory allocations not controlled by the max_server_memory setting, and any other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (and other system uses, if the computer is not wholly dedicated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). This difference is the maximum amount of memory you can assign to the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
  
-## Set options manually  
+## <a name="manually"></a> Set options manually  
 The server options **min server memory** and **max server memory** can be set to span a range of memory values. This method is useful for system or database administrators to configure an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with the memory requirements of other applications, or other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that run on the same host.
 
 > [!NOTE]

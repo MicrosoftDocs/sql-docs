@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], strick security"
   - "clr strict security option"
 ms.assetid: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # CLR strict security   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

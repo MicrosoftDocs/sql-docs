@@ -1,10 +1,11 @@
 ---
 title: "Create new Failover Cluster"
+description: This article describes how to use the Setup program to install or upgrade a SQL Server failover cluster or add a node to an existing cluster.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding nodes"

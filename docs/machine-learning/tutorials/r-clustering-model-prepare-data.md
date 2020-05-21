@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Prepare data to perform clustering in R"
 titleSuffix: SQL machine learning
-description: In part two of this four-part tutorial series, you'll prepare the data from a SQL database to perform clustering in R with SQL machine learning.
+description: In part two of this four-part tutorial series, you'll prepare the data from a database to perform clustering in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
@@ -32,13 +32,13 @@ In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Separate customers along different dimensions using R
-> * Load the data from the SQL database into an R data frame
+> * Load the data from the database into an R data frame
 
 In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
 
 In [part three](r-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in R.
 
-In [part four](r-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in R based on new data.
+In [part four](r-clustering-model-deploy.md), you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
 
 ## Prerequisites
 

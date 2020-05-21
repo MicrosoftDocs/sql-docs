@@ -34,7 +34,7 @@ In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Create a stored procedure that generates the model
-> * Perform clustering in SQL Database
+> * Perform clustering
 > * Use the clustering information
 
 In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
@@ -174,7 +174,7 @@ END;
 GO
 ```
 
-## Perform clustering in SQL database
+## Perform clustering
 
 Now that you've created the stored procedure, execute the following script to perform clustering.
 

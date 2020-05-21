@@ -30,7 +30,7 @@ In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Separate customers along different dimensions using Python
-> * Load the data from the SQL database into a Python data frame
+> * Load the data from the database into a Python data frame
 
 In [part one](python-clustering-model.md), you installed the prerequisites and restored the sample database.
 

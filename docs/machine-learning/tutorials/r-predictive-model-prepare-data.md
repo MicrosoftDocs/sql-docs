@@ -32,7 +32,7 @@ In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Restore a sample database into a database
-> * Load the data from the SQL database into an R data frame
+> * Load the data from the database into an R data frame
 > * Prepare the data in R by identifying some columns as categorical
 
 In [part one](r-predictive-model-introduction.md), you learned how to restore the sample database.
@@ -47,7 +47,7 @@ Part two of this tutorial assumes you have completed [**part one**](r-predictive
 
 ## Load the data into a data frame
 
-To use the data in R, you'll load the data from the SQL database into a data frame (`rentaldata`).
+To use the data in R, you'll load the data from the database into a data frame (`rentaldata`).
 
 Create a new RScript file in RStudio and run the following script. Replace **ServerName** with your own connection information.
 

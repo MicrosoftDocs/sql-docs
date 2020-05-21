@@ -15641,11 +15641,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/azure-data-studio/index.md",
-      "redirect_url": "/sql/azure-data-studio/what-is",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/big-data-cluster/index.md",
       "redirect_url": "/sql/big-data-cluster/big-data-cluster-overview",
       "redirect_document_id": false

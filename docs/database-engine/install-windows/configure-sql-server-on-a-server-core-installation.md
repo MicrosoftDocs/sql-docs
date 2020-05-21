@@ -1,5 +1,6 @@
 ---
 title: "Configure Server Core Installation"
+description: This article covers details about configuring SQL Server on a Server Core installation, including troubleshooting tools.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

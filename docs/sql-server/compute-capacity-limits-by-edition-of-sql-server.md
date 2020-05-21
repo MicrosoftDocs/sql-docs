@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "11/07/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"

@@ -4,7 +4,7 @@ description: This tutorial shows how you can create and run Kqlmagic in Azure Da
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ""

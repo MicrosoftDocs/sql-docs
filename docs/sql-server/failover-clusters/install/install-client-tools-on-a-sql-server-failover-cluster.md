@@ -1,10 +1,11 @@
 ---
 title: "Install Client Tools: Failover Cluster"
+description: Learn how to install client tools, such as SQL Server Management Studio, on a SQL Server failover instance.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
@@ -39,7 +40,7 @@ ms.author: mathoma
   
 1.  To install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client tools and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online, run the following command: Setup.exe/q/Action=Install /Features=Tools  
   
-2.  To install only the basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management tools run the following command: Setup.exe/q/Action=Install Features=SSMS. This will install [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] support for [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], sqlcmd utility, and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Powershell provider.  
+2.  To install only the basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management tools run the following command: Setup.exe/q/Action=Install Features=SSMS. This will install [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] support for [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], sqlcmd utility, and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell provider.  
   
 3.  To install the complete [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management tools, run the following command: Setup.exe/q/Action=Install /Features=ADV_SSMS. For more information about parameter values for the features, see [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   

@@ -1,5 +1,6 @@
 ---
 title: "Upgrade Data Quality Services | Microsoft Docs"
+description: This article provides information on how to upgrade your existing installation of SQL Server Data Quality Services (DQS).
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql

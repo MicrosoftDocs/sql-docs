@@ -1,5 +1,6 @@
 ---
 title: "Create a Table for Storing FILESTREAM Data | Microsoft Docs"
+description: Learn how to create a table for storing FILESTREAM data in SQL Server. See which columns and attributes to use in the Transact-SQL code.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

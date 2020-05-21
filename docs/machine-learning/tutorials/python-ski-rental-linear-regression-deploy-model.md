@@ -4,21 +4,24 @@ titleSuffix: SQL machine learning
 description: In part four of this four-part tutorial series, you'll deploy a Python model to predict ski rentals into a database with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Python Tutorial: Deploy a linear regression model with SQL machine learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll deploy a linear regression model developed in Python into a SQL Server database using Machine Learning Services or Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll deploy a linear regression model developed in Python into a SQL Server database using Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a linear regression model developed in Python into a SQL Managed Instance database using Machine Learning Services.
 ::: moniker-end
 
 In this article, you'll learn how to:

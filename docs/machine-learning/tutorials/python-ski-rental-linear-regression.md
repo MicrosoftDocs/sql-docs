@@ -4,21 +4,24 @@ titleSuffix: SQL machine learning
 description: In this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Python tutorial: Predict ski rental with linear regression with SQL machine learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this four-part tutorial series, you will use Python and linear regression in [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 ::: moniker-end
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
@@ -43,6 +46,9 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * SQL Server Machine Learning Services - For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- SQL Managed Instance Machine Learning Services. For how to sign up, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 * Python IDE - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).

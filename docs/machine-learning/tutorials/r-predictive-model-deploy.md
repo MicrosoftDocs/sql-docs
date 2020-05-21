@@ -8,14 +8,12 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-
 # Tutorial: Deploy a predictive model in R with SQL machine learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using Machine Learning Services.
@@ -26,11 +24,13 @@ In part four of this four-part tutorial series, you'll deploy a machine learning
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using SQL Server R Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into Azure SQL Managed Instance using Machine Learning Services.
+::: moniker-end
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-
 > * Create a stored procedure that generates the machine learning model
 > * Store the model in a database table
 > * Create a stored procedure that makes predictions using the model
@@ -197,12 +197,12 @@ RentalCount_Predicted
 332.571428571429
 ```
 
-You have successfully created, trained, and deployed a model in a SQL database. You then used that model in a stored procedure to predict values based on new data.
+You have successfully created, trained, and deployed a model in a database. You then used that model in a stored procedure to predict values based on new data.
 
 
 ## Clean up resources
 
-When you've finished using the TutorialDB database, delete it from your SQL server.
+When you've finished using the TutorialDB database, delete it from your server.
 
 ## Next steps
 

@@ -43,9 +43,9 @@ You need the following prerequisites to run this quickstart.
 
 ## Run a simple script
 
-To run a Python script, you'll pass it as an argument to the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This system stored procedure starts the Python runtime in the context of SQL Server, passes data to Python, manages Python user sessions securely, and returns any results to the client.
+To run a Python script, you'll pass it as an argument to the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This system stored procedure starts the Python runtime in the context of SQL machine learning, passes data to Python, manages Python user sessions securely, and returns any results to the client.
 
-In the following steps, you'll run this example Python script in your SQL Server instance:
+In the following steps, you'll run this example Python script in your database:
 
 ```python
 a = 1
@@ -55,7 +55,7 @@ d = a*b
 print(c, d)
 ```
 
-1. Open a new query window in **Azure Data Studio** connected to your SQL Server instance.
+1. Open a new query window in **Azure Data Studio** connected to your SQL instance.
 
 1. Pass the complete Python script to the `sp_execute_external_script` stored procedure.
 
@@ -102,7 +102,7 @@ Inputs to the `sp_execute_external_script` stored procedure include:
 | @language | defines the language extension to call, in this case Python |
 | @script | defines the commands passed to the Python runtime. Your entire Python script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable |
 | @input_data_1 | data returned by the query, passed to the Python runtime, which returns the data as a data frame |
-| WITH RESULT SETS | clause defines the schema of the returned data table for SQL Server, adding "Hello World" as the column name, **int** for the data type |
+| WITH RESULT SETS | clause defines the schema of the returned data table for SQL machine learning, adding "Hello World" as the column name, **int** for the data type |
 
 The command outputs the following text:
 

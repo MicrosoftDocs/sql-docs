@@ -24,7 +24,7 @@ In this quickstart, you'll learn how to use data structures and data types when 
 In this quickstart, you'll learn how to use data structures and data types when using Python in [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview). You'll learn about moving data between Python and Azure SQL Managed Instance, and the common issues that might occur.
 ::: moniker-end
 
-SQL relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to your database and expect it to *just work*. In this quickstart, you'll review some basic data structure definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and the database.
+SQL machine learning relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to your database and expect it to *just work*. In this quickstart, you'll review some basic data structure definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and the database.
 
 Concepts to know up front include:
 
@@ -132,7 +132,7 @@ This example does some simple math and converts a scalar into a series.
 
 ## Convert series to data frame
 
-Having converted the scalar math results to a tabular structure, you still need to convert them to a format that SQL Server can handle.
+Having converted the scalar math results to a tabular structure, you still need to convert them to a format that SQL machine learning can handle.
 
 1. To convert a series to a data.frame, call the pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) method.
 

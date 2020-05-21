@@ -1,6 +1,6 @@
 ---
 title: "Database Lifecycle Management | Microsoft Docs"
-description: In SQL Server, Database lifecycle management enables you to manage databases and data assets for performance, protection, availability, and cost.
+description: Learn how to use database lifecycle management in SQL Server to manage databases and data assets for performance, protection, availability, and cost.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

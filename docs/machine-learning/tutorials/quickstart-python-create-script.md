@@ -190,13 +190,13 @@ For now, let's use the default input and output variables of `sp_execute_externa
 > [!NOTE]
 > Python uses leading spaces to group statements. So when the imbedded Python script spans multiple lines, as in the preceding script, don't try to indent the Python commands to be in line with the SQL commands. For example, this script will produce an error:
 
-  ```text
+  ```sql
   EXECUTE sp_execute_external_script @language = N'Python'
       , @script = N'
-      import pandas as pd
-      mytextvariable = pandas.Series(["hello", " ", "world"]);
-      OutputDataSet = pd.DataFrame(mytextvariable);
-      '
+  import pandas as pd
+  mytextvariable = pandas.Series(["hello", " ", "world"]);
+  OutputDataSet = pd.DataFrame(mytextvariable);
+  '
       , @input_data_1 = N''
   WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
   ```

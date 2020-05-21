@@ -1,10 +1,11 @@
 ---
 title: "Remove Failover Cluster Instance"
+description: Use this procedure to uninstall a SQL Server failover cluster instance. This article includes important considerations before you proceed.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [SQL Server], removing failover clustered instance"

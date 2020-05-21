@@ -1,5 +1,6 @@
 ---
 title: "SQL Server installation - Command Prompt parameters"
+description: This article describes command parameters for SQL Server installation. You can specify features to install and configure.
 ms.custom: ""
 ms.date: 07/26/2019
 ms.prod: sql

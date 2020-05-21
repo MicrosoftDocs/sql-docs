@@ -67,7 +67,7 @@ landingContent:
           - text: Predict ski rental with decision tree
             url: tutorials/r-predictive-model-introduction.md
           - text: Categorizing customers using k-means clustering
-            url: tutorials/r-clustering-model-introduction?view=azuresqldb-mi-current.md
+            url: tutorials/r-clustering-model-introduction.md
 
   - title: ML on Big Data Clusters
     linkLists:

@@ -29,7 +29,7 @@ ms.author: mikeray
 >  During setup of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a login is added for the BUILTIN\Users group. This allows all authenticated users of the computer to access the instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] as a member of the public role. The BUILTIN\Users login can be safely removed to restrict [!INCLUDE[ssDE](../../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.
 
 > [!IMPORTANT]  
->Please be advised that most versions of SQL Server have enable TCP/IP by default.
+>Please be advised that most versions of SQL Server have enabled TCP/IP by default.
 Refer: https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/default-sql-server-network-protocol-configuration?view=sql-server-ver15 
   
 > [!WARNING]  
@@ -62,7 +62,7 @@ Refer: https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/de
 #### To Enable a Server Network Protocol Using PowerShell  
 
 > [!IMPORTANT]  
->  **SQLPS** is not part of the SQL Server Setup or newer versions of SQL Mangement Studio anymore. 
+>  **SQLPS** is not part of the SQL Server Setup or newer versions of SQL Management Studio anymore. 
 **You need to manually install the components needed, in the correct order, close all Powershell Windows before you can import the module SQLPS**. 
 Without having the prerequites installed, importing the module and scripts below will not work. 
 Using Install-Module SQLServer is not sufficient for this task. SQLPS and Management objects are needed.

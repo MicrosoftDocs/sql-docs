@@ -256,4 +256,4 @@ The list is from `pkg_resources.working_set` in Python and returned to SQL as a 
 To learn how to use data structures when using Python in SQL machine learning, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Data structures and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
+> [Quickstart: Data structures and objects using Python](quickstart-python-data-structures.md)

@@ -51,7 +51,6 @@ In [part four](r-predictive-model-deploy.md), you'll learn how to store the mode
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * SQL Server Machine Learning Services - For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
-::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 * SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
 ::: moniker-end

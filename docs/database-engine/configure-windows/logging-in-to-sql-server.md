@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "logging in [SQL Server]"
   - "logins [SQL Server]"
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Logging In to SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

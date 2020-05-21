@@ -1,5 +1,6 @@
 ---
 title: "Check Parameters System Configuration Checker"
+description: During SQL Server Setup, the System Configuration Checker for conditions that prevent a successful SQL Server installation. 
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

@@ -10,11 +10,11 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
 # Quickstart: Data structures, data types, and objects using R with SQL machine learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
@@ -50,7 +50,7 @@ You need the following prerequisites to run this quickstart.
 - SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- SQL Managed Instance Machine Learning Services. For how to sign up for Machine Learning Services, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
+- SQL Managed Instance Machine Learning Services. For how to sign up, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 - A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).

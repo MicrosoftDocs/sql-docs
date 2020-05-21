@@ -37,7 +37,7 @@ You need the following prerequisites to run this quickstart.
 - SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- SQL Managed Instance Machine Learning Services. For how to sign up for Machine Learning Services, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
+- SQL Managed Instance Machine Learning Services. For how to sign up, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 - A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).

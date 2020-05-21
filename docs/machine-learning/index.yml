@@ -112,11 +112,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Manage packages in database
-            url: ../sql/azure-data-studio/machine-learning-extension-manage-packages.md
+            url: ../azure-data-studio/machine-learning-extension-manage-packages.md
           - text: Make predictions
-            url: ../sql/azure-data-studio/machine-learning-extension-predictions.md
+            url: ../azure-data-studio/machine-learning-extension-predictions.md
           - text: Import or view models
-            url: ../sql/azure-data-studio/machine-learning-extension-import-view-models.md
+            url: ../azure-data-studio/machine-learning-extension-import-view-models.md
 
   - title: ML on Azure SQL Database Edge
     linkLists:

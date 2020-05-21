@@ -8,14 +8,12 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-
 # Tutorial: Prepare data to perform clustering in R with SQL machine learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to categorize customer data.
@@ -26,18 +24,20 @@ In this four-part tutorial series, you'll use R to develop and deploy a K-Means 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [SQL Server R Services](../r/sql-server-r-services.md) to cluster customer data.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this four-part tutorial series, you'll use R to develop and deploy a K-Means clustering model in [Azure SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview) to cluster customer data.
+::: moniker-end
 
 In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a database. 
 In parts two and three, you'll develop some R scripts in an Azure Data Studio notebook to analyze and prepare this sample data and train a machine learning model. Then, in part four, you'll run those R scripts inside a database using stored procedures.
 
 *Clustering* can be explained as organizing data into groups where members of a group are similar in some way. For this tutorial series, imagine you own a retail business. You'll use the **K-Means** algorithm to perform the clustering of customers in a dataset of product purchases and returns. By clustering customers, you can focus your marketing efforts more effectively by targeting specific groups. K-Means clustering is an *unsupervised learning* algorithm that looks for patterns in data based on similarities.
 
-
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Restore a sample database
-> 
+
 In [part two](r-clustering-model-prepare-data.md), you'll learn how to prepare the data from a database to perform clustering.
 
 In [part three](r-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in R.
@@ -51,6 +51,9 @@ In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stor
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the R language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).
@@ -91,7 +94,7 @@ If you're not going to continue with this tutorial, delete the tpcxbb_1gb databa
 In part one of this tutorial series, you completed these steps:
 
 * Installed the prerequisites
-* Restored a sample database into SQL Server
+* Restored a sample database
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 

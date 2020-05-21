@@ -17,7 +17,6 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
-
 ---
 # SEQUENCES (Transact-SQL)
 

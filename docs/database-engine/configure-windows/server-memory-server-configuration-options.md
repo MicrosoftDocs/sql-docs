@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
-ms.author: mikeray
+ms.author: pelopes
 ---
 # Server Memory Configuration Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,15 +141,15 @@ This will output a statement similar to:
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
-	large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
-	locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
-	virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
-	virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
-	virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
-	page_fault_count AS sql_page_fault_count,
-	memory_utilization_percentage AS sql_memory_utilization_percentage, 
-	process_physical_memory_low AS sql_process_physical_memory_low, 
-	process_virtual_memory_low AS sql_process_virtual_memory_low
+   large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
+   locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
+   virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
+   virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
+   virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
+   page_fault_count AS sql_page_fault_count,
+   memory_utilization_percentage AS sql_memory_utilization_percentage, 
+   process_physical_memory_low AS sql_process_physical_memory_low, 
+   process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
 

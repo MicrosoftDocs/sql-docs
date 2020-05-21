@@ -1,5 +1,6 @@
 ---
 title: "Make Partial Updates to FILESTREAM Data | Microsoft Docs"
+description: Discover how to use the FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT value to make partial updates to FILESTREAM BLOB data. View an example of a partial update.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

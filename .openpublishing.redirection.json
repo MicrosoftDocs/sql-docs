@@ -4587,7 +4587,7 @@
     },
     {
       "source_path": "docs/ssms/f1-help/connection-properties-dialog-box.md",
-      "redirect_url": "/sql/database-engine/configure-windows/view-or-change-server-properties-sql-server",
+      "redirect_url": "/sql/ssms/f1-help/connect-to-server-connection-properties-page-database-engine",
       "redirect_document_id": false
     },
     {
@@ -15638,11 +15638,6 @@
     {
       "source_path": "docs/analytics-platform-system/index.md",
       "redirect_url": "/sql/analytics-platform-system/home-analytics-platform-system-aps-pdw",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/azure-data-studio/index.md",
-      "redirect_url": "/sql/azure-data-studio/what-is",
       "redirect_document_id": false
     },
     {

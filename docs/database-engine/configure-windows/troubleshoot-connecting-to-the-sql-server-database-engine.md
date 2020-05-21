@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "troubleshooting, connecting to Database Engine"
   - "connecting to Database Engine, troubleshooting"
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot connecting to the SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

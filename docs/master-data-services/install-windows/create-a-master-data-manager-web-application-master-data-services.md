@@ -6,7 +6,7 @@ ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223

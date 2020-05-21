@@ -5,24 +5,25 @@ description: In this four-part tutorial series, you'll  cluster customers, using
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-
 # Python tutorial: Categorizing customers using k-means clustering with SQL machine learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In this four-part tutorial series, you'll use Python to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to categorize customer data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this four-part tutorial series, you'll use Python to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to cluster customer data.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this four-part tutorial series, you'll use Python to develop and deploy a K-Means clustering model in [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview) to cluster customer data.
 ::: moniker-end
 
 In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a database. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL machine learning.
@@ -49,6 +50,9 @@ In [part four](python-clustering-model-deploy.md), you'll learn how to create a 
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- SQL Managed Instance Machine Learning Services. For how to sign up, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for both Python and SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).

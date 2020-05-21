@@ -21,15 +21,41 @@ This article provides directions for installing the **SqlServer** PowerShell mod
 There are two SQL Server PowerShell modules:
 
 - **SqlServer**: The SqlServer module includes new cmdlets to support the latest SQL features. The module also contains updated versions of the cmdlets in **SQLPS**. To download the SqlServer module, go to [SqlServer module in the PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
-- **SQLPS**: The SQLPS module is included with the SQL Server installation (for backward compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module.
+- **SQLPS**: The SQLPS module is included in older the SQL Server installations (for backward compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module.
+
 
 > [!NOTE]
-> The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater.
+> The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater. They may require updated nuget and PSGet Modules. Download may fail if the nuget module is outdated because of TLS 1.2 changes.
 
 For help topics, go to:
 
 - [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) cmdlets.
 - [SQLPS](https://docs.microsoft.com/powershell/module/sqlps) cmdlets.
+
+## Missing SQLPS 
+
+If you find that SQLPS cannot be imported on your Server, it might be no longer included. SQL Server 2017 or newer may be affected. If you still need the outdated SQLPS for your scripts, or [managing SQL Server protocols](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/enable-or-disable-a-server-network-protocol?view=sql-server-ver15) follow the instructions below how to install SQLPS manually.
+
+### Installing SQLPS manually
+
+> [!NOTE]
+> Don't mind that you need to install SQL Server 2012 components for this task. SQLPS is no longer updated and there are no updated components for SQL Server 2014 or newer.
+Please be advised that the order of the installation of the components is crucial. Otherwise the MSI packages will fail.
+
+1. [System CLR Types for Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=239644&clcid=0x409) 
+2. [SQL Server 2012 Shared Management Objects](http://go.microsoft.com/fwlink/?LinkID=239659&clcid=0x409)
+3. [PowerShell Extensions for Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=239656&clcid=0x409)
+4. Close all Powershell Windows or logoff before trying to import the module SQLPS.
+
+### Uninstalling SQLPS manually
+
+> [!NOTE]
+>Please be advised that the order of the uninstallation of the components is crucial. Otherwise the MSI packages will fail. If you uninstalled the packages in the wrong oder, reinstall them in the correct order again, eventually using a MSI repair installation.
+
+1. Close all Powershell Windows or logoff before trying to import the module SQLPS.
+2. PowerShell Extensions for Microsoft SQL Server 2012
+3. SQL Server 2012 Shared Management Objects
+4. System CLR Types for Microsoft SQL Server 2012 
 
 ## SQL Server Management Studio
 

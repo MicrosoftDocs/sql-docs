@@ -107,7 +107,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Machine Learning extension for Azure Data Studio
+          - text: What is the Machine Learning extension for Azure Data Studio?
             url: ../azure-data-studio/machine-learning-extension.md
       - linkListType: how-to-guide
         links:

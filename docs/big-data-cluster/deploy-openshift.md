@@ -88,7 +88,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
    1. [Storage](concept-data-persistence.md)
    1. [AD related settings](deploy-active-directory.md)
-   1. [Other customizations](eployment-custom-configuration.md)
+   1. [Other customizations](deployment-custom-configuration.md)
 
 4. Set [environment variables](deployment-guidance.md#env)
 
@@ -103,6 +103,36 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 ```console
    azdata login -n mssql-cluster
    azdata bdc endpoint list
+```
+
+## OpenShift specific settings in the deployment configuration files
+
+SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. These settings  are false  by default in the built-in profiles for OpenShift since the monitoring containers require privileged security context.
+
+```json
+    "security": {
+      "allowNodeMetricsCollection": false,
+      "allowPodMetricsCollection": false
+}
+```
+
+The name of the default storage class in ARO is managed-premium (as opposed to AKS where the default storage class is called default). You would find this in the `control.json` corresponding to `aro-dev-test` and `aro-dev-test-ha`:
+
+```json
+    },
+    "storage": {
+      "data": {
+        "className": "default",
+        "className": "managed-premium",
+        "accessMode": "ReadWriteOnce",
+        "size": "15Gi"
+      },
+      "logs": {
+        "className": "default",
+        "className": "managed-premium",
+        "accessMode": "ReadWriteOnce",
+        "size": "10Gi"
+      }
 ```
 
 ## Next steps

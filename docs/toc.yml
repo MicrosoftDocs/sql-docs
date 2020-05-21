@@ -93,6 +93,8 @@
         href: big-data-cluster/deploy-offline.md
       - name: Active Directory mode
         href: big-data-cluster/deploy-active-directory.md
+      - name: OpenShift
+        href: big-data-cluster/deploy-openshift.md
       - name: Deploy with high availability
         items:
         - name: Master instance

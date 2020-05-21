@@ -481,8 +481,15 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssN
 > When creating backups by using the SQL Writer Service, if the database has configured [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), or includes [memory optimized filegroups](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), then the `MAXTRANSFERSIZE` at the time of a restore should be greater than or equal to the `MAXTRANSFERSIZE` that was used when the backup was created.
 
 > [!NOTE]
-> For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE.
-> For more information about using backup compression with TDE encrypted databases, see the [Remarks](#general-remarks) section.
+> For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). Starting with SQL Server 2016 (13.x), this enables an optimized compression algorithm for TDE encrypted databases that first decrypts a page, compresses it and then encrypts it again. If using MAXTRANSFERSIZE = 65536 (64 KB), backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios.
+> 
+> SQL Server 2019 CU5 and later no longer require a specific MAXTRANSFERSIZE for optimal compression ratios.
+>
+>For more information, see [Backup Compression for TDE-enabled Databases](https://docs.microsoft.com/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases).
+>
+>For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE.
+>
+>For more information about using backup compression with TDE encrypted databases, see the [Remarks](#general-remarks) section.
 
 **Error Management Options**
 

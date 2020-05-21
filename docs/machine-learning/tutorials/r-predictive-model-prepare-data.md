@@ -8,14 +8,12 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"	
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-
 # Tutorial: Prepare data to train a predictive model in R with SQL machine learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive model in R with SQL Server Machine Learning Services or on Big Data Clusters.
@@ -26,12 +24,15 @@ In part two of this four-part tutorial series, you'll prepare data from a databa
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive model in R with SQL Server R Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll prepare data from a database using R. Later in this series, you'll use this data to train and deploy a predictive model in R with Azure SQL Managed Instance Machine Learning Services.
+::: moniker-end
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Restore a sample database into a database
-> * Load the data from the SQL database into an R data frame
+> * Load the data from the database into an R data frame
 > * Prepare the data in R by identifying some columns as categorical
 
 In [part one](r-predictive-model-introduction.md), you learned how to restore the sample database.
@@ -46,7 +47,7 @@ Part two of this tutorial assumes you have completed [**part one**](r-predictive
 
 ## Load the data into a data frame
 
-To use the data in R, you'll load the data from the SQL database into a data frame (`rentaldata`).
+To use the data in R, you'll load the data from the database into a data frame (`rentaldata`).
 
 Create a new RScript file in RStudio and run the following script. Replace **ServerName** with your own connection information.
 
@@ -133,7 +134,7 @@ If you're not going to continue with this tutorial, delete the TutorialDB databa
 
 In part two of this tutorial series, you learned how to:
 
-* Load the sample data from SQL Server into an R data frame
+* Load the sample data into an R data frame
 * Prepare the data in R by identifying some columns as categorical
 
 To create a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:

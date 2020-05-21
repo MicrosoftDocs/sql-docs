@@ -8,35 +8,34 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-
-# Tutorial: Prepare data to train a predictive model in R with SQL machine learning.
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Tutorial: Prepare data to train a predictive model in R with SQL machine learning
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In this four-part tutorial series, you will use R and a machine learning model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md) to predict the number of ski rentals.
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this four-part tutorial series, you will use R and a machine learning model in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) to predict the number of ski rentals.
 ::: moniker-end
-
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In this four-part tutorial series, you will use R and a machine learning model in [SQL Server R Services](../r/sql-server-r-services.md) to predict the number of ski rentals.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this four-part tutorial series, you will use R and a machine learning model in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) to predict the number of ski rentals.
 ::: moniker-end
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
 
-In the first part of this series, you'll get set up with the prerequisites. In parts two and three, you'll develop some R scripts in a notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those R scripts inside SQL Server using T-SQL stored procedures.
+In the first part of this series, you'll get set up with the prerequisites. In parts two and three, you'll develop some R scripts in a notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those R scripts inside a database using T-SQL stored procedures.
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Restore a sample database into SQL Server 
+> * Restore a sample database 
 
 In [part two](r-predictive-model-prepare-data.md), you'll learn how to load the data from a database into a Python data frame, and prepare the data in R.
 
@@ -49,9 +48,14 @@ In [part four](r-predictive-model-deploy.md), you'll learn how to store the mode
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 * SQL Server Machine Learning Services - For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * SQL Server Machine Learning Services - For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+* SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
@@ -95,7 +99,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 In part one of this tutorial series, you completed these steps:
 
 * Installed the prerequisites
-* Restored a sample database into SQL Server
+* Restored a sample database
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 

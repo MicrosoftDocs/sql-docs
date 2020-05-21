@@ -14,8 +14,8 @@ helpviewer_keywords:
 - "file database"
 - "LocalDB"
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 
 # SQL Server Express LocalDB

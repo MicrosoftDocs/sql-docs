@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "protocols [SQL Server], client configuration"
   - "default protocols, client"
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure Client Protocols
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

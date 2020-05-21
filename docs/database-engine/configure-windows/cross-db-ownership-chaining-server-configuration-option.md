@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "cross db ownership chaining option"
   - "chaining ownership"
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # cross db ownership chaining Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: "Prepare for upgrade: Data Migration Assistant"
+description: Prepare to upgrade your OLTP databases and to adopt new features in SQL Server by downloading and running Microsoft Data Migration Assistant.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

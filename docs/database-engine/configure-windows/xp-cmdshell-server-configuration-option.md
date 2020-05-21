@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_cmdshell"
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # xp_cmdshell Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

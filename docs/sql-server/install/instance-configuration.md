@@ -1,5 +1,6 @@
 ---
 title: "Installation Wizard Help | Microsoft Docs"
+description: Specify whether to create a default instance or a named instance of SQL Server by using Instance Configuration in the SQL Server Installation Wizard.
 ms.custom: ""
 ms.date: 08/16/2019
 ms.prod: sql

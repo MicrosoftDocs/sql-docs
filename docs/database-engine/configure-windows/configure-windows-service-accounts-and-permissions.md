@@ -48,8 +48,8 @@ helpviewer_keywords:
   - "manual startup state [SQL Server]"
   - "accounts [SQL Server], user"
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure Windows Service Accounts and Permissions
 

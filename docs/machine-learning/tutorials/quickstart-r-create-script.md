@@ -26,9 +26,7 @@ In this quickstart, you'll run a set of simple R scripts using [SQL Server Machi
 In this quickstart, you'll run a set of simple R scripts using  [SQL Server R Services](../r/sql-server-r-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this quickstart, you'll run a set of simple R scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
-
-In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your database, and then use the model to predict values from new data using [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
+In this quickstart, you'll run a set of simple R scripts using [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in your database.
 ::: moniker-end
 
 ## Prerequisites

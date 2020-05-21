@@ -25,6 +25,9 @@ In this quickstart, you'll learn how to use data structures and data types when 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server R Services](../r/sql-server-r-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview). You'll learn about moving data between R and SQL Managed Instance, and the common issues that might occur.
+::: moniker-end
 
 Common issues to know up front include:
 
@@ -45,6 +48,9 @@ You need the following prerequisites to run this quickstart.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- SQL Managed Instance Machine Learning Services. For how to sign up for Machine Learning Services, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 - A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
@@ -200,7 +206,7 @@ Now R returns a single value as the result.
 Why? In this case, because the two arguments can be handled as vectors of the same length, R returns the inner product as a matrix.  This is the expected behavior according to the rules of linear algebra; however, it could cause problems if your downstream application expects the output schema to never change!
 
 > [!TIP]
-> 
+>
 > Getting errors? Make sure that you're running the stored procedure in the context of the database that contains the table, and not in **master** or another database.
 >
 > Also, we suggest that you avoid using temporary tables for these examples. Some R clients will terminate a connection between batches, deleting temporary tables.
@@ -287,7 +293,7 @@ After you get the query working, review the results of the `str` function to see
 
 **Results**
 
-```sql
+```text
 STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
 STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"
 STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1

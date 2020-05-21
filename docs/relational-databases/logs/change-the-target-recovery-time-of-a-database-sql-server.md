@@ -1,5 +1,6 @@
 ---
 title: "Change target recovery time of a database"
+description: Learn how to set or change the target recovery time of a SQL Server database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql

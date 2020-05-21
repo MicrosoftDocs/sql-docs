@@ -5,7 +5,6 @@ ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.custom: ""
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 

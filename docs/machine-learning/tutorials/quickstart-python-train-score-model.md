@@ -1,25 +1,28 @@
 ---
 title: "Quickstart: Train a model in Python"
-description: In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your database, and then use the model to predict values from new data with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020  
+ms.date: 05/21/2020  
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: garye
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
-# Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Quickstart: Create and score a predictive model in Python with SQL machine learning
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this quickstart, you'll create and train a predictive model using Python. You'll save the model to a table in your database, and then use the model to predict values from new data using [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 You'll create and execute two stored procedures running in SQL. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing Python code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
@@ -33,15 +36,19 @@ By completing this quickstart, you'll learn:
 
 ## Prerequisites
 
+You need the following prerequisites to run this quickstart.
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- SQL Managed Instance Machine Learning Services. For how to sign up for Machine Learning Services, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
+::: moniker-end
 
-- A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
-
+- A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 - The sample data used in this exercise is the Iris sample data. Follow the instructions in [Iris demo data](demo-data-iris-in-sql.md) to create the sample database **irissql**.
 
@@ -49,7 +56,7 @@ By completing this quickstart, you'll learn:
 
 In this step, you'll create a stored procedure that generates a model for predicting outcomes.
 
-1. Open Azure Data Studio, connect to your SQL Server instance, and open a new query window.
+1. Open Azure Data Studio, connect to your SQL instance, and open a new query window.
 
 1. Connect to the irissql database.
 
@@ -61,11 +68,11 @@ In this step, you'll create a stored procedure that generates a model for predic
 1. Copy in the following code to create a new stored procedure.
 
    When executed, this procedure calls [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to start a Python session. 
-   
-   Inputs needed by your Python code are passed as input parameters on this stored procedure. Output will be a trained model, based on the Python **scikit-learn** library for the machine learning algorithm. 
+
+   Inputs needed by your Python code are passed as input parameters on this stored procedure. Output will be a trained model, based on the Python **scikit-learn** library for the machine learning algorithm.
 
    This code uses [**pickle**](https://docs.python.org/2/library/pickle.html) to serialize the model. The model will be trained using data from columns 0 through 4 from the **iris_data** table. 
-   
+
    The parameters you see in the second part of the procedure articulate data inputs and model outputs. As much as possible, you want the Python code running in a stored procedure to have clearly defined inputs and outputs that map to stored procedure inputs and outputs passed in at run time.
 
     ```sql

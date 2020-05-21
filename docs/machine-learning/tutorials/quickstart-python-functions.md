@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: garye
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
 # Quickstart: Python functions with SQL machine learning

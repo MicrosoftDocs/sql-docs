@@ -1,6 +1,6 @@
 ---
 title: "Create data connection strings - Report Builder & SSRS | Microsoft Docs"
-ms.date: 11/18/2019
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data

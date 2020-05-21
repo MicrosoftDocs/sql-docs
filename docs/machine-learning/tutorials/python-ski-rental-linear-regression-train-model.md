@@ -21,7 +21,7 @@ In part three of this four-part tutorial series, you'll train a linear regressio
 In part three of this four-part tutorial series, you'll train a linear regression model in Python. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In part three of this four-part tutorial series, you'll train a linear regression model in Python. In the next part of this series, you'll deploy this model in a SQL Managed Instance database with Machine Learning Services.
+In part three of this four-part tutorial series, you'll train a linear regression model in Python. In the next part of this series, you'll deploy this model in an Azure SQL Managed Instance database with Machine Learning Services.
 ::: moniker-end
 
 In this article, you'll learn how to:

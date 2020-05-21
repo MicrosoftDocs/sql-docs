@@ -21,7 +21,7 @@ In part four of this four-part tutorial series, you'll deploy a linear regressio
 In part four of this four-part tutorial series, you'll deploy a linear regression model developed in Python into a SQL Server database using Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a linear regression model developed in Python into a SQL Managed Instance database using Machine Learning Services.
+In part four of this four-part tutorial series, you'll deploy a linear regression model developed in Python into an Azure SQL Managed Instance database using Machine Learning Services.
 ::: moniker-end
 
 In this article, you'll learn how to:

@@ -23,7 +23,7 @@ In part three of this four-part tutorial series, you'll build a K-Means model in
 In part three of this four-part tutorial series, you'll build a K-Means model in Python to perform clustering. In the next part of this series, you'll deploy this model in a database with SQL Server Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In part three of this four-part tutorial series, you'll build a K-Means model in Python to perform clustering. In the next part of this series, you'll deploy this model in a database with Azure Azure SQL Managed Instance Machine Learning Services.
+In part three of this four-part tutorial series, you'll build a K-Means model in Python to perform clustering. In the next part of this series, you'll deploy this model in a database with Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
 In this article, you'll learn how to:

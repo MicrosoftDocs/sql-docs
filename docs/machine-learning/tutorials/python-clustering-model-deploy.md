@@ -1,27 +1,29 @@
 ---
 title: "Python tutorial: Deploy cluster model"
+titleSuffix: SQL machine learning
 description: In part four of this four-part tutorial series, you'll deploy a clustering model in Python with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-
 # Python tutorial: Deploy a model to categorize customers with SQL machine learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a SQL database using SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a SQL database using SQL Server Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a SQL database using Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
 In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the Python script from any App. To do that, you can deploy the Python script in a database by putting the Python script inside a SQL stored procedure. Because your model executes in the database, it can easily be trained against data stored in the database.

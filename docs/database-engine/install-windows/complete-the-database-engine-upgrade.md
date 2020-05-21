@@ -1,5 +1,6 @@
 ---
 title: "Complete the Database Engine Upgrade | Microsoft Docs"
+description: This article describes some additional steps you might have to take after you finish upgrading the Database Engine of SQL Server.
 ms.custom: ""
 ms.date: "10/23/2017"
 ms.prod: sql

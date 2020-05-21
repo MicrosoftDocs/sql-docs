@@ -23,7 +23,7 @@ In this quickstart, you'll learn how to use Python mathematical and utility func
 In this quickstart, you'll learn how to use Python mathematical and utility functions with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Statistical functions are often complicated to implement in T-SQL, but can be done in Python with only a few lines of code.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this quickstart, you'll learn how to use Python mathematical and utility functions with [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview). Statistical functions are often complicated to implement in T-SQL, but can be done in Python with only a few lines of code.
+In this quickstart, you'll learn how to use Python mathematical and utility functions with [Azure SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview). Statistical functions are often complicated to implement in T-SQL, but can be done in Python with only a few lines of code.
 ::: moniker-end
 
 ## Prerequisites
@@ -37,7 +37,7 @@ You need the following prerequisites to run this quickstart.
 - SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- SQL Managed Instance Machine Learning Services. For how to sign up, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
+- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 - A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).

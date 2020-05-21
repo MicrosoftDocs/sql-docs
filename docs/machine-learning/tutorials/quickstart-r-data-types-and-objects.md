@@ -26,7 +26,7 @@ In this quickstart, you'll learn how to use data structures and data types when 
 In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server R Services](../r/sql-server-r-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview). You'll learn about moving data between R and SQL Managed Instance, and the common issues that might occur.
+In this quickstart, you'll learn how to use data structures and data types when using R in [Azure SQL Managed Instance Machine Learning Services](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview). You'll learn about moving data between R and SQL Managed Instance, and the common issues that might occur.
 ::: moniker-end
 
 Common issues to know up front include:
@@ -50,7 +50,7 @@ You need the following prerequisites to run this quickstart.
 - SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- SQL Managed Instance Machine Learning Services. For how to sign up, see the [SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
+- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/sql-database/sql-database-managed-instance-machine-learning-services-overview).
 ::: moniker-end
 
 - A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).

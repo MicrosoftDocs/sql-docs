@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.date: 05/08/2020
-monikerRange: "=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=sqlallproducts-allversions"
 ---
 
 # Previous versions of SQL Server documentation

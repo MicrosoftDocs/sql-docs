@@ -25,10 +25,12 @@ Performance can degrade if pages are allocated for the PVS table as part of fore
 
 The number of pages the background thread pre-allocates is based on various workload heuristics, but largely allocates pages in chunks of 512 pages. The ADR preallocation factor is a multiple of the chunk. By default, the factor is 4. This means it preallocates 2048 pages at once when required. 
 
-While the background thread takes workload patterns into consideration, this factor can be increased if necessary to improve performance. 
+While the background thread takes workload patterns into consideration, this factor can be increased if necessary to improve performance.
 
 > [!CAUTION]
 > If PVS preallocation is increased too much, it will contend with other allocations in the system and might actually reduce overall performance
+>
+> Before you modify this setting, test the overall performance of the system.
 
 ## Examples  
 

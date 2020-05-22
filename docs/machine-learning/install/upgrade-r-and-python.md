@@ -259,9 +259,9 @@ You might have added other open-source or third-party packages to your package l
 
 |Name|Description|
 |------|------|
-|*list*| Displays a list of all SQL Database instance IDs on the current computer|
-|*bind*| Upgrades the specified SQL Database instance to the latest version of R Server and ensures the instance automatically gets future upgrades of R Server|
-|*unbind*|Uninstalls the latest version of R Server from the specified SQL Database instance and prevents future R Server upgrades from affecting the instance|
+|*list*| Displays a list of all SQL Server instance IDs on the current computer|
+|*bind*| Upgrades the specified SQL Server instance to the latest version of R Server and ensures the instance automatically gets future upgrades of R Server|
+|*unbind*|Uninstalls the latest version of R Server from the specified SQL Server instance and prevents future R Server upgrades from affecting the instance|
 
 <a name="sqlbindr-error-codes"><a/>
 

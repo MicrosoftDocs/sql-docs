@@ -9,7 +9,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
 ms.date: 05/08/2020
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2014 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
 # Install SQL Server documentation to view offline in SSMS

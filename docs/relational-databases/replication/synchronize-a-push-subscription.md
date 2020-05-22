@@ -1,5 +1,6 @@
 ---
 title: "Synchronize a Push Subscription | Microsoft Docs"
+description: Learn how to synchronize a push subscription in SQL Server by using SQL Server Management Studio, replication agents, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

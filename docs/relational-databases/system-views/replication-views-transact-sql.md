@@ -1,5 +1,6 @@
 ---
 title: "Replication Views (Transact-SQL) | Microsoft Docs"
+description: Replication views contain information that is used by replication in SQL Server. The views enable easier access to data in replication system tables.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

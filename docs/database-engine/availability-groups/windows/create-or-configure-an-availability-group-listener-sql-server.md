@@ -273,6 +273,7 @@ Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProviders
 Get-ClusterResource yourListenerName | Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourListenerName  
+Start-Clustergroup yourListenerGroupName
 ```  
   
  For more information about recovery times during failover, see [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS).  

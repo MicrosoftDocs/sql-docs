@@ -1,6 +1,6 @@
 ---
 title: "Database engine events and errors"
-description: This article summarizes error message numbers and the text of the error messages from the sys.messages catalog view in SQL Server.
+description: Consult this MSSQL error code list to find explanations for error messages for SQL Server database engine events.
 ms.custom: ""
 ms.date: 01/28/2020
 ms.prod: sql

@@ -2,7 +2,7 @@
 title: "UTF-8 Support in OLE DB Driver for SQL Server| Microsoft Docs"
 description: "UTF-8 Support in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: 12/12/2019
+ms.date: "05/25/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,12 +16,16 @@ author: David-Engel
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Microsoft OLE DB Driver for SQL Server supports UTF-8 encoding on client and server. For information about the SQL Server UTF-8 support, see:
+Microsoft OLE DB Driver for SQL Server (version 18.2.1) adds support for the UTF-8 server encoding. For information about the SQL Server UTF-8 support, see:
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 support](#ctp23)
+- [UTF-8 support](../../../relational-databases/collations/collation-and-unicode-support.md#utf8)
+
+Version 18.4.0 of the driver adds support for the UTF-8 client encoding ("Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings).
 
 > [!NOTE]  
 > Microsoft OLE DB Driver for SQL Server uses the [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) function to determine the encoding of the DBTYPE_STR input buffer.
+>
+> Scenarios in which GetACP returns a UTF-8 encoding (such as the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings) are supported starting with version 18.4. In previous versions, if the buffer needs to store Unicode data, the buffer data type should be set to *DBTYPE_WSTR* (UTF-16 encoded).
 
 ## Data insertion into a UTF-8 encoded CHAR or VARCHAR column
 When creating an input parameter buffer for insertion, the buffer is described by using an array of [DBBINDING structures](https://go.microsoft.com/fwlink/?linkid=2071182). Each DBBINDING structure associates a single parameter to the consumer's buffer and contains information such as the length and type of the data value. For an input parameter buffer of type CHAR, the *wType* of the DBBINDING structure should be set to DBTYPE_STR. For an input parameter buffer of type WCHAR, the *wType* of the DBBINDING structure should be set to DBTYPE_WSTR.
@@ -44,20 +48,11 @@ For the result buffer type indicator DBTYPE_STR, the driver converts the UTF-8 e
 
 For the result buffer type indicator DBTYPE_WSTR, the driver converts the UTF-8 encoded data to the UTF-16 encoding.
 
+## Communication with servers that don't support UTF-8
+When inserting data from clients configured to use UTF-8 code page, Microsoft OLE DB Driver for SQL Server ensures data is exposed to server in UTF-8 only if server supports UTF-8. That is, if server doesn't support UTF-8, Microsoft OLE DB Driver for SQL Server ensures that UTF-8 strings are converted to the database code page before being sent to the server.
+
 > [!NOTE]  
-> When inserting data from clients configured to use UTF-8 code page, Microsoft OLE DB Driver for SQL Server ensures data is exposed to server in UTF-8 only if server suppports UTF-8. That is, if server doesn't support UTF-8, Microsoft OLE DB Driver for SQL Server ensures that UTF-8 strings are converted to the database code page before being sent to the server.
-
-<a name="ctp23"></a>
-
-### UTF-8 support (SQL Server 2019)
-
-[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] introduces full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix.
-
-For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
-
-This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII (Latin) strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
-
-For more information, see [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
+> Using the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface for inserting UTF-8 encoded data into a legacy text column is only limited to servers that support UTF-8. For details please see [BLOBs and OLE Objects](../ole-db-blobs/blobs-and-ole-objects.md).
 
 ## See Also  
 [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md) 

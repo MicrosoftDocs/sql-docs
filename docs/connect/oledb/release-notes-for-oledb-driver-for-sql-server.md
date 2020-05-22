@@ -1,7 +1,7 @@
 ---
 title: "Release notes for OLE DB Driver"
 description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
-ms.date: "02/27/2020"
+ms.date: "05/25/2020"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -37,15 +37,19 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | Support for Transparent Network IP Resolution (TNIR) |[Transparent Network IP Resolution (TNIR)](features/using-transparent-network-ip-resolution.md)|
-| Support for UTF-8 client encoding | [UTF-8 Support in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md). |
+| Support for UTF-8 client encoding | [UTF-8 Support in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
 
 ### Bugs fixed
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed various bugs in [ISequentialStream](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-isequentialstream) interface | A few bugs affecting multibyte code pages resulted in the interface reporting end of stream before all data were returned to client application.|
-| Fixed a memory leak in [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed memory leak inside IOpenRowset::OpenRowset interface when SSPROP_IRowsetFastLoad property was enabled. |
-| Fixed retrieval and insertion of [SSVARIANT](ole-db-data-types/ssvariant-structure.md) containing non-ASCII strings | When the SSVARIANT structure was of type `VT_SS_VARSTRING` or `VT_SS_STRING`, OLE DB driver did not perform any translations to server/client code page. This resulted in corruption of non-ASCII characters in strings even if client or server was configured with the correct code page to represent these characters. |
+| Fixed various bugs in the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface | A few bugs affecting multibyte code pages resulted in the interface prematurely reporting the end of the stream during the read operation.|
+| Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface when the `SSPROP_IRowsetFastLoad` property was enabled. |
+| Fixed a bug in scenarios involving a sql_variant data type and non-ASCII strings. | Executing certain scenarios involving the `sql_variant` data type and non-ASCII strings may result in data corruption. For details, see: [SSVARIANT Structure](ole-db-data-types/ssvariant-structure.md).
+| Fixed issues with *Test Connection* button in [Data Link Pages](help-topics/data-link-pages.md) | The *Test Connection* button in [Data Link Pages](help-topics/data-link-pages.md) now honors connection properties set in the *All* tab.|
+| Default value of the `SSPROP_INIT_PACKETSIZE` property| Fixed unexpected error when the value of this property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Fixed a few security issues with [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Fixed a few security issues that could result in buffer overflow if user data file was malformed.|
+| Accessibility issues | Fixed various accessibility issues in the UI of the installer and [SQL Server Login Dialog](help-topics/sql-server-login-dialog.md).|
 
 ## Previous Releases
 

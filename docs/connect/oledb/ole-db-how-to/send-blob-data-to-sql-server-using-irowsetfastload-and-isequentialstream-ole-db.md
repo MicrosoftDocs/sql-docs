@@ -2,7 +2,7 @@
 title: "Send BLOB Data to SQL Server Using IROWSETFASTLOAD and ISEQUENTIALSTREAM | Microsoft Docs"
 description: "Send BLOB data to SQL Server using IROWSETFASTLOAD and ISEQUENTIALSTREAM"
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "05/25/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ ms.author: pelopes
 
   This sample shows how to use IRowsetFastLoad to stream varying length BLOB data per row.  
   
- By default, this sample shows how to use IRowsetFastLoad to send variable length BLOB data per row by using in-line bindings. The in-line BLOB data must fit in available memory. This method performs best when the BLOB data is less than a few megabytes, because there isn't additional stream overhead. For data larger than a few megabytes, especially data that isn't available in a block, streaming provides better performance.  
+ By default, this sample shows how to use IRowsetFastLoad to send variable length BLOB data per row by using in-line bindings. The in-line BLOB data must fit in available memory. This method performs best when the BLOB data is less than a few megabytes, because there isn't any additional stream overhead. For data larger than a few megabytes, especially data that isn't available in a block, streaming provides better performance.  
   
  In the source code, when you uncomment `#define USE_ISEQSTREAM`, the sample will use ISequentialStream. The stream implementation is defined in the sample, and can send any size BLOB data simply by changing MAX_BLOB. Stream data does not have to fit in memory or be available in one block. You call this provider by using IRowsetFastLoad::InsertRow. Pass a pointer using IRowsetFastLoad::InsertRow to the stream implementation in the data buffer (rgBinding.obValue offset) along with the amount of data available to read from the stream. Some providers might not have to know the length of the data when binding occurs. In this case, the length can be omitted from the binding.  
   
@@ -30,7 +30,7 @@ ms.author: pelopes
 
  For more information, see [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).
 
- <b id="conversion_note">[1]:</b> While conversions are not possible, if client is configured to use UTF-8 code page, translations can occur from UTF-8 to the database code page if server doesn't support UTF-8. For more information, see [UTF-8 Support in OLE DB Driver for SQL Server](../features/utf-8-support-in-oledb-driver-for-sql-server.md).
+ <b id="conversion_note">[1]:</b> While conversions are not possible, translations between UTF-8 and the database collation code page can still occur if the server doesn't support UTF-8. For more information, see [UTF-8 Support in OLE DB Driver for SQL Server](../features/utf-8-support-in-oledb-driver-for-sql-server.md).
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -42,12 +42,12 @@ ms.author: pelopes
   
  Execute the third ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -475,7 +475,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

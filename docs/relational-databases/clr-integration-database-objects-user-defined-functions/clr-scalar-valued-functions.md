@@ -84,7 +84,7 @@ End Class
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -96,7 +96,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -129,7 +129,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
   
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] query and a sample invocation to register the assembly and UDF are:  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

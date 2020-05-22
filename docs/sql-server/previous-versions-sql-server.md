@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.date: 05/08/2020
-monikerRange: "=sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2014 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
 # Previous versions of SQL Server documentation

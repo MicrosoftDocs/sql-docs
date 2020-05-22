@@ -51,7 +51,7 @@ date-value ::=
      years-value date-separator months-value date-separator days-value
 
 time-value ::=   
-     hours-value time-separator minutes-value time-separatorseconds-value
+     hours-value time-separator minutes-value time-separator seconds-value
 
 timestamp-value ::= date-value timestamp-separator time-value
 

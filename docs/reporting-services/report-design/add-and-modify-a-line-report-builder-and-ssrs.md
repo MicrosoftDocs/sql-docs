@@ -1,6 +1,6 @@
 ---
 title: "Add and Modify a Line (Report Builder) | Microsoft Docs"
-description: Customize the appearance of your reports by adding a graphical element to separate sections or editing line properties to change color or style.
+description: Customize the appearance of your reports by adding a graphical element to separate sections or by editing line properties to change color or style.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

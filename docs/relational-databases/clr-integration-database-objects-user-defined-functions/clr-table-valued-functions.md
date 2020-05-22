@@ -52,7 +52,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ### Defining a Table-Valued Function in Transact-SQL  
  The syntax for defining a CLR table-valued function is similar to that of a [!INCLUDE[tsql](../../includes/tsql-md.md)] table-valued function, with the addition of the **EXTERNAL NAME** clause. For example:  
   
-```  
+```sql
 CREATE FUNCTION GetEmpFirstLastNames()  
 RETURNS TABLE (FirstName NVARCHAR(4000), LastName NVARCHAR(4000))  
 EXTERNAL NAME MyDotNETAssembly.[MyNamespace.MyClassname]. GetEmpFirstLastNames;  
@@ -60,7 +60,7 @@ EXTERNAL NAME MyDotNETAssembly.[MyNamespace.MyClassname]. GetEmpFirstLastNames;
   
  Table-valued functions are used to represent data in relational form for further processing in queries such as:  
   
-```  
+```sql
 select * from function();  
 select * from tbl join function() f on tbl.col = f.col;  
 select * from table t cross apply function(t.column);  
@@ -133,7 +133,7 @@ End Class
 ###### Declaring and Using the Sample Table-Valued Function  
  After the sample table-valued function has been compiled, it can be declared in [!INCLUDE[tsql](../../includes/tsql-md.md)] like this:  
   
-```  
+```sql
 use master;  
 -- Replace SQL_Server_logon with your SQL Server user credentials.  
 GRANT EXTERNAL ACCESS ASSEMBLY TO [SQL_Server_logon];   
@@ -157,7 +157,7 @@ GO
   
  To test the sample, try the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code:  
   
-```  
+```sql
 -- Select the top 100 events,  
 SELECT TOP 100 *  
 FROM dbo.ReadEventLog(N'Security') as T;  
@@ -383,7 +383,7 @@ End Class
   
  Compile the source code to a DLL and copy the DLL to the root directory of your C drive.  Then, execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query.  
   
-```  
+```sql
 use AdventureWorksLT2008;  
 go  
   

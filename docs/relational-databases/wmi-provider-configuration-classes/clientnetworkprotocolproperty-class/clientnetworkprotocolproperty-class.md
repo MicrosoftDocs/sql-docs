@@ -1,5 +1,5 @@
 ---
-title: "ClientNetworkProtocolProperty Class | Microsoft Docs"
+title: "ClientNetworkProtocolProperty Class"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

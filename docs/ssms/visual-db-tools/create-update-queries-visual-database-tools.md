@@ -1,10 +1,9 @@
 ---
-title: "Create Update Queries (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Create Update Queries
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,8 +12,10 @@ helpviewer_keywords:
   - "Update query"
   - "updating tables"
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Create Update Queries (Visual Database Tools)

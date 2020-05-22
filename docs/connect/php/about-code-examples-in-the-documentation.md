@@ -1,5 +1,6 @@
 ---
-title: "About Code Examples in the Documentation | Microsoft Docs"
+title: "About Code Examples in the Documentation"
+description: "There are several points to note when you execute the code examples in the Microsoft Drivers for PHP for SQL Server documentation."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # About Code Examples in the Documentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -21,7 +22,7 @@ There are several points to note when you execute the code examples in the [!INC
   
     For information about how to download free editions and trial versions of SQL Server, see [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193).  
   
-    For information about how to download and install the AdventureWorks database, see the [AdventureWorks page in the SQL Server Samples Github repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
+    For information about how to download and install the AdventureWorks database, see the [AdventureWorks page in the SQL Server Samples GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
 -   Nearly all the code examples in this documentation are intended to be run from the command line, which enables automated testing of all the code examples. For information about how to run PHP from the command line, see [Using PHP from the command line](https://php.net/manual/en/features.commandline.php).  
   
@@ -42,8 +43,8 @@ There are several points to note when you execute the code examples in the [!INC
     die();  
     ```  
   
-    For more information about handling errors and warnings, see [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).  
+    For more information about handling errors and warnings, see [Handling Errors and Warnings](handling-errors-and-warnings.md).  
   
 ## See Also  
-[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Overview of the Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)
   

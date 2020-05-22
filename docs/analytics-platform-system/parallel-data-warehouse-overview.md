@@ -1,5 +1,5 @@
 ---
-title: Parallel Data Warehouse components - Analytics Platform System | Microsoft Docs
+title: Parallel Data Warehouse components
 description: This articles explains the appliance software and the non-appliance software components of Analytics Platform System.  
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Parallel Data Warehouse components - Analytics Platform System

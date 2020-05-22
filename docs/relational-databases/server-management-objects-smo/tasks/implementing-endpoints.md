@@ -1,6 +1,6 @@
 ---
-title: "Implementing Endpoints | Microsoft Docs"
-ms.custom: ""
+title: "Implementing Endpoints"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

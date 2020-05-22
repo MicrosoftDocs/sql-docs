@@ -1,6 +1,6 @@
 ---
-title: "Run the Transact-SQL Debugger | Microsoft Docs"
-ms.custom: ""
+title: Run the Transact-SQL Debugger
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, keyboard shortcuts"
   - "Transact-SQL debugger, starting"
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Run the Transact-SQL Debugger

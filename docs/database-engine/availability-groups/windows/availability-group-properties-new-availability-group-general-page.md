@@ -1,8 +1,8 @@
 ---
-title: "Availability Group Properties: New Availability Group (General Page)"
+title: "General page (New Availability Group & Properties dialog box)"
 titleSuffix: SQL Server
-description: "A description of the various properties found on the 'General' page of the 'New Availability Group' wizard in SQL Server Management Studio."
-ms.custom: "seodec18"
+description: "A description of the various properties found on the 'General' page of the 'New Availability Group' and 'Availability Group Properties' dialog boxes in SQL Server Management Studio (SSMS)."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

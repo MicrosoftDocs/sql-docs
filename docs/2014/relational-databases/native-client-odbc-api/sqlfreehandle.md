@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLFreeHandle function"
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLFreeHandle

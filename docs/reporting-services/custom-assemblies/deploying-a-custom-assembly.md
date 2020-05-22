@@ -1,5 +1,6 @@
 ---
 title: "Deploying a Custom Assembly | Microsoft Docs"
+description: Learn to deploy a custom assembly in SQL Server Reporting Services. Also learn how to grant custom assemblies privileges beyond Execute permissions.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

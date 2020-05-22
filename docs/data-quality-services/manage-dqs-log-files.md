@@ -1,6 +1,5 @@
 ---
-title: "Manage DQS Log Files | Microsoft Docs"
-ms.custom: ""
+title: "Manage DQS Log Files"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,8 +11,8 @@ helpviewer_keywords:
   - "log files"
   - "dqs log files"
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Manage DQS Log Files
 

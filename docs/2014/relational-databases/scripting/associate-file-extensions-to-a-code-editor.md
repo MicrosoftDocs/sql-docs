@@ -1,6 +1,6 @@
 ---
-title: "Associate File Extensions to a Code Editor | Microsoft Docs"
-ms.custom: ""
+title: Associate File Extensions to a Code Editor
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "associating file extensions [SQL Server]"
   - "Query Editor [SQL Server Management Studio], associating file extensions"
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Associate File Extensions to a Code Editor

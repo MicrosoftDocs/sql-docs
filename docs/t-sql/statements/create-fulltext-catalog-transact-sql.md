@@ -41,7 +41,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE FULLTEXT CATALOG catalog_name  
      [ON FILEGROUP filegroup ]  
@@ -100,7 +100,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## Examples  
  The following example creates a full-text catalog and also a full-text index.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

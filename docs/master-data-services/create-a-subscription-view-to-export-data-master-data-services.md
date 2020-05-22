@@ -1,5 +1,5 @@
 ---
-title: "Create a Subscription View to Export Data (Master Data Services) | Microsoft Docs"
+title: Create a Subscription View to Export Data
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

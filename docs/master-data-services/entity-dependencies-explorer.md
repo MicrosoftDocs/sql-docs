@@ -1,5 +1,5 @@
 ---
-title: "Entity Dependencies Explorer | Microsoft Docs"
+title: Entity Dependencies Explorer
 ms.custom: ""
 ms.date: "04/06/2016"
 ms.prod: sql

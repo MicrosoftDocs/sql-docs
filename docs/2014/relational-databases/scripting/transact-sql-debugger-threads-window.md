@@ -1,6 +1,6 @@
 ---
-title: "Threads Window | Microsoft Docs"
-ms.custom: ""
+title: Threads Window
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Threads Window [Transact-SQL]"
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Threads Window

@@ -1,6 +1,6 @@
 ---
-title: "Performance Improvements using DTA recommendations | Microsoft Docs"
-ms.custom: ""
+title: "DTA recommended performance improvements"
+ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +12,7 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
 ---
-# Performance Improvements using DTA recommendations
+# Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 

@@ -65,7 +65,7 @@ ms.author: jrasnick
 
       ||  
       |-|  
-      |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+      |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
 
   
 -   Use the plan cache as a workload. By doing this, you can avoid having to manually create a workload. For more information, see [Tune a Database](#Tune) later in this topic.  

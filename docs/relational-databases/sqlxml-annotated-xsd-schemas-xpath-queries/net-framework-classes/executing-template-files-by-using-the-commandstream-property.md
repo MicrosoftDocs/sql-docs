@@ -1,6 +1,6 @@
 ---
-title: "Executing Template Files by Using the CommandStream Property | Microsoft Docs"
-ms.custom: ""
+title: "Run template files with the CommandStream Property"
+description: Learn how to execute template files that consist of SQL or XPath queries by using the CommandStream property of the SqlXmlCommand object.  
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,6 +15,7 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandStream Property

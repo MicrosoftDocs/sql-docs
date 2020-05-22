@@ -1,6 +1,5 @@
 ---
-title: "Create, Alter, and Drop Secondary Selective XML Indexes | Microsoft Docs"
-ms.custom: ""
+title: "Create, alter, & drop secondary selective XML index | Microsoft Docs"
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -10,9 +9,10 @@ ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Create, Alter, and Drop Secondary Selective XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Describes how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.  
   
 ##  <a name="create"></a> Creating a Secondary Selective XML Index  

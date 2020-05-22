@@ -1,5 +1,5 @@
 ---
-title: "Database Logins, Users, and Roles (Master Data Services) | Microsoft Docs"
+title: Database Logins, Users, and Roles
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

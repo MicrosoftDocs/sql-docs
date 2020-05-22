@@ -1,6 +1,6 @@
 ---
-title: "Create a Model Deployment Package by Using the Wizard | Microsoft Docs"
-ms.custom: ""
+title: Create a Model Deployment Package with Wizard
+ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"

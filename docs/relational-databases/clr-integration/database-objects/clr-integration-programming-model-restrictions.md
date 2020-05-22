@@ -1,5 +1,6 @@
 ---
 title: "CLR Integration Programming Model Restrictions | Microsoft Docs"
+description: SQL Server performs code checks on managed database objects when they are first registered using CREATE ASSEMBLY and at runtime.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

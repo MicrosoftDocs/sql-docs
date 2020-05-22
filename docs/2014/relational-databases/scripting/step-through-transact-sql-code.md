@@ -1,6 +1,6 @@
 ---
-title: "Step Through Transact-SQL Code | Microsoft Docs"
-ms.custom: ""
+title: Step Through Transact-SQL Code
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, step out"
   - "Transact-SQL debugger, step into"
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Step Through Transact-SQL Code

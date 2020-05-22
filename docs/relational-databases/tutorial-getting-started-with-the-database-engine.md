@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Getting Started with the Database Engine | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Getting Started with the Database Engine"
+ms.custom: seo-dt-2019
 ms.date: "06/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

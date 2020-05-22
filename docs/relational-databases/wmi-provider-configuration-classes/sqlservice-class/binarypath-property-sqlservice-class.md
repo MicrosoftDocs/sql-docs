@@ -1,5 +1,5 @@
 ---
-title: "BinaryPath Property (SqlService Class ) | Microsoft Docs"
+title: "BinaryPath Property (SqlService Class )"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

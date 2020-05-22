@@ -77,7 +77,7 @@ ms.author: sstein
   
 -   The port number of the e-mail server.  
   
--   A bit column indicating whether the connection to the SMTP mail server is made using Secure Sockets Layer (SSL).  
+-   A bit column indicating whether the connection to the SMTP mail server is made using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL).  
   
 -   A bit column indicating whether the connection to the SMTP server is made using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

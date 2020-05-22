@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Native Client (ODBC) | Microsoft Docs"
+title: "ODBC"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
   - "SQL Server Native Client, ODBC"
   - "ODBC, about SQL Server Native Client ODBC driver"
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   ODBC is a standard definition of an application programming interface (API) used to access data in relational or indexed sequential access method (ISAM) databases. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports ODBC, via the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver, as one of the native APIs for writing C and C++ applications that communicate with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: "Add an Assembly Reference to a Report (SSRS) | Microsoft Docs"
+title: "Add an Assembly Reference to a Report | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

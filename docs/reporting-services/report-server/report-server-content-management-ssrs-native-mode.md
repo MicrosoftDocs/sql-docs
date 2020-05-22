@@ -1,5 +1,5 @@
 ---
-title: "Report Server Content Management (SSRS Native Mode) | Microsoft Docs"
+title: "Report Server Content Management (Native Mode) | Microsoft Docs"
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

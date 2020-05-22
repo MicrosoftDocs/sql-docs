@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "functions [ODBC], listed by task"
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Function Summary
 The following table lists ODBC functions, grouped by type of task, and includes the conformance designation and a brief description of the purpose of each function. For more information about conformance designations, see [ODBC and the Standard CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). For more information about the syntax and semantics for each function, see [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  

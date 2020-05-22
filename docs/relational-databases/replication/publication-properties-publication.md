@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Replication 'Publication Properties'  dialog box | Microsoft Docs"
-ms.custom: ""
+title: "Publication Properties - Dialog box"
+description: Describes the pages found within the 'Publication Properties" Dialog Box in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -20,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Replication 'Publication Properties'  dialog box
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -139,7 +140,7 @@ To maximize application performance and reduce the amount of remote storage requ
  This option allows Subscribers to use FTP to retrieve snapshot files, but does not require them to do so. If you select this option, the New Subscription Wizard defaults to having the Subscriber retrieve snapshot files through FTP. To change the setting, use the **Subscription Properties** dialog box. If you allow Subscribers to access the snapshot files through FTP, specify the FTP folder as the location for snapshot files on the **Snapshot** page of the **Publication Properties** dialog box. Doing so will cause the Snapshot Agent to update the files in the FTP folder automatically when a new snapshot is generated. If the location is not set to the FTP folder, you will have to update the files manually when new snapshots are generated. For more information, see [Deliver a Snapshot Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
  **Web Synchronization**  
- Merge replication only. Select **Allow Subscribers to synchronize by connecting to a Web server**, and specify a Web server address to allow merge Subscribers to use Web synchronization. The Web server must use Secure Sockets Layer (SSL), and the Web address must be fully qualified, such as `https://server.domain.com/synchronize`. For more information, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+ Merge replication only. Select **Allow Subscribers to synchronize by connecting to a Web server**, and specify a Web server address to allow merge Subscribers to use Web synchronization. The Web server must use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), and the Web address must be fully qualified, such as `https://server.domain.com/synchronize`. For more information, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
 
 
 ## Agent Security

@@ -1,5 +1,5 @@
 ---
-title: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
+title: "Availability Group Properties: Backup Preferences Page"
 description: "A description of the various properties found on the 'Backup preference' page of the 'New Availability Group' wizard in SQL Server Management Studio."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"

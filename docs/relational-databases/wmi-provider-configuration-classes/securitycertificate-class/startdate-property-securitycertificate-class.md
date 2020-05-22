@@ -1,6 +1,6 @@
 ---
-title: "StartDate Property (SecurityCertificate Class) | Microsoft Docs"
-ms.custom: ""
+title: "StartDate Property (SecurityCertificate)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

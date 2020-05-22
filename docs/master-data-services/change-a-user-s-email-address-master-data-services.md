@@ -1,5 +1,5 @@
 ---
-title: "Change a User&#39;s Email Address (Master Data Services) | Microsoft Docs"
+title: Change a User&#39;s Email Address
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

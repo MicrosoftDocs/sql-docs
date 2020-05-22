@@ -44,6 +44,10 @@ To enable `mssql` commands and T-SQL IntelliSense, set the language mode to **SQ
  
 3. In the **Select language mode** drop-down menu that opens, select or enter **SQL**, and then press **ENTER** to set the language mode to SQL. 
 
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## Connect to the SSIS Catalog database
 
 Use Visual Studio Code to establish a connection to the SSIS Catalog.

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "database master key [SQL Server], importing"
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
 ---
 # Restore a Database Master Key

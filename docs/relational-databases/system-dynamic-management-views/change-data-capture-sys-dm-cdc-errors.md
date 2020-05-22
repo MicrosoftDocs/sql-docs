@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sys.dm_cdc_errors dynamic management view"
   - "change data capture [SQL Server], error reporting"
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Change Data Capture - sys.dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

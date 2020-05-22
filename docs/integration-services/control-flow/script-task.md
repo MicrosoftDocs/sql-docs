@@ -45,7 +45,7 @@ ms.author: chugu
   
  VSTA provides all the standard features of the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment, such as the color-coded [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] editor, IntelliSense, and **Object Explorer**. VSTA also uses the same debugger that other [!INCLUDE[msCoName](../../includes/msconame-md.md)] development tools use. Breakpoints in the script work seamlessly with breakpoints on [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tasks and containers. VSTA supports both the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# programming languages.  
   
- To run a script, you must have VSTA installed on the computer where the package runs. When the package runs, the task loads the script engine and runs the script. You can access external .NET assemblies in scripts by adding references to the assemblies in the project.  
+ To run a script, you must have VSTA installed on the computer where the package runs. When the package runs, the task loads the script engine and runs the script. You can access external .NET assemblies in scripts by adding references to the assemblies in the project. Currently we dont support .NET Core and .NET standard assembly references.  
   
 > [!NOTE]  
 >  Unlike earlier versions where you could indicate whether the scripts were precompiled, all scripts are precompiled in [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] and later versions. When a script is precompiled, the language engine is not loaded at run time and the package runs more quickly. However, precompiled binary files consume significant disk space.  

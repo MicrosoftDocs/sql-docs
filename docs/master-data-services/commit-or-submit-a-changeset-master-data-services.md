@@ -1,5 +1,5 @@
 ---
-title: "Commit or Submit a Changeset (Master Data Services) | Microsoft Docs"
+title: Commit or Submit a Changeset
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

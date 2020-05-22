@@ -1,6 +1,7 @@
 ---
-title: "Failover Policy for Failover Cluster Instances | Microsoft Docs"
-ms.custom: ""
+title: "Failover policy for failover cluster instances"
+description: A description of the different failover policies available for a SQL Server failover cluster instance. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

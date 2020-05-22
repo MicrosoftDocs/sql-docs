@@ -1,14 +1,15 @@
 ---
 title: "SQL Server 2014 Release Notes | Microsoft Docs"
+description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2014 (12.x) releases.
 ms.custom: ""
 ms.date: "03/15/2018"
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2014 Release Notes

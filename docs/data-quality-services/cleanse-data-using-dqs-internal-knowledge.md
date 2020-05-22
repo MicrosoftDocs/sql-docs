@@ -1,6 +1,5 @@
 ---
-title: "Cleanse Data Using DQS (Internal) Knowledge | Microsoft Docs"
-ms.custom: ""
+title: "Cleanse Data Using DQS (Internal) Knowledge"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -13,8 +12,8 @@ f1_keywords:
   - "sql13.dqs.dqproject.correction.f1"
   - "sql13.dqs.dqproject.export.f1"
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Cleanse Data Using DQS (Internal) Knowledge
 

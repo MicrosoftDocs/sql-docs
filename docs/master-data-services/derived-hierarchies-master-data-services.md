@@ -1,5 +1,5 @@
 ---
-title: "Derived Hierarchies (Master Data Services) | Microsoft Docs"
+title: Derived Hierarchies
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

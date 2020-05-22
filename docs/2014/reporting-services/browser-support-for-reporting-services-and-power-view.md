@@ -60,7 +60,7 @@ ms.date: 06/13/2017
   
 #### InPrivate browsing feature in Internet Explorer
 
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] does not support the InPrivate browsing feature in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 and Internet Explorer 9. For more information about InPrivate browsing, see [What is InPrivate Browsing?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] does not support the InPrivate browsing feature in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 and Internet Explorer 9. For more information about InPrivate browsing, see [What is InPrivate Browsing?](https://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (https://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View on Excel Services or the Excel Web App on SharePoint Online
 
@@ -152,7 +152,7 @@ ms.date: 06/13/2017
 
  The ReportViewer Web server control is used to embed report functionality in an ASP.NET web application. The controls are included with Visual Studio and support different browsers and browser versions than the other components described in this topic. The type of browser used to view the application determines the kind of ReportViewer functionality that you can provide in your application. Use the table provided in this topic to determine which of the supported browsers are subject to report functionality restrictions and the supported platforms.  
   
- Due to differences in the rendering engines of the supported browsers, some advance report features may be displayed differently in differnt browsers.  For example, text rotation.  
+ Due to differences in the rendering engines of the supported browsers, some advance report features may be displayed differently in different browsers.  For example, text rotation.  
   
 ### Scripting Requirements
 
@@ -195,4 +195,3 @@ ms.date: 06/13/2017
  [Reporting Services Tools](tools/reporting-services-tools.md)
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)
  [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)
- [URL Access Parameter Reference](url-access-parameter-reference.md)  

@@ -41,6 +41,10 @@ To deploy the project to Azure SQL Database, get the connection information you 
 5. Click **Show database connection strings**.
 6. Review the complete **ADO.NET** connection string.
 
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## SSIS PowerShell Provider
 Provide appropriate values for the variables at the top of the following script, and then run the script to deploy the SSIS project.
 

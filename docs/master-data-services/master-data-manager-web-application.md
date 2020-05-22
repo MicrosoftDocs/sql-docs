@@ -1,5 +1,5 @@
 ---
-title: "Master Data Manager Web Application | Microsoft Docs"
+title: Master Data Manager Web Application
 ms.custom: ""
 ms.date: "12/20/2016"
 ms.prod: sql

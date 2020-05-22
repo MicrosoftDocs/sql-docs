@@ -54,15 +54,15 @@ manager: craigg
   
 #### To view groups and logins that belong to the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_help_publication_access](/sql/relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql). For **@publication**, specify the publication name. This displays information about the groups and logins in the PAL.  
+1.  At the Publisher on the publication database, execute [sp_help_publication_access](/sql/relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql). For **\@publication**, specify the publication name. This displays information about the groups and logins in the PAL.  
   
 #### To add groups and logins to the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_grant_publication_access](/sql/relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being added.  
+1.  At the Publisher on the publication database, execute [sp_grant_publication_access](/sql/relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql). For **\@publication**, specify the publication name; and for **\@login**, specify the name of the login or group that is being added.  
   
 #### To remove groups and logins from the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](/sql/relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being removed.  
+1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](/sql/relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql). For **\@publication**, specify the publication name; and for **\@login**, specify the name of the login or group that is being removed.  
   
 ## See Also  
  [Replication Agent Security Model](replication-agent-security-model.md)   

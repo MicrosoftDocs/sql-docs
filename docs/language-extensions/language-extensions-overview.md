@@ -1,21 +1,21 @@
 ---
-title: What are Language Extensions?
-titleSuffix: SQL Server Language Extensions
-description: Learn about SQL Server 2019 language extensions (preview) that run external scripts within SQL Server. 
+title: What is SQL Server Language Extensions?
+titleSuffix: 
+description: Language Extensions is a feature of SQL Server used for executing external code. In SQL Server 2019, Java is supported. The relational data can be used in the external code using the extensibility framework.
 author: dphansen
 ms.author: davidph 
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# What is SQL Server Language Extensions (preview)?
+# What is SQL Server Language Extensions?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Language Extensions is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md).
 
-In SQL Server 2019 Release Candidate 1 (RC 1), Java is supported. The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
+In SQL Server 2019, Java is supported. The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
 
 ## What you can do with Language Extensions
 
@@ -54,9 +54,7 @@ Execute Java code from within T-SQL script:
 
 + [Tutorial: Regular expressions with Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
-## Limitations in RC 1
-
-SQL Server Language Extensions is currently in public preview. There are some limitations in RC 1:
+## Limitations
 
 + The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 

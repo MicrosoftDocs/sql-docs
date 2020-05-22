@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "service master key [SQL Server], importing"
   - "service master key [SQL Server], restoring"
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
 ---
 # Restore the Service Master Key

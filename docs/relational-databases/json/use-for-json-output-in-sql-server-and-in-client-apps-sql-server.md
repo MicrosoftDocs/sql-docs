@@ -1,6 +1,5 @@
 ---
-title: "Use FOR JSON output in SQL Server and in client apps (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Use FOR JSON output in SQL Server and in client apps"
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,6 +12,7 @@ ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)

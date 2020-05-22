@@ -1,6 +1,5 @@
 ---
-title: "Optimize JSON processing with in-memory OLTP | Microsoft Docs"
-ms.custom: ""
+title: "Optimize JSON processing with in-memory OLTP"
 ms.date: "07/18/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -10,6 +9,7 @@ ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Optimize JSON processing with in-memory OLTP

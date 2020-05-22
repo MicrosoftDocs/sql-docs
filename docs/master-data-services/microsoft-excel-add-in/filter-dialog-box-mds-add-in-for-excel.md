@@ -1,5 +1,5 @@
 ---
-title: "Filter Dialog Box (MDS Add-in for Excel) | Microsoft Docs"
+title: Filter Dialog Box
 ms.custom: microsoft-excel-add-in
 ms.date: "03/15/2017"
 ms.prod: sql

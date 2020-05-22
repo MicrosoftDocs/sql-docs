@@ -1,6 +1,6 @@
 ---
-title: "Color Coding in Query Editors | Microsoft Docs"
-ms.custom: ""
+title: Color Coding in Query Editors
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], color coding"
   - "color coding [Query Editor]"
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Color Coding in Query Editors

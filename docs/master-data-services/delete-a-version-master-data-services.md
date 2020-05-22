@@ -1,5 +1,5 @@
 ---
-title: "Delete a Version (Master Data Services) | Microsoft Docs"
+title: Delete a Version
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

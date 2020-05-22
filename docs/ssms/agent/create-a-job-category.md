@@ -1,10 +1,9 @@
 ---
-title: "Create a Job Category | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Create a Job Category"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,8 +11,10 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], categories"
   - "categories [SQL Server Agent jobs]"
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Job Category

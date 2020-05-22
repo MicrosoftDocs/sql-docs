@@ -1,6 +1,6 @@
 ---
-title: "View All Annotations or Transactions for a Member (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: microsoft-excel-add-in
+title: View Annotations or Transactions
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
@@ -34,5 +34,3 @@ ms.author: lle
   
 ## See Also  
  [Overview: Importing Data from Excel &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
-  
-  

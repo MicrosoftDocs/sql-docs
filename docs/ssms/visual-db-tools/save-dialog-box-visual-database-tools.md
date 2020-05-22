@@ -1,18 +1,19 @@
 ---
-title: "Save Dialog Box (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Save Dialog Box
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65541"
   - "vdt.dlgbox.save"
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Save Dialog Box (Visual Database Tools)

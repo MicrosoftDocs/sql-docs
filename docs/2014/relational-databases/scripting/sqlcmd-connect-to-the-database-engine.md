@@ -1,6 +1,6 @@
 ---
-title: "Connect to the Database Engine With sqlcmd | Microsoft Docs"
-ms.custom: ""
+title: Connect to the Database Engine With sqlcmd
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "VIA"
   - "client protocols [SQL Server]"
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Connect to the Database Engine With sqlcmd

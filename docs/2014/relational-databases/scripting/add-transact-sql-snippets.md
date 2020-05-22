@@ -1,14 +1,14 @@
 ---
-title: "Add Transact-SQL Snippets | Microsoft Docs"
-ms.custom: ""
+title: Add Transact-SQL Snippets
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Add Transact-SQL Snippets

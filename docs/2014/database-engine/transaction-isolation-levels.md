@@ -1,6 +1,6 @@
 ---
-title: "Transaction Isolation Levels | Microsoft Docs"
-ms.custom: ""
+title: "Transaction Isolation Levels memory-optimized tables | Microsoft Docs"
+ms.custom: "seo-dt-2019"
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,7 +11,8 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ---
-# Transaction Isolation Levels
+# Transaction Isolation Levels in memory-optimized tables
+
   The following isolation levels are supported for transactions that access memory-optimized tables.  
   
 -   SNAPSHOT  

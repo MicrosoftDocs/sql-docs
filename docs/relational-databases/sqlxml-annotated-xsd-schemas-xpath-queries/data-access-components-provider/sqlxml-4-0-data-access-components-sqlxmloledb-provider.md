@@ -1,5 +1,5 @@
 ---
-title: "SQLXML 4.0 Data Access Components | Microsoft Docs"
+title: "SQLXML 4.0 Data Access Components"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

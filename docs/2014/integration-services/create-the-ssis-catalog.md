@@ -40,7 +40,7 @@ manager: craigg
   
 1.  Execute the following PowerShell script:  
   
-    ```  
+    ```powershell
     # Load the IntegrationServices Assembly  
     [Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices")  
   
@@ -58,14 +58,11 @@ manager: craigg
   
     # Provision a new SSIS Catalog  
     $catalog = New-Object $ISNamespace".Catalog" ($integrationServices, "SSISDB", "P@assword1")  
-    $catalog.Create()  
-  
+    $catalog.Create()
     ```  
   
-     For more examples of how to use Windows PowerShell and the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace, see the blog entry, [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com. For an overview of the namespace and code examples, see the blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267), on blogs.msdn.com.  
+     For more examples of how to use Windows PowerShell and the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace, see the blog entry, [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com. For an overview of the namespace and code examples, see the blog entry, [A Glimpse of the SSIS Catalog Managed Object Model](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892), on blogs.msdn.com.  
   
 ## See Also  
  [SSIS Catalog](catalog/ssis-catalog.md)   
  [Backup, Restore, and Move the SSIS Catalog](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
-  
-  

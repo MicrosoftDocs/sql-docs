@@ -1,5 +1,6 @@
 ---
 title: "Replicate Identity Columns | Microsoft Docs"
+description: In SQL Server, replication handles identity columns across all publication and subscription types. Manage columns manually or have replication manage them.
 ms.custom: ""
 ms.date: "10/04/2016"
 ms.prod: sql
@@ -17,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replicate Identity Columns
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,8 +107,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 1.  Stop all activity on all Subscribers.  
   
 2.  For each published table that includes an identity column:  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  In the subscription database at each Subscriber, execute `IDENT_CURRENT('<TableName>')`.  
   

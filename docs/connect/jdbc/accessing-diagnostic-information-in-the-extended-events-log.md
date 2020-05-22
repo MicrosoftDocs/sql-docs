@@ -1,23 +1,24 @@
 ---
-title: "Accessing diagnostic information in the extended events log | Microsoft Docs"
+title: "Accessing diagnostic information in the extended events log"
+description: "Learn how to access extended events on the server that are related to events from the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Accessing diagnostic information in the extended events log
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In the [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], tracing ([Tracing driver operation](../../connect/jdbc/tracing-driver-operation.md)) has been updated to make it easier to correlate client events with diagnostic information, such as connection failures, from the server's connectivity ring buffer and application performance information in the extended events log. For information about reading the extended events log, see [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
+  In the [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], tracing ([Tracing driver operation](../../connect/jdbc/tracing-driver-operation.md)) has been updated to make it easier to correlate client events with diagnostic information, such as connection failures, from the server's connectivity ring buffer and application performance information in the extended events log. For information about reading the extended events log, see [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
 ## Details  
- For connection operations, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will send a client connection ID. If the connection fails, you can access the connectivity ring buffer ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://go.microsoft.com/fwlink/?LinkId=207752)) and find the **ClientConnectionID** field and get diagnostic information about the connection failure. Client connection IDs are logged in the ring buffer only if an error occurs. (If a connection fails before sending the prelogin packet, a client connection ID won't be generated.) The client connection ID is a 16-byte GUID. You can also find the client connection ID in the extended events target output, if the **client_connection_id** action is added to events in an extended events session. If you need further client driver diagnostic assistance, you can enable tracing and rerun the connection command to observe the **ClientConnectionID** field in the trace.  
+ For connection operations, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will send a client connection ID. If the connection fails, you can access the connectivity ring buffer ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) and find the **ClientConnectionID** field and get diagnostic information about the connection failure. Client connection IDs are logged in the ring buffer only if an error occurs. (If a connection fails before sending the prelogin packet, a client connection ID won't be generated.) The client connection ID is a 16-byte GUID. You can also find the client connection ID in the extended events target output, if the **client_connection_id** action is added to events in an extended events session. If you need further client driver diagnostic assistance, you can enable tracing and rerun the connection command to observe the **ClientConnectionID** field in the trace.  
   
  You can get the client connection ID programmatically by using [ISQLServerConnection Interface](../../connect/jdbc/reference/isqlserverconnection-interface.md). The connection ID will also be present in any connection-related exceptions.  
   
@@ -45,7 +46,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## See also  
- [Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## See also
+
+[Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  

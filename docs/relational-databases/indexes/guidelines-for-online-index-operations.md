@@ -1,7 +1,7 @@
 ---
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: table-view-index
@@ -87,7 +87,7 @@ Large-scale index operations, performed offline or online, can generate large da
 ## Resumable index considerations
 
 > [!NOTE]
-> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create index and index rebuild). See [Create Index](../../t-sql/statements/create-index-transact-sql.md) (currently in public preview for [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
+> The resumable index option for create index and index rebuild applies to SQL Server (index rebuild starting with SQL Server 2017, with create index also supported in SQL Server 2019) and SQL Database. See [Create Index](../../t-sql/statements/create-index-transact-sql.md) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
 
 When you perform resumable online index create or rebuild, the following guidelines apply:
 

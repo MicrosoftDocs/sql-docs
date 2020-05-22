@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLMoreResults function"
   - "SQLExecDirect function"
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Batches of Statements

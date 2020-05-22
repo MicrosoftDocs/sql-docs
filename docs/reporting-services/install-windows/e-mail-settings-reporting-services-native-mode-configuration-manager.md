@@ -1,8 +1,10 @@
 ---
-title: "E-Mail Settings - Reporting Services Native mode (Configuration Manager) | Microsoft Docs"
-ms.date: 06/01/2016
+title: "E-Mail Settings in SSRS Native mode (Configuration Manager) | Microsoft Docs"
+description: "SQL ServerReporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 f1_keywords: 
@@ -14,7 +16,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # E-Mail Settings - Reporting Services Native mode (Configuration Manager)
-Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.
+SQL Server Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.
 
 The report server e-mail delivery extension is not configured by default. You must use the Reporting Services Configuration Manager to minimally configure the extension. To set advanced properties, you must edit the RSReportServer.config file. If you cannot configure the report server to use this extension, you can deliver reports to a shared folder instead. For more information, see File Share Delivery in Reporting Services.
 
@@ -36,7 +38,7 @@ To configure a report server for e-mail delivery, do the following:
 
 - Use the Reporting Services Configuration Manager if you are specifying just an SMTP server and a user account that has permission to send e-mail. These are the minimum settings that are required for configuring the Report Server e-mail delivery extension.
 
-- (Optionally) Use a text editor to specify additional settings in the RSreportserver.config file. This file contains all of the configuration settings for Report Server e-mail delivery. Specifying additional settings in these files is required if you are using a local SMTP server or if you are restricting e-mail delivery to specific hosts. For more information about finding and modifying configuration files, see [Modify a Reporting Services Configuration File (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) in SQL Server Books Online.
+- (Optionally) Use a text editor to specify additional settings in the RSreportserver.config file. This file contains all of the configuration settings for Report Server e-mail delivery. Specifying additional settings in these files is required if you are using a local SMTP server or if you are restricting e-mail delivery to specific hosts. For more information about finding and modifying configuration files, see [Modify a Reporting Services Configuration File (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE] 
 > Report server e-mail settings are based on CDO. If you want more detail about specific settings, you can refer to the CDO production documentation.
@@ -72,7 +74,7 @@ To configure a report server for e-mail delivery, do the following:
 6. You can optionally adjust additional fields, for the email configuration, within the rsreportserver.config.
 
 ## Example Report Server E-Mail Configuration
-The following example illustrates the settings in the RSreportserver.config file for a remote SMTP server. To read about the setting descriptions and valid values, see [Rsreportserver.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) in SQL Server Books Online.
+The following example illustrates the settings in the RSreportserver.config file for a remote SMTP server. To read about the setting descriptions and valid values, see [Rsreportserver.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).
 
 ```
 <RSEmailDPConfiguration>

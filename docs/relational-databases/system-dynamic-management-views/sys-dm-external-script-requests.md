@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_external_script_requests dynamic management view"
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Returns a row for each active worker account that is running an external script.
   
 > [!NOTE] 
 >  
-> This dynamic management view (DMV) is available only if you have installed and enabled the feature that supports external script execution. For more information, see [R Services in SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) and [Machine Learning Services (R, Python) in SQL Server 2017 and later](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
+> This dynamic management view (DMV) is available only if you have installed and enabled the feature that supports external script execution. For more information, see [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) and [Machine Learning Services (R, Python) in SQL Server 2017 and later](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ Returns a row for each active worker account that is running an external script.
 
 This view can be filtered using the script language identifier.
 
-The view also returns the worker account under which the script is being run. For information about worker accounts used by the external scripts, see the Identities used in processing (SQLRUserGroup) section in [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
+The view also returns the worker account under which the script is being run. For information about worker accounts used by the external scripts, see the Identities used in processing (SQLRUserGroup) section in [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../machine-learning/concepts/security.md#sqlrusergroup).
 
 The GUID that is returned in the **external_script_request_id** field also represents the file name of the secured directory where temporary files are stored. Each worker account such as MSSQLSERVER01 represents a single SQL login or Windows user, and might be used to run multiple script requests. By default, these temporary files are cleaned up after completion of the requested script.
  

@@ -1,6 +1,6 @@
 ---
-title: "Remove a Registered Server (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Remove a Registered Server
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "deleting registered servers"
   - "Registered Servers [SQL Server], removing servers"
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 ---
 # Remove a Registered Server (SQL Server Management Studio)
   This topic describes how to remove a server from Registered Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]..  

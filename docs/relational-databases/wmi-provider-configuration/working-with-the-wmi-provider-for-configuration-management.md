@@ -1,6 +1,6 @@
 ---
-title: "Working with the WMI Provider for Configuration Management | Microsoft Docs"
-ms.custom: ""
+title: "Use the WMI Provider for Configuration Management"
+ms.custom: seo-lt-2019
 ms.date: "04/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"

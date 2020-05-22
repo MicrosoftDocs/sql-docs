@@ -1,7 +1,7 @@
 ---
-title: "Change which cluster manages the metadata for replicas in an availability group"
+title: "Change metadata: Cross-cluster availability group migration"
 description: "When doing a cross-cluster migration, change which cluster manages the metadata for availability replicas within an Always On availability group by changing the HADR cluster context for an instance of SQL Server."
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

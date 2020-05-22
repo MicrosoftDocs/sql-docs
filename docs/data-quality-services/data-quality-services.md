@@ -1,6 +1,5 @@
 ---
-title: "Data Quality Services | Microsoft Docs"
-ms.custom: ""
+title: "Data Quality Services"
 ms.date: "10/12/2013"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Data Quality Services
 

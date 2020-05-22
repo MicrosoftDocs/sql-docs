@@ -1,5 +1,5 @@
 ---
-title: "Full-Text Search DDL, Functions, Stored Procedures, and Views | Microsoft Docs"
+title: "Full-Text Search DDL, functions, stored procedures, & views"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -10,6 +10,7 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Full-Text Search DDL, Functions, Stored Procedures, and Views
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

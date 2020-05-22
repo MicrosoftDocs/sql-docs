@@ -1,6 +1,6 @@
 ---
-title: "Access WMI Provider for Configuration Management using WQL | Microsoft Docs"
-ms.custom: ""
+title: "Use WQL to access the WMI Provider"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,10 +1,9 @@
 ---
-title: "Query and View Designer Tools (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Query and View Designer Tools
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -20,8 +19,10 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], components"
   - "View Designer, components"
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Query and View Designer Tools (Visual Database Tools)

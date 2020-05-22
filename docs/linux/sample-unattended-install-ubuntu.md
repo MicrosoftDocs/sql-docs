@@ -26,6 +26,9 @@ This sample Bash script installs SQL Server 2017 on Ubuntu 16.04 without interac
 
 ## Sample script
 
+> [!NOTE]
+> The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line may resolve this issue.
+
 ```bash
 #!/bin/bash -e
 

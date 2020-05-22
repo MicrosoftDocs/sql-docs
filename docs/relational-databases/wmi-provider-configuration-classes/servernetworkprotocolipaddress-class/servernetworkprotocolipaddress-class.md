@@ -1,5 +1,5 @@
 ---
-title: "ServerNetworkProtocolIPAddress Class | Microsoft Docs"
+title: "ServerNetworkProtocolIPAddress Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

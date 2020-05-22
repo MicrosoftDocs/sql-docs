@@ -1,5 +1,5 @@
 ---
-title: "Display Data and Log Space Information for a Database | Microsoft Docs"
+title: "Display data & log space info for a database"
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
@@ -20,6 +20,7 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: "stevestein"
 ms.author: "sstein"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Display Data and Log Space Information for a Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- Permission to execute **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **@updateusage** parameter.  
+ Permission to execute **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **\@updateusage** parameter.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -42,8 +43,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Expand **Databases**.  
   
 3.  Right-click a database, point to **Reports**, point to **Standard Reports,**, and then click **Disk Usage**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

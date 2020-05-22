@@ -1,6 +1,6 @@
 ---
-title: "Programming Specific Tasks | Microsoft Docs"
-ms.custom: ""
+title: "Programming Specific Tasks"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

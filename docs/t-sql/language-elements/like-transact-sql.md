@@ -41,18 +41,20 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
 ```  
-  
+>[!NOTE]
+> Currently ESCAPE and STRING_ESCAPE are not supported in Azure SQL Data Warehouse or Parallel Data Warehouse.
+
 ## Arguments  
  *match_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data type.  
@@ -186,7 +188,7 @@ GO
 |LIKE 'abc[def]'|abcd, abce, and abcf|  
   
 ## Pattern Matching with the ESCAPE Clause  
- You can search for character strings that include one or more of the special wildcard characters. For example, the discounts table in a customers database may store discount values that include a percent sign (%). To search for the percent sign as a character instead of as a wildcard character, the ESCAPE keyword and escape character must be provided. For example, a sample database contains a column named comment that contains the text 30%. To search for any rows that contain the string 30% anywhere in the comment column, specify a WHERE clause such as `WHERE comment LIKE '%30!%%' ESCAPE '!'`. If ESCAPE and the escape character aren't specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns any rows with the string 30.  
+ You can search for character strings that include one or more of the special wildcard characters. For example, the discounts table in a customers database may store discount values that include a percent sign (%). To search for the percent sign as a character instead of as a wildcard character, the ESCAPE keyword and escape character must be provided. For example, a sample database contains a column named comment that contains the text 30%. To search for any rows that contain the string 30% anywhere in the comment column, specify a WHERE clause such as `WHERE comment LIKE '%30!%%' ESCAPE '!'`. If ESCAPE and the escape character aren't specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns any rows with the string 30!.  
   
  If there is no character after an escape character in the LIKE pattern, the pattern isn't valid and the LIKE returns FALSE. If the character after an escape character isn't a wildcard character, the escape character is discarded and the following character is treated as a regular character in the pattern. These characters include the percent sign (%), underscore (_), and left bracket ([) wildcard characters when they are enclosed in double brackets ([ ]). Escape characters can be used within the double bracket characters ([ ]), including to escape a caret (^), hyphen (-), or right bracket (]).  
   
@@ -210,8 +212,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -226,8 +228,8 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
+```
+
 ### B. Using NOT LIKE with the % wildcard character  
  The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
@@ -244,8 +246,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -257,7 +259,7 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
 ### C. Using the ESCAPE clause  
  The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  

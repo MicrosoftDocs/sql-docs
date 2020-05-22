@@ -1,7 +1,8 @@
 ---
 title: "Upgrade Database Engine | Microsoft Docs"
+description: The article provides links to resources that help you upgrade the SQL Server Database Engine from a prior release of SQL Server to SQL Server 2019.
 ms.custom: ""
-ms.date: "07/18/2017"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -35,6 +36,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
     For more information about new features and improved behaviors available after changing a database compatibility level, see [Differences between Compatibility Levels](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
 
-5.  [Take Advantage of New SQL Server Features](https://www.microsoft.com/sql-server/sql-server-2017). Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This article suggests a few of these enhancements and provides links for more information.  
+5.  [Take Advantage of New SQL Server Features](https://www.microsoft.com/sql-server/sql-server-2019). Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This article suggests a few of these enhancements and provides links for more information.  
   
   

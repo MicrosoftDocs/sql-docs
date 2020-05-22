@@ -1,6 +1,5 @@
 ---
-title: "Schema Caching (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Schema Caching (SQLXML)"
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schema Caching (SQLXML 4.0)

@@ -112,8 +112,6 @@ ms.author: "sstein"
   
 6.  Optionally, back up the reverted database, especially if it uses the full (or bulk-logged) recovery model. To back up a database, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This section contains the following examples of reverting a database to a database snapshot:  
   

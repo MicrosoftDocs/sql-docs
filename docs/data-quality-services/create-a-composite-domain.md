@@ -1,6 +1,5 @@
 ---
-title: "Create a Composite Domain | Microsoft Docs"
-ms.custom: ""
+title: "Create a Composite Domain"
 ms.date: "11/22/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -11,8 +10,8 @@ f1_keywords:
   - "sql13.dqs.kb.createcd.f1"
   - "sql13.dqs.dm.cdproperties.f1"
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Create a Composite Domain
 

@@ -1,6 +1,6 @@
 ---
-title: "sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_geo_replication_link_status"
+titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
@@ -15,9 +15,10 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_link_status dynamic management view"
 
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: mashamsft
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -61,6 +62,6 @@ FROM sys.dm_geo_replication_link_status;
 ## See Also  
  [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
-  
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
   

@@ -61,7 +61,7 @@ ms.author: "sstein"
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and log files can be put on either FAT or NTFS file systems. On Windows systems, we recommend using the NTFS file system because the security aspects of NTFS. 
 
 > [!WARNING]
-> Read/write data filegroups and log files cannot be placed on an NTFS compressed file system. Only read-only databases and read-only secondary filegroups can be put on an NTFS compressed file system.
+> Read/write data filegroups and log files are not supported on an NTFS compressed file system. Only read-only databases and read-only secondary filegroups are allowed to be put on an NTFS compressed file system.
 > For space savings, it is highly recommended to use [data compression](../../relational-databases/data-compression/data-compression.md) instead of file system compression.
 
 When multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are running on a single computer, each instance receives a different default directory to hold the files for the databases created in the instance. For more information, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).

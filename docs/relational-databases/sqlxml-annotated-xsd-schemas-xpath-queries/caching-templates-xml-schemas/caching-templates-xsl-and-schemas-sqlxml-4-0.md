@@ -1,6 +1,5 @@
 ---
-title: "Caching Templates, XSL, and Schemas (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Caching Templates, XSL, and Schemas (SQLXML)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Caching Templates, XSL, and Schemas (SQLXML 4.0)

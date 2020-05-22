@@ -1,10 +1,10 @@
 ---
-title: Java data types supported in SQL Server 2019 
+title: Java data types
 titleSuffix: SQL Server Language Extensions
 description: Map data types from Java to SQL Server for input and output data structures, and for input parameters on the sp_execute_external_script.
 author: dphansen
 ms.author: davidph 
-ms.date: 09/05/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

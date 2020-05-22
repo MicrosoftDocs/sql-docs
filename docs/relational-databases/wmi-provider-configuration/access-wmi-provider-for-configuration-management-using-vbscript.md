@@ -1,6 +1,6 @@
 ---
-title: "Modify SQL Server Service Advanced Properties using VBScript | Microsoft Docs"
-ms.custom: ""
+title: "Access the WMI Provider with VBScript"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -36,8 +36,6 @@ ms.author: "carlrab"
 5.  Save the file.  
   
 6.  Run the script by typing **cscript test.vbs** at the command prompt.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Example  
   

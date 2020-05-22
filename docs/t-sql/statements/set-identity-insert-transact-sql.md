@@ -1,6 +1,6 @@
 ---
 title: "SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the SET IDENTITY_INSERT statement. When set to ON, this permits inserting explicit values into the identity column of a table."
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -33,7 +33,7 @@ Allows explicit values to be inserted into the identity column of a table.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
@@ -61,7 +61,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
 ## Examples  
  The following example creates a table with an identity column and shows how the `SET IDENTITY_INSERT` setting can be used to fill a gap in the identity values caused by a `DELETE` statement.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Create tool table.  

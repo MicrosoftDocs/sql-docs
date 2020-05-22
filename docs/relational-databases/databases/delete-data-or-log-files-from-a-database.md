@@ -62,8 +62,6 @@ ms.author: "sstein"
   
 5.  Click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To delete data or log files from a database  

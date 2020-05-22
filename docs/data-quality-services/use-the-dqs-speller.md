@@ -1,6 +1,5 @@
 ---
-title: "Use the DQS Speller | Microsoft Docs"
-ms.custom: ""
+title: "Use the DQS Speller"
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Use the DQS Speller
 

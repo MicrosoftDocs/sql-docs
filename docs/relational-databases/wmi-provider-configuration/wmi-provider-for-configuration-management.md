@@ -1,5 +1,5 @@
 ---
-title: "WMI Provider for Configuration Management Concepts | Microsoft Docs"
+title: "WMI Provider for Configuration Management Concepts"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

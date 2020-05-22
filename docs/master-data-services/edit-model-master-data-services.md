@@ -1,5 +1,5 @@
 ---
-title: "Edit Model (Master Data Services) | Microsoft Docs"
+title: Edit Model
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

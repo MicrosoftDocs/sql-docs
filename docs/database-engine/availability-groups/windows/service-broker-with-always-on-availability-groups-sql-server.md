@@ -1,6 +1,7 @@
 ---
-title: "Service Broker with Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Service Broker with availability groups"
+description: Contains information about configuring Service Broker with SQL Server Always On availability groups. 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

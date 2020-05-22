@@ -1,6 +1,6 @@
 ---
-title: "Plan your adoption of In-Memory OLTP Features in SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Plan adoption of in-memory OLTP "
+ms.custom: seo-dt-2019
 ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

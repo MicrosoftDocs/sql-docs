@@ -1,5 +1,6 @@
 ---
 title: "Remove Defunct Filegroups (SQL Server) | Microsoft Docs"
+description: This article shows you how to remove defunct filegroups in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -72,8 +73,6 @@ ms.author: mikeray
 5.  Select the **Filegroups** page.  
   
 6.  In the **Rows** grid, select the filegroup to delete, click **Remove**, and then click **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -1,6 +1,6 @@
 ---
-title: "Watch Window | Microsoft Docs"
-ms.custom: ""
+title: Watch Window
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Watch Window [Transact-SQL]"
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Watch Window

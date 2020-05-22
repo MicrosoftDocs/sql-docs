@@ -1,6 +1,6 @@
 ---
-title: "Search an Active Document Incrementally | Microsoft Docs"
-ms.custom: ""
+title: Search an Active Document Incrementally
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], incremental search"
   - "incremental searches [SQL Server Management Studio]"
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Search an Active Document Incrementally

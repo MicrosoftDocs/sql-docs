@@ -1,7 +1,7 @@
 ---
-title: "Evaluate health of the availability group using group policies"
+title: "Use group policies for availability group health"
 description: "Learn how to view the group system policies that the Always On dashboard uses to provide information about the availability group health."
-ms.custom: "ag-guide, seodec18"
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -27,6 +27,6 @@ ms.author: jroth
 3.  To view all the availability groups system policies, in the **Select a page** pane, click **Policy Selection**.  
   
 ## Next steps  
- [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).   
+ [The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model).   
   
   

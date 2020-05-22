@@ -1,6 +1,7 @@
 ---
-title: "Upgrading Always On Availability Group replica instances | Microsoft Docs"
-ms.custom: ""
+title: "Upgrade availability group replicas"
+dsecription: "Describes how to upgrade replicas that are participating in an Always On availability group."
+ms.custom: "seo-lt-2019"
 ms.date: "01/10/2018"
 ms.prod: sql
 ms.reviewer: ""

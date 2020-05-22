@@ -1,9 +1,10 @@
 ---
-title: "tablediff Utility | Microsoft Docs"
-ms.custom: ""
+title: "tablediff Utility"
+description: Use the tablediff utility to compare the data in two tables for non-convergence and troubleshoot non-convergence in a replication topology.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual

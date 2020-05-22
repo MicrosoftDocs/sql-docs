@@ -1,6 +1,6 @@
 ---
-title: "Open an Editor (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Open an Editor (SQL Server Management Studio)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting

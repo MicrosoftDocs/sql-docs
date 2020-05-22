@@ -38,8 +38,8 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Requesting the PathName for a column of any other data type or for a **varbinary(max)** columnthat does not have the FILESTREAM storage attribute will cause a query compile-time error.  
   
- *@option*  
- An integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) that defines how the server component of the path should be formatted. *@option* can be one of the following values. The default is 0.  
+ *\@option*  
+ An integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) that defines how the server component of the path should be formatted. *\@option* can be one of the following values. The default is 0.  
   
 |Value|Description|  
 |-----------|-----------------|  

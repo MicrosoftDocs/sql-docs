@@ -1,6 +1,7 @@
 ---
-title: "Administer a Peer-to-Peer Topology (Replication Transact-SQL Programming) | Microsoft Docs"
-ms.custom: ""
+title: "Administer a Peer-to-Peer topology (Replication SP)"
+description: Learn how to use replication stored procedures to administer a peer-to-peer topology, such as to add an article, or make a schema change. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -38,8 +39,6 @@ ms.author: "mathoma"
     >  After [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) is executed, replication automatically adds the article to the subscriptions in the topology.  
   
 6.  Restart the Distribution Agents at each node in the topology.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### To make schema changes to a publication database  
   

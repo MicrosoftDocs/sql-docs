@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "SQL graph, MATCH statement"
 author: shkale-msft
 ms.author: shkale
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

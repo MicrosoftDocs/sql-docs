@@ -64,8 +64,6 @@ To rename a table in Azure SQL Data Warehouse or Parallel Data Warehouse, use th
   
 5.  From the **File** menu choose **Save** _table name_.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To rename a table  

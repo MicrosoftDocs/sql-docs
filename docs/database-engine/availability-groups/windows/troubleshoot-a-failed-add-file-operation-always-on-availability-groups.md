@@ -1,6 +1,7 @@
 ---
-title: "Troubleshoot a Failed Add-File Operation (Always On Availability Groups) | Microsoft Docs"
-ms.custom: ""
+title: "Failed availability group add-file operation"
+decription: Possible resolutions for failing to add a file to an availability group.
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

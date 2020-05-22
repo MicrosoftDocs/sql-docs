@@ -1,7 +1,7 @@
 ---
 title: "User Assistance in SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: ssms
@@ -38,7 +38,7 @@ manager: craigg
   
      Stores user topic bookmarks for easy access later.  
   
- Help on Help ([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer Help) links users to the documentation about the Help Viewer, but the topics are in a collection separate from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about the Help Viewer, select **Help on Help** from the Help menu of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about adding the Help on Help collection of topics to the Books Online collection, see [Add or Remove Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Help on Help ([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer Help) links users to the documentation about the Help Viewer, but the topics are in a collection separate from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about the Help Viewer, select **Help on Help** from the Help menu of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about adding the Help on Help collection of topics to the Books Online collection, see [Add or Remove Product Documentation for SQL Server](../2014-toc/index.yml).  
   
 ## MSDN Online and SQL Server Communities  
  Help in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also provides users ways to contact MSDN Online and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-focused communities on the Web for information. You can:  

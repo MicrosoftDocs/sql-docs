@@ -1,5 +1,6 @@
 ---
 title: "Manage the suspect_pages Table (SQL Server) | Microsoft Docs"
+description: Learn how to manage the suspect_pages table in SQL Server by using SQL Server Management Studio or Transact-SQL. Pages that produce certain errors are suspect.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -126,8 +127,6 @@ ms.author: mikeray
 3.  Expand **dbo.suspect_pages** and right-click **Edit Top 200 Rows**.  
   
 4.  In the query window, edit, update, or delete the rows that you want.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

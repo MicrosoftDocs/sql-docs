@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Management Objects Support for In-Memory OLTP | Microsoft Docs"
+title: "SQL Server Management Objects support - in-memory OLTP"
 description: "Describes items in SQL Server Management Objects (SMO) that support In-Memory OLTP."
-ms.custom: ""
+ms.custom: seo-dt-2019
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -54,7 +54,7 @@ manager: craigg
   
  `//Connect to the local, default instance of SQL Server.`  
   
-```  
+```csharp
 {  
             Server srv = new Server();  
             //Display all the configuration options.   
@@ -90,10 +90,10 @@ manager: craigg
   
  In the example the <xref:Microsoft.SqlServer.Management.Smo.UserOptions> object and the <xref:Microsoft.SqlServer.Management.Smo.Settings> object both have an <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> method. You can run the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> methods for these individually.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Display information about the instance of SQL Server in Information and Settings.  
 "OS Version = " + $srv.Information.OSVersion  
@@ -115,10 +115,10 @@ $srv.Alter()
 ## Modifying SQL Server Configuration Options in PowerShell  
  The code example shows how to update a configuration option in Visual Basic .NET. It also retrieves and displays information about maximum and minimum values for the specified configuration option. Finally, the program informs the user if the change has been made dynamically, or if it is stored until the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is restarted.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance replace LocalMachine with the physical server  
 cd \sql\LocalMachine  
-$svr = get-item default  
+$svr = Get-Item default  
   
 #enumerate its properties  
 foreach ($Item in $Svr.Configuration.Properties)   
@@ -139,13 +139,11 @@ $svr.Configuration.Alter()
   
 #Display when the change takes place according to the IsDynamic property.  
 If ($svr.Configuration.ShowAdvancedOptions.IsDynamic -eq $true)  
- {    
+ {
    "Configuration option has been updated."  
  }  
 Else  
-{  
+ {  
     "Configuration option will be updated when SQL Server is restarted."  
-}  
+ }  
 ```  
-  
-  

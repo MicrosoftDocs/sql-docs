@@ -37,15 +37,14 @@ manager: craigg
   
 -   Create or modify the powershell.exe.config file to load .NET 2.0 and .NET 4.0 assemblies at runtime with the following:  
   
-    ```  
-    <?xml version="1.0"?>   
-    <configuration>   
-        <startup useLegacyV2RuntimeActivationPolicy="true">   
-            <supportedRuntime version="v4.0.30319"/>   
-            <supportedRuntime version="v2.0.50727"/>   
-        </startup>   
-    </configuration>  
-  
+    ```xml
+    <?xml version="1.0"?>
+    <configuration>
+        <startup useLegacyV2RuntimeActivationPolicy="true">
+            <supportedRuntime version="v4.0.30319"/>
+            <supportedRuntime version="v2.0.50727"/>
+        </startup>
+    </configuration>
     ```  
   
  The following example illustrates identifying blobs that have active leases and then breaking them. The example also demonstrates how filter for release lease IDs.  
@@ -78,7 +77,7 @@ manager: craigg
   
      **The lease on \<URL of the Blob> is not a restore lease Breaking lease on \<URL of the Bob>.**  
   
-```  
+```powershell
 param(  
        [Parameter(Mandatory=$true)]  
        [string]$storageAccount,  
@@ -98,34 +97,32 @@ $bytes = [System.IO.File]::ReadAllBytes($storageAssemblyPath)
 [System.Reflection.Assembly]::Load($bytes)  
   
 $cred = New-Object 'Microsoft.WindowsAzure.Storage.Auth.StorageCredentials' $storageAccount, $storageKey  
-  
 $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "https://$storageAccount.blob.core.windows.net", $cred  
-  
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs()
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
 foreach($blob in $allBlobs)  
 {  
-    $blobProperties = $blob.Properties   
+    $blobProperties = $blob.Properties
     if($blobProperties.LeaseStatus -eq "Locked")  
     {  
         $lockedBlobs += $blob  
-  
     }  
 }  
   
 if ($lockedBlobs.Count -eq 0)  
-    {   
-        Write-Host " There are no blobs with locked lease status"  
-    }  
+{
+    Write-Host " There are no blobs with locked lease status"  
+}
+
 if($lockedBlobs.Count -gt 0)  
 {  
-    write-host "Breaking leases"  
-    foreach($blob in $lockedBlobs )   
+    Write-Host "Breaking leases"  
+    foreach($blob in $lockedBlobs )
     {  
         try  
         {  
@@ -143,11 +140,8 @@ if($lockedBlobs.Count -gt 0)
         Write-Host "Breaking lease on $($blob.Uri)"  
         $blob.BreakLease($(New-TimeSpan), $null, $null, $null) | Out-Null  
     }  
-}  
-  
+}
 ```  
   
 ## See Also  
  [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  

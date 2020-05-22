@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.backupencryptionkey.F1"
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Backup Encryption Key (SSRS Native Mode)

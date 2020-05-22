@@ -1,6 +1,8 @@
 ---
-title: "DENY Availability Group Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Availability Group Permissions"
+description: Deny permissions on an Always On availability group.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -28,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
         TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  

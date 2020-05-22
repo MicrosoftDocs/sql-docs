@@ -1,5 +1,5 @@
 ---
-title: "Preparing Data for Display in a Tablix Data Region (Report Builder and SSRS) | Microsoft Docs"
+title: "Preparing Data for Display in a Tablix Data Region (Report Builder) | Microsoft Docs"
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

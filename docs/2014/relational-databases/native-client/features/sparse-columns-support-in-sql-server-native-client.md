@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "sparse columns, SQL Server Native Client"
   - "sparse columns, OLE DB"
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Sparse Columns Support in SQL Server Native Client
@@ -20,7 +20,7 @@ manager: craigg
   
  For more information about sparse column support in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Sparse Columns Support &#40;ODBC&#41;](../odbc/sparse-columns-support-odbc.md) and [Sparse Columns Support &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md).  
   
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](http://msftdpprodsamples.codeplex.com/).  
+ For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
   
 ## User Scenarios for Sparse Columns and SQL Server Native Client  
  The following table summarizes the common user scenarios for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client users with sparse columns:  
@@ -55,5 +55,4 @@ manager: craigg
   
 ## See Also  
  [SQL Server Native Client Programming](../sql-server-native-client-programming.md)  
-  
   

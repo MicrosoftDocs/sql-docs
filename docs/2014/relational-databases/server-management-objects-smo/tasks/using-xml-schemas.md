@@ -29,7 +29,7 @@ manager: craigg
 ## Creating an XML Schema in Visual C#  
  This code example shows how to create an XML schema by using the <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection> object. The <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A> property, which defines the XML schema collection, contains several double quotation marks. These are replaced by the `chr(34)` string.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv = default(Server);  
@@ -50,10 +50,10 @@ manager: craigg
 ## Creating an XML Schema in PowerShell  
  This code example shows how to create an XML schema by using the <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection> object. The <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A> property, which defines the XML schema collection, contains several double quotation marks. These are replaced by the `chr(34)` string.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance replace LocalMachine with the physical server  
 cd \sql\LocalHost  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Reference the AdventureWorks database.  
 $db = $srv.Databases["AdventureWorks2012"]  
@@ -71,5 +71,3 @@ $xsc.Text = "<schema xmlns=" + $dq + "http://www.w3.org/2001/XMLSchema" + $dq + 
 #Create the XML schema collection on the instance of SQL Server.  
 $xsc.Create()  
 ```  
-  
-  

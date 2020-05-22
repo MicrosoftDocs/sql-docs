@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 THROW [ { error_number | @local_variable },  
         { message | @local_variable },  
         { state | @local_variable } ]   
@@ -61,7 +61,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |If a *msg_id* is passed to RAISERROR, the ID must be defined in sys.messages.|The *error_number* parameter does not have to be defined in sys.messages.|  
 |The *msg_str* parameter can contain **printf** formatting styles.|The *message* parameter does not accept **printf** style formatting.|  
-|The *severity* parameter specifies the severity of the exception.|There is no *severity* parameter. The exception severity is always set to 16.|  
+|The *severity* parameter specifies the severity of the exception.|There is no *severity* parameter. When THROW is used to initiate the exception, the severity is always set to 16. However, when THROW is used to re-throw an existing exception, the severity is set to that exception's severity level.|  
   
 ## Examples  
   

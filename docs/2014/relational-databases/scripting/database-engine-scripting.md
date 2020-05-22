@@ -1,6 +1,6 @@
 ---
-title: "Database Engine Scripting | Microsoft Docs"
-ms.custom: ""
+title: Database Engine Scripting
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "scripting [SQL Server Database Engine]"
   - "scripting [SQL Server Database Engine], PowerShell"
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Database Engine Scripting

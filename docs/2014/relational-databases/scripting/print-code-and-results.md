@@ -1,6 +1,6 @@
 ---
-title: "Print Code and Results | Microsoft Docs"
-ms.custom: ""
+title: Print Code and Results
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "text printing [SQL Server Management Studio]"
   - "printing code and text"
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Print Code and Results

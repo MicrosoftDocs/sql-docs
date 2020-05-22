@@ -1,9 +1,9 @@
 ---
-title: "SQL Server Configuration Manager Help | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Configuration Manager Help"
+ms.custom: seo-lt-2019
 ms.date: "02/01/2018"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual

@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Configure replication between two fully connected servers (transactional) | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Configure Transactional Replication"
+description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Servers. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -109,8 +110,6 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
     !["Complete the Wizard" page with publication name](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. After the publication is created, select **Close** to complete the wizard. 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 You might encounter the following error if your SQL Server Agent is not running when you try to create the publication. This error indicates that your publication was created successfully but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. The next section gives instructions. 
 

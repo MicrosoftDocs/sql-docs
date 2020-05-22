@@ -1,5 +1,5 @@
 ---
-title: "Create and Publish a Business Rule (Master Data Services) | Microsoft Docs"
+title: Create and Publish a Business Rule
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,6 +1,7 @@
 ---
-title: SQL Server availability basics for Linux deployments
-description: 
+title: SQL Server high availability for Linux deployments
+description: Learn about the high availability options for SQL Server on Linux, such as Always On availability groups, failover cluster instances (FCI), and log shipping. 
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -71,7 +72,7 @@ Samba, which is the Linux variant of server message block (SMB), can also be use
 
 Windows-based SMB shares can also be used; SMB shares do not need to be Linux-based, as long as the client portion of Samba is configured properly on the Linux server hosting [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and the share has the right access. For those in a mixed environment, this would be one way to leverage existing infrastructure for Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments.
 
-One thing that is important is that the version of Samba deployed should be SMB 3.0 compliant. When SMB support was added in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], it required all shares to support SMB 3.0. If using Samba for the share and not Windows Server, the Samba-based share should be using Samba 4.0 or later, and ideally 4.3 or later, which supports SMB 3.1.1. A good source of information on SMB and Linux is [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+One thing that is important is that the version of Samba deployed should be SMB 3.0 compliant. When SMB support was added in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], it required all shares to support SMB 3.0. If using Samba for the share and not Windows Server, the Samba-based share should be using Samba 4.0 or later, and ideally 4.3 or later, which supports SMB 3.1.1. A good source of information on SMB and Linux is [SMB3 in Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Finally, using a network file system (NFS) share is an option. Using NFS is not an option on Windows-based deployments of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], and can only be used for Linux-based deployments.
 

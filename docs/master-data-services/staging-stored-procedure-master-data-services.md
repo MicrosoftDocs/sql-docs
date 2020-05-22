@@ -1,5 +1,5 @@
 ---
-title: "Staging Stored Procedure (Master Data Services) | Microsoft Docs"
+title: Staging Stored Procedure
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

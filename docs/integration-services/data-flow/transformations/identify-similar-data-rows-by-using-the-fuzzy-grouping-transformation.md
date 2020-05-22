@@ -1,5 +1,5 @@
 ---
-title: "Identify Similar Data Rows by Using the Fuzzy Grouping Transformation | Microsoft Docs"
+title: "Identify Similar Data Rows with the Fuzzy Grouping Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +16,7 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
 ---
-# Identify Similar Data Rows by Using the Fuzzy Grouping Transformation
+# Identify Similar Data Rows with the Fuzzy Grouping Transformation
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

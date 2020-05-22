@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLColumnPrivileges function"
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLColumnPrivileges

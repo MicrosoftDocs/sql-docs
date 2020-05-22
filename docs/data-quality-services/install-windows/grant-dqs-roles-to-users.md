@@ -1,6 +1,5 @@
 ---
-title: "Grant DQS Roles to Users | Microsoft Docs"
-ms.custom: ""
+title: "Grant DQS Roles to Users"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Grant DQS Roles to Users
 

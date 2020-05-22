@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], custom extensions"
   - "delivery extensions [Reporting Services]"
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Custom extensions were detected on the report server (Upgrade Advisor)

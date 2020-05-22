@@ -58,7 +58,7 @@ manager: craigg
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1, and [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer beginning with version 4.5. You can install Windows Installer from the [Windows Installer Web site](https://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer beginning with version 4.5. You can install Windows Installer from the [Windows Installer Web site](https://www.microsoft.com/download/details.aspx?id=8483).  
   
 -   Microsoft .NET Framework 4. .NET Framework 4 is available on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] product media, and from the [.NET Framework 4 download page](https://go.microsoft.com/fwlink/?LinkId=209895).  
   

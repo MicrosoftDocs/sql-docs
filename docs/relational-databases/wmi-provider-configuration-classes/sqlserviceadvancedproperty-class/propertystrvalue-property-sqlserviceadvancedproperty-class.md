@@ -1,6 +1,6 @@
 ---
-title: "PropertyStrValue Property (SqlServiceAdvancedProperty Class) | Microsoft Docs"
-ms.custom: ""
+title: "PropertyStrValue Property (SqlServiceAdvancedProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,5 +1,5 @@
 ---
-title: "Members (Master Data Services) | Microsoft Docs"
+title: Members
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

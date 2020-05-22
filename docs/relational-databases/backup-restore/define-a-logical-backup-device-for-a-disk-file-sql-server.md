@@ -1,7 +1,8 @@
 ---
-title: "Define a Logical Backup Device for a Disk File (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Define logical backup device - disk"
+description: This article shows you how to define a logical backup device for a disk file in SQL Server by using SQL Server Management Studio or Transact-SQL.
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

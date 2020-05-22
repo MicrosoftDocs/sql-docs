@@ -1,8 +1,10 @@
 ---
-title: "Configure and Manage Encryption Keys (SSRS Configuration Manager) | Microsoft Docs"
-ms.date: 05/31/2016
+title: "Configure and Manage Encryption Keys (Configuration Manager) | Microsoft Docs"
+description: "Reporting Services uses encryption keys to secure credentials and connection information that is stored in a report server database."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,7 +18,7 @@ ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 author: maggiesMSFT
 ms.author: maggies
 ---
-# SSRS Encryption Keys - Manage Encryption Keys
+# Configure and Manage Encryption Keys (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses encryption keys to secure credentials and connection information that is stored in a report server database. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], encryption is supported through a combination of public, private, and symmetric keys that are used to protect sensitive data. The symmetric key is created during report server initialization when you install or configure the report server, and it is used by the report server to encrypt sensitive data that is stored in the report server. Public and private keys are created by the operating system, and they are used to protect the symmetric key. A public and private key pair is created for each report server instance that stores sensitive data in a report server database.  
   
  Managing the encryption keys consists of creating a backup copy of the symmetric key, and knowing when and how to restore, delete, or change the keys. If you migrate a report server installation or configure a scale-out deployment, you must have a backup copy of the symmetric key so that you can apply it to the new installation.  

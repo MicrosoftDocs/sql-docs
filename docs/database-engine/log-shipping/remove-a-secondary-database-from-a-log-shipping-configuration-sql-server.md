@@ -1,6 +1,7 @@
 ---
-title: "Remove a Secondary Database from a Log Shipping Configuration (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove log shipping secondary"
+description: Learn how to remove a log shipping secondary partner. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

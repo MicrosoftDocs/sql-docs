@@ -1,6 +1,6 @@
 ---
-title: "SQL Server In-Memory OLTP Internals for SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server in-memory OLTP internals"
+ms.custom: seo-dt-2019
 ms.date: "09/14/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

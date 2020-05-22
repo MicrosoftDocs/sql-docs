@@ -1,5 +1,5 @@
 ---
-title: "Web Application Requirements (Master Data Services) | Microsoft Docs"
+title: Web Application Requirements
 ms.custom: ""
 ms.date: "02/13/2017"
 ms.prod: sql

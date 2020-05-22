@@ -76,7 +76,7 @@ manager: craigg
   
 4.  Click **OK**.  
   
- If you cannot obtain a server certificate from a CA, you can specify a certificate for testing. To configure IIS 6.0 for testing, install a certificate by using the SelfSSL utility. This utility is available in the IIS 6.0 Resource Kit. You can download the tools from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=30958). For IIS 5.0, go to [Microsoft Help and Support](https://go.microsoft.com/fwlink/?LinkId=46229).  
+ If you cannot obtain a server certificate from a CA, you can specify a certificate for testing. To configure IIS 6.0 for testing, install a certificate by using the SelfSSL utility. This utility is available in the IIS 6.0 Resource Kit. You can download the tools from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5135). For IIS 5.0, go to [Microsoft Help and Support](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  A certificate must be associated with a Web site before that Web site can use SSL. SelfSSL automatically associates the certificate with the default Web site. If you already have a certificate or later install a certificate from a CA, you must explicitly associate that certificate with the Web site that is used by Web synchronization. Make sure there is only one certificate associated with the Web site that is used to synchronize subscriptions. If there are multiple certificates, the Subscriber will use the first available Web site.  
@@ -123,7 +123,7 @@ manager: craigg
     > [!NOTE]  
     >  The Web site that you specify provides access to the components that are used by Web synchronization. The Web site does not provide access to other data or Web pages unless you configure the site to do so.  
   
--   Creates a virtual directory and its associated alias. The alias is used when accessing the Web synchronization components. For example, if the IIS address is https://*server.domain.com* and you specify an alias of 'websync1', the address to access the replisapi.dll component is https://*server.domain.com*/websync1/replisapi.dll.  
+-   Creates a virtual directory and its associated alias. The alias is used when accessing the Web synchronization components. For example, if the IIS address is `https://*server.domain.com*` and you specify an alias of 'websync1', the address to access the replisapi.dll component is `https://*server.domain.com*/websync1/replisapi.dll`.  
   
 -   Uses Basic Authentication. We recommend using Basic Authentication because Basic Authentication enables you to run IIS and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher/Distributor on separate computers (the recommended configuration) without requiring Kerberos delegation. Using SSL with Basic Authentication makes sure that logins, passwords, and all data are encrypted in transit. (SSL is required, regardless of the type of authentication that is used.) For more information about best practices for Web synchronization, see the section "Security Best Practices for Web Synchronization" in [Configure Web Synchronization](configure-web-synchronization.md).  
   
@@ -317,7 +317,7 @@ manager: craigg
   
     5.  Click **OK**.  
   
-2.  At the Subscriber, in Internet Explorer, connect to the server in diagnostic mode by appending `?diag` to the address for the replisapi.dll. For example: https://server.domain.com/directory/replisapi.dll?diag.  
+2.  At the Subscriber, in Internet Explorer, connect to the server in diagnostic mode by appending `?diag` to the address for the replisapi.dll. For example: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
 3.  If the certificate that you specified for IIS is not recognized by the Windows operating system, the **Security Alert** dialog box appears. This alert might occur because the certificate is a test certificate or the certificate was issued by a certification authority (CA) that Windows does not recognize.  
   

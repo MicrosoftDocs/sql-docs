@@ -1,6 +1,5 @@
 ---
-title: "Export a Knowledge Base to a .dqs File | Microsoft Docs"
-ms.custom: ""
+title: "Export a Knowledge Base to a .dqs File"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Export a Knowledge Base to a .dqs File
 

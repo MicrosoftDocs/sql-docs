@@ -1,6 +1,5 @@
 ---
-title: "Server-side XML Formatting (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Server-side XML Formatting (SQLXML)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server-side XML Formatting (SQLXML 4.0)

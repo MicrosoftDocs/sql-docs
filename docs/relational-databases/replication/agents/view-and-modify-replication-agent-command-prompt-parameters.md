@@ -1,6 +1,7 @@
 ---
-title: "View and Modify Replication Agent Command Prompt Parameters | Microsoft Docs"
-ms.custom: ""
+title: "View & modify Agent command prompt parameters"
+description: Learn how to view and modify the command prompt parameters used by the different Replication Agents in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,6 +1,7 @@
 ---
-title: "Transport Security - Database Mirroring - Always On Availability | Microsoft Docs"
-ms.custom: ""
+title: "Transport Security: Availability groups & database mirroring"
+description: Learn about how to secure transport of messages exchanged between databases participating in an Always On availability group or database mirroring session hosted on SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability

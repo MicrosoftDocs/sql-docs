@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_bind function"
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_bind

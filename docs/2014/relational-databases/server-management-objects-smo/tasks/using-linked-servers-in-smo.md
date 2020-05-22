@@ -32,7 +32,7 @@ manager: craigg
 ## Creating a link to an OLE-DB Provider Server in Visual C#  
  The code example shows how to create a link to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, heterogeneous data source by using the <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> object. By specifying [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as the product name, data is accessed on the linked server by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB Provider, which is the official OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
 {   
    Server srv = new Server();   
@@ -49,18 +49,16 @@ manager: craigg
 ## Creating a link to an OLE-DB Provider Server in PowerShell  
  The code example shows how to create a link to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, heterogeneous data source by using the <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> object. By specifying [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as the product name, data is accessed on the linked server by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB Provider, which is the official OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $svr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
 #Create a linked server object which corresponds to an OLEDB type of SQL server product  
-$lsvr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.LinkedServer -argumentlist $svr,"OLEDBSRV"  
+$lsvr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.LinkedServer -ArgumentList $svr,"OLEDBSRV"  
   
-#When the product name is SQL Server the remaining properties are not required to be set.   
-$lsvr.ProductName = "SQL Server"  
+#When the product name is SQL Server the remaining properties are not required to be set.
+$lsvr.ProductName = "SQL Server"
   
 #Create the Database Object  
-$lsvr.Create()   
+$lsvr.Create()
 ```  
-  
-  

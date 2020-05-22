@@ -27,7 +27,7 @@ manager: craigg
 ## Creating, Altering, and Removing a Schema in Visual C#  
  This code example demonstrates how to create a schema and assign it to a database object. The program then grants permission to a user, and then creates a new table in the schema.  
   
-```  
+```csharp
 {  
          //Connect to the local, default instance of SQL Server.   
          Server srv = new Server();   
@@ -67,27 +67,26 @@ manager: craigg
 ## Creating, Altering, and Removing a Schema in PowerShell  
  This code example demonstrates how to create a schema and assign it to a database object. The program then grants permission to a user, and then creates a new table in the schema.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a schema object variable by supplying the parent database and name arguments in the constructor.   
-$sch  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Schema `  
--argumentlist $db, "MySchema1"  
+# Define a schema object variable by supplying the parent database and name arguments in the constructor.
+$sch  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Schema -argumentlist $db, "MySchema1"  
   
 # Set schema owner  
-$sch.Owner = "dbo"   
+$sch.Owner = "dbo"
   
-# Create the schema on the instance of SQL Server.   
+# Create the schema on the instance of SQL Server.
 $sch.Create()  
   
-# Define an ObjectPermissionSet that contains the Update and Select object permissions.   
+# Define an ObjectPermissionSet that contains the Update and Select object permissions.
 $obperset  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.ObjectPermissionSet  
 $obperset.Add([Microsoft.SqlServer.Management.SMO.ObjectPermission]::Select)  
 $obperset.Add([Microsoft.SqlServer.Management.SMO.ObjectPermission]::Update)  
   
-# Grant the set of permissions on the schema to the guest account.   
+# Grant the set of permissions on the schema to the guest account.
 $sch.Grant($obperset, "guest")  
   
 #Create a SMO Table with one column and add it to the database  
@@ -95,15 +94,13 @@ $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlis
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $mycol =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Date", $Type  
 $tb.Columns.Add($mycol)  
-$tb.Create()   
+$tb.Create()
   
-# Modify the owner of the schema and run the Alter method to make the change on the instance of SQL Server.   
+# Modify the owner of the schema and run the Alter method to make the change on the instance of SQL Server.
 $sch.Owner = "guest"  
 $sch.Alter()  
   
-# Run the Drop method for the table and the schema to remove them.   
+# Run the Drop method for the table and the schema to remove them.
 $tb.Drop()  
 $sch.Drop()  
-```  
-  
-  
+```

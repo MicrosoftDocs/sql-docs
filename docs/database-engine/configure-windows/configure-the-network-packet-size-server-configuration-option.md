@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "packets [SQL Server], size"
   - "network packet size option"
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the network packet size Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.author: mikeray
 -   The maximum network packet size for encrypted connections is 16,383 bytes.  
   
 > [!NOTE]  
-> If MARS is enabled, the SMUX provider will add a 16-byte header to the packet before SSL encryption, reducing the maximum network packet size to 16368 bytes.
+> If MARS is enabled, the SMUX provider will add a 16-byte header to the packet before TLS encryption, reducing the maximum network packet size to 16368 bytes.
    
 ###  <a name="Recommendations"></a> Recommendations  
   

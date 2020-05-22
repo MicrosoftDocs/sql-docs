@@ -1,6 +1,6 @@
 ---
-title: "Change Font Color, Size, and Style | Microsoft Docs"
-ms.custom: ""
+title: "Change Font Color, Size, and Style"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

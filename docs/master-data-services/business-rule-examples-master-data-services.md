@@ -1,5 +1,5 @@
 ---
-title: "Business Rule Examples (Master Data Services) | Microsoft Docs"
+title: Business Rule Examples
 ms.custom: ""
 ms.date: "01/05/2017"
 ms.prod: sql

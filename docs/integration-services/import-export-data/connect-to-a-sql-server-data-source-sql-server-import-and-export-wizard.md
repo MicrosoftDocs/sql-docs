@@ -28,6 +28,7 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
 
 |Required info|.Net Framework Data Provider for SQL Server property|
 |---|---|
+|Authentication|Default **NotSpecified** as “Integrated Security”, or choose other authentication mode. “Interactive Active Directory Authentication” is not supported. |
 |Server name|**Data Source**|
 |Authentication (login) info|**Integrated Security**; or, **User ID** and **Password**<br/>If you want to see a drop-down list of databases on the server, you first have to provide valid login info.|
 |Database name|**Initial Catalog**|

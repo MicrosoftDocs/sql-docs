@@ -1,5 +1,6 @@
 ---
-title: "Database Mirroring and Database Snapshots (SQL Server) | Microsoft Docs"
+title: "Database mirroring & database snapshots"
+description: Learn about the interoperability of using database snapshots with database mirroring. 
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

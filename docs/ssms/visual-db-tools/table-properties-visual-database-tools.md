@@ -1,18 +1,19 @@
 ---
-title: "Table Properties (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Table Properties
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.tabledesigner"
   - "vdt.designers.properties.Table"
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Table Properties (Visual Database Tools)
@@ -79,5 +80,5 @@ Shows the column used by Microsoft SQL Server as the table's ROWGUID column. To 
 Provides a drop-down list from which you can choose the filegroup for columns that have text or image data types. If the table is stored using a partition scheme, leave this field blank.  
   
 ## See Also  
-[Design Tables (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Design Tables](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

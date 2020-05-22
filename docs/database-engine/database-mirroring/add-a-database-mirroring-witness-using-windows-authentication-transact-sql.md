@@ -1,6 +1,7 @@
 ---
-title: "Add a Database Mirroring Witness Using Windows Authentication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Configure a witness"
+description: "Describes how to configure a database mirroring witness with windows authentication using Transact-SQL. "
+ms.custom: "seo-lt-2019"
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -26,7 +27,7 @@ ms.author: mikeray
 > [!IMPORTANT]  
 >  We recommend that you configure database mirroring during off-peak hours because configuration can impact performance.  
   
-### To establish a witness  
+## Establish a witness  
   
 1.  On the witness server instance, ensure that an endpoint exists for database mirroring. Regardless of the number of mirroring session to be supported, the server instance must have only one database mirroring endpoint. If you intend to use this server instance exclusively as a witness in database mirroring sessions, assign the role of witness to the endpoint (ROLE**=**WITNESS). If you intend to use this server instance as a partner in one or more other database mirroring sessions, assign the role of the endpoint as ALL.  
   

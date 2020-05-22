@@ -87,7 +87,7 @@ manager: craigg
 -   Restrict the number of discrete values for any attribute to 10 or less. You might try grouping values in different ways in different models.  
   
     > [!NOTE]  
-    >  You can use the data exploration tools available in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] to visualize the distribution of values in your data and group your values appropriately before beginning data mining. For more information, see [Data Profiling Task and Viewer](../../integration-services/control-flow/data-profiling-task-and-viewer.md). You can also use the [Data Mining Add-ins for Excel 2007](https://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51), to explore, group and relabel data in Microsoft Excel.  
+    >  You can use the data exploration tools available in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] to visualize the distribution of values in your data and group your values appropriately before beginning data mining. For more information, see [Data Profiling Task and Viewer](../../integration-services/control-flow/data-profiling-task-and-viewer.md). You can also use the [Data Mining Add-ins for Excel 2007](https://www.microsoft.com/download/details.aspx?id=8569), to explore, group and relabel data in Microsoft Excel.  
   
 ## Customizing the Decision Trees Algorithm  
  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm supports parameters that affect the performance and accuracy of the resulting mining model. You can also set modeling flags on the mining model columns or mining structure columns to control the way that data is processed.  

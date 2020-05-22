@@ -1,7 +1,7 @@
 ---
 title: "Recompile a Stored Procedure | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "10/28/2019"
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ""
@@ -61,71 +61,52 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Requires ALTER permission on the specified procedure.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
-  
-#### To recompile a stored procedure by using the WITH RECOMPILE option  
-  
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  From the Standard bar, click **New Query**.  
-  
-3.  Copy and paste the following example into the query window and click **Execute**. This example creates the procedure definition.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+1. From the Standard bar, click **New Query**.  
+  
+1. Copy and paste the following example into the query window and click **Execute**. This example creates the procedure definition.  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-```  
+### To recompile a stored procedure by using the WITH RECOMPILE option   
   
-#### To recompile a stored procedure by using the WITH RECOMPILE option  
-  
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  From the Standard bar, click **New Query**.  
-  
-3.  Copy and paste the following example into the query window and click **Execute**. This example creates a simple procedure that returns all employees (first and last names supplied), their job titles, and their department names from a view.  
-  
-     And then copy and paste the second code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure's query plan.  
+Select **New Query**, then copy and paste the following code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure's query plan.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
 ```  
   
-#### To recompile a stored procedure by using sp_recompile  
-  
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  From the Standard bar, click **New Query**.  
-  
-3.  Copy and paste the following example into the query window and click **Execute**. This example creates a simple procedure that returns all employees (first and last names supplied), their job titles, and their department names from a view.  
-  
-     Then, copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
-  
+### To recompile a stored procedure by using sp_recompile  
+
+Select **New Query**, then copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
+
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
-  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## See Also  

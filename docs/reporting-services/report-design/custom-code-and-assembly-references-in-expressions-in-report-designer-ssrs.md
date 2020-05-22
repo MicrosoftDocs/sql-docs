@@ -1,5 +1,5 @@
 ---
-title: "Custom Code and Assembly References in Expressions in Report Designer (SSRS) | Microsoft Docs"
+title: "Custom Code and Assembly References in Expressions in Report Designer | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,15 +1,15 @@
 ---
-title: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
+title: Connect to and query a SQL Server instance
 description: A tutorial for connecting to a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
-ms.topic: quickstart
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
+ms.topic: tutorial
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ---
 
@@ -106,7 +106,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
    ![Change database](media/connect-query-sql-server/changedb.png)
 
 2. Paste the following T-SQL code snippet into the query window, select it, and then select **Execute** (or select F5 on your keyboard).  
-   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. If you've appended the text, you will want to execute just the portion of the text, so highlight that portion, and then select **Execute**.  
+   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. If you've appended the text, you want to execute just the portion of the text, so highlight that portion, and then select **Execute**.  
   
    ```sql
    USE [TutorialDB]
@@ -192,11 +192,16 @@ You can change the server that your current query window is connected to by foll
     > [!NOTE]
     > This action changes only the server that the query window is connected to, not the server that Object Explorer uses.
 
+## Azure Data Studio
+
+You can also connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure SQL data warehouses](../../azure-data-studio/quickstart-sql-dw.md) using Azure Data Studio.
+
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
 * [Scripting](scripting-ssms.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)
 * [Additional Tips and Tricks for using SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

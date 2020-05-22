@@ -1,6 +1,6 @@
 ---
-title: "Connect to the Database Engine With sqlcmd | Microsoft Docs"
-ms.custom: ""
+title: "Connect to the Database Engine With sqlcmd"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting

@@ -1,5 +1,6 @@
 ---
-title: "Rendering to HTML (Report Builder and SSRS) | Microsoft Docs"
+title: "Rendering to HTML (Report Builder) | Microsoft Docs"
+description: In Report Builder, the HTML rendering extension renders paginated reports in HTML format. It can produce full HTML pages or fragments to embed in other pages.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -80,6 +81,8 @@ ms.author: maggies
   
  Additional search and find functionality is provided by the ReportViewer Web Forms control.  
   
+##  <a name="FontsOnClient"></a> Fonts on the Client Computer
+ When a custom font is used within the report, the computer that is used to view the report (the client computer) must have the custom font installed for the report to display correctly. If the font is not installed on the client computer, the report will display a system default font instead of the custom font.
   
 ##  <a name="DeviceInfo"></a> Device Information Settings  
  You can change some default settings for this renderer, including which mode to render in, by changing the device information settings. For more information, see [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  

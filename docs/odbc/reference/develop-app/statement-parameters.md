@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "statement parameters [ODBC]"
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Statement Parameters
 A *parameter* is a variable in an SQL statement. For example, suppose a Parts table has columns named PartID, Description, and Price. To add a part without parameters would require constructing an SQL statement such as:  

@@ -24,10 +24,10 @@ ms.author: mathoma
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_INVALID_PARAMS|  
-|Message Text|Cannot create plan guide '%.\*ls' because the value specified for **@params** is invalid. Specify the value in the form *parameter_name parameter_type*, or specify NULL.|  
+|Message Text|Cannot create plan guide '%.\*ls' because the value specified for **\@params** is invalid. Specify the value in the form *parameter_name parameter_type*, or specify NULL.|  
   
 ## Explanation  
-The value specified for **@params** is invalid.  
+The value specified for **\@params** is invalid.  
   
 ## User Action  
 Specify the value in the form *parameter_name parameter_type*, or specify NULL.  

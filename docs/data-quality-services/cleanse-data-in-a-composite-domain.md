@@ -1,6 +1,5 @@
 ---
-title: "Cleanse Data in a Composite Domain | Microsoft Docs"
-ms.custom: ""
+title: "Cleanse Data in a Composite Domain"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Cleanse Data in a Composite Domain
 

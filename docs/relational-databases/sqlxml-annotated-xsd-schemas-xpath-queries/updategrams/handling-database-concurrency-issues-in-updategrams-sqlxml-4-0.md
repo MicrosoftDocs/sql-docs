@@ -1,6 +1,5 @@
 ---
-title: "Handling Database Concurrency Issues in Updategrams (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Database concurrency issues in Updategrams (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -20,6 +19,7 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)

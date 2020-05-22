@@ -1,5 +1,5 @@
 ---
-title: "Entity Sync Relationship (Master Data Services) | Microsoft Docs"
+title: Entity Sync Relationship
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

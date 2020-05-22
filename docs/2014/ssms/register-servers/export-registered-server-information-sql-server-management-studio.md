@@ -1,6 +1,6 @@
 ---
-title: "Export Registered Server Information (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Export Registered Server Information
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "exporting registered server information"
   - "transferring registered server information"
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 ---
 # Export Registered Server Information (SQL Server Management Studio)
   This topic describes how to save and export registered server information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]and distribute it to other employees or servers. You can use this export feature to present a consistent user interface on multiple computers.  

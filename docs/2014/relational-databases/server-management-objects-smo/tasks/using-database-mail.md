@@ -58,9 +58,7 @@ manager: craigg
 ```  
   
 ## Creating a Database Mail Account by Using PowerShell  
- This code example shows how to create an e-mail account in SMO. Database Mail is represented by the <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> object and referenced by the <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. SMO can be used to programmatically configure Database Mail, but it cannot be used to send or handle received e-mail.  
-  
- PowerShell  
+ This code example shows how to create an e-mail account in SMO. Database Mail is represented by the <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> object and referenced by the <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Server> object. SMO can be used to programmatically configure Database Mail, but it cannot be used to send or handle received e-mail.
   
 ```powershell  
 #Connect to the local, default instance of SQL Server.  
@@ -73,10 +71,8 @@ $sm = $srv.Mail
   
 #Define and create a mail account by supplying the Database Mail service,  
 #name, description, display name, and email address arguments in the constructor.  
-$a = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Mail.MailAccount -argumentlist $sm, `  
+$a = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Mail.MailAccount -ArgumentList $sm, `  
 "Adventure Works Administrator", "Adventure Works Automated Mailer",`  
  "Mail account for administrative e-mail.", "dba@Adventure-Works.com"  
 $a.Create()  
 ```  
-  
-  

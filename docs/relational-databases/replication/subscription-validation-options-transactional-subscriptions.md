@@ -1,6 +1,7 @@
 ---
-title: "Subscription Validation Options (Transactional Subscriptions) | Microsoft Docs"
-ms.custom: ""
+title: "Subscription validation options dialog box (Transactional)"
+description: Describes the 'Subscription Validation Options' dialog box for Transactional Replication in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

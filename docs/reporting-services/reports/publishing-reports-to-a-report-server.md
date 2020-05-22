@@ -1,5 +1,6 @@
 ---
 title: "Publishing Reports to a Report Server | Microsoft Docs"
+description: Learn how to use the deployment features in SQL Server Data Tools (SSDT) to publish the reports to a report server.
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -27,7 +28,7 @@ ms.author: maggies
 # Publishing Reports to a Report Server
   After you have designed and tested a report or set of reports, you can use the deployment features in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to publish the reports to a report server. You can publish individual reports or a Report Server project which can include multiple reports and data sources. Publishing a Report Server project is the easiest way to publish multiple reports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] uses the term *deploy*, instead of the term *publish*. The two terms are interchangeable.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides project configurations for managing report publication. The configuration specifies the location of the report server, the version of SQL Server Reporting Services installed on the report server, whether the data sources published to the report server are overwritten and so forth. For example, the "Debug" configuraiton can publish to a different server than the "release" configuration. In addition to using the configurations that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides, you can create additional configurations.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides project configurations for managing report publication. The configuration specifies the location of the report server, the version of SQL Server Reporting Services installed on the report server, whether the data sources published to the report server are overwritten and so forth. For example, the "Debug" configuration can publish to a different server than the "release" configuration. In addition to using the configurations that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides, you can create additional configurations.  
  
 ## Requirements to Publish
 Permission is determined through role-based security that is defined by your report server administrator. Publishing operations are typically granted through the **Publisher role**.  

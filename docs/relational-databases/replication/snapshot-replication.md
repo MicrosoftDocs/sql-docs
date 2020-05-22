@@ -1,5 +1,6 @@
 ---
 title: "Snapshot Replication | Microsoft Docs"
+description: Snapshot replication distributes data as it appears at a moment in time. It does not monitor for updates. A snapshot is generated and sent to Subscribers.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Snapshot Replication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

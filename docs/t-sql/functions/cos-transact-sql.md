@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "cosine"
   - "COS function"
 ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COS (Transact-SQL)
@@ -29,7 +29,7 @@ A mathematical function that returns the trigonometric cosine of the specified a
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COS ( float_expression )  
 ```  
   

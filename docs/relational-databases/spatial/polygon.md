@@ -37,8 +37,6 @@ As shown in the illustration:
   
 3.  Figure 3 is a valid **Polygon** instance because its interior rings intersect at a single tangent point.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### Accepted instances  
  Accepted **Polygon** instances are instances that can be stored in a **geometry** or **geography** variable without throwing an exception. The following are accepted **Polygon** instances:  
   

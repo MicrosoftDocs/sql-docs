@@ -1,5 +1,6 @@
 ---
 title: "Restore a Database Backup Using SSMS | Microsoft Docs"
+description: This article explains how to restore a full SQL Server database backup using SQL Server Management Studio.
 ms.custom: ""
 ms.date: "11/16/2016"
 ms.prod: sql

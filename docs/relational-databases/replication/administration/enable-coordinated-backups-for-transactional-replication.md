@@ -1,6 +1,7 @@
 ---
-title: "Enable Coordinated Backups for Transactional Replication | Microsoft Docs"
-ms.custom: ""
+title: "Enable coordinated backups (Transactional)"
+description: Learn to enable coordinated backups on the distribution database so that the transaction log for the Transactional Replication publication database is not truncated until transactions that have been propagated to the Distributor have been backed up. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

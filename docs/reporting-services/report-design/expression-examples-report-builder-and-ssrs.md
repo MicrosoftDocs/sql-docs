@@ -1,5 +1,5 @@
 ---
-title: "Expression Examples (Report Builder and SSRS) | Microsoft Docs"
+title: "Expression Examples (Report Builder) | Microsoft Docs"
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,6 +1,7 @@
 ---
-title: "Specify Endpoint URL - Adding or Modifying Availability Replica | Microsoft Docs"
-ms.custom: ""
+title: "Specify Endpoint URL for availability replica"
+description: Learn how to specify the endpoint URL when adding or modifying a replica within an Always On availability group on SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

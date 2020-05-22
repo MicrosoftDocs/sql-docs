@@ -27,15 +27,14 @@ manager: craigg
   
  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider is used to manage the objects in an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. It is not used to work with the data in databases. If you have navigated to a table or view, you cannot use the provider to select, insert, update, or delete data. Use the **Invoke-Sqlcmd** cmdlet to query or change data in tables and views from the Windows PowerShell environment. For more information, see [Invoke-Sqlcmd cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> Listing Methods and Properties  
- **Listing Methods and Properties**  
+##  <a name="ListPropMeth"></a> Listing Methods and Properties
   
  To view the methods and properties available for specific objects or object classes, use the **Get-Member** cmdlet.  
   
 ### Examples: Listing Methods and Properties  
  This example sets a Windows PowerShell variable to the SMO <xref:Microsoft.SqlServer.Management.Smo.Database> class and lists the methods and properties:  
   
-```  
+```powershell
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
 $MyDBVar | Get-Member -Type Methods  
 $MyDBVar | Get-Member -Type Properties  
@@ -45,34 +44,33 @@ $MyDBVar | Get-Member -Type Properties
   
  This example navigates to the Databases node in a SQLSERVER: path and lists the collection properties:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases  
 Get-Item . | Get-Member -Type Properties  
 ```  
   
  This example navigates to the AdventureWorks2012 node in a SQLSERVER: path and lists the object properties:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a> Using Methods and Properties  
- **Using SMO Methods and Properties**  
+##  <a name="UsePropMeth"></a> Using SMO Methods and Properties  
   
  To perform work on objects from a [!INCLUDE[ssDE](../includes/ssde-md.md)] provider path, you can use SMO methods and properties.  
   
 ### Examples: Using Methods and Properties  
  This example uses the SMO **Schema** property to get a list of the tables from the Sales schema in AdventureWorks2012:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables  
-Get-ChildItem | where {$_.Schema -eq "Sales"}  
+Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
  This example uses the SMO **Script** method to generate a script that contains the `CREATE VIEW` statements you must have to re-create the views in AdventureWorks2012:  
   
-```  
+```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Views  
 foreach ($Item in Get-ChildItem) { $Item.Script() | Out-File -Filepath C:\PowerShell\CreateViews.sql -append }  
@@ -80,7 +78,7 @@ foreach ($Item in Get-ChildItem) { $Item.Script() | Out-File -Filepath C:\PowerS
   
  This example uses the SMO **Create** method to create a database, and then uses the **State** property to show whether the database exists:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
 $MyDBVar.Parent = (Get-Item ..)  

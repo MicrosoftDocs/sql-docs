@@ -1,6 +1,6 @@
 ---
-title: "Use a Format File to Map Table Columns to Data-File Fields (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Map table columns to data-file fields with a format file" 
+description: In SQL Server, non-XML and XML format files can accommodate a data file whose fields are arranged in a different order from the table columns.
 ms.date: "09/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -14,8 +14,9 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Use a Format File to Map Table Columns to Data-File Fields (SQL Server)
+# Use a format file to map table columns to data-file fields (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 A data file can contain fields arranged in a different order from the corresponding columns in the table. This topic presents both non-XML and XML format files that have been modified to accommodate a data file whose fields are arranged in a different order from the table columns. The modified format file maps the data fields to their corresponding table columns.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
@@ -73,27 +74,25 @@ See [Structure of Non-XML Format Files](../../relational-databases/import-export
 2.  Ensure the host file field order values are sequential.
 3.  Ensure there is a carriage return after the last format-file row.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-Compare the changes:	 
+Compare the changes:     
 **Before**
 ```
 13.0
 4
-1       SQLCHAR	0       7       ","      1     PersonID               ""
-2       SQLCHAR	0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR	0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR	0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **After**
 ```
 13.0
 4
-1       SQLCHAR	0       7       ","      1     PersonID               ""
-2       SQLCHAR	0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR	0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR	0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 The modified format file now reflects:
@@ -111,7 +110,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 See [Schema Syntax for XML Format Files](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) for terminology.  Open `D:\BCP\myRemap.xml` in Notepad and perform the following modifications:
 1. The order in which the \<FIELD> elements are declared in the format file is the order in which those fields appear in the data file, thus reverse the order for the \<FIELD> elements with ID attributes 2 and 3.
 2. Ensure the \<FIELD> ID attribute values are sequential.
-3. The order of the \<COLUMN> elements in the \<ROW> element defines the order in which they are returned by the bulk operation.  The XML format file assigns each \<COLUMN> element a local name that has no relationship to the column in the target table of a bulk import operation.  The order of the \<COLUMN> elements is independent of the order of \<FIELD> elements in a \<RECORD> definition.  Each \<COLUMN> element corresponds to a \<FIELD> element (whose ID is specified in the SOURCE attribute of the \<COLUMN> element).  Thus, the values for \<COLUMN> SOURCE are the only attributes that require revision.  Reverse the order for \<COLUMN> SOURCE attributes 2 and 3.
+3. The order of the \<COLUMN> elements in the \<ROW> element defines the order in which the bulk operation sends them to the target.  The XML format file assigns each \<COLUMN> element a local name that has no relationship to the column in the target table of a bulk import operation.  The order of the \<COLUMN> elements is independent of the order of \<FIELD> elements in a \<RECORD> definition.  Each \<COLUMN> element corresponds to a \<FIELD> element (whose ID is specified in the SOURCE attribute of the \<COLUMN> element).  Thus, the values for \<COLUMN> SOURCE are the only attributes that require revision.  Reverse the order for \<COLUMN> SOURCE attributes 2 and 3.
 
 Compare the changes  
 **Before**
@@ -204,7 +203,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>	
+### Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
 ```sql
 USE TestDatabase;
@@ -212,11 +211,11 @@ GO
 
 TRUNCATE TABLE myRemap;
 INSERT INTO dbo.myRemap
-	SELECT *
-	FROM OPENROWSET (
-		BULK 'D:\BCP\myRemap.bcp',
-		FORMATFILE = 'D:\BCP\myRemap.fmt'
-		) AS t1;
+    SELECT *
+    FROM OPENROWSET (
+        BULK 'D:\BCP\myRemap.bcp',
+        FORMATFILE = 'D:\BCP\myRemap.fmt'
+        ) AS t1;
 GO
 
 -- review results
@@ -231,10 +230,10 @@ GO
 
 TRUNCATE TABLE myRemap;
 INSERT INTO dbo.myRemap 
-	SELECT *
-	FROM OPENROWSET (
-		BULK 'D:\BCP\myRemap.bcp',
-		FORMATFILE = 'D:\BCP\myRemap.xml'  
+    SELECT *
+    FROM OPENROWSET (
+        BULK 'D:\BCP\myRemap.bcp',
+        FORMATFILE = 'D:\BCP\myRemap.xml'  
        ) AS t1;
 GO
 

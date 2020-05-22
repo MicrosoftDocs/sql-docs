@@ -33,8 +33,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  [Storage Page](#Storage)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="GeneralPage"></a> General Page  
  **Database**  
  The name of the database containing this table.  
@@ -69,9 +67,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  AUTO  
  This option allows the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to select the lock escalation granularity that is appropriate for the table schema.  
   
--   If the table is partitioned, lock escalation will be allowed to the heap or B-tree (HoBT) granularity. After the lock is escalated to the HoBT level, the lock will not be escalated later to TABLE granularity.  
-  
--   If the table is not partitioned, the lock escalation will be done to the TABLE granularity.  
+- If the table is partitioned, lock escalation will be allowed to the heap or B-tree (HoBT) granularity. In other words, escalation will be allowed to the partition level. After the lock is escalated to the HoBT level, the lock will not be escalated later to TABLE granularity.
+- If the table isn't partitioned, the lock escalation is done to the TABLE granularity. 
   
  TABLE  
  Lock escalation will be done at table-level granularity regardless of whether the table is partitioned or not partitioned. TABLE is the default value.  

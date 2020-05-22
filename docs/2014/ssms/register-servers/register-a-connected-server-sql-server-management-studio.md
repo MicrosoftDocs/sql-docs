@@ -1,6 +1,6 @@
 ---
-title: "Register a Connected Server (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Register a Connected Server
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], register connected servers"
   - "connected server registrations [SQL Server]"
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 ---
 # Register a Connected Server (SQL Server Management Studio)
   This topic describes how to register servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. By registering the server, you can save the connection information for servers that you access frequently. A server can be registered before connecting, or at the time of connection from Object Explorer.  

@@ -1,6 +1,5 @@
 ---
-title: "Introduction to Data Quality Services | Microsoft Docs"
-ms.custom: ""
+title: "Introduction to Data Quality Services"
 ms.date: "03/05/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -10,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Domains"
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Introduction to Data Quality Services
 

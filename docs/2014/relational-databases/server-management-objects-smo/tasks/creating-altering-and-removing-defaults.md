@@ -29,9 +29,8 @@ manager: craigg
 ## Creating, Altering, and Removing a Default in Visual C#  
  This code example shows how to create one default that is simple text, and another default that is a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. The default must be attached to the column by using the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.BindToColumn%2A> method and detached by using the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.UnbindFromColumn%2A> method.  
   
-```  
-{  
-  
+```csharp
+{
           Server srv = new Server();  
   
             //Reference the AdventureWorks2012 database.   
@@ -60,10 +59,10 @@ manager: craigg
 ## Creating, Altering, and Removing a Default in PowerShell  
  This code example shows how to create one default that is simple text, and another default that is a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. The default must be attached to the column by using the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.BindToColumn%2A> method and detached by using the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.UnbindFromColumn%2A> method.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 #Define a Default object variable by supplying the parent database and the default name in the constructor.  
 $def = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Default `  
@@ -86,5 +85,3 @@ $def.Drop()
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.Default>  
-  
-  

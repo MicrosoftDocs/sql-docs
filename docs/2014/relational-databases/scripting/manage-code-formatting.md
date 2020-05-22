@@ -1,6 +1,6 @@
 ---
-title: "Manage Code Formatting | Microsoft Docs"
-ms.custom: ""
+title: Manage Code Formatting
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "text [SQL Server]"
   - "unindenting code"
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Manage Code Formatting

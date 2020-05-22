@@ -1,6 +1,7 @@
 ---
-title: "View Availability Group Properties (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "View availability group properties"
+description: "View the properties of an Always On availability group with either SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. "
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

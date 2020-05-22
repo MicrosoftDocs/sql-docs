@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Management Studio Support for In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
+title: "SSMS support for in-memory OLTP"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -29,8 +29,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 3.  To add a new memory-optimized data filegroup, click the **Filegroups** page. Under **MEMORY OPTIMIZED DATA**, click **Add filegroup** and then enter the name of the memory-optimized data filegroup.  The column labeled **FILESTREAM Files** represents the number of containers in the filegroup. Containers are added on the **General** page.  
   
 4.  To add a file (container) to the filegroup, click the **General** page. Under **Database files**, click **Add**. Select **File Type** as **FILESTREAM Data**, specify the logical name of the container, select the memory-optimized filegroup, and make sure that **Autogrowth / Maxsize** is set to **Unlimited**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
      For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
   

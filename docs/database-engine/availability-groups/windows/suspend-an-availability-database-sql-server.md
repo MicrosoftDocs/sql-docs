@@ -1,6 +1,7 @@
 ---
-title: "Suspend an Availability Database (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Suspend an availability database"
+description: Learn about suspending the data movement for a database within an Always On availability group using SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) or PowerShell. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -94,9 +95,9 @@ ms.author: mathoma
   
 1.  Connect to the server instance that hosts the replica whose database you want to suspend. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.  
   
-2.  Suspend the database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)statement:  
+2.  Suspend the database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) statement:  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To suspend a database**  

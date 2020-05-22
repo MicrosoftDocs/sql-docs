@@ -1,5 +1,5 @@
 ---
-title: "Understanding the WMI Provider for Server Events | Microsoft Docs"
+title: "Understanding the WMI Provider for Server Events"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

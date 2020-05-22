@@ -27,7 +27,7 @@ manager: craigg
 ## Create Storage Account  
  To create a storage account on the Azure Management Portal, follow these steps:  
   
-1.  Log in to the [Azure Management Portal](https://manage.windowsazure.com) using your account. If you do not have an Azure account, visit [Azure free trial](http://www.windowsazure.com/pricing/free-trial/).  
+1.  Log in to the [Azure Management Portal](https://manage.windowsazure.com) using your account. If you do not have an Azure account, visit [Azure free trial](https://www.windowsazure.com/pricing/free-trial/).  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   
@@ -36,7 +36,7 @@ manager: craigg
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## Create a Blob container  
- In Azure, a container provides a grouping of a set of blobs. All blobs must be in a container. A storage account can contain an unlimited number of containers, but must have at least one container. A container can store an unlimited number of blobs. For most up-to-date information on storage size limits, see [How to use the Azure Blob Storage Service in .NET](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
+ In Azure, a container provides a grouping of a set of blobs. All blobs must be in a container. A storage account can contain an unlimited number of containers, but must have at least one container. A container can store an unlimited number of blobs. For most up-to-date information on storage size limits, see [How to use the Azure Blob Storage Service in .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
   
  To create a container in Azure, follow these steps:  
   
@@ -56,5 +56,4 @@ manager: craigg
  **Next Lesson:**  
   
  [Lesson 2. Create a policy on container and generate a Shared Access Signature &#40;SAS&#41; key](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
-  
   

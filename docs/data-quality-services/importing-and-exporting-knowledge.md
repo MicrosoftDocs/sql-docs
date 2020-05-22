@@ -1,6 +1,5 @@
 ---
-title: "Importing and Exporting Knowledge | Microsoft Docs"
-ms.custom: ""
+title: "Importing and Exporting Knowledge"
 ms.date: "07/31/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Importing and Exporting Knowledge
 

@@ -1,6 +1,6 @@
 ---
-title: "Implementing Full-Text Search | Microsoft Docs"
-ms.custom: ""
+title: "Implementing Full-Text Search"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

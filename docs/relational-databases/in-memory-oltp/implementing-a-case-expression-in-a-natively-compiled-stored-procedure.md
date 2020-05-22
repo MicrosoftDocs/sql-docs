@@ -1,6 +1,6 @@
 ---
-title: "Implementing a CASE Expression in a Natively Compiled Stored Procedure | Microsoft Docs"
-ms.custom: ""
+title: "CASE expression in a natively compiled stored procedure"
+ms.custom: seo-dt-2019
 ms.date: "11/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

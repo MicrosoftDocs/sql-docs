@@ -1,6 +1,6 @@
 ---
-title: "Insert Transact-SQL Snippets | Microsoft Docs"
-ms.custom: ""
+title: Insert Transact-SQL Snippets
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Transact-SQL snippets, code"
   - "snippets [Transact-SQL], how to insert"
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Insert Transact-SQL Snippets

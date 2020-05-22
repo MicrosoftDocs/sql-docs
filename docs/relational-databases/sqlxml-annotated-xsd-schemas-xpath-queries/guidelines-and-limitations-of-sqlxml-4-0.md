@@ -1,5 +1,5 @@
 ---
-title: "Guidelines and Limitations of SQLXML 4.0 | Microsoft Docs"
+title: "Guidelines and Limitations of SQLXML 4.0"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

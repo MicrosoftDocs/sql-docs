@@ -1,10 +1,9 @@
 ---
-title: "Remove Columns from Queries (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Remove Columns from Queries
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,8 +12,10 @@ helpviewer_keywords:
   - "deleting columns"
   - "dropping columns"
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Remove Columns from Queries (Visual Database Tools)

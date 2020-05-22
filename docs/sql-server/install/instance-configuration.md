@@ -1,5 +1,6 @@
 ---
 title: "Installation Wizard Help | Microsoft Docs"
+description: Specify whether to create a default instance or a named instance of SQL Server by using Instance Configuration in the SQL Server Installation Wizard.
 ms.custom: ""
 ms.date: 08/16/2019
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 robots: noindex,nofollow
 ---
 
@@ -427,7 +428,7 @@ If this page is skipped during setup, the default MaxDOP value is the recommende
 
 **min server memory** determines the lower memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 0 and the recommended value is also 0. For more information on the effects of **min server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 
-**max server memory** determines the upper memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 2,147,483,647 megabytes (MB) and the calculated recommended values will align with the memory configuration guidelines in [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) for a standalone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, based on the existing system memory. For more information on the effects of **max server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
+**max server memory** determines the upper memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 2,147,483,647 megabytes (MB) and the calculated recommended values will align with the memory configuration guidelines in [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually) for a standalone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, based on the existing system memory. For more information on the effects of **max server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 
 If this page is skipped during setup, the default **max server memory** value used is the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] default value (2,147,483,647 megabytes). You can manually configure these settings on this page once you've chosen the **Recommended** radio button, and you can modify these setting after installation. For more information, see [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
 

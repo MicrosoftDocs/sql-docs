@@ -1,6 +1,6 @@
 ---
-title: "Connect to a Master Data Services Database Dialog Box | Microsoft Docs"
-ms.custom: ""
+title: Connect to a MDS Database Dialog Box
+ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "mds"

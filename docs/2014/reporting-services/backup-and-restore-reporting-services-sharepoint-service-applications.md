@@ -116,7 +116,7 @@ manager: kfile
   
  [Restore a service application (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
- [Restore a service application (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
+ [Restore a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
   
 ### Restore the Encryption Keys using Central Administration  
  For information on restoring the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] encryption keys, see the "Encryption Keys" section of [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  

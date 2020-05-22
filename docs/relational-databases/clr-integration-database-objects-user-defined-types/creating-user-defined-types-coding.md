@@ -1,5 +1,6 @@
 ---
 title: "Coding User-Defined Types | Microsoft Docs"
+description: This example shows how to implement a UDT to use in a SQL Server database. It implements the UDT as a structure. 
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -607,8 +608,6 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Use the **Write** method for the **Currency** UDT to determine how the UDT is persisted on disk and therefore how UDT values are compared and ordered for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations.  
   
 3.  Save the **Currency** UDT using the following binary format:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Save the culture as a UTF-16 encoded string for bytes 0-19 with padding to the right with null characters.  
   

@@ -38,7 +38,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  The name of the project where the parameters resides. The *project_name* is **nvarchar(128)**.  
   
  [ @package_name = ] *package_name*  
- The name of the package. Specify the package name to retrieve all project parameters and the parameters from a specific package. Use NULL to retrieve all project parameters and the parameters from all packages. The *package_name* is **nvarchar(260)**.  
+ The name of the package. Specify the package name to retrieve all project parameters and the parameters from a specific package. The *package_name* is **nvarchar(260)**.  
   
  [ @reference_id = ] *reference_id*  
  The unique identifier of an environment reference. This parameter is optional. The *reference_id* is **bigint**.  

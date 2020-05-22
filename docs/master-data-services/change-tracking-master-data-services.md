@@ -1,5 +1,5 @@
 ---
-title: "Change Tracking (Master Data Services) | Microsoft Docs"
+title: Change Tracking
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

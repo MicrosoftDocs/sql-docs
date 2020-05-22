@@ -1,5 +1,6 @@
 ---
 title: "Tail-Log Backups (SQL Server) | Microsoft Docs"
+description: In SQL Server, a tail-log backup captures any log records that have not yet been backed up to prevent data loss and to keep the log chain intact.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
@@ -41,7 +42,7 @@ ms.author: mathoma
   
 |BACKUP LOG option|Comments|  
 |-----------------------|--------------|  
-|NORECOVERY|Use NORECOVERY whenever you intend to continue with a restore operation on the database. NORECOVERY takes the database into the restoring state. This guarantees that the database does not change after the tail-log backup. The log will be truncated unless the NO_TRUNCATE option or COPY_ONLY option is also specified.<br /><br /> **Important:** Avoid using NO_TRUNCATE, except when the database is damaged.|  
+|NORECOVERY|Use NORECOVERY whenever you intend to continue with a restore operation on the database. NORECOVERY takes the database into the restoring state. This guarantees that the database does not change after the tail-log backup. The log will be truncated unless the NO_TRUNCATE option or COPY_ONLY option is also specified.<br /><br /> **Important:** Avoid using NO_TRUNCATE, except when the database is damaged. You may need to put the database into [single-user mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md) to obtain exclusive access before performing the restore with NORECOVERY. After the restore, set the database back to multi-user mode. |  
 |CONTINUE_AFTER_ERROR|Use CONTINUE_AFTER_ERROR only if you are backing up the tail of a damaged database.<br /><br /> When you use back up the tail of the log on a damaged database, some of the metadata ordinarily captured in log backups might be unavailable. For more information, see [Tail-Log Backups That Have Incomplete Backup Metadata](#IncompleteMetadata), in this topic.|  
   
 ##  <a name="IncompleteMetadata"></a> Tail-Log backups that have incomplete backup metadata  

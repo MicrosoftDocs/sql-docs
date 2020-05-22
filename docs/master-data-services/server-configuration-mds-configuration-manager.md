@@ -1,5 +1,5 @@
 ---
-title: "Server Configuration (MDS Configuration Manager) | Microsoft Docs"
+title: Server Configuration
 ms.custom: ""
 ms.date: "01/26/2017"
 ms.prod: sql

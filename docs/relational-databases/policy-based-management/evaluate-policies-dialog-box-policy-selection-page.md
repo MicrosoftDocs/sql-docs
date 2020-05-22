@@ -1,6 +1,7 @@
 ---
-title: "Evaluate Policies Dialog Box, Policy Selection Page | Microsoft Docs"
-ms.custom: ""
+title: "'Policy Selection' page of the 'Evaluate Policies' dialog box"
+description: Describes the 'Policy Selection' page of the 'Evaluate Policies' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

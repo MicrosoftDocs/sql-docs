@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting SQL Server Managed  Backup to Azure | Microsoft Docs"
+description: This article describes the tasks and tools you can use to troubleshoot errors that may occur during SQL Server Managed Backup to Microsoft Azure operations.
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
@@ -76,7 +77,7 @@ manager: craigg
   
          SmartBackupAdminXevent with the following messages/message prefixes:  
   
-         *"An internal error occured while configuring SQL Server Managed Backup to Azure default settings for instance. Error might be transient."*  
+         *"An internal error occurred while configuring SQL Server Managed Backup to Azure default settings for instance. Error might be transient."*  
   
          *"Probably experiencing connectivity issues with SQL Server. Skipping database in the current iteration."*  
   

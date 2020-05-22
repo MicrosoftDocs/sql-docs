@@ -37,7 +37,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |sku|**nvarchar(128)**|Service Tier of the database. The following are the possible values:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|Maximum storage size in megabytes for the time period, including database data, indexes, stored procedures, and metadata.|  
 |avg_cpu_percent|**decimal(5,2)**|Average compute utilization in percentage of the limit of the service tier.|  
-|avg_data_io_percent|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the service tier.|  
+|avg_data_io_percent|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the service tier. For Hyperscale databases, see [Data IO in resource utilization statistics](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal(5,2)**|Average write resource utilization in percentage of the limit of the service tier.|  
 |max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
 |max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Report Server Windows service, accounts"
   - "Web service [Reporting Services], report server"
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Configure a Service Account (SSRS Configuration Manager)

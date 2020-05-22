@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
@@ -53,7 +53,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ## Examples  
  The following example sets the default language to `Italian`, displays the month name, and then switches back to `us_english` and displays the month name again.  
   
-```  
+```sql
 DECLARE @Today DATETIME;  
 SET @Today = '12/5/2007';  
   

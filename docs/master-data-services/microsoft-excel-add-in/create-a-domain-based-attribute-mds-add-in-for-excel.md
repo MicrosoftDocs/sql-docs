@@ -1,5 +1,5 @@
 ---
-title: "Create a Domain-based Attribute (MDS Add-in for Excel) | Microsoft Docs"
+title: Create a Domain-based Attribute
 ms.custom: microsoft-excel-add-in
 ms.date: "07/25/2017"
 ms.prod: sql

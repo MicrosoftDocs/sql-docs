@@ -1,5 +1,6 @@
 ---
 title: "Complete Database Restores (Full Recovery Model) | Microsoft Docs"
+description: Learn about a complete SQL Server database restore, where all data is recovered to a consistent point in time.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -36,8 +37,6 @@ We recommend that you do _not_ attach or restore databases from unknown or untru
 For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
 ##  <a name="PointOfFailure"></a> Restoring a Database to the Point of Failure  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Typically, recovering a database to the point of failure involves the following basic steps:  
   

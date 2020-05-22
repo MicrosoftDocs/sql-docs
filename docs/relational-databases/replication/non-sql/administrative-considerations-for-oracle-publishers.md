@@ -1,6 +1,7 @@
 ---
-title: "Administrative Considerations for Oracle Publishers | Microsoft Docs"
-ms.custom: ""
+title: "Administrative considerations for Oracle Publishers"
+description: Considerations for the administration of Oracle Publishers publishing changes to SQL Server subscribers. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

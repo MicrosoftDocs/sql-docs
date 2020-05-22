@@ -1,9 +1,9 @@
 ---
-title: "Named Pipes Properties | Microsoft Docs"
-ms.custom: ""
+title: "Named Pipes Properties"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "service master key [SQL Server], exporting"
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
 ---
 # Back Up the Service Master Key

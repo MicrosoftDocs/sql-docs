@@ -1,5 +1,6 @@
 ---
 title: "Use a Format File to Skip a Table Column (SQL Server) | Microsoft Docs"
+description: This article describes how to use a format file to skip importing a table column when the data for the skipped column does not exist in the source data file.
 ms.custom: ""
 ms.date: "02/15/2018"
 ms.prod: sql
@@ -52,8 +53,6 @@ You can use a non-XML format file or an XML format file to skip a table column. 
 1.   Use the **bcp** command-line utility to create a default format file.
 
 2.   Modify the default format file in a text editor.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 The modified format file must map each existing field to its corresponding column in the destination table. It must also indicate which table column or columns to skip. 
 

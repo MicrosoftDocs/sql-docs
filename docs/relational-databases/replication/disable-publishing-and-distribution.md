@@ -1,5 +1,6 @@
 ---
 title: "Disable Publishing and Distribution | Microsoft Docs"
+description: Learn how to disable publishing and distribution in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 
 ---
 # Disable Publishing and Distribution
@@ -63,8 +64,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 2.  Right-click the **Replication** folder, and then click **Disable Publishing and Distribution**.  
   
 3.  Complete the steps in the Disable Publishing and Distribution Wizard.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Publishing and distributing can be disabled programmatically using replication stored procedures.  

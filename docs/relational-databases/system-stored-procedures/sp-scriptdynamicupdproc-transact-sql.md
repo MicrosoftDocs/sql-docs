@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_scriptdynamicupdproc"
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

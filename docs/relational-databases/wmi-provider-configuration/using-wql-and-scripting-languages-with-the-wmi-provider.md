@@ -1,6 +1,6 @@
 ---
-title: "Using WQL and Scripting Languages with the WMI Provider | Microsoft Docs"
-ms.custom: ""
+title: "Access the WMI Provider with WQL and scripting"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -33,6 +33,6 @@ ms.author: "carlrab"
   
 ## See Also  
  [Access WMI Provider for Configuration Management using WQL](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-wql.md)   
- [Modify SQL Server Service Advanced Properties using VBScript](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)  
+ [Access the WMI Provider with VBScript](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

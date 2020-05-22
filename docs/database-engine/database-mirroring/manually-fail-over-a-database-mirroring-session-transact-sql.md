@@ -1,6 +1,7 @@
 ---
-title: "Manually Fail Over a Database Mirroring Session (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Manually fail over a database mirror to partner"
+description: "Instructions to manually fail over a principle database mirror to a secondary partner using Transact-SQL (T-SQL)."
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability

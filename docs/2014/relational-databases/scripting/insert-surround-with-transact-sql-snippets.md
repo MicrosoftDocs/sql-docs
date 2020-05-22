@@ -1,6 +1,6 @@
 ---
-title: "Insert Surround-with Transact-SQL snippets | Microsoft Docs"
-ms.custom: ""
+title: Insert Surround-with Transact-SQL snippets
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], surround with snippets"
   - "Transact-SQL snippets, surround with"
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Insert Surround-with Transact-SQL snippets

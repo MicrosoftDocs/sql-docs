@@ -1,7 +1,8 @@
 ---
-title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/05/2017"
+title: "Configure Server Core Installation"
+description: This article covers details about configuring SQL Server on a Server Core installation, including troubleshooting tools.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

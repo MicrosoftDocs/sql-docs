@@ -1,5 +1,6 @@
 ---
-title: "Interactive Sort (Report Builder and SSRS) | Microsoft Docs"
+title: "Interactive Sort (Report Builder) | Microsoft Docs"
+description: Add interactive sort buttons to enable a user to toggle between ascending and descending order for rows in a table.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

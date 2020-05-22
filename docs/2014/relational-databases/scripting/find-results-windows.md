@@ -1,6 +1,6 @@
 ---
-title: "Find Results Windows | Microsoft Docs"
-ms.custom: ""
+title: Find Results Windows
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Find Results Windows dialog box"
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Find Results Windows

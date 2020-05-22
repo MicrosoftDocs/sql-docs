@@ -1,6 +1,6 @@
 ---
-title: "Associate a Query with a Connection in a Project | Microsoft Docs"
-ms.custom: ""
+title: "Associate a Query with a Connection in a Project"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

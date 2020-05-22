@@ -1,5 +1,5 @@
 ---
-title: "Create a Project | Microsoft Docs"
+title: "Create a Project"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ---
 

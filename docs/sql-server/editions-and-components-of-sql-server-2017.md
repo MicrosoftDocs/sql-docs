@@ -1,10 +1,12 @@
 ---
-title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/28/2019"
+title: "Editions and supported features"
+titleSuffix: SQL Server 2017
+description: This article describes features supported by the various editions of SQL Server 2017, which accommodate different performance, runtime, and price requirements.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
@@ -39,8 +41,9 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
-For information about older versions, see:
+For information about other versions, see:
 
+* [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
 * [SQL Server 2014](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
@@ -53,7 +56,7 @@ For the latest release notes and what's new information, see the following:
 - [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
 - [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 
-### Try SQL Server!    
+### Try SQL Server    
     
 > [![Download from Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
@@ -158,9 +161,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
-|Read-scale availability group|Yes|Yes|No|No|No|No|
-|Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
-  
+|Read-scale availability group<sup>3,4</sup>|Yes|Yes|No|No|No|No|
 
 <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -211,8 +212,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Row-level security|Yes|Yes|Yes|Yes|Yes|  
 |Always Encrypted|Yes|Yes|Yes|Yes|Yes| 
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|   
-|Basic auditing|Yes|Yes|Yes|Yes|Yes| 
-|Fine grained auditing|Yes|Yes|Yes|Yes|Yes| 
+|Server Audit|Yes|Yes|Yes|Yes|Yes| 
+|Database Audit|Yes|Yes|Yes|Yes|Yes| 
 |Transparent database encryption|Yes|No|No|No|No|   
 |Extensible key management|Yes|No|No|No|No| 
 |User-defined roles|Yes|Yes|Yes|Yes|Yes| 

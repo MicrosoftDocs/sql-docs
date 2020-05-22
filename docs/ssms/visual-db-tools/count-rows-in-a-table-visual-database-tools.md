@@ -1,10 +1,9 @@
 ---
-title: "Count Rows in a Table (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Count Rows in a Table
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,8 +14,10 @@ helpviewer_keywords:
   - "number of values"
   - "counting rows"
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Count Rows in a Table (Visual Database Tools)

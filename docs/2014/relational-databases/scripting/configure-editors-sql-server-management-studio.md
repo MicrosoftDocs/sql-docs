@@ -1,14 +1,14 @@
 ---
-title: "Configure Editors (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Configure Editors
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Configure Editors (SQL Server Management Studio)

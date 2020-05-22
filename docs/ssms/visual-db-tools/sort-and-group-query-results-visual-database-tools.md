@@ -1,10 +1,9 @@
 ---
-title: "Sort and Group Query Results (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Sort and Group Query Results
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +19,10 @@ helpviewer_keywords:
   - "Results pane"
   - "sorting query results [SQL Server]"
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Sort and Group Query Results (Visual Database Tools)

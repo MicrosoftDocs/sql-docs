@@ -1,5 +1,5 @@
 ---
-title: "Relationship Staging Table (Master Data Services) | Microsoft Docs"
+title: Relationship Staging Table
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

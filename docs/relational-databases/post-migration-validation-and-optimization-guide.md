@@ -102,8 +102,6 @@ Some examples of non-SARGable predicates:
 2. If unable to traverse all code to the previous point, then for the same purpose, change the data type on the table to match any variable/parameter declaration.
 3. Reason out the usefulness of the following constructs:
 
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
   -   Functions being used as predicates;
   -   Wildcard searches;
   -   Complex expressions based on columnar data - evaluate the need to instead create persisted computed columns, which can be indexed;

@@ -1,7 +1,7 @@
 ---
 title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/01/2019
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "TRANSLATE function"
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRANSLATE (Transact-SQL)
@@ -25,7 +25,7 @@ Returns the string provided as a first argument after some characters specified 
 
 ## Syntax
 
-```sql
+```syntaxsql
 TRANSLATE ( inputString, characters, translations)
 ```
 
@@ -48,7 +48,9 @@ Returns a character expression of the same data type as `inputString` where char
 
 `TRANSLATE` will return an error if *characters* and *translations* expressions have different lengths. `TRANSLATE` will return NULL if any of the arguments are NULL.  
 
-The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions. `TRANSLATE` does not, however, replace a character more than once. This is dissimilar to multiple `REPLACE` functions, as each use would replace all relevant characters. 
+The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions. `TRANSLATE` does not, however, replace any individual character in `inputString` more than once. A single value in the `characters` parameter, can replace multiple characters in `inputString`. 
+
+This is dissimilar to the behavior of multiple `REPLACE` functions, as each function call would replace all relevant characters, even if they had been replaced by a previous nested `REPLACE` function call. 
 
 `TRANSLATE` is always SC collation aware.
 
@@ -64,7 +66,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-```plain_text
+```text
 2*(3+4)/(7-2)
 ```
 

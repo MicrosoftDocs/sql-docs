@@ -1,6 +1,6 @@
 ---
-title: "SQL Server XTP (In-Memory OLTP) Performance Counters | Microsoft Docs"
-ms.custom: ""
+title: "XTP (In-Memory OLTP) Performance Counters"
+ms.custom: seo-dt-2019
 ms.date: "04/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

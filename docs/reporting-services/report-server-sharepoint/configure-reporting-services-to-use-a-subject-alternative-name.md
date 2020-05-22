@@ -1,5 +1,6 @@
 ---
 title: "Configure Reporting Services to use a subject alternative name | Microsoft Docs"
+description: Learn how to configure SQL Server Reporting Services to use an SAN by modifying the rsreportserver.config file and using the Netsh.exe tool.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -16,11 +17,11 @@ This topic explains how to configure Reporting Services (SSRS) to use a subject 
 
 The instructions apply to the Reporting Service URL as well as a Web Service URL.
 
-To use a SAN, the SSL certificate must be registered on the server, signed, and have the private key. You cannot use a self-signed certificate  
+To use a SAN, the TLS/SSL certificate must be registered on the server, signed, and have the private key. You cannot use a self-signed certificate  
   
- URLs in Reporting Services can be configured to use an SSL certificate. A certificate normally has just a subject name, which allows only one URL for an SSL (Secure Sockets Layer) session. The SAN is an additional field in the certificate that allows an SSL service to listen for many URLs, and to share the SSL port with other applications. The SAN looks something like `www.s2.com`.  
+ URLs in Reporting Services can be configured to use a TLS/SSL certificate. A certificate normally has just a subject name, which allows only one URL for a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), session. The SAN is an additional field in the certificate that allows a TLS service to listen for many URLs, and to share the TLS port with other applications. The SAN looks something like `www.s2.com`.  
   
- For more information about SSL settings for Reporting Services, see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ For more information about TLS settings for Reporting Services, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ## Configure SSRS to use a subject alternative name for web service URL
   
@@ -28,11 +29,11 @@ To use a SAN, the SSL certificate must be registered on the server, signed, and 
   
      For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  On the **Web Service URL** page, select an SSL port and SSL Certificate.  
+2.  On the **Web Service URL** page, select a TLS/SSL port and TLS/SSL Certificate.  
   
      ![Reporting Services Configuration Manager](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services Configuration Manager")  
   
-     The configuration manager registers the SSL certificate for the port.  
+     The configuration manager registers the TLS/SSL certificate for the port.  
   
 3.  Open the rsreportserver.config file.  
   

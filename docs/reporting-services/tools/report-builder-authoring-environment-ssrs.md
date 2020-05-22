@@ -1,5 +1,5 @@
 ---
-title: "Report Builder authoring environment (SSRS) | Microsoft Docs"
+title: "Report Builder authoring environment | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

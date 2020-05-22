@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "concurrency [SQL Server Native Client]"
   - "SQLSetConnectAttr function"
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Working with Snapshot Isolation

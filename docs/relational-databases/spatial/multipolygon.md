@@ -59,8 +59,6 @@ The second instance in the MultiPolygon is a LineString instance and not an acce
   
 2.  None of the **Polygon** instances comprising the **MultiPolygon** instance overlap.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 The following example shows two valid **MultiPolygon** instances and one invalid **MultiPolygon** instance.  
   
 ```sql  

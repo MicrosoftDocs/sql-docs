@@ -1,6 +1,5 @@
 ---
-title: "Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options | Microsoft Docs"
-ms.custom: ""
+title: "Request schemas as results with XMLDATA & XMLSCHEMA | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,9 +12,10 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
-# Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# Request schemas as results with XMLDATA & XMLSCHEMA
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The following query returns the XML-DATA schema that describes the document structure.  
   
 ## Example  

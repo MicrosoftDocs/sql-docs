@@ -1,14 +1,14 @@
 ---
 title: "Table and Row Size in Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/27/2017"
+ms.date: "10/18/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Table and Row Size in Memory-Optimized Tables
@@ -107,7 +107,7 @@ Memory-optimized table, consisting of indexes and rows.
   
 -   Second bucket: (John, Paris), (Jane, Prague)  
   
- An end timestamp ??? (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
+ An end timestamp &#x221e; (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
   
  For a time greater than 200, the table contains the following rows:  
   

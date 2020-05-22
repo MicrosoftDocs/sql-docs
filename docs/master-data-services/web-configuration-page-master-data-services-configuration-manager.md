@@ -1,5 +1,5 @@
 ---
-title: "Web Configuration Page (Master Data Services Configuration Manager) | Microsoft Docs"
+title: Web Configuration Page
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql

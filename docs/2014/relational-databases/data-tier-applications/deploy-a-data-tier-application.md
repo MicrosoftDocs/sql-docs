@@ -198,10 +198,10 @@ manager: craigg
 ### Example (PowerShell)  
  The following example deploys a DAC named MyApplication on a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], using a DAC definition from a MyApplication.dacpac package.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -229,5 +229,3 @@ $fileStream.Close()
  [Data-tier Applications](data-tier-applications.md)   
  [Extract a DAC From a Database](extract-a-dac-from-a-database.md)   
  [Database Identifiers](../databases/database-identifiers.md)  
-  
-  

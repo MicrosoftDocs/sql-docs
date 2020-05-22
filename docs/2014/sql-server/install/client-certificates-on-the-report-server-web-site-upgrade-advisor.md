@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Client certificates on the report server web site (Upgrade Advisor)

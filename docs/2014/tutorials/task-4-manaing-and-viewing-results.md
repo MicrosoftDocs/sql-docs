@@ -16,9 +16,9 @@ manager: craigg
   
 1.  Select **Contact Email** domain from the list of domains.  
   
-2.  Switch to the **Invalid** tab in the right pane. Notice that two email addresses that were missing character 's' at the end. These two emails that were found to be invalid by the domain rule that requires all email addresses to end with **@adventure-works.com** (with 's'). DQS uses the domain rule while cleansing to determine whether an email is a valid one or not. This tab displays the domain values that were either marked as invalid in the knowledge base or failed a domain rule. In this case, these values failed the domain rule (Email Validation).  
+2.  Switch to the **Invalid** tab in the right pane. Notice that two email addresses that were missing character 's' at the end. These two emails that were found to be invalid by the domain rule that requires all email addresses to end with **\@adventure-works.com** (with 's'). DQS uses the domain rule while cleansing to determine whether an email is a valid one or not. This tab displays the domain values that were either marked as invalid in the knowledge base or failed a domain rule. In this case, these values failed the domain rule (Email Validation).  
   
-3.  In the **Correct To** column, type the right email address that end with **@adventure-works.com** (with 's').  
+3.  In the **Correct To** column, type the right email address that end with **\@adventure-works.com** (with 's').  
   
      ![Corrections from Email Validation Rule](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Corrections from Email Validation Rule")  
   
@@ -26,7 +26,7 @@ manager: craigg
   
 5.  Switch to the **New** tab in the right pane. The values on this tab are the values for which DQS does not have enough information in the knowledge base yet to determine whether the values are correct. Therefore, it cannot change or suggest changes to the domain values.  
   
-6.  Review the values to confirm that all the emails end with **@adventure-works.com** and click **Approve all terms** on the toolbar. The approved values from this tab move to the **Correct** tab.  
+6.  Review the values to confirm that all the emails end with **\@adventure-works.com** and click **Approve all terms** on the toolbar. The approved values from this tab move to the **Correct** tab.  
   
 7.  Select the **Country** domain from the list of domains.  
   

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "exponential functions"
   - "EXP function"
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EXP (Transact-SQL)
@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 EXP ( float_expression )  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: "SQLXML 4.0 Programming Concepts | Microsoft Docs"
+title: "SQLXML 4.0 Programming Concepts"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

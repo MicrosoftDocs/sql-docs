@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.query.general.f1"
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Query Options Execution (General Page)

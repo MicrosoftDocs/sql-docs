@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], columns"
   - "cryptography [SQL Server], columns"
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
 ---
 # Encrypt a Column of Data

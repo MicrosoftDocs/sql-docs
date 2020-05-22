@@ -169,7 +169,7 @@ GO
 |Check constraints|The system-defined check constraints enforce the following requirements:<br /><br /> Valid filenames.<br /><br /> Valid file attributes.<br /><br /> Parent object must be a directory.<br /><br /> Namespace hierarchy is locked during file manipulation.|  
   
  **Naming convention for the system-defined constraints**  
- The system-defined constaints described above are named in the format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** where:  
+ The system-defined constraints described above are named in the format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** where:  
   
 -   *<constraint_type>* is CK (check constraint), DF (default constraint), FK (foreign key), PK (primary key), or UQ (unique constraint).  
   

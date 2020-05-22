@@ -1,6 +1,6 @@
 ---
-title: "Generate and Publish Scripts Wizard | Microsoft Docs"
-ms.custom: ""
+title: Generate and Publish Scripts Wizard
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -39,8 +39,8 @@ helpviewer_keywords:
   - "databases [SQL Server], generating scripts"
   - "Publish Database Wizard"
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Generate and Publish Scripts Wizard

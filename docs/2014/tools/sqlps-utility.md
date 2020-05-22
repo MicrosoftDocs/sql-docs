@@ -94,26 +94,25 @@ manager: craigg
  The version of the `sqlps` utility in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] was implemented as a Windows PowerShell 1.0 mini-shell. Mini-shells have certain restrictions, such as not allowing users to load snap-ins other than those loaded by the mini-shell. These restrictions do not apply to the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and higher versions of the utility, which have been changed to use the `sqlps` module.  
   
 ## Examples  
- **A. Run the sqlps utility in default, interactive mode without the copyright banner**  
+
+### A. Run the sqlps utility in default, interactive mode without the copyright banner
   
-```  
+```cmd
 sqlps -NoLogo  
 ```  
   
- **B. Run a SQL Server PowerShell script from the command prompt**  
+### B. Run a SQL Server PowerShell script from the command prompt
   
-```  
+```cmd
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. Run a SQL Server PowerShell script from the command prompt, and keep running after the script completes**  
+### C. Run a SQL Server PowerShell script from the command prompt, and keep running after the script completes
   
-```  
+```cmd
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
 ## See Also  
  [Enable or Disable a Server Network Protocol](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
-  
-  

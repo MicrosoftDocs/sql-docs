@@ -1,6 +1,6 @@
 ---
-title: "Configure IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Configure IntelliSense
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "modifying IntelliSense options"
   - "IntelliSense [SQL Server], modifying options"
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Configure IntelliSense (SQL Server Management Studio)

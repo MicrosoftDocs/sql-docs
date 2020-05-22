@@ -1,10 +1,9 @@
 ---
-title: "Enlist a Target Server to a Master Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Enlist a Target Server to a Master Server"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,8 +13,10 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, master servers"
   - "target servers [SQL Server], enlisting"
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Enlist a Target Server to a Master Server
@@ -28,7 +29,7 @@ This topic describes how to add target servers to a multiserver administration c
   
 For information about how the Windows account used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service affects a multiserver environment, see [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md).  
   
-Full Secure Sockets Layer (SSL) encryption and certificate validation is enabled for connections between master servers and target servers by default. For more information, see [Set Encryption Options on Target Servers](../../ssms/agent/set-encryption-options-on-target-servers.md).  
+Full Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption and certificate validation is enabled for connections between master servers and target servers by default. For more information, see [Set Encryption Options on Target Servers](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
   

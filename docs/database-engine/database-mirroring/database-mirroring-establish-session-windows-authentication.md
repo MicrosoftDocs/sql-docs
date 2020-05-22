@@ -1,6 +1,7 @@
 ---
-title: "Database Mirroring - Establish Session - Windows Authentication | Microsoft Docs"
-ms.custom: ""
+title: "Configure database mirroring"
+description: "Steps to configure a database mirroring relationship between a principal and mirror using windows authentication."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,7 +15,7 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Database Mirroring - Establish Session - Windows Authentication
+# Configure database mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  

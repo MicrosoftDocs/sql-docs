@@ -1,5 +1,5 @@
 ---
-title: "Guidelines and Limitations of DiffGrams in SQLXML | Microsoft Docs"
+title: "Guidelines and Limitations of DiffGrams in SQLXML"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Browse for Report Parts and Set a Default Folder (Report Builder and SSRS) | Microsoft Docs"
+title: "Browse for Report Parts and Set a Default Folder (Report Builder) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,5 +1,5 @@
 ---
-title: "Notifications (Master Data Services) | Microsoft Docs"
+title: Notifications
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

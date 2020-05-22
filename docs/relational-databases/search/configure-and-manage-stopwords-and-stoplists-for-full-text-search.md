@@ -1,5 +1,5 @@
 ---
-title: "Configure and Manage Stopwords and Stoplists for Full-Text Search | Microsoft Docs"
+title: "Configure & manage stopwords & stoplists for Full-Text Search"
 ms.date: "02/02/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -17,6 +17,7 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Configure and Manage Stopwords and Stoplists for Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

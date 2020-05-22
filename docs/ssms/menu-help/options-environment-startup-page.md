@@ -1,5 +1,5 @@
 ---
-title: " SQL Server Options page - Environment - Startup | Microsoft Docs"
+title: " SQL Server Options page - Environment - Startup"
 ms.date: 11/05/2018
 ms.prod: sql
 ms.prod_service: "sql-tools"

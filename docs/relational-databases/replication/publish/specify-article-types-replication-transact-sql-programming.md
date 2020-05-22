@@ -1,6 +1,7 @@
 ---
-title: "Specify Article Types (Replication Transact-SQL Programming) | Microsoft Docs"
-ms.custom: ""
+title: "Specify article types (Replication SP)"
+description: Use Replication stored procedures to specify an article type programmatically when you define an article for SQL Server Replication. 
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -42,8 +43,6 @@ ms.author: "mathoma"
 2.  For `logbased manualboth` and `logbased manualfilter` articles, execute [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) to generate the filtering stored procedure for a horizontally filtered article. For more information, see [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
 3.  For `logbased manualboth`, `logbased manualview`, and `logbased manualfilter` articles, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) to generate the view that defines the vertically filtered article. For more information, see [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### To publish a view or indexed view article in a transactional or snapshot publication  
   

@@ -1,6 +1,7 @@
 ---
-title: "Synchronize a Subscription Using Windows Synchronization Manager | Microsoft Docs"
-ms.custom: ""
+title: "Synchronize subscription (Windows Synchronization Manager)"
+description: Learn how to synchronize subscriptions using the Windows Synchronization Manager. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Synchronize a Subscription Using Windows Synchronization Manager
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

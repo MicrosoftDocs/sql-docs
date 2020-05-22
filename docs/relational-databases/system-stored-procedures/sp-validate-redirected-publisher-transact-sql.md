@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_validate_redirected_publisher"
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.author: sstein
  None.  
   
 ## Remarks  
- If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null in the output parameter *@redirected_publisher*. If an entry exists, it is returned in the output parameter in both success and failure cases.  
+ If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null in the output parameter *\@redirected_publisher*. If an entry exists, it is returned in the output parameter in both success and failure cases.  
   
  If the validation succeeds, **sp_validate_redirected_publisher** returns a success indication.  
   

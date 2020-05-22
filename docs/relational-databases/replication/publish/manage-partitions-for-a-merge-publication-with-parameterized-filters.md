@@ -1,6 +1,7 @@
 ---
-title: "Manage Partitions for a Merge Publication with Parameterized Filters | Microsoft Docs"
-ms.custom: ""
+title: "Manage parameterized filters partition (Merge)"
+description: Manage partitions with parameterized filters used for SQL Server merge replication.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -57,8 +58,6 @@ ms.author: "mathoma"
     2.  Accept the default schedule for refreshing snapshots, or click **Change** to specify a different schedule.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To delete a partition  
   

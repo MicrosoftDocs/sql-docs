@@ -1,5 +1,6 @@
 ---
-title: "Evaluate Policies Dialog Box, Evaluation Results Page | Microsoft Docs"
+title: "'Evaluation Results' page of 'Evaluate Policies' dialog box"
+description: Describes the 'Evaluation Results' page of the 'Evaluate Policies' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

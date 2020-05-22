@@ -1,7 +1,7 @@
 ---
-title: "Use automatic seeding to initialize an availability group"
-description: "Automatically create secondary replicas for every database in an Always On availability group using automatic seeding."
-ms.custom: "seodec18"
+title: "Initialize an availability group using automatic seeding"
+description: "Use automatic seeding to automatically create secondary replicas for every database in an Always On availability group without having to manually back up and restore."
+ms.custom: seo-lt-2019
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.reviewer: ""

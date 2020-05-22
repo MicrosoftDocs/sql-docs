@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQLNCLI"
   - "native data access [SQL Server Native Client]"
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQL Server Native Client Programming
@@ -31,7 +31,7 @@ manager: craigg
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client was designed to provide a simplified method of gaining native data access to SQL Server using either OLE DB or ODBC. It is simplified in that it combines OLE DB and ODBC technologies into one library, and it provides a way to innovate and evolve new data access features without changing the current Windows DAC components, which are now part of the Microsoft Windows platform.  
   
- While [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client uses components in Windows DAC, it is not explicitly dependant on a particular version of Windows DAC. You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client with the version of Windows DAC that is installed with any operating system supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ While [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client uses components in Windows DAC, it is not explicitly dependent on a particular version of Windows DAC. You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client with the version of Windows DAC that is installed with any operating system supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## In This Section  
  [What's New in SQL Server Native Client](sql-server-native-client.md)  

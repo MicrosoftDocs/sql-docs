@@ -1,7 +1,7 @@
 ---
-title: "Configure settings for Data Migration Assistant (SQL Server) | Microsoft Docs"
+title: "Configure settings for Data Migration Assistant"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
-ms.custom: ""
+ms.custom: "seo-lt-2019"
 ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ---
 

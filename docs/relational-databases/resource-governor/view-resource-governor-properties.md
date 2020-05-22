@@ -56,8 +56,6 @@ ms.author: jrasnick
   
 4.  To save any changes, click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="RGProp"></a> Resource Governor properties  
  **Classifier function name**  
  Specify the classifier function by selecting from the list.  

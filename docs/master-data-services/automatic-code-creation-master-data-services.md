@@ -1,5 +1,5 @@
 ---
-title: "Automatic Code Creation (Master Data Services) | Microsoft Docs"
+title: Automatic Code Creation
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
 title: "IF...ELSE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQl language reference for IF-ELSE statements to provide control flow in Transact-SQL statements."
 ms.date: "07/11/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -31,7 +31,7 @@ Imposes conditions on the execution of a [!INCLUDE[tsql](../../includes/tsql-md.
   
 ## Syntax  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -54,7 +54,7 @@ IF Boolean_expression
   
 ## Example  
   
-```  
+```sql
 IF DATENAME(weekday, GETDATE()) IN (N'Saturday', N'Sunday')
        SELECT 'Weekend';
 ELSE 
@@ -66,23 +66,20 @@ ELSE
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses `IF...ELSE` to determine which of two responses to show the user, based on the weight of an item in the `DimProduct` table.  
   
-```  
+```sql
 -- Uses AdventureWorksDW  
-  
+
 DECLARE @maxWeight float, @productKey integer  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
-IF @maxWeight <= (SELECT Weight from DimProduct 
-                  WHERE ProductKey = @productKey)   
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is too heavy to ship and is only available for pickup.' 
+IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey = @productKey)   
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is too heavy to ship and is only available for pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ELSE  
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is available for shipping or pickup.' 
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ```  
   
 ## See Also  
@@ -93,8 +90,3 @@ ELSE
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)
  [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
-  
-  
-
-
-

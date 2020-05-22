@@ -1,6 +1,6 @@
 ---
-title: "Replace in Files | Microsoft Docs"
-ms.custom: ""
+title: Replace in Files
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Replace in Files dialog box"
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Replace in Files

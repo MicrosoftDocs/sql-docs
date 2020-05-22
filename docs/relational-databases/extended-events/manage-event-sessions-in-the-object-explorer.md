@@ -1,6 +1,6 @@
 ---
-title: "Manage Event Sessions in the Object Explorer | Microsoft Docs"
-ms.custom: ""
+title: "Manage Event Sessions in the Object Explorer"
+description: You can take actions in Object Explorer that affect Extended Events, such as create, start or stop, export, import, edit, or delete Extended Events sessions.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,6 +1,6 @@
 ---
-title: "Find in Files | Microsoft Docs"
-ms.custom: ""
+title: Find in Files
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Find in Files dialog box"
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Find in Files

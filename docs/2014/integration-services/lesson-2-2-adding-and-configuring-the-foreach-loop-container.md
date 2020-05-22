@@ -59,7 +59,7 @@ manager: craigg
   
     2.  Click the **DOWNLOADS** tab.  
   
-    3.  Click the  HYPERLINK "http://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.  
+    3.  Click the  HYPERLINK "https://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.  
   
 6.  In the **Files** box, type **Currency_\*.txt**.  
   
@@ -88,5 +88,4 @@ manager: craigg
 ## See Also  
  [Configure a Foreach Loop Container](control-flow/foreach-loop-container.md)   
  [Use Variables in Packages](use-variables-in-packages.md)  
-  
   

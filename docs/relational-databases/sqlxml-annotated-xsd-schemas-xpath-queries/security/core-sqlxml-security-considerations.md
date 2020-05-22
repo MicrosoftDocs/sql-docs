@@ -1,5 +1,5 @@
 ---
-title: "Core SQLXML Security Considerations | Microsoft Docs"
+title: "Core SQLXML Security Considerations"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

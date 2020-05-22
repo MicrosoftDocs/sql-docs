@@ -1,6 +1,7 @@
 ---
-title: "Use SQL Server Connector with SQL Encryption Features | Microsoft Docs"
-ms.custom: ""
+title: "Use SQL Server Connector encryption with Azure Key Vault"
+description: Learn how to use the SQL Server Connector with common encryption features such as TDE, encrypting backups, and column level encryption using Azure Key Vault. 
+ms.custom: seo-lt-2019
 ms.date: "09/12/2019"
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,8 +11,8 @@ helpviewer_keywords:
   - "SQL Server Connector, using"
   - "EKM, with SQL Server Connector"
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # Use SQL Server Connector with SQL Encryption Features
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

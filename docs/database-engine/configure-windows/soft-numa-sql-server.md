@@ -66,7 +66,7 @@ Consider the example of a computer with eight CPUs, that does not have hardware 
   
  Instance A, which experiences significant I/O, now has two I/O threads and one lazy writer thread. Instance B, which performs processor-intensive operations, has only one I/O thread and one lazy writer thread. Differing amounts of memory can be assigned to the instances, but unlike hardware NUMA, they both receive memory from the same operating system memory block, and there is no memory-to-processor affinity.  
   
- The lazy writer thread is tied to the SQLOS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as the number of physical NUMA nodes, this will be the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ The lazy writer thread is tied to the SQLOS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as the number of physical NUMA nodes, this will be the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers/ba-p/316044).  
   
 > [!NOTE]
 > The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -126,7 +126,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): Displays the current value (0 or 1) for SOFTNUMA  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): The *softnuma* and *softnuma_desc* columns displays the current configuration values.  
+-   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): The *softnuma_configuration* and *softnuma_configuration_desc* columns displays the current configuration values.  
   
 > [!NOTE]
 > While you can view the running value for automatic soft-NUMA using [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), you cannot change its value using **sp_configure**. You must use the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the `SET SOFTNUMA` argument.  

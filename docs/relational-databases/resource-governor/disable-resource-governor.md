@@ -50,8 +50,6 @@ ms.author: jrasnick
   
 2.  Right-click **Resource Governor**, and then click **Disable**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="RGOffProp"></a> Disable Resource Governor Using Resource Governor Properties  
  **To disable the Resource Governor by using the Resource Governor Properties page**  
   

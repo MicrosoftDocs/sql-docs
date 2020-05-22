@@ -1,5 +1,6 @@
 ---
 title: "View and Read SQL Server Setup Log Files | Microsoft Docs"
+description: This article describes the log files that SQL Server Setup creates. Log files are placed in a dated and time-stamped folder.
 ms.custom: ""
 ms.date: "09/09/2016"
 ms.prod: sql
@@ -76,7 +77,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 
   >[!NOTE]
-  > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similiar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
+  > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### Location  
  The summary.txt is located within %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.

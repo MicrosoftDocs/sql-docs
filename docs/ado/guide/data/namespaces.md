@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "namespaces in ADO"
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Namespaces
 The XML persistence format in ADO uses the following four namespaces.  

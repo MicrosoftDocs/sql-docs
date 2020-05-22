@@ -24,7 +24,7 @@ manager: kfile
  An administrator typically installs and configures [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], grants permission to use the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder, and manages folders and permissions to reports, report parts, and shared datasets saved to the report server. For more information about [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administration, see [Reporting Services Report Server &#40;Native Mode&#41;](report-server/reporting-services-report-server-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
 ##  <a name="Installing"></a> Installing Report Builder  
- Report Builder is available as a stand-alone and [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versions. You or your administrator download and install the stand-alone version on your computer, whereas the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version is installed with [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. You can download Report Builder from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=186083).  
+ Report Builder is available as a stand-alone and [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versions. You or your administrator download and install the stand-alone version on your computer, whereas the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version is installed with [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. You can download Report Builder from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53613).  
   
 > [!NOTE]  
 >  Report Builder cannot be installed on Itanium 64-based computers. This applies to the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] and stand-alone versions of Report Builder.  
@@ -34,14 +34,14 @@ manager: kfile
 ### System Requirements  
  Report Builder requires that the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] version 3.5 is installed on the local computer. If the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] is not installed on the local computer when you install Report Builder, you will be prompted to install it before you can continue and complete the installation.  
   
- The .NET Framework 3.5 is free. You can download the .NET Framework 3.5 from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=110520).  
+ The .NET Framework 3.5 is free. You can download the .NET Framework 3.5 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=21).  
   
  You can install Report Builder on any [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating system that supports the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.5. For example, you can install Report Builder on Windows Vista or Windows 7.  
   
  It is recommended that the computers that will run Report Builder have 512 MB of RAM. However, depending on the complexity of reports you run, you might want less or more RAM.  
   
 ### Installing the Stand-alone Version of Report Builder Directly on Your Computer  
- You install Report Builder from the download site, [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=186083), or an administrator makes the ReportBuilder3.msi file, the Windows Installer Package for Report Builder, available on a share from which you can install it.  
+ You install Report Builder from the download site, [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53613), or an administrator makes the ReportBuilder3.msi file, the Windows Installer Package for Report Builder, available on a share from which you can install it.  
   
  You can also perform a command line installation and include options such as making the installation silent and writing log files for the installation. The documentation for Windows Installer that runs .msi files provides information about the available options.  
   

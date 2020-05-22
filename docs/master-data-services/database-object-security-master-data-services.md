@@ -1,5 +1,5 @@
 ---
-title: "Database Object Security (Master Data Services) | Microsoft Docs"
+title: Database Object Security
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

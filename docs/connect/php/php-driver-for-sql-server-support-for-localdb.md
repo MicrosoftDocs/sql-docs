@@ -1,14 +1,15 @@
 ---
-title: "Support for LocalDB | Microsoft Docs"
+title: "PHP Driver Support for LocalDB"
+description: "Learn how the Microsoft Drivers for PHP for SQL Server support connections to LocalDB database instances."
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Support for LocalDB
 
@@ -53,7 +54,7 @@ In brief, LocalDB allows you to:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-If necessary, you can create a LocalDB instance with sqllocaldb.exe. You can also use sqlcmd.exe to add and modify databases in a LocalDB instance. For example, `sqlcmd -S (localdb)\v11.0`. (When running in IIS, you need to run under the correct account to get the same results as when you run at the command line; see [Using LocalDB with Full IIS, Part 2: Instance Ownership](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) for more information.)
+If necessary, you can create a LocalDB instance with sqllocaldb.exe. You can also use sqlcmd.exe to add and modify databases in a LocalDB instance. For example, `sqlcmd -S (localdb)\v11.0`. (When running in IIS, you need to run under the correct account to get the same results as when you run at the command line; see [Using LocalDB with Full IIS, Part 2: Instance Ownership](/archive/blogs/sqlexpress/using-localdb-with-full-iis-part-2-instance-ownership) for more information.)
 
 The following are example connection strings using the SQLSRV driver that connect to a database in a LocalDB named instance called myInstance:
 

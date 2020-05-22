@@ -1,6 +1,8 @@
 ---
-title: "+= (String Concatenation and Assignment) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "+= String concatenation"
+description: Concatenate two strings and set the string to the result of the operation.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "12/07/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

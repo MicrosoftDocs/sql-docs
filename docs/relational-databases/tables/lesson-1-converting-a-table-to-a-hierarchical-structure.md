@@ -36,9 +36,6 @@ The sample Adventureworks2017 (or later) database contains an **Employee** table
   
 1.  In a Query Editor window, run the following code to copy the table structure and data from the **Employee** table into a new table named **EmployeeDemo**. Since the original table already uses hierarchyid, this query essentially flattens the hierarchy to retrieve the manager of the employee. In subsequent parts of this lesson we will be reconstructing this hierarchy.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-
    ```sql  
    USE AdventureWorks2017;  
    GO  

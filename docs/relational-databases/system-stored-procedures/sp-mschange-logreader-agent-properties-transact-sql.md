@@ -1,6 +1,7 @@
 ---
-title: "sp_MSchange_logreader_agent_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sp_MSchange_logreader_agent_properties (T-SQL)"
+description: Describes the sp_MSchange_logreader_agent_properties stored procedure used to change the properties of the Log Reader Agent for a SQL Server Replication topology. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_MSchange_logreader_agent_properties"
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,6 @@
 ---
-title: "StartMode Property (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+title: "StartMode Property (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

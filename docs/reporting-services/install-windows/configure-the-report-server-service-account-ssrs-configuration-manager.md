@@ -1,12 +1,13 @@
 ---
-title: "Configure the Report Server Service Account (SSRS Configuration Manager) | Microsoft Docs"
+title: "Configure the Report Server Service Account (Configuration Manager) | Microsoft Docs"
+description: "Reporting Services is implemented as a single service that contains a Report Server Web service, web portal, and a background processing application that is used for scheduled report processing and subscription delivery."
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
-ms.custom: seodec18
-ms.date: 12/10/2018 
+ms.custom: seo-lt-2019​, seo-mmd-2019
+ms.date: 12/04/2019 
 ---
 
 # Configure the Report Server Service Account (SSRS Configuration Manager)
@@ -31,7 +32,7 @@ ms.date: 12/10/2018
   
 - Automatically updates the login permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance used to host the report server database. The new account is added to the **RSExecRole**.  
   
-     The database log in for the old account isn't removed automatically. Be sure to remove accounts that are no longer in use. For more information, see [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) in SQL Server Books Online.  
+     The database log in for the old account isn't removed automatically. Be sure to remove accounts that are no longer in use. For more information, see [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
   
      Granting database permissions to a new service account only occurs if you configured the report server database connection to use the service account in the first place. If you configured the report server database connection to use a domain user account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database login, the connection information is not affected by the service account update.  
   

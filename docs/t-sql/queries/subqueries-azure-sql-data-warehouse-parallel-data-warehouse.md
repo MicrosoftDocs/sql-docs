@@ -1,6 +1,8 @@
 ---
-title: "Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs"
-ms.custom: ""
+title: Subqueries
+description: Subqueries in Azure SQL Data Warehouse and Parallel Data Warehouse
+ms.custom: "seo-lt-2019"
+titleSuffix: "Azure SQL Data Warehouse"
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -63,7 +63,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  Is the name of the new synonym.  
   
  *server_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Is the name of the server on which base object is located.  
   
@@ -144,7 +144,7 @@ GO
 ### B. Creating a synonym to remote object  
  In the following example, the base object, `Contact`, resides on a remote server named `Server_Remote`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
 ```  
 EXEC sp_addlinkedserver Server_Remote;  

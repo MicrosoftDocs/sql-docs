@@ -1,7 +1,7 @@
 ---
 title: "BULK INSERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 09/25/2019
+description: "Transact-SQL reference for the BULK INSERT statement."
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -37,7 +37,7 @@ Imports a data file into a database table or view in a user-specified format in 
 
 ## Syntax
 
-```
+```syntaxsql
 BULK INSERT
    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'
@@ -48,12 +48,12 @@ BULK INSERT
    [ [ , ] CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
    [ [ , ] DATAFILETYPE =
       { 'char' | 'native'| 'widechar' | 'widenative' } ]
-   [ [ , ] DATASOURCE = 'data_source_name' ]
+   [ [ , ] DATA_SOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -98,7 +98,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, the data_file can be in Azure blob storage. In that case, you need to specify **data_source_name** option. For an example, see [Importing data from a file in Azure blob storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 **'** _data_source_name_ **'**
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 and Azure SQL Database.
@@ -172,7 +172,7 @@ Specifies that any insert triggers defined on the destination table execute duri
 
 If FIRE_TRIGGERS is not specified, no insert triggers execute.
 
-FORMATFILE_DATASOURCE **=** 'data_source_name'
+FORMATFILE_DATA_SOURCE **=** 'data_source_name'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
 Is a named external data source pointing to the Azure Blob storage location of the format file that will define the schema of imported data. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -299,7 +299,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files, but can read from Azure Blob storage.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### Data Types for Bulk Exporting or Importing SQLXML Documents
 
@@ -359,7 +359,9 @@ When importing from Azure Blob storage and the data is not public (anonymous acc
 
 ### Permissions
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required. Additionally, ALTER TABLE permission is required if one or more of the following is true:
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required. ADMINISTER BULK OPERATIONS permissions or the bulkadmin role is not supported for SQL Server on Linux. Only the `sysadmin` can perform bulk inserts for SQL Server on Linux. 
+
+Additionally, ALTER TABLE permission is required if one or more of the following is true:
 
 - Constraints exist and the CHECK_CONSTRAINTS option is not specified.
 
@@ -390,7 +392,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### B. Using the FIRE_TRIGGERS argument
 
@@ -408,7 +410,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### C. Using line feed as a row terminator
 
@@ -426,7 +428,7 @@ EXEC(@bulk_cmd);
 > Due to how Microsoft Windows treats text files **(\n** automatically gets replaced with **\r\n)**.
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### D. Specifying a code page
 
@@ -443,7 +445,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### E. Importing data from a CSV file
 
@@ -460,14 +462,14 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### F. Importing data from a file in Azure blob storage
 
 The following example shows how to load data from a csv file in an Azure Blob storage location on which you have created a SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -489,9 +491,27 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
+Another way to access the storage account is via [Managed Identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). To do this follow the [Steps 1 thru 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) to configure SQL Database to access Storage via Managed Identity, after which you can implement code sample as below
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### G. Importing data from a file in Azure blob storage and specifying an error file
 

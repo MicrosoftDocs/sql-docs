@@ -1,6 +1,7 @@
 ---
-title: "Enable Updating Subscriptions for Transactional Publications | Microsoft Docs"
-ms.custom: ""
+title: "Enable Updatable Subscriptions for Transactional Publications"
+description: Learn how to enable Updatable Subscriptions for a Transactional Publication in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -37,8 +38,6 @@ ms.author: "mathoma"
 1.  On the **Publication Type** page of the New Publication Wizard, select **Transactional publication with updatable subscriptions**.  
   
 2.  On the **Agent Security** page, specify security settings for the Queue Reader Agent in addition to the Snapshot Agent and Log Reader Agent. For more information about the permissions required for the account under which the Queue Reader Agent runs, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     > **NOTE:** The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
   

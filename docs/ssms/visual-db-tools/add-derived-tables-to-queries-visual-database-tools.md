@@ -1,10 +1,7 @@
 ---
-title: "Add Derived Tables to Queries (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Add Derived Tables to Queries
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,11 +10,16 @@ helpviewer_keywords:
   - "table joins [SQL Server]"
   - "derived tables"
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-author: "markingmyname"
-ms.author: "maghan"
-
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Add Derived Tables to Queries (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Derived tables are result sets used as table sources in a query. You can add a derived table to a query in the **Diagram Pane**.  
   

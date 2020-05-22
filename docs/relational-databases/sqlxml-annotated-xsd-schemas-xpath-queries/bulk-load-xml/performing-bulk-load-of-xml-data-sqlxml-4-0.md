@@ -1,6 +1,6 @@
 ---
-title: "Performing Bulk Load of XML Data (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Performing Bulk Load of XML Data (SQLXML)"
+description: Learn how to use XML Bulk Load in SQLXML 4.0 to load semi-structured XML data into Microsoft SQL Server tables.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,6 +18,7 @@ helpviewer_keywords:
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Bulk Load of XML Data (SQLXML 4.0)

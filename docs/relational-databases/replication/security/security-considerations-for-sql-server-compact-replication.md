@@ -1,6 +1,7 @@
 ---
-title: "Security Considerations for SQL Server Compact Replication | Microsoft Docs"
-ms.custom: ""
+title: "Security considerations (Compact Replication)"
+description: Describes some security considerations for SQL Server Compact Replication.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,6 +1,7 @@
 ---
-title: "Execute Scripts During Synchronization (Replication Transact-SQL Programming) | Microsoft Docs"
-ms.custom: ""
+title: "Execute scripts during synchronization (Replication SP)"
+description: Learn how to use Replication stored procedures to execute on-demand scripts during the synchronization process of a Transactional or Merge Publication.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

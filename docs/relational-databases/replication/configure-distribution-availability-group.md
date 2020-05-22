@@ -1,6 +1,7 @@
 ---
-title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
-ms.custom: ""
+title: "Configure distribution database in availability group"
+description: Configure the distribution database for SQL Server replication with an Always On availability group. 
+ms.custom: seo-lt-2019
 ms.date: "01/16/2019"
 ms.prod: sql
 ms.reviewer: ""
@@ -111,8 +112,6 @@ This example configures a new distributor and publisher and puts the distributio
    The value of `@working_directory` should be a network path independent of DIST1, DIST2, and DIST3.
 
 1. On DIST2 and DIST3, run:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'

@@ -1,6 +1,7 @@
 ---
-title: "sp_replmonitorchangepublicationthreshold (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sp_replmonitorchangepublicationthreshold (T-SQL)"
+description: Describes the sp_replmonitorchangepublicationthreshold stored procedure which changes the monitoring threshold metric for a publication.
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorchangepublicationthreshold"
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

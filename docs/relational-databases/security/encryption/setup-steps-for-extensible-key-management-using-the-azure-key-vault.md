@@ -1,6 +1,7 @@
 ---
-title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps | Microsoft Docs"
-ms.custom: ""
+title: "Setup TDE Extensible Key Management with Azure Key Vault"
+description: Steps to install and configure SQL Server Connect for Azure Key Vault. 
+ms.custom: seo-lt-2019
 ms.date: "09/12/2019"
 ms.prod: sql
 ms.reviewer: vanto
@@ -11,13 +12,13 @@ helpviewer_keywords:
   - "SQL Server Connector, setup"
   - "SQL Server Connector"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  The following steps walk through the installation and configuration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Connector for Azure Key Vault.  
+  The following steps walk through the installation and configuration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault.  
   
 ## Before You Start  
  To use Azure Key Vault with your SQL Server, there are a few prerequisites:  
@@ -348,6 +349,14 @@ SQL Server Version  |Redistributable Install Link
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
+    
+    > [!NOTE]
+    > If you do not log on to SSMS with the Windows account that the credential was added, the CREATE ASYMMETRIC KEY script may fail with the following error:
+    > 
+    > Msg 33046, Level 16, State 1, Line 1
+    > 
+    > Server principal 'public' has no credential associated with cryptographic provider 'AzureKeyVault_EKM_Prov'.
+    
 ## Next Step  
   
 Now that you have completed the basic configuration, see how to [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   

@@ -1,5 +1,6 @@
 ---
 title: "Deploying CLR Database Objects | Microsoft Docs"
+description: Using Microsoft Visual Studio, you can develop CLR database objects for SQL Server, deploy them to a test server, and distribute them to production servers.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -38,8 +39,6 @@ ms.author: "jroth"
 2.  Resolve all build errors and warnings before deploying the assembly to the test server.  
   
 3.  Select **Deploy** from the **Build** menu. The assembly will then be registered in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and database specified when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] project was first created in Visual Studio.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To deploy the assembly using Transact-SQL  
   

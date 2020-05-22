@@ -1,7 +1,7 @@
 ---
-title: "Overview of PowerShell Cmdlets for availability groups"
+title: "PowerShell Cmdlets for availability groups"
 description: "A reference for the different PowerShell cmdlets available to manage Always On availability groups. "
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-title: "Change Sets and Approval (MDS Add-in for Excel) | Microsoft Docs"
+title: Change Sets and Approval
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
 ms.prod: sql

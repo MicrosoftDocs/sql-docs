@@ -1,6 +1,6 @@
 ---
-title: "Creating and Updating Statistics | Microsoft Docs"
-ms.custom: ""
+title: "Creating and Updating Statistics"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

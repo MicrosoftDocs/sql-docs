@@ -1,6 +1,7 @@
 ---
-title: "Take an Availability Group Offline (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Alter availability group offline"
+description: Steps to set your Always On availability group offline
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -53,7 +54,7 @@ manager: craigg
 ### Example  
  The following example takes the `AccountsAG` availability group offline.  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
@@ -77,5 +78,3 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ## See Also  
  [AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  
-  

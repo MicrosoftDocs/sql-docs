@@ -93,8 +93,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 10. To see the DML trigger listed in Object Explorer, right-click **Triggers** and select **Refresh**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  [Before You Begin](#Top)  
   
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  

@@ -1,15 +1,16 @@
 ---
-title: "Proxies Node (SQL Server Agent F1 Help) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Proxies Node (SQL Server Agent F1 Help)"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 1f911829-8c73-4542-b75e-6273f0dd52bf
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Proxies Node (SQL Server Agent F1 Help)

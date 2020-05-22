@@ -1,6 +1,6 @@
 ---
-title: "Search and Replace | Microsoft Docs"
-ms.custom: ""
+title: Search and Replace
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "match whole word [SQL Server]"
   - "searches [SQL Server Management Studio], replacing"
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Search and Replace

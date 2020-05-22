@@ -1,6 +1,7 @@
 ---
-title: "Failover Cluster Instance Administration and Maintenance | Microsoft Docs"
-ms.custom: ""
+title: "Failover Cluster Instance administration & maintenance"
+description: Learn about the administration and maintenance of SQL Server failover cluster instances. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

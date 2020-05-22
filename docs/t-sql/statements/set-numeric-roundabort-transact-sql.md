@@ -34,7 +34,7 @@ Specifies the level of error reporting generated when rounding in an expression 
 
 ## Syntax
 
-```sql
+```syntaxsql
 
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```

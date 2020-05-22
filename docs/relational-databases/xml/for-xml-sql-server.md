@@ -1,7 +1,7 @@
 ---
 title: "FOR XML (SQL Server) | Microsoft Docs"
 ms.custom: "fresh2019may"
-ms.date: "05/22/2019"
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "AUTO FOR XML mode"
   - "XML [SQL Server], construction"
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+author: RothJa
+ms.author: jroth
+# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # FOR XML (SQL Server)
 

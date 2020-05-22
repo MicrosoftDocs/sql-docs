@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-author: CarlRabeler
-ms.author: carlrab
+author: juliemsft
+ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE FUNCTION (SQL Data Warehouse)
@@ -33,7 +33,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql
 --Transact-SQL Scalar Function Syntax  
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
@@ -149,7 +149,7 @@ RETURNS return_data_type
   
  [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : Displays the definition of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions. For example:  
   
-```  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o   
@@ -171,7 +171,7 @@ GO
 ### A. Using a scalar-valued user-defined function to change a data type  
  This simple function takes a **int** data type as an input, and returns a **decimal(10,2)** data type as an output.  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
 RETURNS decimal(10,2)  
 AS  

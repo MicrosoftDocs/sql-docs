@@ -29,8 +29,6 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 3.  Script generation  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  The discovery phase uses the <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> object. Given an URN list of objects, the <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> object returns a <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> object for the objects in the URN list. The Boolean *fParents* parameter is used to select whether the parents or the children of the specified object are to be discovered. The dependency tree can be modified at this stage.  
   
  In the list generation phase, the tree is passed in and the resulting list is returned. This object list is in scripting order and can be manipulated.  

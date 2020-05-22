@@ -1,6 +1,8 @@
 ---
-title: "REVOKE Availability Group Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Availability Group Permissions"
+description: Revoke permissions on an Always On availability group.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -27,7 +29,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON AVAILABILITY GROUP :: availability_group_name  

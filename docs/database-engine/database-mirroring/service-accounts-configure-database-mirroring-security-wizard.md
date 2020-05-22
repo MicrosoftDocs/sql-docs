@@ -1,6 +1,7 @@
 ---
-title: "Service Accounts (Configure Database Mirroring Security Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Configure Security Wizard: Service Accounts"
+description: "Describes the 'Service Accounts' page of the 'Configure Database Mirroring Security Wizard' in SQL Server Management Studio."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,7 +14,7 @@ ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Service Accounts (Configure Database Mirroring Security Wizard)
+# Configure Database Mirroring Security Wizard: Service Accounts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When using Windows Authentication, if the server instances use different accounts, specify the service accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These service accounts must all be domain accounts (in the same or trusted domains).  
   

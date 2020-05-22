@@ -60,8 +60,6 @@ sp_delete_log_shipping_primary_database
   
 7.  Calls **sp_delete_log_shipping_alert_job** on the monitor server.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Permissions  
  Only members of the **sysadmin** fixed server role can run this procedure.  
   

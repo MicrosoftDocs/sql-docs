@@ -1,18 +1,19 @@
 ---
-title: "Create an ActiveX Script Job Step | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Create an ActiveX Script Job Step"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ActiveX scripting jobs [SQL Server]"
   - "job steps [Analysis Services]"
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create an ActiveX Script Job Step

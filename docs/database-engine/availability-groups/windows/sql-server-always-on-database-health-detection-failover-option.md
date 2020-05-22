@@ -1,6 +1,7 @@
 ---
-title: "Database Health Detection Failover Option | Microsoft Docs"
-ms.custom: ""
+title: "Database-level health detection"
+description: Learn about the database-level health detection feature available for SQL Server Always On availability groups.
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-title: "Change a Version Flag Name (Master Data Services) | Microsoft Docs"
+title: Change a Version Flag Name
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

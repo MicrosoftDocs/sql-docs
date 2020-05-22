@@ -27,9 +27,9 @@ manager: craigg
   
 ### To view replicated commands in the distribution database from a specific article or from a specific database published using transactional replication  
   
-1.  (Optional) At the Publisher on the publication database, execute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql). Specify **@publication** and **@article**. Note the value of **article id** in the result set.  
+1.  (Optional) At the Publisher on the publication database, execute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql). Specify **\@publication** and **\@article**. Note the value of **article id** in the result set.  
   
-2.  At the Distributor on the distribution database, execute [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql). (Optional) Specify the article ID from step 2 for **@article_id**. (Optional) Specify the ID of the publication database for **@publisher_database_id**, which can be obtained from the **database_id** column in the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view.  
+2.  At the Distributor on the distribution database, execute [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql). (Optional) Specify the article ID from step 2 for **\@article_id**. (Optional) Specify the ID of the publication database for **\@publisher_database_id**, which can be obtained from the **database_id** column in the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view.  
   
 ## See Also  
  [Programmatically Monitor Replication](../monitoring-replication.md)  

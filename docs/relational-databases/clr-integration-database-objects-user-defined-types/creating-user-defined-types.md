@@ -1,5 +1,6 @@
 ---
 title: "Creating a User-Defined Type | Microsoft Docs"
+description: To create a UDT to install in SQL Server, first create a class in a .NET Framework programming language, which conforms to the specifications for creating UDTs.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -78,7 +79,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -227,7 +228,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  

@@ -27,13 +27,13 @@ ms.author: mathoma
 |Message Text|Must declare the scalar variable "%.*ls".|  
   
 ## Explanation  
-This error occurs when a variable is used in a SQL script without first declaring the variable. The following example returns error 137 for both the SET and SELECT statements because **@mycol** is not declared.  
+This error occurs when a variable is used in a SQL script without first declaring the variable. The following example returns error 137 for both the SET and SELECT statements because **\@mycol** is not declared.  
   
 SET @mycol = 'ContactName';  
   
 SELECT @mycol;  
   
-One of the more complicated causes of this error includes the use of a variable that is declared outside the EXECUTE statement. For example, the variable **@mycol** specified in the SELECT statement is local to the SELECT statement; thus it is outside the EXECUTE statement.  
+One of the more complicated causes of this error includes the use of a variable that is declared outside the EXECUTE statement. For example, the variable **\@mycol** specified in the SELECT statement is local to the SELECT statement; thus it is outside the EXECUTE statement.  
   
 USE AdventureWorks2012;  
   

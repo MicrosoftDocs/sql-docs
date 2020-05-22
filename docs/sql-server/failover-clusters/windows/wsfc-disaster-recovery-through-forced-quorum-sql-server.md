@@ -1,6 +1,7 @@
 ---
-title: "WSFC Disaster Recovery through Forced Quorum (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Disaster Recovery through forced quorum"
+description: Recovery from a quorum failure requires manual intervention. This article describes how to address how to force quorum in the event of a disaster of a SQL Server failover cluster instance (FCI). 
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

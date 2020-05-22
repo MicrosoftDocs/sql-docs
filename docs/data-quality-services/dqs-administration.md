@@ -1,6 +1,5 @@
 ---
-title: "DQS Administration | Microsoft Docs"
-ms.custom: ""
+title: "DQS Administration"
 ms.date: "10/01/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,8 +11,8 @@ helpviewer_keywords:
   - "administration"
   - "dqs,adminstration"
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # DQS Administration
 

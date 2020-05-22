@@ -1,6 +1,6 @@
 ---
-title: "Use sqlcmd with Scripting Variables | Microsoft Docs"
-ms.custom: ""
+title: Use sqlcmd with Scripting Variables
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "sqlcmd utility, scripts"
   - "setvar command"
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Use sqlcmd with Scripting Variables

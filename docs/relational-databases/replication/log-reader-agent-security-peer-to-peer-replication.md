@@ -1,6 +1,7 @@
 ---
-title: "Log Reader Agent Security (Peer-to-Peer Replication) | Microsoft Docs"
-ms.custom: ""
+title: "Log Reader Agent Security (SSMS)"
+description: Describes the 'Log Reader Agent Security' page for a Transaction and Peer-to-peer Publication within SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,5 +1,6 @@
 ---
-title: "Work with Change Data (SQL Server) | Microsoft Docs"
+title: "Work with Change Data"
+ms.custom: seo-dt-2019
 ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Transact-SQL tutorials"
   - "SQL Server Management Studio [SQL Server], tutorials"
   - "scripts [SQL Server], SQL Server Management Studio"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: "Create a Snapshot for a Merge Publication with Parameterized Filters | Microsoft Docs"
-ms.custom: ""
+title: "Create snapshot with parameterized filters (Merge)"
+description: Learn how to create a snapshot for a Merge Publication using parameterized filters. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -59,8 +60,6 @@ When parameterized row filters are used in merge publications, replication initi
 1.  Create a merge publication with the New Publication Wizard, and specify one or more parameterized row filters on the **Add Filter** page of the wizard. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 2.  Generate a schema snapshot for the publication. By default, a schema snapshot is generated when you complete the New Publication Wizard; you can also generate a schema snapshot from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To generate a schema snapshot  
   

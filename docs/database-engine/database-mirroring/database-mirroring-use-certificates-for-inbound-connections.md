@@ -1,6 +1,7 @@
 ---
-title: "Database Mirroring - Use Certificates for Inbound Connections | Microsoft Docs"
-ms.custom: ""
+title: "Use certificates for inbound connection"
+description: Describes the steps for configuring server instances to use certificates to authenticate inbound connections for database mirroring. 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability

@@ -1,6 +1,6 @@
 ---
-title: "Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Creating CDATA sections using sql:use-cdata (SQLXML)"
+description: Learn how to create CDATA sections in SQLXML 4.0 using the sql:use-cdata annotation to escape blocks of text that contain markup characters.
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,6 +19,7 @@ ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)

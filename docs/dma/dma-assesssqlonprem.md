@@ -1,8 +1,8 @@
 ---
-title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
+title: "Perform a SQL Server migration assessment"
+titleSuffix: Data Migration Assistant
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
-ms.custom: ""
-ms.date: "08/08/2019"
+ms.date: "01/15/2020"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,13 +12,17 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
+ms.custom: "seo-lt-2019"
 ---
 
 # Perform a SQL Server migration assessment with Data Migration Assistant
 
-The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database, by using Data Migration Assistant.
+The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database by using Data Migration Assistant.
+
+   > [!NOTE]
+   > Data Migration Assistant v5.0 introduces support for analyzing database connectivity and embedded SQL queries in the application code. For more information, see the blog post [Using Data Migration Assistant to assess an application’s data access layer](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
 
 ## Create an assessment
 
@@ -71,7 +75,7 @@ The following step-by-step instructions help you perform your first assessment f
     DROP EVENT SESSION [DatalayerSession] ON SERVER
     go
     CREATE EVENT SESSION [DatalayerSession] ON SERVER  
-    ADD EVENT sqlserver.sql_statement_completed( 
+    ADD EVENT sqlserver.sql_batch_completed( 
         ACTION (sqlserver.sql_text,sqlserver.client_app_name,sqlserver.client_hostname,sqlserver.database_id))
     ADD TARGET package0.asynchronous_file_target(SET filename=N'C:\temp\Demos\DataLayerAppassess\DatalayerSession.xel')  
     WITH (MAX_MEMORY=2048 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=3 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
@@ -105,6 +109,9 @@ The following step-by-step instructions help you perform your first assessment f
 
     ![Add sources and start assessment](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> You can run multiple assessments concurrently and view the state of the assessments by opening the **All Assessments** page.
+
 ## View results
 
 The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
@@ -135,9 +142,9 @@ For Azure SQL Database, the assessments provide migration blocking issues and fe
 
 ## Assess a data estate for target readiness
 
-If you want further extend these assessments to the entire data estate and find the relative readiness of SQL Server instances and databases for migration to Azure SQL Database, upload the results to the Azure migrate hub by selecting **Upload to Azure Migrate**.
+If you want further extend these assessments to the entire data estate and find the relative readiness of SQL Server instances and databases for migration to Azure SQL Database, upload the results to the Azure Migrate hub by selecting **Upload to Azure Migrate**.
 
-Doing so allows you to view the consolidated results on the Azure migrate hub project.
+Doing so allows you to view the consolidated results on the Azure Migrate hub project.
 
 Detailed, step-by-step guidance for target readiness assessments is available [here](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017).
 
@@ -147,4 +154,6 @@ Detailed, step-by-step guidance for target readiness assessments is available [h
 
 After all databases finish the assessment, select **Export report** to export the results to either a JSON file or a CSV file. You can then analyze the data at your own convenience.
 
-You can run multiple assessments concurrently and view the state of the assessments by opening the **All Assessments** page.
+## Save and load assessments
+
+In addition to exporting the results of an assessment, you can save assessment detail to a file and load an assessment file for later review.  For more information, see the article [Save and load assessments with Data Migration Assistant](../dma/dma-save-load-assessments.md).

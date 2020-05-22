@@ -1,6 +1,6 @@
 ---
-title: "Sample: Using the WMI Event Provider with the .NET Framework | Microsoft Docs"
-ms.custom: ""
+title: "Sample: Use the WMI Event Provider in .NET"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

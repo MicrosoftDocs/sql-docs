@@ -35,10 +35,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## Arguments  
- [**@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the database for which the replication database option is being set. *db_name* is **sysname**, with no default.  
   
- [**@optname=**] **'***optname***'**  
+`[ @optname = ] 'optname'`
  Is the replication database option to enable or disable. *optname* is **sysname**, and can be one of these values.  
   
 |Value|Description|  

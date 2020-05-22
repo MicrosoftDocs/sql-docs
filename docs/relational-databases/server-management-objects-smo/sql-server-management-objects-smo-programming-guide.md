@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Management Objects (SMO) Programming Guide | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Management Objects (SMO) Programming Guide"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,6 +1,6 @@
 ---
-title: "Simulating an IF-WHILE EXISTS Statement in a Natively Compiled Module | Microsoft Docs"
-ms.custom: ""
+title: "Simulating IF-WHILE EXISTS - natively compiled module"
+ms.custom: seo-dt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

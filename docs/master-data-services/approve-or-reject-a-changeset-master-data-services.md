@@ -1,5 +1,5 @@
 ---
-title: "Approve or Reject a Changeset (Master Data Services) | Microsoft Docs"
+title: Approve or Reject a Changeset
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

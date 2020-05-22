@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.serviceaccount.F1"
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Service Account (SSRS Native Mode)

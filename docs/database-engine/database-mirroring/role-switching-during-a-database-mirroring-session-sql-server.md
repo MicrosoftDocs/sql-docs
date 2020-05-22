@@ -1,6 +1,7 @@
 ---
-title: "Role Switching During a Database Mirroring Session (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Switch database mirror roles"
+description: Learn about switching database mirroring roles. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability

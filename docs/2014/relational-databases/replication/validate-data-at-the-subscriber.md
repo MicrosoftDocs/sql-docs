@@ -106,7 +106,7 @@ Take the following issues into consideration when validating data:
 
 #### All articles
   
-1.  At the Publisher on the publication database, execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Specify **@publication** and one of the following values for **@rowcount_only**:    
+1.  At the Publisher on the publication database, execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Specify **\@publication** and one of the following values for **\@rowcount_only**:    
     -   **1** - rowcount check only (the default)    
     -   **2** - rowcount and binary checksum.  
   
@@ -118,7 +118,7 @@ Take the following issues into consideration when validating data:
   
 #### Single article 
   
-1.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:    
+1.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specify **\@publication**, the name of the article for **\@article**, and one of the following values for **\@rowcount_only**:    
     -   **1** - Rowcount check only (the default)    
     -   **2** - Rowcount and binary checksum.  
   
@@ -131,9 +131,9 @@ Take the following issues into consideration when validating data:
 #### Single subscriber
   
 1.  At the Publisher on the publication database, open an explicit transaction using [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
-2.  At the Publisher on the publication database, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Specify the publication for **@publication**, the name of the Subscriber for **@subscriber**, and the name of the subscription database for **@destination_db**.    
+2.  At the Publisher on the publication database, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Specify the publication for **\@publication**, the name of the Subscriber for **\@subscriber**, and the name of the subscription database for **\@destination_db**.    
 3.  (Optional) Repeat step 2 for each subscription being validated.    
-4.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:    
+4.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specify **\@publication**, the name of the article for **\@article**, and one of the following values for **\@rowcount_only**:    
     -   **1** - Rowcount check only (the default)    
     -   **2** - Rowcount and binary checksum.  
   
@@ -181,7 +181,7 @@ Take the following issues into consideration when validating data:
 
 ### Using Transact-SQL (T-SQL)
 
-1.  At the Publisher on the publication database, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Specify **@publication**, the name of the Subscriber for **@subscriber**, the name of the subscription database for **@subscriber_db**, and one of the following values for **@level**:   
+1.  At the Publisher on the publication database, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Specify **\@publication**, the name of the Subscriber for **\@subscriber**, the name of the subscription database for **\@subscriber_db**, and one of the following values for **\@level**:   
     -   **1** - Rowcount-only validation.    
     -   **3** - Rowcount binary checksum validation.  
   
@@ -212,7 +212,7 @@ Take the following issues into consideration when validating data:
 
 ### Using Transact-SQL (T-SQL)
 
-1.  At the Publisher on the publication database, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Specify **@publication** and one of the following values for **@level**:    
+1.  At the Publisher on the publication database, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Specify **\@publication** and one of the following values for **\@level**:    
     -   **1** - Rowcount-only validation.    
     -   **3** - Rowcount binary checksum validation.  
   

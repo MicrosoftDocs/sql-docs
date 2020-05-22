@@ -1,5 +1,5 @@
 ---
-title: "Validate Specific Members against Business Rules (Master Data Services) | Microsoft Docs"
+title: Validate Specific Members against Business Rules
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

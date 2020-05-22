@@ -1,5 +1,6 @@
 ---
-title: "Results Page (Always On Availability Group Wizards) | Microsoft Docs"
+title: "Results Page (Always On Availability Group Wizards)"
+description: Describes the options of the "Results" page of the Always On Availability Group Wizard within the SQL Server Management Studio GUI. 
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql

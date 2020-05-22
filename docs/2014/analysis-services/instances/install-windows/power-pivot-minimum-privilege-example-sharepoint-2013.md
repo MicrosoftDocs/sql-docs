@@ -66,10 +66,7 @@ manager: craigg
   
 2.  Run the following PowerShell code:  
   
-    ```  
+    ```powershell
     $webApp = Get-SPWebApplication "http://<servername>"  
-    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")  
-  
+    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")
     ```  
-  
-  

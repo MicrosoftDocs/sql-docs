@@ -1,6 +1,6 @@
 ---
-title: "Accessing Memory-Optimized Tables Using Interpreted Transact-SQL | Microsoft Docs"
-ms.custom: ""
+title: "Memory-optimized tables using interpreted T-SQL"
+ms.custom: seo-dt-2019
 ms.date: "05/31/2016"
 ms.prod: sql  
 ms.reviewer: ""

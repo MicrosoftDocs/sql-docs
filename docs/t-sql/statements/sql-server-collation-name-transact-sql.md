@@ -30,7 +30,7 @@ Is a single string that specifies the collation name for a [!INCLUDE[ssNoVersion
 
 ## Syntax
 
-```
+```syntaxsql
 <SQL_collation_name> :: =
 SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>
 

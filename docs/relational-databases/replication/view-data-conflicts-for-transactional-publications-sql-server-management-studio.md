@@ -1,6 +1,7 @@
 ---
-title: "View Data Conflicts for Transactional Publications (SSMS) | Microsoft Docs"
-ms.custom: ""
+title: "View data conflicts (Transactional) - SSMS"
+description: View data conflicts for Transactional Replication using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

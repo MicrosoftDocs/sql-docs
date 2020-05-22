@@ -62,7 +62,7 @@ manager: craigg
   
 ##  <a name="TSQL"></a> Using Transact-SQL  
   
-#### To create a CmdExec job step  
+### To create a CmdExec job step  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -70,7 +70,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- creates a job step that uses CmdExec  
     USE msdb;  
     GO  
@@ -87,8 +87,7 @@ manager: craigg
  For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
- **To create a CmdExec job step**  
+
+### To create a CmdExec job step
   
  Use the `JobStep` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.  
-  
-  

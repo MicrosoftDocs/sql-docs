@@ -1,5 +1,5 @@
 ---
-title: "Overlapping User and Group Permissions (Master Data Services) | Microsoft Docs"
+title: Overlapping User and Group Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

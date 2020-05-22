@@ -1,5 +1,5 @@
 ---
-title: "Create an Index (Master Data Services) | Microsoft Docs"
+title: Create an Index
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

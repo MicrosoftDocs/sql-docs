@@ -1,5 +1,5 @@
 ---
-title: "Create a Consolidated Member (Master Data Services) | Microsoft Docs"
+title: Create a Consolidated Member
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

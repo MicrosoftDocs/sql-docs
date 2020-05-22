@@ -118,7 +118,7 @@ manager: craigg
   
 -   **New database name** - Provide a name for the imported database.  
   
--   **Edition of [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - Specify [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. For more information about editions of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see this [SQL Database](http://www.windowsazure.com/home/tour/database/) web site.  
+-   **Edition of [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - Specify [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. For more information about editions of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see this [SQL Database](https://www.windowsazure.com/home/tour/database/) web site.  
   
 -   **Maximum database size (GB)** - Use the drop-down menu to specify the maximum size for your database.  
   
@@ -145,5 +145,4 @@ manager: craigg
 ## See Also  
  [Data-tier Applications](data-tier-applications.md)   
  [Export a Data-tier Application](export-a-data-tier-application.md)  
-  
   

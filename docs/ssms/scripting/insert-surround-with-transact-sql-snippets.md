@@ -1,6 +1,6 @@
 ---
-title: "Insert Surround-with Transact-SQL snippets | Microsoft Docs"
-ms.custom: ""
+title: "Insert Surround-with Transact-SQL snippets"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

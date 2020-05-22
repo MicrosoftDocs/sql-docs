@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.serverstatus.F1"
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Report Server Status (SSRS Native Mode)

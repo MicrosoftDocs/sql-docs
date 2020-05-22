@@ -1,5 +1,6 @@
 ---
 title: "Using the RSClientPrint Control in Custom Applications | Microsoft Docs"
+description: RSPrintClient provides client-side printing for reports viewed in HTML Viewer. The report server renders the report in the Image (EMF) rendering extension.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -25,15 +26,14 @@ ms.author: maggies
   
 -   Use the control to improve printing for Web-based reports. You can specify the object in any of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-compatible programming languages or in script. The control is not intended for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms applications.  
   
--   Copy the .cab file from the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] program files and add it to your custom application code base.  
-  
+-   Copy the .cab file from the [!INCLUDE[ssRSNoVersion](../../../includes/ssrsnoversion-md.md)] program files and add it to your custom application code base.  
+ 
 -   Use an \<OBJECT> tag to specify the control.  
   
 -   Specify a relative or fully qualified URL to the .cab file in the OBJECT CODEBASE attribute.  
   
 -   Specify your own application version information for the .cab file to track which version is used in your application.  
-  
--   Review the Books Online topics about Image (EMF) rendering to understand how pages are rendered for print preview and output.  
+    
   
 ## RSPrintClient Overview  
  The control displays a custom print dialog box that supports features common to other print dialog boxes, including print preview, page selections for specifying specific pages and ranges, page margins, and orientation. The control is packaged as a CAB file. The text in the **Print** dialog box is localized into all of the languages supported in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **RSPrintClient** ActiveX control uses the Image rendering extension (EMF) to print the report. The following EMF device information is used: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight, and PageWidth. Other device information settings for image rendering are not supported.  

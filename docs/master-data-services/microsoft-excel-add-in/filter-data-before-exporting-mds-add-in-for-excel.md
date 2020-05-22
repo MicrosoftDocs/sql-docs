@@ -1,5 +1,5 @@
 ---
-title: "Filter Data before Exporting (MDS Add-in for Excel) | Microsoft Docs"
+title: Filter Data before Exporting
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
 ms.prod: sql

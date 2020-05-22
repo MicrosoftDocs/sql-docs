@@ -1,6 +1,7 @@
 ---
-title: "Estimate Service Interruption for Role Switching (Database Mirroring) | Microsoft Docs"
-ms.custom: ""
+title: "Estimate service interruption during mirror failover"
+description: Estimate the interruption of service when failover a database mirror from the primary to the secondary role. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: high-availability

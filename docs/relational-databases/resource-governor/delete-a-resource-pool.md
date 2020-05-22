@@ -40,8 +40,6 @@ ms.author: jrasnick
   
 3.  In the **Delete Object** window, the resource pool is listed in the **Object to be deleted** list. To delete the resource pool, click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
     >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
   

@@ -1,6 +1,7 @@
 ---
-title: "Define and Modify a Join Filter Between Merge Articles | Microsoft Docs"
-ms.custom: ""
+title: "Define & modify join filter between Merge articles"
+description: Learn how to define and modify the join filter used between Merge articles using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -83,8 +84,6 @@ ms.author: "mathoma"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 6.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To modify a join filter  
   

@@ -73,8 +73,6 @@ ms.author: "mathoma"
   
 3.  Issue the SQL command `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## SQL Server Error 21663 Is Raised Regarding the Lack of a Primary Key  
  Articles in transactional publications must have a valid primary key. If they do not have a valid primary key, you will receive the following error message when you attempt to add an article:  
   

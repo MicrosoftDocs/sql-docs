@@ -1,6 +1,7 @@
 ---
-title: "Use the Add Azure Replica Wizard (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure Azure VM as a secondary replica in an availability group"
+description: Use the Add Azure Replica Wizard to help you create a new Azure VM in hybrid IT and configure it as a secondary replica for a new or existing Always On availability group.
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +13,7 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Use the Add Azure Replica Wizard (SQL Server)
+# Configure Azure VM as a secondary replica in an availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the Add Azure Replica Wizard to help you create a new Azure VM in hybrid IT and configure it as a secondary replica for a new or existing Always On availability group.  
   

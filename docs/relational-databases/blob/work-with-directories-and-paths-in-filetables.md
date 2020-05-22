@@ -1,5 +1,6 @@
 ---
 title: "Work with Directories and Paths in FileTables | Microsoft Docs"
+description: The FileTables feature uses a directory structure to store files. Learn how to work with its directories, paths, restrictions, and semantics.
 ms.custom: ""
 ms.date: "08/26/2016"
 ms.prod: sql
@@ -61,8 +62,6 @@ GO
 2.  The **DIRECTORY_NAME** specified at the database level.  
   
 3.  The **FILETABLE_DIRECTORY** specified at the FileTable level.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  The resulting hierarchy looks like this:  
   

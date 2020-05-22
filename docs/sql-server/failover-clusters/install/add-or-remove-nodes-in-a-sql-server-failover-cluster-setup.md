@@ -1,10 +1,11 @@
 ---
-title: "Add or Remove Nodes in a SQL Server Failover Cluster (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Add, remove nodes Failover Cluster"
+description: This article shows you how to add or remove nodes in an existing SQL Server failover cluster instance.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding nodes"

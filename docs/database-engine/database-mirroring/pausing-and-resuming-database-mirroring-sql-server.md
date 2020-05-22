@@ -1,6 +1,7 @@
 ---
-title: "Pausing and Resuming Database Mirroring (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Pause & resume database mirror"
+description: Learn how to pause and later resume your SQL Server database mirroring session at any time. 
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: high-availability

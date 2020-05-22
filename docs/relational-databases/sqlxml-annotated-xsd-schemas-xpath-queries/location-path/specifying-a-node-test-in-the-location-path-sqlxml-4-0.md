@@ -1,6 +1,5 @@
 ---
-title: "Specifying a Node Test in the Location Path (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Specifying a Node Test in the Location Path (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Node Test in the Location Path (SQLXML 4.0)

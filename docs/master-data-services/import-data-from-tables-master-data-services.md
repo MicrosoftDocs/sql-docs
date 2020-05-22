@@ -1,5 +1,5 @@
 ---
-title: "Import Data from Tables (Master Data Services) | Microsoft Docs"
+title: Import Data from Tables
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

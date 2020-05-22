@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Multi-Subnet Clustering (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Multi-Subnet Clustering"
+description: Learn about configuring a SQL Server failover cluster instance in a multi-subnet environment. 
+ms.custom: seo-lt-2019
 ms.date: "09/01/2016"
 ms.prod: sql
 ms.reviewer: ""

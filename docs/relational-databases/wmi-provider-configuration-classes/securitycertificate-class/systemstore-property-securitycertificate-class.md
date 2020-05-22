@@ -1,6 +1,6 @@
 ---
-title: "SystemStore Property (SecurityCertificate Class) | Microsoft Docs"
-ms.custom: ""
+title: "SystemStore Property (SecurityCertificate)"
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

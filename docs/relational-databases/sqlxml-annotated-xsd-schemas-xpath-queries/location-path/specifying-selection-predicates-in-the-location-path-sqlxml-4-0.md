@@ -1,6 +1,5 @@
 ---
-title: "Specifying Selection Predicates in the Location Path (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Set selection predicates in location path (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -17,6 +16,7 @@ helpviewer_keywords:
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Selection Predicates in the Location Path (SQLXML 4.0)

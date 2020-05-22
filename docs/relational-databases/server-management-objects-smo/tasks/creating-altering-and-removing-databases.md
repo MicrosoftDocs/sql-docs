@@ -1,6 +1,6 @@
 ---
-title: "Creating, Altering, and Removing Databases | Microsoft Docs"
-ms.custom: ""
+title: "Creating, Altering, and Removing Databases"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Replication | Microsoft Docs"
+description: Learn about replication in SQL Server, technologies for copying and distributing data and database objects among databases and synchronizing between databases.
 ms.custom: ""
 ms.date: "11/20/2018"
 ms.prod: sql
@@ -13,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Replication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

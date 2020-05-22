@@ -1,5 +1,6 @@
 ---
 title: "Synchronize a Push Subscription | Microsoft Docs"
+description: Learn how to synchronize a push subscription in SQL Server by using SQL Server Management Studio, replication agents, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -40,8 +41,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
 5.  In the **View Synchronization Status - \<Subscriber>:\<SubscriptionDatabase>** dialog box, click **Start**. When synchronization is complete, the message **Synchronization completed** is displayed.  
   
 6.  Click **Close**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To synchronize a push subscription on demand in Management Studio (at the Subscriber)  
   

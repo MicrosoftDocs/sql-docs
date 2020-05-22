@@ -68,7 +68,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- adding a new job category to the "NightlyBackups" job  
     USE msdb ;  
     GO  
@@ -84,5 +84,3 @@ manager: craigg
  **To change the membership of a job category**  
   
  Use the `JobCategory` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.  
-  
-  

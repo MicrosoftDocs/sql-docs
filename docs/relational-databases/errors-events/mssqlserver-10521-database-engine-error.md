@@ -24,10 +24,10 @@ ms.author: mathoma
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_PARAM_NEEDED|  
-|Message Text|Cannot create plan guide '%.\*ls' because **@type** was specified as '%ls' and the parameter '%ls' is NULL. This type requires a non-NULL value for the parameter. Specify a non-NULL value for the parameter, or change the type to one that allows a NULL value for the parameter.|  
+|Message Text|Cannot create plan guide '%.\*ls' because **\@type** was specified as '%ls' and the parameter '%ls' is NULL. This type requires a non-NULL value for the parameter. Specify a non-NULL value for the parameter, or change the type to one that allows a NULL value for the parameter.|  
   
 ## Explanation  
-The type specified in **@type** requires a non-NULL value for the specified parameter; however a NULL value was supplied.  
+The type specified in **\@type** requires a non-NULL value for the specified parameter; however a NULL value was supplied.  
   
 ## User Action  
 Specify a non-NULL value for the parameter, or change the type to one that allows a NULL value for the parameter.  

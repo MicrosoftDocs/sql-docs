@@ -1,6 +1,5 @@
 ---
-title: "Import Values from an Excel File into a Domain | Microsoft Docs"
-ms.custom: ""
+title: "Import Values from an Excel File into a Domain"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,8 +11,8 @@ f1_keywords:
   - "sql13.dqs.kb.importselect.f1"
   - "sql13.dqs.kb.failingvalues.f1"
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Import Values from an Excel File into a Domain
 

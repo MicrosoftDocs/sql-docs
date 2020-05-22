@@ -1,5 +1,6 @@
 ---
 title: "Creating an Assembly | Microsoft Docs"
+description: Use CREATE ASSEMBLY to register an assembly in SQL Server and specify its security settings. Register an assembly to use its functionality.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -73,8 +74,6 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  The assembly is strong name signed or Authenticode signed with a certificate. This strong name (or certificate) is created inside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as an asymmetric key (or certificate), and has a corresponding login with **EXTERNAL ACCESS ASSEMBLY** permission (for external access assemblies) or **UNSAFE ASSEMBLY** permission (for unsafe assemblies).  
   
 2.  The database owner (DBO) has **EXTERNAL ACCESS ASSEMBLY** (for **EXTERNAL ACCESS** assemblies) or **UNSAFE ASSEMBLY** (for **UNSAFE** assemblies) permission, and the database has the [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) set to **ON**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  The two conditions listed above are also checked at assembly load time (which includes execution). At least one of the conditions must be met in order to load the assembly.  
   

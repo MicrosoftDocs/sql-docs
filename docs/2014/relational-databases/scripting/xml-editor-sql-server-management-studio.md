@@ -1,6 +1,6 @@
 ---
-title: "XML Editor (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: XML Editor
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "XML Designer [SQL Server Management Studio]"
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # XML Editor (SQL Server Management Studio)

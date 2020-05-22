@@ -1,5 +1,6 @@
 ---
 title: "View and Modify Replication Security Settings | Microsoft Docs"
+description: Learn how to view and modify replication security settings in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # View and Modify Replication Security Settings
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,8 +66,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 4.  The **Distributor Properties - \<Distributor>** and **Distribution Database Properties - \<Database>** dialog boxes. For more information about accessing these dialog boxes, see [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 5.  The **Publisher Properties - \<Publisher>** dialog box. For more information about accessing this dialog box, [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To change the password for an account used by one or more agents  
   
@@ -214,7 +213,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 #### To change security settings for an immediate updating pull subscription  
   
-1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**…**) button in the row.  
+1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**&#x2026;**) button in the row.  
   
 2.  In the **Enter Connection Information** dialog box, select one of the following options:  
   

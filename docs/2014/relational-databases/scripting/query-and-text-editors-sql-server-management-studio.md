@@ -1,6 +1,6 @@
 ---
-title: "Query and Text Editors (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Query and Text Editors
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
   - "queries [SQL Server], SQL Server Management Studio"
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Query and Text Editors (SQL Server Management Studio)

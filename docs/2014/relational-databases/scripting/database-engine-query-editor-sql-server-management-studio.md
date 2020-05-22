@@ -1,6 +1,6 @@
 ---
-title: "Database Engine Query Editor (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Database Engine Query Editor
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Query Editor [Database Engine], Features"
   - "SQL Server Management Studio [SQL Server], Database Engine Query Editor"
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Database Engine Query Editor (SQL Server Management Studio)

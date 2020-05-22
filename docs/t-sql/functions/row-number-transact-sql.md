@@ -1,6 +1,6 @@
 ---
 title: "ROW_NUMBER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the ROW_NUMBER function. This function numbers the output of a result set."
 ms.date: "09/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "row numbers [SQL Server]"
   - "sequential row numbers [SQL Server]"
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROW_NUMBER (Transact-SQL)
@@ -37,7 +37,7 @@ Numbers the output of a result set. More specifically, returns the sequential nu
   
 ## Syntax  
   
-```  
+```syntaxsql
 ROW_NUMBER ( )   
     OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: "Find Key Phrases in Documents with Semantic Search | Microsoft Docs"
+title: "Find key phrases in documents with semantic search"
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -11,6 +11,7 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
+ms.custom: "seo-lt-2019"
 ---
 # Find Key Phrases in Documents with Semantic Search
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

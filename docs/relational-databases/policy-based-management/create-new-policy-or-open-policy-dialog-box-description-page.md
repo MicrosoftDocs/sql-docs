@@ -1,6 +1,7 @@
 ---
-title: "Create New Policy or Open Policy Dialog Box, Description Page | Microsoft Docs"
-ms.custom: ""
+title: "'Description' page of 'Create New Policy' or 'Open Policy' dialog box"
+description: Describes the 'Description' page of the 'Create New Policy' or 'Open Policy' dialog box for Policy-Based Management for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

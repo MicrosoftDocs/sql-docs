@@ -1,8 +1,10 @@
 ---
-title: "Configure the Unattended Execution Account (SSRS Configuration Manager) | Microsoft Docs"
-ms.date: 05/31/2016
+title: "Configure the Unattended Execution Account (Configuration Manager) | Microsoft Docs"
+description: "Reporting Services provides a special account that is used for unattended report processing and for sending connection requests across the network."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +22,8 @@ ms.author: maggies
 # Configure the Unattended Execution Account (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  
   
--   Send connection requests over the network for reports that use database authentication, or connect to external report data sources that do not require or use authentication. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in SQL Server Books Online.  
-  
+-   Send connection requests over the network for reports that use database authentication, or connect to external report data sources that do not require or use authentication. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
+
 -   Retrieve external image files that are used in report. If you want to use an image file and the file cannot be accessed through Anonymous access, you can configure the unattended report processing account and grant the account permission to access the file.  
   
  Unattended report processing refers to any report execution process that is triggered by an event (either a schedule-driven event or data refresh event) rather than a user request. The report server uses the unattended report processing account to log on to the computer that hosts the external data source. This account is necessary because the credentials of the Report Server service account are never used to connect to other computers.  
@@ -51,8 +53,8 @@ ms.author: maggies
   
      **rsconfig -e -u\<domain/username> -p\<password>**  
   
- **rsconfig -e** supports additional arguments. For more information about syntax and to view command examples, see [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) in SQL Server Books Online.  
-  
+ **rsconfig -e** supports additional arguments. For more information about syntax and to view command examples, see [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
+ 
 ### How Account Information is Stored  
  When you set the account, the following settings are specified as encrypted values in the RSreportserver.config file on a local or remote report server instance:  
   
@@ -99,6 +101,6 @@ ms.author: maggies
  The account information is removed from the RSReportServer.config file.  
   
 ## See Also  
- [Reporting Services Configuration Manager (SSRS Native Mode)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services Configuration Manager (SSRS Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

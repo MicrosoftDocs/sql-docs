@@ -1,7 +1,7 @@
 ---
 title: "HAVING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/28/2017"
+ms.date: "01/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 [ HAVING <search condition> ]  
 ```  
   
@@ -55,7 +55,7 @@ ORDER BY SalesOrderID ;
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example uses a `HAVING` clause to retrieve the total for each `SalesAmount` from the `FactInternetSales` table when the `OrderDateKey` is in the year 2004 or later.  
+ The following example uses a `HAVING` clause to retrieve the total `SalesAmount` that exceeds `80000` for each `OrderDateKey` from the `FactInternetSales` table.  
   
 ```sql
 -- Uses AdventureWorks  

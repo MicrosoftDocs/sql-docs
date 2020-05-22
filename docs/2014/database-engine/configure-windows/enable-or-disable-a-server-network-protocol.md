@@ -66,7 +66,7 @@ manager: craigg
   
      To disable protocols, set the `IsEnabled` properties to `$false`.  
   
-    ```  
+    ```powershell
     $smo = 'Microsoft.SqlServer.Management.Smo.'  
     $wmi = new-object ($smo + 'Wmi.ManagedComputer').  
   
@@ -92,18 +92,18 @@ manager: craigg
   
 -   When the script is run locally and configures the local computer, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell can make the script more flexible by dynamically determining the local computer name. To retrieve the local computer name, replace the line setting the `$uri` variable with the following line.  
   
-    ```  
-    $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
+    ```powershell
+    $uri = "ManagedComputer[@Name='" + (Get-Item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
 #### To restart the Database Engine by using SQL Server PowerShell  
   
 -   After you enable or disable protocols, you must stop and restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for the change to take effect. Execute the following statements to stop and start the default instance by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. To stop and start a named instance replace `'MSSQLSERVER'` with `'MSSQL$<instance_name>'`.  
   
-    ```  
+    ```powershell
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\<computer_name>  
-    $Wmi = (get-item .).ManagedComputer  
+    $Wmi = (Get-Item .).ManagedComputer  
     # Get a reference to the default instance of the Database Engine.  
     $DfltInstance = $Wmi.Services['MSSQLSERVER']  
     # Display the state of the service.  
@@ -121,5 +121,3 @@ manager: craigg
     # Refresh the cache and display the state of the service.  
     $DfltInstance.Refresh(); $DfltInstance  
     ```  
-  
-  

@@ -63,8 +63,6 @@ ms.author: "sstein"
   
 5.  Verify the file change by running the following query.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
     FROM sys.master_files  

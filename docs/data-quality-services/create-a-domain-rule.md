@@ -1,6 +1,5 @@
 ---
-title: "Create a Domain Rule | Microsoft Docs"
-ms.custom: ""
+title: "Create a Domain Rule"
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -11,8 +10,8 @@ f1_keywords:
   - "sql13.dqs.dm.testdomainrule.f1"
   - "sql13.dqs.dm.rules.f1"
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Create a Domain Rule
 

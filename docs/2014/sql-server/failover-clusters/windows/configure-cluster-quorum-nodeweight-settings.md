@@ -41,7 +41,7 @@ manager: craigg
   
 ##  <a name="PowerShellProcedure"></a> Using Powershell  
   
-##### To configure NodeWeight settings  
+### To configure NodeWeight settings
   
 1.  Start an elevated Windows PowerShell via **Run as Administrator**.  
   
@@ -51,8 +51,7 @@ manager: craigg
   
 4.  Output the cluster node properties in a readable format.  
   
-### Example (Powershell)  
- The following example changes the NodeWeight setting to remove the quorum vote for the "AlwaysOnSrv1" node, and then outputs the settings for all nodes in the cluster.  
+ The following example changes the NodeWeight setting to remove the quorum vote for the "AlwaysOnSrv1" node, and then outputs the settings for all nodes in the cluster.
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -71,16 +70,15 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  The cluster.exe utility is deprecated in the [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] release.  Please use PowerShell with Failover Clustering for future development.  The cluster.exe utility will be removed in the next release of Windows Server. For more information, see [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
-##### To configure NodeWeight settings  
+### To configure NodeWeight settings
   
 1.  Start an elevated Command Prompt via **Run as Administrator**.  
   
 2.  Use **cluster.exe** to set `NodeWeight` values.  
-  
-### Example (Cluster.exe)  
+
  The following example changes the NodeWeight value to remove the quorum vote of the "AlwaysOnSrv1" node in the "Cluster001" cluster.  
   
-```ms-dos  
+```cmd
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
 ```  
   
@@ -94,5 +92,3 @@ cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0
  [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [View Cluster Quorum NodeWeight Settings](view-cluster-quorum-nodeweight-settings.md)   
  [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
-  
-  

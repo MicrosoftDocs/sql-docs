@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server services, setting startup options"
   - "SQL Server services, setting startup parameters"
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # SCM Services - Configure Server Startup Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

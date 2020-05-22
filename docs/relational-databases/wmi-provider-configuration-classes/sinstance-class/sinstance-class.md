@@ -1,5 +1,5 @@
 ---
-title: "SInstance Class | Microsoft Docs"
+title: "SInstance Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

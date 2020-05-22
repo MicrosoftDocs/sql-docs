@@ -314,7 +314,7 @@ manager: craigg
   
          The **-n** switch instructs **netstat** to numerically display the address and port number of active TCP connections. The **-a** switch instructs **netstat** to display the TCP and UDP ports on which the computer is listening.  
   
--   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=28590).  
+-   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## See Also  
  [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)  

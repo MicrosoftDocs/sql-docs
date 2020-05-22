@@ -1,6 +1,5 @@
 ---
-title: "How FOR JSON escapes special characters and control characters (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "How FOR JSON escapes special characters and control characters"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,6 +11,7 @@ ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How FOR JSON escapes special characters and control characters (SQL Server)

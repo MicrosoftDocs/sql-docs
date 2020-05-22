@@ -1,6 +1,6 @@
 ---
-title: "Transact-SQL Debugger | Microsoft Docs"
-ms.custom: ""
+title: Transact-SQL Debugger
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, introduction"
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Transact-SQL Debugger

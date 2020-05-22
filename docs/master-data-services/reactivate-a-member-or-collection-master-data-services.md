@@ -1,5 +1,5 @@
 ---
-title: "Reactivate a Member or Collection (Master Data Services) | Microsoft Docs"
+title: Reactivate a Member or Collection
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

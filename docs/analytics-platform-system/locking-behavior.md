@@ -1,5 +1,5 @@
 ---
-title: Locking behavior - Parallel Data Warehouse | Microsoft Docs
+title: Locking behavior
 description: Learn how Parallel Data Warehouse uses locking to ensure the integrity of transactions and to maintain the consistency of databases when multiple users are accessing data at the same time. 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Locking behavior in Parallel Data Warehouse

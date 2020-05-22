@@ -1,5 +1,5 @@
 ---
-title: "Deploy a Model Deployment Package by Using MDSModelDeploy | Microsoft Docs"
+title: Deploy a Model Deployment Package (MDSModelDeploy)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

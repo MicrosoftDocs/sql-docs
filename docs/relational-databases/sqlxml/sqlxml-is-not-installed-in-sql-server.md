@@ -1,5 +1,5 @@
 ---
-title: "SQLXML Is Not Installed in SQL Server | Microsoft Docs"
+title: "SQLXML Is Not Installed in SQL Server"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

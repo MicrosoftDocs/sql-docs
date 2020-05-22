@@ -1,6 +1,6 @@
 ---
-title: "Search Documents Using Results Lists | Microsoft Docs"
-ms.custom: ""
+title: Search Documents Using Results Lists
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "searches [SQL Server Management Studio], multiple files"
   - "Query Editor [SQL Server Management Studio], search multiple files"
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Search Documents Using Results Lists

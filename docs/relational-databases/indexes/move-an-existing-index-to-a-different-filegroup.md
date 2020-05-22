@@ -71,8 +71,6 @@ ms.author: mikeray
   
 9. On the **File** menu, select **Save**_table_name_.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To move an existing index to a different filegroup in Object Explorer  
   
 1.  In Object Explorer, click the plus sign to expand the database that contains the table containing the index that you want to move.  

@@ -117,11 +117,11 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ### Example 2
  The following example extracts the value of the JSON property `town` into a local variable.  
   
-```sql  
+```sql
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
-SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
+SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
 
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[0].town'); -- Paris
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London

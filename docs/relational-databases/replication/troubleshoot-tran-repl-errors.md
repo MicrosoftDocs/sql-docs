@@ -1,6 +1,7 @@
 ---
-title: "Troubleshooter: Find errors with SQL Server transactional replication | Microsoft Docs"
-ms.custom: ""
+title: "Find errors with transactional replication"
+description: Describes how to locate and identify errors with Transactional Replication, as well as the troubleshooting methodology for addressing issues with replication.
+ms.custom: seo-lt-2019
 ms.date: "04/27/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -10,7 +11,7 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Troubleshooter: Find errors with SQL Server transactional replication 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -21,8 +22,6 @@ This process creates the publication and puts it in the *synchronizing* state. S
 1. Transactions occur on objects that are replicated, and are marked "for replication" in the transaction log. 
 2. The Log Reader Agent scans through the transaction log and looks for transactions that are marked "for replication." These transactions are then saved to the distribution database. 
 3. The Distribution Agent scans through the distribution database by using the reader thread. Then, by using the writer thread, this agent connects to the subscriber to apply those changes to the subscriber.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Errors can occur in any step of this process. Finding those errors can be the most challenging aspect of troubleshooting synchronization issues. Thankfully, the use of Replication Monitor makes this process easy. 
 

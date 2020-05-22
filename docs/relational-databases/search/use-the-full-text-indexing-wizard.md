@@ -41,8 +41,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 5.  **Type Column.** Select the name of the column that holds the document type of column being full-text indexed.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > **NOTE:** The  **Type Column** is enabled only when the column named in the **Available Columns** column is of type **varbinary(max)** or **image**.  
   
 6. **Statistical Semantics.** Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  

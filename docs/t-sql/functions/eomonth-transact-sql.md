@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EOMONTH function"
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EOMONTH (Transact-SQL)
@@ -28,7 +28,7 @@ This function returns the last day of the month containing a specified date, wit
   
 ## Syntax  
   
-```  
+```syntaxsql
 EOMONTH ( start_date [, month_to_add ] )  
 ```  
   

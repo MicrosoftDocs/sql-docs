@@ -1,5 +1,5 @@
 ---
-title: "Cache Shared Datasets (SSRS) | Microsoft Docs"
+title: "Cache Shared Datasets | Microsoft Docs"
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

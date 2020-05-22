@@ -1,6 +1,6 @@
 ---
-title: "Open and Configure Object Explorer | Microsoft Docs"
-ms.custom: ""
+title: "Open and Configure Object Explorer"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

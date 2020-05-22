@@ -1,6 +1,7 @@
 ---
-title: "Create a Subscription for a Non-SQL Server Subscriber | Microsoft Docs"
-ms.custom: ""
+title: "Create subscription for non-SQL Subscriber"
+description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
+ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,6 +1,6 @@
 ---
-title: "Managing Services and Network Settings by Using WMI Provider | Microsoft Docs"
-ms.custom: ""
+title: "Managing Services and Network Settings by Using WMI Provider"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,6 +1,7 @@
 ---
-title: "Prepare a Mirror Database for Mirroring (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Prepare a database for mirroring"
+description: Learn how to prepare a SQL Server database for database mirroring. 
+ms.custom: seo-lt-2019
 ms.date: "11/10/2017"
 ms.prod: sql
 ms.prod_service: high-availability

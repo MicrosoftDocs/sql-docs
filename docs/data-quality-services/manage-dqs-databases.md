@@ -1,6 +1,5 @@
 ---
-title: "Manage DQS Databases | Microsoft Docs"
-ms.custom: ""
+title: "Manage DQS Databases"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Manage DQS Databases
 

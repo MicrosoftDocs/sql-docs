@@ -12,7 +12,7 @@ ms.author: lle
 manager: craigg
 ---
 # Task 4: Setting Domain Rules
-  In this task, you create a rule for the **Contact Email** domain to verify if the email address ends with **@adventure-works.com**. See [Creating a Domain Rule](https://msdn.microsoft.com/library/hh510397.aspx) topic for more details on the page.  
+  In this task, you create a rule for the **Contact Email** domain to verify if the email address ends with **\@adventure-works.com**. See [Creating a Domain Rule](https://msdn.microsoft.com/library/hh510397.aspx) topic for more details on the page.  
   
 1.  Click **Contact Email** in the **Domain list**.  
   
@@ -26,7 +26,7 @@ manager: craigg
   
 5.  In the **Build a Rule** pane, click **down arrow**, and select **Value ends with**.  
   
-6.  Type **@adventure-works.com** in the text box and press **TAB**. You can add more conditions by clicking **Add a new condition to the selected clause** toolbar button in the **Build a Rule** pane.  
+6.  Type **\@adventure-works.com** in the text box and press **TAB**. You can add more conditions by clicking **Add a new condition to the selected clause** toolbar button in the **Build a Rule** pane.  
   
      ![Email Validation Rule](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Email Validation Rule")  
   
@@ -38,9 +38,9 @@ manager: craigg
   
      ![Test Domain Rule Dialog Box](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Test Domain Rule Dialog Box")  
   
-9. Type **frank7@adventure-works.com** (a valid value) in the **Contact Email** column.  
+9. Type **frank7\@adventure-works.com** (a valid value) in the **Contact Email** column.  
   
-10. Repeat previous two steps to add **joe2@adventure-work.com** (an invalid value with no 's').  
+10. Repeat previous two steps to add **joe2\@adventure-work.com** (an invalid value with no 's').  
   
 11. Click the last button (**Test the domain rule on all the terms**) on the toolbar to test the input data against the rule.  
   

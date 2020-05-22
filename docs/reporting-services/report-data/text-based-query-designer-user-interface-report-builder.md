@@ -83,8 +83,8 @@ uspGetWhereUsedProductID
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
  For the specified date, the result set displays a list of 13 product identifiers that used the specified component number.  
   

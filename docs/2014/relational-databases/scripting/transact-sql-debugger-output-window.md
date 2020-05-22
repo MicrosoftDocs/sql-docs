@@ -1,6 +1,6 @@
 ---
-title: "Output Window | Microsoft Docs"
-ms.custom: ""
+title: Output Window
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Output Window [Transact-SQL]"
   - "Output Window [SQL Server Management Studio]"
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Output Window

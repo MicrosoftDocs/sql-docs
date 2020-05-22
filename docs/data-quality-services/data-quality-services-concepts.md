@@ -1,6 +1,5 @@
 ---
-title: "Data Quality Services Concepts | Microsoft Docs"
-ms.custom: ""
+title: "Data Quality Services Concepts"
 ms.date: "01/01/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Data Quality Services Concepts
 

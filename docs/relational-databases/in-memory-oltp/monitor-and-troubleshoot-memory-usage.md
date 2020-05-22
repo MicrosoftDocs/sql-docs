@@ -43,8 +43,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  Paste this code into the new query window and execute each section.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     -- create a database to be used  
     CREATE DATABASE IMOLTP_DB  

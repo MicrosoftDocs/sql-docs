@@ -1,6 +1,7 @@
 ---
-title: "Set the Compatibility Level for Merge Publications | Microsoft Docs"
-ms.custom: ""
+title: "Set compatibility level for Merge Publications"
+description: Learn how to set the compatibility level for Merge Publications using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -47,8 +48,6 @@ ms.author: "mathoma"
 #### To set the publication compatibility level for a merge publication  
   
 1.  At the Publisher, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying a value for `@publication_compatibility_level` to make the publication compatible with older versions of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To change the publication compatibility level of a merge publication  
   

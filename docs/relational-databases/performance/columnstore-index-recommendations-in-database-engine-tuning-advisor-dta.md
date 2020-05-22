@@ -1,6 +1,6 @@
 ---
-title: "Columnstore index recommendations in Database Engine Tuning Advisor (DTA) | Microsoft Docs"
-ms.custom: ""
+title: "Columnstore index recommendations-Database Engine Tuning Advisor (DTA)"
+ms.custom: seo-dt-2019
 ms.date: "01/09/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -49,7 +49,7 @@ For more information on dta.exe command line utility, see [dta Utility](../../to
 ## See Also
 [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)      
-[Tutorial: Database Engine Tuning Advisor](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
+[Tutorial: Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
 
 
 

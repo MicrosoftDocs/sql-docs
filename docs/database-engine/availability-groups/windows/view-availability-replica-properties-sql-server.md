@@ -1,6 +1,7 @@
 ---
-title: "View Availability Replica Properties (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "View availability replica properties"
+description: "Instructions for viewing the properties for an availability group replica SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

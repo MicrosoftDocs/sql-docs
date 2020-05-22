@@ -1,6 +1,7 @@
 ---
-title: "Replication Subscribers and Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Replication Subscribers & availability groups (SQL Server)"
+description: Learn about configuring a replication subscriber with a SQL Server Always On availability group. 
+ms.custom: seo-lt-2019
 ms.date: "08/08/2019"
 ms.prod: sql
 ms.reviewer: ""

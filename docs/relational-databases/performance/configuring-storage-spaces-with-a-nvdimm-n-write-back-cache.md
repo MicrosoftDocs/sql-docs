@@ -1,6 +1,6 @@
 ---
-title: "Configuring Storage Spaces with a NVDIMM-N write-back cache | Microsoft Docs"
-ms.custom: ""
+title: "Configuring Storage - NVDIMM-N write-back cache"
+ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -30,7 +30,7 @@ This article explains how to install SQL Server Machine Learning Services on Doc
 
 The following command clones the `mssql-docker` git repository to a local directory.
 
-1. Open a Bash terminal on Linux or Mac, or open a Windows Subsystem for Linux terminal on Windows.
+1. Open a Bash terminal on Linux or Mac.
 
 2. Create a directory to hold a local copy of the mssql-docker repository.
 
@@ -59,10 +59,12 @@ Complete the following steps to build the docker image:
 3. Run the command:
 
     ```bash
-    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<password> -v <directory on the host OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
     ```
-
-    Change `<your_sa_password>` in `SA_PASSWORD=<your_sa_password>` and change the `-v` path. 
+  
+    > [!NOTE]
+    > Any of the following values can be used for MSSQL_PID: Developer (free), Express (free), Enteprise (paid), Standard (paid). If you are using a paid edition, please ensure that you have purchased a license. Replace (password) with your actual password. Volume mounting using -v is optional. Replace (directory on the host OS) with an actual directory where you want to mount the database data and log files.
+    
 
 4. Confirm by running the following command:
 
@@ -83,30 +85,19 @@ Complete the following steps to build the docker image:
    export ACCEPT_EULA_ML='Y'
    export PATH_TO_MSSQL='/home/mssql/'
    ```
-
-2. Run the run.sh script:
-
-   ```bash
-   ./run.sh
-   ```
-
-   This command creates a SQL Server container with Machine Learning Services, using the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**.
-
+  
    > [!NOTE]
    > The process for running production SQL Server editions in containers is slightly different. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
 
-3. To view your Docker containers, run the `docker ps` command:
+2. To view your Docker containers, run the `docker ps` command:
 
    ```bash
    sudo docker ps -a
    ```
 
-4. If the **STATUS** column shows a status of **Up**, SQL Server is running  in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
+3. If the **STATUS** column shows a status of **Up**, SQL Server is running  in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
 
-   ```bash
-   $ sudo docker ps -a
-   ```
-
+ 
     Output:
 
     ```

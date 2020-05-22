@@ -1,5 +1,6 @@
 ---
 title: "Planning a SQL Server Installation | Microsoft Docs"
+description: This article helps you plan to install SQL Server. It includes links to resources needed for SQL Server installation.
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql

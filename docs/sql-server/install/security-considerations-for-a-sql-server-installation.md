@@ -1,5 +1,6 @@
 ---
 title: "Security Considerations"
+description: This article discusses some security best practices that you should consider both before and after you install SQL Server.
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Last Function (Report Builder) | Microsoft Docs"
+description: The last function returns the final value in a set of data after all sorting and filtering have been applied at the specified scope.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

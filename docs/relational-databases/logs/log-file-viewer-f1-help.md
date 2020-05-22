@@ -1,6 +1,6 @@
 ---
 title: "Log File Viewer F1 Help | Microsoft Docs"
-description: Learn about the F1 Help for Log File Viewer in SQL Server. This article describes options, frequently displayed columns, and permissions.
+description: Get guidance from F1 Help for frequently displayed columns, permissions, and other options for Log File Viewer in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

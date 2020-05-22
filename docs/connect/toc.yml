@@ -6,6 +6,8 @@
 
 - name: SQL Server Drivers
   href: ../connect/sql-connection-libraries.md
+- name: Driver Feature Support Matrix
+  href: ../connect/driver-feature-matrix.md
 - name: SQL Server Driver History
   href: ../connect/connect-history.md
 - name: SQL Data Developer

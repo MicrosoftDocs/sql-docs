@@ -53,7 +53,8 @@ For disk-based tables, **sp_updatestats** updates statistics based on the **modi
 For databases with a compatibility level below 90, executing **sp_updatestats** does not preserve the latest NORECOMPUTE setting for specific statistics. For databases with a compatibility level of 90 or higher, sp_updatestats does preserve the latest NORECOMPUTE option for specific statistics. For more information about disabling and re-enabling statistics updates, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role, or ownership of the database (**dbo**).  
+
+To run sp_updatestats as user needs to be the owner of the database (the dbo, not just member of the role db_owner) or to be member of the sysadmin fixed server role.
 
 ## Examples  
 The following example updates the statistics for tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  

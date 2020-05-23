@@ -1,7 +1,7 @@
 ---
 title: Configure Azure Active Directory authentication
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics 
-description: Learn how to connect to SQL Database, SQL Managed Instance, and Azure Synapse Analytics by using Azure Active Directory Authentication - after configuring Azure AD.
+description: Learn how to connect to SQL Database, SQL Managed Instance, and Azure Synapse Analytics by using Azure Active Directory authentication, after you configure Azure AD.
 services: sql-database
 ms.service: sql-database
 ms.subservice: security
@@ -13,9 +13,11 @@ ms.author: mireks
 ms.reviewer: vanto, carlrab
 ms.date: 03/27/2020
 ---
-# Configure and manage Azure AD authentication with Azure SQL
+# Configure and manage Azure Active Directory authentication with SQL
 
-This article shows you how to create and populate Azure Active Directory (Azure AD), and then use Azure AD with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics (formerly Azure SQL Data Warehouse)](../../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md). For an overview, see [Azure Active Directory Authentication](aad-authentication-overview.md).
+[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
+
+This article shows you how to create and populate an Azure Active Directory (Azure AD) instance, and then use Azure AD with [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics (formerly Azure SQL Data Warehouse)](../../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md). For an overview, see [Azure Active Directory authentication](authentication-aad-overview.md).
 
 ## Azure AD authentication methods
 
@@ -28,11 +30,9 @@ Azure AD authentication supports the following authentication methods:
     - Azure AD pass-through authentication
   - Federated authentication
 
-For more information on Azure AD authentication methods, and which one to choose see, the article:
+For more information on Azure AD authentication methods, and which one to choose, see [Choose the right authentication method for your Azure Active Directory hybrid identity solution](../../active-directory/hybrid/choose-ad-authn.md).
 
-- [Choose the right authentication method for your Azure Active Directory hybrid identity solution](../../active-directory/hybrid/choose-ad-authn.md)
-
-For more information on Azure AD hybrid identities, setup, and synchronization, see the following articles:
+For more information on Azure AD hybrid identities, setup, and synchronization, see:
 
 - Password hash authentication - [Implement password hash synchronization with Azure AD Connect sync](../../active-directory/hybrid/how-to-connect-password-hash-synchronization.md)
 - Pass-through authentication - [Azure Active Directory Pass-through Authentication](../../active-directory/hybrid/how-to-connect-pta-quick-start.md)
@@ -81,29 +81,29 @@ To grant your SQL Managed Instance Azure AD read permission using the Azure port
 
 3. Navigate to the SQL Managed Instance you want to use for Azure AD integration.
 
-   ![aad](./media/aad-authentication-configure/aad.png)
+   ![aad](./media/authentication-aad-configure/aad.png)
 
 4. Select the banner on top of the Active Directory admin page and grant permission to the current user.
 
-    ![grant permissions-portal](./media/aad-authentication-configure/grant-permissions.png)
+    ![grant permissions-portal](./media/authentication-aad-configure/grant-permissions.png)
 
 5. After the operation succeeds, the following notification will show up in the top-right corner:
 
-    ![success](./media/aad-authentication-configure/success.png)
+    ![success](./media/authentication-aad-configure/success.png)
 
 6. Now you can choose your Azure AD admin for your SQL Managed Instance. For that, on the Active Directory admin page, select **Set admin** command.
 
-    ![set-admin](./media/aad-authentication-configure/set-admin.png)
+    ![set-admin](./media/authentication-aad-configure/set-admin.png)
 
 7. On the Azure AD admin page, search for a user, select the user or group to be an administrator, and then select **Select**.
 
-   The Active Directory admin page shows all members and groups of your Active Directory. Users or groups that are grayed out can't be selected because they aren't supported as Azure AD administrators. See the list of supported admins in [Azure AD Features and Limitations](aad-authentication-overview.md#azure-ad-features-and-limitations). Role-based access control (RBAC) applies only to the Azure portal and isn't propagated to SQL Database, SQL Managed Instance, or Azure Synapse.
+   The Active Directory admin page shows all members and groups of your Active Directory. Users or groups that are grayed out can't be selected because they aren't supported as Azure AD administrators. See the list of supported admins in [Azure AD Features and Limitations](authentication-aad-overview.md#azure-ad-features-and-limitations). Role-based access control (RBAC) applies only to the Azure portal and isn't propagated to SQL Database, SQL Managed Instance, or Azure Synapse.
 
-    ![Add Azure Active Directory admin](./media/aad-authentication-configure/add-azure-active-directory-admin.png)
+    ![Add Azure Active Directory admin](./media/authentication-aad-configure/add-azure-active-directory-admin.png)
 
 8. At the top of the Active Directory admin page, select **Save**.
 
-    ![save](./media/aad-authentication-configure/save.png)
+    ![save](./media/authentication-aad-configure/save.png)
 
     The process of changing the administrator may take several minutes. Then the new administrator appears in the Active Directory admin box.
 
@@ -236,7 +236,7 @@ The following two procedures show you how to provision an Azure Active Directory
 
 2. Search for and select **SQL server**.
 
-    ![Search for and select SQL servers](./media/aad-authentication-configure/search-for-and-select-sql-servers.png)
+    ![Search for and select SQL servers](./media/authentication-aad-configure/search-for-and-select-sql-servers.png)
 
     >[!NOTE]
     > On this page, before you select **SQL servers**, you can select the **star** next to the name to *favorite* the category and add **SQL servers** to the left navigation bar.
@@ -245,15 +245,15 @@ The following two procedures show you how to provision an Azure Active Directory
 
 4. In the **Active Directory admin** page, select **Set admin**.
 
-    ![SQL servers set Active Directory admin](./media/aad-authentication-configure/sql-servers-set-active-directory-admin.png)  
+    ![SQL servers set Active Directory admin](./media/authentication-aad-configure/sql-servers-set-active-directory-admin.png)  
 
-5. In the **Add admin** page, search for a user, select the user or group to be an administrator, and then select **Select**. (The Active Directory admin page shows all members and groups of your Active Directory. Users or groups that are grayed out cannot be selected because they are not supported as Azure AD administrators. (See the list of supported admins in the **Azure AD Features and Limitations** section of [Use Azure Active Directory Authentication for authentication with SQL Database or Azure Synapse](aad-authentication-overview.md).) Role-based access control (RBAC) applies only to the portal and is not propagated to SQL Server.
+5. In the **Add admin** page, search for a user, select the user or group to be an administrator, and then select **Select**. (The Active Directory admin page shows all members and groups of your Active Directory. Users or groups that are grayed out cannot be selected because they are not supported as Azure AD administrators. (See the list of supported admins in the **Azure AD Features and Limitations** section of [Use Azure Active Directory Authentication for authentication with SQL Database or Azure Synapse](authentication-aad-overview.md).) Role-based access control (RBAC) applies only to the portal and is not propagated to SQL Server.
 
-    ![Select Azure Active Directory admin](./media/aad-authentication-configure/select-azure-active-directory-admin.png)  
+    ![Select Azure Active Directory admin](./media/authentication-aad-configure/select-azure-active-directory-admin.png)  
 
 6. At the top of the **Active Directory admin** page, select **SAVE**.
 
-    ![save admin](./media/aad-authentication-configure/save-admin.png)
+    ![save admin](./media/authentication-aad-configure/save-admin.png)
 
 The process of changing the administrator may take several minutes. Then the new administrator appears in the **Active Directory admin** box.
 
@@ -430,7 +430,11 @@ Use this method if you are logged into Windows using your Azure Active Directory
 
    ![Select AD Integrated Authentication][11]
 
+<<<<<<< HEAD:articles/azure-sql/database/aad-authentication-configure.md
 2. Select the **Options** button, and on the **Connection Properties** page, in the **Connect to database** box, type the name of the user database you want to connect to. For more information, see the article [Multi-factor Azure AD auth](../mfa-authentication-ssms-overview.md#azure-ad-domain-name-or-tenant-id-parameter) on the differences between the Connection Properties for SSMS 17.x and 18.x.
+=======
+2. Select the **Options** button, and on the **Connection Properties** page, in the **Connect to database** box, type the name of the user database you want to connect to. For more information, see the article [Multi-factor AAD auth](authentication-mfa-ssms-overview.md#azure-ad-domain-name-or-tenant-id-parameter) on the differences between the Connection Properties for SSMS 17.x and 18.x.
+>>>>>>> 6e86723e6fc9f096e5e49f356bab46ef8264c560:articles/azure-sql/database/authentication-aad-configure.md
 
    ![Select the database name][13]
 
@@ -454,7 +458,11 @@ Use this method to authenticate to the database in SQL Database or the SQL Manag
 
 Use this method for interactive authentication with or without Multi-Factor Authentication (MFA), with password being requested interactively. This method can be used to authenticate to the database in SQL Database, the SQL Managed Instance, and Azure Synapse for Azure AD cloud-only identity users, or those who use Azure AD hybrid identities.
 
+<<<<<<< HEAD:articles/azure-sql/database/aad-authentication-configure.md
 For more information, see [Using multi-factor Azure AD authentication with SQL Database and Azure Synapse (SSMS support for MFA)](../mfa-authentication-ssms-overview.md).
+=======
+For more information, see [Using Multi-factor AAD authentication with SQL Database and Azure Synapse (SSMS support for MFA)](authentication-mfa-ssms-overview.md).
+>>>>>>> 6e86723e6fc9f096e5e49f356bab46ef8264c560:articles/azure-sql/database/authentication-aad-configure.md
 
 ## Using an Azure AD identity to connect from a client application
 
@@ -536,7 +544,7 @@ Guidance on troubleshooting issues with Azure AD authentication can be found in 
 - For more information about firewall rules in SQL Database, see [SQL Database firewall rules](firewall-configure.md).
 
 <!--Image references-->
-[11]: ./media/aad-authentication-configure/active-directory-integrated.png
-[12]: ./media/aad-authentication-configure/12connect-using-pw-auth2.png
-[13]: ./media/aad-authentication-configure/13connect-to-db2.png
+[11]: ./media/authentication-aad-configure/active-directory-integrated.png
+[12]: ./media/authentication-aad-configure/12connect-using-pw-auth2.png
+[13]: ./media/authentication-aad-configure/13connect-to-db2.png
 

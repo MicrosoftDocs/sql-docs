@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory
+title: Azure Active Directory authentication
 description: Learn about how to use Azure Active Directory for authentication with Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics
 services: sql-database
 ms.service: sql-database
@@ -12,7 +12,10 @@ ms.author: mireks
 ms.reviewer: vanto, carlrab
 ms.date: 04/23/2020
 ---
-# Use Azure AD authentication to connect with Azure SQL Database
+
+# Use Azure Active Directory authentication
+
+[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
 Azure Active Directory (Azure AD) authentication is a mechanism for connecting to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Azure Synapse Analytics (formerly Azure SQL Data Warehouse)](../../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md) by using identities in Azure AD.
 
@@ -35,7 +38,11 @@ With Azure AD authentication, you can centrally manage the identities of databas
     - Federated authentication.
   - For more information on Azure AD authentication methods and which one to choose, see the following article:
     - [Choose the right authentication method for your Azure Active Directory hybrid identity solution](../../active-directory/hybrid/choose-ad-authn.md)
+<<<<<<< HEAD:articles/azure-sql/database/aad-authentication-overview.md
 - Azure AD supports connections from SQL Server Management Studio that use Active Directory Universal Authentication, which includes Multi-Factor Authentication. Multi-Factor Authentication includes strong authentication with a range of easy verification options — phone call, text message, smart cards with pin, or mobile app notification. For more information, see [SSMS support for Azure AD Multi-Factor Authentication with Azure SQL Database, SQL Managed Instance, and Azure Synapse](../mfa-authentication-ssms-overview.md)
+=======
+- Azure AD supports connections from SQL Server Management Studio that use Active Directory Universal Authentication, which includes Multi-Factor Authentication (MFA). MFA includes strong authentication with a range of easy verification options — phone call, text message, smart cards with pin, or mobile app notification. For more information, see [SSMS support for Azure AD MFA with Azure SQL Database, SQL Managed Instance, and Azure Synapse](authentication-mfa-ssms-overview.md)
+>>>>>>> 6e86723e6fc9f096e5e49f356bab46ef8264c560:articles/azure-sql/database/authentication-aad-overview.md
 - Azure AD supports similar connections from SQL Server Data Tools (SSDT) that use Active Directory Interactive Authentication. For more information, see [Azure Active Directory support in SQL Server Data Tools (SSDT)](/sql/ssdt/azure-active-directory)
 
 > [!NOTE]  
@@ -51,7 +58,7 @@ The configuration steps include the following procedures to configure and use Az
 6. Connect to your database by using Azure AD identities.
 
 > [!NOTE]
-> To learn how to create and populate Azure AD, and then configure Azure AD with Azure SQL Database, SQL Managed Instance, and Azure Synapse, see [Configure Azure AD with Azure SQL Database](aad-authentication-configure.md).
+> To learn how to create and populate Azure AD, and then configure Azure AD with Azure SQL Database, SQL Managed Instance, and Azure Synapse, see [Configure Azure AD with Azure SQL Database](authentication-aad-configure.md).
 
 ## Trust architecture
 
@@ -83,7 +90,7 @@ When using Azure AD authentication, there are two Administrator accounts; the or
 
 To create new users, you must have the `ALTER ANY USER` permission in the database. The `ALTER ANY USER` permission can be granted to any database user. The `ALTER ANY USER` permission is also held by the server administrator accounts, and database users with the `CONTROL ON DATABASE` or `ALTER ON DATABASE` permission for that database, and by members of the `db_owner` database role.
 
-To create a contained database user in Azure SQL Database, SQL Managed Instance, or Azure Synapse, you must connect to the database or instance using an Azure AD identity. To create the first contained database user, you must connect to the database by using an Azure AD administrator (who is the owner of the database). This is demonstrated in [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](aad-authentication-configure.md). Azure AD authentication is only possible if the Azure AD admin was created for Azure SQL Database, SQL Managed Instance, or Azure Synapse. If the Azure Active Directory admin was removed from the server, existing Azure Active Directory users created previously inside SQL Server can no longer connect to the database using their Azure Active Directory credentials.
+To create a contained database user in Azure SQL Database, SQL Managed Instance, or Azure Synapse, you must connect to the database or instance using an Azure AD identity. To create the first contained database user, you must connect to the database by using an Azure AD administrator (who is the owner of the database). This is demonstrated in [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](authentication-aad-configure.md). Azure AD authentication is only possible if the Azure AD admin was created for Azure SQL Database, SQL Managed Instance, or Azure Synapse. If the Azure Active Directory admin was removed from the server, existing Azure Active Directory users created previously inside SQL Server can no longer connect to the database using their Azure Active Directory credentials.
 
 ## Azure AD features and limitations
 
@@ -149,12 +156,21 @@ The following authentication methods are supported for Azure AD server principal
 - [Microsoft JDBC Driver 6.0 for SQL Server](https://www.microsoft.com/download/details.aspx?id=11774) supports Azure AD authentication. Also, see [Setting the Connection Properties](/sql/connect/jdbc/setting-the-connection-properties).
 - PolyBase cannot authenticate by using Azure AD authentication.
 - Azure AD authentication is supported for Azure SQL Database and Azure Synapse by using the Azure portal **Import Database** and **Export Database** blades. Import and export using Azure AD authentication is also supported from a PowerShell command.
+<<<<<<< HEAD:articles/azure-sql/database/aad-authentication-overview.md
 - Azure AD authentication is supported for SQL Database, SQL Managed Instance, and Azure Synapse with using the CLI. For more information, see [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](aad-authentication-configure.md) and [SQL Server - az sql server](https://docs.microsoft.com/cli/azure/sql/server).
 
 ## Next steps
 
 - To learn how to create and populate Azure AD, and then configure Azure AD with Azure SQL Database, SQL Managed Instance, or Azure Synapse, see [Configure and manage Azure Active Directory authentication with SQL Database, SQL Managed Instance, or Azure Synapse](aad-authentication-configure.md).
 - For a tutorial of using Azure AD server principals (logins) with SQL Managed Instance, see [Azure AD server principals (logins) with SQL Managed Instance](../managed-instance/aad-security-configure-tutorial.md)
+=======
+- Azure AD authentication is supported for SQL Database, SQL Managed Instance, and Azure Synapse with using CLI. For more information, see [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](authentication-aad-configure.md) and [SQL Server - az sql server](https://docs.microsoft.com/cli/azure/sql/server).
+
+## Next steps
+
+- To learn how to create and populate Azure AD, and then configure Azure AD with Azure SQL Database, SQL Managed Instance or Azure Synapse, see [Configure and manage Azure Active Directory authentication with SQL Database, SQL Managed Instance, or Azure Synapse](authentication-aad-configure.md).
+- For a tutorial of using Azure AD server principals (logins) with SQL Managed Instances, see [Azure AD server principals (logins) with SQL Managed Instances](../managed-instance/aad-security-configure-tutorial.md)
+>>>>>>> 6e86723e6fc9f096e5e49f356bab46ef8264c560:articles/azure-sql/database/authentication-aad-overview.md
 - For an overview of logins, users, database roles, and permissions in SQL Database, see [Logins, users, database roles, and permissions](logins-create-manage.md).
 - For more information about database principals, see [Principals](https://msdn.microsoft.com/library/ms181127.aspx).
 - For more information about database roles, see [Database roles](https://msdn.microsoft.com/library/ms189121.aspx).
@@ -162,6 +178,6 @@ The following authentication methods are supported for Azure AD server principal
 - For more information about firewall rules in SQL Database, see [SQL Database firewall rules](firewall-configure.md).
 
 <!--Image references-->
-[1]: ./media/aad-authentication-overview/1aad-auth-diagram.png
-[2]: ./media/aad-authentication-overview/2subscription-relationship.png
-[3]: ./media/aad-authentication-overview/3admin-structure.png
+[1]: ./media/authentication-aad-overview/1aad-auth-diagram.png
+[2]: ./media/authentication-aad-overview/2subscription-relationship.png
+[3]: ./media/authentication-aad-overview/3admin-structure.png

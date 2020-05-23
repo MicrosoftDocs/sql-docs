@@ -26,7 +26,7 @@ Converts an *inputdate* to the corresponding *datetimeoffset* value in the targe
 
 **AT TIME ZONE** implementation relies on a Windows mechanism to convert **datetime** values across time zones.  
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
 ## Syntax
 

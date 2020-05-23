@@ -1,5 +1,6 @@
 ---
 title: "Replication Tables (Transact-SQL) | Microsoft Docs"
+description: Replication system tables support a replication topology. Replication adds system tables to a database configured as a Publisher or a Subscriber.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

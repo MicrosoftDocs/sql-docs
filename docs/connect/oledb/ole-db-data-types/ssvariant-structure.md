@@ -78,24 +78,32 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 
 ## Problems with the sql_variant data type and recovery procedure
 ### Problems
-Before version 18.4 of the OLE DB driver, insertion into a `sql_variant` column could result in corruption of data on the server if the `SSVARIANT` structure was of type `VT_SS_VARSTRING` or `VT_SS_STRING` containing non-ASCII characters, and either of the following conditions were true:
-- The `pwszDataSourceType` field in the `DBPARAMBINDINFO` structure describing the `sql_variant` parameter was set to `L"DBTYPE_SQLVARIANT"`or `L"sql_variant"`. For details, see: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85))
+Before version 18.4 of the OLE DB driver, insertion into a `sql_variant` column could result in corruption of data on the server if all of the following conditions were true:
+- Code page of the client didn't match the collation code page of the database.
+- The data to insert contained non-ASCII characters in the client's code page.
+- Either of the following conditions were true:
+  - The `pwszDataSourceType` field in the `DBPARAMBINDINFO` structure describing the parameter corresponding to the `sql_variant` column was set to `L"DBTYPE_SQLVARIANT"`or `L"sql_variant"`. For details, see: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
 
-  *or*
-- The parameterized SQL query used for insertion was prepared.
+    *or*
+  - The parameterized SQL query used for insertion was prepared.
 
-More specifically, the OLE DB driver didn't translate data to server's code page before insertion. However, the driver wrongly indicated to the server that the data was encoded in server's code page. This behavior resulted in a mismatch between the data and its corresponding code page stored in the `sql_variant` column.
+More specifically, the OLE DB driver didn't translate data to the collation code page of the database before insertion. However, the driver wrongly indicated to the server that the data was encoded in the collation code page of the database. This behavior resulted in a mismatch between the data and its corresponding code page stored in the `sql_variant` column.
 
-Similarly, upon retrieval of the same value, the OLE DB driver didn't translate strings to client's code page. However, since inserted data was already in client's code page (See the paragraph above), client applications could interpret data correctly. Even so, applications using other drivers retrieved these values in corrupted format. The corruption occurred because other drivers (wrongly) interpreted the string in server's code page and attempted to translate it to client's code page.
+Similarly, upon retrieval of the same value, the OLE DB driver didn't translate strings to the client's code page. However, since the inserted data was already in the client's code page (See the paragraph above), the client applications could interpret the data correctly. Even so, applications using other drivers retrieved these values in corrupted format. The corruption occurred because other drivers (wrongly) interpreted the string in the collation code page of the database and attempted to translate it to the client's code page.
 
-Since version 18.4, the OLE DB Driver ensures that narrow string data stored in the `SSVARIANT` structure are translated to server's code page before insertion. Similarly, the data is translated back to client's code page upon retrieval. As a result, clients that rely on the mentioned bug might experience issues while retrieving data that is inserted using an OLE DB driver before version 18.4. The [Recovery procedure](#recovery-procedure) below aims to provide guidance to resolve these issues.
+Since version 18.4, the OLE DB Driver ensures that the narrow string data are translated to the collation code page of the database before insertion. Similarly, the data is translated back to the client's code page upon retrieval. As a result, clients that rely on the mentioned bug might experience issues while retrieving data that is inserted using an OLE DB driver before version 18.4. The [Recovery procedure](#recovery-procedure) below aims to provide guidance to resolve these issues.
 
 ### Recovery procedure
+> [!IMPORTANT]  
+> Before performing the recovery steps below, make sure you backup your existing data.
+
 If your application experiences issues retrieving `DBTYPE_SQLVARIANT` data type after switching to version 18.4, the following steps need to be taken:
-- Switch to a version of the driver before 18.4.
-- Retrieve data while specifying `DBTYPE_STR` in the `DBBINDING` structure passed to `IAccessor::CreateAccessor`.
-- Insert the retrieved data back into the column while specifying `L"DBTYPE_STR"` as the type of parameter provided to `ICommandWithParameters::SetParameterInfo`. To avoid the problem described in the previous section, the parameterized query *must not* be prepared.
+- Make sure the machine from which recovery is done has the same code page as the machine that inserted the data initially. Ideally, recovery should be done from the same machine.
+- Switch to a version of the driver *before* 18.4.
+- Retrieve data from the `sql_variant` column while specifying `DBTYPE_STR` as the `wType` field in the [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v%3dvs.85)) structure passed to [IAccessor::CreateAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85)). For details, see: [Fetching rows](../ole-db-rowsets/fetching-rows.md).
+- Insert the retrieved data back into the column while specifying `L"DBTYPE_STR"` as the `pwszDataSourceType` field of `DBPARAMBINDINFO` parameter provided to `ICommandWithParameters::SetParameterInfo`. To avoid the problem described in the previous section, the parameterized query *must not* be prepared. For details, see: [Command parameters](../ole-db-commands/command-parameters.md).
 - Once the above steps are done, you should be able switch back to version 18.4 of the driver and retrieve the data properly.
+- *Optional*: Corrupted data previously stored can be removed from the table.
 
 ## See Also  
  [Data Types &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  

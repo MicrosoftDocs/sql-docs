@@ -52,7 +52,7 @@ For the result buffer type indicator DBTYPE_WSTR, the driver converts the UTF-8 
 Microsoft OLE DB Driver for SQL Server ensures data is exposed to the server in a way that the server can understand. When inserting data from UTF-8 enabled clients, the driver translates UTF-8 encoded strings to the database collation code page before sending it to the server.
 
 > [!NOTE]  
-> Using the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface for inserting UTF-8 encoded data into a legacy text column is only limited to servers that support UTF-8. For details see [BLOBs and OLE Objects](../ole-db-blobs/blobs-and-ole-objects.md).
+> Using the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface for inserting UTF-8 encoded data into a legacy text column is only limited to servers that support UTF-8. For details, see [BLOBs and OLE Objects](../ole-db-blobs/blobs-and-ole-objects.md).
 
 ## See Also  
 [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md) 

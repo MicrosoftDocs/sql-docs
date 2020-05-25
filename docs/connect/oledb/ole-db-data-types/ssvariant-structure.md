@@ -79,7 +79,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 ## Problems with the sql_variant data type and recovery procedure
 ### Problems
 Before version 18.4 of the OLE DB driver, insertion into a `sql_variant` column could result in corruption of data on the server if the `SSVARIANT` structure was of type `VT_SS_VARSTRING` or `VT_SS_STRING` containing non-ASCII characters, and either of the following conditions were true:
-- The `pwszDataSourceType` field in the `DBPARAMBINDINFO` structure describing the `sql_variant` parameter was set to `L"DBTYPE_SQLVARIANT"`or `L"sql_variant"`. For details, see: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms725393(v=vs.85))
+- The `pwszDataSourceType` field in the `DBPARAMBINDINFO` structure describing the `sql_variant` parameter was set to `L"DBTYPE_SQLVARIANT"`or `L"sql_variant"`. For details, see: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85))
 
   *or*
 - The parameterized SQL query used for insertion was prepared.

@@ -45,11 +45,11 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :-------- | :------ |
 | Fixed various bugs in the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface | A few bugs affecting multibyte code pages resulted in the interface prematurely reporting the end of the stream during the read operation.|
 | Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface when the `SSPROP_IRowsetFastLoad` property was enabled. |
-| Fixed a bug in scenarios involving a sql_variant data type and non-ASCII strings. | Executing certain scenarios involving the `sql_variant` data type and non-ASCII strings may result in data corruption. For details, see: [SSVARIANT Structure](ole-db-data-types/ssvariant-structure.md).
-| Fixed issues with *Test Connection* button in [Data Link Pages](help-topics/data-link-pages.md) | The *Test Connection* button in [Data Link Pages](help-topics/data-link-pages.md) now honors connection properties set in the *All* tab.|
-| Default value of the `SSPROP_INIT_PACKETSIZE` property| Fixed unexpected error when the value of this property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
-| Fixed a few security issues with [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Fixed a few security issues that could result in buffer overflow if user data file was malformed.|
-| Accessibility issues | Fixed various accessibility issues in the UI of the installer and [SQL Server Login Dialog](help-topics/sql-server-login-dialog.md).|
+| Fixed a bug in scenarios involving a sql_variant data type and non-ASCII strings. | Executing certain scenarios involving the `sql_variant` data type and non-ASCII strings may result in data corruption. For details, see: [SSVARIANT Structure](ole-db-data-types/ssvariant-structure.md#problems-with-the-sql_variant-data-type-and-recovery-procedure).
+| Fixed issues with the *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) | The *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) now honors initialization properties set in the *All* tab. |
+| Fixed the `SSPROP_INIT_PACKETSIZE` property default value handling | Fixed an unexpected error when the `SSPROP_INIT_PACKETSIZE` property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Fixed buffer overflow issues in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Fixed buffer overflow issues when using malformed data files. |
+| Fixed accessibility issues | Fixed accessibility issues in the installer UI and the [SQL Server Login dialog](help-topics/sql-server-login-dialog.md) (reading content, tab stops). |
 
 ## Previous Releases
 

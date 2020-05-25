@@ -24,7 +24,7 @@ ms.author: pelopes
 
   The OLE DB Driver for SQL Server exposes the **ISequentialStream** interface to support consumer access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**<a href="#text_note"><sup>**1**</sup></a>, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and xml data types as binary large objects (BLOBs). The **Read** method on **ISequentialStream** lets the consumer retrieve much data in manageable chunks.
 
- <b id="text_note">[1]: Using the ISequentialStream interface for inserting UTF-8 encoded data into a legacy text column is only limited to servers that support UTF-8. An attempt to execute this scenario when targeting a server that doesn't support UTF-8 will result in the driver posting the following error message: "*Streaming not supported over the selected column type*".
+ <b id="text_note">[1]:</b> Using the ISequentialStream interface for inserting UTF-8 encoded data into a legacy text column is only limited to servers that support UTF-8. An attempt to execute this scenario when targeting a server that doesn't support UTF-8 will result in the driver posting the following error message: "*Streaming not supported over the selected column type*".
 
  For a sample demonstrating this feature, see [Set Large Data &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   

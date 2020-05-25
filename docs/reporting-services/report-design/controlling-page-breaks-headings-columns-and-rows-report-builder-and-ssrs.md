@@ -1,6 +1,6 @@
 ---
 title: "Controlling Page Breaks, Headings, Columns, and Rows (Report Builder) | Microsoft Docs"
-description: Optimize viewing and printing of your tables, lists, or images with choices for page lengths, columns, headings, and rows.
+description: Optimize viewing and printing of your tables, lists, or images with choices for page lengths, columns, headings, and rows in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

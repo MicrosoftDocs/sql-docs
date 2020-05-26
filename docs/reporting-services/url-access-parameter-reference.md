@@ -1,7 +1,8 @@
 ---
 title: "URL access parameter reference | Microsoft Docs"
 description: Use the parameters in this article as part of a URL to configure the look and feel of your Reporting Services reports.
-ms.date: 01/31/2020
+ms.date: 05/22/2020
+
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -75,18 +76,21 @@ ms.author: maggies
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**: Search a report for a specific set of text.
+-   **FindString**: Searches a report for a specific set of text and highlights the text.
+    
+    > [!IMPORTANT]  
+    >  *rc:FindString* doesn't work unless you include *rc:Toolbar*=**false** to the URL access string.
   
      For example, in native mode:
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      For example, in SharePoint mode:
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**: Specifies the last section to search. The default value of this parameter is the last page of the report.  

@@ -17,7 +17,7 @@ manager: craigg
 # Filter Settings (Object Explorer and Utility Explorer)
   Use this dialog box to specify a filter. A filter allows you to configure Object Explorer and Utility Explorer to display only items that meet specific criteria. For example, you can use a filter to show only jobs with names that contain the word "Maintenance." The header for the **Filter Settings** dialog box contains the name of the server, and it may contain the name of the database.  
   
-## UIElement List  
+## UI element list  
  **Property**  
  Displays the property to filter on.  
   

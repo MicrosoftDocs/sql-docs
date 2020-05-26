@@ -35,7 +35,7 @@ manager: craigg
   
 -   Click **Get Results** to display the results of cross-validation.  
   
-## UIElement List  
+## UI element list  
  **Fold Count**  
  Specify the number of folds, or partitions, to create. The minimum value is 2, meaning that half the data set is used for testing and half for training.  
   

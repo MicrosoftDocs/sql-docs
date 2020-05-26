@@ -19,7 +19,7 @@ manager: craigg
   
  When you do not merge results, the result set from each server will be displayed in its own grid with its own schema.  
   
-## UIElement List  
+## UI element list  
  **Merge results**  
  Select this check box to combine the result sets from several servers into the same grid.  
   

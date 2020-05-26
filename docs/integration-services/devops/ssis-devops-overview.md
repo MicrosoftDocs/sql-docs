@@ -339,6 +339,12 @@ The configuration JSON schema has three layers:
 
 ## Release notes
 
+### Version 1.0.2
+
+Release Date: May 26, 2020
+
+- Fixed an issue that SSIS Catalog Configuration task may fail in some case after configuration work is done.
+
 ### Version 1.0.1
 
 Release Date: May 9, 2020

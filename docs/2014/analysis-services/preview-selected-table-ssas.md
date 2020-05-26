@@ -22,7 +22,7 @@ manager: craigg
   
  The appearance of data on this page does not guarantee import will succeed. If the user name specified in the Impersonation Information page does not have sufficient privileges to read from the selected database, import will fail.  
   
-## UIElement List  
+## UI element list  
  **Checkbox in the column header**  
  Select the checkbox to include the column in the data import. Clear the checkbox to remove the column from the data import.  
   

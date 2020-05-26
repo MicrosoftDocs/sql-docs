@@ -1,5 +1,6 @@
 ---
 title: "Open Log File Viewer | Microsoft Docs"
+description: Learn to use Log File Viewer in SQL Server Management Studio to access information about errors and events that are captured in several logs.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

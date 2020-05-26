@@ -1,5 +1,6 @@
 ---
 title: "History Cleanup Task (Maintenance Plan) | Microsoft Docs"
+description: Learn how to discard backup/restore history, SQL Server Agent Job history, and maintenance plan history from the msdb database using the History Cleanup Task.
 ms.custom: ""
 ms.date: 03/14/2017
 ms.prod: sql

@@ -69,6 +69,7 @@ rental_train_data$WeekDay <- factor(rental_train_data$WeekDay);
 
 #Create a dtree model and train it using the training data set
 model_dtree <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = rental_train_data);
+library(rpart);
 #Serialize the model before saving it to the database table
 trained_model <- as.raw(serialize(model_dtree, connection=NULL));
 '

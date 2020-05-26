@@ -62,7 +62,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
   * sklearn
 
   To install these packages:
-  1. In Azure Data Studio, select **Manage Packages**.
+  1. In your Azure Data Studio notebook, select **Manage Packages**.
   2. In the **Manage Packages** pane, select the **Add new** tab.
   3. For each of the following packages, enter the package name, click **Search**, then click **Install**.
 

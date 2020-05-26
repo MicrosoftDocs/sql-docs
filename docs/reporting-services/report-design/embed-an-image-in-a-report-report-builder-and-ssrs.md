@@ -1,5 +1,6 @@
 ---
 title: "Embed an Image in a Report (Report Builder) | Microsoft Docs"
+description: Be sure that an image is always available to a report by using an image that is embedded in the report and listed in the Report Data pane of Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

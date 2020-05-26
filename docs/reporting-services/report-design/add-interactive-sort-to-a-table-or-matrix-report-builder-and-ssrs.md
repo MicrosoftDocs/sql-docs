@@ -1,5 +1,6 @@
 ---
 title: "Add Interactive Sort to a Table or Matrix (Report Builder) | Microsoft Docs"
+description: Enable users to change the sort order of rows and columns in tables and matrices using interactive sort buttons in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

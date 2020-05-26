@@ -1,5 +1,6 @@
 ---
 title: "Formatting Ranges on a Gauge (Report Builder) | Microsoft Docs"
+description:
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

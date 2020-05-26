@@ -1,5 +1,6 @@
 ---
 title: "Creating Recursive Hierarchy Groups (Report Builder) | Microsoft Docs"
+description: Discover a popular use for displaying hierarchical data for recursive hierarchy groups, such as employees in an organizational chart, in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

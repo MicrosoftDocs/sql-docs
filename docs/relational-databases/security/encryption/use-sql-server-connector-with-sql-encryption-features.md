@@ -52,7 +52,7 @@ You will need to create a credential and a login, and create a database encrypti
         > [!IMPORTANT]  
         >  You must remove the hyphens from the **Client ID**.  
   
-    -   Complete the second part of the `SECRET` argument with **Client Secret** from Part I.  In this example the **Client Secret** from Part 1 is `ReplaceWithAADClientSecret`. 
+    -   Complete the second part of the `SECRET` argument with **Client Secret** from Part I. In this example, the **Client Secret** from Part 1 is `ReplaceWithAADClientSecret`. 
   
     -   The final string for the SECRET argument will be a long sequence of letters and numbers, with no hyphens.
   

@@ -6,7 +6,8 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.reviewer: maghan, sstein
+manager: viharp
+ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 05/20/2020
 ---

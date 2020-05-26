@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Extended Events Sessions"
 description: A SQL Server Extended Events session is created in the SQL Server process that hosts the Extended Events engine. Learn about session states and session content.
-ms.date: "03/14/2017"
+ms.date: "05/26/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -28,9 +28,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Session States  
  The following illustration shows the various states of an Extended Events session.  
-  
- ![Extended event session state](../../relational-databases/extended-events/media/xesessionstate.gif "Extended event session state")  
-  
+
+![Extended event session state](../../relational-databases/extended-events/media/xesessionstate.png "Extended event session state")
+
  Referring to the preceding figure, note that session state changes as the different DDL commands are issued for an event session. The following table describes these changes in state.  
   
 |Illustration label|DDL statement|Description|  

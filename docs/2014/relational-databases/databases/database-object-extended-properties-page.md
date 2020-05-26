@@ -16,7 +16,7 @@ manager: craigg
 # Database Object (Extended Properties Page)
   Extended properties allow you to add custom properties to database objects. Use this page to view or modify extended properties for the selected object. The **Extended Properties** page is the same for all types of database objects.  
   
-## UIElement List  
+## UI element list  
  **Database**  
  Displays the name of the selected database. This field is read-only.  
   

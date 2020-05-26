@@ -1,5 +1,6 @@
 ---
 title: "Missing Join Predicate Event Class | Microsoft Docs"
+description: The Missing Join Predicate event class indicates that a query running that has no join predicate in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

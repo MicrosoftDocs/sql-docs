@@ -216,6 +216,10 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
 -   Subscriber failover to a secondary database, while supported, is a manual procedure for merge replication subscribers. The procedure is essentially identical to the method used to fail over a mirrored subscriber database. Transactional replication subscribers do not need special handling while participating in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Subscribers must be running [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] or later to participate in an availability group.  For more information, see [Replication Subscribers and Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
 -   Metadata and objects that exist outside the database are not propagated to the secondary replicas, including logins, jobs, linked servers. If you require the metadata and objects at the new primary database after failover, you must copy them manually. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
+
+### Distributed Availability Groups
+
+The publisher, or distribution database in an Availability Group cannot be configured as part of a Distributed Availability Group. The publisher database in an Availability Group and the distribution database in an Availability Group both require a listener endpoint for proper configuration and usage. However, it is not possiblle to configure a listener endpoint for a Distributed Availability group.
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Replication**  

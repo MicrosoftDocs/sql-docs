@@ -61,6 +61,8 @@ AS
 BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
+rental_train_data$Month <- factor(rental_train_data$Month);
+rental_train_data$Day <- factor(rental_train_data$Day);
 rental_train_data$Holiday <- factor(rental_train_data$Holiday);
 rental_train_data$Snow    <- factor(rental_train_data$Snow);
 rental_train_data$WeekDay <- factor(rental_train_data$WeekDay);
@@ -152,6 +154,8 @@ BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
 #Convert types to factors
+rental_train_data$Month <- factor(rental_train_data$Month);
+rental_train_data$Day <- factor(rental_train_data$Day);
 rentals$Holiday <- factor(rentals$Holiday);
 rentals$Snow    <- factor(rentals$Snow);
 rentals$WeekDay <- factor(rentals$WeekDay);

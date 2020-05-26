@@ -16,7 +16,7 @@ manager: craigg
 # Query Options Execution (ANSI Page)
   Use this page to specify that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will run the queries using all or a portion of the settings specified in the ISO (ANSI) standard.  
   
-## UIElement List  
+## UI element list  
  **SET ANSI_DEFAULTS**  
  Select all of the default ISO settings. This box is unavailable by default, because only some of the ISO settings are configured.  
   

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Index Architecture and Design Guide | Microsoft Docs"
+description: Learn about designing efficient indexes in SQL Server to achieve good database and application performance. Read about index architecture and best practices.
 ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: sql

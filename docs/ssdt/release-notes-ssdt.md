@@ -5,8 +5,8 @@ ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: markingmyname
-ms.author: maghan
+author: dzsquared
+ms.author: drskwier
 manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019

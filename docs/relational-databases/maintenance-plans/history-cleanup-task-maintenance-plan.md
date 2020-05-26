@@ -21,7 +21,7 @@ ms.reviewer: ""
   
  This statement uses the **sp_purge_jobhistory** and **sp_delete_backuphistory** statements.  
   
-## UIElement List  
+## UI element list  
  **Connection**  
  Select the server connection to use when performing this task.  
   

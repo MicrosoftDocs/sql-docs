@@ -8,7 +8,7 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/21/2020
+ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
@@ -56,6 +56,8 @@ In [part four](r-predictive-model-deploy.md), you'll learn how to store the mode
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 * Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+
+* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
 * R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
@@ -73,6 +75,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 > If you are using Machine Learning Services on Big Data Clusters, see how to [Restore a database into the SQL Server big data cluster master instance](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. Download the file [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
@@ -86,14 +89,26 @@ The sample database used in this tutorial has been saved to a **.bak** database 
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. Download the file [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
-1. Enable external scripts by running the following SQL commands:
+1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 
-    ```sql
-    sp_configure 'external scripts enabled', 1;
-    RECONFIGURE WITH override;
-    ```
+   * Import from the **TutorialDB.bak** file you downloaded
+   * Name the target database "TutorialDB"
 
+1. You can verify that the restored database exists by querying the **dbo.rental_data** table:
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+::: moniker-end
+
+## Clean up resources
+
+If you're not going to continue with this tutorial, delete the TutorialDB database.
 ## Next steps
 
 In part one of this tutorial series, you completed these steps:

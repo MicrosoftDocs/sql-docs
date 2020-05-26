@@ -19,8 +19,8 @@ keywords:
   - "sql server ssms"
   - "ssms express"
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-author: dnethi
-ms.author: dinethi
+author: dzsquared
+ms.author: drskwier
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 05/19/2020

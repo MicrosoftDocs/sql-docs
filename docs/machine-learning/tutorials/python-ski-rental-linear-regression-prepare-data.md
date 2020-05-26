@@ -44,7 +44,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 To use the data in Python, you'll load the data from the database into a pandas data frame.
 
-Create a new Python notebook in Azure Data Studio and run the script below. Replace `<server>` with your own server name.
+Create a new Python notebook in Azure Data Studio and run the script below. 
 
 The Python script below imports the dataset from the **dbo.rental_data** table in your database to a pandas data frame **df**.
 

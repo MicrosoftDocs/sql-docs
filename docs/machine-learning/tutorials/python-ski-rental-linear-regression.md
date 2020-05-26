@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -26,12 +26,12 @@ In this four-part tutorial series, you will use Python and linear regression in 
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
 
-In the first part of this series, you'll get set up with the prerequisites. In parts two and three, you'll develop some Python scripts in a notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside SQL Server using T-SQL stored procedures.
+In the first part of this series, you'll get set up with the prerequisites. In parts two and three, you'll develop some Python scripts in a notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside the database using T-SQL stored procedures.
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into SQL Server 
+> * Import a sample database
 
 In [part two](python-ski-rental-linear-regression-prepare-data.md), you'll learn how to load the data from a database into a Python data frame, and prepare the data in Python.
 
@@ -103,7 +103,7 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 In part one of this tutorial series, you completed these steps:
 
 * Installed the prerequisites
-* Import a sample database into an SQL Server
+* Import a sample database
 
 To prepare the data from the TutorialDB database, follow part two of this tutorial series:
 

@@ -60,7 +60,7 @@ actual_counts <- test_data$RentalCount;
 
 #Model 1: Use lm to create a linear regression model, trained with the training data set
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
-
+library(rpart);
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
@@ -71,6 +71,7 @@ Use a predict function to predict the rental counts using each trained model.
 
 ```r
 #Use both models to make predictions using the test data set.
+library(rpart);
 predict_lm <- predict(model_lm, test_data)
 predict_lm <- data.frame(RentalCount_Pred = predict_lm, RentalCount = test_data$RentalCount, 
                          Year = test_data$Year, Month = test_data$Month,

@@ -16,7 +16,7 @@ manager: craigg
 # Importing (SSAS)
   This page of the **Table Import Wizard** enables you to view the progress of the import operation. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
-## UIElement List  
+## UI element list  
  **Details**  
  Displays the following information for each data import operation.  
   

@@ -16,7 +16,7 @@ manager: craigg
 # Set Advanced Properties (SSAS)
   This page of the **Table Import Wizard** enables you to specify additional property settings for a data source connection. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
-## UIElement List  
+## UI element list  
  **Providers**  
  Select the provider to use for the data source connection. To connect to a data source, you must have the appropriate provider installed on your computer.  
   

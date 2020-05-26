@@ -20,7 +20,7 @@ manager: craigg
   
 -   [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
-## UIElement List  
+## UI element list  
  **Schedules**  
  Lists each scheduled incremental population, if any, on the base table for the full-text index.  
   

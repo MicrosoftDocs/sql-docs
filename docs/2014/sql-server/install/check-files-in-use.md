@@ -36,7 +36,7 @@ manager: craigg
   
 -   Name of the file that is locked  
   
-## UIElement List  
+## UI element list  
   
 |Name|Description|  
 |----------|-----------------|  

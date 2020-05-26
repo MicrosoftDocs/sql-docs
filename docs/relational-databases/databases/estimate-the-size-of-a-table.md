@@ -1,5 +1,6 @@
 ---
 title: "Estimate the Size of a Table | Microsoft Docs"
+description: Use this procedure to estimate the amount of space that is required to store data in a table in SQL Server.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

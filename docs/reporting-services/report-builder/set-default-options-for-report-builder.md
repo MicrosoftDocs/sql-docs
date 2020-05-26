@@ -19,7 +19,7 @@ ms.author: maggies
   
 -   In Report Builder, click **File** > **Options**.  
   
-## UIElement List  
+## UI element list  
  **Use this report server or SharePoint site by default**  
  Your administrator may have configured this. The value can be a well-formed URL starting with http:// or https://. This setting determines which data source connections appear by default in the Table/Matrix and Chart wizards. In addition, your reports will be processed on this server and you can reference resources from this server.  
   

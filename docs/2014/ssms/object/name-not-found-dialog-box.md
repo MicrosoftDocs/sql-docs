@@ -18,7 +18,7 @@ manager: craigg
 # Name Not Found Dialog Box
   One or more object names in the dialog box could not be found. Select an option to continue.  
   
-## UIElement List  
+## UI element list  
  **Correct this information and search again**  
  Select to allow use of the **Select this object type**, **Object type**, and **Enter the object name** area.  
   

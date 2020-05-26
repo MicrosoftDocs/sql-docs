@@ -16,7 +16,7 @@ manager: craigg
 # Go To Dialog Box (SSAS)
   The **Go To** dialog box enables you to jump to a specific column in a table.  
   
-## UIElement List  
+## UI element list  
   
 |||  
 |-|-|  

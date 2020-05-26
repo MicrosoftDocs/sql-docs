@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## UIElement List  
+## UI element list  
  **Enable FILESTREAM for Transact-SQL access**  
  Select to enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access. This control must be checked before the other control options will be available.  
   

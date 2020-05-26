@@ -16,7 +16,7 @@ manager: craigg
 # Edit Table Properties Dialog Box (SSAS)
   The **Edit Table Properties** dialog box enables you to view and modify the properties of tables that are imported into the model designer by using the Table Import Wizard. To access this dialog box, in the model designer, select a table, then click the **Table** menu, and then click **Table Properties**.  
   
-## UIElement List  
+## UI element list  
  The options for this dialog box are different depending on whether you originally imported data by selecting tables from a list or by using a SQL query.  
   
 ## Table Preview Mode  

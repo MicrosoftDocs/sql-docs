@@ -5,7 +5,7 @@ description: In this four-part tutorial series, you'll  cluster customers, using
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 05/21/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
@@ -52,7 +52,9 @@ In [part four](python-clustering-model-deploy.md), you'll learn how to create a 
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+* Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+
+* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for both Python and SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Iris demo data for Python and R tutorials with SQL machine learning
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-In this exercise, create a database to store data from the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) and models based on the same data. Iris data is included in both the R and Python distributions installed, and is used in machine learning tutorials for SQL machine learning.
+In this exercise, create a database to store data from the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) and models based on the same data. Iris data is included in both the R and Python distributions, and is used in machine learning tutorials for SQL machine learning.
 
 To complete this exercise, you should have [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or another tool that can run T-SQL queries.
 

@@ -20,7 +20,7 @@ manager: craigg
   
 -   [Create and Manage Full-Text Catalogs](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
-## UIElement List  
+## UI element list  
  **Full-text catalog name**  
  The name of the full-text catalog.  
   

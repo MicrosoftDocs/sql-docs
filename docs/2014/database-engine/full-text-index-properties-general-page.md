@@ -18,7 +18,7 @@ manager: craigg
   
 -   [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
-## UIElement List  
+## UI element list  
  **Full-Text Catalog**  
  Displays the name of the full-text catalog with which the full-text index is associated.  
   

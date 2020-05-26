@@ -16,7 +16,7 @@ manager: craigg
   
  You can add other features not included in the prepared instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance after you have completed the configuration of the prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## UIElement List  
+## UI element list  
   
 |Component Group|Components and features|  
 |---------------------|-----------------------------|  

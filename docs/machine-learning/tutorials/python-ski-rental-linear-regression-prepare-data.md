@@ -27,7 +27,7 @@ In part two of this four-part tutorial series, you'll prepare data from a databa
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Load the data from the SQL Server database into a **pandas** data frame
+> * Load the data from the database into a **pandas** data frame
 > * Prepare the data in Python by removing some columns
 
 In [part one](python-ski-rental-linear-regression.md), you learned how to restore the sample database.
@@ -44,7 +44,7 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 To use the data in Python, you'll load the data from the database into a pandas data frame.
 
-Create a new Python notebook in Azure Data Studio and run the script below. Replace `<SQL Server>` with your own SQL Server name.
+Create a new Python notebook in Azure Data Studio and run the script below. Replace `<server>` with your own server name.
 
 The Python script below imports the dataset from the **dbo.rental_data** table in your database to a pandas data frame **df**.
 
@@ -57,7 +57,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>)
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>)
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 

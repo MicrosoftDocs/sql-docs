@@ -86,7 +86,7 @@ Is an identifier associated with the information type. This is often used by cen
 
 *RANK*
 
-Is an identifier based on a predefinied set of values which define sensitivity rank. Used by other services like Advanced Threat Protection to detect anomalies based on their rank.
+Is an identifier based on a predefined set of values which define sensitivity rank. Used by other services like Advanced Threat Protection to detect anomalies based on their rank.
 
 
 ## Remarks  

@@ -26,7 +26,7 @@ This section explains platforms that are supported with BDC.
 |Platform|Supported versions|
 |---------|---------|
 |Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
-|Red Hat OpenShift|BDC requires OpenShift version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server 2019 CU5|
+|Red Hat OpenShift|BDC requires OpenShift version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server 2019 CU5.|
 |Azure Kubernetes Service (AKS)|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
 |Azure Red Hat OpenShift|See [Azure Red Hat OpenShift](/azure/aks/sopenshift/). <br><br> Support introduced in SQL Server 2019 CU5.|
 
@@ -79,7 +79,7 @@ Cumulative Update 5 (CU5) release for SQL Server 2019. The SQL Server Database E
 
 ### Added capabilities
 
-- Support for Big Data Cluster deployment on Red Hat OpenShift. Support include OpenShift container platform version 4.4 and Azure RedHat OpenShift. See [deploy-openshift.md]
+- Support for Big Data Cluster deployment on Red Hat OpenShift. Support include OpenShift container platform version 4.4 and Azure RedHat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
 
 ## <a id="cu4"></a> CU4 (April 2020)
 

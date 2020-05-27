@@ -96,7 +96,7 @@ Starting from version 18.4, the OLE DB Driver translates the narrow strings to t
 > [!IMPORTANT]  
 > Before performing the recovery steps below, make sure to back up your existing data.
 
-If your application experiences issues retrieving data from a `sql_variant` column after switching to version 18.4 of the OLE DB driver, the corrupted data needs to be modified to have the same collation as the database in which the data is stored. The following script can be used to recover a single value from a `sql_variant` column. The script is a template and you must adjust it to fit your scenario.
+If your application experiences issues retrieving data from a `sql_variant` column after switching to version 18.4 of the OLE DB driver, the corrupted data needs to be modified to have the same collation as the database in which the data is stored. The following script can be used to recover a single value from a `sql_variant` column. The script is a template and you need to adjust it to fit your scenario.
 
 > [!IMPORTANT]  
 > Since the original code page of the data isn't stored, you need to tell the server how the data was initially encoded. To do so, execute the script within the context of a database that has the same code page as the code page of the client which initially inserted the data. For example, if the corrupted data was inserted from a client configured with code page `932`, the following script needs to be executed within the context of a database with a Japanese collation (e.g. `Japanese_XJIS_100_CS_AI`).

@@ -75,7 +75,7 @@ landingContent:
         links:
           - text: Machine Learning Services in Azure SQL Managed Instance
             url: /azure/azure-sql/managed-instance/machine-learning-services-overview
-          - text: Key differences between Machine Learning Services in Azure SQL Managed Instance and SQL Server
+          - text: Key differences between ML in Azure SQL Managed Instance and SQL Server
             url: /azure/azure-sql/managed-instance/machine-learning-services-differences
 
   - title: ML on Azure SQL Database Edge

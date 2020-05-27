@@ -37,7 +37,7 @@ Error: 17207, Severity: 16, State: 1.
 FileMgr::StartSecondaryDataFiles: Operating system error 2(The system cannot find the file specified.) occurred while creating or opening file 'F:\MSSQL\DATA\MyDB_FG1_1.ndf'. Diagnose and correct the operating system error, and retry the operation.
 ```
 
-You may see these errors during the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance startup process or any Database operation that attempts to start the database (for example, ALTER DATABASE). In some scenarios, you may see both 17207 and 17204 errors and in other occasions you might just see one of them.
+You may see these errors during the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance startup process or any database operation that attempts to start the database (for example, ALTER DATABASE). In some scenarios, you may see both 17207 and 17204 errors and in other occasions you might just see one of them.
 
 If a user database runs into these errors, that database will be left in the RECOVERY_PENDING state, and applications cannot access the database. If a system database encounters these errors, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance will not start and you cannot connect to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This could also result in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster resource to go offline.
 
@@ -64,36 +64,36 @@ These error messages contain the following information:
       
 1. The state information distinguishes multiple locations within a function that can generate this error message.
 1. The full physical path for the file.
-1. The File ID corresponding to the file.
-1. The Operating System error code and error description. In some instances, you'll see only the error code.
+1. The file ID corresponding to the file.
+1. The operating system error code and error description. In some instances, you'll see only the error code.
  
-The operating system error information printed in these error messages is the root cause leading to error 17204. Common causes for these these error messages are a permission issue or an incorrect path to the file.
+The operating system error information printed in these error messages is the root cause leading to error 17204. Common causes for these error messages are a permission issue or an incorrect path to the file.
 
 
 ## User action  
 1. Resolving error 17207 involves understanding the associated operating system error code and diagnosing that error. Once the operating system error condition is resolved, then you can attempt to restart the database (using ALTER DATABASE SET ONLINE, for example) or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to bring the affected database online. In some cases, you may not be able to resolve the operating system error, so you will have to take specific corrective actions. We'll discuss these actions in this section.
 1. If the 17207 error message contains only an error code and not an error description, then you can try resolving the error code using the command from an operating system shell: net helpmsg <error code> . If you are getting an 8-digit status code as the error code, then you can refer to the information sources like [How do I convert an HRESULT to a Win32 error code?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133) to decode what these status codes into OS errors.
 1. If you are getting the ```Access is Denied``` operating system error = 5, consider these methods:
-   -  Check the permissions that are set on the file by looking at the properties of the file in Windows Explorer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Windows groups to provision Access Control on the various file resources. Make sure the appropriate group [with names like SQLServerMSSQLUser$ComputerName$MSSQLSERVER or SQLServerMSSQLUser$ComputerName$InstanceName] has the required permissions on the database file that is mentioned in the error message. Review [Configure File System Permissions for Database Engine Access](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)  for more details. Ensure that the Windows group actually includes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account or the service SID.
+   -  Check the permissions that are set on the file by looking at the properties of the file in Windows Explorer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Windows groups to provision access control on the various file resources. Make sure the appropriate group (with names like SQLServerMSSQLUser$ComputerName$MSSQLSERVER or SQLServerMSSQLUser$ComputerName$InstanceName) has the required permissions on the database file that is mentioned in the error message. Review [Configure File System Permissions for Database Engine Access](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)  for more details. Ensure that the Windows group actually includes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account or the service SID.
    -  Review the user account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is currently running. You can use the Windows Task Manager to get this information. Look for the "User Name" value for the executable "sqlservr.exe". Also if you recently changed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, know that the supported way to do this operation is to use the SQL Server Configuration Manager utility. More information on this is available at [SQL Server Configuration Manager](../sql-server-configuration-manager.md). 
-   -  Depending on the type of operation (opening databases during server startup, attaching a database, database restore, and so on), the account that is used for impersonation and accessing the database file may vary. Review the topic [Securing Data and Log Files](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) to understand which operation sets what permission and to which accounts. Use a tool like Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to understand if the file access is happening under the security context of the SQL Server instance service startup account [or Service SID] or an impersonated account.
+   -  Depending on the type of operation (opening databases during server startup, attaching a database, database restore, and so on), the account that is used for impersonation and accessing the database file may vary. Review the topic [Securing Data and Log Files](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) to understand which operation sets what permission and to which accounts. Use a tool like Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to understand if the file access is happening under the security context of the SQL Server instance service startup account (or Service SID) or an impersonated account.
 
 If SQL Server is impersonating the user credentials of the login that executes the ALTER DATABASE or CREATE DATABASE operation, you will notice the following information in the Process Monitor tool (an example).
 
-        ```Date & Time:      3/27/2010 8:26:08 PM
-        Event Class:        File System
-        Operation:          CreateFile
-        Result:                ACCESS DENIED
-        Path:                  C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\DATA\attach_test.mdf
-        TID:                   4288
-        Duration:             0.0000366
-        Desired Access:Generic Read/Write
-        Disposition:        Open
-        Options:            Synchronous IO Non-Alert, Non-Directory File, Open No Recall
-        Attributes:          N
-        ShareMode:       Read
-        AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+```Date & Time:      3/27/2010 8:26:08 PM
+Event Class:        File System
+Operation:          CreateFile
+Result:                ACCESS DENIED
+Path:                  C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\DATA\attach_test.mdf
+TID:                   4288
+Duration:             0.0000366
+Desired Access:Generic Read/Write
+Disposition:        Open
+Options:            Synchronous IO Non-Alert, Non-Directory File, Open No Recall
+Attributes:          N
+ShareMode:       Read
+AllocationSize:   n/a
+Impersonating: DomainName\UserName```
   
 1. If you are getting ```The system cannot find the file specified``` OS error = 3:
    - Review the complete path from the error message.

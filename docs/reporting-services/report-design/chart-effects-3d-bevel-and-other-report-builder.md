@@ -1,5 +1,6 @@
 ---
 title: "3D, Bevel, and Other Effects in a Chart (Report Builder) | Microsoft Docs"
+description: Discover how 3D effects can be used to provide depth and add visual impact to charts in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

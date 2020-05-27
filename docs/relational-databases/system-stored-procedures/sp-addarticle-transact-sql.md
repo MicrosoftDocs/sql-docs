@@ -1,5 +1,6 @@
 ---
 title: "sp_addarticle (Transact-SQL) | Microsoft Docs"
+description: Creates an article and adds it to a publication. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql

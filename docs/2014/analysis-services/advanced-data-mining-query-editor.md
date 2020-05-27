@@ -18,7 +18,7 @@ manager: craigg
   
  To get to the **Data Mining Query Advanced Editor**, click **Query** and then click **Advanced**.  
   
-## UIElement List  
+## UI element list  
  **DMX Query pane**  
  Here you can see the current DMX statement.  
   

@@ -18,7 +18,7 @@ manager: craigg
   
 -   [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
-## UIElement List  
+## UI element list  
  **Unique index**  
  Select an index from the drop down list. The index must be a single-key-column, unique, non-nullable index.  
   

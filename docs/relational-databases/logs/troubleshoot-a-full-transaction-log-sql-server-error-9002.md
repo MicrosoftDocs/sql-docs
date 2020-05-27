@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot full transaction log error 9002"
-ms.custom: ""
+description: Learn about possible responses to a full transaction log in SQL Server and how to avoid the problem in the future.
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

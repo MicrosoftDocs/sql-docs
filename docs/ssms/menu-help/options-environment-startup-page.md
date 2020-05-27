@@ -14,7 +14,7 @@ ms.author: "maghan"
 
 Use the **Options** dialog box to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startup actions, general window management options, and other general settings. On the **Tools** menu, click **Options**, expand the **Environment** folder, and then click **Startup**.
 
-## UIElement List
+## UI element list
 
 **At startup**
 

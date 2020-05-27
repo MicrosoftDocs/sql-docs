@@ -1,5 +1,6 @@
 ---
 title: "Monitoring (Replication) | Microsoft Docs"
+description: Learn about the monitoring tools used to track activity and status of replication in SQL Server replication topology.
 ms.custom: ""
 ms.date: "11/20/2018"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Replication Agent Administration | Microsoft Docs"
+description: Learn about managing replication agents, which perform tasks for replication, like creating copies of schema and data and propagating changes between servers.
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql

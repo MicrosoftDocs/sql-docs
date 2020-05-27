@@ -1,5 +1,6 @@
 ---
 title: "sp_repldone (Transact-SQL) | Microsoft Docs"
+description: Updates the record that identifies the last distributed transaction of the server. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

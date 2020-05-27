@@ -8,23 +8,24 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-
 # Tutorial: Deploy a clustering model in R with SQL machine learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services or on Big Data Clusters.
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a database using SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server Machine Learning Services.
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a database using SQL Server Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a SQL database using SQL Server R Services.
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a database using SQL Server R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in R, into a database using Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
 In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the R script from any app. To do that, you can deploy the R script in a database by putting the R script inside a SQL stored procedure. Because your model executes in the database, it can easily be trained against data stored in the database.
@@ -33,7 +34,7 @@ In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Create a stored procedure that generates the model
-> * Perform clustering in SQL Database
+> * Perform clustering
 > * Use the clustering information
 
 In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
@@ -134,10 +135,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -173,7 +175,7 @@ END;
 GO
 ```
 
-## Perform clustering in SQL database
+## Perform clustering
 
 Now that you've created the stored procedure, execute the following script to perform clustering.
 
@@ -232,7 +234,7 @@ When you're finished with this tutorial, you can delete the tpcxbb_1gb database.
 In part four of this tutorial series, you learned how to:
 
 * Create a stored procedure that generates the model
-* Perform clustering in SQL Server
+* Perform clustering with SQL machine learning
 * Use the clustering information
 
 To learn more about using R in Machine Learning Services, see:

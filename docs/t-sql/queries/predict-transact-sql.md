@@ -74,7 +74,7 @@ The DATA parameter is used to specify the data used for scoring or prediction. D
 > [!IMPORTANT]
 > The `RUNTIME = ONNX` argument is only available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) and [Azure SQL Edge](/azure/sql-database-edge/onnx-overview).
 
-Indicates the machine learning engine used for model execution. The Runtime parameter value is always `ONNX`.
+Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`.
 
 **WITH ( <result_set_definition> )**
 

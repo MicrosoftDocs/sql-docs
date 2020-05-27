@@ -59,9 +59,8 @@ HRESULT BCPColFmt(
 -   The length of the optional terminating byte sequence <a href="#terminator_note"><sup>**1**</sup></a>.  
   
 
-<b id="terminator_note"></b>
 > [!IMPORTANT]
-> Using the terminator sequence in scenarios where the data file code page is set to UTF-8 is not supported. In such scenarios, pbUserDataTerm must be set to nullptr and cbUserDataTerm must be set to 0.
+> <b id="terminator_note">[1]:</b> Using the terminator sequence in scenarios where the data file code page is set to UTF-8 is not supported. In such scenarios, **pbUserDataTerm** must be set to `nullptr` and **cbUserDataTerm** must be set to `0`.
 
  Each call to **BCPColFmt** specifies the format for one user-file field. For example, to change the default settings for three fields in a five-field user data file, first call `BCPColumns(5)`, and then call **BCPColFmt** five times, with three of those calls setting your custom format. For the remaining two calls, set *eUserDataType* to BCP_TYPE_DEFAULT, and set *cbIndicator*, *cbUserData*, and *cbUserDataTerm* to 0, BCP_VARIABLE_LENGTH, and 0 respectively. This procedure copies all five columns, three with your customized format and two with the default format.  
   

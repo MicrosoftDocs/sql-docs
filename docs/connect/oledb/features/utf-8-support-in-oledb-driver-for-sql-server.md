@@ -20,12 +20,12 @@ Microsoft OLE DB Driver for SQL Server (version 18.2.1) adds support for the UTF
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 support](../../../relational-databases/collations/collation-and-unicode-support.md#utf8)
 
-Version 18.4.0 of the driver adds support for the UTF-8 client encoding (Enabled with the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings in Windows 10).
+Version 18.4.0 of the driver adds support for the UTF-8 client encoding (enabled with the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings in Windows 10).
 
 > [!NOTE]  
 > Microsoft OLE DB Driver for SQL Server uses the [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) function to determine the encoding of the DBTYPE_STR input buffer.
 >
-> Scenarios in which GetACP returns a UTF-8 encoding (Enabled with the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings in Windows 10) are supported starting with version 18.4. In previous versions, if the buffer needs to store Unicode data, the buffer data type should be set to *DBTYPE_WSTR* (UTF-16 encoded).
+> Scenarios in which GetACP returns a UTF-8 encoding (enabled with the "Use Unicode UTF-8 for worldwide language support" checkbox under Region Settings in Windows 10) are supported starting with version 18.4. In previous versions, if the buffer needs to store Unicode data, the buffer data type should be set to *DBTYPE_WSTR* (UTF-16 encoded).
 
 ## Data insertion into a UTF-8 encoded CHAR or VARCHAR column
 When creating an input parameter buffer for insertion, the buffer is described by using an array of [DBBINDING structures](https://go.microsoft.com/fwlink/?linkid=2071182). Each DBBINDING structure associates a single parameter to the consumer's buffer and contains information such as the length and type of the data value. For an input parameter buffer of type CHAR, the *wType* of the DBBINDING structure should be set to DBTYPE_STR. For an input parameter buffer of type WCHAR, the *wType* of the DBBINDING structure should be set to DBTYPE_WSTR.

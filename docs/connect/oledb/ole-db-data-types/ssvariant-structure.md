@@ -75,12 +75,11 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
-
-## Problems with the sql_variant data type and recovery procedure
-### Problems
+## Known issues
+### Possible narrow string data corruption
 Before version 18.4 of the OLE DB driver, insertion into a `sql_variant` column could result in corruption of data on the server if all of the following conditions were true:
 - Code page of the client didn't match the collation code page of the database.
-- The data to insert contained non-ASCII characters in the client's code page.
+- The client buffer to insert (DBTYPE_STR) contained non-ASCII characters encoded in the client code page.
 - Either of the following conditions were true:
   - The `pwszDataSourceType` field in the `DBPARAMBINDINFO` structure describing the parameter corresponding to the `sql_variant` column was set to `L"DBTYPE_SQLVARIANT"`or `L"sql_variant"`. For details, see: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
 
@@ -89,21 +88,62 @@ Before version 18.4 of the OLE DB driver, insertion into a `sql_variant` column 
 
 More specifically, the OLE DB driver didn't translate data to the collation code page of the database before insertion. However, the driver wrongly indicated to the server that the data was encoded in the collation code page of the database. This behavior resulted in a mismatch between the data and its corresponding code page stored in the `sql_variant` column.
 
-Similarly, upon retrieval of the same value, the OLE DB driver didn't translate strings to the client's code page. However, since the inserted data was already in the client's code page (See the paragraph above), the client applications could interpret the data correctly. Even so, applications using other drivers retrieved these values in corrupted format. The corruption occurred because other drivers (wrongly) interpreted the string in the collation code page of the database and attempted to translate it to the client's code page.
+Similarly, upon retrieval of the same value, the OLE DB driver didn't translate strings to the client code page. However, since the inserted data was already in the client code page (see the paragraph above), the client application could interpret the data correctly. Even so, applications using other drivers retrieved these values in the corrupted format. The corruption occurred because other drivers interpreted the string in the database collation code page and attempted to translate it to the client code page.
 
-Since version 18.4, the OLE DB Driver ensures that the narrow string data are translated to the collation code page of the database before insertion. Similarly, the data is translated back to the client's code page upon retrieval. As a result, clients that rely on the mentioned bug might experience issues while retrieving data that is inserted using an OLE DB driver before version 18.4. The [Recovery procedure](#recovery-procedure) below aims to provide guidance to resolve these issues.
+Starting from version 18.4, the OLE DB Driver translates the narrow strings to the database collation code page before the insertion. Similarly, the driver translates the data back to the client code page upon retrieval. As a result, client applications that rely on the mentioned bug might experience issues while retrieving data that is inserted using an earlier version of the OLE DB Driver. The [recovery procedure](#recovery-procedure) below aims to provide guidance to resolve these issues.
 
 ### Recovery procedure
 > [!IMPORTANT]  
 > Before performing the recovery steps below, make sure you backup your existing data.
 
-If your application experiences issues retrieving `DBTYPE_SQLVARIANT` data type after switching to version 18.4, the following steps need to be taken:
-- Make sure the machine from which recovery is done has the same code page as the machine that inserted the data initially. Ideally, recovery should be done from the same machine.
-- Switch to a version of the driver *before* 18.4.
-- Retrieve data from the `sql_variant` column while specifying `DBTYPE_STR` as the `wType` field in the [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v%3dvs.85)) structure passed to [IAccessor::CreateAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85)). For details, see: [Fetching rows](../ole-db-rowsets/fetching-rows.md).
-- Insert the retrieved data back into the column while specifying `L"DBTYPE_STR"` as the `pwszDataSourceType` field of `DBPARAMBINDINFO` parameter provided to `ICommandWithParameters::SetParameterInfo`. To avoid the problem described in the previous section, the parameterized query *must not* be prepared. For details, see: [Command parameters](../ole-db-commands/command-parameters.md).
-- Once the above steps are done, you should be able switch back to version 18.4 of the driver and retrieve the data properly.
-- *Optional*: Corrupted data previously stored can be removed from the table.
+If your application experiences issues retrieving `DBTYPE_SQLVARIANT` data type after switching to version 18.4, the corrupted data needs to be modified to have the same collation as the database in which the data is stored. The following script can be used to recover a single value from the `sql_variant` column. Since the actual collation of the data isn't stored on the server, you need to hint the server of the actual collation of the data. To do so, you must execute the script within the context of a database that has the same collation code page as the client which initially inserted data. That's why the database from which the query is executed is typically not the same database where the data is stored. As an example, if the corrupted data was initially inserted from a client with code page 932, the following query needs to be executed within the context of a database with a Japanese collation (for example, `Japanese_XJIS_100_CS_AI`).
+
+> [!IMPORTANT]  
+> The following script is just a template and you must adjust it to fit your scenario.
+
+```sql
+/*
+    Description:
+        Template that can be used to recover the corrupted value inserted into the sql_variant column.
+
+    Scenario:
+        Database which contains the corrupted value is named [YourDatabase].
+        Schema is named [dbo].
+        The corrupted value is stored in a column of type sql_variant named [YourColumn].
+        The corrupted value is sql_variant of BaseType char. For details on sql_variant properties, see:
+            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql#arguments
+*/
+
+-- Base type in sql_variant can hold a maximum of 8000 bytes
+-- For details see: 
+--  https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
+DECLARE @bin VARBINARY(8000)
+
+-- In the following lines we convert the sql_variant base type to binary.
+-- <FilterExpression>
+--      Is a place holder and must be replaced with an expression which filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+SET @bin = (SELECT CAST([YourColumn] AS VARBINARY(8000)) FROM [YourDatabase].[dbo].[YourTable] WHERE <FilterExpression>)
+
+-- In the following lines we store the binary value in a fixed size CHAR[59] array.
+-- IMPORTANT NOTE: 
+--      This example assumes corrupted sql_variant value contains a fixed size CHAR[59] array.
+--      You MUST adjust the type (i.e., char/varchar) to match the exact type of the value in your scenario.
+DECLARE @char CHAR(59)
+SET @char = CAST((@bin) AS CHAR(59))
+DECLARE @sqlvariant sql_variant
+
+-- The following lines recover the corrupted value by translating the value to the collation of the database.
+-- <DBCollation>
+--      Must be replaced with the colllation (e.g., Latin1_General_100_CI_AS_SC_UTF8) of the database holding the data.
+SET @sqlvariant = @char collate <DBCollation>
+
+-- Finally, we update the corrupted value with the recovered value.
+-- "<FilterExpression>"
+--      Is a place holder and must be replaced with an expression which filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <FilterExpression>
+```
 
 ## See Also  
  [Data Types &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  

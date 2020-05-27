@@ -1,5 +1,6 @@
 ---
 title: "Stock Charts (Report Builder) | Microsoft Docs"
+description: Display financial or scientific data using up to four values per data point using markers such as lines or triangles in Report Builder.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -69,7 +69,7 @@ landingContent:
           - text: Categorizing customers using k-means clustering
             url: tutorials/r-clustering-model-introduction.md
 
-  - title: ML on Azure SQL Managed Instance
+  - title: Azure SQL Managed Instance
     linkLists:
       - linkListType: overview
         links:
@@ -78,7 +78,7 @@ landingContent:
           - text: Key differences between ML in Azure SQL Managed Instance and SQL Server
             url: /azure/azure-sql/managed-instance/machine-learning-services-differences
 
-  - title: ML on Azure SQL Database Edge
+  - title: Azure SQL Database Edge
     linkLists:
       - linkListType: overview
         links:
@@ -105,7 +105,7 @@ landingContent:
           - text: Import or view models
             url: ../azure-data-studio/machine-learning-extension-import-view-models.md
 
-  - title: ML on Big Data Clusters
+  - title: SQL Server Big Data Clusters
     linkLists:
       - linkListType: overview
         links:
@@ -124,7 +124,7 @@ landingContent:
           - text: Integrate Spark with SQL Server
             url: ../big-data-cluster/spark-mssql-connector.md
 
-  - title: ML on Azure Synapse Analytics
+  - title: Azure Synapse Analytics
     linkLists:
       - linkListType: overview
         links:

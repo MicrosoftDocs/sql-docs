@@ -76,7 +76,6 @@ In the following R script, you'll use the function **kmeans** to perform cluster
 # Output table to hold the customer group mappings.
 # Generate clusters using Kmeans and output key / cluster to a table
 # called return_cluster
-sqlDrop(ch, "return_cluster")
 
 ## create clustering model
 clust <- kmeans(customer_data[,2:5],4)

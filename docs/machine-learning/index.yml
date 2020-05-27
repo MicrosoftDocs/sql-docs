@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page 
   author: dphansen
   ms.author: davidph
-  ms.date: 05/21/2020
+  ms.date: 05/27/2020
 
 landingContent:
   - title: Machine learning on SQL Server
@@ -69,6 +69,42 @@ landingContent:
           - text: Categorizing customers using k-means clustering
             url: tutorials/r-clustering-model-introduction.md
 
+  - title: ML on Azure SQL Managed Instance
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Machine Learning Services in Azure SQL Managed Instance
+            url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+          - text: Key differences between Machine Learning Services in Azure SQL Managed Instance and SQL Server
+            url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+
+  - title: ML on Azure SQL Database Edge
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Machine learning and AI with ONNX in SQL Database Edge
+            url: /azure/sql-database-edge/onnx-overview
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy and make predictions with an ONNX model in SQL Database Edge
+            url: /azure/sql-database-edge/deploy-onnx
+
+
+  - title: Azure Data Studio ML extension
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is the Machine Learning extension for Azure Data Studio?
+            url: ../azure-data-studio/machine-learning-extension.md
+      - linkListType: how-to-guide
+        links:
+          - text: Manage packages in database
+            url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+          - text: Make predictions
+            url: ../azure-data-studio/machine-learning-extension-predictions.md
+          - text: Import or view models
+            url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+
   - title: ML on Big Data Clusters
     linkLists:
       - linkListType: overview
@@ -102,29 +138,3 @@ landingContent:
         links:
           - text: Create, develop, and maintain Azure Synapse Studio notebooks
             url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-
-  - title: Azure Data Studio ML extension
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: What is the Machine Learning extension for Azure Data Studio?
-            url: ../azure-data-studio/machine-learning-extension.md
-      - linkListType: how-to-guide
-        links:
-          - text: Manage packages in database
-            url: ../azure-data-studio/machine-learning-extension-manage-packages.md
-          - text: Make predictions
-            url: ../azure-data-studio/machine-learning-extension-predictions.md
-          - text: Import or view models
-            url: ../azure-data-studio/machine-learning-extension-import-view-models.md
-
-  - title: ML on Azure SQL Database Edge
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Machine learning and AI with ONNX in SQL Database Edge
-            url: /azure/sql-database-edge/onnx-overview
-      - linkListType: how-to-guide
-        links:
-          - text: Deploy and make predictions with an ONNX model in SQL Database Edge
-            url: /azure/sql-database-edge/deploy-onnx

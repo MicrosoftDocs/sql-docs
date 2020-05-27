@@ -32,7 +32,9 @@ For more information about package location and installation paths, see [Get Pyt
 
 ## Prerequisites
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 + You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
+::: moniker-end
 
 + Install [python](https://www.python.org/) on the client computer you use to connect to SQL Server. You also may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
 

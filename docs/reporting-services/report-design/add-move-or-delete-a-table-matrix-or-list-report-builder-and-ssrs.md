@@ -1,5 +1,6 @@
 ---
 title: "Add, Move, or Delete a Table, Matrix, or List (Report Builder) | Microsoft Docs"
+description: Arrange your table or matrix data regions by using the New Table Wizard or New Matrix Wizard in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

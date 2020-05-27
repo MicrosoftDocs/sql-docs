@@ -59,7 +59,7 @@ In the **connStr** function, replace **ServerName** with your own connection inf
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
 
 #Define the query to select data
 input_query <- "
@@ -120,7 +120,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## Load the data into a data frame

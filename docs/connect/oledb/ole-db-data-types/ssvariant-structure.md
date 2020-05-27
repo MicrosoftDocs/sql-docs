@@ -88,7 +88,7 @@ Before version 18.4 of the OLE DB driver, insertion into a `sql_variant` column 
 
 More specifically, the OLE DB driver didn't translate data to the collation code page of the database before insertion. However, the driver wrongly indicated to the server that the data was encoded in the collation code page of the database. This behavior resulted in a mismatch between the data and its corresponding code page stored in the `sql_variant` column.
 
-Similarly, upon retrieval of the same value, the OLE DB driver didn't translate strings to the client code page. However, since the inserted data was already in the client code page (see the paragraph above), the client application could interpret the data correctly. Even so, applications using other drivers retrieved these values in the corrupted format. The corruption occurred because other drivers interpreted the string in the database collation code page and attempted to translate it to the client code page.
+Similarly, upon retrieval of the same value, the OLE DB driver didn't translate strings to the client code page. However, since the inserted data was already in the client code page (see the paragraph above), the client application could interpret the data correctly. Even so, applications using other drivers would retrieve these values in a corrupted format. The corruption occurs because other drivers interpreted the string in the database collation code page and attempted to translate it to the client code page.
 
 Starting from version 18.4, the OLE DB Driver translates the narrow strings to the database collation code page before the insertion. Similarly, the driver translates the data back to the client code page upon retrieval. As a result, client applications that rely on the mentioned bug might experience issues while retrieving data that is inserted using an earlier version of the OLE DB Driver. The [recovery procedure](#recovery-procedure) below aims to provide guidance to resolve these issues.
 
@@ -96,10 +96,10 @@ Starting from version 18.4, the OLE DB Driver translates the narrow strings to t
 > [!IMPORTANT]  
 > Before performing the recovery steps below, make sure you backup your existing data.
 
-If your application experiences issues retrieving `DBTYPE_SQLVARIANT` data type after switching to version 18.4, the corrupted data needs to be modified to have the same collation as the database in which the data is stored. The following script can be used to recover a single value from the `sql_variant` column. Since the actual collation of the data isn't stored on the server, you need to hint the server of the actual collation of the data. To do so, you must execute the script within the context of a database that has the same collation code page as the client which initially inserted data. That's why the database from which the query is executed is typically not the same database where the data is stored. As an example, if the corrupted data was initially inserted from a client with code page 932, the following query needs to be executed within the context of a database with a Japanese collation (for example, `Japanese_XJIS_100_CS_AI`).
+If your application experiences issues retrieving `DBTYPE_SQLVARIANT` data type after switching to version 18.4, the corrupted data needs to be modified to have the same collation as the database in which the data is stored. The following script can be used to recover a single value from the `sql_variant` column. The following script is just a template and you must adjust it to fit your scenario.
 
 > [!IMPORTANT]  
-> The following script is just a template and you must adjust it to fit your scenario.
+> Since the actual collation of the data isn't stored on the server, you need to hint the server of the actual collation of the data. To do so, you must execute the script within the context of a database that has the same collation code page as the client which initially inserted data. That's why the database from which the following script is executed is typically not the same database where the data is stored. As an example, if the corrupted data was initially inserted from a client with code page 932, the following script needs to be executed within the context of a database with a Japanese collation (for example, `Japanese_XJIS_100_CS_AI`).
 
 ```sql
 /*
@@ -127,7 +127,7 @@ SET @bin = (SELECT CAST([YourColumn] AS VARBINARY(8000)) FROM [YourDatabase].[db
 
 -- In the following lines we store the binary value in a fixed size CHAR[59] array.
 -- IMPORTANT NOTE: 
---      This example assumes corrupted sql_variant value contains a fixed size CHAR[59] array.
+--      This example assumes the corrupted sql_variant value contains a fixed size CHAR[59] array.
 --      You MUST adjust the type (i.e., char/varchar) to match the exact type of the value in your scenario.
 DECLARE @char CHAR(59)
 SET @char = CAST((@bin) AS CHAR(59))

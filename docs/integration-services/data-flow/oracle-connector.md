@@ -14,7 +14,7 @@ ms.author: chugu
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-Microsoft Connector for Oracle enables to export data from and load data into Oracle data source in an SSIS package.
+Microsoft Connector for Oracle enables the ability to export data from and load data into Oracle data source in an SSIS package.
 
 ## Version support
 

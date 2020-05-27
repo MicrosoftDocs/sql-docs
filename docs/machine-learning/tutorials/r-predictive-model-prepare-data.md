@@ -54,15 +54,13 @@ Create a new RScript file in RStudio and run the following script. Replace **Ser
 ```r
 #Define the connection string to connect to the TutorialDB database
 connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")

@@ -16,7 +16,7 @@ manager: craigg
 # Check Constraint Expression Dialog Box (Visual Database Tools)
   When you attach a check constraint to a table or column, you must include an SQL expression. Type the check constraint expression in the box provided.  
   
-## UIElement List  
+## UI element list  
  Expression  
  Enter the expression  
   

@@ -1,5 +1,6 @@
 ---
 title: "Shrink a File | Microsoft Docs"
+description: Learn how to shrink a data or log file in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

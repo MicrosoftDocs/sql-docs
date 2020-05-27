@@ -6,9 +6,10 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
+manager: viharp
+ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 5/20/2020
-ms.reviewer: maghan, sstein
 ---
 
 # Download and install Azure Data Studio

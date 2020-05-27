@@ -1,5 +1,6 @@
 ---
 title: "Types of Replication | Microsoft Docs"
+description: Learn about the different types of replication that SQL Server provides for use in distributed applications.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

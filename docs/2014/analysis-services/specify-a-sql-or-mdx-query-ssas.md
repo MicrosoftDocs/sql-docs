@@ -18,7 +18,7 @@ manager: craigg
   
  The query can manipulate the data that is imported. For example, you could join data from different tables or select only rows that meet certain criteria.  
   
-## UIElement List  
+## UI element list  
   
 |||  
 |-|-|  

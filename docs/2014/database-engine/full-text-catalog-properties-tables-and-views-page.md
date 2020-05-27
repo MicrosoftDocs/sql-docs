@@ -16,7 +16,7 @@ manager: craigg
 # Full-Text Catalog Properties (Tables and Views Page)
   Use this dialog page to view or modify the tables and views that are assigned to the full-text catalog.  
   
-## UIElement List  
+## UI element list  
  **All eligible table/view objects in this database**  
  Lists the tables and views that have a unique index defined on them, but are not already a part of the full-text catalog. To select a table or view and assign it to the catalog, select the items in the list box and press the "->" button.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Memory Management Architecture Guide | Microsoft Docs"
+description: Learn about memory management architecture in SQL Server, including changes to memory management in previous versions.
 ms.custom: ""
 ms.date: 01/09/2019
 ms.prod: sql

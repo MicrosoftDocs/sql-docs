@@ -78,24 +78,22 @@ The operating system error information printed in these error messages is the ro
    -  Review the user account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is currently running. You can use the Windows Task Manager to get this information. Look for the "User Name" value for the executable "sqlservr.exe". Also if you recently changed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, know that the supported way to do this operation is to use the SQL Server Configuration Manager utility. More information on this is available at [SQL Server Configuration Manager](../sql-server-configuration-manager.md). 
    -  Depending on the type of operation (opening databases during server startup, attaching a database, database restore, and so on), the account that is used for impersonation and accessing the database file may vary. Review the topic [Securing Data and Log Files](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) to understand which operation sets what permission and to which accounts. Use a tool like Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to understand if the file access is happening under the security context of the SQL Server instance service startup account (or Service SID) or an impersonated account.
 
-If SQL Server is impersonating the user credentials of the login that executes the ALTER DATABASE or CREATE DATABASE operation, you will notice the following information in the Process Monitor tool (an example).
+      If SQL Server is impersonating the user credentials of the login that executes the ALTER DATABASE or CREATE DATABASE operation, you will notice the following information in the Process Monitor tool (an example).
 
-```
-Date & Time:      3/27/2010 8:26:08 PM
-Event Class:        File System
-Operation:          CreateFile
-Result:                ACCESS DENIED
-Path:                  C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\DATA\attach_test.mdf
-TID:                   4288
-Duration:             0.0000366
-Desired Access:Generic Read/Write
-Disposition:        Open
-Options:            Synchronous IO Non-Alert, Non-Directory File, Open No Recall
-Attributes:          N
-ShareMode:       Read
-AllocationSize:   n/a
-Impersonating: DomainName\UserName
-```
+        ```Date & Time:      3/27/2010 8:26:08 PM
+        Event Class:        File System
+        Operation:          CreateFile
+        Result:                ACCESS DENIED
+        Path:                  C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\DATA\attach_test.mdf
+        TID:                   4288
+        Duration:             0.0000366
+        Desired Access:Generic Read/Write
+        Disposition:        Open
+        Options:            Synchronous IO Non-Alert, Non-Directory File, Open No Recall
+        Attributes:          N
+        ShareMode:       Read
+        AllocationSize:   n/a
+        Impersonating: DomainName\UserName```
   
 1. If you are getting ```The system cannot find the file specified``` OS error = 3:
    - Review the complete path from the error message.

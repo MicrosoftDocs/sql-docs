@@ -68,8 +68,8 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Supports the **time**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.<br /><br /> Includes the following members:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) Specifies the scale for *tTime2Val* value.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Supports the **datetime2**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.<br /><br /> Includes the following members:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) Specifies the scale for *tsDataTimeVal* value.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Supports the **datetimeoffset**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.<br /><br /> Includes the following members:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) Specifies the scale for *tsoDateTimeOffsetVal* value.|  
-|NCharVal|No corresponding OLE DB type indicator.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Supports the **nchar** and **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the string to which *pwchNCharVal* points. Does not include terminating zero.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the string to which *pwchNCharVal* points.<br /><br /> *pwchNCharVal* (**WCHAR** \*) Pointer to the string.<br /><br /> *rgbReserved* (**BYTE[5]**) Used internally by driver only.<br /><br /> Unused members: *dwReserved*, and *pwchReserved*.|  
-|CharVal|No corresponding OLE DB type indicator.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Supports the **char** and **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the string to which *pchCharVal* points. Does not include terminating zero.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the string to which *pchCharVal* points.<br /><br /> *pchCharVal* (**CHAR** \*) Pointer to the string.<br /><br /> *rgbReserved* (**BYTE[5]**) Used internally by driver only.<br /><br /> Unused members:<br /><br /> *dwReserved*, and *pwchReserved*.|  
+|NCharVal|No corresponding OLE DB type indicator.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Supports the **nchar** and **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the string to which *pwchNCharVal* points. Does not include terminating zero.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the string to which *pwchNCharVal* points.<br /><br /> *pwchNCharVal* (**WCHAR** \*) Pointer to the string.<br /><br /> *rgbReserved* (**BYTE[5]**) Specifies the collation information.<br /><br /> Unused members: *dwReserved*, and *pwchReserved*.|  
+|CharVal|No corresponding OLE DB type indicator.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Supports the **char** and **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the string to which *pchCharVal* points. Does not include terminating zero.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the string to which *pchCharVal* points.<br /><br /> *pchCharVal* (**CHAR** \*) Pointer to the string.<br /><br /> *rgbReserved* (**BYTE[5]**) Specifies the collation information.<br /><br /> Unused members:<br /><br /> *dwReserved*, and *pwchReserved*.|  
 |BinaryVal|No corresponding OLE DB type indicator.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Supports the **binary** and **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the data to which *prgbBinaryVal* points.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the data to which *prgbBinaryVal* points.<br /><br /> *prgbBinaryVal* (**BYTE** \*) Pointer to the binary data.<br /><br /> Unused member: *dwReserved*.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
@@ -79,9 +79,9 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 ### Possible narrow string data corruption
 Before version 18.4 of the OLE DB driver, insertion into a `sql_variant` column could result in data corruption on the server if all of the following conditions were true:
 - The client machine code page didn't match the database collation code page.
-- The client buffer to insert (DBTYPE_STR) contained non-ASCII characters encoded in the client code page.
+- The client buffer to insert contained non-ASCII narrow string characters encoded in the client code page.
 - Either of the following conditions were true:
-  - The `pwszDataSourceType` field in the `DBPARAMBINDINFO` structure describing the parameter corresponding to the `sql_variant` column was set to `L"DBTYPE_SQLVARIANT"`, `L"sql_variant"`, or `L"DBTYPE_VARIANT"`. For details, see: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
+  - The `pwszDataSourceType` field in the `DBPARAMBINDINFO` structure describing the parameter corresponding to the `sql_variant` column was set to `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"`, or `L"sql_variant"`. For details, see: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
 
     *or*
   - The parameterized SQL query used for insertion was prepared.
@@ -94,12 +94,12 @@ Starting from version 18.4, the OLE DB Driver translates the narrow strings to t
 
 ### Recovery procedure
 > [!IMPORTANT]  
-> Before performing the recovery steps below, make sure you backup your existing data.
+> Before performing the recovery steps below, make sure to back up your existing data.
 
-If your application experiences issues retrieving `DBTYPE_SQLVARIANT` data type after switching to version 18.4, the corrupted data needs to be modified to have the same collation as the database in which the data is stored. The following script can be used to recover a single value from the `sql_variant` column. The following script is just a template and you must adjust it to fit your scenario.
+If your application experiences issues retrieving data from a `sql_variant` column after switching to version 18.4 of the OLE DB driver, the corrupted data needs to be modified to have the same collation as the database in which the data is stored. The following script can be used to recover a single value from a `sql_variant` column. The script is a template and you must adjust it to fit your scenario.
 
 > [!IMPORTANT]  
-> Since the actual collation of the data isn't stored on the server, you need to hint the server of the actual collation of the data. To do so, you must execute the script within the context of a database that has the same collation code page as the client which initially inserted data. That's why the database from which the following script is executed is typically not the same database where the data is stored. As an example, if the corrupted data was initially inserted from a client with code page 932, the following script needs to be executed within the context of a database with a Japanese collation (for example, `Japanese_XJIS_100_CS_AI`).
+> Since the original code page of the data isn't stored, you need to tell the server how the data was initially encoded. To do so, execute the script within the context of a database that has the same code page as the code page of the client which initially inserted the data. For example, if the corrupted data was inserted from a client configured with code page `932`, the following script needs to be executed within the context of a database with a Japanese collation (e.g. `Japanese_XJIS_100_CS_AI`).
 
 ```sql
 /*
@@ -107,11 +107,11 @@ If your application experiences issues retrieving `DBTYPE_SQLVARIANT` data type 
         Template that can be used to recover the corrupted value inserted into the sql_variant column.
 
     Scenario:
-        Database which contains the corrupted value is named [YourDatabase].
+        The database is named [YourDatabase] and it contains a table named [YourTable], which contains the corrupted value.
         Schema is named [dbo].
         The corrupted value is stored in a column of type sql_variant named [YourColumn].
         The corrupted value is sql_variant of BaseType char. For details on sql_variant properties, see:
-            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql#arguments
+            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
 */
 
 -- Base type in sql_variant can hold a maximum of 8000 bytes
@@ -121,26 +121,26 @@ DECLARE @bin VARBINARY(8000)
 
 -- In the following lines we convert the sql_variant base type to binary.
 -- <FilterExpression>
---      Is a place holder and must be replaced with an expression which filters a single corrupted value to be recovered.
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
 --      Therefore, the expression must result in a single value being returned only.
 SET @bin = (SELECT CAST([YourColumn] AS VARBINARY(8000)) FROM [YourDatabase].[dbo].[YourTable] WHERE <FilterExpression>)
 
--- In the following lines we store the binary value in a fixed size CHAR[59] array.
+-- In the following lines we store the binary value in char(59) (a fixed-size character data type).
 -- IMPORTANT NOTE: 
---      This example assumes the corrupted sql_variant value contains a fixed size CHAR[59] array.
---      You MUST adjust the type (i.e., char/varchar) to match the exact type of the value in your scenario.
+--      This example assumes the corrupted sql_variant's base type is char(59).
+--      You MUST adjust the type (that is, char/varchar) and size to match your scenario exactly.
 DECLARE @char CHAR(59)
 SET @char = CAST((@bin) AS CHAR(59))
 DECLARE @sqlvariant sql_variant
 
 -- The following lines recover the corrupted value by translating the value to the collation of the database.
 -- <DBCollation>
---      Must be replaced with the colllation (e.g., Latin1_General_100_CI_AS_SC_UTF8) of the database holding the data.
+--      Must be replaced with the collation (for example, Latin1_General_100_CI_AS_SC_UTF8) of the database holding the data.
 SET @sqlvariant = @char collate <DBCollation>
 
 -- Finally, we update the corrupted value with the recovered value.
 -- "<FilterExpression>"
---      Is a place holder and must be replaced with an expression which filters a single corrupted value to be recovered.
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
 --      Therefore, the expression must result in a single value being returned only.
 UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <FilterExpression>
 ```

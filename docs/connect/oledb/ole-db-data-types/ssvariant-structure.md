@@ -90,7 +90,7 @@ More specifically, the OLE DB driver didn't translate data to the collation code
 
 Similarly, upon retrieval of the same value, the OLE DB driver didn't translate strings to the client code page. However, since the inserted data was already in the client code page (see the paragraph above), the client application could interpret the data correctly. Even so, applications using other drivers would retrieve these values in a corrupted format. The corruption occurs because other drivers interpreted the string in the database collation code page and attempted to translate it to the client code page.
 
-Starting from version 18.4, the OLE DB Driver translates the narrow strings to the database collation code page before the insertion. Similarly, the driver translates the data back to the client code page upon retrieval. As a result, client applications that rely on the mentioned bug might experience issues while retrieving data that is inserted using an earlier version of the OLE DB Driver. The [recovery procedure](#recovery-procedure) below aims to provide guidance to resolve these issues.
+Starting from version 18.4, the OLE DB Driver translates the narrow strings to the database collation code page before the insertion. Similarly, the driver translates the data back to the client code page upon retrieval. As a result, client applications that rely on the bug mentioned above might experience issues while retrieving data that is inserted using an earlier version of the OLE DB Driver. The [recovery procedure](#recovery-procedure) below aims to provide guidance to resolve these issues.
 
 ### Recovery procedure
 > [!IMPORTANT]  

@@ -80,7 +80,8 @@ The operating system error information printed in these error messages is the ro
 
 If SQL Server is impersonating the user credentials of the login that executes the ALTER DATABASE or CREATE DATABASE operation, you will notice the following information in the Process Monitor tool (an example).
 
-```Date & Time:      3/27/2010 8:26:08 PM
+```
+Date & Time:      3/27/2010 8:26:08 PM
 Event Class:        File System
 Operation:          CreateFile
 Result:                ACCESS DENIED
@@ -93,7 +94,8 @@ Options:            Synchronous IO Non-Alert, Non-Directory File, Open No Recall
 Attributes:          N
 ShareMode:       Read
 AllocationSize:   n/a
-Impersonating: DomainName\UserName```
+Impersonating: DomainName\UserName
+```
   
 1. If you are getting ```The system cannot find the file specified``` OS error = 3:
    - Review the complete path from the error message.
@@ -104,6 +106,7 @@ Impersonating: DomainName\UserName```
      - If the database file associated with the error belongs to a secondary filegroup, then you can optionally mark that filegroup offline, bring the database online, and then perform a restore of that filegroup alone. For more information, refer to the OFFLINE section of the topic [ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
      - If the file that produced the error is a transaction log file, review the information under the sections "FOR ATTACH" and "FOR ATTACH_REBUILD_LOG" of the topic [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) to understand how you can recreate the missing transaction log files.
    - Ensure that any disk or network location [like iSCSI drive] is available before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to access the database files on these locations. If needed create the required dependencies in Cluster Administrator or Service Control Manager.
+
 1. If you're getting the ```The process cannot access the file because it is being used by another process``` operating system error = 32:
    - Use a tool like [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) or [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file.
    - Stop that process from accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database files. Common examples include anti-virus programs (see guidance for file exclusions in the following [KB article](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).

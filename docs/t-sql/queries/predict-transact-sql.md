@@ -1,7 +1,7 @@
 ---
 title: "PREDICT (Transact-SQL)"
 ms.custom: ""
-ms.date: "05/11/2020"
+ms.date: "05/27/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -33,7 +33,8 @@ For more information, see [Native scoring using the PREDICT T-SQL function](../.
 PREDICT  
 (  
   MODEL = @model | model_literal,  
-  DATA = object AS <table_alias>  
+  DATA = object AS <table_alias>
+  [, RUNTIME = ONNX ]
 )  
 WITH ( <result_set_definition> )  
 
@@ -52,7 +53,7 @@ MODEL = @model | model_literal
 
 ### Arguments
 
-**model**
+**MODEL**
 
 The `MODEL` parameter is used to specify the model used for scoring or prediction. The model is specified as a variable or a literal or a scalar expression.
 
@@ -64,17 +65,16 @@ The model object can be created by using R or Python or another tool.
 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) is the supported model format for Azure Synapse.
 ::: moniker-end
 
-**data**
+**DATA**
 
 The DATA parameter is used to specify the data used for scoring or prediction. Data is specified in the form of a table source in the query. Table source can be a table, table alias, CTE alias, view, or table-valued function.
 
-<!-- This should likely be removed - TBD
-**parameters**
+**RUNTIME = ONNX**
 
-The PARAMETERS parameter is used to specify optional user-defined parameters used for scoring or prediction.
+> [!IMPORTANT]
+> The `RUNTIME = ONNX` argument is only available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) and [Azure SQL Edge](/azure/sql-database-edge/onnx-overview).
 
-The name of each parameter is specific to the model type. For example, the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in RevoScaleR supports the parameter `@computeResiduals`, which indicates whether residuals should be computed when scoring a logistic regression model. If you are calling a compatible model, you could pass that parameter name and a TRUE or FALSE value to the `PREDICT` function.
--->
+Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`.
 
 **WITH ( <result_set_definition> )**
 
@@ -99,11 +99,14 @@ The `PREDICT` function is supported in all editions of SQL Server 2017 or later,
 
 ### Supported algorithms
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 The model that you use must have been created using one of the supported algorithms from the RevoScaleR package. For a list of currently supported models, see [Real-time scoring](../../machine-learning/real-time-scoring.md).
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 Algorithms that can be converted to [ONNX](https://onnx.ai/) model format are supported.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Algorithms that can be converted to [ONNX](https://onnx.ai/) model format and models that you have been created using one of the supported algorithms from the RevoScaleR package are supported.
 ::: moniker-end
 
 ### Permissions

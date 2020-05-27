@@ -80,7 +80,8 @@ The operating system error information printed in these error messages is the ro
 
       If SQL Server is impersonating the user credentials of the login that executes the ALTER DATABASE or CREATE DATABASE operation, you will notice the following information in the Process Monitor tool (an example).
 
-        ```Date & Time:      3/27/2010 8:26:08 PM
+        ```
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -93,7 +94,8 @@ The operating system error information printed in these error messages is the ro
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
 1. If you are getting ```The system cannot find the file specified``` OS error = 3:
    - Review the complete path from the error message.

@@ -6,14 +6,27 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.reviewer: maghan, sstein
+manager: viharp
+ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 05/20/2020
+ms.date: 05/27/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## May 2020 (hotfix)
+
+May 27, 2020 &nbsp; / &nbsp; version: 1.18.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #10538 "Run Current Query" keybind no longer behaving as expected | [#10538](https://github.com/microsoft/azuredatastudio/issues/10538)  |
+| Fix bug #10537 Unable to open new or existing sql files on v1.18 | [#10537](https://github.com/microsoft/azuredatastudio/issues/10537)  |
+| &nbsp; | &nbsp; |
 
 ## May 2020
 

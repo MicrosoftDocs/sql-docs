@@ -1,5 +1,6 @@
 ---
 title: "Peer-to-Peer Transactional Replication | Microsoft Docs"
+description: In SQL Server, peer-to-peer replication provides a scale-out and high-availability solution by maintaining copies of data across multiple server instances.
 ms.custom: ""
 ms.date: "08/29/2016"
 ms.prod: sql

@@ -16,7 +16,7 @@ manager: craigg
 # Options (Environment-General Page)
   Use the **Options** dialog box to configure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startup actions, general window management options, and other general settings. On the **Tools** menu, click **Options**, expand the **Environment** folder, and then click **General**.  
   
-## UIElement List  
+## UI element list  
  **At startup**  
  Select the action for [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to perform when it is started. The options are:  
   

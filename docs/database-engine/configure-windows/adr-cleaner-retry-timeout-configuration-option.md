@@ -1,7 +1,7 @@
 ---
 title: " ADR cleaner retry timeout (min) configuration option | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/19/2020"
+ms.date: "06/01/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: configuration
@@ -12,6 +12,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # ADR cleaner retry timeout (min) configuration option
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Introduced in SQL Server 2019.
 

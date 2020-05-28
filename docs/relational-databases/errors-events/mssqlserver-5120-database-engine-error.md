@@ -70,14 +70,14 @@ To resolve, follow these steps:
 1. Use the -T startup option to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this startup option to turn on trace flag 1802 in [SQL Server Configuration Manager](../sql-server-configuration-manager.md) (see [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) for information on 1802). For more information about how to change the startup parameters, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 2. Use the following command to detach the database.
-```tsql
- exec sp_detach_db DatabaseName
- go 
-```
+   ```tsql
+    exec sp_detach_db DatabaseName
+    go 
+   ```
 
 3. Use the following command to reattach the database.
-```tsql
-exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
-go
-```
+   ```tsql
+   exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
+   go
+   ```
  

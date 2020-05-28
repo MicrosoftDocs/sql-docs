@@ -41,7 +41,8 @@ If you are getting the ```Access is Denied``` operating system error = 5, consid
 
       If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is impersonating the user credentials of the login that executes the ALTER DATABASE or CREATE DATABASE operation, you will notice the following information in the Process Monitor tool (an example).
       
-        ```Date & Time:      3/27/2010 8:26:08 PM
+        ```
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -54,7 +55,8 @@ If you are getting the ```Access is Denied``` operating system error = 5, consid
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
   
 ### Attaching files that reside on a network-attached storage  

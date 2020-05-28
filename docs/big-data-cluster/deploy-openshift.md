@@ -41,10 +41,10 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    oc new-project <namespaceName>
    ```
 
-3. Assign the custom scc to the default user within the namespace:
+3. Assign the custom scc to the service accounts for users within the namespace where BDC is deployed:
 
    ```console
-   oc adm policy add-scc-to-user bdc-scc -z default -n <namespaceName>
+   oc adm policy add-scc-to-group bdc-scc system:serviceaccounts:<namespaceName>
    ```
 
 4. Assign appropriate permission to the user deploying BDC. Do one of the following. 

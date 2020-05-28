@@ -2,10 +2,10 @@
 title: Troubleshoot `pyspark` notebook
 titleSuffix: SQL Server Big Data Cluster
 description: Troubleshoot `pyspark` notebook
-author: MikeRayMSFT
-ms.author: mikeray
+author: DaniBunny
+ms.author: dacoelho
 ms.reviewer: mikeray
-ms.date: 05/15/2020
+ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster

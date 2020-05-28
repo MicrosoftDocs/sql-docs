@@ -5,19 +5,27 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/01/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
 # Get Python package information
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-This article describes how to get information about installed Python packages, including versions and installation locations, on SQL Server Machine Learning Services. Example Python scripts show you how to list package information such as installation path and version.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+This article describes how to get information about installed Python packages, including versions and installation locations, on [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). Example Python scripts show you how to list package information such as installation path and version.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+This article describes how to get information about installed Python packages, including versions and installation locations, on [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Example Python scripts show you how to list package information such as installation path and version.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+This article describes how to get information about installed Python packages, including versions and installation locations, on [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). Example Python scripts show you how to list package information such as installation path and version.
+::: moniker-end
 
 ## Default Python library location
 
@@ -119,7 +127,7 @@ EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
 import pkg_resources
-pkg_name = "pandas"
+pkg_name = "scikit-learn"
 try:
     version = pkg_resources.get_distribution(pkg_name).version
     print("Package " + pkg_name + " is version " + version)
@@ -131,19 +139,7 @@ except:
 Result:
 
 ```text
-STDOUT message(s) from external script: Package pandas is version 0.23.4
-```
-
-The following example prints the version of the package `pandas`.
-
-```sql
-EXECUTE sp_execute_external_script
-  @language = N'Python',
-  @script = N'
-import pkg_resources
-pkg_name = "pandas"
-print(pkg_name + " package is version " + pkg_resources.get_distribution(pkg_name).version)
-'
+STDOUT message(s) from external script: Package scikit-learn is version 0.20.2
 ```
 
 The following example returns the version of Python.
@@ -159,9 +155,9 @@ print(sys.version)
 
 ## Next steps
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 + [Install packages with Python tools](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [Install new Python packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

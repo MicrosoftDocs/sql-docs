@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "dynamic ports [SQL Server]"
   - "TCP/IP [SQL Server], port numbers"
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure a Server to Listen on a Specific TCP Port
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

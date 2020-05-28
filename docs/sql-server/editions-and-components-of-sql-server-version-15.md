@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"
@@ -32,7 +32,6 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: rothj
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]

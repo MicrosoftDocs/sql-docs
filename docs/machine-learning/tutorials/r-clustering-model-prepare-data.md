@@ -1,43 +1,44 @@
 ---
 title: "Tutorial: Prepare data to perform clustering in R"
 titleSuffix: SQL machine learning
-description: In part two of this four-part tutorial series, you'll prepare the data from a SQL database to perform clustering in R with SQL machine learning.
+description: In part two of this four-part tutorial series, you'll prepare the data from a database to perform clustering in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-
 # Tutorial: Prepare data to perform clustering in R with SQL machine learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll prepare the data from a SQL database to perform clustering in R with SQL Database Machine Learning Services or on Big Data Clusters.
+In part two of this four-part tutorial series, you'll prepare the data from a database to perform clustering in R with SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll prepare the data from a SQL database to perform clustering in R with SQL Database Machine Learning Services.
+In part two of this four-part tutorial series, you'll prepare the data from a database to perform clustering in R with SQL Server Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In part two of this four-part tutorial series, you'll prepare the data from a SQL database to perform clustering in R with SQL Database R Services.
+In part two of this four-part tutorial series, you'll prepare the data from a database to perform clustering in R with SQL Server 2016 R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll prepare the data from a database to perform clustering in R with Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Separate customers along different dimensions using R
-> * Load the data from the SQL database into an R data frame
+> * Load the data from the database into an R data frame
 
 In [part one](r-clustering-model-introduction.md), you installed the prerequisites and restored the sample database.
 
 In [part three](r-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in R.
 
-In [part four](r-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in R based on new data.
+In [part four](r-clustering-model-deploy.md), you'll learn how to create a stored procedure in a database that can perform clustering in R based on new data.
 
 ## Prerequisites
 
@@ -58,9 +59,9 @@ In the **connStr** function, replace **ServerName** with your own connection inf
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -119,7 +120,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## Load the data into a data frame
@@ -127,7 +128,7 @@ LEFT OUTER JOIN (
 Now use the following script to return the results from the query to an R data frame.
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -136,7 +137,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -160,7 +161,7 @@ If you're not going to continue with this tutorial, delete the tpcxbb_1gb databa
 In part two of this tutorial series, you learned how to:
 
 * Separate customers along different dimensions using R
-* Load the data from the SQL database into an R data frame
+* Load the data from the database into an R data frame
 
 To create a machine learning model that uses this customer data, follow part three of this tutorial series:
 

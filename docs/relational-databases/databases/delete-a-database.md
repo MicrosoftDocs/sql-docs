@@ -1,5 +1,6 @@
 ---
 title: "Delete a Database | Microsoft Docs"
+description: Learn how to delete a user-defined database in SQL Server Management Studio in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

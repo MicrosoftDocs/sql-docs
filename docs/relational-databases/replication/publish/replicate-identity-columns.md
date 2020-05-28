@@ -1,5 +1,6 @@
 ---
 title: "Replicate Identity Columns | Microsoft Docs"
+description: In SQL Server, replication handles identity columns across all publication and subscription types. Manage columns manually or have replication manage them.
 ms.custom: ""
 ms.date: "10/04/2016"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Drop XML Indexes | Microsoft Docs"
+description: Learn how the DROP INDEX Transact-SQL statement can be used to drop existing primary or secondary XML and non-XML indexes.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

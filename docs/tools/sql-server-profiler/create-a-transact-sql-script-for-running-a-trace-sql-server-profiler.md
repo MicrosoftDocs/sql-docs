@@ -1,6 +1,7 @@
 ---
 title: Create a Transact-SQL Script for Running a Trace
 titleSuffix: SQL Server Profiler
+description: Find out how to create a Transact-SQL script from an existing trace file or table in SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

@@ -21,7 +21,7 @@ manager: craigg
 > [!NOTE]  
 >  When selecting a database in this page, the credentials of the user specified are used. However, import will not succeed if the user specified in the Impersonation Information page does not have sufficient privileges to read from the selected database.  
   
-## UIElement List  
+## UI element list  
  **Friendly connection name**  
  Type a unique name for this data source connection. This is a required field.  
   

@@ -19,7 +19,7 @@ manager: craigg
 ## Stand-Alone Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The following table lists the supported storage types and the default directories for a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are user configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
-## UIElement List  
+## UI element list  
   
 |Description|Supported Storage Type|Default directory|Recommendations|  
 |-----------------|----------------------------|-----------------------|---------------------|  

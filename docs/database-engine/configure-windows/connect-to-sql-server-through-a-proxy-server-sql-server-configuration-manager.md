@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Microsoft Proxy Server [SQL Server]"
   - "local address tables [SQL Server]"
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Connect to SQL Server Through a Proxy Server (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

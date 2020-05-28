@@ -6,14 +6,42 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.reviewer: maghan, sstein
+manager: viharp
+ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 04/30/2020
+ms.date: 05/27/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## May 2020 (hotfix)
+
+May 27, 2020 &nbsp; / &nbsp; version: 1.18.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #10538 "Run Current Query" keybind no longer behaving as expected | [#10538](https://github.com/microsoft/azuredatastudio/issues/10538)  |
+| Fix bug #10537 Unable to open new or existing sql files on v1.18 | [#10537](https://github.com/microsoft/azuredatastudio/issues/10537)  |
+| &nbsp; | &nbsp; |
+
+## May 2020
+
+May 20, 2020 &nbsp; / &nbsp; version: 1.18.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Announcing Redgate SQL Prompt extension | This extension lets you manage formatting styles directly within Azure Data Studio, so you can create and edit your styles without leaving the IDE. |
+| Announcing Machine Learning Extension | This extension enables you to: <br/> &bull; &nbsp; Manage Python and R packages with SQL Server machine learning services with Azure Data Studio.<br/> &bull; &nbsp; Use ONNX model to make predictions in Azure SQL Edge.<br/> &bull; &nbsp; View ONNX models in an Azure SQL Edge database. <br/> &bull; &nbsp; Import ONNX models from a file or Azure Machine Learning into Azure SQL Edge database. <br/> &bull; &nbsp; Create a notebook to run experiments. |
+| New notebook features | &bull; &nbsp; Added new Python Dependencies Wizard to make it easier to install Python dependencies <br/> &bull; &nbsp; Added underline support for Markdown Toolbar |
+| Parameterization for Always Encrypted | Allows you to run queries that insert, update or filter by encrypted database columns.|
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## April 2020 (hotfix)
 
@@ -186,7 +214,7 @@ October 2, 2019 &nbsp; / &nbsp; version: 1.12.0
 ### Known Issues
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
 ## September 2019
 
@@ -206,8 +234,7 @@ September 10, 2019 &nbsp; / &nbsp; version: 1.11.0
 ### Known Issues
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
-
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
 ## August 2019
 
@@ -778,7 +805,7 @@ The *December Public Preview* includes several bugs fixes across all feature are
 
 November 15, 2017 &nbsp; / &nbsp; version: 0.23.6
 
-- Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+- Initial release of Azure Data Studio.
 
 ## Next Steps
 
@@ -788,6 +815,6 @@ See one of the following quickstarts to get started:
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
 
-Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+Contribute to Azure Data Studio:
 
 - [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio)

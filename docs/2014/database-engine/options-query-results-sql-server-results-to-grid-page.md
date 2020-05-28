@@ -16,7 +16,7 @@ manager: craigg
 # Options (Query Results-SQL Server-Results to Grid Page)
   Use this page to specify the options for displaying a query result set in grid format. Changes to these options are applied only to new [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries. To change the options for the current queries, click **Query Options** on the **Query** menu, or right-click in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query window and select **Query Options**. In the left pane of the **Query Options** dialog box, under **Results**, click **Grid**.  
   
-## UIElement List  
+## UI element list  
  **Include the query in the result set**  
  Returns the text of the query as part of the query output.  
   

@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.date: 05/08/2020
-monikerRange: "=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || sql-server-2014 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
 # Previous versions of SQL Server documentation
@@ -29,7 +29,7 @@ There is offline documentation for several older versions of SQL Server.
 
 To access offline content for SQL Server versions 2012 and later, see [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md).
 
-> [!Tip]
+> [!IMPORTANT]
 > SQL 2014 Transact-SQL content is only available offline.
 
 ## Lifecycle policy
@@ -40,7 +40,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## Next steps
 
-- [SQL Server Documentation](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 documentation](../2014/2014-toc/index.yml?view=sql-server-2014).
-- [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/)
+- [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 online documentation](../2014/2014-toc/index.yml?view=sql-server-2014)
+- [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

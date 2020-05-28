@@ -1,6 +1,6 @@
 ---
 title: "Display data & log space info for a database"
-ms.custom: ""
+description: Learn how to display the data and log space information for a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

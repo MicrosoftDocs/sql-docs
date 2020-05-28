@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 01/10/2020
+ms.date: 05/27/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -566,7 +566,7 @@ The database is available for read and write operations.
 To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]
-> On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.
+> On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
 
 **\<db_user_access_option> ::=**     
 Controls user access to the database.
@@ -600,13 +600,13 @@ You can determine this option's status by examining the `user_access` column in 
 Controls whether transactions commit fully durable or delayed durable.
 
 DISABLED     
-All transactions following SET DISABLED are fully durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET DISABLED` are fully durable. Any durability options set in an atomic block or commit statement are ignored.
 
 ALLOWED     
-All transactions following SET ALLOWED are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
+All transactions following `SET ALLOWED` are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
 
 FORCED     
-All transactions following SET FORCED are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET FORCED` are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
 
 **\<external_access_option> ::=**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -755,9 +755,13 @@ MAX_STORAGE_SIZE_MB
 Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
 
 > [!NOTE]
-> MAX_STORAGE_SIZE_MB limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the DATA_FLUSH_INTERVAL_SECONDS option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
-> If the Query Store has breached the MAX_STORAGE_SIZE_MB limit between storage size checks, it will transition to read-only mode. If SIZE_BASED_CLEANUP_MODE is enabled, the cleanup mechanism to enforce the MAX_STORAGE_SIZE_MB limit is also triggered.
+> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
+> If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered.
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
+
+> [!IMPORTANT]
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 INTERVAL_LENGTH_MINUTES     
 Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
@@ -789,7 +793,7 @@ NONE
 Stop capturing new queries. The Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
 CUSTOM     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Allows control over the QUERY_CAPTURE_POLICY options.
 
@@ -799,7 +803,7 @@ MAX_PLANS_PER_QUERY
 Defines the maximum number of plans maintained for each query. The default is 200. MAX_PLANS_PER_QUERY is type **int**.
 
 **\<query_capture_policy_option_list> :: =**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Controls the Query Store capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
 
@@ -1744,7 +1748,7 @@ The database is available for read and write operations.
 To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]
-> On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.
+> On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
 
 **\<db_user_access_option> ::=**     
 Controls user access to the database.
@@ -1761,13 +1765,13 @@ You can determine this option's status by examining the `user_access` column in 
 Controls whether transactions commit fully durable or delayed durable.
 
 DISABLED     
-All transactions following SET DISABLED are fully durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET DISABLED` are fully durable. Any durability options set in an atomic block or commit statement are ignored.
 
 ALLOWED     
-All transactions following SET ALLOWED are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
+All transactions following `SET ALLOWED` are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
 
 FORCED     
-All transactions following SET FORCED are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET FORCED` are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
 
 **\<PARAMETERIZATION_option> ::=**     
 Controls the parameterization option.
@@ -1808,9 +1812,16 @@ MAX_STORAGE_SIZE_MB
 Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
 
 > [!NOTE]
-> MAX_STORAGE_SIZE_MB limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the DATA_FLUSH_INTERVAL_SECONDS option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
-> If the Query Store has breached the MAX_STORAGE_SIZE_MB limit between storage size checks, it will transition to read-only mode. If SIZE_BASED_CLEANUP_MODE is enabled, the cleanup mechanism to enforce the MAX_STORAGE_SIZE_MB limit is also triggered.
+> `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+
+> [!NOTE]
+> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
+> If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered.
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
+
+> [!IMPORTANT]
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 INTERVAL_LENGTH_MINUTES     
 Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
@@ -2493,13 +2504,13 @@ You can determine this option's status by examining the user_access column in th
 Controls whether transactions commit fully durable or delayed durable.
 
 DISABLED     
-All transactions following SET DISABLED are fully durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET DISABLED` are fully durable. Any durability options set in an atomic block or commit statement are ignored.
 
 ALLOWED     
-All transactions following SET ALLOWED are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
+All transactions following `SET ALLOWED` are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
 
 FORCED     
-All transactions following SET FORCED are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET FORCED` are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
 
 **\<PARAMETERIZATION_option> ::=**     
 Controls the parameterization option.
@@ -2538,6 +2549,15 @@ Determines the frequency at which data written to the Query Store is persisted t
 
 MAX_STORAGE_SIZE_MB     
 Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
+
+> [!NOTE]
+> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
+> If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered.
+> Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
+
+> [!IMPORTANT]
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 INTERVAL_LENGTH_MINUTES     
 Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.

@@ -182,7 +182,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
 
-1. Pull the SQL Server 2019 Linux container image from Docker Hub.
+1. Pull the SQL Server 2019 Linux container image from Microsoft Container Registry.
 
    ::: zone pivot="cs1-bash"
    ```bash

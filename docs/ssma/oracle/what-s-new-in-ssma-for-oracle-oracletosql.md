@@ -1,5 +1,6 @@
 ---
 title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for Oracle (AccessToSQL) for each release.
 authors: "HJToland3;nahk-ivanov"
 
 ms.prod: sql

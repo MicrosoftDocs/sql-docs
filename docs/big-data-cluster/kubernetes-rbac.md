@@ -20,7 +20,7 @@ This following section describes the permissions required for the users managing
 
 ## Role required for deployment
 
-BDC control plane uses service account, `sa-mssql-controller` to orchestrate the provisioning of the cluster pods, services, high availability, monitoring, etc. When BDC deployment starts (for example, `azdata bdc create`), `azdata` does the following following:
+BDC uses service accounts (such as `sa-mssql-controller` or `master`) to orchestrate the provisioning of the cluster pods, services, high availability, monitoring, etc. When BDC deployment starts (for example, `azdata bdc create`), `azdata` does the following following:
 
 1. Checks if provided namespace exists.
 2. If it does not exist, it creates one and applies the `MSSQL_CLUSTER` label.
@@ -126,6 +126,4 @@ You can customize the these settings in  the security section in the `control.js
   }
 ```
 
-If these settings are set to `false`, there is not going to be an attempt to create the service account, cluster role, and the binding for Telegraf.
-
-## Next steps
+If these settings are set to `false`, BDC deployemnt workflow will not attempt to create the service account, cluster role, and the binding for Telegraf.

@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_4104 | Microsoft Docs"
+description: The specified multi-part identifier could not be mapped to an existing entity. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql

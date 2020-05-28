@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_208 | Microsoft Docs"
+description: The specified object cannot be found, giving rise to an invalid object name message. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql

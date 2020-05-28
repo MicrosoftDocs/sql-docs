@@ -15,9 +15,18 @@ ms.technology: big-data-cluster
 
 This article demonstrates how to troubleshoot a `pyspark` notebook that fails.
 
-## Background
+## Architecture of a PySpark job under Azure Data Studio
 
-Azure Data Studio communicates with the `livy` endpoint which in turn issues `spark-submit` commands. The `spark-submit` command has a parameter to use YARN as the spark cluster manager.
+Azure Data Studio communicates with the `livy` endpoint on SQL Server BDC. 
+
+The `livy` endpoint issues `spark-submit` commands within the BDC cluster. Each `spark-submit` command has a parameter that specifies YARN as the cluster resource manager.
+
+To efficiently troubleshoot your PySpark session you will collect and review logs within each layer: Livy, YARN and Spark.
+
+This troubleshooting steps require that you have:
+
+1. `azdata` installed and with configuration correctly set to your cluster.
+2. Familiarity with running Linux commands and some log troubleshooting skills.
 
 ## Troubleshooting steps
 
@@ -35,7 +44,7 @@ Azure Data Studio communicates with the `livy` endpoint which in turn issues `sp
    - `<ip_address>`: Big data cluster endpoint
    - `<username>`: Your big data cluster username
    - `<namespace>`: The Kubernetes namespace for your cluster
-   - `<folder_to_copy_logs>`: The path where you want your logs copied to
+   - `<folder_to_copy_logs>`: The local folder path where you want your logs copied to
 
    ```console
    azdata login --auth basic --username <username> --endpoint https://<ip_address>:30080
@@ -84,7 +93,7 @@ Azure Data Studio communicates with the `livy` endpoint which in turn issues `sp
 
 1. Review the YARN UI
 
-   Get YARN endpoint from Azure Data Studio big data cluster. or run `azdata bdc endpoint list –o table`.
+   Get the YARN endpoint URL from the Azure Data Studio big data cluster management dashboard or run `azdata bdc endpoint list –o table`.
 
    For example:
 
@@ -117,7 +126,13 @@ Azure Data Studio communicates with the `livy` endpoint which in turn issues `sp
 
 1. Review the YARN application logs.
 
-   Get application log for the app. Use `kubectl` to connect to the `sparkhead-0` pod, and run this command:
+   Get application log for the app. Use `kubectl` to connect to the `sparkhead-0` pod, for example:
+   
+   ```console
+   kubectl exec -it sparkhead-0 -- /bin/bash
+   ```
+      
+   And then run this command within that shell using the right `application_id`:
 
    ```console
    yarn logs -applicationId application_<application_id>

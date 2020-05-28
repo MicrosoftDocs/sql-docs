@@ -26,7 +26,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 > [!IMPORTANT]
 > Below pre-requisites must be performed by a OpenShift cluster admin (cluster-admin cluster role) that has sufficient permissions to create these cluster level objects. For more information on cluster roles in OpenShift see here: https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html
 
-1. Create a custom security context constraint (scc) using the attached [`bdc-scc.yaml`](<!---Link To sample>)
+1. Create a custom security context constraint (scc) using the attached [`bdc-scc.yaml`](#bdc-sccyml-file).
 
    ```console
    oc apply -f bdc-scc.yaml
@@ -133,6 +133,50 @@ The name of the default storage class in ARO is managed-premium (as opposed to A
         "accessMode": "ReadWriteOnce",
         "size": "10Gi"
       }
+```
+
+## `bdc-scc.yml` file
+
+```yml
+allowHostDirVolumePlugin: false
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowPrivilegeEscalation: true
+allowPrivilegedContainer: false
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+apiVersion: security.openshift.io/v1
+defaultAddCapabilities: null
+fsGroup:
+  type: MustRunAs
+kind: SecurityContextConstraints
+metadata:
+  annotations:
+    kubernetes.io/description: SQL Server BDC Nonroot scc is based on 'restricted' scc plus additional capabilities.
+  generation: 2
+  name: bdc-restricted-scc
+readOnlyRootFilesystem: false
+requiredDropCapabilities:
+- KILL
+- MKNOD
+runAsUser:
+  type: MustRunAsNonRoot
+seLinuxContext:
+  type: MustRunAs
+supplementalGroups:
+  type: MustRunAs
+volumes:
+- configMap
+- downwardAPI
+- emptyDir
+- persistentVolumeClaim
+- projected
+- secret
 ```
 
 ## Next steps

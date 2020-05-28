@@ -41,13 +41,14 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 
 If you already have a Kubernetes cluster that meets the above prerequisites, then you can skip directly to the [deployment step](#deploy). This section assumes a basic understanding of Kubernetes concepts.  For detailed information on Kubernetes, see the [Kubernetes documentation](https://kubernetes.io/docs/home).
 
-You can choose to deploy Kubernetes in any of three ways:
+You can choose to deploy Kubernetes the following ways:
 
 | Deploy Kubernetes on: | Description | Link |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
 | **Single or Multiple machines (`kubeadm`)** | A Kubernetes cluster deployed on physical or virtual machines using `kubeadm` | [Instructions](deploy-with-kubeadm.md) |
-
+| **Azure Red Hat OpenShift** | A managed offering of OpenShift running in Azure. | [Instructions](missing-link.md)|
+|**Red Hat OpenShift**|A hybrid cloud, enterprise Kubernetes application platform.| [Instructions](missing-link.md)|
 > [!TIP]
 > You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](notebooks-deploy.md).
 

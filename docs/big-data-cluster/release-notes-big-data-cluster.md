@@ -36,6 +36,7 @@ This section explains platforms that are supported with BDC.
 |Platform|Supported versions|
 |---------|---------|
 |Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
+|OpenShift| |
 |Ubuntu|16.04|
 
 ### SQL Server Editions

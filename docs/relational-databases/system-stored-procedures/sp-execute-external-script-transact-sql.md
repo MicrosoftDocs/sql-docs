@@ -327,13 +327,9 @@ For scoring, you can also use the native [PREDICT](../../t-sql/queries/predict-t
 
 ## See also
 
-+ [SQL Server Machine Learning Services](../../machine-learning/index.yml)
++ [SQL machine learning](../../machine-learning/index.yml)
 + [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md). 
 + [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
-+ [Python Libraries and Data Types](../../machine-learning/python/python-libraries-and-data-types.md)  
-+ [R Libraries and R Data Types](../../machine-learning/r/r-libraries-and-data-types.md)  
-+ [SQL Server R Services](../../machine-learning/r/sql-server-r-services.md)   
-+ [Known Issues for SQL Server Machine Learning Services](../../machine-learning/known-issues-for-sql-server-machine-learning-services.md)   
 + [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
 + [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

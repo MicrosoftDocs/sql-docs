@@ -132,7 +132,7 @@
     - name: Security
       href: big-data-cluster/concept-security.md
     - name: Deploy multiple in Active Directory domain
-      href: active-directory-deployment-background.md
+      href: big-data-cluster/active-directory-deployment-background.md
   - name: How-to guides
     items:
     - name: Configure
@@ -208,7 +208,7 @@
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
-        href: kubernetes-rbac.md
+        href: big-data-cluster/kubernetes-rbac.md
       - name: Update AZDATA_PASSWORD
         href: big-data-cluster/change-azdata-password.md
       - name: Manage user access

@@ -47,8 +47,9 @@ You can choose to deploy Kubernetes the following ways:
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
 | **Single or Multiple machines (`kubeadm`)** | A Kubernetes cluster deployed on physical or virtual machines using `kubeadm` | [Instructions](deploy-with-kubeadm.md) |
-| **Azure Red Hat OpenShift** | A managed offering of OpenShift running in Azure. | [Instructions](missing-link.md)|
-|**Red Hat OpenShift**|A hybrid cloud, enterprise Kubernetes application platform.| [Instructions](missing-link.md)|
+|**Azure Red Hat OpenShift** | A managed offering of OpenShift running in Azure. | [Instructions](missing-link.md)|
+|**Red Hat OpenShift**|A hybrid cloud, enterprise Kubernetes application platform.| [Instructions](deploy-openshift.md)|
+
 > [!TIP]
 > You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](notebooks-deploy.md).
 

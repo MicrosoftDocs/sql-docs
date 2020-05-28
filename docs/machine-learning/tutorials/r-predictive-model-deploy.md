@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using Machine Learning Services.
+In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part four of this four-part tutorial series, you'll deploy a machine learning model developed in R into SQL Server using Machine Learning Services.

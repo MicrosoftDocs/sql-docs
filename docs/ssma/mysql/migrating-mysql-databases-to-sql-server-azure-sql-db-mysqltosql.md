@@ -1,5 +1,6 @@
 ---
 title: "Migrate MySQL Databases to SQL Server - Azure SQL DB | Microsoft Docs"
+description: Use this recommended process to migrate MySQL databases to SQL Server or Azure SQL Database using SQL Server Migration Assistant (SSMA).
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

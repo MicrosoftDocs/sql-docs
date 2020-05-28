@@ -1,5 +1,6 @@
 ---
 title: "Paths & optimization hints for selective XML Indexes | Microsoft Docs"
+description: Learn how to specify node paths and optimization hints when you create or alter selective XML indexes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

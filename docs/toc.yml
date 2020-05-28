@@ -105,6 +105,8 @@
           href: big-data-cluster/deploy-on-aks.md
         - name: Kubeadm
           href: big-data-cluster/deploy-with-kubeadm.md
+        - name: OpenShift
+          href: big-data-cluster/deploy-openshift.md
       - name: Deployment scripts
         items:
         - name: AKS python script
@@ -129,9 +131,11 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Deploy multiple in Active Directory domain
+      href: big-data-cluster/active-directory-deployment-background.md
   - name: How-to guides
     items:
-    - name: Configuration
+    - name: Configure
       items:
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
@@ -201,12 +205,14 @@
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
-      - name: Security
-        items:
-        - name: Update AZDATA_PASSWORD
-          href: big-data-cluster/change-azdata-password.md
-        - name: Manage user access
-          href: big-data-cluster/manage-user-access.md
+    - name: Secure
+      items:
+      - name: Kubernetes RBAC for BDC
+        href: big-data-cluster/kubernetes-rbac.md
+      - name: Update AZDATA_PASSWORD
+        href: big-data-cluster/change-azdata-password.md
+      - name: Manage user access
+        href: big-data-cluster/manage-user-access.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio

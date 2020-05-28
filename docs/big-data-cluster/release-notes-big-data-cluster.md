@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 03/31/2020
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -25,14 +25,18 @@ This section explains platforms that are supported with BDC.
 
 |Platform|Supported versions|
 |---------|---------|
-|Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) for Kubernetes version support policy.|
+|Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
+|Red Hat OpenShift|BDC requires OpenShift version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server 2019 CU5.|
 |Azure Kubernetes Service (AKS)|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
+|Azure Red Hat OpenShift|See [Azure Red Hat OpenShift](/azure/aks/sopenshift/). <br><br> Support introduced in SQL Server 2019 CU5.|
+
 
 ### Host OS for Kubernetes
 
 |Platform|Supported versions|
 |---------|---------|
 |Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
+|OpenShift| |
 |Ubuntu|16.04|
 
 ### SQL Server Editions
@@ -47,6 +51,7 @@ This section explains platforms that are supported with BDC.
 |---------|---------|
 |`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
+|`oc`| Red Hat OpenShift CLI. Required for Red Hat OpenShift deployment. See [Getting started with the CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)|
 
 ## Release history
 
@@ -54,6 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release               | Version         | Release date |
 |-----------------------|-----------------|--------------|
+| [CU5](#cu5)           | 15.0.4043.7     | 2020-05-31   |
 | [CU4](#cu4)           | 15.0.4033.1     | 2020-03-31   |
 | [CU3](#cu3)           | 15.0.4023.6     | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
@@ -63,7 +69,19 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
-gi
+
+## <a id="cu5"></a> CU5 (June 2020)
+
+Cumulative Update 5 (CU5) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4043.7.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4043.7 |[2019-CU5-ubuntu-16.04]
+
+### Added capabilities
+
+- Support for Big Data Cluster deployment on Red Hat OpenShift. Support include OpenShift container platform version 4.4 and Azure RedHat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
+
 ## <a id="cu4"></a> CU4 (April 2020)
 
 Cumulative Update 4 (CU4) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4033.1.

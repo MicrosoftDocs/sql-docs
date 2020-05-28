@@ -1,5 +1,6 @@
 ---
 title: "ADR Preallocation Factor configuration option | Microsoft Docs"
+description: "Explains the SQL Server instance configuration setting for ADR Preallocation Factor."
 ms.custom: ""
 ms.date: "06/01/2020"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: " ADR cleaner retry timeout (min) configuration option | Microsoft Docs"
+description: "Explains the SQL Server instance configuration setting for ADR cleaner retry timeout."
 ms.custom: ""
 ms.date: "06/01/2020"
 ms.prod: sql

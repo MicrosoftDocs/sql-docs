@@ -122,7 +122,7 @@ This troubleshooting steps require that you have:
 
 1. Check the application ID and individual application_master and container logs.
 
-   :::image type="complex" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Check application ID":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Check application ID":::
 
 1. Review the YARN application logs.
 

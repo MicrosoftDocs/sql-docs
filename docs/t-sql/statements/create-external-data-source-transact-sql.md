@@ -323,7 +323,7 @@ WITH (
 
 ### G. Create external data source to reference Kafka
 
-In this example, the external data source is a Kafak server with IP address xxx.xxx.xxx.xxx and listenning on port 1234. The kafka external data source is only for data streaming and does not support predicate push down.
+In this example, the external data source is a Kafak server with IP address xxx.xxx.xxx.xxx and listenning on port 1900. The kafka external data source is only for data streaming and does not support predicate push down.
 
 ```sql
 -- Create an External Data Source for Kafka

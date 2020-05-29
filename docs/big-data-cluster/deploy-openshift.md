@@ -24,16 +24,16 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 ## Pre-requisites
 
 > [!IMPORTANT]
-> Below pre-requisites must be performed by a OpenShift cluster admin (cluster-admin cluster role) that has sufficient permissions to create these cluster level objects. For more information on cluster roles in OpenShift see here: https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html
+> Below pre-requisites must be performed by a OpenShift cluster admin (cluster-admin cluster role) that has sufficient permissions to create these cluster level objects. For more information on cluster roles in OpenShift see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Create a custom security context constraint (scc) using the attached [`bdc-scc.yaml`](#bdc-sccyml-file).
+1. Create a custom security context constraint (SCC) using the attached [`bdc-scc.yaml`](#bdc-sccyml-file).
 
    ```console
    oc apply -f bdc-scc.yaml
    ```
 
    > [!NOTE]
-   > The custom scc for BDC is based on the built-in restricted scc in OpenShift, with additional permissions. To learn more about security context constraints in OpenShift see [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). For a detailed information on what additional permissions are required for big data clusters on top of the restricted scc, see [here](// TODO link)
+   > The custom SCC for BDC is based on the built-in restricted SCC in OpenShift, with additional permissions. To learn more about security context constraints in OpenShift see [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). For a detailed information on what additional permissions are required for big data clusters on top of the restricted scc, see [here](// TODO link)
 
 2. Create a namespace/project:
 
@@ -41,10 +41,10 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    oc new-project <namespaceName>
    ```
 
-3. Assign the custom scc to the default user within the namespace:
+3. Assign the custom SCC to the service accounts for users within the namespace where BDC is deployed:
 
    ```console
-   oc adm policy add-scc-to-user bdc-scc -z default -n <namespaceName>
+   oc adm policy add-scc-to-group bdc-scc system:serviceaccounts:<namespaceName>
    ```
 
 4. Assign appropriate permission to the user deploying BDC. Do one of the following. 
@@ -57,7 +57,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    oc adm policy add-role-to-user cluster-admin <deployingUser> -n <namespaceName>
    ```
 
-   The user deploying big data cluster must then login to the OpenShift console:
+   The user deploying big data cluster must then log in to the OpenShift console:
 
    ```console
    oc login -u <deployingUser> -p <password>
@@ -98,7 +98,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    azdata bdc create --config-openshift custom --accept-eula yes
    ```
 
-6. Upon successful deployment, you can login and list the external cluster endpoints:
+6. Upon successful deployment, you can log in and list the external cluster endpoints:
 
 ```console
    azdata login -n mssql-cluster

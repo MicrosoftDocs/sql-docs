@@ -213,6 +213,8 @@
         href: big-data-cluster/change-azdata-password.md
       - name: Manage user access
         href: big-data-cluster/manage-user-access.md
+      - name: Non root containers
+        href: big-data-cluster/non-root-containers.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio

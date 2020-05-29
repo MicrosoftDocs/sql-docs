@@ -1785,7 +1785,7 @@ FORCED
 
 The current setting of this option can be determined by examining the `is_parameterization_forced` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
@@ -2524,7 +2524,7 @@ FORCED
 
 The current setting of this option can be determined by examining the `is_parameterization_forced` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store.

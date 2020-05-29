@@ -1,5 +1,6 @@
 ---
 title: "Audit Login Event Class | Microsoft Docs"
+description: The Audit Login event class indicates that a user has successfully logged in to Microsoft SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

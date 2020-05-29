@@ -1,5 +1,6 @@
 ---
 title: "FOR XML (SQL Server) | Microsoft Docs"
+description: Learn about the FOR XML clause that is used in SQL queries to retrieve results as XML.
 ms.custom: "fresh2019may"
 ms.date: 04/03/2020
 ms.prod: sql

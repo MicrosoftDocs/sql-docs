@@ -11,13 +11,13 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on OpenShift
+# Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on OpenShift on-premises and Azure Red Hat OpenShift
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article explains how to deploy a SQL Server Big Data Cluster (BDC) on OpenShift.
+This article explains how to deploy a SQL Server Big Data Cluster (BDC) on OpenShift environments, on-premises or on Azure Red Hat OpenShift (ARO).
 
-SQL Server 2019 CU5 introduces support for SQL Server Big Data Clusters on OpenShift. You can deploy big data clusters to on-premises OpenShift or on Azure RedHat OpenShift (ARO). Deployment on-premises requires version OpenShift cluster version 4.3. While the deployment workflow is similar to deploying in other Kubernetes based platforms ([kubeadm](deploy-with-kubeadm.md) and [AKS](deploy-on-aks.md)), there are some differences. The difference is mainly in relation to running applications as non-root user and the security context used for the namespace BDC is deployed in.
+SQL Server 2019 CU5 introduces support for SQL Server Big Data Clusters on OpenShift. You can deploy big data clusters to on-premises OpenShift or on Azure RedHat OpenShift (ARO). Deployment requires OpenShift cluster version minimum 4.3. While the deployment workflow is similar to deploying in other Kubernetes based platforms ([kubeadm](deploy-with-kubeadm.md) and [AKS](deploy-on-aks.md)), there are some differences. The difference is mainly in relation to running applications as non-root user and the security context used for the namespace BDC is deployed in.
 
 This article outlines deployment steps that are specific to the OpenShift platform, points out options you have for accessing the target environment and the namespace you are using to deploy the big data cluster.
 
@@ -84,11 +84,20 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
+   For a deployment on ARO, we recommend to start with one of the *aro-* profiles, that includes default values for *serviceType* and *storageClass* appropriate for this environment. For example:
+
+   ```console
+   azdata bdc config init --source aro-dev-test --target custom-openshift
+   ```
+
 3. Customize the configuration files control.json and bdc.json. Here are some additional resources that guide you through the customizations supported for various use cases:
 
    1. [Storage](concept-data-persistence.md)
    1. [AD related settings](deploy-active-directory.md)
    1. [Other customizations](deployment-custom-configuration.md)
+
+   > [!NOTE]
+   > Integrating with Azure Active Directory for BDC is not supported, hence you can not use this authentication method when deploying on ARO.
 
 4. Set [environment variables](deployment-guidance.md#env)
 
@@ -161,7 +170,7 @@ metadata:
   generation: 2
   name: bdc-restricted-scc
 readOnlyRootFilesystem: false
-requiredDropCapabilities:
+requiredDropCapabilities
 - KILL
 - MKNOD
 runAsUser:

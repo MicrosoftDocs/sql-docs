@@ -1,7 +1,7 @@
 ---
 title: "PREDICT (Transact-SQL)"
 ms.custom: ""
-ms.date: "05/27/2020"
+ms.date: "05/29/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -74,7 +74,7 @@ The DATA parameter is used to specify the data used for scoring or prediction. D
 > [!IMPORTANT]
 > The `RUNTIME = ONNX` argument is only available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) and [Azure SQL Edge](/azure/sql-database-edge/onnx-overview).
 
-Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`.
+Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`. The parameter is required for Azure SQL Edge. On Azure SQL Managed Instance, the parameter is optional and only used when using ONNX models.
 
 **WITH ( <result_set_definition> )**
 

@@ -30,7 +30,7 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
-   ![Help Viewer Add Remove Content](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![Add and Remove Help Content](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    The Help Viewer opens to the Manage Content tab.
 

@@ -107,7 +107,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
 ## OpenShift specific settings in the deployment configuration files
 
-SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. These settings  are false  by default in the built-in profiles for OpenShift since the monitoring containers require privileged security context.
+SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. These parameters  are set to *false*  by default in the built-in profiles for OpenShift since the monitoring containers require [privileged security context](https://www.openshift.com/blog/managing-sccs-in-openshift), which will relax some of the secuirty constraints for the namespace BDC is deployed on.
 
 ```json
     "security": {

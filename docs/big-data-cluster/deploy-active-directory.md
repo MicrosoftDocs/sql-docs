@@ -202,7 +202,7 @@ AD integration requires the following parameters. Add these parameters to the `c
   >The value passed through the subdomain setting is not a new AD domain but only a DNS domain used by the BDC cluster internally.
 
   >[!IMPORTANT]
-  >You need to install or upgrade latest version of **azdata CLI** as of SQL Server 2019 release to leverage these new capabilties and deploy multiple big data clusters in the same domain.
+  >You need to install or upgrade latest version of **azdata CLI** as of SQL Server 2019 CU5 release to leverage these new capabilities and deploy multiple big data clusters in the same domain.
 
   See [Concept: deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deployment-background.md) for more details regarding deploying multiple big data clusters in the same Active Directory domain.
 

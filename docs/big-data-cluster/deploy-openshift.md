@@ -19,6 +19,8 @@ This article explains how to deploy a SQL Server Big Data Cluster (BDC) on OpenS
 
 SQL Server 2019 CU5 introduces support for SQL Server Big Data Clusters on OpenShift. You can deploy big data clusters to on-premises OpenShift or on Azure RedHat OpenShift (ARO). Deployment requires OpenShift cluster version minimum 4.3. While the deployment workflow is similar to deploying in other Kubernetes based platforms ([kubeadm](deploy-with-kubeadm.md) and [AKS](deploy-on-aks.md)), there are some differences. The difference is mainly in relation to running applications as non-root user and the security context used for the namespace BDC is deployed in.
 
+For deploying the OpenShift cluster on-premises see the [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-installation-and-upgrade). For ARO deployments see the [Azure Red Hat OpenShift](https://docs.microsoft.com/en-us/azure/openshift/intro-openshift).
+
 This article outlines deployment steps that are specific to the OpenShift platform, points out options you have for accessing the target environment and the namespace you are using to deploy the big data cluster.
 
 ## Pre-requisites

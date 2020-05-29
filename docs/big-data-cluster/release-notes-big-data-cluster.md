@@ -50,7 +50,7 @@ This section explains platforms that are supported with BDC.
 
 |Platform|Supported versions|
 |---------|---------|
-|`azdata`|As a best practice, use the latest version available. Starting with SQL Server 2019 CU5 release, `azdata` has a independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
+|`azdata`|As a best practice, use the latest version available. Starting with SQL Server 2019 CU5 release, `azdata` has an independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 
@@ -81,13 +81,13 @@ Cumulative Update 5 (CU5) release for SQL Server 2019. The SQL Server Database E
 
 ### Added capabilities
 
-- Support for Big Data Cluster deployment on Red Hat OpenShift. Support include OpenShift container platform version 4.3 and Azure RedHat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
+- Support for Big Data Cluster deployment on Red Hat OpenShift. Support includes OpenShift container platform version 4.3 and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
 - Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5. 
 - Added support for deploying multiple big data clusters against an Active Directory domain.
-- `azdata` CLI has a its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
-- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/data-virtualization-extension?view=sql-server-ver15) for  Azure Data Studio , which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
-- Added support to persist customizations performed in Grafana. Before CU5 customers would notice that any edits in Grafana configurations would be lost upon metricsui pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted. 
-- Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the metricsdc pods). As a result of this change, Telegraf now requires a service account, cluster role and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
+- `azdata` CLI has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
+- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
+- Added support to persist customizations performed in Grafana. Before CU5 customers would notice that any edits in Grafana configurations would be lost upon `metricsui` pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted. 
+- Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the `metricsdc` pods). As a result of this change, Telegraf now requires a service account, cluster role and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
 - Added two feature switches to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn of the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to false in control.json deployment configuration file. For OpenShift environments, these settings are set to false by default in the built-in deployment profiles, since collecting pod and node metrics required privileged capabilities.
 
 ## <a id="cu4"></a> CU4 (April 2020)
@@ -147,14 +147,14 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Issue and customer impact**: For new big data clusters deployed using SQL Server 2019 CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. As a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server 2019 CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only impacting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no impact to credentials when the cluster is deployed to use Active Directory authentication. 
 
-- **Workaround**: Azure Data Studio will handle the credentials change transparently for the connection made to gateway to enable HDFS browsing experience in the ObjectExplorer. You must install [latest Azure Data Studio insiders build](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15#download-insiders-build-of-azure-data-studio) that includes the necessary changes that address this use case.
-For other scenarios where  you must provide credentials for accessing service through the gateway (e.g. logging in with `azdata`, accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, you will login by providing the username corresponding to  **AZDATA_USERNAME** environment variable.
+- **Workaround**: Azure Data Studio will handle the credentials change transparently for the connection made to gateway to enable HDFS browsing experience in the ObjectExplorer. You must install [latest Azure Data Studio insiders build](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio) that includes the necessary changes that address this use case.
+For other scenarios where  you must provide credentials for accessing service through the gateway (e.g. logging in with `azdata`, accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, log in by providing the username corresponding to **AZDATA_USERNAME** environment variable.
 
 ### Pods and nodes metrics not being collected
 
 - **Affected releases**: all releases starting with CU5.
 
-- **Issue and customer impact**: As result of a security fix related to the API that telegraf was using to collect metrics pod and host nodes metrics, customers *might* noticed that the metrics are not being collected. This is possible in both new and existing deployments of BDC (after upgrade to CU5).  As result to the fix, Telegraf now requires a service account with cluster wide role permissions. During the deployment (or upgrade), we are attempting to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade will still proceed with an warning and succeed, but the pod & node metrics will not be collected. 
+- **Issue and customer impact**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may noticed that the metrics are not being collected. This is possible in both new and existing deployments of BDC (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
 
 - **Workaround**: You can ask an administrator to create the role and service account (either before or after the deployment/upgrade), and BDC will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
@@ -203,9 +203,9 @@ Upgrading using different repositories for current and target builds is not supp
 
        **`controllerUpgradeTimeoutInMinutes`** Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
 
-       **`totalUpgradeTimeoutInMinutes`**: Designates the combines amount of time for both the controller and controller db to finish upgrading (controller + controllerdb upgrade).Default is 10. Update to at least  40.
+       **`totalUpgradeTimeoutInMinutes`**: Designates the combines amount of time for both the controller and controller db to finish upgrading (`controller` + `controllerdb` upgrade). Default is 10. Update to at least  40.
 
-       **`componentUpgradeTimeoutInMinutes`**: Designates the amount of time that each subsequent phase of the upgrade has to complete.  Default is 30. Update to 45.
+       **`componentUpgradeTimeoutInMinutes`**: Designates the amount of time that each subsequent phase of the upgrade has to complete. Default is 30. Update to 45.
 
    3. Save and exit
 

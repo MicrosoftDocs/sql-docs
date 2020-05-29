@@ -746,13 +746,13 @@ READ_ONLY
 Information can be read from the Query Store, but new information isn't added. If the maximum issued space of the Query Store has been exhausted, the Query Store will change is operation mode to READ_ONLY.
 
 CLEANUP_POLICY     
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**.
+Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**. The default value is **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
+Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. The default value is **100 MB** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is **1 GB**.
 
 > [!NOTE]
 > `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
@@ -764,7 +764,7 @@ Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bi
 > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 INTERVAL_LENGTH_MINUTES     
-Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
+Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**. The default value is **60**.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 Controls whether cleanup automatically activates when the total amount of data gets close to maximum size.
@@ -797,10 +797,19 @@ CUSTOM
 
 Allows control over the QUERY_CAPTURE_POLICY options.
 
-QUERY_CAPTURE_MODE is type **nvarchar**.
+QUERY_CAPTURE_MODE is type **nvarchar**. 
 
 MAX_PLANS_PER_QUERY     
-Defines the maximum number of plans maintained for each query. The default is 200. MAX_PLANS_PER_QUERY is type **int**.
+Defines the maximum number of plans maintained for each query. MAX_PLANS_PER_QUERY is type **int**. The default value is **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]))
+
+ON    
+Wait statistics information per query is captured. This value is the default configuration value.
+
+OFF    
+Wait statistics information per query won't be captured.
 
 **\<query_capture_policy_option_list> :: =**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
@@ -1803,13 +1812,13 @@ OPERATION_MODE
 Describes the operation mode of the Query Store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the Query Store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the Query Store, but new information isn't added. If the maximum allocated space of the Query Store has been exhausted, the Query Store will change is operation mode to READ_ONLY.
 
 CLEANUP_POLICY     
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**.
+Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**. The default value is **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
+Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium edition, default is **1 GB** and for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **10 MB**.
 
 > [!NOTE]
 > `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
@@ -1824,7 +1833,7 @@ Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type *
 > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 INTERVAL_LENGTH_MINUTES     
-Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
+Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**. The default value is **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Controls whether cleanup will be automatically activated when the total amount of data gets close to maximum size.
@@ -1852,7 +1861,7 @@ Stop capturing new queries. The Query Store will continue to collect compile and
 QUERY_CAPTURE_MODE is type **nvarchar**.
 
 MAX_PLANS_PER_QUERY     
-An integer representing the maximum number of plans maintained for each query. Default is 200.
+An integer representing the maximum number of plans maintained for each query. MAX_PLANS_PER_QUERY is type **int**. The default value is **200**.
 
 **\<snapshot_option> ::=**     
 Determines the transaction isolation level.
@@ -2542,13 +2551,13 @@ OPERATION_MODE
 Describes the operation mode of the Query Store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the Query Store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the Query Store, but new information isn't added. If the maximum allocated space of the Query Store has been exhausted, the Query Store will change is operation mode to READ_ONLY.
 
 CLEANUP_POLICY     
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**.
+Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**. The default value is **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
+Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. The default value is **100 MB**.
 
 > [!NOTE]
 > `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
@@ -2560,7 +2569,7 @@ Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type *
 > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 INTERVAL_LENGTH_MINUTES     
-Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
+Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**. The default value is **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Controls whether cleanup will be automatically activated when the total amount of data gets close to maximum size.
@@ -2588,7 +2597,7 @@ Stop capturing new queries. The Query Store will continue to collect compile and
 QUERY_CAPTURE_MODE is type **nvarchar**.
 
 MAX_PLANS_PER_QUERY     
-An integer representing the maximum number of plans maintained for each query. Default is 200.
+An integer representing the maximum number of plans maintained for each query. MAX_PLANS_PER_QUERY is type **int**. The default value is **200**.
 
 **\<snapshot_option> ::=**
 

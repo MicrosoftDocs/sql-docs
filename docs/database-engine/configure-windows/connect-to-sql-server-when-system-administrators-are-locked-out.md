@@ -52,12 +52,13 @@ Option | Description | When to use
 `-m"sqlcmd"`| Limits connections to a single connection that must identify itself as the **sqlcmd** client program| When you plan to connect to the instance with **sqlcmd** and you want to prevent other applications from taking the only available connection.
 `-m"Microsoft SQL Server Management Studio - Query"`| Limits connections to a single connection that must identify itself as the **Microsoft SQL Server Management Studio - Query** application.| When you plan to connect to the instance through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and you want to prevent other applications from taking the only available connection.
 `-f`| Limits connections to a single connection and starts the instance in minimal configuration | When some other configuration is preventing you from starting.
+---|---|---
   
 For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 
 ## Step by step instructions
 
-The following step by step instructions describe how to grant system administrator permissions to a SQL Server login that mistakenly no longer has access.
+The following step-by-step instructions describe how to grant system administrator permissions to a SQL Server login that mistakenly no longer has access.
 
 These instructions assume,
 

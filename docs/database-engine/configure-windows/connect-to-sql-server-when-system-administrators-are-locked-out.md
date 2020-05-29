@@ -46,13 +46,13 @@ It's also possible for an unknown client application to take the only available 
 
 The following table summarizes the different ways to start your instance in single-user mode in the command line.
 
-Option | Description | When to use
----|---|---
-`-m` | Limits connections to a single connection | When there are no other users attempting to connect to the instance or you are not sure of the application name you are using to connect to the instance. 
-`-m"sqlcmd"`| Limits connections to a single connection that must identify itself as the **sqlcmd** client program| When you plan to connect to the instance with **sqlcmd** and you want to prevent other applications from taking the only available connection.
-`-m"Microsoft SQL Server Management Studio - Query"`| Limits connections to a single connection that must identify itself as the **Microsoft SQL Server Management Studio - Query** application.| When you plan to connect to the instance through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and you want to prevent other applications from taking the only available connection.
-`-f`| Limits connections to a single connection and starts the instance in minimal configuration | When some other configuration is preventing you from starting.
----|---|---
+| Option | Description | When to use |
+|:---|:---|:---|
+|`-m` | Limits connections to a single connection | When there are no other users attempting to connect to the instance or you are not sure of the application name you are using to connect to the instance. |
+|`-m"sqlcmd"`| Limits connections to a single connection that must identify itself as the **sqlcmd** client program| When you plan to connect to the instance with **sqlcmd** and you want to prevent other applications from taking the only available connection. |
+|`-m"Microsoft SQL Server Management Studio - Query"`| Limits connections to a single connection that must identify itself as the **Microsoft SQL Server Management Studio - Query** application.| When you plan to connect to the instance through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and you want to prevent other applications from taking the only available connection. |
+|`-f`| Limits connections to a single connection and starts the instance in minimal configuration | When some other configuration is preventing you from starting. |
+| &nbsp; | &nbsp; | &nbsp; |
   
 For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
 

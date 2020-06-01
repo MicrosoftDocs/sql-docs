@@ -1,5 +1,6 @@
 ---
 title: "Errors and Events Reference (Database Engine) | Microsoft Docs"
+description: Learn about selected SQL Server Database Engine error messages that need further explanation and use links to external resources.
 ms.custom: ""
 ms.date: "10/15/2019"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "distinct-values Function (XQuery) | Microsoft Docs"
+description: Learn how to use the distinct-values function in an XQuery to remove duplicate values from a sequence.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

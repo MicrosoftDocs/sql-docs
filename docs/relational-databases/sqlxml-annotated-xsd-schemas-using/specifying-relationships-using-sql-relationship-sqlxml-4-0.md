@@ -1,5 +1,6 @@
 ---
 title: "Set relationships with sql:relationship (SQLXML)"
+description: Learn how to use the sql:relationship annotation in SQLXML 4.0 to specify relationships between XML elements.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

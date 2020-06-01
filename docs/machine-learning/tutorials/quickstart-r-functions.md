@@ -107,21 +107,19 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 The **utils** package, installed by default,  provides a variety of utility functions for investigating the current R environment. These functions can be useful if you're finding discrepancies in the way your R code performs in SQL Server and in outside environments.
 
-For example, you might use the R `memory.limit()` function to get memory for the current R environment. Because the `utils` package is installed but not loaded by default, you must use the `library()` function to load it first.
+For example, you might use the system timing functions in R, such as `system.time` and `proc.time`, to capture the time used by R processes and analyze performance issues. For an example, see the tutorial [Create Data Features](../tutorials/walkthrough-create-data-features.md) where R timing functions are embedded in the solution.
 
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
         library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+        start.time <- proc.time();
+        
+        # Run R processes
+        
+        elapsed_time <- proc.time() - start.time;'
 ```
-
-> [!TIP]
-> Many users like to use the system timing functions in R, such as `system.time` and `proc.time`, to capture the time used by R processes and analyze performance issues. For an example, see the tutorial [Create Data Features](../tutorials/walkthrough-create-data-features.md) where R timing functions are embedded in the solution.
 
 ## Next steps
 

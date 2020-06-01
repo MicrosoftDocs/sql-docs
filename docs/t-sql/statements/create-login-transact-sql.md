@@ -476,8 +476,8 @@ After creating a login, the login can connect to a SQL Database managed instance
 - Login is not replicated to the secondary instance in a failover group. Login is saved in the master database, which is a system database, and as such, is not geo-replicated. To solve this, the user must create login with the same SID on the secondary instance.
 
 ```SQL
--- Sample code to create login on the secondary instance
-CREATE LOGIN foo WITH PASSWORD = 'password', SID = 0x12345.
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
 ```
 
 ## Examples

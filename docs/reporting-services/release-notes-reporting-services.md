@@ -1,6 +1,6 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
-ms.date: 04/06/2020
+ms.date: 04/28/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -45,6 +45,15 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## SQL Server 2019 Reporting Services
+
+## 15.0.7243.37714, 2019/11/01
+
+Initial release.
+
+
+## SQL Server 2017 Reporting Services
+
 ## 14.0.600.1572, 2020/04/06 
 
 | Fixed issue | Details |

@@ -32,10 +32,6 @@ Data and log files are initialized to overwrite any existing data left on the di
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instant file initialization (IFI) allows for faster execution of the previously mentioned file operations, since it reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.
 
-Instant file initialization is available only on 
-* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)]
-* [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] and later
-
 ## Enable instant file initialization
 
 Instant file initialization is only available if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account has been granted *SE_MANAGE_VOLUME_NAME*. Members of the Windows Administrator group have this right and can grant it to other users by adding them to the **Perform Volume Maintenance Tasks** security policy.  
@@ -43,7 +39,7 @@ Instant file initialization is only available if the [!INCLUDE[ssNoVersion](../.
 > Some feature usage, such as [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), can prevent Instant File Initialization.  
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this permission can be granted to the service account at install time, during setup. If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this permission can be granted to the service account at install time, during setup. <br><br>If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
   
 To grant an account the `Perform volume maintenance tasks` permission:  
   
@@ -75,9 +71,9 @@ To grant an account the `Perform volume maintenance tasks` permission:
 
 ## Security considerations
 
-If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed in a secure physical environment, we recommend enabling instant file initialization as the benefits can outweigh the security risk.
+We recommend enabling instant file initialization as the benefits can outweigh the security risk.
 
-When using instant file initialization, the deleted disk content is overwritten only as new data is written to the files. For this reason, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file.
+When using instant file initialization, the deleted disk content is overwritten only as new data is written to the files. For this reason, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file. 
 
 While the database file is attached to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the local administrator. However, when the file is detached, it may be accessed by a user or service that does not have *SE_MANAGE_VOLUME_NAME*.
 

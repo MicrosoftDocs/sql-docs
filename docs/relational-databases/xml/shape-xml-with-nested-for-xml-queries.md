@@ -1,5 +1,6 @@
 ---
 title: "Shape XML with Nested FOR XML Queries | Microsoft Docs"
+description: View an example of using nested FOR XML queries to shape the resulting XML.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -473,6 +473,12 @@ After creating a login, the login can connect to a SQL Database managed instance
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
 - External (guest) users imported from another Azure AD directory cannot be directly configured as an Azure AD admin for managed instance. Instead, join external user to an Azure AD security-enabled group and configure the group as the instance administrator.
+- Login is not replicated to the secondary instance in a failover group. Login is saved in the master database, which is a system database, and as such, is not geo-replicated. To solve this, the user must create login with the same SID on the secondary instance.
+
+```SQL
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+```
 
 ## Examples
 

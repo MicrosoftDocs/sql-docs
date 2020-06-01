@@ -1,5 +1,6 @@
 ---
 title: "Specifying Axis in a Path Expression Step | Microsoft Docs"
+description: Learn how to specify an axis step in an XQuery path expression.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

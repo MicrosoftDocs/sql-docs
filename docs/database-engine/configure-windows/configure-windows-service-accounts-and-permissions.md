@@ -1,12 +1,12 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
-ms.custom: ""
+ms.custom: contperfq4
 ms.date: "03/17/2020"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: configuration
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "startup service states [SQL Server]"
   - "Setup [SQL Server], user accounts"

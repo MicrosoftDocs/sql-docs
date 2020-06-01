@@ -86,7 +86,9 @@ Cluster admin password:
  + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> Note that in non-AD mode, the username "root" has to be used in combination with the above password, for authenticating to the Gateway (Knox) for access to HDFS/Spark.
+> Note that in non-AD mode, the username has to be used in combination with the above password, for authenticating to the Gateway (Knox) for access to HDFS/Spark. Prior to SQL Server 2019 CU5, the user name was `root`.
+> 
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ## Next steps
 

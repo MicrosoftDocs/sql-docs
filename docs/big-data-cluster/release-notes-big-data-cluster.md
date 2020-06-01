@@ -143,7 +143,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ### Credentials for accessing services through gateway endpoint
 
-- **Affected releases**: new clusters deployed starting with CU5.
+- **Affected releases**: New clusters deployed starting with CU5.
 
 - **Issue and customer impact**: For new big data clusters deployed using SQL Server 2019 CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. As a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server 2019 CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only impacting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no impact to credentials when the cluster is deployed to use Active Directory authentication. 
 

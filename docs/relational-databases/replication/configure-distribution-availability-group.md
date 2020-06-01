@@ -366,7 +366,7 @@ WITH IP
 ((N'10.0.0.8', N'255.255.255.0')) , PORT=1500);
 GO
 
--- STEP 5 - Enable SQLNode1 also as a Distributor
+-- STEP 5 - Enable SQLNode2 also as a Distributor
 :CONNECT SQLNODE2
 EXEC sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
 GO

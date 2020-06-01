@@ -29,24 +29,6 @@ This topic describes how to configure the **max worker threads** server configur
 - A pool of threads handles all users.
 
 The default value for **max worker threads** is 0. This enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to automatically configure the number of worker threads at startup. The default setting is best for most systems. However, depending on your system configuration, setting **max worker threads** to a specific value sometimes improves performance.  
-
-**In This Topic**
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To configure the max worker threads option, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   **Follow Up:**  [After you configure the max worker threads option](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   

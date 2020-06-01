@@ -1,7 +1,7 @@
 ---
 title: "Database Files and Filegroups | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/07/2018"
+ms.custom: "contperfq4"
+ms.date: "05/29/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

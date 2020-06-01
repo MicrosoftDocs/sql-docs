@@ -47,7 +47,7 @@ You can choose to deploy Kubernetes the following ways:
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
 | **Single or Multiple machines (`kubeadm`)** | A Kubernetes cluster deployed on physical or virtual machines using `kubeadm` | [Instructions](deploy-with-kubeadm.md) |
-|**Azure Red Hat OpenShift** | A managed offering of OpenShift running in Azure. | [Instructions](missing-link.md)|
+|**Azure Red Hat OpenShift** | A managed offering of OpenShift running in Azure. | [Instructions](deploy-openshift.md)|
 |**Red Hat OpenShift**|A hybrid cloud, enterprise Kubernetes application platform.| [Instructions](deploy-openshift.md)|
 
 > [!TIP]

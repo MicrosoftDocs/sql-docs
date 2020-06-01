@@ -1,5 +1,6 @@
 ---
 title: "Formatting Numbers and Dates (Report Builder) | Microsoft Docs"
+description: Learn how to format numbers and dates in Report Builder data regions by selecting a format from the Number page of the data region's Properties dialog box.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

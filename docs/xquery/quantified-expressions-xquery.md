@@ -1,5 +1,6 @@
 ---
 title: "Quantified Expressions (XQuery) | Microsoft Docs"
+description: Learn how to use quantified expressions in XQuery to apply either existential or universal quantification to an expression over one or several sequences.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Scatter Charts (Report Builder) | Microsoft Docs"
+description:  Find out how to use scatter charts, with values represented by point positions on a chart, to compare aggregated data across categories in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

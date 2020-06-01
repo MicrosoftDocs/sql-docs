@@ -1,5 +1,6 @@
 ---
 title: "Database concurrency issues in Updategrams (SQLXML)"
+description: Learn how to use the Optimistic Concurrency Control mechanism in updategrams (SQLXML 4.0) to handle database concurrency issues.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

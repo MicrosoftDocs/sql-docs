@@ -1,5 +1,6 @@
 ---
 title: "Example: Retrieving Binary Data | Microsoft Docs"
+description: View an example of an SQL query that retrieves binary data using the RAW and BINARY BASE64 options with the FOR XML clause.
 ms.custom: ""
 ms.date: 04/03/2020
 ms.prod: sql

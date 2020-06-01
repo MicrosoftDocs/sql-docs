@@ -1,5 +1,6 @@
 ---
 title: "SQLXML 4.0 Data Access Components"
+description: Learn about the data access components in SQLXML 4.0 - SQLXMLOLEDB Provider, SQLXML Managed Classes, and the SQL Server Native Client (SQLNCLI11). 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

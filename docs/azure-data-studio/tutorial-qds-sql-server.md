@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
+ms.date: 06/01/2020
 ---
 
 # Tutorial: Add the *five slowest queries* sample widget to the database dashboard
@@ -111,9 +111,7 @@ To add the *slow queries widget* to your dashboard, edit the *dashboard.database
 
    ![Insight detail dialog](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. Right-click the cell to the right of **query_sql_txt** in **Item Details** and click **Copy Cell**.
-
-4. Close the **Insights** pane.
+3. Close the **Insights** pane.
 
 ## View the query plan
 

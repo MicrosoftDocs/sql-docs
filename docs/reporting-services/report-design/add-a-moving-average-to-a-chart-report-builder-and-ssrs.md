@@ -1,5 +1,6 @@
 ---
 title: "Add a Moving Average to a Chart (Report Builder) | Microsoft Docs"
+description: Learn how the Moving Average formula price indicator can be shown on a chart to identify trends in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

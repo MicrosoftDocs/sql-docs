@@ -1,5 +1,6 @@
 ---
 title: "Identify key columns using sql:key-fields (SQLXML)"
+description: Learn how to ensure proper nesting in an SQLXML 4.0 query result by specifying the sql:key-fields annotation in an XPath query to identify key columns. 
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

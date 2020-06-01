@@ -1,5 +1,6 @@
 ---
 title: "Treemap and sunburst charts in SQL Server Reporting Services | Microsoft Docs"
+description: Discover how to visually represent hierarchical data using a treemap or sunburst chart in Report Builder.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design

@@ -36,7 +36,7 @@ SIN ( float_expression )
 
 ## Arguments  
  *float_expression*  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to float.  
+ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to float, in radians.
   
 ## Return Types  
  **float**  

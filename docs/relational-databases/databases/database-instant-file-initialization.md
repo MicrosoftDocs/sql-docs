@@ -1,5 +1,5 @@
 ---
-title: "Database Instant File Initialization | Microsoft Docs"
+title: Database Instant File Initialization
 description: Learn about instant file initialization and how to enable it on your SQL Server database.
 ms.custom: contperfq4
 ms.date: 05/30/2020
@@ -23,7 +23,7 @@ ms.author: "sstein"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In this article, you learn about instant file initialization, and how to enable it to speed up growth for your SQL Server database files.  
 
-Data and log files are initialized to overwrite any existing data left on the disk from previously deleted files. Data and log files are first initialized by zeroing the files (filling with zeros) when you perform the following operations:  
+By default, data and log files are initialized to overwrite any existing data left on the disk from previously deleted files. Data and log files are first initialized by zeroing the files (filling with zeros) when you perform the following operations:  
   
 - Create a database.  
 - Add data or log files, to an existing database.  
@@ -66,18 +66,18 @@ To grant an account the `Perform volume maintenance tasks` permission:
     1. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account has **not** been granted *SE_MANAGE_VOLUME_NAME*, an informational message that resembles the following is logged:
 
         `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
-     > [!NOTE]
+    > [!NOTE]
     > You can also use the column *instant_file_initialization_enabled* in the [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV to identify if instant file initialization is enabled.
 
 ## Security considerations
 
 We recommend enabling instant file initialization as the benefits can outweigh the security risk.
 
-When using instant file initialization, the deleted disk content is overwritten only as new data is written to the files. For this reason, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file. 
+When using instant file initialization, the deleted disk content is overwritten only as new data is written to the files. For this reason, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file.
 
 While the database file is attached to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the local administrator. However, when the file is detached, it may be accessed by a user or service that does not have *SE_MANAGE_VOLUME_NAME*.
 
-Similar considerations exist when, 
+Similar considerations exist when:
 
 * *The database is backed up.* If the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.  
 
@@ -90,7 +90,7 @@ If the potential for disclosing deleted content is a concern, you should take on
 - Always make sure that any detached data files and backup files have restrictive DACLs.  
 - Disable instant file initialization for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    To do so, revoke *SE_MANAGE_VOLUME_NAME* from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account.
     
-    Note, disabling will increase allocation times for data files, and only affects files that are created or increased in size after the user right is revoked.
+    > [!NOTE] Disabling will increase allocation times for data files, and only affects files that are created or increased in size after the user right is revoked.
   
 ## See Also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

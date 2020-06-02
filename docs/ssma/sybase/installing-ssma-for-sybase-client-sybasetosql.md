@@ -1,5 +1,6 @@
 ---
 title: "Installing SSMA  for Sybase Client (SybaseToSQL) | Microsoft Docs"
+description: Learn about installation prerequisites for SQL Server Migration Assistant (SSMA) for Sybase Adaptive Server Enterprise (ASE) and how to install.
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

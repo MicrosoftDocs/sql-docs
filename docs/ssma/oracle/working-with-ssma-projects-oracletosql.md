@@ -1,5 +1,6 @@
 ---
 title: "Working with SSMA Projects (OracleToSQL) | Microsoft Docs"
+description: Learn how to create an SSMA project that contains metadata for Oracle databases to migrate and SQL Server, along with settings and connection information.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

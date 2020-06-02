@@ -1,5 +1,6 @@
 ---
 title: "Mapping MySQL and SQL Server Character Set (MySQLToSQL) | Microsoft Docs"
+description: Learn how to specify a character set for MySQL character data types, expressions, and literals to use during character data type conversion by SSMA for MySQL.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

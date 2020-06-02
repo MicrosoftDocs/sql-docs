@@ -1,5 +1,6 @@
 ---
 title: "Examples: Using OPENXML | Microsoft Docs"
+description: View examples of how to use OPENXML to create a rowset view of an XML document.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Bulk Load Security Considerations (SQLXML)"
+description: Learn about the security guidelines for using XML Bulk Load in SQLXML 4.0.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

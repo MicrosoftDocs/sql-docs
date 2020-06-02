@@ -192,3 +192,4 @@ volumes:
 
 ## Next steps
 
+[Tutorial: Load sample data into a SQL Server big data cluster](tutorial-load-sample-data.md)

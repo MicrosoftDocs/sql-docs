@@ -90,7 +90,8 @@ If the potential for disclosing deleted content is a concern, you should take on
 - Always make sure that any detached data files and backup files have restrictive DACLs.  
 - Disable instant file initialization for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    To do so, revoke *SE_MANAGE_VOLUME_NAME* from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account.
     
-    > [!NOTE] Disabling will increase allocation times for data files, and only affects files that are created or increased in size after the user right is revoked.
+    > [!NOTE]
+    > Disabling will increase allocation times  for data files, and only affects files that are created or increased in size after the user right is revoked.
   
 ## See Also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

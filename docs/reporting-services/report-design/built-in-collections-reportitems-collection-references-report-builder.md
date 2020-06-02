@@ -1,6 +1,6 @@
 ---
 title: "ReportItems Collection References (Report Builder) | Microsoft Docs"
-description: Discover the the ReportItems collection, the text boxes in Report Builder that are in the current scope of a page header, page footer, or report body.
+description: Discover the ReportItems collection. These text boxes in Report Builder are in the current scope of a page header, page footer, or report body.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

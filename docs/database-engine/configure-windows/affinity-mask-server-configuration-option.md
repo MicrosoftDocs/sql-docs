@@ -49,10 +49,17 @@ ms.author: maghan
   
  Whether a new scheduler is added or removed, the permanent system tasks such as lockmonitor, checkpoint, system task thread (processing DTC), and signal process continue to run on the scheduler while the server is operational. These permanent system tasks do not dynamically migrate. To redistribute processor load for these system tasks across schedulers, it is necessary to restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to shut down a scheduler associated with a permanent system task, the task continues to run on the offline scheduler (no migration). This scheduler is bound to the processors in the modified affinity mask and should not put any load on the processor it was affinitized with before the change. Having extra offline schedulers, should not significantly affect the load of the system. If this is not the case, a database server reboot is required to reconfigure these tasks.  
   
- The I/O affinity tasks (such as lazywriter and logwriter) are directly affected by the I/O affinity mask. If the lazywriter and logwriter tasks are not affinitized, they follow the same rules defined for the other permanent tasks such as lockmonitor or checkpoint.  
-  
- To ensure that the new affinity mask is valid, the RECONFIGURE command verifies that the normal CPU and I/O affinities are mutually exclusive. If this is not the case, an error message is reported to the client session and to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, indicating that such a setting is not recommended. Running RECONFIGURE WITH OVERRIDE options allows CPU and I/O affinities that are not mutually exclusive.  
-  
+ The 'affinity mask' and 'affinity I/O mask' configuration values of SQL Server should not conflict. Performance may suffer if you choose to affinitize a processor for both SQL Server worker thread scheduling and for I/O processing. Therefore, ensure that the configuration values are not set for the same processor. The same recommendation applies to the 'affinity64 mask' and 'affinity64 I/O mask'.  To ensure that the affinity mask does not overlap with affinity IO mask, the [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) command verifies that the normal CPU and I/O affinities are mutually exclusive. If this is not the case, an error message is reported to the client session and to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, indicating that such a setting is not recommended. 
+ 
+
+```
+ Msg 5834, Level 16, State 1, Line 1
+ The affinity mask specified conflicts with the IO affinity mask specified. Use the override option to force this configuration
+```
+
+ Running RECONFIGURE WITH OVERRIDE options allows CPU and I/O affinities to overlap and to not be mutually exclusive.  
+ 
+ The I/O affinity tasks (such as lazywriter and logwriter) are directly affected by the I/O affinity mask. If the lazywriter and logwriter tasks are not affinitized, they follow the same rules defined for the other permanent tasks such as lockmonitor or checkpoint.     
  If you specify an affinity mask that attempts to map to a nonexistent CPU, the RECONFIGURE command reports an error message to both the client session and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. Using the RECONFIGURE WITH OVERRIDE option has no effect in this case, and the same configuration error is reported again.  
   
  You can also exclude [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activity from processors assigned specific workload assignments by the Windows 2000 or Windows Server 2003 operating system. If you set a bit representing a processor to 1, that processor is selected by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine for thread assignment. When you set **affinity mask** to 0 (the default), the Microsoft Windows 2000 or Windows Server 2003 scheduling algorithms set the thread's affinity. When you set **affinity mask** to any nonzero value, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affinity interprets the value as a bitmask that specifies those processors eligible for selection.  

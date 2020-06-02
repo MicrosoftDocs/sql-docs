@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Migration Assistant for DB2 (DB2ToSQL) | Microsoft Docs"
+description: Learn about SSMA for DB2 and follow step-by-step instructions for migrating DB2 databases to SQL Server or Azure SQL Database.
 ms.prod: sql
 ms.custom: ""
 ms.date: "10/10/2019"

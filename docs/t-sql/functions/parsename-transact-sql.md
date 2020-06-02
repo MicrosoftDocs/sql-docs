@@ -36,26 +36,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql 
-PARSENAME (   [ server_name . database_name . schema_name .   
-      | database_name .[ schema_name ] .   
-      | schema_name .   
-    ]  
-  object_name ) , object_piece )   
+PARSENAME ('object_name' , object_piece )
 ```  
   
 ## Arguments
 
-*server_name*
-Is the name of the server.
-
-*database_name*
-Is the name of the database.
-
-*schema_name*
-Is the name of the schema to which the table or view belongs.
-
-*object_name* 
-Is the name of the object.  
+*'object_name'*
+Is the parameter that holds the name of the object for which to retrieve the specified object part. This parameter is an optionally-qualified object name. If all parts of the object name are qualified, this name can have four parts: the server name, the database name, the owner name, and the object name.  Each part of the 'object_name' string is type *sysname* which is equivalent to varchar(128). This means with a 4-part name, the total string length can be 512 bytes. Even if the total string length is less than 512 bytes, if any part of the string exceeds 128 bytes, PARSENAME will return NULL for that part as it is not a valid sysname.
   
 *object_piece*  
 Is the object part to return. *object_piece* is of type **int**, and can have these values:  
@@ -66,7 +53,7 @@ Is the object part to return. *object_piece* is of type **int**, and can have th
   
 ## Return Type
 
- **nvarchar(128)**
+ **sysname**
   
 ## Remarks
 

@@ -1,5 +1,6 @@
 ---
 title: "Installing SSMA for Oracle Client (OracleToSQL) | Microsoft Docs"
+description: Learn about installation prerequisites for the SQL Server Migration Assistant (SSMA) for Oracle client and how to install.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -28,7 +28,7 @@ This section explains platforms that are supported with BDC.
 |Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
 |Red Hat OpenShift|BDC requires OpenShift version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server 2019 CU5.|
 |Azure Kubernetes Service (AKS)|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
-|Azure Red Hat OpenShift|BDC requires Azure Red Hat OpenShift version minimum 4.3. See [Azure Red Hat OpenShift](/azure/aks/sopenshift/). <br><br> Support introduced in SQL Server 2019 CU5.|
+|Azure Red Hat OpenShift|BDC requires Azure Red Hat OpenShift version minimum 4.3. See [Azure Red Hat OpenShift](/azure/openshift/). <br><br> Support introduced in SQL Server 2019 CU5.|
 
 
 ### Host OS for Kubernetes
@@ -53,6 +53,7 @@ This section explains platforms that are supported with BDC.
 |`azdata`|As a best practice, use the latest version available. Starting with SQL Server 2019 CU5 release, `azdata` has an independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
+For a complete list, see [Which tools are required?](deploy-big-data-tools.md#which-tools-are-required)
 
 ## Release history
 

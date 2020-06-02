@@ -56,7 +56,7 @@ Customizing the account name is optional. Use the `accountPrefix` parameter in t
 
 The subdomain only applies to DNS. Hence the new LDAP user account name is `bdc-ldap@contoso.local`. The account name would not be  not `bdc-ldap@bdc.contoso.local`.
 
-## Sempantics
+## Semantics
 
 In summary, these are the semantics of the parameters added in CU5 for multiple clusters in a domain:
 

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
+description: Learn about SSMA for Access and follow step-by-step instructions for migrating Access databases to SQL Server or Azure SQL Database.
 ms.prod: sql
 ms.custom: ""
 ms.date: "10/10/2019"

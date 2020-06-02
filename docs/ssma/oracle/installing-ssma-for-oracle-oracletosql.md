@@ -1,5 +1,6 @@
 ---
 title: "Installing SSMA  for Oracle (OracleToSQL) | Microsoft Docs"
+description: Use these articles to install, upgrade, and uninstall SQL Server Migration Assistant (SSMA) for Oracle, which includes a client application and an extension pack.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

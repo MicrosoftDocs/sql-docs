@@ -1,10 +1,11 @@
 ---
 title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for Oracle (OracleToSQL) for each release.
 authors: "HJToland3;nahk-ivanov"
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "4/27/2020"
+ms.date: "6/2/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,6 +15,13 @@ ms.author: "jtoland;alexiva"
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for Oracle contains minor performance improvements as well as the following changes:
+
+* Fix for the Tester issue with index-organized tables
+* Fix for the names of extended stored procedures in extension pack
 
 ## SSMA v8.9
 

@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Returns the specified part of an object name. The parts of an object that can be retrieved are the object name, owner name, database name, and server name.  
+  Returns the specified part of an object name. The parts of an object that can be retrieved are the object name, schema name, database name, and server name. 
   
 > [!NOTE]  
 >  The PARSENAME function does not indicate whether an object by the specified name exists. PARSENAME just returns the specified part of the specified object name.  
@@ -35,24 +35,33 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
+```syntaxsql 
+PARSENAME (   [ server_name . database_name . schema_name .   
+      | database_name .[ schema_name ] .   
+      | schema_name .   
+    ]  
+  object_name ) , object_piece )   
 ```  
-PARSENAME ( 'object_name' , object_piece )   
-```  
   
-## Arguments  
- '*object_name*'  
- Is the name of the object for which to retrieve the specified object part. *object_name* is **sysname**. This parameter is an optionally-qualified object name. If all parts of the object name are qualified, this name can have four parts: the server name, the database name, the owner name, and the object name.  
+## Arguments
+
+*server_name*
+
+database_name
+Is the name of the database.
+
+schema_name
+Is the name of the schema to which the table or view belongs.
+
+*object_name* 
+Is the name of the object.  
   
- *object_piece*  
- Is the object part to return. *object_piece* is of type **int**, and can have these values:  
-  
- 1 = Object name  
-  
- 2 = Schema name  
-  
- 3 = Database name  
-  
- 4 = Server name  
+*object_piece*  
+Is the object part to return. *object_piece* is of type **int**, and can have these values:  
+    1 = Object name  
+    2 = Schema name  
+    3 = Database name  
+    4 = Server name  
   
 ## Return Types  
  **sysname**  

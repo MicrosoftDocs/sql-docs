@@ -1,5 +1,6 @@
 ---
 title: "Connecting to SQL Server (MySQLToSQL) | Microsoft Docs"
+description: Learn how to connect to a target instance of SQL Server to migrate MySQL databases. SSMA obtains metadata about databases in SQL Server.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,6 @@
 ---
 title: "Menu commands and other shortcut keys(Oracle To SQL) | Microsoft Docs"
+description: Learn about keyboard shortcuts to access menu commands and other shortcut keys used in various dialog boxes of the SSMA for Oracle application.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

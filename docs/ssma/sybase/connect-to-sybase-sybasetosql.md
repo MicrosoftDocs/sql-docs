@@ -1,5 +1,6 @@
 ---
 title: "Connect to Sybase (SybaseToSQL) | Microsoft Docs"
+description: Connect to the Adaptive Server instance to begin migration using SSMA for Sybase Adaptive Server Enterprise (ASE). Use the Connect to Oracle dialog box.
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -135,7 +135,9 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 
 - New Server Audit Specification dialog may cause SSMS to crash with an access violation error.
 
-- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on Nuget.org right after SSMS 18.5 is released)
+- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on Nuget.org right after SSMS 18.5 is released).
+
+- [Error when connecting to SSAS via msmdpump.dll in SSMS](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696-error-when-connecting-to-ssas-via-msmdpump-dll-in).
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 

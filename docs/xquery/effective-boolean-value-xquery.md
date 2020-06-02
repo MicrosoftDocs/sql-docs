@@ -1,5 +1,6 @@
 ---
 title: "Effective Boolean Value (XQuery) | Microsoft Docs"
+description: Learn about effective Boolean values in XQuery.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Access SQLXML functionality in the .NET environment"
+description: Learn how to use SQLXML Managed Classes to access the .NET Framework environment.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

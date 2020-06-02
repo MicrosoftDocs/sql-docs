@@ -47,10 +47,10 @@ PARSENAME (   [ server_name . database_name . schema_name .
 
 *server_name*
 
-database_name
+*database_name*
 Is the name of the database.
 
-schema_name
+*schema_name*
 Is the name of the schema to which the table or view belongs.
 
 *object_name* 

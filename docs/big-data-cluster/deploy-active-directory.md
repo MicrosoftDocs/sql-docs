@@ -46,7 +46,7 @@ To create a new user in AD, you can right-click the domain or the OU and select 
 
 This user will be referred to as the *BDC domain service account* in this article.
 
-### Creating an OU
+### Create an OU
 
 On the domain controller, open **Active Directory Users and Computers**. On the left panel, right-click the directory under which you want to create your OU and select **New** \> **Organizational Unit**, then follow the prompts from the wizard to create the OU. Alternatively, you can create an OU with PowerShell:
 
@@ -60,7 +60,7 @@ The examples in this article use `bdc` for the OU name.
 
 ![image14](./media/deploy-active-directory/image14.png)
 
-### Setting permissions the BDC AD account
+### Set permissions for an AD account 
 
 Whether you have created a new AD user or using an existing AD user, there are certain permissions the user needs to have. This account is the user account that the BDC controller will use when joining the cluster to AD.
 
@@ -172,9 +172,9 @@ AD integration requires the following parameters. Add these parameters to the `c
   > [!IMPORTANT]
   > When multiple domain controllers are serving a domain, use the primary domain controller (PDC) as the first entry in the `domainControllerFullyQualifiedDns` list in the security config. To get the PDC name, type `netdom query fsmo`, at the command prompt, and then press **ENTER**.
 
-- `security.activeDirectory.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`).
+- `security.activeDirectory.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`). The value of provided for this parameter should be fully-qualified.
 
-- `security.activeDirectory.domainDnsName`: Name of your domain (e.g. `contoso.local`).
+- `security.activeDirectory.domainDnsName`: Name of your DNS domain that will be used for the cluster (e.g. `contoso.local`). 
 
 - `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or global. Members of this group get administrator permissions in the cluster. This means that they have `sysadmin` permissions in SQL Server, superuser permissions in HDFS, and administrators in controller. 
 
@@ -270,25 +270,18 @@ azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.g
 azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.appproxy.spec.endpoints[0].dnsName=<app proxy DNS name>.<Domain name. e.g. contoso.local>"
 ```
 
-Optionally, you can include the `subdomain` in the DNS name provided for the endpoints configuration. For example:
+> [!IMPORTANT]
+> You can use endpoint DNS names of your choice as long as they are fully qualified and do not conflict between any two big data clusters deployed in the same domain. Optionally, you can use the `subdomain` parameter value to ensure DNS names are different across clusters. For example:
 
 ```bash
 # DNS names for BDC services
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.<subdomain e.g. mssql-cluster>.contoso.local"
 ```
 
-> [!IMPORTANT]
-> The example above applies to big data cluster as of SQL Server 2019 CU5 release. If you have an existing cluster deployed before this release or if you are deploying a new cluster with pre-CU5 Docker image tag, you should not include the `subdomain` portion in the DNS names values provided for each service. For example,
->
-> ```bash
-> # DNS names for BDC services for a cluster deployed before CU5 release cannot include the subdomain value
-> azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.contoso.local"
-> ```
-
 You can find an example script here for [deploying a SQL Server big data cluster on single node Kubernetes cluster (kubeadm) with AD integration](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
 
 > [!Note]
-> There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example you must deploy an a pre-CU5 release and you already upgraded **azdata CLI**, or you are deploying a new cluster using the latest CU5 release, but can't modify an already existing application connection string or the DNS names. This is highly unlikely, but if you need to revert to the pre-CU5 behavior, you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.  Here is the command to do so:
+> There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example, you must deploy an a pre-CU5 release and you already upgraded **azdata CLI**. This is highly unlikely, but if you need to revert to the pre-CU5 behavior, you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.  Here is the command to do so:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
@@ -339,11 +332,18 @@ From Azure Data Studio:
 
 #### Connect to controller with AD authentication from Linux/Mac
 
-You can connect to the controller endpoint using `azdata` and AD authentication.
+There are two options for connecting to the controller endpoint using `azdata` and AD authentication. You can use the *--endpoint/-e* parameter:
 
 ```bash
 kinit <username>@<domain name>
 azdata login -e https://<controller DNS name>:30080 --auth ad
+```
+
+Alternatively, you can connect using the *--namespace/-n* parameter, which is the big data cluster name:
+
+```bash
+kinit <username>@<domain name>
+azdata login -n <clusterName> --auth ad
 ```
 
 #### Connect to controller with AD authentication from Windows

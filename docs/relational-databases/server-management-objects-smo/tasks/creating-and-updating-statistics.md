@@ -2,7 +2,7 @@
 title: Creating and Updating Statistics
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology: tools-other
+ms.technology: smo
 ms.topic: reference
 helpviewer_keywords: statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1

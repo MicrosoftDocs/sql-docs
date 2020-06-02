@@ -1,7 +1,7 @@
 ---
 title: "PARSENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/02/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -46,6 +46,7 @@ PARSENAME (   [ server_name . database_name . schema_name .
 ## Arguments
 
 *server_name*
+Is the name of the server.
 
 *database_name*
 Is the name of the database.
@@ -63,10 +64,12 @@ Is the object part to return. *object_piece* is of type **int**, and can have th
     3 = Database name  
     4 = Server name  
   
-## Return Types  
- **sysname**  
+## Return Type
+
+ **nvarchar(128)**
   
-## Remarks  
+## Remarks
+
  PARSENAME returns NULL if one of the following conditions is true:  
   
 -   Either *object_name* or *object_piece* is NULL.  
@@ -75,10 +78,11 @@ Is the object part to return. *object_piece* is of type **int**, and can have th
   
  The requested object part has a length of 0 and is not a valid [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier. A zero-length object name renders the complete qualified name as not valid.  
   
-## Examples  
+## Examples
+
  The following example uses `PARSENAME` to return information about the `Person` table in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 1) AS 'Object Name';  
@@ -115,7 +119,8 @@ Server Name
 (1 row(s) affected)
 ```
   
-## See Also  
+## See Also
+
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot
 ms.custom: seo-dt-2019
-ms.date: 06/02/2020
+ms.date: 06/03/2020
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

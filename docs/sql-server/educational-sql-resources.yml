@@ -130,7 +130,7 @@ landingContent:
     - linkListType: reference 
       links:
       - text: Microsoft Learn
-        url: https://docs.microsoft.com/en-us/learn/
+        url: https://docs.microsoft.com/learn/
       - text: LinkedIn Learning
         url: https://www.linkedin.com/learning/topics/sql-server
       - text: Pluralsight

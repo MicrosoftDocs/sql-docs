@@ -1,5 +1,6 @@
 ---
 title: "Executing XPath Queries (SQLXMLOLEDB Provider)"
+description: Learn how to use SQLXMLOLEDB Provider-specific properties when executing XPath queries.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

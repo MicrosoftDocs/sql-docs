@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the HIDE Directive | Microsoft Docs"
+description: View an example of using the HIDE directive in an SQL query.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

@@ -5,7 +5,7 @@ description: This article describes security concepts for SQL Server Big Data Cl
 author: nelgson 
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/23/2019
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

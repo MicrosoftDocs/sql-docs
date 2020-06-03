@@ -5,7 +5,7 @@ description: This article describes how SQL Server Big Data Clusters uses RBAC w
 author: mihaelablendea 
 ms.author: ""
 ms.reviewer: mikeray
-ms.date: 05/23/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

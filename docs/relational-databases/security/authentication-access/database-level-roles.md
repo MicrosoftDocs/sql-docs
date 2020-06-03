@@ -125,7 +125,7 @@ These database roles exist only in the virtual master database. Their permission
 |[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Adds a database user, database role, Windows login, or Windows group to a database role in the current database. All platforms except [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse should use `ALTER ROLE` instead.|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Removes a security account from a SQL Server role in the current database. All platforms except [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse should use `ALTER ROLE` instead.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Adds permission to a role.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Denys a permission to a role.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Denies a permission to a role.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Removes a previously granted or denied permissions.
   
   

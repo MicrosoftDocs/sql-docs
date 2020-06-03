@@ -15,7 +15,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Example: Specifying the ELEMENT Directive and Entity Encoding
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This example illustrates the difference between the **ELEMENT** and **XML** directives. The **ELEMENT** directive entitizes the data, but the **XML** directive does not. The \<Summary> element is assigned XML, `<Summary>This is summary description</Summary>`, in the query.  
   
  Consider this query:  

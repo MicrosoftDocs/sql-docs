@@ -1,5 +1,6 @@
 ---
 title: "Group data by columns or rows in a mobile report | Reporting Services | Microsoft Docs"
+description: In Mobile Report Publisher, you can organize data by columns or by rows in many types of charts. This article illustrates data structured by columns or by rows.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

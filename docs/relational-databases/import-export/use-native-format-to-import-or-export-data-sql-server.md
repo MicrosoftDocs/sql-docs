@@ -1,5 +1,6 @@
 ---
 title: "Use native format to import & export data"
+description: In SQL Server import or export, native format maintains the native data types of a database for high-speed data transfer of data between SQL Server tables.
 ms.date: "09/30/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

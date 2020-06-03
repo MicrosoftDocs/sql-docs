@@ -1,7 +1,7 @@
 ---
 title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2018"
+ms.date: "03/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -91,7 +91,7 @@ ALTER SCHEMA schema_name
 ## Examples  
   
 ### A. Transferring ownership of a table  
- The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the schema.  
+ The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,5 +1,6 @@
 ---
 title: "Install PolyBase on Windows | Microsoft Docs"
+description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase

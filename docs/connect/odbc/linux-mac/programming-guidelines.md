@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
-ms.author: genemi
+ms.author: v-daenge
 ---
 # Programming Guidelines
 

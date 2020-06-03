@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Use XML in Computed Columns
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML instances can appear as a source for a computed column, or as a type of computed column. The examples in this topic show how to use XML with computed columns.  
   
 ## Creating Computed Columns from XML Columns  

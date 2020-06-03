@@ -177,6 +177,7 @@ MAXDOP = *max_degree_of_parallelism*
  Uses the actual number of processors or fewer based on the current system workload.  
   
  \<update_stats_stream_option> 
+ 
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
 ## Remarks  

@@ -14,7 +14,7 @@ ms.technology: machine-learning
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-You can run Python and R scripts on the master instance of [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../advanced-analytics/index.yml).
+You can run Python and R scripts on the master instance of [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../machine-learning/index.yml).
 
 > [!NOTE]
 > You can also run Java code on the master instance with [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md). Following the steps below will also enable Language Extensions.
@@ -77,7 +77,7 @@ You are now ready to run Python and R scripts on the master instance of Big Data
 
 ## Next steps
 
-+ [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Quickstart: Create and score a predictive model in R with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-create-script.md)
++ [Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-train-score-model.md)
++ [Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Quickstart: Create and score a predictive model in R with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-r-train-score-model.md)

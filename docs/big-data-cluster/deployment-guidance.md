@@ -49,7 +49,7 @@ You can choose to deploy Kubernetes in any of three ways:
 | **Single or Multiple machines (`kubeadm`)** | A Kubernetes cluster deployed on physical or virtual machines using `kubeadm` | [Instructions](deploy-with-kubeadm.md) |
 
 > [!TIP]
-> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](deploy-notebooks.md).
+> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](notebooks-deploy.md).
 
 ### Verify Kubernetes configuration
 
@@ -66,7 +66,7 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 
 ## Ensure you have storage configured
 
-For most big data cluster deployments to have persistent storage. At this time, you need to make sure you have a plan for how you're going to provide persistent storage on the Kubernetes cluster before you deploy the BDC.
+Most big data cluster deployments should have persistent storage. At this time, you need to make sure you have a plan for how you're going to provide persistent storage on the Kubernetes cluster before you deploy the BDC.
 
 If you deploy in AKS, no storage setup is necessary. AKS provides built-in storage classes with dynamic provisioning. You can customize the storage class (`default` or `managed-premium`) in the deployment configuration file. The built-in profiles use a `default` storage class. If you are deploying on a Kubernetes cluster you deployed using `kubeadm`, you'll need to ensure you have sufficient storage for a cluster of your desired scale available and configured for use. If you wish to customize how your storage is used, you should do this before proceeding. See [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 

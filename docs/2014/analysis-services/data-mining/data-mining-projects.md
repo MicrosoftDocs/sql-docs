@@ -154,7 +154,7 @@ manager: craigg
   
  These visualizations are temporary, and are closed without saving when you exit the session with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Therefore, if you need to export these visualizations to another application for presentation or further analysis, use the **Copy** commands provided in each tab or pane of the viewer interface.  
   
- The Data Mining Add-ins for Excel also provides a Visio template that you can use to represent your models in a Visio diagram and annotate and modify the diagram using Visio tools. For more information, see [Microsoft SQL Server 2008 SP2 Data Mining Add-ins for Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
+ The Data Mining Add-ins for Excel also provides a Visio template that you can use to represent your models in a Visio diagram and annotate and modify the diagram using Visio tools. For more information, see [Microsoft SQL Server 2008 SP2 Data Mining Add-ins for Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=8569).
   
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  After you have created a model, you can investigate the results and make decisions about which models perform the best.  

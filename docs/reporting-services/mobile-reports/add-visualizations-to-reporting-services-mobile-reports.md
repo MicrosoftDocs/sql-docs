@@ -1,5 +1,6 @@
 ---
 title: "Add visualizations to Reporting Services mobile reports | Microsoft Docs"
+description: "Learn about the three basic chart types you can use in Reporting Services mobile reports: time, category, and totals, and their corresponding comparison charts."
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

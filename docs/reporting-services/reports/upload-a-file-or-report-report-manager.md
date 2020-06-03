@@ -1,5 +1,6 @@
 ---
 title: "Upload a File or Report in the Report Server | Microsoft Docs"
+description: Learn how to add reports and other files to a report server without having to publish those items from a client application.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

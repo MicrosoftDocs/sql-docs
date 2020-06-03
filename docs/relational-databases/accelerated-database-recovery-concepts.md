@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Accelerated database recovery
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is new for SQL Server 2019 and is also available for single databases and pooled databases in Azure SQL Database, and databases in Azure SQL Data Warehouse (currently in public preview). The primary benefits of ADR are:
 
@@ -86,6 +86,10 @@ The ADR recovery process has the same three phases as the current recovery proce
 - **Undo phase**
 
    The undo phase with ADR completes almost instantaneously by using sLog to undo non-versioned operations and persisted version store (PVS) with logical revert to perform row level version-based undo.
+
+You can also watch this 8-minute video that explains Accelerated Database Recovery
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 
 ## ADR recovery components
 

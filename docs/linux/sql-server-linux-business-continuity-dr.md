@@ -1,6 +1,6 @@
 ---
 title: Disaster recovery for SQL Server on Linux
-description: 
+description: This article is an overview of business continuity solutions for high availability and disaster recovery in SQL Server. It focuses on availability scenarios.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

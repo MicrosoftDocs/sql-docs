@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_client_info"
   - "sqlsrv_client_info"
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

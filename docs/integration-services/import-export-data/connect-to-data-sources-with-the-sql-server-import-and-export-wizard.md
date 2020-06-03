@@ -1,5 +1,5 @@
 ---
-title: "Connect to Data Sources with the SQL Server Import and Export Wizard | Microsoft Docs"
+title: "Connect to Data Sources (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.prod: sql

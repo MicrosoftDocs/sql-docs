@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Connectors for Oracle and Teradata by Attunity (SSIS) | Microsoft Docs"
+title: "Microsoft Connectors for Oracle and Teradata by Attunity | Microsoft Docs"
 
 ms.date: "08/16/2019"
 ms.prod: sql

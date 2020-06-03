@@ -1,5 +1,7 @@
 ---
 title: "Start Report Builder | Microsoft Docs"
+description: Report Builder is a stand-alone report authoring environment. The first time you start it, Microsoft Download Center prompts you to download it.
+
 ms.date: 01/03/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

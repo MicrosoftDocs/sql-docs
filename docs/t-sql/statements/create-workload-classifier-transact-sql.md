@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/27/2020
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -37,12 +37,12 @@ Creates a classifier object for use in workload management.  The classifier assi
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    (   WORKLOAD_GROUP = ‘name’  
-    ,   MEMBERNAME = ‘security_account’ 
-[ [ , ] WLM_LABEL = ‘label’ ]  
-[ [ , ] WLM_CONTEXT = ‘context’ ]  
-[ [ , ] START_TIME = ‘HH:MM’ ]  
-[ [ , ] END_TIME = ‘HH:MM’ ]  
+    (   WORKLOAD_GROUP = 'name'  
+    ,   MEMBERNAME = 'security_account' 
+[ [ , ] WLM_LABEL = 'label' ]  
+[ [ , ] WLM_CONTEXT = 'context' ]  
+[ [ , ] START_TIME = 'HH:MM' ]  
+[ [ , ] END_TIME = 'HH:MM' ]  
   
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
@@ -58,8 +58,8 @@ WITH
 
  Available workload groups can be found in [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) catalog view.
 
- *MEMBERNAME* ='security_account'*    
- This is the security account being added to the role.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.
+ *MEMBERNAME* = *'security_account'*    
+ The security account used to classified against.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.
  
  *WLM_LABEL*   
  Specifies the label value that a request can be classified against.  Label is an optional parameter of type nvarchar(255).  Use the [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) in the request to match the classifier configuration.
@@ -138,13 +138,13 @@ A request can match against multiple classifiers.  There is a weighting for the 
 Consider the following classifier configurations.
 
 ```sql
-CREATE WORKLOAD CLASSIFIER classiferA WITH  
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
 ( WORKLOAD_GROUP = 'wgDashboards'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = HIGH
  ,WLM_LABEL      = 'salereport' )
 
-CREATE WORKLOAD CLASSIFIER classiferB WITH  
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
@@ -152,7 +152,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-The user `userloginA` is configured for both classifiers.  If userloginA runs a query with a label equal to `salesreport` between 6PM and 7AM UTC, the request will be classified to the wgDashboards workload group with HIGH importance.  The expectation may be to classify the request to wgUserQueries with LOW importance for off-hours reporting, but the weighting of WLM_LABEL is higher than START_TIME/END_TIME.  The weighting of classiferA is 80 (64 for user, plus 16 for WLM_LABEL).  The weighting of classifierB is 68 (64 for user, 4 for START_TIME/END_TIME).  In this case, you can add WLM_LABEL to classiferB.
+The user `userloginA` is configured for both classifiers.  If userloginA runs a query with a label equal to `salesreport` between 6PM and 7AM UTC, the request will be classified to the wgDashboards workload group with HIGH importance.  The expectation may be to classify the request to wgUserQueries with LOW importance for off-hours reporting, but the weighting of WLM_LABEL is higher than START_TIME/END_TIME.  The weighting of classifierA is 80 (64 for user, plus 16 for WLM_LABEL).  The weighting of classifierB is 68 (64 for user, 4 for START_TIME/END_TIME).  In this case, you can add WLM_LABEL to classifierB.
 
  For more information see, [workload weighting](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 

@@ -71,11 +71,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *\<block_dml_operation>* 
  The particular DML operation for which the block predicate will be applied. AFTER specifies that the predicate will be evaluated on the values of the rows after the DML operation was performed (INSERT or UPDATE). BEFORE specifies that the predicate will be evaluated on the values of the rows before the DML operation is performed (UPDATE or DELETE). If no operation is specified, the predicate will apply to all operations.  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  Enables or disables the security policy from enforcing its security predicates against the target tables. If not specified the security policy being created is enabled.  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- Indicates whether all predicate functions in the policy must be created with the SCHEMABINDING option. By default, all functions must be created with SCHEMABINDING.  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ Indicates whether all predicate functions in the policy must be created with the SCHEMABINDING option. By default this setting is **ON** and all functions must be created with SCHEMABINDING.  
   
  NOT FOR REPLICATION  
  Indicates that the security policy should not be executed when a replication agent modifies the target object. For more information, see [Control the Behavior of Triggers and Constraints During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  

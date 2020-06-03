@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using table-valued parameters
 
@@ -121,7 +121,7 @@ pStmt.execute();
   
 ## Passing a table-valued parameter as a SQLServerDataTable object  
 
-Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerDataTable class represents an in-memory table of relational data. This example demonstrates how to construct a table-valued parameter from in-memory data using the SQLServerDataTable object. The code first creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
+Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerDataTable class represents an in-memory table of relational data. This example demonstrates how to construct a table-valued parameter from in-memory data using the SQLServerDataTable object. First, the code creates a SQLServerDataTable object, defines its schema, and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -150,7 +150,7 @@ pStmt.execute();
   
 ## Passing a table-valued parameter as a ResultSet object  
 
-This example demonstrates how to stream rows of data from a ResultSet to a table-valued parameter. The code first retrieves data from a source table in a creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
+This example demonstrates how to stream rows of data from a ResultSet to a table-valued parameter. First, the code retrieves data from a source table in a SQLServerDataTable object, defines its schema, and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */

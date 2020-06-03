@@ -1,7 +1,7 @@
 ---
 title: "Example: Retrieving Binary Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/23/2019"
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, retrieving binary data example"
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+author: RothJa
+ms.author: jroth
+# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # Example: Retrieving Binary Data
 

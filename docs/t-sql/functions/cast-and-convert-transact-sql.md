@@ -1,6 +1,6 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another."
 ms.date: "08/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -165,7 +165,7 @@ For a **binary(n)**, **char(n)**, **varbinary(n)**, or **varchar(n)** *expressio
 Implicit conversions do not require specification of either the CAST function or the CONVERT function. Explicit conversions require specification of the CAST function or the CONVERT function. The following illustration shows all explicit and implicit data type conversions allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **bigint**, and **sql_variant**, and **xml**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.
   
 > [!TIP]  
-> The [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) has this chart available for download as a PDF file.  
+> The [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) has this chart available for download as a PNG file.  
   
 ![Data type conversion table](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
   

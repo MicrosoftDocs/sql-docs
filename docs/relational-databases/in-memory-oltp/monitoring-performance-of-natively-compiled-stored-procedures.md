@@ -100,7 +100,7 @@ The following query returns the query text as well as execution statistics for a
 SELECT
         st.objectid,
         object_name(st.objectid) as 'object name',
-        SUBSTRING()
+        SUBSTRING(
             st.text,
             (qs.statement_start_offset/2) + 1,
             ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1

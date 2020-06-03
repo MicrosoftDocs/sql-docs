@@ -55,6 +55,8 @@ SET TRANSACTION ISOLATION LEVEL
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+>[!NOTE]
+> SQL Data Warehouse implements ACID transactions. The isolation level of the transactional support is default to READ UNCOMMITTED.  You can change it to READ COMMITTED SNAPSHOT ISOLATION by turning ON the READ_COMMITTED_SNAPSHOT database option for a user database when connected to the master database.  Once enabled, all transactions in this database are executed under READ COMMITTED SNAPSHOT ISOLATION and the setting READ UNCOMMITTED on session level will not be honored. Check [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) for details.  
 
 ## Arguments  
  READ UNCOMMITTED  

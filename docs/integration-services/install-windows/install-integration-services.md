@@ -1,5 +1,5 @@
 ---
-title: "Install SQL Server Integration Services (SSIS) | Microsoft Docs"
+title: "Install SQL Server Integration Services | Microsoft Docs"
 description: Learn how to install Microsoft SQL Server Integration Services (SSIS) and how to get other downloads for SSIS
 ms.custom: ""
 ms.date: "09/19/2019"

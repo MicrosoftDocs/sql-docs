@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Extended Events Sessions"
+description: A SQL Server Extended Events session is created in the SQL Server process that hosts the Extended Events engine. Learn about session states and session content.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

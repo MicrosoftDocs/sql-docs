@@ -118,7 +118,7 @@ REVERT ;
  The following example shows the `xp_cmdshell` extended stored procedure executing a directory command.  
   
 ```  
-EXEC master..xp_cmdshell 'dir *.exe''  
+EXEC master..xp_cmdshell 'dir *.exe'  
 ```  
   
 ### B. Returning no output  
@@ -128,7 +128,7 @@ EXEC master..xp_cmdshell 'dir *.exe''
 USE master;  
   
 EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck  
-    \\server2\backups\SQLbcks, NO_OUTPUT';  
+    \\server2\backups\SQLbcks', NO_OUTPUT;  
 GO  
 ```  
   

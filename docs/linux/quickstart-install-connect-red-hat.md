@@ -112,6 +112,11 @@ At this point, SQL Server is running on your RHEL machine and is ready to use!
 
 ## <a id="install"></a>Install SQL Server
 
+> [!NOTE]
+> The following commands for SQL Server 2019 points to the RHEL 8 repository. RHEL 8 does not come preinstalled with python2, which is required by SQL Server. For more information, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> If you are using RHEL 7, change the path below to `/rhel/7` instead of `/rhel/8`.
+
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
 1. Download the Microsoft SQL Server 2019 Red Hat repository configuration file:

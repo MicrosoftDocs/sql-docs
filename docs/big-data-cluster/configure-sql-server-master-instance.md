@@ -47,7 +47,7 @@ To change any of these settings, follow these steps:
 1. Restart SQL Server instance.  Replace `<namespaceName>` with the big data cluster name.
 
    ```bash
-   kubectl exec -it master-0  -c mssql-server -n <namespaceName>-- /bin/bash
+   kubectl exec -it master-0  -c mssql-server -n <namespaceName> -- /bin/bash
    supervisorctl restart mssql-server
    exit
    ```

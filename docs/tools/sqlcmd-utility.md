@@ -83,7 +83,7 @@ To run sqlcmd statements in SSMS, select SQLCMD Mode from the top navigation Que
 
 Currently, **sqlcmd** doesn't require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.  
 
- Other topics:
+ Other topics: 
 
 - [Start the sqlcmd Utility](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
 - [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
@@ -260,10 +260,9 @@ Prints raw error messages to the screen.
 - **-P ""**
 
 We recommend that you use a strong password.
- 
+
 #### [**Use a strong password!**](../relational-databases/security/strong-passwords.md)
-  
-  
+
  The password prompt is displayed by printing the password prompt to the console, as follows: `Password:`  
   
  User input is hidden. This means that nothing is displayed and the cursor stays in position.  
@@ -338,11 +337,11 @@ We recommend that you use a strong password.
   
  Path examples:  
 
-```cmd 
+```cmd
 -i C:\<filename>  
 -i \\<Server>\<Share$>\<filename>  
 -i "C:\Some Folder\<file name>"  
-```cmd
+```
   
  File paths that contain spaces must be enclosed in quotation marks.  
   
@@ -355,11 +354,11 @@ We recommend that you use a strong password.
   
  Path examples:  
 
-```cmd 
+```cmd
 -o C:< filename>  
 -o \\<Server>\<Share$>\<filename>  
 -o "C:\Some Folder\<file name>"  
- ```cmd
+ ```
  File paths that contain spaces must be enclosed in quotation marks.  
   
  **-r**[**0** | **1**]  
@@ -547,21 +546,22 @@ We recommend that you use a strong password.
  **-?**  
  Displays the version of **sqlcmd** and a syntax summary of **sqlcmd** options.  
   
-## Remarks  
- Options do not have to be used in the order shown in the syntax section.  
-  
- When multiple results are returned, **sqlcmd** prints a blank line between each result set in a batch. In addition, the `<x> rows affected` message does not appear when it does not apply to the statement executed.  
-  
- To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this article. For more information, see [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)  
-  
+## Remarks
+
+Options do not have to be used in the order shown in the syntax section.
+
+When multiple results are returned, **sqlcmd** prints a blank line between each result set in a batch. In addition, the `<x> rows affected` message does not appear when it does not apply to the statement executed.
+
+To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this article. For more information, see [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)
+
 > [!NOTE]  
->  The options **-L**, **-Q**, **-Z** or **-i** cause **sqlcmd** to exit after execution.  
+>  The options **-L**, **-Q**, **-Z** or **-i** cause **sqlcmd** to exit after execution.
   
- The total length of the **sqlcmd** command-line in the command environment (Cmd.exe), including all arguments and expanded variables, is that which is determined by the operating system for Cmd.exe.  
+ The total length of the **sqlcmd** command-line in the command environment (Cmd.exe), including all arguments and expanded variables, is that which is determined by the operating system for Cmd.exe.
   
-## Variable Precedence (Low to High)  
+## Variable Precedence (Low to High)
   
-1.  System-level environmental variables.  
+1.  System-level environmental variables.
   
 2.  User-level environmental variables  
   
@@ -897,10 +897,10 @@ When you press ENTER, the following informational message is printed: "Changed d
 
 Examples using Azure Active Directory Authentication:
 
-```cmdconsole
+```cmd
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAADPassword -l 30
-```cmd
+```
   
 ## sqlcmd Best Practices
 

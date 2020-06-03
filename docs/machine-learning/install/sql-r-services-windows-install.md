@@ -142,7 +142,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
 
-1. Open SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
+1. Open SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
 
 1. If Launchpad is running, you should be able to run simple R to verify that external scripting runtimes can communicate with SQL Server.
 

@@ -5,7 +5,7 @@ description: Connect to big data cluster using sparklyr from RStudio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

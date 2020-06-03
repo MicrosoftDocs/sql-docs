@@ -1,5 +1,6 @@
 ---
 title: "Enable Remote Errors (Reporting Services) | Microsoft Docs"
+description: Learn how to set server properties on a Reporting Services report server to return additional information about error conditions that occur on remote servers.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

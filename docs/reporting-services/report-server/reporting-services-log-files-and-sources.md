@@ -1,5 +1,6 @@
 ---
 title: "Reporting Services Log Files and Sources | Microsoft Docs"
+description: Report servers and report server environments record execution and trace information in several logs about server operations and status in Reporting Services.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

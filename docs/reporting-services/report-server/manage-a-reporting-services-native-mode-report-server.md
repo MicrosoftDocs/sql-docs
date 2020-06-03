@@ -1,5 +1,6 @@
 ---
 title: "Manage a Reporting Services Native Mode Report Server | Microsoft Docs"
+description: Refer to these articles for configuration tasks for a Reporting Services native mode report server and to configure a report server for SharePoint integrated.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

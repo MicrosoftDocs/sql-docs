@@ -154,7 +154,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Filestream:** RLS is incompatible with Filestream.  
   
-- **PolyBase:** RLS is supported with Polybase external tables for Azure Synapse SQL data warehouses only.
+- **PolyBase:** RLS is supported with Polybase external tables for Azure Synapse only.
 
 - **Memory-Optimized Tables:** The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see the **Row-Level Security in Memory Optimized Tables** section in [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -290,7 +290,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure Synapse SQL external table
+### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure Synapse external table
 
 This short example creates three users and an external table with six rows. It then creates an inline table-valued function and a security policy for the external table. The example shows how select statements are filtered for the various users.
 
@@ -334,7 +334,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Create an Azure Synapse SQL external table from the Sales table created.
+Create an Azure Synapse external table from the Sales table created.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -383,7 +383,7 @@ WITH (STATE = OFF);
 
 Now the Sales1 and Sales2 users can see all six rows.
 
-Connect to the Synapse SQL data warehouse database to clean up resources
+Connect to the Azure Synapse database to clean up resources
 
 ```sql
 DROP USER Sales1;
@@ -410,7 +410,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. Scenario for users who connect to the database through a middle-tier application
 
 > [!NOTE]
-> In this example block predicates functionality isn't currently supported for Azure Synapse SQL, hence inserting rows for the wrong user ID isn't blocked with Azure Synapse SQL.
+> In this example block predicates functionality isn't currently supported for Azure Synapse, hence inserting rows for the wrong user ID isn't blocked with Azure Synapse.
 
 This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary.  
   

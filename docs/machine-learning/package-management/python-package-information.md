@@ -5,7 +5,7 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/27/2020
+ms.date: 06/01/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -142,7 +142,10 @@ Result:
 STDOUT message(s) from external script: Package scikit-learn is version 0.20.2
 ```
 
-The following example returns the version of Python.
+<a name="bkmk_SQLPythonVersion"></a>
+## View the version of Python
+
+The following example code returns the version of Python installed in the instance of SQL Server.
 
 ```sql
 EXECUTE sp_execute_external_script

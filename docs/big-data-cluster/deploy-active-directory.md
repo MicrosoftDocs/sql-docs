@@ -186,6 +186,40 @@ AD integration requires the following parameters. Add these parameters to the `c
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
+  >[!IMPORTANT]
+  >If your domain users have a large number of group memberships, you should adjust the values for *gateway-site.gateway.httpserver.requestHeaderBuffer* (default value is *8192*) and  *hdfs.core-site.hadoop.security.group.mapping.ldap.search.group.hierarchy.levels* (default value is *10*), using the custom *bdc.json* deployment configuration file. This is a best practice to avoid connection timeouts to gateway and/or HTTP responses with 431 *Request Header Fields Too Large* status code. Here is a section of the configuration file showing how define the values of these settings: 
+
+```json
+{
+    ...
+    "spec": {
+        "resources": {
+            ...
+            "gateway": {
+                "spec": {
+                    "replicas": 1,
+                    "endpoints": [{...}],
+                    "settings": {
+                        "gateway-site.gateway.httpserver.requestHeaderBuffer": "65536"
+                    }
+                }
+            },
+            ...
+        },
+        "services": {
+            ...
+            "hdfs": {
+                "resources": [...],
+                "settings": {
+                  "hdfs.core-site.hadoop.security.group.mapping.ldap.search.group.hierarchy.levels": "4"
+                }
+            },
+            ...
+        }
+    }
+}
+```
+
 - `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
 
   >[!IMPORTANT]

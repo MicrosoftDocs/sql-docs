@@ -396,7 +396,7 @@ After you've restored your database into a container, you might also want to reg
    ```PowerShell
    cd ~
    docker cp sql1:/var/opt/mssql/backup/wwi_2.bak wwi_2.bak
-   ls -l wwi*
+   ls wwi*
    ```
 
 ## Use the persisted data

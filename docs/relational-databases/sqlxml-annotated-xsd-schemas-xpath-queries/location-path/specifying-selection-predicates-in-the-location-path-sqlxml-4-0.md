@@ -1,5 +1,6 @@
 ---
 title: "Set selection predicates in location path (SQLXML)"
+description: Learn how specifying selection predicates in the location path expression of an XPath (SQLXML 4.0) query filters the node set that is being queried.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

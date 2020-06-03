@@ -1,5 +1,6 @@
 ---
 title: "Connecting to DB2 Database (DB2ToSQL) | Microsoft Docs"
+description: Learn how to connect to a target instance of DB2 database to migrate DB2 databases. SSMA obtains metadata about all DB2 schemas.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

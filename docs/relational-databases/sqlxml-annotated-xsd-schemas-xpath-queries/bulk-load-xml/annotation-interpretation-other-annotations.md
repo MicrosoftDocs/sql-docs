@@ -1,5 +1,6 @@
 ---
 title: "Other Annotations (SQLXML)"
+description: View a list of SQLXML annotations with a description of how each one is interpreted by XML Bulk Load.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,5 +1,6 @@
 ---
 title: "Installing SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
+description: Use these articles to install, upgrade, and uninstall SQL Server Migration Assistant for SAP ASE, which includes a client application and an extension pack.
 ms.custom: ""
 ms.date: "11/29/2017"
 ms.prod: sql

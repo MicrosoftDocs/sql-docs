@@ -1,5 +1,6 @@
 ---
 title: "Mapping Oracle Schemas to SQL Server Schemas (OracleToSQL) | Microsoft Docs"
+description: Learn how to customize SSMA for Oracle mappings between Oracle schemas and SQL Server or accept the default.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

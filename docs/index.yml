@@ -26,6 +26,15 @@ highlightedContent:
 
 productDirectory:
   items:
+  - title: SQL Server on Windows
+    imageSrc: media/index/windows.svg
+    links:
+      - url: sql-server/index.yml
+        text: On-premises
+      - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
+        text: On an Azure VM
+      - url: https://docs.microsoft.com/previous-versions/sql/
+        text: Previous Versions (SQL 2005-2012)  
   - title: SQL on Azure 
     imageSrc: media/index/azure.svg
     links:
@@ -35,15 +44,6 @@ productDirectory:
         text: Azure SQL Managed Instance        
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
         text: Azure Synapse Analytics (SQL DW)
-  - title: SQL Server on Windows
-    imageSrc: media/index/windows.svg
-    links:
-      - url: sql-server/index.yml
-        text: On-premises
-      - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
-        text: On an Azure VM
-      - url: https://docs.microsoft.com/previous-versions/sql/
-        text: Previous Versions (SQL 2005-2012)
   - title: SQL Server on Linux
     imageSrc: media/index/linux.svg
     links:

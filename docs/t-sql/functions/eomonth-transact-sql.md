@@ -51,7 +51,7 @@ The `EOMONTH` function can remote to [!INCLUDE[ssSQL11](../../includes/sssql11-m
   
 ### A. EOMONTH with explicit datetime type  
   
-```  
+```sql 
 DECLARE @date DATETIME = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
@@ -68,7 +68,7 @@ Result
 
 ### B. EOMONTH with string parameter and implicit conversion  
   
-```  
+```sql
 DECLARE @date VARCHAR(255) = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  

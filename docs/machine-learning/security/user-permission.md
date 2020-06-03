@@ -21,7 +21,7 @@ For more information, see the permissions section in [Security overview for the 
 
 ## Permission to run scripts
 
-For each user who run Python or R scripts with SQL Server Machine Learning Services, and who are not an administrator, you must grant them the permission to run external scripts in each database where the language is used.
+For each user who runs Python or R scripts with SQL Server Machine Learning Services, and who are not an administrator, you must grant them the permission to run external scripts in each database where the language is used.
 
 To grant permission to execute external script, run the following script:
 

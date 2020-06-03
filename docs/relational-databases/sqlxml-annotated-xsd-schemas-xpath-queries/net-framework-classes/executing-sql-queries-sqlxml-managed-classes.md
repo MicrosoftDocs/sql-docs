@@ -1,5 +1,6 @@
 ---
 title: "Executing SQL Queries (SQLXML)"
+description: Learn how to execute SQL queries using SQLXML Managed Classes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

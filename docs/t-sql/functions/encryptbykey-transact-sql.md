@@ -94,7 +94,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ### A. Encrypting a string with a symmetric key  
  The following example adds a column to the `Employee` table, and then encrypts the value of the Social Security number that is stored in column `NationalIDNumber`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -117,7 +117,7 @@ GO
   
 ### B. Encrypting a record together with an authentication value  
   
-```  
+```sql 
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  

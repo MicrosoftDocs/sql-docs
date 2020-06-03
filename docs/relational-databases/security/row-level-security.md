@@ -36,7 +36,7 @@ Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/creat
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
-> Azure SQL Data Warehouse supports filter predicates only. Block predicates aren't currently supported in Azure SQL Data Warehouse.
+> Azure Synapse supports filter predicates only. Block predicates aren't currently supported in Azure Synapse.
 
 ## <a name="Description"></a> Description
 
@@ -154,7 +154,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Filestream:** RLS is incompatible with Filestream.  
   
-- **PolyBase:** RLS is supported with Polybase external tables for Azure SQL Data Warehouse only.
+- **PolyBase:** RLS is supported with Polybase external tables for Azure Synapse only.
 
 - **Memory-Optimized Tables:** The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see the **Row-Level Security in Memory Optimized Tables** section in [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -180,8 +180,6 @@ It is possible to cause information leakage through the use of carefully crafted
   
  Create three user accounts that will demonstrate different access capabilities.  
 
-> [!NOTE]
-> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, so you must CREATE LOGIN for each user beforehand. Later, you will log in as the appropriate user to test this behavior.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -268,10 +266,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, so log in as the appropriate user to test the above behavior.
-
 The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.
 
 Alter the security policy to disable the policy.
@@ -296,7 +290,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure SQL Data Warehouse external table
+### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure Synapse external table
 
 This short example creates three users and an external table with six rows. It then creates an inline table-valued function and a security policy for the external table. The example shows how select statements are filtered for the various users.
 
@@ -340,7 +334,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Create an Azure SQL Data Warehouse external table from the Sales table created.
+Create an Azure Synapse external table from the Sales table created.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -389,7 +383,7 @@ WITH (STATE = OFF);
 
 Now the Sales1 and Sales2 users can see all six rows.
 
-Connect to the SQL Data Warehouse database to clean up resources
+Connect to the Azure Synapse database to clean up resources
 
 ```sql
 DROP USER Sales1;
@@ -416,7 +410,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. Scenario for users who connect to the database through a middle-tier application
 
 > [!NOTE]
-> In this example block predicates functionality isn't currently supported for Azure SQL Data Warehouse, hence inserting rows for the wrong user ID isn't blocked with Azure SQL Data Warehouse.
+> In this example block predicates functionality isn't currently supported for Azure Synapse, hence inserting rows for the wrong user ID isn't blocked with Azure Synapse.
 
 This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary.  
   

@@ -1,5 +1,6 @@
 ---
 title: "SQLXML 4.0 Security Considerations"
+description: View information about SQLXML 4.0 security considerations.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

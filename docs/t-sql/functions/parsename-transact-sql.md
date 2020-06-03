@@ -42,7 +42,7 @@ PARSENAME ('object_name' , object_piece )
 ## Arguments
 
 *'object_name'*
-Is the parameter that holds the name of the object for which to retrieve the specified object part. This parameter is an optionally-qualified object name. If all parts of the object name are qualified, this name can have four parts: the server name, the database name, the schema name, and the object name.  Each part of the 'object_name' string is type *sysname* which is equivalent to varchar(128). This means with a 4-part name, the total string length can be 512 bytes. Even if the total string length is less than 512 bytes, if any part of the string exceeds 128 bytes, PARSENAME will return NULL for that part as it is not a valid sysname.
+Is the parameter that holds the name of the object for which to retrieve the specified object part. This parameter is an optionally-qualified object name. If all parts of the object name are qualified, this name can have four parts: the server name, the database name, the schema name, and the object name.  Each part of the 'object_name' string is type *sysname* which is equivalent to nvarchar(128) or 256 bytes. If any part of the string exceeds 256 bytes, PARSENAME will return NULL for that part as it is not a valid sysname.
   
 *object_piece*  
 Is the object part to return. *object_piece* is of type **int**, and can have these values:  

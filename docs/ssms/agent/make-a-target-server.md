@@ -18,9 +18,8 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ""
-ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 
 ---
@@ -85,13 +84,13 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example enlists the current server into the AdventureWorks1 master server. The location for the current server is Building 21, Room 309, Rack 5.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_msx_enlist N'AdventureWorks1',   
         N'Building 21, Room 309, Rack 5' ;   
-    GO;  
+    GO
     ```  
   
     For more information, see [sp_msx_enlist (Transact-SQL)](https://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f).  

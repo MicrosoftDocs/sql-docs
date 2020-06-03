@@ -136,7 +136,4 @@ $fti.CatalogName = "Test_Catalog2"
 
 # Create the Full Text Search Index
 $fti.Create()
-
-## Next steps
-
-* [SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md)
+```

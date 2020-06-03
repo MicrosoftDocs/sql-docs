@@ -137,7 +137,7 @@ Use the following steps to verify that all components used to launch external sc
 1. In SQL Server Management Studio, open a new query window, and run the following command:
 
     ```sql
-    EXEC sp_configure  'external scripts enabled'
+    EXEC sp_configure 'external scripts enabled'
     ```
 
     The **run_value** should now be set to 1.

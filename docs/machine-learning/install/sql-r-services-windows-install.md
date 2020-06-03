@@ -84,8 +84,6 @@ For local installations, you must run Setup as an administrator. If you install 
     + Database Engine Services
     + R Services (In-Database)
 
-    Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
-
 1. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 ## Set environment variables

@@ -1,6 +1,6 @@
 ---
 title: Known issues for Python and R
-description: This article describes known problems or limitations with machine learning components that are provided in SQL Server Machine Learning Services and SQL Server 2016 R Services.
+description: This article describes known problems or limitations with the Python and R components that are provided in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/03/2020
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Known issues in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes known problems or limitations with machine learning components that are provided in [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
+This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
 
 ## Setup and configuration issues
 

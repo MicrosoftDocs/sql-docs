@@ -1,7 +1,6 @@
 ---
 title: Previous releases of SSDT
 ms.prod: sql
-ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,9 +8,8 @@ ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 author: markingmyname
 ms.author: maghan
 manager: jroth
-ms.reviewer: “”
 ms.custom: seo-lt-2019
-ms.date: 03/26/2020
+ms.date: 06/03/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 

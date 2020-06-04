@@ -1,8 +1,7 @@
 ---
 title: "Use OPENJSON with an Explicit Schema"
-ms.date: "06/02/2016"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -10,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

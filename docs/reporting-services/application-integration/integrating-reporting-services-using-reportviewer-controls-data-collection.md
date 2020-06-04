@@ -9,8 +9,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ""
-ms.date: 09/18/2018
+ms.date: 06/03/2020
 ---
 # Integrate Reporting Services Using ReportViewer Controls - Data Collection
 

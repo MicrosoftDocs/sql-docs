@@ -1,9 +1,8 @@
 ---
 title: "Customize Menus and Shortcut Keys"
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "sql-tools"
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +19,6 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ---
 
 # Customize Menus and Shortcut Keys

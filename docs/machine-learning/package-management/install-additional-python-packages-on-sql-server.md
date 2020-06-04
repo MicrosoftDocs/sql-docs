@@ -62,7 +62,21 @@ For more information about package location and installation paths, see [Get Pyt
 
 To use **sqlmlutils**, you first need to install it on the client computer that you use to connect to SQL Server.
 
-You can install sqlmlutils with a simple **pip** command from the **Comment Prompt**:
+### In Azure Data Studio
+
+If you'll be using **sqlmlutils** in Azure Data Studio, you can install it using the Manage Packages feature.
+
+1. In Azure Data Studio, click **Manage Packages**.
+1. Click **Add new**.
+1. Enter "sqlmlutils" in the **Search Pip packages** field.
+1. Click **Search**.
+1. Select the **Package Version** you want to install (the latest version is recommended).
+1. Click **Install**.
+1. Click **Close**.
+
+### From Python command line
+
+If you'll be using **sqlmlutils** from a Python command prompt or IDE, you can install sqlmlutils with a simple **pip** command from the **Comment Prompt**:
 
 ```console
 pip install sqlmlutils
@@ -71,11 +85,8 @@ pip install sqlmlutils
 You can also install **sqlmlutils** from a zip file:
 
 1. Make sure you have **pip** installed. See [pip installation](https://pip.pypa.io/en/stable/installing/) for more information.
-
 1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist to the client computer. Don't unzip the file.
-
 1. Open a **Command Prompt** and run the following commands to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded - this example assumes the downloaded file is `c:\temp\sqlmlutils-1.0.0.zip`.
-
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```

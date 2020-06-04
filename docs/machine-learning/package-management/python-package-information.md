@@ -5,7 +5,7 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/01/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye

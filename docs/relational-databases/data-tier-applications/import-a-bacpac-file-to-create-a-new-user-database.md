@@ -1,7 +1,6 @@
 ---
 title: "Import a BACPAC file to create a new user database"
-ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.technology:
 ms.topic: conceptual

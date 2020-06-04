@@ -12,15 +12,15 @@ helpviewer_keywords:
   - "SQL Server Connector, setup"
   - "SQL Server Connector"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: jaszymas, rupp29
-ms.author: jaszymas, rupp29
+author: rupp29
+ms.author: rupp29
 ---
 # SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The following steps walk through the installation and configuration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault.  
   
-## Before You Start  
+## Before You Start
  To use Azure Key Vault with your SQL Server, there are a few prerequisites:  
   
 -   You must have an Azure subscription  
@@ -39,7 +39,7 @@ SQL Server Version  |Redistributable Install Link
 2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## Part I: Set up an Azure Active Directory service principal  
+## Part I: Set up an Azure Active Directory service principal
  In order to grant SQL Server access permissions to your Azure Key Vault, you will need a Service Principal account in Azure Active Directory (AAD).  
   
 1.  Go to the [Azure portal](https://ms.portal.azure.com/), and sign in.  

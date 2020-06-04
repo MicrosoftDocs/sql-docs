@@ -23,7 +23,7 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
+catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] retry_count]  
 ```  
   
 ## Arguments  

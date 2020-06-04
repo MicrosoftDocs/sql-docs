@@ -23,7 +23,7 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-delete_environment_reference [ @reference_id = ] reference_id  
+catalog.delete_environment_reference [ @reference_id = ] reference_id  
 ```  
   
 ## Arguments  

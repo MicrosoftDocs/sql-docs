@@ -23,7 +23,7 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-delete_folder [ @folder_name = ] folder_name  
+catalog.delete_folder [ @folder_name = ] folder_name  
 ```  
   
 ## Arguments  

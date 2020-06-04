@@ -23,7 +23,7 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-delete_environment_variable [ @folder_name = ] folder_name  
+catalog.delete_environment_variable [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
 ```  

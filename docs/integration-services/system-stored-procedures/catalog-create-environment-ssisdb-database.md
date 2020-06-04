@@ -23,9 +23,9 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-catalog.create_environment [@folder_name =] folder_name  
-     , [@environment_name =] environment_name  
-  [  , [@environment_description =] environment_description ]  
+catalog.create_environment [ @folder_name = ] folder_name  
+     , [ @environment_name = ] environment_name  
+  [  , [ @environment_description = ] environment_description ]  
 ```  
   
 ## Arguments  

@@ -35,9 +35,9 @@ For more information about package location and installation paths, see [Get Pyt
 + You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
 ::: moniker-end
 
-+ Install [python](https://www.python.org/) on the client computer you use to connect to SQL Server. You also may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
-
 + Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio.
+
++ Install the Python kernel in Azure Data Studio. You can also install and use Python from the command line, and you may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 
 ### Other considerations
 
@@ -76,7 +76,7 @@ If you'll be using **sqlmlutils** in Azure Data Studio, you can install it using
 
 ### From Python command line
 
-If you'll be using **sqlmlutils** from a Python command prompt or IDE, you can install sqlmlutils with a simple **pip** command from the **Comment Prompt**:
+If you'll be using **sqlmlutils** from a Python command prompt or IDE, you can install sqlmlutils with a simple **pip** command:
 
 ```console
 pip install sqlmlutils

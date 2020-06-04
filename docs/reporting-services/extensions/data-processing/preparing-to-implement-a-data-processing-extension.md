@@ -1,5 +1,6 @@
 ---
 title: "Preparing to Implement a Data Processing Extension | Microsoft Docs"
+description: Prepare to implement a data processing extension in SQL Server Reporting Services by reading about available interfaces and required and optional functionality.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

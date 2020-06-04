@@ -1,5 +1,6 @@
 ---
 title: "Creating a Delivery Extension Library | Microsoft Docs"
+description: Find out how to assign a delivery extension that you create in Reporting Services to a unique namespace and build it into a library or assembly file.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

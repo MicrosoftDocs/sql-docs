@@ -27,9 +27,9 @@ Please review [this technical whitepaper](https://aka.ms/sql-bdc-openshift-secur
 
 ```json
  "security": {
-	…
-            "allowRunAsRoot": true,
-	…
+  …
+    "allowRunAsRoot": true,
+  …
 }
 ```
 
@@ -51,10 +51,12 @@ Beginning with CU5, two new feature switches were added to control the collectio
 For example 
 
 ```json
- "security": {
-            "allowPodMetricsCollection": true,
-            "allowNodeMetricsCollection": true,
-   ...
+"security": {
+  ...
+  "allowPodMetricsCollection": true,
+  "allowNodeMetricsCollection": true,
+  ...
+}
 ```
 
 > [!NOTE]

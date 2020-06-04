@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Connector, setup"
   - "SQL Server Connector"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: jaszymas, arupp
-ms.author: jaszymas, arupp
+author: jaszymas, rupp29
+ms.author: jaszymas, rupp29
 ---
 # SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,19 @@ SQL Server Version  |Redistributable Install Link
 3.  Copy the **App (Client) ID** and **Client Secret** for a later step, where they will be used to grant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] access to your key vault.  
  
  4. Navigate to Azure Active Directory (AAD) in the Azure portal
+ <br>
  ![ekm-part1-image1](../../../relational-databases/security/encryption/media/ekm/ekm-part1-image1.png "ekm-part1-image1")  
 
  5. Register Application in Azure Active Directory
+<br>
  ![ekm-part1-image2](../../../relational-databases/security/encryption/media/ekm/ekm-part1-image2.png "ekm-part1-image2")  
  
- 6. Add New Client Secret  
+ 6. Add New Client Secret
+ <br>
  ![ekm-part1-image3](../../../relational-databases/security/encryption/media/ekm/ekm-part1-image3.png "ekm-part1-image3")  
  
  7. Click on the + New client secret button (expiration as appropriate) then "Add"
+ <br>
  ![ekm-part1-image4](../../../relational-databases/security/encryption/media/ekm/ekm-part1-image4.png "ekm-part1-image4")  
  
  	8. Copy the "Value" of the Client Secret to be used to create an Asymmetric key in SQL Server.
@@ -69,22 +73,22 @@ The Azure portal can be used to create the Key Vault and add an Azure Active Dir
 1. **Create a new resource group**
 All Azure resources created via Azure portal must be contained in resource groups. Create a resource group to house your key vault. This example uses `ContosoDevRG`. Choose your own **unique** resource group and key vault name as all key vault names are globally unique.
 
-  A. Create a Resource Group
+  A. Create a Resource Group<br>
 ![ekm-part2-image1](../../../relational-databases/security/encryption/media/ekm/ekm-part2-image1.png "ekm-part2-image1")  
 
-  B. Create the Key Vault
+  B. Create the Key Vault<br>
 ![ekm-part2-image2](../../../relational-databases/security/encryption/media/ekm/ekm-part2-image2.png "ekm-part2-image2")  
 
-  C. Add Access Policy to Azure Active Directory Principal (Application)
+  C. Add Access Policy to Azure Active Directory Principal (Application)<br>
 ![ekm-part2-image3](../../../relational-databases/security/encryption/media/ekm/ekm-part2-image3.png "ekm-part2-image3")  
 
-  D. Access Policies: Get, List, Unwrap Key, Wrap Key
+  D. Access Policies: Get, List, Unwrap Key, Wrap Key<br>
 ![ekm-part2-image4](../../../relational-databases/security/encryption/media/ekm/ekm-part2-image4.png "ekm-part2-image4")
 
-  E. Add a Principal (Azure Active Directory Application) to the Key Vault
+  E. Add a Principal (Azure Active Directory Application) to the Key Vault<br>
  ![ekm-part2-image5](../../../relational-databases/security/encryption/media/ekm/ekm-part2-image5.png "ekm-part2-image5")  
 
-  F. Also Save the Changes to the Access Policies:
+  F. Also Save the Changes to the Access Policies:<br>
 ![ekm-part2-image6](../../../relational-databases/security/encryption/media/ekm/ekm-part2-image6.png "ekm-part2-image6")  
  
 
@@ -149,8 +153,8 @@ All Azure resources created via Azure portal must be contained in resource group
   
      Record the name of your key vault.  
   
-     The statement returns:  
-  
+     The statement returns:
+
     ```  
     Vault Name                       : ContosoEKMKeyVault  
     Resource Group Name              : ContosoDevRG  
@@ -270,7 +274,7 @@ All Azure resources created via Azure portal must be contained in resource group
    
   
 ## Part III: Install the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector  
- Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). (This should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.)  
+ Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). (The download should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.)  
 
 > [!NOTE]  
 >  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."
@@ -282,7 +286,7 @@ All Azure resources created via Azure portal must be contained in resource group
   
  By default, the connector installs at C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault. This location can be changed during setup. (If changed, adjust the scripts below.)  
   
- There's no interface for the Connector, but if it's installed successfully, the **Microsoft.AzureKeyVaultService.EKM.dll** is installed on the machine. This is the cryptographic EKM provider DLL that needs to be registered with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using the `CREATE CRYPTOGRAPHIC PROVIDER` statement.  
+ There's no interface for the Connector, but if it's installed successfully, the **Microsoft.AzureKeyVaultService.EKM.dll** is installed on the machine. This assembly is the cryptographic EKM provider DLL that needs to be registered with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using the `CREATE CRYPTOGRAPHIC PROVIDER` statement.  
   
  The SQL Server Connector installation also allows you to optionally download sample scripts for SQL Server encryption.  
   
@@ -333,7 +337,7 @@ All Azure resources created via Azure portal must be contained in resource group
     >  The file path length cannot exceed 256 characters.  
   
   
-4.  **Setup a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential for a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log in to use the key vault**  
+4.  **Set up a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential for a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log in to use the key vault**  
   
      A credential must be added to each login that will be performing encryption using a key from the Key Vault. This might include:  
   

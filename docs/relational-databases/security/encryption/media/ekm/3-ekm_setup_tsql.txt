@@ -1,0 +1,286 @@
+/*           
+Client ID: 9A57CBC5-4C4C-40E2-B517-EA677E0EFA00
+ContosoKeyVaultApp Secret: 08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m
+Key Vault Name: ContosoEKMKeyVault
+Key Vault Key: ContosoRSAKey0
+*/
+
+/*=====================================================================================
+==This is a PowerShell Script that should be executed prior to running the TSQL script==
+=======================================================================================
+<# This PowerShell script will:
+   1) Connect to Azure using your Azure Account
+   2) Switch to the subscription of choice
+   3) Create a new Resource Group (to be a container for the Key Vault)
+   4) Generate a new Azure Key Vault
+   5) Gran the appropriate Access to the Key Vault
+   6) Validate the Key Vault was created
+   7) Add a Key to the Key Vault
+
+#>
+$AzureSubscription    = "YourAzureSubscription"
+$RGName               = 'ContosoDevRG'
+$Location             = 'East Asia'
+$VaultName            = 'ContosoEKMKeyVault'
+$VaultKeyName         = 'ContosoRSAKey0'
+$ServicePrincipalName = '9a57cbc5-4c4c-40e2-b517-ea677e0efa00' <# This is the App (Client) ID from Azure Active Directory #>
+
+<# ContosoKeyVaultEKMSecret "08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m" (This is also from Azure Active directory)#>
+
+   <#Step 1#> Connect-AzAccount 
+   <#Step 2#> Select-AzSubscription $AzureSubscription 
+   <#Step 3#> New-AzResourceGroup -Name $RGName -Location $Location 
+   <#Step 4#> New-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $Location
+   <#Step 5#> Set-AzKeyVaultAccessPolicy -VaultName $VaultName -ServicePrincipalName $ServicePrincipalName -PermissionsToKeys get, wrapKey, unwrapKey, list 
+   <#Step 6#> Get-AzKeyVault -VaultName $VaultName
+   <#Step 7#> Add-AzKeyVaultKey -VaultName $VaultName -Name $VaultKeyName -Destination 'Software'
+*/
+
+SET NOEXEC OFF;         --Set these parameters prior to running.
+:setvar AzureKeyVault   "ContosoEKMKeyVault"               --From: Dashboard > Resource groups > {ResourceGroup} > {Azure Key Vault}
+:setvar AppDisplayName  "ContosoKeyVaultApp"               --From: Dashboard > Microsoft | App registrations > {Azure Active Directory Registered App} | Display name
+:setvar AppID           "9A57CBC54C4C40E2B517EA677E0EFA00" --REMOVE DASHES - From: Dashboard > Microsoft | App registrations > Application (Client) ID
+:setvar Secret          "08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m" --From: Dashboard > Microsoft | App registrations > {Azure Active Directory Registered App} | Certificates & secrets
+:setvar AzKeyVaultName  "ContosoRSAKey0"                   --From: Dashboard > Resource groups > {ResourceGroup} > <Key Vault> | Keys > Name
+:setvar Login           "[DOMAIN\login]"                   --Login [<domain>\<login>]
+
+/*
+Detect SQLCMD mode and disable script execution if SQLCMD mode is not supported.
+To re-enable the script after enabling SQLCMD mode, execute the following:
+SET NOEXEC OFF;
+*/
+:setvar __IsSqlCmdEnabled "True"
+GO
+IF N'$(__IsSqlCmdEnabled)' NOT LIKE N'True'
+    BEGIN
+        PRINT N'SQLCMD mode must be enabled to successfully execute this script.';
+        SET NOEXEC ON;
+    END
+GO
+--Test AppID + Secret
+IF CHARINDEX('-','$(AppID)') > 0
+	BEGIN
+	RAISERROR('AppID can not have any dashes',16,1,'$(AppId)') WITH NOWAIT
+	SET NOEXEC ON;
+	END
+
+--Expose advanced options
+EXEC sp_configure 'show advanced options', 1;  
+GO  
+RECONFIGURE;  
+GO  
+-- Enable EKM provider  
+EXEC sp_configure 'EKM provider enabled', 1;  
+GO  
+RECONFIGURE;  
+GO
+
+--Download SQL Connectory and use TSQL to CREATE a CRYPTOGRAPHIC PROVIDER
+--SQL Server Connector for Microsoft Azure Key Vault: https://www.microsoft.com/en-us/download/details.aspx?id=45344
+USE [master];
+IF NOT EXISTS (SELECT * FROM sys.cryptographic_providers where name = 'AzureKeyVault_EKM')
+	BEGIN
+      --Create the Crypto Provider in Master Database
+		CREATE CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
+		FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';
+      RAISERROR('1) CREATED CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]...successful',0,1) WITH NOWAIT
+	END
+ELSE
+	BEGIN
+      RAISERROR('1) CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM] already exists...skipping',0,1) WITH NOWAIT
+	END
+GO
+
+IF NOT EXISTS(select * from sys.credentials where name = 'sysadmin_ekm_cred')
+   BEGIN
+      --A credential is needed to bind the Azure Key Vault and the ADD App (Client) ID
+      CREATE CREDENTIAL sysadmin_ekm_cred
+          WITH IDENTITY = '$(AzureKeyVault)', -- for public Azure
+          -- WITH IDENTITY = '$(AzureKeyVault)'.vault.usgovcloudapi.net', -- for Azure Government
+          -- WITH IDENTITY = '$(AzureKeyVault).vault.azure.cn', -- for Azure China
+          -- WITH IDENTITY = '$(AzureKeyVault).vault.microsoftazure.de', -- for Azure Germany
+          SECRET = '$(AppID)$(Secret)'  --AppID (without dahses) and the Secret from Azure Active Directory App Registrations (Certificates and Secrets)
+      FOR CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
+      RAISERROR('2) CREATED CREDENTIAL sysadmin_ekm_cred with Secret:[%s]...successful',0,1,'$(AppID)$(Secret)' ) WITH NOWAIT
+   END
+ELSE
+   BEGIN
+       RAISERROR('2) CREDENTIAL sysadmin_ekm_cred already exists with Secret:"%s"...skipping',0,1,'$(AppID)$(Secret)') WITH NOWAIT
+   END
+GO
+
+IF NOT EXISTS( select * from sys.server_principal_credentials pc
+               join sys.credentials c on c.credential_id = pc.credential_id
+               join sys.server_principals p on p.principal_id = pc.principal_id
+               WHERE c.name = 'sysadmin_ekm_cred')
+   BEGIN
+      --Alter the Login by mapping the credential to the Login
+      ALTER LOGIN $(Login)
+      ADD CREDENTIAL sysadmin_ekm_cred;
+      RAISERROR('3) CREDENTIAL sysadmin_ekm_cred mapped to Login:%s...successful',0,1,'$(Login)') WITH NOWAIT
+   END
+ELSE
+   BEGIN
+      RAISERROR('3) CREDENTIAL sysadmin_ekm_cred already mapped to Server Principal ...skipping',0,1) WITH NOWAIT
+   END 
+GO 
+
+IF NOT EXISTS(select * from sys.asymmetric_keys WHERE name = 'EKMSampleASYKey')
+   BEGIN
+      DECLARE @Msg nvarchar(4000), @ErrorMessage NVARCHAR(4000), @ErrorSeverity VARCHAR(2), @ErrorState VARCHAR(2), @ErrNumber VARCHAR(6)
+      BEGIN TRY 
+         --Now that the AAD App has been registered and the Login has a mapped credential, the ASYMMETRIC KEY can be creted
+         CREATE ASYMMETRIC KEY EKMSampleASYKey           
+         FROM PROVIDER [AzureKeyVault_EKM]	            
+         WITH PROVIDER_KEY_NAME = '$(AzKeyVaultName)', --This is the KEY Name inside the Azure Key Vault 
+         CREATION_DISPOSITION = OPEN_EXISTING;  	      
+
+         RAISERROR('4) ASYMMETRIC KEY EKMSampleASYKey created...successful',0,1) WITH NOWAIT
+      END TRY
+      BEGIN CATCH
+         SELECT @Msg = ERROR_MESSAGE(), @ErrNumber = ERROR_NUMBER(), @ErrorSeverity = ERROR_SEVERITY(),  @ErrorState = ERROR_STATE()
+         SELECT @Msg Msg, @ErrNumber ErrNumber, @ErrorSeverity ErrorSeverity,  @ErrorState ErrorState
+         --Additional Error Information and possible solutions to fix errors.
+         --If the Azure Active Directory (AAD) does not have a valid App Registration and a "Client Secret" (Description and Value), you will see this error.
+         IF PATINDEX('%Provider error code: 3303%',@Msg) > 0
+            SET @ErrorMessage = 'Cannot get token due to incorrect credentials. Make sure the credential string or certificate is valid.' + char(10) + @Msg
+         
+         --A common mistake it to forget to remove dashes from the AppID or have a typo in the Azure Active Directory "Secret"
+         IF PATINDEX('%Provider error code: 3110%',@Msg) > 0
+            SET @ErrorMessage = 'Check to ensure your App (Client) ID dos not have any dashes, all dashes must be removed from the AppID.' + char(10) + @Msg
+         
+         --If you do not "add access policy" to the Azure Active Directly Application, this error will occur
+         IF PATINDEX('%Provider error code: 3113%',@Msg) > 0
+            SET @ErrorMessage = 'Check to ensure your Azure Key Vault has Access Policies for the Azure Active Directly Application.' + char(10) +
+            'Check: Dashboard > Key vaults > <Your Key Vault> | Access policies > Add access policy (Key Management: Get, List, Wrap, Unwrap)'  
+         
+         --If you try to tun the TSQL to create the Credentials and ASYMETRIC KEYS before the Azure items are created, this error occurs.
+         IF PATINDEX('%Provider error code: 3900%',@Msg) > 0
+            SET @ErrorMessage = 'Azure Key Vault does not exist, please create the Azure Key Vault prior to CREATE ASYMMETRIC KEY.' + char(10) + @Msg
+
+         SET @ErrorMessage = 'Msg ' + @ErrNumber + ', Level ' + @ErrorSeverity + ', State ' + @ErrorState + CHAR(10) + @ErrorMessage
+         RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState) WITH NOWAIT;  
+      END CATCH                 
+   END
+ELSE
+   BEGIN
+      RAISERROR('4) ASYMMETRIC KEY EKMSampleASYKey already exists...skipping',0,1) WITH NOWAIT
+   END
+GO
+--Verify Asymmentric Key was created
+IF EXISTS(select * from sys.asymmetric_keys WHERE name = 'EKMSampleASYKey')
+    RAISERROR('5) Creating ASYMMETRIC KEY EKMSampleASYKey exists...Successful',0,1) WITH NOWAIT
+ELSE
+    RAISERROR('5) ASYMMETRIC KEY EKMSampleASYKey was not created, check the variables and configuration',0,1) WITH NOWAIT
+GO
+
+IF NOT EXISTS(select * from sys.server_principals where name = 'TDE_Login')
+   BEGIN
+      --Create a Login that will associate the asymmetric key to this login
+      CREATE LOGIN TDE_Login
+      FROM ASYMMETRIC KEY EKMSampleASYKey;
+      RAISERROR('6) CREATE LOGIN TDE_Login...successful',0,1) WITH NOWAIT
+   END
+ELSE
+   BEGIN
+      RAISERROR('6) LOGIN TDE_Login already exists...skipping',0,1) WITH NOWAIT
+   END
+
+IF EXISTS( select * 
+           from sys.server_principal_credentials pc
+           join sys.credentials c on c.credential_id = pc.credential_id
+           join sys.server_principals p on p.principal_id = pc.principal_id
+           WHERE c.name = 'sysadmin_ekm_cred'
+           AND QUOTENAME(p.name) = '$(Login)')
+   BEGIN
+      --Now drop the credential mapping from the original association
+      ALTER LOGIN $(Login)
+      DROP CREDENTIAL sysadmin_ekm_cred;
+      RAISERROR('7) CREDENTIAL sysadmin_ekm_cred mapped to Login:%s...successful',0,1,'$(Login)') WITH NOWAIT
+   END
+ELSE
+   BEGIN
+      RAISERROR('7) CREDENTIAL sysadmin_ekm_cred does not exist for Login:%s...skipping',0,1,'$(Login)') WITH NOWAIT
+   END
+
+IF NOT EXISTS( select * 
+               from sys.server_principal_credentials pc
+               join sys.credentials c on c.credential_id = pc.credential_id
+               join sys.server_principals p on p.principal_id = pc.principal_id
+               WHERE c.name = 'sysadmin_ekm_cred'
+               AND p.name = 'TDE_Login')
+   BEGIN
+      --Re-associate/map the EKM credential to the new Login that created from the ASYMMETRIC KEY 
+      ALTER LOGIN TDE_Login
+      ADD CREDENTIAL sysadmin_ekm_cred;
+      RAISERROR('8) CREDENTIAL sysadmin_ekm_cred added for Login:%s...successful',0,1,'TDE_Login') WITH NOWAIT
+   END
+ELSE
+   BEGIN
+      RAISERROR('8) CREDENTIAL sysadmin_ekm_cred already exist for Login:%s...skipping',0,1,'TDE_Login') WITH NOWAIT
+   END
+GO
+
+IF NOT EXISTS(select * from sys.databases where name = 'TestTDE')
+   BEGIN
+      --Create a test database that will be encrypted with the Azure Key Vault (Key)
+      CREATE DATABASE TestTDE
+      RAISERROR('9) DATABASE [%s] created...successful',0,1,'TestTDE') WITH NOWAIT
+   END
+ELSE
+   BEGIN
+      RAISERROR('9) DATABASE [%s] already eists...skipping',0,1,'TestTDE') WITH NOWAIT
+   END
+GO
+
+use TestTDE 
+GO
+
+
+IF NOT EXISTS(select * from sys.dm_database_encryption_keys where DB_NAME(Database_id) = 'TestTDE')
+   BEGIN
+      --Create an ENCRYPTION KEY using the ASYMENTRIC KEY (EKMSampleASYKey)
+      CREATE DATABASE ENCRYPTION KEY   
+      WITH ALGORITHM = AES_256   
+      ENCRYPTION BY SERVER ASYMMETRIC KEY EKMSampleASYKey;  
+      RAISERROR('10) DATABASE ENCRYPTION KEY:[%s]...successful',0,1,'EKMSampleASYKey') WITH NOWAIT
+   END
+ELSE
+   BEGIN
+      RAISERROR('10) DATABASE ENCRYPTION KEY:[%s] already eists...skipping',0,1,'EKMSampleASYKey') WITH NOWAIT
+   END
+GO
+ 
+IF EXISTS (select * from sys.databases 
+           where DB_NAME(Database_id) = 'TestTDE'  
+           and is_encrypted = 0 --0=Not encrypted
+           )
+   BEGIN
+      ---Enable TDE by setting ENCRYPTION ON
+      ALTER DATABASE TestTDE   
+      SET ENCRYPTION ON;  
+      RAISERROR('11) DATABASE:[%s] is being Encrypted...successful',0,1,'TestTDE'  ) WITH NOWAIT
+   END
+ELSE
+   BEGIN
+      RAISERROR('11) DATABASE:[%s] isalready Encrypted...skipping',0,1,'TestTDE'  ) WITH NOWAIT
+   END
+GO
+ 
+ 
+/* CLEAN UP
+USE Master
+ALTER DATABASE [TestTDE] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+DROP DATABASE [TestTDE]
+
+ALTER LOGIN [TDE_Login] DROP CREDENTIAL [sysadmin_ekm_cred]
+DROP LOGIN [TDE_Login]
+
+--ALTER LOGIN [<DOMAIN>\<login>] DROP CREDENTIAL [sysadmin_ekm_cred] --END TRY BEGIN CATCH END CATCH
+DROP CREDENTIAL [sysadmin_ekm_cred] --END TRY BEGIN CATCH END CATCH
+USE MASTER
+DROP ASYMMETRIC KEY [EKMSampleASYKey]
+DROP CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
+
+*/
+ 

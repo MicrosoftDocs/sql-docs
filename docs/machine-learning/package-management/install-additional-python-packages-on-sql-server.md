@@ -68,11 +68,9 @@ If you'll be using **sqlmlutils** in Azure Data Studio, you can install it using
 
 1. In Azure Data Studio, click **Manage Packages**.
 1. Click **Add new**.
-1. Enter "sqlmlutils" in the **Search Pip packages** field.
-1. Click **Search**.
+1. Enter "sqlmlutils" in the **Search Pip packages** field and click **Search**.
 1. Select the **Package Version** you want to install (the latest version is recommended).
-1. Click **Install**.
-1. Click **Close**.
+1. Click **Install** and then **Close**.
 
 ### From Python command line
 

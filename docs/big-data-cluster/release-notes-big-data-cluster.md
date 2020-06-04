@@ -82,7 +82,7 @@ Cumulative Update 5 (CU5) release for SQL Server 2019. The SQL Server Database E
 
 ### Added capabilities
 
-- Support for Big Data Cluster deployment on Red Hat OpenShift. Support includes OpenShift container platform version 4.3 and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
+- Support for Big Data Clusters deployment on Red Hat OpenShift. Support includes OpenShift container platform version 4.3 and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
 - Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5. 
 - Added support for deploying multiple big data clusters against an Active Directory domain.
 - `azdata` CLI has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.

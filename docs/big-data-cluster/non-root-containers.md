@@ -20,7 +20,7 @@ SQL Server 2019 CU5 introduces support for non-root containers. The platform imp
 Please review [this technical whitepaper](https://aka.ms/sql-bdc-openshift-security) that captures details of the security design for accommodating deployments using non-root users, highlighting what and why Big Data Clusters temporarily elevate permissions is certain cases. The content of the whitepaper was developed in collaboration with security experts from SQL Server and Red Hat, and focuses on security contexts and capabilities in OpenShift, but the BDC security concepts and design are applicable to all supported platforms.
 
 > [!NOTE]
-> At the time of the CU5 release, the setup step of the applications deployed with [app deploy](concept-application-deployment.md) interfaces will still run as *root* users. This is required since during setup  additional packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
+> At the time of the CU5 release, the setup step of the applications deployed with [app deploy](concept-application-deployment.md) interfaces will still run as *root* user. This is required since during setup  additional packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
 > [!NOTE]
 > We recommend that the cluster runs with the default non-root setting. In case you want to revert back to pre-CU5 behavior, and have containers within BDC run as `root` user, you can use the new feature switch `allowRunAsRoot` and turn off the default behavior. You can only set this at deployment time. To set this, specify the setting under the `security` section in the `control.json` deployment configuration file:

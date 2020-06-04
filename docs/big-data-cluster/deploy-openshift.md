@@ -149,6 +149,13 @@ The name of the default storage class in ARO is managed-premium (as opposed to A
 ## `bdc-restricted-scc.yml` file
 
 ```yml
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  annotations:
+    kubernetes.io/description: SQL Server BDC Nonroot scc is based on 'restricted' scc plus additional capabilities.
+  generation: 2
+  name: bdc-restricted-scc
 allowHostDirVolumePlugin: false
 allowHostIPC: false
 allowHostNetwork: false
@@ -161,18 +168,11 @@ allowedCapabilities:
 - SETGID
 - CHOWN
 - SYS_PTRACE
-apiVersion: security.openshift.io/v1
 defaultAddCapabilities: null
 fsGroup:
   type: MustRunAs
-kind: SecurityContextConstraints
-metadata:
-  annotations:
-    kubernetes.io/description: SQL Server BDC Nonroot scc is based on 'restricted' scc plus additional capabilities.
-  generation: 2
-  name: bdc-restricted-scc
 readOnlyRootFilesystem: false
-requiredDropCapabilities
+requiredDropCapabilities:
 - KILL
 - MKNOD
 runAsUser:

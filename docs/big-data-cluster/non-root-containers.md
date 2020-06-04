@@ -13,29 +13,14 @@ ms.technology: big-data-cluster
 
 # Non-root Big Data Clusters containers
 
-SQL Server 2019 CU5 introduces support for non-root containers. This means that beginning with CU5 privileged containers are no longer required. You can now turn off pods and metrics collection that require elevated privileges.
-
-## Configuration file switches
-
-Beginning with CU5, two new feature switches were added to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn of the built-in metrics collection for pods and host nodes by setting `allowNodeMetricsCollection` and `allowPodMetricsCollection`* to `false` in `control.json` deployment configuration file. 
-
-For example 
-
-```json
- "security": {
-            "allowPodMetricsCollection": true,
-            "allowNodeMetricsCollection": true,
-   ...
-```
-
-> [!NOTE]
-> For OpenShift environments, these settings are set to false by default in the built-in deployment profiles. Collecting pod and node metrics required privileged capabilities and the recommended security context for OpenShift is based off the *restricted* constraints.
-
-In addition to non-privileged containers, starting with CU5, for all new deployments for BDC, containers run as a non-root user by default on all supported platforms. These capabilities are available for all new deployments using the SQL Server 2019 CU5 corresponding image tag. Existing pre-CU5 BDC deployments will not be impacted, and applications in these clusters will continue to run as root user.
+SQL Server 2019 CU5 introduces support for non-root containers. The platform implementation is safer by ensuring that all container applications running within BDC are started as non-root users by default, on all supported platforms. These capabilities are available for all new deployments using the SQL Server 2019 CU5 corresponding image tag. Existing pre-CU5 BDC deployments will not be impacted by this change, and applications in these clusters will continue to run as root user. 
 
 ## Technical background
 
 Please review [this technical whitepaper](https://aka.ms/sql-bdc-openshift-security) that captures details of the security design for accommodating deployments using non-root users, highlighting what and why Big Data Clusters temporarily elevate permissions is certain cases. The content of the whitepaper was developed in collaboration with security experts from SQL Server and Red Hat, and focuses on security contexts and capabilities in OpenShift, but the BDC security concepts and design are applicable to all supported platforms.
+
+> [!NOTE]
+> At the time of the CU5 release, the setup step of the applications deployed with [app deploy](concept-application-deployment.md) interfaces will still run as *root* users. This is required since during setup  additional packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
 > [!NOTE]
 > We recommend that the cluster runs with the default non-root setting. In case you want to revert back to pre-CU5 behavior, and have containers within BDC run as `root` user, you can use the new feature switch `allowRunAsRoot` and turn off the default behavior. You can only set this at deployment time. To set this, specify the setting under the `security` section in the `control.json` deployment configuration file:
@@ -58,6 +43,24 @@ As a result of services within BDC running as non-root users, credentials used f
 Azure Data Studio handles the credentials change transparently for the connection made through gateway to enable HDFS browsing experience in the Object Explorer or submitting Spark jobs through notebooks. Install the [latest Azure Data Studio insiders build](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio). This build includes the necessary changes for this use case.
 
 For other scenarios where you must provide credentials for accessing the service through the gateway (e.g. logging in with `azdata`, accessing web dashboards for Spark), ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using `root` username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, you will login by providing the username corresponding to `AZDATA_USERNAME` environment variable.
+
+## Configuration file switches
+
+Beginning with CU5, two new feature switches were added to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn of the built-in metrics collection for pods and host nodes by setting `allowNodeMetricsCollection` and `allowPodMetricsCollection`* to `false` in `control.json` deployment configuration file. 
+
+For example 
+
+```json
+ "security": {
+            "allowPodMetricsCollection": true,
+            "allowNodeMetricsCollection": true,
+   ...
+```
+
+> [!NOTE]
+> For OpenShift environments, these settings are set to false by default in the built-in deployment profiles. Collecting pod and node metrics required privileged capabilities and the recommended security context for OpenShift is based off the *restricted* constraints.
+
+In addition to non-privileged containers, starting with CU5, for all new deployments for BDC, containers run as a non-root user by default on all supported platforms. These capabilities are available for all new deployments using the SQL Server 2019 CU5 corresponding image tag. Existing pre-CU5 BDC deployments will not be impacted, and applications in these clusters will continue to run as root user.
 
 ## NEXT STEPS
 [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

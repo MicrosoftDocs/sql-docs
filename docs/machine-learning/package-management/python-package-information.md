@@ -65,12 +65,12 @@ EXECUTE sp_execute_external_script
   @script=N'import sys; print("\n".join(sys.path))'
 ```
 
+For more information about the variable `sys.path` and how it's used to set the interpreter's search path for modules, see [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
 > Don't try to install Python packages directly in the SQL package library using **pip** or similar methods. Instead, use **sqlmlutils** to install packages in a SQL instance. For more information, see [Install Python packages with sqlmlutils](install-additional-python-packages-on-sql-server.md).
 ::: moniker-end
-
-For more information about the variable `sys.path` and how it's used to set the interpreter's search path for modules, see [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
 
 ## Default Microsoft Python packages
 

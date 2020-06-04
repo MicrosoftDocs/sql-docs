@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/11/2020"
+ms.date: "06/03/2020"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "language-reference"
@@ -29,7 +29,7 @@ A job object is a Windows construct that implements CPU, memory, and IO resource
   
 |Columns|Data Type|Description|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**int**|Specifies the portion of processor cycles that the SQL Server threads can use during each scheduling interval. The value is reported as a percentage of available cycles within a 10000-cycle scheduling interval. For example, the value 100 means that threads can use CPU cores are their full capacity.|
+|cpu_rate|**int**|Specifies the portion of processor cycles that SQL Server threads can use during each scheduling interval. The value is reported as a percentage of available cycles within a 10000-cycle scheduling interval, multiplied by the number of logical CPUs. For example, the value 800 on a SQL Server instance with 8 logical CPUs means that threads can use CPUs are their full capacity.|
 |cpu_affinity_mask|**bigint**|A bit mask describing which logical processors the SQL Server process can use within the processor group. For example, cpu_affinity_mask 255 (1111 1111 in binary) means that the first eight logical processors can be used. <br /><br />This column is provided for backwards compatibility. It does not report the processor group, and the reported value may be incorrect when a processor group contains more than 64 logical processors. Use the `process_physical_affinity` column to determine processor affinity instead.|
 |cpu_affinity_group|**int**|The number of the processor group that is used by SQL Server.|
 |memory_limit_mb|**bigint**|The maximum amount of committed memory, in MB, that all processes in the job object, including SQL Server, can use cumulatively.| 

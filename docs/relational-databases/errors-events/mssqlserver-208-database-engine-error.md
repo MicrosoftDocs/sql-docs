@@ -18,8 +18,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|208|  
 |Event Source|MSSQLSERVER|  

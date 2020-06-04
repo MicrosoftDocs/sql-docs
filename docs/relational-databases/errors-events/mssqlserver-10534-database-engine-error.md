@@ -17,8 +17,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10534|  
 |Event Source|MSSQLSERVER|  

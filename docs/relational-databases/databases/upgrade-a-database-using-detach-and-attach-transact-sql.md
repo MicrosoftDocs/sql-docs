@@ -1,9 +1,7 @@
 ---
 title: "Upgrade a database using detach & attach (Transact-SQL)"
-ms.custom: ""
-ms.date: "11/26/2018"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual

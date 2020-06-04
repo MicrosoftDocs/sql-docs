@@ -1,14 +1,13 @@
 ---
 title: "Import JSON documents"
-ms.date: 10/28/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

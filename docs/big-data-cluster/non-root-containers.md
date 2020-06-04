@@ -64,7 +64,7 @@ For example
 
 In addition to non-privileged containers, starting with CU5, for all new deployments for BDC, containers run as a non-root user by default on all supported platforms. These capabilities are available for all new deployments using the SQL Server 2019 CU5 corresponding image tag. Existing pre-CU5 BDC deployments will not be impacted, and applications in these clusters will continue to run as root user.
 
-## NEXT STEPS
+## Next steps
 [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)
 
 [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on OpenShift](deploy-openshift.md)

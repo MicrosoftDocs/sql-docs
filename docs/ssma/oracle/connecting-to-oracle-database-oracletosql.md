@@ -55,14 +55,26 @@ Some of the SSMA features require additional permissions. For instance, if you w
 - `EXECUTE ANY PROCEDURE`  
   Required to run procedures and functions you would like to test in all schemas.
 
-- `CREATE ANY TABLE`  
-  Required to create temporary tables for change tracking and backups.
+- `CREATE ANY TABLE` and `ALTER ANY TABLE`  
+  Required to create and modify temporary tables for change tracking and backups.
 
 - `INSERT ANY TABLE` and `UPDATE ANY TABLE`  
   Required to insert change tracking and backup data into temporary tables.
 
 - `DROP ANY TABLE`  
   Required to drop temporary tables used for change tracking and backups.
+
+- `CREATE ANY INDEX` and `ALTER ANY INDEX`  
+  Required to create and modify indexes on temporary tables used for change tracking and backups.
+
+- `DROP ANY INDEX`  
+  Required to drop indexes on temporary tables used for change tracking and backups.
+
+- `CREATE ANY TRIGGER` and `ALTER ANY TRIGGER`  
+  Required to create and modify temporary triggers used for change tracking.
+
+- `DROP ANY TRIGGER`  
+  Required to drop temporary triggers used for change tracking.
 
 > [!NOTE]
 > This is a generic set of permissions required for SSMA to operate properly. If you want to narrow down the scope of your migration to a subset of schemas you can do so by granting above permissions to the limited set of objects, instead of `ALL`. While possible, it might be very hard to correctly identify all dependencies, thus preventing SSMA from functioning properly. It is highly recommended to stick to the generic set as defined above to eliminate any potential permission issues during migration process.

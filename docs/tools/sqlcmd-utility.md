@@ -918,14 +918,14 @@ Use the following practices to help maximize security and efficiency.
 
 ## Next steps
 
-[Start the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-start-the-utility.md)
-[Run Transact-SQL Script Files Using sqlcmd](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)
-[Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)
-[Use sqlcmd with Scripting Variables](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
-[Connect to the Database Engine With sqlcmd](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)
-[Edit SQLCMD Scripts with Query Editor](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
-[Manage Job Steps](~/ssms/agent/manage-job-steps.md)   
-[Create a CmdExec Job Step](~/ssms/agent/create-a-cmdexec-job-step.md)  
+- [Start the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-start-the-utility.md)
+- [Run Transact-SQL Script Files Using sqlcmd](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)
+- [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)
+- [Use sqlcmd with Scripting Variables](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
+- [Connect to the Database Engine With sqlcmd](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)
+- [Edit SQLCMD Scripts with Query Editor](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
+- [Manage Job Steps](~/ssms/agent/manage-job-steps.md)   
+- [Create a CmdExec Job Step](~/ssms/agent/create-a-cmdexec-job-step.md)  
 
 ## Feedback
 

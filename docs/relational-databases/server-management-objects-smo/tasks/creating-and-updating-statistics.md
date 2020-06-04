@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot
 ms.custom: seo-dt-2019
-ms.date: 06/03/2020
+ms.date: 06/04/2020
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -93,47 +93,29 @@ public static void CreatingAndUpdatingStatistics()
 This code example creates a new table on an existing database for which the <xref:Microsoft.SqlServer.Management.Smo.Statistic> object and the <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> object are created.
 
 ```powershell
-# Example of implementing a full text search on the default instance.
-# Set the path context to the local, default instance of SQL Server and database tables
-
 Import-Module SQLServer
 
-CD SQLServer:\sql\localhost\default\databases
-$db = get-item AdventureWorks
+# Connect to the local, default instance of SQL Server.  
+$srv = Get-Item SQLSERVER:\SQL\localhost\DEFAULT
 
-CD AdventureWorks\tables
+# Reference the AdventureWorks database.
+$db = $srv.Databases["AdventureWorks"]
 
-#Get a reference to the table
-$tb = get-item Production.ProductCategory
+# Reference the CreditCard table.
+$tb = $db.Tables["CreditCard", "Sales"]
 
-# Define a FullTextCatalog object variable by specifying the parent database and name arguments in the constructor.
+# Define a Statistic object by supplying the parent table and name
+# arguments in the constructor.
+$stat = New-Object Microsoft.SqlServer.Management.Smo.Statistic($tb, "Test_Statistics")
 
-$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -argumentlist $db, "Test_Catalog2"
-$ftc.IsDefault = $true
+# Define a StatisticColumn object variable for the CardType column
+# and add to the Statistic object variable.
+$statcol = New-Object Microsoft.SqlServer.Management.Smo.StatisticColumn($stat, "CardType")
+$stat.StatisticColumns.Add($statcol)
 
-# Create the Full Text Search catalog on the instance of SQL Server.
-$ftc.Create()
+# Create the statistic counter on the instance of SQL Server.
+$stat.Create()
 
-# Define a FullTextIndex object variable by supplying the parent table argument in the constructor.
-$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -argumentlist $tb
-
-#  Define a FullTextIndexColumn object variable by supplying the parent index
-#  and column name arguments in the constructor.
-
-$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -argumentlist $fti, "Name"
-
-# Add the indexed column to the index.
-$fti.IndexedColumns.Add($ftic)
-
-# Set change tracking
-$fti.ChangeTracking = [Microsoft.SqlServer.Management.SMO.ChangeTracking]::Automatic
-
-# Specify the unique index on the table that is required by the Full Text Search index.
-$fti.UniqueIndexName = "AK_ProductCategory_Name"
-
-# Specify the catalog associated with the index.
-$fti.CatalogName = "Test_Catalog2"
-
-# Create the Full Text Search Index
-$fti.Create()
+# Finally dump all the statistics (you can see the newly created one at the bottom)
+$tb.Statistics
 ```

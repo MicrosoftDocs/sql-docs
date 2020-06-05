@@ -146,15 +146,9 @@ The following example lists all default settings for supported configurable item
 }
 ```
 
-## Unsupported configurations
+The following sections list unsupported configurations.
 
-This section list unsupported configurations for:
-
-- [spark](#spark)
-- [hdfs](#hdfs)
-- [gateway](#gateway)
-
-### spark
+## Unsupported `spark` configurations
 
 The following `spark` configurations are unsupported and cannot be changed in the context of the Big Data Cluster.
 
@@ -273,7 +267,7 @@ The following `spark` configurations are unsupported and cannot be changed in th
 |           |                            |                            | |
 |           | hive-env                   | hive-env.sh                
 
-### hdfs
+## Unsupported `hdfs` configurations
 
 The following `hdfs` configurations are unsupported and cannot be changed in the context of the Big Data Cluster.
 
@@ -350,7 +344,7 @@ The following `hdfs` configurations are unsupported and cannot be changed in the
 |          | zookeeper-log4j-properties  | log4j.properties (zookeeper)  | log4j.rootLogger                                      |
 |          |                             |                               | log4j.appender.CONSOLE.*                              |
 
-### gateway
+## Unsupported `gateway` configurations
 
 The following `gateway` configurations for are unsupported and cannot be changed in the context of the Big Data Cluster.
 

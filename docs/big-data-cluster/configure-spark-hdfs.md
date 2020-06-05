@@ -183,11 +183,9 @@ The following `spark` configurations are unsupported and cannot be changed in th
 |           |                            |                            | yarn.resourcemanager.zk-address                                         |
 |           |                            |                            | yarn.resourcemanager.ha.rm-ids                                          |
 |           |                            |                            | yarn.resourcemanager.hostname.*                                         |
-|           |                            |                            | |
 |           | capacity-scheduler         | capacity-scheduler.xml     | yarn.scheduler.capacity.root.acl_submit_applications                    |
 |           |                            |                            | yarn.scheduler.capacity.root.acl_administer_queue                       |
 |           |                            |                            | yarn.scheduler.capacity.root.default.acl_application_max_priority       |
-|           |                            |                            | |
 |           | yarn-env                   | yarn-env.sh                |                                                                         |
 |           | spark-defaults-conf        | spark-defaults.conf        | spark.yarn.archive                                                      |
 |           |                            |                            | spark.yarn.historyServer.address                                        |
@@ -203,11 +201,9 @@ The following `spark` configurations are unsupported and cannot be changed in th
 |           |                            |                            | spark.network.crypto.enabled                                            |
 |           |                            |                            | spark.ssl.keyStore                                                      |
 |           |                            |                            | spark.ssl.keyStorePassword  
-|           |                            |                            | |                                            |
 |           |                            |                            | spark.ui.enabled                                                        |
 |           | spark-env                  | spark-env.sh               | SPARK_NO_DAEMONIZE                                                      |
 |           |                            |                            | SPARK_DIST_CLASSPATH                                                    |
-|           |                            |                            | |
 |           | spark-history-server-conf  | spark-history-server.conf  | spark.history.fs.logDirectory                                           |
 |           |                            |                            | spark.ui.proxyBase                                                      |
 |           |                            |                            | spark.history.fs.cleaner.enabled                                        |
@@ -224,7 +220,6 @@ The following `spark` configurations are unsupported and cannot be changed in th
 |           |                            |                            | spark.history.ui.acls.enable                                            |
 |           |                            |                            | spark.history.ui.admin.acls                                             |
 |           |                            |                            | spark.history.ui.admin.acls.groups                                      |
-|           |                            |                            | |
 |           | livy-conf                  | livy.conf                  | livy.keystore                                                           |
 |           |                            |                            | livy.keystore.password                                                  |
 |           |                            |                            | livy.spark.master                                                       |
@@ -243,7 +238,6 @@ The following `spark` configurations are unsupported and cannot be changed in th
 |           |                            |                            | livy.impersonation.enabled                                              |
 |           |                            |                            | livy.server.access-control.enabled                                      |
 |           |                            |                            | livy.server.access-control.*                                            |
-|           |                            |                            | |
 |           | livy-env                   | livy-env.sh                | LIVY_SERVER_JAVA_OPTS                                                   |
 |           | hive-site                  | hive-site.xml              | javax.jdo.option.ConnectionURL                                          |
 |           |                            |                            | javax.jdo.option.ConnectionDriverName                                   |
@@ -264,7 +258,6 @@ The following `spark` configurations are unsupported and cannot be changed in th
 |           |                            |                            | hive.metastore.sasl.enabled                                             |
 |           |                            |                            | hive.metastore.execute.setugi                                           |
 |           |                            |                            | hive.cluster.delegation.token.store.class                               |
-|           |                            |                            | |
 |           | hive-env                   | hive-env.sh                
 
 ## Unsupported `hdfs` configurations
@@ -286,10 +279,8 @@ The following `hdfs` configurations are unsupported and cannot be changed in the
 |          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
 |          |                             |                               | hadoop.http.filter.initializers                       |
 |          |                             |                               | hadoop.security.group.mapping.*                       |
-|           |                            |                            | |
 |          | hadoop-env                  | hadoop-env.sh                 | JAVA_HOME                                             |
 |          |                             |                               | HADOOP_CLASSPATH                                      |
-|           |                            |                            | |
 |          | mapred-env                  | mapred-env.sh                 |                                                       |
 |          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
 |          |                             |                               | dfs.datanode.data.dir                                 |
@@ -331,16 +322,13 @@ The following `hdfs` configurations are unsupported and cannot be changed in the
 |          |                             |                               | dfs.webhdfs.enabled                                   |
 |          |                             |                               | dfs.permissions.superusergroup                        |
 |          | hdfs-env                    | hdfs-env.sh                   | HADOOP_HEAPSIZE_MAX                                   |
-|           |                            |                            | |
 |          | zoo-cfg                     | zoo.cfg                       | secureClientPort                                      |
 |          |                             |                               | clientPort                                            |
 |          |                             |                               | dataDir                                               |
 |          |                             |                               | dataLogDir                                            |
 |          |                             |                               | 4lw.commands.whitelist                                |
-|           |                            |                            | |
 |          | zookeeper-java-env          | java.env                      | ZK_LOG_DIR                                            |
 |          |                             |                               | SERVER_JVMFLAGS                                       |
-|           |                            |                            | |
 |          | zookeeper-log4j-properties  | log4j.properties (zookeeper)  | log4j.rootLogger                                      |
 |          |                             |                               | log4j.appender.CONSOLE.*                              |
 

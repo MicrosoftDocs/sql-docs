@@ -64,7 +64,7 @@ SQL Server Version  |Redistributable Install Link
  <br>
  ![ekm-part1-aad-add-secret](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-add-secret.png "ekm-part1-aad-add-secret")  
  
- 	8. Copy the "Value" of the Client Secret to be used to create an Asymmetric key in SQL Server.
+8. Copy the "Value" of the Client Secret to be used to create an Asymmetric key in SQL Server.
  ![ekm-part1-image5](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png "ekm-part1-aad-new-secret")  
  
 ## Part II: Create a Key Vault using the Azure portal 

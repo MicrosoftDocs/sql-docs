@@ -2,7 +2,6 @@
 title: Troubleshooting a hang or crash with SSMS
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4

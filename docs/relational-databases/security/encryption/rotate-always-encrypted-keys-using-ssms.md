@@ -7,7 +7,6 @@ ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
-f1_keywords: 
   - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
   - "sql13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
 helpviewer_keywords: 

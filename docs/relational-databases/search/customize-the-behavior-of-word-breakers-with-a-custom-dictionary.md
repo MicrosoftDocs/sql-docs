@@ -1,6 +1,5 @@
 ---
 title: "Customize behavior of word breakers with a custom dictionary"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"

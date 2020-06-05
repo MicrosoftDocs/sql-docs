@@ -1,7 +1,6 @@
 ---
 title: "sp_pdw_add_network_credentials"
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.service: sql-data-warehouse
 ms.reviewer: ""

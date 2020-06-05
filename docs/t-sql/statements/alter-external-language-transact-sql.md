@@ -3,7 +3,6 @@ title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 11/04/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: language-extensions
 ms.topic: language-reference
 author: nelgson

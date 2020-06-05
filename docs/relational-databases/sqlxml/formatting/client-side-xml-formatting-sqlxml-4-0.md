@@ -1,5 +1,6 @@
 ---
 title: "Client-side XML Formatting (SQLXML)"
+description: Learn about client-side XML formatting in SQLXML 4.0 using the FOR XML clause.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

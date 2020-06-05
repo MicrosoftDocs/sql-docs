@@ -17,7 +17,7 @@ ms.author: maghan
 # Configure the max worker threads Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This topic describes how to configure the **max worker threads** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **max worker threads** option configures the number of worker threads that are available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-wide to process query requests, logins, logout, and similar application requests.
+This topic describes how to configure the **max worker threads** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **max worker threads** option configures the number of worker threads that are available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-wide to process query requests, login, logout, and similar application requests.
 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the native thread services of the operating systems to ensure the following conditions:
@@ -34,7 +34,7 @@ The default value for **max worker threads** is 0. This enables [!INCLUDE[ssNoVe
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The actual number of query requests can exceed the value set in **max worker threads** in which case  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pools the worker threads so that the next available worker thread can handle the request. A worker thread is assigned only to active requests and is released once the request is serviced, even if the user session/connection where on which the request was made remains open. 
+-   The actual number of query requests can exceed the value set in **max worker threads** in which case  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pools the worker threads so that the next available worker thread can handle the request. A worker thread is assigned only to active requests and is released once the request is serviced. This happens even if the user session/connection on which the request was made remains open. 
 
 -   The **max worker threads** server configuration option does not limit all threads that may be spawned inside the engine. System threads required for tasks such as LazyWriter, Checkpoint, Log Writer, Service Broker, Lock Manager, or others are spawned outside this limit. Availability Groups use some of the worker threads from within the **max worker thread limi**t but also use system threads (see [Thread Usage by Availability Groups](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage) ) If the number of threads configured is being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
   

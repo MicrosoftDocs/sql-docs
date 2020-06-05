@@ -141,7 +141,7 @@ b           c           i
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  
        LEAD(SalesAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS NextQuota,  
-   SalesAmountQuota - LEAD(Sale sAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS Diff  
+   SalesAmountQuota - LEAD(SalesAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS Diff  
 FROM dbo.FactSalesQuota  
 WHERE EmployeeKey = 272 AND CalendarYear IN (2001,2002)  
 ORDER BY CalendarYear, CalendarQuarter;  

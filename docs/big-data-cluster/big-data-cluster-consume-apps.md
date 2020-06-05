@@ -24,6 +24,9 @@ This article describes how to consume an app deployed on a SQL Server big data c
 - [azdata command-line utility](deploy-install-azdata.md)
 - An app deployed using either [azdata](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
 
+> [!NOTE]
+> When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job. If your big data cluster is deployed on OpenShift, launching the cron job requires additional capabilities. See the details regarding [security considerations on OpenShift](concept-application-deployment.md#app-deploy-security) for specific instructions.
+
 ## Capabilities
 
 After you have deployed an application to your [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], you can access and consume that application using a RESTful web service. This enables integration of that app from other applications or services (for example, a mobile app or website). The following table describes the application deployment commands that you can use with **azdata** to get information about the RESTful web service for your app.

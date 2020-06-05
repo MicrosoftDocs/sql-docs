@@ -95,7 +95,8 @@ All Azure resources created via Azure portal must be contained in resource group
 ## Part II: Create a Key Vault and Key using PowerShell
  The key vault and key created here will be used by the SQL Server Database Engine for encryption key protection.  
   
-> [!IMPORTANT] The subscription where the key vault is created must be in the same default Azure Active Directory where the Azure Active Directory service principal was created. If you want to use an Active Directory other than your default Active Directory for creating a service principal for the SQL Server Connector, you must change the default Active Directory in your Azure account before creating your key vault. To learn how to change the default Active Directory to the one you'd like to use, please refer to the SQL Server Connector [FAQs](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
+> [!IMPORTANT] 
+> The subscription where the key vault is created must be in the same default Azure Active Directory where the Azure Active Directory service principal was created. If you want to use an Active Directory other than your default Active Directory for creating a service principal for the SQL Server Connector, you must change the default Active Directory in your Azure account before creating your key vault. To learn how to change the default Active Directory to the one you'd like to use, please refer to the SQL Server Connector [FAQs](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
   
 1.  **Open PowerShell and Sign in**  
@@ -116,7 +117,8 @@ All Azure resources created via Azure portal must be contained in resource group
     CurrentStorageAccount :  
     ```  
   
-    > [!NOTE]  If you have multiple subscriptions and want to specify a specific one to use for the vault, then use `Get-AzSubscription` to see the subscriptions and `Select-AzSubscription` to choose the correct subscription. Otherwise, PowerShell will select one for you by default.  
+    > [!NOTE]  
+    > If you have multiple subscriptions and want to specify a specific one to use for the vault, then use `Get-AzSubscription` to see the subscriptions and `Select-AzSubscription` to choose the correct subscription. Otherwise, PowerShell will select one for you by default.  
   
 2.  **Create a new resource group**  
   
@@ -138,7 +140,7 @@ All Azure resources created via Azure portal must be contained in resource group
     ```  
   
     > [!NOTE] 
-    For the `-Location parameter`, use the command `Get-AzureLocation` to identify how to specify an alternative location to the one in this example. If you need more information, type: `Get-Help Get-AzureLocation`  
+    > For the `-Location parameter`, use the command `Get-AzureLocation` to identify how to specify an alternative location to the one in this example. If you need more information, type: `Get-Help Get-AzureLocation`  
   
 3.  **Create a Key Vault**  
   
@@ -182,7 +184,8 @@ All Azure resources created via Azure portal must be contained in resource group
      You can authorize other users and applications to use your key vault.   
     In this case, let's use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   
-    > [!IMPORTANT] The Azure Active Directory service principal must have at least the `get`, `list`,`wrapKey`, and `unwrapKey` permissions for the key vault.  
+    > [!IMPORTANT] 
+    > The Azure Active Directory service principal must have at least the `get`, `list`,`wrapKey`, and `unwrapKey` permissions for the key vault.  
   
      As shown below, use the **App (Client) ID** from Part I for the `ServicePrincipalName` parameter. The `Set-AzKeyVaultAccessPolicy` runs silently with no output if it runs successfully.  
   
@@ -199,7 +202,8 @@ All Azure resources created via Azure portal must be contained in resource group
   
      There are two ways to generate a key in Azure Key Vault: 1) Import an existing key or 2) create a new key.  
                   
-      > [!NOTE]  SQL Server only supports 2048-bit RSA keys.
+      > [!NOTE]  
+      > SQL Server only supports 2048-bit RSA keys.
         
     ### Best practice:
     
@@ -210,7 +214,8 @@ All Azure resources created via Azure portal must be contained in resource group
     3. Before using the key in Azure Key Vault for the first time, take an Azure Key Vault key backup. Learn more about the [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) command.
     4. Whenever any changes are made to the key (for example add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
 
-        > [!NOTE]  Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
+        > [!NOTE]  
+        > Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
 
     ### Types of keys:
     There are two types of keys you can generate in Azure Key Vault that will work with SQL Server. Both are asymmetric 2048-bit RSA keys.  
@@ -220,7 +225,7 @@ All Azure resources created via Azure portal must be contained in resource group
     -   **HSM-protected:** Created and protected by a hardware security module (HSM) for additional security. Cost is about $1 per key version.  
   
         > [!IMPORTANT] 
-        The SQL Server Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.   
+        > The SQL Server Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.   
         > Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], please refer to the Key Rollover steps in the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### Import an existing key   
@@ -240,7 +245,8 @@ All Azure resources created via Azure portal must be contained in resource group
           -KeyFilePassword $securepfxpwd $securepfxpwd  -Destination 'HSM'  
     ```  
  
-    > [!IMPORTANT]  Importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key will result in permanent data loss.  
+    > [!IMPORTANT]  
+    > Importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key will result in permanent data loss.  
 
     ### Create a new key
     #### Example:  
@@ -263,16 +269,18 @@ All Azure resources created via Azure portal must be contained in resource group
     Id         : https://contosoekmkeyvault.vault.azure.net:443/  
                  keys/ContosoRSAKey0/<guid>  
     ```  
- > [!IMPORTANT] 
-   The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the vault and used to encrypt the DEK.  
+     > [!IMPORTANT] 
+    > The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the vault and used to encrypt the DEK.  
    
   
 ## Part III: Install the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector  
  Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). (The download should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.)  
 
-> [!NOTE] Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."
+  > [!NOTE] 
+  > Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."
 
-> [!NOTE]  There is a breaking change in 1.0.5.0 version, in terms of the thumbprint algorithm. You may experience database restore failure after upgrading to 1.0.5.0 version. Please refer KB aritcle [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> [!NOTE]
+> There is a breaking change in 1.0.5.0 version, in terms of the thumbprint algorithm. You may experience database restore failure after upgrading to 1.0.5.0 version. Please refer KB aritcle [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png "ekm-connector-install")  
   
@@ -325,7 +333,7 @@ All Azure resources created via Azure portal must be contained in resource group
     GO  
     ```  
     > [!NOTE]
-    The file path length cannot exceed 256 characters.  
+    > The file path length cannot exceed 256 characters.  
   
   
 4.  **Set up a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential for a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login to use the key vault:**  
@@ -345,8 +353,8 @@ All Azure resources created via Azure portal must be contained in resource group
         - If you're using a **private Azure cloud** (ex. Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Don't include "https://" in the Vault URI.   
     -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.  
   
-        > [!IMPORTANT] 
-        You **must** remove the hyphens from the **App (Client) ID**.  
+      > [!IMPORTANT] 
+      > You **must** remove the hyphens from the **App (Client) ID**.  
   
     -   Complete the second part of the `SECRET` argument with **Client Secret** from Part I.  In this example the **Client Secret** from Part 1 is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, with *no hyphens*.  
   

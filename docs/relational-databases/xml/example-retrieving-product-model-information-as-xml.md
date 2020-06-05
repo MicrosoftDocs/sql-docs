@@ -1,5 +1,6 @@
 ---
 title: "Example: Retrieving Product Model Information as XML | Microsoft Docs"
+description: View an example of how to retrieve product model information as XML by using RAW mode with the FOR XML clause.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

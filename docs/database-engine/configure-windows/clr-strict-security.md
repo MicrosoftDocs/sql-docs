@@ -1,6 +1,6 @@
 ---
 title: "CLR strict security | Microsoft Docs"
-description: How to configure CLR strict security in SQL Server
+description: Learn to configure common language runtime (CLR) strict security in SQL Server. Control the interpretation of the SAFE, EXTERNAL ACCESS, and UNSAFE permissions.
 ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql

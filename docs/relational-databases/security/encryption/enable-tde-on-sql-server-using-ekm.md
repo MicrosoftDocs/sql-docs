@@ -76,23 +76,23 @@ All Azure resources created via Azure portal must be contained in resource group
       1. **Create a Resource Group**<br>
 ![ekm-part2-create-resource-group](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-resource-group.png "ekm-part2-create-resource-group")  
 
-      1. **Create the Key Vault**<br>
+      1. **Create the key vault**<br>
 ![ekm-part2-create-key-vault](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-key-vault.png "ekm-part2-create-key-vault")  
 
-      1. **Add Access Policy to Azure Active Directory Principal (Application)**<br>
+      1. **Add Access Policy to Azure Active Directory principal (Application)**<br>
 ![ekm-part2-add-access-policy](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-access-policy.png "ekm-part2-add-access-policy")  
 
       1. **Access Policies: Get, List, Unwrap Key, Wrap Key**<br>
 ![ekm-part2-access-policy-permission](../../../relational-databases/security/encryption/media/ekm/ekm-part2-access-policy-permission.png "ekm-part2-access-policy-permission")
 
-      1. **Add a Principal (Azure Active Directory Application) to Azure Key Vault**<br>
+      1. **Add a principal (Azure Active Directory Application) to Azure Key Vault**<br>
  ![ekm-part2-select-principal](../../../relational-databases/security/encryption/media/ekm/ekm-part2-select-principal.png "ekm-part2-select-principal")  
 
-      1. **Also Save the Changes to the Access Policies**<br>
+      1. **Also save the changes to the access policies**<br>
 ![ekm-part2-save-access-policy](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png "ekm-part2-save-access-policy")  
  
 
-## Part II: Create a Key Vault and Key using PowerShell
+## Part II: Create a Key Vault and key using PowerShell
  The key vault and key created here will be used by the SQL Server Database Engine for encryption key protection.  
   
 > [!IMPORTANT] 
@@ -176,7 +176,7 @@ All Azure resources created via Azure portal must be contained in resource group
     Tags                             :  
     ```  
   
-1.  **Grant Permission for the Azure Active Directory Service Principal to Access the Azure Key Vault**  
+1.  **Grant permission for the Azure Active Directory Service Principal to access the Azure Key Vault**  
   
      You can authorize other users and applications to use your key vault.   
     In this case, let's use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
@@ -419,9 +419,9 @@ All Azure resources created via Azure portal must be contained in resource group
     ```  
 
 10. **Create a database encryption key:**
- Create an ENCRYPTION KEY using the ASYMENTRIC KEY (EKMSampleASYKey)
+ Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
      ```sql  
-    --Create an ENCRYPTION KEY using the ASYMENTRIC KEY (EKMSampleASYKey)
+    --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
      ```  
@@ -439,7 +439,7 @@ All Azure resources created via Azure portal must be contained in resource group
      ```sql  
     -- CLEAN UP
     USE Master
-    ALTER DATABASE [TestTDE] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+    ALTER DATABASE [TestTDE] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
     DROP DATABASE [TestTDE]
 
     ALTER LOGIN [TDE_Login] DROP CREDENTIAL [sysadmin_ekm_cred]

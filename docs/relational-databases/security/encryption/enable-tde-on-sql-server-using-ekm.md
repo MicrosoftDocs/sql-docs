@@ -70,7 +70,7 @@ SQL Server Version  |Redistributable Install Link
 ## Part II: Create a Key Vault using the Azure portal 
 The Azure portal can be used to create the Key Vault and add an Azure Active Directory Principal to the Key Vault.
 
-1. **Create a new resource group**
+1. **Create a new resource group:**
 All Azure resources created via Azure portal must be contained in resource groups. Create a resource group to house your key vault. This example uses `ContosoDevRG`. Choose your own **unique** resource group and key vault name as all key vault names are globally unique.
 
       1. **Create a Resource Group**<br>
@@ -92,7 +92,7 @@ All Azure resources created via Azure portal must be contained in resource group
 ![ekm-part2-save-access-policy](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png "ekm-part2-save-access-policy")  
  
 
-## Part II: Create a Key Vault and key using PowerShell
+## Part II: Create an Azure Key Vault and key using PowerShell
  The key vault and key created here will be used by the SQL Server Database Engine for encryption key protection.  
   
 > [!IMPORTANT] 
@@ -119,7 +119,7 @@ All Azure resources created via Azure portal must be contained in resource group
     > [!NOTE]  
     > If you have multiple subscriptions and want to specify a specific one to use for the vault, then use `Get-AzSubscription` to see the subscriptions and `Select-AzSubscription` to choose the correct subscription. Otherwise, PowerShell will select one for you by default.  
   
-1.  **Create a new resource group**   
+1.  **Create a new resource group:**   
      All Azure resources created via Azure portal must be contained in resource groups. Create a resource group to house your key vault. This example uses `ContosoDevRG`. Choose your own **unique** resource group and key vault name as all key vault names are globally unique.  
   
     ```powershell  
@@ -140,7 +140,7 @@ All Azure resources created via Azure portal must be contained in resource group
     > [!NOTE] 
     > For the `-Location parameter`, use the command `Get-AzureLocation` to identify how to specify an alternative location to the one in this example. If you need more information, type: `Get-Help Get-AzureLocation`  
   
-1.  **Create an key vault**    
+1.  **Create a key vault:**    
      The `New-AzKeyVault` cmdlet requires a resource group name, a key vault name, and a geographic location. For example, for a key vault named `ContosoEKMKeyVault`, type:  
   
     ```powershell  
@@ -176,7 +176,7 @@ All Azure resources created via Azure portal must be contained in resource group
     Tags                             :  
     ```  
   
-1.  **Grant permission for the Azure Active Directory Service Principal to access the Azure Key Vault**  
+1.  **Grant permission for the Azure Active Directory Service Principal to access the Azure Key Vault:**  
   
      You can authorize other users and applications to use your key vault.   
     In this case, let's use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
@@ -195,7 +195,7 @@ All Azure resources created via Azure portal must be contained in resource group
      Call the `Get-AzKeyVault` cmdlet to confirm the permissions. In the statement output under 'Access Policies,' you should see your AAD application name listed as another tenant that has access to this key vault.  
   
        
-1.  **Generate an Asymmetric Key in the key vault**  
+1.  **Generate an Asymmetric Key in the key vault:**  
   
      There are two ways to generate a key in Azure Key Vault: 1) Import an existing key or 2) create a new key.  
                   
@@ -206,7 +206,7 @@ All Azure resources created via Azure portal must be contained in resource group
     
     To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practice:
  
-    1. Create your encryption key locally on a local HSM device. (Make sure to use an asymmetric, RSA 2048 key so it's is supported by SQL Server.)
+    1. Create your encryption key locally on a local HSM (hardware security module) device. (Make sure to use an asymmetric, RSA 2048 key so it's is supported by SQL Server.)
     1. Import the encryption key to Azure Key Vault. See the steps below for how to do that.
     1. Before using the key in Azure Key Vault for the first time, take an Azure Key Vault key backup. Learn more about the [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) command.
     1. Whenever any changes are made to the key (for example add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
@@ -337,7 +337,7 @@ All Azure resources created via Azure portal must be contained in resource group
   
      A credential must be added to each login that will be performing encryption using a key from the Key Vault. This might include:  
   
-    -   A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administrator login who will use key vault in order to set up and manage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption scenarios.  
+    -   A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administrator login who will use key vault to set up and manage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption scenarios.  
   
     -   Other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins who might enable Transparent Data Encryption (TDE), or other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption features.  
   

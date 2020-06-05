@@ -1,9 +1,9 @@
 ---
-title: What is Application Deployment?
+title: What is application deployment?
 titleSuffix: SQL Server Big Data Clusters
 description: This article describes application deployment on a Big Data Clusters for SQL Server 2019.
-author: jeroenterheerdt 
-ms.author: jterh
+author: cloudmelon 
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
@@ -12,13 +12,13 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# What is Application Deployment on a Big Data Cluster?
+# What is application deployment on a Big Data Cluster?
 
-Application Deployment enables the deployment of applications on the big data cluster by providing interfaces to create, manage, and run applications. Applications deployed on the big data cluster benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on SQL Server Big Data Clusters are R, Python, SSIS, MLeap.
+Application deployment enables the deployment of applications on the big data cluster by providing interfaces to create, manage, and run applications. Applications deployed on the big data cluster benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on SQL Server Big Data Clusters are R, Python, SSIS, MLeap.
 
-The following sections describe the architecture and functionality of Application Deployment.
+The following sections describe the architecture and functionality of application deployment.
 
-## Application Deployment architecture
+## Application deployment architecture
 
 Application deployment consists of a controller and app runtime handlers. When creating an application, a specification file (`spec.yaml`) is provided. This `spec.yaml` file contains everything the controller needs to know to successfully deploy the application. The following is a sample of the contents for `spec.yaml`:
 
@@ -48,9 +48,9 @@ After the ReplicaSet has been created and the pods have started, a cron job is c
 
 When an application is executed, the Kubernetes service for the application proxies the requests to a replica and returns the results.
 
-## How to work with Application Deployment
+## How to work with application deployment
 
-The two main interfaces for Application Deployment are: 
+The two main interfaces for application deployment are: 
 - [Command line interface `azdata`](big-data-cluster-create-apps.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 

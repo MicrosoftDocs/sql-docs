@@ -105,7 +105,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 When importing from Azure Blob storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command.
 
 > [!NOTE]
-> Do not use explicit transaction or you will receive a 4861 error.
+> Do not use explicit transaction, or you receive a 4861 error.
 
 ### Using BULK INSERT
 

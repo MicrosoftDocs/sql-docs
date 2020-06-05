@@ -41,7 +41,7 @@ In addition to these configurations, we also offer the ability to configure whet
 
 This boolean value, `includeSpark`, is in the `bdc.json` configuration file at `spec.resources.storage-0.spec.settings.spark`.
 
-## Supported Configurations
+## Supported configurations
 
 The following example lists all default settings for supported configurable items.
 
@@ -349,7 +349,7 @@ The following `gateway` configurations for are unsupported and cannot be changed
 |          |                             |                               | ssl.exclude.protocols                                 |
 |          |                             |                               | ssl.include.ciphers                                   |
 
-## Configurations via Cluster Profile
+## Configurations via cluster Profile
 
 In the cluster profile there are resources and services. At deployment time, we can specify configurations in one of two ways: 
 

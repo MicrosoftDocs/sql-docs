@@ -1,5 +1,5 @@
 ---
-title: "Connect To Oracle (OracleToSQL) | Microsoft Docs"
+title: "Connect to Oracle (OracleToSQL) | Microsoft Docs"
 description: Learn how to connect to an Oracle database to begin migration using SSMA for Oracle. Use the Connect to Oracle dialog box. 
 authors: "nahk-ivanov"
 
@@ -13,7 +13,7 @@ ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 ms.author: "alexiva"
 ---
 
-# Connect To Oracle (OracleToSQL)
+# Connect to Oracle (OracleToSQL)
 
 Use the **Connect to Oracle** dialog box to connect to the Oracle database that you want to migrate.
 
@@ -70,6 +70,6 @@ Connection strings consist of parameter name and value pairs.
 
 For SSMA connection strings, always include the Provider parameter. Also, make sure that you include the Port parameter when you connect to Oracle.
 
-## Next Step
+## Next steps
 
 The next step in the migration process is to [Connect to SQL Server](connect-to-sql-server-oracletosql.md).

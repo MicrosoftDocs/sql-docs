@@ -95,6 +95,6 @@ Connection strings consist of parameter name and value pairs. The names of the p
 
    This is an advanced mode option.
 
-## Next Step
+## Next steps
 
 The next step in the migration process is to [Connect to SQL Server](connect-to-sql-server-sybasetosql.md).

@@ -853,7 +853,9 @@ Requires these user permissions:
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+
+> [!NOTE]
+> CONTROL DATABASE permissions are required to create only the MASTER KEY, DATABASE SCOPED CREDENTIAL, and EXTERNAL DATA SOURCE
 
 Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
 

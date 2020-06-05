@@ -23,7 +23,7 @@ Your connection to the database stays active until you close the project. When y
 
 Metadata about the Oracle database is not automatically updated. Instead, if you want to update the metadata in Oracle Metadata Explorer, you must manually update it. For more information, see the "Refreshing Oracle Metadata" section later in this topic.
 
-## Required Oracle Permissions
+## Required Oracle permissions
 
 At minimum, the account that is used to connect to the Oracle database must have the following permissions:
 
@@ -79,7 +79,7 @@ Some of the SSMA features require additional permissions. For instance, if you w
 > [!NOTE]
 > This is a generic set of permissions required for SSMA to operate properly. If you want to narrow down the scope of your migration to a subset of schemas you can do so by granting above permissions to the limited set of objects, instead of `ALL`. While possible, it might be very hard to correctly identify all dependencies, thus preventing SSMA from functioning properly. It is highly recommended to stick to the generic set as defined above to eliminate any potential permission issues during migration process.
 
-## Establishing a Connection to Oracle
+## Establishing a connection to Oracle
 
 When you connect to a database, SSMA reads the database metadata, and then adds this metadata to the project file. This metadata is used by SSMA when it converts objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax, and when it migrates data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can browse this metadata in the Oracle Metadata Explorer pane and review properties of individual database objects.
 
@@ -123,7 +123,7 @@ When you connect to a database, SSMA reads the database metadata, and then adds 
 
 Your connection to the database server stays active until you close the project. When you reopen the project, you must reconnect if you want an active connection to the database. You can work offline until you want to update metadata, load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and migrate data.
 
-## Refreshing Oracle Metadata
+## Refreshing Oracle metadata
 
 Metadata about the Oracle database is not automatically refreshed. The metadata in Oracle Metadata Explorer is a snapshot of the metadata when you first connected, or the last time that you manually refreshed metadata. You can manually update metadata for all schemas, a single schema, or individual database objects.
 
@@ -146,10 +146,10 @@ Metadata about the Oracle database is not automatically refreshed. The metadata 
 
 5. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
 
-## Next Step
+## Next steps
 
 The next step in the migration process is to [Connect to an instance of SQL Server](connecting-to-sql-server-oracletosql.md).
 
-## See Also
+## See also
 
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

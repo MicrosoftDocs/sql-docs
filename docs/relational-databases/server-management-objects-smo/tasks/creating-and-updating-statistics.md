@@ -65,7 +65,7 @@ public static void CreatingAndUpdatingStatistics()
     var db = srv.Databases["AdventureWorks"];
 
     // Reference the CreditCard table.
-    var tb = db.Tables["CreditCard", "dbo"];
+    var tb = db.Tables["CreditCard", "Sales"];
 
     // Define a Statistic object by supplying the parent table and name
     // arguments in the constructor.
@@ -81,10 +81,12 @@ public static void CreatingAndUpdatingStatistics()
 
     // List all the statistics object on the table (you will see the newly created one)
     foreach (var s in tb.Statistics.Cast<Statistic>())
-    Console.WriteLine($"{s.ID}\t{s.Name}");
+        Console.WriteLine($"{s.ID}\t{s.Name}");
 
-// Output:
-//   2  Test_Statistics
+    // Output:
+    //  2       AK_CreditCard_CardNumber
+    //  1       PK_CreditCard_CreditCardID
+    //  3       Test_Statistics
  }
 ```
 
@@ -118,4 +120,12 @@ $stat.Create()
 
 # Finally dump all the statistics (you can see the newly created one at the bottom)
 $tb.Statistics
+
+# Output:
+# Name                                Last Updated Is From Index  Statistic Columns
+#                                                  Creation
+# ----                                ------------ -------------- -----------------
+# AK_CreditCard_CardNumber      10/27/2017 2:33 PM True           {CardNumber}
+# PK_CreditCard_CreditCardID    10/27/2017 2:33 PM True           {CreditCardID}
+# Test_Statistics                 6/4/2020 8:11 PM False          {CardType}
 ```

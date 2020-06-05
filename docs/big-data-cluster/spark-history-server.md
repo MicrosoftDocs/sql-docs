@@ -188,7 +188,13 @@ The Executor Usage Graph visualizes the Spark job actual executor allocation and
 + Click the color icon to select or unselect the corresponding content in all drafts.
 
     ![Select chart](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## Spark / Yarn Logs
+In addition to the Spark History Server, you can find the logs for Spark and Yarn here, respectively:
+* Spark Event logs: hdfs:///system/spark-events
+* Yarn logs: hdfs:///tmp/logs/root/logs-tfile
 
+Note: Both of these logs have a default retention period of 7 days. If you want to change retention period, see the [Configure Apache Spark and Apache Hadoop](configure-spark-hdfs.md) page. Location **cannot** be changed.
 
 ## Known issues
 The Spark History Server has the following known issues:

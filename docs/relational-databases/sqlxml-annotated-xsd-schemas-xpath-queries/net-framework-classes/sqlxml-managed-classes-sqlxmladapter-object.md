@@ -1,5 +1,6 @@
 ---
 title: "SqlXmlAdapter Object (SQLXML)"
+description: Learn about the SqlXmlAdapter object that provides methods that facilitate interaction with the dataset in the .NET Framework.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,5 +1,6 @@
 ---
 title: "Column Names with the Path Specified as data() | Microsoft Docs"
+description: Learn about XML queries containing column names with the path specified as data().
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql

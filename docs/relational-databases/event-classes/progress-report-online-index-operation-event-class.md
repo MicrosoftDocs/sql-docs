@@ -1,7 +1,6 @@
 ---
 title: "Progress Report: Online Index Operation Event Class"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability

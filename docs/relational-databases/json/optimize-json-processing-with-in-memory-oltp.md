@@ -1,14 +1,13 @@
 ---
 title: "Optimize JSON processing with in-memory OLTP"
-ms.date: "07/18/2017"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -141,7 +140,6 @@ AS BEGIN
 	FROM xtp.Product
 		JOIN OPENJSON(@ProductIds)
 			ON ProductID = value
-
 END;
 
 CREATE PROCEDURE xtp.UpdateProductData(@ProductId int, @Property nvarchar(100), @Value nvarchar(100))
@@ -152,7 +150,6 @@ AS BEGIN
 	UPDATE xtp.Product
 	SET Data = JSON_MODIFY(Data, @Property, @Value)
 	WHERE ProductID = @ProductId;
-
 END
 ```
 

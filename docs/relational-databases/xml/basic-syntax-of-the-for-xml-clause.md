@@ -1,5 +1,6 @@
 ---
 title: "Basic Syntax of the FOR XML Clause | Microsoft Docs"
+description: Learn the basic syntax of the FOR XML clause and how it is used to determine the shape of XML resulting from an SQL query.
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Caching Templates, XSL, and Schemas (SQLXML)"
+description: View information about caching templates, XSL, and schemas in SQLXML 4.0. 
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

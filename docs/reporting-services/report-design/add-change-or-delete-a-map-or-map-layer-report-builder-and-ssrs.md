@@ -1,5 +1,6 @@
 ---
 title: "Add, Change, or Delete a Map or Map Layer (Report Builder) | Microsoft Docs"
+description: Learn how to add, remove, or change map options manually or by using the map layer wizard in Report Builder.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

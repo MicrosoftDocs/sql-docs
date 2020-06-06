@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot Reports: Map Reports (Report Builder) | Microsoft Docs"
+description: Explore troubleshooting ideas for situations that can result when you customize, add a layer, or publish a report with a map in Report Builder.
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

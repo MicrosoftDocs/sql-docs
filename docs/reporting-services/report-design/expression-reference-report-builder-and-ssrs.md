@@ -1,5 +1,6 @@
 ---
 title: "Expression Reference (Report Builder) | Microsoft Docs"
+description: Learn about the syntax required in expressions, before processing or publishing, to support references to built-in functions and collections in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

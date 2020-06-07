@@ -1,6 +1,6 @@
 ---
 title: "Add, Change, or Delete Available Values for a Report Parameter | Microsoft Docs"
-description: Customize the list of choices a user can make to valid values for a parameter. Specify a list of available values to display to the user. 
+description: Customize the list of choices a user can make to valid values for a parameter. Specify a list of available values to display to the user in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

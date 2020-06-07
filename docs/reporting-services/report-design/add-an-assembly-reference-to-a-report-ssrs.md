@@ -1,5 +1,6 @@
 ---
 title: "Add an Assembly Reference to a Report | Microsoft Docs"
+description: Learn how to provide an assembly reference to a report so that the report processor can resolve names in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

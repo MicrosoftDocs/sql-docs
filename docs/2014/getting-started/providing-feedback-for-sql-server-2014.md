@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Providing Feedback for SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] appreciates you taking the time to help us improver our [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] products and documentation. You can provide suggestions and bug reports about the product features and user interface, submit documentation feedback, and opt to send error reports and usage data automatically to [!INCLUDE[msCoName](../includes/msconame-md.md)] for analysis. Each of these three feedback options is described here.  

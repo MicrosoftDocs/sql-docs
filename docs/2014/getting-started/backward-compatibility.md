@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Backward Compatibility
   The following sections contain backward compatibility information for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. This content includes information about deprecated features, discontinued features, breaking changes, and behavior changes.  

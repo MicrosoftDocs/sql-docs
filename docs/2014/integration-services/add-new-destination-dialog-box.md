@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add New Destination Dialog Box
   The following table lists the options available on the Add New Destination Dialog Box.  

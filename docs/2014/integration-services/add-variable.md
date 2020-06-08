@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add Variable
   Use the **Add Variable** dialog box to specify the properties of a new variable.  

@@ -10,7 +10,6 @@ helpviewer_keywords:
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Getting Assistance (SQL Server 2014)
   There are three principal sources of information from [!INCLUDE[msCoName](../includes/msconame-md.md)] about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

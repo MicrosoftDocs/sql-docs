@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # View Event Session Data
   This topic describes using the display user interface to see and analyze extended event data:  

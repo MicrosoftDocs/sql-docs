@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQL Server 2014 Product Specifications
   The topics in the following table provide product specification details for this release:  

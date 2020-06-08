@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Quick-Start Installation of SQL Server 2014
     

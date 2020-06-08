@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Analysis Services Processing Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  

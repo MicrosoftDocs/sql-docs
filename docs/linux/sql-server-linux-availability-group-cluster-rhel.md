@@ -162,7 +162,7 @@ For information on Pacemaker cluster properties, see [Pacemaker Clusters Propert
 
 ## Create availability group resource
 
-To create the availability group resource, use `pcs resource create` command and set the resource properties. The following command creates a `ocf:mssql:ag` master/slave type resource for availability group with name `ag1`.
+To create the availability group resource, use `pcs resource create` command and set the resource properties. The following command creates a `ocf:mssql:ag` master/subordinate type resource for availability group with name `ag1`.
 
 **RHEL 7**
 

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 5be897bd-f36c-4c6a-a91a-13d0d016f8b6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Connect to Server (Integration Services)
   Use this dialog to view or specify options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

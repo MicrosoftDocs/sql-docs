@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Server Properties (General Page) - SQL Server Management Studio
   Use this page to view read-only information about your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  

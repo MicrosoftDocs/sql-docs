@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Server Network Configuration
   Server network configuration tasks include enabling protocols, modifying the port or pipe used by a protocol, configuring encryption, configuring the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service, exposing or hiding the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] on the network, and registering the Server Principal Name. Most of the time, you do not have to change the server network configuration. Only reconfigure the server network protocols if special network requirements.  

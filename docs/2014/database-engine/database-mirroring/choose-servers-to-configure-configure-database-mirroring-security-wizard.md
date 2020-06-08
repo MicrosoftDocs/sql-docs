@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Choose Servers to Configure (Configure Database Mirroring Security Wizard)
   Use this page to specify which server instances you want to configure now. You must select at least one server instance before continuing the wizard.  

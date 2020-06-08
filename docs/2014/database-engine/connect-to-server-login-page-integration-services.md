@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Connect to Server (Login Page) Integration Services
   Use this tab to view or specify the following options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

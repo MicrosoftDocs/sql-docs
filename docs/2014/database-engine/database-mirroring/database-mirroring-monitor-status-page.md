@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring Monitor (Status Page)
   This read-only page displays the most recent mirroring status for the principal and mirror server instances of the database currently selected in the navigation tree. If information about an instance is currently unavailable, some of the cells in the **Status** grid corresponding to that instance are grayed out and display **Unknown**.  

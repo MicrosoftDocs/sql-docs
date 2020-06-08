@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring Monitor (Warnings Page)
   Displays a read-only list of warnings supported on database mirroring events and the specified warning threshold values, if available.  

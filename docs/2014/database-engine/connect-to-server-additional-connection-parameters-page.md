@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ba34b01a-6289-4eb8-8341-fa3d9ec87b3f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Connect to Server (Additional Connection Parameters Page)
   The **Connect to** dialog box of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] presents the most common connection string values as options. Use the **Additional Connection Parameters** page to add more connection parameters to the connection string.  

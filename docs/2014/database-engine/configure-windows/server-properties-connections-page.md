@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Server Properties (Connections Page)
   Use this page to view or modify your connection options.  

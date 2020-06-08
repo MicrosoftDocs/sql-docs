@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Server Properties (Processors Page)
   Use this page to view or modify your processor options. Processor affinity settings are only enabled when more than one processor is installed.  

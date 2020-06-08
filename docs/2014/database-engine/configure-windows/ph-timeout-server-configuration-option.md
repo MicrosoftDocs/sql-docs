@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # PH timeout Server Configuration Option
   Use the PH timeout option to specify the time, in seconds, that the full-text protocol handler should wait to connect to a database before timing out. The default value is 60 seconds. Increase the ph timeout value when connection attempts are timing out due to temporary network issues.  

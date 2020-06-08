@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Monitor Overview
   SQL Server Monitor does not perform monitoring functions, but it hosts modules that do. The SQL Server Monitor modules include Replication Monitor and Database Mirroring Monitor.  

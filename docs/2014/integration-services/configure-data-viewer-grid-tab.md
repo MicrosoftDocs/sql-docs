@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Configure Data Viewer (Grid Tab)
   Use the **Grid** tab of the **Configure Data Viewer** dialog box to specify columns to display. A grid chart displays data records as rows in a grid. The chart reflects the contents of one buffer only.  

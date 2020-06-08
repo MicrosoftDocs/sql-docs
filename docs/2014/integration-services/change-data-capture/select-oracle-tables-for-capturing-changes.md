@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Select Oracle Tables for Capturing Changes
   Use this dialog box to select the tables that are included in the CDC instance. The tables selected are added to the list in the **Select Tables and Columns** page of the New Instance wizard. You can do the following in this dialog box.  

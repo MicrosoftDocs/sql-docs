@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # High Availability Support
   The CDC Service for Oracle is designed for high availability. The following features provide part of the high availability support:  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Edit the Table Properties
   Use this dialog box to edit the specific columns from the selected table where changes are being captured. You can also edit the **Security Role** and **Capture Instance** information.  

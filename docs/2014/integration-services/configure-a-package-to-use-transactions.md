@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Configure a Package to Use Transactions
   When you configure a package to use transactions, you have two options:  

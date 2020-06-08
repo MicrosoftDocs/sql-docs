@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Set Parameter Value Dialog Box
   Use the **Set Parameter Value** dialog box to set values for parameters and connection manager properties, for projects and packages.  

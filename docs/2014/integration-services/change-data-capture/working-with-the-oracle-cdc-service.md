@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Working with the Oracle CDC Service
   This section describes some important concepts of the Oracle CDC Service. The concepts included in this section are:  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Modify OData Source Query at Runtime
   You can modify the OData Source query at runtime by adding an expression to the **[OData Source].[Query]** property of the Data Flow task.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create InfoPackage
   Use the **Create InfoPackage** dialog box to create a new InfoPackage in the SAP Netweaver BW system.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7ac877a1-0f29-46b9-9a51-73b02172bef1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # DMX Query Editor (Analysis Services - Data Mining)
   Use the DMX Query Editor to design and execute statements written in the Data Mining Extensions (DMX) language.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Local Currency Reference (Business Intelligence Wizard)
   Use the **Define Local Currency Reference** page to define the local currencies for currency conversion functionality that covers the many-to-many or many-to-one conversion types specified on the **Select Conversion Type** page. A local currency is the currency in which the transactions for measures selected in the **Select Measures** page are stored.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Choose and Map Model Testing Data
   To create an accuracy chart in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you must choose the data that will be used to test the model, and map the data to the model.  

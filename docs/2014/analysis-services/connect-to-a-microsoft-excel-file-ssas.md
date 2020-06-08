@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Microsoft Excel File (SSAS)
   This page of the **Table Import Wizard** enables you to connect to a Microsoft Excel file stored on the local machine. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

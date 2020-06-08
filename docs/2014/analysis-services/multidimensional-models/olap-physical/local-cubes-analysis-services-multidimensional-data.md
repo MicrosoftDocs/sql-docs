@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Local Cubes (Analysis Services - Multidimensional Data)
   To create, update or delete local cubes, you must write and execute either an ASSL script or an AMO program.  

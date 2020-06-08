@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Actions (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Actions** tab in Cube Designer to view and edit actions, including drillthrough actions and report actions, for the selected cube.  

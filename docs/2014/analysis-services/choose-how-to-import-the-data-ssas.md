@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Choose How to Import the Data (SSAS)
   This page of the **Table Import Wizard** enables you to choose how to import data from the selected data source. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

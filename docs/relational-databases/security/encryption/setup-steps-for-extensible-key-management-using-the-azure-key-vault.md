@@ -195,7 +195,8 @@ All Azure resources created via Azure portal must be contained in resource group
   
      There are two ways to generate a key in Azure Key Vault: 1) Import an existing key or 2) create a new key.  
                   
-  > [!NOTE] SQL Server only supports 2048-bit RSA keys.
+  > [!NOTE] 
+  >SQL Server only supports 2048-bit RSA keys.
         
   ### Best practice:
     
@@ -206,7 +207,8 @@ All Azure resources created via Azure portal must be contained in resource group
     - Before using the key in Azure Key Vault for the first time, take an Azure Key Vault key backup. Learn more about the [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) command.
     - Whenever any changes are made to the key (for example add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
 
-  > [!NOTE]Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
+  > [!NOTE]
+  >Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
 
 ### Types of keys:
     There are two types of keys you can generate in Azure Key Vault that will work with SQL Server. Both are asymmetric 2048-bit RSA keys.  
@@ -236,7 +238,8 @@ All Azure resources created via Azure portal must be contained in resource group
         -KeyFilePassword $securepfxpwd $securepfxpwd  -Destination 'HSM'  
   ```  
  
-  > [!IMPORTANT]   Importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key will result in permanent data loss.  
+  > [!IMPORTANT]
+  >Importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key will result in permanent data loss.  
 
 ### Create a new key 
    Example:  
@@ -259,7 +262,8 @@ All Azure resources created via Azure portal must be contained in resource group
   Id         : https://contosoekmkeyvault.vault.azure.net:443/  
                 keys/ContosoRSAKey0/<guid>  
   ```  
-  > [!IMPORTANT] The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the key vault and used to encrypt the DEK.  
+  > [!IMPORTANT] 
+  >The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the key vault and used to encrypt the DEK.  
    
   
 ## Part III: Install the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector  

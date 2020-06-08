@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 39406be1-9819-4629-9c29-b32fb20bab2e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Discontinued Analysis Services Functionality in SQL Server 2014
   This topic describes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

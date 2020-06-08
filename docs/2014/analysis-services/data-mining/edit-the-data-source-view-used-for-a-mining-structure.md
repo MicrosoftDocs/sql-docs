@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Edit the Data Source View used for a Mining Structure
   You can open a data source view from within Data Mining Designer so that you can modify it.  

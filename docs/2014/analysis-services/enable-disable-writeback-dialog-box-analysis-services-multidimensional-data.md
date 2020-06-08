@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Enable-Disable Writeback Dialog Box (Analysis Services - Multidimensional Data)
   The **Enable/Disable Writeback** dialog box enables or disables writeback for a measure group in a cube. Enabling writeback on a measure group defines a writeback partition and creates a writeback table for that measure group. Disabling writeback on a measure group removes the writeback partition but does not delete the writeback table, to avoid unanticipated data loss. The **Enable/Disable Writeback** dialog box is displayed by:  

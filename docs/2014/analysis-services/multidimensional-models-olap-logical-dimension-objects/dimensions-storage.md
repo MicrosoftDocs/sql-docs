@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 8d74b932-2174-4e1f-8414-636455880b6a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Dimension Storage
   Dimensions in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] support two storage modes:  

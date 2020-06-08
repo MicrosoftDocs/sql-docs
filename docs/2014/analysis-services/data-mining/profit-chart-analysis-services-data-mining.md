@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Profit Chart (Analysis Services - Data Mining)
   A profit chart displays the estimated profitability associated with using a mining model. For example, let's assume your model predicts which customers a company should contact in a business scenario. In that case, you would add to the profit chart information about the cost of conducting the targeted mailing campaign. Then, in the completed chart, you can see the estimated profit if customers are correctly targeted, as compared to randomly contacting customers.  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # SQL Server 2014 Analysis Services
 

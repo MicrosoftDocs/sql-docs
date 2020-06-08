@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Defining a Dimension
   In the following task, you will use the Dimension Wizard to build a Date dimension.  

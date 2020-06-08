@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Grant permissions on a dimension (Analysis Services)
   Dimension security is used to set permissions on a dimension object, not its data. Typically, allowing or denying access to processing operations is the main objective when setting permissions on a dimension.  

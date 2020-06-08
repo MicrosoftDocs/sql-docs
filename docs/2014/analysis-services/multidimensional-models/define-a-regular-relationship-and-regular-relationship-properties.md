@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define a Regular Relationship and Regular Relationship Properties
   When you define a new cube dimension or a new measure group, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will try to detect if a regular relationship exists and then set the dimension usage setting to `Regular`. You can view or edit a regular dimension relationship on the **Dimension Usage** tab of Cube Designer.  

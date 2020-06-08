@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create the Data Mining Structure (Data Mining Wizard)
   Use the **Create the Data Mining Structure** page to create a data mining structure and optionally create an associated mining model.  

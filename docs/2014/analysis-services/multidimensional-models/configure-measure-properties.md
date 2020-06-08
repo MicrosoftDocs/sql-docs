@@ -40,7 +40,6 @@ helpviewer_keywords:
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Configure Measure Properties
   Measures have properties that enable you to define how the measures function and to control how the measures appear to users.  

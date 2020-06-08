@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Processing Data Mining Objects
   A data mining object is only an empty container until it has been processed. *Processing* a data mining model is also called *training*.  

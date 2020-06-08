@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Model Properties
   Mining models have the following kinds of properties:  

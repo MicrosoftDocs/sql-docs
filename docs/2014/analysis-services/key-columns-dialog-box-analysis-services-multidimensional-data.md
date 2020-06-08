@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Key Columns Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Key Columns** dialog box to change the **KeyColumns** property of an attribute. For more information, see [Modify the KeyColumn Property of an Attribute](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Query Pane (Mining Model Prediction View)
   The **Query** pane displays the Data Mining Expressions (DMX) statements created by Prediction Query Builder. You can modify the statements and then click the **Switch to query result view** button to return the results. If you switch back to the **Design** view, any changes you made to the statement will be lost.  

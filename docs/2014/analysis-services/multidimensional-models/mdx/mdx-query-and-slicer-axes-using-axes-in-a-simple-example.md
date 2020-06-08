@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Using Query and Slicer Axes in a Simple Example (MDX)
   The simple example presented in this topic illustrates the basics of specifying and using query and slicer axes.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Named Calculations in a Data Source View (Analysis Services)
   A named calculation is a SQL expression represented as a calculated column. This expression appears and behaves as a column in the table. A named calculation lets you extend the relational schema of existing tables or views in a data source view without modifying the tables or views in the underlying data source. Consider the following examples:

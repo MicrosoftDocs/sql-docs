@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Semiadditive Behavior (Business Intelligence Wizard)
   Use the **Define Semiadditive Behavior** page to enable or disable semi-additive behavior on measures. Semi-additive behavior determines how measures that are contained by a cube are aggregated over a time dimension.  

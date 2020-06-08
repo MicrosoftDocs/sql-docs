@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Detect Categories (Table Analysis Tools for Excel)
   ![Detect Categories button in ribbon](media/tat-detectcat.gif "Detect Categories button in ribbon")

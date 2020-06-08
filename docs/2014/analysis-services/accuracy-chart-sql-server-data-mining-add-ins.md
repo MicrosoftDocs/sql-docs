@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Accuracy Chart (SQL Server Data Mining Add-ins)
   ![Accuracy Chart button in Data Mining ribbon](media/dmc-accchart.gif "Accuracy Chart button in Data Mining ribbon")  

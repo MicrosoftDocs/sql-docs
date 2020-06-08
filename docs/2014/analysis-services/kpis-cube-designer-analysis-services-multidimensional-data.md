@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # KPIs (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **KPIs** tab in Cube Designer to view and edit Key Performance Indicators (KPIs) for the selected cube.  

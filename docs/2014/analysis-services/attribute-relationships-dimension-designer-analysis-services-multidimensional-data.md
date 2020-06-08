@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Attribute Relationships (Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the **Attribute Relationships** tab in Dimension Designer to create, modify or delete the attribute relationships of the selected dimension.  

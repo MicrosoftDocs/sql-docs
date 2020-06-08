@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Globalization scenarios for Analysis Services Multiidimensional
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stores and manipulates multilingual data and metadata in both tabular and multidimensional data models. Data storage is Unicode (UTF-16), in character sets that use Unicode encoding. If you load ANSI data into a data model, characters are stored using Unicode equivalent code points.  

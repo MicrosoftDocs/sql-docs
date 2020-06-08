@@ -1,5 +1,6 @@
 ---
 title: "Custom Code and Assembly References in Expressions in Report Designer | Microsoft Docs"
+description: Find out how to add references to custom code embedded in a report. Build and save to your computer and deploy to the report server in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

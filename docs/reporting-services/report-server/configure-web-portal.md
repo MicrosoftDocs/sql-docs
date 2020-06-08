@@ -1,5 +1,6 @@
 ---
 title: "Configure the web portal | Microsoft Docs"
+description: Learn how to configure the web portal application, used to view reports, manage report server content, and grant user access to a native mode report server.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Step 1: Building the Deployment Utility
   In this task, you will configure and build a deployment utility for the Deployment Tutorial project.  

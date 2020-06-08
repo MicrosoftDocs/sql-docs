@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Interoperability and Coexistence (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) can co-exist side-by-side with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services and [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services.  

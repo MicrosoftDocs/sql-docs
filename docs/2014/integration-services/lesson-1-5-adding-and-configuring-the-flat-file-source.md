@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Step 5: Adding and Configuring the Flat File Source
   In this task, you will add and configure a Flat File source to your package. A Flat File source is a data flow component that uses metadata defined by a Flat File connection manager to specify the format and structure of the data to be extracted from the flat file by a transform process. The Flat File source can be configured to extract data from a single flat file by using the file format definition provided by the Flat File connection manager.  

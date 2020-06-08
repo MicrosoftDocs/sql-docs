@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # File Connection Manager Editor
   Use the **File Connection Manager Editor** dialog box to specify the properties used to connect to a file or a folder.  

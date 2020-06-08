@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ODBC Source Editor (Columns Page)
   Use the **Columns** page of the **ODBC Source Editor** dialog box to map an output column to each external (source) column.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Multicast Transformation Editor
   Use the **Multicast Transformation Editor** dialog box to view and set the properties for each transformation output.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Inherited Transactions
   A package can run another package by using the Execute Package task. The child package, which is the package run by the Execute Package task, may create its own package transaction, or it may inherit the parent package transaction.  

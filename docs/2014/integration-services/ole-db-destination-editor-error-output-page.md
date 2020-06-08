@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OLE DB Destination Editor (Error Output Page)
   Use the **Error Output** page of the **OLE DB Destination Editor** dialog box to specify error handling options.  

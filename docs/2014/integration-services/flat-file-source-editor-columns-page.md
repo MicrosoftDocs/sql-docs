@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Flat File Source Editor (Columns Page)
   Use the **Columns** node of the **Flat File Source Editor** dialog box to map an output column to each external (source) column.  

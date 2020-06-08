@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Fuzzy Grouping Transformation Editor (Columns Tab)
   Use the **Columns** tab of the **Fuzzy Grouping Transformation Editor** dialog box to specify the columns used to group rows with duplicate values.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Step 4: Testing the Lesson 5 Tutorial Package
   At run time, your package will obtain the value for the `Directory` property from a variable updated at run time, rather than using the original directory name that you specified when you created the package. The value of the variable is populated by the SSISTutorial.dtsConfig file.  

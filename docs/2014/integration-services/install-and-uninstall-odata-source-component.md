@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Install and Uninstall OData Source Component
   This topic provides instructions for installing or removing OData Source Component on your computer.  

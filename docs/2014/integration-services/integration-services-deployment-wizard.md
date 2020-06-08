@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Deployment Wizard
   The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Deployment Wizard deploys projects to the SSISDB catalog on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance using the project deployment model.  

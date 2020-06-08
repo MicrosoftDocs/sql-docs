@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ODBC Source Editor (Error Output Page)
   Use the **Error Output** page of the **ODBC Source Editor** dialog box to select error handling options.  

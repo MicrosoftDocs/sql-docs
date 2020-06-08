@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Preview Data Dialog Box (SQL Server Import and Export Wizard)
   Use the **Preview Data** dialog box to see the query that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard will send to the data source. You can also use this dialog box to preview up to 200 rows of sample data.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OLE DB Source Editor (Error Output Page)
   Use the **Error Output** page of the **OLE DB Source Editor** dialog box to select error handling options and to set properties on error output columns.  

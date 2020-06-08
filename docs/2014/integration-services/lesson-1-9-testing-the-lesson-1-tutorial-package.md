@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Step 9: Testing the Lesson 1 Tutorial Package
   In this lesson, you have done the following tasks:  

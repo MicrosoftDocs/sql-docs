@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Step 2: Converting the Project to the Project Deployment Model
   In this task, you will use the Integration Services Project Conversion Wizard to convert the project to the Project Deployment Model.  

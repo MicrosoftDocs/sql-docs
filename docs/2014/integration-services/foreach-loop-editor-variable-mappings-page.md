@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Foreach Loop Editor (Variable Mappings Page)
   Use the **Variables Mappings** page of the **Foreach Loop Editor** dialog box to map variables to the collection value. The value of the variable is updated with the collection values on each iteration of the loop.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Performing Operation (SQL Server Import and Export Wizard)
   Use the **Performing Operation** page to view the progress and the results of the import/export operation, and to interrupt the operation if necessary.  

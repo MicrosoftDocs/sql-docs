@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OData Connection Manager Editor
   Use the **OData Connection Manager Editor** dialog box to add a connection or edit an existing connection to an OData source.  

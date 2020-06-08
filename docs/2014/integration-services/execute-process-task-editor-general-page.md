@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Execute Process Task Editor (General Page)
   Use the **General** pageof the **Execute Process Task Editor** dialog box to name and describe the Execute Process task.  

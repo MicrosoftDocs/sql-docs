@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Export Column Transformation Editor (Error Output Page)
   Use the **Error Output** page of the **Export Column Transformation Editor** dialog box to specify how to handle errors.  

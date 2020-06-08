@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ROUND (SSIS Expression)
   Returns a numeric expression that is rounded to the specified length or precision. The length parameter must evaluate to an integer.  

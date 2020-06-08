@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # () (Parentheses) (SSIS Expression)
   Identifies the evaluation order of expressions. Expressions enclosed in parentheses have the highest evaluation precedence. Nested expressions enclosed in parentheses are evaluated in inner-to-outer order.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Derived Column Transformation Editor
   Use the **Derived Column Transformation Editor** dialog box to create expressions that populate new or replacement columns.  

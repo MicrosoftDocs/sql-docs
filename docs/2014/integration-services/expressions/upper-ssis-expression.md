@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # UPPER (SSIS Expression)
   Returns a character expression after converting lowercase characters to uppercase characters.  

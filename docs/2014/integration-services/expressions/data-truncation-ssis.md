@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Truncation (SSIS)
   An expression may inadvertently cause data to be truncated. Truncation can occur under the following circumstances:  

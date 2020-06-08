@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Development of an Integration Services Project
   You add [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages to projects. To create and work with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, you must install the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] environment. For more information, see [Install Integration Services](install-windows/install-integration-services.md).  

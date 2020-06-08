@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Enable Logging for Package Execution on the SSIS Server
   This procedure describes how to set or change the logging level for a package when you execute a package that you have deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. The logging level you set when you execute the package overrides the package logging you configure using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. See [Enable Package Logging in SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) for more information.  

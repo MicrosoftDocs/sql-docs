@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # || (Logical OR) (SSIS Expression)
   Performs a logical OR operation. The expression evaluates to TRUE if one or both conditions are TRUE.  

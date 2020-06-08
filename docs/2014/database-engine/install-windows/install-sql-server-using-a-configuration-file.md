@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Install SQL Server 2014 Using a Configuration File
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup provides the ability to generate a configuration file based upon the system default and run-time inputs. You can use the configuration file to deploy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] throughout the enterprise with the same configuration. You can also standardize manual installations throughout the enterprise, by creating a batch file that launches Setup.exe.  

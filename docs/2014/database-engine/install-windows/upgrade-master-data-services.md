@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade Master Data Services
   There are four scenarios for upgrading to Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Choose the scenario that fits your situation.  

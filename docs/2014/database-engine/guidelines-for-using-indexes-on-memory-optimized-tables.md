@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Guidelines for Using Indexes on Memory-Optimized Tables
   Indexes are used for efficiently accessing data in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables. Specifying the right indexes can dramatically improve query performance. Consider, for example, the query:  

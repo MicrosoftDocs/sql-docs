@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Extensions to AdventureWorks to Demonstrate In-Memory OLTP
     

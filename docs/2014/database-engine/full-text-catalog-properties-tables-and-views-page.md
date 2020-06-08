@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Full-Text Catalog Properties (Tables and Views Page)
   Use this dialog page to view or modify the tables and views that are assigned to the full-text catalog.  

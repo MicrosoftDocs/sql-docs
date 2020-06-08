@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Installation for SQL Server 2014
  ## [Download SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Updategram Sample Applications (SQLXML 4.0)
   This section provides examples of using updategrams.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade Database Engine
   This topic provides the information that you will need to prepare for and understand the upgrade process; it covers:  

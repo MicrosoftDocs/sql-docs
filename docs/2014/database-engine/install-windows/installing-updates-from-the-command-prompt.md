@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Installing Updates from the Command Prompt
   Test and modify installation scripts to meet the needs of your organization.  

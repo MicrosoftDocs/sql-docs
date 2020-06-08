@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade to SQL Server 2014 Using the Installation Wizard (Setup)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for upgrade of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. You can also install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] side by side with an earlier version, or migrate existing databases and configuration settings from an earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version, and apply them to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

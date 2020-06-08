@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 80f1e02c-5e71-4610-ae62-fde62c4189d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Windows Management Instrumentation
   This section contains the following subjects:  

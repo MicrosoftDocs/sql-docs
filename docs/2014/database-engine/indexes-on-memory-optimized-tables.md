@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 86805eeb-6972-45d8-8369-16ededc535c7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Indexes on Memory-Optimized Tables
   This section contains topics about indexes for memory-optimized tables:  

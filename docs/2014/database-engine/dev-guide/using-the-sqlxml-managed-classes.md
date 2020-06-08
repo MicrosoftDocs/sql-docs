@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Using the SQLXML Managed Classes
   This section provides sample applications that demonstrate how to use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML Managed Classes.  

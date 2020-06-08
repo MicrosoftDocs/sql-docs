@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Install a Service Pack on a System with Minimal Downtime for Mirrored Databases
   This topic describes how to minimize downtime for mirrored databases when you install service packs and hotfixes. This process involves sequentially upgrading the instances of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] that are participating in database mirroring. This form of update, which is known as a *rolling update*, reduces downtime to only a single failover. Note that for high-performance mode sessions in which the mirror server is geographically distant from the principal server, a rolling update might be inappropriate.  

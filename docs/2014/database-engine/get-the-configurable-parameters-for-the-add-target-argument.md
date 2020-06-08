@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 08454543-c5c8-4ca3-9af9-f1d82264471c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Get the Configurable Parameters for the ADD TARGET Argument
   Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

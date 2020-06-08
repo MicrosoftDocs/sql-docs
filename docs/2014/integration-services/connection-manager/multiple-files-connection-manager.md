@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Multiple Files Connection Manager
   A Multiple Files connection manager enables a package to reference existing files and folders, or to create files and folders at run time.  

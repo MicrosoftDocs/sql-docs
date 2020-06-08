@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Profiling Task Editor (General Page)
   Use the **General** page of the **Data Profiling Task Editor** to configure the following options:  

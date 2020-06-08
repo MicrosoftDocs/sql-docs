@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Blob Upload Task
   The Azure Blob Upload Task enables an SSIS package to upload files to an Azure blob storage.   

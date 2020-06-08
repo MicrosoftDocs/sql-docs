@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ca6aed42-8940-4f41-beb7-619e084cd850
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # New or Edit Server Registration (General Tab) (Analysis Services - Multidimensional Data)
   Use this tab to specify options when registering an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Profiler - Organize Columns
   Use the **Organize Columns** dialog box to select data columns for grouping or aggregating events that are displayed in a trace, which makes large trace files or tables easier to view and analyze.  

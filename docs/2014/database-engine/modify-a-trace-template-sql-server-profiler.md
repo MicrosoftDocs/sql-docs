@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b81df2a1-e202-43d8-92b0-0beb145f0116
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Modify a Trace Template (SQL Server Profiler)
   This topic describes how to modify a trace template by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Profiler - Tools-Options (General Options Page)
   Use the **General Options** dialog box to view or specify the following options.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Transaction Isolation Levels in memory-optimized tables
 

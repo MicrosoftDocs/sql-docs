@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP
   This topic provides brief descriptions and links to the many database objects that support In-Memory OLTP.  

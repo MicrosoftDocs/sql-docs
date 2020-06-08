@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Setting up SQL Server Managed Backup to Azure for Availability Groups
   This topic is a tutorial on configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for databases participating in AlwaysOn Availability Groups.  

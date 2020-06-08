@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Technical Reference (Database Engine)
   Find the tools, languages, and administration programming reference documentation for the [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].

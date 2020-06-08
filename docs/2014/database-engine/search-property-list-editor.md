@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Search Property List Editor
   Use this dialog box to add or delete search properties in a search property list.  

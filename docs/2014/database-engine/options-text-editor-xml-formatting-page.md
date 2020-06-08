@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Options (Text Editor - XML - Formatting Page)
 

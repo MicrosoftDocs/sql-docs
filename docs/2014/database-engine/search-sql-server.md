@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Search (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides search features for text and documents that go beyond the functionality of the [!INCLUDE[tsql](../includes/tsql-md.md)]`LIKE` keyword.  

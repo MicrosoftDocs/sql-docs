@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Measures (Cube Wizard)
   Use the **Select Measures** page to select the measure groups and measures to be created.  

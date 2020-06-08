@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Attribute Ordering (Dimension) (Business Intelligence Wizard)
   Use the **Specify Attribute Ordering** page to select a dimension for which the Business Intelligence Wizard will define an ordering attribute and ordering criteria that will be used to sort members in each attribute that is contained in that dimension.  

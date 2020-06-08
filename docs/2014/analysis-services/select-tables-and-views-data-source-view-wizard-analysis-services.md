@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Tables and Views (Data Source View Wizard) (Analysis Services)
   Use the **Select Tables and Views** page to select the tables or views from the data source that you want to include in the data source view.  

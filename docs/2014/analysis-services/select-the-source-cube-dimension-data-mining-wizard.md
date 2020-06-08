@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select the Source Cube Dimension (Data Mining Wizard)
   Use the **Select the Source Cube Dimension** page to select the dimension from the cube that contains the cases you want to analyze. For example, if you are building a model that analyzes the purchasing behavior of customers based on demographics, you would select the Customer dimension, which typically contains a unique record for each customer and various attributes that represent demographics, such as gender, location, or income. Later in the wizard you will have the opportunity to add a table that is related to this case table: for example, you might add a nested table that shows which products the customer has purchased.  

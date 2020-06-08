@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a9d5c5b0-1beb-49bf-8df5-c659c8e7b390
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Mining Model Dialog Box (Mining Model Prediction View)
   Use the **Select Mining Model** dialog box to select a mining model on which to base your predictions.  

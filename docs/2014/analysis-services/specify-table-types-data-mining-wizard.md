@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Table Types (Data Mining Wizard)
   Use the **Specify Table Types** page to identify the tables to use to define the mining structure. If a table is not selected, it will not be used to define the mining structure.  

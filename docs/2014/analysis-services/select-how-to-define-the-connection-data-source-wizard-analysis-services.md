@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select how to define the connection (Data Source Wizard) (Analysis Services)
   Use the **Select how to define the connection** page to create or select the data connection for a data source.  

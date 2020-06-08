@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Shopping Basket Analysis (Table AnalysisTools for Excel)
   ![Shopping Basket Tool](media/tat-shopbskt.gif "Shopping Basket Tool")  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Sequence Clustering Cluster Diagram Tab (Mining Model Viewer
   The **Cluster Diagram** tab in the **Microsoft Sequence Clustering Viewer** provides a graphical view of all the clusters that the sequence clustering model contains.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Mining Model Column Usage (Data Mining Wizard)
   Use the **Specify Mining Model Column Usage** page to specify how the mining model columns will be used, and to add nested tables.  

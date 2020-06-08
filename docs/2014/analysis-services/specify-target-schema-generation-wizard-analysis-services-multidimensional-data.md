@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Target (Schema Generation Wizard) (Analysis Services - Multidimensional Data)
   Use the **Specify Target** page to identify the data source view in which the relational schemas are to be created.  

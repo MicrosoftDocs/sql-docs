@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Table Import Wizard Reference (SSAS)
   This section provides Help on the **Table Import Wizard**. This wizard enables you to import data from a variety of data sources. To access the wizard from the model designer, on the **Model** menu, click **Import from Data Source**.  

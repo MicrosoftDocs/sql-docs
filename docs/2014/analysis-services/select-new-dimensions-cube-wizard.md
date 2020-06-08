@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7241a3b3-bba9-4b4c-99d9-61ec92ab969a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select New Dimensions (Cube Wizard)
   Use the **Select New Dimensions** page to select the new dimensions to create.  

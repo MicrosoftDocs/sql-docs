@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Feature Properties
   Feature properties pertain to product features, most of them advanced, including properties that control links between server instances.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Slice Source Cube (Data Mining Wizard)
   You can use the **Slice Source Cube** dialog box to restrict the data used to train the model. Typically a cube contains data related to many different dimensions and attributes, such as all stores, all regions, and all products. It is not practical to train a model on unlimited combinations of attributes, so you use this dialog box to choose a specific set to use in training a model.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 733afc25-5055-4411-bab5-dd9e0595cd2d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Objects (Linked Object Wizard)
   Use the **Select Objects** page to select the objects that will be linked to or imported.  

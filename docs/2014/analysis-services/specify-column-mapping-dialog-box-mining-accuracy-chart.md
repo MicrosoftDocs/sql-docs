@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Column Mapping Dialog Box (Mining Accuracy Chart)
   Use the **Specify Column Mapping** tab to select tables from an external data source and map the columns to a data mining model. You can then use the external data to test the accuracy of a mining model and displays the results in the accuracy chart.  

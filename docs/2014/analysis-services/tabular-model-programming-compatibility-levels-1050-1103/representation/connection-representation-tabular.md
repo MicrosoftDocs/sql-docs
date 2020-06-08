@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connection Representation (Tabular)
   The connection object defines the source of the data that populates the tabular model.  

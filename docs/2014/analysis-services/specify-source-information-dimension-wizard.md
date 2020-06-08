@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Source Information (Dimension Wizard)
   Use the **Select the Main Dimension Table** page to select the data source view, main dimension table, key columns, and member name column for the dimension to be created.  

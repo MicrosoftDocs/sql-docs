@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ce5af79f-a1f8-47f3-acb9-769022285a69
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Mining Structure Dialog Box (Mining Accuracy Chart View)
   Use the **Select Mining Structure** dialog box to select a mining structure that contains the mining models for which you want to compare or test the accuracy.  

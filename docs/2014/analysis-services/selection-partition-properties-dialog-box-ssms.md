@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Selection (Partition Properties Dialog Box) (SSMS)
   Use the **Selection** page of the **Partition Properties** dialog box in SQL Server Management Studio to select a partition from a measure group for which to view or modify properties in the **General**, **Proactive Caching**, or **Error Configuration** pane.  

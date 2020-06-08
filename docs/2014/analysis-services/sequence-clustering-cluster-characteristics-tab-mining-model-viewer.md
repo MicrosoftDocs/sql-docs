@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Sequence Clustering Cluster Characteristics Tab (Mining Model Viewer)
   The **Cluster Characteristics** tab in the **Microsoft Sequence Clustering Viewer** provides a detailed list of the characteristics that define a sequence cluster. Those characteristics can include simple attribute-value pairs as well as transitions between states.  

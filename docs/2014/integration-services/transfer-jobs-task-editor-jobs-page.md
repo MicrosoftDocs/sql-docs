@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transfer Jobs Task Editor (Jobs Page)
   Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about the Transfer Jobs task, see [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  

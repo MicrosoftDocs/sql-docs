@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Save a Package to the File System
   This procedure describes how to save an existing package to the file system as a .dtsx file.  

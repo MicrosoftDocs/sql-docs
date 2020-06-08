@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Events Logged by the Integration Services Service
   The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service logs various messages to the Windows Application event log. The service logs these messages when the service starts, when the service stops, and when certain problems occur.  

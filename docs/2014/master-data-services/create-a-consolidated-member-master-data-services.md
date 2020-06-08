@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Consolidated Member (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], create a consolidated member when you want a parent node for an explicit hierarchy. Consolidated members can have their own attributes. They are used for grouping. As shown in the following example, consolidated members can be used for account groups that have accounts under them.

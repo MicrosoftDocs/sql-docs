@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Progress Tab
   Use the **Progress** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to view the progress of execution of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package when you run the package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The **Progress** tab lists the start time, the finish time, and the elapsed time for validation and execution of the package and its executables; any information or warnings for the package; progress notifications; the success or failure of the package; and any error messages that are generated during package execution.  

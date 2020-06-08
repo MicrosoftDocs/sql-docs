@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Set the Properties of the Integration Services Service
     

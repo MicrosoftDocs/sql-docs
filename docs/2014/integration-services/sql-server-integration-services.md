@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Integration Services
   

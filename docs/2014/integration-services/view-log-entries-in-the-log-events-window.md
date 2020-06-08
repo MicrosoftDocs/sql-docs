@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # View Log Entries in the Log Events Window
   This procedure describes how to run a package and view the log entries it writes. You can view the log entries in real time. The log entries that are written to the **Log Events** window can also be copied and saved for further analysis.  

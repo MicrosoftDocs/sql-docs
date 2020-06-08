@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transfer Master Stored Procedures Task Editor (General Page)
   Use the **General** page of the **Transfer Master Stored Procedures Task Editor** dialog box to name and describe the Transfer Master Stored Procedures task. For more information about this task, see [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md).  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Raw File Destination Editor (Columns Page)
   Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  

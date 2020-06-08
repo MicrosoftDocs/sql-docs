@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change the System Administrator Account (Master Data Services)
   You can change the user account that is designated as the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system administrator.  

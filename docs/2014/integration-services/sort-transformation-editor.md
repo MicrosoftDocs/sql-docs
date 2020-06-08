@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Sort Transformation Editor
   Use the **Sort Transformation Editor** dialog box to select the columns to sort, set the sort order, and specify whether duplicates are removed.  

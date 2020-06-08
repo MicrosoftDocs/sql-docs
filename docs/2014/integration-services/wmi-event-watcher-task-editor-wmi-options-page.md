@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # WMI Event Watcher Task Editor (WMI Options Page)
   Use the **WMI Options** page of the **WMI Event Watcher Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and how the WMI Event Watcher task responds to Microsoft Windows Instrumentation (WMI) events.  

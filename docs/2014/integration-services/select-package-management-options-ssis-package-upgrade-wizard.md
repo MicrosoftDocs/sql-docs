@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Select Package Management Options (SSIS Package Upgrade Wizard)
   Use the **Select Package Management Options** page to specify options for upgrading packages.  

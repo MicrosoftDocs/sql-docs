@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Set the Properties of a Package
   This procedure describes how to configure package properties by using the **Properties** window.  

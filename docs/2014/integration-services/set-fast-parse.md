@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Set Fast Parse
   The fast parse property must be set for each column of the source or transformation that uses fast parse. To set the property, use the Advanced editor of the Flat File source and Data Conversion transformation.  

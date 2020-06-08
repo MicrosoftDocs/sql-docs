@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 766d5ab5-fa33-4bd1-b8d2-30bd6855cbe0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Raw File Source Editor (Columns Page)
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing. For more information, see [Raw File Source](data-flow/raw-file-source.md).  

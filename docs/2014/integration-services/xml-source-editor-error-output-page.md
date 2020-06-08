@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # XML Source Editor (Error Output Page)
   Use the **Error Output** page of the **XML Source Editor** dialog box to select error handling options and to set properties on error output columns.  

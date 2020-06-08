@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # XML Task Editor (General Page)
   Use the **General Node** of the **XML Task Editor** dialog box to specify the operation type and configure the operation.  

@@ -58,6 +58,14 @@ ms.author: maggies
   
     -   Right click parameter in the **Report Data** pane, and then click **Delete**.  
   
+## Hidden/Internal Parameters in runtime
+If you have hidden/internal parameters, the logic on whether it'll be rendered as empty space in runtime is as follows:
+
+   - If any row or column is full of hidden/internal parameters or empty cell, then it won't be rendered in runtime;
+   - Otherwise, both hidden/internal parameters and empty cell will be rendered as empty space;
+  
+  
+
 ## See Also  
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint is a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server running in SharePoint mode. PowerPivot for SharePoint provides server hosting of PowerPivot data in a SharePoint farm. PowerPivot data is an analytical data model that you build using one of the following:  

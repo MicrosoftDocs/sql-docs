@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Creation Method (Dimension Wizard)
   Use the **Select Creation Method** page to select how to create the dimension.  

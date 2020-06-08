@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Query (SQL Server Data Mining Add-ins)
   ![Query Model button, Data Mining ribbon](media/dmc-query.gif "Query Model button, Data Mining ribbon")  

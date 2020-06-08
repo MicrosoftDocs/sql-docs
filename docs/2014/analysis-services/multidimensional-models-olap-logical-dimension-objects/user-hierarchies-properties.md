@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # User Hierarchy Properties
   The following table describes the properties of a user-defined hierarchy.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Named Set Form Editor (Calculations Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Named Set Form Editor** pane on the **Calculations** tab in Cube Designer to create or modify a named set.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Drillthrough on Mining Models
   *Drillthrough* means the ability to query either a mining model or a mining structure and get detailed data that is not exposed in the model.  

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Decision Trees Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is a classification and regression algorithm provided by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for use in predictive modeling of both discrete and continuous attributes.

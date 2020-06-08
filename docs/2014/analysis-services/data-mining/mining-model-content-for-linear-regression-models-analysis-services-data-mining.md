@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Model Content for Linear Regression Models (Analysis Services - Data Mining)
   This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

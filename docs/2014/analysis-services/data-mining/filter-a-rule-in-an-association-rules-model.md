@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Filter a Rule in an Association Rules Model
   You can use filtering with association models to restrict the results to just the associations that interest you. For example, you might filter the rules to show only those that include a specific product.  

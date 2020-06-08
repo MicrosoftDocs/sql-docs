@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Time Series Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm includes two separate algorithms for analyzing time series:

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Definition Queries (Data Mining)
   For data mining, the category *data definition query* means DMX statements or XMLA commands that do the following:  

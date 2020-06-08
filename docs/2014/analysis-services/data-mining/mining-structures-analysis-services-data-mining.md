@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Structures (Analysis Services - Data Mining)
   The mining structure defines the data from which mining models are built: it specifies the source data view, the number and type of columns, and an optional partition into training and testing sets. A single mining structure can support multiple mining models that share the same domain. The following diagram illustrates the relationship of the data mining structure to the data source, and to its constituent data mining models.  

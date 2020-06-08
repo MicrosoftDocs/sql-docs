@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Structure Tasks and How-tos
   The **Mining Structure** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contains tools that you can use to create, edit, and process a mining structure.  

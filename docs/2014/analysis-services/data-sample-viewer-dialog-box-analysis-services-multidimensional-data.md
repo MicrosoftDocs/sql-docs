@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 590383cd-30b3-4e3f-a1cf-3f9ec7ba48e3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Sample Viewer Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Data Sample Viewer** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to view the first 1000 records of a fact table that will be used to provide measures for a new cube.  

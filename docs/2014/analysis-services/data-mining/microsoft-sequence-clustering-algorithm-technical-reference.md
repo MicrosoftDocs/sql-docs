@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Sequence Clustering Algorithm Technical Reference
   The Microsoft Sequence Clustering algorithm is a hybrid algorithm that uses Markov chain analysis to identify ordered sequences, and combines the results of this analysis with clustering techniques to generate clusters based on the sequences and other attributes in the model. This topic describes the implementation of the algorithm, how to customize the algorithm, and special requirements for sequence clustering models.  

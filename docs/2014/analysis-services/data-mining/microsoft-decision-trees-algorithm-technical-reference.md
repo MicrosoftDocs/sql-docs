@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Decision Trees Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is a hybrid algorithm that incorporates different methods for creating a tree, and supports multiple analytic tasks, including regression, classification, and association. The Microsoft Decision Trees algorithm supports modeling of both discrete and continuous attributes.  

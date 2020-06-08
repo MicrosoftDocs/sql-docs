@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Related Projects for Data Mining Solutions
   The minimum that is required for a data mining solution is the data mining project, which defines data sources, data source views, mining structures and mining models. However, when data mining models are used in daily decision making, it is important that data mining be integrated with other part of a predictive analytics solution, which can include these processes and components:  

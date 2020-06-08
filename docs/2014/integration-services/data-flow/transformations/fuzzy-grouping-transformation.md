@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Fuzzy Grouping Transformation
   The Fuzzy Grouping transformation performs data cleaning tasks by identifying rows of data that are likely to be duplicates and selecting a canonical row of data to use in standardizing the data.  

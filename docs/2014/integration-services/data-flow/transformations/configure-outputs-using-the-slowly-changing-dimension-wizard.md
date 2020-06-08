@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Configure Outputs Using the Slowly Changing Dimension Wizard
   The Slowly Changing Dimension Wizard functions as the editor for the Slowly Changing Dimension transformation. Building and configuring the data flow for slowly changing dimension data can be a complex task. The Slowly Changing Dimension Wizard offers the simplest method of building the data flow for the Slowly Changing Dimension transformation outputs by guiding you through the steps of mapping columns, selecting business key columns, setting column change attributes, and configuring support for inferred dimension members.

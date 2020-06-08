@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OLE DB Command Transformation
   The OLE DB Command transformation runs an SQL statement for each row in a data flow. For example, you can run an SQL statement that inserts, updates, or deletes rows in a database table.  

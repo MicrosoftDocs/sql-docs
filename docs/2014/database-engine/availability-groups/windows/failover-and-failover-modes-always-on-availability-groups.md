@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Failover and Failover Modes (AlwaysOn Availability Groups)
   Within the context of an availability group, the primary role and secondary role of availability replicas are typically interchangeable in a process known as *failover*. Three forms of failover exist: automatic failover (without data loss), planned manual failover (without data loss), and forced manual failover (with possible data loss), typically called *forced failover*. Automatic and planned manual failover preserve all your data. An availability group fails over at the availability-replica level. That is, an availability group fails over to one of its secondary replicas (the current *failover target*).  

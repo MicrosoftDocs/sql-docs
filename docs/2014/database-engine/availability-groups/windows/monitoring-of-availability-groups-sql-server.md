@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Monitoring of Availability Groups (SQL Server)
   To monitor the properties and state of an AlwaysOn availability group you can use the following tools.  

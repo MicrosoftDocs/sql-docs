@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Remote Blob Store (RBS) and AlwaysOn Availability Groups (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] can provide a high-availability and disaster recovery solution for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][Remote Blob Store (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB objects (blobs). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] protects any RBS metadata and schemas stored in an availability database by replicating them to the secondary replicas. This is the SharePoint Content Database. Generally speaking, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stores this RBS metadata independently from the blob.  

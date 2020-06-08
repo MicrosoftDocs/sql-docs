@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication Subscribers and AlwaysOn Availability Groups (SQL Server)
   When an AlwaysOn availability group containing a database that is a replication subscriber fails over, the replication subscription might fail. For transactional replication push subscribers, the distribution agent will continue to replicate automatically after a failover if the subscription was created using the AG listener name. For transactional replication pull subscribers, the distribution agent will continue to replicate automatically after a failover, if the subscription was created using the AG listener name and the original subscriber server is up and running. This is because the distribution agent jobs only get created on the original subscriber (primary replica of the AG). For merge subscribers, a replication administrator must manually reconfigure the subscriber, by recreating the subscription.  

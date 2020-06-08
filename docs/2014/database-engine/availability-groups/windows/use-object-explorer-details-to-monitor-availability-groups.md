@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use the Object Explorer Details to Monitor Availability Groups (SQL Server Management Studio)
   This topic describes how to use the **Object Explorer Details** pane of [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] to monitor and manage existing AlwaysOn availability groups, availability replicas, and availability databases.  

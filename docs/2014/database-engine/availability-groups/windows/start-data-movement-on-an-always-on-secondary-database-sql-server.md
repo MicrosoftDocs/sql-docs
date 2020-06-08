@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Start Data Movement on an AlwaysOn Secondary Database (SQL Server)
   This topic contains information about how to start data synchronization after you add a database to an AlwaysOn availability group. For each new primary replica, secondary databases must be prepared on the server instances that host the secondary replicas. Then each of these secondary databases must be manually joined to the availability group.  

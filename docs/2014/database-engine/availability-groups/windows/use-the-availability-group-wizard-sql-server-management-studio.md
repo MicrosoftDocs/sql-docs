@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use the Availability Group Wizard (SQL Server Management Studio)
   This topic describes how to use the New Availability Group Wizard (in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) to create and configure an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  

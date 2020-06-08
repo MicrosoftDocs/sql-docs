@@ -18,7 +18,6 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Progress Page (AlwaysOn Availability Group Wizards)
   Use this dialog box to view the progress of a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] wizard that you are running in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The progress bar indicates the relative progress of the steps that the wizard is performing.  

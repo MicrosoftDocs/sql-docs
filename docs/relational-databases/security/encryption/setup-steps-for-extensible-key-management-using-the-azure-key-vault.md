@@ -195,23 +195,23 @@ All Azure resources created via Azure portal must be contained in resource group
   
      There are two ways to generate a key in Azure Key Vault: 1) Import an existing key or 2) create a new key.  
                   
-  > [!NOTE] 
-  >SQL Server only supports 2048-bit RSA keys.
+      > [!NOTE] 
+      >SQL Server only supports 2048-bit RSA keys.
         
   ### Best practice:
     
-    To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practice:
+  To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practice:
  
-    - Create your encryption key locally on a local HSM (hardware security module) device. (Make sure to use an asymmetric, RSA 2048 key so it's is supported by SQL Server.)
-    - Import the encryption key to Azure Key Vault. See the steps below for how to do that.
-    - Before using the key in Azure Key Vault for the first time, take an Azure Key Vault key backup. Learn more about the [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) command.
-    - Whenever any changes are made to the key (for example add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
+  - Create your encryption key locally on a local HSM (hardware security module) device. (Make sure to use an asymmetric, RSA 2048 key so it's is supported by SQL Server.)
+  - Import the encryption key to Azure Key Vault. See the steps below for how to do that.
+  - Before using the key in Azure Key Vault for the first time, take an Azure Key Vault key backup. Learn more about the [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) command.
+  - Whenever any changes are made to the key (for example add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
 
   > [!NOTE]
-  >Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
+  > Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
 
 ### Types of keys:
-    There are two types of keys you can generate in Azure Key Vault that will work with SQL Server. Both are asymmetric 2048-bit RSA keys.  
+  There are two types of keys you can generate in Azure Key Vault that will work with SQL Server. Both are asymmetric 2048-bit RSA keys.  
   
   - **Software-protected:** Processed in software and encrypted at rest. Operations on software-protected keys occur on Azure Virtual Machines. Recommended for keys not used in a production deployment.  
 
@@ -223,14 +223,14 @@ All Azure resources created via Azure portal must be contained in resource group
 
 ### Import an existing key   
   
-    If you have an existing 2048-bit RSA software-protected key, you can upload the key to Azure Key Vault. For example, if you had a .PFX file saved to your `C:\\` drive in a file named `softkey.pfx` that you want to upload to Azure Key Vault, type the following to set the variable `securepfxpwd` for a password of `12987553` for the .PFX file:  
+  If you have an existing 2048-bit RSA software-protected key, you can upload the key to Azure Key Vault. For example, if you had a .PFX file saved to your `C:\\` drive in a file named `softkey.pfx` that you want to upload to Azure Key Vault, type the following to set the variable `securepfxpwd` for a password of `12987553` for the .PFX file:  
   
   ``` powershell  
   $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
     -AsPlainText -Force  
   ```  
-  
-    Then you can type the following to import the key from the .PFX file, which protects the key by hardware (recommended) in the Key Vault service:  
+
+  Then you can type the following to import the key from the .PFX file, which protects the key by hardware (recommended) in the Key Vault service:  
   
   ``` powershell  
       Add-AzureKeyVaultKey -VaultName 'ContosoKeyVault' `  
@@ -250,7 +250,7 @@ All Azure resources created via Azure portal must be contained in resource group
     -Name 'ContosoRSAKey0' -Destination 'Software'  
   ```  
   
-    The statement returns:  
+The statement returns:  
   
   ```
   Attributes : Microsoft.Azure.Commands.KeyVault.Models.KeyAttributes  
@@ -262,9 +262,9 @@ All Azure resources created via Azure portal must be contained in resource group
   Id         : https://contosoekmkeyvault.vault.azure.net:443/  
                 keys/ContosoRSAKey0/<guid>  
   ```  
-  > [!IMPORTANT] 
-  >The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the key vault and used to encrypt the DEK.  
-   
+> [!IMPORTANT] 
+>The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the key vault and used to encrypt the DEK.  
+       
   
 ## Part III: Install the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector  
  Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). (The download should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.)  
@@ -272,8 +272,8 @@ All Azure resources created via Azure portal must be contained in resource group
   > [!NOTE] 
   > Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."
 
-> [!NOTE]
-> There is a breaking change in 1.0.5.0 version, in terms of the thumbprint algorithm. You may experience database restore failure after upgrading to 1.0.5.0 version. Please refer KB aritcle [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+  > [!NOTE]
+  > There is a breaking change in 1.0.5.0 version, in terms of the thumbprint algorithm. You may experience database restore failure after upgrading to 1.0.5.0 version. Please refer KB aritcle [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png "ekm-connector-install")  
   

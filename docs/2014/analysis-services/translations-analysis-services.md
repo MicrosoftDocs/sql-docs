@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Translations (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensional only  

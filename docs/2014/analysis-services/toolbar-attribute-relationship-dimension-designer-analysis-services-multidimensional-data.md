@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Attribute Relationship Designer Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the toolbar on the **Attribute Relationship** tab of the Dimension Designer to do the following procedures:  

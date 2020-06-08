@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Browser Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the features in the **Toolbar** in Cube Designer to perform common operations while designing or browsing a cube or its object, or when creating an MDX query. Operations that are common to both design time and query view include setting the user context, processing objects, and setting the default language.

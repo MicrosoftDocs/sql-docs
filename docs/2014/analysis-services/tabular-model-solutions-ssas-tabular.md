@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tabular Model Solutions (SSAS Tabular)
   Topics in this section provide information about how to author tabular models by using the tabular model designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

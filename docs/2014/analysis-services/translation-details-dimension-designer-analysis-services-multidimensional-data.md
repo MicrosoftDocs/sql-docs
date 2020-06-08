@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Translation Details (Translations Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the **Translation Details** pane on the **Translations** tab of Dimension Designer to define and manage translations for the currently selected dimension.  

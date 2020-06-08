@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Change table, column, or row filter mappings (SSAS Tabular)
   This topic describes how to change table, column, or row filter mappings by using the **Edit Table Properties** dialog box in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

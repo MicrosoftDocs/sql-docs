@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Import from PowerPivot (SSAS Tabular)
   This topic describes how to create a new tabular model project by importing the metadata and data from a PowerPivot workbook by using the Import from PowerPivot project template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

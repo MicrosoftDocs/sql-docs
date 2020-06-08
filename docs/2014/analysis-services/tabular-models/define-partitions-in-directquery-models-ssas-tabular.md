@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Partitions and DirectQuery Mode (SSAS Tabular)
   This section explains how partitions are used in DirectQuery models. For more general information about partitions in tabular models, see [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  

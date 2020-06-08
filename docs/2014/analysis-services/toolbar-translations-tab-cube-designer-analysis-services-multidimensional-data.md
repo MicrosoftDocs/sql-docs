@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 22a4ca7a-0d43-47eb-8078-eb4b167b6e72
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Translations Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Toolbar** pane to perform common operations on the **Translations** tab in Cube Designer.  

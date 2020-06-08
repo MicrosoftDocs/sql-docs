@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tabular Model Data Access
   Tabular model databases in Analysis Services can be accessed by most of the same clients, interfaces, and languages that you use to retrieve data or metadata from a multidimensional model. For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  

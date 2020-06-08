@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # DirectQuery Mode (SSAS Tabular)
   Analysis Services lets you retrieve data and create reports from a tabular model by retrieving data and aggregates directly from a relational database system, using *DirectQuery mode*. This topic introduces the differences between standard tabular models that reside only in memory and tabular models that can query a relational data source, and explains how you can author and deploy a model for use in DirectQuery mode.  

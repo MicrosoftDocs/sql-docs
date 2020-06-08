@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Dimension Usage Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Toolbar** pane to perform common actions, such as adding a cube dimension or processing the cube, on the **Dimension Usage** tab in Cube Designer.  

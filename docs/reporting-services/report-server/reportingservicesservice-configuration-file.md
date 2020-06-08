@@ -1,5 +1,6 @@
 ---
 title: "ReportingServicesService Configuration File | Microsoft Docs"
+description: Learn about the file location, editing guidelines, and configuration settings of ReportingServicesService.exe.config used for tracing in Reporting Services.
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

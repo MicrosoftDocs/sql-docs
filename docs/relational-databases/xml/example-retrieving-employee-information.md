@@ -1,5 +1,6 @@
 ---
 title: "Example: Retrieving Employee Information | Microsoft Docs"
+description: View an example of how to retrieve employee information as XML from a database using a query with FOR XML EXPLICIT.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

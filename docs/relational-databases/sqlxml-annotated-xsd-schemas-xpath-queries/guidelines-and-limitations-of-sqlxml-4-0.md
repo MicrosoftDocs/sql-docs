@@ -1,5 +1,6 @@
 ---
 title: "Guidelines and Limitations of SQLXML 4.0"
+description: Learn about the guidelines and limitations of working with SQLXML 4.0.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

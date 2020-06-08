@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Case Level Columns (Data Mining Wizard)
   Use the **Select Case Level Columns** page to select the attributes and measures from the underlying source cube dimension that will be the case level columns of the mining structure.  

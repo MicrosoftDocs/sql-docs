@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # PowerPivot Server Administration and Configuration in Central Administration
   PowerPivot server administration and configuration is performed by SharePoint service application administrators, using SharePoint Central Administration.  

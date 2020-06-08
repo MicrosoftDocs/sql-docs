@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Metadata (ODBC)
   This section discusses parameter, column result, and catalog metadata.  

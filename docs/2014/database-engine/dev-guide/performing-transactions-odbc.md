@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f431191a-5762-4f0b-85bb-ac99aff29724
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Performing Transactions (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver support the ODBC API transaction management functions. [!INCLUDE[msCoName](../../includes/msconame-md.md)] offers full support for local transactions on an individual server. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver uses these features to support the ODBC API functions that manage transactions.  

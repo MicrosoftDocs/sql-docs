@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Prerequisites, Restrictions, and Recommendations for Database Mirroring
     

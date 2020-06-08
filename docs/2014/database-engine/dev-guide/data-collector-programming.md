@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 53b4752b-055d-4716-b2bc-75b4cce84101
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Data Collector Programming
   The data collector API, in <xref:Microsoft.SqlServer.Management.Collector>, allows programmatic control of all configuration operations through the object model. In addition, many of the data collection operations that use the API are implemented as stored procedures that are installed on the server.

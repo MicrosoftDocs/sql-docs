@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Register Mirrored Database
   Use this dialog box to register one or more mirrored databases on a given server instance by adding the database or databases to the Database Mirroring Monitor. When a database is added, Database Mirroring Monitor locally caches information about the database, its partners, and how to connect to the partners.  

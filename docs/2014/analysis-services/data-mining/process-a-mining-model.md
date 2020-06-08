@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Process a Mining Model
   In the Mining Models tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can either process a specific mining model that is associated with a mining structure or you can process all the models that are associated with the structure.  

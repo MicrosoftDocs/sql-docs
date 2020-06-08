@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQL Server Index Design Guide
 

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Source View (Cube Structure Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Data Source View** pane to view tables and columns from the data source view associated with the selected cube. This pane is used to create measure groups and measures by dragging columns from the **Data Source View** pane to the **Measures** pane.  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Choosing Data for Data Mining
   As you start data mining, you might ask "How much data do I need?" or "Are there any special requirements I should know about when cleaning or formatting my data?"  

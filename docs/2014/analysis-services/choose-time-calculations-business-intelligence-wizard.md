@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f363fbf5-c51f-42ee-8ab4-86ab35cab597
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Choose Time Calculations (Business Intelligence Wizard)
   Use the **Choose Time Calculations** page to define the resolution of the new time calculations to be created for an existing time hierarchy.  

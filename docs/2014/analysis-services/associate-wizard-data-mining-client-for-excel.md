@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Associate Wizard (Data Mining Client for Excel)
   ![Associate wizard in Data Mining ribbon](media/dmc-associate.gif "Associate wizard in Data Mining ribbon")  

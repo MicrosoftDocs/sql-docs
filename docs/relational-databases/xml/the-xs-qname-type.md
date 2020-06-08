@@ -1,5 +1,6 @@
 ---
 title: "The xs:QName Type | Microsoft Docs"
+description: Learn how to use the xs:QName type as an XML Schema restriction element or as the member type of a union.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

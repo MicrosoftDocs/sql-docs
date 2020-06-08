@@ -1,5 +1,6 @@
 ---
 title: "AUTO Mode Heuristics in Shaping Returned XML | Microsoft Docs"
+description: Learn how to use AUTO mode heuristics with the FOR XML clause to compare column values in adjacent rows and determine the shape of XML returned by a query.
 ms.custom: "fresh2019may"
 ms.date: 04/03/2020
 ms.prod: sql

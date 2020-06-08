@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Data Mining Server
   ![Connections button](media/misc-connection.gif "Connections button")  

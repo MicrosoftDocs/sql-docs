@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to an Informix Database (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to connect to an Informix database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

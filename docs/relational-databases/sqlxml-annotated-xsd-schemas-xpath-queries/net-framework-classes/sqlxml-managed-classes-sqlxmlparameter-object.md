@@ -1,5 +1,6 @@
 ---
 title: "SqlXmlParameter Object (SQLXML)"
+description: Learn about the properties supported by the SqlXmlParameter object, a SQLXML Managed Class.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

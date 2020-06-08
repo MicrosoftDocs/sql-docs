@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Attribute Profiles Tab (Mining Model Viewer)
   Use the **Attribute Profiles** tab to see how the distribution of input values in a Naive Bayes model state contribute to each state of the outcome attribute. The distribution of values is shown as a colored histogram, all distributions presented in a tabular format, to make it easier to compare values.  

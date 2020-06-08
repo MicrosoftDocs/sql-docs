@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Attribute Characteristics Tab (Mining Model Viewer)
   Use the **Attribute Characteristics** pane to explore the relationships between outcomes and input attributes in a Naïve Bayes model. You can choose the value of the target attribute, and then see a list of the input attributes that have the strongest effect on the outcomes.  

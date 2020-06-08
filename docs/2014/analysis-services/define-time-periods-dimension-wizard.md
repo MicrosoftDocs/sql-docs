@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Time Periods (Dimension Wizard)
   Use the **Define Time Periods** page to define the calendar year information and time frequencies to include in the time dimension or server time dimension.  

@@ -1,5 +1,6 @@
 ---
 title: "Columns that Contain a Null Value By Default | Microsoft Docs"
+description: Learn how to work with columns that contain a null value by default by using the ELEMENTS XSINIL keyword phrase in SQL.
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql

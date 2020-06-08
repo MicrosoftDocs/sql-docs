@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 0ed3caf1-249d-4307-b588-d8a0ef315faa
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Source Wizard F1 Help (Analysis Services)
   Use the Data Source Wizard to create a data source for use in the following business intelligence projects in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  

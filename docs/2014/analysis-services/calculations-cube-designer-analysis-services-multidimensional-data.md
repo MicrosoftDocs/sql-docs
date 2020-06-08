@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculations (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Calculations** tab in Cube Designer to view and edit calculations, including calculated members, named sets, and Multidimensional Expressions (MDX) script commands for the selected cube.  

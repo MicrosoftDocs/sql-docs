@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Model Filter Syntax and Examples (Analysis Services - Data Mining)
   This section provides detailed information about the syntax for model filters, together with sample expressions.  

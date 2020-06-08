@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Scope of Calculations (Business Intelligence Wizard)
   Use the **Define Scope of Calculations** page to associate the new time calculations with individual measures.  

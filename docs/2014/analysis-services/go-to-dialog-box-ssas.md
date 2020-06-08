@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 28cc2539-a983-4e29-9017-62e3ebea450f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Go To Dialog Box (SSAS)
   The **Go To** dialog box enables you to jump to a specific column in a table.  

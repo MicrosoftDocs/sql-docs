@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Partition Source Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Partition Source** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to specify the source of fact table data for a partition. You can display the **Partition Source** dialog box by:  

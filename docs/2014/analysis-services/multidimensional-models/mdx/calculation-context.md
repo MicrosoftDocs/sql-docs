@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculation Context
   The calculation context is the known subspace of the cube where an expression is evaluated and all coordinates are either explicitly known or can be derived from the expression.  

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Attributes in Parent-Child Hierarchies
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a general assumption is usually made about the content of members in a dimension. Leaf members contain data derived directly from underlying data sources; nonleaf members contain data derived from aggregations performed on child members.  

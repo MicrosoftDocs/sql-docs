@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Impact Analysis Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Impact Analysis** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to identify and optionally process dependent objects that are affected if the objects listed in the **Process** dialog box are processed. You can display the **Impact Analysis** dialog box by clicking **Impact Analysis** from the **Process** dialog box.  

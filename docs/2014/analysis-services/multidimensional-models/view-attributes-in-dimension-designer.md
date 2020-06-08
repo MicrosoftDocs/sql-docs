@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # View Attributes in a Tree, List or Grid in Dimension Designer
   This procedure describes how to change the way that attributes are displayed in the Dimension Designer.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create Measures and Measure Groups in Multidimensional Models
   A *measure* is an aggregation of numeric data values, such as sum, count, minimum, maximum, average, or a custom MDX expression that you create. A *measure group* is a container for one or more measures. All measures exist in a measure group, even if there is only one measure. A cube must have at least one measure and measure group.

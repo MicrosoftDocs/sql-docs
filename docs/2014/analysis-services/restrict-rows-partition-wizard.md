@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Restrict Rows (Partition Wizard)
   Use the **Restrict Rows** page to restrict the rows that will be retrieved from the specified table and will be aggregated and included in the partition.  

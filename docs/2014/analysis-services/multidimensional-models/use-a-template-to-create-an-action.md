@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Use a Template to Create an Action
   The **Actions** view in Cube Designer contains a number of templates that you can use to create common actions. Cube Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

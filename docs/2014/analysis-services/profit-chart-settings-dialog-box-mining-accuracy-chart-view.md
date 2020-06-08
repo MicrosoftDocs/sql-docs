@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Profit Chart Settings Dialog Box (Mining Accuracy Chart View)
   Use the **Profit Chart Settings** dialog box to configure settings for generating a profit chart. For more information about profit charts, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  

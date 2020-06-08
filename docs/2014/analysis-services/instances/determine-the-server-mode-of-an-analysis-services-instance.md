@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Determine the Server Mode of an Analysis Services Instance
   Analysis Services can be installed in one of three server modes: Multidimensional and Data Mining (default), PowerPivot for SharePoint, and Tabular. The server mode of an Analysis Services instance is determined during setup when you choose options for installing the server.  

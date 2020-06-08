@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 66194214-be3b-4df2-a676-216b986c8838
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select a Measure Group Dimension (Add New Nested Table Wizard)
   Use the **Select a Measure Group Dimension** page to select a dimension in the measure group to use as a nested table.  

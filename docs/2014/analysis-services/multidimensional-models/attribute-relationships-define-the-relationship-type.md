@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define the Relationship Type of an Attribute Relationship
   You define the relationship type of an attribute relationship by using the **Attribute Relationships** tab in Dimension Designer, which can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

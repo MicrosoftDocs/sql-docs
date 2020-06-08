@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Model Tab (Mining Model Viewers)
   The **Model** tab in the Microsoft Time Series Viewer displays a representation of a time series as a node in a graph, similar to those used in decision tree models.  

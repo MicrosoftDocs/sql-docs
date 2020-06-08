@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 25826ba1-2b38-4b34-bd3a-7eba116093ae
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Add an  Attribute to a Dimension
   You can add an attribute to a dimension either automatically or manually in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

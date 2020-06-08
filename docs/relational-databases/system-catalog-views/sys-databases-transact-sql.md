@@ -1,7 +1,7 @@
 ---
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/11/2020"
+ms.date: "06/08/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -111,8 +111,9 @@ If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database i
 |**is_temporal_retention_enabled**|**bit**|Indicates whether temporal retention policy cleanup task is enabled.<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|The catalog collation setting:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|The catalog collation setting:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**physical_database_name**|**nvarchar(128)**|For SQL Server, the physical name of the database. For Azure SQL Database, a common id for the databases on a server. <br />**Applies to**: SQL Server 2019 (15.x) and later, and Azure SQL Database|
 |**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**Applies to**: Azure SQL Data Warehouse Gen2. While this features is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.|
-|**is_memory_optimized_enabled**|**bit**|Indicates whether certain In-Memory features, such as [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md), are enabled for the database. Does not reflect the availability or configuration state of [In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). <br />**Applies to**: SQL Server 2019 (15.x)|
+|**is_memory_optimized_enabled**|**bit**|Indicates whether certain In-Memory features, such as [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md), are enabled for the database. Does not reflect the availability or configuration state of [In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). <br />**Applies to**: SQL Server 2019 (15.x) and later, and Azure SQL Database|
   
 ## Permissions
 

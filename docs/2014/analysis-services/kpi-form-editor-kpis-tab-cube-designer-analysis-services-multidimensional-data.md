@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # KPI Form Editor (KPIs Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **KPI Form Editor** pane on the **KPIs** tab in Cube Designer to create or modify the selected Key Performance Indicator (KPI).  

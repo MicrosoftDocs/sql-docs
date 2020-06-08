@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculations in Multidimensional Models
   Use the **Calculations** tab of Cube Designer to create calculated members, named sets, and other Multidimensional Expressions (MDX) calculations.  

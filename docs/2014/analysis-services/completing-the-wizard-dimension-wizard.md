@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Dimension Wizard)
   Use the **Completing the Wizard** page to do the following procedures:  

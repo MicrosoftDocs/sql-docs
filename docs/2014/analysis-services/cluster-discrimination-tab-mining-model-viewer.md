@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cluster Discrimination Tab (Mining Model Viewer)
   Use the **Cluster Discrimination** tab to compare two clusters that exist in a clustering model. You can see how different combinations of attributes and values are represented within the clusters.  

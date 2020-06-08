@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browse Data Source View (Data Mining Wizard)
   Use the **Browse Data Source View** dialog box to view the data source view that you selected on the **Select Data Source View** page of the wizard.  

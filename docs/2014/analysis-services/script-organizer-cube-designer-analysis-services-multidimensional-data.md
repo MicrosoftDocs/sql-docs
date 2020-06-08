@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Script Organizer (Calculations Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Script Organizer** pane on the **Calculations** tab in Cube Designer to access and reorder the calculated members, named sets, and script commands contained in the cube script for the specified cube.  

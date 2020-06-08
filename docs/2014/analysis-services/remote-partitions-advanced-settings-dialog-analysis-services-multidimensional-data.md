@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Remote Partitions - Advanced Settings Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Remote Partitions - Advanced Settings** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to edit advanced settings, such as the connection string of the data source representing the remote [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database maintaining remote partitions, while restoring remote partitions from a remote backup file to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database by using the **Restore Database** dialog box. You can display the **Remote Partitions - Advanced Settings** dialog box from the **Partitions** page of the **Restore Database** dialog box by clicking the ellipsis button (**...**) for a remote partition after selecting the **Restore remote partitions** option.  

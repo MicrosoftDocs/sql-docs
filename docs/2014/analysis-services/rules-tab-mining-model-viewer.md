@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Rules Tab (Mining Model Viewer)
   Use the **Rules** pane in an association model to view the rules that the algorithm extracted from the data. Rules describe how items are related to each other, and can be used to create recommendations.  

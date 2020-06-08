@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Advanced Data Source View Options Dialog Box (Data Source View Wizard) (Analysis Services)
   The **Advanced Data Source View Options** dialog box gives you additional control over how the data source view pulls schemas and relationships from the data source to build the view.  

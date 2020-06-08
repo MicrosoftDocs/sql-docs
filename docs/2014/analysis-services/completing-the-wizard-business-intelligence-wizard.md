@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c0d5fc7c-2fcf-4d13-b75c-84620667b9b7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Business Intelligence Wizard)
   Use the **Completing the Wizard** page to review the changes that will be made when the Business Intelligence Wizard is finished.  

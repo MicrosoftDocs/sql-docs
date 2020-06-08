@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Creating a Data Mining Model
   Data modeling is the step of data mining where you build patterns and trends by applying *algorithms* to data. Later you can use those patterns for analysis, or to make predictions.  

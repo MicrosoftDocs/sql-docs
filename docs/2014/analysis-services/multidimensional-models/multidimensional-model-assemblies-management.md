@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Multidimensional Model Assemblies Management
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supplies lots of intrinsic functions for use with the Multidimensional Expressions (MDX) and Data Mining Extensions (DMX) languages, designed to accomplish everything from standard statistical calculations to traversing members in a hierarchy. But, as with any other complex and robust product, there is always the need to extend the functionality of such a product further.  

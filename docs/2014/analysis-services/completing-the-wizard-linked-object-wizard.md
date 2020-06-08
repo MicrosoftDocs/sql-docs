@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f42e61a4-163d-4552-97e4-a275a30ba106
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Linked Object Wizard)
   Use the **Completing the Wizard** page to review the decisions made in earlier pages of the wizard.  

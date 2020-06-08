@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # MDX Query Fundamentals (Analysis Services)
   Multidimensional Expressions (MDX) lets you query multidimensional objects, such as cubes, and return multidimensional cellsets that contain the cube's data. This topic and its subtopics provide an overview of MDX queries.  

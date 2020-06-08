@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a6ed550c-9fae-453d-948a-b3a1f4dbdffa
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create Data Mining Dimension Dialog
   Use the **Create Data Mining Dimension** dialog box to create a new data mining dimension based on an OLAP mining model.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 697874d4-3f7a-4126-96f5-37cc8e2ee306
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Query Binding Detail (Partition Source Dialog Box) (Analysis Services - Multidimensional Data)
   Use the **Query Binding** option in the **Partition Source** dialog box to specify the query that provides the data for the partition. You can display this pane by selecting **Query Binding** from the **Binding type** option in the **Partition Source** dialog box.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f7bfc77c-e0a4-4bd0-9358-ee1d5562a7f3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Models View (Data Mining Model Designer)
   Use the **Mining Models** view to create or modify mining models that a mining structure contains.  

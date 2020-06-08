@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Time Periods (Data Source) (Dimension Wizard)
   Use the **Define Time Periods** page to define attributes representing time periods in the time dimension with columns in the table specified in the **Select the Dimension Type** page.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Cube from a template without using a Data Source View
   Select **Build the cube without using a data source** on the first page of the Cube Wizard to create a cube without using a data source view. You can later use the Schema Generation Wizard to generate the relational schema for the data source view based on the structure of the cube and possibly other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. For more information about generating a schema, see [Schema Generation Wizard &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  

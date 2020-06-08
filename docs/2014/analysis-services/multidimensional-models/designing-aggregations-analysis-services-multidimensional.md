@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Designing Aggregations (Analysis Services - Multidimensional)
   Aggregations are precalculated summaries of cube data that help enable [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to provide rapid query responses.  

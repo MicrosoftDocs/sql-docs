@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browse Dimension Data in Dimension Designer
   You can browse the data in a dimension by using the **Browser** view in Dimension Designer, which is accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

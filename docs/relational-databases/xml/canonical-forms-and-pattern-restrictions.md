@@ -1,5 +1,6 @@
 ---
 title: "Canonical Forms and Pattern Restrictions | Microsoft Docs"
+description: Learn how to prevent issues that occur when the canonical representation of primitive value types don't comply with pattern restrictions from an XSD pattern facet.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

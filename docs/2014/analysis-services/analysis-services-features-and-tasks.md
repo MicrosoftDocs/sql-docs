@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analysis Services Features and Tasks
   Analysis Services foundational documentation is organized by modeling and server mode so that you can focus on just the tools, tasks, and features that are available in the mode you installed. Server administration tasks that span multiple modes can be found in Server Instances.  

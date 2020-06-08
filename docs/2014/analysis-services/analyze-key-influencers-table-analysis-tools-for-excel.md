@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analyze Key Influencers (Table Analysis Tools for Excel)
   ![Analyze Key Influencers button in ribbon](media/tat-aki.gif "Analyze Key Influencers button in ribbon")  

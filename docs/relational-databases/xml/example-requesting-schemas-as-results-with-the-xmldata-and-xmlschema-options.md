@@ -1,5 +1,6 @@
 ---
 title: "Request schemas as results with XMLDATA & XMLSCHEMA | Microsoft Docs"
+description: Learn how to use the XMLDATA and XMLSCHEMA options in RAW mode with the FOR XML clause to request an XML-DATA schema or an XSD schema in the query result.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

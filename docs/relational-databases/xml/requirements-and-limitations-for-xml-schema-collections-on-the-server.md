@@ -1,5 +1,6 @@
 ---
 title: "Requirements and limitations (XML schema collections) | Microsoft Docs"
+description: Learn about the requirements and limitations for modifying your XML schema collections in SQL Server.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

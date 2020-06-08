@@ -1,5 +1,6 @@
 ---
 title: "XML System Stored Procedures | Microsoft Docs"
+description: Learn about the XML system stored procedures provided by SQL Server that are used to write queries with OPENXML.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

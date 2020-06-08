@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculated Member Form Editor (Calculations Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Calculated Member Form Editor** pane on the **Calculations** tab in Cube Designer to create or modify a calculated member.  

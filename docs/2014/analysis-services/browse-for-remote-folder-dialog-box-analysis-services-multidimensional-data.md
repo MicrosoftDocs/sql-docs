@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browse for Remote Folder Dialog Box (Analysis Services - Multidimensional Data)
   The **Browse for Remote Folder** dialog box displays a list of available log and data folders defined for an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can either select a listed folder, or you can specify a different folder if needed. The **Browse for Remote Folder** dialog box is displayed by doing one of the following steps:  

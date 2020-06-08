@@ -1,5 +1,6 @@
 ---
 title: "Use Updategram in a sample ASP Application (SQLXML)"
+description: View an example of using an SQLXML updategram in an Active Server Pages (ASP) application.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

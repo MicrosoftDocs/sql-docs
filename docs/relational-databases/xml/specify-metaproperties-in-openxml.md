@@ -1,5 +1,6 @@
 ---
 title: "Specify Metaproperties in OPENXML | Microsoft Docs"
+description: Learn how to specify metaproperty attributes in an OPENXML statement to extract information from XML nodes.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Set Domain Properties
   This topic describes how to set domain properties in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  

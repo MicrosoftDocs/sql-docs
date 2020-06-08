@@ -8,7 +8,6 @@ ms.technology: "analysis-services"
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # UI Designers and Dialogs for Tabular Analysis
 

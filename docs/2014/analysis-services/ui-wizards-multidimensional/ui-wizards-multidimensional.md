@@ -10,7 +10,6 @@ helpviewer_keywords:
   - "Analysis Services wizards"
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # UI Wizards for Multidimensional Analysis
 

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # User Interface Reference (Analysis Services)
   This section includes Help topics for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. These topics are also available from the user interface by pressing the F1 key or by clicking **Help** on wizard pages, designers, and dialog boxes.  

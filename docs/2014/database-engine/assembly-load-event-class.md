@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Assembly Load Event Class
   The **Assembly Load** event class occurs when a request to load an assembly is executed.  

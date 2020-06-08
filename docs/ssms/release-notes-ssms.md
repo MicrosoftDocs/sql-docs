@@ -56,15 +56,15 @@ SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need
 | New Item | Details |
 |----------|---------|
 | Analysis Services | Improved performance when expanding the list of databases while connected to AS Azure or PowerBI servers. |
-| Analysis Services | Fixed an issue where an error would occur trying to open the Synchronize Database Wizard of an Analysis Services server.  |
-| Analysis Services | Fixed an issue preventing users from querying SSAS 2017 and earlier versions with cell data permissions.  |
+| Analysis Services | Fixed an issue where an error would occur trying to open the Synchronize Database Wizard of an Analysis Services server. |
+| Analysis Services | Fixed an issue preventing users from querying SSAS 2017 and earlier versions with cell data permissions. |
 | General SSMS | [Table Designer - Fixed beep when trying to TAB in a Table Designer grid](https://feedback.azure.com/forums/908035/suggestions/40318435) |
 
 ### Known issues (18.5.1)
 
 | New Item | Details | Workaround |
 |----------|---------||-----------|
-| General SSMS | Database diagrams are still affected by the known issue (<link to UserVoice>) | N/A |
+| General SSMS | Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
 | SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
 | Integration Services | Known issue: When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |

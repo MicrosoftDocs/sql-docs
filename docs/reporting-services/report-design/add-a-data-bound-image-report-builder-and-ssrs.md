@@ -1,6 +1,6 @@
 ---
 title: "Add a Data-Bound Image (Report Builder) | Microsoft Docs"
-description: Learn how to reference an image that is stored in a database to display these images in your reports in Report Builder.
+description: Learn how to reference an image that is stored in a database to display the image in your reports in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

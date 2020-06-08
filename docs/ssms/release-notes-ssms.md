@@ -49,7 +49,7 @@ GeneMi. 2019/04/02.
 
 SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
-18.5.1 is an update to 18.5 with the following new items and bug fixes.
+18.5.1 is an update to 18.5 with the following bug fixes.
 
 ### Bug fixes in 18.5.1
 
@@ -67,7 +67,7 @@ SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need
 | General SSMS | Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
 | SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
-| Integration Services | Known issue: When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
@@ -88,8 +88,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ## 18.5
 
-![download](media/download-icon.png) [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2132606)
-
+![download](media/download-icon.png) [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
 - Release number: 18.5
 - Build number: 15.0.18330.0
 - Release date: April 07, 2020

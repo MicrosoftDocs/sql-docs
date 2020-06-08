@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connection Properties Dialog Box (SSAS - Tabular)
   Use this page to view or modify in SQL Server Management Studio the connection properties of a data source used by a tabular model database.  

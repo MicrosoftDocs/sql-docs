@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Usage-Based Optimization Wizard)
   Use the **Completing the Wizard** page to save the aggregation design and assign it to the selected partitions. You can also optionally process the selected partitions after the Usage-Based Optimization Wizard finishes designing and saving the aggregations.  

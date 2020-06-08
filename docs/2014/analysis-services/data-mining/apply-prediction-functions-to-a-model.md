@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Apply Prediction Functions to a Model
   To create a prediction query, you must first select the mining model on which the query will be based. You can select any mining model that exists in the current project.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Data Mining Wizard)
   Use the **Completing the Wizard** page to review the mining structure that will be created when you finish the wizard. You can also set the name of the mining structure.  

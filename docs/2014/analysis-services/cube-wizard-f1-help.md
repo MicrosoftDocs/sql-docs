@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cube Wizard F1 Help
   Use the Cube Wizard to create a cube for a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

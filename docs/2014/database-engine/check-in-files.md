@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Check In Files
   To make source-controlled files that you have modified available to other users, you must check the files into source control. When you check in a file, the version you check in is written to the source control provider and becomes the latest version of the file.  

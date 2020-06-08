@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Collations and Code Pages
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] has restrictions on supported code pages for (var)char columns in memory-optimized tables and supported collations used in indexes and natively compiled stored procedures.  

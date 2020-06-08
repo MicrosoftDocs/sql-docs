@@ -10,7 +10,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 04/07/2020
+ms.date: 06/09/2020
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -63,7 +63,7 @@ SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need
 ### Known issues (18.5.1)
 
 | New Item | Details | Workaround |
-|----------|---------||---------|
+|----------|---------||-----------|
 | General SSMS | Database diagrams are still affected by the known issue (<link to UserVoice>) | N/A |
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
 | SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |

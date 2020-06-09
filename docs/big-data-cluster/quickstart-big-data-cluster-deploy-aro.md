@@ -27,8 +27,8 @@ The default big data cluster deployment used here consists of a SQL Master insta
 - An Azure subscription.
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python minimum version 3.0](https://www.python.org/downloads)
-- [`az` cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [`azdata` CLI](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata?view=sql-server-ver15) 
+- [`az` CLI](/cli/azure/install-azure-cli/)
+- [`azdata` CLI](deploy-install-azdata.md)
 - The following [big data tools](deploy-big-data-tools.md):
   - **kubectl**
   - **Azure Data Studio**
@@ -37,7 +37,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 
 The script uses Azure CLI to automate the creation of an ARO cluster. Before running the script, you must log in to your Azure account with Azure CLI at least once. Run the following command from a command prompt.
 
-```
+```terminal
 az login
 ```
 
@@ -58,7 +58,7 @@ python deploy-sql-big-data-aro.py
 When prompted, provide your input for Azure subscription ID and the Azure resource group to create the resources in. Optionally, you can also provide your input for other configurations or use the defaults provided. For example:
 
 - `azure_region`
-- `vm_size` for OpenShift worker nodes. For an optimal experience while you are validating basic scenarios, we recommend at least 8 vCPUs and 64GB memory across all worker nodes in the cluster. The script uses `Standard_D8s_v3` and 3 worker nodes as default. A default size configuration for big data clusters also uses about 24 disks for persistent volume claims across all components.
+- `vm_size` for OpenShift worker nodes. For an optimal experience while you are validating basic scenarios, we recommend at least 8 vCPUs and 64 GB memory across all worker nodes in the cluster. The script uses `Standard_D8s_v3` and 3 worker nodes as default. A default size configuration for big data clusters also uses about 24 disks for persistent volume claims across all components.
 - network configuration for OpenShift cluster deployment - see the [ARO deployment article](\azure\openshift\tutorial-create-cluster) for more details on each parameter.
 - `cluster_name` - this value is used for both ARO cluster and SQL Server Big Data Cluster created on top of ARO. Note that the name of the SQL Big Data Cluster is going to be a Kubernetes namespace.
 - `password` - same value is going to be used for all accounts.
@@ -75,7 +75,7 @@ If you are testing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdatacluste
 
 Run the following Azure CLI command to remove the big data cluster and the ARO service in Azure (replace `<resource group name>` with the **Azure resource group** you specified in the deployment script):
 
-```azurecli
+```terminal
 az group delete -n <resource group name>
 ```
 

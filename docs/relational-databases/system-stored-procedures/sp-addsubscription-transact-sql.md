@@ -253,7 +253,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password= ] '*password*'  
- Specifies a password for the backup if a password was set when the backup was created. *password*is **sysname**, with a default value of NULL.  
+ Specifies a password for the backup if a password was set when the backup was created. *password* is **sysname**, with a default value of NULL.  
   
  [ @fileidhint= ] *fileidhint*  
  Identifies an ordinal value of the backup set to be restored. *fileidhint* is **int**, with a default value of NULL.  

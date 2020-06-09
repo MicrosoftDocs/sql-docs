@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to [Azure Red Hat OpenShift (ARO)](/azure/virtual-machines/linux/openshift-get-started).
+In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to [Azure Red Hat OpenShift (ARO)](/azure/virtual-machines/linux/openshift-get-started). This deployment option is supported beginning with SQL Server 2019 CU5.
 
 > [!TIP]
 > ARO is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).

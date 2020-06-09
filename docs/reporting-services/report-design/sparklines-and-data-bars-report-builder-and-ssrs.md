@@ -1,6 +1,7 @@
 ---
 title: "Sparklines and Data Bars (Report Builder) | Microsoft Docs"
-ms.date: 03/07/2017
+description: Discover the benefits of using sparklines and data bars. These compact charts convey much information in a very little space in Report Builder. 
+mms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design

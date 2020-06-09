@@ -6,7 +6,6 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 06/11/2020
@@ -17,7 +16,7 @@ ms.date: 06/11/2020
 **[Download and install the latest release!](download.md)**
 ## June 2020
 
-June 10, 2020 &nbsp; / &nbsp; version: 1.19.0
+June 11, 2020 &nbsp; / &nbsp; version: 1.19.0
 
 &nbsp;
 

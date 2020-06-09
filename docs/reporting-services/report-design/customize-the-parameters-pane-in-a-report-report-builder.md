@@ -58,7 +58,7 @@ ms.author: maggies
 
     -   Right click parameter in the **Report Data** pane, and then click **Delete**.
 
-## Hidden/Internal Parameters in runtime
+## Hidden/Internal parameters in runtime
 If you have hidden/internal parameters, the logic on whether it'll be rendered as empty space in runtime is as follows:
 
    - If any row or column is full of hidden/internal parameters or empty cell, then it won't be rendered in runtime;
@@ -66,25 +66,25 @@ If you have hidden/internal parameters, the logic on whether it'll be rendered a
 
 For example, `ReportParameter1` is hidden while rests are visible:
 
-![Hidden Parameter Example 1](../../reporting-services/report-design/media/ssrs-hiddenparameter-rb-1.png "One hidden parameter in layout grid")
+![Hidden Parameter Example 1](../../reporting-services/report-design/media/ssrs-hidden-parameter-rb-1.png "One hidden parameter in layout grid")
 
 This will result in an empty space in runtime because there are visible parameters in first column or first row:
 
-![Hidden Parameter Example 1 - runtime](../../reporting-services/report-design/media/ssrs-hiddenparameter-server-1.png "One hidden parameter in layout grid result in empty space in runtime")
+![Hidden Parameter Example 1 - runtime](../../reporting-services/report-design/media/ssrs-hidden-parameter-server-1.png "One hidden parameter in layout grid result in empty space in runtime")
 
 Now if we change `ReportParameter3` to hidden as well:
 
-![Hidden Parameter Example 2](../../reporting-services/report-design/media/ssrs-hiddenparameter-rb-2.png "Two hidden parameter in same column")
+![Hidden Parameter Example 2](../../reporting-services/report-design/media/ssrs-hidden-parameter-rb-2.png "Two hidden parameter in same column")
 
 Then the first column is omitted because the whole column is empty:
 
-![Hidden Parameter Example 2 - runtime](../../reporting-services/report-design/media/ssrs-hiddenparameter-server-2.png "Two hidden parameter in same column in runtime")
+![Hidden Parameter Example 2 - runtime](../../reporting-services/report-design/media/ssrs-hidden-parameter-server-2.png "Two hidden parameter in same column in runtime")
 
 ## Default layout
 For those reports that were authored before SSRS 2016 version, a default layout grid of 2 columns and N rows will be used in runtime. To change the layout, simply open the report in latest Report Builder and save back, then a customized layout info will be saved to .rdl file as well.
 
 
-## See Also
+## See also
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)
 
 

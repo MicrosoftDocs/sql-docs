@@ -210,7 +210,7 @@ executeCmd(command)
 
 ## `bdc-restricted-scc.yaml
 
-The following .yml manifest defines a restricted security context constraints SCC for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
+The following .yml manifest defines a restricted security context constraints (SCC) for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
 
 ```yml
 allowHostDirVolumePlugin: false

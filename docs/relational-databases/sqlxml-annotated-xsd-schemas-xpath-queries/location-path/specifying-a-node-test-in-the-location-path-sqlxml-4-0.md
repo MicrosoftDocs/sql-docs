@@ -1,5 +1,6 @@
 ---
 title: "Specifying a Node Test in the Location Path (SQLXML)"
+description: Learn how to specify a node test in the location path of an SQLXML 4.0. XPath query.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

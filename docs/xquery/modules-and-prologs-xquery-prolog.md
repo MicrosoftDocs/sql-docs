@@ -1,5 +1,6 @@
 ---
 title: "XQuery Prolog | Microsoft Docs"
+description: Learn about XQuery prologs that contain a series of declarations and definitions that together create the required environment for query processing.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql

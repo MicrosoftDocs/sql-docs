@@ -23,20 +23,20 @@ ms.author: rupp29
 ## Before you start
  To use Azure Key Vault with your SQL Server, there are a few prerequisites:  
   
--   You must have an Azure subscription  
+- You must have an Azure subscription.
   
--   Install the latest [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 or higher).  
+- Install the latest [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 or higher).  
 
--   Create an Azure Active Directory  
+- Create an Azure Active Directory.
 
--   Familiarize yourself with the principals of EKM storage using the Azure Key Vault by reviewing [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+- Familiarize yourself with the principals of EKM storage using the Azure Key Vault by reviewing [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
 
--   Have the appropriate version of the Visual Studio C++ redistributable installed based on the version of SQL Server that you're running:
+- Have the appropriate version of the Visual Studio C++ redistributable installed based on the version of SQL Server that you're running:
   
-SQL Server Version  |Redistributable Install Link    
----------|--------- 
-2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
-2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
+  SQL Server Version  |Redistributable Install Link    
+  ---------|--------- 
+  2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
+  2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
 ## Part I: Set up an Azure Active Directory service principal
@@ -430,7 +430,7 @@ Refer to [B. Frequently Asked Questions](../../../relational-databases/security/
     ```  
 
 10. **Create a database encryption key:**
-    Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
+    Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey).
     ```sql  
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY   
@@ -438,7 +438,7 @@ Refer to [B. Frequently Asked Questions](../../../relational-databases/security/
     ```  
   
 11. **Encrypt the test database:**
-    Enable TDE by setting ENCRYPTION ON
+    Enable TDE by setting ENCRYPTION ON.
      ```sql  
     --Enable TDE by setting ENCRYPTION ON
     ALTER DATABASE TestTDE   
@@ -446,7 +446,7 @@ Refer to [B. Frequently Asked Questions](../../../relational-databases/security/
      ```  
     
 12. **Cleanup test objects:**
-    Delete all the objects created in this test script
+    Delete all the objects created in this test script.
     ```sql  
     -- CLEAN UP
     USE Master
@@ -464,12 +464,12 @@ Refer to [B. Frequently Asked Questions](../../../relational-databases/security/
     ```  
     
 **Sample scripts:**
-You can find sample scripts in the blog at [SQL Server Transparent Data Encryption and Extensible Key Management Using Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549)  
+You can find sample scripts in the blog at [SQL Server Transparent Data Encryption and Extensible Key Management Using Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 
 
 ## Next step  
   
-Now that you've completed the basic configuration, see how to [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+Now that you've completed the basic configuration, see how to [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).
   
 ## See also  
 

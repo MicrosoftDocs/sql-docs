@@ -29,9 +29,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 - [Python minimum version 3.0](https://www.python.org/downloads)
 - [`az` CLI](/cli/azure/install-azure-cli/)
 - [`azdata` CLI](deploy-install-azdata.md)
-- The following [big data tools](deploy-big-data-tools.md):
-  - **kubectl**
-  - **Azure Data Studio**
+- **Azure Data Studio**
 
 ## Log in to your Azure account
 
@@ -61,8 +59,8 @@ When prompted, provide your input for Azure subscription ID and the Azure resour
 - `vm_size` for OpenShift worker nodes. For an optimal experience while you are validating basic scenarios, we recommend at least 8 vCPUs and 64 GB memory across all worker nodes in the cluster. The script uses `Standard_D8s_v3` and 3 worker nodes as default. A default size configuration for big data clusters also uses about 24 disks for persistent volume claims across all components.
 - network configuration for OpenShift cluster deployment - see the [ARO deployment article](\azure\openshift\tutorial-create-cluster) for more details on each parameter.
 - `cluster_name` - this value is used for both ARO cluster and SQL Server Big Data Cluster created on top of ARO. Note that the name of the SQL Big Data Cluster is going to be a Kubernetes namespace.
-- `password` - same value is going to be used for all accounts.
 - `username `- this is the username for the accounts provisioned during deployment for the controller admin account, SQL Server master instance account and gateway. Note that `sa` SQL Server account is disabled automatically for you, as a best practice.
+- `password` - same value is going to be used for all accounts.
 
 The SQL Server Big Data Cluster is now deployed on ARO. You can now use Azure Data Studio to connect to the cluster. For more information, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -71,7 +69,7 @@ The SQL Server Big Data Cluster is now deployed on ARO. You can now use Azure Da
 If you are testing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure, you should delete the ARO cluster when finished to avoid unexpected charges. Do not remove the cluster if you intend to continue using it.
 
 > [!WARNING]
-> The following steps tears down the AKS cluster which removes the SQL Server big data cluster as well. If you have any databases or HDFS data that you want to keep, back that data up before deleting the cluster.
+> The following steps tears down the ARO cluster which removes the SQL Server big data cluster as well. If you have any databases or HDFS data that you want to keep, back that data up before deleting the cluster.
 
 Run the following Azure CLI command to remove the big data cluster and the ARO service in Azure (replace `<resource group name>` with the **Azure resource group** you specified in the deployment script):
 

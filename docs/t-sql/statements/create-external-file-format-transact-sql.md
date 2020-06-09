@@ -132,7 +132,7 @@ WITH (
    Specifies a text format with column delimiters, also called field terminators.
    
    -  JSON
-   Specifies a JSON format.
+   Specifies a JSON format. Applies to Azure SQL Edge only. 
   
  FIELD_TERMINATOR = *field_terminator*  
 Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
@@ -388,7 +388,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
 )
 ```   
 ### F. Create a JSON external file format  
- This example creates an external file format for a JSON file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.  
+ This example creates an external file format for a JSON file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression. This example applies to Azure SQL Edge and is currently not supported for other SQL products. 
   
 ```  
 CREATE EXTERNAL FILE FORMAT jsonFileFormat  

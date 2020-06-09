@@ -1,5 +1,6 @@
 ---
 title: "Configure a Report Server for Remote Administration | Microsoft Docs"
+description: Learn how to configure Reporting Services Report Server instances for local or remote configuration by using the configuration tool or writing custom code.
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

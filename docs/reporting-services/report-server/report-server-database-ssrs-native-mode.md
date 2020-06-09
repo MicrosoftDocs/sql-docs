@@ -1,5 +1,6 @@
 ---
 title: "Report Server Database (Native Mode) | Microsoft Docs"
+description: Learn how a native mode Reporting Services installation separates persistent data storage and temporary data storage into two databases.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

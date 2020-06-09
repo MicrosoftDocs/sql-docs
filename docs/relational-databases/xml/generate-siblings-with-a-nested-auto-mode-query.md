@@ -1,5 +1,6 @@
 ---
 title: "Generate Siblings with a Nested AUTO Mode Query | Microsoft Docs"
+description: Learn how to generate XML siblings by using a nested AUTO mode query as an alternative to using EXPLICIT mode.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

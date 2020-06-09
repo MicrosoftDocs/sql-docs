@@ -1,10 +1,8 @@
 ---
 title: "JSON Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 helpviewer_keywords: 
@@ -12,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: genemi
+ms.reviewer: jroth
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON Functions (Transact-SQL)

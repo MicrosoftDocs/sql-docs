@@ -1,5 +1,6 @@
 ---
 title: "Change Existing Columns to XML Columns | Microsoft Docs"
+description: Learn how to use the ALTER TABLE statement to change a string type column to an xml data type column.
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql

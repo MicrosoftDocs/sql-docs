@@ -1,5 +1,6 @@
 ---
 title: "Code Access Security in Reporting Services | Microsoft Docs"
+description: Find out about code access security in Reporting Services. Learn how evidence, code groups, and named permission sets factor into a security policy.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

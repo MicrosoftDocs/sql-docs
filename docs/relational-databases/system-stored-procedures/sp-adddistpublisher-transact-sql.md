@@ -1,7 +1,7 @@
 ---
 title: "sp_adddistpublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2018"
+ms.date: "06/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -43,6 +43,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## Arguments  
 `[ @publisher = ] 'publisher'`
  Is the Publisher name. *publisher* is **sysname**, with no default.  
+
+> [!NOTE]
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
   
 `[ @distribution_db = ] 'distribution_db'`
  Is the name of the distribution database. *distributor_db* is **sysname**, with no default. This parameter is used by replication agents to connect to the Publisher.  

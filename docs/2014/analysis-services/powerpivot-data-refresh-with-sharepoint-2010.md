@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # PowerPivot Data Refresh with SharePoint 2010
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]t data refresh is a scheduled server-side operation that queries external data sources to update embedded [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data in an Excel 2010 workbook that is stored in a content library.

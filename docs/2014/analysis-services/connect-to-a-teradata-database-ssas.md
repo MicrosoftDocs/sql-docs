@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 875ad4a3-a2b3-4b68-8c1c-6507e9f25b4d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Teradata Database (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to connect to a Teradata database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

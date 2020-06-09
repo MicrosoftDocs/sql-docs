@@ -95,6 +95,9 @@ Discusses new authentication methods introduced in OLE DB driver 18.2.1 that hav
  [OLE DB Driver for SQL Server Support for LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Discusses OLE DB Driver for SQL Server support for the LocalDB feature.  
   
+ [Using Transparent Network IP Resolution](../../oledb/features/using-transparent-network-ip-resolution.md)  
+ Discusses how OLE DB Driver for SQL Server supports transparent network IP resolution in a failover cluster.  
+  
 ## See Also  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   

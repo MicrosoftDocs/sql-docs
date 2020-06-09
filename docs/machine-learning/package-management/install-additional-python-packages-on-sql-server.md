@@ -3,7 +3,7 @@ title: Install Python packages with sqlmlutils
 description: Learn how to use Python pip to install new Python packages on an instance of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/27/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -24,8 +24,10 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
 
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> The **sqlmlutils** package described in this article is used for adding Python packages to SQL Server 2019 or later. For SQL Server 2017 and earlier, see [Install packages with Python tools](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
+> The **sqlmlutils** package described in this article is used for adding Python packages to SQL Server 2019 or later. For SQL Server 2017 and earlier, see [Install packages with Python tools](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017).
+::: moniker-end
 
 ## Prerequisites
 
@@ -33,13 +35,13 @@ For more information about package location and installation paths, see [Get Pyt
 + You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
 ::: moniker-end
 
-+ Install [python](https://www.python.org/) on the client computer you use to connect to SQL Server. You also may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
-
 + Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio.
+
++ Install the Python kernel in Azure Data Studio. You can also install and use Python from the command line, and you may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 
 ### Other considerations
 
-+ Packages must be compliant with the version of Python you have. For information on which version of Python is included with each SQL Server version, see the [Python and R versions](../sql-server-machine-learning-services.md#versions).
++ Packages must be compliant with the version of Python you have, and the version of Python on the server must match the version of Python on the client computer. For information on which version of Python is included with each SQL Server version, see the [Python and R versions](../sql-server-machine-learning-services.md#versions). To confirm the version of Python in a particular SQL instance, see [View the version of Python](python-package-information.md#bkmk_SQLPythonVersion).
 
 + The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 
@@ -58,17 +60,38 @@ For more information about package location and installation paths, see [Get Pyt
 
 ## Install sqlmlutils on the client computer
 
-To use **sqlmlutils**, you first need to install it on the client computer that you use to connect to SQL Server. Make sure you have `pip` installed, see [pip installation](https://pip.pypa.io/en/stable/installing/) for more information.
+To use **sqlmlutils**, you first need to install it on the client computer that you use to connect to SQL Server.
 
+### In Azure Data Studio
+
+If you'll be using **sqlmlutils** in Azure Data Studio, you can install it using the Manage Packages feature.
+
+1. In Azure Data Studio, click **Manage Packages**.
+1. Click **Add new**.
+1. Enter "sqlmlutils" in the **Search Pip packages** field and click **Search**.
+1. Select the **Package Version** you want to install (the latest version is recommended).
+1. Click **Install** and then **Close**.
+
+### From Python command line
+
+If you'll be using **sqlmlutils** from a Python command prompt or IDE, you can install sqlmlutils with a simple **pip** command:
+
+```console
+pip install sqlmlutils
+```
+
+You can also install **sqlmlutils** from a zip file:
+
+1. Make sure you have **pip** installed. See [pip installation](https://pip.pypa.io/en/stable/installing/) for more information.
 1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist to the client computer. Don't unzip the file.
-
 1. Open a **Command Prompt** and run the following commands to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded - this example assumes the downloaded file is `c:\temp\sqlmlutils-1.0.0.zip`.
-
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
 
 ## Add a Python package on SQL Server
+
+Using **sqlmlutils**, you can add Python packages to a SQL instance. You can then use those packages in your Python code running in the SQL instance.
 
 In the following example, you'll add the [text-tools](https://pypi.org/project/text-tools/) package to SQL Server.
 
@@ -84,7 +107,7 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 1. On the client computer, open **Python** or a Python environment.
 

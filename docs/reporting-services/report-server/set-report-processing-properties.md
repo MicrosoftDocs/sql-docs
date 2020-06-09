@@ -1,5 +1,6 @@
 ---
 title: "Set Report Processing Properties | Microsoft Docs"
+description: Learn about report execution properties in Report Server that control how reports are processed and how to set them for each report by using the web portal.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

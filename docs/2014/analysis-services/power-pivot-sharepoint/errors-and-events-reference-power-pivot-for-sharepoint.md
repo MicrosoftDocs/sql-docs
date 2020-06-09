@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Errors and Events Reference (PowerPivot for SharePoint)
   This section provides information about errors and events for PowerPivot for SharePoint. Errors in this section are identified by the error message text that appears in a log or error window.  

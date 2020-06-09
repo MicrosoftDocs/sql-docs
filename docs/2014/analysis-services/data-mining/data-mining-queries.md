@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining Queries
   Data mining queries are useful for many purposes. You can:  

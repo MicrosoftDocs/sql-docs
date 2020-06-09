@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Choose Enhancement (Business Intelligence Wizard)
   Use the **Choose Enhancement** page to choose the business intelligence enhancement to add to your cube or dimension.  

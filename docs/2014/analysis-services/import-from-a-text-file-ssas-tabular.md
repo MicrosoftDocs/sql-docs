@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Import from a Text File (SSAS Tabular)
   You can import data from Microsoft Excel files and text files by using the Table Import Wizard.  

@@ -1,5 +1,6 @@
 ---
 title: "Updategram Security Considerations (SQLXML)"
+description: Learn the security guidelines for using updategrams in SQLXML 4.0.
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

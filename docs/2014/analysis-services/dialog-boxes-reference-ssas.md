@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c7d1059a-3133-4884-b2f0-518febfc56ad
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Dialog Boxes Reference (SSAS)
   To learn about the dialog boxes in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], see the following topics.  

@@ -1,5 +1,6 @@
 ---
 title: "Create, Delete, or Modify a Folder - Reporting Services | Microsoft Docs"
+description: Learn how to create, modify, and delete folders so that you can organize and manage the items that you publish to a Reporting Services report server.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

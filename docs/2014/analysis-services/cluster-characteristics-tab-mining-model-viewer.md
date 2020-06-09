@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cluster Characteristics Tab (Mining Model Viewer)
   The **Cluster Characteristics** tab lets you explore the characteristics of a cluster in a clustering model, or the set of all cases in the model. The graph shows the importance of each attribute-value pair as a characteristic that defines the cluster, in comparison with other clusters.  

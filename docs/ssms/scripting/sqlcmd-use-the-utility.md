@@ -404,28 +404,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     ```  
     :exit(select 100)  
-    @echo off  
-    C:\windowsscript.bat  
-    @echo off  
-  
-    echo Running badscript.sql  
-    sqlcmd -i badscript.sql -b -o out.log  
-    if not errorlevel 1 goto next1  
-    echo == An error occurred   
-  
-    :next1  
-  
-    echo Running goodscript.sql  
-    sqlcmd -i goodscript.sql -b -o out.log  
-    if not errorlevel 1 goto next2  
-    echo == An error occurred   
-  
-    :next2  
-    echo Running returnvalue.sql  
-    sqlcmd -i returnvalue.sql -o out.log  
-    echo SQLCMD returned %errorlevel% to the command shell  
-  
-    :exit  
     ```  
   
 -   C:\windowsscript.bat  

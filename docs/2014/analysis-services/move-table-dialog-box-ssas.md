@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Move Table Dialog Box (SSAS)
   The **Move Table** dialog box enables you to change the order in which tables appear in the model designer. To access this dialog box, right-click the tab at the bottom of the table that you want to move, and then select **Move**.  

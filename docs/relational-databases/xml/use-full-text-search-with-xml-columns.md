@@ -1,5 +1,6 @@
 ---
 title: "Use Full-Text Search with XML Columns | Microsoft Docs"
+description: Learn how to create a full-text index of XML columns and perform a full-text search of XML values using SQL.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Source View (Dimension Structure Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the **Data Source View** pane to view tables and columns from the data source view associated with the selected dimension. This pane is used to create attributes, member properties, hierarchies, and levels, by dragging columns from the **Data Source View** pane to the **Attributes** or **Hierarchies and Levels** pane.  

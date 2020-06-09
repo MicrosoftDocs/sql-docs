@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Globalization Tips and Best Practices (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensional only  

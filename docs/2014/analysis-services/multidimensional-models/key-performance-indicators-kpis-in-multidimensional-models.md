@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Key Performance Indicators (KPIs) in Multidimensional Models
   In business terminology, a Key Performance Indicator (KPI) is a quantifiable measurement for gauging business success.  

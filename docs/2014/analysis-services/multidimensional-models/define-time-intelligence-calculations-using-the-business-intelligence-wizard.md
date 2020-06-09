@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Time Intelligence Calculations using the Business Intelligence Wizard
   The time intelligence enhancement is a cube enhancement that adds time calculations (or time views) to a selected hierarchy. This enhancement supports the following categories of calculations:  

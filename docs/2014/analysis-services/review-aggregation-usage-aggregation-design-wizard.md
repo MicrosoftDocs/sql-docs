@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Review Aggregation Usage (Aggregation Design Wizard)
   Use the **Review Aggregation Usage** page to configure aggregation usage settings.  

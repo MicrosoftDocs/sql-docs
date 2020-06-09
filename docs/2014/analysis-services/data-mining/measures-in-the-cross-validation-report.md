@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Measures in the Cross-Validation Report
   During cross-validation, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] divides the data in a mining structure into multiple cross-sections and then iteratively tests the structure and any associated mining models. Based on this analysis, it outputs a set of standard accuracy measures for the structure and each model.  

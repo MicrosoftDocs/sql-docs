@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Naive Bayes Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm is a classification algorithm based on Bayes' theorems, and provided by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for use in predictive modeling. The word naïve in the name Naïve Bayes derives from the fact that the algorithm uses Bayesian techniques but does not take into account dependencies that may exist.

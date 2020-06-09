@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Dimension Attributes (Dimension Wizard)
   Use the **Select Dimension Attributes** page to select and modify the attributes for the dimension to be created.  

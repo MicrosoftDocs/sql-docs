@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Technical Reference (SSAS)
   Find the tools, languages, and PowerShell reference documentation for using or administering [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # XMLA Concepts
   The XML for Analysis (XMLA) open standard supports data access to data sources that reside on the World Wide Web. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] implements XMLA per the XMLA 1.1 specification.  

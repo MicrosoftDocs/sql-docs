@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # The following features are not supported by Excel Services and may not display or may display only partially: Comments, Shapes, or other objects
   This error occurs when you add Slicers to a PowerPivot workbook from a PowerPivot Field List.  

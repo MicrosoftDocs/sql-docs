@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Creating Query-Scoped Cell Calculations (MDX)
   You use the `WITH` keyword in Multidimensional Expressions (MDX) to describe calculated cells within the context of a query. The `WITH` keyword has the following syntax:  

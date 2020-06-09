@@ -123,7 +123,7 @@ The output of this request will give you a JWT `access_token`, which you will ne
 
 ## Execute the app using the RESTful web service
 
-There are mutiple ways to comsume an app on BDC, you can choose to use [azdata app run command](https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-create-apps?view=sql-server-ver15#run-an-app). This section will demonstrate how to use common developer tools such as Postman to execute the app. 
+There are mutiple ways to comsume an app on BDC, you can choose to use [azdata app run command](big-data-cluster-create-apps.md). This section will demonstrate how to use common developer tools such as Postman to execute the app. 
 
 You can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. 
 

@@ -9,7 +9,7 @@ ms.author: alayu
 manager: viharp
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 ---
 
 # Release notes for Azure Data Studio

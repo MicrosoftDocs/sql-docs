@@ -64,7 +64,7 @@ SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need
 
 | New Item | Details | Workaround |
 |----------|---------||-----------|
-| General SSMS | There is a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, later try to open it with 17.9.1. See [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
+| General SSMS | There is a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, and then later try to open it with 17.9.1. See [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
 | SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |

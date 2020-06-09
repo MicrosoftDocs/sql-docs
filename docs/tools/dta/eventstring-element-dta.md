@@ -1,5 +1,6 @@
 ---
 title: "EventString Element (DTA)"
+description: In the dta utility, the EventString element specifies a Transact-SQL script workload directly in the XML input file.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

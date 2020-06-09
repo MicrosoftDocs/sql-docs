@@ -1,5 +1,6 @@
 ---
 title: "sp_addsubscription (Transact-SQL) | Microsoft Docs"
+description: Adds a subscription to a publication and sets the Subscriber status. This stored procedure runs at the Publisher on the publication database.
 ms.date: "10/28/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addsubscription"
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

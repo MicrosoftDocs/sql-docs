@@ -1,10 +1,11 @@
 ---
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for MySQL (MySQLToSQL) for each release.
 authors: "HJToland3;nahk-ivanov"
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "4/2/2020"
+ms.date: "6/2/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,6 +15,17 @@ ms.author: "jtoland;alexiva"
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for MySQL contains minor performance improvements and bug fixes.
+
+## SSMA v8.9
+
+The v8.9 release of SSMA for MySQL contains the following changes:
+
+* Fix for data migration of spatial types
+* Fix for the issue with special characters in project name
 
 ## SSMA v8.8
 

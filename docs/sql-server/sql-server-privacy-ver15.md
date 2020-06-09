@@ -2,6 +2,7 @@
 title: "SQL Server 2019 privacy supplement | Microsoft Docs"
 ms.date: 09/20/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: "mikeray"
 ms.custom: ""
 ms.topic: conceptual
@@ -111,11 +112,11 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 ## Organization identifiable information (OII)
 
 Data received from an organization, or generated from their use of the product.
--	Linkable to an organization.
--	Does not contain content.
+-   Linkable to an organization.
+-   Does not contain content.
 
 ### Examples of organization identifiable information
--	Organization Name (example: Microsoft Corp.)
+-   Organization Name (example: Microsoft Corp.)
 
 ### Permitted usage scenarios
 |Scenario  |Access Restrictions  |Retention Requirements|

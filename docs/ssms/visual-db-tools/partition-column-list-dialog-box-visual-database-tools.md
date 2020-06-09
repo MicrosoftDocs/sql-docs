@@ -21,7 +21,7 @@ If a table has an associated partition scheme, you can use this dialog box to ch
   
 For more information on partition schemes and functions see SQL Server Books Online.  
   
-## UIElement List  
+## UI element list  
 Data Type  
 Shows the data types of the columns defined in the partition scheme.  
   

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changepublication"
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

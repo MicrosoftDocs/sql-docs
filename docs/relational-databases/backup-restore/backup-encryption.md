@@ -1,5 +1,6 @@
 ---
 title: "Backup Encryption | Microsoft Docs"
+description: This article describes encryption options for SQL Server backups, including the usage, benefits, and recommended practices for encrypting during backup.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

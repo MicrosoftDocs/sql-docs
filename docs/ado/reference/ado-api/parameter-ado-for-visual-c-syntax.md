@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Parameter collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameter (ADO for Visual C++ Syntax)
 ## Methods  

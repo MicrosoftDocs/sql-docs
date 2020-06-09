@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_publication_validation"
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_publication_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

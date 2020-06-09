@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), cross-version compatibility"
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Cross-Version Compatibility

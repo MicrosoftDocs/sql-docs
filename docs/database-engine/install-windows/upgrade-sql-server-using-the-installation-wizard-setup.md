@@ -1,5 +1,6 @@
 ---
 title: "Upgrade: Installation Wizard (Setup)"
+description: The SQL Server Installation Wizard provides a single feature tree for an in-place upgrade of SQL Server components to the latest version of SQL Server.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

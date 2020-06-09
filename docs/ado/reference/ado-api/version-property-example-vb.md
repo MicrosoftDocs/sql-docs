@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Version property [ADO], Visual Basic example"
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Version Property Example (VB)
 This example uses the [Version](../../../ado/reference/ado-api/version-property-ado.md) property of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object to display the current ADO version. It also uses several dynamic properties to show:  

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropmergesubscription"
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

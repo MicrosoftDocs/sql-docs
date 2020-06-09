@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "CoCreateInstance method"
   - "OLE DB data sources [SQL Server Native Client]"
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Establishing a Connection to a Data Source

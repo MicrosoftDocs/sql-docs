@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "sys.availability_read_only_routing_lists dynamic management view"
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

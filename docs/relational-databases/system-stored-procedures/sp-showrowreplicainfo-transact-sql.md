@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_showrowreplicainfo"
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -14,7 +14,7 @@ manager: craigg
 # SQL Server Properties (FILESTREAM Tab)
   Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## UIElement List  
+## UI element list  
  **Enable FILESTREAM for Transact-SQL access**  
  Select to enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access. This control must be checked before the other control options will be available.  
   

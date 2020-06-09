@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, bulk copy operations"
   - "SQLNCLI, bulk copy operations"
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Performing Bulk Copy Operations

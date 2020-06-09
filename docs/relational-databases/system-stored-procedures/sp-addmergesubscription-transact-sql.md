@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergesubscription"
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

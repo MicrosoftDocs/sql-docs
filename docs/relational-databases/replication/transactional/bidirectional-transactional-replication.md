@@ -1,5 +1,6 @@
 ---
 title: "Bidirectional Transactional Replication | Microsoft Docs"
+description: Bidirectional transactional replication lets two servers exchange changes. Each server publishes data and subscribes to a publication from the other server.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

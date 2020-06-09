@@ -1,5 +1,6 @@
 ---
 title: "Restore a Backup from a Device (SQL Server) | Microsoft Docs"
+description: This article describes how to restore a backup from a device in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

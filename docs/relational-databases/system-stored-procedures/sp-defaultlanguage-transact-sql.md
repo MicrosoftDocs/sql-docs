@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_defaultlanguage"
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

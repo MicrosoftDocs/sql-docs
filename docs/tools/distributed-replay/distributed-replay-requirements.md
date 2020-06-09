@@ -3,11 +3,11 @@ title: Distributed Replay requirements
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/18/2018
 ---

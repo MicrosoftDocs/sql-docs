@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Dimension Properties Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Dimension Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of a dimension in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Dimension Properties** dialog box by right-clicking a dimension in Object Explorer and selecting **Properties**.  

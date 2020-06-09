@@ -1,5 +1,6 @@
 ---
 title: "Values for &lt;xsd:simpleType&gt; Declarations | Microsoft Docs"
+description: View a table of the restrictions that are applied for all recognized values of the <xsd:simpleType> declaration.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

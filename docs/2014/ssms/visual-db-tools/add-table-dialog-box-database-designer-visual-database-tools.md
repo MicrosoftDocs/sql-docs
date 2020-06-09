@@ -20,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
-## UIElement List  
+## UI element list  
  **Refresh**  
  Refreshed the list of tables to match the current state of the database.  
   

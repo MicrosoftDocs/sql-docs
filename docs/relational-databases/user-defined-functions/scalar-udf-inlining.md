@@ -2,7 +2,7 @@
 title: "Scalar UDF Inlining in Microsoft SQL Server | Microsoft Docs"
 description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019)."
 ms.custom: ""
-ms.date: 03/17/2020
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -149,12 +149,21 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - There are no signatures added to the UDF.
 - The UDF is not a partition function.
 - The UDF does not contain references to Common Table Expressions (CTEs)
+- The UDF does not contain references to intrinsic functions (e.g. @@ROWCOUNT) that may alter the results when inlined (restriction added in Microsoft SQL Server 2019 CU2).
+- The UDF does not contain aggregate functions being passed as parameters to a scalar UDF (restriction added in Microsoft SQL Server 2019 CU2).
+- The UDF does not reference built-in views (e.g. OBJECT_ID, restriction added in Microsoft SQL Server 2019 CU2).
+-	The UDF does not reference XML methods (restriction added in Microsoft SQL Server 2019 CU4).
+-	The UDF does not contain a SELECT with ORDER BY without a "TOP 1" (restriction added in Microsoft SQL Server 2019 CU4).
+-	The UDF does not contain a SELECT query that performs an assignment in conjunction with the ORDER BY clause (e.g. SELECT @x = @x +1 FROM table ORDER BY column_name, restriction added in Microsoft SQL Server 2019 CU4).
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) is not supported for inlining.
 
 <sup>2</sup> Recursive UDFs will be inlined to a certain depth only.
 
 <sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
+
+> [!NOTE]
+> For information on the latest T-SQL Scalar UDF Inlining fixes and changes to inlining eligibility scenarios, see the Knowledge Base article: [FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
 
 ### Checking whether or not a UDF can be inlined
 For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether a UDF is inlineable or not. 
@@ -255,11 +264,13 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Views that reference inline scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. There might be some differences in the behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) with UDF inlining. 
 In certain situations (depending upon the logic in the UDF), inlining might be more conservative w.r.t masking output columns. In scenarios where the columns referenced in a UDF are not output columns, they will not be masked. 
-1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
+1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Beginning in Microsoft SQL Server 2019 CU2, we will block inlining if the UDF references certain intrinsic functions (e.g. @@ROWCOUNT).
 
 ## See Also
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)     
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Joins](../../relational-databases/performance/joins.md)     
-[Demonstrating Intelligent Query Processing](https://aka.ms/IQPDemos)      
+[Demonstrating Intelligent Query Processing](https://aka.ms/IQPDemos)     
+[FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+

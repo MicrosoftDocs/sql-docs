@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "default language option"
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the default language Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

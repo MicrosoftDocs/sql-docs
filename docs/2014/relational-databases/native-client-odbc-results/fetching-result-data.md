@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data types"
   - "SQLGetData function"
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Fetching Result Data

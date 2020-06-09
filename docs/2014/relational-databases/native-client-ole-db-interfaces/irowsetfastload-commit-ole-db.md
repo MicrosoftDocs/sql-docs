@@ -13,8 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "Commit method"
 ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # IRowsetFastLoad::Commit (OLE DB)

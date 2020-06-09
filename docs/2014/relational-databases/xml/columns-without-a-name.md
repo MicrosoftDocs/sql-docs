@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns without"
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Columns without a Name

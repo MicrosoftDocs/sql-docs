@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [OLE DB], client to server"
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Conversions Performed from Client to Server

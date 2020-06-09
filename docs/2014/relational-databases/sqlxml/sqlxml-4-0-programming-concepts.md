@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "SQLXML, about SQLXML"
   - "SQLXML"
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLXML 4.0 Programming Concepts

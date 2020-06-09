@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorhelpmergesession"
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

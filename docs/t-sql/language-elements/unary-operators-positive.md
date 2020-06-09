@@ -3,7 +3,7 @@ title: "+ (Unary Plus) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -20,9 +20,10 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unary Operators - Positive
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Returns the value of a numeric expression (a unary operator). Unary operators perform an operation on only one expression of any one of the data types of the numeric data type category.   
   

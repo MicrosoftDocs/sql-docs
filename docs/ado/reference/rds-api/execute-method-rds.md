@@ -11,8 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Execute method [ADO]"
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Execute Method (RDS)
 Executes the request and creates an ADO recordset for use in ADO 2.5 and later.  

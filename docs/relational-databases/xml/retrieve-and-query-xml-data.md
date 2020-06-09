@@ -1,5 +1,6 @@
 ---
 title: "Retrieve and Query XML Data | Microsoft Docs"
+description: Learn about the query options that must be specified when querying XML data, and about the parts of XML instances that are not preserved when stored in databases.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

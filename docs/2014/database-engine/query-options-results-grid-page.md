@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.query.grid.f1"
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Query Options Results (Grid Page)

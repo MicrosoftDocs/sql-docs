@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "EventReasonEnum enumeration [ADO]"
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # EventReasonEnum
 Specifies the reason that caused an event to occur.  

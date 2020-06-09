@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQLColAttribute function"
   - "SQLNumResultCols function"
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Determining the Characteristics of a Result Set (ODBC)

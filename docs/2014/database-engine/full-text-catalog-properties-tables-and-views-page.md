@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1"
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Full-Text Catalog Properties (Tables and Views Page)
   Use this dialog page to view or modify the tables and views that are assigned to the full-text catalog.  
   
-## UIElement List  
+## UI element list  
  **All eligible table/view objects in this database**  
  Lists the tables and views that have a unique index defined on them, but are not already a part of the full-text catalog. To select a table or view and assign it to the catalog, select the items in the list box and press the "->" button.  
   

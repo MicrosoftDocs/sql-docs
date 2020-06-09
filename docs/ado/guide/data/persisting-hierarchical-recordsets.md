@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "persisting hierarchical Recordsets [ADO]"
   - "data shaping [ADO], hierarchical Recordsets"
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Persisting Hierarchical Recordsets
 You can save a hierarchical **Recordset** to a file in either ADTG or XML format by calling the [Save](../../../ado/reference/ado-api/save-method.md) method. However, two limitations apply when saving hierarchical **Recordset**s in XML format: You cannot save in XML if the hierarchical **Recordset** contains pending updates, and you cannot save a parameterized hierarchical **Recordset**.  

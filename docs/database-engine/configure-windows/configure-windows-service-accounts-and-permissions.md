@@ -1,12 +1,12 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
-ms.custom: ""
+ms.custom: contperfq4
 ms.date: "03/17/2020"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: configuration
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "startup service states [SQL Server]"
   - "Setup [SQL Server], user accounts"
@@ -48,8 +48,8 @@ helpviewer_keywords:
   - "manual startup state [SQL Server]"
   - "accounts [SQL Server], user"
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure Windows Service Accounts and Permissions
 
@@ -246,7 +246,7 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 
 For most components [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configures the ACL for the per-service account directly, so changing the service account can be done without having to repeat the resource ACL process.
 
-When installing [!INCLUDE[ssAS](../../includes/ssas-md.md)], a per-service SID for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service is created. A local Windows group is created, named in the format **SQLServerMSASUser$**_computer_name_**$**_instance_name**. The per-service SID **NT SERVICE\MSSQLServerOLAPService** is granted membership in the local Windows group, and the local Windows group is granted the appropriate permissions in the ACL. If the account used to start the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service is changed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager must change some Windows permissions (such as the right to log on as a service), but the permissions assigned to the local Windows group will still be available without any updating, because the per-service SID has not changed. This method allows the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service to be renamed during upgrades.
+When installing [!INCLUDE[ssAS](../../includes/ssas-md.md)], a per-service SID for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service is created. A local Windows group is created, named in the format **SQLServerMSASUser$**_computer_name_**$**_instance_name_. The per-service SID **NT SERVICE\MSSQLServerOLAPService** is granted membership in the local Windows group, and the local Windows group is granted the appropriate permissions in the ACL. If the account used to start the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service is changed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager must change some Windows permissions (such as the right to log on as a service), but the permissions assigned to the local Windows group will still be available without any updating, because the per-service SID has not changed. This method allows the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service to be renamed during upgrades.
 
 During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup creates a local Windows groups for [!INCLUDE[ssAS](../../includes/ssas-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service. For these services, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configures the ACL for the local Windows groups.
 
@@ -260,7 +260,7 @@ The following table shows permissions that [!INCLUDE[ssNoVersion](../../includes
 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service|Permissions granted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT SERVICE\MSSQLSERVER**. Named instance: **NT SERVICE\MSSQL$**InstanceName.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> Permission to start SQL Writer<br /><br /> Permission to read the Event Log service<br /><br /> Permission to read the Remote Procedure Call service|
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT SERVICE\MSSQLSERVER**. Named instance: **NT Service\SQLAGENT$**_InstanceName_.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> Permission to start SQL Writer<br /><br /> Permission to read the Event Log service<br /><br /> Permission to read the Remote Procedure Call service|
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:** \*<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT Service\SQLSERVERAGENT**. Named instance: **NT Service\SQLAGENT$**_InstanceName_.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (All rights are granted to a local Windows group. Default instance: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. Named instance: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_.)|**Log on as a service** (SeServiceLogonRight)<br /><br /> For tabular only:<br /><br /> **Increase a process working set** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)<br /><br /> **Lock pages in memory** (SeLockMemoryPrivilege) - this is needed only when paging is turned off entirely.<br /><br /> For failover cluster installations only:<br /><br /> **Increase scheduling priority** (SeIncreaseBasePriorityPrivilege)|
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (All rights are granted to the per-service SID. Default instance: **NT SERVICE\ReportServer**. Named instance: **NT SERVICE\\ReportServer$**_InstanceName_.)|**Log on as a service** (SeServiceLogonRight)|

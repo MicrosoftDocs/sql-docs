@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "EKM provider enabled option"
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # EKM provider enabled Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: "Sequence Type Matching | Microsoft Docs"
+description: Learn how to match the sequence type returned by an XQuery expression with a specific type.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

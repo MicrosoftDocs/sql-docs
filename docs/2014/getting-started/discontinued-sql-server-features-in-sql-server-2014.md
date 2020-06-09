@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Discontinued SQL Server Features in SQL Server 2014

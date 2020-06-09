@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Change a SQL Server Authentication User Password (OLE DB)

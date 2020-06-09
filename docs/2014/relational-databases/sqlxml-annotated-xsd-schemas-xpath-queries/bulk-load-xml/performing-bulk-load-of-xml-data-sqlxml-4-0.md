@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "XDR schemas [SQLXML], XML Bulk Load"
   - "inserting data"
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Performing Bulk Load of XML Data (SQLXML 4.0)

@@ -16,7 +16,7 @@ manager: craigg
   
  Color scheme changes do not take effect during the session in which you make them. You can evaluate color changes by opening another instance of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and producing the conditions under which you expect your changes to apply.  
   
-## UIElement List  
+## UI element list  
  **Show settings for**  
  Lists all the user interface elements for which you can change font and color schemes. After selecting an item from this list you can customize color settings for the item selected in **Display items**.  
   

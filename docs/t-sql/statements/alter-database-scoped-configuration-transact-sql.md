@@ -406,7 +406,7 @@ Sets Transact-SQL and query processing behaviors to be compatible with the speci
 
 ## <a name="Permissions"></a> Permissions
 
-Requires `ALTER ANY DATABASE SCOPE CONFIGURATION` on the database. This permission can be granted by a user with CONTROL permission on a database.
+Requires `ALTER ANY DATABASE SCOPED CONFIGURATION` on the database. This permission can be granted by a user with CONTROL permission on a database.
 
 ## General Remarks
 

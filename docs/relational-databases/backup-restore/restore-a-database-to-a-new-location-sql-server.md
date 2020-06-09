@@ -1,5 +1,6 @@
 ---
 title: "Restore a Database to a New Location (SQL Server) | Microsoft Docs"
+description: This article shows you how to restore a SQL Server database to a new location and rename the database by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql

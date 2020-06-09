@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Introduction to Memory-Optimized Tables

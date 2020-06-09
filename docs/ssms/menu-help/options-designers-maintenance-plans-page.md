@@ -17,7 +17,7 @@ ms.author: "maghan"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use the **Options** dialog box to determine the default behavior of the designer when new shapes are added to the design surface. On the **Tools** menu, click **Options**, expand **Designers**, and select **Maintenance Plans**.  
   
-## UIElement List  
+## UI element list  
 **Connect a new shape to the selected shape by default**  
 When this check box is selected, new shapes automatically connect to other shapes when they are added to the design surface. When this check box is cleared, new shapes are not connected when they are added. Selecting this check box enables the following boxes.  
   

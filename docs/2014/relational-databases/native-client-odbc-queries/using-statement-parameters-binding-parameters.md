@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ODBC applications, parameters"
   - "bound parameter markers [SQL Server Native Client]"
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Binding Parameters

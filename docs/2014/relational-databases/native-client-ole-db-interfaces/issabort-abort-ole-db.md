@@ -13,8 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "Abort method"
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # ISSAbort::Abort (OLE DB)

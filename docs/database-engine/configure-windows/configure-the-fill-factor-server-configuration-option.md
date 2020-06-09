@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "fill factor option [SQL Server]"
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the fill factor Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

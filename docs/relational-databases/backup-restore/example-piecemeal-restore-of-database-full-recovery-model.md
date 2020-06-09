@@ -1,5 +1,6 @@
 ---
 title: "Piecemeal restore: full recovery model"
+description: This example shows a piecemeal restore in SQL Server of a database using the full recovery model, beginning with a tail-log backup.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

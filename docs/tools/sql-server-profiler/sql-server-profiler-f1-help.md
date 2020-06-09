@@ -1,6 +1,7 @@
 ---
 title: SQL Server Profiler dialog boxes
 titleSuffix: SQL Server Profiler
+description: Explore the commands and settings that are available in SQL Server Profiler for use in traces, templates, files, tables, performance counters, and replays.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

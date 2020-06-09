@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ODBC data types, text columns"
   - "image columns [ODBC]"
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Managing Text and Image Columns

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Aggregation Design Wizard)
   Use the **Completing the Wizard** page to save the aggregation design to the selected partitions. You can also optionally deploy and process the selected partitions after the Aggregation Design Wizard finishes designing and saving the aggregations.  

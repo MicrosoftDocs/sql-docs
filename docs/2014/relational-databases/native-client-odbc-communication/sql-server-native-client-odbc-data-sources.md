@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data sources"
   - "ODBC data sources"
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQL Server Native Client ODBC Data Sources

@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "rowsets [ODBC]"
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Fetch and Update Rowsets (ODBC)

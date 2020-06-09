@@ -6,8 +6,8 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Transparent Data Encryption with Azure SQL Database

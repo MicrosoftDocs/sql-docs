@@ -73,7 +73,7 @@ To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learnin
     BEGIN
       SET NOCOUNT ON;
       DECLARE @query nvarchar(max) =  
-      N'SELECT tipped FROM nyctaxi_sample'  
+      N'SELECT tipped FROM [dbo].[nyctaxi_sample]'  
       EXECUTE sp_execute_external_script @language = N'R',  
                                          @script = N'  
        image_file = tempfile();  

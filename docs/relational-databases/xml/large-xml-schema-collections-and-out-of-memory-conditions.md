@@ -1,5 +1,6 @@
 ---
 title: "Out-of-memory with large XML schema collections | Microsoft Docs"
+description: Learn about solutions for handling out-of-memory conditions when loading or dropping a large XML schema collection.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

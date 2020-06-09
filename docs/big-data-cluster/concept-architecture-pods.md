@@ -25,7 +25,7 @@ This article describes the pods deployed with `aks-dev-test-ha` profile and incl
 kubectl get pods -n <namespace>
 ```
 
-Replace `<namespace>` with the Kubernetes namespace of your big data cluster. 
+Replace `<namespace>` with the name of your big data cluster. 
 
 For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
 

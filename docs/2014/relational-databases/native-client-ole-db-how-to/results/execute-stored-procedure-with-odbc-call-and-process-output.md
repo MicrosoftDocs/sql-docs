@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "stored procedures [ODBC]"
   - "ODBC CALL syntax"
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Execute a Stored Procedure (Using ODBC CALL Syntax) and Process Return Codes and Output Parameters (OLE DB)

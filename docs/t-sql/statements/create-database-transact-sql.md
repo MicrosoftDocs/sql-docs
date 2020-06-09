@@ -928,7 +928,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ### Copy a database
 
-```stntaxsql
+```syntaxsql
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =

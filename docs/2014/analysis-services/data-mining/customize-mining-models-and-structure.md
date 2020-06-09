@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Customize Mining Models and Structure
   After you have selected an algorithm that meets your business needs, you can customize the mining model in the following ways to potentially improve results.

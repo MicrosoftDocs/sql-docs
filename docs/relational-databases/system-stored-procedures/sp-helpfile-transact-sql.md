@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpfile"
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

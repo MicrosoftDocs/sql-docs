@@ -1,5 +1,6 @@
 ---
 title: "Grant Permissions on an XML Schema Collection | Microsoft Docs"
+description: Learn how to grant permissions to create an XML schema collection and also to grant permissions on an XML schema collection object.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

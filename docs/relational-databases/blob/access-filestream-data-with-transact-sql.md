@@ -1,5 +1,6 @@
 ---
 title: "Access FILESTREAM Data with Transact-SQL | Microsoft Docs"
+description: Learn how to use the Transact-SQL INSERT, UPDATE, and DELETE statements to access and manage FILESTREAM data.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

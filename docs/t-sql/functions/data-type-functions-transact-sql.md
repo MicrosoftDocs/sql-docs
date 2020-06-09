@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # Data Type Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

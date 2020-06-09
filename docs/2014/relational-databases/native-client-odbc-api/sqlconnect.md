@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLConnect function"
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLConnect

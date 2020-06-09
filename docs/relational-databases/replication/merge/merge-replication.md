@@ -1,5 +1,6 @@
 ---
 title: "Merge Replication | Microsoft Docs"
+description: Merge replication uses a snapshot of the publication database objects and data, and then tracks modifications at the Publisher and Subscribers with triggers.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

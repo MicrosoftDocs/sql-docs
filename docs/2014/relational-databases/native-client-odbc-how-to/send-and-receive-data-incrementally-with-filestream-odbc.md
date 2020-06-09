@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Send and Receive Data Incrementally with FILESTREAM (ODBC)

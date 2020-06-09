@@ -63,7 +63,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
-
+gi
 ## <a id="cu4"></a> CU4 (April 2020)
 
 Cumulative Update 4 (CU4) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4033.1.

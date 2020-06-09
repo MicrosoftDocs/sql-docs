@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Process Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Process** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to process [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects. You can display the **Process** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by:  

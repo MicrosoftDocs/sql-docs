@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "cursors [ODBC], concurrency"
   - "ODBC cursors, concurrency"
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Cursor Concurrency (ODBC)

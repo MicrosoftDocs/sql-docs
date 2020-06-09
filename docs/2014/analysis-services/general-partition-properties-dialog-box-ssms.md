@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # General (Partition Properties Dialog Box) (SSMS)
   Use the **General** page of the **Partition Properties** dialog box in SQL Server Management Studio to set the general properties of a partition in a measure group for a cube in an [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  

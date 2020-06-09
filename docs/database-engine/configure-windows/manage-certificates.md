@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "installing certificates"
   - "security [SQL Server], encryption"
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Certificate Management (SQL Server Configuration Manager)
 

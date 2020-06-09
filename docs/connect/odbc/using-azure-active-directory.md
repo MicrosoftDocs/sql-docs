@@ -2,7 +2,7 @@
 title: "Using Azure Active Directory with the ODBC Driver"
 description: "The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to an instance of Azure SQL Database using Azure Active Directory."
 ms.custom: ""
-ms.date: "03/18/2020"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -172,5 +172,5 @@ SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};U
 ~~~
 
 ## See Also
-[Token-based authentication support for Azure SQL DB using Azure AD auth](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
 
+[Token-based authentication support for Azure SQL DB using Azure AD auth](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)

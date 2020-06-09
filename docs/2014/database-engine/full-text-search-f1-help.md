@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Full-Text Search F1 Help

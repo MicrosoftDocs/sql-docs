@@ -1,5 +1,6 @@
 ---
 title: "Create a FILESTREAM-Enabled Database | Microsoft Docs"
+description: Configure a database to support FILESTREAM by using the CONTAINS FILESTREAM clause when you create or alter the database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

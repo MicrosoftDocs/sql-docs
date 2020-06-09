@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ODBC applications, header files"
   - "SQLNCLI, library files"
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using the SQL Server Native Client Header and Library Files

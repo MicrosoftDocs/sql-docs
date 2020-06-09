@@ -42,7 +42,7 @@ manager: craigg
     > [!TIP]  
     >  After disabling AlwaysOn Availability Groups, you should remove any local availability replicas from the server instance. If you remove the last replica of a given availability group, you should also remove the group.  
   
-## UIElement List  
+## UI element list  
   
 > [!NOTE]  
 >  For more information about follow up after you disable AlwaysOn Availability Groups and for information about how to create and configure availability groups, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online.  

@@ -1,5 +1,6 @@
 ---
 title: "Modify XML Indexes | Microsoft Docs"
+description: Learn how the ALTER INDEX (Transact-SQL) DDL statement can be used to modify existing XML and non-XML indexes. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

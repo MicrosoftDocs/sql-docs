@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EOMONTH function"
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EOMONTH (Transact-SQL)
@@ -51,7 +51,7 @@ The `EOMONTH` function can remote to [!INCLUDE[ssSQL11](../../includes/sssql11-m
   
 ### A. EOMONTH with explicit datetime type  
   
-```  
+```sql 
 DECLARE @date DATETIME = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
@@ -68,7 +68,7 @@ Result
 
 ### B. EOMONTH with string parameter and implicit conversion  
   
-```  
+```sql
 DECLARE @date VARCHAR(255) = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  

@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, rowset creation"
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Table-Valued Parameter Rowset Creation

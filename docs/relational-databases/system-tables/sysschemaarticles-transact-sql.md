@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysschemaarticles system table"
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: "ObjectType Trace Event Column | Microsoft Docs"
+description: Refer to the possible values of the Object Type trace event column, which is used in a variety of trace events in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

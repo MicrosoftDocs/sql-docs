@@ -1,5 +1,6 @@
 ---
 title: "Back Up and Restore of SQL Server Databases | Microsoft Docs"
+description: This article describes the benefits of backing up SQL Server databases and introduces backup and restore strategies and security considerations.
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql

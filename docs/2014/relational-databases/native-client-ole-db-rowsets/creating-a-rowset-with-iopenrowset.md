@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, rowsets"
   - "OLE DB rowsets, creating"
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Creating a Rowset with IOpenRowset

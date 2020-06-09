@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLDrivers function"
 ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLDrivers

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, programming"
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Appendix C: Programming with ADO in Development Environments
 ADO is a COM automation interface component that can be used with many programming languages, including Microsoft Visual Basic, VBScript, JScript and Visual C++. A version of ADO is installed with each of these tools and other applications, such as Microsoft Office and Microsoft SQL Server.

@@ -23,22 +23,37 @@ The following article provides reference for the `bdc endpoint` command in the `
 [azdata bdc endpoint list](#azdata-bdc-endpoint-list) | Lists the endpoints for the Big Data Cluster.
 ## azdata bdc endpoint list
 Lists the endpoints for the Big Data Cluster.
+
 ```bash
 azdata bdc endpoint list [--endpoint-name -e] 
-       ```
+```
+
 ### Optional Parameters
+
 #### `--endpoint-name -e`
+
 Big data cluster endpoint name.
+
 ### Global Arguments
+
 #### `--debug`
+
 Increase logging verbosity to show all debug logs.
+
 #### `--help -h`
+
 Show this help message and exit.
+
 #### `--output -o`
+
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+
 #### `--query -q`
+
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+
 #### `--verbose`
+
 Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps

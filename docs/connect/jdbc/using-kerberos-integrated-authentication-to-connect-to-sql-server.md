@@ -68,7 +68,7 @@ For more information about service principal names (SPNs), see:
 
 - [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Using Kerberos with SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Using Kerberos with SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Before 6.2 release of JDBC driver, for proper use of Cross Realm Kerberos, you would need to explicitly set the **serverSpn**.

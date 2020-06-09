@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "number of characters"
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
-ms.author: mikeray
+ms.author: pelopes
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEN (Transact-SQL)

@@ -30,19 +30,19 @@ manager: craigg
   
 -   **Blogs:**  
   
-     [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)  
+     [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
-     [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+     [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
-     [Monitoring AlwaysOn Health with PowerShell - Part 1: Basic Cmdlet Overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+     [Monitoring AlwaysOn Health with PowerShell - Part 1: Basic Cmdlet Overview](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
-     [Monitoring AlwaysOn Health with PowerShell - Part 2: Advanced Cmdlet Usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+     [Monitoring AlwaysOn Health with PowerShell - Part 2: Advanced Cmdlet Usage](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
   
-     [Monitoring AlwaysOn Health with PowerShell - Part 3 : A Simple Monitoring Application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+     [Monitoring AlwaysOn Health with PowerShell - Part 3 : A Simple Monitoring Application](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
   
-     [Monitoring AlwaysOn Health with PowerShell - Part 4 : Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+     [Monitoring AlwaysOn Health with PowerShell - Part 4 : Integration with SQL Server Agent](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
   
-     [SQL Server AlwaysOn Team Blogs: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn Team Blogs: The official SQL Server AlwaysOn Team Blog](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
   

@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [ODBC]"
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Executing Queries How-to Topics (ODBC)

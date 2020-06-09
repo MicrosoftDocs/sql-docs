@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), descriptor fields"
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Table-Valued Parameter Descriptor Fields

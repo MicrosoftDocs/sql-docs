@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to Microsoft SQL Server Analysis Services (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to import data from a Microsoft SQL Server Analysis Services cube or a PowerPivot workbook that is hosted on SharePoint. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -21,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  The credentials of the current user are used when selecting a database in this page. However, import will not succeed if the user specified in the Impersonation Information page does not have sufficient privileges to read from the selected database.  
   
-## UIElement List  
+## UI element list  
  **Friendly connection name**  
  Type a unique name for this data source connection. This is a required field.  
   

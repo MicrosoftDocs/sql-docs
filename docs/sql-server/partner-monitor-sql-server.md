@@ -1,11 +1,11 @@
 ---
 title: Monitor SQL Server partners | Microsoft Docs
 description: Lists of third-party partners with solutions to monitor Server.
-services: sql-server
 ms.topic: conceptual
 ms.custom: ""
 ms.date: 11/02/2017 
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---

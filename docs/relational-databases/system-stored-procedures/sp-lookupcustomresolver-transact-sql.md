@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_lookupcustomresolver"
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

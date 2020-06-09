@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Columns with a Name Specified as a Wildcard Character

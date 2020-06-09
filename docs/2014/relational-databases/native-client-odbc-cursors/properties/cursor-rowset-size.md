@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC cursors, rowset size"
   - "rowsets [ODBC]"
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Cursor Rowset Size

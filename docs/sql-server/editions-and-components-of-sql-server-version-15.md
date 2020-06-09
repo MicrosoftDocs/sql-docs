@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"
@@ -32,7 +32,6 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: rothj
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
@@ -158,7 +157,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Resumable online index rebuilds|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|
-|Accelerated database recovery|Yes|Yes|No|No|No|
+|Accelerated database recovery|Yes|Yes|Yes|No|No|
 |Mirrored backups|Yes|No|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
@@ -415,11 +414,10 @@ For information about the Business Intelligence Client features supported by the
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No|
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|
 
-[![Download SSMS](https://docs.microsoft.com/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**
-
 ## Next steps
 
 [Product Specifications for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
 [Installation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../database-engine/install-windows/installation-for-sql-server-2016.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

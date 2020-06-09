@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Flush method [ADO]"
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Flush Method (ADO)
 Forces the contents of the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) remaining in the ADO buffer to the underlying object with which the **Stream** is associated.  

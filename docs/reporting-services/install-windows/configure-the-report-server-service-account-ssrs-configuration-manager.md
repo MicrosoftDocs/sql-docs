@@ -47,7 +47,7 @@ ms.date: 12/04/2019
   
 2. On the Service Account page, select the option that describes the type of account you want to use.  
   
-3. If you selected a Windows user account, specify the new account and password. The account can't be more than 20 characters.  
+3. If you selected a Windows user account, specify the new account and password. The account can't be more than 20 characters and can't contain special characters " / \ [ ] : ; | = , + * ? < > ' per Windows user account naming rules.  
   
      If the report server is deployed in a network that supports Kerberos authentication, you must register the report server Service Principal Name (SPN) with the domain user account you specified. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   

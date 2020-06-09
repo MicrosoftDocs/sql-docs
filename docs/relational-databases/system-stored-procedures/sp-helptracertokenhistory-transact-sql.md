@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helptracertokenhistory"
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

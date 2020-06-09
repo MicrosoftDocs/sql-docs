@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Comparing Tabular and Multidimensional Solutions (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides two distinct approaches for data modeling: tabular and multidimensional. While there is significant overlap between them, there are also important differences that will inform your decision about how to move forward. In this topic, we offer feature comparisons and explain how each approach addresses common project requirements. For example, if support of a specific data source is a top consideration, the section on data sources can help guide your decision on which modeling approach to use.  

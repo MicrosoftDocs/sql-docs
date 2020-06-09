@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLDescribeParam function"
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLDescribeParam

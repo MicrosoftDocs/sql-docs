@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "C2 Audit Mode option"
   - "recording attempts"
 ms.assetid: 5a8d73a6-c4f6-4967-ba11-ecbcfc90b9cc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # c2 audit mode Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

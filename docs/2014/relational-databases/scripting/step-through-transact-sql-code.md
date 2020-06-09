@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, step out"
   - "Transact-SQL debugger, step into"
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Step Through Transact-SQL Code

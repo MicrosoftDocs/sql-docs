@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_colfmt function"
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_colfmt

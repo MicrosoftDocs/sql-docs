@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), descriptor header field"
   - "table-valued parameters (ODBC), statement attribute"
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Statement Attributes that Affect Table-Valued Parameters

@@ -18,8 +18,8 @@ manager: craigg
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|9004|  
 |Event Source|MSSQLSERVER|  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sp_dbmmonitorhelpmonitoring"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dbmmonitorhelpmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_add_principalprofile_sp"
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

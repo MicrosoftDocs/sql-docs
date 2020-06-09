@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Lesson 3: Configuring Distribution

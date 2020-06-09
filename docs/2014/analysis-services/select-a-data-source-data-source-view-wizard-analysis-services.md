@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select a Data Source (Data Source View Wizard) (Analysis Services)
   Use the **Select a Data Source** page to select a data source for the data source view.  

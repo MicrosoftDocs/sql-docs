@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, large value data types"
   - "SQL Server Native Client OLE DB provider, large value data types"
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using Large Value Types

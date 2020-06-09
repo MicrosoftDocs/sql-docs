@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "bulk copy [ODBC], changes for date/time improvements"
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)

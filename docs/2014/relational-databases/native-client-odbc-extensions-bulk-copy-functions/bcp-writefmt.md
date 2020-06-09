@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_writefmt function"
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_writefmt

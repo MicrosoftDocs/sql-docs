@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLNCLI, about SQL Server Native Client"
   - "data access [SQL Server Native Client], about SQL Server Native Client"
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # When to Use SQL Server Native Client

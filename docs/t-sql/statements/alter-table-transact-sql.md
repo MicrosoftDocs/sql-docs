@@ -646,7 +646,7 @@ Specifies that *constraint_name* or *column_name* is removed from the table. Mul
 - Bound to a rule.
 
 > [!NOTE]
-> Dropping a column doesn't reclaim the disk space of the column. You may have to reclaim the disk space of a dropped column when the row size of a table is near, or has exceeded, its limit. Reclaim space by creating a clustered index on the table or rebuilding an existing clustered index by using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). For information about the impact of dropping LOB data types, see this [CSS blog entry](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx).
+> Dropping a column doesn't reclaim the disk space of the column. You may have to reclaim the disk space of a dropped column when the row size of a table is near, or has exceeded, its limit. Reclaim space by creating a clustered index on the table or rebuilding an existing clustered index by using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). For information about the impact of dropping LOB data types, see this [CSS blog entry](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower).
 
 PERIOD FOR SYSTEM_TIME  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

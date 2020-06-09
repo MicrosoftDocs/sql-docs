@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], XML schema collections"
   - "ALTER permission"
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Grant Permissions on an XML Schema Collection

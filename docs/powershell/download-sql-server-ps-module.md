@@ -46,7 +46,7 @@ You can use the [PowerShell extension](../azure-data-studio/powershell-extension
 
 ## Installing or updating the SqlServer module
 
-To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session as an administrator. You also start Azure Data Studio as an administrator and run these commands in a PowerShell session in the integrated terminal.
+To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](/powershell/scripting/overview) session as an administrator. You also start Azure Data Studio as an administrator and run these commands in a PowerShell session in the integrated terminal.
 
 ### Install the SqlServer module
 

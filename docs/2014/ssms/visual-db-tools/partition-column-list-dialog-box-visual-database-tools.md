@@ -18,7 +18,7 @@ manager: craigg
   
  For more information on partition schemes and functions see SQL Server Books Online.  
   
-## UIElement List  
+## UI element list  
  Data Type  
  Shows the data types of the columns defined in the partition scheme.  
   

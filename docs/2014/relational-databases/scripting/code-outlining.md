@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], outlining code"
   - "Query Editor [SQL Server Management Studio], hiding code"
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Code Outlining

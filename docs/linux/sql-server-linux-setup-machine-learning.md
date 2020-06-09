@@ -245,9 +245,8 @@ Includes:
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python)
-# Be sure to include -9.4.7* in mlsservices package names
-sudo zypper install mssql-mlservices-mlm-py-9.4.7*
-sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
+sudo zypper install mssql-mlservices-mlm-py
+sudo zypper install mssql-mlservices-mlm-r
 ```
 
 ### Minimum installation 
@@ -263,9 +262,8 @@ Includes:
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python extensions
-# Be sure to include -9.4.6* in mlsservices package names
-sudo zypper install mssql-mlservices-packages-py-9.4.7*
-sudo zypper install mssql-mlservices-packages-r-9.4.7*
+sudo zypper install mssql-mlservices-packages-py
+sudo zypper install mssql-mlservices-packages-r
 ```
 
 ## Post-install config (required)

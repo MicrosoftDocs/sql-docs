@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 819d0a4e-7815-4332-a605-b07ca2ade6ac
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Cube Hierarchy Properties
   Cube hierarchy properties enable you to specify unique settings for user-defined hierarchies in cube dimensions based on the same database dimension. The following table describes the properties of a cube hierarchy.  

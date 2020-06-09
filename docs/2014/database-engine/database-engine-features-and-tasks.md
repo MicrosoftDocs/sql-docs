@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], development"
   - "development [SQL Server Database Engine]"
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Database Engine Features and Tasks

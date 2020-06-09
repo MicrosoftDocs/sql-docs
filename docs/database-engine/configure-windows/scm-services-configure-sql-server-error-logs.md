@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.configurelogs.configureerrorlogs.f1"
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # SCM Services - Configure SQL Server Error Logs
 

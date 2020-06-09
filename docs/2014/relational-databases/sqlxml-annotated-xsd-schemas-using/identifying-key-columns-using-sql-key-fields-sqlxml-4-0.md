@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "key-fields annotation"
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Identifying Key Columns Using sql:key-fields (SQLXML 4.0)

@@ -1,6 +1,7 @@
 ---
 title: "Tablix Data Region (Report Builder) | Microsoft Docs"
-ms.date: 03/07/2017
+description: Display paginated report data in cells that are organized into rows and columns with a tablix data region in Report Builder.
+s.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design

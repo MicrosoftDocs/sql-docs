@@ -1,5 +1,6 @@
 ---
 title: "Replication Distribution Agent | Microsoft Docs"
+description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql
@@ -58,6 +59,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -199,6 +201,9 @@ distrib [-?]
 -   The **MessageInterval** value is reached after the last history event is logged.  
   
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
+
+**-MultiSubnetFailover**
+ Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Specifies the minimum size, in bytes, for binary large object data above which the data will be bound as a stream. You must specify **-UseOledbStreaming** to use this parameter. Values can range from 400 to 1048576 bytes, with a default of 16384 bytes.  
@@ -293,6 +298,7 @@ distrib [-?]
 |Updated content|  
 |---------------------|  
 |Added the **-ExtendedEventConfigFile** parameter.|  
+|Added the **-MultiSubnetFailover** parameter.|  
   
 ## See Also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  

@@ -45,7 +45,7 @@ ms.date: 04/07/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Generate and Publish Scripts Wizard 
+# Generate and Publish Scripts Wizard
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -153,6 +153,8 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 - **Append to file** - When **True**, this script is added to the bottom of an existing script, specified on the **Set Scripting Options** page. When **False**, the new script overwrites a previous script. The default is **False**.
 
+- **Check for object existence** - When **True**, adds the existence check before generating the create statement for your SQL Objects. For example: tables, views, functions, or stored procedures. The CREATE statement is wrapped in an IF statement. If you know your target is clean, the script is a lot cleaner. If you do NOT expect the objects to exist on the target, you get an error. The default is **False**.
+
 - **Continue scripting on error** - When **False**, scripting stops when an error occurs. When **True**, scripting continues. The default is **False**.
 
 - **Convert UDDTs to base types** - When **True**, user-defined data types (UDDT) are converted into the underlying base data types that were used to create them. Use **True** when the UDDT does not exist in the database where the script runs. When **False**, UDDTs are used. The default is **False**.
@@ -225,7 +227,7 @@ This page summarizes the options that you have selected in this wizard. To chang
 
 Use this page to monitor the progress of the wizard as it occurs.
 
-**Details** - View the **Action** column to see the progress of the wizard. After generating the scripts, the wizard saves the scripts to a file or uses them to publish to a Web service, depending on your selections. When each of these steps are complete, Select the value in the **Result** column to see the outcome of the corresponding step.
+**Details** - View the **Action** column to see the progress of the wizard. After generating the scripts, the wizard saves the scripts to a file or uses them to publish to a Web service, depending on your selections. When each of these steps is complete, Select the value in the **Result** column to see the outcome of the corresponding step.
 
 **Save Report** - Select to save the results of the wizard's progress to a file.
 

@@ -11,8 +11,8 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, login migration"
 ms.assetid: ""
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ms.custom: "seo-lt-2019"
 ---
 

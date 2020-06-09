@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Extended Events Sessions | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 05/26/2020
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: xevents
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "sessions"
   - "extend events [SQL Server]"
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQL Server Extended Events Sessions
@@ -24,9 +24,9 @@ manager: craigg
   
 ## Session States  
  The following illustration shows the various states of an Extended Events session.  
-  
- ![Extended event session state](../../database-engine/media/xesessionstate.gif "Extended event session state")  
-  
+
+![Extended event session state](../../database-engine/media/xesessionstate.png "Extended event session state")
+
  Referring to the preceding figure, note that session state changes as the different DDL commands are issued for an event session. The following table describes these changes in state.  
   
 |Illustration label|DDL statement|Description|  

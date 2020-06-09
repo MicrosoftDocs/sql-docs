@@ -12,8 +12,8 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Text Editor-Transact-SQL-IntelliSense)

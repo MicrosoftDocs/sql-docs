@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "open objects option"
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # open objects Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

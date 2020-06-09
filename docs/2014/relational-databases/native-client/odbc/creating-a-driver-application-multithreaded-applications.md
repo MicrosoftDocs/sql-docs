@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, multithreaded applications"
   - "multithreaded applications [SQL Server Native Client]"
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Multithreaded Applications

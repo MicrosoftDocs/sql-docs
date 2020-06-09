@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysschedules system table"
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

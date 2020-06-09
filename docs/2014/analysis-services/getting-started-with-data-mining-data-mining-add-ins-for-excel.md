@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Getting Started with Data Mining (Data Mining Add-ins for Excel)
   Data mining is the process of discovering meaningful patterns in data. Data mining is a natural complement to the process of exploring and understanding your data through traditional BI. Machine algorithms can process very large amounts of data and discover patterns and trends that would otherwise be hidden.  

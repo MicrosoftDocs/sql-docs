@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "editing data [ADO], adding multiple fields"
   - "editing data [ADO], AddNew method"
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Adding Multiple Fields and Values
 Occasionally, it might be more efficient to pass in an array of fields and their corresponding values to the **AddNew** method, rather than setting **Value** multiple times for each new field. If *FieldList* is an array, *Values* must also be an array with the same number of members; otherwise, an error occurs. The order of field names must match the order of field values in each array. The following code passes an array of fields and an array of values to the **AddNew** method.

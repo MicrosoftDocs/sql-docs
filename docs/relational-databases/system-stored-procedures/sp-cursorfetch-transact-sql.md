@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorfetch"
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

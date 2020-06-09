@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # ODBC Driver Behavior Change When Handling Character Conversions

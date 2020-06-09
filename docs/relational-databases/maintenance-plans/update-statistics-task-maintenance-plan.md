@@ -1,5 +1,6 @@
 ---
 title: "Update Statistics Task (Maintenance Plan) | Microsoft Docs"
+description: Learn how to update SQL Server information about the data in the tables and indexes by using the Use the Update Statistics Task.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

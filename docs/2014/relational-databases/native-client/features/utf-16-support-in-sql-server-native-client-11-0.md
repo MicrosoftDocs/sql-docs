@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: f2520424-8ef4-409f-8147-d83da5076e96
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # UTF-16 Support in SQL Server Native Client 11.0

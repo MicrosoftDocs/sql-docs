@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 73b89a9f-f403-4ab8-99f7-e3ceb870c260
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculated Member Builder Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Calculated Member Builder** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to build a calculated member.  

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "WillConnect event [ADO]"
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # WillConnect Event (ADO)
 The **WillConnect** event is called before a connection starts.  

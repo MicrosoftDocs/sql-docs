@@ -15,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "CERTPRIVATEKEY"
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-author: MikeRayMSFT
 author: VanMSFT
 ms.author: vanto
 ---

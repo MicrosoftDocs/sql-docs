@@ -1,5 +1,6 @@
 ---
 title: "Replication Merge Agent | Microsoft Docs"
+description: The Replication Merge Agent applies the initial snapshot held in database tables to the Subscribers, merges incremental data changes, and reconciles conflicts.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql

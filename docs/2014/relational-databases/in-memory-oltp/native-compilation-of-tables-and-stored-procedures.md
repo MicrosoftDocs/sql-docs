@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Native Compilation of Tables and Stored Procedures

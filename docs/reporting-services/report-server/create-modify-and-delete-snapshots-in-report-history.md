@@ -1,5 +1,6 @@
 ---
 title: "Create, Modify, and Delete Snapshots in Report History | Microsoft Docs"
+description: Learn how to maintain report history in Reporting Services by adding and deleting snapshots, or by modifying properties that affect report history storage.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "cursor threshold option"
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the cursor threshold Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

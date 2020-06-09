@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ADOX, object model"
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADOX Object Model
 The following diagram illustrates how objects are represented and related in ADOX. For more information about a specific object or collection, see the specific reference topic, or [ADOX Objects](../../../ado/reference/adox-api/adox-objects.md) and [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md).  

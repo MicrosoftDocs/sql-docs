@@ -2,7 +2,7 @@
 title: "Support Resources for the Microsoft Drivers for PHP"
 description: "Helpful resources when you are developing applications that use the Microsoft Drivers for PHP for SQL Server."
 ms.custom: ""
-ms.date: "10/15/2019"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -24,7 +24,7 @@ For the latest documentation, see the [Microsoft PHP Driver for SQL Server](micr
   
 For peer-to-peer support, visit the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
-To provide feedback, ask questions, or learn what the development team is considering, visit the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Team Blog](https://blogs.msdn.microsoft.com/sqlphp/).  
+To provide feedback, ask questions, or learn what the development team is considering, visit the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [SQL Server Drivers Blog](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers).  
   
 [Microsoft PHP driver for SQL Server source code on GitHub](https://github.com/Microsoft/msphpsql)  
   

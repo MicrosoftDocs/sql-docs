@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ADO MD, methods"
   - "methods [ADO MD]"
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO MD Methods
 

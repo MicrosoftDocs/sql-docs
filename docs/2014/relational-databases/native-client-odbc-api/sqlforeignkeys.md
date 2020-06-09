@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLForeignKeys function"
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLForeignKeys

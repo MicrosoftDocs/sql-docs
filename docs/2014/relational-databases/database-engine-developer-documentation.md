@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "developer's guide [SQL Server Database Engine]"
   - "Database Engine [SQL Server], development"
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Developer&#39;s Guide (Database Engine)

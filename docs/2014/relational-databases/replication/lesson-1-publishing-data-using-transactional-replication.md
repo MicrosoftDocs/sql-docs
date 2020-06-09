@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Lesson 1: Publishing Data Using Transactional Replication

@@ -1,5 +1,6 @@
 ---
 title: "Vary Polygon, Line, and Point Display by Rules and Analytical Data | Microsoft Docs"
+description:  Control display for polygons, lines, and points by setting options and rules, or by overriding options for embedded map elements in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQL Server Transaction Locking and Row Versioning Guide
 

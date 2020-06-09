@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "DropColumn function"
   - "SQL Server Native Client OLE DB provider, columns"
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Removing a Column from a SQL Server Table

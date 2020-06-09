@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "maximum number of simultaneous user connections"
   - "connections [SQL Server], simultaneous"
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the user connections Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

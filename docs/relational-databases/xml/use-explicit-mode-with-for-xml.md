@@ -1,5 +1,6 @@
 ---
 title: "Use EXPLICIT Mode with FOR XML | Microsoft Docs"
+description: Learn how using FOR XML EXPLICIT mode provides the most flexibility in generating XML from a query result.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

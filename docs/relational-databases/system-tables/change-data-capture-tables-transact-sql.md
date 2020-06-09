@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Change Data Capture Tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

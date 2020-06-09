@@ -39,7 +39,7 @@ A query execution plan is a definition of the following:
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
-> -  The ***[Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** is the compiled plan, as produced by the Query Optimizer based on estimations. This is the query plan that is store in the plan cache.        
+> -  The ***[Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** is the compiled plan, as produced by the Query Optimizer based on estimations. This is the query plan that is stored in the plan cache.        
 > -  The ***[Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md)*** is the compiled plan plus its [execution context](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). It becomes available **after the query execution has completed**. This includes actual runtime information such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], the elapsed and CPU time used during execution.         
 > -  The ***[Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)*** is the compiled plan plus its execution context. It is available for **in-flight query executions**, and updated every second. This includes runtime information such as the actual number of rows flowing through the [operators](../../relational-databases/showplan-logical-and-physical-operators-reference.md), elapsed time, and the estimated query progress.
 

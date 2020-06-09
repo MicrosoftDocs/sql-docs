@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.spl.searchpropertylisteditor.f1"
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Search Property List Editor

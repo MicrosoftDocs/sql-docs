@@ -1,5 +1,6 @@
 ---
 title: "Validate Expressions (XQuery) | Microsoft Docs"
+description: Learn about the validate expression in XQuery.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

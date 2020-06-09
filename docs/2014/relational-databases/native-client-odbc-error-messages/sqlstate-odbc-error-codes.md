@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLSTATEs"
   - "errors [ODBC], cause information"
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLSTATE (ODBC Error Codes)

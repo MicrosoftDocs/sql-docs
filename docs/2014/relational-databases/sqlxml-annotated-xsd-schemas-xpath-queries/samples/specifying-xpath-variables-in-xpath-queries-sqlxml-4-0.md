@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], XPath variables"
   - "XPath variables [SQLXML]"
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Specifying XPath Variables in XPath Queries (SQLXML 4.0)

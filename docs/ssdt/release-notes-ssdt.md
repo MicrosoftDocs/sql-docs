@@ -5,10 +5,10 @@ ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: markingmyname
-ms.author: maghan
-manager: jroth
-ms.reviewer: ""
+author: dzsquared
+ms.author: drskwier
+manager: viharp
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
@@ -39,6 +39,43 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## 15.9.5,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; May 27, 2020  
+_Build Number:_ &nbsp; 14.0.16218.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Added support for searching tasks and pipeline components by adding a search box in SSIS toolbox. |
+| Integration Services (SSIS) | Added progress bar when switching target server version. |
+| Integration Services (SSIS) | Added additional cloud configuration for Azure-enabled project and add Windows Authentication support for executing packages in Azure. |
+| Integration Services (SSIS) | Added assessment for packages to be executed in Azure in Azure-enabled project. |
+| Integration Services (SSIS) | Fixed an issue that in some cases VS instances cannot be listed in the installer |
+| Integration Services (SSIS) | Fixed an issue that this production cannot be uninstalled if the VS instance has been uninstalled. |
+| Integration Services (SSIS) | Fixed an issue that a script component copied from another one in the same package cannot be correctly loaded during debugging when target server version is lower than SQL Server 2019. |
+| Integration Services (SSIS) | Fixed an accessibility issue that luminosity ratio for the component connector lines are less than 3:1 under package designer window. |
+| Integration Services (SSIS) | Fixed an accessibility issue that luminosity ratio is less than 3:1 for “Fit View to window” control present under package designer window. |
+| Integration Services (SSIS) | Fixed an issue that Trasfer Database Task does not work when a database has filegroups that contains a filestream. |
+| Integration Services (SSIS) | Fixed an issue that when using ODBC components in Foreach Loop component, the ODBC component will meet 'Function sequence error' in the second loop during package execution. |
+| Integration Services (SSIS) | Fixed an issue that Rebuild Index Task UI will be cut off in low resolution mode. |
+| Integration Services (SSIS) | Fixed an issue that the "Sign In" button does not show up in high DPI mode. |
+| Integration Services (SSIS) | Fixed an issue that connection manager elements are displayed too large in high DPI mode. |
+| Integration Services (SSIS) | Fixed an issue that execution results are stacked on top of each other in high DPI mode. |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
+| Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source is not localized | &nbsp; |
+| When targeting SQL Server 2017 and SxS with SQL Server 2017 patched with CU19 or later CU, debugging packages containing Script Task/Component with breakpoints hangs if Run64BitRuntime is set to ture. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## 15.9.4,&nbsp; SSDT for VS 2017
 

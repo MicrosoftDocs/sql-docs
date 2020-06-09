@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_unsentitems database mail view"
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

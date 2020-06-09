@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Lesson 2: Creating a Subscription to the Merge Publication

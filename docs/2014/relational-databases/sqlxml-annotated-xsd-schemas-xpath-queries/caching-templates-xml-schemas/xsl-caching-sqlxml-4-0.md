@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "cache [SQLXML]"
   - "XSL caching [SQLXML]"
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # XSL Caching (SQLXML 4.0)

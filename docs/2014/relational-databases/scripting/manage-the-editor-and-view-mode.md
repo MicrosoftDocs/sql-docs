@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "displaying line numbers"
   - "view modes [SQL Server Management Studio]"
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Manage the Editor and View Mode

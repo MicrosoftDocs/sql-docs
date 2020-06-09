@@ -30,7 +30,7 @@ ms.author: mikeray
  For more information about how to create a utility control point, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). For more information about how to add an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
  
   
-### UIElement List  
+### UI element list  
  Managed Instance Health  
  Health status for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is displayed on the left side of the Utility Explorer content pane.  
   
@@ -113,7 +113,7 @@ ms.author: mikeray
  ## Deployed Data-tier Application Details (SQL Server Utility)
   Information in the Deployed Data-tier Applications view of Utility Explorer provides utilization data for individual data-tier applications, CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the data-tier application level for CPU utilization and for database data files and log files. You can also view property details for individual data-tier applications.  
   
-### UIElement List  
+### UI element list  
  List view  
  The list view in the top pane displays data about individual data-tier applications. Health state icons provide summary status for each data-tier application by utilization category:  
   
@@ -253,7 +253,7 @@ ms.author: mikeray
 ## Managed Instance Details (SQL Server Utility)
  Information in the Managed Instances view of Utility Explorer provides utilization data for individual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level, for a computer, for database files and log files, and at the level of storage volumes. You can also view property details for individual managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### UIElement List  
+### UI element list  
  List view  
  The list view in the top pane displays data about individual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listed in rows by ComputerName\InstanceName.  
   
@@ -411,7 +411,7 @@ ms.author: mikeray
 ## Utility Administration (SQL Server Utility)
 Use the Utility Administration tabs to manage policy, security, and data warehouse settings for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility concepts, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-### UIElement List
+### UI element list
  **Policy tab** - Use the policy tab to view or specify global monitoring policies.  
   
  Set global data-tier application monitoring policies. To expand the list of values for this option, click on the arrow next to the policy name, or click on the policy title.  

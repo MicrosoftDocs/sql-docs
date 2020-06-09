@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Lesson 1: Publishing Data Using Merge Replication

@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, date/time improvements"
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # OLE DB API Support for Date and Time Enhancements

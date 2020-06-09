@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ODBC cursors, isolation levels"
   - "row versioning [SQL Server], ODBC"
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Cursor Transaction Isolation Level

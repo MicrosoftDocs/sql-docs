@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "EXPLICIT mode"
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Example: Retrieving Employee Information

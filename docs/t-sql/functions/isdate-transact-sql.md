@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "time [SQL Server], validate"
   - "ISDATE function [SQL Server]"
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISDATE (Transact-SQL)

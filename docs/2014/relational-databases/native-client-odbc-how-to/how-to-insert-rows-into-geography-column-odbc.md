@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # How to: Insert Rows into Geography Column (ODBC)

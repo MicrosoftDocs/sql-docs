@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_add_job"
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-author: rothja
-ms.author: jroth
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Profiling ODBC Driver Performance How-to Topics (ODBC)

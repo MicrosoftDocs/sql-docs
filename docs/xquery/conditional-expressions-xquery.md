@@ -1,5 +1,6 @@
 ---
 title: "Conditional Expressions (XQuery) | Microsoft Docs"
+description: Learn about the conditional expressions that are supported by XQuery.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql

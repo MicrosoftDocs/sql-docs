@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # About the SQL Server License Terms (SSCM)

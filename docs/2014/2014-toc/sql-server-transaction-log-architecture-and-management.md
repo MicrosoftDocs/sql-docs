@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQL Server Transaction Log Architecture and Management
 

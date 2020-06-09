@@ -1,5 +1,6 @@
 ---
 title: "sp_dropsubscription (Transact-SQL) | Microsoft Docs"
+description: Drops subscriptions to an article, publication, or subscriptions on the Publisher. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropsubscription"
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

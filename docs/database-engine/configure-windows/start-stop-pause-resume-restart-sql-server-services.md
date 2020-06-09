@@ -37,8 +37,8 @@ helpviewer_keywords:
   - "administering SQL Server, starting and stopping services"
   - "Management Studio [SQL Server], starting or stopping services"
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ""
 ---
 

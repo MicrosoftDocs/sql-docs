@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "core.sp_purge_data stored procedure"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

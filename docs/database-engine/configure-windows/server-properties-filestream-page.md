@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], properties page"
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Server Properties - FILESTREAM Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## UIElement List  
+## UI element list  
  **Enable FILESTREAM for Transact-SQL access**  
  Select to enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access. This control must be checked before the other control options will be available.  
   

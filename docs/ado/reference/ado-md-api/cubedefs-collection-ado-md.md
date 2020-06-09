@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CubeDefs collection [ADO MD]"
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CubeDefs Collection (ADO MD)
 Contains the [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objects that represent a cube from a multidimensional catalog.  

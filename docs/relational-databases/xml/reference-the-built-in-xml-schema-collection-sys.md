@@ -1,5 +1,6 @@
 ---
 title: "Reference the Built-in XML Schema Collection (sys) | Microsoft Docs"
+description: Learn how to reference the built-in XML schema collection sys that is predefined for every database you create.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

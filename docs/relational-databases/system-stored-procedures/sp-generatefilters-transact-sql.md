@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_generatefilters"
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_generatefilters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

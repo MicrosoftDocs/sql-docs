@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), catalog functions to retrieve metadata"
   - "table-valued parameters (ODBC), metadata"
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Additional Table-Valued Parameter Metadata

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data updates [ADO], about data updates"
   - "updating data [ADO], about updating data"
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Updating Data
 Update behavior and functionality is largely dependent upon update mode (lock type), cursor type, and cursor location.  

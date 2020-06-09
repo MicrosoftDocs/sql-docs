@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "users [SQL Server], global defaults"
   - "user options option [SQL Server]"
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the user options Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

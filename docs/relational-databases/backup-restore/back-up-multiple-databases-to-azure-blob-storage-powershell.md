@@ -1,5 +1,6 @@
 ---
 title: "Back up multiple databases: Azure Blob Storage"
+description: This article provides sample scripts that can be used to automate backups in SQL Server to Azure Blob storage service using PowerShell cmdlets.
 titleSuffix: "PowerShell"
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"

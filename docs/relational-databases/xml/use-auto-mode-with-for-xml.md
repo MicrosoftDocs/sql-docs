@@ -1,5 +1,6 @@
 ---
 title: "Use AUTO Mode with FOR XML | Microsoft Docs"
+description: Learn how to use AUTO mode with the FOR XML clause to return query results as nested XML elements.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

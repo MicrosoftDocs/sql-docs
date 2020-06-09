@@ -9,11 +9,11 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Tips for using R packages
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 This article provides helpful tips on using R packages in SQL Server. These tips are for DBAs who are unfamiliar with R, and experienced R developers who are unfamiliar with package access in a SQL Server instance.
 
@@ -88,6 +88,6 @@ Using the following guidelines will help you avoid "package not found" errors.
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Install packages with R tools](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

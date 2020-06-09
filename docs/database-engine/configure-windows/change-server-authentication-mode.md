@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "server authentication mode [SQL Server]"
   - "modifying server authentication mode"
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 
 # Change server authentication mode

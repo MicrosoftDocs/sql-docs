@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_enumeratependingschemachanges"
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

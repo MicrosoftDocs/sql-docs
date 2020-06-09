@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "servers [SQL Server], remote"
   - "connections [SQL Server], remote servers"
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # View or Configure Remote Server Connection Options (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

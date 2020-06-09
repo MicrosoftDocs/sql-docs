@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Reason parameter [ADO]"
   - "event parameters [ADO]"
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Event Parameters
 Every event handler has a status parameter that controls the event handler. For Complete events, this parameter is also used to indicate the success or failure of the operation that generated the event. Most Complete events also have an error parameter to provide information about any error that might have occurred, and one or more object parameters that refer to the ADO objects used to perform the operation. For example, the [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) event includes object parameters for the **Command**, **Recordset**, and **Connection** objects associated with the event. In the following Microsoft® Visual Basic® example, you can see the pCommand, pRecordset, and pConnection objects which represent the **Command**, **Recordset**, and **Connection** objects that are used by the **Execute** method.  

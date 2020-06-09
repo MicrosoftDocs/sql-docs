@@ -1,5 +1,6 @@
 ---
 title: "Upgrade SQL Server | Microsoft Docs"
+description: This article provides links to resources that contain upgrade information for instances of different versions of SQL Server.
 ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql

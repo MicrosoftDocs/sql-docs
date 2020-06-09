@@ -11,8 +11,8 @@ dev_langs:
 helpviewer_keywords: 
   - "security dynamic management views"
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Security-Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

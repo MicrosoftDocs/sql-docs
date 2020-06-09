@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, columns"
   - "adding columns"
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Adding a Column to a SQL Server Table

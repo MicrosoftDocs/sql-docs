@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [ODBC], calling"
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Call Stored Procedures (ODBC)

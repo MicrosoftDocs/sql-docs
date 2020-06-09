@@ -1,5 +1,6 @@
 ---
 title: "Using Updategrams to Modify Data in SQLXML 4.0"
+description: View information and examples about updategrams and how they are used for modifying data in SQLXML 4.0.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

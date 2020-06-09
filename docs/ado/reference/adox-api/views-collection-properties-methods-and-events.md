@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Views collection [ADOX], members"
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Views Collection Properties, Methods, and Events
 ## Properties  

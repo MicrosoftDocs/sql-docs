@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [ODBC]"
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Log Long-Running Queries (ODBC)

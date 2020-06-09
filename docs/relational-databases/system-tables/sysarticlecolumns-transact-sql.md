@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysarticlecolumns system table"
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

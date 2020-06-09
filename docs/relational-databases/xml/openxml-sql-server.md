@@ -1,10 +1,11 @@
 ---
 title: "OPENXML (SQL Server) | Microsoft Docs"
+description: Learn about the OPENXML statement in SQL Server that provides a rowset view of the internal representation of an XML document.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
+ms.reviewer: jroth
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -53,13 +54,13 @@ ms.author: genemi
   
  In the following example, an XML document is shredded in a way that `<Customers>` elements are stored in the `Customers` table and `<Orders>` elements are stored in the `Orders` table by using two `INSERT` statements. The example also shows a `SELECT` statement with `OPENXML` that retrieves `CustomerID` and `OrderDate` from the XML document. The last step in the process is to call `sp_xml_removedocument`. This is done in order to release the memory allocated to contain the internal XML tree representation that was created during the parse phase.  
   
-```  
+```sql
 -- Create tables for later population using OPENXML.  
 CREATE TABLE Customers (CustomerID varchar(20) primary key,  
                 ContactName varchar(20),   
                 CompanyName varchar(20));  
 GO  
-CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime;)  
+CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime);
 GO  
 DECLARE @docHandle int;  
 DECLARE @xmlDocument nvarchar(max); -- or xml type  
@@ -84,7 +85,8 @@ SELECT *
 FROM OPENXML(@docHandle, N'//Orders')   
   WITH Orders;  
 -- Using OPENXML in a SELECT statement.  
-SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders') WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);  
+SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders')
+  WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);
 -- Remove the internal representation of the XML document.  
 EXEC sp_xml_removedocument @docHandle;   
 ```  
@@ -143,7 +145,8 @@ EXEC sp_xml_removedocument @docHandle;
 |**datatype**|**nvarchar(max)**|Is the actual data type of the element or attribute row and is otherwise NULL. The data type is inferred from the inline DTD or from the inline schema.|  
 |**prev**|**bigint**|Is the XML ID of the previous sibling element. Is NULL if there is no direct previous sibling.|  
 |**text**|**ntext**|Contains the attribute value or the element content in text form. Or is NULL, if the edge table entry does not need a value.|  
-  
+||||
+
 #### Using the WITH Clause to Specify an Existing Table  
  You can use the WITH clause to specify the name of an existing table. To do this, just specify an existing table name whose schema can be used by OPENXML to generate the rowset.  
   

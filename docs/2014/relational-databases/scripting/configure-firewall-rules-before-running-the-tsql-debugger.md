@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ports [SQL Server], Transact-SQL debugger"
   - "TCP/IP [SQL Server], port numbers"
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Configure the Transact-SQL Debugger

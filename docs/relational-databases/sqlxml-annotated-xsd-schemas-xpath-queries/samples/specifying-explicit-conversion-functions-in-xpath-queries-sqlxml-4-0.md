@@ -1,5 +1,6 @@
 ---
 title: "Use conversion functions in XPath Queries (SQLXML)"
+description: Learn how to specify the explicit conversion functions string() and number() in SQLXML 4.0 XPath queries.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

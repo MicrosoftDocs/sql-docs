@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "protocols [SQL Server], default settings"
   - "default protocols, after install"
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Default SQL Server Network Protocol Configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

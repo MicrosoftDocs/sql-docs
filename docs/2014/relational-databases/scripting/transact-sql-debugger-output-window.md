@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Output Window [Transact-SQL]"
   - "Output Window [SQL Server Management Studio]"
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Output Window

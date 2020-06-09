@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Error Severities | Microsoft Docs"
+description: Use this list of severity levels to understand the type of problem that SQL Server encountered when the SQL Server Database Engine raises an error.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

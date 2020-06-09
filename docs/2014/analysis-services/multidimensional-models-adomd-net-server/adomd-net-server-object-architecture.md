@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # ADOMD.NET Server Object Architecture
   The ADOMD.NET server objects are helper objects that can be used to create user defined functions (UDFs) or stored procedures in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

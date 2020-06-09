@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Server Configuration Options (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,6 +68,8 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
     |[ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
+    |[ADR cleaner retry timeout (min)](../../database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md)<br><br> Introduced in SQL Server 2019|0|32767|15|  
+    |[ADR Preallocation Factor](../../database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md)<br><br> Introduced in SQL Server 2019|0|32767|4|  
     |[affinity I/O mask](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A, only available on 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
@@ -118,6 +120,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsolete)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[polybase network encryption](../../relational-databases/polybase/polybase-installation.md#enable) | 0|1 |1
     |[polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  

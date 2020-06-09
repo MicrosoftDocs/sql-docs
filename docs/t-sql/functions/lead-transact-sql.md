@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "LEAD function"
   - "analytic functions, LEAD"
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEAD (Transact-SQL)
@@ -141,7 +141,7 @@ b           c           i
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  
        LEAD(SalesAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS NextQuota,  
-   SalesAmountQuota - LEAD(Sale sAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS Diff  
+   SalesAmountQuota - LEAD(SalesAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS Diff  
 FROM dbo.FactSalesQuota  
 WHERE EmployeeKey = 272 AND CalendarYear IN (2001,2002)  
 ORDER BY CalendarYear, CalendarQuarter;  

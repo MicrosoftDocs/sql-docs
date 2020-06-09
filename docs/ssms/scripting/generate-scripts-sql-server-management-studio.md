@@ -23,7 +23,7 @@ For a detailed Tutorial on scripting various objects using SQL Server Management
 
 ## Before You Begin
 
-Choose the mechanism that best meets your requirements.  
+Choose the mechanism that best meets your requirements. 
 
 ###  <a name="GenPubScriptWiz"></a> Generate and Publish Scripts Wizard
 

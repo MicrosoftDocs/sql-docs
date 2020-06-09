@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_targetsvrgrp_member"
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

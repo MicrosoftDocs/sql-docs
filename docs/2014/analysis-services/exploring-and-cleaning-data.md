@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Exploring and Cleaning Data
   Data preparation is much more than data cleansing. Remember that how data is prepared also affects how results are interpreted in the end. Data preparation involves these tasks:  

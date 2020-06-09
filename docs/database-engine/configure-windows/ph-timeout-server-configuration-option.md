@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "protocols [SQL Server], timing out"
   - "ph timeout option"
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # PH timeout Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

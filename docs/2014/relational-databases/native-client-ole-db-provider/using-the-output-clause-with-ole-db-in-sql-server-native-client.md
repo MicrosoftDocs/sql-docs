@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 53deeb99-c088-4fde-844b-b2d91d6de1eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using the OUTPUT Clause with OLE DB in SQL Server Native Client

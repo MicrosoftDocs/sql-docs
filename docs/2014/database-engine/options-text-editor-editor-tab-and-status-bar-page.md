@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.swb.sqleditors.editorcontextsettings"
   - "VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar"
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Text Editor: Editor Tab and Status Bar Page)

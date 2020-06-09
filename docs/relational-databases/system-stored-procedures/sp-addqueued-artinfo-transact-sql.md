@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addqueued_artinfo"
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

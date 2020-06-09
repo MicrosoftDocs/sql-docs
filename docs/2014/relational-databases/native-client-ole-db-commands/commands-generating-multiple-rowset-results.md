@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "commands [OLE DB]"
   - "multiple-rowset results"
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Commands Generating Multiple-Rowset Results

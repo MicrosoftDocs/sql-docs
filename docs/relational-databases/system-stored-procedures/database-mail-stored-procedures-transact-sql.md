@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "e-mail [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], mail"
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Database Mail Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

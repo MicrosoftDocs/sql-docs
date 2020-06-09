@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analysis Services MDX Query Designer (SSAS)
   The Analysis Services Multidimensional Expression (MDX) query designer provides a graphical user interfaces to help you create MDX queries for a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source. The MDX graphical query designer has two modes: design mode and query mode. Each mode provides a metadata pane from which you can drag members from the selected cubes to build an MDX query that retrieves the data you want to use.  

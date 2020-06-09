@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropmessage"
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

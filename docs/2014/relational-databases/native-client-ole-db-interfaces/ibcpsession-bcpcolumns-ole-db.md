@@ -13,8 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "BCPColumns method"
 ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # IBCPSession::BCPColumns (OLE DB)

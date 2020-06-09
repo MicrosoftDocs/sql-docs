@@ -590,7 +590,7 @@ RESTORE LOG AdventureWorks2012
   FROM AdventureWorksBackups
     WITH FILE = 4,
     RECOVERY,
-    STOPATMARK = 'UPDATE Product list prices';
+    STOPATMARK = ListPriceUpdate;
 ```
 
 [&#91;Top of examples&#93;](#examples)
@@ -765,7 +765,7 @@ FROM URL
 Specifies one or more backup devices placed on URLs that will be used for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service.
 
 > [!IMPORTANT]
-> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
+> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
 *n*
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "errors [OLE DB], SQL Server message results"
   - "OLE DB error handling, SQL Server message results"
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQL Server Message Results

@@ -1,5 +1,6 @@
 ---
 title: "Upgrade Database Engine | Microsoft Docs"
+description: The article provides links to resources that help you upgrade the SQL Server Database Engine from a prior release of SQL Server to SQL Server 2019.
 ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql

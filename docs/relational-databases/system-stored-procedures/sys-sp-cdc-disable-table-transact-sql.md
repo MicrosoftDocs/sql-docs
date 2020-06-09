@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sp_cdc_disable_table"
   - "change data capture [SQL Server], disabling tables"
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-author: rothja
-ms.author: jroth
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

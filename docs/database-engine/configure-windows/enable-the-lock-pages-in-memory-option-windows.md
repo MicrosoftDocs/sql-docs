@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Lock Pages in Memory option"
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Enable the Lock Pages in Memory Option (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

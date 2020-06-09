@@ -92,7 +92,7 @@ landingContent:
       - text: Use Azure Storage for backup & restore
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
 
-  - title: Azure SQL Database single database
+  - title: Azure SQL Database (PaaS)
     linkLists:
     - linkListType: learn
       links:
@@ -130,15 +130,13 @@ landingContent:
     - linkListType: reference 
       links:
       - text: Microsoft Learn
-        url: /azure/sql-database/sql-database-single-database
+        url: https://docs.microsoft.com/learn/
       - text: LinkedIn Learning
-        url: /azure/sql-database/sql-database-managed-instance
-      - text: Microsoft Virtual Academy
-        url: /azure/sql-database/sql-database-single-database
+        url: https://www.linkedin.com/learning/topics/sql-server
       - text: Pluralsight
-        url: /azure/sql-database/sql-database-managed-instance
+        url: https://www.pluralsight.com/browse/data-professional/sql-server
       - text: Channel 9
-        url: /azure/sql-database/sql-database-managed-instance
+        url: https://channel9.msdn.com/Tags/sql+server
 
   - title: SQL Server on Linux
     linkLists:
@@ -185,7 +183,7 @@ landingContent:
       - text: Configure replication
         url: ../linux/sql-server-linux-replication-tutorial-tsql.md
 
-  - title: Azure SQL Database managed instance 
+  - title: Azure SQL Managed Instance (PaaS)
     linkLists:
     - linkListType: quickstart
       links:

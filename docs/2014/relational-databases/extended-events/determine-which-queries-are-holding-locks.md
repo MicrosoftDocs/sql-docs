@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], locks"
   - "extended events [SQL Server], holding locks"
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Determine Which Queries Are Holding Locks

@@ -1,5 +1,6 @@
 ---
 title: "Replication Log Reader Agent | Microsoft Docs"
+description: The Replication Log Reader Agent monitors SQL Server databases configured for transactional replication and copies transactions to the distribution database.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql
@@ -44,7 +45,8 @@ logread [-?]
 [-LoginTimeOut login_time_out_seconds]  
 [-LogScanThreshold scan_threshold]  
 [-MaxCmdsInTran number_of_commands]  
-[-MessageInterval message_interval]  
+[-MessageInterval message_interval]
+[-MultiSubnetFailover [0|1]]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2|3|4]]  
 [-PacketSize packet_size]  
@@ -133,6 +135,9 @@ logread [-?]
  Is the time interval used for history logging. A history event is logged when the **MessageInterval** value is reached after the last history event is logged.  
   
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
+ 
+ **-MultiSubnetFailover** [**0**|**1**]
+ Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover to 1 (true) provides faster detection of and connection to the (currently) active server.
   
  **-Output** _output_path_and_file_name_  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  
@@ -195,6 +200,7 @@ logread [-?]
 |Updated content|  
 |---------------------|  
 |Added the **-ExtendedEventConfigFile** parameter.|  
+|Added the **-MultiSubnetFailover** parameter.|
   
 ## See Also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  

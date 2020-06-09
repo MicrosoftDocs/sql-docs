@@ -11,8 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Axis object [ADO MD], members"
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Axis Object Properties, Methods, and Events
 ## Properties/Collections  

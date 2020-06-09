@@ -349,6 +349,14 @@ SQL Server Version  |Redistributable Install Link
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
+    
+    > [!NOTE]
+    > If you do not log on to SSMS with the Windows account that the credential was added, the CREATE ASYMMETRIC KEY script may fail with the following error:
+    > 
+    > Msg 33046, Level 16, State 1, Line 1
+    > 
+    > Server principal 'public' has no credential associated with cryptographic provider 'AzureKeyVault_EKM_Prov'.
+    
 ## Next Step  
   
 Now that you have completed the basic configuration, see how to [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   

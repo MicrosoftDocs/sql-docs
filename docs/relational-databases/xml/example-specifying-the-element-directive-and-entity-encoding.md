@@ -1,5 +1,6 @@
 ---
-title: "Specify the ELEMENT eirective and entity encoding | Microsoft Docs"
+title: "Specify the ELEMENT directive and entity encoding | Microsoft Docs"
+description: Learn how to specify the ELEMENT directive in an SQL query so that the query result is entity encoded.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

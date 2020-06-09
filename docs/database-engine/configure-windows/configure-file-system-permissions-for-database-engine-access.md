@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "service account [SQL Server], file system permissions"
   - "permissions [SQL Server], file system"
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure File System Permissions for Database Engine Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.swb.sqleditors.multiserverresultssettings"
   - "VS.ToolsOptionsPages.QueryResults.SqlServer.SQLMultiServerResults"
 ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Query Results-SQL Server-Multi-Server)
@@ -19,7 +19,7 @@ manager: craigg
   
  When you do not merge results, the result set from each server will be displayed in its own grid with its own schema.  
   
-## UIElement List  
+## UI element list  
  **Merge results**  
  Select this check box to combine the result sets from several servers into the same grid.  
   

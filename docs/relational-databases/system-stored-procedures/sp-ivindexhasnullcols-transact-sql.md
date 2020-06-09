@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_ivindexhasnullcols"
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

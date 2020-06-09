@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Description property"
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Description Property
 Describes an [Error](../../../ado/reference/ado-api/error-object.md) object.  

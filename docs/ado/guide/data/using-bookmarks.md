@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "bookmarks [ADO]"
   - "Recordset object [ADO]"
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using Bookmarks
 It is often useful to return directly to a specific record after having moved around in the **Recordset** without having to scroll through every record and compare values. For example, if you attempt to search for a record using the **Find** method but the search returns no records, you are automatically placed at either end of the **Recordset**. If your provider supports them, bookmarks can be used to mark your place before using the **Find** method so you can return to your location. A bookmark is a **Variant** type value that uniquely identifies a record in a **Recordset** object.  

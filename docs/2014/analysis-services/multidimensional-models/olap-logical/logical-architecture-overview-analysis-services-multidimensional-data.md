@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Logical Architecture Overview (Analysis Services - Multidimensional Data)
   Analysis Services operates in a server deployment mode that determines the memory architecture and runtime environment used by different types of Analysis Services models. Server mode is determined during installation. **Multidimensional and Data Mining mode** supports traditional OLAP and data mining. **Tabular mode** supports tabular models. **SharePoint integrated mode** refers to an instance of Analysis Services that was installed as PowerPivot for SharePoint, used for loading and querying Excel or PowerPivot data models inside a workbook.

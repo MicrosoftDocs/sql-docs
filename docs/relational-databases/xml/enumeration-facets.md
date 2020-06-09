@@ -1,5 +1,6 @@
 ---
 title: "Enumeration Facets | Microsoft Docs"
+description: Learn how SQL Server uses enumeration facets to validate XML schemas.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

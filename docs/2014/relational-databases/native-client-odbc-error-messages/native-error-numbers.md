@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "messages [ODBC], native error numbers"
   - "errors [ODBC], native error numbers"
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Native Error Numbers

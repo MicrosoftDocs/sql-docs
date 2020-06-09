@@ -48,7 +48,7 @@ azdata bdc spark batch create --file -f
 ### Examples
 Create a new Spark batch.
 ```bash
-azdata spark batch create --code "2+2"
+azdata spark batch create --file "/path/to/file"
 ```
 ### Required Parameters
 #### `--file -f`

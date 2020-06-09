@@ -1,5 +1,6 @@
 ---
 title: "Schema Caching (SQLXML)"
+description: Learn how to use registry keys to explicitly control schema caching and improve the performance of an XPath query in SQLXML 4.0.
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

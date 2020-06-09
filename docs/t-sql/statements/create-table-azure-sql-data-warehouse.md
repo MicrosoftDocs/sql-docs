@@ -29,7 +29,7 @@ To understand tables and how to use them, see [Tables in SQL Data Warehouse](htt
 
 ## Syntax
   
-```
+```syntaxsql
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -46,8 +46,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <column_constraint>::=
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
-        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 
 <table_option> ::=

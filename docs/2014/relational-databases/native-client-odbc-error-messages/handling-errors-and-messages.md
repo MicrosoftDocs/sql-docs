@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "errors [ODBC], about error handling"
   - "messages [ODBC]"
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Handling Errors and Messages

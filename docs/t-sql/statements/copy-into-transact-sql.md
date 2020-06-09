@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (preview) 
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 04/24/2020
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -43,23 +43,23 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 ```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
-FROM ‘<external_location>’ [,...n]
+FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
  [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]	
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [,MAXERRORS = max_errors ] 
- [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
- [,FIELDQUOTE = ‘string_delimiter’] 
- [,FIELDTERMINATOR =  ‘field_terminator’]  
- [,ROWTERMINATOR = ‘row_terminator’]
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'| 'Snappy'}] 
+ [,FIELDQUOTE = 'string_delimiter'] 
+ [,FIELDTERMINATOR =  'field_terminator']  
+ [,ROWTERMINATOR = 'row_terminator']
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘date_format’] 
+ [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 
@@ -135,30 +135,31 @@ Multiple file locations can only be specified from the same storage account and 
 When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
 
 - Authenticating with Shared Access Signatures (SAS)
-  *IDENTITY: A constant with a value of ‘Shared Access Signature’*
-  *SECRET: The* [*shared access signature*](/azure/storage/common/storage-sas-overview) *provides delegated access to resources in your storage account.*
-  Minimum permissions required: READ and LIST
-
+  
+  - *IDENTITY: A constant with a value of ‘Shared Access Signature’*
+  - *SECRET: The* [*shared access signature*](/azure/storage/common/storage-sas-overview) *provides delegated access to resources in your storage account.*
+  -  Minimum permissions required: READ and LIST
+  
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
-  *SECRET: AAD Application Service Principal key*
-  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
-
-  > [!NOTE]  
-  > Use the OAuth 2.0 token endpoint **V1**
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET: AAD Application Service Principal key*
+  -  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
 
 - Authenticating with Storage account key
-  *IDENTITY: A constant with a value of ‘Storage Account Key’*
-  *SECRET: Storage account key*
+  
+  - *IDENTITY: A constant with a value of ‘Storage Account Key’*
+  - *SECRET: Storage account key*
   
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
-  *IDENTITY: A constant with a value of ‘Managed Identity’*
-  Minimum RBAC roles required: Storage blob data contributor, Storage blob data owner, or Storage blob data reader for the AAD registered SQL Database server 
+  
+  - *IDENTITY: A constant with a value of ‘Managed Identity’*
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server
   
 - Authenticating with an AAD user
-  *CREDENTIAL is not required*
-  Minimum RBAC roles required: Storage blob data contributor, Storage blob data owner, or Storage blob data reader for the AAD user
+  
+  - *CREDENTIAL is not required*
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD user
 
 *ERRORFILE = Directory Location*</br>
 *ERRORFILE* only applies to CSV. Specifies the directory within the COPY statement where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one will be created on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. 
@@ -315,7 +316,7 @@ WITH (
     ENCODING = 'UTF8',
     DATEFORMAT = 'ymd',
 	MAXERRORS = 10,
-	ERRORFILE = '/errorsfolder/',--path starting from the storage container
+	ERRORFILE = '/errorsfolder',--path starting from the storage container
 	IDENTITY_INSERT = 'ON'
 )
 ```
@@ -365,6 +366,19 @@ WITH (
 	FILE_TYPE = 'CSV'
 	CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
 	FIELDTERMINATOR = '|'
+)
+```
+
+### F. Load using MSI credentials
+
+```sql
+COPY INTO dbo.myCOPYDemoTable
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt'
+WITH (
+    FILE_TYPE = 'CSV',
+    CREDENTIAL = (IDENTITY = 'Managed Identity'),
+    FIELDQUOTE = '"',
+    FIELDTERMINATOR=','
 )
 ```
 

@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "cursors [ODBC], how to topics"
 ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using Cursors How-to Topics (ODBC)

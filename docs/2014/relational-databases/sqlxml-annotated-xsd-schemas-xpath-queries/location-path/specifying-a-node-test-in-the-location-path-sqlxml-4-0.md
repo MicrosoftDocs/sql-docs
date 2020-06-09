@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "node tests [SQLXML]"
   - "location path for XPath query"
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Specifying a Node Test in the Location Path (SQLXML 4.0)

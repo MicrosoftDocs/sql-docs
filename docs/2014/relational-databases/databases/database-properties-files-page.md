@@ -16,7 +16,7 @@ manager: craigg
 # Database Properties (Files Page)
   Use this page to create a new database, or view or modify properties for the selected database. This topic applies to the **Database Properties (Files Page)** for existing databases, and to the **New Database (General Page)**.  
   
-## UIElement List  
+## UI element list  
  **Database name**  
  Add or display the name of the database.  
   

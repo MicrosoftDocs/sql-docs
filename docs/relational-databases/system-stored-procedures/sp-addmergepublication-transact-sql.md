@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergepublication"
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addmergepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

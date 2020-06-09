@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "handles [SQL Server Native Client]"
   - "environment handles [SQLNCLI]"
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Allocating an Environment Handle

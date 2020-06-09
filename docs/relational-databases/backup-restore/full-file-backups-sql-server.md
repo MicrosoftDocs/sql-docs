@@ -1,5 +1,6 @@
 ---
 title: "Full File Backups (SQL Server) | Microsoft Docs"
+description: In SQL Server, you can back up and restore a whole filegroup instead of specifying each file individually.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

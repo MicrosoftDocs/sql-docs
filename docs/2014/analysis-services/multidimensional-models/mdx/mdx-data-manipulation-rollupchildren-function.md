@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Working with the RollupChildren Function (MDX)
   The Multidimensional Expressions (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx)

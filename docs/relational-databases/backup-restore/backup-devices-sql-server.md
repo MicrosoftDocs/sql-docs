@@ -1,5 +1,6 @@
 ---
 title: "Backup Devices (SQL Server) | Microsoft Docs"
+description: This article describes backup devices for a SQL Server database, including terminology and working with backup devices.
 ms.custom: ""
 ms.date: "08/12/2016"
 ms.prod: sql

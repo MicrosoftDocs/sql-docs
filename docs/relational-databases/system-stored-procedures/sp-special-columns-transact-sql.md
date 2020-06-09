@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_special_columns"
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_special_columns (Transact-SQL)

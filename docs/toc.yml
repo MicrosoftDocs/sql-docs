@@ -111,6 +111,8 @@
         items:
         - name: AKS python script
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+        - name: ARO python script
+          href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
         - name: Single node kubeadm script
           href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks

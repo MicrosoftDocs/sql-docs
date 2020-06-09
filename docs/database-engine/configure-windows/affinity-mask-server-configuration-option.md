@@ -94,7 +94,7 @@ When specifying the affinity I/O mask option, you must use it with the affinity 
 
 ## Example
 
-As an example of setting the affinity mask option, if processors 1, 2, and 5 are selected as available with bits 1, 2, and 5 set to 1 and bits 0, 3, 4, 6, and 7 set to 0, a hexadecimal value of 0x26 or the decimal equivalent of `38` is specified. Number the bits from right to left. The affinity mask option starts counting processors from 0 to 31, so that in the following example the counter `1` represents the second processor on the server.  
+As an example of setting the affinity mask option, let's select processors 1, 2, and 5 as available by setting bits in positions 1, 2, and 5 set to 1 and bits 0, 3, 4, 6, and 7 set to 0. The resulting value is a hexadecimal 0x26 or the decimal equivalent `38`. Number the bit positions from right to left.
 
 ```sql
 sp_configure 'show advanced options', 1;

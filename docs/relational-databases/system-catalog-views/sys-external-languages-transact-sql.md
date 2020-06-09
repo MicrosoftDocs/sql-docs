@@ -3,7 +3,6 @@ title: "sys.external_languages (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/22/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 

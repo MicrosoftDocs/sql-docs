@@ -93,6 +93,12 @@ In order to access the RESTful web service for the app you have deployed you fir
 |GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
 |CU1 and later| `https://[IP]:[PORT]/api/v1/swagger.json`|
 
+ From the output of previous example, CU4 release and the IP address of controller (10.1.1.3 in the example) and the port number (30080), the URL would look like the following : 
+ 
+ ```bash
+    https://10.1.1.3 :30080/api/v1/swagger.json
+```
+ 
 > For version information, see [Release history](release-notes-big-data-cluster.md#release-history).
 
 Open the appropriate URL in your browser using the IP address and port you retrieved running the [`describe`](#retrieve-the-endpoint) command above. Sign in with the same credentials you used for `azdata login`.
@@ -101,11 +107,19 @@ Paste the contents of the `swagger.json` into the [Swagger Editor](https://edito
 
 ![API Swagger](media/big-data-cluster-consume-apps/api_swagger.png)
 
-Notice the `app` GET method as well as the `token` POST method. Since the authentication for apps uses JWT tokens, you will need to get a token my using your favorite tool to make a POST call to the `token` method. Here is an example of how to do just that in [Postman](https://www.getpostman.com/):
+Notice the `app` is GET method and to get the `token` would use POST method. Since the authentication for apps uses JWT tokens, you will need to get a token my using your favorite tool to make a POST call to the `token` method. With the same example, the URL to get JWT token would look like the follows :
+
+ ```bash
+    https://10.1.1.3 :30080/api/v1/token
+```
+
+
+Here is an example of how to do just that in [Postman](https://www.getpostman.com/):
 
 ![Postman Token](media/big-data-cluster-consume-apps/postman_token.png)
 
-The result of this request will give you a JWT `access_token`, which you will need to call the URL to run the app.
+
+The output of this request will give you a JWT `access_token`, which you will need to call the URL to run the app.
 
 ## Execute the app using the RESTful web service
 

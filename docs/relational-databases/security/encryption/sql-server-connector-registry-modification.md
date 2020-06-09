@@ -42,39 +42,38 @@ This article describes the modifying registry entires to enable SQL Connector er
     1. In the search box on the taskbar, type regedit. Then, select the top result for Registry Editor (Desktop app).
     1. Press and hold or right-click the Start  button, then select Run. Enter regedit in the Open: box and select OK.
 
->>![ekm-regedit-open.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-open.png "ekm-regedit-open.png")  
+       ![ekm-regedit-open.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-open.png "ekm-regedit-open.png")  
 
 1.  Navigate to this registry key:
 
     **HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\\**
->>![ekm-regedit-akv.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv.png "ekm-regedit-akv.png")  
-
+    
+    ![ekm-regedit-akv.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv.png "ekm-regedit-akv.png")  
 
 1.  Add a new Key under "Azure Key Vault" named: Log:
 
-    ****HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\\Log\\**
+    **HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\\Log\\**
 
->>![ekm-regedit-akv-log.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log.png "ekm-regedit-akv-log.png")  
-
+    ![ekm-regedit-akv-log.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log.png "ekm-regedit-akv-log.png")  
 
 1.  Below the "Log" key add a DWORD (32-bit) Value named "Level":
 
-   ****HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\\Log\\**
+    **HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\\Log\\**
 
->>![ekm-regedit-akv-log-dword.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log-dword.png "ekm-regedit-akv-log-dword.png")  
+    ![ekm-regedit-akv-log-dword.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log-dword.png "ekm-regedit-akv-log-dword.png")  
 
 1. Set the value of the DWORD as appropriate LogLevel (0,1,2):
-    >1. 0 (Info) - **Default**
-    >1. 1 (Error)
-    >1. 2 (No Log)
+   1. 0 (Info) - **Default**
+   1. 1 (Error)
+   1. 2 (No Log)
 
->>![ekm-regedit-akv-log-level.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log-level.png "ekm-regedit-akv-log-level.png")  
+   ![ekm-regedit-akv-log-level.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log-level.png "ekm-regedit-akv-log-level.png")  
 
 
 
 The registry entries described in this article are found under this key:
 
-```cpp
+```console
 \Computer
     \HKEY_LOCAL_MACHINE
        \SOFTWARE

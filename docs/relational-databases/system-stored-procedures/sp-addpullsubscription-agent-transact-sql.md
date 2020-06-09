@@ -1,7 +1,7 @@
 ---
 title: "sp_addpullsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2019"
+ms.date: "06/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -75,6 +75,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## Arguments  
 `[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
+
+> [!NOTE]
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
   
 `[ @publisher_db = ] 'publisher_db'_`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with a default value of NULL. *publisher_db* is ignored by Oracle Publishers.  

@@ -123,10 +123,21 @@ The output of this request will give you a JWT `access_token`, which you will ne
 
 ## Execute the app using the RESTful web service
 
-> [!NOTE]
-> If you want, you can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. You will have to log in with the same credentials you used for `azdata login`. The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method. Also note the Base URL displayed at the top.
+There are mutiple ways to comsume an app on BDC, you can choose to use [azdata app run command](big-data-cluster-create-apps.md). This section will demonstrate how to use common developer tools such as Postman to execute the app. 
 
-You can use your favorite tool to call the `run` method (`https://[IP]:30778/api/app/[appname]/[version]/run`), passing in the parameters in the body of your POST request as json. In this example, we will use [Postman](https://www.getpostman.com/). Before making the call, you will need to set the `Authorization` to `Bearer Token` and paste in the token you retrieved earlier. This will set a header on your request. See the screenshot below.
+You can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. 
+
+> [!NOTE]
+> You will have to log in with the same credentials you used for `azdata login`. With the same example, the command would look like the follows :
+
+ ```bash
+    azdata app describe --name add-app --version v1
+```
+
+The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method, and underneath it went through application proxy which is a web API that authenticates users and then routes the requests through to the applications. Notice that the Base URL displayed at the top. You can use tool of your choice to call the `run` method (`https://[IP]:30778/api/app/[appname]/[version]/run`), passing in the parameters in the body of your POST request as json. 
+
+
+In this example, we will use [Postman](https://www.getpostman.com/). Before making the call, you will need to set the `Authorization` to `Bearer Token` and paste in the token you retrieved earlier. This will set a header on your request. See the screenshot below.
 
 ![Postman Run Headers](media/big-data-cluster-consume-apps/postman_run_1.png)
 
@@ -139,6 +150,7 @@ When you send the request, you will get the same output as you did when you ran 
 ![Postman Run Result](media/big-data-cluster-consume-apps/postman_result.png)
 
 You have now successfully called the app through the web service. You can follow similar steps to integrate this web service in your application.
+
 
 ## Next steps
 

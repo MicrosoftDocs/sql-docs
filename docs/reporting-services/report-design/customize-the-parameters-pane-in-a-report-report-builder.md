@@ -81,7 +81,7 @@ Then the first column is omitted because the whole column is empty:
 ![Hidden Parameter Example 2 - runtime](../../reporting-services/report-design/media/ssrs-hiddenparameter-server-2.png "Two hidden parameter in same column in runtime")
 
 ## Default layout
-For those reports that was authored before SSRS 2016 version, a default layout grid of 2 columns and N rows will be used in runtime. To change the layout, simply open the report in latest Report Builder and save back, then a customized layout info will be saved to .rdl file as well.
+For those reports that were authored before SSRS 2016 version, a default layout grid of 2 columns and N rows will be used in runtime. To change the layout, simply open the report in latest Report Builder and save back, then a customized layout info will be saved to .rdl file as well.
 
 
 ## See Also

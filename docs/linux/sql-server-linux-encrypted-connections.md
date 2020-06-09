@@ -57,9 +57,9 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 
     -   If you are using CA signed certificate, you have to copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine. 
     -   If you are using the self-signed certificate, just copy the .pem file to the following folders respective to distribution and execute the commands to enable them 
-        - **Ubuntu**: Copy cert to ```/usr/share/ca-certificates/```  rename extension to .crt  use dpkg-reconfigure ca-certificates to enable it as system CA certificate. 
-        - **RHEL**: Copy cert to ```/etc/pki/ca-trust/source/anchors/``` use ```update-ca-trust``` to enable it as system CA certificate.
-        - **SUSE**: Copy cert to ```/usr/share/pki/trust/anchors/``` use ```update-ca-certificates``` to enable it as system CA certificate.
+        - **Ubuntu**: Copy cert to ```/usr/share/ca-certificates/```,  rename its extension to .crt, and use ```dpkg-reconfigure ca-certificates``` to enable it as system CA certificate. 
+        - **RHEL**: Copy cert to ```/etc/pki/ca-trust/source/anchors/``` and use ```update-ca-trust``` to enable it as system CA certificate.
+        - **SUSE**: Copy cert to ```/usr/share/pki/trust/anchors/``` and use ```update-ca-certificates``` to enable it as system CA certificate.
         - **Windows**:  Import the .pem file as a certificate under current user -> trusted root certification authorities -> certificates
         - **macOS**: 
            - Copy the cert to ```/usr/local/etc/openssl/certs```

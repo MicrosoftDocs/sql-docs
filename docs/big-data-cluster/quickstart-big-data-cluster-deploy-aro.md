@@ -47,7 +47,7 @@ az login
 
    >These files are located in this article under:
    - [`deploy-sql-big-data-aro.py`](#deploy-sql-big-data-aropy)
-   - [`bdc-restricted-scc.yaml](#bdc-restricted-sccyaml)
+   - [`bdc-restricted-scc.yaml`](#bdc-restricted-sccyaml)
 
 1. Run the script using:
 
@@ -208,7 +208,7 @@ command="azdata bdc endpoint list -o table"
 executeCmd(command)
 ```
 
-## `bdc-restricted-scc.yaml
+## `bdc-restricted-scc.yaml`
 
 The following .yml manifest defines a restricted security context constraints (SCC) for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
 

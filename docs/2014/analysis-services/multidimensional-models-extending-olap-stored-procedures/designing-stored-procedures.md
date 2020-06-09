@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: af4e7bd5-041b-4a40-9942-0ef6a3af46c6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Designing Stored Procedures
   Both the administrative object model Analysis Management Objects (AMO) and the client oriented object model [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® Data Objects (Multidimensional) (ADO MD) are available in stored procedures.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ee1fac79-ae15-4c3c-9a98-33db04388817
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # General (Storage Options Dialog Box) (Analysis Services - Multidimensional Data)
   Use the **General** tab of the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to set the storage mode and proactive caching settings for a dimension, cube, measure group, or partition.  

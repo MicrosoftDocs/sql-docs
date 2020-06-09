@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Creating and Using Property Values (MDX)
   Multidimensional Expressions (MDX) supports intrinsic and user-defined properties for dimensions, levels, members, and cells. The intrinsic properties provide unique names, captions, and even formatting and font sizes for individual cells. User-defined properties, on the other hand, can provide almost any kind of additional attribute to members.  

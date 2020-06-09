@@ -70,6 +70,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Feature | Details |
 | :------ | :------ |
 | Deployment |  A regression was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| .NET Core | Importing bacpacs with Sensitivity Classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next sqlpackage release. |
 | &nbsp; | &nbsp; |
 
 ## 18.4.1 sqlpackage

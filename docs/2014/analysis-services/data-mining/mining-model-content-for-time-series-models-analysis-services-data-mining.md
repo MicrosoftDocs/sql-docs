@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)
   All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm.  

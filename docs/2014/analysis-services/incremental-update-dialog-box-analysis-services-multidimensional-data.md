@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Incremental Update Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Incremental Update** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to define the settings that are used when measure groups and partitions are incrementally updated. You can display the **Incremental Update** dialog box by clicking **Configure** in the **Settings** column of the **Object list** grid in the **Process** dialog box.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Change the Properties of a Mining Structure
   There are two kinds of properties on a mining structure, both of which can be modified:  

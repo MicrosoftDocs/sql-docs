@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Integration Services Properties (Advanced Tab)"
+description: Find out about the Advanced tab in the SQL Server Integration Services Properties dialog box, where you can view custom property values.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

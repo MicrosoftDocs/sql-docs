@@ -1,5 +1,6 @@
 ---
 title: "Viewing the Windows Application Log"
+description: Find out how to view and manage the Windows application log. You can configure SQL Server to write event information to this log.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

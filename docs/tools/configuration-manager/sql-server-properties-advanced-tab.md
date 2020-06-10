@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Properties (Advanced Tab)"
+description: Learn about the options on the Advanced tab in the SQL Server Properties dialog box, such as the instance ID, custom properties, and other properties.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

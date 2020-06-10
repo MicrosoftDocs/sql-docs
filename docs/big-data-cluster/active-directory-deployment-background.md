@@ -5,7 +5,7 @@ description: Learn about SQL Server Big Data Cluster deployment in Active Direct
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/04/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -44,6 +44,8 @@ ms.author: "mathoma"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   Article names cannot include any of the following characters: % , * , [ , ] , | , : , " , ? , ' , \ , / , < , >. If objects in the database include any of these characters and you want to replicate them, you must specify an article name that is different from the object name.  
+
+-   Merge Publications are limited to a maximum of 2048 articles and Transactional/Snapshot Publications are limited to 32,767 articles. For more information see [Maximum Capacity Specifications: Replication Objects] (https://docs.microsoft.com/en-us/sql/sql-server/maximum-capacity-specifications-for-sql-server?redirectedfrom=MSDN&view=sql-server-ver15#replication-objects)
   
 ##  <a name="Security"></a> Security  
  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -57,7 +59,7 @@ ms.author: "mathoma"
   
 2.  Expand the **Replication** folder, and then right-click the **Local Publications** folder.  
   
-3.  Click **New Publication**.  
+3.  Click **New Publication**.   
   
 4.  Follow the pages in the New Publication Wizard to:  
 

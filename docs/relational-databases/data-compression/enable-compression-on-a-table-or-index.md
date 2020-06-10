@@ -247,7 +247,7 @@ In SQL Server, run `sp_estimate_data_compression_savings` and then enable compre
     
 ### On Azure SQL Database
 
-Azure SQL Database does not support `sp_estimate_data_compression`. The following scripts enable compression estimating the compression amount. 
+Azure SQL Database does not support `sp_estimate_data_compression`. The following scripts enable compression without estimating the compression amount. 
 
 #### To enable compression on a table  
   

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Agent Properties (Service Tab)"
-description: Learn about the options on the Service tab in the SQL Server Agent Properties dialog box, such as the binary path, the start mode, and other properties.
+description: Learn about the options on the Service tab in the SQL Server Agent Properties dialog box, such as the binary path, the process ID, and the start mode.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

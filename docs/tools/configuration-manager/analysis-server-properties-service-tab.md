@@ -1,6 +1,6 @@
 ---
 title: "Analysis Server Properties (Service Tab)"
-description: Find out about the options on the Service tab in the Analysis Server Properties dialog box, such as the binary path, the start mode, and other properties.
+description: Find out about the options on the Service tab in the Analysis Server Properties dialog box, such as the binary path, the host name, and the start mode.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

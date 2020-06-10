@@ -1,6 +1,6 @@
 ---
 title: "Report Server Properties (Advanced Tab)"
-description: Learn about the options on the Advanced tab of the Report Server Properties dialog box, such as the dump directory, the instance ID, and other properties.
+description: Learn about the options on the Advanced tab of the Report Server Properties dialog box, such as the dump directory and the instance ID.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

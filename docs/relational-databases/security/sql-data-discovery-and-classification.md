@@ -8,9 +8,9 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 09/12/2019
-ms.author: mibar
-author: barmichal
+ms.date: 06/10/2020
+ms.author: datrigan
+author: DavidTrigano
 ---
 # SQL Data Discovery and Classification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,9 @@ SELECT
     O.NAME AS table_name,
     C.NAME AS column_name,
     information_type,
-	label
+	label,
+	rank,
+	rank_desc
 FROM sys.sensitivity_classifications sc
     JOIN sys.objects O
     ON  sc.major_id = O.object_id

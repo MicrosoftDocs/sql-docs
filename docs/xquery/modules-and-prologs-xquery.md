@@ -1,5 +1,6 @@
 ---
 title: "Modules and Prologs (XQuery) | Microsoft Docs"
+description: Learn which specifications are not supported in an XQuery prolog when declaring a namespace.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

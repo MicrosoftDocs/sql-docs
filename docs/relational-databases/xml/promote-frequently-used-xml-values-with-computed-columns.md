@@ -1,5 +1,6 @@
 ---
 title: "Promote frequent XML values with computed columns | Microsoft Docs"
+description: Learn how to promote frequently used XML values into relational columns for more efficient querying by creating computed columns.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

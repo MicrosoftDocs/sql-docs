@@ -1,5 +1,6 @@
 ---
 title: "Client Protocols - Named Pipes Properties (Protocol Tab)"
+description: Find out how to view or modify the description of the default pipe in SQL Server Configuration Manager. Learn how to connect to a different pipe.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

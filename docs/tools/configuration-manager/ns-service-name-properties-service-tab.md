@@ -1,5 +1,6 @@
 ---
 title: "NS$&lt;service name&gt; Properties (Service Tab)"
+description: Learn about the options on the Service tab in the Notification Services Properties dialog box, such as the binary path, the start mode, and other properties.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

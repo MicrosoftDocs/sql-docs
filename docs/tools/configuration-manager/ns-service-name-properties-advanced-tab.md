@@ -1,5 +1,6 @@
 ---
 title: "NS$&lt;service name&gt; Properties (Advanced Tab)"
+description: View values of custom properties by using the Advanced tab in the Notification Services Properties dialog box in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
 title: "Custom XSD mappings to tables/columns (SQLXML)"
-description: Learn how to create a custom mapping in SQLXML XPath query between the elements and attributes of an XSD schema and the tables and columns of a relational database.
+description: Learn how to create a custom mapping in an SQLXML XPath query between the elements and attributes of an XSD schema and the tables and columns of a relational database.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

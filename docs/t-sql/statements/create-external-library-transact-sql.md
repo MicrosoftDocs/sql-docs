@@ -171,7 +171,7 @@ Specifies the content of the package as a hex literal, similar to assemblies.
 
 This option is useful if you need to create a library or alter an existing library (and have the required permissions to do so), but the file system on the server is restricted and you cannot copy the library files to a location that the server can access.
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform.
@@ -185,18 +185,16 @@ Specifies the platform for the content of the library. The value defaults to the
 In SQL Server 2019, Windows and Linux are the supported platforms.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 **LANGUAGE = 'R'**
 
-Specifies the language of the package.
-R is supported in SQL Server 2017.
+Specifies the language of the package. R is supported in SQL Server 2017.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-**LANGUAGE = 'R'**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+**language**
 
-Specifies the language of the package.
-R is supported in Azure SQL Database.
+Specifies the language of the package. The value can be `R` or `Python` in Azure SQL Managed Instance.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"

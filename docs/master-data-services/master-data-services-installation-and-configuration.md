@@ -1,5 +1,6 @@
 ---
 title: Installation and Configuration
+description: Learn how to install Master Data Services on a Windows Server 2012 R2 computer, set up the MDS database and website, and deploy the sample models and data.
 ms.custom: ""
 ms.date: 05/22/2019
 ms.prod: sql

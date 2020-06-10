@@ -1,5 +1,6 @@
 ---
 title: Import Data from Tables
+description: Learn to add data and make data changes to a model, in bulk. Use this procedure to add, update, and delete data in the Master Data Services database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

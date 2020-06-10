@@ -1,6 +1,6 @@
 ---
 title: "Display Percentage Values on Pie Chart (Report Builder) | Microsoft Docs"
-description: In Reporting Services paginated reports, by default the legend shows categories. You may also want percentages in the legend or the pie slices themselves.
+description: Learn how to display percentage values on a pie chart, in the legend or in the pie slices in Report Builder.
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

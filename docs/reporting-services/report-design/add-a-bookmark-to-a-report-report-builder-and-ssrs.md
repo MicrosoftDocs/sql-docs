@@ -1,5 +1,6 @@
 ---
 title: "Add a Bookmark to a Report (Report Builder) | Microsoft Docs"
+description: Find out how to add bookmarks to a report to provide a customized table of contents or to provide customized internal navigation links in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

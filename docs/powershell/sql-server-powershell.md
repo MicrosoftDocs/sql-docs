@@ -33,8 +33,6 @@ To ship SQL PowerShell updates, we had to change the identity of the SQL PowerSh
 
 If you have any PowerShell scripts that run `Import-Module -Name SQLPS`, and you want to take advantage of the new provider functionality and new cmdlets, you must change them to `Import-Module -Name SqlServer`. The new module is installed to `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` folder. As such, you don't have to update the $env:PSModulePath variable. If you have scripts that use a third-party or community version of a module named **SqlServer**, use the Prefix parameter to avoid name collisions.
 
-There's no change to the module used by SQL Server Agent. As such, the job steps of the type PowerShell use the SQLPS module. For more information, see [How to run PowerShell with SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md).
-
 ## SQL Server PowerShell Components
 
 The **SqlServer** module loads two Windows PowerShell snap-ins:
@@ -57,7 +55,22 @@ Use the **Convert-UrnToPath** cmdlet to convert a Unique Resource Name for a Dat
 
 Query expressions are strings that use syntax similar to XPath to specify a set of criteria that enumerates one or more objects in an object model hierarchy. A Unique Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object. For more information, see [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md).
 
+## SQL Server Agent
+
+There's no change to the module used by SQL Server Agent. As such, SQL Server Agent jobs which have job steps of the type PowerShell use the SQLPS module. For more information, see [How to run PowerShell with SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md). However, starting with SQL Server 2019, you can disable this. To do so, on the first line of a job step of the type PowerShell you can add `#NOSQLPS` which stops the SQL Agent from auto-loading the SQLPS module. When you do this, your SQL Agent Job runs the version of PowerShell installed on the machine, and then you can use any other PowerShell module you like.
+
+If you want to use the **SqlServer** module in your SQL Agent Job step, you can place this code on the first two lines of your script.
+
+```powershell
+#NOSQLPS
+Import-Module -Name SqlServer
+```
+
 ## Cmdlet reference
 
 - [SqlServer cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
 - [SQLPS cmdlets](https://docs.microsoft.com/powershell/module/sqlps)
+
+## Next steps
+
+[Download SQL Server PowerShell Module](download-sql-server-ps-module.md)

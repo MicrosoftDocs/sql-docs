@@ -150,7 +150,10 @@ Visit [Manage SQL Server on Linux with PowerShell Core](../linux/sql-server-linu
 
 ## Other modules
 
-- [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/)
-- [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/)
-- [ReportingServicesTools](https://www.powershellgallery.com/packages/ReportingServicesTools/)
-- [MicrosoftPowerBIMgmt](https://www.powershellgallery.com/packages/MicrosoftPowerBIMgmt/)
+- [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/) - SQL service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.
+
+- [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) - Module with DSC resources for deployment and configuration of Microsoft SQL Server.
+
+## Next steps
+
+[SQL Server PowerShell](sql-server-powershell.md)

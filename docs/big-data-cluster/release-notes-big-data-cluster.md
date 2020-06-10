@@ -25,11 +25,10 @@ This section explains platforms that are supported with BDC.
 
 |Platform|Supported versions|
 |---------|---------|
-|Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
-|Red Hat OpenShift|BDC requires OpenShift version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server 2019 CU5.|
-|Azure Kubernetes Service (AKS)|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
-|Azure Red Hat OpenShift|BDC requires Azure Red Hat OpenShift version minimum 4.3. See [Azure Red Hat OpenShift](/azure/openshift/). <br><br> Support introduced in SQL Server 2019 CU5.|
-
+|Vanilla (upstream) Kubernetes|Deploy BDC on premises using a Kubernetes cluster version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
+|Red Hat OpenShift|Deploy BDC on premises using an OpenShift cluster version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server 2019 CU5.|
+|Azure Kubernetes Service (AKS)|Deploy BDC on AKS cluster version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
+|Azure Red Hat OpenShift (ARO)|Deploy BDC on ARO version minimum 4.3. See [Azure Red Hat OpenShift](/azure/openshift/). <br><br> Support introduced in SQL Server 2019 CU5.|
 
 ### Host OS for Kubernetes
 
@@ -37,8 +36,7 @@ This section explains platforms that are supported with BDC.
 |---------|---------|
 |Kubernetes|Ubuntu|16.04|
 |Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
-|OpenShift|Red Hat Enterprise Linux |See [OpenShift release notes](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
-
+|OpenShift|Red Hat Enterprise Linux / CoreOS |See [OpenShift release notes](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
 
 ### SQL Server Editions
 
@@ -82,7 +80,7 @@ Cumulative Update 5 (CU5) release for SQL Server 2019. The SQL Server Database E
 
 ### Added capabilities
 
-- Support for Big Data Clusters deployment on Red Hat OpenShift. Support includes OpenShift container platform version 4.3 and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
+- Support for Big Data Clusters deployment on Red Hat OpenShift. Support includes OpenShift container platform deployed on premises version 4.3 and up and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
 - Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5. 
 - Added support for deploying multiple big data clusters against an Active Directory domain.
 - `azdata` CLI has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.

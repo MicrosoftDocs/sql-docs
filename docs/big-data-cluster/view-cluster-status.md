@@ -5,7 +5,7 @@ description: This article explains how to view the status of a big data cluster 
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 06/04/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

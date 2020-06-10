@@ -6,7 +6,7 @@ author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 06/06/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

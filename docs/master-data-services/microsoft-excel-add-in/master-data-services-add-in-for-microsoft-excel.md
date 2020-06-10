@@ -1,5 +1,6 @@
 ---
 title: Overview
+description: Learn how to load of data from Master Data Services into Excel and publish it back to Master Data Services by using the Master Data Services Add-in for Excel.
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "07/25/2017"
 ms.prod: sql

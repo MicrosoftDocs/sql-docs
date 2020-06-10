@@ -7,7 +7,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
 ms.custom: ""
-ms.date: 01/23/2020
+ms.date: 06/10/2020
 ---
 
 # Install the SQL Server PowerShell module
@@ -33,20 +33,20 @@ For help topics, go to:
 
 ## SQL Server Management Studio
 
-SQL Server Management Studio (SSMS), beginning with version 17.0, doesn't install either PowerShell module. To use PowerShell with SSMS, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), doesn't install either PowerShell module. To use PowerShell with SSMS, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
 > [!NOTE]
-> With version 16.x of SSMS, an earlier version of the **SqlServer** module is included with SQL Server Management Studio (SSMS)
+> With SSMS 16.x, an earlier version of the **SqlServer** module is included with SQL Server Management Studio (SSMS)
 
 ## Azure Data Studio
 
-Azure Data Studio doesn't install either PowerShell module. To use PowerShell with Azure Data Studio, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) doesn't install either PowerShell module. To use PowerShell with Azure Data Studio, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
 You can use the [PowerShell extension](../azure-data-studio/powershell-extension.md), which provides rich PowerShell editor support in Azure Data Studio.
 
 ## Installing or updating the SqlServer module
 
-To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](/powershell/scripting/overview) session as an administrator. You also start Azure Data Studio as an administrator and run these commands in a PowerShell session in the integrated terminal.
+To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](/powershell/scripting/overview) session as an administrator. You can also start Azure Data Studio as an administrator and run these commands in a PowerShell session in the integrated terminal.
 
 ### Install the SqlServer module
 
@@ -147,3 +147,10 @@ Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
 ## SQL Server PowerShell on Linux
 
 Visit [Manage SQL Server on Linux with PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) to see how to install SQL Server PowerShell on Linux.
+
+## Other modules
+
+- [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/)
+- [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/)
+- [ReportingServicesTools](https://www.powershellgallery.com/packages/ReportingServicesTools/)
+- [MicrosoftPowerBIMgmt](https://www.powershellgallery.com/packages/MicrosoftPowerBIMgmt/)

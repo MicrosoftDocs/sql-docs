@@ -145,7 +145,7 @@ ms.author: maggies
   
   
 ##  <a name="Sort"></a> Specifying a Sort Expression to Synchronize Sort Order  
- When you add an interactive sort button to a table column, you can synchronize sorting for multiple items that have a common containing scope. For example, you can add a sort button to a column header in a matrix, and specify the containing scope as the name of the dataset that is bound to the matrix. When a user clicks the sort button, not only are the matrix rows sorted, but also the chart series groups of charts that are bound to the same datset are sorted. In this way, all data regions that depend on that dataset can be synchronized to show the same sort order.  
+ When you add an interactive sort button to a table column, you can synchronize sorting for multiple items that have a common containing scope. For example, you can add a sort button to a column header in a matrix, and specify the containing scope as the name of the dataset that is bound to the matrix. When a user clicks the sort button, not only are the matrix rows sorted, but also the chart series groups of charts that are bound to the same dataset are sorted. In this way, all data regions that depend on that dataset can be synchronized to show the same sort order.  
   
  For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   

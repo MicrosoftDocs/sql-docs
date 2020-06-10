@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
-ms.date: 05/12/2020
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql

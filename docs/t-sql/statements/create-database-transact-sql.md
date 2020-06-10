@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
 ms.custom: ""
-ms.date: 05/12/2020
+ms.date: 06/10/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

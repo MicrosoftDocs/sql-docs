@@ -58,7 +58,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 > [!NOTE]  
 >  A **request_id** is unique within a session.  
   
-```  
+```sql  
 SELECT  
     task_address,  
     task_state,  
@@ -79,7 +79,7 @@ SELECT
 ### B. Associating session IDs with Windows threads  
  You can use the following query to associate a session ID value with a Windows thread ID. You can then monitor the performance of the thread in the Windows Performance Monitor. The following query does not return information for sessions that are sleeping.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
   FROM sys.dm_os_tasks AS STasks  
   INNER JOIN sys.dm_os_threads AS SThreads  
@@ -88,7 +88,39 @@ SELECT STasks.session_id, SThreads.os_thread_id
   ORDER BY STasks.session_id;  
 GO  
 ```  
-  
+
+### C. View waiting tasks per connection
+
+```sql
+SELECT st.text AS [SQL Text], c.connection_id, w.session_id, 
+  w.wait_duration_ms, w.wait_type, w.resource_address, 
+  w.blocking_session_id, w.resource_description, c.client_net_address, c.connect_time
+FROM sys.dm_os_waiting_tasks AS w
+INNER JOIN sys.dm_exec_connections AS c ON w.session_id = c.session_id 
+CROSS APPLY (SELECT * FROM sys.dm_exec_sql_text(c.most_recent_sql_handle)) AS st 
+              WHERE w.session_id > 50 AND w.wait_duration_ms > 0
+ORDER BY c.connection_id, w.session_id
+GO
+```
+
+### D. View waiting tasks for all user processes with additional information
+
+```sql
+SELECT 'Waiting_tasks' AS [Information], owt.session_id,
+	owt.wait_duration_ms, owt.wait_type, owt.blocking_session_id,
+	owt.resource_description, es.program_name, est.text,
+	est.dbid, eqp.query_plan, er.database_id, es.cpu_time,
+	es.memory_usage*8 AS memory_usage_KB
+FROM sys.dm_os_waiting_tasks owt
+INNER JOIN sys.dm_exec_sessions es ON owt.session_id = es.session_id
+INNER JOIN sys.dm_exec_requests er ON es.session_id = er.session_id
+OUTER APPLY sys.dm_exec_sql_text (er.sql_handle) est
+OUTER APPLY sys.dm_exec_query_plan (er.plan_handle) eqp
+WHERE es.is_user_process = 1
+ORDER BY owt.session_id;
+GO
+```
+
 ## See Also  
 [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)     

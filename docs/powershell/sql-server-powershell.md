@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ""
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 ---
 
 # SQL Server PowerShell

@@ -24,7 +24,8 @@ ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # date (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+<!--[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]-->
+[!INCLUDE [tsql-appliesto](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [tsql-appliesto-ss2008](../../includes/applies-to-version/tsql-appliesto-ss2008.md)] [!INCLUDE [tsql-appliesto-asdb-yes](../../includes/applies-to-version/tsql-appliesto-asdb-yes.md)] [!INCLUDE [tsql-appliesto-asdw-yes](../../includes/applies-to-version/tsql-appliesto-asdw-yes.md)] [!INCLUDE [tsql-appliesto-pdw-no](../../includes/applies-to-version/tsql-appliesto-pdw-yes.md)]
 
 Defines a date in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

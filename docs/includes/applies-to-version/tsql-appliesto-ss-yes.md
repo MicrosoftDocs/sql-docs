@@ -6,5 +6,5 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-<Token>![No](../media/no-icon.png)SQL Server</Token>
+<Token>![yes](../media/yes-icon.png)SQL Server</Token>
 

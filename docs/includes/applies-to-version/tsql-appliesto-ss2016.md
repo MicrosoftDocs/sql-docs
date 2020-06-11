@@ -7,4 +7,3 @@ ms.author: mikeray
 ---
 
 <Token>![Yes](../media/yes-icon.png)SQL Server 2016 and later</Token>
-

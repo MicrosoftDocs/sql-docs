@@ -6,5 +6,4 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-<Token>![No](../media/no-icon.png)SQL Server</Token>
-
+<Token>![Yes](../media/yes-icon.png)SQL Server 2008 and later</Token>

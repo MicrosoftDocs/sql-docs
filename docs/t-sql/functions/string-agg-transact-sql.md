@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sql
 ---
 # STRING_AGG (Transact-SQL)
 
-<<!--[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]-->
+<!--[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]-->
 
 [!INCLUDE [tsql-appliesto](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [tsql-appliesto-ss2017](../../includes/applies-to-version/tsql-appliesto-ss2017.md)] [!INCLUDE [tsql-appliesto-asdb-yes](../../includes/applies-to-version/tsql-appliesto-asdb-yes.md)] [!INCLUDE [tsql-appliesto-asdw-yes](../../includes/applies-to-version/tsql-appliesto-asdw-yes.md)] [!INCLUDE [tsql-appliesto-pdw-no](../../includes/applies-to-version/tsql-appliesto-pdw-no.md)]
 

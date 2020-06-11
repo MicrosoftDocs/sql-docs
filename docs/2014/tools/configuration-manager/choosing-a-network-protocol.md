@@ -1,5 +1,6 @@
 ---
 title: "Choosing a Network Protocol | Microsoft Docs"
+description: Compare and contrast network protocols that are available for connecting to SQL Server Database Engine, such as shared memory, TCP/IP, and named pipes.
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

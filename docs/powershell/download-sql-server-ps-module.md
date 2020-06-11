@@ -49,7 +49,7 @@ You can use the [PowerShell extension](../azure-data-studio/powershell-extension
 
 To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](/powershell/scripting/overview) session as an administrator. You can also start Azure Data Studio as an administrator and run these commands in a PowerShell session in the integrated terminal.
 
-You can also use *Install-Module SQLServer -Scope CurrentUser* to run elevated permissions. This cmdlet is useful for users who aren't administrators in their environment. However, since the scope is limited to the current user, other users on the same machine can't see the module.
+You can also use *Install-Module SQLServer -Scope CurrentUser* to run elevated permissions. This cmdlet is useful for users who aren't administrators in their environment. However, since the scope is limited to the current user, other users on the same machine can't use the module.
 
 ### Install the SqlServer module
 

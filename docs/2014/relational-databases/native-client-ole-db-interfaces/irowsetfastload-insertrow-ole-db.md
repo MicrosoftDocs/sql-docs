@@ -13,8 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "InsertRow method"
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # IRowsetFastLoad::InsertRow (OLE DB)

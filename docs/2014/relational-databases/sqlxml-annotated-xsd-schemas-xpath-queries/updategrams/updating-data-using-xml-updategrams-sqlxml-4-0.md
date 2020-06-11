@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "updg:before attribute"
   - "record updates [SQLXML]"
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Updating Data Using XML Updategrams (SQLXML 4.0)

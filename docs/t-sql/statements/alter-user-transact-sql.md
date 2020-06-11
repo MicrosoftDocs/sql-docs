@@ -49,7 +49,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER USER userName
@@ -218,7 +218,7 @@ GO
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 
 ALTER USER userName
@@ -402,7 +402,7 @@ GO
 > `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
 > </br> </br> There is a new syntax extension that was added to help remap users in a database that was migrated to managed instance. The ALTER USER syntax helps map database users in a federated and synchronized domain with Azure AD, to Azure AD logins.
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
@@ -658,7 +658,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse
 
 ALTER USER userName
@@ -773,7 +773,7 @@ GO
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 ALTER USER userName

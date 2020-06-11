@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "autofetch option"
   - "cursors [ODBC], autofetch"
 ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using Autofetch with ODBC Cursors

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "commands [OLE DB]"
   - "command preparation [SQL Server Native Client]"
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Preparing Commands

@@ -29,7 +29,7 @@ manager: craigg
   
  The [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client determines the structure of the specified model by sending a request to the specified data source, which returns a schema that can be used by the client to create queries against the model as a data source and perform operations based on the data. Subsequent operations in the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] user interface to filter data, perform calculations or aggregations, and display associated data are controlled by the client and cannot be programmatically manipulated.  
   
- The queries that are sent by the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client to the model are issued as DAX statements, which you can monitor by setting a trace on the model.  The client also issues a request to the server for the initial schema definition, which is presented according to the Conceptual Schema Definition Language (CSDL). For more information, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ The queries that are sent by the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client to the model are issued as DAX statements, which you can monitor by setting a trace on the model.  The client also issues a request to the server for the initial schema definition, which is presented according to the Conceptual Schema Definition Language (CSDL). For more information, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### SQL Server Management Studio  
  You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage instances that host tabular models, and to query the metadata and data in them. You can process models or the objects in a model, create and manage partitions, and set security that can be used for managing data access. For more information, see the following topics:  
@@ -67,7 +67,7 @@ manager: craigg
 ### CSDL  
  The Conceptual Schema Definition Language is not a query language, per se, but it can be used to retrieve information about the model and model metadata, that can later be used to create reports or create queries against the model.  
   
- For information about how CSDL is used in tabular models, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
+ For information about how CSDL is used in tabular models, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## Programmatic Interfaces  
  The principal interfaces that are used for interacting with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular models are the schema rowsets, XMLA, and the query clients and query tools provided by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -83,7 +83,7 @@ manager: craigg
   
  You can also retrieve data directly from an Analysis Services instance in an XML-based format. You can retrieve the schema of the tabular model by using the DISCOVER_CSDL_METADATA rowset, or you can use an EXECUTE or DISCOVER command with existing ASSL elements, objects, or properties. For more information, see the following resources:  
   
--   [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### Manipulate Analysis Services Objects  
  You can create, modify, delete, and process tabular models and objects in them, including tables, columns, perspectives, measures, and partitions, using XMLA commands, or by using AMO. Both AMO and XMLA have been updated to support additional properties that are used in tabular models for enhanced reporting and modeling.  

@@ -13,8 +13,8 @@ apilocation:
   - "setTrustStore Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setTrustStore Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  For more information, see the SunX509 TrustManager Interface documentation on the Sun Microsystems Web site.  
   
- If the trustStore property is set to a string or an empty string "", the driver will use that value to find the trustStore file to validate the server SSL certificate.  
+ If the trustStore property is set to a string or an empty string "", the driver will use that value to find the trustStore file to validate the server TLS/SSL certificate.  
   
  The trustStorePassword property can be specified along with the trustStore property and its value is used to open the trustStore file. For more information, see [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
   

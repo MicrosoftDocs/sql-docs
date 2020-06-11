@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   

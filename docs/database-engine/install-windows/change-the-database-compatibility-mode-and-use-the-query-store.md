@@ -1,5 +1,6 @@
 ---
 title: "Use Query Store after upgrade"
+description: This article explains the place of using the query store to establish a baseline and changing the database compatibility level in a SQL Server upgrade.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

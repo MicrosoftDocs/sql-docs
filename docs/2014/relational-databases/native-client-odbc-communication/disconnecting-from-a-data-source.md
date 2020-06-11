@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ODBC functions"
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Disconnecting from a Data Source

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "GetColumns method"
   - "BLOBs, fetching"
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream

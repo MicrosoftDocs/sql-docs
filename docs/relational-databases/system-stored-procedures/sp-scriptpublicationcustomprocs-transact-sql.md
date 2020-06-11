@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_scriptpublicationcustomprocs"
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

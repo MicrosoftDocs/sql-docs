@@ -1,8 +1,7 @@
 ---
 title: SQL Server Central Management Servers extension
-titleSuffix: Azure Data Studio
 description: Install and use the SQL Server Central Management Servers extension (preview) for Azure Data Studio
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual

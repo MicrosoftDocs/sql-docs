@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.query.general.f1"
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Query Options Execution (General Page)
   Use this page to specify the options for running [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries. To access this dialog box, right-click the body of a Query Editor window, and then click **Query Options**.  
   
-## UIElement List  
+## UI element list  
  **SET ROWCOUNT**  
  The default value of 0 indicates that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will wait for results until all results are received. Provide a value greater than 0 if you want [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to halt the query after obtaining the specified number of rows. To turn this option off (so that all rows are returned), specify SET ROWCOUNT 0.  
   

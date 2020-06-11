@@ -2,7 +2,7 @@
 title: "Data Type Mapping in Rowsets and Parameters | Microsoft Docs"
 description: "Data Type mapping in rowsets and parameters"
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "02/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -36,7 +36,7 @@ ms.author: pelopes
 |**bit**|DBTYPE_BOOL|  
 |**char**|DBTYPE_STR|  
 |**datetime**|DBTYPE_DBTIMESTAMP|  
-|**datetime2**|DBTYPE_DBTIME2|  
+|**datetime2**|DBTYPE_DBTIMESTAMP|  
 |**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
 |**image**|DBTYPE_BYTES|  

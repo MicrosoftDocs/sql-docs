@@ -1,5 +1,6 @@
 ---
 title: "Rename computer hosting instance"
+description: When you rename a computer that hosts an instance of SQL Server, update the system metadata stored in sys.servers.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

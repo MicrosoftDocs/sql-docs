@@ -1,5 +1,6 @@
 ---
 title: "Formatting the Legend on a Chart (Report Builder) | Microsoft Docs"
+description: Learn how to format a legend on a chart in Report Builder with the Legend Properties dialog box or by using the Properties pane.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

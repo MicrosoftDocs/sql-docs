@@ -1,5 +1,5 @@
 ---
-title: "Hadoop Connection Manager - SQL Server Integration Services | Microsoft Docs"
+title: "Hadoop Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

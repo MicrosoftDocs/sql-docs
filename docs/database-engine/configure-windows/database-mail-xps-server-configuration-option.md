@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Database Mail XPs option"
   - "Database Mail [SQL Server], enabling"
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Database Mail XPs Server Configuration Option
 

@@ -1,5 +1,5 @@
 ---
-title: "Convert Data Type by Using Data Conversion Transformation | Microsoft Docs"
+title: "Convert Data Type with Data Conversion Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -15,7 +15,7 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
 ---
-# Convert Data Type by Using Data Conversion Transformation
+# Convert Data Type with Data Conversion Transformation
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "information properties [OLE DB]"
   - "OLE DB data source properties [SQL Server Native Client]"
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Data Source Information Properties

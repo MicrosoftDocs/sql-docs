@@ -6,6 +6,8 @@
 
 - name: SQL Server Drivers
   href: ../connect/sql-connection-libraries.md
+- name: Driver Feature Support Matrix
+  href: ../connect/driver-feature-matrix.md
 - name: SQL Server Driver History
   href: ../connect/connect-history.md
 - name: SQL Data Developer
@@ -2782,10 +2784,12 @@
     items:
     - name: System Requirements
       href: ../connect/odbc/linux-mac/system-requirements.md
-    - name: Installing the Driver Manager
+    - name: Install the Driver Manager
       href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-    - name: Installing the Microsoft ODBC Driver for SQL Server
+    - name: Install the ODBC Driver (Linux)
       href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+    - name: Install the ODBC Driver (macOS)
+      href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
     - name: Feature Guides
       items:
       - name: Connection String Keywords and Data Source Names (DSNs)
@@ -5124,6 +5128,8 @@
       href: ../connect/oledb/features/using-large-value-types.md
     - name: Using Multiple Active Result Sets (MARS)
       href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+    - name: Using Transparent Network IP Resolution
+      href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
     - name: Using User-Defined Types
       href: ../connect/oledb/features/using-user-defined-types.md
     - name: Using XML Data Types

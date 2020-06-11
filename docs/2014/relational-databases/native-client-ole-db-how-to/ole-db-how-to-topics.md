@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, how-to topics"
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # OLE DB How-to Topics

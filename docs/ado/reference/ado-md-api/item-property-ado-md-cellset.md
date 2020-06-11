@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Item property [ADO MD]"
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Item Property (ADO MD Cellset)
 Retrieves a cell from a [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) using its coordinates.  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLTransact"
   - "SQLTransact function [ODBC], Text File Driver"
 ms.assetid: 0349bd4e-f402-4a69-b215-046210a433de
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTransact (Text File Driver)
 > [!NOTE]  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 365bfd63-c55a-433d-9e1a-a788bc149a25
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Server Objects (Analysis Services - Multidimensional Data)
     

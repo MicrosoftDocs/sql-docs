@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "syscollector_execution_stats view"
   - "data collector view"
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # syscollector_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], text file driver"
   - "Jet-based ODBC drivers [ODBC], text file driver"
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Text File Driver Programming Considerations
 This section contains the following topics:  

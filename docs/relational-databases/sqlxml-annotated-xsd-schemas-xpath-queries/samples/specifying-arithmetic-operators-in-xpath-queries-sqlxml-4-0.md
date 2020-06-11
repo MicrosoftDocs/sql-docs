@@ -1,5 +1,6 @@
 ---
 title: "Use arithmetic operators in XPath queries (SQLXML)"
+description: Learn how to specify arithmetic-operators in SQLXML 4.0 XPath queries.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

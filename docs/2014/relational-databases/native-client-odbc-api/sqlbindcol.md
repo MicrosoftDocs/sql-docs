@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLBindCol function"
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLBindCol

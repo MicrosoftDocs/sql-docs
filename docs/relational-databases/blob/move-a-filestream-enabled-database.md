@@ -1,5 +1,6 @@
 ---
 title: "Move a FILESTREAM-Enabled Database | Microsoft Docs"
+description: Discover how to move a FILESTREAM-enabled database. See which Transact-SQL scripts to use in the Query Editor of SQL Server Management Studio.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

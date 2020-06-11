@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2014 Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/25/2019"
+ms.date: "04/06/2020"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "analysis-services"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # SQL Server 2014 Analysis Services
 
@@ -29,7 +28,7 @@ Documentation is separated by version. You are currently in SQL Server 2014 Anal
 
 - To learn more about SQL Server 2012 and earlier, see [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
 - To learn more about SQL Server 2014, see [Books Online for SQL Server 2014](../2014-toc/index.yml)
-- To learn more about SQL Server 2016 and later, see [Microsoft SQL documentation](https://docs.microsoft.com/sql/).
+- To learn more about SQL Server 2016 and later, see [Analysis Services documentation](https://docs.microsoft.com/analysis-services/).
 - To learn more about Azure Analysis Services, see [Azure Analysis Services Documentation](https://docs.microsoft.com/azure/analysis-services/).
 
 ## Analysis Services workflow

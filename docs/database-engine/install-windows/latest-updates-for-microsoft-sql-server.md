@@ -10,14 +10,19 @@ ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
+ms.reviewer: hristins
 mtps_version: v=MSDN.10
 ---
 
 # Latest updates for Microsoft SQL Server
 
-Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to  receive information about updates and to download the updates.
+Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to receive information about updates and to download the updates.
 
-This page tracks the latest updates to all supported versions of SQL Server. For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](https://support.microsoft.com/lifecycle/).
+This page tracks the latest updates to all supported versions of SQL Server. 
+
+For information about previous updates, see the [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/). 
+
+For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](https://support.microsoft.com/lifecycle/). 
 
 ## Latest updates
 
@@ -25,9 +30,9 @@ Each of the following links provides information for all of the applicable produ
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 2 [(KB 4536075)](https://support.microsoft.com/help/4536075)|2/13/2020|[SQL Server 2019 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 19 [(KB 4535007)](https://support.microsoft.com/help/4535007)|2/5/2020|[SQL Server 2017 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 11 [(KB 4535706)](https://support.microsoft.com/kb/4535706)|2/11/2020|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
+|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 4 [(KB 4548597)](https://support.microsoft.com/help/4548597)|3/31/2020|[SQL Server 2019 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 20 [(KB 4541283)](https://support.microsoft.com/help/4541283)|2/5/2020|[SQL Server 2017 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 13 [(KB 4549825)](https://support.microsoft.com/kb/4549825)|5/28/2020|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|7/9/2019|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|N/A|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|11/22/2017|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 4532095](https://support.microsoft.com/help/4532095)|CU 4 [(KB 4535288)](https://support.microsoft.com/kb/4535288)|2/11/2020|[SQL Server 2014 Installation](https://technet.microsoft.com/library/cc281837(v=sql.120).aspx)|
@@ -60,3 +65,5 @@ Each of the following links provides information for all of the applicable produ
   - [SQL Server DevCenter](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server TechCenter](https://technet.microsoft.com/sqlserver/default.aspx)
   - [SQL Server Product Information Center](https://www.microsoft.com/sqlserver/default.aspx)
+  - [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/)
+  - [SQL Server release blogs](https://aka.ms/sqlreleases)

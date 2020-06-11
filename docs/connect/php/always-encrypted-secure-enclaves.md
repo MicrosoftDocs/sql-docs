@@ -1,5 +1,6 @@
 ---
-title: "Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server | Microsoft Docs"
+title: "Always Encrypted with Secure Enclaves with the PHP Drivers"
+description: "Learn how to use Always Encrypted with secure enclaves with the Microsoft Drivers for PHP for SQL Server."
 ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,9 +8,8 @@ ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ""
-ms.author: v-dapugl
-author: david-puglielli
-manager: v-mabarw
+ms.author: v-daenge
+author: David-Engel
 ---
 # Using Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -23,7 +23,7 @@ manager: v-mabarw
 
 ## Enabling Always Encrypted with Secure Enclaves
 
-Support for Always Encrypted with Secure Enclaves is available in the PHP Drivers for SQL Server starting with 5.8.0. Always Encrypted with Secure Enclaves requires SQL Server 2019 or later and version 17.4+ of the ODBC driver. Further details on general requirements for Always Encrypted with the PHP Drivers for SQL Server are available [here](../../connect/php/using-always-encrypted-php-drivers.md).
+Support for Always Encrypted with Secure Enclaves is available in the PHP Drivers for SQL Server starting with 5.8.0. Always Encrypted with Secure Enclaves requires SQL Server 2019 or later and version 17.4+ of the ODBC driver. Further details on general requirements for Always Encrypted with the PHP Drivers for SQL Server are available [here](using-always-encrypted-php-drivers.md).
 
 Always Encrypted with Secure Enclaves ensures the security of encrypted data by attesting the enclave - that is, verifying the enclave against an external attestation service. To use secure enclaves, the `ColumnEncryption` keyword must identify the attestation type and protocol along with associated attestation data, separated by a comma. Version 17.4 of the ODBC driver supports only Virtualization-Based Security (VBS) and the Host Guardian Service (HGS) protocol for the enclave type and protocol. The associated attestation data is the URL of the attestation server. Thus, the following would be added to the connection string:
 
@@ -385,8 +385,8 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 ## See Also  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[Using Always Encrypted with the PHP Drivers for SQL Server | Microsoft Docs](../../connect/php/using-always-encrypted-php-drivers.md)
+[Programming Guide for PHP SQL Driver](programming-guide-for-php-sql-driver.md)  
+[SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)  
+[PDO_SQLSRV Driver API Reference](pdo-sqlsrv-driver-reference.md)  
+[Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
   

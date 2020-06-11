@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: This article describes how to install the SQL Server Tools on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -88,7 +88,10 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 
 ## <a id="ubuntu"></a>Install tools on Ubuntu 16.04
 
-Use the following steps to install the **mssql-tools** on Ubuntu. 
+Use the following steps to install the **mssql-tools** on Ubuntu.
+
+> [!NOTE]
+> Ubuntu 18.04 is supported starting with SQL Server 2019 CU3. If you are using Ubuntu 18.04, change the repository path from `/ubuntu/16.04` to `/ubuntu/18.04`.
 
 1. Import the public repository GPG keys.
 

@@ -5,7 +5,7 @@
 - name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
 - name: Previous versions 2005-2014
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 
 - name: Overview
   items:
@@ -81,6 +81,8 @@
       items:
       - name: Deployment guidance
         href: big-data-cluster/deployment-guidance.md
+      - name: Deployed resources
+        href: big-data-cluster/concept-architecture-pods.md
       - name: Upgrade to a new release
         href: big-data-cluster/deployment-upgrade.md
       - name: Customize deployments
@@ -110,7 +112,7 @@
         - name: Single node kubeadm script
           href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks
-          href: big-data-cluster/deploy-notebooks.md         
+          href: big-data-cluster/notebooks-deploy.md
   - name: Concepts
     items:
     - name: Application deployment
@@ -146,7 +148,7 @@
       - name: HDFS data
         items:
         - name: Virtualize CSV data
-          href: relational-databases/polybase/data-virtualization-csv.md
+          href: big-data-cluster/data-virtualization-csv.md
         - name: Query HDFS data
           href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
         - name: HDFS tiering
@@ -179,6 +181,96 @@
       items:
       - name: Use Machine Learning Services (Python, R)
         href: big-data-cluster/machine-learning-services.md
+
+      - name: Machine learning quickstarts
+        items:
+        - name: Python
+          items:
+          - name: Run Python scripts
+            href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Data structures and objects
+            href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Python functions
+            href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Train and score a model
+            href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+        - name: R
+          items:
+          - name: Run R scripts
+            href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Data types and objects
+            href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: R functions
+            href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Train and score a model
+            href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+
+      - name: Machine learning tutorials
+        items:
+        - name: Python
+          items:
+          - name: Ski rental (linear regression)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 2 - Prepare data
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 3 - Train model
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 4 - Deploy model
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Categorize customers (k-means clustering)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 2 - Prepare the data
+              href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 3 - Create the model
+              href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 4 - Deploy the model
+              href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+        - name: R
+          items:
+          - name: Ski rental (decision tree)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 2 - Prepare data
+              href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 3 - Train model
+              href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 4 - Deploy model
+              href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Categorize customers (k-means clustering)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 2 - Prepare the data
+              href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 3 - Create the model
+              href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 4 - Deploy the model
+              href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+
+      - name: Manage Python, R packages
+        items:
+        - name: Python
+          items:
+          - name: Get Python package information
+            href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Install with sqlmlutils
+            href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+        - name: R
+          items:
+          - name: Get R package information
+            href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Install with sqlmlutils
+            href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Create a miniCRAN repo
+            href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: Tips for using R packages
+            href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15
+
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap
@@ -193,26 +285,18 @@
         href: big-data-cluster/connect-to-big-data-cluster.md
       - name: View cluster status
         href: big-data-cluster/view-cluster-status.md
-      - name: Kubernetes troubleshooting
-        href: big-data-cluster/cluster-troubleshooting-commands.md
-      - name: Manage with notebook
-        href: big-data-cluster/manage-notebooks.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
+      - name: Manage existing notebooks
+        href: big-data-cluster/notebooks-manage-bdc.md
+      - name: Run a notebook with Spark
+        href: big-data-cluster/notebooks-tutorial-spark.md
       - name: Security
         items:
         - name: Update AZDATA_PASSWORD
           href: big-data-cluster/change-azdata-password.md
         - name: Manage user access
           href: big-data-cluster/manage-user-access.md
-    - name: Notebooks
-      items:
-      - name: Notebooks overview
-        href: big-data-cluster/notebooks-guidance.md
-      - name: Notebook tutorial
-        href: big-data-cluster/tutorial-notebook-spark.md
-      - name: Manage existing notebooks
-        href: big-data-cluster/notebooks-how-to-manage.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -223,8 +307,24 @@
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
+    - name: Troubleshoot
+      items:
+      - name: Troubleshoot Kubernetes
+        href: big-data-cluster/cluster-troubleshooting-commands.md
+      - name: Troubleshoot pyspark notebook
+        href: big-data-cluster/troubleshoot-pyspark-notebook.md
+      - name: Active directory domain group scope
+        href: big-data-cluster/troubleshoot-active-directory.md
+      - name: Active directory DNS
+        href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+      - name: Active directory login fails
+        href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+      - name: HDFS admin permissions
+        href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference
     items:
+    - name: BDC partners
+      href: sql-server/partner-big-data-cluster.md
     - name: Deployment reference
       items:
       - name: Deployment configuration file
@@ -610,10 +710,11 @@
             - name: SignalAbort
               href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
   - name: Always On availability groups
-    href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
     items:
     - name: Overview
       items:
+      - name: What is an Always On availability group?
+        href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       - name: Availability modes
         href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
       - name: Technology & capabilities
@@ -706,7 +807,7 @@
           href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
         - name: View listener properties
           href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-      - name: Operation
+      - name: Operate
         items:
         - name: Add Database
           items:
@@ -750,6 +851,8 @@
           href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
         - name: View health with policies
           href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: Connect to listener
+          href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
     - name: Concepts
       items:
       - name: Configuration
@@ -788,12 +891,12 @@
           href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
       - name: Connectivity
         items:
-        - name: Client connection
+        - name: Listener
+          href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+        - name: Client connection types
           href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-        - name: Client connectivity
+        - name: Driver & client support
           href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-        - name: Listeners, clients, & failover
-          href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
       - name: Interoperability
         items:
         - name: Replication, CT, & CDC
@@ -940,10 +1043,13 @@
           - name: SQL Server error log
             href: database-engine/availability-groups/windows/sql-server-error-log-always-on-availability-groups.md
   - name: Always On failover cluster instance
-    href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     items:
     - name: Overview
-      href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+      items:
+        - name: What is a failover cluster instance?
+          href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+        - name: Windows Server failover cluster
+          href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     - name: How-to
       items:
       - name: Deployment
@@ -1386,6 +1492,15 @@
             href: relational-databases/databases/database-properties-mirroring-page.md
           - name: Query store page
             href: relational-databases/databases/database-properties-query-store-page.md
+  - name: Event notification
+    href: relational-databases/service-broker/event-notifications.md
+    items:
+    - name: Implement
+      href: relational-databases/service-broker/implement-event-notifications.md
+    - name: Configure Dialog Security
+      href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+    - name: Get Information
+      href: relational-databases/service-broker/get-information-about-event-notifications.md
   - name: Filestream, Filetable & BLOB
     href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
     items:
@@ -1540,15 +1655,8 @@
     items:
     - name: Sequence Properties
       href: relational-databases/sequence-numbers/sequence-properties-general-page.md
-  - name: Service broker
-    href: relational-databases/service-broker/event-notifications.md
-    items:
-    - name: Implement
-      href: relational-databases/service-broker/implement-event-notifications.md
-    - name: Configure Dialog Security
-      href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-    - name: Get Information
-      href: relational-databases/service-broker/get-information-about-event-notifications.md
+  - name: Service Broker
+    href: database-engine/configure-windows/sql-server-service-broker.md 
   - name: Spatial data
     href: relational-databases/spatial/spatial-data-sql-server.md
     items:
@@ -1697,7 +1805,7 @@
         href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
       - name: Disable constraints with INSERT & UPDATE
         href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-    - name: Unique constraints
+    - name: Unique constraints and check constraints
       href: relational-databases/tables/unique-constraints-and-check-constraints.md
       items:
       - name: Create
@@ -2552,7 +2660,11 @@
       - name: Java to SQL data types
         href: language-extensions/how-to/java-to-sql-data-types.md
       - name: Create a Java jar file
-        href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+        href: language-extensions/how-to/call-java-from-sql.md
+    - name: Reference
+      items:
+      - name: Extensibility Framework API
+        href: language-extensions/reference/extensibility-framework-api.md
   - name: SQL Server Native Client
     href: relational-databases/native-client/sql-server-native-client.md
     items:
@@ -2673,7 +2785,7 @@
         href: relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
       - name: Properties
         href: relational-databases/native-client-ole-db-provider/about-ole-db-properties.md
-      - name: Estable a connection
+      - name: Establish a connection
         href: relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
       - name: Execute a command
         href: relational-databases/native-client-ole-db-provider/executing-a-command.md
@@ -4166,12 +4278,8 @@
   items:
   - name: Overview
     items:
-    - name: What's New
+    - name: What's new
       href: sql-server/install/what-s-new-in-sql-server-installation.md
-    - name: Maximum Capacity Specifications
-      href: sql-server/maximum-capacity-specifications-for-sql-server.md
-    - name: Compute capacity limits by edition
-      href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
   - name: Release notes
     items:
     - name: Discontinued functionality in SQL Server
@@ -4191,25 +4299,29 @@
   - name: Planning
     href: sql-server/install/planning-a-sql-server-installation.md
     items:
-    - name: Hardware & Software Requirements
+    - name: Maximum capacity specifications
+      href: sql-server/maximum-capacity-specifications-for-sql-server.md
+    - name: Compute capacity limits by edition
+      href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
+    - name: Hardware & software requirements
       items:
       - name: SQL Server 2019
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-      - name: SQL Server 2017 & prior
+      - name: SQL Server 2016 & 2017
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
-    - name: Security Considerations
+    - name: Security considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-    - name: Network Protocols & Network Libraries
+    - name: Network protocols & libraries
       href: sql-server/install/network-protocols-and-network-libraries.md
-    - name: Work with Multiple Versions & Instances
+    - name: Work with multiple Versions & Instances
       href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-    - name: Local Language Versions
+    - name: Language versions
       href: sql-server/install/local-language-versions-in-sql-server.md
-    - name: File Locations
+    - name: File locations
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: SQL Server Privacy supplement
+      - name: SQL Server privacy supplement
         items:
         - name: SQL Server 2017 and prior
           href: sql-server/sql-server-privacy.md
@@ -4367,8 +4479,6 @@
       href: database-engine/configure-windows/remote-servers.md
     - name: SQL Server Monitor Overview
       href: database-engine/configure-windows/sql-server-monitor-overview.md
-    - name: Service Broker
-      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: Buffer Pool Extension
       href: database-engine/configure-windows/buffer-pool-extension.md
     - name: Server Configuration Options
@@ -4378,6 +4488,10 @@
         href: database-engine/configure-windows/access-check-cache-server-configuration-options.md
       - name: ad hoc distributed queries
         href: database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md
+      - name: ADR cleaner retry timeout
+        href: database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md
+      - name: ADR Preallocation Factor
+        href: database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md
       - name: affinity Input-Output mask
         href: database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md
       - name: affinity64 Input-Output mask
@@ -6165,15 +6279,6 @@
             href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
     - name: Transaction log management
       items:
-      - name: Log File Viewer
-        href: relational-databases/logs/log-file-viewer.md
-        items:
-        - name: Open
-          href: relational-databases/logs/open-log-file-viewer.md
-        - name: View Offline
-          href: relational-databases/logs/view-offline-log-files.md
-        - name: F1 Help
-          href: relational-databases/logs/log-file-viewer-f1-help.md
       - name: Transaction log
         href: relational-databases/logs/the-transaction-log-sql-server.md
         items:
@@ -6759,7 +6864,7 @@
         href: relational-databases/partitions/modify-a-partition-function.md
       - name: Modify a Scheme
         href: relational-databases/partitions/modify-a-partition-scheme.md
-      - name: Manage Partition Wizard F1 Help
+      - name: Manage Partition Wizard
         href: relational-databases/partitions/manage-partition-wizard-f1-help.md
     - name: Plan guides
       href: relational-databases/performance/plan-guides.md
@@ -7023,13 +7128,13 @@
       href: relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
-  - name: Advanced Analytics & Machine learning > 
-    href: advanced-analytics/
+  - name: Machine Learning Services > 
+    href: machine-learning/
   - name: Analytics Platform System > 
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md
   - name: SQL Server Analysis Services (SSAS) > 
-    href: https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview
+    href: https://docs.microsoft.com/analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) > 
     href: reporting-services/index.md
   - name: Master Data Services
@@ -7548,6 +7653,8 @@
           items:
           - name: Query columns using Always Encrypted with SSMS
             href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+          - name: Query columns using Always Encrypted with Azure Data Studio
+            href: relational-databases/security/encryption/always-encrypted-query-columns-ads.md
         - name: Migrate sensitive data protected with Always Encrypted
           items:
           - name: Export and import 
@@ -7756,104 +7863,8 @@
   items:
   - name: Overview
     href: tools/overview-sql-tools.md
-  - name: Azure Data Studio
-    href: azure-data-studio/what-is.md
-    items:
-    - name: Install
-      href: azure-data-studio/download-azure-data-studio.md
-    - name: Release notes
-      href: azure-data-studio/release-notes-azure-data-studio.md
-    - name: Quickstarts
-      items:
-      - name: Connect & query SQL Server
-        href: azure-data-studio/quickstart-sql-server.md
-      - name: Connect & query Azure SQL Database
-        href: azure-data-studio/quickstart-sql-database.md
-      - name: Connect & query Azure SQL Data Warehouse
-        href: azure-data-studio/quickstart-sql-dw.md
-      - name: Connect & query PostgreSQL
-        href: azure-data-studio/quickstart-postgres.md
-    - name: Tutorials
-      items:
-      - name: T-SQL Editor
-        href: azure-data-studio/tutorial-sql-editor.md
-      - name: "Sample insight: slow queries"
-        href: azure-data-studio/tutorial-qds-sql-server.md
-      - name: "Sample insight: table space usage"
-        href: azure-data-studio/tutorial-table-space-sql-server.md
-      - name: Build a custom insight
-        href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
-      - name: Backup & restore
-        href: azure-data-studio/tutorial-backup-restore-sql-server.md
-    - name: How-to guides
-      items:
-      - name: Dashboards & insight widgets
-        href: azure-data-studio/insight-widgets.md
-      - name: Code snippets
-        href: azure-data-studio/code-snippets.md
-      - name: Integrated terminal (PowerShell, Bash)
-        href: azure-data-studio/integrated-terminal.md
-      - name: Keyboard shortcuts
-        href: azure-data-studio/keyboard-shortcuts.md
-      - name: Explorer Azure SQL resources
-        href: azure-data-studio/azure-resource-explorer.md
-      - name: SQL Notebooks
-        href: azure-data-studio/sql-notebooks.md
-      - name: Server groups
-        href: azure-data-studio/server-groups.md
-      - name: Source control
-        href: azure-data-studio/source-control.md
-      - name: Workspace & user settings
-        href: azure-data-studio/settings.md
-      - name: Windows authentication (Kerberos)
-        href: azure-data-studio/enable-kerberos.md
-      - name: Usage data collection
-        href: azure-data-studio/usage-data-collection.md
-    - name: Extensions
-      href: azure-data-studio/extensions.md
-      items:
-      - name: PostgreSQL extension
-        href: azure-data-studio/postgres-extension.md
-      - name: Data Virtualization extension
-        href: azure-data-studio/data-virtualization-extension.md
-      - name: SQL Server Agent
-        href: azure-data-studio/sql-server-agent-extension.md
-      - name: SQL Server Central Management Servers extension
-        href: azure-data-studio/sql-server-cms-extension.md        
-      - name: SQL Server dacpac extension
-        href: azure-data-studio/sql-server-dacpac-extension.md
-      - name: SQL Server Import
-        href: azure-data-studio/sql-server-import-extension.md
-      - name: SQL Server Profiler
-        href: azure-data-studio/sql-server-profiler-extension.md
-      - name: Schema Compare extension
-        href: azure-data-studio/schema-compare-extension.md        
-      - name: PowerShell extension
-        href: azure-data-studio/powershell-extension.md        
-      - name: Managed Instance extension
-        href: azure-data-studio/azure-sql-managed-instance-extension.md        
-      - name: SandDance extension
-        href: azure-data-studio/sanddance-extension.md
-    - name: Extension Authoring
-      items:
-      - name: Extensibility overview
-        href: azure-data-studio/extensibility.md
-      - name: Extension authoring
-        href: azure-data-studio/extension-authoring.md
-      - name: Create an extension
-        href: azure-data-studio/tutorial-create-extension.md
-      - name: Extensibility APIs
-        href: azure-data-studio/extensibility-apis.md
-    - name: Resources
-      items:
-      - name: FAQ
-        href: azure-data-studio/faq.md
-      - name: Azure Data Studio GitHub repo >>
-        href: https://www.github.com/Microsoft/azuredatastudio
-      - name: SQL Server Blog >>
-        href: https://blogs.technet.microsoft.com/dataplatforminsider/
-      - name: Report issues & make suggestions >>
-        href: https://github.com/microsoft/azuredatastudio/issues
+  - name: Azure Data Studio >
+    href: azure-data-studio/index.yml
   - name: Command prompt utilities
     href: tools/command-prompt-utility-reference-database-engine.md
     items:
@@ -8400,6 +8411,15 @@
         href: ssms/ssms-utility.md
       - name: SSMS Keyboard Shortcuts
         href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+      - name: Log File Viewer
+        href: relational-databases/logs/log-file-viewer.md
+        items:
+        - name: F1 Help
+          href: relational-databases/logs/log-file-viewer-f1-help.md
+        - name: Open
+          href: relational-databases/logs/open-log-file-viewer.md
+        - name: View Offline
+          href: relational-databases/logs/view-offline-log-files.md
       - name: SQL Server Agent
         items:
         - name: SQL Server Agent
@@ -8455,7 +8475,7 @@
           items:
           - name: Download Instructions Tab
             href: ssms/agent/target-servers-download-instructions-tab.md
-          - name: arget Server Status Tab
+          - name: Target Server Status Tab
             href: ssms/agent/target-servers-target-server-status-tab.md
         - name: Alerts Properties
           href: ssms/agent/alerts.md
@@ -8520,11 +8540,17 @@
           href: ssms/register-servers/registered-servers-f1-help.md
       - name: Scripting with SSMS
         items:
+        - name: Generate scripts
+          items:
+          - name: Generate Scripts
+            href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+          - name: Generate & Publish Scripts Wizard
+            href: ssms/scripting/generate-and-publish-scripts-wizard.md
+          - name: Objects Supported by the Generate Scripts Wizard
+            href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Query & Text Editors
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           items:
-          - name: Database Engine Query Editor
-            href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
           - name: Color Coding in Query Editors
@@ -8643,14 +8669,6 @@
             items:
             - name: Spatial Results Window
               href: ssms/scripting/spatial-results-window.md
-            - name: Generate Scripts
-              href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-              items:
-              - name: Generate & Publish Scripts Wizard
-                href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                items:
-                - name: Objects Supported by the Generate Scripts Wizard
-                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
     - name: How-to
       items:
       - name: Install non-English SSMS
@@ -9026,6 +9044,8 @@
         items:
         - name: F1 Help for Server Connections (SSMS)
           href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+        - name: Database Engine Query Editor
+          href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
         - name: Connect to Microsoft Azure Storage
           href: ssms/f1-help/connect-to-microsoft-azure-storage.md
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
@@ -9840,6 +9860,8 @@
         href: linux/sql-server-linux-setup-ssis.md
       - name: Install SQL Server Machine Learning Services
         href: linux/sql-server-linux-setup-machine-learning.md
+      - name: Install SQL Server Machine Learning Services on Docker
+        href: linux/sql-server-linux-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
         href: linux/sql-server-linux-setup-language-extensions.md
       - name: Configure repositories
@@ -10020,6 +10042,8 @@
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Resources
   items:
+  - name: Offline SQL Server documentation
+    href: sql-server/sql-server-offline-documentation.md
   - name: Learn
     items:
     - name: Educational resources 
@@ -10062,8 +10086,6 @@
       href: sql-server/sql-server-docs-contribute.md
   - name: Partners
     items:
-    - name: Big Data Clusters
-      href: sql-server/partner-big-data-cluster.md
     - name: Monitoring
       href: sql-server/partner-monitor-sql-server.md
     - name: High availability & disaster recovery
@@ -10072,13 +10094,8 @@
       href: sql-server/partner-management-sql-server.md
     - name: Development
       href: sql-server/partner-dev-sql-server.md
-  - name: Local content with Help Viewer
-    href: sql-server/sql-server-help-installation.md
 - name: Reference
   items:
-  - name: Archived Content (SQL 2005 - 2012) >
-    displayName: 2005, 2008, 2008 r2, 2012, previous-versions
-    href: https://docs.microsoft.com/previous-versions/sql/
   - name: Database samples
     items:
     - name: Samples Overview
@@ -10343,6 +10360,8 @@
           href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
       - name: Errors 5000 to 8000
         items:
+        - name: 5120
+          href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
         - name: 5228
           href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
         - name: 5229
@@ -10615,6 +10634,8 @@
           href: relational-databases/errors-events/mssqlserver-17194-database-engine-error.md
         - name: 17204
           href: relational-databases/errors-events/mssqlserver-17204-database-engine-error.md
+        - name: 17207
+          href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
         - name: 17300
           href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
         - name: 17660
@@ -15404,6 +15425,8 @@
           href: t-sql/functions/current-timestamp-transact-sql.md
         - name: CURRENT_TIMEZONE
           href: t-sql/functions/current-timezone-transact-sql.md
+        - name: CURRENT_TIMEZONE_ID
+          href: t-sql/functions/current-timezone-id-transact-sql.md
         - name: DATEADD
           href: t-sql/functions/dateadd-transact-sql.md
         - name: DATEDIFF
@@ -17065,5 +17088,3 @@
         href: xquery/string-search-in-xquery.md
       - name: Handling Namespaces in XQuery
         href: xquery/handling-namespaces-in-xquery.md
-- name: Knowledge Base support
-  href: kb-support/toc.yml

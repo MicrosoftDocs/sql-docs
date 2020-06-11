@@ -14,7 +14,7 @@ manager: craigg
 # Analysis Services Configuration - Data Directories
   The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that is created and provisioned during Setup.  
   
-## UIElement List  
+## UI element list  
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  

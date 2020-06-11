@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Migration Assistant for MySQL (MySQLToSQL) | Microsoft Docs"
+description: Learn about SSMA for MySQL and follow step-by-step instructions for migrating MySQL databases to SQL Server or Azure SQL Database.
 ms.prod: sql
 ms.custom: ""
 ms.date: "10/10/2019"

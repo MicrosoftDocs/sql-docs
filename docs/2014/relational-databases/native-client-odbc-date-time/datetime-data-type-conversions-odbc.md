@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "bindings [ODBC]"
   - "ODBC, bindings and conversions"
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # datetime Data Type Conversions (ODBC)

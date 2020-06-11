@@ -26,7 +26,7 @@ ms.author: chugu
 catalog.create_environment_reference [ @folder_name = ] folder_name  
      , [ @project_name = ] project_name  
      , [ @environment_name = ] environment_name  
-     , [ @reference_location = ] reference_location  
+     , [ @reference_type = ] reference_type  
   [  , [ @environment_folder_name = ] environment_folder_name ]  
   [  , [ @reference_id = ] reference_id OUTPUT ]  
 ```  
@@ -41,8 +41,8 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
  [ @environment_name = ] *environment_name*  
  The name of the environment being referenced. The *environment_name* is **nvarchar(128)**.  
   
- [ @reference_location = ] *reference_location*  
- Indicates whether the environment can be located in the same folder as the project (relative reference) or in a different folder (absolute reference). Use the value `R` to indicate a relative reference. Use the value `A` to indicate an absolute reference. The *reference_location* is **char(1)**.  
+ [ @reference_type = ] *reference_type*  
+ Indicates whether the environment can be located in the same folder as the project (relative reference) or in a different folder (absolute reference). Use the value `R` to indicate a relative reference. Use the value `A` to indicate an absolute reference. The *reference_type* is **char(1)**.  
   
  [ @environment_folder_name = ] *environment_folder_name*  
  The name of the folder in which the environment that being referenced is located. This value is required for absolute references. The *environment_folder_name* is **nvarchar(128)**.  

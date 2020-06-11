@@ -24,7 +24,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -49,7 +49,7 @@ column_name AS computed_column_expression
  Is the name of the column to be altered, added, or dropped. *column_name* can be 1 through 128 characters. For new columns, *column_name* can be omitted for columns created with a **timestamp** data type. If no *column_name* is specified for a **timestamp** data type column, the name **timestamp** is used.  
   
 *computed_column_expression*  
- Is an expression that defines the value of a computed column. A computed column is a virtual column that is not physically stored in the table but is computed from an expression that uses other columns in the same table. For example, a computed column could have the definition: cost AS price * qty. The expression can be a noncomputed column name, constant, function, variable, and any combination of these connected by one or more operators. The expression cannot be a subquery or include an alias data type.  
+ Is an expression that defines the value of a computed column. A computed column is a virtual column that is not physically stored in the table but is computed from an expression that uses other columns in the same table. An expression must yield a value. For example, a computed column could have the definition: cost AS price * qty. Another example with bitwise operators: is_finalised AS is_checked | is_approved. The expression can be a noncomputed column name, constant, function, variable, and any combination of these connected by one or more operators. The expression cannot be a search condition, subquery or include an alias data type.  
   
  Computed columns can be used in select lists, WHERE clauses, ORDER BY clauses, or any other locations where regular expressions can be used, but with the following exceptions:  
   

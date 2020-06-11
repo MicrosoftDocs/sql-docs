@@ -1,5 +1,6 @@
 ---
 title: "Connect to a Microsoft Azure Subscription | Microsoft Docs"
+description: Register an Azure blob container with your instance of SQL Server, which creates a shared access signature, stored access policy, and SQL Server Credential.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

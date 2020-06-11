@@ -1,5 +1,6 @@
 ---
 title: "Restore Database (Options Page) | Microsoft Docs"
+description: While restoring a database in SQL Server, use the Options page of the Restore Database dialog box to modify the behavior and outcome of the restore operation.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

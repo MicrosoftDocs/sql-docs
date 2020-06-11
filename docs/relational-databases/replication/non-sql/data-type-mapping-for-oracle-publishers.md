@@ -1,5 +1,6 @@
 ---
 title: "Data Type Mapping for Oracle Publishers | Microsoft Docs"
+description: Learn about default mappings of data types between Oracle and SQL Server when data is moved from the Oracle Publisher to the SQL Server Distributor.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

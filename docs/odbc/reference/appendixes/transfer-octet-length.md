@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL data types [ODBC], column characteristics"
   - "data types [ODBC], transfer octet length"
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Transfer Octet Length
 The transfer octet length of a column is the maximum number of bytes returned to the application when data is transferred to its default C data type. For character data, the transfer octet length does not include space for the null-termination character. The transfer octet length of a column may be different than the number of bytes required to store the data on the data source.  

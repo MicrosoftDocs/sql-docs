@@ -49,6 +49,10 @@ The following steps describe how to pull the big data cluster container images f
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> Do not modify the big data cluster images once they are pushed into your private repository. Performing a deployment with modified images will result in an unsupported big data cluster setup.
+
 
 ### <a id="images"></a> Big data cluster container images
 

@@ -1,5 +1,6 @@
 ---
 title: "Import data from Excel to SQL | Microsoft Docs"
+description: This article describes methods to import data from Excel to SQL Server or Azure SQL Database. Some use a single step, others require an intermediate text file.
 ms.custom: sqlfreshmay19
 ms.date: "09/30/2019"
 ms.prod: sql
@@ -30,7 +31,7 @@ You can use the following tools to import data from Excel:
 | [Azure Data Factory](#adf)                         |                                                   |
 | &nbsp; | &nbsp; |
 
-If you want to import multiple worksheets from an Excel workbook, you typically have to run each of these tools once for each sheet.
+If you want to import multiple worksheets from an Excel workbook, you typically have to run any of these tools once for each sheet.
 
 A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this list. To learn more about the solution that interests you, follow the provided links.
 

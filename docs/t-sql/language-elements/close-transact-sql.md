@@ -29,7 +29,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   

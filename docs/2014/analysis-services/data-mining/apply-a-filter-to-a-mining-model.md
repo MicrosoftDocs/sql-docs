@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Apply a Filter to a Mining Model
   If your mining structure contains a nested table, you can apply a filter to the case table, the nested table, or both.  

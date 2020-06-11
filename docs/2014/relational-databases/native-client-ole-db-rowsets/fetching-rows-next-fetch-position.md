@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "next fetch position"
   - "rowsets [OLE DB], fetching"
 ms.assetid: 9ef74b3f-c9c0-492f-9b93-d65738a61abd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Next Fetch Position

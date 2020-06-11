@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define a New Attribute Automatically
   You can create a new attribute in a dimension by using drag-and-drop editing in the Dimension Designer.  

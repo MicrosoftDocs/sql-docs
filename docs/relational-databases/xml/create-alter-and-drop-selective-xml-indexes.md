@@ -12,7 +12,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Create, Alter, and Drop Selective XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Describes how to create a new selective XML index, or alter or drop an existing selective XML index.  
   
  For more information about selective XML indexes, see [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  

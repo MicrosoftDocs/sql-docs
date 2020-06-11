@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Conversion Type (Business Intelligence Wizard)
   Use the **Select Conversion Type** page to define the relationship between local currencies and reporting currencies for transactions stored in multiple currencies. A local currency is the currency in which the transactions for measures selected in the **Select Measures** page are stored. A reporting currency is the currency in which the transactions selected in the **Select Measures** page are translated.  

@@ -3,7 +3,6 @@ title: "Create a Database Master Key | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 

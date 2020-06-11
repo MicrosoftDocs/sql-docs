@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_event_bindings catalog view"
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

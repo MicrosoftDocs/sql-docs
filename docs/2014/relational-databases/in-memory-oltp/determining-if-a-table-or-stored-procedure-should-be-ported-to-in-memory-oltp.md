@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Analyze, Migrate, Report"
   - "AMR"
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP

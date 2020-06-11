@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Event Class Reference | Microsoft Docs"
+description: Record events as they occur in an instance of SQL Server Database Engine by using the SQL Server Profiler.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

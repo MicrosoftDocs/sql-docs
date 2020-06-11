@@ -1,5 +1,5 @@
 ---
-title: "Loop through Excel Files and Tables by Using a Foreach Loop Container | Microsoft Docs"
+title: "Loop through Excel Files and Tables with a Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2018"
 ms.prod: sql
@@ -15,7 +15,7 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
 ---
-# Loop through Excel Files and Tables by Using a Foreach Loop Container
+# Loop through Excel Files and Tables with a Foreach Loop Container
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

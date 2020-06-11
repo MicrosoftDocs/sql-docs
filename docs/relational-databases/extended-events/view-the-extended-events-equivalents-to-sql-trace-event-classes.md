@@ -1,5 +1,6 @@
 ---
 title: "Extended events equivalents to SQL Trace Event classes"
+description: This article shows you how to view the Extended Events actions and events that are equivalent to each SQL Trace event and its associated columns.
 ms.date: "03/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

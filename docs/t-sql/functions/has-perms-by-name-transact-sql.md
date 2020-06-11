@@ -32,7 +32,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  

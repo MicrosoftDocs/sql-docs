@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 ## Syntax    
     
-```    
+```syntaxsql
 -- Syntax for SQL Server  
 ALTER AUTHORIZATION    
    ON [ <class_type>:: ] entity_name    
@@ -54,7 +54,7 @@ ALTER AUTHORIZATION
     }    
 ```    
 
-```
+```syntaxsql
 -- Syntax for SQL Database  
   
 ALTER AUTHORIZATION    
@@ -73,7 +73,7 @@ ALTER AUTHORIZATION
 ```    
 
     
-```    
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
   
 ALTER AUTHORIZATION ON    
@@ -93,7 +93,7 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-```    
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER AUTHORIZATION ON    
@@ -265,7 +265,7 @@ Instead of using Azure AD users as individual owners of the database, use an Azu
   ```    
   
 Now the `mydbogroup` members can centrally manage the database as members of the **db_owner** role.  
-- When members of this group are removed from the Azure AD group, they automatically loose the dbo permissions for this database.  
+- When members of this group are removed from the Azure AD group, they automatically lose the dbo permissions for this database.  
 - Similarly if new members are added to `mydbogroup` Azure AD group, they automatically gain the dbo access for this database.  
   
 To check if a specific user has the effective dbo permission, have the user execute the following statement:  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Unique Schema property [ADO]"
   - "Unique Catalog property [ADO]"
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)
 Enables you to closely control modifications to a particular base table in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) that was formed by a JOIN operation on multiple base tables.  

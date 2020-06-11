@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SSVARIANT struct"
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SSVARIANT Structure

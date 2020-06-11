@@ -37,13 +37,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 SET DATEFIRST { number | @number_var }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET DATEFIRST 7 ;  
@@ -76,7 +76,7 @@ SET DATEFIRST 7 ;
 ## Examples  
  The following example displays the day of the week for a date value and shows the effects of changing the `DATEFIRST` setting.  
   
-```  
+```sql
 -- SET DATEFIRST to U.S. English default value of 7.  
 SET DATEFIRST 7;  
   

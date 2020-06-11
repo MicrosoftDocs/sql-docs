@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "LIKE predicate limitations [ODBC]"
   - "ODBC SQL grammar, LIKE predicate limitations"
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # LIKE Predicate Limitations
 If data in a column is longer than 255 characters, the LIKE comparison will be based only on the first 255 characters.  

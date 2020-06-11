@@ -27,7 +27,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER RESOURCE POOL { pool_name | "default" }  
 [WITH  
     ( [ MIN_CPU_PERCENT = value ]  

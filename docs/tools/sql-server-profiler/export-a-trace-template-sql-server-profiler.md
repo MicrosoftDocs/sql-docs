@@ -1,6 +1,7 @@
 ---
 title: Export a Trace Template 
 titleSuffix: SQL Server Profiler
+description: Learn how to use SQL Server Profiler to export a trace template as a template file so you can use the template with another instance of SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

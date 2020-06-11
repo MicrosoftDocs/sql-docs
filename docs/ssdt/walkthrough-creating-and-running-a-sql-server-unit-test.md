@@ -117,12 +117,12 @@ To complete this walkthrough, you must be able to connect to a database server (
     PRINT N'Creating Sales.CK_Orders_FilledDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.CK_Orders_OrderDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.uspCancelOrder...';  
     GO  
@@ -176,7 +176,7 @@ To complete this walkthrough, you must be able to connect to a database server (
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  

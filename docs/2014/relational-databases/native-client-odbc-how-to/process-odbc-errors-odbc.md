@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "errors [ODBC]"
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Process ODBC Errors (ODBC)

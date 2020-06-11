@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLSetDescRec function"
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLSetDescRec

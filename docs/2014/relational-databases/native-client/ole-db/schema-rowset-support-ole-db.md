@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, schema rowsets"
   - "rowsets [OLE DB], schema"
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Schema Rowset Support (OLE DB)

@@ -1,5 +1,6 @@
 ---
 title: XML input file samples (DTA)
+description: There are several sample XML input files that you can use with the dta command line tool to tune databases for improved query performance.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

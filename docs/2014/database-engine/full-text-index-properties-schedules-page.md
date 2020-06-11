@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1"
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Full-Text Index Properties (Schedules Page)
@@ -20,7 +20,7 @@ manager: craigg
   
 -   [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
-## UIElement List  
+## UI element list  
  **Schedules**  
  Lists each scheduled incremental population, if any, on the base table for the full-text index.  
   

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Command Window [Transact-SQL]"
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Command Window

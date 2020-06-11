@@ -24,7 +24,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP INDEX index_name ON <object>  
     [ WITH ( <drop_index_option> [ ,...n ] ) ]  
   

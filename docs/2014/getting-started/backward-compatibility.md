@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "compatibility [Reporting Services]"
   - "earlier versions [SQL Server], (See also backward compatibility)"
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Backward Compatibility

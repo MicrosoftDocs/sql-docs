@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "messages [ODBC], native error numbers"
   - "errors [ODBC], native error numbers"
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Error Numbers

@@ -1,5 +1,6 @@
 ---
 title: "Replication Agents Overview | Microsoft Docs"
+description: Learn about the agents that SQL Server replication uses to carry out tasks associated with tracking changes and distributing data.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

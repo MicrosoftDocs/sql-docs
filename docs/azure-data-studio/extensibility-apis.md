@@ -1,20 +1,19 @@
 ---
 title: Extensibility APIs
-titleSuffix: Azure Data Studio
 description: Learn about the extensibility APIs for Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
 
 # Azure Data Studio extensibility APIs
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] provides an API that extensions can use to interact with other parts of Azure Data Studio, such as Object Explorer. These APIs are available from the [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) file and are described below.
+Azure Data Studio provides an API that extensions can use to interact with other parts of Azure Data Studio, such as Object Explorer. These APIs are available from the [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) file and are described below.
 
 ## Connection Management
 `azdata.connection`

@@ -25,7 +25,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  

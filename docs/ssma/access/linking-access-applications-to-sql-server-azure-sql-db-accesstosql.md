@@ -1,5 +1,6 @@
 ---
 title: "Link Access Applications to SQL Server - Azure SQL DB | Microsoft Docs"
+description: Learn how to link your Access tables to the migrated tables so that you can use your existing Access applications with SQL Server or Azure SQL Database.
 ms.prod: sql
 ms.custom: ""
 ms.date: "08/17/2017"
@@ -50,7 +51,7 @@ When you open a table in Access, the data is retrieved using a keyset cursor. As
   
 > [!IMPORTANT]  
 > To link access tables with an Azure database, you need SQL Server Native Client(SNAC) version 10.5 or above.   
-> You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
+> You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## Unlinking Access tables  
 When you unlink an Access table from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure table, SSMA restores the original Access table and its data.  

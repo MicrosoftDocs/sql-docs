@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "bcp_setbulkmode function"
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_setbulkmode

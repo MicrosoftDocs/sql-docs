@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 73ab6859-9605-419e-bd78-798f68cc66f8
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Breaking Changes to SQL Server Features in SQL Server 2014

@@ -1,5 +1,6 @@
 ---
 title: "Setting up SQL Server Managed Backup to Azure for Availability Groups | Microsoft Docs"
+description: This tutorial shows you how to configure SQL Server Managed Backup to Microsoft Azure for databases participating in Always On Availability Groups.
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

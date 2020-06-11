@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # TYPE Directive in FOR XML Queries
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for the [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) enables you to optionally request that the result of a FOR XML query be returned as **xml** data type by specifying the TYPE directive. This allows you to process the result of a FOR XML query on the server. For example, you can specify an XQuery against it, assign the result to an **xml** type variable, or write [Nested FOR XML queries](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  

@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLTablePrivileges function"
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLTablePrivileges

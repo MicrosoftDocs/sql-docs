@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLPutData function"
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLPutData

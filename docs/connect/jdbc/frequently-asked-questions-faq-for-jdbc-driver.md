@@ -1,15 +1,16 @@
 ---
-title: "Frequently asked questions (FAQ) for JDBC driver | Microsoft Docs"
+title: "Frequently asked questions (FAQ) for JDBC driver"
+description: "This page provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "01/29/2020"
+ms.date: "03/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Frequently asked questions (FAQ) for JDBC driver
 
@@ -25,17 +26,17 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
 **Which versions of SQL Server and Java do the driver support?**  
 See the [Microsoft JDBC Driver for SQL Server support matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.
 
-**What is the difference between the JDBC driver packages available on the Microsoft Download Center and the JDBC driver available on GitHub?**  
-The JDBC driver files available on the GitHub repository for the Microsoft JDBC driver are the core of the JDBC driver and are under the open-source license listed in the repository. The driver packages on the Microsoft Download Center include additional libraries for Windows-integrated authentication and enabling XA transactions with the JDBC driver. Those additional libraries are under the license included with the downloadable package.
+**What is the difference between the JDBC driver packages available on the [Microsoft download page](download-microsoft-jdbc-driver-for-sql-server.md) and the JDBC driver available on GitHub?**  
+The JDBC driver files available on the GitHub repository for the Microsoft JDBC driver are the core of the JDBC driver and are under the open-source license listed in the repository. The driver packages on the [Microsoft download page](download-microsoft-jdbc-driver-for-sql-server.md) include additional libraries for Windows-integrated authentication and enabling XA transactions with the JDBC driver. Those additional libraries are under the license included with the downloadable package.
 
 **What should I know when upgrading my driver?**  
 The Microsoft JDBC Driver 8.2 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3 (partially), and 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.2.jre13.jar | JDBC 4.3 (partially), and 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.2.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 The Microsoft JDBC Driver 7.4 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
@@ -107,8 +108,8 @@ The JDBC Drivers 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the "Distrib
 **Can I use the driver to access Microsoft SQL Server from a Linux computer?**  
 Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. For more information, see [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**Does the driver support Secure Sockets Layer (SSL) encryption?**  
-Starting with version 1.2, the driver supports Secure Sockets Layer (SSL) encryption. For more information, see [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).
+**Does the driver support TLS encryption?**  
+Starting with version 1.2, the driver supports Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption. For more information, see [Using encryption](../../connect/jdbc/using-ssl-encryption.md).
 
 **Which authentication types are supported by the Microsoft JDBC Driver for SQL Server?**  
 The table below lists available authentication options. A pure Java Kerberos authentication is available starting with the 4.0 release of the driver.
@@ -118,6 +119,7 @@ The table below lists available authentication options. A pure Java Kerberos aut
 | Non-Windows | Pure Java Kerberos                    |
 | Non-Windows | SQL Server                            |
 | Non-Windows | Azure Active Directory Authentication |
+| Non-Windows | NTLM                                  |
 | Windows     | Pure Java Kerberos                    |
 | Windows     | SQL Server                            |
 | Windows     | Kerberos with NTLM backup             |

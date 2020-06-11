@@ -1,5 +1,6 @@
 ---
 title: "Editions and supported features of SQL Server 2017 ~ Linux"
+description: This article describes features supported by the various editions of SQL Server 2017 on Linux. It helps you choose from available editions and components.
 ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux

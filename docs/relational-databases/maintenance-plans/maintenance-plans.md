@@ -1,5 +1,6 @@
 ---
 title: "Maintenance Plans | Microsoft Docs"
+description: Learn about maintenance plans, which create a workflow to ensure that your SQL Server database is optimized, regularly backed up, and free of inconsistencies.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

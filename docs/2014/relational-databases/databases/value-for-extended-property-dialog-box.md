@@ -19,7 +19,7 @@ manager: craigg
 # Value for Extended Property Dialog Box
   Use the **Value for** *\<property name>* dialog box to enter or view a value. This is a common dialog box that can be opened from several locations.  
   
-## UIElement List  
+## UI element list  
  **Extended property name**  
  The name of the extended property being viewed or set.  
   

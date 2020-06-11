@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveDriverManager function function [ODBC]"
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRemoveDriverManager Function
 **Conformance**  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, about rowsets"
   - "rowsets [OLE DB]"
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Rowsets

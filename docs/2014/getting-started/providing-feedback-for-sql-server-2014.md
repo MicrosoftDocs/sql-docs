@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "product feedback [SQL Server]"
   - "automatic error or usage reporting"
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Providing Feedback for SQL Server 2014

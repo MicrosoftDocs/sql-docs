@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_deletetracertokenhistory"
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_deletetracertokenhistory (Transact-SQL)
 

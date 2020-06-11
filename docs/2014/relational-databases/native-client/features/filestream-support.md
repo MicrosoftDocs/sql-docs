@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], SQL Server Native Client"
   - "SQL Server Native Client [FILESTREAM support]"
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # FILESTREAM Support

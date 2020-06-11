@@ -29,7 +29,7 @@ Returns the value of a specified certificate property.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CertProperty ( Cert_ID , '<PropertyName>' )  
   
 <PropertyName> ::=  

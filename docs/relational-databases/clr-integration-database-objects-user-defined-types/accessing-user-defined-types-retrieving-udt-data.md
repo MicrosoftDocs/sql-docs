@@ -1,5 +1,6 @@
 ---
 title: "Retrieving UDT Data | Microsoft Docs"
+description: This article describes how to access UDTs in a SQL Server database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

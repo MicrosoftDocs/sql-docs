@@ -1,5 +1,6 @@
 ---
-title: "Step 1: Configure development environment for Java development | Microsoft Docs"
+title: "Step 1: Configure environment for Java"
+description: "Step 1 of this getting started guide involves installing Java, the Microsoft JDBC Driver for SQL Server, and configuring your development environment."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 1: Configure development environment for Java development
   

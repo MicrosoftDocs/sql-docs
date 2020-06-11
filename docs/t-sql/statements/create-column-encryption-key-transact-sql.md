@@ -38,7 +38,7 @@ Creates a column encryption key metadata object for [Always Encrypted](../../rel
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 CREATE COLUMN ENCRYPTION KEY key_name   
 WITH VALUES  
   (  

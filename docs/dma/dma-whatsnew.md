@@ -1,5 +1,6 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
+description: Learn about the new features in each release of Data Migration Assistant for SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: "11/05/2019"
 ms.prod: sql
@@ -11,13 +12,18 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, new features"
 ms.assetid: ""
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ---
 
 # What's new in Data Migration Assistant
 
 This article lists the additions in each release of Data Migration Assistant.
+
+## Data Migration Assistant v 5.2
+The v5.2 release of the Data Migration Assistant provides support for:
+- Uploading assessments to Azure Migrate with support for Azure Government and national clouds (sovereign offering).  This feature enables to assess the readiness of SQL Server data estate migrating to Azure SQL.
+- Command line support for uploading assessments to Azure Migrate with support for Azure Government and national clouds.  Now, you can completely automate uploading the assessments to Azure migrate project to get a consolidated Azure SQL readiness report. 
 
 ## Data Migration Assistant v 5.0
 

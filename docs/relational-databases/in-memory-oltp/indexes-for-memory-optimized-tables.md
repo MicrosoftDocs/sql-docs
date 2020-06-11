@@ -83,7 +83,7 @@ This subsection contains a Transact-SQL code block that demonstrates the syntax 
     )  
         WITH (  
         MEMORY_OPTIMIZED = ON,  
-        DURABILITY = SCHEMA\_AND_DATA);  
+        DURABILITY = SCHEMA_AND_DATA);  
     go  
         
         --------------------  

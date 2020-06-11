@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "AbsolutePage property [ADO]"
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # AbsolutePage Property (ADO)
 Indicates on which page the current record resides.  

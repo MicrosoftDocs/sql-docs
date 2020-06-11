@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetFind comparability [ODBC]"
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Comparability for IRowsetFind

@@ -1,5 +1,6 @@
 ---
 title: "Name Element for Index (DTA)"
+description: In the dta utility, the Name element for Index specifies a name for an index in the user-specified configuration.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

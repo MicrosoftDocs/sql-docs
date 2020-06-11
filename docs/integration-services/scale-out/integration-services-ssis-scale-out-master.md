@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Integration Services (SSIS) Scale Out Master | Microsoft Docs"
+title: "Scale Out Master | Microsoft Docs"
 description: "This article describes the Scale Out Master component of SSIS Scale Out"
 ms.custom: performance
 ms.date: 01/19/2019
@@ -49,7 +49,7 @@ You configure the Scale Out Master service by using the `<drive>:\Program Files\
 |Configuration  |Description  |Default Value  |
 |---------|---------|---------|
 |PortNumber|The network port number used to communicate with a Scale Out Worker.|8391|
-|SSLCertThumbprint|The thumbprint of the SSL certificate used to protect  the communication with a Scale Out Worker.|The thumbprint of the SSL certificate specified during the Scale Out Master installation|
+|SSLCertThumbprint|The thumbprint of the TLS/SSL certificate used to protect  the communication with a Scale Out Worker.|The thumbprint of the TLS/SSL certificate specified during the Scale Out Master installation|
 |SqlServerName|The name of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] that contains the SSISDB catalog. For example, ServerName\\InstanceName.|The name of the SQL Server that is installed with the Scale Out Master.|
 |CleanupCompletedJobsIntervalInMs|The interval for cleaning up completed execution jobs, in milliseconds.|43200000|
 |DealWithExpiredTasksIntervalInMs|The interval for dealing with expired execution jobs, in milliseconds.|300000|

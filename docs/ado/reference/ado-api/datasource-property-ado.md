@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DataSource property [ADO]"
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DataSource Property (ADO)
 Indicates an object that contains data to be represented as a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

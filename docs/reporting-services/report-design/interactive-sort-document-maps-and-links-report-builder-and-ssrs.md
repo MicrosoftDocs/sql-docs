@@ -1,5 +1,6 @@
 ---
 title: "Interactive Sort, Document Maps, and Links (Report Builder) | Microsoft Docs"
+description: Enable your users to change the sort order of values in a report, show or hide items, or select links to other reports or Web pages in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

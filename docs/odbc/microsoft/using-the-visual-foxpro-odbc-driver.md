@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver"
   - "FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver"
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using the Visual FoxPro ODBC Driver
 In this section, the following topics discuss how to use the Microsoft® Visual FoxPro® ODBC Driver:  

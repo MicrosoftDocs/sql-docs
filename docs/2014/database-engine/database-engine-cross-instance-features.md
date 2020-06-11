@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology:
 ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Database Engine Cross-Instance Features

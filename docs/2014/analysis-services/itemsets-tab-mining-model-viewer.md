@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Itemsets Tab (Mining Model Viewer)
   You can use the **Itemsets** pane to view the frequent itemsets that an association rules mining model contains. Because an association model can contain many itemsets, controls are provided in the viewer to help you filter the itemsets that are displayed in the viewer.  

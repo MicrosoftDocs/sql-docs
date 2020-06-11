@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLCancel function"
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQLCancel

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "property values [SQL Server Native Client]"
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # About OLE DB Properties

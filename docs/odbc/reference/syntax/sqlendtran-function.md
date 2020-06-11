@@ -18,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLEndTran function [ODBC]"
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLEndTran Function
 **Conformance**  

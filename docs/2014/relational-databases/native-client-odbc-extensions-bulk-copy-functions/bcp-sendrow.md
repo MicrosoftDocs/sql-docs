@@ -15,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_sendrow function"
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # bcp_sendrow

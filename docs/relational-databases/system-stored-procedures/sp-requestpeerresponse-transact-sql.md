@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_requestpeerresponse"
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

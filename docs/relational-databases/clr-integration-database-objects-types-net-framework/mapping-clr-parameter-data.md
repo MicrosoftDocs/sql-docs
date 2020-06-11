@@ -1,5 +1,6 @@
 ---
 title: "Mapping CLR Parameter Data | Microsoft Docs"
+description: This article lists Microsoft SQL Server data types, equivalents in the CLR for SQL Server, and native CLR equivalents in the .NET Framework.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

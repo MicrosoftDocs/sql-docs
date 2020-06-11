@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "parent axis"
   - "axes [SQLXML]"
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Specifying Axes in XPath Queries (SQLXML 4.0)

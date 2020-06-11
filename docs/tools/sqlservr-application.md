@@ -1,5 +1,6 @@
 ---
 title: "sqlservr Application"
+description: The sqlservr application starts, stops, pauses, and continues an instance of SQL Server from a command prompt.
 ms.custom: seo-lt-2019
 ms.date: "08/01/2019"
 ms.prod: sql

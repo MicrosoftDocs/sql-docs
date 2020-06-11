@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLSetConnectOption function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLSetConnectOption"
 ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectOption (Paradox Driver)
 > [!NOTE]  

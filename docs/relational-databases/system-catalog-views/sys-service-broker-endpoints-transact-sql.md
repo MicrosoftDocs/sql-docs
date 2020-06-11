@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_broker_endpoints catalog view"
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

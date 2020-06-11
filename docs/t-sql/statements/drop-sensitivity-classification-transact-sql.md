@@ -33,7 +33,7 @@ Drops sensitivity classification metadata from one or more database columns.
 
 ## Syntax
 
-```sql
+```syntaxsql
 DROP SENSITIVITY CLASSIFICATION FROM
     <object_name> [, ...n ]
 

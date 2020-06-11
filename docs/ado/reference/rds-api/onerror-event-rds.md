@@ -11,8 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "onError event [ADO]"
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # onError Event (RDS)
 The **onError** event is called whenever an error occurs during an operation.  

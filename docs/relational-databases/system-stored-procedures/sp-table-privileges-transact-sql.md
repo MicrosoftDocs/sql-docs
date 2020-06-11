@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_table_privileges"
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_table_privileges (Transact-SQL)
 

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 23edb339-2fe9-4d83-b5cb-522a585c9db5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select a Data Source (Linked Object Wizard)
   Use the **Select a Data Source** page to select the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source that contains the objects from which to link or import.  

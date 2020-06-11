@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "GetParameterInfo function"
   - "OLE DB, data types"
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Data Type Mapping in Rowsets and Parameters

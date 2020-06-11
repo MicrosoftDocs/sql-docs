@@ -38,7 +38,7 @@ DBCC OPENTRAN helps to identify active transactions that may be preventing log t
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC OPENTRAN   
 [   
     ( [ database_name | database_id | 0 ] )   

@@ -11,8 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "IRowsetFastLoad interface"
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # IRowsetFastLoad (OLE DB)

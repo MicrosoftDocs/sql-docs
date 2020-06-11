@@ -1,5 +1,6 @@
 ---
 title: "Install & configure DW WideWorldImporters sample database"
+description: Follow these instructions to download, install, and configure the WideWorldImportersDW sample database with SQL Server Management Studio.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -28,7 +29,7 @@ Download the sample WideWorldImportersDW database backup/bacpac that corresponds
 
 Source code to recreate the sample database is available from the following location. Note that data population is based on ETL from the OLTP database (WideWorldImporters):
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## Install
 

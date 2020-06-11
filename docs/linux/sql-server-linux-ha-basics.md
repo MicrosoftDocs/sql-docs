@@ -1,6 +1,6 @@
 ---
 title: SQL Server high availability for Linux deployments
-description: Learn about the different high availability options available for SQL Server on Linux, such as Always On availability groups, failover cluster instances (FCI), and log shipping. 
+description: Learn about the high availability options for SQL Server on Linux, such as Always On availability groups, failover cluster instances (FCI), and log shipping. 
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray

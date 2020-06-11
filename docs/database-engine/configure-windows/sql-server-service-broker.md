@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Service Broker"
   - "Service Broker"
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Service Broker
@@ -116,4 +116,8 @@ FROM ExpenseQueue;
  For more information, see [Service Broker with Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  
   
   
+## Next steps
+
+The most common use of Service Broker is for [event notifications](../../relational-databases/service-broker/event-notifications.md). Learn how to [implement event notifications](../../relational-databases/service-broker/implement-event-notifications.md), [configure dialog security](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md), or [get more information](../../relational-databases/service-broker/get-information-about-event-notifications.md). 
+
 

@@ -14,7 +14,7 @@ manager: craigg
 # Utility Administration (SQL Server Utility)
   Use the Utility Administration tabs to manage policy, security, and data warehouse settings for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility concepts, see [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-## UIElement List  
+## UI element list  
  Policy tab - Use the policy tab to view or specify global monitoring policies.  
   
  Set global data-tier application monitoring policies. To expand the list of values for this option, click on the arrow next to the policy name, or click on the policy title.  
@@ -58,7 +58,7 @@ manager: craigg
  Reducing policy violation noise from highly volatile resources. To expand the controls for this feature, click on the down-arrow on the right side of the display.  
  For more information, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## UIElement List  
+## UI element list  
  Security tab - Displays login names with permissions to administer or read from the UCP.  
   
  Select the logins from the UCP that will be added to the Utility Reader role.  
@@ -74,7 +74,7 @@ manager: craigg
   
  To be a Utility administrator, you must have sysadmin privileges on the instance of SQL Server. To add or change user accounts for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, use Object Explorer in SSMS to add the user to the server logins of the UCP instance of SQL Server. For more information, see [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql).  
   
-## UIElement List  
+## UI element list  
  Data Warehouse tab - Displays configuration details for the utility management data warehouse.  
   
  Data Retention  

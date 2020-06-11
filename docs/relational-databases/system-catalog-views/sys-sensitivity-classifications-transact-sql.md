@@ -22,10 +22,10 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "rank"
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 Returns a row for each classified item in the database.
 

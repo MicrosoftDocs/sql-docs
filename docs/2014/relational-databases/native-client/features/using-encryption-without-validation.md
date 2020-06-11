@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "encryption [SQL Server Native Client]"
   - "SQL Server Native Client, encryption"
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using Encryption Without Validation

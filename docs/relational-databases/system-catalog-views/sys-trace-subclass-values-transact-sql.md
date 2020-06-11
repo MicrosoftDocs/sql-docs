@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_subclass_values catalog view"
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

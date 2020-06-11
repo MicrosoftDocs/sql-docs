@@ -1,5 +1,6 @@
 ---
 title: "Generate data in SQL samples WideWorldImporters"
+description: Use these SQL statements to generate and import sample data up to the current date for the WideWorldImporters sample databases.
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.prod: sql

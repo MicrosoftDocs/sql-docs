@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Grid (Dimension Usage Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Grid** pane on the **Dimension Usage** tab in Cube Designer to view and edit dimension relationships between cube dimensions and measure groups. Each dimension relationship is represented as a cell in a grid, in which measure groups are displayed as columns and dimensions are displayed as rows.  

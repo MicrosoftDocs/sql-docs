@@ -66,7 +66,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
@@ -136,7 +136,7 @@ CREATE USER user_name
 > [!NOTE]
 > The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
   
 CREATE USER user_name   
@@ -151,7 +151,7 @@ CREATE USER Azure_Active_Directory_principal FROM EXTERNAL PROVIDER
 [;]
 ``` 
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 CREATE USER user_name   

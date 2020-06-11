@@ -53,7 +53,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 <OUTPUT_CLAUSE> ::=  
 {  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "modifying passwords"
   - "SQLAllocHandle function"
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Allocating a Connection Handle

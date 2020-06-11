@@ -1,5 +1,6 @@
 ---
 title: "XML Format Files (SQL Server) | Microsoft Docs"
+description: SQL Server 2019 provides an XML schema that defines syntax for writing XML format files to use for bulk importing data into a SQL Server table.
 ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql

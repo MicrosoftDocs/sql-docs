@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_18456 | Microsoft Docs"
+description: A connection attempt is rejected due to a failure with a bad password or username in SQL Server. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "06/09/2017"
 ms.prod: sql
@@ -17,8 +18,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|18456|  
 |Event Source|MSSQLSERVER|  

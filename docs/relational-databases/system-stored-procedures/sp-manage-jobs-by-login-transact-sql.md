@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_manage_jobs_by_login"
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

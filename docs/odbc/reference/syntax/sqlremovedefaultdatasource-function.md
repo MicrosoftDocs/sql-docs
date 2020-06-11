@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveDefaultDataSource function [ODBC]"
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRemoveDefaultDataSource Function
 **Conformance**  

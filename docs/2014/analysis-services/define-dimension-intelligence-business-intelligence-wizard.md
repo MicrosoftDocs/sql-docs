@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Dimension Intelligence (Business Intelligence Wizard)
   Use the **Define Dimension Intelligence** page to map existing dimension attributes to attribute types for the specified dimension type.  

@@ -1,5 +1,6 @@
 ---
 title: "Use the Maintenance Plan Wizard | Microsoft Docs"
+description: Learn how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in SQL Server.
 ms.date: "06/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

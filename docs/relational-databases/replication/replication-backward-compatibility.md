@@ -1,5 +1,6 @@
 ---
 title: "Replication Backward Compatibility | Microsoft Docs"
+description: Review these resources for backward compatibility in replication before you upgrade or if you have several versions of SQL Server in a replication topology.
 ms.custom: ""
 ms.date: "03/02/2016"
 ms.prod: sql

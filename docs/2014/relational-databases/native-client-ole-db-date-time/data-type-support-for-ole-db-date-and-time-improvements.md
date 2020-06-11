@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "date/time [OLE DB], data type support"
   - "OLE DB, date/time improvements"
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Data Type Support for OLE DB Date and Time Improvements

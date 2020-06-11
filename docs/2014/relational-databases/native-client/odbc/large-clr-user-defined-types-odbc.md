@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "ODBC, large user-defined types"
   - "large user-defined types [ODBC]"
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Large CLR User-Defined Types (ODBC)

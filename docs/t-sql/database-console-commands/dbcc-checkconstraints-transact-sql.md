@@ -33,7 +33,7 @@ Checks the integrity of a specified constraint or all constraints on a specified
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC CHECKCONSTRAINTS  
 [   
     (   

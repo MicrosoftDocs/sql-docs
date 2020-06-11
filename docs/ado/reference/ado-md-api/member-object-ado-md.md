@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Member object [ADO MD], members"
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Member Object (ADO MD)
 Represents a member of a level in a cube, the children of a member of a level, or a member of a position along an axis of a cellset.  

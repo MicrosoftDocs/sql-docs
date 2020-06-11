@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_kill_filestream_non_transacted_handles"
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

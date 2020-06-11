@@ -1,5 +1,6 @@
 ---
 title: "Introduction to the SQLXMLOLEDB Provider (SQLXML)"
+description: Learn about the SQLXMLOLEDB Provider, an OLE DB provider that exposes SQLXML functionality through ActiveX Data Objects (ADO).
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

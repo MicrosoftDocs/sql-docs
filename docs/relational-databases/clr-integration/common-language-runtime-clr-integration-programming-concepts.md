@@ -1,6 +1,6 @@
 ---
 title: "Common Language Runtime (CLR) Programming"
-description: Links to Common Language Runtime (CLR) programming articles
+description: This article provides resources for using CLR integration with SQL Server, which allows you to write server-side modules using any .NET Framework language.
 ms.custom: "seo-lt-2019"
 ms.date: "03/16/2017"
 ms.prod: sql

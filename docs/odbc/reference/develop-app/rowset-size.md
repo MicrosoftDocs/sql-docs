@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "block cursors [ODBC]"
   - "result sets [ODBC], block cursors"
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Rowset Size
 Which rowset size to use depends on the application. Screen-based applications commonly follow one of two strategies. The first is to set the rowset size to the number of rows displayed on the screen; if the user resizes the screen, the application changes the rowset size accordingly. The second is to set the rowset size to a larger number, such as 100, which reduces the number of calls to the data source. The application scrolls locally within the rowset when possible and fetches new rows only when it scrolls outside the rowset.  

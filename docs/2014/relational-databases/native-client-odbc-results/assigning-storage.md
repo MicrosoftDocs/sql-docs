@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "binding result sets [SQL Server Native Client]"
   - "array binding"
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Assigning Storage

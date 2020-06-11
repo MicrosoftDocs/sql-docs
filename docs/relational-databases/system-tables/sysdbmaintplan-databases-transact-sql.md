@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdbmaintplan_databases system table"
 ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysdbmaintplan_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

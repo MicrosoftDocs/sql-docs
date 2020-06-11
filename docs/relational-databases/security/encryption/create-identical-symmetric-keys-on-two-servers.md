@@ -91,7 +91,7 @@ SQL Server 2016 uses the SHA1 hashing algorithm for its encryption work. Startin
 - Ensure your SQL Server 2017 is updated to at least Cumulative Update 2 (CU2).
   - See [Cumulative Update 2 (CU2) for SQL Server 2017](https://support.microsoft.com/help/4052574) for important details.
 - After you install CU2, turn on trace flag 4631 in SQL Server 2017: `DBCC TRACEON(4631, -1);`
-  - Trace flag 4631 is new in SQL Sewrver 2017. Trace flag 4631 needs to be `ON` globally before you create the master key, certificate, or symmetrical key in SQL Server 2017. This enables these created items to interoperate with SQL Server 2016 and earlier versions.
+  - Trace flag 4631 is new in SQL Server 2017. Trace flag 4631 needs to be `ON` globally before you create the master key, certificate, or symmetrical key in SQL Server 2017. This enables these created items to interoperate with SQL Server 2016 and earlier versions.
 
 For more guidance, see:
 

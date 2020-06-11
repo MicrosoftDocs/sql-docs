@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "level 2 API functions [ODBC]"
   - "ODBC core level API functions [ODBC]"
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Functions and the Visual FoxPro ODBC Driver
 The topics in this section provide a brief summary of ODBC API functions and any Visual FoxPro-specific details.  

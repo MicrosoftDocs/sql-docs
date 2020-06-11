@@ -1,5 +1,6 @@
 ---
 title: "Subscribe to Publications | Microsoft Docs"
+description: Learn about the types of subscriptions in SQL Server replication, how to choose the type you need, and how to create a subscription.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

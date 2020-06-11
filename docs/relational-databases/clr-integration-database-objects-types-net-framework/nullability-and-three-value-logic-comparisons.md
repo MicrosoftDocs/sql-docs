@@ -1,5 +1,6 @@
 ---
 title: "Nullability and Three-Value Logic Comparisons | Microsoft Docs"
+description: This article covers how SQL Server data types differ from types in System.Data.SqlTypes in the .NET Framework, which have similar semantics and precision.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Advanced Data Mining Query Editor
   The **Data Mining Query Advanced Editor** is a tool to help you build custom models and queries.  
@@ -18,7 +17,7 @@ manager: craigg
   
  To get to the **Data Mining Query Advanced Editor**, click **Query** and then click **Advanced**.  
   
-## UIElement List  
+## UI element list  
  **DMX Query pane**  
  Here you can see the current DMX statement.  
   

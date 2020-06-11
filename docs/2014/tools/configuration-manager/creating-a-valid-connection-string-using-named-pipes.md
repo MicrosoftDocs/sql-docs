@@ -1,5 +1,6 @@
 ---
 title: "Creating a Valid Connection String Using Named Pipes | Microsoft Docs"
+description: Learn how to create a valid connection string when using the named pipes protocol to connect to an instance of SQL Server. View examples of valid pipe names.
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "aliases [SQL Server], named pipes"
   - "Named Pipes [SQL Server], connection strings"
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Creating a Valid Connection String Using Named Pipes

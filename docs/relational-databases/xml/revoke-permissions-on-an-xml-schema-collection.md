@@ -14,7 +14,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Revoke Permissions on an XML Schema Collection
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The permission to create an XML schema collection can be revoked by using one of the following:  
   
 -   Revoke the ALTER permission for the relational schema. Then, the principal cannot create an XML schema collection in the relational schema. However, the principal can still do so in other relational schemas in the same database.  

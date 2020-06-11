@@ -38,7 +38,7 @@ Shrinks the size of the data and log files in the specified database.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC SHRINKDATABASE   
 ( database_name | database_id | 0   
      [ , target_percent ]   

@@ -6,10 +6,10 @@ ms.technology: ssdt
 ms.topic: conceptual
 keywords: "install ssdt, download ssdt, latest ssdt"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-author: markingmyname
-ms.author: maghan
-manager: jroth
-ms.reviewer: ""
+author: dzsquared
+ms.author: drskwier
+manager: viharp
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
@@ -27,13 +27,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The core SSDT functionality to create database projects has remained integral to Visual Studio.
 
-With Visual Studio 2019, the required functionality to enable Analysis Services, Integration Services, and Reporting Services projects has moved into the respective Visual Studio (VSIX) extensions only. There's no more a standalone SSDT installation required.
+With Visual Studio 2019, the required functionality to enable Analysis Services, Integration Services, and Reporting Services projects has moved into the respective Visual Studio (VSIX) extensions only.
+
+> [!NOTE]
+> There's no SSDT standalone installer for Visual Studio 2019.
 
 ### Install SSDT with Visual Studio 2019
 
 If [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) is already installed, you can edit the list of workloads to include SSDT.
 
-* For SQL database projects, select **SQL Server Data Tools** under **Data storage and processing**.
+* For SQL Database projects, select **SQL Server Data Tools** under **Data storage and processing**.
 
    ![Data storage and processing workload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -41,7 +44,7 @@ If [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-
 
 If you don’t have Visual Studio 2019 installed, then you can download and install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/). 
 
-* For SQL database projects, select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads during installation.
+* For SQL Database projects, select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads during installation.
 
 * For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) from either *Tools > Extensions and Updates* or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
@@ -51,7 +54,7 @@ If you don’t have Visual Studio 2019 installed, then you can download and inst
 
 Starting with Visual Studio 2017, the functionality of creating Database Projects has been integrated into the Visual Studio installation. There's no need to install the SSDT standalone installer for the core SSDT experience.
 
-Now to create Analysis Services, Integration Services or Reporting Services projects, you still need the SSDT standalone installer.
+Now to create Analysis Services, Integration Services, or Reporting Services projects, you still need the SSDT standalone installer.
 
 ### Install SSDT with Visual Studio 2017
 
@@ -71,12 +74,16 @@ The installer lists available Visual Studio instances to add SSDT tools. If Visu
 
 ## SSDT for VS 2017 (standalone installer)
 
-[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
+[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.5)](https://go.microsoft.com/fwlink/?linkid=2131035 )
 
 > [!IMPORTANT]
-> * Before installing SSDT for Visual Studio 2017 (15.9.3), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
+> * Before installing SSDT for Visual Studio 2017 (15.9.5), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
 > * Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=100619).
-> * Removed the inbox component Microsoft Oracle Connector for SQL Server 2019. Now we have announced Microsoft Oracle Connector for SQL Server 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=58228).
+> * To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL Server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
+>    * [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
+>    * [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)
+>    * [Microsoft Connector Version 3.0 for Oracle and Teradata by Attunity targeting SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)
+>    * [Microsoft Connector Version 2.0 for Oracle and Teradata by Attunity targeting SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ### Release Notes
 
@@ -90,17 +97,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](https://docs.micr
 
 This release of **SSDT for VS 2017** can be installed in the following languages:
 
-* [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
-* [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
-* [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
-* [French]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
-* [German]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
-* [Italian]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
-* [Japanese]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
-* [Korean]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
-* [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
-* [Russian]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
-* [Spanish]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
+* [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
+* [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
+* [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
+* [French]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
+* [German]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
+* [Italian]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
+* [Japanese]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
+* [Korean]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
+* [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
+* [Russian]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
+* [Spanish]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
 
 ### Considerations and limitations
 
@@ -121,8 +128,6 @@ First, complete the following steps while **online**:
 3. While still online, execute one of the following commands to download all the files required for installing offline. Using the `--layout` option is the key, it downloads the actual files for the offline installation. Replace `<filepath>` with the actual layouts path to save the files.
    1. For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang en-us` (a single language is ~1 GB).
    1. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>` (all languages are ~3.9 GB).
-
-4. Execute `SSDT-Setup-ENU.exe /layout c:\<filepath>` to extract the SSDT payload into the same `<filepath>` location where the VS2017 files were downloaded. This action ensures that all files from both are combined into a single layouts folder.
 
 After completing the previous steps, the following steps below can be done **offline**:
 

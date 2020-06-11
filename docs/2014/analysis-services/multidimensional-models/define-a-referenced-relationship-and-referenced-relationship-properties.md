@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define a Referenced Relationship and Referenced Relationship Properties
   A reference dimension relationship is defined on the **Dimension Usage** tab of Cube Designer. The reference dimension relationship is defined by specifying the following:  

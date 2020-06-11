@@ -22,7 +22,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE XML INDEX index_name  
     ON <table_object> ( xml_column_name )  

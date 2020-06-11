@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, password expiration"
   - "modifying passwords"
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Changing Passwords Programmatically

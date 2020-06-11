@@ -1,5 +1,6 @@
 ---
 title: "Publish Data and Database Objects | Microsoft Docs"
+description: This article summarizes the tables and other database objects you can publish for replication in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

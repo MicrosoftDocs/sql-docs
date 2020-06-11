@@ -2,8 +2,8 @@
 ms.date: 05/21/2019
 ms.topic: include
 ms.prod: sql
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 ---
 ## ![info_tip](../media/info-tip.png) Get help for SQL tools
 

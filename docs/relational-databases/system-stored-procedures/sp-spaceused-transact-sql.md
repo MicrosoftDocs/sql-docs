@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_spaceused"
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_spaceused (Transact-SQL)
@@ -162,7 +162,7 @@ If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_
 |**xtp_pending_truncation**|**varchar(18)**|Total size of checkpoint files with state WAITING_FOR_LOG_TRUNCATION, in KB. This is the disk space used for checkpoint files that are awaiting cleanup, once log truncation happens. Returns NULL if the database does not have a memory_optimized_data filegroup with at least one container. This column is only included if `@include_total_xtp_storage=1`.|
 
 ## Remarks  
- **database_size** is always larger than the sum of **reserved** + **unallocated space** because it includes the size of log files, but **reserved** and **unallocated_space** consider only data pages.  
+ **database_size** is generally larger than the sum of **reserved** + **unallocated space** because it includes the size of log files, but **reserved** and **unallocated_space** consider only data pages. In some cases with Azure Synapse Analytics, this statement may not be true. 
   
  Pages that are used by XML indexes and full-text indexes are included in **index_size** for both result sets. When *objname* is specified, the pages for the XML indexes and full-text indexes for the object are also counted in the total **reserved** and **index_size** results.  
   

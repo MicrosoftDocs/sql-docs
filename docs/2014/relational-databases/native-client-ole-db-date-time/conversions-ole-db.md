@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "bindings [OLE DB]"
   - "OLE DB, bindings and conversions"
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Bindings and Conversions (OLE DB)

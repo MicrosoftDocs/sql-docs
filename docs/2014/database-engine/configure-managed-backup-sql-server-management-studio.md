@@ -1,5 +1,6 @@
 ---
 title: "Configure Managed Backup (SQL Server Management Studio) | Microsoft Docs"
+description: Use the Managed Backup dialog box to configure SQL Server Managed Backup to Azure default setting. Learn about the options you need to consider.
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: "sql-server-2014"

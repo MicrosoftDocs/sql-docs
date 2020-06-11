@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "cursors [ODBC], options"
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Set Cursor Options (ODBC)

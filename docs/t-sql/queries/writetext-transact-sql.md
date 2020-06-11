@@ -36,7 +36,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 WRITETEXT [BULK]  
   { table.column text_ptr }  

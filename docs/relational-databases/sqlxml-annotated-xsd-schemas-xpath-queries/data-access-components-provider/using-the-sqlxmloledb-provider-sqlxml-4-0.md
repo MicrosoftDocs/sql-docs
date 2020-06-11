@@ -1,5 +1,6 @@
 ---
 title: "Using the SQLXMLOLEDB Provider (SQLXML)"
+description: View information about using SQLXMLOLEDB Provider-specific properties in ADO applications.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

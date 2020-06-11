@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Native Client | Microsoft Docs"
+title: "About"
 ms.date: "04/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -7,8 +7,8 @@ ms.custom: ""
 ms.technology: native-client
 ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client

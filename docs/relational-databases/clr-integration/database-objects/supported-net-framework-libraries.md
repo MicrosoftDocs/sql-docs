@@ -1,5 +1,6 @@
 ---
 title: "Supported .NET Framework Libraries | Microsoft Docs"
+description: With the CLR hosted in SQL Server, you can author using supported .NET Framework class libraries and unsupported libraries that you register with a database.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -26,37 +27,27 @@ ms.author: "jroth"
  The libraries/namespaces supported by CLR integration in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] are:  
   
 -   CustomMarshalers  
-  
 -   Microsoft.VisualBasic  
-  
 -   Microsoft.VisualC  
-  
 -   mscorlib  
-  
 -   System  
-  
 -   System.Configuration  
-  
+-   System.Core  
 -   System.Data  
-  
 -   System.Data.OracleClient  
-  
 -   System.Data.SqlXml  
-  
 -   System.Deployment  
-  
 -   System.Security  
-  
 -   System.Transactions  
-  
 -   System.Web.Services  
-  
 -   System.Xml  
-  
--   System.Core.dll  
-  
--   System.Xml.Linq.dll  
-  
+-   System.Xml.Linq  
+
+<!--
+Any modifications to the list above should be duplicated on the following page:
+https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
+-->
+
 ## Unsupported Libraries  
  Unsupported libraries can still be called from your managed stored procedures, triggers, user-defined functions, user-defined types, and user-defined aggregates. The unsupported library must first be registered in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, using the **CREATE ASSEMBLY** statement, before it can be used in your code. Any unsupported library that is registered and run on the server should be reviewed and tested for security and reliability.  
   

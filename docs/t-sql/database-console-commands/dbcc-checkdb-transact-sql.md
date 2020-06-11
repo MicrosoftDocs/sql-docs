@@ -58,7 +58,7 @@ This means that the DBCC CHECKALLOC, DBCC CHECKTABLE, or DBCC CHECKCATALOG comma
     
 ## Syntax    
     
-```    
+```syntaxsql
 DBCC CHECKDB     
     [ ( database_name | database_id | 0    
         [ , NOINDEX     

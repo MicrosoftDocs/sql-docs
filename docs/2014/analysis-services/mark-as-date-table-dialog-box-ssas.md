@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 698b5ef1-b79b-4d76-9847-39669b4f5bb9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mark as Date Table Dialog Box (SSAS)
   The **Mark as Date Table** dialog box appears when you click the **Table** menu, then click **Date**, and then click in the **Mark as Date Table**. Date tables are used with time intelligence functions. In order to create a relationship with a data table, you must specify a column with unique values to be used as a unique identifier for the table.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Row Filters (Role Designer)(Tabular Model)
   Use the **Row Filters** page of the Role Designer to define row level filters for the associated role. Row filters can be defined only for roles with Read and Read and Process permissions.  

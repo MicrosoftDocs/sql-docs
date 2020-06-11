@@ -13,7 +13,7 @@ ms.author: maghan
 ---
 # Run Windows PowerShell Steps in SQL Server Agent
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 Use SQL Server Agent to run SQL Server PowerShell scripts at schedule times.  
   

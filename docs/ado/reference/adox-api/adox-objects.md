@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "objects [ADOX]"
   - "ADOX, objects"
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADOX Objects
 ## ADOX Object Summary  

@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE FULLTEXT INDEX ON table_name  
    [ ( { column_name   
              [ TYPE COLUMN type_column_name ]  

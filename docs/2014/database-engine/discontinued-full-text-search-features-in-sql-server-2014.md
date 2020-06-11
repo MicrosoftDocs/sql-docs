@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], discontinued features"
   - "discontinued features [full-text search]"
 ms.assetid: 70587b3c-cc77-4681-924d-a1df7cdf1517
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Discontinued Full-Text Search Features in SQL Server 2014

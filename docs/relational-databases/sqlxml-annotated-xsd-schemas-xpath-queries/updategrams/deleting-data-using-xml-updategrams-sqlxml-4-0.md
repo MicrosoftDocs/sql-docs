@@ -1,5 +1,6 @@
 ---
 title: "Deleting Data Using XML Updategrams (SQLXML)"
+description: Learn about deleting data using an XML updategram in SQLXML 4.0.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

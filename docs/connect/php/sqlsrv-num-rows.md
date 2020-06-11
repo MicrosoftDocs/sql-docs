@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_num_rows"
   - "sqlsrv_num_rows"
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

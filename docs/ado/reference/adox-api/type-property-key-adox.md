@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type property [ADOX]"
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Type Property (Key) (ADOX)
 Indicates the type of the key.  

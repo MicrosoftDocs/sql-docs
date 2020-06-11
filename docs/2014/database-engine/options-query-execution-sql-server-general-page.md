@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral"
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Options (Query Execution-SQL Server-General Page)

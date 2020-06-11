@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], packages"
   - "xe"
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQL Server Extended Events Packages

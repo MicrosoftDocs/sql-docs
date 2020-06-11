@@ -1,10 +1,10 @@
 ---
 title: "SQL Server Audit (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/21/2016"
+ms.date: "01/01/2020"
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Audit"
   - "audits [SQL Server], SQL Server Audit"
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-author: VanMSFT
-ms.author: vanto
+author: davidtrigano
+ms.author: datrigan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SQL Server Audit (Database Engine)

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "backward compatibility [SQL Server], Database Engine"
   - "full-text search [SQL Server], backward compatibility"
 ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Full-Text Search Backward Compatibility

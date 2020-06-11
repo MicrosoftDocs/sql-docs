@@ -1,5 +1,6 @@
 ---
 title: "SoapException Errors Table | Microsoft Docs"
+description: Learn about the errors that are accessible from methods through a SoapException in the Report Server Web service.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

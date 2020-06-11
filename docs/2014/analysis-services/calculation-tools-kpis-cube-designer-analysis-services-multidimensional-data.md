@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculation Tools (KPIs Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Calculation Tools** pane on the **KPIs** tab in Cube Designer to explore metadata, functions, and templates available for use in Key Performance Indicators (KPIs).  

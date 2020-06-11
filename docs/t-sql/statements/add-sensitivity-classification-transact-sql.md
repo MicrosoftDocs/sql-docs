@@ -1,14 +1,14 @@
 ---
 title: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
-ms.date: 03/25/2019
-ms.reviewer: ""
+ms.date: 06/10/2020
+ms.reviewer: vanto
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""
 ms.manager: craigg
-ms.author: giladm
-author: giladmit
+ms.author: datrigan
+author: DavidTrigano
 f1_keywords:
   - "ADD SENSITIVITY CLASSIFICATION"
   - "ADD_SENSITIVITY_CLASSIFICATION"
@@ -39,7 +39,7 @@ Classifying sensitive data in your database environment helps achieve extended v
 
 ## Syntax  
 
-```
+```syntaxsql
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
     WITH ( <sensitivity_option> [, ...n ] )     
@@ -86,7 +86,7 @@ Is an identifier associated with the information type. This is often used by cen
 
 *RANK*
 
-Is an identifier based on a predefinied set of values which define sensitivity rank. Used by other services like Advanced Threat Protection to detect anomalies based on their rank.
+Is an identifier based on a predefined set of values which define sensitivity rank. Used by other services like Advanced Threat Protection to detect anomalies based on their rank.
 
 
 ## Remarks  
@@ -105,12 +105,12 @@ Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIV
 
 ### A. Classifying two columns
 
-The following example classifies the columns **dbo.sales.price** and **dbo.sales.discount** with the sensitivity label **Highly Confidential** and the Information Type **Financial**.
+The following example classifies the columns **dbo.sales.price** and **dbo.sales.discount** with the sensitivity label **Highly Confidential**, rank **Critical** and the Information Type **Financial**.
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     dbo.sales.price, dbo.sales.discount
-    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
+    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK='CRITICAL' )
 ```  
 
 ### B. Classifying only a label

@@ -1,10 +1,11 @@
 ---
 title: "What's New in SQL Server 2016"
+description: Learn about new SQL Server 2016 security features, querying capabilities, Hadoop and cloud integration, R analytics, and more.
 ms.custom: ""
 ms.date: "07/22/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 keywords: 
   - "new sql server"
@@ -28,7 +29,7 @@ This page provides summary information and links to more detailed SQL Server 201
  **Try SQL Server today!** 
 - Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
-- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016).
+- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview).
 
 ## SQL Server 2016 Database Engine
 - You can now configure **multiple tempDB** database files during SQL Server installation and setup.
@@ -48,7 +49,7 @@ This page provides summary information and links to more detailed SQL Server 201
 
 ## SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services provides improved performance, authoring, database management, filtering, processing, and much more for tabular model databases based on the **1200 compatibility level**.
-- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integrate the R programming language, used for statistical analysis, into SQL Server. 
+- **[SQL Server R Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** integrate the R programming language, used for statistical analysis, into SQL Server. 
 - New **Database Consistency Checker (DBCC)** runs internally to detect potential data corruption issues.
 - **Direct Query**, which queries live external data rather than importing it first, now supports more data sources, including Azure SQL, Oracle and Teradata. 
 - There are numerous new **DAX (Data Access Expressions) functions**.

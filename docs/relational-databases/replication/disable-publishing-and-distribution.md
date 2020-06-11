@@ -1,5 +1,6 @@
 ---
 title: "Disable Publishing and Distribution | Microsoft Docs"
+description: Learn how to disable publishing and distribution in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Name Element for Server (DTA)"
+description: In the dta utility, the Name element for Server contains the name of the server where the databases you want to tune reside.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

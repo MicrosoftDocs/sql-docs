@@ -1,6 +1,7 @@
 ---
 title: Cancel option admin tool
 titleSuffix: SQL Server Distributed Replay
+description: This article describes the cancel command-line option and syntax of the SQL Server Distributed Replay administration tool.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

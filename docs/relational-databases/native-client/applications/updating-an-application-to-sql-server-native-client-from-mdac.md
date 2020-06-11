@@ -1,5 +1,5 @@
 ---
-title: "Native Client, update app SQL from MDAC"
+title: "Update from MDAC"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], vs. MDAC"
   - "SQL Server Native Client, updating applications"
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating an Application to SQL Server Native Client from MDAC

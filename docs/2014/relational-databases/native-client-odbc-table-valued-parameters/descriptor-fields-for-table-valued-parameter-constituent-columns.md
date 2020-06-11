@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), descriptor fields for constituent columns"
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Descriptor Fields for Table-Valued Parameter Constituent Columns

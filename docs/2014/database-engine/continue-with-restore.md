@@ -1,5 +1,6 @@
 ---
 title: "Continue with Restore | Microsoft Docs"
+description: In SQL Server, use the Continue with Restore dialog box to indicate whether you want to restore the next backup set.
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

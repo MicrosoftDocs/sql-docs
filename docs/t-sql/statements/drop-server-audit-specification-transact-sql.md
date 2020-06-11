@@ -29,7 +29,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP SERVER AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  

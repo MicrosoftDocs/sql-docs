@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Deprecated Analysis Services Features in SQL Server 2014
   This topic describes the deprecated [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  

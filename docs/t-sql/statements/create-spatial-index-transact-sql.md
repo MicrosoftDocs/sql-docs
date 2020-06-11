@@ -32,7 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```
+```syntaxsql
 CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  

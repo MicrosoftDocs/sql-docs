@@ -18,7 +18,7 @@ manager: craigg
   
  To connect to a data source, you must have the appropriate provider installed on your computer. For more information about supported data sources and providers, see [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
-## UIElement List  
+## UI element list  
  **Friendly name for this connection**  
  Type a unique name for this data source connection. This is a required field.  
   

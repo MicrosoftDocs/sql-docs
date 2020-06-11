@@ -29,7 +29,7 @@ This function decrypts data originally encrypted with a passphrase.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'ciphertext' | @ciphertext }  

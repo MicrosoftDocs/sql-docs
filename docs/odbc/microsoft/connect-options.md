@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], connection options"
   - "custom connection options [ODBC]"
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connect Options
 > [!IMPORTANT]  

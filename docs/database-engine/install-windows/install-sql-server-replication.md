@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server Replication | Microsoft Docs"
+description: Install replication components by using the SQL Server Installation Wizard or in a Command Prompt window.
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql

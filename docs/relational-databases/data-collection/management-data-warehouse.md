@@ -1,5 +1,6 @@
 ---
 title: "Management Data Warehouse | Microsoft Docs"
+description: The management data warehouse in SQL Server is a relational database that contains the data that is collected from a target server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

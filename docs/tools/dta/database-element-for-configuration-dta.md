@@ -1,5 +1,6 @@
 ---
 title: "Database Element for Configuration (DTA)"
+description: In the dta utility, the Database element for Configuration specifies the database against which you want to evaluate a configuration.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

@@ -1,5 +1,6 @@
 ---
 title: "DropOnlyMode Element (DTA)"
+description: In the dta utility, DropOnlyMode element specifies that Database Engine Tuning Advisor only considers dropping existing indexes, indexed views, or partitions.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other

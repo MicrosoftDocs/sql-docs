@@ -30,7 +30,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  
     XML_schema_collection_name  

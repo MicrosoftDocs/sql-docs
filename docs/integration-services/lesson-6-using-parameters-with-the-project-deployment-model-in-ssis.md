@@ -1,5 +1,5 @@
 ---
-title: "Lesson 6: Use parameters with the Project Deployment Model in SSIS | Microsoft Docs"
+title: "Lesson 6: Use parameters with the Project Deployment Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2019"
 ms.prod: sql

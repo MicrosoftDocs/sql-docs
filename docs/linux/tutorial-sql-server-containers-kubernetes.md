@@ -46,7 +46,7 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 * **Kubernetes cluster**
    - The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) to manage the cluster. 
 
-   - See [Deploy an Azure Container Service (AKS) cluster](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
+   - See [Deploy an Azure Kubernetes Service (AKS) cluster](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
 
    >[!NOTE]
    >To protect against node failure, a Kubernetes cluster requires more than one node.
@@ -176,7 +176,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
              value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: MSSQL_SA_PASSWORD
+           - name: SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql

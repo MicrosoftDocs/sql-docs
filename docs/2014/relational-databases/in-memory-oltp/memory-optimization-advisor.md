@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.swb.memoryoptimizationwizard.f1"
   - "swb.memoryoptimizationwizard.f1"
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Memory Optimization Advisor

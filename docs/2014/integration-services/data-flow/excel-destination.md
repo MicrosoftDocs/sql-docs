@@ -97,14 +97,6 @@ manager: craigg
   
 -   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
   
-## Related Content  
-  
--   Blog entry, [Excel in Integration Services, Part 1 of 3: Connections and Components](https://go.microsoft.com/fwlink/?LinkId=217674), on dougbert.com  
-  
--   Blog entry, [Excel in Integration Services, Part 2 of 3: Tables and Data Types](https://go.microsoft.com/fwlink/?LinkId=217675), on dougbert.com.  
-  
--   Blog entry, [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), on dougbert.com.  
-  
 ## See Also  
  [Excel Source](excel-source.md)   
  [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   

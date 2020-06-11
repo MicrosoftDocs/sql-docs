@@ -1,5 +1,6 @@
 ---
 title: "Maintenance Cleanup Task (Maintenance Plan) | Microsoft Docs"
+description: Learn how to remove old files for maintenance plans, including text reports for maintenance plans and database backup files using the Maintenance Cleanup Task.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

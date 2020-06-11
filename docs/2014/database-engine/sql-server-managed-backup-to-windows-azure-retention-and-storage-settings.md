@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Managed Backup to Azure - Retention and Storage Settings | Microsoft Docs"
+description: This topic describes how to configure SQL Server Managed Backup to Microsoft Azure for a database and to configure default settings for the instance.
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: "sql-server-2014"

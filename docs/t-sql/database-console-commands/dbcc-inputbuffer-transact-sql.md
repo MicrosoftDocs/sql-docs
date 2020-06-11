@@ -33,7 +33,7 @@ Displays the last statement sent from a client to an instance of [!INCLUDE[msCoN
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC INPUTBUFFER ( session_id [ , request_id ])  
 [WITH NO_INFOMSGS ]  
 ```  

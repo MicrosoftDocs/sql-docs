@@ -15,7 +15,7 @@ ms.author: lle
 manager: craigg
 ---
 # Create a Link Attribute (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a link attribute when you want users to enter a hyperlink as an attribute value, such as http://www.contoso.com.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a link attribute when you want users to enter a hyperlink as an attribute value, such as `http://www.contoso.com`.  
   
 > [!NOTE]  
 >  When users enter a value for a link attribute, the string must begin with **http://** or an error will be displayed.  

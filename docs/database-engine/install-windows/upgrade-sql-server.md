@@ -1,5 +1,6 @@
 ---
 title: "Upgrade SQL Server | Microsoft Docs"
+description: This article provides links to resources that contain upgrade information for instances of different versions of SQL Server.
 ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
@@ -47,7 +48,7 @@ This section contains the following articles:
  [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
- [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=436)   
  [Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

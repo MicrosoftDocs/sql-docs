@@ -8,7 +8,6 @@ ms.reviewer: ""
 ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: high-availability
 ---
 # Configure read-scale for an Always On availability group

@@ -5,8 +5,7 @@ ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017    
 ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---

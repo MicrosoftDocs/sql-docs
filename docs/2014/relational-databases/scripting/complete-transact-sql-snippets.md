@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "snippets [Transact-SQL], completing"
   - "Transact-SQL snippets, completing"
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Complete Transact-SQL Snippets

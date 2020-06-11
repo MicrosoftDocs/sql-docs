@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "system functions [ODBC]"
   - "functions [ODBC], system functions"
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # System Functions
 The following table lists system functions that are included in the ODBC scalar function set. By calling **SQLGetInfo** with an *information type* of SQL_SYSTEM_FUNCTIONS, an application can determine which system functions are supported by a driver.  

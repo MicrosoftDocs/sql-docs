@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "log files [SQL Server], changing default location"
   - "data files [SQL Server], changing default location"
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # View or Change the Default Locations for Data and Log Files
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

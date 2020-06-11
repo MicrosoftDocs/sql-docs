@@ -1,5 +1,6 @@
 ---
 title: "HumanResources.myTeam Sample Table (SQL Server) | Microsoft Docs"
+description: To run code examples for importing and exporting bulk data in SQL Server, you need to create a test table named myTeam in the HumanResources schema.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

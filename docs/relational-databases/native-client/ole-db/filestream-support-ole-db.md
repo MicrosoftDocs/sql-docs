@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "OLE DB [FILESTREAM support]"
   - "FILESTREAM [SQL Server], OLE DB"
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ---
 # FILESTREAM Support (OLE DB)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

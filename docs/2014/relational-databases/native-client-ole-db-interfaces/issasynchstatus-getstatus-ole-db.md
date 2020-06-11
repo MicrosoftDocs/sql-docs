@@ -13,8 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "GetStatus method"
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # ISSAsynchStatus::GetStatus (OLE DB)

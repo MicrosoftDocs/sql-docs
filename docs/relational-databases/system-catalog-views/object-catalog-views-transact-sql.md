@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "object catalog views [SQL Server]"
   - "catalog views [SQL Server], objects"
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Object Catalog Views (Transact-SQL)
 

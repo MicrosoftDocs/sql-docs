@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], replication"
   - "replication dynamic management objects [SQL Server]"
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Replication Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

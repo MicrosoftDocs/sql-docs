@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, ODBC"
   - "ODBC, about SQL Server Native Client ODBC driver"
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQL Server Native Client (ODBC)

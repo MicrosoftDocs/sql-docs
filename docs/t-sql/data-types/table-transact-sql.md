@@ -28,7 +28,7 @@ Is a special data type used to store a result set for processing at a later time
   
 ## Syntax  
   
-```sql
+```syntaxsql
 table_type_definition ::=   
     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )   
   

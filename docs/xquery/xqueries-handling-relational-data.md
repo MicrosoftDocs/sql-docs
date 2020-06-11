@@ -1,5 +1,6 @@
 ---
 title: "XQueries Handling Relational Data | Microsoft Docs"
+description: Learn how to bind non-XML relational data to XML by using the XQuery extensions sql:column() and sql:variable().
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

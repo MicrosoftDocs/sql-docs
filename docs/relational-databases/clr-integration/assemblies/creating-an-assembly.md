@@ -1,5 +1,6 @@
 ---
 title: "Creating an Assembly | Microsoft Docs"
+description: Use CREATE ASSEMBLY to register an assembly in SQL Server and specify its security settings. Register an assembly to use its functionality.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

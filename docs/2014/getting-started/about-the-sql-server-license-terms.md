@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "licenses [SQL Server]"
   - "end user license agreement [SQL Server]"
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # About the SQL Server License Terms

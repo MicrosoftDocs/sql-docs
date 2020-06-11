@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_server_info"
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_server_info (Transact-SQL)
 

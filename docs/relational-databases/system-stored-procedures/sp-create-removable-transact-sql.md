@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_create_removable"
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -81,6 +81,7 @@ Execute a pass-through command against a linked server
     )   
     [ AS { LOGIN | USER } = ' name ' ]  
     [ AT linked_server_name ]  
+    [ AT data_source_name ]  
 [;]  
   
 <execute_option>::=  
@@ -515,7 +516,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
   AT *data_source*  
 **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
   
- Specifies that *command_string* is executed against *linked_server_name* and results, if any, are returned to the client. *linked_server_name* must refer to an existing linked server definition in the local server. Linked servers are defined by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ Specifies that *command_string* is executed against *data_source_name* and results, if any, are returned to the client. *data_source_name* must refer to an existing EXTERNAL DATA SOURCE definition in the database. Only data sources that point to SQL Server are supported. Additionally, in SQL Server big data cluster data sources that point to compute pool, data pool or storage pool are supported. Data sources are defined by using [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md).  
   
  WITH \<execute_option>  
  Possible execute options. The RESULT SETS options cannot be specified in an INSERT...EXEC statement.  
@@ -947,6 +948,49 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
+### R. Using EXECUTE with AT DATA_SOURCE data_source_name to query a remote SQL Server 
+ The following example passes a command string to an external data source pointing to a SQL Server instance. 
+  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+  
+```  
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
+GO  
+```  
+  
+### S. Using EXECUTE with AT DATA_SOURCE data_source_name to query compute pool in SQL Server big data cluster 
+ The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlComputePool` against a compute pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
+  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+  
+```
+CREATE EXTERNAL DATA SOURCE SqlComputePool WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlComputePool;  
+GO  
+```  
+
+### T. Using EXECUTE with AT DATA_SOURCE data_source_name to query data pool in SQL Server big data cluster 
+ The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlDataPool` against a data pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
+  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+  
+```
+CREATE EXTERNAL DATA SOURCE SqlDataPool WITH (LOCATION = 'sqldatapool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlDataPool;  
+GO  
+```
+
+### U. Using EXECUTE with AT DATA_SOURCE data_source_name to query storage pool in SQL Server big data cluster 
+ The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlStoragePool` against a data pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
+  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+  
+```
+CREATE EXTERNAL DATA SOURCE SqlStoragePool WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlStoragePool;  
+GO  
+```
+
 ## See Also  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

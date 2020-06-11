@@ -62,7 +62,7 @@ Running RECONFIGURE WITH OVERRIDE options allows CPU and I/O affinities to overl
 The I/O affinity tasks (such as lazy writer and log writer) are directly affected by the I/O affinity mask. If the lazy writer and log writer tasks aren't bound, they follow the same rules defined for the other permanent tasks such as lock monitor or checkpoint.
 If you specify an affinity mask that attempts to map to a nonexistent CPU, the RECONFIGURE command reports an error message to both the client session and the SQL Server error log. Using the RECONFIGURE WITH OVERRIDE option has no effect in this case, and the same configuration error is reported again.
 
-You can also exclude SQL Server activity from processors assigned specific workload assignments by the Windows 2000 or Windows Server 2003 operating system. If you set a bit representing a processor to 1, that processor is selected by the SQL Server Database Engine for thread assignment. When you set **affinity mask** to 0 (the default), the Microsoft Windows 2000 or Windows Server 2003 scheduling algorithms set the thread's affinity. When you set **affinity mask** to any nonzero value, SQL Server affinity interprets the value as a bitmask that specifies those processors eligible for selection.  
+You can also exclude SQL Server activity from specific workload assignments by the Windows operating system. If you set a bit representing a processor to 1, that processor is selected by the SQL Server Database Engine for thread assignment. When you set **affinity mask** to 0 (the default), the Microsoft Windows scheduling algorithms set the thread's affinity. When you set **affinity mask** to any nonzero value, SQL Server affinity interprets the value as a bitmask that specifies those processors eligible for selection.  
 
 By segregating SQL Server threads from running on particular processors, Microsoft Windows can better evaluate the system's handling of processes specific to Windows. For example, on an 8-CPU server running two instances of SQL Server (instance A and B), the system administrator could use the affinity mask option to assign the first set of 4 CPUs to instance A and the second set of 4 to instance B. To configure more than 32 processors, set both the affinity mask and the affinity64 mask. The values for **affinity mask** are as follows:
 
@@ -76,7 +76,7 @@ By segregating SQL Server threads from running on particular processors, Microso
 
 - To cover more than 32 CPUs, configure a four-byte affinity mask for the first 32 CPUs and up to a four-byte affinity64 mask for the remaining CPUs.
 
-Because setting SQL Server processor affinity is a specialized operation, it's recommended that it's used only when necessary. In most cases, the Microsoft Windows 2000 or Windows Server 2003 default affinity provides the best performance. Consider the CPU requirements for other applications when setting the affinity masks. For more information, see your Windows operating system documentation.
+Because setting SQL Server processor affinity is a specialized operation, it's recommended that it's used only when necessary. In most cases, the Microsoft Windows default affinity provides the best performance. Consider the CPU requirements for other applications when setting the affinity masks. For more information, see your Windows operating system documentation.
 
 > [!NOTE]
 > You can use the Windows System Monitor to view and analyze individual processor usage.

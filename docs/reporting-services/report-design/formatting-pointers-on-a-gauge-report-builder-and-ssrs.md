@@ -1,5 +1,6 @@
 ---
 title: "Formatting Pointers on a Gauge (Report Builder) | Microsoft Docs"
+description: Find out how to indicate the current value of a gauge in a paginated report in Report Builder by formatting points on the gauge. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

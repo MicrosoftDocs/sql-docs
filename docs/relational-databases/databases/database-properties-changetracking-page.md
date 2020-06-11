@@ -1,6 +1,6 @@
 ---
 title: "Database Properties (ChangeTracking Page) | Microsoft Docs"
-description: "In SQL Server Management Studio, use the ChangeTracking tab in the Database Properties dialog box to view or modify change tracking settings for a database."
+description: "Learn how to use the ChangeTracking tab in the Database Properties dialog box to view or modify change-tracking settings for a database."
 ms.custom: ""
 ms.date: "01/07/2016"
 ms.prod: sql

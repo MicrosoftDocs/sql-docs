@@ -1,6 +1,6 @@
 ---
 title: "Database Properties (Options Page) | Microsoft Docs"
-description: "In SQL Server Management Studio, use the Options tab in the Database Properties dialog box to view or modify a database's collation and other settings."
+description: "Learn how to use the Options tab in the Database Properties dialog box to view or modify a database's collation, recovery model, and other settings."
 ms.custom: ""
 ms.date: "08/28/2017"
 ms.prod: sql

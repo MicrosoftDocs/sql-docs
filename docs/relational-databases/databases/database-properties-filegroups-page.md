@@ -1,6 +1,6 @@
 ---
 title: "Database Properties (Filegroups Page) | Microsoft Docs"
-description: "In SQL Server Management Studio, use the Filegroups tab in the Database Properties dialog box to view the filegroups of a database or to add a new filegroup."
+description: "Learn how to use the Filegroups tab in the Database Properties dialog box to view the filegroups of a database or to add a new filegroup."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
-title: "Role Definitions -predefined roles | Microsoft Docs"
-ms.date: 05/24/2019
+title: "Role definitions - predefined roles | Microsoft Docs"
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security

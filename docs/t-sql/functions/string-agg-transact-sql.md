@@ -18,7 +18,10 @@ ms.author: jrasnick
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+<<!--[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]-->
+
+[!INCLUDE [tsql-appliesto](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [tsql-appliesto-ss2017](../../includes/applies-to-version/tsql-appliesto-ss2017.md)] [!INCLUDE [tsql-appliesto-asdb-yes](../../includes/applies-to-version/tsql-appliesto-asdb-yes.md)] [!INCLUDE [tsql-appliesto-asdw-yes](../../includes/applies-to-version/tsql-appliesto-asdw-yes.md)] [!INCLUDE [tsql-appliesto-pdw-no](../../includes/applies-to-version/tsql-appliesto-pdw-no.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. 
  

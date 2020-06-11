@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (Mirroring Page) | Microsoft Docs"
+description: "Learn how to configure mirroring properties and view a mirroring session's status. See how to start, pause, or remove a mirroring session."
 ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql

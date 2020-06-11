@@ -1,5 +1,6 @@
 ---
 title: "Database States | Microsoft Docs"
+description: "Find out about the various states a database can be in, such as ONLINE, OFFLINE, or SUSPECT. Learn how to verify the current state of a database."
 ms.custom: ""
 ms.date: "07/14/2016"
 ms.prod: sql

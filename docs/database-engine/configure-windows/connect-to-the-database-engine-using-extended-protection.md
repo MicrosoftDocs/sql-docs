@@ -1,5 +1,6 @@
 ---
 title: "Connect to the Database Engine Using Extended Protection | Microsoft Docs"
+description: Learn how Extended Protection uses service binding and channel binding to help prevent authentication relay attacks. See how to enable this feature.
 ms.custom: ""
 ms.date: "05/21/2019"
 ms.prod: sql

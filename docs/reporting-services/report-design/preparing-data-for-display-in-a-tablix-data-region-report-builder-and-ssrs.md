@@ -1,5 +1,6 @@
 ---
 title: "Preparing Data for Display in a Tablix Data Region (Report Builder) | Microsoft Docs"
+description: Learn how to customize the display of data in Report Builder to show either all data retrieved or a subset of the data.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

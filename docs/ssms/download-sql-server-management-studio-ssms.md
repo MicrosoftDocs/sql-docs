@@ -46,7 +46,7 @@ SSMS 18.5.1 is the latest general availability (GA) version of SSMS. If you have
 ### Version information
 
 - Release number: 18.5.1
-- Build number: 15.0.18330.0
+- Build number: 15.0.18333.0
 - Release date: June 09, 2020
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).

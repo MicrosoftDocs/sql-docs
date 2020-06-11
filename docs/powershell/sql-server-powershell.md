@@ -41,13 +41,13 @@ This section applies to scripts executed from PowerShell and not the SQL Agent. 
 
 The **SqlServer** module comes with:
 
-- [Powershell Providers](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers), which enables a simple navigation mechanism similar to file system paths. You can build paths similar to file system paths, where the drive is associated with a SQL Server management object model, and the nodes are based on the object model classes. You can then use familiar commands such as **cd** and **dir** to navigate the paths similar to the way you navigate folders in a command prompt window. You can use other commands, such as **ren** or **del**, to perform actions on the nodes in the path.
+- [PowerShell Providers](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers), which enables a simple navigation mechanism similar to file system paths. You can build paths similar to file system paths, where the drive is associated with a SQL Server management object model, and the nodes are based on the object model classes. You can then use familiar commands such as **cd** and **dir** to navigate the paths similar to the way you navigate folders in a command prompt window. You can use other commands, such as **ren** or **del**, to perform actions on the nodes in the path.
 
 - A set of cmdlets that support actions such as running a **sqlcmd** script containing Transact-SQL or XQuery statements.  
 
 - The AS provider and cmdlets, which before they were installed separately.
 
-## SQL Server Versions
+## SQL Server versions
 
 SQL PowerShell cmdlets can be used to manage instances of Azure SQL Database, Azure SQL Data Warehouse, and all [supported SQL Server products](https://support.microsoft.com/lifecycle/search/1044).
 

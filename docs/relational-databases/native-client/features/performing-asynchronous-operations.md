@@ -1,5 +1,6 @@
 ---
 title: "Performing Asynchronous Operations | Microsoft Docs"
+description: The SQL Server Native Client OLE DB provider allows applications to perform asynchronous database operations. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Building Applications"
+description: Learn about the SQL Server Native Client library, including upgrading from MDAC, using header and library files, and connection strings to use with a client.
 ms.custom: ""
 ms.date: 12/16/2019
 ms.prod: sql

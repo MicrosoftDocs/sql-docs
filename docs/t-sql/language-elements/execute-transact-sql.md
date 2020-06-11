@@ -44,6 +44,224 @@ Executes a command string or character string within a [!INCLUDE[tsql](../../inc
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+
+This is the syntax for SQL Server 2019, which is different than previous versions: 
+
+
+```syntaxsql
+-- Syntax for SQL Server  
+  
+Execute a stored procedure or function  
+[ { EXEC | EXECUTE } ]  
+    {   
+      [ @return_status = ]  
+      { module_name [ ;number ] | @module_name_var }   
+        [ [ @parameter = ] { value   
+                           | @variable [ OUTPUT ]   
+                           | [ DEFAULT ]   
+                           }  
+        ]  
+      [ ,...n ]  
+      [ WITH <execute_option> [ ,...n ] ]  
+    }  
+[;]  
+  
+Execute a character string  
+{ EXEC | EXECUTE }   
+    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
+    [ AS { LOGIN | USER } = ' name ' ]  
+[;]  
+  
+Execute a pass-through command against a linked server  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'command_string [ ? ]' } [ + ...n ]  
+        [ { , { value | @variable [ OUTPUT ] } } [ ...n ] ]  
+    )   
+    [ AS { LOGIN | USER } = ' name ' ]  
+    [ AT linked_server_name ]  
+[;]  
+  
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+  
+<result_sets_definition> ::=   
+{  
+    (  
+         { column_name   
+           data_type   
+         [ COLLATE collation_name ]   
+         [ NULL | NOT NULL ] }  
+         [,...n ]  
+    )  
+    | AS OBJECT   
+        [ db_name . [ schema_name ] . | schema_name . ]   
+        {table_name | view_name | table_valued_function_name }  
+    | AS TYPE [ schema_name.]table_type_name  
+    | AS FOR XML   
+}  
+```  
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
+
+This is the syntax for versions prior to  SQL Server 2019:
+
+```syntaxsql
+-- Syntax for SQL Server  
+  
+Execute a stored procedure or function  
+[ { EXEC | EXECUTE } ]  
+    {   
+      [ @return_status = ]  
+      { module_name [ ;number ] | @module_name_var }   
+        [ [ @parameter = ] { value   
+                           | @variable [ OUTPUT ]   
+                           | [ DEFAULT ]   
+                           }  
+        ]  
+      [ ,...n ]  
+      [ WITH <execute_option> [ ,...n ] ]  
+    }  
+[;]  
+  
+Execute a character string  
+{ EXEC | EXECUTE }   
+    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
+    [ AS { LOGIN | USER } = ' name ' ]  
+[;]  
+  
+Execute a pass-through command against a linked server  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'command_string [ ? ]' } [ + ...n ]  
+        [ { , { value | @variable [ OUTPUT ] } } [ ...n ] ]  
+    )   
+    [ AS { LOGIN | USER } = ' name ' ]  
+    [ AT linked_server_name ]  
+[;]  
+  
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+  
+<result_sets_definition> ::=   
+{  
+    (  
+         { column_name   
+           data_type   
+         [ COLLATE collation_name ]   
+         [ NULL | NOT NULL ] }  
+         [,...n ]  
+    )  
+    | AS OBJECT   
+        [ db_name . [ schema_name ] . | schema_name . ]   
+        {table_name | view_name | table_valued_function_name }  
+    | AS TYPE [ schema_name.]table_type_name  
+    | AS FOR XML   
+}  
+```  
+::: moniker-end
+
+  
+```syntaxsql
+-- In-Memory OLTP   
+
+Execute a natively compiled, scalar user-defined function  
+[ { EXEC | EXECUTE } ]   
+    {   
+      [ @return_status = ]   
+      { module_name | @module_name_var }   
+        [ [ @parameter = ] { value   
+                           | @variable   
+                           | [ DEFAULT ]   
+                           }  
+        ]   
+      [ ,...n ]   
+      [ WITH <execute_option> [ ,...n ] ]   
+    }  
+<execute_option>::=  
+{  
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}  
+```  
+  
+```syntaxsql
+-- Syntax for Azure SQL Database   
+  
+Execute a stored procedure or function  
+[ { EXEC | EXECUTE } ]  
+    {   
+      [ @return_status = ]  
+      { module_name  | @module_name_var }   
+        [ [ @parameter = ] { value   
+                           | @variable [ OUTPUT ]   
+                           | [ DEFAULT ]   
+                           }  
+        ]  
+      [ ,...n ]  
+      [ WITH RECOMPILE ]  
+    }  
+[;]  
+  
+Execute a character string  
+{ EXEC | EXECUTE }   
+    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
+    [ AS {  USER } = ' name ' ]  
+[;]  
+  
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+  
+<result_sets_definition> ::=   
+{  
+    (  
+         { column_name   
+           data_type   
+         [ COLLATE collation_name ]   
+         [ NULL | NOT NULL ] }  
+         [,...n ]  
+    )  
+    | AS OBJECT   
+        [ db_name . [ schema_name ] . | schema_name . ]   
+        {table_name | view_name | table_valued_function_name }  
+    | AS TYPE [ schema_name.]table_type_name  
+    | AS FOR XML  
+  
+```
+
+  
+```syntaxsql
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+
+-- Execute a stored procedure  
+[ { EXEC | EXECUTE } ]  
+    procedure_name   
+        [ { value | @variable [ OUT | OUTPUT ] } ] [ ,...n ] }  
+[;]  
+  
+-- Execute a SQL string  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
+[;]  
+```  
+
   
 ```syntaxsql
 -- Syntax for SQL Server  
@@ -190,6 +408,7 @@ Execute a character string
     ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
 [;]  
 ```  
+
   
 ## Arguments  
  @*return_status*  
@@ -287,6 +506,14 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
   
  AT *linked_server_name*  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+  
+ Specifies that *command_string* is executed against *linked_server_name* and results, if any, are returned to the client. *linked_server_name* must refer to an existing linked server definition in the local server. Linked servers are defined by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+  
+ WITH \<execute_option>  
+ Possible execute options. The RESULT SETS options cannot be specified in an INSERT...EXEC statement.  
+ 
+  AT *data_source*  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
   
  Specifies that *command_string* is executed against *linked_server_name* and results, if any, are returned to the client. *linked_server_name* must refer to an existing linked server definition in the local server. Linked servers are defined by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   

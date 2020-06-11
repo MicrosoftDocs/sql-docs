@@ -67,8 +67,20 @@ ms.author: mikeray
 
 ##  <a name="Permissions"></a> Permissions  
 
-To encrypt a backup or to restore from an encrypted backup use the **VIEW DEFINITION** permission on the certificate or asymmetric key that is used to encrypt the database backup.  
-  
+The account that does backup operations on an encrypted database requires specific permissions. 
+
+- **db_backupoperator** database level role on the database being backed up. This is required regardless of encryption. 
+- **VIEW DEFINITION** permission on the certificate in `master` database.
+
+   The following example grants the appropriate permissions for the certificate. 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > Access to the TDE certificate is not required to back up or restore a TDE protected database.  
   

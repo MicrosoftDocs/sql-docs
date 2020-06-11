@@ -1,5 +1,6 @@
 ---
 title: "Generate an Inline XDR Schema | Microsoft Docs"
+description: View information about generating an inline XDR schema.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

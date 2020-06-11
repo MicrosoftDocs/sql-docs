@@ -1,5 +1,6 @@
 ---
 title: "XQueries Involving Order | Microsoft Docs"
+description: 
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

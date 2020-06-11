@@ -6,5 +6,5 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-<Token>![Yes](media/yes-icon.png)Azure SQL Database</Token>
+<Token>![Yes](../media/yes-icon.png)Azure SQL Database</Token>
 

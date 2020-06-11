@@ -6,5 +6,5 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-<Token>![No](media/no-icon.png)Parallel Data Warehouse </Token>
+<Token>![No](../media/no-icon.png)Parallel Data Warehouse </Token>
 

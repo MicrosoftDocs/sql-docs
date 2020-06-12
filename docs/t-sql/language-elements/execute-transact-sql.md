@@ -45,10 +45,8 @@ Executes a command string or character string within a [!INCLUDE[tsql](../../inc
   
 ## Syntax  
 
-The syntax changed in SQL Server 2019. 
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-The following code block shows the syntax for SQL Server 2019. Alternatively, see [syntax for SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017) instead. 
+The following code block shows the syntax in SQL Server 2019. Alternatively, see [syntax in SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017) instead. 
 
 Syntax in SQL Server 2019: 
 
@@ -114,7 +112,7 @@ Execute a pass-through command against a linked server
 
 ::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
 
-The following code block shows the syntax for versions prior to SQL Server 2019. Alternatively, see [syntax in SQL Server 2019](execute-transact-sql.md?view=sql-server-ver15) instead.
+The following code block shows the syntax in SQL Server 2017 and earlier. Alternatively, see [syntax in SQL Server 2019](execute-transact-sql.md?view=sql-server-ver15) instead.
 
 Syntax in SQL Server 2017 and earlier:  
 

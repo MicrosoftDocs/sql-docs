@@ -1,6 +1,6 @@
 ---
 title: "xp_cmdshell Server configuration option"
-ms.custom: ""
+ms.custom: "contperfq4"
 ms.date: "06/12/2020"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
 
 ---
 

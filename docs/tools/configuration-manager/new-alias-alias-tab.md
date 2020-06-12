@@ -1,5 +1,6 @@
 ---
 title: "New Alias (Alias Tab)"
+description: Learn how to create an alias, an alternate name for a SQL Server instance that is used when connecting to that instance. View examples of when to use an alias.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,20 +1,17 @@
 ---
-title: "xp_cmdshell Server configuration option"
-ms.custom: "contperfq4"
-ms.date: "06/12/2020"
+title: xp_cmdshell Server configuration option
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-dev_langs:
-  - "TSQL"
-helpviewer_keywords: 
-  - "xp_cmdshell"
+dev_langs: "TSQL"
+helpviewer_keywords: "xp_cmdshell"
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: markingmyname
 ms.author: maghan
-
+ms.custom: contperfq4
+ms.date: 06/12/2020
 ---
 
 # xp_cmdshell Server configuration option
@@ -45,7 +42,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## See Also
+## Next steps
 
 - [xp_cmdshell extended stored procedure](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)
 - [Server Configuration Options (SQL Server)](server-configuration-options-sql-server.md)

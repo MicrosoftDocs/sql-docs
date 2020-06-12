@@ -1,6 +1,6 @@
 ---
 title: Deploying Models
-description: Learn how to use model packages to move copies of models from one Master Data Services environment to another or to create new models in your environment.
+description: Deploy model packages to move copies of models from one Master Data Services environment to another or to create new models in your environment.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

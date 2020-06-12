@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Properties (AlwaysOn High Availability Tab) | Microsoft Docs"
+description: Learn how to turn the AlwaysOn Availability Groups feature on or off in SQL Server 2014, and view prerequisites the server instance must meet for this feature.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"

@@ -1,5 +1,6 @@
 ---
 title: "Remove an Instance of SQL Server from the SQL Server Utility | Microsoft Docs"
+description: Learn how to remove a managed instance of SQL Server from the SQL Server Utility either by using SQL Server Management Studio or by running a PowerShell script.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

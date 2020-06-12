@@ -92,7 +92,7 @@ Select the method you want to use to create a key vault.
 ::: moniker range="azureportal"
 |||||
 |-|-|-|-|
- **_\*PowerShell \*_** &nbsp; | [The Azure portal](setup-steps-for-extensible-key-management-using-the-azure-key-vault.md.md?view=azureportal)|||
+ **_\*PowerShell \*_** &nbsp; | [The Azure portal](setup-steps-for-extensible-key-management-using-the-azure-key-vault.md?view=azureportal)|||
 |||||
 
 ### Create a key vault by using the Azure portal 
@@ -154,7 +154,7 @@ You can use the Azure portal to create the key vault and then add an Azure AD pr
 
 ### Create a key vault and key by using PowerShell
 
-The key vault and key that you create here is used by the SQL Server Database Engine for encryption key protection.  
+The key vault and key that you create here are used by the SQL Server Database Engine for encryption key protection.  
   
 > [!IMPORTANT] 
 > The subscription where the key vault is created must be in the same default Azure AD instance where the Azure AD service principal was created. If you want to use an Azure AD instance other than your default instance for creating a service principal for the SQL Server Connector, you must change the default Azure AD instance in your Azure account before you create your key vault. To learn how to change the default Azure AD instance to the one you want to use, see the "Frequently asked questions" section of [SQL Server Connector maintenance & troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
@@ -409,7 +409,7 @@ For a note about the minimum permission levels needed for each action in this se
   
     - Edit the `IDENTITY` argument (`ContosoEKMKeyVault`) to point to your Azure key vault.
       - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure key vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
-      - If you're using a *private Azure cloud* (for example, Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-PowerShell) section. Don't include "https://" in the Vault URI.   
+      - If you're using a *private Azure cloud* (for example, Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include "https://" in the Vault URI.   
     - Replace the first part of the `SECRET` argument with the Azure Active Directory Client ID from [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.  
   
       > [!IMPORTANT] 

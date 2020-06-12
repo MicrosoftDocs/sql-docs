@@ -1,6 +1,6 @@
 ---
 title: "Example: Specifying the CDATA Directive | Microsoft Docs"
-description: View an example of how to specify the CDATA directive to wtap the specified data in a CDATA section.
+description: View an example of how to specify the CDATA directive to wrap the specified data in a CDATA section.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

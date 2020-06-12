@@ -1,6 +1,6 @@
 ---
 title: "XQueries Involving Order | Microsoft Docs"
-description: 
+description: View examples of XQueries that are based on the sequence in which nodes appear in a document.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

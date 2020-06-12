@@ -1,5 +1,6 @@
 ---
 title: "Requirements for Running SQLXML Examples"
+description: Learn the requirements for creating working samples using the examples in the SQLXML 4.0 Programming Concepts section.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

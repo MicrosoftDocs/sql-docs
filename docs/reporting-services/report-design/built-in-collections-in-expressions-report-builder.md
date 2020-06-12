@@ -1,6 +1,7 @@
 ---
 title: "Built-in Collections in Expressions (Report Builder) | Microsoft Docs"
-description: Learn about built-in collections in expressions to reference collections such as parameters, fields, datasets in your reports in Report Builder. 
+description: Discover built-in collections in expressions to reference collections such as parameters, fields, datasets in your reports in Report Builder. 
+ms.date: 3/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design

@@ -1,5 +1,6 @@
 ---
 title: "Client Protocols - TCP and IP Properties (Protocol Tab) | Microsoft Docs"
+description: Learn how to specify TCP/IP options in Microsoft SQL Server Configuration Manager, such as the keep alive parameter and the default port number.
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Browser Service"
+description: Learn how to use SQL Server Browser, a service that listens for requests for SQL Server resources and provides information about installed SQL Server instances.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

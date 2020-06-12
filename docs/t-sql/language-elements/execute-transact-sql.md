@@ -612,7 +612,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### Context Switching Permissions  
  To specify EXECUTE AS on a login, the caller must have IMPERSONATE permissions on the specified login name. To specify EXECUTE AS on a database user, the caller must have IMPERSONATE permissions on the specified user name. When no execution context is specified, or EXECUTE AS CALLER is specified, IMPERSONATE permissions are not required.  
   
-## Examples  
+## Examples: SQL Server
   
 ### A. Using EXECUTE to pass a single parameter  
  The `uspGetEmployeeManagers` stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database expects one parameter (`@EmployeeID`). The following examples execute the `uspGetEmployeeManagers` stored procedure with `Employee ID 6` as its parameter value.  
@@ -880,10 +880,59 @@ WITH RESULT SETS
 );  
   
 ```  
+  ### O. Using EXECUTE with AT DATA_SOURCE data_source_name to query a remote SQL Server 
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ The following example passes a command string to an external data source pointing to a SQL Server instance. 
   
-### O: Basic Procedure Execution  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+  
+```sql    
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
+GO  
+```  
+  
+### P. Using EXECUTE with AT DATA_SOURCE data_source_name to query compute pool in SQL Server Big Data Cluster 
+
+ The following example passes a command string to an external data source pointing to a compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlComputePool` against a compute pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
+  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlComputePool 
+WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlComputePool;  
+GO  
+```  
+
+### Q. Using EXECUTE with AT DATA_SOURCE data_source_name to query data pool in SQL Server Big Data Cluster 
+ The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlDataPool` against a data pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
+  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlDataPool 
+WITH (LOCATION = 'sqldatapool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlDataPool;  
+GO  
+```
+
+### R. Using EXECUTE with AT DATA_SOURCE data_source_name to query storage pool in SQL Server Big Data Cluster 
+
+ The following example passes a command string to an external data source pointing to compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlStoragePool` against a data pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
+  
+**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlStoragePool
+WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlStoragePool;  
+GO  
+```
+
+  
+## Examples: Azure Synapse Analytics 
+  
+### A: Basic Procedure Execution  
  Executing a stored procedure:  
   
 ```sql  
@@ -902,7 +951,7 @@ EXEC ('EXEC ' + @var);
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### P: Executing Strings  
+### B: Executing Strings  
  Executing a SQL string:  
   
 ```sql   
@@ -923,7 +972,7 @@ SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';
 EXEC (@stringVar);  
 ```  
   
-### Q: Procedures with Parameters  
+### C: Procedures with Parameters  
 
  The following example creates a procedure with parameters and demonstrates 3 ways to execute the procedure:  
   
@@ -948,55 +997,6 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-  ### R. Using EXECUTE with AT DATA_SOURCE data_source_name to query a remote SQL Server 
-  
- The following example passes a command string to an external data source pointing to a SQL Server instance. 
-  
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
-  
-```sql    
-EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
-GO  
-```  
-  
-### S. Using EXECUTE with AT DATA_SOURCE data_source_name to query compute pool in SQL Server Big Data Cluster 
-
- The following example passes a command string to an external data source pointing to a compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlComputePool` against a compute pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
-  
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
-  
-```sql  
-CREATE EXTERNAL DATA SOURCE SqlComputePool 
-WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
-EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlComputePool;  
-GO  
-```  
-
-### T. Using EXECUTE with AT DATA_SOURCE data_source_name to query data pool in SQL Server Big Data Cluster 
- The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlDataPool` against a data pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
-  
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
-  
-```sql  
-CREATE EXTERNAL DATA SOURCE SqlDataPool 
-WITH (LOCATION = 'sqldatapool://controller-svc/default');
-EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlDataPool;  
-GO  
-```
-
-### U. Using EXECUTE with AT DATA_SOURCE data_source_name to query storage pool in SQL Server Big Data Cluster 
-
- The following example passes a command string to an external data source pointing to compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlStoragePool` against a data pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
-  
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
-  
-```sql  
-CREATE EXTERNAL DATA SOURCE SqlStoragePool
-WITH (LOCATION = 'sqlhdfs://controller-svc/default');
-EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlStoragePool;  
-GO  
-```
-
 ## See Also  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

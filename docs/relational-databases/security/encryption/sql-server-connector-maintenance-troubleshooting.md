@@ -162,7 +162,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 ### On Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **What are the endpoints that the SQL Server Connector needs access to?** 
- The Connector talks to two endpoints, which need to be whitelisted. The only port required for outbound communication to these other services is 443 for Https:
+ The Connector talks to two endpoints, which need to be allowed. The only port required for outbound communication to these other services is 443 for Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
 

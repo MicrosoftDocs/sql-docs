@@ -79,7 +79,7 @@ Execute a pass-through command against a linked server
     )   
     [ AS { LOGIN | USER } = ' name ' ]  
     [ AT linked_server_name ]  
-    [ AT data_source_name ]  
+    [ AT DATA_SOURCE data_source_name ]  
 [;]  
   
 <execute_option>::=  
@@ -262,152 +262,6 @@ Execute a character string
 [;]  
 ```  
 
-  
-```syntaxsql
--- Syntax for SQL Server  
-  
-Execute a stored procedure or function  
-[ { EXEC | EXECUTE } ]  
-    {   
-      [ @return_status = ]  
-      { module_name [ ;number ] | @module_name_var }   
-        [ [ @parameter = ] { value   
-                           | @variable [ OUTPUT ]   
-                           | [ DEFAULT ]   
-                           }  
-        ]  
-      [ ,...n ]  
-      [ WITH <execute_option> [ ,...n ] ]  
-    }  
-[;]  
-  
-Execute a character string  
-{ EXEC | EXECUTE }   
-    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
-    [ AS { LOGIN | USER } = ' name ' ]  
-[;]  
-  
-Execute a pass-through command against a linked server  
-{ EXEC | EXECUTE }  
-    ( { @string_variable | [ N ] 'command_string [ ? ]' } [ + ...n ]  
-        [ { , { value | @variable [ OUTPUT ] } } [ ...n ] ]  
-    )   
-    [ AS { LOGIN | USER } = ' name ' ]  
-    [ AT linked_server_name ]  
-[;]  
-  
-<execute_option>::=  
-{  
-        RECOMPILE   
-    | { RESULT SETS UNDEFINED }   
-    | { RESULT SETS NONE }   
-    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
-}   
-  
-<result_sets_definition> ::=   
-{  
-    (  
-         { column_name   
-           data_type   
-         [ COLLATE collation_name ]   
-         [ NULL | NOT NULL ] }  
-         [,...n ]  
-    )  
-    | AS OBJECT   
-        [ db_name . [ schema_name ] . | schema_name . ]   
-        {table_name | view_name | table_valued_function_name }  
-    | AS TYPE [ schema_name.]table_type_name  
-    | AS FOR XML   
-}  
-```  
-  
-```syntaxsql
--- In-Memory OLTP   
-
-Execute a natively compiled, scalar user-defined function  
-[ { EXEC | EXECUTE } ]   
-    {   
-      [ @return_status = ]   
-      { module_name | @module_name_var }   
-        [ [ @parameter = ] { value   
-                           | @variable   
-                           | [ DEFAULT ]   
-                           }  
-        ]   
-      [ ,...n ]   
-      [ WITH <execute_option> [ ,...n ] ]   
-    }  
-<execute_option>::=  
-{  
-    | { RESULT SETS UNDEFINED }   
-    | { RESULT SETS NONE }   
-    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
-}  
-```  
-  
-```syntaxsql
--- Syntax for Azure SQL Database   
-  
-Execute a stored procedure or function  
-[ { EXEC | EXECUTE } ]  
-    {   
-      [ @return_status = ]  
-      { module_name  | @module_name_var }   
-        [ [ @parameter = ] { value   
-                           | @variable [ OUTPUT ]   
-                           | [ DEFAULT ]   
-                           }  
-        ]  
-      [ ,...n ]  
-      [ WITH RECOMPILE ]  
-    }  
-[;]  
-  
-Execute a character string  
-{ EXEC | EXECUTE }   
-    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
-    [ AS {  USER } = ' name ' ]  
-[;]  
-  
-<execute_option>::=  
-{  
-        RECOMPILE   
-    | { RESULT SETS UNDEFINED }   
-    | { RESULT SETS NONE }   
-    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
-}   
-  
-<result_sets_definition> ::=   
-{  
-    (  
-         { column_name   
-           data_type   
-         [ COLLATE collation_name ]   
-         [ NULL | NOT NULL ] }  
-         [,...n ]  
-    )  
-    | AS OBJECT   
-        [ db_name . [ schema_name ] . | schema_name . ]   
-        {table_name | view_name | table_valued_function_name }  
-    | AS TYPE [ schema_name.]table_type_name  
-    | AS FOR XML  
-  
-```  
-  
-```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-
--- Execute a stored procedure  
-[ { EXEC | EXECUTE } ]  
-    procedure_name   
-        [ { value | @variable [ OUT | OUTPUT ] } ] [ ,...n ] }  
-[;]  
-  
--- Execute a SQL string  
-{ EXEC | EXECUTE }  
-    ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
-[;]  
-```  
 
   
 ## Arguments  
@@ -512,7 +366,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  WITH \<execute_option>  
  Possible execute options. The RESULT SETS options cannot be specified in an INSERT...EXEC statement.  
  
-  AT *data_source*  
+AT DATA_SOURCE data_source_name 
 **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
   
  Specifies that *command_string* is executed against *data_source_name* and results, if any, are returned to the client. *data_source_name* must refer to an existing EXTERNAL DATA SOURCE definition in the database. Only data sources that point to SQL Server are supported. Additionally, for SQL Server big data cluster data sources that point to compute pool, data pool or storage pool are supported. Data sources are defined by using [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).  

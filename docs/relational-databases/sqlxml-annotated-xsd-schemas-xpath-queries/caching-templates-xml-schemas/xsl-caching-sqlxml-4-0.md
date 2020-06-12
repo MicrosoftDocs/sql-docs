@@ -1,5 +1,6 @@
 ---
 title: "XSL Caching (SQLXML)"
+description: Learn how to cache XSL style sheets and set the XSL cache size to improve query performance in SQLXML 4.0.
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

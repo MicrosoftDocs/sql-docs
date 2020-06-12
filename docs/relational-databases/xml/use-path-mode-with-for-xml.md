@@ -1,5 +1,6 @@
 ---
 title: "Use PATH Mode with FOR XML | Microsoft Docs"
+description: Learn how to use PATH mode with nested FOR XML queries and the TYPE directive to write less complex queries that return xml type instances.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

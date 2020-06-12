@@ -1,6 +1,6 @@
 ---
 title: "Add or Remove Margins from a Chart (Report Builder) | Microsoft Docs"
-description: Learn how to add or remove margins from a column or scatter chart type you are including in a report in Report Builder. 
+description: Add or remove margins from a column or scatter chart in Report Builder. Improve readability or appearance of paginated reports. 
 mms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

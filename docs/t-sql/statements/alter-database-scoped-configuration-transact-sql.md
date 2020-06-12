@@ -410,7 +410,7 @@ ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
 **APPLIES TO**: Azure SQL Database only (feature is in public preview)
 
-If asynchronous statistics update is enabled, enabling this configuration will cause the background session updating statistics to wait for a Sch-M lock on a low priority queue to avoid blocking other sessions in high concurrency scenarios. For more information, see [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
+If asynchronous statistics update is enabled, enabling this configuration will cause the background request updating statistics to wait for a Sch-M lock on a low priority queue, to avoid blocking other sessions in high concurrency scenarios. For more information, see [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
 
 ## <a name="Permissions"></a> Permissions
 

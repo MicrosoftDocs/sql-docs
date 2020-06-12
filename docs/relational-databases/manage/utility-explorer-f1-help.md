@@ -1,6 +1,6 @@
 ---
 title: "Utility Explorer F1 Help | Microsoft Docs"
-description: Get acquainted with functionality that is offered in various areas of the SQL Server Utility, such as views, the dashboard, and the Utility Administration tabs.
+description: Get acquainted with functionality that is offered in various areas of the SQL Server Utility. Learn about views, the dashboard, and the Utility Administration tabs.
 ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql

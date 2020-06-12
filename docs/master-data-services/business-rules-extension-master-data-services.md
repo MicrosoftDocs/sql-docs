@@ -1,6 +1,6 @@
 ---
 title: Business Rules Extension
-description: In Master Data Services, you can apply user-defined SQL scripts as an extension of pre-defined conditions and actions.
+description: You can apply user-defined SQL scripts as an extension of pre-defined business rule conditions and actions in Master Data Services.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Add a Border to a Report (Report Builder) | Microsoft Docs"
+description: Define areas of a paginated report by adding borders to the headers, footers, and report body in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -14,7 +15,7 @@ ms.author: maggies
 # Add a Border to a Report (Report Builder and SSRS)
   You can add a border to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report by adding borders to the headers, footers, and report body themselves, without adding lines or rectangles.    
     
- If you add a report border that appears on the page header and footer, do not suppress the header and footer on the first and last pages of the report. If you do, the border may appear cut off at the top or bottom of the first and last pages of the report. For more information, see [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md).    
+ If you add a report border that appears on the page header and footer, do not suppress the header and footer on the first and last pages of the report. If you do, the border might appear cut off at the top or bottom of the first and last pages of the report. For more information, see [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md).    
     
 ## To add a border to a report    
     

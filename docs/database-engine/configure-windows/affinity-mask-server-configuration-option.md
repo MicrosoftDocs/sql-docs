@@ -120,13 +120,13 @@ These are **affinity mask** values for an 8-CPU system.
 
 The affinity mask option is an advanced option. If you're using the sp_configure system stored procedure to change the setting, you can change **affinity mask** only when **show advanced options** is set to 1. After executing the [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE command, the new setting takes effect immediately without requiring a restart of the SQL Server instance.  
 
-## Non-uniform Memory Access (NUMA)
+## Non-uniform memory access (NUMA)
 
 When using hardware-based non-uniform memory access (NUMA) and the affinity mask is set, every scheduler in a node binds to its own CPU. When the affinity mask isn't set, each scheduler is bound to the group of CPUs within the NUMA node and a scheduler mapped to NUMA node N1 can schedule work on any CPU in the node, but not on CPUs associated with another node.  
 
 Any operation running on a single NUMA node can only use buffer pages from that node. When an operation is run in parallel on CPUs from multiple nodes, memory can be used from any node involved.  
   
-## Licensing Issues
+## Licensing issues
 
 Dynamic affinity is tightly constrained by CPU licensing. SQL Server doesn't allow any configuration of 
 affinity mask options that violates the licensing policy.  

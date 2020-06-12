@@ -1,5 +1,6 @@
 ---
 title: "SQL Server &lt;server&gt; (SQL Server Configuration Manager)"
+description: Discover how to use SQL Server Configuration Manager to view the properties of the SQL Server Database Engine.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -45,10 +45,12 @@ Executes a command string or character string within a [!INCLUDE[tsql](../../inc
   
 ## Syntax  
 
+The syntax changed in SQL Server 2019. 
+
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+The following code block shows the syntax for SQL Server 2019. Alternatively, see [syntax for SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017) instead. 
 
-This is the syntax for SQL Server 2019, which is different than previous versions: 
-
+Syntax in SQL Server 2019: 
 
 ```syntaxsql
 -- Syntax for SQL Server  
@@ -112,7 +114,9 @@ Execute a pass-through command against a linked server
 
 ::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
 
-This is the syntax for versions prior to  SQL Server 2019:
+The following code block shows the syntax for versions prior to SQL Server 2019. Alternatively, see [syntax in SQL Server 2019](execute-transact-sql.md?view=sql-server-ver15) instead.
+
+Syntax in SQL Server 2017 and earlier:  
 
 ```syntaxsql
 -- Syntax for SQL Server  
@@ -516,7 +520,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
   AT *data_source*  
 **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
   
- Specifies that *command_string* is executed against *data_source_name* and results, if any, are returned to the client. *data_source_name* must refer to an existing EXTERNAL DATA SOURCE definition in the database. Only data sources that point to SQL Server are supported. Additionally, in SQL Server big data cluster data sources that point to compute pool, data pool or storage pool are supported. Data sources are defined by using [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md).  
+ Specifies that *command_string* is executed against *data_source_name* and results, if any, are returned to the client. *data_source_name* must refer to an existing EXTERNAL DATA SOURCE definition in the database. Only data sources that point to SQL Server are supported. Additionally, for SQL Server big data cluster data sources that point to compute pool, data pool or storage pool are supported. Data sources are defined by using [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).  
   
  WITH \<execute_option>  
  Possible execute options. The RESULT SETS options cannot be specified in an INSERT...EXEC statement.  
@@ -618,21 +622,21 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### A. Using EXECUTE to pass a single parameter  
  The `uspGetEmployeeManagers` stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database expects one parameter (`@EmployeeID`). The following examples execute the `uspGetEmployeeManagers` stored procedure with `Employee ID 6` as its parameter value.  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers 6;  
 GO  
 ```  
   
  The variable can be explicitly named in the execution:  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers @EmployeeID = 6;  
 GO  
 ```  
   
  If the following is the first statement in a batch or an **osql** or **sqlcmd** script, EXEC is not required.  
   
-```  
+```sql    
 dbo.uspGetEmployeeManagers 6;  
 GO  
 --Or  
@@ -643,7 +647,7 @@ GO
 ### B. Using multiple parameters  
  The following example executes the `spGetWhereUsedProductID` stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It passes two parameters: the first parameter is a product ID (`819`) and the second parameter, `@CheckDate,` is a `datetime` value.  
   
-```  
+```sql    
 DECLARE @CheckDate datetime;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
@@ -653,7 +657,7 @@ GO
 ### C. Using EXECUTE 'tsql_string' with a variable  
  The following example shows how `EXECUTE` handles dynamically built strings that contain variables. This example creates the `tables_cursor` cursor to hold a list of all user-defined tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, and then uses that list to rebuild all indexes on the tables.  
   
-```  
+```sql    
 DECLARE tables_cursor CURSOR  
    FOR  
    SELECT s.name, t.name   
@@ -681,7 +685,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql    
 DECLARE @retstat int;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
@@ -699,7 +703,7 @@ EXEC @proc_name;
 ### F. Using EXECUTE with DEFAULT  
  The following example creates a stored procedure with default values for the first and third parameters. When the procedure is run, these defaults are inserted for the first and third parameters when no value is passed in the call or when the default is specified. Note the various ways the `DEFAULT` keyword can be used.  
   
-```  
+```sql    
 IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL  
    DROP PROCEDURE dbo.ProcTestDefaults;  
 GO  
@@ -718,7 +722,7 @@ GO
   
  The `Proc_Test_Defaults` stored procedure can be executed in many combinations.  
   
-```  
+```sql    
 -- Specifying a value only for one parameter (@p2).  
 EXECUTE dbo.ProcTestDefaults @p2 = 'A';  
 -- Specifying a value for the first two parameters.  
@@ -740,7 +744,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql    
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
 EXECUTE ( 'CREATE TABLE AdventureWorks2012.dbo.SalesTbl   
@@ -751,7 +755,7 @@ GO
 ### H. Using EXECUTE WITH RECOMPILE  
  The following example executes the `Proc_Test_Defaults` stored procedure and forces a new query plan to be compiled, used, and discarded after the module is executed.  
   
-```  
+```sql    
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
 GO  
 ```  
@@ -759,7 +763,7 @@ GO
 ### I. Using EXECUTE with a user-defined function  
  The following example executes the `ufnGetSalesOrderStatusText` scalar user-defined function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It uses the variable `@returnstatus` to store the value returned by the function. The function expects one input parameter, `@Status`. This is defined as a **tinyint** data type.  
   
-```  
+```sql    
 DECLARE @returnstatus nvarchar(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
@@ -772,7 +776,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver    
         @server='ORACLE',  
@@ -804,7 +808,7 @@ GO
 ### K. Using EXECUTE AS USER to switch context to another user  
  The following example executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] string that creates a table and specifies the `AS USER` clause to switch the execution context of the statement from the caller to `User1`. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will check the permissions of `User1` when the statement is run. `User1` must exist as a user in the database and must have permission to create tables in the `Sales` schema, or the statement fails.  
   
-```  
+```sql    
 EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
 AS USER = 'User1';  
 GO  
@@ -815,7 +819,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
@@ -831,7 +835,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
@@ -851,7 +855,7 @@ WITH RESULT SETS
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 --Create the procedure  
 CREATE PROC Production.ProductList @ProdName nvarchar(50)  
 AS  
@@ -884,50 +888,51 @@ WITH RESULT SETS
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### Example O: Basic Procedure Execution  
+### O: Basic Procedure Execution  
  Executing a stored procedure:  
   
-```  
+```sql  
 EXEC proc1;  
 ```  
   
  Calling a stored procedure with name determined at runtime:  
   
-```  
+```sql    
 EXEC ('EXEC ' + @var);  
 ```  
   
  Calling a stored procedure from within a stored procedure:  
   
-```  
+```sql   
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### Example P: Executing Strings  
+### P: Executing Strings  
  Executing a SQL string:  
   
-```  
+```sql   
 EXEC ('SELECT * FROM sys.types');  
 ```  
   
  Executing a nested string:  
   
-```  
+```sql  
 EXEC ('EXEC (''SELECT * FROM sys.types'')');  
 ```  
   
  Executing a string variable:  
   
-```  
+```sql  
 DECLARE @stringVar nvarchar(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
   
-### Example Q: Procedures with Parameters  
+### Q: Procedures with Parameters  
+
  The following example creates a procedure with parameters and demonstrates 3 ways to execute the procedure:  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  
@@ -948,45 +953,51 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-### R. Using EXECUTE with AT DATA_SOURCE data_source_name to query a remote SQL Server 
+  ### R. Using EXECUTE with AT DATA_SOURCE data_source_name to query a remote SQL Server 
+  
  The following example passes a command string to an external data source pointing to a SQL Server instance. 
   
 **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
   
-```  
+```sql    
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
 GO  
 ```  
   
-### S. Using EXECUTE with AT DATA_SOURCE data_source_name to query compute pool in SQL Server big data cluster 
- The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlComputePool` against a compute pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
+### S. Using EXECUTE with AT DATA_SOURCE data_source_name to query compute pool in SQL Server Big Data Cluster 
+
+ The following example passes a command string to an external data source pointing to a compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlComputePool` against a compute pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
   
 **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
   
-```
-CREATE EXTERNAL DATA SOURCE SqlComputePool WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlComputePool 
+WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlComputePool;  
 GO  
 ```  
 
-### T. Using EXECUTE with AT DATA_SOURCE data_source_name to query data pool in SQL Server big data cluster 
+### T. Using EXECUTE with AT DATA_SOURCE data_source_name to query data pool in SQL Server Big Data Cluster 
  The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlDataPool` against a data pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
   
 **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
   
-```
-CREATE EXTERNAL DATA SOURCE SqlDataPool WITH (LOCATION = 'sqldatapool://controller-svc/default');
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlDataPool 
+WITH (LOCATION = 'sqldatapool://controller-svc/default');
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlDataPool;  
 GO  
 ```
 
-### U. Using EXECUTE with AT DATA_SOURCE data_source_name to query storage pool in SQL Server big data cluster 
- The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlStoragePool` against a data pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
+### U. Using EXECUTE with AT DATA_SOURCE data_source_name to query storage pool in SQL Server Big Data Cluster 
+
+ The following example passes a command string to an external data source pointing to compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlStoragePool` against a data pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
   
 **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
   
-```
-CREATE EXTERNAL DATA SOURCE SqlStoragePool WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlStoragePool
+WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlStoragePool;  
 GO  
 ```

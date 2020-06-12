@@ -52,7 +52,7 @@ Use the following basic steps to get connected:
    | Setting | Description |
    |-----|-----|
    | **Server type** | The default is database engine; do not change this value. |
-   | **Server name** | Enter the name of the target Linux SQL Server machine or its IP address. |
+   | **Server name** | Enter the name of the target Linux SQL Server machine, or its IP address and port in the format `IP,port`. |
    | **Authentication** | For SQL Server on Linux, use **SQL Server Authentication**. |
    | **Login** | Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). |
    | **Password** | Enter the password for the specified user (for the **SA** account, you created this during setup). |

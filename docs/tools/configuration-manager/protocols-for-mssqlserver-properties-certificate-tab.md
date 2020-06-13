@@ -1,5 +1,6 @@
 ---
 title: "Protocols for MSSQLSERVER Properties (Certificate Tab)"
+description: Select a certificate for SQL Server, or view certificate properties by using the Certificate tab on the Protocols for MSSQLSERVER Properties dialog box.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

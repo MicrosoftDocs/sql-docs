@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Integration Services Properties (Service Tab)"
+description: Learn about the options on the Service tab in the Integration Services Properties dialog box, such as the binary path, the host name, and the start mode.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

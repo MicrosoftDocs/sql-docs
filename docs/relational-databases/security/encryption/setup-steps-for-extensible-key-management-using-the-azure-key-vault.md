@@ -51,7 +51,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
       ![Screenshot of the "Azure services" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part1-login-portal.png)
 
-    * Select **"More services"** and then, in the **All services** box, type **Azure Active Directory**.
+    * Select **More services** and then, in the **All services** box, type **Azure Active Directory**.
 
       ![Screenshot of the "All Azure services" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 

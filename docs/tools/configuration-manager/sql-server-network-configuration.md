@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Network Configuration"
+description: Get acquainted with the Server Network Configuration dialog boxes in SQL Server Configuration Manager.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

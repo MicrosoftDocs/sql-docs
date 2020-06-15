@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for MySQL (MySQLToSQL) for each release.
-authors: "HJToland3;nahk-ivanov"
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for MySQL (MySQLToSql)
 

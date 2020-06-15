@@ -2,7 +2,7 @@
 title: "Set up Transparent Data Encryption (TDE) Extensible Key Management with Azure Key Vault"
 description: Install and configure the SQL Server Connector for Azure Key Vault. 
 ms.custom: seo-lt-2019
-ms.date: "06/11/2020"
+ms.date: "06/15/2020"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -89,11 +89,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
 Select the method you want to use to create a key vault.
 
-::: moniker range="azureportal"
-|||||
-|-|-|-|-|
- **_\*PowerShell \*_** &nbsp; | [The Azure portal](setup-steps-for-extensible-key-management-using-the-azure-key-vault.md?view=azureportal)|||
-|||||
+## [Azure portal](#tab/portal)
 
 ### Create a key vault by using the Azure portal 
 
@@ -145,12 +141,7 @@ You can use the Azure portal to create the key vault and then add an Azure AD pr
    
    ![Screenshot of the Save button on the "Add access policy" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png)  
  
-::: moniker-end
-::: moniker range="powershell"
-|||||
-|-|-|-|-|
- [PowerShell](setup-steps-for-extensible-key-management-using-the-azure-key-vault.md?view=powershell) |**_\* The Azure portal \*_** &nbsp;|
-|||||
+## [PowerShell](#tab/powershell)
 
 ### Create a key vault and key by using PowerShell
 
@@ -330,7 +321,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 > [!IMPORTANT] 
 > The key vault supports multiple versions of the same named key, but keys to be used by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key that's used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the key vault and used to encrypt the DEK.  
 
-::: moniker-end
+---
        
 ## Step 3: Install the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector  
 

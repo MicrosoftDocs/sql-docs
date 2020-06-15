@@ -32,7 +32,7 @@ Use these links to download the appropriate sample database for your scenario.
 - **Data Warehouse (DW)** data is for data warehousing workloads. 
 - **Lightweight (LT)** data is a lightweight and pared down version of the **OLTP** sample. 
 
-|**OLTP** |D**ata Warehouse** |**Lightweight**|
+|**OLTP** |**Data Warehouse** |**Lightweight**|
 |---------|---------|---------|
 |[AdventureWorks2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|

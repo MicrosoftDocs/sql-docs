@@ -51,11 +51,23 @@ Additional files can be found directly on GitHub:
 
 ## Restore to SQL Server 
 
-You can use the `.bak` file to restore your sample database to your SQL Server instance. You can do so using the graphical interface (GUI) in [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), or using the [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) command. 
+You can use the `.bak` file to restore your sample database to your SQL Server instance. You can do so using the [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) command, or using the graphical interface (GUI) in [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
-### GUI
+# [Transact-SQL (T-SQL](#tab/tsql)
 
-You can restore your database using the GUI in SQL Server Management Studio or Azure Data Studio. 
+You can restore your sample database using Transact-SQL (T-SQL). An example to restore AdventureWorks2019 is provided below, but the database name and installation file path may vary depending on your environment. 
+
+To restore AdventureWorks2019, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
+
+```sql
+USE [master]
+RESTORE DATABASE [AdventureWorks2019] 
+FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
+WITH  FILE = 1,  NOUNLOAD,  STATS = 5
+GO
+
+```
+
 
 # [SQL Server Management Studio (SSMS)](#tab/ssms)
 
@@ -104,21 +116,6 @@ To restore your database in Azure Data Studio (SSMS), follow these steps:
 
 ---
 
-### Transact-SQL (T-SQL)
-
-You can restore your sample database using Transact-SQL (T-SQL) as well. An example to restore AdventureWorks2019 is provided below, but the database name and installation file path may vary depending on your environment. 
-
-To restore AdventureWorks2019, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
-
-```sql
-USE [master]
-RESTORE DATABASE [AdventureWorks2019] 
-FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
-WITH  FILE = 1,  NOUNLOAD,  STATS = 5
-GO
-
-```
-
 ## Deploy to Azure SQL Database
 
 You have two options to view sample Azure SQL Database data. You can use a sample when you create a new database, or you can deploy a database from SQL Server directly to Azure using SQL Server Management Studio (SSMS).
@@ -150,11 +147,11 @@ To deploy a sample database from SQL Server to Azure SQL Database, follow these 
 
 1. Connect to your SQL Server in SQL Server Management Studio. 
 1. If you haven't already done so, [restore the sample database to SQL Server](#restore-to-sql-server). 
-1. Right-click your restored database > **Tasks** > **Deploy Database to Microsoft Azure SQL Database...**. 
+1. Right-click your restored database in **Object Explorer** > **Tasks** > **Deploy Database to Microsoft Azure SQL Database...**. 
 
    :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Choose to deploy your database to Microsoft Azure SQL Database from right-clicking your database and selecting Tasks":::
 
-1. Follow the wizard to connect to your Azure SQL Database and deploy your database. 
+1. Follow the wizard to connect to Azure SQL Database and deploy your database. 
 
 
 ## Creation scripts

@@ -170,13 +170,14 @@ executeCmd (command)
 # Setup pre-requisites for deploying BDC on OpenShift
 #
 #
+#Creating new project/namespace
+command = "oc new-project "+ CLUSTER_NAME
+executeCmd (command)
+#
 # create custom SCC for BDC
 command = "oc apply -f bdc-restricted-scc.yml"
 executeCmd (command)
 #
-#Creating new project/namespace
-command = "oc new-project "+ CLUSTER_NAME
-executeCmd (command)
 #Adding the custom scc to BDC namespace
 command = "oc adm policy add-scc-to-group bdc-restricted-scc system:serviceaccounts:" + CLUSTER_NAME
 executeCmd (command)

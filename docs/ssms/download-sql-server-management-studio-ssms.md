@@ -108,10 +108,15 @@ There are shared components that remain installed after you uninstall SSMS.
 
 The shared components that remain installed are:
 
-- 
-- 
-- 
-- 
+- Microsoft .NET Framework 4.7.2
+- Microsoft OLE DB Driver for SQL Server
+- Microsoft ODBC Driver 17 for SQL Server
+- Microsoft Visual C++ 2013 Redistributable (x86)
+- Microsoft Visual C++ 2017 Redistributable (x86)
+- Microsoft Visual C++ 2017 Redistributable (x64)
+- Microsoft Visual Studio Tools for Applications 2017
+
+As such, even after you uninstall SSMS from your machine, you must uninstall these components separately.
 
 ## Supported SQL offerings
 

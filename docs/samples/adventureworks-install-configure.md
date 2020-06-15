@@ -20,8 +20,8 @@ For more information about samples, see the [Samples GitHub repository](https://
 
 ## Prerequisites
 
-- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). 
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).  or later.
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 
 ## Download .bak files 
@@ -53,7 +53,7 @@ Additional files can be found directly on GitHub:
 
 You can use the `.bak` file to restore your sample database to your SQL Server instance. You can do so using the [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) command, or using the graphical interface (GUI) in [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
-# [Transact-SQL (T-SQL](#tab/tsql)
+# [Transact-SQL (T-SQL)](#tab/tsql)
 
 You can restore your sample database using Transact-SQL (T-SQL). An example to restore AdventureWorks2019 is provided below, but the database name and installation file path may vary depending on your environment. 
 
@@ -75,7 +75,7 @@ If you're not familiar using SQL Server Management Studio (SSMS), you can see [c
 
 To restore your database in SQL Server Management Studio, follow these steps:
 
-1. Download the appropriate `.bak` file from one of links provided in the [.bak download files](#download-bak-files) section.
+1. Download the appropriate `.bak` file from one of links provided in the [download .bak files](#download-bak-files) section.
 1. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
 1. Open SQL Server Management Studio (SSMS) and connect to your SQL Server. 
 1. Right-click **Databases** in **Object Explorer** > **Restore Database...** to launch the **Restore Database** wizard. 
@@ -99,7 +99,7 @@ If you're not familiar using Azure Data Studio, you can see [connect & query](..
 
 To restore your database in Azure Data Studio (SSMS), follow these steps:
 
-1. Download the appropriate `.bak` file from one of links provided in the [.bak download files](#download-bak-files) section.
+1. Download the appropriate `.bak` file from one of links provided in the [download .bak files](#download-bak-files) section.
 1. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
 1. Open Azure Data Studio Studio (SSMS) and connect to your SQL Server. 
 1. Right-click **Databases** in **?????** > **Restore** to launch the **?????** wizard. 

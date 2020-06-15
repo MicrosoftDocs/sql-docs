@@ -1,5 +1,6 @@
 ---
 title: "ad hoc distributed queries Server Configuration Option | Microsoft Docs"
+description: Find out how to enable ad hoc distributed queries in SQL Server so that you can use OPENROWSET and OPENDATASOURCE to connect to remote OLE DB data sources.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

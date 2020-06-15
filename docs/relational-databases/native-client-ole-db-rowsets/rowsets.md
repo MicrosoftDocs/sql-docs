@@ -1,6 +1,6 @@
 ---
 title: "Rowsets | Microsoft Docs"
-description: A rowset is a set of rows that contain columns of data, which enable all OLE DB data providers to expose result set data in tabular form.
+description: Enable all data providers to expose result set data in tabular form. In OLE DB, use the rowset feature, a set of rows that contains columns of data. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

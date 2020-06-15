@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browsing an Association Rules Model
   When you open an association model using **Browse**, the model is displayed in an interactive viewer, similar to the Association Rules Viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  The viewer lets you see at a glance which items were correlated with each other, and displays rules that you can use for prediction or making recommendations.  

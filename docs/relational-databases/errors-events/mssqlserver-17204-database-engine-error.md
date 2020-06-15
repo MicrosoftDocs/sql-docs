@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_17204 | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -17,8 +17,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| :-------- | :---- |
 |Product Name|SQL Server|  
 |Event ID|17204|  
 |Event Source|MSSQLSERVER|  

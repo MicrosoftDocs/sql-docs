@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7729e98e-6296-4ad9-b73c-fb0f29f4c54e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # New Mining Model Dialog Box (Mining Structure View)
   Use the **New Mining Model** dialog box to add a new mining model to the mining structure.  

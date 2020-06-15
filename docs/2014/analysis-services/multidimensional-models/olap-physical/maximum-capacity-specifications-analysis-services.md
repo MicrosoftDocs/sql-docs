@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Maximum Capacity Specifications (Analysis Services)
   The following tables specify the maximum sizes and numbers of various objects defined in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] components under different server deployment modes.  

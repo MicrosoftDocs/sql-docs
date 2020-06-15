@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Enable Dimension Writeback (Dimension) (Business Intelligence Wizard)
   Use the **Enable Dimension Writeback** page to select a dimension for which the Business Intelligence Wizard will enable writeback.  

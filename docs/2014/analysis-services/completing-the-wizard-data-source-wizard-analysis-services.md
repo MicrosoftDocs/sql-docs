@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Data Source Wizard) (Analysis Services)
   Use the **Completing the Wizard** page of the wizard to review the connection string and specify a name for the new data source.  

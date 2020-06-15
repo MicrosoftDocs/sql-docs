@@ -1,5 +1,6 @@
 ---
 title: "XML Construction (XQuery) | Microsoft Docs"
+description: Learn how to construct XML structures in an XQuery using the direct and computed constructors.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

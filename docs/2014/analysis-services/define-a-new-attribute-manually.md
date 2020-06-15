@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define a New Attribute Manually
   This procedure describes how to create a new attribute in a dimension by using the **Attributes** pane in the Dimension Designer.  

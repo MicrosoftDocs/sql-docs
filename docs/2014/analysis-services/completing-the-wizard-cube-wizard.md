@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f97a568c-dab4-4e3b-a70a-1aa9af186805
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Cube Wizard)
   Use the **Completing the Wizard** page to name and to preview the cube that will be created when the wizard is finished.  

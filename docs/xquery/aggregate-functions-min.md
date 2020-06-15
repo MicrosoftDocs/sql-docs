@@ -1,5 +1,6 @@
 ---
 title: "min Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery min() function that returns the one item in a sequence whose value is less that that of all the others.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

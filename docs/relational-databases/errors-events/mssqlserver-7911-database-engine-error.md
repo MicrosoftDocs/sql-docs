@@ -18,8 +18,8 @@ robots: noindex,nofollow
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|7911|  
 |Event Source|MSSQLSERVER|  

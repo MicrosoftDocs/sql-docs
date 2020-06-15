@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Chart Tab (Mining Model Viewers)
   Use the **Chart** pane to display the historical data used in training a time series model, together with the predicted values. The vertical axis of the chart represents the value of the series, and the horizontal axis represents time. Future predictions are represented by a dotted line.  

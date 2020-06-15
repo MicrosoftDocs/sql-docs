@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Multidimensional Model Solutions (SSAS)
     

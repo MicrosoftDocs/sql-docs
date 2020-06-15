@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Filter the Source Cube for a Mining Structure
   When you create a mining structure that is based on data in a multidimensional model (an OLAP cube), you can *slice* the cube that the mining structure is based on. Slicing lets you create subsets of data, as a kind of filter on the data that is used to train the mining model.  

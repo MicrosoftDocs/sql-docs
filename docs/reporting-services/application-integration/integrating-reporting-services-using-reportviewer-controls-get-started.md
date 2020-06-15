@@ -2,7 +2,7 @@
 title: "Get started with Report Viewer controls"
 description: The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. 
 ms.custom: seo-lt-2019
-ms.date: 12/12/2019
+ms.date: 06/03/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
@@ -249,7 +249,17 @@ The viewer control is designed for modern browsers. The control may not work as 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
-      
+
+## NuGet.org pages
+
+Here are links to articles on the NuGet.org site about the WebForm and WinForm versions of the Report Viewer control:
+
+- Microsoft.ReportingServices.ReportViewerControl.WebForms
+[https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- Microsoft.ReportingServices.ReportViewerControl.Winforms
+[https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
+
+
 ## Feedback
 
 Let the team know about issues on the [Reporting Services forums](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).

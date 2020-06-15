@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Write-Enabled Partitions
   The data in a cube is generally read-only. However, for certain scenarios, you may want to write-enable a partition. Write-enabled partitions are used to enable business users to explore scenarios by changing cell values and analyzing the effects of the changes on cube data. When you write-enable a partition, client applications can record changes to the data in the partition. These changes, known as writeback data, are stored in a separate table and do not overwrite any existing data in a measure group. However, they are incorporated into query results as if they are part of the cube data.  

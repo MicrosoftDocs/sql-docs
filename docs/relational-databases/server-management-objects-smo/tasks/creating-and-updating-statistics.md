@@ -1,20 +1,21 @@
 ---
-title: Creating and Updating Statistics
+title: Create and update statistics
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology: smo
+ms.technology: 
 ms.topic: reference
-helpviewer_keywords: statistical information [SMO]
+helpviewer_keywords:
+  - "statistical information [SMO]"
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot
 ms.custom: seo-dt-2019
-ms.date: 06/02/2020
+ms.date: 06/04/2020
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Creating and Updating Statistics
+# Create and update statistics
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -26,7 +27,7 @@ It's possible to create statistics for any column by using the <xref:Microsoft.S
 
 To use any code example that is provided, you can choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
 
-## Creating and Update Statistics in Visual Basic
+## Create and update statistics in Visual Basic
 
 This code example creates a new table on an existing database for which the <xref:Microsoft.SqlServer.Management.Smo.Statistic> object and the <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> object are created.
 
@@ -51,78 +52,81 @@ stat.StatisticColumns.Add(statcol)
 stat.Create()
 ```
 
-## Creating and Update Statistics in C#
+## Create and update statistics in C#
 
 This code example creates a new table on an existing database for which the <xref:Microsoft.SqlServer.Management.Smo.Statistic> object and the <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> object are created.
 
 ```csharp
-{  
-            //Connect to the local, default instance of SQL Server.  
-            Server srv = new Server();
-            //Reference the AdventureWorks2012 database.
-            Database db = default(Database);
-            db = srv.Databases["AdventureWorks2012"]
-            //Reference the CreditCard table.
-  
-           Table tb = db.Tables["CreditCard", "Sales"];  
-            //Define a Statistic object by supplying the parent table and name
-            //arguments in the constructor.
-            Statistic stat = default(Statistic);
-            stat = new Statistic(tb, "Test_Statistics");
-            //Define a StatisticColumn object variable for the CardType column
-            //and add to the Statistic object variable.
-            StatisticColumn statcol = default(StatisticColumn);
-            statcol = new StatisticColumn(stat, "CardType");
-            stat.StatisticColumns.Add(statcol);
-            //Create the statistic counter on the instance of SQL Server.
-            stat.Create();
-        }
+public static void CreatingAndUpdatingStatistics()
+{
+    // Connect to the local, default instance of SQL Server.
+    var srv = new Server();
+
+    // Reference the AdventureWorks2012 database.
+    var db = srv.Databases["AdventureWorks"];
+
+    // Reference the CreditCard table.
+    var tb = db.Tables["CreditCard", "Sales"];
+
+    // Define a Statistic object by supplying the parent table and name
+    // arguments in the constructor.
+    var stat = new Statistic(tb, "Test_Statistics");
+
+    // Define a StatisticColumn object variable for the CardType column
+    // and add to the Statistic object variable.
+    var statcol = new StatisticColumn(stat, "CardType");
+    stat.StatisticColumns.Add(statcol);
+
+    //Create the statistic counter on the instance of SQL Server.
+    stat.Create();
+
+    // List all the statistics object on the table (you will see the newly created one)
+    foreach (var s in tb.Statistics.Cast<Statistic>())
+        Console.WriteLine($"{s.ID}\t{s.Name}");
+
+    // Output:
+    //  2       AK_CreditCard_CardNumber
+    //  1       PK_CreditCard_CreditCardID
+    //  3       Test_Statistics
+ }
 ```
 
-## Creating and Update Statistics in PowerShell
+## Create and update statistics in PowerShell
 
 This code example creates a new table on an existing database for which the <xref:Microsoft.SqlServer.Management.Smo.Statistic> object and the <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> object are created.
 
 ```powershell
-# Example of implementing a full text search on the default instance.
-# Set the path context to the local, default instance of SQL Server and database tables
+Import-Module SQLServer
 
-CD \sql\localhost\default\databases
-$db = get-item AdventureWorks2012
+# Connect to the local, default instance of SQL Server.  
+$srv = Get-Item SQLSERVER:\SQL\localhost\DEFAULT
 
-CD AdventureWorks2012\tables
+# Reference the AdventureWorks database.
+$db = $srv.Databases["AdventureWorks"]
 
-#Get a reference to the table
-$tb = get-item Production.ProductCategory
+# Reference the CreditCard table.
+$tb = $db.Tables["CreditCard", "Sales"]
 
-# Define a FullTextCatalog object variable by specifying the parent database and name arguments in the constructor.
+# Define a Statistic object by supplying the parent table and name
+# arguments in the constructor.
+$stat = New-Object Microsoft.SqlServer.Management.Smo.Statistic($tb, "Test_Statistics")
 
-$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -argumentlist $db, "Test_Catalog2"
-$ftc.IsDefault = $true
+# Define a StatisticColumn object variable for the CardType column
+# and add to the Statistic object variable.
+$statcol = New-Object Microsoft.SqlServer.Management.Smo.StatisticColumn($stat, "CardType")
+$stat.StatisticColumns.Add($statcol)
 
-# Create the Full Text Search catalog on the instance of SQL Server.
-$ftc.Create()
+# Create the statistic counter on the instance of SQL Server.
+$stat.Create()
 
-# Define a FullTextIndex object variable by supplying the parent table argument in the constructor.
-$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -argumentlist $tb
+# Finally dump all the statistics (you can see the newly created one at the bottom)
+$tb.Statistics
 
-#  Define a FullTextIndexColumn object variable by supplying the parent index
-#  and column name arguments in the constructor.
-
-$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -argumentlist $fti, "Name"
-
-# Add the indexed column to the index.
-$fti.IndexedColumns.Add($ftic)
-
-# Set change tracking
-$fti.ChangeTracking = [Microsoft.SqlServer.Management.SMO.ChangeTracking]::Automatic
-
-# Specify the unique index on the table that is required by the Full Text Search index.
-$fti.UniqueIndexName = "AK_ProductCategory_Name"
-
-# Specify the catalog associated with the index.
-$fti.CatalogName = "Test_Catalog2"
-
-# Create the Full Text Search Index
-$fti.Create()
+# Output:
+# Name                                Last Updated Is From Index  Statistic Columns
+#                                                  Creation
+# ----                                ------------ -------------- -----------------
+# AK_CreditCard_CardNumber      10/27/2017 2:33 PM True           {CardNumber}
+# PK_CreditCard_CreditCardID    10/27/2017 2:33 PM True           {CreditCardID}
+# Test_Statistics                 6/4/2020 8:11 PM False          {CardType}
 ```

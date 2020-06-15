@@ -1,5 +1,6 @@
 ---
 title: "Selective XML Indexes (SXI) | Microsoft Docs"
+description: Learn how to use selective XML indexes (SXI) to improve query performance, support faster indexing, and reduce the storage costs of XML indexes.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

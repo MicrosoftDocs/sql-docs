@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Manipulating Data (MDX)
 

@@ -1,6 +1,6 @@
 ---
-title: "Role Definitions -predefined roles | Microsoft Docs"
-ms.date: 05/24/2019
+title: "Role definitions - predefined roles | Microsoft Docs"
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security
@@ -55,11 +55,11 @@ ms.author: maggies
 |----------|-----------------|  
 |Consume reports|Reads report definitions.|  
 |Create linked reports|Create linked reports that are based on a non-linked report.|  
-|Manage all subscriptions|View, modify, and delete any subscription for reports and linked reports, regardless of who owns the subscription. This task also supports the creation of data-driven subscriptions.|  
+|Manage all subscriptions|View, modify, and delete any subscription for reports and linked reports, regardless of who owns the subscription. This task supports the creation of data-driven subscriptions. It also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Manage data sources|Create and delete shared data source items, view, and modify data source properties and content.|  
 |Manage folders|Create, view, and delete folders, and view and modify folder properties.|  
 |Manage models|Create, view, and delete models, and view and modify model properties.|  
-|Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports.|  
+|Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports. This task also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Manage report history|Create, view, and delete report history, view report history properties, and view, and modify settings that determine snapshot history limits and how caching works.|  
 |Manage reports|Add and delete reports, modify report parameters, view and modify report properties, view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
 |Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  

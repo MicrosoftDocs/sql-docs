@@ -1,9 +1,7 @@
 ---
 title: "General database mail troubleshooting"
-ms.custom: ""
-ms.date: "04/22/2019"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to an Oracle Database (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to connect to an Oracle database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

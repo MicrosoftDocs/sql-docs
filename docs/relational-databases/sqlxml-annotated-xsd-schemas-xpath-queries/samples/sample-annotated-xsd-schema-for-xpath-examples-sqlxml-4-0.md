@@ -1,5 +1,6 @@
 ---
 title: "Sample annotated XSD Schema for XPath (SQLXML)"
+description: View the annotated XSD schema that is used by the examples in this section to demonstrate XPath queries in SQLXML 4.0.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

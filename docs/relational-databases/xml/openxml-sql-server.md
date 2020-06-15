@@ -1,5 +1,6 @@
 ---
 title: "OPENXML (SQL Server) | Microsoft Docs"
+description: Learn about the OPENXML statement in SQL Server that provides a rowset view of the internal representation of an XML document.
 ms.custom: ""
 ms.date: 05/11/2020
 ms.prod: sql

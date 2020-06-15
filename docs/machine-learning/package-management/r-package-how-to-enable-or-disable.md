@@ -36,7 +36,7 @@ To enable or disable package management on SQL Server, use the command-line util
 
     This command creates instance-level objects on the SQL Server computer that are required for package management. It also restarts the Launchpad for the instance.
 
-    If you do not specify an instance, the default instance is used. If you do not specify a user, the current security context is used. For example, the following command enables package management on the instance in the path of RegisterRExt.exe, using the credentials of the user who opened the command prompt:
+    If you do not specify an instance, the default instance is used. If you do not specify a user, the current security context is used. For example, the following command enables package management on the default instance, using the credentials of the user who opened the command prompt:
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -46,7 +46,7 @@ To enable or disable package management on SQL Server, use the command-line util
    
     This command creates some database artifacts, including the following database roles that are used for controlling user permissions: `rpkgs-users`, `rpkgs-private`, and `rpkgs-shared`.
 
-    For example, the following command enables package management on the database, on the instance where RegisterRExt is run. If you do not specify a user, the current security context is used.
+    For example, the following command enables package management on the database, on the default instance. If you do not specify a user, the current security context is used.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/27/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -29,13 +29,7 @@ This article describes how to get information about installed Python packages, i
 
 ## Default Python library location
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. The instance library is a secured folder registered with SQL Server.
-::: moniker-end
-
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install.
-::: moniker-end
 
 All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any Python code running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.
@@ -63,7 +57,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
-Run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory and the standard library path.
+Run the following SQL statement if you want to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory and the standard library path.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -72,6 +66,11 @@ EXECUTE sp_execute_external_script
 ```
 
 For more information about the variable `sys.path` and how it's used to set the interpreter's search path for modules, see [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+> [!NOTE]
+> Don't try to install Python packages directly in the SQL package library using **pip** or similar methods. Instead, use **sqlmlutils** to install packages in a SQL instance. For more information, see [Install Python packages with sqlmlutils](install-additional-python-packages-on-sql-server.md).
+::: moniker-end
 
 ## Default Microsoft Python packages
 
@@ -142,7 +141,10 @@ Result:
 STDOUT message(s) from external script: Package scikit-learn is version 0.20.2
 ```
 
-The following example returns the version of Python.
+<a name="bkmk_SQLPythonVersion"></a>
+## View the version of Python
+
+The following example code returns the version of Python installed in the instance of SQL Server.
 
 ```sql
 EXECUTE sp_execute_external_script

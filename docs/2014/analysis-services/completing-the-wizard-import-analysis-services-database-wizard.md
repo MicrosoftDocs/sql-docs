@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 1c88608a-5408-4ac0-aea8-5abb977f32ca
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Import Analysis Services Database Wizard)
   Use the **Completing the Wizard** page to display the progress of the wizard as the data and metadata from the selected [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database is imported into the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  

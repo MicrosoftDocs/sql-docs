@@ -1,5 +1,6 @@
 ---
 title: "SQL Native Client 11.0 Configuration"
+description: Find out about the settings that are configured in the SQL Server Native Client Configuration dialog boxes in Microsoft SQL Server Configuration Manager.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Perspective Details (Perspectives Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Perspective Details** pane on the **Perspectives** tab in Cube Designer to manage the metadata available to users who query the selected perspective.  

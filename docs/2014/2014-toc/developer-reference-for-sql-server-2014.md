@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Developer Reference for SQL Server 2014
 

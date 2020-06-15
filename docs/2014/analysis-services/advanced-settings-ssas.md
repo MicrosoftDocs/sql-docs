@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f6ccea00-3419-489c-affc-ed8b002cffc9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Advanced Settings (SSAS)
   This dialog box from the **Table Import Wizard** enables you to specify the encoding and the locale for the flat file you are connecting to. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

@@ -1,7 +1,7 @@
 ---
 title: "Include Indicators and Gauges in a Gauge Panel (Report Builder) | Microsoft Docs"
 description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your reports in Report Builder. 
-mms.date: 03/01/2017
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design

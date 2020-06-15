@@ -31,7 +31,7 @@ The bulk copy operation is executed with the <xref:Microsoft.Data.SqlClient.SqlB
 > [!NOTE]
 >  This sample will not run unless you have created the work tables as described in [Bulk copy example setup](bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL`INSERT … SELECT` statement to copy the data.  
   
-[!code-csharp[DataWorks SqlBulkCopyOpeions_Default#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_Default.cs#1)]
+[!code-csharp[DataWorks SqlBulkCopyOptions_Default#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_Default.cs#1)]
   
 ## Performing a dedicated bulk copy operation in a transaction  
 By default, a bulk copy operation is its own transaction. When you want to perform a dedicated bulk copy operation, create a new instance of <xref:Microsoft.Data.SqlClient.SqlBulkCopy> with a connection string, or use an existing <xref:Microsoft.Data.SqlClient.SqlConnection> object without an active transaction. In each scenario, the bulk copy operation creates, and then commits or rolls back the transaction.  

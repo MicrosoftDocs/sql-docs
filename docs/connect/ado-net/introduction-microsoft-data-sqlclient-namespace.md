@@ -13,7 +13,85 @@ ms.reviewer: v-kaywon
 ---
 # Introduction to Microsoft.Data.SqlClient namespace
 
-[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+[!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+
+## Release notes for Microsoft.Data.SqlClient 2.0
+
+Release notes are also available in the GitHub Repository: [2.0 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.0).
+
+### New Features
+
+#### EventSource tracing
+
+This release introduces support for capturing event trace logs for debugging applications. In order to capture these events, client applications must listen for events from SqlClient's EventSource implementation:
+
+```
+Microsoft.Data.SqlClient.EventSource
+```
+
+For more information, see how to [Enable event tracing in SqlClient](sql/enabling-eventsource-tracing.md).
+
+#### Enabling Managed networking on Windows
+
+A new AppContext switch **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** enables the use of a managed SNI implementation on Windows for testing and debugging purposes. This switch will toggle the driver's behavior to use a managed SNI in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
+```
+
+#### Enabling decimal truncation behavior 
+
+The decimal data scale will be rounded by the driver by default as is done by SQL Server. For backwards compatibility, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to **true**.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
+```
+
+#### New Connection string property synonyms
+
+New synonyms have been added for the following existing connection string properties to avoid spacing confusion around properties consisting of more than one word. Old property names will continue to be supported for backwards compatibility.
+
+|Existing connection string property|New Synonym|
+|-----------------------------------|-----------|
+| ApplicationIntent | Application Intent |
+| ConnectRetryCount | Connect Retry Count |
+| ConnectRetryInterval | Connect Retry Interval |
+| PoolBlockingPeriod | Pool Blocking Period |
+| MultipleActiveResultSets | Multiple Active Result Sets |
+| MultiSubnetFailover | Multiple Subnet Failover |
+| TransparentNetworkIPResolution | Transparent Network IP Resolution |
+| TrustServerCertificate | Trust Server Certificate |
+
+#### SqlBulkCopy RowsCopied property
+
+This property provides read-only access to the number of rows processed in the ongoing bulk copy operation. Note that this value is not necessarily equal to the number of rows added to the destination table. 
+
+#### Connection Open Overrides
+
+The default behaviour of SqlConnection.Open() can be overridden to disable the ten second delay and automatic connection retries triggered by transient errors.
+
+```csharp
+using SqlConnection sqlConnection = new SqlConnection("Data Source=(local);Integrated Security=true;Initial Catalog=AdventureWorks;");
+sqlConnection.Open(SqlConnectionOverrides.OpenWithoutRetry);
+```
+
+#### Set username for Active Directory Interactive mode
+
+A username can be specified in the connection string when using Azure Active Directory Interactive authentication mode. This feature is only available in .NET framework. 
+
+Set a username using the **User ID** or **UID** connection string property:
+
+```
+"Server=<server name>; Authentication=Active Directory Interactive; User Id=<username>;"
+```
+
+#### Order hints for SqlBulkCopy
+
+Order hints can be provided to improve performance for bulk copy operations on tables with clustered indexes. For more information, see the [bulk copy operations](sql/bulk-copy-order-hints.md) section.
+
+#### SNI dependency changes
+
+Microsoft.Data.SqlClient (.NET Core and .NET Standard) on Windows is now dependent on **Microsoft.Data.SqlClient.SNI.runtime**, replacing the previous dependency on **runtime.native.System.Data.SqlClient.SNI**. The new dependency adds support for the ARM platform along with the already supported platforms ARM64, x64 and x86 on Windows.
 
 ## Release notes for Microsoft.Data.SqlClient 1.1.0
 
@@ -23,7 +101,7 @@ Release notes are also available in the GitHub Repository: [1.1 Release Notes](h
 
 #### Always Encrypted with secure enclaves
 
-Always Encrypted is available starting in Microsoft SQL Server 2016. Secure enclaves are available starting in Microsoft SQL Server 2019. In order to use the enclave feature, connection strings should include the required attestation protocol and attestation URL. Examples:
+Always Encrypted is available starting in Microsoft SQL Server 2016. Secure enclaves are available starting in Microsoft SQL Server 2019. In order to use the enclave feature, connection strings should include the required attestation protocol and attestation URL. For example:
 
 ```
 Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
@@ -57,7 +135,7 @@ Release notes are also available on the GitHub Repository: [1.0 Release Notes](h
 
 ### Data Classification
 
-Data Classification brings a new set of APIs exposing read-only Data Sensitivity and Classification information about objects retrieved via SqlDataReader when the underlying source supports the feature and contains metadata about [data sensitivity and classification](../../relational-databases/security/sql-data-discovery-and-classification.md).
+Data Classification brings a new set of APIs exposing read-only Data Sensitivity and Classification information about objects retrieved via SqlDataReader when the underlying source supports the feature and contains metadata about [data sensitivity and classification](../../relational-databases/security/sql-data-discovery-and-classification.md). See the sample application at [Data Discovery and Classification in SqlClient](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
 
 ```csharp
 public class SqlDataReader

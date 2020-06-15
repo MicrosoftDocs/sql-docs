@@ -42,6 +42,10 @@
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/sql/index.md
     items:
+    - name: "Enable event tracing in SqlClient"
+      href: ../connect/ado-net/sql/enabling-eventsource-tracing.md
+    - name: "AppContext switches in SqlClient"
+      href: ../connect/ado-net/sql/appcontext-switches.md
     - name: SQL Server security
       href: ../connect/ado-net/sql/sql-server-security.md
       items:
@@ -97,6 +101,8 @@
           href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
         - name: Transaction and bulk copy operations
           href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+        - name: Order hints for bulk copy operations
+          href: ../connect/ado-net/sql/bulk-copy-order-hints.md
       - name: Multiple Active Result Sets (MARS)
         href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
         items:
@@ -147,7 +153,8 @@
         href: ../connect/ado-net/sql/sqlclient-support-localdb.md
       - name: SqlClient support for Always Encrypted
         href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
-
+      - name: Data Discovery and Classification in SqlClient
+        href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
   - name: Microsoft JDBC Driver for SQL Server

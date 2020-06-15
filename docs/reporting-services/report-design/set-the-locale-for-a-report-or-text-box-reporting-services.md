@@ -1,5 +1,6 @@
 ---
 title: "Set the Locale for a Report or Text Box (Reporting Services) | Microsoft Docs"
+description: Use the Language property on a text box to provide the locale setting for formats that display data that differ by language and region in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Services"
+description: Get acquainted with the SQL Server Services dialog boxes in Microsoft SQL Server Configuration Manager.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

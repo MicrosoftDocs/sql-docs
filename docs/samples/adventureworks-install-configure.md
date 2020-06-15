@@ -97,11 +97,11 @@ For more information on restoring a SQL Server database, see [Restore a database
 
 If you're not familiar using Azure Data Studio, you can see [connect & query](../azure-data-studio/quickstart-sql-server.md) to get started
 
-To restore your database in Azure Data Studio (SSMS), follow these steps:
+To restore your database in Azure Data Studio, follow these steps:
 
 1. Download the appropriate `.bak` file from one of links provided in the [download .bak files](#download-bak-files) section.
 1. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
-1. Open Azure Data Studio Studio (SSMS) and connect to your SQL Server. 
+1. Open Azure Data Studio Studio  and connect to your SQL Server. 
 1. Right-click **Databases** in **?????** > **Restore** to launch the **?????** wizard. 
 
    :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::

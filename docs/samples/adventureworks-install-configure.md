@@ -163,10 +163,11 @@ The below scripts can be used to create the entire AdventureWorks database:
 - [AdventureWorks OLTP Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
 - [AdventureWorks DW Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
 
+Additional information about using the scripts can be found on [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). 
 
 ## Next steps
 
-Once you have your sample databases restored, the following tutorials can help you get started with SQL Server: 
+Once you've restored your sample database, using the following tutorials to get started with SQL Server: 
 
 [Tutorials for SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [Tutorials for SQL Server database engine](../relational-databases/database-engine-tutorials.md)

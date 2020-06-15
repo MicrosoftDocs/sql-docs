@@ -1,6 +1,6 @@
 ---
 title: "AdventureWorks sample databases"
-description: Follow these instructions to download and install AdventureWorks sample databases to SQL Server or Azure SQL Database. 
+description: Follow these instructions to download and install AdventureWorks sample databases to SQL Server using Transact-SQL (T-SQL), SQL Server Management Studio (SSMS), or Azure Data Studio.  
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,7 +11,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
-# AdventureWorks installation and configuration
+# AdventureWorks sample databases
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 This article provides direct links to download AdventureWorks sample databases, as well as instructions for restoring them to SQL Server and Azure SQL Database. 

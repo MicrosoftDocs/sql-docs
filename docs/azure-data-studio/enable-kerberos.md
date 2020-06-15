@@ -3,12 +3,12 @@ title: Connect your SQL Server using Windows authentication (Kerberos)
 description: Learn how to enable Kerberos to use Active Directory Authentication for Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu, maghan, sstein"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: "meet-bhagdev"
-ms.author: "meetb"
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.custom: seodec18
+ms.date: 09/24/2018
 ---
 
 # Connect Azure Data Studio to your SQL Server using Windows authentication - Kerberos

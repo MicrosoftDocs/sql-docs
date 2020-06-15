@@ -46,4 +46,4 @@ For more information, see the following resources.
   
 |Resource|Description|  
 |--------------|-----------------|  
-|[AppContext Class](https://docs.microsoft.com/en-us/dotnet/api/system.appcontext?view=netcore-3.1)|Provides members for setting and retrieving data about an application's context.| 
+|[AppContext Class](https://docs.microsoft.com/dotnet/api/system.appcontext?view=netcore-3.1)|Provides members for setting and retrieving data about an application's context.| 

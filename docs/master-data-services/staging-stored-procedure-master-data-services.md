@@ -1,5 +1,6 @@
 ---
 title: Staging Stored Procedure
+description: Use one of three stored procedures to initiate the staging process from SQL Server Management Studio in Master Data Services.
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

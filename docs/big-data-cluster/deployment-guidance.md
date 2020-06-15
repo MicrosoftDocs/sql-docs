@@ -21,21 +21,37 @@ A SQL Server big data cluster is deployed as docker containers on a Kubernetes c
 - Install the cluster configuration tool `azdata` on your client machine.
 - Deploy a SQL Server big data cluster in a Kubernetes cluster.
 
-## Install SQL Server 2019 Big Data tools
 
-Before deploying a SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
+## Supported platforms
 
-- `azdata`
-- `kubectl`
-- Azure Data Studio
-- [Data Virtualization extension](../azure-data-studio/data-virtualization-extension.md) for Azure Data Studio
+This section explains platforms that are supported with BDC.
 
-## <a id="prereqs"></a> Kubernetes prerequisites
+### Kubernetes platforms
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] require a minimum Kubernetes version of at least v1.13 for both server and client (kubectl).
+|Platform|Supported versions|
+|---------|---------|
+|Kubernetes|BDC requires Kubernetes version minimum 1.13 for both server and client (kubectl). See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) for Kubernetes version support policy.|
+|Azure Kubernetes Service (AKS)|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
 
 > [!NOTE]
 > Note that the client and server Kubernetes versions should be within +1 or -1 minor version. For more information, see [Kubernetes release notes and version skew SKU policy)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+
+### Host OS for Kubernetes
+
+|Platform|Supported versions|
+|---------|---------|
+|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
+|Ubuntu|16.04|
+
+### SQL Server Editions
+
+|Edition|Notes|
+|---------|---------|
+|Enterprise<br/>Standard<br/>Developer| Big Data Cluster edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition after deployment. See [Configure SQL Server master instance](../big-data-cluster/configure-sql-server-master-instance.md). |
+
+## <a id="prereqs"></a> Kubernetes
+
+
 
 ### <a id="kubernetes"></a> Kubernetes cluster setup
 
@@ -71,6 +87,16 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 Most big data cluster deployments should have persistent storage. At this time, you need to make sure you have a plan for how you're going to provide persistent storage on the Kubernetes cluster before you deploy the BDC.
 
 If you deploy in AKS, no storage setup is necessary. AKS provides built-in storage classes with dynamic provisioning. You can customize the storage class (`default` or `managed-premium`) in the deployment configuration file. The built-in profiles use a `default` storage class. If you are deploying on a Kubernetes cluster you deployed using `kubeadm`, you'll need to ensure you have sufficient storage for a cluster of your desired scale available and configured for use. If you wish to customize how your storage is used, you should do this before proceeding. See [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
+
+## Install SQL Server 2019 Big Data tools
+
+Before deploying a SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
+
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- [Data Virtualization extension](../azure-data-studio/data-virtualization-extension.md) for Azure Data Studio
+
 
 ## <a id="deploy"></a> Deployment overview
 
@@ -119,7 +145,7 @@ In this scenario, you are prompted for any settings that are not part of the def
 
 ## <a id="customconfig"></a> Custom configurations
 
-It is also possible to customize your deployment to accommodate the workloads you are planning to run. Note that you can not change the scale (number of replicas) or storage settings for big data cluster services post deployments, so you must plan your deployment configuration carefully to avoid capacity issues. To customize your deployment, follow these steps:
+It is also possible to customize your deployment to accommodate the workloads you are planning to run. You cannot change the scale (number of replicas) or storage settings for big data cluster services post deployments, so you must plan your deployment configuration carefully to avoid capacity issues. To customize your deployment, follow these steps:
 
 1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  `azdata bdc config list` command to list them:
 

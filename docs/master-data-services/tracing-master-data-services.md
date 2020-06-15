@@ -1,5 +1,6 @@
 ---
 title: Tracing
+description: The Web.config file contains a tracing section, new in SQL Server 2016 Master Data Services. Learn about default tracing behavior.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

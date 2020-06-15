@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Connector, setup"
   - "SQL Server Connector"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: rupp29
-ms.author: rupp29
+author: VanMSFT
+ms.author: vanto
 ---
 # SQL Server TDE Extensible Key Management using Azure Key Vault - Setup steps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

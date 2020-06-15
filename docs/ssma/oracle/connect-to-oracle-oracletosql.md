@@ -1,7 +1,7 @@
 ---
 title: "Connect to Oracle (OracleToSQL) | Microsoft Docs"
 description: Learn how to connect to an Oracle database to begin migration using SSMA for Oracle. Use the Connect to Oracle dialog box. 
-authors: "nahk-ivanov"
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""

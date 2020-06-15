@@ -16,13 +16,13 @@ ms.reviewer:
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-The AppContext class allows SqlClient to provide new functionality while continuing to support callers who depend on the previous behavior. Users can opt out of a change in behaviour by setting specific AppContext switches.
+The AppContext class allows SqlClient to provide new functionality while continuing to support callers who depend on the previous behavior. Users can opt out of a change in behavior by setting specific AppContext switches.
 
 SqlClient currently supports two AppContext switches.
 
 ## Enabling decimal truncation behavior
 
-Starting with Microsoft.Data.SqlClient 2.0, decimal data will be rounded by default, as is done by SQL Server. To enable the previous behaviour of truncation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to `true` at application startup:
+Starting with Microsoft.Data.SqlClient 2.0, decimal data will be rounded by default, as is done by SQL Server. To enable the previous behavior of truncation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to `true` at application startup:
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);

@@ -68,7 +68,7 @@ This property provides read-only access to the number of rows processed in the o
 
 #### Connection Open Overrides
 
-The default behaviour of SqlConnection.Open() can be overridden to disable the ten second delay and automatic connection retries triggered by transient errors.
+The default behavior of SqlConnection.Open() can be overridden to disable the ten second delay and automatic connection retries triggered by transient errors.
 
 ```csharp
 using SqlConnection sqlConnection = new SqlConnection("Data Source=(local);Integrated Security=true;Initial Catalog=AdventureWorks;");

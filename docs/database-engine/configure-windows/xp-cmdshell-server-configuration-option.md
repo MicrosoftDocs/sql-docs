@@ -5,8 +5,8 @@ ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-dev_langs: "TSQL"
-helpviewer_keywords: "xp_cmdshell"
+helpviewer_keywords: 
+  - "xp_cmdshell"
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: markingmyname
 ms.author: maghan

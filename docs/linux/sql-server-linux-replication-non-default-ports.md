@@ -4,7 +4,7 @@ titleSuffix: SQL Server on Linux
 description: Learn to configure snapshot folder shares with non-default ports for SQL Server replication on Linux.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikerayW
+ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article

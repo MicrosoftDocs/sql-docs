@@ -15,7 +15,7 @@ ms.date: 09/24/2018
 
 Azure Data Studio supports connecting to SQL Server using Kerberos.
 
-In order to use Integrated Authentication (Windows Authentication) on macOS or Linux, you need to set up a **Kerberos ticket** linking your current user to a Windows domain account. 
+In order to use Integrated Authentication (Windows Authentication) on macOS or Linux, you need to set up a **Kerberos ticket** linking your current user to a Windows domain account.
 
 ## Prerequisites
 

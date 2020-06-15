@@ -1,5 +1,6 @@
 ---
 title: Business Rule Actions
+description: In Master Data Services, business rules cause actions. Learn about default value actions, change value actions, validation actions, and external actions.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: Domain-Based Attributes
+description: Learn about domain-based attributes in Master Data Services, which have values populated from another entity. Users must pick a value from a list.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

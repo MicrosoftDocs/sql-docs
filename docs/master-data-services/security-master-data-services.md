@@ -1,5 +1,6 @@
 ---
 title: Security
+description: Learn about security in Master Data Services, including types of users, how to set security, security in the add-in for Excel, and related tasks.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

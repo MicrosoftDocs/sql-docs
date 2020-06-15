@@ -8,7 +8,6 @@ ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_jobstep_TSQL"
   - "sp_add_jobstep"
-dev_langs: "TSQL"
 helpviewer_keywords: 
   - "sp_add_jobstep"
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755

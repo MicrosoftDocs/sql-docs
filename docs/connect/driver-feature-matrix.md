@@ -2,7 +2,7 @@
 title: "Driver feature support matrix"
 description: "Learn which popular features are supported in drivers for SQL Server and where to find information about them."
 ms.custom: ""
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -64,7 +64,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Spatial Data Types](../relational-databases/spatial/spatial-data-sql-server.md) | | | [Yes](jdbc/use-spatial-datatypes.md) | |
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md) | [Yes](../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md) | [Yes](jdbc/using-table-valued-parameters.md) | [Yes](oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md) |
 | [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) | [Yes](oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) |
-| [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](odbc/using-transparent-network-ip-resolution.md) | [Yes](odbc/using-transparent-network-ip-resolution.md) | [Yes](jdbc/setting-the-connection-properties.md) | |
+| [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](odbc/using-transparent-network-ip-resolution.md) | [Yes](odbc/using-transparent-network-ip-resolution.md) | [Yes](jdbc/setting-the-connection-properties.md) | [Yes](oledb/features/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 | <a id="table3"></a>Feature | [Drivers for PHP for SQL Server on Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Drivers for PHP for SQL Server on Linux and macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[2](#note2)</sup> |

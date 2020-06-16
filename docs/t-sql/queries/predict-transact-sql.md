@@ -1,5 +1,6 @@
 ---
 title: "PREDICT (Transact-SQL)"
+titleSuffix: SQL machine learning
 ms.custom: ""
 ms.date: "06/16/2020"
 ms.prod: sql

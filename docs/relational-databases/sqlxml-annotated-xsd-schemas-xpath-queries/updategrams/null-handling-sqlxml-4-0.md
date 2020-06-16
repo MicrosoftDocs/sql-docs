@@ -1,5 +1,6 @@
 ---
 title: "NULL Handling (SQLXML)"
+description: Learn how NULL attributes or elements can be specified in an SQLXML 4.0 updategram by using the updg:nullvalue attribute.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

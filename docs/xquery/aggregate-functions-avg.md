@@ -1,5 +1,6 @@
 ---
 title: "avg Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function avg() that returns the average of a specified sequence of numbers.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql

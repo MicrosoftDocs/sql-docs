@@ -1,5 +1,6 @@
 ---
 title: "Data Accessor Functions | Microsoft Docs"
+description: Learn how to use the XQuery data-accessor functions fn:data(), fn:string(), and text().
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

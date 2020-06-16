@@ -1,5 +1,6 @@
 ---
 title: "Create XML Data Type Variables and Columns | Microsoft Docs"
+description: Learn how to create columns and variables of the XML data type in SQL Server.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

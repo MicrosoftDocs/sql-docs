@@ -1,5 +1,6 @@
 ---
 title: "XQueries Involving Hierarchy | Microsoft Docs"
+description: View examples of XQueries that involve hierarchies.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql

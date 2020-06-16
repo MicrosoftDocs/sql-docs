@@ -41,11 +41,11 @@ az login
 
 ## Instructions
 
-1. Download both the Python script `deploy-sql-big-data-aro.py` and the yaml file `bdc-restricted-scc.yaml`.
+1. Download both the Python script `deploy-sql-big-data-aro.py` and the yaml file `bdc-scc.yaml`.
 
    >These files are located in this article under:
    - [`deploy-sql-big-data-aro.py`](#deploy-sql-big-data-aropy)
-   - [`bdc-restricted-scc.yaml`](#bdc-restricted-sccyaml)
+   - [`bdc-scc.yaml`](#bdc-sccyaml)
 
 1. Run the script using:
 
@@ -171,14 +171,14 @@ executeCmd (command)
 #
 #
 # create custom SCC for BDC
-command = "oc apply -f bdc-restricted-scc.yml"
+command = "oc apply -f bdc-scc.yml"
 executeCmd (command)
 #
 #Creating new project/namespace
 command = "oc new-project "+ CLUSTER_NAME
 executeCmd (command)
 #Adding the custom scc to BDC namespace
-command = "oc adm policy add-scc-to-group bdc-restricted-scc system:serviceaccounts:" + CLUSTER_NAME
+command = "oc adm policy add-scc-to-group bdc-scc system:serviceaccounts:" + CLUSTER_NAME
 executeCmd (command)
 #
 # Deploy big data cluster
@@ -206,9 +206,9 @@ command="azdata bdc endpoint list -o table"
 executeCmd(command)
 ```
 
-## `bdc-restricted-scc.yaml`
+## `bdc-scc.yaml`
 
-The following .yml manifest defines a restricted security context constraints (SCC) for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
+The following .yml manifest defines a custom security context constraints (SCC) for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
 
 ```yml
 allowHostDirVolumePlugin: false
@@ -226,13 +226,13 @@ allowedCapabilities:
 apiVersion: security.openshift.io/v1
 defaultAddCapabilities: null
 fsGroup:
-  type: MustRunAs
+  type: RunAsAny
 kind: SecurityContextConstraints
 metadata:
   annotations:
-    kubernetes.io/description: SQL Server BDC custom scc is based on 'restricted' scc plus additional capabilities required by BDC.
+    kubernetes.io/description: SQL Server BDC custom scc is based on 'nonroot' scc plus additional capabilities required by BDC.
   generation: 2
-  name: bdc-restricted-scc
+  name: bdc-scc
 readOnlyRootFilesystem: false
 requiredDropCapabilities:
 - KILL
@@ -242,7 +242,7 @@ runAsUser:
 seLinuxContext:
   type: MustRunAs
 supplementalGroups:
-  type: MustRunAs
+  type: RunAsAny
 volumes:
 - configMap
 - downwardAPI

@@ -1,5 +1,6 @@
 ---
 title: "Create a Credential | Microsoft Docs"
+description: Learn how to create a credential in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL, including limitations and restrictions.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

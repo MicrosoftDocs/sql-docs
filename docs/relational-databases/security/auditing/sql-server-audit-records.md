@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Audit Records | Microsoft Docs"
+description: Learn how to audit server-level and database-level events and groups of events by using the SQL Server Audit feature.
 ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql

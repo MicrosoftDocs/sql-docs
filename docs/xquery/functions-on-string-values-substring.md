@@ -1,5 +1,6 @@
 ---
 title: "substring Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function substring() that returns the specified portion of a source string.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "App Context Switches in Sqlclient"
+title: "App Context Switches in SqlClient"
 description: "Describes how to use AppContext switches that are available in SqlClient."
 ms.date: "06/15/2020"
 dev_langs: 

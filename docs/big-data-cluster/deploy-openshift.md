@@ -32,14 +32,14 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 > [!IMPORTANT]
 > Below pre-requisites must be performed by a OpenShift cluster admin (cluster-admin cluster role) that has sufficient permissions to create these cluster level objects. For more information on cluster roles in OpenShift see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Create a custom security context constraint (SCC) using the attached [`bdc-restricted-scc.yaml`](#bdc-restricted-sccyml-file).
+1. Create a custom security context constraint (SCC) using the attached [`bdc-scc.yaml`](#bdc-sccyml-file).
 
    ```console
-   oc apply -f bdc-restricted-scc.yaml
+   oc apply -f bdc-scc.yaml
    ```
 
    > [!NOTE]
-   > The custom SCC for BDC is based on the built-in restricted SCC in OpenShift, with additional permissions. To learn more about security context constraints in OpenShift see [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). For a detailed information on what additional permissions are required for big data clusters on top of the restricted SCC, see [here](// TODO link)
+   > The custom SCC for BDC is based on the built-in *nonroot* SCC in OpenShift, with additional permissions. To learn more about security context constraints in OpenShift see [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). For a detailed information on what additional permissions are required for big data clusters on top of the *nonroot* SCC, download the whitepaper [here](https://aka.ms/sql-bdc-openshift-security).
 
 2. Create a namespace/project:
 
@@ -50,7 +50,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 3. Assign the custom SCC to the service accounts for users within the namespace where BDC is deployed:
 
    ```console
-   oc adm policy add-scc-to-group bdc-restricted-scc system:serviceaccounts:<namespaceName>
+   oc adm policy add-scc-to-group bdc-scc system:serviceaccounts:<namespaceName>
    ```
 
 4. Assign appropriate permission to the user deploying BDC. Do one of the following. 
@@ -150,16 +150,16 @@ The name of the default storage class in ARO is managed-premium (as opposed to A
       }
 ```
 
-## `bdc-restricted-scc.yml` file
+## `bdc-scc.yml` file
 
 ```yml
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
   annotations:
-    kubernetes.io/description: SQL Server BDC Nonroot scc is based on 'restricted' scc plus additional capabilities.
+    kubernetes.io/description: SQL Server BDC Nonroot scc is based on 'nonroot' scc plus additional capabilities.
   generation: 2
-  name: bdc-restricted-scc
+  name: bdc-scc
 allowHostDirVolumePlugin: false
 allowHostIPC: false
 allowHostNetwork: false
@@ -182,9 +182,9 @@ requiredDropCapabilities:
 runAsUser:
   type: MustRunAsNonRoot
 seLinuxContext:
-  type: MustRunAs
+  type:RunAsAny
 supplementalGroups:
-  type: MustRunAs
+  type:RunAsAny
 volumes:
 - configMap
 - downwardAPI

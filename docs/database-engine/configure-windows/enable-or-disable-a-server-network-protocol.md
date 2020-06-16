@@ -23,14 +23,10 @@ ms.author: mikeray
 ---
 # Enable or Disable a Server Network Protocol
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  All network protocols are installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, but may or may not be enabled. This topic describes how to enable or disable a server network protocol in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager or PowerShell. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be stopped and restarted for the change to take effect. 
+  All network protocols are installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, but may or may not be enabled. For more information on which network protocols are enabled by default, see [Default SQL Server Network Protocol Configuration](https://docs.microsoft.com/sql/database-engine/configure-windows/default-sql-server-network-protocol-configuration#default-configuration). This topic describes how to enable or disable a server network protocol in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager or PowerShell. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be stopped and restarted for the change to take effect. 
   
 > [!IMPORTANT]  
 >  During setup of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a login is added for the BUILTIN\Users group. This allows all authenticated users of the computer to access the instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] as a member of the public role. The BUILTIN\Users login can be safely removed to restrict [!INCLUDE[ssDE](../../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.
-
-> [!IMPORTANT]  
->Please be advised that most versions of SQL Server have enabled [TCP/IP by default]
-(https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/default-sql-server-network-protocol-configuration?view=sql-server-ver15).
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] up to [!INCLUDE[sssql14](../../includes/sssql14-md.md)] only support TLS 1.0 and SSL 3.0 by default. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail unless you have installed the appropriate update to add support for TLS 1.1 and 1.2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which is listed <a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">here</a>. Starting from [!INCLUDE[sssql15](../../includes/sssql15-md.md)], all release versions of SQL Server include TLS 1.2 support without further updates required.
@@ -62,14 +58,11 @@ ms.author: mikeray
 #### To Enable a Server Network Protocol Using PowerShell  
 
 > [!IMPORTANT]  
->  **SQLPS** is not part of the SQL Server Setup or newer versions of SQL Management Studio anymore. 
-**You need to manually install the components needed, in the correct order, close all Powershell Windows before you can import the module SQLPS**. 
-Without having the prerequites installed, importing the module and scripts below will not work. 
-Using Install-Module SQLServer is not sufficient for this task. SQLPS and Management objects are required.
-Please refer to [this article](https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver15), explaining the prodecure to manually install SQLPS.
-As of 05/21/2020 the page is missing instruction how to install SQLPS on a Windows Server (Core) hosting SQL Server.
+> **SQLPS** is not part of the SQL Server Setup or included in newer versions of SQL Server Management Studio (SSMS). Close all PowerShell Windows before importing the SQLPS module, and follow the below steps in correct order to manually install SQLPS.
+Without installing SQL Server or SSMS, importing the module and scripts below will not be complete for this task.
+Using 'Install-Module SqlServer' is not sufficient, as SQL Server Management Objects are required. For more information, see [Install the SQL Server PowerShell module](https://docs.microsoft.com/sql/powershell/download-sql-server-ps-module).
 
-1.  Using administrator permissions open a command prompt.  
+1.  Run PowerShell as administrator.  
   
 2.  Start Windows PowerShell from the taskbar, or click Start, then All Programs, then Accessories, then Windows PowerShell, then Windows PowerShell.  
   

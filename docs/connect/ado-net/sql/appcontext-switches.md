@@ -36,7 +36,7 @@ On Windows, SqlClient uses a native implementation of the SNI network interface 
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
 ```
 
-This switch will toggle the driver's behavior to use a managed networking implementation in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows. It is intended for testing and debugging purposes only.
+This switch will toggle the driver's behavior to use a managed networking implementation in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library. It is intended for testing and debugging purposes only.
 
 > [!NOTE]
 > There are some known differences when compared to the native implementation. For example, the managed implementation does not support non-domain Windows Authentication.

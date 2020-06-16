@@ -1,25 +1,26 @@
 ---
 title: Native scoring with T-SQL PREDICT
+titleSuffix: SQL machine learning
 description: Learn how to use native scoring with the PREDICT T-SQL function to generate prediction values for new data inputs in near-real-time. 
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/15/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
-# Native scoring with the PREDICT T-SQL function in SQL Server Machine Learning Services
+# Native scoring with the PREDICT T-SQL function with SQL machine learning
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Learn how to use native scoring with the [PREDICT T-SQL function](../t-sql/queries/predict-transact-sql.md) to generate prediction values for new data inputs in near-real-time. Native scoring requires that you have an already trained model.
 
-The `PREDICT` function uses the native C++ extension capabilities in SQL Server. This methodology offers the fastest possible processing speed of forecasting and prediction workloads, but comes with platform and library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
+The `PREDICT` function uses the native C++ extension capabilities in SQL machine learning. This methodology offers the fastest possible processing speed of forecasting and prediction workloads, but comes with platform and library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
 
 > [!NOTE]
-> This article only covers Machine Learning Services in SQL Server. `PREDICT` is also available in Azure SQL Managed Instance, Azure SQL Edge, and Azure Synapse Analytics. For more information, see the [PREDICT T-SQL function](../t-sql/queries/predict-transact-sql.md).
+> This article covers Machine Learning Services in SQL Server, Azure SQL Managed Instance, and Azure SQL Database. `PREDICT` is also available in Azure SQL Edge and Azure Synapse Analytics. For more information, see the [PREDICT T-SQL function](../t-sql/queries/predict-transact-sql.md).
 
 ## How native scoring works
 
@@ -34,15 +35,24 @@ The function returns predictions for the input data, together with any columns o
 
 ## Prerequisites
 
-`PREDICT` is available on all editions of SQL Server 2017 and later on Windows and Linux and enabled by default. You do not need to install R, Python, or enable additional features.
+`PREDICT` is available on all editions of SQL Server 2017 and later on Windows and Linux, Azure SQL Managed Instance, and Azure SQL Database, and is enabled by default. You do not need to install R, Python, or enable additional features.
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ The model must be trained in advance using one of the supported **rx** algorithms listed below, or use an [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) model format.
+::: moniker-end
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 + The model must be trained in advance using one of the supported **rx** algorithms listed below.
+::: moniker-end
 
 + Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
 <a name="bkmk_native_supported_algos"></a> 
 
 ## Supported algorithms
+
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ Algorithmns using the [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) model format.
+::: moniker-end
 
 + revoscalepy models
 
@@ -132,7 +142,7 @@ EXECUTE sp_execute_external_script
   VALUES('iris.dtree','v1', @model) ;
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > Be sure to use the [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
 
 You can run a statement such as the following to view the stored model in binary format:

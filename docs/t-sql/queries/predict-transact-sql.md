@@ -1,7 +1,7 @@
 ---
 title: "PREDICT (Transact-SQL)"
 ms.custom: ""
-ms.date: "05/29/2020"
+ms.date: "06/16/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -57,8 +57,12 @@ MODEL = @model | model_literal
 
 The `MODEL` parameter is used to specify the model used for scoring or prediction. The model is specified as a variable or a literal or a scalar expression.
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 The model object can be created by using R or Python or another tool.
+::: moniker-end
+
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+The model object can be created by using R or Python or another tool. [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) is also a supported model format for Azure SQL Managed Instance.
 ::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -157,6 +161,6 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
 ::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 - [Native scoring using the PREDICT T-SQL function](../../machine-learning/sql-native-scoring.md)
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current||=sqlallproducts-allversions"
 -	[Learn more about ONNX models](/azure/machine-learning/concept-onnx#get-onnx-models)
 ::: moniker-end

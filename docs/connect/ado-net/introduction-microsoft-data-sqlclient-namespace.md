@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Microsoft.Data.SqlClient namespace"
 description: "Introduction page for the Microsoft.Data.SqlClient namespace."
-ms.date: "09/30/2019"
+ms.date: "06/15/2019"
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity

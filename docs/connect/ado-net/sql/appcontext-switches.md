@@ -41,6 +41,34 @@ This switch will toggle the driver's behavior to use a managed networking implem
 > [!NOTE]
 > There are some known differences when compared to the native implementation. For example, the managed implementation does not support non-domain Windows Authentication.
 
+## Disabling Transparent Network IP Resolution
+
+Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. TNIR interacts with MultiSubnetFailover to provide the following three connection sequences:<br />
+* 0: One IP is attempted, followed by all IPs in parallel
+* 1: All IPs are attempted in parallel
+* 2: All IPs are attempted one after another
+
+|TransparentNetworkIPResolution|MultiSubnetFailover|Behavior|
+|--------|--------|--------|
+|True|True|1|
+|True|False|0|
+|False|True|1|
+|False|False|2|
+
+TransparentNetworkIPResolution is enabled by default. MultiSubnetFailover is disabled by default. To disable TNIR, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString"** to `true` at application startup:
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString", true);
+```
+
+See the documentation for [SqlConnection.ConnectionString Property](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) for more information about setting these properties.
+
+## Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking
+
+
+## Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin
+
+
 ## External resources  
 For more information, see the following resources.  
   

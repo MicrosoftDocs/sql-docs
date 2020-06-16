@@ -1,7 +1,7 @@
 ---
 title: "Finding additional SqlClient driver information"
 description: "Page that contains useful information regarding the driver."
-ms.date: "09/30/2019"
+ms.date: "06/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"

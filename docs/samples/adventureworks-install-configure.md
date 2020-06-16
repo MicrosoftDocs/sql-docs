@@ -76,7 +76,9 @@ To restore your database in SQL Server Management Studio, follow these steps:
 
 1. Download the appropriate `.bak` file from one of links provided in the [download .bak files](#download-bak-files) section.
 2. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is:
+
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
+
 3. Open SQL Server Management Studio (SSMS) and connect to your SQL Server in. 
 4. Right-click **Databases** in **Object Explorer** > **Restore Database...** to launch the **Restore Database** wizard. 
 
@@ -101,7 +103,9 @@ To restore your database in Azure Data Studio, follow these steps:
 
 1. Download the appropriate `.bak` file from one of links provided in the [download .bak files](#download-bak-files) section.
 1. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is:
+
     `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
+
 1. Open Azure Data Studio Studio and connect to your SQL Server instance.
 1. Right-click on your server and select **Manage**.
 
@@ -113,7 +117,7 @@ To restore your database in Azure Data Studio, follow these steps:
 
 1. On the **General** tab, fill in the values listed under **Source**.
     1. Under **Restore from**, select *Backup file*.
-    1. Under **Backup file path**, select the location you stored the .bak file - `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. This auto-populates the rest of the fields such as **Database**, **Target database** and **Restore to**. 
+    1. Under **Backup file path**, select the location you stored the .bak file. This auto-populates the rest of the fields such as **Database**, **Target database** and **Restore to**. 
 1. Select **Restore** to restore your database. 
 
    :::image type="content" source="media/adventureworks-install-configure/ads-sql-server-2019-adw-database-sample.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
@@ -175,6 +179,6 @@ Additional information about using the scripts can be found on [GitHub](https://
 Once you've restored your sample database, using the following tutorials to get started with SQL Server: 
 
 
-[Tutorials for SQL Server database engine](../relational-databases/database-engine-tutorials.md)
+[Tutorials for SQL Server database engine](../relational-databases/database-engine-tutorials.md)   
 [Connect and query with SQL Server Management Studio (SSMS)](../ssms/tutorials/connect-query-sql-server.md)   
-[Connect and query with Azure Data Studio](../ssms/tutorials/connect-query-sql-server.md)   
+[Connect and query with Azure Data Studio](../ssms/tutorials/connect-query-sql-server.md)

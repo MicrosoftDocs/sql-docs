@@ -68,7 +68,6 @@ GO
 
 ```
 
-
 # [SQL Server Management Studio (SSMS)](#tab/ssms)
 
 If you're not familiar using SQL Server Management Studio (SSMS), you can see [connect & query](../ssms/tutorials/connect-query-sql-server.md) to get started. 
@@ -76,9 +75,9 @@ If you're not familiar using SQL Server Management Studio (SSMS), you can see [c
 To restore your database in SQL Server Management Studio, follow these steps:
 
 1. Download the appropriate `.bak` file from one of links provided in the [download .bak files](#download-bak-files) section.
-1. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
-1. Open SQL Server Management Studio (SSMS) and connect to your SQL Server. 
-1. Right-click **Databases** in **Object Explorer** > **Restore Database...** to launch the **Restore Database** wizard. 
+2. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
+3. Open SQL Server Management Studio (SSMS) and connect to your SQL Server. 
+4. Right-click **Databases** in **Object Explorer** > **Restore Database...** to launch the **Restore Database** wizard. 
 
    :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
 

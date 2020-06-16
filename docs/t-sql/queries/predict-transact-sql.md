@@ -19,7 +19,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md.md)]
 
 Generates a predicted value or scores based on a stored model.
 

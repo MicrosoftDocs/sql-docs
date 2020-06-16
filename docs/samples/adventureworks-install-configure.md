@@ -95,24 +95,31 @@ For more information on restoring a SQL Server database, see [Restore a database
 
 # [Azure Data Studio](#tab/data-studio)
 
-If you're not familiar using Azure Data Studio, you can see [connect & query](../azure-data-studio/quickstart-sql-server.md) to get started
+If you're not familiar using[Azure Data Studio Studio](../azure-data-studio/download-azure-data-studio.md), you can see [connect & query](../azure-data-studio/quickstart-sql-server.md) to get started
 
 To restore your database in Azure Data Studio, follow these steps:
 
 1. Download the appropriate `.bak` file from one of links provided in the [download .bak files](#download-bak-files) section.
-1. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
-1. Open Azure Data Studio Studio  and connect to your SQL Server. 
-1. Right-click **Databases** in **?????** > **Restore** to launch the **?????** wizard. 
+2. Move the `.bak` file to your SQL Server backup location. This varies depending on your installation location, instance name and version of SQL Server. The default location for a default instance of SQL Server 2019 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
+3. Open Azure Data Studio Studio and connect to your SQL Server.
+4. Right-click on your server and select **Manage**.
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
 
-1. ???????????
-1. ???????????
-1. ??????????????
-1. Check the **Files** tab to confirm the **Restore as** location and file names match your intended location and file names in the **Restore Database** wizard. 
-1. Select **OK** to restore your database. 
+5. Select **Restore**
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
+
+6. While in the **General** tab, fill in the values listed under **Source**.
+    a. Under **Restore from**, select *Backup file*.
+    b. Under **Backup file path**, select the location you stored the .bak file - `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
+    c. Under **Database**, the database name should auto-populate.
+7. Under **Destination**, the **Target database** field and the **Restore to** field should auto-populate.
+8. Under **Restore Plan**, the database should auto-populate.
+9. Then select **Restore**
+
+   :::image type="content" source="media/adventureworks-install-configure/ads-sql-server-2019-adw-database-sample.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
+
 
 ---
 

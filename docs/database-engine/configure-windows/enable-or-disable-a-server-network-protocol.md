@@ -58,9 +58,7 @@ ms.author: mikeray
 #### To Enable a Server Network Protocol Using PowerShell  
 
 > [!IMPORTANT]  
-> **SQLPS** is not part of the SQL Server Setup or included in newer versions of SQL Server Management Studio (SSMS). Close all PowerShell Windows before importing the SQLPS module, and follow the below steps in correct order to manually install SQLPS.
-Without installing SQL Server or SSMS, importing the module and scripts below will not be complete for this task.
-Using 'Install-Module SqlServer' is not sufficient, as SQL Server Management Objects are required. For more information, see [Install the SQL Server PowerShell module](https://docs.microsoft.com/sql/powershell/download-sql-server-ps-module).
+> **SQLPS** may not be a part of the SQL Server Setup or included in newer versions of SQL Server Management Studio (SSMS). For more information, see [SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell). **If** you need to install SQLPS, follow step 3 below. Close all PowerShell Windows before importing the SQLPS module, and follow the below steps in correct order to manually install SQLPS. Without installing SQL Server or SSMS, importing the module and scripts below will not be complete for this task. Using 'Install-Module SqlServer' is not sufficient, as SQL Server Management Objects are required. For more information, see [Install the SQL Server PowerShell module](https://docs.microsoft.com/sql/powershell/download-sql-server-ps-module).
 
 1.  Run PowerShell as administrator.  
   

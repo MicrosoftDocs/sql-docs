@@ -1,7 +1,6 @@
 ---
 title: Previous releases of SSDT
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
@@ -25,14 +24,6 @@ Historically, the Visual Studio shell used to create SQL Server content types ha
 ## Previous downloads
 
 An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive.
-
-| Visual Studio version | SSDT release |
-|:---|:---|
-| 2017 |[15.8.0](https://go.microsoft.com/fwlink/?linkid=2124319)
-
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40a)
-
-<br>
 
 | Visual Studio version | SSDT release |
 |:---|:---|

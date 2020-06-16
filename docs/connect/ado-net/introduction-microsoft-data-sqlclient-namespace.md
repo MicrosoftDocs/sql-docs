@@ -33,7 +33,7 @@ For more information, see how to [Enable event tracing in SqlClient](sql/enablin
 
 #### Enabling Managed networking on Windows
 
-A new AppContext switch **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** enables the use of a managed SNI implementation on Windows for testing and debugging purposes. This switch will toggle the driver's behavior to use a managed SNI in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows.
+A new AppContext switch **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** enables the use of a managed SNI implementation on Windows for testing and debugging purposes. This switch will toggle the driver's behavior to use a managed SNI in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);

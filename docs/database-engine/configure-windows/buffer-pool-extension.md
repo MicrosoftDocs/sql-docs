@@ -1,6 +1,6 @@
 ---
 title: "Buffer Pool Extension | Microsoft Docs"
-description: Learn about buffer pool extension and its benefits, which include improved I/O throughput. View best practices to follow when turning this feature on.
+description: Learn about buffer pool extension and its benefits, which include improved I/O throughput. View best practices to follow when turning on this feature.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

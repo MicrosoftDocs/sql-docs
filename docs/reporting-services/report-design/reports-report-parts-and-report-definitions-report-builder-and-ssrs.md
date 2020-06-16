@@ -1,6 +1,7 @@
 ---
 title: "Reports, Report Parts, and Report Definitions (Report Builder) | Microsoft Docs"
-ms.date: 05/24/2018
+description: Discover the terms used to describe a report in different states in Report Builder. The states include the initial definition and the published report.
+mms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design

@@ -75,14 +75,27 @@ During a manual failover, the `pcs` command `move` or `crm` command `migrate` ad
 An example of the constraint which gets created because of a manual failover. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+Note, the AG resource name in pacemaker clusters on Red Hat Enterprise Linux 8.x and Ubuntu 18.04 may resemble "ag_cluster-clone" as the nomenclature regarding resources has been evolving to use "promotable clone". 
+
 - **RHEL/Ubuntu example**
 
    In the following command `cli-prefer-ag_cluster-master` is the ID of the constraint that needs to be removed. `sudo pcs constraint list --full` returns this ID. 
    
    ```bash
-   sudo pcs constraint remove cli-prefer-ag_cluster-master  
+      sudo pcs resource clear ag_cluster-master  
    ```
-   
+   Or,
+   ```bash
+      sudo pcs constraint remove cli-prefer-ag_cluster-master  
+   ```
+  
+  Alternatively, you can perform both move and clearing of auto generated constraints in a single line as following. Following example uses "clone" terminology as per Red Hat Enterprise Linux 8.x. 
+  
+     ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **SLES example**
 
    In the following command `cli-prefer-ms-ag_cluster` is the ID of the constraint. `crm config show` returns this ID. 

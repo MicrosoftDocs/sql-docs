@@ -82,7 +82,7 @@ A username can be specified in the connection string when using Azure Active Dir
 Set a username using the **User ID** or **UID** connection string property:
 
 ```
-"Server=<server name>; Authentication=Active Directory Interactive; User Id=<username>;"
+"Server=<server name>; Database=<dbname>; Authentication=Active Directory Interactive; User Id=<username>;"
 ```
 
 #### Order hints for SqlBulkCopy

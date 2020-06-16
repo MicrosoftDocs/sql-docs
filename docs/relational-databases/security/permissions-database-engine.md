@@ -1,5 +1,6 @@
 ---
 title: "Permissions (Database Engine) | Microsoft Docs"
+description: This article contains the complete list of permissions in SQL Server. Some permissions apply to all platforms while others do not.
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: sql

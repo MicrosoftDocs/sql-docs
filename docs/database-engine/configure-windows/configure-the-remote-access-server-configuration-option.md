@@ -1,5 +1,6 @@
 ---
 title: "Configure the remote access Server Configuration Option | Microsoft Docs"
+description: Learn about the remote access option, which has been deprecated. View alternate sources of information on troubleshooting SQL Server connection issues.
 ms.custom: ""
 ms.date: "08/11/2017"
 ms.prod: sql

@@ -79,6 +79,7 @@ Unsupported model types include the following types:
 + PMML models
 + Models created using other open-source or third-party libraries
 
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## Example: PREDICT (T-SQL)
 
 In this example, you create a model, and then call the real-time prediction function from T-SQL.
@@ -172,6 +173,7 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 
 > [!NOTE]
 > Because the columns and values returned by **PREDICT** can vary by model type, you must define the schema of the returned data by using a **WITH** clause.
+::: moniker-end
 
 ## Next steps
 

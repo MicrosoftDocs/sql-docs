@@ -1,6 +1,6 @@
 ---
 title: "allow updates Server Configuration Option | Microsoft Docs"
-description: Learn about the allow updates option, which is no longer available in SQL Server. See what action to take to avoid causing RECONFIGURE statements to fail.
+description: "Learn about the obsolete SQL Server configuration option 'allow updates.' See how using this option will cause RECONFIGURE statements to fail."
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

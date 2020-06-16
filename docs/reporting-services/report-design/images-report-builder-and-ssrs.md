@@ -1,7 +1,7 @@
 ---
 title: "Images (Report Builder) | Microsoft Docs"
 description: Find out about images as a item in Report Builder. These images contain a reference to an image embedded in a report or stored in a database.
-mms.date: 03/01/2017
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design

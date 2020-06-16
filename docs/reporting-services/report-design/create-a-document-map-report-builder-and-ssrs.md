@@ -1,5 +1,6 @@
 ---
 title: "Create a Document Map (Report Builder) | Microsoft Docs"
+description: Learn how to use a document map to provide a set of navigational links to report items in a rendered report in Report Builder.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

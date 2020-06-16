@@ -8,7 +8,6 @@ keywords: "install ssdt, download ssdt, latest ssdt"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: dzsquared
 ms.author: drskwier
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
@@ -157,6 +156,16 @@ SSDT for Visual Studio 2015 and 2017 both use DacFx 17.4.1: [Download Data-Tier 
 
 To download and install SSDT for Visual Studio 2015, or an older version of SSDT, see [Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md).
 
+## See Also
+
+* [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
+
+* [SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)
+
+* [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)
+
+* [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+
 ## Next steps
 
 After installing SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT.
@@ -170,13 +179,3 @@ After installing SSDT, work through these tutorials to learn how to create datab
 * [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-## See Also
-
-* [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
-
-* [SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)
-
-* [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)
-
-* [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

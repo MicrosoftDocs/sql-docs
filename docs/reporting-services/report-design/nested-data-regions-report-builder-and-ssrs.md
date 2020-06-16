@@ -1,5 +1,6 @@
 ---
 title: "Nested Data Regions (Report Builder) | Microsoft Docs"
+description: Discover ways to nest a data region inside another data region in Report Builder. Display data summaries in a concise table or matrix. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,5 +1,6 @@
 ---
 title: "Principals (Database Engine) | Microsoft Docs"
+description: Learn about principals in Database Engine, which are entities that can request SQL Server resources. There are SQL Server-level and database-level principals.
 ms.custom: ""
 ms.date: "01/09/2017"
 ms.prod: sql

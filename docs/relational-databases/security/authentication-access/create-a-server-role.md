@@ -1,5 +1,6 @@
 ---
 title: "Create a Server Role | Microsoft Docs"
+description: Create a server role in SQL Server by using SQL Server Management Studio or Transact-SQL. Server roles can’t be granted permission on database-level securables.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

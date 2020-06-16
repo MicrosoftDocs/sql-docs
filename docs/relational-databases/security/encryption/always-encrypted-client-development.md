@@ -1,5 +1,6 @@
 ---
 title: "Develop applications using Always Encrypted | Microsoft Docs"
+description: Learn about Always Encrypted client-side encryption technology that ensures sensitive data are never revealed to the SQL Server or Azure SQL Database.
 ms.custom: ""
 ms.date: "10/30/2019"
 ms.prod: sql

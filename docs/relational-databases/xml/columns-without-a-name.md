@@ -1,5 +1,6 @@
 ---
 title: "Columns without a Name | Microsoft Docs"
+description: Learn how SQL Server treats columns without a name when generating XML.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

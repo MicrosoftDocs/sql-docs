@@ -1,6 +1,6 @@
 ---
 title: Native scoring with T-SQL PREDICT
-description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pre-trained model written in R or Python on SQL Server.
+description: Learn how to use native scoring with the PREDICT T-SQL function to generate prediction values for new data inputs in near-real-time. 
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/15/2020
@@ -34,7 +34,7 @@ The function returns predictions for the input data, together with any columns o
 
 ## Prerequisites
 
-`PREDICT` is available on all editions of SQL Server  database engine and enabled by default, including SQL Server Machine Learning Services on Windows, SQL Server 2017 and later on Windows and Linux. You do not need to install R, Python, or enable additional features.
+`PREDICT` is available on all editions of SQL Server 2017 and later on Windows and Linux and enabled by default. You do not need to install R, Python, or enable additional features.
 
 + The model must be trained in advance using one of the supported **rx** algorithms listed below.
 
@@ -165,7 +165,4 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 
 ## Next steps
 
-For a complete solution that includes native scoring, see these samples from the SQL Server development team:
-
-+ Deploy your ML script: [Using a Python model](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Deploy your ML script: [Using an R model](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ [PREDICT T-SQL function](../t-sql/queries/predict-transact-sql.md)

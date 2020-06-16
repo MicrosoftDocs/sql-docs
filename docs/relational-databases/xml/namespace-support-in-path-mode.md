@@ -1,5 +1,6 @@
 ---
 title: "Namespace Support in PATH Mode | Microsoft Docs"
+description: Learn about namespace support when using PATH mode to generate XML from a SELECT query.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -44,7 +44,6 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
     [ , [ @schedule_id = ] schedule_id OUTPUT ]
-    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   

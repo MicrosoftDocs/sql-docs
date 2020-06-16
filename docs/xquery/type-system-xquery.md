@@ -1,5 +1,6 @@
 ---
 title: "Type System (XQuery) | Microsoft Docs"
+description: Learn about the XQuery type system that includes built-in types of XML schema and types defined in the xpath-datatypes namespace.
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql

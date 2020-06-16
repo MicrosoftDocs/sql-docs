@@ -1,5 +1,6 @@
 ---
 title: "Using XPath Queries in SQLXML 4.0"
+description: Learn about using XPath queries in SQLXML 4.0 to query the XML views created by an annotated XSD schema.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

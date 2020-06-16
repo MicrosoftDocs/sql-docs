@@ -1,5 +1,6 @@
 ---
 title: "Revoke Permissions on an XML Schema Collection | Microsoft Docs"
+description: Learn how to revoke permissions on an XML schema collection.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

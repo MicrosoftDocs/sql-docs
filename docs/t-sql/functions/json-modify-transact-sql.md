@@ -301,7 +301,7 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
 ```  
   

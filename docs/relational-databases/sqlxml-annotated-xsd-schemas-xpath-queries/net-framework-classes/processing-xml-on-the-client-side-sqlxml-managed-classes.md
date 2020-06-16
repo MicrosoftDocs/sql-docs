@@ -1,5 +1,6 @@
 ---
 title: "Processing XML on the Client Side (SQLXML)"
+description: Learn how to process XML on the client side by using the ClientSideXml property of the SqlXmlCommand object in the SQLXML Managed Classes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

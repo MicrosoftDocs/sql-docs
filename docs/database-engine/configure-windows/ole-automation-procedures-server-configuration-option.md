@@ -1,5 +1,6 @@
 ---
 title: "Ole Automation Procedures Server Configuration Option | Microsoft Docs"
+description: Learn about the Ole Automation Procedures option. See how it specifies whether SQL Server can instantiate OLE Automation objects within Transact-SQL batches.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

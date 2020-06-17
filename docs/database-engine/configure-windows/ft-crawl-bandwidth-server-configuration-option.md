@@ -1,5 +1,6 @@
 ---
 title: "ft crawl bandwidth Server Configuration Option | Microsoft Docs"
+description: Learn about the ft crawl bandwidth option. See how it affects the number of buffers that SQL Server maintains in the pool of large memory buffers.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

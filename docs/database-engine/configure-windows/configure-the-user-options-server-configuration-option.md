@@ -1,6 +1,6 @@
 ---
 title: "Configure the user options Server Configuration Option | Microsoft Docs"
-description: "Learn about the user options option. See how it changes the default values of the query processing options that SQL Server establishes for users' work sessions."
+description: 'Learn about the "user options" option. See how it changes the default values of the query processing options that SQL Server establishes for user work sessions.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

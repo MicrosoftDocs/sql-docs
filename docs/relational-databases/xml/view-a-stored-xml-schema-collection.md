@@ -1,5 +1,6 @@
 ---
 title: "View a Stored XML Schema Collection | Microsoft Docs"
+description: Learn how to view a stored XML schema collection by using the XQuery function xml_schema_namespace().
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

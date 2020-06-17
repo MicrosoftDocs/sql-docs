@@ -1,5 +1,6 @@
 ---
 title: "FLWOR Statement and Iteration (XQuery) | Microsoft Docs"
+description: Learn about the for, let, where, order by, and return clauses that make up the FLOWR iteration syntax in XQuery.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

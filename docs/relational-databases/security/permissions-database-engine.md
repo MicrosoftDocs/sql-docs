@@ -97,8 +97,8 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |Permission|Applies to|  
 |----------------|----------------|  
 |ALTER|All classes of objects except TYPE.|  
-|CONTROL|All classes of objects: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|  
-|DELETE|All classes of objects except DATABASE SCOPED CONFIGURATION, and SERVER.|  
+|CONTROL|All classes of objects: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br /> USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|  
+|DELETE|All classes of objects except DATABASE SCOPED CONFIGURATION, SERVER, and TYPE.|  
 |EXECUTE|CLR types, external scripts, procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), and synonyms|  
 |IMPERSONATE|Logins and users|  
 |INSERT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|  

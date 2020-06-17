@@ -1,5 +1,6 @@
 ---
 title: "Introduction to DiffGrams in SQLXML 4.0"
+description: Learn about the format, annotations, and processing logic of DiffGrams in SQLXML 4.0.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

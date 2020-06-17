@@ -1,5 +1,6 @@
 ---
 title: "FOR XML Support for Various SQL Server Data Types | Microsoft Docs"
+description: View information about the various SQL Server data types that are supported by the FOR XML clause in an SQL query.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Compare Typed XML to Untyped XML | Microsoft Docs"
+description: Learn about the differences between typed and untyped XML.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

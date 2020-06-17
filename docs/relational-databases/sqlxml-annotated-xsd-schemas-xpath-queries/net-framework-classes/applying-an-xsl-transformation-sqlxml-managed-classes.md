@@ -1,5 +1,6 @@
 ---
 title: "Applying an XSL Transformation (SQLXML)"
+description: View an example of an SQL query that applies an XSL transformation by using the XslPath property of the SqlXmlCommand object in the SQLXML Managed Classes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

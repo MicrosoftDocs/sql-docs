@@ -1,5 +1,6 @@
 ---
 title: "sql:mapped (SQLXML)"
+description: Learn how the SQLXML annotation sql:mapped is interpreted during the XML Bulk Load process.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

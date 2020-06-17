@@ -1,5 +1,6 @@
 ---
 title: "Core SQLXML Security Considerations"
+description: Learn the core security guidelines for using SQLXML for data access.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

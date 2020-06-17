@@ -1,5 +1,6 @@
 ---
 title: "Define the Serialization of XML Data | Microsoft Docs"
+description: Learn about the rules used when serializing xml data in SQL Server.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

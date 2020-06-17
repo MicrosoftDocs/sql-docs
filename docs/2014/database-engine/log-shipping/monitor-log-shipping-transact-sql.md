@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Monitor Log Shipping (Transact-SQL)
   After you have configured log shipping, you can monitor information about the status of all the log shipping servers. The history and status of log shipping operations are always saved locally by the log shipping jobs. The history and status of the backup operation are stored at the primary server, and the history and status of the copy and restore operations are stored at the secondary server. If you have implemented a remote monitor server, this information is also stored on the monitor server.  

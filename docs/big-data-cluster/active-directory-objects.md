@@ -41,16 +41,16 @@ Account name prefix is determined by the namespace for the cluster. In the table
 |`storage-0`|`storage-0-x`|`hadoop`|`Yarn Node Manager`|`ynt0-x`|`bdc-ynt0-x`|`yarnnm-storage-0-x`|Storage pool Yarn node manager service user|
 |`storage-0`|`storage-0-x`|`hadoop`|`HDFS Datanode`|`hdt0`|`bdc-hdt0`|`hdfsdn-storage-0`|Storage pool HDFS datanode service user|
 |`storage-0`|`storage-0-x`|`hadoop`|`HDFS Datanode`|`htt0`|`bdc-htt0`|`http-storage-0`|Storage pool HTTP service user|
-|`nmnode-0`|`nmnode-0-x`|`hadoop`|`HDFS Namenode`|`hdnn`|`bdc-hdnn`|`hdfsnn-nmnode`|HDFS Namenode service user|
-|`nmnode-0`|`nmnode-0-x`|`hadoop`|`HDFS Namenode`|`htnn`|`bdc-htnn`|`http-nmnode`|HDFS Namenode HTTP service user|
-|`nmnode-0`|`nmnode-0-x`|`hadoop`|`KMS`|`kmnn-x`|`bdc-kmnn-x`|`kms-nmnode-x`|Namenode KMS service user|
+|`nmnode-0`|`nmnode-0-x`|`hadoop`|`HDFS Namenode`|`hdnn`|`bdc-hdnn`|`hdfsnn-nmnode`|HDFS Name node service user|
+|`nmnode-0`|`nmnode-0-x`|`hadoop`|`HDFS Namenode`|`htnn`|`bdc-htnn`|`http-nmnode`|HDFS Name node HTTP service user|
+|`nmnode-0`|`nmnode-0-x`|`hadoop`|`KMS`|`kmnn-x`|`bdc-kmnn-x`|`kms-nmnode-x`|Name node KMS service user|
 |`zookeeper`|`zookeeper-x`|`zookeeper`|`Journal node`|`jnzk-x`|`bdc-jnzk-x`|`jn-zookeeper-x`|Zookeeper JournalNode service user|
 |`zookeeper`|`zookeeper-x`|`zookeeper`|`Zookeeper`|`htzk`|`bdc-htzk`|`http-zookeeper`|Zookeeper HTTP service user|
-|`sparkhead`|`sparkhead-x`|`hadoop-yarn-jobhistory`|`Yarn Resource Manager`|`yrsh-x`|`bdc-yrsh-x`|`yarnrm-sparkhead-x`|Sparkhead Yarn resource manager service user|
-|`sparkhead`|`sparkhead-x`|`*`|`*`|`htsh`|`bdc-htsh`|`http-sparkhead`|Sparkhead HTTP user|
-|`sparkhead`|`sparkhead-x`|`hadoop-livy-sparkhistory`|`Spark History Server`|`shsh-x`|`bdc-shsh-x`|`sph-sparkhead-x`|Sparkhead Spark history service user|
-|`sparkhead`|`sparkhead-x`|`hadoop-livy-sparkhistory`|`Livy`|`lvsh-x`|`bdc-lvsh-x`|`livy-sparkhead-x`|Sparkhead Livy service user|
-|`sparkhead`|`sparkhead-x`|`hadoop-hivemetastore`|`Hive Metastore`|`hvsh-x`|`bdc-hvsh-x`|`hive-sparkhead-x`|Sparkhead Hive service user|
+|`sparkhead`|`sparkhead-x`|`hadoop-yarn-jobhistory`|`Yarn Resource Manager`|`yrsh-x`|`bdc-yrsh-x`|`yarnrm-sparkhead-x`|Spark head Yarn resource manager service user|
+|`sparkhead`|`sparkhead-x`|`*`|`*`|`htsh`|`bdc-htsh`|`http-sparkhead`|Spark head HTTP user|
+|`sparkhead`|`sparkhead-x`|`hadoop-livy-sparkhistory`|`Spark History Server`|`shsh-x`|`bdc-shsh-x`|`sph-sparkhead-x`|Spark head Spark history service user|
+|`sparkhead`|`sparkhead-x`|`hadoop-livy-sparkhistory`|`Livy`|`lvsh-x`|`bdc-lvsh-x`|`livy-sparkhead-x`|Spark head Livy service user|
+|`sparkhead`|`sparkhead-x`|`hadoop-hivemetastore`|`Hive Metastore`|`hvsh-x`|`bdc-hvsh-x`|`hive-sparkhead-x`|Spark head Hive service user|
 |`spark-0`|`spark-0-x`|`hadoop`|`Yarn Node Manager`|`yns0-x`|`bdc-yns0-x`|`yarnnm-spark-0-x`|Spark pool Yarn node manager service user|
 |`spark-0`|`spark-0-x`|`hadoop`|`Yarn Node Manager`|`hts0`|`bdc-hts0`|`http-spark-0`|Spark pool Yarn node manager HTTP user|
 |`gateway`|`gateway-x`|`knox`|`Knox`|`knox-x`|`bdc-knox-x`|`knox-gateway-x`|Knox Gateway user|

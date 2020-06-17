@@ -19,13 +19,13 @@ This article describes what are the Active Directory (AD) accounts and groups th
 
 The user accounts are generated in the provided [organizational unit (OU)](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) during cluster deployment. Each of them represents a service in BDC. The accounts own the Service Principal Names (SPNs) required by each service. The SPNs owned by each account can be listed using [setspn](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spn-setspn-syntax.aspx) command.
 
-The pod suffix (-x) is used to denote a variable pod ID below. The account names below do not include a variable prefix that is user provided during deployment.
+The deployment automatically generates account names. Beginning with SQL Server 2019 CU5, the account name prefix is the namespace. If your namespace is `bdc` for the items on this article, replace `<namespace>` with `bdc` to identify your accounts.
+
+The pod suffix (-x) denotes a variable pod ID below. The account names below do not include a variable prefix that is user provided during deployment.
 
 The classic account name applies to deployments using versions before 2019 CU5 as well as deployments done with "useSubdomain" option set to false in security configuration.
 
-Account name prefix is determined by the namespace for the cluster. If the namespace is `bdc` for the items below replace `<namespace>` with `bdc`.
-
-| Account name - as generated beginning with SQL Server 2019 CU5)|More information|
+| Account name|More information|
 |----|---|
 |`<namespace>-ctrl`|[Controller service account](#controller-service-account)|
 |`<namespace>-ngxm`|[Monitoring service proxy service account](#monitoring-service-proxy-service-account)|
@@ -430,9 +430,10 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 The following groups are created in the OU provided by the user. The members of the groups are the users created above for the corresponding services.
 
-Group name prefix is determined by the namespace for the cluster. If the namespace is `bdc` for the items below replace `<namespace>` with `bdc`.
+Beginning with SQL Server 2019 CU5, group name prefix is determined by the namespace for the cluster. If the namespace is `bdc` for the items below replace `<namespace>` with `bdc`.
 
-| Group name - as generated (beginning with SQL Server 2019 CU5)|More information|
+| Group name|More information|
+|----|---|
 |`<namespace>-dmsvc`|[Data Warehouse DMS Service group](#data-warehouse-dms-service-group)|
 |`<namespace>-desvc`|[Data Warehouse Engine Service group](#data-warehouse-engine-service-group)|
 

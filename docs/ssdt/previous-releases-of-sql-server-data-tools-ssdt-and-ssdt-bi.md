@@ -8,7 +8,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 06/16/2020
+ms.date: 06/17/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 
@@ -25,7 +25,7 @@ Historically, the Visual Studio shell used to create SQL Server content types ha
 
 You can only download previous versions of SSDT to install or set up as an ISO image. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive.
 
-### SSDT for VS 2015
+### SSDT for Visual Studio (VS) 2015
 
 **[Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)**
 
@@ -33,13 +33,11 @@ This release of **SSDT for VS 2015** can be installed in the following languages
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40a)
 
-| Visual Studio version | SSDT release |
-|:---|:---|
-| 2013 |[16.5](https://go.microsoft.com/fwlink/?linkid=858660) |
+### SSDT for Visual Studio (VS) 2013
+
+**[Download SSDT for Visual Studio 2013 (16.5)](https://go.microsoft.com/fwlink/?linkid=858660)**
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)
-
-<br>
 
 \* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT for VS2015 is no longer being updated. For additional information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
@@ -50,13 +48,12 @@ This release of **SSDT for VS 2015** can be installed in the following languages
 Provides templates for building relational databases for the RDBMS and Azure SQL Database. SSDT is version agnostic with respect to relational database design. You can use either the Visual Studio 2012 or 2013 version with any version of SQL Server Database Engine or Azure SQL Database.
 **Database Designers**
 
-- [Download SSDT for Visual Studio 2013](https://msdn.microsoft.com/dn864412)  
+- [Download SSDT for Visual Studio 2013](https://msdn.microsoft.com/dn864412)
 
-- [Download SSDT for Visual Studio 2012](https://msdn.microsoft.com/jj650015)  
+- [Download SSDT for Visual Studio 2012](https://msdn.microsoft.com/jj650015)
 
-- **SSDT for Visual Studio 2010** is no longer available so please choose a newer version. Newer versions of SSDT run side-by-side with existing Visual Studio 2010 installations. It's not necessary to have SSDT match the full-product version of Visual Studio on your computer.
-
-Visual Studio 2013 customers can download a preview version of SSDT to try out new features that are not yet in the product release version.
+> [!Note]
+> **SSDT for Visual Studio 2010** is no longer available. Newer versions of SSDT run side-by-side with existing Visual Studio 2010 installations. It's not necessary to have SSDT match the full-product version of Visual Studio on your computer.
 
 ### SQL BI: Analysis Services, Reporting Services, Integration services
 
@@ -74,6 +71,6 @@ For SQL Server 2012 or 2014, you can use either **SSDT-BI for Visual Studio 2012
 
 ## Next steps
 
-- [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
-- [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
+- [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Tools and Utilities](../tools/overview-sql-tools.md)

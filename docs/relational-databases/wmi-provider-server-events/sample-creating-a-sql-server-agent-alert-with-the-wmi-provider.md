@@ -1,5 +1,6 @@
 ---
 title: "Create a SQL Server Agent Alert with the WMI Provider"
+description: This sample creates a SQL Server Agent alert that respond to specific events. This simple alert saves XML deadlock graph events in a table for later analysis.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

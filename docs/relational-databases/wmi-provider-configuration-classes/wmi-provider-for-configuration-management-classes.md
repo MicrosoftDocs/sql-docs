@@ -1,5 +1,6 @@
 ---
 title: "WMI Provider for Configuration Management Classes"
+description: This article summarizes classes for which the Windows Management Instrumentation provider for Configuration Management provides functionality.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

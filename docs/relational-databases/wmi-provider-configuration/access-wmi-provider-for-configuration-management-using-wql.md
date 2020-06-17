@@ -1,5 +1,6 @@
 ---
 title: "Use WQL to access the WMI Provider"
+description: This example shows how to run Windows Management Instrumentation Query Language statements for the WMI Provider for Computer Management in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

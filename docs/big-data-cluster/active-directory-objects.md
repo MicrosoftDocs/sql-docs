@@ -15,17 +15,19 @@ ms.technology: big-data-cluster
 
 This article describes what are the Active Directory (AD) accounts and groups that SQL Server creates during a big data cluster deployment.
 
-## Accounts
+## Accounts & groups
 
-The user accounts are generated in the provided [organizational unit (OU)](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) during cluster deployment. Each of them represents a service in BDC. The accounts own the Service Principal Names (SPNs) required by each service. The SPNs owned by each account can be listed using [setspn](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spn-setspn-syntax.aspx) command.
+The user accounts and groups are generated in the provided [organizational unit (OU)](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) during cluster deployment.
 
-The deployment automatically generates account names. Beginning with SQL Server 2019 CU5, the account name prefix is the namespace. If your namespace is `bdc` for the items on this article, replace `<namespace>` with `bdc` to identify your accounts.
+Each of the accounts represents a service in BDC. The accounts own the Service Principal Names (SPNs) required by each service. The SPNs owned by each account can be listed using [setspn](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spn-setspn-syntax.aspx) command.
 
-The pod suffix (-x) denotes a variable pod ID below. The account names below do not include a variable prefix that is user provided during deployment.
+The deployment automatically generates account and group names. Beginning with SQL Server 2019 CU5, the account or group name prefix is the namespace. If your namespace is `bdc` for the items on this article, replace `<namespace>` with `bdc` to identify your accounts.
 
-The classic account name applies to deployments using versions before 2019 CU5 as well as deployments done with "useSubdomain" option set to false in security configuration.
+The pod suffix (-x) denotes a variable pod ID below. The names below do not include a variable prefix that is user provided during deployment.
 
-| Account name|More information|
+The classic account name applies to deployments using versions before SQL Server 2019 CU5 as well as deployments done with "useSubdomain" option set to false in security configuration.
+
+| Account or group name|More information|
 |----|---|
 |`<namespace>-ctrl`|[Controller service account](#controller-service-account)|
 |`<namespace>-ngxm`|[Monitoring service proxy service account](#monitoring-service-proxy-service-account)|
@@ -53,6 +55,10 @@ The classic account name applies to deployments using versions before 2019 CU5 a
 |`<namespace>-knox-x`|[Knox Gateway user](#knox-gateway-user)|
 |`<namespace>-htgw`|[Knox Gateway HTTP user](#knox-gateway-http-user)|
 |`<namespace>-apst`|[App setup user](#app-setup-user)|
+|`<namespace>-dmsvc`|[Data Warehouse DMS Service group](#data-warehouse-dms-service-group)|
+|`<namespace>-desvc`|[Data Warehouse Engine Service group](#data-warehouse-engine-service-group)|
+
+The following section provides more details about each accounts. For information about groups, skip to [Groups](#groups).
 
 ## Controller, management, & LDAP related accounts
 
@@ -429,13 +435,6 @@ Used by grafana and hadoop services to look up users through LDAP.
 ## Groups
 
 The following groups are created in the OU provided by the user. The members of the groups are the users created above for the corresponding services.
-
-Beginning with SQL Server 2019 CU5, group name prefix is determined by the namespace for the cluster. If the namespace is `bdc` for the items below replace `<namespace>` with `bdc`.
-
-| Group name|More information|
-|----|---|
-|`<namespace>-dmsvc`|[Data Warehouse DMS Service group](#data-warehouse-dms-service-group)|
-|`<namespace>-desvc`|[Data Warehouse Engine Service group](#data-warehouse-engine-service-group)|
 
 ### Data Warehouse DMS Service group
 

@@ -29,6 +29,8 @@ To automatically create all the required objects in Active Directory, the BDC ne
 
 The steps below assume you already have an Active Directory domain controller. If you don't have a domain controller, the following [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) includes steps that can be helpful.
 
+For a list of AD accounts and groups, see [Auto generated Active Directory objects](active-directory-objects.md).
+
 ## Create AD objects
 
 Do the following things before you deploy a BDC with AD integration:

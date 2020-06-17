@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Auto generated Active Directory objects
 
-This article describes what are the Active Directory (AD) accounts and groups that SQL Server creates during a big data cluster deployment.
+This article describes what are the Active Directory (AD) accounts and groups that SQL Server creates during a big data cluster (BDC) deployment.
 
 ## Accounts & groups
 
@@ -21,7 +21,7 @@ The user accounts and groups are generated in the provided [organizational unit 
 
 Each of the accounts represents a service in BDC. The accounts own the Service Principal Names (SPNs) required by each service. The SPNs owned by each account can be listed using [setspn](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spn-setspn-syntax.aspx) command.
 
-The deployment automatically generates account and group names. Beginning with SQL Server 2019 CU5, the account or group name prefix is the namespace. If your namespace is `bdc` for the items on this article, replace `<namespace>` with `bdc` to identify your accounts.
+The deployment automatically generates account and group names. Beginning with SQL Server 2019 CU5, the account or group name prefix is the deployment namespace name (BDC cluster name). If the cluster name is `bdc` for the items on this article, replace `<prefix>` with `bdc` to identify your accounts.
 
 The pod suffix (-x) denotes a variable pod ID below. The names below do not include a variable prefix that is user provided during deployment.
 
@@ -29,34 +29,34 @@ The classic account name applies to deployments using versions before SQL Server
 
 | Account or group name|More information|
 |----|---|
-|`<namespace>-ctrl`|[Controller service account](#controller-service-account)|
-|`<namespace>-ngxm`|[Monitoring service proxy service account](#monitoring-service-proxy-service-account)|
-|`<namespace>-ldap`|[LDAP lookup user](#ldap-lookup-user)|
-|`<namespace>-sqc0-x/<namespace>-sqc0`|[Compute pool SQL Server user](#compute-pool-sql-server-user)|
-|`<namespace>-dmc0-x`|[Compute pool Data Warehouse DMS user](#compute-pool-data-warehouse-dms-user)|
-|`<namespace>-dec0-x`|[Compute pool Data Warehouse Engine user](#compute-pool-data-warehouse-engine-user)|
-|`<namespace>-sqd0`|[Data pool SQL Server user](#data-pool-sql-server-user)|
-|`<namespace>-sqs0`|[Storage pool SQL Server user](#storage-pool-sql-server-user)|
-|`<namespace>-ynt0-x`|[Storage pool Yarn node manager service user](#storage-pool-yarn-node-manager-service-user)|
-|`<namespace>-htt0`|[Storage pool HTTP service user](#storage-pool-http-service-user)|
-|`<namespace>-hdt0`|[Storage pool HDFS datanode service user](#storage-pool-hdfs-datanode-service-user)|
-|`<namespace>-hdnn`|[HDFS Name node service user](#hdfs-name-node-service-user)|
-|`<namespace>-htnn`|[HDFS Name node HTTP service user](#hdfs-name-node-http-service-user)|
-|`<namespace>-kmnn-x`|[Name node KMS service user](#name-node-kms-service-user)|
-|`<namespace>-jnzk-x`|[Zookeeper JournalNode service users](#zookeeper-journalnode-service-users)|
-|`<namespace>-htzk`|[Zookeeper HTTP service user](#zookeeper-http-service-user)|
-|`<namespace>-yrsh-x`|[Sparkhead Yarn resource manager service user](#sparkhead-yarn-resource-manager-service-user)|
-|`<namespace>-htsh`|[Sparkhead HTTP user](#sparkhead-http-user)|
-|`<namespace>-shsh-x`|[Sparkhead Spark history service user](#sparkhead-spark-history-service-user)|
-|`<namespace>-lvsh-x`|[Sparkhead Livy service user](#sparkhead-livy-service-user)|
-|`<namespace>-hvsh-x`|[Sparkhead Hive service user](#sparkhead-hive-service-user)|
-|`<namespace>-yns0-x`|[Spark pool Yarn node manager service user](#spark-pool-yarn-node-manager-service-user)|
-|`<namespace>-hts0`|[Spark pool Yarn node manager HTTP user](#spark-pool-yarn-node-manager-http-user)|
-|`<namespace>-knox-x`|[Knox Gateway user](#knox-gateway-user)|
-|`<namespace>-htgw`|[Knox Gateway HTTP user](#knox-gateway-http-user)|
-|`<namespace>-apst`|[App setup user](#app-setup-user)|
-|`<namespace>-dmsvc`|[Data Warehouse DMS Service group](#data-warehouse-dms-service-group)|
-|`<namespace>-desvc`|[Data Warehouse Engine Service group](#data-warehouse-engine-service-group)|
+|`<prefix>-ctrl`|[Controller service account](#controller-service-account)|
+|`<prefix>-ngxm`|[Monitoring service proxy service account](#monitoring-service-proxy-service-account)|
+|`<prefix>-ldap`|[LDAP lookup user](#ldap-lookup-user)|
+|`<prefix>-sqc0-x/<prefix>-sqc0`|[Compute pool SQL Server user](#compute-pool-sql-server-user)|
+|`<prefix>-dmc0-x`|[Compute pool Data Warehouse DMS user](#compute-pool-data-warehouse-dms-user)|
+|`<prefix>-dec0-x`|[Compute pool Data Warehouse Engine user](#compute-pool-data-warehouse-engine-user)|
+|`<prefix>-sqd0`|[Data pool SQL Server user](#data-pool-sql-server-user)|
+|`<prefix>-sqs0`|[Storage pool SQL Server user](#storage-pool-sql-server-user)|
+|`<prefix>-ynt0-x`|[Storage pool Yarn node manager service user](#storage-pool-yarn-node-manager-service-user)|
+|`<prefix>-htt0`|[Storage pool HTTP service user](#storage-pool-http-service-user)|
+|`<prefix>-hdt0`|[Storage pool HDFS datanode service user](#storage-pool-hdfs-datanode-service-user)|
+|`<prefix>-hdnn`|[HDFS Name node service user](#hdfs-name-node-service-user)|
+|`<prefix>-htnn`|[HDFS Name node HTTP service user](#hdfs-name-node-http-service-user)|
+|`<prefix>-kmnn-x`|[Name node KMS service user](#name-node-kms-service-user)|
+|`<prefix>-jnzk-x`|[Zookeeper JournalNode service users](#zookeeper-journalnode-service-users)|
+|`<prefix>-htzk`|[Zookeeper HTTP service user](#zookeeper-http-service-user)|
+|`<prefix>-yrsh-x`|[Sparkhead Yarn resource manager service user](#sparkhead-yarn-resource-manager-service-user)|
+|`<prefix>-htsh`|[Sparkhead HTTP user](#sparkhead-http-user)|
+|`<prefix>-shsh-x`|[Sparkhead Spark history service user](#sparkhead-spark-history-service-user)|
+|`<prefix>-lvsh-x`|[Sparkhead Livy service user](#sparkhead-livy-service-user)|
+|`<prefix>-hvsh-x`|[Sparkhead Hive service user](#sparkhead-hive-service-user)|
+|`<prefix>-yns0-x`|[Spark pool Yarn node manager service user](#spark-pool-yarn-node-manager-service-user)|
+|`<prefix>-hts0`|[Spark pool Yarn node manager HTTP user](#spark-pool-yarn-node-manager-http-user)|
+|`<prefix>-knox-x`|[Knox Gateway user](#knox-gateway-user)|
+|`<prefix>-htgw`|[Knox Gateway HTTP user](#knox-gateway-http-user)|
+|`<prefix>-apst`|[App setup user](#app-setup-user)|
+|`<prefix>-dmsvc`|[Data Warehouse DMS Service group](#data-warehouse-dms-service-group)|
+|`<prefix>-desvc`|[Data Warehouse Engine Service group](#data-warehouse-engine-service-group)|
 
 The following section provides more details about each accounts. For information about groups, skip to [Groups](#groups).
 
@@ -71,7 +71,7 @@ The following section provides more details about each accounts. For information
 |Container name|`controller`|
 |Service name|`controller`|
 |Account name (without prefix)| `ctrl`|
-|Account (with namespace prefix)|`<namespace>-ctrl`|
+|Account (with namespace prefix)|`<prefix>-ctrl`|
 |Classic account name|`ctrl-controller`|
 
 ### Monitoring service proxy service account
@@ -83,7 +83,7 @@ The following section provides more details about each accounts. For information
 |Container name|`service-proxy`|
 |Service name|`nginx`|
 |Account (without prefix)| `ngxm`|
-|Account (with namespace prefix)|`<namespace>-ngxm`|
+|Account (with namespace prefix)|`<prefix>-ngxm`|
 |Classic account name|`nginx-mgmtproxy`|
 
 ### LDAP lookup user
@@ -97,7 +97,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`grafana`|
 |Service name|`grafana`|
 |Account name (without prefix)| `ldap`|
-|Account name (with namespace prefix)|`<namespace>-ldap`|
+|Account name (with namespace prefix)|`<prefix>-ldap`|
 |Classic account name|`ldap-user`|
 
 ## Master pool accounts
@@ -111,7 +111,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`mssql-server`|
 |Service name|`mssql`|
 |Account name (without prefix)| `sqmp-x/sqmp`|
-|Account name (with namespace prefix)|`<namespace>-sqmp-x/<namespace>-sqmp`|
+|Account name (with namespace prefix)|`<prefix>-sqmp-x/<prefix>-sqmp`|
 |Classic account name|`mssql-master-x`|
 
 ### Master pool Data Warehouse DMS user
@@ -123,7 +123,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`mssql-server`|
 |Service name|`dwdms`|
 |Account (without prefix)| `dmmp-x`|
-|Account (with namespace prefix)|`<namespace>-dmmp-x`|
+|Account (with namespace prefix)|`<prefix>-dmmp-x`|
 |Classic account name|`dwdms-master-x`|
 
 ### Master pool Data Warehouse Engine user
@@ -135,7 +135,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`mssql-server`|
 |Service name|`dweng`|
 |Account (without prefix)| `demp`|
-|Account (with namespace prefix)|`<namespace>-demp-x`|
+|Account (with namespace prefix)|`<prefix>-demp-x`|
 |Classic account name|`dweng-master-x`|
 
 ## Compute pool accounts
@@ -149,7 +149,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`mssql-server`|
 |Service name|`mssql`|
 |Account (without prefix)| `sqc0-x/sqlc0`|
-|Account (with namespace prefix)|`<namespace>-sqc0-x/<namespace>-sqc0`|
+|Account (with namespace prefix)|`<prefix>-sqc0-x/<prefix>-sqc0`|
 |Classic account name|`mssql-compute-0-x`|
 
 ### Compute pool Data Warehouse DMS user
@@ -161,7 +161,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`mssql-server`|
 |Service name|`dwdms`|
 |Account (without prefix)| `dmc0-x`|
-|Account (with namespace prefix)|`<namespace>-dmc0-x`|
+|Account (with namespace prefix)|`<prefix>-dmc0-x`|
 |Classic account name|`dwdms-compute-0-x`|
 
 ### Compute pool Data Warehouse Engine user
@@ -173,7 +173,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`mssql-server`|
 |Service name|`dweng`|
 |Account (without prefix)| `dec0-x`|
-|Account (with namespace prefix)|`<namespace>-dec0-x`|
+|Account (with namespace prefix)|`<prefix>-dec0-x`|
 |Classic account name|`dweng-compute-0-x`|
 
 ## Data pool accounts
@@ -187,7 +187,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`mssql-server`|
 |Service name|`mssql`|
 |Account (without prefix)| `sqd0`|
-|Account (with namespace prefix)|`<namespace>-sqd0`|
+|Account (with namespace prefix)|`<prefix>-sqd0`|
 |Classic account name|`mssql-data-0`|
 
 ## Storage pool accounts
@@ -201,7 +201,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`mssql-server`|
 |Service name|`mssql`|
 |Account (without prefix)| `sqs0`|
-|Account (with namespace prefix)|`<namespace>-sqs0`|
+|Account (with namespace prefix)|`<prefix>-sqs0`|
 |Classic account name|`mssql-storage-0`|
 
 ### Storage pool Yarn node manager service user
@@ -213,7 +213,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop`|
 |Service name|`Yarn Node Manager`|
 |Account (without prefix)| `ynt0-x`|
-|Account (with namespace prefix)|`<namespace>-ynt0-x`|
+|Account (with namespace prefix)|`<prefix>-ynt0-x`|
 |Classic account name|`yarnnm-storage-0-x`|
 
 ### Storage pool HTTP service user
@@ -225,7 +225,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop`|
 |Service name|`HDFS Datanode`|
 |Account (without prefix)| `hdt0`|
-|Account (with namespace prefix)|`<namespace>-hdt0`|
+|Account (with namespace prefix)|`<prefix>-hdt0`|
 |Classic account name|`http-storage-0`|
 
 ### Storage pool HDFS datanode service user
@@ -237,7 +237,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop`|
 |Service name|`HDFS Datanode`|
 |Account (without prefix)| `hdt0`|
-|Account (with namespace prefix)|`<namespace>-hdt0`|
+|Account (with namespace prefix)|`<prefix>-hdt0`|
 |Classic account name|`hdfsdn-storage-0`|
 
 ## HDFS accounts
@@ -251,7 +251,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop`|
 |Service name|`HDFS Namenode`|
 |Account (without prefix)| `hdnn`|
-|Account (with namespace prefix)|`<namespace>-hdnn`|
+|Account (with namespace prefix)|`<prefix>-hdnn`|
 |Classic account name|`hdfsnn-nmnode`|
 
 ### HDFS Name node HTTP service user
@@ -263,7 +263,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop`|
 |Service name|`HDFS Namenode`|
 |Account (without prefix)| `htnn`|
-|Account (with namespace prefix)|`<namespace>-htnn`|
+|Account (with namespace prefix)|`<prefix>-htnn`|
 |Classic account name|`http-nmnode`|
 
 ## KMS accounts
@@ -277,10 +277,10 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop`|
 |Service name|`KMS`|
 |Account (without prefix)| `kmnn-x`|
-|Account (with namespace prefix)|`<namespace>-kmnn-x`|
+|Account (with namespace prefix)|`<prefix>-kmnn-x`|
 |Classic account name|`kms-nmnode-x`|
 
-## Zookeper accounts
+## Zookeeper accounts
 
 ### Zookeeper JournalNode service users
 
@@ -291,7 +291,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`zookeeper`|
 |Service name|`Journal node`|
 |Account (without prefix)| `jnzk-x`|
-|Account (with namespace prefix)|`<namespace>-jnzk-x`|
+|Account (with namespace prefix)|`<prefix>-jnzk-x`|
 |Classic account name|`jn-zookeeper-x`|
 
 ### Zookeeper HTTP service user
@@ -303,7 +303,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`zookeeper`|
 |Service name|`Zookeeper`|
 |Account (without prefix)| `htzk`|
-|Account (with namespace prefix)|`<namespace>-htzk`|
+|Account (with namespace prefix)|`<prefix>-htzk`|
 |Classic account name|`http-zookeeper`|
 
 ## Spark related accounts
@@ -317,7 +317,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop-yarn-jobhistory`|
 |Service name|`Yarn Resource Manager`|
 |Account (without prefix)| `yrsh-x`|
-|Account (with namespace prefix)|`<namespace>-yrsh-x`|
+|Account (with namespace prefix)|`<prefix>-yrsh-x`|
 |Classic account name|`yarnrm-sparkhead-x`|
 
 ### Sparkhead HTTP user
@@ -329,7 +329,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`*`|
 |Service name|`*`|
 |Account (without prefix)| `htsh`|
-|Account (with namespace prefix)|`<namespace>-htsh`|
+|Account (with namespace prefix)|`<prefix>-htsh`|
 |Classic account name|`http-sparkhead`|
 
 ### Sparkhead Spark history service user
@@ -341,7 +341,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop-livy-sparkhistory`|
 |Service name|`Spark History Server`|
 |Account (without prefix)| `shsh-x`|
-|Account (with namespace prefix)|`<namespace>-shsh-x`|
+|Account (with namespace prefix)|`<prefix>-shsh-x`|
 |Classic account name|`sph-sparkhead-x`|
 
 ### Sparkhead Livy service user
@@ -353,7 +353,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop-livy-sparkhistory`|
 |Service name|`Livy`|
 |Account (without prefix)| `lvsh-x`|
-|Account (with namespace prefix)|`<namespace>-lvsh-x`|
+|Account (with namespace prefix)|`<prefix>-lvsh-x`|
 |Classic account name|`livy-sparkhead-x`|
 
 ### Sparkhead Hive service user
@@ -365,7 +365,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop-hivemetastore`|
 |Service name|`Hive Metastore`|
 |Account (without prefix)| `hvsh-x`|
-|Account (with namespace prefix)|`<namespace>-hvsh-x`|
+|Account (with namespace prefix)|`<prefix>-hvsh-x`|
 |Classic account name|`hive-sparkhead-x`|
 
 ### Spark pool Yarn node manager service user
@@ -377,7 +377,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop`|
 |Service name|`Yarn Node Manager`|
 |Account (without prefix)| `yns0-x`|
-|Account (with namespace prefix)|`<namespace>-yns0-x`|
+|Account (with namespace prefix)|`<prefix>-yns0-x`|
 |Classic account name|`yarnnm-spark-0-x`|
 
 ### Spark pool Yarn node manager HTTP user
@@ -389,7 +389,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`hadoop`|
 |Service name|`Yarn Node Manager`|
 |Account (without prefix)| `hts0`|
-|Account (with namespace prefix)|`<namespace>-hts0`|
+|Account (with namespace prefix)|`<prefix>-hts0`|
 |Classic account name|`http-spark-0`|
 
 ## Knox accounts
@@ -403,7 +403,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`knox`|
 |Service name|`Knox`|
 |Account (without prefix)| `knox-x`|
-|Account (with namespace prefix)|`<namespace>-knox-x`|
+|Account (with namespace prefix)|`<prefix>-knox-x`|
 |Classic account name|`knox-gateway-x`|
 
 ### Knox Gateway HTTP user
@@ -415,7 +415,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`knox`|
 |Service name|`Knox`|
 |Account (without prefix)| `htgw`|
-|Account (with namespace prefix)|`<namespace>-htgw`|
+|Account (with namespace prefix)|`<prefix>-htgw`|
 |Classic account name|`http-gateway`|
 
 ## App accounts
@@ -429,7 +429,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Container name|`App Service Proxy`|
 |Service name|`nginx`|
 |Account (without prefix)| `apst`|
-|Account (with namespace prefix)|`<namespace>-apst`|
+|Account (with namespace prefix)|`<prefix>-apst`|
 |Classic account name|`app-setup`|
 
 ## Groups
@@ -445,7 +445,7 @@ The following groups are created in the OU provided by the user. The members of 
 |Container name|`mssql-server`|
 |Service name|`dwdms`|
 |Group (without prefix)| `dmsvc`|
-|Account (with namespace prefix)|`<namespace>-dmsvc`|
+|Account (with namespace prefix)|`<prefix>-dmsvc`|
 |Classic account name|`dwdms-service`|
 
 ### Data Warehouse Engine Service group
@@ -457,7 +457,7 @@ The following groups are created in the OU provided by the user. The members of 
 |Container name|`mssql-server`|
 |Service name|`dweng`|
 |Group (without prefix)| `desvc`|
-|Account (with namespace prefix)|`<namespace>-desvc`|
+|Account (with namespace prefix)|`<prefix>-desvc`|
 |Classic account name|`desvc`|
 
 ## Next steps

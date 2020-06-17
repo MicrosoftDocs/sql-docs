@@ -35,6 +35,10 @@
       href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
     - name: Download Microsoft SqlClient Data Provider for SQL Server
       href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+    - name: "Enable event tracing in SqlClient"
+      href: ../connect/ado-net/enabling-eventsource-tracing.md
+    - name: "AppContext switches in SqlClient"
+      href: ../connect/ado-net/appcontext-switches.md
     - name: SqlClient Driver support lifecycle
       href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
     - name: Finding additional SqlClient Driver information
@@ -42,10 +46,6 @@
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/sql/index.md
     items:
-    - name: "Enable event tracing in SqlClient"
-      href: ../connect/ado-net/sql/enabling-eventsource-tracing.md
-    - name: "AppContext switches in SqlClient"
-      href: ../connect/ado-net/sql/appcontext-switches.md
     - name: SQL Server security
       href: ../connect/ado-net/sql/sql-server-security.md
       items:
@@ -5529,7 +5529,7 @@
         href: ../connect/php/how-to-connect-on-a-specified-port.md
       - name: Connection Pooling
         href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-      - name: "How to: Disable Multiple Active Resultsets (MARS)"
+      - name: "How to: Disable Multiple Active Result Sets (MARS)"
         href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
       - name: Connection Options
         href: ../connect/php/connection-options.md
@@ -6002,8 +6002,8 @@
         href: ../ado/guide/data/handling-errors-in-vbscript.md
       - name: Handling Errors in Visual C++
         href: ../ado/guide/data/handling-errors-in-visual-c.md
-      - name: Handline Errors in Visual J++
-        href: ../ado/guide/data/handline-errors-in-visual-j.md
+      - name: Handling Errors in Visual J++
+        href: ../ado/guide/data/handling-errors-in-visual-j.md
       - name: Handling Errors in JScript
         href: ../ado/guide/data/handling-errors-in-jscript.md
     - name: Anticipating Errors
@@ -6118,7 +6118,7 @@
       href: ../ado/guide/data/streams-and-persistence.md
     - name: Command Streams
       href: ../ado/guide/data/command-streams.md
-    - name: Retrieving Resultsets into Streams
+    - name: Retrieving Result Sets into Streams
       href: ../ado/guide/data/retrieving-resultsets-into-streams.md
     - name: Using ADO for Internet Publishing
       href: ../ado/guide/data/using-ado-for-internet-publishing.md

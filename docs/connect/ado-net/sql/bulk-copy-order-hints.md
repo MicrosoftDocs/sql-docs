@@ -18,7 +18,7 @@ ms.reviewer:
 
 Bulk copy operations offer significant performance advantages over other methods for loading data into a SQL Server table. Performance can be further enhanced by using order hints. Specifying order hints for your bulk copy operations can lower the insertion time of sorted data into tables with clustered indexes.
 
-By default, the bulk insert operation assumes the incoming data is unordered. SQL Server forces an intermediate sort of this data before bulk loading it. If you know that your incoming data is already sorted, you can use order hints to tell the bulk copy operation about the sort order of any destination columns that are part of a clustered index.
+By default, the bulk insert operation assumes the incoming data is unordered. SQL Server forces an intermediate sort of this data before bulk loading it. If you know your incoming data is already sorted, you can use order hints to tell the bulk copy operation about the sort order of any destination columns that are part of a clustered index.
   
 ## Adding order hints to a bulk copy operation  
 The following example bulk copies data from a source table in the **AdventureWorks** sample database to a destination table in the same database. 

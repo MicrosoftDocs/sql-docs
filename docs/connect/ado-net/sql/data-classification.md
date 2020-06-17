@@ -1,6 +1,6 @@
 ---
 title: "Data Discovery and Classification in SqlClient"
-description: "Describes how to check if a SQL Server database supports data classification and how to retrieve the data classification information from a table through a SqlDataReader object."
+description: "Describes how to check if a SQL Server database supports data classification and how to access data classification information through a SqlDataReader object."
 ms.date: "06/15/2020"
 dev_langs: 
   - "csharp"
@@ -16,7 +16,7 @@ ms.reviewer:
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-[Data Discovery & Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) is a set of advanced services for discovering, classifying, labeling & reporting the sensitive data in your databases. SqlClient provides an API exposing read-only Data Discovery and Classification information about objects retrieved via SqlDataReader when the underlying source supports the feature.
+[Data Discovery & Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) is a set of advanced services for discovering, classifying, labeling & reporting the sensitive data in your databases. SqlClient provides an API exposing read-only Data Discovery and Classification information when the underlying source supports the feature. This information is accessed through SqlDataReader.
 
 This sample application demonstrates how to access the Data Classification properties of SqlDataReader.
 

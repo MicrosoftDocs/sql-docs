@@ -18,7 +18,8 @@ ms.reviewer:
 
 The AppContext class allows SqlClient to provide new functionality while continuing to support callers who depend on the previous behavior. Users can opt out of a change in behavior by setting specific AppContext switches.
 
-SqlClient currently supports two AppContext switches.
+## .NET Core and .NET Standard
+SqlClient supports the following AppContext switches on .NET Core and .NET Standard.
 
 ## Enabling decimal truncation behavior
 
@@ -41,6 +42,9 @@ This switch will toggle the driver's behavior to use a managed networking implem
 > [!NOTE]
 > There are some known differences when compared to the native implementation. For example, the managed implementation does not support non-domain Windows Authentication.
 
+## .NET Framework
+SqlClient supports the following AppContext switches on .NET Framework.
+
 ## Disabling Transparent Network IP Resolution
 
 Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. TNIR interacts with MultiSubnetFailover to provide the following three connection sequences:<br />
@@ -61,17 +65,12 @@ TransparentNetworkIPResolution is enabled by default. MultiSubnetFailover is dis
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString", true);
 ```
 
-See the documentation for [SqlConnection.ConnectionString Property](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) for more information about setting these properties.
-
-## Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking
-
+For more information about setting these properties, see the documentation for [SqlConnection.ConnectionString Property](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). 
 
 ## Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin
 
+## Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking
 
-## External resources  
-For more information, see the following resources.  
-  
-|Resource|Description|  
-|--------------|-----------------|  
-|[AppContext Class](https://docs.microsoft.com/dotnet/api/system.appcontext?view=netcore-3.1)|Provides members for setting and retrieving data about an application's context.| 
+## See also
+
+[AppContext Class](https://docs.microsoft.com/dotnet/api/system.appcontext?view=netcore-3.1)

@@ -23,6 +23,8 @@ The pod suffix (-x) is used to denote a variable pod ID below. The account names
 
 The classic account name applies to deployments using versions before 2019 CU5 as well as deployments done with "useSubdomain" option set to false in security configuration.
 
+Account name prefix is determined by the namespace for the cluster. In the table below `bdc` represents the namespace.
+
 |Scale Set Name|Pod Name|Container Name|Service Name|Account Name (Without prefix)|Account Name (with prefix=`bdc`)|Classic Account Name|Description|
 |---|---|---|---|---|---|---|---|
 |`control`|`control-x`|`controller`|`controller`|`ctrl`|`bdc-ctrl`|`cntrl-controller`|Controller Service account|
@@ -58,6 +60,8 @@ The classic account name applies to deployments using versions before 2019 CU5 a
 ## Groups
 
 The following groups are created in the OU provided by the user. The members of the groups are the users created above for the corresponding services.
+
+Group name prefix is determined by the namespace for the cluster. In the table below `bdc` represents the namespace.
 
 |Scale Set Name|Pod Name|Container Name|Service Name|Group Name (Without prefix)|Group Name (with prefix=`bdc`)|Classic Group Name|Description|
 |---|---|---|---|---|---|---|---|

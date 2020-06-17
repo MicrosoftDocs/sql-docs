@@ -306,6 +306,8 @@
         href: big-data-cluster/non-root-containers.md
       - name: Multiple BDCs in the same AD domain
         href: big-data-cluster/active-directory-deployment-background.md
+      - name: AD objects
+        href: big-data-cluster/active-directory-objects.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SMO Connection Manager Editor
   Use the **SMO Connection Manager Editor** to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connection for use by the various tasks that transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  

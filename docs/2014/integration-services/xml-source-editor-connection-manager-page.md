@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # XML Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **XML Source Editor** to specify an XML file and the XSD that transforms the XML data.  

@@ -1,5 +1,6 @@
 ---
 title: "Components"
+description: Learn about components of the SQL Server Native Client such as sqlncli11.dll, sqlnclir11.rll, sqlncli.h, and sqlncli11.lib.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

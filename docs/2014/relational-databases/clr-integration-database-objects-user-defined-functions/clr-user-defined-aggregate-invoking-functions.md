@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Invoking CLR User-Defined Aggregate Functions
   In [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statements, you can invoke common language runtime (CLR) user-defined aggregates, subject to all the rules that apply to system aggregate functions.  

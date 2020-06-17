@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Access FileTables with Transact-SQL
   Describes how [!INCLUDE[tsql](../../includes/tsql-md.md)] data manipulation language (DML) commands work with FileTables.  

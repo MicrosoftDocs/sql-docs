@@ -1,8 +1,8 @@
 ---
 title: Manage availability group failover - SQL Server on Linux
 description: "This article describes types of failover: automatic, planned manual failover, and forced manual failover. Automatic and planned manual preserve all your data."
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual

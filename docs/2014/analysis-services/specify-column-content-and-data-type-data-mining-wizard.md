@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Column Content and Data Type (Data Mining Wizard)
   Use the **Specify Column Content and Data Type** page to specify the usage and data type for each column that you selected on the previous page of the wizard. If you want to ignore the column, click **Back** to return to the page **Specify the Training Data**, and clear all checkboxes.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Partitions to Modify (Usage-Based Optimization Wizard)
   Use the **Select Partitions to Modify** page to select the partitions for which you want to design aggregations.  

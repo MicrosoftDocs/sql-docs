@@ -1,5 +1,6 @@
 ---
 title: "Process Return Codes and Output Parameters (ODBC) | Microsoft Docs"
+description: Learn about SQLSTATE, which provides detailed information about the cause of a warning or error in the SQL Server Native Client ODBC driver.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

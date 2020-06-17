@@ -1,6 +1,6 @@
 ---
 title: "Set the PAGE_VERIFY Database Option to CHECKSUM | Microsoft Docs"
-description: Checks whether PAGE_VERIFY option is CHECKSUM, which controls whether the SQL Server Database Engine calculates a checksum to help provide data-file integrity.
+description: Check whether PAGE_VERIFY option is CHECKSUM, which controls whether the SQL Server Database Engine calculates a checksum to help provide data-file integrity.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

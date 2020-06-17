@@ -99,11 +99,11 @@ Provides templates for building relational databases for the RDBMS and Azure SQL
 > [!Note]
 > **SSDT for Visual Studio 2010** is no longer available. Newer versions of SSDT run side-by-side with existing Visual Studio 2010 installations. It's not necessary to have SSDT match the full-product version of Visual Studio on your computer.
 
-### SQL BI: Analysis Services, Reporting Services, Integration services
+## SQL BI: Analysis Services, Reporting Services, Integration services
 
 BI templates are used to create SSAS models, SSRS reports, and SSIS packages. BI Designers are tied to specific releases of SQL Server. To use the newer BI features, install a newer versioned BI designer.
 
-### BI Designers
+## BI Designers
 
 [Download SSDT-BI for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313) (SQL Server 2014, SQL Server 2012, SQL Server 2008, and 2008 R2)
 

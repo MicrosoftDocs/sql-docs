@@ -1,5 +1,5 @@
 ---
-title: Previous releases of SSDT
+title: Previous releases of SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -20,7 +20,7 @@ SQL Server Data Tools (SSDT) provides project templates and design surfaces for 
 
 SSDT is backwards compatible, so you can always use [the newest SSDT](download-sql-server-data-tools-ssdt.md) to design and deploy databases, models, reports, and packages that run on older versions of SQL Server.
 
-Historically, the Visual Studio shell used to create SQL Server content types has been released under various names, including **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, and **Business Intelligence Development Studio**. Previous versions came with distinct sets of project templates. To get all of the project templates together in one SSDT, you need [the newest version](download-sql-server-data-tools-ssdt.md). Otherwise, you probably need to install multiple previous versions to get all of the templates used in SQL Server.  Only one shell is installed per version of Visual Studio; installing a second SSDT just adds the missing templates.
+Historically, the Visual Studio shell used to create SQL Server content types has been released under various names, including **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, and **Business Intelligence Development Studio**. Previous versions came with distinct sets of project templates. To get all of the project templates together in one SSDT, you need [the newest version](download-sql-server-data-tools-ssdt.md). Otherwise, you probably need to install multiple previous versions to get all of the templates used in SQL Server. Only one shell is installed per version of Visual Studio; installing a second SSDT just adds the missing templates.
 
 ## Previous SSDT releases
 

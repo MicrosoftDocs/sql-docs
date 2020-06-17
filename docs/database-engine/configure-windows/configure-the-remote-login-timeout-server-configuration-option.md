@@ -1,5 +1,6 @@
 ---
 title: "Configure the remote login timeout Server Configuration Option | Microsoft Docs"
+description: Learn about the remote login timeout option. See how it limits the number of seconds that SQL Server allots for connecting to a remote server.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

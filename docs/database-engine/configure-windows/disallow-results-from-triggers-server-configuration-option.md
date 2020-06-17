@@ -1,5 +1,6 @@
 ---
 title: "disallow results from triggers Server Configuration Option | Microsoft Docs"
+description: "Learn about the disallow results from triggers option. See how it can prevent problems in applications that aren't designed to work with result sets."
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

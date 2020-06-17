@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Server Properties (Misc Server Settings Page)
   Use this page to view or modify your server settings.  

@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Understanding the Tabular Object Model
   A tabular model is a logical representation of tables, relationships, hierarchies, perspectives, measures, and Key Performance. This section introduces the internal implementation using AMO. See [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) if you haven't used AMO before.  

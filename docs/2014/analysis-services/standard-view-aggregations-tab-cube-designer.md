@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Standard View (Aggregations Tab, Cube Designer)
   Use the **Standard View** of the aggregation designer to view aggregations. You can also create and modify aggregation designs in this view by using the **Aggregation Design Wizard** or the **Usage Based Optimization Wizard**.  

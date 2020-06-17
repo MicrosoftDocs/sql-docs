@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Viewing Data Mining Models in Visio (Data Mining Add-ins)
   The Visio shapes for data mining let you connect to a server and create a diagram representing an existing data mining model. The diagrams can then be customized using Visio controls, but you can also drill down into data, expose some of the underlying statistics, and work with the underlying model.  

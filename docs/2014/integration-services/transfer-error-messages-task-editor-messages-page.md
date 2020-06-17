@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transfer Error Messages Task Editor (Messages Page)
   Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Load Data by Using the OLE DB Destination
   To add and configure an OLE DB destination, the package must already include at least one Data Flow task and a source.  

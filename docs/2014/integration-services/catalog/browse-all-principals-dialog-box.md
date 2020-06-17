@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Browse All Principals Dialog Box
   Use the **Browse All Principals** dialog box to select a database principal to change the principal's permissions on the selected project or on all projects contained in a selected folder.  

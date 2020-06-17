@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Example: Offline Restore of Primary and One Other Filegroup (Full Recovery Model)
   This topic is relevant only for databases under the full recovery model that contain multiple filegroups.  

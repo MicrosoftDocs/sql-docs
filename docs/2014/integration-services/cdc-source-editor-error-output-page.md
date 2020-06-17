@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # CDC Source Editor (Error Output Page)
   Use the **Error Output** page of the **CDC Source Editor** dialog box to select error handling options.  

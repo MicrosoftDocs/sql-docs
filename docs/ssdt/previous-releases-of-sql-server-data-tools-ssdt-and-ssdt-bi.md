@@ -106,7 +106,7 @@ To install this version of SSDT, you must download an ISO image. The ISO file is
 
 Steps to install:
 
-1. **[Download SSDT for Visual Studio 2012 (11.1.20905)](https://go.microsoft.com/fwlink/?linkid=518814)**
+1. **[Download SSDT for Visual Studio 2012 (11.1.50727.1)](https://go.microsoft.com/fwlink/?linkid=518814)**
 
 2. Open the ISO image.
 

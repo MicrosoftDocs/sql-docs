@@ -1,6 +1,6 @@
 ---
 title: "in-doubt xact resolution Server Configuration Option | Microsoft Docs"
-description: Become familiar with the in-doubt xact resolution option. See how it determines the default outcome for in-doubt transactions in SQL Server.
+description: 'Become familiar with the "in-doubt xact resolution" option. See how it determines the default outcome for in-doubt transactions in SQL Server.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

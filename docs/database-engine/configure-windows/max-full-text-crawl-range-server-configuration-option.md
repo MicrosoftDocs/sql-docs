@@ -1,6 +1,6 @@
 ---
 title: "max full-text crawl range Server Configuration Option | Microsoft Docs"
-description: Find out about the max full-text crawl range option. See how it optimizes SQL Server CPU utilization to improve crawl performance during a full crawl.
+description: 'Find out about the "max full-text crawl range" option. See how it optimizes SQL Server CPU utilization to improve crawl performance during a full crawl.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

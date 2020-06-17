@@ -1,6 +1,6 @@
 ---
 title: "lightweight pooling Server Configuration Option | Microsoft Docs"
-description: Learn about the lightweight pooling option. See how it can provide better throughput in symmetric multiprocessing environments with excessive context switching.
+description: 'Learn about the "lightweight pooling" option. See how it can provide better throughput in symmetric multiprocessing environments with excessive context switching.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

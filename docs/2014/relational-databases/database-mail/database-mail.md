@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Mail
   Database Mail is an enterprise solution for sending e-mail messages from the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Using Database Mail, your database applications can send e-mail messages to users. The messages can contain query results, and can also include files from any resource on your network.  

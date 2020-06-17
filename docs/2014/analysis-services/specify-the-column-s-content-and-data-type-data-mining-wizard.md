@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify the Column&#39;s Content and Data Type (Data Mining Wizard)
   Use the **Specify the Column's Content and Data Type** page to modify the column and content types that have already been set by the wizard. The wizard uses the data types of the source columns and the capabilities of the selected algorithm to determine the default data and content types for each column.  

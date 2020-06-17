@@ -1,5 +1,6 @@
 ---
 title: "Modify a Resource Health Policy Definition (SQL Server Utility) | Microsoft Docs"
+description: Learn how to use SQL Server Management Studio to modify a resource health policy definition so that you can better evaluate SQL Server performance data.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create and Manage Tabular Model Partitions (SSAS Tabular)
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions defined for a model during model authoring are duplicated in a deployed model. Once deployed, you can manage those partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or by using a script. Tasks provided in this topic describe how to create and manage partitions for a deployed model.  

@@ -1,5 +1,6 @@
 ---
 title: "Move a UCP from One Instance of SQL Server to Another (SQL Server Utility) | Microsoft Docs"
+description: Learn how to use SQL Server Management Studio to move a utility control point (UCP) from one instance of SQL Server to another.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

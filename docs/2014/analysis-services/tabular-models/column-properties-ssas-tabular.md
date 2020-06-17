@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Column Properties (SSAS Tabular)
   This topic describes tabular model column properties.  

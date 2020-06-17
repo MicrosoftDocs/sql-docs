@@ -26,17 +26,18 @@ Historically, the Visual Studio shell used to create SQL Server content types ha
 
 Download previous SSDT versions by selecting the download link in the related section.
 
-| SSDT version     | Visual Studio version |
-|-------------------------------------------|-----------------------|
-| [15.8](#ssdt-for-visual-studio-vs-2017)   | 2017 |
+| SSDT version | Visual Studio version |
+|--------------|-----------------------|
+| [15.8](#ssdt-for-visual-studio-vs-2017) | 2017 |
 | [17.4](#ssdt-for-visual-studio-vs-2015) | 2015 |
 | [16.5](#ssdt-for-visual-studio-vs-2013) | 2013 |
+| [11.1.50727.1](#ssdt-for-visual-studio-vs-2012) | 2012 |
 
 ### SSDT for Visual Studio (VS) 2017
 
 **[Download SSDT for Visual Studio 2017 (15.8)](https://go.microsoft.com/fwlink/?linkid=2124319)**
 
-This release of **SSDT for VS 2017** can be installed in the following languages:
+This **SSDT for Visual Studio 2017** release can be installed in the following languages:
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x40a)
 
@@ -54,7 +55,7 @@ Steps to install:
 
     ![ISO image](media/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi/iso-image.png)
 
-This release of **SSDT for VS 2015** can be installed in the following languages:
+This **SSDT for Visual Studio 2015** release can be installed in the following languages:
 
 | Language | SHA256 Hash |
 |----------|-------------|
@@ -84,7 +85,7 @@ Steps to install:
 
     ![ISO image](media/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi/iso-image.png)
 
-This release of **SSDT for VS 2013** can be installed in the following languages:
+This **SSDT for Visual Studio 2013** release can be installed in the following languages:
 
 | Language | SHA256 Hash |
 |----------|-------------|
@@ -114,7 +115,7 @@ Steps to install:
 
     ![ISO image](media/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi/iso-image.png)
 
-This release of **SSDT for VS 2012** can be installed in the following languages:
+This **SSDT for Visual Studio 2012** release can be installed in the following languages:
 
 | Language | SHA256 Hash |
 |----------|-------------|
@@ -130,10 +131,8 @@ This release of **SSDT for VS 2012** can be installed in the following languages
 | [Russian](https://go.microsoft.com/fwlink/?linkid=518814&clcid=0x419) | E2191D787BA833DF4A85B064C5373DC44099E76214FBF9505728702D4D6B83F0 |
 | [Spanish](https://go.microsoft.com/fwlink/?linkid=518814&clcid=0x40a) | 6D81FB572A7003C54C29D2ACF076D2CED4A1CA80F329BFF9D41A806920D64EEE |
 
-SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT for VS 2015 is no longer being updated. For more information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
-
 > [!Note]
-> SSDT for Visual Studio 2010 is no longer available. Newer versions of SSDT run side-by-side with existing Visual Studio 2010 installations. It's not necessary to have SSDT match the full-product version of Visual Studio on your computer.
+> SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT versions for Visual Studio 2015 and earlier are no longer updated. SSDT for Visual Studio 2010 is no longer available. For more information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
 ## SQL BI: Analysis Services, Reporting Services, Integration services
 

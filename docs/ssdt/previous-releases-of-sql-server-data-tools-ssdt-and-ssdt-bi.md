@@ -21,7 +21,7 @@ SSDT is backwards compatible, so you can always use [the newest SSDT](download-s
 
 Historically, the Visual Studio shell used to create SQL Server content types has been released under various names, including **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, and **Business Intelligence Development Studio**. Previous versions came with distinct sets of project templates. To get all of the project templates together in one SSDT, you need [the newest version](download-sql-server-data-tools-ssdt.md). Otherwise, you will probably need to install multiple previous versions to get all of the templates used in SQL Server.  Only one shell is installed per version of Visual Studio; installing a second SSDT just adds the missing templates.
 
-## Previous downloads
+## Previous version downloads
 
 You can only download previous versions of SSDT to install or set up as an ISO image. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive.
 

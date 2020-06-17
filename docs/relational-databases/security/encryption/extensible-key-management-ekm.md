@@ -84,7 +84,7 @@ GO
 #### EKM Device-Specific Basic Authentication Using username/password  
  For those EKM modules that support Basic authentication using a *username/password* pair, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides transparent authentication using credentials. For more information about credentials, see [Credentials &#40;Database Engine&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- A credential can be created for an EKM provider and mapped to a login (both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] accounts) to access an EKM module on per-login basis. The *Identify* field of the credential contains the username; the *secret* field contains a password to connect to an EKM module.  
+ A credential can be created for an EKM provider and mapped to a login (both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] accounts) to access an EKM module on per-login basis. The *identity* field of the credential contains the username; the *secret* field contains a password to connect to an EKM module.  
   
  If there is no login mapped credential for the EKM provider, the credential mapped to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account is used.  
   

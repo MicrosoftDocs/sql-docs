@@ -14,7 +14,7 @@ ms.reviewer:
 ---
 # Enabling event tracing in SqlClient
 
-[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 [Event Tracing for Windows (ETW)](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal) is an efficient kernel-level tracing facility that lets you log driver-defined events for debugging and testing purposes. SqlClient supports capturing ETW events at different informational levels. To begin capturing event traces, client applications should listen for events from SqlClient's EventSource implementation:
 

@@ -6003,7 +6003,7 @@
       - name: Handling Errors in Visual C++
         href: ../ado/guide/data/handling-errors-in-visual-c.md
       - name: Handling Errors in Visual J++
-        href: ../ado/guide/data/handling-errors-in-visual-j.md
+        href: ../ado/guide/data/handline-errors-in-visual-j.md
       - name: Handling Errors in JScript
         href: ../ado/guide/data/handling-errors-in-jscript.md
     - name: Anticipating Errors

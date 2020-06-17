@@ -14,7 +14,7 @@ ms.reviewer:
 ---
 # App Context Switches in Sqlclient
 
-[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 The AppContext class allows SqlClient to provide new functionality while continuing to support callers who depend on the previous behavior. Users can opt out of a change in behavior by setting specific AppContext switches.
 

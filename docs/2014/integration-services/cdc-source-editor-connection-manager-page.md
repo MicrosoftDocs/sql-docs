@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # CDC Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **CDC Source Editor** dialog box to select the ADO.NET connection manager for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database that the CDC source reads change rows from (the CDC database). Once the CDC database is selected you need to select a captured table in the database.  

@@ -99,6 +99,9 @@ When executing parallel requests in [row mode](../../relational-databases/query-
 
 ## Permissions
 If the user has `VIEW SERVER STATE` permission on the server, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session. `VIEW SERVER STATE` cannot be granted in Azure SQL Database so `sys.dm_exec_requests` is always limited to the current connection.
+
+In Always-On scenarios, if the secondary replica is set to **read-intent only**, the connection to the secondary must specify its application intent in connection string parameters by adding `applicationintent=readonly`. Otherwise, the access check for `sys.dm_exec_requests` won't pass for databases in the availability group, even if `VIEW SERVER STATE` permission is present.
+
   
 ## Examples  
   

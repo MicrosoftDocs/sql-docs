@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Browser Service (Database Engine and SSAS)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser program runs as a Windows service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances installed on the computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contributes to the following actions:  

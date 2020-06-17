@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)
   Use this page to specify information about the server instance that is to serve as the witness for the session.  

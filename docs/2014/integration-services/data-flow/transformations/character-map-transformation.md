@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Character Map Transformation
   The Character Map transformation applies string functions, such as conversion from lowercase to uppercase, to character data. This transformation operates only on column data with a string data type.  

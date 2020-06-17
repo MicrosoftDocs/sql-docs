@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Full-Text Index Properties (Columns Page)
   **To view or change the properties of a full-text index**  

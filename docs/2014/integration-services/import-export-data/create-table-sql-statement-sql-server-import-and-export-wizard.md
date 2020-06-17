@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create Table SQL Statement (SQL Server Import and Export Wizard)
   Use the **Create Table SQL Statement** dialog box to view the statement that was generated automatically, or to modify it for your purposes. If you modify this statement, you may also have to make associated changes to column mapping, and you will have to maintain the edited SQL statement manually thereafter.  

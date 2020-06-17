@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 747a0de0-3c2f-4d31-a692-7111fc0911d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add a Destination using Destination Assistant
   This topic provides steps to add a new destination using the Destination Assistant and also lists the options that are available on the **Add New Destination** dialog, which you will see when you drag-drop the Destination Assistant to the SSIS Designer.  

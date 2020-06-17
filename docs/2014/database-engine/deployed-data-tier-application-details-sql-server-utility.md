@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Deployed Data-tier Application Details (SQL Server Utility)
   Information in the Deployed Data-tier Applications view of Utility Explorer provides utilization data for individual data-tier applications, CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the data-tier application level for CPU utilization and for database data files and log files. You can also view property details for individual data-tier applications.  

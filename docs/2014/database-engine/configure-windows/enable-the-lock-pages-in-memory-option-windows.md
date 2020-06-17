@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Enable the Lock Pages in Memory Option (Windows)
   This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk.  

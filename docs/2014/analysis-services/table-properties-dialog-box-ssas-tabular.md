@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Table Properties Dialog Box (SSAS - Tabular)
   Use the **Table Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to view the properties of a table in a tabular model database. All properties are read-only.  

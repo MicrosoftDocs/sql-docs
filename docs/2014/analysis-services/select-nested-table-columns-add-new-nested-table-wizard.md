@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Nested Table Columns (Add New Nested Table Wizard)
   Use the **Select Nested Table Columns** page to select the attributes and measures to include in the nested table and to define how the mining model will use the attributes and measures.  

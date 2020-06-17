@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Role Switching During a Database Mirroring Session (SQL Server)
   Within the context of a database mirroring session, the principal and mirror roles are typically interchangeable in a process known as *role switching*. In role switching, the mirror server acts as the *failover partner* for the principal server, taking over the principal role, recovering its copy of the database and bringing it online as the new principal database. The former principal server, when available, assumes the mirror role, and its database becomes the new mirror database. Potentially, the roles can switch back and forth either in response to multiple failures or for administrative purposes.  

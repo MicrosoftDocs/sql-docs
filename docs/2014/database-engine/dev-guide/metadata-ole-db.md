@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Metadata (OLE DB)
   This section describes parameter metadata, result set column metadata, and schema rowset metadata.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0da64d58-6e03-45f3-8443-6b94d4158891
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Partitions to Modify (Aggregation Design Wizard)
   Use the **Select Partitions to Modify** page to select the partitions for which you want to design aggregations.  

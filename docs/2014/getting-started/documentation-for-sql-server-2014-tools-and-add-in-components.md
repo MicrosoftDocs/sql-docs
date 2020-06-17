@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Documentation for SQL Server 2014 Tools and Add-in Components
     

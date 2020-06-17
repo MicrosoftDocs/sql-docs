@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Database Engine Backward Compatibility
   Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

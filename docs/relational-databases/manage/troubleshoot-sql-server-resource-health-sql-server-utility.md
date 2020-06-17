@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot SQL Server Resource Health (SQL Server Utility) | Microsoft Docs"
+description: Learn about troubleshooting resource health issues that a SQL Server UCP identifies, such as overutilized CPU, file space, or allocated disk space.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

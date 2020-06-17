@@ -1,5 +1,6 @@
 ---
 title: "Enroll an Instance of SQL Server (SQL Server Utility) | Microsoft Docs"
+description: Start monitoring the performance and configuration of an instance of SQL Server by enrolling it into an existing SQL Server Utility.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

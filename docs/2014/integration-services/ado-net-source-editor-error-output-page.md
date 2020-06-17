@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ADO NET Source Editor (Error Output Page)
   Use the **Error Output** page of the **ADO NET Source Editor** dialog box to select error handling options and to set properties on error output columns.  

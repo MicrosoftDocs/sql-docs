@@ -63,12 +63,12 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Remarks  
- This dynamic management view shows the in-memory configuration. To see the stored configuration metadata, use the sys.resource_governor_workload_groups catalog view.  
+ This dynamic management view shows the in-memory configuration. To see the stored configuration metadata, use the [sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) catalog view.  
   
  When `ALTER RESOURCE GOVERNOR RESET STATISTICS` is successfully executed, the following counters are reset: `statistics_start_time`, `total_request_count`, `total_queued_request_count`, `total_cpu_limit_violation_count`, `total_cpu_usage_ms`, `max_request_cpu_time_ms`, `total_lock_wait_count`, `total_lock_wait_time_ms`, `total_query_optimization_count`, `total_suboptimal_plan_generation_count`, `total_reduced_memgrant_count`, and `max_request_grant_memory_kb`. The counter `statistics_start_time` is set to the current system date and time, and the other counters are set to zero (0).  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission.  
+ Requires `VIEW SERVER STATE` permission.  
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

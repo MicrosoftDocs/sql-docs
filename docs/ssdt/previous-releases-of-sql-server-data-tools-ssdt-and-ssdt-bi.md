@@ -15,37 +15,79 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 SQL Server Data Tools (SSDT) provides project templates and design surfaces for building SQL Server content types - relational databases, Analysis Services models, Reporting Services reports, and Integration Services packages.
-  
+
 SSDT is backwards compatible, so you can always use [the newest SSDT](download-sql-server-data-tools-ssdt.md) to design and deploy databases, models, reports, and packages that run on older versions of SQL Server.
 
 Historically, the Visual Studio shell used to create SQL Server content types has been released under various names, including **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, and **Business Intelligence Development Studio**. Previous versions came with distinct sets of project templates. To get all of the project templates together in one SSDT, you need [the newest version](download-sql-server-data-tools-ssdt.md). Otherwise, you probably need to install multiple previous versions to get all of the templates used in SQL Server.  Only one shell is installed per version of Visual Studio; installing a second SSDT just adds the missing templates.
 
-## Previous version downloads
+## Previous SSDT releases
 
-You can download previous versions of SSDT to install or set up as an ISO image. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited, or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive.
+Download previous SSDT versions by selecting the download link in the related section.
+
+| SSDT version                              | Visual Studio version |
+|-------------------------------------------|-----------------------|
+| [15.8](#ssdt-for-visual-studio-vs-2017)   | 2017 |
+| [17.4](#ssdt-for-visual-studio-vs-2015-1) | 2015 |
+| [16.5](#ssdt-for-visual-studio-vs-2013-2) | 2013 |
+
+### SSDT for Visual Studio (VS) 2017
+
+**[Download SSDT for Visual Studio 2017 (15.8)](https://go.microsoft.com/fwlink/?linkid=2124319)**
+
+This release of **SSDT for VS 2017** can be installed in the following languages:
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x40a)
 
 ### SSDT for Visual Studio (VS) 2015
 
-**[Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)**
+To install this version of SSDT, you must download an ISO image. The ISO file is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited, or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive.
+
+Steps to install:
+
+1. **[Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=2132817)**.
+
+2. Open the ISO image.
+
+3. Run the *SSDTSetup.exe* file.
+
+    ![ISO image](media/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi/iso-image.png)
 
 This release of **SSDT for VS 2015** can be installed in the following languages:
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2132817&clcid=0x40a)
+
+#### SHA256 hashes (VS 2015)
+
+????????????????????????????????
 
 ### SSDT for Visual Studio (VS) 2013
 
-**[Download SSDT for Visual Studio 2013 (16.5)](https://go.microsoft.com/fwlink/?linkid=858660)**
+To install this version of SSDT, you must download an ISO image. The ISO file is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited, or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive.
 
-This release of **SSDT for VS 2015** can be installed in the following languages:
+Steps to install:
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)
+1. **[Download SSDT for Visual Studio 2013 (16.5)](https://go.microsoft.com/fwlink/?linkid=832312)**
+
+2. Open the ISO image.
+
+3. Run the *SSDTSetup.exe* file.
+
+    ![ISO image](media/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi/iso-image.png)
+
+This release of **SSDT for VS 2013** can be installed in the following languages:
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=832312&clcid=0x40a)
+
+#### SHA256 hashes (VS 2013)
+
+??????????????????????
+
 
 \* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT for VS2015 is no longer being updated. For more information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
-## Links to Download pages
-
-### SQL Relational: Database Engine
+## SQL Relational: Database Engine
 
 Provides templates for building relational databases for the RDBMS and Azure SQL Database. SSDT is version agnostic with respect to relational database design. You can use either the Visual Studio 2012 or 2013 version with any version of SQL Server Database Engine or Azure SQL Database.
 **Database Designers**

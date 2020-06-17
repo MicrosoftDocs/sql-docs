@@ -7,7 +7,6 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: dzsquared
 ms.author: drskwier
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
@@ -265,7 +264,6 @@ _SSDT for Visual Studio 2017._
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 - Deploying SSIS projects that have packages that contain Script Task/Flat file destination to Azure-SSIS will result in the packages failing to execute in Azure-SSIS.
 
-
 ## 15.8,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; September 5, 2018  
@@ -327,7 +325,6 @@ _SSDT for Visual Studio 2017._
 - Fix an issue that *Resolve References* dialog disappears when attempting to edit a combobox.  
 - Fix an issue that F1 help link of *Hadoop Connection Manager* doesn't work.  
 - Fix an issue that script task code will be lost if it's in a container when targeting SQL Server 2016.  
-
 
 **Installer:**
 
@@ -398,8 +395,8 @@ _SSDT for Visual Studio 2017._
 
 Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the following bug fixes to the installer:
 
-1.	Fix an issue where the installer stops responding on SQL Server Integration Services post install.
-2.	Fix an issue where setup fails with the following error message: "The requested metafile operation is not support (0x800707D3)".
+1. Fix an issue where the installer stops responding on SQL Server Integration Services post install.
+2. Fix an issue where setup fails with the following error message: "The requested metafile operation is not support (0x800707D3)".
 
 In addition to these two bug fixes, the following details for 15.5.0 still apply to 15.5.1
 
@@ -446,7 +443,6 @@ _SSDT for Visual Studio 2015._
 
 **Integration Services (IS)**
 - Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
-
 
 ### Bug fixes
 
@@ -496,7 +492,6 @@ This release provides a standalone web installer for SQL Server Database, Analys
 - Refine some messages of installer based on customer feedback.
 - Fix an issue that installer doesn't support upgrade.
 
-
 ### SSIS
 
 - Fix an issue that Import/Export Wizard cannot list data source when Azure feature pack is installed.
@@ -506,12 +501,10 @@ This release provides a standalone web installer for SQL Server Database, Analys
 - Fix an issue that Flat File Source configure dialog doesn't show correctly when double-click DTSWizard.exe and select Flat File Source.
 - Fix an issue that a package containing Azure Feature Pack task/component can't execute when targeting SQL Server 2017.
 
-
 **Known Issues**
 
 - The installer is not localized.
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-
 
 ## 17.30,&nbsp; SSDT for VS 2015
 
@@ -542,7 +535,7 @@ _SSDT for Visual Studio 2015._
 - New Report Project format does not retain source control binding, and raises an error similar to the  message:
 
    *The project file C:\path is not bound to source control, but the solution contains source control binding information in it.*
- 
+
    To work around this issue, click **Use solution binding**  every time the solution is opened.
 
 - After upgrading your project to the new MSBuild format, save may fail with a message similar to the following:
@@ -615,7 +608,6 @@ _SSDT for Visual Studio 2017._
 
 This preview is the first version of SSDT for Visual Studio 2017. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.3 or later.
 
-
 **Known Issues**
 
 - The installer is not localized.
@@ -631,12 +623,10 @@ _SSDT for Visual Studio 2015._
 
 ### What's New?
 
-
 **AS projects:**
 - Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatibility level tabular models.
 - New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
-
 
 ### Bug Fixes
 
@@ -820,7 +810,6 @@ _Supports up to SQL Server 2016._
 
 **What's New?**
 
-
 ### Connection Improvements
 
 * The new search box in the **Browse** tab helps you filter your Local servers, Network servers, and Azure SQL databases. This is useful if you have a large number of servers or databases appearing in these lists.
@@ -957,7 +946,6 @@ _For SQL Server 2016._
     - While creating Column Master Key or Column Encryption Key, you may experience that the changes are not reflected on SQL Server Object Explorer immediately after clicking Update Database. To work around, refresh the database node in SQL Server Object Explorer.
     - If you try to encrypt a column in a table with data from SQL Server Object Explorer, you may experience a failure. This feature is currently supported only in SSDT database projects and SSMS. Support for SQL Server Object Explorer will be enabled in a later release.
 
-
 **Updates and fixes**
 * **Database tools:**
     - **SSDT:**
@@ -992,7 +980,6 @@ _For SQL Server 2016._
 - **Temporal Tables enhanced support:** Simplified the experience by unlinking temporal tables before alterations and relinking once these have completed. This means that Temporal Tables have parity with other table types (standard, in-memory) in terms of the operations that are supported. 
 - **SqlPackage.exe and installation changes:** Changes to isolate SSDT from SQL Server engine and SSMS updates. For details, see [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
 
- 
 
 **Updates and fixes**
 * **Database tools:**
@@ -1004,8 +991,7 @@ _For SQL Server 2016._
     * Fixed an issue where Export took a long time exporting with large amount of data due to a write to the model.xml file after data phase completed caused contents of the .bacpac file to be rewritten.
     * Fixed an issue where Users were not appearing in the Security folder for Azure SQL DW and APS connections.
 
-
- * **Analysis Services & Reporting Services:**
+* **Analysis Services & Reporting Services:**
     * Fixed a SxS issue with MSOLAP OLEDB provider where only the 32-bit provider was getting installed, impacting 64-bit Excel 2016 connecting to SQL Server 2014 (did not repro with ClickOnce installs from Office365, only MSI Excel install).
     * Fixed an issue for a corner case to be more robust when upgrading AS model with pasted tables from 1103 to 1200 compatibility level that could give error "Relationship uses an invalid column ID".
     * Fixed a SxS issue when SSDT-BI 2013 on same machine, could no longer import data in AS model after uninstalling SSDT 2015 (cartridges shared registry setting).
@@ -1022,8 +1008,7 @@ _For SQL Server 2016._
     * Fixed an Object Reference not set exception when viewing the model.bim project file properties while in code view. 
     * Fixed an issue with pasting data into AS model grid to create pasted table yielded incorrect values on international locales using comma as decimal separator. 
     * Fixed an issue opening 2008 RS project in SSDT and choosing to not upgrade it. 
-    * Fixed issue in 1200 compatibility level models calculated table UI when using default formatting for column type to allow changing the formatting type from the UI. 
-    
+    * Fixed issue in 1200 compatibility level models calculated table UI when using default formatting for column type to allow changing the formatting type from the UI.
 
 ## June 2016,&nbsp; SSDT for VS 2015
 
@@ -1034,10 +1019,9 @@ _For SQL Server 2016._
 SSDT General Availability (GA) is now released. The SSDT GA update for June 2016 adds support for the latest updates of SQL Server 2016 RTM, and various bug fixes. For details, see [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/).
 
 ## Additional Resources
-  
-[Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
-[Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
-[What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx)  
-[What's New in Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
-[What's New in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
-  
+
+- [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
+- [What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx)
+- [What's New in Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
+- [What's New in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)

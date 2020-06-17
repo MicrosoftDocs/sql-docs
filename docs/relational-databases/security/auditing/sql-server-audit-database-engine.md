@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Audit (Database Engine) | Microsoft Docs"
-description: Learn how to create server audits for the SQL Server Database Engine or an individual database. Server audits contain server and database audit specifications.
+description: Learn about server audits for the SQL Server Database Engine or an individual database. Server audits contain server and database audit specifications.
 ms.custom: ""
 ms.date: "01/01/2020"
 ms.prod: sql

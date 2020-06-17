@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Audit Records | Microsoft Docs"
-description: Learn how to audit server-level and database-level events and groups of events by using the SQL Server Audit feature.
+description: SQL Server audits consist of audit action items, which are recorded to an audit target. This article summarizes the records that can be sent to a target.
 ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql

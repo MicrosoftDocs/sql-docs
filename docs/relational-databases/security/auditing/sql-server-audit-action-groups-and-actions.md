@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Audit Action Groups and Actions | Microsoft Docs"
-description: Learn how to audit server-level and database-level groups of events and individual events by using the SQL Server Audit feature.
+description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit. 
 ms.custom: ""
 ms.date: "10/19/2016"
 ms.prod: sql

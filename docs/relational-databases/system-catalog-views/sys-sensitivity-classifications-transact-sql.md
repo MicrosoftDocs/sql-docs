@@ -52,7 +52,7 @@ Returns a row for each classified item in the database.
 
 ### A. Listing all classified columns and their corresponding classification
 
-The following example returns a table listing the table name, column name, label, label ID, information type, information type ID, rank, rank description for each classified column in the database.
+The following example returns a table that lists the table name, column name, label, label ID, information type, information type ID, rank, and rank description for each classified column in the database.
 
 > [!NOTE]
 > Label is a keyword for Azure SQL Data Warehouse.

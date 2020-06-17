@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Continue with Restore
   Use the **Continue with Restore** dialog box to indicate whether you want to restore the next backup set. To delay the restore operation, for example, to swap tapes, wait until you are ready to proceed before you click **OK**.  

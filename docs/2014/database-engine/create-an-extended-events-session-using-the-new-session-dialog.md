@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Create an Extended Events Session Using the New Session Dialog
   The New Session dialog lets you define an Extended Events session that captures, displays, and analyzes your data. The New Session dialog exposes all Extended Events functionality.  

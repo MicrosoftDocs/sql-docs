@@ -219,7 +219,7 @@ After the DBCC CHECKDB command finishes, a message is written to the [!INCLUDE[s
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] records the date and time when a consistency check was run for a database with no errors (or "clean" consistency check). This is known as the `last known clean check`. When a database is first started, this date is written to the EventLog (EventID-17573) and ERRORLOG in the following format: 
 >
->`CHECKDB for database '<database>r' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
 
 ## Error Reporting    

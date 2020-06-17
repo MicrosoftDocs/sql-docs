@@ -130,7 +130,10 @@ This release of **SSDT for VS 2012** can be installed in the following languages
 | [Russian](https://go.microsoft.com/fwlink/?linkid=518814&clcid=0x419) | E2191D787BA833DF4A85B064C5373DC44099E76214FBF9505728702D4D6B83F0 |
 | [Spanish](https://go.microsoft.com/fwlink/?linkid=518814&clcid=0x40a) | 6D81FB572A7003C54C29D2ACF076D2CED4A1CA80F329BFF9D41A806920D64EEE |
 
-\* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT for VS 2015 is no longer being updated. For more information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT for VS 2015 is no longer being updated. For more information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+
+> [!Note]
+> SSDT for Visual Studio 2010 is no longer available. Newer versions of SSDT run side-by-side with existing Visual Studio 2010 installations. It's not necessary to have SSDT match the full-product version of Visual Studio on your computer.
 
 ## SQL BI: Analysis Services, Reporting Services, Integration services
 

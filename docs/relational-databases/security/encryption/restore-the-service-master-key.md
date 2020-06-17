@@ -1,5 +1,6 @@
 ---
 title: "Restore the Service Master Key | Microsoft Docs"
+description: Learn how to restore the service master key in SQL Server by using Transact-SQL, including required permissions.
 ms.custom: ""
 ms.date: "01/02/2019"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Create a Database Master Key | Microsoft Docs"
+description: This article describes how to create a database master key in SQL Server by using Transact-SQL, including the required permission.
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: sql

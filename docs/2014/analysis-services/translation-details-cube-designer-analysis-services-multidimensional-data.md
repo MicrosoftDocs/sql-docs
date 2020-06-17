@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Translation Details (Translations Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Transaction Details** pane on the **Transactions** tab in Cube Designer to define and manage translations for the currently selected cube.  

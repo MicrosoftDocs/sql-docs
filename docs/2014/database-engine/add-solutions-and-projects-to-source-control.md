@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Add Solutions and Projects to Source Control
   When you add a solution to source control, the solution becomes part of a dynamic versioning archive created and maintained by the source control provider. Each time someone checks in a new version of the solution, that version becomes part of the archive and is available to other source control users.  

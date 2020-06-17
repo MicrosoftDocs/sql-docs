@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Set Advanced Properties (SSAS)
   This page of the **Table Import Wizard** enables you to specify additional property settings for a data source connection. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # What&#39;s Included in the Data Mining Add-Ins for Office
   When you install the Data Mining Add-ins for Office 2013, and you select all installation options, the following toolbars and templates will be added:  

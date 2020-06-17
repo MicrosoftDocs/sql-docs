@@ -306,7 +306,7 @@
         href: big-data-cluster/non-root-containers.md
       - name: Multiple BDCs in the same AD domain
         href: big-data-cluster/active-directory-deployment-background.md
-      - name: AD objects
+      - name: Auto-generated AD objects
         href: big-data-cluster/active-directory-objects.md
     - name: Spark jobs
       items:

@@ -392,7 +392,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 |Account (with namespace prefix)|`<namespace>-hts0`|
 |Classic account name|`http-spark-0`|
 
-## Knox Accounts
+## Knox accounts
 
 ### Knox Gateway user
 

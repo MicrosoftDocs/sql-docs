@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # CSDLBI Attributes for Report Design
   This section describes the attributes in the extensions to CSDL for tabular modeling that affect [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] query design.  

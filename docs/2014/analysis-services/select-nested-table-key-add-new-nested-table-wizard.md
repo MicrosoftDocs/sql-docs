@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Nested Table Key (Add New Nested Table Wizard)
   Use the **Select Nested Table Key** page to select the attribute that will be the key for the nested table.  

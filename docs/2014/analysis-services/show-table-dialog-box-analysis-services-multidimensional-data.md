@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Show Table Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Show Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to include tables from the data source view associated with a dimension, cube, or mining structure. You can display this dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by:  

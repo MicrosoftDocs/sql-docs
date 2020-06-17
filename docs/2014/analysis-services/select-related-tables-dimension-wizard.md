@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Related Tables (Dimension Wizard)
   Use the **Select Related Tables** page to include related tables (tables to which the main dimension tables are related in the data source view) in the dimension.  

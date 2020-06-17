@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Dimension Type (Dimension Wizard)
   Use the **Specify Dimension Type** page to define the dimension type and add special attribute types associated with the selected dimension type to the dimension.  

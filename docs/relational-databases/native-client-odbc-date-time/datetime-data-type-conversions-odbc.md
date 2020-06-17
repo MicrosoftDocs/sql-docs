@@ -1,5 +1,6 @@
 ---
 title: "datetime Data Type Conversions (ODBC) | Microsoft Docs"
+description: Learn about data type conversions in ODBC, which are already defined by ODBC or are consistent extensions of ODBC.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # File Restores (Full Recovery Model)
   This topic is relevant only for databases that contain multiple files or filegroups under the full or bulk-load recovery model.  

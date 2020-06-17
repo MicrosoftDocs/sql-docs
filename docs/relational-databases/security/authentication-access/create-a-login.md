@@ -1,6 +1,6 @@
 ---
 title: "Create a Login | Microsoft Docs"
-description: Learn how to create a login in SQL Server or SQL Database by using SQL Server Management Studio or Transact-SQL.
+description: Learn how to create a login in SQL Server or Azure SQL Database by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

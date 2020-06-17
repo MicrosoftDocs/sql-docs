@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Manipulating UDT Data
   [!INCLUDE[tsql](../../includes/tsql-md.md)] provides no specialized syntax for INSERT, UPDATE, or DELETE statements when modifying data in user-defined type (UDT) columns. The [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST or CONVERT functions are used to cast native data types to the UDT type.  

@@ -1,5 +1,6 @@
 ---
 title: "Create a distributed transactions | Microsoft Docs"
+description: Applications can use MSDTC to extend or distribute a transaction across several instances of SQL Server. A .NET class can also distribute a transaction.
 ms.custom: ""
 ms.date: "05/13/2019"
 ms.prod: sql

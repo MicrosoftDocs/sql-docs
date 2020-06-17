@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Save SSIS Package (SQL Server Import and Export Wizard)
   Use the **Save SSIS Package** page to name, describe, and save a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) package to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` database or to a file that has the .dtsx extension.  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Comparing Scripting Solutions and Custom Objects
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Script task or Script component can implement much of the same functionality that is possible in a custom managed task or data flow component. Here are some considerations to help you choose the appropriate type of task for your needs:  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Reverse a Transaction (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], administrators can reverse a transaction when an action needs to be undone. Examples of transactions are attribute value changes, hierarchy moves, or member deletions.  

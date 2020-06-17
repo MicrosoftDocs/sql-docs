@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Web Service Task Editor (Output Page)
   Use the **Output** page of the **Web Service Task Editor** dialog box to specify where to store the result returned by the Web method.  

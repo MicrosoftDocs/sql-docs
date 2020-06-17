@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Assembly Properties (General Page)
   Use this page to view or modify properties for the assembly.  

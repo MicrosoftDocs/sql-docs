@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # &amp;&amp; (Logical AND) (SSIS Expression)
   Performs a logical AND operation. The expression evaluates to TRUE if all conditions are TRUE.  

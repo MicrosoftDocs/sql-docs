@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Import and Export Packages (SSIS Service)
     

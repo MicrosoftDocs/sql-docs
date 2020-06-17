@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Administer Multiple Servers Using Central Management Servers
   You can administer multiple servers by designating Central Management Servers and creating server groups.  

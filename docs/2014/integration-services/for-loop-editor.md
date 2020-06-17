@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # For Loop Editor
   Use the **For Loop** page of the **For Loop Editor** dialog box to configure a loop that repeats a workflow until a specified condition evaluates to false.  

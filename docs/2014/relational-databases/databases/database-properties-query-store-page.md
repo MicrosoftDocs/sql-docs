@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Properties (Query Store Page)
   Access this page from the principal database, and use it to configure and to modify the properties of the database query store. These options can also be configure by using the [ALTER DATABASE SET options](/sql/t-sql/statements/alter-database-transact-sql-set-options). For information about the query store, see [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md).  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Map Query Parameters to Variables in an Execute SQL Task
 

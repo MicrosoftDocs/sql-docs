@@ -37,6 +37,8 @@ This release of **SSDT for VS 2015** can be installed in the following languages
 
 **[Download SSDT for Visual Studio 2013 (16.5)](https://go.microsoft.com/fwlink/?linkid=858660)**
 
+This release of **SSDT for VS 2015** can be installed in the following languages:
+
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)
 
 \* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT for VS2015 is no longer being updated. For additional information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).

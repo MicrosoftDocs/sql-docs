@@ -1,6 +1,6 @@
 ---
 title: "Place Data and Log Files on Separate Drives | Microsoft Docs"
-description: Check whether data and log files are on separate logical drives, which has implications for performance in SQL Server.
+description: Place data and log files on separate logical drives. Separate locations allow activity for each to occur at the same time, improving SQL performance.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

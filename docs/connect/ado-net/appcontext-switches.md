@@ -18,9 +18,6 @@ ms.reviewer:
 
 The AppContext class allows SqlClient to provide new functionality while continuing to support callers who depend on the previous behavior. Users can opt out of a change in behavior by setting specific AppContext switches.
 
-## .NET Core and .NET Standard
-SqlClient supports the following AppContext switches on .NET Core and .NET Standard.
-
 ## Enabling decimal truncation behavior
 
 Starting with Microsoft.Data.SqlClient 2.0, decimal data will be rounded by default, as is done by SQL Server. To enable the previous behavior of truncation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to `true` at application startup:
@@ -28,6 +25,10 @@ Starting with Microsoft.Data.SqlClient 2.0, decimal data will be rounded by defa
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
 ```
+
+## .NET Core and .NET Standard
+
+The following AppContext switches are only supported on .NET Core and .NET Standard.
 
 ## Enabling Managed networking on Windows
 
@@ -43,7 +44,7 @@ This switch will toggle the driver's behavior to use a managed networking implem
 > There are some known differences when compared to the native implementation. For example, the managed implementation does not support non-domain Windows Authentication.
 
 ## .NET Framework
-SqlClient supports the following AppContext switches on .NET Framework.
+The following AppContext switches are only supported on .NET Framework.
 
 ## Disabling Transparent Network IP Resolution
 
@@ -67,9 +68,21 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConn
 
 For more information about setting these properties, see the documentation for [SqlConnection.ConnectionString Property](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). 
 
-## Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin
+## Enable a minimum timeout during login
 
-## Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking
+To prevent a login attempt from hanging indefinitely, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin** to `true` at application startup:
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin", false);
+```
+
+## Disable blocking behavior of ReadAsync
+
+By default, ReadAsync runs synchronously and blocks the calling thread on .NET Framework. To disable this blocking behavior, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking** to `false` at application startup:
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", false);
+```
 
 ## See also
 

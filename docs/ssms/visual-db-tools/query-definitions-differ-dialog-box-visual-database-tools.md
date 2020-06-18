@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---

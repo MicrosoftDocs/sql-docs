@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Database Object Access Event Class
   The **Audit Database Object Access** event class occurs when database objects, such as schemas, are accessed.  

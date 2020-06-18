@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Server Configuration - Service Accounts
   Use the Server Configuration page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to assign login accounts to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services configured on this page depend on the features you have selected to install.  

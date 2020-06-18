@@ -1,5 +1,6 @@
 ---
 title: "Using ADO to Execute SQLXML 4.0 Queries"
+description: Learn how to execute SQLXML 4.0 queries in a COM-based application by using SQLXML extensions to ActiveX Data Objects (ADO).
 ms.custom: ""
 ms.date: 12/15/2019
 ms.prod: sql

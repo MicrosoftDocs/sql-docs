@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # WMI Provider Events and Errors
   This topic contains cause and resolution information for a number of WMI errors related to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

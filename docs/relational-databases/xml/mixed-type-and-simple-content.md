@@ -1,5 +1,6 @@
 ---
 title: "Mixed Type and Simple Content | Microsoft Docs"
+description: View an example showing that SQL Server does not support creating an XML schema that restricts a mixed type to a simple content.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

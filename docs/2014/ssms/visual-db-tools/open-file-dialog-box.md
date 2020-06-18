@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Open File Dialog Box
   Use the **Open File** dialog box to open an existing file from disk. You can also use this dialog box to open an already opened file using different language encoding options.  

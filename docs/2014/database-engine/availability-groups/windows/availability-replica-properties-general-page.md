@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Availability Replica Properties (General Page)
   Use this dialog box to viewthe properties of an availability replica.  

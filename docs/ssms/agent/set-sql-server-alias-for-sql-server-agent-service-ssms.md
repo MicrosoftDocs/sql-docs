@@ -10,7 +10,6 @@ helpviewer_keywords:
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

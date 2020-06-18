@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Columns with a Name
   The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Domain accounts required for SharePoint farm (Upgrade Advisor)
   SharePoint products that are configured for a farm environment require that you use domain accounts.  

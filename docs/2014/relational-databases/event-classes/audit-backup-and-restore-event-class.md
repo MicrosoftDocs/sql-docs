@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Backup and Restore Event Class
   The **Audit Backup/Restore** event class occurs whenever a backup or restore command is issued.  

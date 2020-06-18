@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # View or Modify Jobs
   You can view any job you have created. After you have run a job, you can also view its history. Viewing a job's history allows you to see when the job ran, the status of the job as a whole, and the status of each job step in the job. You can see whether the job ever failed in the past, when the job last completed successfully, and what output the job created each time the job ran. Members of the **sysadmin** fixed server role can view or modify any job, regardless of the owner.  

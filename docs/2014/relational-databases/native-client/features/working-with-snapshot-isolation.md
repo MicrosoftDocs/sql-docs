@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Working with Snapshot Isolation
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new "snapshot" isolation level that is intended to enhance concurrency for online transaction processing (OLTP) applications. In earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], concurrency was based solely on locking, which can cause blocking and deadlocking problems for some applications. Snapshot isolation depends on enhancements to row versioning and is intended to improve performance by avoiding reader-writer blocking scenarios.  

@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Monitor Memory Usage
   Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges.  

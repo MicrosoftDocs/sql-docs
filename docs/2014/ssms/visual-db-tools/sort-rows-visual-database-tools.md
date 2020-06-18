@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Sort Rows (Visual Database Tools)
   You can order the rows in a query result. That is, you can name a particular column or set of columns whose values determine the order of rows in the result set.  

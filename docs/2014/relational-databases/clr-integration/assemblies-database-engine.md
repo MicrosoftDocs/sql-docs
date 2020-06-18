@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Assemblies (Database Engine)
   The topics in this section provide information to help you understand, design, and implement assemblies.  

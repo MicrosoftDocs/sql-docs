@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Domain-Based Attributes (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a domain-based attribute is an attribute with values that are populated by members from another entity. You can think of a domain-based attribute as a constrained list; domain-based attributes prevent users from entering attribute values that are not valid. To select an attribute value, the user must pick from a list.

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Constructing an SQL Statement (ODBC)
   ODBC applications perform almost all of their database access by executing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The form of these statements depends on the application requirements. SQL statements can be constructed in the following ways:  

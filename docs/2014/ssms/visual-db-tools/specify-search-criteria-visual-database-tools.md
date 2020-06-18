@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Specify Search Criteria (Visual Database Tools)
   You can use search criteria to restrict the number of rows returned by a query.  

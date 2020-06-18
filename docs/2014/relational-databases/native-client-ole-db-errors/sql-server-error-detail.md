@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQL Server Error Detail
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider defines the provider-specific error interface [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md). The interface returns more detail about a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error and is valuable when command execution or rowset operations fail.  

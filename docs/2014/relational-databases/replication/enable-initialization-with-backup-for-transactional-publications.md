@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Enable Initialization with a Backup for Transactional Publications (SQL Server Management Studio)
   To initialize a subscription to a transactional publication from a backup, enable the publication to allow initialization from a backup, and then specify backup information when creating the subscription:  

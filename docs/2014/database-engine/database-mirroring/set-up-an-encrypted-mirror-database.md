@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Set Up an Encrypted Mirror Database
 

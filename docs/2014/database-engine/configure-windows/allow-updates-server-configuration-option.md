@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # allow updates Server Configuration Option
   This option is still present in the **sp_configure** stored procedure, although its functionality is unavailable in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The setting has no effect. Direct updates to the system tables are not supported.  

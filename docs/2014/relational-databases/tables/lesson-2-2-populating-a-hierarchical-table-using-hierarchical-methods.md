@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Populating a Hierarchical Table Using Hierarchical Methods
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] has 8 employees working in the Marketing department. The employee hierarchy looks like this:  

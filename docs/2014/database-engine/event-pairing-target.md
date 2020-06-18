@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Event Pairing Target
   The event pairing target matches two events using one or more columns of data that are present in each event. Many events come in pairs, for example, lock acquires and lock releases. After an event sequence is paired, both events are discarded. Discarding matched sets allows for easy detection of lock acquisitions that have not been released.  

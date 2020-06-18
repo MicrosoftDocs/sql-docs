@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ---
 

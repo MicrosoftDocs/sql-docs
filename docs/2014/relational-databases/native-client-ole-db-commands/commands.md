@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Commands
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ICommand** interface and command objects, which are described in this section:  

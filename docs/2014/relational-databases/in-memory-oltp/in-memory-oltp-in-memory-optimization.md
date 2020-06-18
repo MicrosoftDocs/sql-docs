@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # In-Memory OLTP (In-Memory Optimization)
 

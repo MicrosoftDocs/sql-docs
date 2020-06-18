@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # GETUTCDATE (SSIS Expression)
   Returns the current date of the system in UTC time (Universal Time Coordinate or Greenwich Mean Time) using a DT_DBTIMESTAMP format. The GETUTCDATE function takes no arguments.  

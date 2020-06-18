@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Creating a Valid Connection String Using Named Pipes
   Unless changed by the user, when the default instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on the named pipes protocol, it uses `\\.\pipe\sql\query` as the pipe name. The period indicates that the computer is the local computer, `pipe` indicates that the connection is a named pipe, and `sql\query` is the name of the pipe. To connect to the default pipe, the alias must have `\\<computer_name>\pipe\sql\query` as the pipe name. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been configured to listen on a different pipe, the pipe name must use that pipe. For instance, if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using `\\.\pipe\unit\app` as the pipe, the alias must use `\\<computer_name>\pipe\unit\app` as the pipe name.  

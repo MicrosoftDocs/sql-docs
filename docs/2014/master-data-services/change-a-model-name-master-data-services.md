@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change a Model Name (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of a model.  

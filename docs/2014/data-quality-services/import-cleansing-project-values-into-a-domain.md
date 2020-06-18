@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Import Cleansing Project Values into a Domain
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), you can import data quality knowledge gathered during the cleansing process in a data quality cleansing project or an Integration Services package containing the DQS Cleansing component into a domain. This ensures that trusted knowledge is not lost, and that the knowledge base is continually improved.  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ClientSettings Class
   The [ClientSettings Class](clientsettings-class.md) represents the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] settings on the client.  

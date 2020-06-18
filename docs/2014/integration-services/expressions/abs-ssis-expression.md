@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ABS (SSIS Expression)
   Returns the absolute, positive value of a numeric expression.  

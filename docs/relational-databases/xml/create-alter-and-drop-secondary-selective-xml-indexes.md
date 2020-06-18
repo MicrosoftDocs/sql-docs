@@ -1,5 +1,6 @@
 ---
 title: "Create, alter, & drop secondary selective XML index | Microsoft Docs"
+description: Learn how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

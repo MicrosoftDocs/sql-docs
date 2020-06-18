@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Manage Objects by Using Object Explorer
   You can use Object Explorer to manage objects such as databases, tables and stored procedures.  

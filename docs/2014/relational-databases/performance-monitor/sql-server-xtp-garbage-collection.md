@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # XTP Garbage Collection
   The XTP Garbage Collection performance object contains counters related to the XTP engine's garbage collector.  

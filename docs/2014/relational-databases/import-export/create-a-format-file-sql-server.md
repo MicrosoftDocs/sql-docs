@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Create a Format File (SQL Server)
   When you bulk import into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a format file to a flexible system for writing data files that requires little or no editing to comply with other data formats or to read data files from other software programs.  

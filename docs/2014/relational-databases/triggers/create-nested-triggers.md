@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Create Nested Triggers
   Both DML and DDL triggers are nested when a trigger performs an action that initiates another trigger. These actions can initiate other triggers, and so on. DML and DDL triggers can be nested up to 32 levels. You can control whether AFTER triggers can be nested through the **nested triggers** server configuration option. INSTEAD OF triggers (only DML triggers can be INSTEAD OF triggers) can be nested regardless of this setting.  

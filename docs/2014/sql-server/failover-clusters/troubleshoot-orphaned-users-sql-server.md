@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Troubleshoot Orphaned Users (SQL Server)
   To log into an instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a principal must have a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. This login is used in the authentication process that verifies whether the principal is allowed to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins on a server instance are visible in the **sys.server_principals** catalog view and the **sys.syslogins** compatibility view.  

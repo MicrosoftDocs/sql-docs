@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Data Type Usage
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose the following use of data types.  

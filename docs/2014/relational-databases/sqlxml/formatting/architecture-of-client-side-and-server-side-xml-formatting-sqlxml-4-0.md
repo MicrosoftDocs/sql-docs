@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)
   The following illustration shows the architecture of XML formatting on the server side.  

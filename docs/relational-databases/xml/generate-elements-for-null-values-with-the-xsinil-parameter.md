@@ -1,5 +1,6 @@
 ---
 title: "Generate elements for NULL values with XSINIL | Microsoft Docs"
+description: Learn how to generate XML elements for NULL values by using the XSINIL parameter on the ELEMENTS directive.
 ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"

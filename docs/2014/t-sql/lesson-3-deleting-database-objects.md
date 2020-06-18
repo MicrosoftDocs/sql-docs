@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Lesson 3: Deleting Database Objects
   This short lesson removes the objects that you created in Lesson 1 and Lesson 2, and then drops the database.  

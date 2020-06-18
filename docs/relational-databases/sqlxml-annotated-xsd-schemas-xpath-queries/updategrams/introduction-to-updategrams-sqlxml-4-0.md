@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Updategrams (SQLXML)"
+description: Learn about SQLXML 4.0 updategrams that can be used to insert, update, or delete data in a database.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

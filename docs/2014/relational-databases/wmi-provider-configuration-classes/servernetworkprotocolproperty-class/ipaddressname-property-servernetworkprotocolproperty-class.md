@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # IPAddressName Property (ServerNetworkProtocolProperty Class)
   Gets the name of the IP address.  

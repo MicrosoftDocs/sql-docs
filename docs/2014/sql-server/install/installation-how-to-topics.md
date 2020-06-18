@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Installation How-to Topics
   Use the following topics to install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # TSQL Event Category
   The **TSQL** event category contains general TSQL events.  

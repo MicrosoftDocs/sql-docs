@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Tutorial: Replicating Data with Mobile Clients
   Replication is a good solution to the problem of moving data between a central server and mobile clients that are only occasionally connected. Using replication's wizards, you can easily configure and administer a replication topology. This tutorial shows you how to configure a replication topology for mobile clients.  

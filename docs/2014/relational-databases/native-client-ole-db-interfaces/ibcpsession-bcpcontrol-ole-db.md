@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # IBCPSession::BCPControl (OLE DB)
   Sets the options for a bulk-copy operation.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Element for Configuration (DTA)
   Specifies the database against which you want the Database Engine Tuning Advisor to evaluate the hypothetical configuration (specified by the `Configuration` element).  

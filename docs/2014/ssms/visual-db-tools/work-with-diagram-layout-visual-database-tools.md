@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Work with Diagram Layout (Visual Database Tools)
   You can customize the way your database diagrams look.  

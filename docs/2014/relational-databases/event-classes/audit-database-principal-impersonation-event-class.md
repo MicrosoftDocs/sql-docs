@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Database Principal Impersonation Event Class
   The **Audit Database Principal Impersonation** event class occurs when an impersonation occurs within the database scope, such as EXECUTE AS \<*user*> or SETUSER.  

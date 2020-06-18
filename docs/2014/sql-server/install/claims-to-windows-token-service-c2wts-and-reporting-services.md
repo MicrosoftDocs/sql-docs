@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Claims to Windows Token Service (C2WTS) and Reporting Services
   The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode if you want to use windows authentication for Data Sources that are outside the SharePoint farm. This is true even if the user accesses the data sources with Windows Authentication because the communication between the web front-end (WFE) and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service will always be Claims authentication.  

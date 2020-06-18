@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---

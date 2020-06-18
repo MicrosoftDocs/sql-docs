@@ -116,7 +116,7 @@ The shared components that remain installed are:
 - Microsoft Visual C++ 2017 Redistributable (x64)
 - Microsoft Visual Studio Tools for Applications 2017
 
-As such, even after you uninstall SSMS from your machine, you must uninstall these components separately.
+These components aren't uninstall because they can be shared with other products. If uninstalled, you may run the risk of disabling other products.
 
 ## Supported SQL offerings
 

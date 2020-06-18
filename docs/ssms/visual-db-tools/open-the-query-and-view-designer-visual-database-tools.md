@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 ---
 # Open the Query and View Designer (Visual Database Tools)

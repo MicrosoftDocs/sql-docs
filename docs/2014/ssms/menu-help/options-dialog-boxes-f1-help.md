@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Options Dialog Boxes F1 Help
   This section contains the F1 Help for the dialog boxes available by clicking **Options** on the **Tools** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

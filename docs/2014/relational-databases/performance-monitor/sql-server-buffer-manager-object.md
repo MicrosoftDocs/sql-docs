@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server, Buffer Manager Object
   The **Buffer Manager** object provides counters to monitor how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses:  

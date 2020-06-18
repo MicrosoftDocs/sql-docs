@@ -25,7 +25,7 @@ For more information on cluster configuration, resource agent options, managemen
 > [!NOTE]
 > Bias-free communication
 >
-> Microsoft supports a diverse and inclusionary environment. This article contains references to the word _slave_. The Microsoft [style guide for bias-free communication](https://github.com/MicrosoftDocs/microsoft-style-guide/blob/master/styleguide/bias-free-communication.md) recognizes this as an exclusionary word. The word is used in this article for consistency because it's currently the word that appears in the software. When the software is updated to remove the word, this article will be updated to be in alignment.
+> Microsoft supports a diverse and inclusionary environment. This article contains references to the word _slave_. The Microsoft [style guide for bias-free communication](https://github.com/MicrosoftDocs/microsoft-style-guide/blob/master/styleguide/bias-free-communication.md) recognizes this as an exclusionary word. The word is used in this article for consistency because it's currently the word that appears in the Pacemaker open source high availability solution. When the software is updated to remove the word, this article will be updated to be in alignment.
 >
 
 ## Roadmap
@@ -313,8 +313,8 @@ The colocation constraint has an implicit ordering constraint. It moves the virt
 1. User issues resource migrate to the availability group master from node1 to node2.
 2. The virtual IP resource stops on node 1.
 3. The virtual IP resource starts on node 2. At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary. 
-4. The availability group master on node 1 is demoted to slave.
-5. The availability group slave on node 2 is promoted to master. 
+4. The availability group master on node 1 is demoted.
+5. The availability group on node 2 is promoted to master. 
 
 To prevent the IP address from temporarily pointing to the node with the pre-failover secondary, add an ordering constraint. 
 To add an ordering constraint, run the following command on one node: 

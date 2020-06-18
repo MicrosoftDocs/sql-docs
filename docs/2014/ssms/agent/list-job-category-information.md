@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # List Job Category Information
   How to list job category information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  

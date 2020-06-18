@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8f49b1c1-d877-4c46-b988-f8cdd8ac0925
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # FOR BROWSE is not allowed in views in 90 or later compatibility modes
   Upgrade Advisor detected the use of the FOR BROWSE clause in a view. The FOR BROWSE clause is allowed (and ignored) in views when the database compatibility mode is set to 80. The FOR BROWSE clause is not allowed in views when the database compatibility mode is set to 90 or later.  

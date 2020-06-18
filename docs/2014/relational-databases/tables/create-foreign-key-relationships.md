@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create Foreign Key Relationships
   This topic describes how to create foreign key relationships in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You create a relationship between two tables when you want to associate rows of one table with rows of another.  

@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connecting to Data Sources in the Script Task
   Connection managers provide access to data sources that have been configured in the package. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../connection-manager/integration-services-ssis-connections.md).  

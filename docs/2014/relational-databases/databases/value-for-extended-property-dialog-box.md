@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Value for Extended Property Dialog Box
   Use the **Value for** *\<property name>* dialog box to enter or view a value. This is a common dialog box that can be opened from several locations.  

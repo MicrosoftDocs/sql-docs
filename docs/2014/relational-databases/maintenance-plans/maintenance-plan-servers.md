@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Maintenance Plan (Servers)
   Use the **Servers** dialog box to select the servers where you want to run the maintenance plan.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # FileTable Schema
   Describes the pre-defined and fixed schema of a FileTable.  

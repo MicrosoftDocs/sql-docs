@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect Tasks and Containers by Using a Default Precedence Constraint
   Precedence constraints connect two executables. An executable can be any task or a For Loop, Foreach Loop, or Sequence container. This procedure describes how to set the default behavior for precedence constraints, and how to connect executables using the default precedence constraints.  

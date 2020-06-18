@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 64744048-205f-4d4d-add8-ff0ca13943f3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Perspectives Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Toolbar** pane to perform common operations on the **Perspectives** tab in Cube Designer.  

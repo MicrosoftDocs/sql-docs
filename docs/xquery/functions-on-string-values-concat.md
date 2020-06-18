@@ -1,5 +1,6 @@
 ---
 title: "concat Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function concat() that returns a string created by concatenating zero or more strings specified as arguments.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

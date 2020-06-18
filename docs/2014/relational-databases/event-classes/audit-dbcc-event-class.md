@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit DBCC Event Class
   The **Audit DBCC** event class occurs whenever a DBCC command is issued.  

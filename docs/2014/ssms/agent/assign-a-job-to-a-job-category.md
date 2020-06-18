@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Assign a Job to a Job Category
   This topic describes how to assign [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs to job categories in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  

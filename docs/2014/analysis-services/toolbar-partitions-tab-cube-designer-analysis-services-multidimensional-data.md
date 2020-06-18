@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7225064a-4f6c-40d3-a026-34e757a966da
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Partitions Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Toolbar** pane to perform common actions on the **Partitions** tab in Cube Designer.  

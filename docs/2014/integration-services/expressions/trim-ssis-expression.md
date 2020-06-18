@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # TRIM (SSIS Expression)
   Returns a character expression after removing leading and trailing spaces.  

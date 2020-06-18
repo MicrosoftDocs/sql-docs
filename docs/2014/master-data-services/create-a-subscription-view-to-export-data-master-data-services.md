@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Subscription View (Master Data Services)
   Create a subscription view when you want to create a view of your data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database for use by subscribing systems.  

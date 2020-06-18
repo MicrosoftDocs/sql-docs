@@ -1,5 +1,6 @@
 ---
 title: "affinity64 mask Server Configuration Option | Microsoft Docs"
+description: Find out about the affinity64 mask option. See when to use it in SQL Server to bind processors to specific threads.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

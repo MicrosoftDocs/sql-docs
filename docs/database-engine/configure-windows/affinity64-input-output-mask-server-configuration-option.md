@@ -1,5 +1,6 @@
 ---
 title: "affinity64 Input-Output mask Server Configuration Option | Microsoft Docs"
+description: Learn about the affinity64 I/O mask option. See when to use it to bind SQL Server disk I/O to a specified subset of CPUs.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

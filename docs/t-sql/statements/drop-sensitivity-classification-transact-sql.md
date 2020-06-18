@@ -6,7 +6,6 @@ ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""
-ms.manager: craigg
 ms.author: giladm
 author: giladmit
 f1_keywords:

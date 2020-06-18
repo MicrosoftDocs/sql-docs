@@ -25,7 +25,7 @@ By default, a bulk copy operation is done as an isolated operation. The bulk cop
 
  - Do the bulk copy operation within an existing transaction
 
- - Enlist in a **System.Transactions**<xref:System.Transactions.Transaction>.  
+ - Enlist in a **System.Transactions** <xref:System.Transactions.Transaction>.  
   
 ## Performing a non-transacted bulk copy operation  
 The following Console application shows what happens when a non-transacted bulk copy operation encounters an error partway through the operation.  

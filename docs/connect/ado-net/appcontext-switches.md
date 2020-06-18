@@ -1,5 +1,5 @@
 ---
-title: "App Context Switches in SqlClient"
+title: "AppContext Switches in SqlClient"
 description: "Describes how to use AppContext switches that are available in SqlClient."
 ms.date: "06/15/2020"
 dev_langs: 
@@ -12,7 +12,7 @@ author: johnnypham
 ms.author: v-jopha
 ms.reviewer: 
 ---
-# App Context Switches in Sqlclient
+# AppContext Switches in Sqlclient
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -20,9 +20,7 @@ The AppContext class allows SqlClient to provide new functionality while continu
 
 ## Enabling decimal truncation behavior
 
-```suggestion
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
-```
 
 Starting with Microsoft.Data.SqlClient 2.0, decimal data will be rounded by default, as is done by SQL Server. To enable the previous behavior of truncation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to `true` at application startup:
 
@@ -32,9 +30,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 ## Enabling Managed networking on Windows
 
-```suggestion
-[!INCLUDE [appliesto-xxxx-netcore-netst-md](../../includes/appliesto-xxxx-netcore-netst-md)]
-```
+[!INCLUDE [appliesto-xxxx-netcore-netst-md](../../includes/appliesto-xxxx-netcore-netst-md.md)]
 
 On Windows, SqlClient uses a native implementation of the SNI network interface by default. To enable the use of a managed SNI implementation, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** to `true` at application startup:
 
@@ -49,9 +45,7 @@ This switch will toggle the driver's behavior to use a managed networking implem
 
 ## Disabling Transparent Network IP Resolution
 
-```suggestion
-[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md)]
-```
+[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
 
 Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. TNIR interacts with MultiSubnetFailover to provide the following three connection sequences:<br />
 * 0: One IP is attempted, followed by all IPs in parallel
@@ -75,9 +69,7 @@ For more information about setting these properties, see the documentation for [
 
 ## Enable a minimum timeout during login
 
-```suggestion
-[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md)]
-```
+[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
 
 To prevent a login attempt from hanging indefinitely, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCalculationDuringLogin** to `true` at application startup:
 
@@ -87,9 +79,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseOneSecFloorInTimeoutCal
 
 ## Disable blocking behavior of ReadAsync
 
-```suggestion
-[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md)]
-```
+[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
 
 By default, ReadAsync runs synchronously and blocks the calling thread on .NET Framework. To disable this blocking behavior, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking** to `false` at application startup:
 

@@ -57,7 +57,7 @@ A new AppContext switch **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingO
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
 ```
 
-See [App Context Switches in SqlClient](appcontext-switches.md) for a full list of available switches in the driver.
+See [AppContext Switches in SqlClient](appcontext-switches.md) for a full list of available switches in the driver.
 
 #### Enabling decimal truncation behavior 
 

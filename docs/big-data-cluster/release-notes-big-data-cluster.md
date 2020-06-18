@@ -140,7 +140,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
-### Different credentials for accessing services through gateway endpoint 
+### Credentials for accessing services through gateway endpoint
 
 - **Affected releases**: New clusters deployed starting with CU5.
 

@@ -1,5 +1,6 @@
 ---
 title: affinity mask Server Configuration Option
+description: Learn about the affinity mask option in SQL Server. View an example that uses it to bind processors to specific threads.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration

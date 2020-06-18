@@ -153,6 +153,13 @@
         href: ../connect/ado-net/sql/sqlclient-support-localdb.md
       - name: SqlClient support for Always Encrypted
         href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+        items:
+        - name: Develop a .NET application using Always Encrypted with secure enclaves
+          href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+        - name: Using Azure Key Vault with Always Encrypted
+          href: ado-net/sql/azure-key-vault-example.md
+        - name: Using Azure Key Vault with Always Encrypted with Secure Enclaves
+          href: ado-net/sql/azure-key-vault-enclave-example.md
       - name: Data Discovery and Classification in SqlClient
         href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC

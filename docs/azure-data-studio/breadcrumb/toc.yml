@@ -1,9 +1,7 @@
 - name: Docs
-  tocHref: /
-  topicHref: /
+  tocHref: /azure/
+  topicHref: /sql/index
   items:
-
-  - name: Azure Data Studio
-    tocHref: /azure-data-studio/
-    topicHref: /azure-data-studio/index
-    items:
+  - name: SQL Machine Learning
+    tocHref: /azure/sql-database/
+    topicHref: /sql/machine-learning/

@@ -1,5 +1,6 @@
 ---
 title: "Return Codes | Microsoft Docs"
+description: Learn about return codes supported for SQL Server Native Client OLE DB, including the commonly encountered DB_S_ERRORSOCCURRED HRESULT value.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

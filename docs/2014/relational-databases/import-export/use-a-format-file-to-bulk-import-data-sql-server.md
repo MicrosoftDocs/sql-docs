@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use a Format File to Bulk Import Data (SQL Server)
   This topic illustrates the use of a format file in bulk-import operations. The format file maps the fields of the data file to the columns of the table.  You can use a non-XML or XML format file to bulk import data when using a **bcp** command or a BULK INSERT or INSERT ... SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] command.  

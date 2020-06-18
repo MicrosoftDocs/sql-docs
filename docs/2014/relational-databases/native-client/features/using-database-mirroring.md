@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Using Database Mirroring
     

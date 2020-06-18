@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Schema Object GDR Event Class
   The **Audit Schema Object GDR** event class occurs whenever a GRANT, REVOKE, or DENY is issued for a schema object permission by any user in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -15,7 +15,6 @@ topic_type:
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # LocalDBStartInstance Function
   Starts the specified SQL Server Express LocalDB instance.  

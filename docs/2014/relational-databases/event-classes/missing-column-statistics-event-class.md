@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Missing Column Statistics Event Class
   The Missing Column Statistics event class indicates that column statistics that could have been useful for the optimizer are not available.  

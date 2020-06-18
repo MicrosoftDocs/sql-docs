@@ -1,6 +1,6 @@
 ---
 title: "Restore the Service Master Key | Microsoft Docs"
-description: Learn how to restore the service master key in SQL Server by using Transact-SQL, including required permissions.
+description: Learn how to restore the service master key in SQL Server by using Transact-SQL. The service master key is the root of the SQL Server encryption hierarchy. 
 ms.custom: ""
 ms.date: "01/02/2019"
 ms.prod: sql

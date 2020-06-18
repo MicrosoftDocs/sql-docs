@@ -1,0 +1,9 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+
+  - name: Azure Data Studio
+    tocHref: /Azure Data Studio/
+    topicHref: /azure-data-studio/index
+    items:

@@ -1,6 +1,6 @@
 ---
 title: "View or Change the Default Locations for Data and Log Files | Microsoft Docs"
-description: 'Learn how to view or change the default locations for SQL Server data files and log files. See how to protect the files with access control lists (ACLs).'
+description: 'Find out how to view or change the default locations for SQL Server data files and log files. See how to protect the files with access control lists (ACLs).'
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: sql

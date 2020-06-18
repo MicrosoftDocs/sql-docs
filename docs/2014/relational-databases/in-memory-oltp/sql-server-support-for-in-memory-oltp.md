@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: f4525df0-a186-44e5-bba6-5d8123a0f965
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SQL Server Support for In-Memory OLTP
   This section discusses new and updated syntax and features supporting memory-optimized tables.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL:StmtCompleted Event Class
   The SQL:StmtCompleted event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has completed.  

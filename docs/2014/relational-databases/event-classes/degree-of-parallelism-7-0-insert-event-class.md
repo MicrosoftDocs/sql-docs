@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Degree of Parallelism (7.0 Insert) Event Class
   The **Degree of Parallelism (7.0 Insert)** event class occurs each time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a SELECT, INSERT, UPDATE, or DELETE statement.  

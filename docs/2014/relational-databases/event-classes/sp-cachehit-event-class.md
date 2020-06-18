@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SP:CacheHit Event Class
   The SP:CacheHit event class indicates that a stored procedure is in the plan cache.  

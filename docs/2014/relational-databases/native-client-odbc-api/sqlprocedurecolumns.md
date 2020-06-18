@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLProcedureColumns
   `SQLProcedureColumns` returns one row reporting the return value attributes of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLForeignKeys
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports cascading updates and deletes through the foreign key constraint mechanism. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns SQL_CASCADE for UPDATE_RULE and/or DELETE_RULE columns if CASCADE option is specified on the ON UPDATE and/or ON DELETE clause of the FOREIGN KEY constraints. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns SQL_NO_ACTION for UPDATE_RULE and/or DELETE_RULE columns if NO ACTION option is specified on the ON UPDATE and/or ON DELETE clause of the FOREIGN KEY constraints.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Altering Memory-Optimized Tables
   Performing ALTER operations on memory-optimized tables is not supported. This includes such operations as changing the bucket_count, adding or removing an index, and adding or removing a column. This topic provides guidelines on how to update memory-optimized tables.  

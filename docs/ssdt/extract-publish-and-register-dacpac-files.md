@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

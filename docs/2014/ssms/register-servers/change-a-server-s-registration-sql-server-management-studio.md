@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ---
 # Change a Server&#39;s Registration (SQL Server Management Studio)
   This topic describes how to change a server's registration in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can change the connection information for a registered server at any time.  

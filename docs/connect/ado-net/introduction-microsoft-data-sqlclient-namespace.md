@@ -21,7 +21,7 @@ Release notes are also available in the GitHub Repository: [2.0 Release Notes](h
 
 ### Breaking Changes
 
-- The access modifier for the enclave provider interface `SqlColumnEncryptionEnclaveProvider` has been changed from `public` to `internal`,
+- The access modifier for the enclave provider interface `SqlColumnEncryptionEnclaveProvider` has been changed from `public` to `internal`.
 
 - Constants in the `SqlClientMetaDataCollectionNames` class have been updated to reflect changes in SQL Server.
 

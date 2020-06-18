@@ -24,7 +24,7 @@ By default, the bulk insert operation assumes the incoming data is unordered. SQ
   
 ## Adding order hints to a bulk copy operation  
 The following example bulk copies data from a source table in the **AdventureWorks** sample database to a destination table in the same database. 
-A SqlBulkCopyColumnOrderHint object is created to define the sort order for the ProductNumber column in the destination table. The order hint is then added to the SqlBulkCopy instance, which will append the appropriate order hint argument to the resulting `INSERT BULK` query.
+A SqlBulkCopyColumnOrderHint object is created to define the sort order for the **ProductNumber** column in the destination table. The order hint is then added to the SqlBulkCopy instance, which will append the appropriate order hint argument to the resulting `INSERT BULK` query.
 
 [!code-csharp [SqlBulkCopy.ColumnOrderHint#1](~/../sqlclient/doc/samples/SqlBulkCopy_ColumnOrderHint.cs#1)]
 

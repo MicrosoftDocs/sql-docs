@@ -20,9 +20,12 @@ ms.reviewer: v-kaywon
 Bulk copy operations can be performed as isolated operations or as part of a multiple step transaction. This latter option enables you to perform more than one bulk copy operation within the same transaction, as well as perform other database operations such as inserts, updates, and deletes, while still being able to commit or roll back the entire transaction.  
   
 By default, a bulk copy operation is done as an isolated operation. The bulk copy operation occurs in a non-transacted way, with no opportunity for rolling it back. If you need to roll back all or part of the bulk copy when an error occurs, you can:
- - use a <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-managed transaction
- - do the bulk copy operation within an existing transaction
- - or enlist in a **System.Transactions**<xref:System.Transactions.Transaction>.  
+
+ - Use a <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-managed transaction
+
+ - Do the bulk copy operation within an existing transaction
+
+ - Enlist in a **System.Transactions**<xref:System.Transactions.Transaction>.  
   
 ## Performing a non-transacted bulk copy operation  
 The following Console application shows what happens when a non-transacted bulk copy operation encounters an error partway through the operation.  

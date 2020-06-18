@@ -27,7 +27,7 @@ ms.reviewer: v-kaywon
 |[Introduction to Microsoft.Data.SqlClient namespace](introduction-microsoft-data-sqlclient-namespace.md)|Introduction page for the Microsoft.Data.SqlClient namespace.|  
 |[Download Microsoft SqlClient Data Provider for SQL Server](download-microsoft-sqlclient-data-provider.md)|Download page for ADO.NET and Microsoft SqlClient Data Provider for SQL Server.|  
 |[Enabling event tracing in SqlClient](enabling-eventsource-tracing.md)|Describes how to use event tracing to debug and test the driver.|  
-|[App Context Switches in SqlClient](appcontext-switches.md)|Describes the AppContext switches supported by the driver.|  
+|[AppContext Switches in SqlClient](appcontext-switches.md)|Describes the AppContext switches supported by the driver.|  
 |[SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md)|Page that contains product support lifecycle information.|  
 |[Finding additional SqlClient driver information](find-additional-sqlclient-driver-information.md)|Page that contains useful information about the driver.|  
 

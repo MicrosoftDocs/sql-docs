@@ -1,6 +1,6 @@
 ---
 title: "Failed availability group add-file operation"
-decription: Possible resolutions for failing to add a file to an availability group.
+decription: Troubleshoot failed add-file operations in Always On availability group. File paths can differ between the systems that host the primary and secondary replicas. 
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql

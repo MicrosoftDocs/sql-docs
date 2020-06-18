@@ -14,6 +14,8 @@ ms.reviewer:
 ---
 # Data Discovery and Classification in SqlClient
 
+[!INCLUDE[appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
+
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 [Data Discovery & Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) is a set of advanced services for discovering, classifying, labeling & reporting the sensitive data in your databases. SqlClient provides an API exposing read-only Data Discovery and Classification information when the underlying source supports the feature. This information is accessed through SqlDataReader.

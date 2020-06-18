@@ -14,6 +14,8 @@ ms.reviewer:
 ---
 # Order hints for bulk copy operations
 
+[!INCLUDE[appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
+
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Bulk copy operations offer significant performance advantages over other methods for loading data into a SQL Server table. Performance can be further enhanced by using order hints. Specifying order hints for your bulk copy operations can lower the insertion time of sorted data into tables with clustered indexes.

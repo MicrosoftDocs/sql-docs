@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Customize (Toolbars Page)
   The **Toolbars** tab enables you to create, rename, remove, and reset toolbars. You can access this tab by clicking **Customize** on the **Tools** menu and then clicking **Toolbars**.  

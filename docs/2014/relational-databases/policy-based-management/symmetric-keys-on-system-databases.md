@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Symmetric Keys on System Databases
   This rule checks for user-created symmetric keys in the master, msdb, model, and tempdb databases.  

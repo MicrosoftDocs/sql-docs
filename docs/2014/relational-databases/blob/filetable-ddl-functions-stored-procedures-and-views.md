@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # FileTable DDL, Functions, Stored Procedures, and Views
   Lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that have been added or changed to support the FileTable feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

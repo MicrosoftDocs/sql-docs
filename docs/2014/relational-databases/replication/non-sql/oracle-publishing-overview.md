@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Oracle Publishing Overview
   Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], you can include Oracle Publishers in your replication topology, starting with Oracle version 9i. Publishing servers can be deployed on any Oracle supported hardware and operating system. The feature is built on the well-established foundation of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] snapshot replication and transactional replication, providing similar performance and usability.  

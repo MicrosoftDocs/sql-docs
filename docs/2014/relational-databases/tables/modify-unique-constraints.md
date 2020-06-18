@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Modify Unique Constraints
   You can modify a unique constraint in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

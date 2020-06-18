@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # AcceptPause Property (SqlService Class)
   Gets the Boolean property value that specifies whether the service can be paused.  

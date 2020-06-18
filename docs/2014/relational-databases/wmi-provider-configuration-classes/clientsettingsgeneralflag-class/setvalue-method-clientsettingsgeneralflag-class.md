@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SetValue Method (ClientSettingsGeneralFlag Class)
   Sets all the values of the referenced flag.  

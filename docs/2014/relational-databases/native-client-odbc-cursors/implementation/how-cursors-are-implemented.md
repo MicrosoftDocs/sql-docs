@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # How Cursors Are Implemented
   ODBC applications control the behavior of a cursor by setting one or more statement attributes before executing an SQL statement. ODBC has two different ways to specify the characteristics of a cursor:  

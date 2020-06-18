@@ -44,7 +44,6 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server 2014: Hardware and Software Requirements
 

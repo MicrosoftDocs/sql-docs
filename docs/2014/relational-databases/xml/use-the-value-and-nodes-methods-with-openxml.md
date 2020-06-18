@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use the value() and nodes() Methods with OPENXML
   You can use multiple **value()** methods on `xml` data type in a **SELECT** clause to generate a rowset of extracted values. The **nodes()** method yields an internal reference for each selected node that can be used for additional query. The combination of the **nodes()** and **value()** methods can be more efficient in generating the rowset when it has several columns and, perhaps, when the path expressions used in its generation are complex.  

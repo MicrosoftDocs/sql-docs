@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Table-Valued Parameter Descriptor Fields
   Support for table-valued parameters includes new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific fields in ODBC application parameter descriptors (APDs) and implementation parameter descriptors (IPDs).  

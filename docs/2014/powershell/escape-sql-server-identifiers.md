@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Escape SQL Server Identifiers
   You can often use the Windows PowerShell back-tick escape character (`) to escape characters that are allowed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] delimited identifiers but not Windows PowerShell path names. Some characters, however, cannot be escaped. For example, you cannot escape the colon character (:) in Windows PowerShell. Identifiers with that character must be encoded. Encoding is more reliable than escaping because encoding works for all characters.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Set Breakpoints
   Use the **Set Breakpoints** dialog box to specify the events on which to enable breakpoints and to control the behavior of the breakpoint.  

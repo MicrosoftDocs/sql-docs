@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Validate All Subscriptions
   Use the **Validate All Subscriptions** dialog box to specify that all subscriptions to a merge publication should be validated the next time the Merge Agent for each subscription runs. The results of validation are displayed in Replication Monitor. For more information, see [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  

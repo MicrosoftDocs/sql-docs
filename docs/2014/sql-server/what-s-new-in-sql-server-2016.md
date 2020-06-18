@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # What's New in SQL Server 2014
 

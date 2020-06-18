@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Set Up Database Diagram Designer (Visual Database Tools)
   To use Database Diagram Designer, it must first be set up by a member of the **db_owner** role to control access to diagrams.  

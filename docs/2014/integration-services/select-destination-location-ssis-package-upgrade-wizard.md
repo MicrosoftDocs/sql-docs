@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Select Destination Location (SSIS Package Upgrade Wizard)
   Use the **Select Destination Location** page to specify the destination to which to save the upgraded packages.  

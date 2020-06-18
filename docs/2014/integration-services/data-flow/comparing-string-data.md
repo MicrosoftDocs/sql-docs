@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Comparing String Data
   String comparisons are an important part of many of the transformations performed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and string comparisons are also used in the evaluation of expressions in variables and property expressions. For example, the Sort transformation compares values in a dataset to sort data in ascending or descending order.  

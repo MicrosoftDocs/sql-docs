@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQL Server Data Types in the .NET Framework
   The `SqlTypes` library is part of the base class library of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. It is designed to provide data types with the same semantics and precision as those found in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This topic describes the new semantics to .NET Framework programmers, and introduces the types implemented in the `System.Data.SqlTypes` namespace that is included in the `System.Data` library.  

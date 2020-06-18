@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ba0d57b5-87cc-43f0-bfbb-f06123c546bd
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Select a Prepared Instance
   Use the **Select Prepared Instance** page to specify the prepared instance you want to complete.  

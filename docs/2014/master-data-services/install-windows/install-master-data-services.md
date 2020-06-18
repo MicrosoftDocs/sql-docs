@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Install Master Data Services
   The following workflow provides an overview of how to install and configure [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installation is a three-part process:  

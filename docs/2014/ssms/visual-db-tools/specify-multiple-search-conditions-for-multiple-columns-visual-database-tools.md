@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)
   You can expand or narrow the scope of your query by including several data columns as part of your search condition. For example, you might want to:  

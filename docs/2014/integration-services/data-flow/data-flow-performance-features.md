@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Flow Performance Features
   This topic provides suggestions about how to design [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to avoid common performance issues. This topic also provides information about features and tools that you can use to troubleshoot the performance of packages.  

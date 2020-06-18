@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # XML Output File Format (ssbdiagnose)
   The **ssbdiagnose** utility delivers its output as an XML file when you run it with the **-XML** switch. The XML output file lists header information and the errors that it found in the [!INCLUDE[ssSB](../../includes/sssb-md.md)] configuration or conversation that was analyzed. You can write an application to analyze or report on the errors listed in the file. Or, you can view the XML file in a general XML editor, such as XML Notepad.  

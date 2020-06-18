@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Running and Managing Packages Programmatically
   If you need manage and run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. In this approach, you have a range of options:  

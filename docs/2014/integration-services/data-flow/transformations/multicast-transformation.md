@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Multicast Transformation
   The Multicast transformation distributes its input to one or more outputs. This transformation is similar to the Conditional Split transformation. Both transformations direct an input to multiple outputs. The difference between the two is that the Multicast transformation directs every row to every output, and the Conditional Split directs a row to a single output. For more information, see [Conditional Split Transformation](conditional-split-transformation.md).  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Schedule a Package by using SQL Server Agent
   The following procedure provides steps to automate the execution of a package by using a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step to run the package.  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Profiler Templates
   You can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create templates that define the event classes and data columns to include in traces. After you define and save the template, you can run a trace that records the data for each event class you selected. You can use a template on many traces; the template is not itself executed.  

@@ -8,7 +8,6 @@ helpviewer_keywords:
 ms.assetid: fad98caa-8a29-4b88-8464-f60a5c4fc00e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "06/13/2017"

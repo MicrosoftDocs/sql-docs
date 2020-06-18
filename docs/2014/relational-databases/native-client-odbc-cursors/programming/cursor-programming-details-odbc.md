@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Cursor Programming Details (ODBC)
   Choosing the correct cursor type can improve application performance. Under certain conditions, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] may implicitly convert a cursor type when you execute an SQL statement that is not supported by the cursor type you requested.  

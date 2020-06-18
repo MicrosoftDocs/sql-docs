@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change a Version Flag Name (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of a version flag.  

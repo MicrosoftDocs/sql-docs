@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create a Schedule
   You can create a schedule for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  

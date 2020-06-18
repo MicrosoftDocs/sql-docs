@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8d06bda9-0bbf-4baa-b270-07b1c1f640eb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Full-Text Search word breakers and filters significantly improved in SQL Server 2005 and SQL Server 2008
   The word breakers and filters were significantly changed. Additional improvements have been made to word breakers, including enhanced language coverage and reliability.  

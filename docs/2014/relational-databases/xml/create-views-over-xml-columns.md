@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Create Views over XML Columns
   You can use an `xml` type column to create views. The following example creates a view in which the value from an `xml` type column is retrieved using the `value()` method of the `xml` data type.  

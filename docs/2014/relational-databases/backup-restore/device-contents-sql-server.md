@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Device Contents (SQL Server)
   Use this dialog box to view the backup information. This information describes the device, the media, the media set, and the backup set or sets.  

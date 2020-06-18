@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Device Not Ready Error
   This rule checks the system event log for EventId 15. This error can be caused by SCSI host adapter configuration issues or related problems.  

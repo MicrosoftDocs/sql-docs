@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLGetStmtAttr
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver extends SQLGetStmtAttr to expose driver-specific statement attributes.  

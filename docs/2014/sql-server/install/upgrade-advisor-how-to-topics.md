@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d73bf759-58f7-4789-af49-ac8ca94f913d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade Advisor How-to Topics
   This section contains common procedures for using Upgrade Advisor.  

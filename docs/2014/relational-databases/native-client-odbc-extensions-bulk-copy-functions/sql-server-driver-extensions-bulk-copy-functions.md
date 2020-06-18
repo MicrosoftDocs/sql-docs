@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Bulk Copy Functions
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific bulk-copy API extension of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver allows client applications to rapidly add data rows to, or extract data rows from, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  

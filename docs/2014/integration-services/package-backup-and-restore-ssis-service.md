@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Package Backup and Restore (SSIS Service)
     

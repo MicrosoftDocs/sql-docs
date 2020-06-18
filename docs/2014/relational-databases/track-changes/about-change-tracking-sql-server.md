@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # About Change Tracking (SQL Server)
   Change tracking is a lightweight solution that provides an efficient change tracking mechanism for applications. Typically, to enable applications to query for changes to data in a database and access information that is related to the changes, application developers had to implement custom change tracking mechanisms. Creating these mechanisms usually involved a lot of work and frequently involved using a combination of triggers, `timestamp` columns, new tables to store tracking information, and custom cleanup processes.  

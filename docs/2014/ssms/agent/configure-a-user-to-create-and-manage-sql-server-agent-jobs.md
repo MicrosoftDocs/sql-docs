@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Configure a User to Create and Manage SQL Server Agent Jobs
   This topic describes how to configure a user to create or execute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.  

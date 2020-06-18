@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Create a Publication from an Oracle Database
   This topic describes how to create a publication from an Oracle database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

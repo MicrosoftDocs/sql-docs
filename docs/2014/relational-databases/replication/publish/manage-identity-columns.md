@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Manage Identity Columns
   This topic describes how to manage identity columns in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. When Subscriber inserts are replicated back to the Publisher, identity columns must be managed to avoid assignment of the same identity value at both the Subscriber and Publisher. Replication can manage identity ranges automatically or you can choose to manually handle identity range management.  For information about the identity range management options provided by replication, see [Replicate Identity Columns](replicate-identity-columns.md).  

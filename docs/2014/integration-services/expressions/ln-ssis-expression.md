@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # LN (SSIS Expression)
   Returns the natural logarithm of a numeric expression.  

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Execute a Stored Procedure
   This topic describes how to execute a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

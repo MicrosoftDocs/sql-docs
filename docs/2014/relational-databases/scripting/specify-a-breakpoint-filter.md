@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Specify a Breakpoint Filter
   A breakpoint filter limits the breakpoint to acting only on specified computers, operating system processes, and threads. Breakpoint filters are typically used when debugging parallel applications.  

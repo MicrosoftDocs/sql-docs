@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Advanced Merge Replication Conflict Detection and Resolution
   When a Publisher and a Subscriber are connected and synchronization occurs, the Merge Agent detects if there are any conflicts. If conflicts are detected, the Merge Agent uses a conflict resolver (which is specified when an article is added to a publication) to determine which data is accepted and propagated to other sites.  

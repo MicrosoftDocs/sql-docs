@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Database Scope GDR Event Class
   The **Audit Database Scope GDR** event class occurs whenever a GRANT, REVOKE, or DENY is issued for a statement permission by any user in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for database-only actions such as granting permissions on a database.  

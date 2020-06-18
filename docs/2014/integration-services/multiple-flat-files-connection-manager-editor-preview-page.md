@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Multiple Flat Files Connection Manager Editor (Preview Page)
   Use the **Preview** page of the **Multiple Flat Files ConnectionManager Editor** dialog box to view the contents of the first selected source file divided into columns as you have defined them.  

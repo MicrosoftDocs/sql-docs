@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Creating a Login
   To access the [!INCLUDE[ssDE](../includes/ssde-md.md)], users require a login. The login can represent the user's identity as a Windows account or as a member of a Windows group, or the login can be a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login that exists only in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Whenever possible you should use Windows Authentication.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Other Non-SQL Server Subscribers
   For a list of non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers supported by [!INCLUDE[msCoName](../../../includes/msconame-md.md)], see [Non-SQL Server Subscribers](non-sql-server-subscribers.md). This topic includes information about requirements for ODBC drivers and OLE DB providers.  

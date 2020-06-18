@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Flat File Connection Manager Editor (Preview Page)
   Use the **Preview** node of the **Flat File Connection Manager Editor** dialog box to view the contents of the source file in a tabular format.  

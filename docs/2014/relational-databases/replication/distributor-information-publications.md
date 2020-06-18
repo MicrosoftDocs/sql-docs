@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Distributor Information Dialog Box 
 This topic provides information on the **Distributor** dialog box 

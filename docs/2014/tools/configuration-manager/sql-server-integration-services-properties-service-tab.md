@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Integration Services Properties (Service Tab)
   Use the **Service**tab on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Properties** dialog box to view or specify the following options.  

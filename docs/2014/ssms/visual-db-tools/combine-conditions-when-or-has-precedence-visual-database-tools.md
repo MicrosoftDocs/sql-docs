@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)
   To link conditions with OR and give them precedence over conditions linked with AND, you must repeat the AND condition for each OR condition.  

@@ -34,19 +34,15 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 ::: moniker-end
 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 This article describes how to change the default version of R or Python used by a SQL instance in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 If you have installed one or more CUs, you may have multiple versions of R or Python in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* or `PYTHON_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
-::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 For example, if you install a CU containing Python 3.7, a new `PYTHON_SERVICES` folder is created:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES.3.7`
-::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Each SQL instance uses one of these versions as the default version of R or Python. You can change the default version by using the **RegisterRExt.exe** command-line utility. The utility is located under both the R and Python folders in each SQL instance:
 
 *&lt;SQL instance path&gt;*`\R_SERVICES.n.n\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe`  
@@ -59,11 +55,11 @@ Each SQL instance uses one of these versions as the default version of R or Pyth
 
 **RegisterRExt.exe** accepts these command-line arguments:
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - `/configure` - Required, specifies that you're configuring the default R version.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - `/configure` - Required, specifies that you're configuring the default R/Python version.
 
 - `/python` - Specifies that you're configuring the default Python version. Optional if you specify `/pythonhome`.
@@ -72,7 +68,7 @@ Each SQL instance uses one of these versions as the default version of R or Pyth
 - `/instance:`*&lt;instance name&gt;* - Optional, the instance you want to configure. If not specified, the default instance is configured.
 
 - `/rhome:`*&lt;path to the R_SERVICES[n.n] folder&gt;* - Optional, the version you want to set as the default R version.
-  ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"  
+  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"  
   or  
   `/pythonhome:`*&lt;path to the PYTHON_SERVICES[n.n] folder&gt;* - Optional, the version you want to set as the default Python version.
   ::: moniker-end
@@ -80,7 +76,7 @@ Each SQL instance uses one of these versions as the default version of R or Pyth
   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   If you don't specify /rhome, the path used is the path under which **RegisterRExt.exe** is located.
   ::: moniker-end
-  ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
   If you don't specify /rhome or /pythonhome, the path used is the path under which **RegisterRExt.exe** is located.
   ::: moniker-end
 

@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Profiling ODBC Driver Performance How-to Topics (ODBC)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver has two driver-specific options for profiling the performance of the driver.  

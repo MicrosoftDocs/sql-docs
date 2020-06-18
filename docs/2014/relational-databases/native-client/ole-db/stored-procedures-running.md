@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Running Stored Procedures (OLE DB)
   When executing statements, calling a stored procedure on the data source (instead of executing or preparing a statement in the client application directly) can provide:  

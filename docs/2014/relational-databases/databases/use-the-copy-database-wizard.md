@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Use the Copy Database Wizard
   The Copy Database Wizard lets you move or copy databases and their objects easily from one server to another, with no server downtime. You can also upgrade databases from a previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. By using this wizard, you can do the following:  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Data Types (OLE DB)
   In order to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and process the results using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, you must know how the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider maps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types to OLE DB data types when binding parameters or columns in a rowset, and when it uses the **ITableDefinition** interface to create a table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

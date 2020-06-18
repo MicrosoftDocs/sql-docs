@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Publication Information, All Subscriptions (Merge Publication)
   The **All Subscriptions** tab displays information on all subscriptions to the selected merge publication.  

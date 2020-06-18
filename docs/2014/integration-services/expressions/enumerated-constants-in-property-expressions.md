@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Enumerated Constants in Property Expressions
   If property expressions include values from an enumerator member list, the expression must use the numeric value of the enumerator member instead of the friendly name of the member. For example, if an expression sets the `LoggingMode` property then you must use the numeric value 2 instead of the friendly name Disabled.  

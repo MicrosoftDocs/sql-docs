@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Collapse Groups of Rows (Visual Database Tools)
   You can create a query result in which each result row corresponds to an entire group of rows from the original data. When collapsing rows, there are several things to keep in mind:  

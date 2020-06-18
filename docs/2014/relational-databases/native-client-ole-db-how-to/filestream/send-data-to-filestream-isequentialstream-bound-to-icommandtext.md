@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Send Data to a FILESTREAM Column Using ISequentialStream Bound to ICommandText Parameter (OLE DB)
   This sample uses an ISequentialStream interface bound to an ICommandText parameter to send between 4MB and 4GB of data to a filestream column.  

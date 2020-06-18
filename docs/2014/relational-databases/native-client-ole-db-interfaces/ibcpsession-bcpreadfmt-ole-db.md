@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # IBCPSession::BCPReadFmt (OLE DB)
   Reads format information for each column from the format file.  

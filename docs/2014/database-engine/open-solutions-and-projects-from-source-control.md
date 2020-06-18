@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Open Solutions and Projects from Source Control
   You can use [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to open a solution or project directly from source control. When you open a solution from source control, the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environment automatically retrieves the latest version of the solution and copies it to the location you specify.  

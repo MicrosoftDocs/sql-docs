@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQL Server XML Bulk Load Object Model (SQLXML 4.0)
   The Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML Bulk Load object model consists of the SQLXMLBulkLoad object. This object supports the following methods and properties.  

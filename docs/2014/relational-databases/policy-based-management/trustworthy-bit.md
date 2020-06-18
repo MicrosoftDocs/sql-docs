@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Trustworthy Bit
   This rule determines whether the dbo role for a database is assigned to the sysadmin fixed server role and the database has its trustworthy bit set to ON.  

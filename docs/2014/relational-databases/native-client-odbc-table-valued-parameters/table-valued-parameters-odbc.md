@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Table-Valued Parameters (ODBC)
   ODBC support for table-valued parameters lets a client application send parameterized data to the server more efficiently, by sending multiple rows to the server with one call.  

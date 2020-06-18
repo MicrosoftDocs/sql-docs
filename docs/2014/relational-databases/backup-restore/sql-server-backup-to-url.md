@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Backup to URL
   This topic introduces the concepts, requirements and components necessary to use the Azure Blob storage service as a backup destination. The backup and restore functionality are same or similar to when using DISK or TAPE, with a few differences. The differences are and any notable exceptions, and a few code examples are included in this topic.  

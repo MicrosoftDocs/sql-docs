@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Database Engine Cross-Instance Features
   This section contains the tools and tasks associated with managing and monitoring servers and database instances.  

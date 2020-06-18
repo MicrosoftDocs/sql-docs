@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Object Already Exists
   The object you are trying to save has the same name as an object already in the database. Choose another name and proceed.  

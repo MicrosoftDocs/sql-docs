@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Excel Custom Properties
   **Source Custom Properties**  

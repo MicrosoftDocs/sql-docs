@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore Database (Options Page)
   Use the **Options** page of the **Restore Database** dialog box to modify the behavior and outcome of the restore operation.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9eb4060a-9c3e-41e0-8767-3cfaebc45de7
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Change Credentials Wizard (SSRS Native Mode)
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager provides the Change Credentials Wizard to guide you through the steps of reconfiguring the account that the report server uses to connect to the report server database. When you change credentials, the Configuration Manager will update all permissions and database login information on the database server for the report server database that is actively used by the report server.  

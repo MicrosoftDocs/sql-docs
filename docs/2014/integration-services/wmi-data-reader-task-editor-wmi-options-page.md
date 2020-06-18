@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # WMI Data Reader Task Editor (WMI Options Page)
   Use the **WMI Options** page of the **WMI Data Reader Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and the destination of the query result.  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Updating Data in Rowsets
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider updates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data when a consumer updates a modifiable rowset that contains that data. A modifiable rowset is created when the consumer requests support for either the **IRowsetChange** or **IRowsetUpdate** interface.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ODBC Destination Editor (Mappings Page)
   Use the **Mappings** page of the **ODBC Destination Editor** dialog box to map input columns to destination columns.  

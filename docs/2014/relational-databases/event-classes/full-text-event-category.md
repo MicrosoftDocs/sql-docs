@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Full Text Event Category
   The **Full Text** event category contains general full-text events.  

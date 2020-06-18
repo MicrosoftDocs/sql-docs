@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Set Large Data (OLE DB)
   This sample shows how to set BLOB data, create a table, add a sample record, fetches that record in the rowset, and then set the value of the BLOB field. This sample is not supported on IA64.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Report Server Status (SSRS Native Mode)
   Use this page to view information about the report server instance to which you are currently connected. This page is the start page for report server configuration. Additional pages are available to configure URLs, the service account, the report server database, report server e-mail delivery, scale-out deployment, and encryption keys.  

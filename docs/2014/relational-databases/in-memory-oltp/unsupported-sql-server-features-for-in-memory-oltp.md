@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Supported SQL Server Features
   This topic discusses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are or not supported for use with memory-optimized objects.  

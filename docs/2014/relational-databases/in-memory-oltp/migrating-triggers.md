@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Migrating Triggers
   This topic discusses DDL and DML triggers and memory-optimized tables.  

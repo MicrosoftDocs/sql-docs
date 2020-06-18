@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # PropertyStrVal Property (ServerNetworkProtocolProperty Class)
   Gets the string value of the referenced property.  

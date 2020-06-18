@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Welcome to the Slowly Changing Dimension Wizard
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions.  

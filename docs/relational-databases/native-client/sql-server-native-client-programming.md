@@ -1,5 +1,6 @@
 ---
 title: "Programming"
+description: Use these resources to understand SQL Server Native Client, a stand-alone data access API, used for both OLE DB and ODBC. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

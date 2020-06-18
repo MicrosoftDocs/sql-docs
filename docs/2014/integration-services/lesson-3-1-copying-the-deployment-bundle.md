@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Step 1: Copying the Deployment Bundle
   In this task, you will copy the deployment bundle to the destination computer.  

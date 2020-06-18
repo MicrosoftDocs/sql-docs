@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Options (Text Editor:XML:Tabs Page)
   This dialog box lets you change the tabbing behavior of the XML Editor, which is used to edit XML documents. To display these settings, click **Options** on the **Tools** menu, expand the **Text Editor** folder, expand the **XML** subfolder and then click **Tabs**.  

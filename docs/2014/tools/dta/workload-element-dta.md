@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Workload Element (DTA)
   Specifies the workload to be used for a tuning session.  

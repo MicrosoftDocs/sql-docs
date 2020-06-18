@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Change Workload Group Settings
   You can change workload group settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

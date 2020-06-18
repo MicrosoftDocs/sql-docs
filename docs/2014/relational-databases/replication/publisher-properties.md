@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Replication Publisher Properties
   This section contains information on Publisher properties available at the Distributor and the Publisher. 

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use a Statement (ODBC)
     

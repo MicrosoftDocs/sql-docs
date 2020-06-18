@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ServerNetworkProtocolIPAddress Class
   The [ServerNetworkProtocolIPAddress Class]servernetworkprotocolipaddress-class.md) represents an IP address supported by the server network protocol.  

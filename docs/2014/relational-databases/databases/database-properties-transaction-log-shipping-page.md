@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Properties (Transaction Log Shipping Page)
   Use this page to configure and modify the properties of log shipping for a database.  

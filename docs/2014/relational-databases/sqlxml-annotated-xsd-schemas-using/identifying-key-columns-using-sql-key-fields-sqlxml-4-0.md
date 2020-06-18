@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Identifying Key Columns Using sql:key-fields (SQLXML 4.0)
   When an XPath query is specified against an XSD schema, key information is required in most cases to obtain proper nesting in the result. Specifying the `sql:key-fields` annotation is a way of ensuring that the appropriate hierarchy is generated.  

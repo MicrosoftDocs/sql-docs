@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Migrating to In-Memory OLTP
   This section discusses how to migrate database objects to use In-Memory OLTP.  

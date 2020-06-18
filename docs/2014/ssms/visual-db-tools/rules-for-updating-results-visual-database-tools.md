@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Rules for Updating Results (Visual Database Tools)
   In many cases, you can update the result set displayed in the [Results Pane](visual-database-tools.md). However, in some cases you cannot.  

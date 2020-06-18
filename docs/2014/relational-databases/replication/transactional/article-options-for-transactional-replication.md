@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Article Options for Transactional Replication
   There are a number of options for articles in transactional publications. With transactional replication, you can do the following:  

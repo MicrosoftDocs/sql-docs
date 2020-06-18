@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Choose Target Table for Insert Results Dialog Box (Visual Database Tools)
   Allows you to specify the table to which rows of data will be added as the result of an INSERT RESULTS query. This dialog box appears when you start an INSERT RESULTS query.  

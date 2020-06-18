@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Lesson 1: Creating the Suppliers DQS Knowledge Base
   In this lesson, you create a DQS knowledge base named **Suppliers** with the knowledge (metadata) about supplier data. You use the knowledge base to perform the cleansing and matching activities on input supplier data. The cleansing activity identifies incorrect/invalid data, corrects the incorrect data, proposes corrections/suggestions, standardizes the data, and enriches the data with more information. The matching activity compares data and identifies similar records (but slightly different) in the data that helps you remove duplicates on the data.  

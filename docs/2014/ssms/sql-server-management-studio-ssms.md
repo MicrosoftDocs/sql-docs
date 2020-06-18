@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is an integrated environment for managing your SQL Server infrastructure. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides tools to configure, monitor, and administer instances of SQL Server. It also provides tools to deploy, monitor, and upgrade the data-tier components, such as databases and data warehouses used by your applications, and to build queries and scripts.  

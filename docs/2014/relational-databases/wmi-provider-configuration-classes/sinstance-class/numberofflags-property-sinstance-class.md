@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # NumberOfFlags Property (SInstance Class)
   Gets the number of flags for the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

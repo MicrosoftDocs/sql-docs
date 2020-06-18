@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Install Client Tools on a SQL Server Failover Cluster
   Client tools such as [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] are shared features common across all instances on the same machine. They are backward compatible, with supported [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions that can be installed side by side. Only one version of the client tool exists on a node at a time.  

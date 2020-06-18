@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use Data-at-Execution Parameters (ODBC)
     

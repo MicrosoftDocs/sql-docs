@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # OLE DB Table-Valued Parameter Type Support (Properties)
   This topic provides information about OLE DB properties and property sets that are associated with table-valued parameter rowset objects.  

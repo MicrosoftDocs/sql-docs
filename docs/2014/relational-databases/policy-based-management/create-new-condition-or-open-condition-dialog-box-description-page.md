@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create New Condition or Open Condition Dialog Box, Description Page
   Use this dialog box to add a description to a Policy-Based Management condition.  

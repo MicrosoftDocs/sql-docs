@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Installation Type
   Use the Installation Type page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify whether to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or add features to an existing instance.  

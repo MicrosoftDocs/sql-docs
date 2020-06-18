@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: fa33627c-2e99-4be3-9424-52ab83446e07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQL_ENG020596
     

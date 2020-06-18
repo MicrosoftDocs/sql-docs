@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication Tutorials
   Replication includes tutorials that you can use to learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

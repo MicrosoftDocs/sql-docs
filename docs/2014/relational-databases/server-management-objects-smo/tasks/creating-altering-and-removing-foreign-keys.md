@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Creating, Altering, and Removing Foreign Keys
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), foreign keys are represented by the <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> object.  

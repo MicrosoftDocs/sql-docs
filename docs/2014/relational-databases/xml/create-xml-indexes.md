@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Create XML Indexes
   This topic describes how to create primary and secondary XML indexes.  

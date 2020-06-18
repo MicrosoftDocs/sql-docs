@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # OLE DB API Support for Date and Time Enhancements
   The following OLE DB APIs support enhanced date/time features.  

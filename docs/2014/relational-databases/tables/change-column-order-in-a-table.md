@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Change Column Order in a Table
   You can change the order of columns in Table Designer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

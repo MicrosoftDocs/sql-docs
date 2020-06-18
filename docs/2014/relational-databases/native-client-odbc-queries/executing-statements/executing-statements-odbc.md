@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Executing Statements (ODBC)
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver offers a variety ways to execute SQL statements in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database:  

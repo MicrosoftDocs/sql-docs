@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Procedures
   A stored procedure is a precompiled executable object that contains one or more [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements. Stored procedures can have input and output parameters and can also put out an integer return code. An application can enumerate available stored procedures by using catalog functions.  

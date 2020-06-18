@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Automatically Delete a Job
   This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to automatically delete jobs when they succeed, fail, or complete by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or SQL Server Management Objects.  

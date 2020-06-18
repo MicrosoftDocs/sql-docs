@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Reporting Services Configuration Options (SSRS)
   Use the **Reporting Services Configuration** page of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify how a report server is installed and configured. The availability of an installation option depends on options you chose previously on the **Feature Selection** page and whether you are also installing a local instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] at the same time you are installing the report server.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 ---
 # Point
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data, a `Point` is a 0-dimensional object representing a single location and may contain Z (elevation) and M (measure) values.  

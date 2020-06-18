@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Publishers
   You can give permission for other Publishers to use this Distributor. Be aware that enabling a Publisher to use this server as its remote Distributor does not make that server a Publisher. You must connect to the Publisher, configure it for publishing, and choose this server as the Distributor. You can configure the Publisher and choose a Distributor through the New Publication Wizard.  

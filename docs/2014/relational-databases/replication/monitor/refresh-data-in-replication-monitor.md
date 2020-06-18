@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Refresh Data in Replication Monitor
   In Replication Monitor, the main window and detail windows (those windows launched from the main window) can be refreshed automatically or manually. To refresh a window manually, press F5. By default, the main window is refreshed automatically every five seconds; the rate can be customized for each Publisher.  

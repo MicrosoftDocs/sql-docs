@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # StartMode Property (SqlService Class)
   Gets the start mode of the service.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Converting from DB-Library to ODBC Bulk Copy
   Converting a DB-Library bulk copy program to ODBC is easy because the bulk copy functions supported by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver are similar to the DB-Library bulk copy functions, with the following exceptions:  

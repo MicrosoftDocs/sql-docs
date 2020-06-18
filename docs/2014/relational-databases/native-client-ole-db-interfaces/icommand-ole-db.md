@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # ICommand (OLE DB)
   This topic discusses OLE DB behavior that is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

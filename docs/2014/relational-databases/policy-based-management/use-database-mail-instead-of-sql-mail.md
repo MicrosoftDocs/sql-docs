@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Use Database Mail Instead of SQL Mail
   This rule checks the sys.configurations catalog view to determine whether the SQL Mail XPs server-wide configuration option is set to ON.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Create a Publication
   This topic describes how to create a publication in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  

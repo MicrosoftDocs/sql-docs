@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 ---
 # Create, Modify, and Drop Spatial Indexes
   A spatial index can more efficiently perform certain operations on a column of the `geometry` or `geography` data type (a *spatial column*). More than one spatial index can be specified on a spatial column. This is useful, for example, for indexing different tessellation parameters in a single column.  

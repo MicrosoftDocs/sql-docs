@@ -113,15 +113,21 @@ To restore your database in Azure Data Studio, follow these steps:
 
 1. Select **Restore**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Select restore from the top menu to restore your database.":::
 
 1. On the **General** tab, fill in the values listed under **Source**.
     1. Under **Restore from**, select *Backup file*.
-    1. Under **Backup file path**, select the location you stored the .bak file. This auto-populates the rest of the fields such as **Database**, **Target database** and **Restore to**. 
+    1. Under **Backup file path**, select the location you stored the .bak file. 
+    
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Select your backup file path":::
+    
+    This auto-populates the rest of the fields such as **Database**, **Target database** and **Restore to**. 
+
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Once you have chosen a backup file path, the rest of the fields autopopulate":::
+
 1. Select **Restore** to restore your database. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-sql-server-2019-adw-database-sample.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
-
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Once you're ready, select Restore to restore your database.":::
 
 ---
 

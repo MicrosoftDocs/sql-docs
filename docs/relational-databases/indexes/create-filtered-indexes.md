@@ -77,9 +77,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     -   Non-unique indexes. Filtered indexes can be non-unique, whereas indexed views must be unique.  
   
--   Filtered indexes are defined on one table and only support simple comparison operators. If you need a filter expression that references multiple tables or has complex logic, you should create a view.  
-
--   Filtered indexes do not support `LIKE` operators. 
+-   Filtered indexes are defined on one table and only support simple [comparison operators](../../t-sql/language-elements/comparison-operators-transact-sql.md). If you need a filter expression that references multiple tables or has complex logic, you should create a view. Filtered indexes do not support `LIKE` operators. 
   
 -   A column in the filtered index expression does not need to be a key or included column in the filtered index definition if the filtered index expression is equivalent to the query predicate and the query does not return the column in the filtered index expression with the query results.  
   

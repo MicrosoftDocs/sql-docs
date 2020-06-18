@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Bulk Copy a SELECT Result Set (ODBC)
   This sample shows how to use bulk copy functions to bulk copy out the result set of a SELECT statement. This sample was developed for ODBC version 3.0 or later.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # TuningTimeInMin Element (DTA)
   Specifies the maximum length of a tuning session in minutes.  

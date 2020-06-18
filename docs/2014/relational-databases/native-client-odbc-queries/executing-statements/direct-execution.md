@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Direct Execution
   Direct execution is the most basic way to execute a statement. An application builds a character string containing a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement and submits it for execution using the **SQLExecDirect** function. When the statement reaches the server, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compiles it into an execution plan and then immediately runs the execution plan.  

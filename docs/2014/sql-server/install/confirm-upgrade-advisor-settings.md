@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 07a4d94b-df0e-4662-9604-221664762ee8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Confirm Upgrade Advisor Settings
   On this page, you can review the selected Upgrade Advisor Analysis Wizard options and parameters you entered. After you have reviewed the options and parameters, click **Run** to start the analysis.  

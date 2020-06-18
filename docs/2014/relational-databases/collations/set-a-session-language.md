@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Set a Session Language
   The session language can be used to set how the following elements are displayed on the server, based on language and cultural preference:  

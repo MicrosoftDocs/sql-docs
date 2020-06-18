@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Showplan Text Event Class
   The Showplan Text event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an SQL statement. The information included is a subset of the information available in Showplan All, Showplan XML Statistics Profile or Showplan XML event class.  

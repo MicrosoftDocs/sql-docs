@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Add Login to Server Role Event Class
   The **Audit Add Login to Server Role** event class occurs whenever a login is added or removed from a fixed server role. This event class is used for the **sp_addsrvrolemember** and **sp_dropsrvrolemember** stored procedures.  

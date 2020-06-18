@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Tutorial: Evaluating Best Practices by Using Policy-Based Management
   Welcome to the Evaluating Best Practices by Using Policy-Based Management tutorial. This tutorial is intended for users who are familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but new to Policy-Based Management. Policy-Based Management is a system for defining policies that can be used enforce site administration standards. Policy-Based Management includes a set of best practices policies that you can use to analyze an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to determine whether the instance meets best practices guidelines and recommendations.  

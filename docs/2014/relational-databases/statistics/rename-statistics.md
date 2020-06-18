@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Rename Statistics
   You can rename a statistics object in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Manage Files with Encoding
   To facilitate the display of your code in a particular language and on a particular platform, you can associate a particular character encoding with a file.  

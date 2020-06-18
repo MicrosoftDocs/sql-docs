@@ -27,7 +27,6 @@ helpviewer_keywords:
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Specifying Relationships Using sql:relationship (SQLXML 4.0)
   The elements in an XML document can be related. The elements can be nested hierarchically, and ID, IDREF, or IDREFS relationships can be specified between the elements.  

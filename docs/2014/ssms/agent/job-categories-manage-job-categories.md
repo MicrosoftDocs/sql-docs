@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Job Categories: Manage Job Categories
   Use the **Job Categories** dialog box to add or delete job categories. Built-in job categories cannot be deleted.  

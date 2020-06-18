@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Query Definitions Differ Dialog Box (Visual Database Tools)
   This dialog box notifies you that your query cannot be represented graphically in the Diagram and Criteria panes, and that you can edit your query only in the SQL pane.  

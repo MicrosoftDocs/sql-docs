@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Mirroring State Change Event Class
   The **Database Mirroring State Change** event class indicates when the state of a mirrored database changes. Include this event class in traces that are monitoring conditions of mirrored databases.  

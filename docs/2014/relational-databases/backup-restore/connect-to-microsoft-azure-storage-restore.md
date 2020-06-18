@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Connect to Azure Storage (Restore)
   The dialog box allows you to specify the connection to Azure storage account information in order to retrieve the files storage in the Azure storage account. After specifying the required information, click **Connect** to establish the connection to Azure storage.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2c231793-3878-4a5e-a425-1fa0d787ba84
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade all target servers before upgrading the master server
   Before you upgrade the master server, upgrade all computers that are running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are configured as target servers.  

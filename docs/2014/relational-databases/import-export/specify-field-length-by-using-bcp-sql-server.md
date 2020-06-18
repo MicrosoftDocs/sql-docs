@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Specify Field Length by Using bcp (SQL Server)
   The field length indicates the maximum number of characters that are required to represent data in character format. The field length is already known if the data is stored in the native format; for example, the `int` data type takes 4 bytes. If you have indicated 0 for the prefix length, the **bcp** command prompts you for field length, the default field lengths, and the impact of field-length on data storage in data files that contain `char` data.  

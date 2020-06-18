@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Session Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider interprets OLE DB session properties as follows.  

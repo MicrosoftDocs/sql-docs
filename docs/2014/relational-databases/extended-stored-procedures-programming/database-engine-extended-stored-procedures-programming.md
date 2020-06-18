@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Programming Extended Stored Procedures
     

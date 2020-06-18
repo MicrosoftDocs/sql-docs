@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Replication 'Publisher Settings' dialog box
   The **Publisher Settings** dialog box allows you to change settings for Publishers that have been added to the left pane in Replication Monitor.  

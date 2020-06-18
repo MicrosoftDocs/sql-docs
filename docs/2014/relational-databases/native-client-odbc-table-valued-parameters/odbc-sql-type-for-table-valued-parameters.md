@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # ODBC SQL Type for Table-Valued Parameters
   Support for table-valued parameters is provided by a new ODBC SQL type, SQL_SS_TABLE.  

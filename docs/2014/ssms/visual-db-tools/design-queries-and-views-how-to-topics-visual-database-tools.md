@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)
   The Query and View Designer can help you create and maintain the data retrieval and data manipulation portions of your application.  

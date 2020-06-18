@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 183b5cdd-962e-41ca-8064-ea44f622c77d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Setup User Interface Reference
   This section describes the installation options presented by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.  

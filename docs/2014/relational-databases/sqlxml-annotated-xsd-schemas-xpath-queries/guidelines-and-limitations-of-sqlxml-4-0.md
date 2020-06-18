@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Guidelines and Limitations of SQLXML 4.0
   Remember the following when working with SQLXML 4.0:  

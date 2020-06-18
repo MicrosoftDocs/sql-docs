@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # View Filter Information (SQL Server Profiler)
   This topic describes how to view filters on data columns for event classes by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

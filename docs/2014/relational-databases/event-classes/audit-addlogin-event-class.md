@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Addlogin Event Class
   The **Audit Addlogin** event class occurs when a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  

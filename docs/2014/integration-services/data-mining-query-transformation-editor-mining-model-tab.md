@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Mining Query Transformation Editor (Mining Model Tab)
   Use the **Mining Model** tab of the **Data Mining Query Transformation Editor** dialog box to select the data mining structure and its mining models.  

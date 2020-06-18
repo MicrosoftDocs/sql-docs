@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Get Mutual Kerberos Authentication
   This sample shows how to get mutual Kerberos authentication by using ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

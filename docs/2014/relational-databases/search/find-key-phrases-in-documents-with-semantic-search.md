@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Find Key Phrases in Documents with Semantic Search
   Describes how to find the key phrases in documents or text columns that are configured for statistical semantic indexing.  

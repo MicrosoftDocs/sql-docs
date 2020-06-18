@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2cc9f6ff-de36-4e94-bd04-59f5c45c4911
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Remove calls to the deprecated DBCC CONCURRENCYVIOLATION command
   Upgrade Advisor detected the use of the DBCC CONCURRENCYVIOLATION command. This command is no longer available. Executing this command returns error 2526.  

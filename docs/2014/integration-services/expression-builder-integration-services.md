@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Expression Builder (Integration Services)
   The **Expression Builder** dialog box provides a graphical user interface for building the expressions that property expressions use. You can access the **Expression Builder** dialog box from the custom task dialog boxes in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, and from the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

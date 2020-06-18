@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Change Database Wizard (SSRS Native Mode)
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager provides the Change Database Wizard to guide you through the steps of creating a new report server database or selecting an existing report server database to use with the current report server instance.  

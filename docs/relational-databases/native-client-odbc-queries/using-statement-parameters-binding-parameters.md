@@ -1,5 +1,6 @@
 ---
 title: "Binding Parameters | Microsoft Docs"
+description: Find out how to bind each parameter marker in an SQL statement to a variable in the application before the statement can run.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

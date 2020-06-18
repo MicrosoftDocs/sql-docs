@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View the SQL Server Error Log (SQL Server Management Studio)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains user-defined events and certain system events. You can use this error log to troubleshoot problems related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SP:CacheRemove Event Class
   The SP:CacheRemove event class indicates that the stored procedure has been removed from the plan cache.  

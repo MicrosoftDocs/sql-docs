@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ErrorControl Property (SqlService Class)
   Gets or sets the severity of the error if the service fails to start during startup.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Nested AFTER trigger fires even when trigger nesting is OFF
   Upgrade Advisor detected an AFTER trigger nested inside an INSTEAD OF trigger that is defined on one or more tables. Nested AFTER triggers may fire even when the `nested triggers` server configuration option is set to 0.  

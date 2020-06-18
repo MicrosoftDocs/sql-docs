@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ODBC Source
   The ODBC source extracts data from ODBC-supported database by using a database table, a view, or an SQL statement.  

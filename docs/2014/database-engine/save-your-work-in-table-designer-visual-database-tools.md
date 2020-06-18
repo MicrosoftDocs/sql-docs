@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Save Your Work in Table Designer (Visual Database Tools)
   You can save changes to tables that are open in Table Designer.  

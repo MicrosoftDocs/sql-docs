@@ -95,6 +95,9 @@ using SqlConnection sqlConnection = new SqlConnection("Data Source=(local);Integ
 sqlConnection.Open(SqlConnectionOverrides.OpenWithoutRetry);
 ```
 
+> [!NOTE]
+> Note that this override can only be applied to SqlConnection.Open() and not SqlConnection.OpenAsync().
+
 #### Username support for Active Directory Interactive mode
 
 A username can be specified in the connection string when using Azure Active Directory Interactive authentication mode for both .NET Framework and .NET Core

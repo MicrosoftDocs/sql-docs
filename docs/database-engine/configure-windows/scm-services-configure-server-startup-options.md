@@ -1,5 +1,6 @@
 ---
 title: "Configure Server Startup Options (SQL Server Configuration Manager) | Microsoft Docs"
+description: Learn how to set options that the SQL Server Database Engine uses when it starts. View limitations and restrictions on making changes to startup parameters.
 ms.custom: ""
 ms.date: "11/23/2017"
 ms.prod: sql

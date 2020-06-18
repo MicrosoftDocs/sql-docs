@@ -1,6 +1,6 @@
 ---
 title: "SQL Injection | Microsoft Docs"
-description: Learn how SQL injection attacks work, and how to mitigate such attacks by validating input and reviewing code for SQL injection in SQL Server.
+description: Learn how SQL injection attacks work. Mitigate such attacks by validating input and reviewing code for SQL injection in SQL Server.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

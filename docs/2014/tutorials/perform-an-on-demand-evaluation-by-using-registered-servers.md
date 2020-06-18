@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Perform an On-Demand Evaluation by Using Registered Servers
 

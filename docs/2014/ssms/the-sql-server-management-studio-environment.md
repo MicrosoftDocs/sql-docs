@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # The SQL Server Management Studio Environment
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides a rich environment for managing and developing queries in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

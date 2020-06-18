@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
   This topic discusses how you can monitor the performance of natively compiled stored procedures  

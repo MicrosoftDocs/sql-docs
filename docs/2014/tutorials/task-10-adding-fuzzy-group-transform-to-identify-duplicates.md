@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 10: Adding Fuzzy Group Transform to Identify Duplicates
   In this task, you add a Fuzzy Group Transform to the data flow. The Fuzzy Group transformation can help identify duplicates in the source data. See [Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) for more details.  

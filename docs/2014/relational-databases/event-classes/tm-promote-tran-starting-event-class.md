@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # TM: Promote Tran Starting Event Class
   The TM: Promote Tran Starting event class indicates that a PROMOTE TRANSACTION request is starting. The request is sent from the client through the transaction management interface.  

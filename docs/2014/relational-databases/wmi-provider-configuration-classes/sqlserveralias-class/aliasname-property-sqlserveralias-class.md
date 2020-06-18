@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # AliasName Property (SqlServerAlias Class)
   Gets the name of the server connection alias.  

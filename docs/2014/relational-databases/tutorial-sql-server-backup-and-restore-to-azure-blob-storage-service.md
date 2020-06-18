@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service
   Welcome to the Getting Started with SQL Server Backup and Restore with Azure Blob Storage Service tutorial. This tutorial helps you understand how to write backups to and restore from the Azure Blob storage service.  

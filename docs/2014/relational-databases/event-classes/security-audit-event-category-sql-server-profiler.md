@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Security Audit Event Category (SQL Server Profiler)
   The **Security Audit** event category contains security audit events.  

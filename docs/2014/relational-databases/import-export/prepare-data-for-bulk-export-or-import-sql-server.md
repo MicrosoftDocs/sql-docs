@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Prepare Data for Bulk Export or Import (SQL Server)
   This section discusses the considerations involved in planning for bulk-export operations and the requirements for bulk-import operations.  

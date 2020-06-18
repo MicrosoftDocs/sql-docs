@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLSetConnectAttr
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver ignores the setting of SQL_ATTR_CONNECTION_TIMEOUT.  

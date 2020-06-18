@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SetServiceAccountPassword Method (SqlService Class)
   Modifies the password for the account that the referenced service runs under.  

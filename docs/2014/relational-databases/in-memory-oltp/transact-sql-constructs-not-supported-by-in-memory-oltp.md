@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP
   Memory-optimized tables and natively compiled stored procedures do not support the full [!INCLUDE[tsql](../../includes/tsql-md.md)] surface area that is supported by disk-based tables and interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures. When attempting to use one of the unsupported features, the server returns an error.  

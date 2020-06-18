@@ -11,7 +11,6 @@ api_location:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Command-Line Management Tool: SqlLocalDB.exe
   SqlLocalDB.exe is a simple tool that enables the user to easily manage LocalDB instances from the command line. It is implemented as a simple wrapper around the LocalDB instance API. As in many similar SQL Server tools (for example, SQLCMD), parameters are passed to SqlLocalDB as command-line arguments and output is sent to the console.  

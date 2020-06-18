@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Install PowerPivot for SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is a collection of middle-tier and backend services that provide PowerPivot data access in a SharePoint 2010 farm. If your organization uses the client application, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010, to create workbooks that contain analytical data, you must have [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] to access that data in a server environment. This topic walks you through the basic installation process and it links you additional topics to help you configure PowerPivot.

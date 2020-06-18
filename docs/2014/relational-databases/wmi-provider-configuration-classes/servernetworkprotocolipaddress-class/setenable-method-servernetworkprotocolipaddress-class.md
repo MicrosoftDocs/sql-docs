@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SetEnable Method (ServerNetworkProtocolIPAddress Class)
   Enables the IP address.  

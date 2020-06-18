@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Filter Published Data for Merge Replication
   In addition to the static row filters and column filters you can define with other types of replication, merge replication offers parameterized row filters and join filters. For more information about static row filters and column filters, see [Filter Published Data](../publish/filter-published-data.md).  

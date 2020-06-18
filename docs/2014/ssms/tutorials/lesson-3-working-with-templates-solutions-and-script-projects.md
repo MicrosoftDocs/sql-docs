@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: edac948a-18bb-4301-9504-945056727f63
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Lesson 3: Working with Templates, Solutions, and Script Projects
   Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can create custom templates, and create solutions and script projects.  

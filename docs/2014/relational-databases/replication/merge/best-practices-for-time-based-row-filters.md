@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Best Practices for Time-Based Row Filters
   Users of applications often require a time-based subset of data from a table. For instance, a salesperson might require data for orders in the last week, or an event planner might require data for events in the upcoming week. In many cases, applications use queries containing the `GETDATE()` function to accomplish this. Consider the following row filter statement:  

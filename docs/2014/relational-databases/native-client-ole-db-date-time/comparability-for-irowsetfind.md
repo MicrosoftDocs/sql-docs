@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Comparability for IRowsetFind
   For date/time types only, IRowsetFind supports the following comparisons:  

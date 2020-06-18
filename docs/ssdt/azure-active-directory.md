@@ -5,7 +5,6 @@ ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019

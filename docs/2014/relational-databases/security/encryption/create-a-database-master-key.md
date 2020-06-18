@@ -10,7 +10,6 @@ helpviewer_keywords:
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 ms.reviewer: carlrab
 ---
 # Create a Database Master Key

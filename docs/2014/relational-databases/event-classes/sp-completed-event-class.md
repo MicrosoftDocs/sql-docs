@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SP:Completed Event Class
   The SP:Completed event class indicates that the stored procedure has completed executing.  

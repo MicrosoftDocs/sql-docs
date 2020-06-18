@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Show Query Properties (Visual Database Tools)
   You can display properties for a query in the Properties window from Query and View Designer.  

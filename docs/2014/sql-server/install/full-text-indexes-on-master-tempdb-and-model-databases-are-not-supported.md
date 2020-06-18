@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f7992965-42c1-4eb8-a7fb-afb38b67c740
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Full-text indexes on master, tempdb and model databases are not supported
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow full-text indexes on any system database.  

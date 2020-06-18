@@ -13,7 +13,6 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 ms.reviewer: ""
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # History Cleanup Task (Maintenance Plan)
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # bcp_readfmt
   Reads a data file format definition from the specified format file.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Job Properties: New Job (Notifications Page)
   Use this page to set actions for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform when the job completes.  

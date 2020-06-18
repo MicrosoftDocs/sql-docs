@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Executing Commands Containing Table-Valued Parameters
   Executing a command that contains table-valued parameters requires two phases:  

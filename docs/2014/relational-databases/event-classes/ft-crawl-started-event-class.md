@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # FT:Crawl Started Event Class
   The **FT:Crawl Started** event class indicates that a full-text crawl (population) has started. Use this event class to check if a crawl request is actually being picked up by worker tasks.  

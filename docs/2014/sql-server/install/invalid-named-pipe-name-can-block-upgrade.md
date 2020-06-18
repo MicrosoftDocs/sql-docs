@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Invalid named pipe name can block upgrade
   Upgrade fails if the named pipes protocol is incorrectly configured.  

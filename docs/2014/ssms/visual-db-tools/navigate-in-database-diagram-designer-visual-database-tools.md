@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Navigate in Database Diagram Designer (Visual Database Tools)
   You can work in Database Diagram Designer using the keyboard as well as the mouse. Refer to the following tables for specific methods used in the Database Diagram Designer.  

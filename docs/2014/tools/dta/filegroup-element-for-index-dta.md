@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Filegroup Element for Index (DTA)
   Specifies the filegroup on which the index is to be created for a user-specified configuration.  

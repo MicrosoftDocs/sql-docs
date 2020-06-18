@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # OLEDB Provider Information Event Class
   The **OLEDB Provider Information** event class occurs when a distributed query is run and collects information corresponding to the provider connection.  

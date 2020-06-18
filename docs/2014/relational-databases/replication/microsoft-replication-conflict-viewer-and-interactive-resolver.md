@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Microsoft Replication Conflict Viewer and Interactive Resolver
   This section includes information on the Replication Conflict Viewer for merge replication and transactional replication, and the Interactive Resolver for merge replication:  

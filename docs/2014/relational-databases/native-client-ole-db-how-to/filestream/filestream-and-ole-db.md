@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Filestream and OLE DB
   This section contains four samples that show how to use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB with the filestream feature:  

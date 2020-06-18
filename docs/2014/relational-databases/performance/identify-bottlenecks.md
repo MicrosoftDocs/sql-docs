@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Identify Bottlenecks
   Simultaneous access to shared resources causes bottlenecks. In general, bottlenecks are present in every software system and are inevitable. However, excessive demands on shared resources cause poor response time and must be identified and tuned.  

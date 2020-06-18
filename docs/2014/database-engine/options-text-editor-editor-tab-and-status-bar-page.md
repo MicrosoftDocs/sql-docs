@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Options (Text Editor: Editor Tab and Status Bar Page)
   The **Editor Tab and Status Bar Page** lets you customize the information displayed by the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Query Editors. You can specify the level of information displayed in the tab and status bar of the Query Editor window, and whether the status bar appears at the top or bottom of the editor window.  

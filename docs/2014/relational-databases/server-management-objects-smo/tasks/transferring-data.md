@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Transferring Data
   The <xref:Microsoft.SqlServer.Management.Smo.Transfer> class is a utility class that provides tools to transfer objects and data.  

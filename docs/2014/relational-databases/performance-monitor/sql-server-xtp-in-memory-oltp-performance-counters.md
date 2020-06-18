@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # XTP (In-Memory OLTP) Performance Counters
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides objects and counters that can be used by Performance Monitor to monitor In-Memory OLTP activity.  

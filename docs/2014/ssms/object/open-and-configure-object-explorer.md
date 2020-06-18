@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Open and Configure Object Explorer
   Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  

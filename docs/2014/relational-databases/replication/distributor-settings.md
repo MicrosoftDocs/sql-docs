@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Replication 'Distributor Settings' dialog box
   The **Distributor Settings** dialog box enables you to change settings for Distributors that were added to the left pane in Replication Monitor.  

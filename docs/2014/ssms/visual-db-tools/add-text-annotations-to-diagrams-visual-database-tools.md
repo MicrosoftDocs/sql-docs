@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Add Text Annotations to Diagrams (Visual Database Tools)
   To make notes or comments on a diagram you can add text annotations.  

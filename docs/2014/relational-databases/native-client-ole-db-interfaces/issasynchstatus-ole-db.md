@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # ISSAsynchStatus (OLE DB)
   **ISSAsynchStatus** exposes support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asynchronous operations. This is an optional interface that inherits from the core OLE DB interface **IDBAsynchStatus**. In addition to the **Abort** and **GetStatus** methods inherited from **IDBAsynchStatus**, **ISSAsynchStatus** provides one new method that is used to wait until an asynchronous operation has completed or a time-out occurs.  

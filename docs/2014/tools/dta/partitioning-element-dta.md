@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Partitioning Element (DTA)
   Contains the partitioning scheme that you would like Database Engine Tuning Advisor to use during analysis.  

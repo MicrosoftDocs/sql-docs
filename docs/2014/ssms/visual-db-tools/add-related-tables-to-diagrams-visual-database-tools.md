@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Add Related Tables to Diagrams (Visual Database Tools)
   You can quickly add to a database diagram all of the tables that are involved in a relationship with a selected table.  

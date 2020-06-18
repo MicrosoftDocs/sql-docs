@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Adding a Column to a SQL Server Table
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ITableDefinition::AddColumn** function. This allows consumers to add a column to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  

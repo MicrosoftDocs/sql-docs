@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Unloading an Extended Stored Procedure DLL
     

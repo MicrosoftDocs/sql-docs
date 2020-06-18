@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure HDInsight Pig Task
 Use the **Azure HDInsight Pig Task** to run Pig script on an Azure HDInsight cluster.

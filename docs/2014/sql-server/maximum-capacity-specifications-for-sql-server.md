@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Maximum Capacity Specifications for SQL Server
   The following tables specify the maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  

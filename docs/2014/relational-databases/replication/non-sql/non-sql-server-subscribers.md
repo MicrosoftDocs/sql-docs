@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Non-SQL Server Subscribers
   The following non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers can subscribe to snapshot and transactional publications using push subscriptions. Subscriptions are supported for the two most recent versions of each database listed using the most recent version of the OLE DB provider listed.  

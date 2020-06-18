@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Spatial Results Window
   The **Spatial results** window provides visual mapping tools for viewing spatial data. To view spatial results, your query results must include a spatial column with either geometry or geography data.  

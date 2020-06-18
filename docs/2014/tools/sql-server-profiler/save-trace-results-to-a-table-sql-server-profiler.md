@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Save Trace Results to a Table (SQL Server Profiler)
   This topic describes how to save trace results to a database table by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

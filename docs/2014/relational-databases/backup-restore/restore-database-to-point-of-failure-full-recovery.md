@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore a Database to the Point of Failure Under the Full Recovery Model (Transact-SQL)
   This topic explains how to restore to the point of failure. The topic is relevant only for databases that are using the full or bulk-logged recovery models.  

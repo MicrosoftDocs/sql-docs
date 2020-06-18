@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Dropping a SQL Server Table
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ITableDefinition::DropTable** function. This allows consumers to remove a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table from a database.  

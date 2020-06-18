@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Create a New SQL Server Failover Cluster (Setup)
   To install or upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run the Setup program on each node of the failover cluster. To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. Do not run Setup on the active node to manage the other nodes.  

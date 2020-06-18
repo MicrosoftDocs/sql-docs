@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Using Messages
   In SMO, system messages are represented by the <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> object that belongs to the `Server` object. Because the system messages cannot be modified, `SystemMessage` object properties are read-only.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # IRowsetFastLoad::Commit (OLE DB)
   Marks the end of a batch of inserted rows and writes the rows to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. For samples, see [Bulk Copy Data Using IRowsetFastLoad &#40;OLE DB&#41;](irowsetfastload-ole-db.md) and [Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  

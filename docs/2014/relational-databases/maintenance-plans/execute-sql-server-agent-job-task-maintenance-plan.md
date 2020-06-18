@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Execute SQL Server Agent Job Task (Maintenance Plan)
   Use the **Execute SQL Server Agent Job Task** dialog to execute Microsoft SQL Server Agent jobs within a maintenance plan. This option will not be available if you have no SQL Server Agent jobs on the selected connection.  

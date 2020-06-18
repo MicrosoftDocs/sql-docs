@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 11: Publishing the Knowledge Base
   In this task, you publish the knowledge base. A published knowledgebase can be used for cleansing or matching activity in data quality project.  

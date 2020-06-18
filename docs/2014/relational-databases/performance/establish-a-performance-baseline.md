@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Establish a Performance Baseline
   To determine whether your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system is performing optimally, take performance measurements at regular intervals over time, even when no problems occur, to establish a server performance baseline. Compare each new set of measurements with those taken earlier.  

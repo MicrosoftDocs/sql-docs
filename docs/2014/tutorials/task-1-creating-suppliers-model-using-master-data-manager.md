@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 1: Creating Suppliers Model using Master Data Manager
   In this task, you create a model named **Suppliers** in MDS using **Master Data Manager**.  

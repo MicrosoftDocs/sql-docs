@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SAP BW Source Editor (Error Output Page)
   Use the **Error Output** page of the **SAP BW Source Editor** to select error handling options and to set properties on error output columns.  

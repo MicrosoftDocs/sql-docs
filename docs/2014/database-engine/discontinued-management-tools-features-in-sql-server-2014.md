@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Discontinued Management Tools Features in SQL Server 2014
   This topic describes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Tools features that are no longer available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

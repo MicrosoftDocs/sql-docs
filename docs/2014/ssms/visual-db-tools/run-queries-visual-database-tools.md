@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Run Queries (Visual Database Tools)
   When you have finished designing your query, you can run it.  

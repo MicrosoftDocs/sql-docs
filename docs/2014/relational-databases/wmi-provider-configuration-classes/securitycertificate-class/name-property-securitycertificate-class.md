@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Name Property (SecurityCertificate Class)
   Gets the name of the security certificate.  

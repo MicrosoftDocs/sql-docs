@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Hierarchies (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a hierarchy is a tree structure that you can use to:

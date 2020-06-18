@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Encode and Decode SQL Server Identifiers
   SQL Server delimited identifiers sometimes contain characters not supported in Windows PowerShell paths. These characters can be specified by encoding their hexadecimal values.  

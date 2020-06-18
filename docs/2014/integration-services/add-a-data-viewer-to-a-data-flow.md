@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add a Data Viewer to a Data Flow
   This topic describes how to add and configure a data viewer in a data flow. A data viewer displays data that is moving between two data flow components. For example, a data viewer can display the data that is extracted from a data source before a transformation in the data flow modifies the data.  

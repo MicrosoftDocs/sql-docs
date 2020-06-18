@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...) (SQL Server)
   This topic provides an overview of how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT statement and the INSERT...SELECT * FROM OPENROWSET(BULK...) statement to bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. This topic also describes security considerations for using BULK INSERT and OPENROWSET(BULK...), and using these methods to bulk import from a remote data source.  

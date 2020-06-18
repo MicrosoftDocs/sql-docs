@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use AUTO Mode with FOR XML
   As described in [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), AUTO mode returns query results as nested XML elements. This does not provide much control over the shape of the XML generated from a query result. The AUTO mode queries are useful if you want to generate simple hierarchies. However, [Use EXPLICIT Mode with FOR XML](use-explicit-mode-with-for-xml.md) and [Use PATH Mode with FOR XML](use-path-mode-with-for-xml.md) provide more control and flexibility in deciding the shape of the XML from a query result.  

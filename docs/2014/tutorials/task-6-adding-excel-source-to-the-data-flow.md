@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 6: Adding Excel Source to the Data Flow
   In this task, you add an Excel Source to the data flow to read supplier data from the source Excel file. The Excel Source extracts data from worksheets or ranges in Microsoft Excel workbooks. See [Excel Source](../integration-services/data-flow/excel-source.md) topic for more details.

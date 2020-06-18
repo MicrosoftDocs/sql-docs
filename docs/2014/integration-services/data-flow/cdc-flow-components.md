@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # CDC Flow Components
   The Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] help SSIS developers work with CDC and reduce the complexity of CDC packages.  

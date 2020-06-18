@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Using Try..Catch in Natively Compiled Stored Procedures
   You can use try..catch blocks inside a natively compiled stored procedure. The following constructs are supported:  

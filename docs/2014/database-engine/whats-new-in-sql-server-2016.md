@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # What&#39;s New (Database Engine)
   This latest release of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] introduces new features and enhancements that increase the power and productivity of architects, developers, and administrators who design, develop, and maintain data storage systems. These are the areas in which the [!INCLUDE[ssDE](../includes/ssde-md.md)] has been enhanced.  

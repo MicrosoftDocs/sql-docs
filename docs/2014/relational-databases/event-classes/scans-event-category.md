@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Scans Event Category
   The **Scans** event category contains scan events.  

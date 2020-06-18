@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use Cursors (ODBC)
     

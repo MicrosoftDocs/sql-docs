@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Proxy Account Properties and New Proxy Account (General Page)
   Use this page to view or change the properties of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account.  

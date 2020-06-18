@@ -1,5 +1,6 @@
 ---
 title: "Inserting Data into Table-Valued Parameters | Microsoft Docs"
+description: Learn about the two models that the SQL Server Native Client OLE DB Provider supports for the consumer to specify data for table valued parameter rows.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Delete Tables (Database Engine)
   You can delete (drop) a table from your database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

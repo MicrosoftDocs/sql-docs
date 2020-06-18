@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Query Options Results (Text Page)
   Use this page to specify the options for displaying a query result set in text format. The settings on this page also apply when **Results to File** is selected.  

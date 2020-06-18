@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Create a Bulk Copy Format File (ODBC)
   This sample shows how to use bulk copy functions to create both a data file and a format file. This sample was developed for ODBC version 3.0 or later.  

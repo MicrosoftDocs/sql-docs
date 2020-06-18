@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade How-to Topics
   The topics in this section describe how to upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone instance.  

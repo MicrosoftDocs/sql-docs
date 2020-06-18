@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b459abaf-8787-4b65-9231-ae30e5469fd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Update OPENXML XPath expressions to remove unsupported functions
   Upgrade Advisor detected the use of XPath functionality. You may be affected by changes in XPath functionality for OPENXML features after you upgrade.  

@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Database Checkpoints (SQL Server)
   This topic provides an overview of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database checkpoints. A *checkpoint* creates a known good point from which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can start applying changes contained in the log during recovery after an unexpected shutdown or crash.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Configuration Manager Help
   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services and configure network connectivity. To create or manage database objects, configure security, and write [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  

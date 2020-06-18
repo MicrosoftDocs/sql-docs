@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Data Source Properties (OLE DB)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider implements data source properties as follows.  

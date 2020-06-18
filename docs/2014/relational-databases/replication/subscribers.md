@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Subscribers
   Specify the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers that will receive a subscription to the selected publication.  

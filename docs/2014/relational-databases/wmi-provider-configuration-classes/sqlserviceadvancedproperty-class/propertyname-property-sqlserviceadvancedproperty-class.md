@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # PropertyName Property (SqlServiceAdvancedProperty Class)
   Gets or sets the name of an advanced property.  

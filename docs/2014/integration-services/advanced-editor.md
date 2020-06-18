@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Advanced Editor
   Use the **Advanced Editor** dialog box to configure to configure properties for the selected [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object.  

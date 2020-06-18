@@ -1,6 +1,6 @@
 ---
 title: "Report Design Tips (Report Builder) | Microsoft Docs"
-description: Identify visual design methods for better data display in Report Builder. Customize your data with charts, databars, indicators, sparklines, tables, and maps.
+description: Identify visual design methods for better data display in Report Builder. Customize your reports with charts, databars, indicators, sparklines, tables, and maps.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

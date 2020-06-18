@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Before Installing Failover Clustering
   Before you install a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must select the hardware and the operating system on which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will run. You must also configure Windows Server Failover Clustering (WSFC), and review network, security, and considerations for other software that will run on your failover cluster.  

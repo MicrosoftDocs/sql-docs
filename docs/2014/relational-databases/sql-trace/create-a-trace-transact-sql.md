@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Create a Trace (Transact-SQL)
   This topic describes how to use stored procedures to create a trace.  

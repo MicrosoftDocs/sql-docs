@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Table-Valued Parameter Metadata for Prepared Statements
   An application can obtain metadata for a prepared procedure call through SQLNumParams and SQLDescribeParam. For table-valued parameters, *DataTypePtr* is set to SQL_SS_TABLE. Additional metadata is available through SQLGetDescField for SQL_CA_SS_TYPE_NAME, SQL_CA_SS_CATALOG_NAME, and SQL_CA_SS_SCHEMA_NAME.  

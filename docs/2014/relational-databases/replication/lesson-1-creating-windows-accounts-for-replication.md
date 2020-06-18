@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Lesson 1: Creating Windows Accounts for Replication
   In this lesson, you will create Windows accounts to run replication agents. You will create a separate Windows account on the local server for the following agents:  

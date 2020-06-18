@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Print Query Results (Visual Database Tools)
   To print the results of your query, you can copy the contents of the [Results pane](visual-database-tools.md) to another Windows program, such as a word processing program, then format and print it there.  

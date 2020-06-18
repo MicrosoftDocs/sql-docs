@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Agent Error Log
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent creates an error log that records warnings and errors by default. The following warnings and errors are displayed in the log:  

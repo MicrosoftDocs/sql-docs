@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # OLEDB DataRead Event Class
   The OLEDB DataRead event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calls an OLE DB provider for distributed queries and remote stored procedures. Include this event class in traces that monitor when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes a data request call to the OLE DB provider.  

@@ -10,7 +10,6 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 ---
 # Spatial Indexes Overview
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports spatial data and spatial indexes. A *spatial index* is a type of extended index that allows you to index a spatial column. A spatial column is a table column that contains data of a spatial data type, such as `geometry` or `geography`.

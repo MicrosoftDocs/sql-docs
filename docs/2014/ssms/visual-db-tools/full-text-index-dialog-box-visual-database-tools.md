@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Full-Text Index Dialog Box (Visual Database Tools)
   This dialog box allows you to create a full-text index, for full-text searches on text-based columns in your database tables. A full-text index relies on a regular index, so you must create that first. The regular index must be created on a single, non-null column; it is best to choose a column with small values rather than a column with large ones.  

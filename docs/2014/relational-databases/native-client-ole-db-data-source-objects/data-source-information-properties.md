@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Data Source Information Properties
   In the provider-specific property set DBPROPSET_SQLSERVERDATASOURCEINFO, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider defines the following data source information properties.  

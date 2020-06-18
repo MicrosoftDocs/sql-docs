@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Tutorial: Database Engine Tuning Advisor
   Welcome to the Database Engine Tuning Advisor tutorial. Database Engine Tuning Advisor examines how queries are processed in the databases you specify, and then recommends how you can improve query processing performance by modifying database structures such as indexes, indexed views, and partitioning.  

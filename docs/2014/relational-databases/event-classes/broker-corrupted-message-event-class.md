@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Broker:Corrupted Message Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a **Broker:Corrupted Message** event when Service Broker receives a corrupted message.  

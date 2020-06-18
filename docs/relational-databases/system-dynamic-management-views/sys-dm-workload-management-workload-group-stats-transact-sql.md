@@ -10,7 +10,6 @@ dev_langs:
   - "TSQL"
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: "= azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # sys.dm_workload_management_workload_groups_stats (Transact-SQL)

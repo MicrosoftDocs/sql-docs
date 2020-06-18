@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 ---
 # Choose an Encryption Algorithm
   Encryption is one of several defenses-in-depth that are available to the administrator who wants to secure an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

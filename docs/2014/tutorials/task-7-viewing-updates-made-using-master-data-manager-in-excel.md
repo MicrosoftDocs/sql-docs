@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 7: Viewing Updates Made using Master Data Manager in Excel
   In this task, you verify that you see the updated data from MDS in Excel.

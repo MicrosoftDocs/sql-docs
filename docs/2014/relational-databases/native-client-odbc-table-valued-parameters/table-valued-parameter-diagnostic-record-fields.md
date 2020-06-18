@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Table-Valued Parameter Diagnostic Record Fields
   Two new diagnostic fields, SQL_DIAG_SS_TABLE_COLUMN_NUMBER and SQL_DIAG_SS_TABLE_ROW_NUMBER, have been added to diagnostic records. These fields help you to determine which table-valued parameter column values are associated with errors and warnings.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Set a Trace Filter (Transact-SQL)
   This topic describes how to use stored procedures to create a filter that retrieves only the information you need on an event being traced.  

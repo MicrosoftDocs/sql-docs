@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Specify a Target Server&#39;s Location (SQL Server Management Studio)
   This topic describes how to specify the location of a target server in a multiserver administration configuration in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

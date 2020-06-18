@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Process Results (ODBC)
     

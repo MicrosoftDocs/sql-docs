@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use Rowset Binding (ODBC)
     

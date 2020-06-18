@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Server Object Management Event Class
   The **Audit Server Object Management** event class occurs in the case of CREATE, ALTER, or DROP for server objects.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Change Audit Event Class
   The **Audit Change Audit** event class occurs whenever an audit trace modification is made.  

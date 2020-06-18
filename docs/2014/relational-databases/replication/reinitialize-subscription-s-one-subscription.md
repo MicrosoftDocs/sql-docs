@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Reinitialize Subscription(s) - One Subscription
   The **Reinitialize Subscription(s)** dialog box allows you to mark a subscription for reinitialization. Reinitialization involves applying a snapshot to the Subscriber; it is performed by the Distribution Agent for subscriptions to transactional publications and by the Merge Agent for subscriptions to merge publications.  

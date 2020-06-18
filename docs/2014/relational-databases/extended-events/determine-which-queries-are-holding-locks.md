@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Determine Which Queries Are Holding Locks
   Database administrators often need to identify the source of locks that are hindering database performance.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # CPU Threshold Exceeded Event Class
   The CPU Threshold Exceeded event class indicates that Resource Governor detects a query that exceeds the CPU threshold specified for REQUEST_MAX_CPU_TIME_SEC.  

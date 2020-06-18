@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Change the Default Location for Projects
   The default location for files and projects is the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projects folder in your My Documents folder.  

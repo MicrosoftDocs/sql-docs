@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # QN:Subscription Event Class
   The QN:Subscription event reports information on notification subscriptions.  

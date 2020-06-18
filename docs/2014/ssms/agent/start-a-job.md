@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Start a Job
   This topic describes how to start running a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  

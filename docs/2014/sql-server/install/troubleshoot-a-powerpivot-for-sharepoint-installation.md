@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Troubleshoot a PowerPivot for SharePoint Installation
   If you get errors instead of the pages and features you expect, do the following.  

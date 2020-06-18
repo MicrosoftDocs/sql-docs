@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Executing XPath Queries (SQLXML Managed Classes)
   This example illustrates how XPath queries are executed against a mapping schema.  

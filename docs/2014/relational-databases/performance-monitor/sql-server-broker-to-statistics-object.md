@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server, Broker TO Statistics Object
   The SQLServer:Broker TO Statistics performance object reports information about how many times [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialogs request transmission objects, and how often transmission objects are written to **tempdb**.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Implementing IDENTITY in a Memory-Optimized Table
   IDENTITY(1, 1) is supported on a memory-optimized table. However, identity columns with definition of IDENTITY(x, y) where x != 1 or y != 1 are not supported on memory-optimized tables. The workaround for IDENTITY values uses the SEQUENCE object ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  

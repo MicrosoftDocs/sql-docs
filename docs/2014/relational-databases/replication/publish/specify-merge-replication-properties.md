@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Specify Merge Replication Properties
 This topic explains how to specify various properties for your merge replication. 

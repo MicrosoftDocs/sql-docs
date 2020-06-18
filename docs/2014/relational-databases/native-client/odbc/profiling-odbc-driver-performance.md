@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Profiling ODBC Driver Performance
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver can profile two types of performance data:  

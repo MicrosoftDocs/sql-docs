@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create Queries with Unnamed Parameters (Visual Database Tools)
   You can create a query with an unnamed parameter by specifying a question mark (?) as a placeholder for a literal value. Query and View Designer will give it a temporary name. You can specify as many unnamed parameters in the query as you need.  

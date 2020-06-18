@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Repair a Distributed Replay Installation
   Repairing a Distributed Replay component (controller or client) will do the following:  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Unprepare SQL Event Class
   The Unprepare SQL event class indicates that the SqlClient, ODBC, OLE DB, or DB-Library has unprepared (deleted) a prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements.  

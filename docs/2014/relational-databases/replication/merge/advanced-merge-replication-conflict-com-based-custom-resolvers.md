@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # COM-Based Custom Resolvers
   Custom resolvers provide more flexibility than the default resolution mechanism, and they can implement business logic required by applications using the replicated data. A COM-based custom resolver is a dynamic-link library (DLL) that implements the **ICustomResolver** COM interface, its methods and properties, and other supporting interfaces and type definitions designed specifically for conflict resolution.  

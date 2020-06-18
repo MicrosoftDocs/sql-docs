@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Example: Retrieving Employee Information
   This example retrieves an employee ID and employee name for each employee. In the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the employeeID can be obtained from the BusinessEntityID column in the Employee table. Employee names can be obtained from the Person table. The BusinessEntityID column can be used to join the tables.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Verify Queries (Visual Database Tools)
   To avoid problems, you can check the query you have built to ensure its syntax is correct. This option is especially useful when you enter statements in the [SQL pane](visual-database-tools.md).  

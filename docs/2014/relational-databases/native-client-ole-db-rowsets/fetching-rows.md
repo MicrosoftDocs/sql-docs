@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Fetching Rows
   The **IRowset** interface is the base rowset interface. The **IRowset** interface provides methods for fetching rows sequentially, getting the data from those rows, and managing rows. Consumers use the methods in **IRowset** for all basic rowset operations. This includes fetching and releasing rows and getting column values.  

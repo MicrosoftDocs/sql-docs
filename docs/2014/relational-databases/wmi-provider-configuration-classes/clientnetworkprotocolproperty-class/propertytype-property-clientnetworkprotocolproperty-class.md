@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # PropertyType Property (ClientNetworkProtocolProperty Class)
   Gets the type of property referenced by the [PropertyIdx Property (ClientNetworkProtocolProperty Class)](clientnetworkprotocolproperty-class.md) value.  

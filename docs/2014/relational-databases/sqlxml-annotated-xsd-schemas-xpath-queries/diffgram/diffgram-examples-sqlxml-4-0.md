@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # DiffGram Examples (SQLXML 4.0)
   The examples in this topic consist of DiffGrams that perform insert, update, and delete operations to the database. Before using the examples, note the following:  

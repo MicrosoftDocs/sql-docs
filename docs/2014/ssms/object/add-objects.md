@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Add Objects
   Limits the object selection dialog boxes to the types of objects you want to see.  

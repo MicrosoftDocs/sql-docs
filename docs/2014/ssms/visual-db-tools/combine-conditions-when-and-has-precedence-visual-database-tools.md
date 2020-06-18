@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Combine Conditions When AND Has Precedence (Visual Database Tools)
   To combine conditions with AND, you add the column to the query twice--once for each condition. To combine conditions with OR, you put the first one in the Filter column and additional conditions into an **Or...** column.  

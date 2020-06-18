@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Add Namespaces to Queries with WITH XMLNAMESPACES
   [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) provides namespace URI support in the following way:  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Report Server Properties (Service Tab)
   This service is the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Report Server service. The property values in light gray cannot be changed by using this application.  

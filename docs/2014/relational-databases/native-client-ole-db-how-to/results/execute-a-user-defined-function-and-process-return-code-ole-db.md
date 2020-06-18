@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)
   In this example, a user-defined function is executed, and the return code is printed. This sample is not supported on IA64.  

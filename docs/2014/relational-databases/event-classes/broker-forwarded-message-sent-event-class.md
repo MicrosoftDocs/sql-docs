@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Broker:Forwarded Message Sent Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a Broker:Forwarded Message Sent event when Service Broker forwards a message.  

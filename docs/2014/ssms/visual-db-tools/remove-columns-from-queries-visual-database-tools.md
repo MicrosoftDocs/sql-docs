@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Remove Columns from Queries (Visual Database Tools)
   If you no longer want to use a column in a query, you can remove it. If you do, the Query and View Designer removes references to the column in the select list, the sort specification, the search criteria, **SQL Pane**, and any grouping specifications.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Force a Target Server to Poll the Master Server
   This topic describes how to force a target server to poll the master server. The target server must be a registered server on the master server.  

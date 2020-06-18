@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
   Large data can be bound or retrieved using the `ISequentialStream` interface. For bound columns, the status flag DBSTATUS_S_TRUNCATED indicates that the data is truncated.  

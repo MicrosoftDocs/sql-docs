@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SqlToolsVSNativeHelpers
   Library that supports SQL Server functionality in Visual Studio.  

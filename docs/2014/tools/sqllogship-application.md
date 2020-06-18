@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sqllogship Application
   The **sqllogship** application performs a backup, copy, or restore operation and associated clean-up tasks for a log shipping configuration. The operation is performed on a specific instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for a specific database.  

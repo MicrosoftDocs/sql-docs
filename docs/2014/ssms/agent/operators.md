@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Operators
   Operators are aliases for people or groups that can receive electronic notification when jobs have completed or alerts have been raised. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service supports the notification of administrators through operators. Operators enable notification and monitoring capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

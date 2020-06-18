@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Example: Retrieving Product Model Information as XML
   The following query returns product model information. `RAW` mode is specified in the `FOR XML` clause.  

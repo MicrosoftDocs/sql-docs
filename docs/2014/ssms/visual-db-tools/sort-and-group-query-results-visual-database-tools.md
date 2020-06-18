@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Sort and Group Query Results (Visual Database Tools)
   You can create a query result in which each result row corresponds to an entire group of rows from the original data.  

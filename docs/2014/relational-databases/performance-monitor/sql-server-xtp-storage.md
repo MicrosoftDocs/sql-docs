@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # XTP Storage
   The XTP Storage performance object contains counters related to XTP storage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

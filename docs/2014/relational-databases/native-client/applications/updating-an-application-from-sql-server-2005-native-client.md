@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Updating an Application from SQL Server 2005 Native Client
   This topic discusses the breaking changes in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client since [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  

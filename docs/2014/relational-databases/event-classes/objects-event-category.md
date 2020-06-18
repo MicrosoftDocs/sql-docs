@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Objects Event Category
   The **Objects** event category contains general objects events.  

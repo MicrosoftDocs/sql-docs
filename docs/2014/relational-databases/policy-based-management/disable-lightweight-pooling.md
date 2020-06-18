@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 481bb43d-6fe5-497c-9096-971fb6bf733b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Disable Lightweight Pooling
   This rule checks that lightweight pooling is disabled on the server. Setting lightweightpooling to 1 causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to switch to fiber mode scheduling. Fiber mode is intended for certain situations in which the context switching of the UMS workers is the important bottleneck in performance. Because this is rare, fiber mode seldom improves performance or scalability on the typical system.  

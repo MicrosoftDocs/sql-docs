@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # How the Query and View Designer Represents Joins (Visual Database Tools)
   If tables are joined, the [Query and View Designer](visual-database-tools.md) represents the join graphically in the [Diagram pane](diagram-pane-visual-database-tools.md) and by using SQL syntax in the [SQL pane](sql-pane-visual-database-tools.md).  

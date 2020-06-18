@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Sending Result Sets to the Server (Extended Stored Procedure API)
     

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Synonyms (Database Engine)
   A synonym is a database object that serves the following purposes:  

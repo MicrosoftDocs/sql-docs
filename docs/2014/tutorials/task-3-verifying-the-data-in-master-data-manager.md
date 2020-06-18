@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 3: Verifying the Data in Master Data Manager
   In this task, you verify that the **Supplier** entity is created on **MDS** using **Master Data Manager Web Application**.

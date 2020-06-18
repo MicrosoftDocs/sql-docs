@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Stop a Query (Visual Database Tools)
   If you see that the query is taking too long or is not returning the results you expect, you can stop the query if it has not already finished.  

@@ -29,7 +29,6 @@ helpviewer_keywords:
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Resolving Upgrade Issues
   The topics in this section describe upgrade issues that can be detected as well as those that cannot be detected, but that might affect the upgrade or post-upgrade experience. The issues are organized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component.  

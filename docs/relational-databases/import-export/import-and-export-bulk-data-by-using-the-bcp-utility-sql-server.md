@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ""
 ms.date: "09/28/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"

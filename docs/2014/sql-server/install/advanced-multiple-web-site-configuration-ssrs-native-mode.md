@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Advanced Multiple Web Site Configuration (SSRS Native Mode)
   Use this dialog box to create and manage the URLs used to access a report server or Report Manager. The **Advanced Multiple Web Site Configuration** dialog box is used to create additional URLs, custom URLs that include a host header name, or specify an IP address in the IPv4 or IPv6 format.  

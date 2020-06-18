@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Associate a Query with a Connection in a Project
   If a query was created without a connection, or if a query is moved from one project to another it will not be associated with a connection in the current project.  

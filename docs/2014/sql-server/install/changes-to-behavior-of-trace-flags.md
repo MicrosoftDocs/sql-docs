@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: d739df96-2659-4383-8e10-194657632526
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Changes to behavior of trace flags
   Global trace flags set by a session take effect in other sessions immediately. Some trace flags from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] do not exist in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

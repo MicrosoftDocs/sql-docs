@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLGetTypeInfo
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver reports the additional column USERTYPE in the result set of `SQLGetTypeInfo`. USERTYPE reports the DB-Library data type definition and is useful to developers porting existing DB-Library applications to ODBC.  

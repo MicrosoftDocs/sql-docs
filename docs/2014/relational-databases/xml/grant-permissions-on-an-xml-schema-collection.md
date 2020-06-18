@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Grant Permissions on an XML Schema Collection
   You can grant permissions to create an XML schema collection and also grant permissions on an XML schema collection object.  

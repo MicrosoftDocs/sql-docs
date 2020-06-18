@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Lesson 2. Create a policy on container and generate a Shared Access Signature (SAS) key
   In this lesson, you will learn how to create a policy on the Blob container and also generate a SAS key.  

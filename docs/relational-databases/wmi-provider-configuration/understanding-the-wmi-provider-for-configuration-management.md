@@ -1,6 +1,6 @@
 ---
 title: "WMI Provider for Configuration Management"
-description: The WMI Provider for Configuration Management in SQL Server uses WMI to manage services, server aliases, and client/server network settings.
+description: Learn how the WMI Provider for Configuration Management uses WMI to manage services, server aliases, and client/server network settings in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

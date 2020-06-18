@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ServerNetworkProtocol Class
   The [ServerNetworkProtocol Class]servernetworkprotocol-class.md) represents network protocols installed on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that enables communication with clients over a network.  

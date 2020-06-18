@@ -42,7 +42,6 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # New Publication Wizard
   This section provides information on the following pages of the New Publication Wizard:  

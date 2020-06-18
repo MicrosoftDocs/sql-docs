@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Generate Siblings with a Nested AUTO Mode Query
   The following example shows how to generate siblings by using a nested AUTO mode query. The only other way to generate such XML is to use the EXPLICIT mode. However, this can be cumbersome.  

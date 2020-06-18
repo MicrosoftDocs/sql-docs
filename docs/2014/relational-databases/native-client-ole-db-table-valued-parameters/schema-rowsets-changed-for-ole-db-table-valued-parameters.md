@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters
   The following are the schema rowsets that have been changed or added to support table-valued parameters.  

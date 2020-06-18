@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ClientNetworkProtocol Class
   The [ClientNetworkProtocol Class](clientnetworkprotocol-class.md) represents network protocols installed on a client instance that allows communication with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] over a network.  

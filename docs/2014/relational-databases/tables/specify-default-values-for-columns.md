@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Specify Default Values for Columns
   You can specify a default value that will be entered in the column in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If you do not assign a default value and the user leaves the column blank, then:  

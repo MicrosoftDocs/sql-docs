@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Fetching Result Data
   An ODBC application has three options for fetching result data.  

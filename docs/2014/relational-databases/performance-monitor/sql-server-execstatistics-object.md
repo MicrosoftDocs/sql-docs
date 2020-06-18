@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server, ExecStatistics Object
   The **SQLServer:ExecStatistics** object in Microsoft SQL Server provides counters to monitor various executions.  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SqlServiceType Property (SqlServiceAdvancedProperty Class)
   Gets the type of the managed service associated with the advanced property.  

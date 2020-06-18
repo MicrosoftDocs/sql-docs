@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # View a Saved Trace (Transact-SQL)
   This topic describes how to use built-in functions to view a saved trace.  

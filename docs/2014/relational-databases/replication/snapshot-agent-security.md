@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Snapshot Agent Security
   The **Snapshot Agent Security** dialog box allows you to specify:  

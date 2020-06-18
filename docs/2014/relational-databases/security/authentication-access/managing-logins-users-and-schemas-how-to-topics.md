@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Managing Logins, Users, and Schemas How-to Topics
   This page provides links to topics that show you how to manage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, database users, and database schemas, as well as how to join a role and grant permissions to a principal.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server, Cursor Manager Total Object
   The **SQLServer:Cursor Manager Total** object provides counters to monitor cursors.  

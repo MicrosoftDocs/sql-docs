@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Upgrade Full-Text Search
   Upgrading full-text search to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is done during setup and when database files and full-text catalogs from the earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are attached, restored, or copied using the Copy Database Wizard.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1bb7396f-cbb2-4f88-b82b-543287ed4172
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Connect to Server (Oracle), Connection Properties
   Use the **Connection Properties** tab of the **Connect to Server** dialog box to specify a publishing option of **Gateway** or **Complete**. After a Publisher is identified, this option cannot be changed without dropping and reconfiguring the Publisher. For more information, see [Configure an Oracle Publisher](non-sql/configure-an-oracle-publisher.md).  

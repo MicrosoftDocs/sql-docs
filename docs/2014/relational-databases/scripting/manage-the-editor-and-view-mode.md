@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Manage the Editor and View Mode
   The Editor gives you a number of ways to control the view of your code.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
   Full-text administration for a server instance includes:  

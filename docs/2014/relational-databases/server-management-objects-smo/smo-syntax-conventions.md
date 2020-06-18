@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SMO Syntax Conventions
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) typographical conventions are based on those used in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET reference materials.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c477ab89-a1cd-4f2c-aa7c-40525041100f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Toggle a Breakpoint
   The act of setting a breakpoint on a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement is called toggling a breakpoint.  

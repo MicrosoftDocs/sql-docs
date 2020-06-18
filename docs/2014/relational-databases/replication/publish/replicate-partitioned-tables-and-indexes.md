@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replicate Partitioned Tables and Indexes
   Partitioning makes large tables or indexes more manageable because partitioning enables you to manage and access subsets of data quickly and efficiently, and maintain the integrity of a data collection at the same time. For more information, see [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Replication supports partitioning by providing a set of properties that specify how partitioned tables and indexes should be treated.  

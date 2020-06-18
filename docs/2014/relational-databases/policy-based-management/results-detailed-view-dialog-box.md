@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Results Detailed View Dialog Box
   This dialog box shows the results of policy evaluation after you have run a policy by using the **Evaluate Policies** dialog box and clicked **Evaluate**. This dialog box is read-only, and helps you understand which part of a property expression might be failing.  

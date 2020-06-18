@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Clustered Property (SqlService Class)
   Gets the Boolean property value that specifies whether the service is part of a clustered instance.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Using Table and Index Partitioning
   Data can be stored by using the storage algorithms provided by [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Partitioning can make large tables and indexes more manageable and scalable.  

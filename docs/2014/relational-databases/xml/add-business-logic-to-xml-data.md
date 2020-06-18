@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Add Business Logic to XML Data
   Your business logic can be added to XML data in several ways:  

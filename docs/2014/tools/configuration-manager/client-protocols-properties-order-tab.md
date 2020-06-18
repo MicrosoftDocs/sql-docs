@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Client Protocols Properties (Order Tab)
   Use the **Order**page on the **Client Protocols Properties** dialog box to view and enable the client protocols.  

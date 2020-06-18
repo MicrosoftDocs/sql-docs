@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)
   Appears when you change the data type, length, scale, precision, or collation of a column that participates in a relationship.  

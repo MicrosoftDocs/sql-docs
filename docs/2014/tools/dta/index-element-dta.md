@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Index Element (DTA)
   Contains information about an index that you want to create or drop for a user-specified configuration.  

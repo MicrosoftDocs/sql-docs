@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Operator Properties: New Operator (Notifications Page)
   Use this page to set the alerts and jobs that notify the operator.  

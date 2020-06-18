@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Use the Toolbox
   You can select and drag items, text, and controls from the Toolbox onto forms, pages, and designers, and drag items from these sources back into the Toolbox for reuse later. For example, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] you can drag a task onto a Maintenance Plan.  

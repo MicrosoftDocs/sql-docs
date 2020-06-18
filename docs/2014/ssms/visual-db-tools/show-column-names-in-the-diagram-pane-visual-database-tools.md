@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Show Column Names in the Diagram Pane (Visual Database Tools)
   You can choose to hide or show the column names of tables in the **Diagram Pane** of the Query and View Designer.  

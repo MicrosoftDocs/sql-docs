@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create Column Aliases (Visual Database Tools)
   You can create aliases for column names to make it easier to work with column names, calculations, and summary values. For example, you can create a column alias to:  

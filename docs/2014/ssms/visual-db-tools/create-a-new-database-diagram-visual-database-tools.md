@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create a New Database Diagram (Visual Database Tools)
   You can use Object Explorer to create new database diagrams. Database diagrams graphically show the structure of the database. Using database diagrams you can create and modify tables, columns, relationships, and keys. Additionally, you can modify indexes and constraints.  

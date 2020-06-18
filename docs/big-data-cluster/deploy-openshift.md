@@ -174,7 +174,7 @@ allowedCapabilities:
 - SYS_PTRACE
 defaultAddCapabilities: null
 fsGroup:
-  type: MustRunAs
+  type: RunAsAny
 readOnlyRootFilesystem: false
 requiredDropCapabilities:
 - KILL
@@ -182,7 +182,7 @@ requiredDropCapabilities:
 runAsUser:
   type: MustRunAsNonRoot
 seLinuxContext:
-  type:RunAsAny
+  type:MustRunAs
 supplementalGroups:
   type:RunAsAny
 volumes:

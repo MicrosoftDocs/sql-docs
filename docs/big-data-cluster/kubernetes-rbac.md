@@ -3,7 +3,7 @@ title: Kubernetes RBAC
 titleSuffix: SQL Server big data clusters
 description: This article describes how SQL Server Big Data Clusters uses RBAC with Kubernetes.
 author: mihaelablendea 
-ms.author: ""
+ms.author: mihaelablendea
 ms.reviewer: mikeray
 ms.date: 06/11/2020
 ms.topic: conceptual

@@ -1,6 +1,6 @@
 ---
 title: "SMO and DMO XPs Server Configuration Option | Microsoft Docs"
-description: 'View information on the "SMO and DMO XPs" configuration option. See how it enables SQL Server Management Object (SMO) extended stored procedures on a server.'
+description: 'Learn how to enable SQL Server Management Object (SMO) extended stored procedures on a server. View information on the "SMO and DMO XPs" configuration option.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

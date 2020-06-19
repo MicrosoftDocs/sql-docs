@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use XML in Computed Columns
   XML instances can appear as a source for a computed column, or as a type of computed column. The examples in this topic show how to use XML with computed columns.  

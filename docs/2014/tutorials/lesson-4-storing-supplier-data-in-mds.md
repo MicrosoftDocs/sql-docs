@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Lesson 4: Storing Supplier Data in MDS
   Master Data Services (MDS) is the SQL Server solution for master data management. Master data management (MDM) describes the efforts made by an organization to discover and define nontransactional lists of data.  

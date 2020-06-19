@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a User Interface for a Custom Connection Manager
   After you have overridden the implementation of the properties and methods of the base class to provide your custom functionality, you may want to create a custom user interface for your connection manager. If you do not create a custom user interface, users can configure your connection manager only by using the Properties window.  

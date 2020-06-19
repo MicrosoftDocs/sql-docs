@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ADO NET Source Editor (Columns Page)
   Use the **Columns** page of the **ADO NET Source Editor** dialog box to map an output column to each external (source) column.  

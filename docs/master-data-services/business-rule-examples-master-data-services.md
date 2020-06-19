@@ -1,5 +1,6 @@
 ---
 title: Business Rule Examples
+description: Review these examples of business rules for Master Data Services. These examples are in sample models included with your installation of Master Data Services.
 ms.custom: ""
 ms.date: "01/05/2017"
 ms.prod: sql

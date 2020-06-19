@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore the master Database (Transact-SQL)
   This topic explains how to restore the **master** database from a full database backup.  

@@ -10,7 +10,6 @@ f1_keywords:
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

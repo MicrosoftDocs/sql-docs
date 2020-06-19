@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Broker Event Category
   The **Broker** event category contains general Service Broker events.  

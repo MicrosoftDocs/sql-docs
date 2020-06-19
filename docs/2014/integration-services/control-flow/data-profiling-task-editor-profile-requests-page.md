@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Profiling Task Editor (Profile Requests Page)
   Use the **Profile Requests Page** of the **Data Profiling Task Editor** to select and configure the profiles that you want to compute. In a single Data Profiling task, you can compute multiple profiles for multiple columns or combinations of columns in multiple tables or views.  

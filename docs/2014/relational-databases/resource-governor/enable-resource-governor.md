@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Enable Resource Governor
   The Resource Governor is turned off by default. You can enable the Resource Governor by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  

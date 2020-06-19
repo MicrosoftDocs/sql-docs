@@ -1,5 +1,6 @@
 ---
 title: "View Resource Health Policy Results (SQL Server Utility) | Microsoft Docs"
+description: Learn how to use SQL Server Management Studio to view SQL Server Utility resource health policy results for instances of SQL Server and data-tier applications.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

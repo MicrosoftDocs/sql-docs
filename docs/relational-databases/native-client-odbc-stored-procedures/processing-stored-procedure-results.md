@@ -1,5 +1,6 @@
 ---
 title: "Processing Stored Procedure Results | Microsoft Docs"
+description: Learn about the mechanisms SQL Server stored procedures use to return data to applications. Applications must be able to handle all these types.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive
   The following query specifies the `ELEMENTS` directive to generate element-centric XML from the query result.  

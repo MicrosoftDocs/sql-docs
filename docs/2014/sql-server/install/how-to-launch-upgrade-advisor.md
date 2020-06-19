@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # How to: Launch Upgrade Advisor
   Upgrade Advisor provides a central console that you can use to launch the Upgrade Advisor Analysis Wizard and the Upgrade Advisor Report Viewer. This topic describes how to launch Upgrade Advisor.  

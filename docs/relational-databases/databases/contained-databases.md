@@ -1,5 +1,6 @@
 ---
 title: "Contained Databases | Microsoft Docs"
+description: "Learn about contained databases, the benefits and limitations of partially contained databases, and how SQL Server 2019 works to isolate databases."
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql

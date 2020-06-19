@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Schema Object Access Event Class
   The **Audit Schema Object Access** event class occurs when an object permission (such as SELECT) is used.  

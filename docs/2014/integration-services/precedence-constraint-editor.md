@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Precedence Constraint Editor
   Use the **Precedence Constraint Editor** dialog box to configure precedence constraints.  

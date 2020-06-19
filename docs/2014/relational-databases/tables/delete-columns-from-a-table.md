@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Delete Columns from a Table
   This topic describes how to delete table columns in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

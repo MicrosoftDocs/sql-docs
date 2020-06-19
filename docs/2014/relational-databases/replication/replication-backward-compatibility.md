@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication Backward Compatibility
   Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. It is important to understand backward compatibility if you are upgrading or if you have more than one version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a replication topology.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Divide (SSIS Expression)
   Divides the first numeric expression by the second one.  

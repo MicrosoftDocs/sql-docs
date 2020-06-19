@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3f1d3eb7-2baa-4215-b040-0b41e3d10740
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 3 (Optional): Reviewing the Subscription Views
   In this task, you confirm that the SQL views are created by using SQL Server Management Studio.

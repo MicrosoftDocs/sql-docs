@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Oracle Supplemental Logging Script
   This dialog box shows the script the Oracle supplemental logging script.  

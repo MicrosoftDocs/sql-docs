@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Use the full path to register extended stored procedure DLL names
   Extended stored procedures that were previously registered without the full path for the DLL name may not work in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

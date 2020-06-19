@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Indexes on Computed Columns
   You can define indexes on computed columns as long as the following requirements are met:  

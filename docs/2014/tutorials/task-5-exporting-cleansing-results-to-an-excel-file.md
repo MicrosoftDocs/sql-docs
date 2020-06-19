@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 5: Exporting Cleansing Results to an Excel File
   In this task, you export results from the cleansing activity to an Excel file. See [Export Stage](https://msdn.microsoft.com/library/hh213061.aspx#Export) topic for more details.  

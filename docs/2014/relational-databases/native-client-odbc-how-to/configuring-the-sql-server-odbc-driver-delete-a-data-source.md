@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Delete a Data Source (ODBC)
   You can delete a data source by using ODBC Administrator, programmatically (by using [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), or by deleting a file (if a file data source name).  

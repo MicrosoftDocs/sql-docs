@@ -1,5 +1,6 @@
 ---
 title: Validation
+description: Data is validated to ensure its accuracy, either automatically or based on business rules that you create in Master Data Services.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "SQLSTATE (ODBC Error Codes) | Microsoft Docs"
+description: When SQL Server ODBC driver runs stored procedures as remote stored procedures, the procedure can have integer return codes and output parameters.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

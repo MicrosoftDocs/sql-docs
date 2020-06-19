@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Properties (Startup Parameters Tab)"
+description: Use the Startup Parameters tab of the SQL Server Properties dialog box to add or remove startup parameters, which can affect Database Engine performance.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

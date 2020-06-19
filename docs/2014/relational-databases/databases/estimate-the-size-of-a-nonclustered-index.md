@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Estimate the Size of a Nonclustered Index
   Follow these steps to estimate the amount of space that is required to store a nonclustered index:  

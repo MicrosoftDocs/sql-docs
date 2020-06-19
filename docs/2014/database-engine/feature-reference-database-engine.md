@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Feature Reference (Database Engine)
   The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes several tools and applications that you can use to create, manage, and view database objects and data. In addition, there are tools that you can use to monitor and troubleshoot server and database performance and enable and disable features, services, and network protocols. This section provides specific topics describing the dialog boxes of these tools and applications.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Server Properties F1 Help
   This section contains the F1 Help topics for the **Server Properties** pages in SQL Server Management Studio.  

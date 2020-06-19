@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Guest Permissions on User Databases
   This rule determines whether the guest user has permission to access the database. This rule applies to user databases only.  

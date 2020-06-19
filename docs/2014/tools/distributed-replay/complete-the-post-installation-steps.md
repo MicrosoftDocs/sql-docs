@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Complete the Post-Installation Steps
   After you install Distributed Replay you must modify the Distributed Replay controller and client services accounts.  

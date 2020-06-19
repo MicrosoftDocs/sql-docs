@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Azure
   This lesson assumes that you already have another SQL Server, which might reside in another on-premises computer or in a virtual machine in Azure. For information on how to create a SQL Server virtual machine in Azure, see [Provisioning a SQL Server Virtual Machine on Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). After provisioning a SQL Server virtual machine in Azure, make sure that you can connect to an instance of SQL Server in this virtual machine via SQL Server Management Studio in another computer.  

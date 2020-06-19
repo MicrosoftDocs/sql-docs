@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint
   Use the following checklist to install these BI features in the same SharePoint farm: PowerPivot for SharePoint, Report Builder, and [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Although this checklist recommends a specific installation order, in practice you can install these features in almost any order. This checklist assumes installation of the following products or features:  

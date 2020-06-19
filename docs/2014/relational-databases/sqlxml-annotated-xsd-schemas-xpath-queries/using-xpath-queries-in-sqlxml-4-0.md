@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Using XPath Queries in SQLXML 4.0
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for annotated XSD schemas allows you to create XML views of the relational data stored in the database. You can use a subset of the XPath language to query the XML views created by an annotated XSD schema.  

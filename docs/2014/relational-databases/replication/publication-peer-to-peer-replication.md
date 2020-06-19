@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Publication (Peer-to-Peer Replication)
   The **Publication** page displays transactional publications that are enabled for peer-to-peer replication. Publications are enabled on the **Subscription Options** page of the **Publication Properties** dialog box.  

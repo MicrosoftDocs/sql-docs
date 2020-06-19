@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SMO Object Model Diagram
   This diagram shows the SMO object hierarchy and the relationships between the object types. The <xref:Microsoft.SqlServer.Management.Smo.Server> object is the top level object.  

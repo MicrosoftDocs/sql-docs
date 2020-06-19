@@ -8,7 +8,6 @@ ms.technology:
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
 ---
 # Set the Collation of User-defined Databases to Match Those of the master and model Databases
 See [Set the Collation of User-defined Databases to Match Those of the master and model Databases](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md).

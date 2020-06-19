@@ -1,5 +1,6 @@
 ---
 title: "Change the Text of a Legend Item (Report Builder) | Microsoft Docs"
+description: Find out how to change the text of a legend item to show more information about the individual data points in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

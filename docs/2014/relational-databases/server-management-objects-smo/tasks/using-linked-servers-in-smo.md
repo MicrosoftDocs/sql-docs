@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Using Linked Servers in SMO
   A linked server represents an OLE DB data source on a remote server. Remote OLE DB data sources are linked to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using the <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> object.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLExecute
   If the statement attribute SQL_SOPT_SS_PARAM_FOCUS is not set to 0, SQLExecute will return SQL_ERROR and generate a diagnostic record with SQLSTATE=HY024 and the message "Invalid attribute value, SQL_SOPT_SS_PARAM_FOCUS (must be zero at execution time)". For more information about SQL_SOPT_SS_PARAM_FOCUS, see [SQLSetStmtAttr](sqlsetstmtattr.md).  

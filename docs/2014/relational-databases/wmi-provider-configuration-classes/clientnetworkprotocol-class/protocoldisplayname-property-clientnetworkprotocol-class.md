@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ProtocolDisplayName Property (ClientNetworkProtocol Class)
   Gets the display name of the client network protocol specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  

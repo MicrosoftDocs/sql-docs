@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # IBCPSession::BCPColFmt (OLE DB)
   Creates a binding between program variables and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columns.  

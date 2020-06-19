@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Merge Data by Using the Union All Transformation
   To add and configure a Union All transformation, the package must already include at least one Data Flow task and two data sources.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Rename Solutions and Project Items
   You can rename a solution and its project items in Solution Explorer.  

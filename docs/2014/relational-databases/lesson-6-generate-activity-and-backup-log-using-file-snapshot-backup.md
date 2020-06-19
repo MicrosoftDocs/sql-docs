@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Lesson 7: Move your data files to Azure Storage
   In this lesson, you will learn how to move your data files to Azure Storage (but not your SQL Server instance). To follow this lesson, you do not need to complete Lesson 4, 5, and 6.  

@@ -1,5 +1,6 @@
 ---
 title: "Native Error Numbers | Microsoft Docs"
+description: For errors, the SQL Server Native Client ODBC driver returns the native error number from SQL Server or, for errors detected by the driver, 0.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Modify applications to expect bigint values from sysperfinfo.cntr_value
   sysperfinfo returns a `bigint` value for the cntr_value column.  

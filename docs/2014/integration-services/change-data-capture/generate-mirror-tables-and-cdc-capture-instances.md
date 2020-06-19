@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Generate Mirror Tables and CDC Capture Instances
   Use the Generate Mirror Tables page to generate the mirror tables for the tables you included in the CDC instance  

@@ -1,5 +1,6 @@
 ---
 title: "Aliases (SQL Server Configuration Manager)"
+description: Learn how to create an alias in SQL Server Configuration Manager so that you can use an alternate name when connecting to an instance of SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

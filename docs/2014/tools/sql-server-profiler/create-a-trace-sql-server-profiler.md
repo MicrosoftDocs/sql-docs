@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create a Trace (SQL Server Profiler)
   This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create a trace.  

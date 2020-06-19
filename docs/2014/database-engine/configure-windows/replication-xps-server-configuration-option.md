@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Replication XPs Server Configuration Option
   This option is for internal use only.  

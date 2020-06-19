@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Save Deadlock Graphs (SQL Server Profiler)
   This topic describes how to save a deadlock graph by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Deadlock graphs are saved as XML files.  

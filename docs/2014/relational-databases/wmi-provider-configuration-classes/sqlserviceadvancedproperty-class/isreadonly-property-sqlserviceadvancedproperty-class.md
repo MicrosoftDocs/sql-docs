@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # IsReadOnly Property (SqlServiceAdvancedProperty Class)
   Gets or sets the Boolean property that specifies whether the advanced property is read-only or not.  

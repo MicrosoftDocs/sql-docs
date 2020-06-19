@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Save an Execution Plan in XML Format
   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to save execution plans as an XML file, and to open them for viewing.  

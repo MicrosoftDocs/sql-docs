@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Excel Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **Excel Destination Editor** dialog box to specify data source information, and to preview the results. The Excel destination loads data into a worksheet or a named range in a [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] workbook.  

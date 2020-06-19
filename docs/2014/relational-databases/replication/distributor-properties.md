@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Replication Distributor Properties
 This topic discusses the properties found on the **General**, **Publishers**, and **Distribution Database** pages within the **Distributor Properties** window. 

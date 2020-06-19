@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # NS$&lt;service name&gt; Properties (Service Tab)
   This service is the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] service. The property values in light gray cannot be changed using this application.  

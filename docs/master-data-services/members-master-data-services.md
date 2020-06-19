@@ -1,5 +1,6 @@
 ---
 title: Members
+description: In Master Data Services, members are the physical master data, such as a Road-150 bike in a Product entity or a specific customer in a Customer entity.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

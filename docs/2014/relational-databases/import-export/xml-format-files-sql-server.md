@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # XML Format Files (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides an XML schema that defines syntax for writing *XML format files* to use for bulk importing data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. XML format files must adhere to this schema, which is defined in the XML Schema Definition Language (XSDL). XML format files are only supported when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

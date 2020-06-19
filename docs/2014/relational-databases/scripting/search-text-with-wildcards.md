@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Search Text with Wildcards
   The following expressions can replace characters or digits in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  

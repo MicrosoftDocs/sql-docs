@@ -1,5 +1,6 @@
 ---
 title: Master Data Manager Web Application
+description: Learn how to use the Master Data Manager web application to perform administrative tasks for Master Data Services.
 ms.custom: ""
 ms.date: "12/20/2016"
 ms.prod: sql

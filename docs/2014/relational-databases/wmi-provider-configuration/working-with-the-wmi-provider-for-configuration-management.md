@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Working with the WMI Provider for Configuration Management
   Consider the following before programming with the WMI Provider for Computer Management:  

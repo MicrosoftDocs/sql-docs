@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Configuration Manager Help"
+description: Get acquainted with SQL Server Configuration Manager. Learn how to use it to manage SQL Server services and configure network connectivity.
 ms.custom: seo-lt-2019
 ms.date: "02/01/2018"
 ms.prod: sql

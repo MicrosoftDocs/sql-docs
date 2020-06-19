@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Handling SMO Exceptions
   In managed code, exceptions are thrown when an error occurs. SMO methods and properties do not report success or failure in the return value. Instead, exceptions can be caught and handled by an exception handler.  

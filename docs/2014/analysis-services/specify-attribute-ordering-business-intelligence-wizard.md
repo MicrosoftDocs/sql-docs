@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Attribute Ordering (Business Intelligence Wizard)
   Use the **Specify Attribute Ordering** page to specify the ordering attributes and ordering criteria for attributes in the selected dimension.  

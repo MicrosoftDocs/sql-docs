@@ -1,5 +1,6 @@
 ---
 title: "Example: Renaming the &lt;row&gt; Element | Microsoft Docs"
+description: View an example of renaming an XML row element by specifying an optional argument to RAW mode in the FOR XML clause.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

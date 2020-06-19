@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Removing an Extended Stored Procedure from SQL Server
     

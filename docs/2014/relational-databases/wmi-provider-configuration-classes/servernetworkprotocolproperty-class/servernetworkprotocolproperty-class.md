@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ServerNetworkProtocolProperty Class
   The [ServerNetworkProtocolProperty Class]servernetworkprotocolproperty-class.md) represents the properties of a server network protocol.  

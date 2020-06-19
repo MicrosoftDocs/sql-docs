@@ -1,5 +1,6 @@
 ---
 title: "Configure the query governor cost limit Server Configuration Option | Microsoft Docs"
+description: Learn about the query governor cost limit option. See how to use it to limit execution to queries that SQL Server estimates will complete within a certain time.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

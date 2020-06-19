@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Map Columns to Composite Domains
   A composite domain consists of two or more single domains. You can map multiple columns to the domain, or you can map a single column with delimited values to the domain.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Job Properties: New Job (Targets Page)
   Use this page to manage the target servers for the job.  

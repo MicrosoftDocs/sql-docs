@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SetDefaults Method (ClientSettings Class)
   Sets all the default values for the instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client with the option to overwrite existing data.  

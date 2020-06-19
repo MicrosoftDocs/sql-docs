@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # ISAPI filters detected on the report server site (Upgrade Advisor)
   Upgrade Advisor detected one or more ISAPI filters on the Web site that hosts the report server and Report Manager virtual directories. ISAPI filters are not supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

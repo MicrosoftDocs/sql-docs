@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Query with Full-Text Search
   To define full-text searches, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text queries use the full-text predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE. These support rich [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that supports a variety of forms of query terms. To write full-text queries, you must learn when and how to use these predicates and functions.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Agent, Statistics Object
   The SQL Server Agent **Statistics** performance object contains performance counters that report information about SQL Server Agent.  

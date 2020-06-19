@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create the Finance Name Policy
   In this task, you will create a database named Finance, and then create a condition that requires all tables to start with the letters **fintbl**. Then, you will create a policy and policy category to enforce a naming standard for tables in the Finance database.  

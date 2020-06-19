@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Flat File Source
   The Flat File source reads data from a text file. The text file can be in delimited, fixed width, or mixed format.  

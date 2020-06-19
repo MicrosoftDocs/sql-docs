@@ -102,6 +102,7 @@ ALTER TABLE Sales.TempSalesReason
 For more information, see:
 
 - [Primary and Foreign Key Constraints](primary-and-foreign-key-constraints.md)
+- [GRANT Database Permissions](../../t-sql/statements/grant-database-permissions-transact-sql.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).

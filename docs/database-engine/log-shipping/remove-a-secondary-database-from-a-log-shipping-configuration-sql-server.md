@@ -1,6 +1,6 @@
 ---
 title: "Remove log shipping secondary"
-description: Learn how to remove a log shipping secondary partner. 
+description: Learn how to remove a log shipping secondary partner in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

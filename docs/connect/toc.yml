@@ -36,7 +36,7 @@
     - name: Download Microsoft SqlClient Data Provider for SQL Server
       href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
     - name: "Enable event tracing in SqlClient"
-      href: ../connect/ado-net/enabling-eventsource-tracing.md
+      href: ../connect/ado-net/enable-eventsource-tracing.md
     - name: "AppContext switches in SqlClient"
       href: ../connect/ado-net/appcontext-switches.md
     - name: SqlClient Driver support lifecycle

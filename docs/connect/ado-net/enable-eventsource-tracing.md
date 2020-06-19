@@ -26,7 +26,7 @@ Microsoft.Data.SqlClient.EventSource
 
 The current implementation supports the following Event Keywords:
 
-| Keyword Name | Value | Description |
+| Keyword name | Value | Description |
 | ------------ | ----- | ----------- |
 | ExecutionTrace | 1 | Turns on capturing Start/Stop events before and after command execution. |
 | Trace | 2 | Turns on capturing basic application flow trace events. |

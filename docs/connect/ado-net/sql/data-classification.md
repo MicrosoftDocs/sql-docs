@@ -24,5 +24,6 @@ This sample application demonstrates how to access the Data Classification prope
 
 [!code-csharp [SqlDataReader_DataDiscoveryAndClassification#1](~/../sqlclient/doc/samples/SqlDataReader_DataDiscoveryAndClassification.cs#1)]
 
-## See Also  
+**See also**  
+
  [SQL Server features and ADO.NET](sql-server-features-adonet.md)   

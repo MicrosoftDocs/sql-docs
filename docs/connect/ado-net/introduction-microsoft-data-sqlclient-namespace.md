@@ -19,7 +19,7 @@ ms.reviewer: v-kaywon
 
 Release notes are also available in the GitHub Repository: [2.0 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.0).
 
-### Breaking Changes
+### Breaking changes
 
 - The access modifier for the enclave provider interface `SqlColumnEncryptionEnclaveProvider` has been changed from `public` to `internal`.
 
@@ -33,7 +33,7 @@ Release notes are also available in the GitHub Repository: [2.0 Release Notes](h
 
 - For .NET Framework applications consuming **Microsoft.Data.SqlClient**, the SNI.dll files previously downloaded to the `bin\x64` and `bin\x86` folders are now named `Microsoft.Data.SqlClient.SNI.x64.dll` and` Microsoft.Data.SqlClient.SNI.x86.dll` and will be downloaded to the `bin` directory.
 
-### New Features
+### New features
 
 #### DNS failure resiliency
 
@@ -47,9 +47,9 @@ This release introduces support for capturing event trace logs for debugging app
 Microsoft.Data.SqlClient.EventSource
 ```
 
-For more information, see how to [Enable event tracing in SqlClient](enabling-eventsource-tracing.md).
+For more information, see how to [Enable event tracing in SqlClient](enable-eventsource-tracing.md).
 
-#### Enabling Managed networking on Windows
+#### Enabling managed networking on Windows
 
 A new AppContext switch **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** enables the use of a managed SNI implementation on Windows for testing and debugging purposes. This switch will toggle the driver's behavior to use a managed SNI in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library.
 
@@ -67,7 +67,7 @@ The decimal data scale will be rounded by the driver by default as is done by SQ
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
 ```
 
-#### New Connection string property synonyms
+#### New connection string property synonyms
 
 New synonyms have been added for the following existing connection string properties to avoid spacing confusion around properties with more than one word. Old property names will continue to be supported for backwards compatibility.
 
@@ -86,7 +86,7 @@ New synonyms have been added for the following existing connection string proper
 
 The RowsCopied property provides read-only access to the number of rows that have been processed in the ongoing bulk copy operation. This value may not necessarily be equal to the final number of rows added to the destination table. 
 
-#### Connection Open Overrides
+#### Connection open overrides
 
 The default behavior of SqlConnection.Open() can be overridden to disable the ten-second delay and automatic connection retries triggered by transient errors.
 
@@ -120,7 +120,7 @@ Microsoft.Data.SqlClient (.NET Core and .NET Standard) on Windows is now depende
 
 Release notes are also available in the GitHub Repository: [1.1 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
 
-### New Features
+### New features
 
 #### Always Encrypted with secure enclaves
 

@@ -1,5 +1,5 @@
 ---
-title: "AppContext Switches in SqlClient"
+title: "AppContext switches in SqlClient"
 description: "Describes how to use AppContext switches that are available in SqlClient."
 ms.date: "06/15/2020"
 dev_langs: 
@@ -12,7 +12,7 @@ author: johnnypham
 ms.author: v-jopha
 ms.reviewer: 
 ---
-# AppContext Switches in Sqlclient
+# AppContext switches in Sqlclient
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -28,7 +28,7 @@ Starting with Microsoft.Data.SqlClient 2.0, decimal data will be rounded by defa
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
 ```
 
-## Enabling Managed networking on Windows
+## Enabling managed networking on Windows
 
 [!INCLUDE [appliesto-xxxx-netcore-netst-md](../../includes/appliesto-xxxx-netcore-netst-md.md)]
 

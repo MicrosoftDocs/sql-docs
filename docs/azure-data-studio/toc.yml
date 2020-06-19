@@ -2,7 +2,7 @@
   href: ../azure-data-studio/index.yml
 
 - name: Download Azure Data Studio
-  href: ../azure-data-studio/download-azure-data-studio.md
+  href: download-azure-data-studio.md
 - name: Release notes
   href: release-notes-azure-data-studio.md
 

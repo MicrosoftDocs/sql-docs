@@ -1,7 +1,7 @@
 - name: Docs
-  tocHref: /azure/
+  tocHref: /sql/
   topicHref: /sql/index
   items:
   - name: Azure Data Studio
-    tocHref: /azure/sql-database/
-    topicHref: /sql/machine-learning/
+    tocHref: /sql/azure-data-studio/
+    topicHref: /sql/azure-data-studio/

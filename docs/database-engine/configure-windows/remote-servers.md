@@ -1,6 +1,6 @@
 ---
 title: "Remote Servers | Microsoft Docs"
-description: Learn about remote servers, which SQL Server has replaced with linked servers. View information on remote server functionality, configuration, and security.
+description: Learn about remote servers, which have been replaced with linked servers in SQL Server. View information on functionality, configuration, and security.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

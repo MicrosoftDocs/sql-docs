@@ -468,7 +468,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  Page locks are not used.  
   
 > [!NOTE]
-> An index cannot be reorganized when ALLOW_PAGE_LOCKS is set to OFF.  
+> An index cannot be reorganized when ALLOW_PAGE_LOCKS is set to OFF. When you perform an Index rebuild operation on a multicore machine and a parallel plan is used, the rebuild might result in a fragmented index if ALLOW_PAGE_LOCKS option is set to OFF during the rebuild operation. 
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 

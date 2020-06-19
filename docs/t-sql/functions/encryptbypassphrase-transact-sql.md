@@ -89,7 +89,7 @@ SET @PassphraseEnteredByUser
 -- In this case, the record is number 3681.  
 UPDATE Sales.CreditCard  
 SET CardNumber_EncryptedbyPassphrase = EncryptByPassPhrase(@PassphraseEnteredByUser  
-    , CardNumber, 1, CONVERT( varbinary, CreditCardID))  
+    , CardNumber, 1, CONVERT(varbinary, CreditCardID))  
 WHERE CreditCardID = '3681';  
 GO  
 ```  

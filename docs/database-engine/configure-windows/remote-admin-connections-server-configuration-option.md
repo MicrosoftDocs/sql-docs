@@ -1,6 +1,6 @@
 ---
 title: "remote admin connections Server Configuration Option | Microsoft Docs"
-description: Learn how applications on remote computers can use the DAC. See how to use the "remote admin connections" option with sp_configure to turn on this capability.
+description: 'Learn how applications on remote computers can use the DAC. See how to use the "remote admin connections" option with sp_configure to turn on this capability.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

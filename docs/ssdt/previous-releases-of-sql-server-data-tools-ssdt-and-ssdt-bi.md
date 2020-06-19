@@ -32,7 +32,7 @@ Download previous SSDT versions by selecting the download link in the related se
 | [17.4](#ssdt-for-visual-studio-vs-2015) | 2015 |
 | [16.5](#ssdt-for-visual-studio-vs-2013) | 2013 |
 | [11.1.50727.1](#ssdt-for-visual-studio-vs-2012) | 2012 |
-0
+
 ### SSDT for Visual Studio (VS) 2017
 
 **[Download SSDT for Visual Studio 2017 (15.8)](https://go.microsoft.com/fwlink/?linkid=2124319)**

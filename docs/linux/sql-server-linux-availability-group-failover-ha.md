@@ -94,7 +94,7 @@ An example of the constraint which gets created because of a manual failover.
    Alternatively, you can perform both move and clearing of auto generated constraints in a single line as follows. The following example uses the *clone* terminology as per Red Hat Enterprise Linux 8.x. 
   
    ```bash
-   sudo pcs resource move ag_cluster-clone --master nodeName2 && sudo pcs resource clear ag_cluster-clone
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
 
    ```
   

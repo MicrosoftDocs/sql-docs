@@ -1,5 +1,5 @@
 ---
-title: "Data Discovery and Classification in SqlClient"
+title: "Data discovery and classification in SqlClient"
 description: "Describes how to check if a SQL Server database supports data classification and how to access data classification information through a SqlDataReader object."
 ms.date: "06/15/2020"
 dev_langs: 
@@ -12,7 +12,7 @@ author: johnnypham
 ms.author: v-jopha
 ms.reviewer: 
 ---
-# Data Discovery and Classification in SqlClient
+# Data discovery and classification in SqlClient
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 

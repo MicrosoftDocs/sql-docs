@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring Monitor (Warnings Page) | Microsoft Docs"
+description: Use this read-only Database Mirroring Monitor page to view warnings supported on database mirroring events and the warning threshold values, if available.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

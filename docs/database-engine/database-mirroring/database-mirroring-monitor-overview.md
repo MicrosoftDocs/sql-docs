@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring Monitor Overview | Microsoft Docs"
+description: Learn how to use Database Mirroring Monitor to monitor mirrored databases to verify data flow in the database mirroring session and for troubleshooting.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

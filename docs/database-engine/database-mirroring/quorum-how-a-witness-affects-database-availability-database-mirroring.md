@@ -1,6 +1,6 @@
 ---
 title: "How a witness affects database availability"
-description: "Describes how a database mirroring affects quorum and database availability."
+description: Describes how a database mirroring affects quorum and database availability. Quorum makes sure that a database is owned by only one partner at a time.
 ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"
 ms.prod: sql

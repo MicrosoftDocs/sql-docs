@@ -1,5 +1,6 @@
 ---
 title: "Manually Fail Over a Database Mirroring Session (SQL Server Management Studio) | Microsoft Docs"
+description: Learn how to initiate manual failover to the mirror server by using SQL Server Management Studio. The mirror database becomes the principal database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

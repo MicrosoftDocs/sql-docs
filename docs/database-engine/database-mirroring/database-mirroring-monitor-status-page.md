@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring Monitor (Status Page) | Microsoft Docs"
+description: Use this read-only Database Mirroring Monitor page to view the mirroring status for the principal and mirror server instances of the selected database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -579,7 +579,7 @@ After an availability group is created in [!INCLUDE[ssnoversion-md](../includes/
 
 The AG resource that is created is a special kind of resource called a clone. The AG resource essentially has copies on each node, and there is one controlling resource called the master. The master is associated with the server hosting the primary replica. The other resources host secondary replicas (regular or configuration-only) and can be promoted to master in a failover.
 
-[!INCLUDE [bias-sensitive-term-slave](../includes/bias-sensitive-term-slave.md)]
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  Create the AG resource with the following syntax:
 

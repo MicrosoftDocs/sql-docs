@@ -164,7 +164,7 @@ Both a WSFC and a Pacemaker cluster have the concept of a resource. A resource i
 
 Pacemaker has standard and clone resources. Clone resources are ones that run simultaneously on all nodes. An example would be an IP address that runs on multiple nodes for load balancing purposes. Any resource that gets created for FCIs uses a standard resource, since only one node can host an FCI at any given time.
 
-[!INCLUDE [bias-sensitive-term-slave](../includes/bias-sensitive-term-slave.md)]
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 When an AG is created, it requires a specialized form of a clone resource called a multi-state resource. While an AG only has one primary replica, the AG itself is running across all nodes that it is configured to work on, and can potentially allow things such as read-only access. Because this is a "live" use of the node, the resources have the concept of two states: master and slave. For more information, see [Multi-state resources: Resources that have multiple modes](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 

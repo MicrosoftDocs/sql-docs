@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/13/2019"
+ms.date: "06/11/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -738,8 +738,9 @@ The BACKUP statement is not allowed in an explicit or implicit transaction.
 
 Cross-platform backup operations, even between different processor types, can be performed as long as the collation of the database is supported by the operating system.
 
-When using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, it is recommended to use a `MAXTRANSFERSIZE` setting **larger than 65536 (64 KB)**.
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this enables an optimized compression algorithm for TDE encrypted databases that first decrypts a page, compresses it and then encrypts it again. If using `MAXTRANSFERSIZE = 65536` (64 KB), backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], setting `MAXTRANSFERSIZE` **larger than 65536 (64 KB)** enables an optimized compression algorithm for [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) encrypted databases that first decrypts a page, compresses it, and then encrypts it again. If `MAXTRANSFERSIZE` is not specified, or if `MAXTRANSFERSIZE = 65536` (64 KB) is used, backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, setting `MAXTRANSFERSIZE` is no longer required to enable this optimized compression algorithm with TDE. If the backup command is specified `WITH COMPRESSION` or the *backup compression default* server configuration is set to 1, `MAXTRANSFERSIZE` will automatically be increased to 128K to enable the optimized algorithm. If `MAXTRANSFERSIZE` is specified on the backup command with a value > 64K, the provided value will be honored. In other words, SQL Server will never automatically decrease the value, it will only increase it. If you need to back up a TDE encrypted database with `MAXTRANSFERSIZE = 65536`, you must specify `WITH NO_COMPRESSION` or ensure that the *backup compression default* server configuration is set to 0.
 
 > [!NOTE]
 > There are some cases where the default `MAXTRANSFERSIZE` is greater than 64K:
@@ -747,7 +748,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this enables an
 > - When the database has multiple data files created, it uses `MAXTRANSFERSIZE` > 64K
 > - When performing backup to URL, the default `MAXTRANSFERSIZE = 1048576` (1MB)
 >
-> Even if one of these conditions applies, you must explicitly set `MAXTRANSFERSIZE` greater than 64K in your backup command in order to get the new backup compression algorithm.
+> Even if one of these conditions applies, you must explicitly set `MAXTRANSFERSIZE` greater than 64K in your backup command in order to get the optimized backup compression algorithm, unless you are on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 or later.
 
 By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 

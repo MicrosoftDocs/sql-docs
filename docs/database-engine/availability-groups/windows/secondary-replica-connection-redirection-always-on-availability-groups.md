@@ -1,6 +1,6 @@
 ---
 title: "Redirect read/write connections to primary replica"
-description: Learn how to always redirect read/write connections to the primary replica of an Always On availability group regardless of the target server specified in the connection string. 
+description: Learn how to redirect read/write connections to the primary replica of an Always On availability group regardless of the server specified in the connection string. 
 ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql

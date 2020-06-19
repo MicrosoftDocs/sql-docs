@@ -1,6 +1,6 @@
 ---
 title: "Upgrade a failover cluster instance"
-description: "Steps to upgrade a SQL Server failover cluster instance using the installation media." 
+description: "Learn how to upgrade a SQL Server failover cluster instance using installation media. Learn about a rolling upgrade and upgrading a multi-subnet cluster." 
 ms.custom: "seo-lt-2019"
 ms.date: "11/21/2019"
 ms.prod: sql

@@ -1,6 +1,6 @@
 - name: Azure Data Studio
-  tocHref: /azure-data-studio/
-  topicHref: /azure-data-studio/index
+  tocHref: /
+  topicHref: /
   items:
 
     - name: Azure Data Studio

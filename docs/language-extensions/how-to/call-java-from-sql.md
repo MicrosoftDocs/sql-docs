@@ -109,6 +109,21 @@ with result sets ((column1 int))
 
 For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
+## Java loopback for SQL Server
+
+The Java loopback connection applies to both Windows & Linux - external script connecting back to SQL Server. In Windows for loopback to work you can use integratedSecurity=true in the connection string. 
+
+Example of a string using a jdbc driver to connect to a named database on a remote server:
+
+```java
+jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;integratedSecurity=true;
+``` 
+In SQL Server 2019 for Linux the certificate details have to be specified based on the following JDBC docs:
+
+https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios
+
+https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0
+
 ## Next steps
 
 + [Tutorial: Search for a string using regular expressions in Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

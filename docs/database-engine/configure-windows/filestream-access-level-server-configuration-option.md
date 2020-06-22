@@ -1,5 +1,6 @@
 ---
 title: "filestream access level Server Configuration Option | Microsoft Docs"
+description: 'Become familiar with the "filestream_access_level" option. See how it changes the FILESTREAM access level for an instance of SQL Server.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

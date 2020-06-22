@@ -124,7 +124,6 @@ In this example, you don't need to specify `/python` since you're including the 
 - [Get R package information](../package-management/r-package-information.md)
 - [Install packages with R tools](../package-management/install-r-packages-standard-tools.md)
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - [Get R package information](../package-management/r-package-information.md)
 - [Get Python package information](../package-management/python-package-information.md)

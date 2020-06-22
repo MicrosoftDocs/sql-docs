@@ -17,8 +17,6 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-
 This article describes how to change the default version of R used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md)).
 
 If you have installed one or more CUs, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
@@ -31,59 +29,18 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 
 *&lt;SQL instance path&gt;*\R_SERVICES.n.n\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe
 
-::: moniker-end
-
-
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-This article describes how to change the default version of R or Python used by a SQL instance in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
-
-If you have installed one or more CUs, you may have multiple versions of R or Python in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* or `PYTHON_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
-::: moniker-end
-
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-For example, if you install a CU containing Python 3.7, a new `PYTHON_SERVICES` folder is created:
-
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES.3.7`
-::: moniker-end
-
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Each SQL instance uses one of these versions as the default version of R or Python. You can change the default version by using the **RegisterRExt.exe** command-line utility. The utility is located under both the R and Python folders in each SQL instance:
-
-*&lt;SQL instance path&gt;*`\R_SERVICES.n.n\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe`  
-*&lt;SQL instance path&gt;*`\PYTHON_SERVICES.n.n\Lib\site-packages\revoscalepy\rxLibs\RegisterRExt.exe`
-::: moniker-end
-
-
 > [!Note]
 > The functionality described in this article is available only with the copy of **RegisterRExt.exe** included in SQL CUs. Don't use the copy that came with the original SQL installation.
 
 **RegisterRExt.exe** accepts these command-line arguments:
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 - `/configure` - Required, specifies that you're configuring the default R version.
-::: moniker-end
-
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-- `/configure` - Required, specifies that you're configuring the default R/Python version.
-
-- `/python` - Specifies that you're configuring the default Python version. Optional if you specify `/pythonhome`.
-::: moniker-end
 
 - `/instance:`*&lt;instance name&gt;* - Optional, the instance you want to configure. If not specified, the default instance is configured.
 
 - `/rhome:`*&lt;path to the R_SERVICES[n.n] folder&gt;* - Optional, the version you want to set as the default R version.
-  ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"  
-  or  
-  `/pythonhome:`*&lt;path to the PYTHON_SERVICES[n.n] folder&gt;* - Optional, the version you want to set as the default Python version.
-  ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   If you don't specify /rhome, the path used is the path under which **RegisterRExt.exe** is located.
-  ::: moniker-end
-  ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-  If you don't specify /rhome or /pythonhome, the path used is the path under which **RegisterRExt.exe** is located.
-  ::: moniker-end
-
 
 For example, to configure R 3.5 as the default version of R for the instance MSSQLSERVER01:
 
@@ -97,7 +54,6 @@ In this example, you don't need to include the `/rhome` argument since you're sp
 
 ## Remove a language version
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 To remove a version of R, use **RegisterRExt.exe** with the `/cleanup` command-line argument, using the same `/rhome`, `/pythonhome`, and `/instance` arguments described previously.
 
 For example, to remove the R 3.5 folder from the instance MSSQLSERVER01:
@@ -105,33 +61,11 @@ For example, to remove the R 3.5 folder from the instance MSSQLSERVER01:
 ```cmd
 .\RegisterRExt.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5" /instance:MSSQLSERVER01
 ```
-::: moniker-end
-
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-To remove a version of R or Python, use **RegisterRExt.exe** with the `/cleanup` command-line argument, using the same `/rhome`, `/pythonhome`, and `/instance` arguments described previously.
-
-For example, to remove the Python 3.7 folder from the instance MSSQLSERVER01:
-
-```cmd
-.\RegisterRExt.exe /cleanup /python /pythonhome:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\PYTHON_SERVICES.3.7" /instance:MSSQLSERVER01
-```
-
-In this example, you don't need to specify `/python` since you're including the `/pythonhome` argument.
-::: moniker-end
 
 > [!NOTE]
 > You can remove a version only if it's not configured as the default.
 
 ## Next steps
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - [Get R package information](../package-management/r-package-information.md)
 - [Install packages with R tools](../package-management/install-r-packages-standard-tools.md)
-::: moniker-end
-
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- [Get R package information](../package-management/r-package-information.md)
-- [Get Python package information](../package-management/python-package-information.md)
-- [Install packages with R tools](../package-management/install-r-packages-standard-tools.md)
-- [Install packages with Python tools](../package-management/install-python-packages-standard-tools.md)
-::: moniker-end

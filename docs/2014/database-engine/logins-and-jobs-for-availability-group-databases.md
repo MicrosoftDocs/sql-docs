@@ -1,5 +1,6 @@
 ---
 title: "Management of Logins and Jobs for the Databases of an Availability Group (SQL Server) | Microsoft Docs"
+description: Learn how to maintain the same set of user logins and SQL Server Agent jobs on a primary database of an AlwaysOn availability group and the secondary databases.
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

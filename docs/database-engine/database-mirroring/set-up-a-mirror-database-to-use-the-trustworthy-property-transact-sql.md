@@ -1,6 +1,6 @@
 ---
 title: "Enable trustworthy property for a mirrored database"
-description: Describes the steps necessary to enable the trustworthy property on a newly mirrored database. 
+description: Describes the steps necessary to enable the TRUSTWORTHY database property on a newly mirrored database by using Transact-SQL.
 ms.custom: "seo-lt-2019"
 ms.date: "03/09/2017"
 ms.prod: sql

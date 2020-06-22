@@ -1,6 +1,6 @@
 ---
 title: "Changes aren't visible on secondary availability group replica"
-ms.description: "Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group." 
+ms.description: Learn how to troubleshoot a failover on an Always On availability group which takes longer than your recovery time objective in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql

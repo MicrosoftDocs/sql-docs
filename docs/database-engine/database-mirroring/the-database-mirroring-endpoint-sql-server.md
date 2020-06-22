@@ -1,5 +1,6 @@
 ---
 title: "The Database Mirroring Endpoint (SQL Server) | Microsoft Docs"
+description: Learn about a dedicated database mirroring endpoint, which is required for each server to participate in Always On availability groups or database mirroring.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot: Availability group exceeded RTO (SQL Server) | Microsoft Docs"
+description: 
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Broadcast a Shutdown Message (Command Prompt) | Microsoft Docs"
+description: Find out how to use the net send command to broadcast a message in SQL Server. See how to determine which users are currently connected to SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -302,7 +302,7 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 
 | Class | Description | Provider (lookup) name | Platform |
 |:---|:---|:---|:---|
-|[SqlColumnEncryptionAzureKeyVaultProvider Class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Provider for Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
+|[SqlColumnEncryptionAzureKeyVaultProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Provider for Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
 For examples demonstrating performing encryption/decryption with Azure Key Vault, see [Azure Key Vault working with Always Encrypted](azure-key-vault-example.md) and [Azure Key Vault working with Always Encrypted with Secure Enclaves](azure-key-vault-enclave-example.md).
 

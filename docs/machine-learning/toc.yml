@@ -39,7 +39,7 @@
     href: ../machine-learning/install/sql-pretrained-models-install.md
   - name: Upgrade Python and R
     href: ../machine-learning/install/upgrade-r-and-python.md
-  - name: Change default language version
+  - name: Change default language runtime
     href: ../machine-learning/install/change-default-language-runtime-version.md
   - name: Azure Data Studio notebooks
     href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md

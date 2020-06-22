@@ -4,7 +4,7 @@ description: Learn how you can create and use a resource pool for managing Pytho
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019

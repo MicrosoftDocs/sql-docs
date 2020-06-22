@@ -5,7 +5,7 @@ description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Acti
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 06/11/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

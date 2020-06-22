@@ -25,7 +25,7 @@ This release adds the top-requested features for Python and R machine learning o
 > [!NOTE]
 > For the what's new documentation on Java in SQL Server 2019, see the [What's new in SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
-Below are the new features for SQL Server Machine Learning Services available on both **Windows** and **Linux**:
+Below are the new features for SQL Server Machine Learning Services, available on both **Windows** and **Linux**:
 
 - Linux platform support was added for R and Python machine learning. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 - [Loopback connection to SQL Server from a Python or R script](connect/loopback-connection.md). 

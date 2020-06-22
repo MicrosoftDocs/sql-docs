@@ -5,7 +5,7 @@ description: Learn the steps and resources for deploying SQL Server Big Data Clu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/11/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

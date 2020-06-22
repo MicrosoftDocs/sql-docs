@@ -45,6 +45,9 @@ This section describes optimal configuration defaults that are designed to ensur
 > [!IMPORTANT]
 > These defaults are automatically applied in the final stage of Query Store activation in all Azure SQL databases (see preceding important note). After this light up, Azure SQL Database won't be changing configuration values set by customers, unless they negatively impact primary workload or reliable operations of the Query Store.
 
+> [!NOTE]  
+> Query Store cannot be disabled in Azure SQL Database single database and elastic pool. Executing ALTER DATABASE [database] SET QUERY_STORE = OFF will return the warning “'QUERY_STORE=OFF' is not supported in this version of SQL Server.” 
+
 If you want to stay with your custom settings, use [ALTER DATABASE with Query Store options](https://msdn.microsoft.com/library/bb522682.aspx) to revert configuration to the previous state. Check out [Best Practices with the Query Store](https://msdn.microsoft.com/library/mt604821.aspx) in order to learn how top chose optimal configuration parameters.
 
 ## Use Query Store with elastic pool databases

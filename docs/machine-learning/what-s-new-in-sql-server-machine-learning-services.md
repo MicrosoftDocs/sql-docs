@@ -3,7 +3,7 @@ title: What's new in SQL Server Machine Learning Services?
 titleSuffix: 
 description: New feature announcements for each release of SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: overview
 author: dphansen
 ms.author: davidph
 ms.custom: sqlseattle

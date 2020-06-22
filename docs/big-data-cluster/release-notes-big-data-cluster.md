@@ -59,7 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release          | BDC Version    | `azdata` Version| Release date |
 |------------------|----------------|-----------------|--------------|
-| [CU5](#cu5)      | 15.0.4043.12   | 20.0.0          | 2020-05-31   |
+| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
 | [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 2020-02-13   |
@@ -72,11 +72,11 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../inc
 
 ## <a id="cu5"></a> CU5 (June 2020)
 
-Cumulative Update 5 (CU5) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4043.7.
+Cumulative Update 5 (CU5) release for SQL Server 2019.
 
 |Package version | Image tag |
 |-----|-----|
-|15.0.4043.7 |[2019-CU5-ubuntu-16.04]
+|15.0.4043.16 |[2019-CU5-ubuntu-16.04]
 
 ### Added capabilities
 
@@ -163,7 +163,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a BDC cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
 
-- **Workaround**: Install `kubectl` tool on the same client machine and re-issue the *azdata bdc copy-logs* command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
+- **Workaround**: Install `kubectl` tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
 
 ### Deployment with private repository
 

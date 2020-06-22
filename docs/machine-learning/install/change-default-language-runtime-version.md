@@ -94,7 +94,7 @@ In this example, you don't need to include the `/rhome` argument since you're sp
 ## Remove a language version
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-To remove a version of R, use **RegisterRExt.exe** with the `/cleanup` command-line argument, using the same `/rhome`, `/pythonhome`, and `/instance` arguments described previously.
+To remove a version of R, use **RegisterRExt.exe** with the `/cleanup` command-line argument, using the same `/rhome` and `/instance` arguments described previously.
 
 For example, to remove the R 3.5 folder from the instance MSSQLSERVER01:
 

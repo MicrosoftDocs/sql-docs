@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

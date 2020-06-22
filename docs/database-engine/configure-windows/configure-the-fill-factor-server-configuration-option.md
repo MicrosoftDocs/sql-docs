@@ -1,5 +1,6 @@
 ---
 title: "Configure the fill factor Server Configuration Option | Microsoft Docs"
+description: Learn about the fill factor option. See how to configure it to specify the percentage of space on each leaf-level page that SQL Server fills with data.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Configure the media retention Server Configuration Option | Microsoft Docs"
+description: Learn about the media retention option. See how to use it to specify how long SQL Server retains transaction log and database backups.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

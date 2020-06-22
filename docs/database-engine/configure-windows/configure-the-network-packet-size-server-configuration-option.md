@@ -1,5 +1,6 @@
 ---
 title: "Configure the network packet size Server Configuration Option | Microsoft Docs"
+description: Learn how to use the network packet size option to set the packet size that SQL Server uses when transferring requests and results between clients and servers.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

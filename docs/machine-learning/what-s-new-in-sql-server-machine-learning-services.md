@@ -29,7 +29,7 @@ Below are the new features for SQL Server Machine Learning Services, available o
 
 - Linux platform support was added in Machine Learning Services for Python and R. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 - [Loopback connection to SQL Server from a Python or R script](connect/loopback-connection.md). 
-- [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for R and Python.
+- [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for Python and R.
 - The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduces two new parameters that enable you to easily generate multiple models from partitioned data. Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md).
 - Failover cluster support is available for the Launchpad service, assuming SQL Server Launchpad service is started on all nodes. For more information, see [SQL Server failover cluster installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md).
 - Isolation mechanism changes for Machine Learning Services,see [SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](install/sql-server-machine-learning-services-2019.md)

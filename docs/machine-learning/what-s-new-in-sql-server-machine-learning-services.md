@@ -34,8 +34,6 @@ Below are the new features for SQL Server Machine Learning Services, available o
 - Failover cluster support is available for the Launchpad service, assuming SQL Server Launchpad service is started on all nodes. For more information, see [SQL Server failover cluster installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md).
 - Isolation mechanism changes for Machine Learning Services. For more information, see [SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](install/sql-server-machine-learning-services-2019.md).
 
-> [!NOTE]
-> For the what's new documentation on Java in SQL Server 2019, see the [What's new in SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

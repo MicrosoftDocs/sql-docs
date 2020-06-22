@@ -27,7 +27,7 @@ This release adds the top-requested features for Python and R machine learning o
 
 Below are the new features for SQL Server Machine Learning Services, available on both **Windows** and **Linux**:
 
-- Linux platform support was added for R and Python machine learning. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- Linux platform support was added in Machine Learning Services for Python and R. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 - [Loopback connection to SQL Server from a Python or R script](connect/loopback-connection.md). 
 - [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for R and Python.
 - The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduces two new parameters that enable you to easily generate multiple models from partitioned data. Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md).

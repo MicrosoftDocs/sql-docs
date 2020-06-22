@@ -1,6 +1,6 @@
 ---
 title: "Diagnostic Connection for Database Administrators | Microsoft Docs"
-description: Find out about the dedicated administrator connection (DAC). View its restrictions, instructions on how to establish it, and examples demonstrating its use.
+description: "Find out about the dedicated administrator connection (DAC). View its restrictions, instructions on how to establish it, and examples demonstrating its use."
 ms.custom: ""
 ms.date: "02/27/2019"
 ms.prod: sql

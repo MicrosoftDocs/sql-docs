@@ -53,7 +53,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
         ```sql  
         SELECT *  
         FROM AdventureWorks2012.Sales.SalesOrderHeader  
-        WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
+        WHERE OrderDate = CONVERT(DATETIME, '07/19/2006', 101)  
         ```  
   
 ## See also

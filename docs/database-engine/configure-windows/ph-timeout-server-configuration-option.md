@@ -1,5 +1,6 @@
 ---
 title: "PH timeout Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "PH timeout" option. See how it limits the time that the full-text protocol handler allots for connecting to a SQL Server database.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

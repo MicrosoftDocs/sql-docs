@@ -1,5 +1,6 @@
 ---
 title: "Database Mail XPs Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "DatabaseMail XPs" option. View different ways of turning on this option so that you can use Database Mail in SQL Server.'
 ms.custom: ""
 ms.date: "11/27/2018"
 ms.prod: sql

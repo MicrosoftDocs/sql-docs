@@ -163,7 +163,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a BDC cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
 
-- **Workaround**: Install `kubectl` tool on the same client machine and re-issue the *azdata bdc copy-logs* command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
+- **Workaround**: Install `kubectl` tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
 
 ### Deployment with private repository
 

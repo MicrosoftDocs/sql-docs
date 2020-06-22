@@ -1,5 +1,6 @@
 ---
 title: "Connect to SQL Server with Proxy Server-SQL Server Config Manager | Microsoft Docs"
+description: "Learn how to use SQL Server Configuration Manager to connect to SQL Server through a proxy server. See how to use Remote WinSock (RWS) to listen remotely."
 ms.custom: ""
 ms.date: "12/15/2016"
 ms.prod: sql

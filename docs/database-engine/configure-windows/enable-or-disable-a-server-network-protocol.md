@@ -1,5 +1,6 @@
 ---
 title: "Enable or Disable a Server Network Protocol | Microsoft Docs"
+description: Find out how to enable or disable a server network protocol. See how to use SQL Server Configuration Manager or PowerShell for this task.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

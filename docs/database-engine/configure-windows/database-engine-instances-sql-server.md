@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Instances (SQL Server) | Microsoft Docs"
+description: Find out about Database Engine instances. View information on tasks you can perform on instances, such as configuring properties and enabling protocols.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot: Availability group exceeded RTO (SQL Server) | Microsoft Docs"
-description: 
+description: Learn how to troubleshoot a failover on an Always On availability group which takes longer than your recovery time objective in SQL Server.
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: sql

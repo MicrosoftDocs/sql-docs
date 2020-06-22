@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 ---
 # Open Database Diagram Designer (Visual Database Tools)

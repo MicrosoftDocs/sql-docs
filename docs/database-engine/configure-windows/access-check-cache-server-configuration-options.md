@@ -1,5 +1,6 @@
 ---
 title: "access check cache Server Configuration Options | Microsoft Docs"
+description: "Learn about the access check result cache and the options that control the cache's behavior. See when to change these options in SQL Server."
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

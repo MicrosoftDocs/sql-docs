@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)

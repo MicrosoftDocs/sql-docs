@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---

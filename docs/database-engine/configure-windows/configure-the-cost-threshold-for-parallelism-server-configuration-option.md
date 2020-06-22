@@ -1,5 +1,6 @@
 ---
 title: "Configure the cost threshold for parallelism Server Configuration Option | Microsoft Docs"
+description: Learn about the cost threshold for parallelism option. See how its value affects whether SQL Server runs parallel plans for queries, and find out how to set it.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

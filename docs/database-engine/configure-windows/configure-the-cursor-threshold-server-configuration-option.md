@@ -1,5 +1,6 @@
 ---
 title: "Configure the cursor threshold Server Configuration Option | Microsoft Docs"
+description: Learn about the cursor threshold option. See how its value affects whether SQL Server generates cursor keysets asynchronously, and find out how to configure it.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---

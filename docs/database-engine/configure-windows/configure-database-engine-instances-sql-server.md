@@ -1,5 +1,6 @@
 ---
 title: "Configure Database Engine Instances (SQL Server) | Microsoft Docs"
+description: Get acquainted with SQL Server configuration tasks so that you can configure a Database Engine instance to meet performance and availability requirements.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

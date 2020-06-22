@@ -1,6 +1,5 @@
 ---
 title: "Best practices - natively compiled stored procedures"
-description: Learn about best practices for natively compiled stored procedures which are typically used in performance-critical parts of an application.
 ms.custom: seo-dt-2019
 ms.date: "03/24/2017"
 ms.prod: sql

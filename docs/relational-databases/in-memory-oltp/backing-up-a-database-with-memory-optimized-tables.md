@@ -1,6 +1,5 @@
 ---
 title: "Database backup with Memory-optimized tables"
-description: Learn how memory-optimized tables are backed up as part of regular database backups. Read about full database backup and differential backups.
 ms.custom: seo-dt-2019
 ms.date: "03/20/2017"
 ms.prod: sql

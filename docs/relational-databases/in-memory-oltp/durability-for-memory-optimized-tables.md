@@ -1,6 +1,5 @@
 ---
 title: "Durability for Memory-Optimized Tables | Microsoft Docs"
-description: Learn how In-Memory OLTP provides full durability for memory-optimized tables, by using transaction logging and persisting data changes to on-disk storage.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql

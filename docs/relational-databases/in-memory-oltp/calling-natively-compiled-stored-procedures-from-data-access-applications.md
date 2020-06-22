@@ -1,6 +1,5 @@
 ---
 title: "Natively compiled stored procedures - data access applications"
-description: Find guidance for calling natively compiled stored procedures from data access applications, with an example that uses the SQL Server Native Client ODBC driver.
 ms.custom: seo-dt-2019
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Atomic Blocks | Microsoft Docs"
+description: Learn about BEGIN ATOMIC, part of the ANSI SQL standard. SQL Server supports atomic blocks in native procedures. 
 ms.custom: ""
 ms.date: "10/26/2017"
 ms.prod: sql

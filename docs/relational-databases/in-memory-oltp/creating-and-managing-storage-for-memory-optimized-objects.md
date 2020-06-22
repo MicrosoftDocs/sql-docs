@@ -1,5 +1,6 @@
 ---
 title: "Create & manage storage - memory-optimized objects"
+description: Learn about Transact-SQL features supported only for natively compiled stored procedures and how to create natively compiled stored procedures in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "03/15/2017"
 ms.prod: sql

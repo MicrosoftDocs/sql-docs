@@ -1,6 +1,5 @@
 ---
 title: "Install a Service Pack on a System with Minimal Downtime for Mirrored Databases | Microsoft Docs"
-description: Learn how to sequentially upgrade instances of SQL Server used in database mirroring, which is known as a rolling update and reduces downtime.
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"

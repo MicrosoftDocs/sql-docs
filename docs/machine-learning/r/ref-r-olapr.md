@@ -5,7 +5,7 @@ ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 12/04/2018  
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"

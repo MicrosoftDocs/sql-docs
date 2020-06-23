@@ -1,5 +1,6 @@
 ---
 title: "Permissions (Database Engine) | Microsoft Docs"
+description: Consult this complete list of SQL Server permissions to find out which permissions apply to platforms that you use.
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: sql

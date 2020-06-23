@@ -5,7 +5,7 @@ ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph

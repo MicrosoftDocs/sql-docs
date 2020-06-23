@@ -19,6 +19,7 @@ By default, SQL Server compresses data streams where appropriate for availabilit
 | Synchronous-commit replica | Not compressed
 | Asynchronous- commit replicas | Compressed
 | During automatic seeding | Not compressed
+| TDE enabled in database  | Not compressed
 
 ## Trace flags for availability group compression 
 

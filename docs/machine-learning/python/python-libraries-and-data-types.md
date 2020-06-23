@@ -5,7 +5,7 @@ ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 12/10/2018  
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019

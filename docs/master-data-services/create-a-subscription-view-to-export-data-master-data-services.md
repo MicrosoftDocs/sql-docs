@@ -1,5 +1,6 @@
 ---
 title: Create a Subscription View to Export Data
+description: Learn how to create a subscription view to export Master Data Services data to subscribing systems, which creates a view of your data.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

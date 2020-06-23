@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7d32b560-49d6-4558-b5d6-9127067f82d6
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Virtual directories are unspecified (Upgrade Advisor)
   Upgrade Advisor did not detect virtual directory settings for the Report Server Web service or Report Manager. After upgrade completes, you must configure URL reservations for the report server by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager.  

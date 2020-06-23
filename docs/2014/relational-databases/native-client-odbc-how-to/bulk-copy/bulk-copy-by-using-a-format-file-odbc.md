@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Bulk Copy by Using a Format File (ODBC)
   This sample shows how to use the ODBC bcp_init function with a format file.  

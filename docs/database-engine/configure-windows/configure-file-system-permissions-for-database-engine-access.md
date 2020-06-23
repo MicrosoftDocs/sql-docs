@@ -1,5 +1,6 @@
 ---
 title: "Configure File System Permissions for Database Engine Access | Microsoft Docs"
+description: Learn about per-service SIDs. See how to grant them access permission to the database file location so that the Database Engine can access the database files.
 ms.custom: ""
 ms.date: "06/06/2016"
 ms.prod: sql

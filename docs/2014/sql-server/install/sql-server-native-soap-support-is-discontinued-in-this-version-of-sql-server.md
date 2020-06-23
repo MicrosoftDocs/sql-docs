@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 80fd692b-1cea-4139-8e80-454d3e81c76d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server native SOAP support is discontinued in this version of SQL Server.
   Upgrade Advisor detected use of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native XML Web Services.  

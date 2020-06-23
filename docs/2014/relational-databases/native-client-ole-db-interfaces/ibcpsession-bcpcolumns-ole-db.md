@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # IBCPSession::BCPColumns (OLE DB)
   Sets the number of fields that are to be bound to the columns in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  

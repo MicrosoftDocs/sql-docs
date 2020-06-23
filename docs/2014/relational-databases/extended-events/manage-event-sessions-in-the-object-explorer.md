@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Manage Event Sessions in the Object Explorer
   This topic discusses the actions you can take in **Object Explorer** that affect Extended Events:  

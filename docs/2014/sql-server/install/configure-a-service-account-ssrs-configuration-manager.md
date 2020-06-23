@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Configure a Service Account (SSRS Configuration Manager)
   In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, the Report Server Web service, Report Manager, and the background processing application run within a single service. The account under which the service runs is defined during Setup when you specify the account in the Service Identity page, but you can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool if you want use a different account or update the password.  

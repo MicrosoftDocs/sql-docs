@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Select Object Types (Object Explorer)
   Use this dialog box to specify the types of objects that appear in the **Select Objects** dialog box.  

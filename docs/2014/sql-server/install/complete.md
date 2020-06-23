@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 95a14506-db11-490f-b5c3-61dea7fd247c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Complete
   The Complete page confirms your installation status.  

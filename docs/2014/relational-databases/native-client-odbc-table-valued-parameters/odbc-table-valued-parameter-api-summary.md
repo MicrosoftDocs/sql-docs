@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # ODBC Table-Valued Parameter API Summary
   This topic lists the ODBC functions that were enhanced to support table-valued parameters.  

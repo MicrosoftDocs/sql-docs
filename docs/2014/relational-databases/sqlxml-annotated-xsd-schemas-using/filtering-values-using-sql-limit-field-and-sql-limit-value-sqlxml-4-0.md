@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)
   You can limit rows that are returned from a database query on the basis of some limiting value. The `sql:limit-field` and `sql:limit-value` annotations are used to identify the database column that contains limiting values and to specify a specific limiting value to be used to filter the data returned.  

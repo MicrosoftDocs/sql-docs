@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLColumns
   `SQLColumns` returns SQL_SUCCESS whether or not values exist for the *CatalogName*, *TableName*, or *ColumnName* parameters. **SQLFetch** returns SQL_NO_DATA when invalid values are used in these parameters.  

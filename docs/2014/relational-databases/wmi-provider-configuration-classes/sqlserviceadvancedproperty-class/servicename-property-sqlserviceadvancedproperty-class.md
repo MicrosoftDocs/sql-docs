@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ServiceName Property (SqlServiceAdvancedProperty Class)
   Gets the name of the managed service that is associated with the advanced property.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Manage Full-Text Indexes
      

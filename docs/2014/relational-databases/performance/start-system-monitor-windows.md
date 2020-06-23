@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Start System Monitor (Windows)
   Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters, for server resources such as processor and memory use, and for many Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources such as locks and transactions.  

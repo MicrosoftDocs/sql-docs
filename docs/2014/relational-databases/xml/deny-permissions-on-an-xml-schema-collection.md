@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Deny Permissions on an XML Schema Collection
   Permission can be denied to either create a new XML schema collection or use an existing one.  

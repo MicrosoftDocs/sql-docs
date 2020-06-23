@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (General Page) | Microsoft Docs"
+description: "Learn how to use the General tab in the Database Properties dialog box to view or modify the properties of a database."
 ms.custom: ""
 ms.date: "10/27/2015"
 ms.prod: sql

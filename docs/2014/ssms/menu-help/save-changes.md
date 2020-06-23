@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Save Changes
   Warns you that changes to the items listed will not be saved unless you click **Yes**.  

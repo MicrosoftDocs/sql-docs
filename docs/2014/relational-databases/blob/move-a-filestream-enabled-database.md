@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Move a FILESTREAM-Enabled Database
   This topic shows how to move a FILESTREAM-enabled database.  

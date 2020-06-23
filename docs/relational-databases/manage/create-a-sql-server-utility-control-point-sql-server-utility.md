@@ -1,5 +1,6 @@
 ---
 title: "Create a SQL Server Utility Control Point (SQL Server Utility) | Microsoft Docs"
+description: Get help identifying resource use bottlenecks and consolidation opportunities by creating a SQL Server utility control point (UCP).
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

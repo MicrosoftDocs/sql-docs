@@ -1,5 +1,6 @@
 ---
 title: "Configure the query wait Server Configuration Option | Microsoft Docs"
+description: Learn about the query wait option. See how to use it to specify the number of seconds a SQL Server query waits for resources before it times out.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

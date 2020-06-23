@@ -11,7 +11,6 @@ ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ---

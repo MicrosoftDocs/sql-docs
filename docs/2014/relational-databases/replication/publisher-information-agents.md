@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Publisher Information, Agents
   The **Agents** tab displays information about the agents and maintenance jobs that are associated with the Publisher:  

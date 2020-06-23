@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Full-Text Search Upgrade Issues
   The topics in this section describe the full-text search issues that might affect your upgrade. The topics describe actions that you can take to mitigate the effect of these changes on your environment.  

@@ -39,14 +39,14 @@ SSMS is free!
 
 ## Download SSMS
 
-**[![download](media/download-icon.png) Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
+**[Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.5.1 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.5.1 upgrades it to 18.5.1.
 
 ### Version information
 
 - Release number: 18.5.1
-- Build number: 15.0.18330.0
+- Build number: 15.0.18333.0
 - Release date: June 09, 2020
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).
@@ -102,6 +102,22 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
 
 3. If all goes well, you can see SSMS installed at %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" based on the example. If something went wrong, you could inspect the error code returned and take a peek at the %TEMP%\SSMSSetup for the log file.
 
+## Uninstall
+
+There are shared components that remain installed after you uninstall SSMS.
+
+The shared components that remain installed are:
+
+- Microsoft .NET Framework 4.7.2
+- Microsoft OLE DB Driver for SQL Server
+- Microsoft ODBC Driver 17 for SQL Server
+- Microsoft Visual C++ 2013 Redistributable (x86)
+- Microsoft Visual C++ 2017 Redistributable (x86)
+- Microsoft Visual C++ 2017 Redistributable (x64)
+- Microsoft Visual Studio Tools for Applications 2017
+
+These components aren't uninstall because they can be shared with other products. If uninstalled, you may run the risk of disabling other products.
+
 ## Supported SQL offerings
 
 - This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
@@ -133,7 +149,7 @@ Supported hardware:
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
-## See also
+## Next steps
 
 - [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)

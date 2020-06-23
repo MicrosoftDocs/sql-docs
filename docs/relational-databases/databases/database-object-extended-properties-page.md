@@ -1,5 +1,6 @@
 ---
 title: "Database Object (Extended Properties Page) | Microsoft Docs"
+description: "Find out about the Extended Properties page. Learn how to use this page to add, view, or modify custom properties of database objects."
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

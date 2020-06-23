@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ODBC Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **ODBC Destination Editor** dialog box to select the ODBC connection manager for the destination. This page also lets you select a table or view from the database  

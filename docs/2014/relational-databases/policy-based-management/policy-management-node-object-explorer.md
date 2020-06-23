@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Policy Management Node (Object Explorer)
   This section contains the following F1 Help topics for the **PolicyManagement** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

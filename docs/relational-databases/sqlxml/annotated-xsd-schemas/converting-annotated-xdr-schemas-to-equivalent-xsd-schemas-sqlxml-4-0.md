@@ -1,5 +1,6 @@
 ---
 title: "Convert annotated XDR schemas to XSD (SQLXML)"
+description: Learn how to convert an annotated XDR schema to an equivalent XSD schema by using the XDR to XSD Converter tool in SQLXML 4.0. 
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connection Managers Area
   Packages use connection managers to connect to data sources such as files, relational databases, and servers.  

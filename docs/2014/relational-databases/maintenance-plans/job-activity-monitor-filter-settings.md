@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Job Activity Monitor (Filter Settings)
   Use this page to reduce the number of rows visible in the Job Activity Monitor. Enter criteria in one or several of the available boxes, to show only the rows that meet the specified values. Some of the boxes, such as **Status** or **Blocking Type** offer a finite number of possible values, provided by a drop-down list. Others, such as **Application,** allow you to enter whatever value and as many values as you wish, as a comma separated list. Toolbar icons allow you to sort the available boxes by category or alphabetically. Click the criteria to show a short description of the each one.  

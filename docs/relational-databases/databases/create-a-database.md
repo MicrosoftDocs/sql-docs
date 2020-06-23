@@ -1,5 +1,6 @@
 ---
 title: "Create a Database | Microsoft Docs"
+description: "Find out how to create a database in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL. View recommendations for the procedure."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

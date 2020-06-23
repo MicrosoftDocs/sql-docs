@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Broker:Conversation Group Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Conversation Group** event when Service Broker creates a new conversation group or drops an existing conversation group.  

@@ -1,5 +1,6 @@
 ---
 title: Importing Data from Tables
+description: Import data from tables and make changes to data after you create a model for your data in Master Data Services.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

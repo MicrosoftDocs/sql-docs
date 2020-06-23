@@ -8,7 +8,6 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
 ---
 # Continue with Restore
 See [Continue with Restore](../../database-engine/continue-with-restore.md).

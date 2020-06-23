@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # GetCurrentCertificate Method (ServerSettings Class)
   Gets the current security certificate.  

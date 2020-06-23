@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Validating Models and Using Models for Prediction (Data Mining Add-ins for Excel)
   Testing and validating your model is an important step in the data mining process. You must know how well your mining models perform against real data before you deploy the models into a production environment.  

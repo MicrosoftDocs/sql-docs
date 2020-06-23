@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 422872b7-b0cd-466d-a6bf-2e2c8a2f8da5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Validation Rules for Data-tier Application Wizards
   This topic will be updated with corrective action for validation rules in Data-tier Application Wizards.  

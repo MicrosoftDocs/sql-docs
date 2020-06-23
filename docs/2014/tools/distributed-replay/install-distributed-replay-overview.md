@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Install Distributed Replay
   Use the following topics to install the Distributed Replay feature.  

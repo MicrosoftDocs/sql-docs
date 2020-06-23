@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Obsolete extensions were detected on the report server computer (Upgrade Advisor)
   Upgrade Advisor detected one or more rendering extensions that are no longer available in the current release.  

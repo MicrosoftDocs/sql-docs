@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Estimate the Size of a Heap
   You can use the following steps to estimate the amount of space that is required to store data in a heap:  

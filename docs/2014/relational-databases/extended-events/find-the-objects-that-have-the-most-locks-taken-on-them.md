@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Find the Objects That Have the Most Locks Taken on Them
   Database administrators often need to identify the source of locks that are hindering database performance.  

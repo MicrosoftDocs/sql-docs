@@ -1,5 +1,6 @@
 ---
 title: "Specify a column with a wildcard character (SQLXML) | Microsoft Docs"
+description: Learn how column names that are specified as a wildcard character affect the results of an XQuery.
 ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"

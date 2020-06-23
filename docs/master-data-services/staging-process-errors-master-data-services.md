@@ -1,5 +1,6 @@
 ---
 title: Staging Process Errors
+description: This article explains error codes added to all processed records during the staging process in Master Data Services.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Select Source Location (SSIS Package Upgrade Wizard)
   Use the **Select Source Location** page to specify the source from which to upgrade packages.  

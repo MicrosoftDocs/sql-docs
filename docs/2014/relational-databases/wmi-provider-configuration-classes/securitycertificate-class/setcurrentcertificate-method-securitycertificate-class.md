@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SetCurrentCertificate Method (SecurityCertificate Class)
   Sets the current security certificate.  

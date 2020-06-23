@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Input and Output Error During Hard Page Fault
   This rule checks the system event log for EventId 51. This error is caused by an error during a hard page fault.  

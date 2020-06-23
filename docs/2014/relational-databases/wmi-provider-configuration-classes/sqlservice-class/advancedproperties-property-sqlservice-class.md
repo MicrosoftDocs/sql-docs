@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # AdvancedProperties Property (SqlService Class)
   Gets an array of object references that contain the advanced properties for the `SqlService` object.  

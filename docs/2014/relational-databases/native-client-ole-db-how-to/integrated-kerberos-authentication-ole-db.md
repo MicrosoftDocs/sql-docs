@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Integrated Kerberos Authentication (OLE DB)
   This sample shows how to get mutual Kerberos authentication by using OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Delete a Solution
   Deleting a solution permanently erases files from physical storage as well as the file items in the solution.  

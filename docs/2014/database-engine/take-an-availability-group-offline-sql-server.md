@@ -1,6 +1,6 @@
 ---
 title: "Alter availability group offline"
-description: Learn how to set your Always On availability group to the OFFLINE state by using Transact-SQL in SQL Server to migrate resources to another cluster.
+description: Steps to set your Always On availability group offline
 ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

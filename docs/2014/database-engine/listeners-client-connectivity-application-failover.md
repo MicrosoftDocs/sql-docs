@@ -1,6 +1,5 @@
 ---
 title: "Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server) | Microsoft Docs"
-description: Learn about Always On Availability Groups client connectivity and application-failover functionality in SQL Server.
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

@@ -32,7 +32,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 > [!IMPORTANT]
 > Below pre-requisites must be performed by a OpenShift cluster admin (cluster-admin cluster role) that has sufficient permissions to create these cluster level objects. For more information on cluster roles in OpenShift see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Create a custom security context constraint (SCC) using the attached [`bdc-scc.yaml`](#bdc-sccyml-file).
+1. Create a custom security context constraint (SCC) using the attached [`bdc-scc.yaml`](#bdc-sccyaml-file).
 
    ```console
    oc apply -f bdc-scc.yaml
@@ -110,7 +110,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 5. Deploy big data cluster
 
    ```console
-   azdata bdc create --config-openshift custom --accept-eula yes
+   azdata bdc create --config custom-openshift --accept-eula yes
    ```
 
 6. Upon successful deployment, you can log in and list the external cluster endpoints:
@@ -150,9 +150,9 @@ The name of the default storage class in ARO is managed-premium (as opposed to A
       }
 ```
 
-## `bdc-scc.yml` file
+## `bdc-scc.yaml` file
 
-```yml
+```yaml
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:

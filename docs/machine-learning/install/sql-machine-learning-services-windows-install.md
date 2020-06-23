@@ -4,7 +4,7 @@ description: Learn how to install SQL Server Machine Learning Services on Window
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 02/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019

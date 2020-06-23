@@ -1,5 +1,6 @@
 ---
 title: "Monitor and Troubleshoot Memory Usage | Microsoft Docs"
+description: Learn about monitoring and troubleshooting In-Memory OLTP memory usage, which has different patterns that disk-based tables in SQL Server.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

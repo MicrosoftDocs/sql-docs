@@ -1,5 +1,6 @@
 ---
 title: "Memory-optimized table Dynamic Management Views (Transact-SQL)"
+description: Learn about the SQL Server dynamic management views and object catalog views used with In-Memory OLTP in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "02/01/2017"
 ms.prod: sql

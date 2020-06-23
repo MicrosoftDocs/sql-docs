@@ -1,5 +1,6 @@
 ---
 title: "Overview and Usage Scenarios | Microsoft Docs"
+description: Learn about In-Memory OLTP, SQL Server and Azure SQL Database technology for optimized transaction processing. Review examples and additional resources.
 ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: sql

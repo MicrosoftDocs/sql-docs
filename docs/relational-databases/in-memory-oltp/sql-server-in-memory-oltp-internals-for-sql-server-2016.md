@@ -1,5 +1,6 @@
 ---
 title: "SQL Server in-memory OLTP internals"
+description: Learn about In-Memory OLTP, SQL Server and Azure SQL Database technology for optimized transaction processing. Review examples and additional resources.
 ms.custom: seo-dt-2019
 ms.date: "09/14/2016"
 ms.prod: sql

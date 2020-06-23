@@ -5,7 +5,7 @@ description: R Services is a feature in SQL Server 2016 that gives the ability t
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/12/2019 
-ms.topic: overview
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"

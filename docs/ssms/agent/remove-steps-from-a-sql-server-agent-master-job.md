@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

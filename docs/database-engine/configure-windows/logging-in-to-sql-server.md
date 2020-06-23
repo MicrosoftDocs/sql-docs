@@ -1,5 +1,6 @@
 ---
 title: "Logging In to SQL Server | Microsoft Docs"
+description: Find out about different ways of signing in to an instance of SQL Server. Learn which format to use for the server name in various environments.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

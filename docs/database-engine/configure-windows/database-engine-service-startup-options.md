@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Service Startup Options | Microsoft Docs"
+description: Become familiar with SQL Server Database Engine startup options. View tips on how to use them, and learn about the purpose of each option.
 ms.custom: ""
 ms.date: "08/01/2019"
 ms.prod: sql

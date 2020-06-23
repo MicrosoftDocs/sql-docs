@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Surface Area Configuration | Microsoft Docs"
+description: Learn how to change feature defaults for SQL Server installation and selectively enable or disable features of a running instance of SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

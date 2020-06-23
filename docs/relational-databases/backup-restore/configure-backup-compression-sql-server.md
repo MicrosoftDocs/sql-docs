@@ -21,7 +21,7 @@ ms.author: mikeray
   
 -   **[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
-     To override the server backup-compression default when creating a backup, use either WITH NO_COMPRESSION or WITH COMPRESSION in you [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement.  
+     To override the server backup-compression default when creating a backup, use either WITH NO_COMPRESSION or WITH COMPRESSION in your [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement.  
   
      For a log shipping configuration, you can control the backup compression behavior of log backups by using [sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)[sp_change_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md).  
   

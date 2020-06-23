@@ -1,5 +1,6 @@
 ---
 title: "default trace enabled Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "default trace enabled" option. Find out how default tracing can help with troubleshooting.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

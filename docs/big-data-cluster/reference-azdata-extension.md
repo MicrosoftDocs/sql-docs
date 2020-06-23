@@ -1,7 +1,7 @@
 ---
-title: azdata context reference
+title: azdata extension reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata context commands.
+description: Reference article for azdata extension commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata context
+# azdata extension
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -20,27 +20,46 @@ The following article provides reference for the `sql` commands in the `azdata` 
 ## Commands
 |     |     |
 | --- | --- |
-[azdata context list](#azdata-context-list) | Lists the available contexts in the user profile.
-[azdata context delete](#azdata-context-delete) | Deletes the context with the given namespace from the user profile.
-[azdata context set](#azdata-context-set) | Sets the context with the given namespace as the active context in the user profile.
-## azdata context list
-You may set or delete any of these with `azdata context set` or `azdata context delete`. To login to a new context, use `azdata login`.
+[azdata extension add](#azdata-extension-add) | Add an extension.
+[azdata extension remove](#azdata-extension-remove) | Remove an extension.
+[azdata extension list](#azdata-extension-list) | List all installed extensions.
+## azdata extension add
+Add an extension.
 ```bash
-azdata context list [--active -a] 
-                    
+azdata extension add --source -s 
+                     [--index]  
+                     
+[--pip-proxy]  
+                     
+[--pip-extra-index-urls]  
+                     
+[--yes -y]
 ```
 ### Examples
-Lists all available contexts in the user profile.
+Add extension from URL.
 ```bash
-azdata context list
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
 ```
-Lists the active context in the user profile.
+Add extension from local disk.
 ```bash
-azdata context list --active
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
 ```
+Add extension from local disk and use pip proxy for dependencies.
+```bash
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
+```
+### Required Parameters
+#### `--source -s`
+Path to a extension wheel on disk or URL to an extension
 ### Optional Parameters
-#### `--active -a`
-List only the currently active context.
+#### `--index`
+Base URL of the Python Package Index (default https://pypi.org/simple). This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.
+#### `--pip-proxy`
+Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port
+#### `--pip-extra-index-urls`
+Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.
+#### `--yes -y`
+Do not prompt for confirmation.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -52,20 +71,23 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## azdata context delete
-If the deleted context is active, the user will need to set a new active context. To see contexts available to set or delete `azdata context list`
+## azdata extension remove
+Remove an extension.
 ```bash
-azdata context delete --namespace -n 
-                      
+azdata extension remove --name -n 
+                        [--yes -y]
 ```
 ### Examples
-Deletes contextNamespace from the user profile.
+Remove an extension.
 ```bash
-azdata context delete -n contextNamespace
+azdata extension remove --name some-ext
 ```
 ### Required Parameters
-#### `--namespace -n`
-Namespace of the context which you'd like to delete.
+#### `--name -n`
+Name of the extension
+### Optional Parameters
+#### `--yes -y`
+Do not prompt for confirmation.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -77,20 +99,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## azdata context set
-To see contexts available to set `azdata context list`. If no contexts are listed, you need to login in order to create a context in your user profile `azdata login`. What you login to will become your active context. If you login to multiple entities, you can then switch between active contexts with this command. To see your currently active context `azdata context list --active`
+## azdata extension list
+List all installed extensions.
 ```bash
-azdata context set --namespace -n 
-                   
+azdata extension list 
 ```
 ### Examples
-Sets contextNamespace as the active context in the user profile.
+List extensions.
 ```bash
-azdata context set -n contextNamespace
+azdata extension list
 ```
-### Required Parameters
-#### `--namespace -n`
-Namespace of the context which you'd like to set.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

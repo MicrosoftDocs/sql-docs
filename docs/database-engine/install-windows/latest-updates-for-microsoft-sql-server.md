@@ -4,7 +4,7 @@ TOCTitle: Latest updates for Microsoft SQL Server
 ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
 ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
 ms:contentKeyID: 31804705
-ms.date: 2/13/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -51,6 +51,8 @@ Each of the following links provides information for all of the applicable produ
 |SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/A|N/A|N/A|[SQL Server 2000 Installation](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
 **Learn how to test updates:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+
+[!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
 ### Knowledge base
 

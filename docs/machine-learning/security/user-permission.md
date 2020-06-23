@@ -4,7 +4,7 @@ description: Learn how you can give users permission to run external Python and 
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4

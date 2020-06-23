@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Login Password Expiration | Microsoft Docs"
+description: Check whether password expiration of each SQL Server login is enabled to help counter a possible attack in SQL Server. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

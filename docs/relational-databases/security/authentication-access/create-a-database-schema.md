@@ -1,5 +1,6 @@
 ---
 title: "Create a Database Schema | Microsoft Docs"
+description: Learn how to create a schema in SQL Server by using SQL Server Management Studio or Transact-SQL, including limitations and restrictions.
 ms.custom: ""
 ms.date: "07/05/2017"
 ms.prod: sql

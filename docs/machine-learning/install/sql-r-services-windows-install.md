@@ -5,7 +5,7 @@ description: Learn how to install SQL Server 2016 R Services on Windows. You can
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4

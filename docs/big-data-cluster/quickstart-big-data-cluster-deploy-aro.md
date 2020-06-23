@@ -151,7 +151,7 @@ executeCmd(command)
 command = "az network vnet subnet update --name "+MASTER_SUBNET_NAME+" --resource-group "+GROUP_NAME+" --vnet-name "+VNET_NAME+" --disable-private-link-service-network-policies true"
 print("Updating Master Subnet by disabling Private Link Policies")
 executeCmd(command)
-command = "az aro create --only-show-errors --resource-group "+GROUP_NAME+" --name "+CLUSTER_NAME+" --vnet "+VNET_NAME+" --master-subnet "+MASTER_SUBNET_NAME+" --worker-subnet "+WORKER_SUBNET_NAME+" --worker-count "+OC_NODE_COUNT+" --worker-vm-size "+WORKER_VM_SIZE
+command = "az aro create --resource-group "+GROUP_NAME+" --name "+CLUSTER_NAME+" --vnet "+VNET_NAME+" --master-subnet "+MASTER_SUBNET_NAME+" --worker-subnet "+WORKER_SUBNET_NAME+" --worker-count "+OC_NODE_COUNT+" --worker-vm-size "+WORKER_VM_SIZE +" --only-show-errors"
 print("Creating OpenShift cluster: "+CLUSTER_NAME)
 executeCmd (command)
 #
@@ -175,7 +175,7 @@ command = "oc new-project "+ CLUSTER_NAME
 executeCmd (command)
 #
 # create custom SCC for BDC
-command = "oc apply -f bdc-scc.yml"
+command = "oc apply -f bdc-scc.yaml"
 executeCmd (command)
 #
 #Adding the custom scc to BDC namespace
@@ -209,9 +209,9 @@ executeCmd(command)
 
 ## `bdc-scc.yaml`
 
-The following .yml manifest defines a custom security context constraints (SCC) for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
+The following .yaml manifest defines a custom security context constraints (SCC) for the Big Data Cluster deployment. Copy it to the same directory as `deploy-sql-big-data-aro.py`.
 
-```yml
+```yaml
 allowHostDirVolumePlugin: false
 allowHostIPC: false
 allowHostNetwork: false

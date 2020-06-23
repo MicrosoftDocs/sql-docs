@@ -4,7 +4,7 @@ description: Learn how to use Python pip to install new Python packages on an in
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph

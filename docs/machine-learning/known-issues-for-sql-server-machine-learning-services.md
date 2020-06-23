@@ -4,8 +4,7 @@ description: This article describes known problems or limitations with the Pytho
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/03/2020
-ms.topic: conceptual
-#ms.topic: troubleshooting
+ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4

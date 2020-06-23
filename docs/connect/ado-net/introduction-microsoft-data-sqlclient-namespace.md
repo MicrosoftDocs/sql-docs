@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Microsoft.Data.SqlClient namespace"
 description: "Introduction page for the Microsoft.Data.SqlClient namespace."
-ms.date: "06/15/2019"
+ms.date: "06/23/2019"
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -32,6 +32,8 @@ Release notes are also available in the GitHub Repository: [2.0 Release Notes](h
 - The driver now performs decimal scale rounding to match SQL Server behavior. For backwards compatibility, the previous behavior of truncation can be enabled using an AppContext switch.
 
 - For .NET Framework applications consuming **Microsoft.Data.SqlClient**, the SNI.dll files previously downloaded to the `bin\x64` and `bin\x86` folders are now named `Microsoft.Data.SqlClient.SNI.x64.dll` and` Microsoft.Data.SqlClient.SNI.x86.dll` and will be downloaded to the `bin` directory.
+
+- New connection string property synonyms will replace old properties when fetching connection string from `SqlConnectionStringBuilder` for consistency. [Read More](#new-connection-string-property-synonyms)
 
 ### New features
 
@@ -69,7 +71,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### New connection string property synonyms
 
-New synonyms have been added for the following existing connection string properties to avoid spacing confusion around properties with more than one word. Old property names will continue to be supported for backwards compatibility.
+New synonyms have been added for the following existing connection string properties to avoid spacing confusion around properties with more than one word. Old property names will continue to be supported for backwards compatibility but the new connection string properties will now be included when fetching connection string from [SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder).
 
 |Existing connection string property|New Synonym|
 |-----------------------------------|-----------|

@@ -2,7 +2,7 @@
 title: "Connecting with sqlcmd"
 description: "Learn how to use the sqlcmd utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,7 +21,7 @@ The [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) utility is availabl
   
 The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, respectively:
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -165,22 +165,30 @@ In the current release, the following options are not available:
   
 You can use the following alternative method: Put the parameters inside one file, which you can then append to another file. This will help you use a parameter file to replace the values. For example, create a file called `a.sql` (the parameter file) with the following content:
   
+    ```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+    ```
   
 Then create a file called `b.sql`, with the parameters for replacement:  
   
+    ```sql
     select $(ColumnName) from $(TableName)  
+    ```
 
 At the command line, combine `a.sql` and `b.sql` into `c.sql` using the following commands:  
   
+    ```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+    ```
   
 Run `sqlcmd` and use `c.sql` as input file:  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+    ```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+    ```
 
 - -z *password* Change password.  
   

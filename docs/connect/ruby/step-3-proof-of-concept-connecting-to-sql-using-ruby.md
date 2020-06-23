@@ -30,9 +30,9 @@ The [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) function is u
   
 Copy and paste the following code in an empty file. Call it test.rb. Then execute it by entering the following command from your command prompt:  
   
-    ```ruby
+```ruby
     ruby test.rb  
-    ```
+```
   
 In the code sample, the [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds) function is used to retrieve a result set from a query against SQL Database. This function accepts a query and returns a result set. The results set is iterated over by using [result.each do |row|](https://github.com/rails-sqlserver/tiny_tds).  
   

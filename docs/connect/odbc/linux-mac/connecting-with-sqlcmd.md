@@ -165,30 +165,30 @@ In the current release, the following options are not available:
   
 You can use the following alternative method: Put the parameters inside one file, which you can then append to another file. This will help you use a parameter file to replace the values. For example, create a file called `a.sql` (the parameter file) with the following content:
   
-    ```console
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
-    ```
+```
   
 Then create a file called `b.sql`, with the parameters for replacement:  
   
-    ```sql
+```sql
     select $(ColumnName) from $(TableName)  
-    ```
+```
 
 At the command line, combine `a.sql` and `b.sql` into `c.sql` using the following commands:  
   
-    ```console
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
-    ```
+```
   
 Run `sqlcmd` and use `c.sql` as input file:  
   
-    ```console
+```console
     sqlcmd -S<...> -P<..> -U<..> -I c.sql  
-    ```
+```
 
 - -z *password* Change password.  
   

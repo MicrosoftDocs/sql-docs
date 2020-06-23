@@ -147,12 +147,6 @@ manager: kfile
 |ComputerNamePhysicalDnsHostname|The DNS host name of the local computer. If the local computer is a node in a cluster, the DNS host name of the local computer is used, not the name of the cluster virtual server.|
 |ComputerNamePhysicalNetBIOS|The NetBIOS name of the local computer. If the local computer is a node in a cluster, the NetBIOS name of the local computer, not the name of the cluster virtual server.|
 
- As SPNs are added, an entry is added to the trace log that resembles the following:
-
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`
-
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`
-
  For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../report-server/register-a-service-principal-name-spn-for-a-report-server.md) and [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).
 
 ## See Also

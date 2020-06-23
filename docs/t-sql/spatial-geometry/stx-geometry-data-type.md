@@ -1,7 +1,7 @@
 ---
 title: "STX (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/03/2017"
+ms.date: "06/23/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -21,7 +21,7 @@ ms.author: mlandzic
 # STX (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-The  X-coordinate property of a **Point**instance.
+The  X-coordinate property of a **Point** instance.
   
 ## Syntax  
   

@@ -1,6 +1,6 @@
 ---
 title: "Replication Subscribers & availability groups (SQL Server)"
-description: Learn what happens if an Always On availability group that contains a database that is a replication subscriber fails over in SQL Server.
+description: Learn what happens if an Always On availability group containing a database that is a replication subscriber fails over in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "08/08/2019"
 ms.prod: sql

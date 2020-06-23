@@ -1,6 +1,6 @@
 ---
 title: "Failed availability group add-file operation"
-decription: Troubleshoot failed add-file operations in an Always On availability group. File paths can differ between systems that host the primary and secondary replicas. 
+description: Troubleshoot failed add-file operations in an Always On availability group. File paths can differ between systems that host the primary and secondary replicas. 
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql

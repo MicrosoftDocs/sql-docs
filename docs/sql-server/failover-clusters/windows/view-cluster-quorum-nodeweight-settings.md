@@ -1,6 +1,6 @@
 ---
 title: "View Cluster Quorum NodeWeight Settings | Microsoft Docs"
-description: Learn how to view NodeWeight settings for each member node in a Windows Server Failover Clustering cluster, which are used during quorum voting.
+description: Learn how to view NodeWeight settings for each member node in a Windows Server Failover Clustering cluster. These settings are used during quorum voting.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

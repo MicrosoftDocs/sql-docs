@@ -1,6 +1,6 @@
 ---
 title: "Database mirroring and full-text catalogs"
-description: Describes how to configure a database mirror on a database that has a full-text catalog. Learn about indexes before and after failover.
+description: Learn how to configure a database mirror on a database that has a full-text catalog and about indexes before and after failover.
 ms.custom: "seo-lt-2019"
 ms.date: "03/03/2017"
 ms.prod: sql

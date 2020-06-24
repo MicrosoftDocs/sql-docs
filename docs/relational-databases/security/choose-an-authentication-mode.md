@@ -1,5 +1,6 @@
 ---
 title: "Choose an Authentication Mode | Microsoft Docs"
+description: Choose between Windows Authentication mode and mixed mode authentication for the SQL Server Database Engine at setup time.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

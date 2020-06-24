@@ -2,7 +2,7 @@
 title: Airline flight demo data for tutorials
 Description: Create a database containing the Airline dataset from R and Python. This dataset is used in R and Python tutorials for SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 10/22/2018  
 ms.topic: tutorial

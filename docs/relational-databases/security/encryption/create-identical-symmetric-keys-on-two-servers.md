@@ -1,5 +1,6 @@
 ---
 title: "Create Identical Symmetric Keys on Two Servers | Microsoft Docs"
+description: Learn how to create identical symmetric keys on two servers in SQL Server by using Transact-SQL. This supports encryption in separate databases or servers.
 ms.custom: ""
 ms.date: "05/30/2019"
 ms.prod: sql

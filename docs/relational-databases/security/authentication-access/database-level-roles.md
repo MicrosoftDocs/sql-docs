@@ -1,5 +1,6 @@
 ---
 title: "Database-Level Roles | Microsoft Docs"
+description: SQL Server provides several roles that are security principals that group other principals to manage the permissions in your databases.
 ms.custom: ""
 ms.date: 06/03/2020
 ms.prod: sql

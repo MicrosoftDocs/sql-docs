@@ -1,5 +1,6 @@
 ---
 title: "Determining Effective Database Engine Permissions | Microsoft Docs"
+description: Learn how to determine who has permissions to various objects in the SQL Server Database Engine, including the current and previous permissions systems.
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: sql

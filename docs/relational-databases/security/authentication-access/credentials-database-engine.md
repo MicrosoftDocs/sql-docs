@@ -1,5 +1,6 @@
 ---
 title: "Credentials (Database Engine) | Microsoft Docs"
+description: Learn about credentials in SQL Server. Get acquainted with the authentication information required to connect to a resource outside SQL Server.
 ms.custom: ""
 ms.date: "06/27/2019"
 ms.prod: sql

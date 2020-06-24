@@ -1,5 +1,6 @@
 ---
 title: "Start SQL Server with Minimal Configuration | Microsoft Docs"
+description: Become familiar with the minimal configuration startup option in SQL Server. See when and how to use it, and learn about how it limits functionality.
 ms.custom: ""
 ms.date: "01/20/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: xp_cmdshell Server configuration option
+description: 'Learn about the "xp_cmdshell" option. See how it controls whether SQL Server can run the "xp_cmdshell" extended stored procedure. Find out how to turn it on.'
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

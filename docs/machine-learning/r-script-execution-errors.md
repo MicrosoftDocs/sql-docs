@@ -2,7 +2,7 @@
 title: Troubleshooting R scripts
 description: This article documents several scripting errors when running R code in SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 05/31/2018  
 ms.topic: troubleshooting

@@ -1,5 +1,6 @@
 ---
 title: "Encrypt a Column of Data | Microsoft Docs"
+description: Learn how to encrypt a column of data by using symmetric encryption in SQL Server using Transact-SQL, sometimes known as column-level or cell-level encryption.
 ms.custom: ""
 ms.date: "01/02/2019"
 ms.prod: sql

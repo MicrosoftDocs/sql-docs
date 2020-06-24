@@ -2,7 +2,7 @@
 title: "Python + T-SQL: Train model"
 description: Python tutorial showing how to train and save a model using Transact-SQL on SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/01/2018  
 ms.topic: tutorial

@@ -3,7 +3,7 @@ title: Iris demo data set for tutorials
 titleSuffix: SQL machine learning
 Description: Create a database containing the Iris dataset and predictive models. This dataset is used in R and Python tutorials with SQL machine learning.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen

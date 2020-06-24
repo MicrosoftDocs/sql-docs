@@ -1,5 +1,6 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
+description: Learn about Transparent Data Encryption, which encrypts SQL Server, Azure SQL Database, and Azure Synapse Analytics data, known as encrypting data at rest.
 ms.custom: ""
 ms.date: 05/09/2019
 ms.prod: sql

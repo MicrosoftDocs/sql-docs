@@ -1,5 +1,6 @@
 ---
 title: "Strong Passwords | Microsoft Docs"
+description: Learn about passwords in SQL Server and find out what constitutes a strong password to enhance security for your deployment.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

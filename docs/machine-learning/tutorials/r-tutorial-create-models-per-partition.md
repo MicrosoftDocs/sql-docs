@@ -2,7 +2,7 @@
 title: Create partition-based models in R
 description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
   
 ms.date: 04/30/2020
 ms.topic: tutorial

@@ -1,5 +1,6 @@
 ---
 title: "Row-Level Security | Microsoft Docs"
+description: Learn how Row-Level Security uses group membership or execution context to control access to rows in a database table in SQL Server.
 ms.custom: ""
 ms.date: "05/14/2019"
 ms.prod: sql

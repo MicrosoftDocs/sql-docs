@@ -1,5 +1,6 @@
 ---
 title: "Restore a Database Master Key | Microsoft Docs"
+description: Learn how to restore the database master key in SQL Server by using SQL Server Management Studio with Transact-SQL.
 ms.custom: ""
 ms.date: "01/02/2019"
 ms.prod: sql

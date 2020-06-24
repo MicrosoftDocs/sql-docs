@@ -1,5 +1,6 @@
 ---
 title: "Permissions or Securables Page | Microsoft Docs"
+description: Use the Permissions page or the Securables page to view or set the permissions for securables in SQL Server. 
 ms.custom: ""
 ms.date: "01/07/2016"
 ms.prod: sql

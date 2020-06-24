@@ -1,5 +1,6 @@
 ---
 title: "Provision Always Encrypted keys using PowerShell | Microsoft Docs"
+description: Learn how to provision keys for Always Encrypted using the SqlServer PowerShell module to provide control access to the encryption keys and the database.
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql

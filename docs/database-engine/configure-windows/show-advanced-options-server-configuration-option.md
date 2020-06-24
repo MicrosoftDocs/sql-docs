@@ -1,5 +1,6 @@
 ---
 title: "show advanced options Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "show advanced options" option. See how to use it to list advanced options when you run the SQL Server system stored procedure "sp_configure."'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

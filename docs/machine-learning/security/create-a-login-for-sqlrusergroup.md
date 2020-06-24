@@ -2,10 +2,10 @@
 title: Create a login for SQLRUserGroup
 description: For loopback connections using implied authentication, create a login in SQL Server for SQLRUserGroup, so that a worker account can log in to the server, for identity conversion back to the calling user.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 01/25/2019  
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"

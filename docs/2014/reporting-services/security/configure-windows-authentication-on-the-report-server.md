@@ -154,14 +154,8 @@ manager: kfile
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service and look for entries similar to the following in the trace log file:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   The values under \<Explicit> will contain the SPNs configured in Active Directory for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account.  
-  
+-   Restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.
+
  If you do not want continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.  
   
 ```  

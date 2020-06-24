@@ -2,10 +2,10 @@
 title: microsoftml Python package
 description: Introduces the Microsoft machine learning algorithms and models for Python, as related to SQL Server machine learning workloads.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/06/2019  
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"

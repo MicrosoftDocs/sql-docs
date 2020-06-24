@@ -32,7 +32,7 @@ ms.author: lle
 ## Configure Master Data Services for Custom Workflows  
  Creating a custom workflow requires writing some custom code and configuring [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to pass workflow data to your workflow handler. Follow these steps to enable custom workflow processing:  
   
-1.  Create a .NET assembly that implements <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
+1.  Create a .NET assembly that implements [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785).  
   
 2.  Configure SQL Server MDS Workflow Integration Service to connect to your [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database and to associate a tag with your workflow handler.  
   
@@ -43,7 +43,7 @@ ms.author: lle
 5.  Apply the business rule to a member that triggers your custom workflow.  
   
 ### Create the Workflow Handler Assembly  
- A custom workflow is a .NET class library assembly that implements the <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> interface. SQL Server MDS Workflow Integration Service calls the <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> method to run your code. For example code that implements <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>, see [Custom Workflow Example &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
+ A custom workflow is a .NET class library assembly that implements the [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785) interface. SQL Server MDS Workflow Integration Service calls the [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow*](/previous-versions/sql/sql-server-2016/hh759009) method to run your code. For example code that implements [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow*](/previous-versions/sql/sql-server-2016/hh759009), see [Custom Workflow Example &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
   
  Follow these steps to use Visual Studio 2010 to create an assembly that SQL Server MDS Workflow Integration Service can call to handle a custom workflow:  
   
@@ -53,9 +53,9 @@ ms.author: lle
   
 3.  Add 'using Microsoft.MasterDataServices.Core.Workflow;' to your C# code file.  
   
-4.  Inherit from <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> in your class declaration. The class declaration should be similar to: 'public class WorkflowTester : IWorkflowTypeExtender'.  
+4.  Inherit from [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785) in your class declaration. The class declaration should be similar to: 'public class WorkflowTester : IWorkflowTypeExtender'.  
   
-5.  Implement the <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> interface. The <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> method is called by SQL Server MDS Workflow Integration Service to start your workflow.  
+5.  Implement the [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785) interface. The [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow*](/previous-versions/sql/sql-server-2016/hh759009) method is called by SQL Server MDS Workflow Integration Service to start your workflow.  
   
 6.  Copy your assembly to the location of the SQL Server MDS Workflow Integration Service executable, named Microsoft.MasterDataServices.Workflow.exe, in \<Your installation folder>\Master Data Services\WebApplication\bin.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Server Configuration Options (SQL Server) | Microsoft Docs"
+description: Find out how to manage and optimize SQL Server resources. View available configuration options, possible settings, default values, and restart requirements.
 ms.custom: ""
 ms.date: "04/13/2017"
 ms.prod: sql

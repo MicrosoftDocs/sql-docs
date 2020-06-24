@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (Advanced Page) | Microsoft Docs"
+description: Get acquainted with SQL Server advanced server settings. Learn about FILESTREAM options, various thresholds, full-text upgrade alternatives, and other settings.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

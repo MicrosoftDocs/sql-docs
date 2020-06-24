@@ -157,14 +157,14 @@ executeCmd (command)
 #
 # Login to oc console
 #
-command = "az aro list-credentials --name "+CLUSTER_NAME+" --resource-group "+GROUP_NAME 
+command = "az aro list-credentials --name "+CLUSTER_NAME+" --resource-group "+GROUP_NAME +" --only-show-errors"
 output=json.loads(getoutput(command))
 OC_CLUSTER_USERNAME = str(output['kubeadminUsername'])
 OC_CLUSTER_PASSWORD = str(output['kubeadminPassword'])
-command = "az aro show --name "+CLUSTER_NAME+" --resource-group "+GROUP_NAME 
+command = "az aro show --name "+CLUSTER_NAME+" --resource-group "+GROUP_NAME +" --only-show-errors"
 output=json.loads(getoutput(command))
 APISERVER = str(output['apiserverProfile']['url'])
-command = "oc login "+ APISERVER+ " -u " + OC_CLUSTER_USERNAME + " -p "+ OC_CLUSTER_PASSWORD 
+command = "oc login "+ APISERVER+ " -u " + OC_CLUSTER_USERNAME + " -p "+ OC_CLUSTER_PASSWORD
 executeCmd (command)
 #
 # Setup pre-requisites for deploying BDC on OpenShift

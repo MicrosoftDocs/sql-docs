@@ -2,7 +2,7 @@
 title: Deploy R code in stored procedures
 description: Embed R language code in a SQL Server stored procedure to make it available to any client application having access to a SQL Server database.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/15/2019  
 ms.topic: how-to

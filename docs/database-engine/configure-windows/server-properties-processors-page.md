@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (Processors Page) | Microsoft Docs"
+description: Get acquainted with processor settings in SQL Server. Learn which options control the number of worker threads, the processor assignment, and other properties.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

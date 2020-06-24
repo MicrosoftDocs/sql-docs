@@ -7,7 +7,7 @@ ms.author: davidph
 ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-bdc
 ---
 
 # Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters

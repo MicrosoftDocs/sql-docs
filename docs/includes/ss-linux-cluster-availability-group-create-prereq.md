@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-For more information about this XE session, see [Always On extended events](../database-engine/availability-groups/windows/always-on-extended-events).
+For more information about this XE session, see [Always On extended events](../database-engine/availability-groups/windows/always-on-extended-events.md).
 
 ## Create a certificate
 

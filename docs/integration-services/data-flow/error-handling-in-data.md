@@ -138,7 +138,7 @@ Use the **Configure Error Output** dialog box to configure error handling option
   
     -   Include the error description in an additional column by using a single line of script to call the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> method of the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.  
   
-    -   Include the column name in an additional column by using a single line of script to call the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> method of the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.  
+    -   Include the column name in an additional column by using a single line of script to call the [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*](/previous-versions/sql/sql-server-2016/mt657629) method of the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.  
   
      You can add the Script component to the error segment of the data flow anywhere downstream from the data flow components whose errors you want to capture. Typically you place the Script component immediately before the error rows are written to a destination. This way, the script looks up descriptions only for error rows that are written. The error segment of the data flow may correct some errors and not write those rows to an error destination.  
 

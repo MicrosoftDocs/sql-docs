@@ -43,7 +43,7 @@ ms.author: lle
   
 |Namespace|Description|  
 |---------------|-----------------|  
-|<xref:Microsoft.MasterDataServices.Deployment>|Contains classes that can be used to create a deployment package from a model and to deploy a package into a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|  
+|[Microsoft.MasterDataServices.Deployment](/previous-versions/sql/sql-server-2016/ff487448)|Contains classes that can be used to create a deployment package from a model and to deploy a package into a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|  
 |<xref:Microsoft.MasterDataServices.Services>|Contains a class that receives and processes web service operations made to the web server computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application.|  
 |<xref:Microsoft.MasterDataServices.Services.DataContracts>|Contains classes that define how data is passed from the client computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to the web server computer.|  
 |<xref:Microsoft.MasterDataServices.Services.MessageContracts>|Contains classes that define how requests and responses are passed from the client computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to the web server computer.|  

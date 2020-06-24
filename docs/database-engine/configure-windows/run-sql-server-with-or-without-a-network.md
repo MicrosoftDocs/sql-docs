@@ -1,5 +1,6 @@
 ---
 title: "Run SQL Server With or Without a Network | Microsoft Docs"
+description: Learn how to run SQL Server on a network and without one. For local use, see how to use a local pipe. For network use, see how to check for required services.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

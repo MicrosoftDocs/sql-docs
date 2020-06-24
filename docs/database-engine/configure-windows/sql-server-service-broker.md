@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Service Broker | Microsoft Docs"
+description: Learn about Service Broker. See how it provides native support for messaging in the SQL Server Database Engine and Azure SQL Database Managed Instance.
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql

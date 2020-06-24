@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Feature Selection
   Use the check boxes on the **Feature Selection** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation wizard to select components for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  

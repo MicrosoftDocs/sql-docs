@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 05/27/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -724,14 +724,17 @@ The current setting of this option can be determined by examining the `is_parame
 <a name="query-store"></a> **\<query_store_options> ::=**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
 Enables the Query Store.
 
-OFF     
-Disables the Query Store. OFF is the default value.
+OFF [ FORCED ]     
+Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes Query Store to shut down as fast as possible. Effectively turns off Query Store immediately. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 introduces FORCED.
+
+> [!NOTE]  
+> Query Store cannot be disabled in Azure SQL Database single database and elastic pool. Executing ALTER DATABASE [database] SET QUERY_STORE = OFF will return the warning “'QUERY_STORE=OFF' is not supported in this version of SQL Server.” 
 
 CLEAR     
 Remove the contents of the Query Store.

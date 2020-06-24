@@ -1,5 +1,6 @@
 ---
 title: Alias Properties (Alias Tab)
+description: Use the Alias tab of the Properties dialog box to configure an alias so that you can use an alternate name when connecting to an instance of SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

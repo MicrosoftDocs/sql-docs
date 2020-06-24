@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Facet Properties Dialog Box, Dependent Policies Page
   Use this dialog box to display a list of policies that currently reference this Policy-Based Management facet.  

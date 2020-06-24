@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ProtocolName Property (ClientNetLibInfo Class)
   Gets the name of the protocol that is associated with the client network library.  

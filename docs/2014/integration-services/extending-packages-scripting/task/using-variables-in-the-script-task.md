@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Using Variables in the Script Task
   Variables make it possible for the Script task to exchange data with other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md).  

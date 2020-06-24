@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # StartDate Property (SecurityCertificate Class)
   Gets the date when the security certificate starts being in effect.  

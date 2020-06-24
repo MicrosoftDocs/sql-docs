@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3f083347-0fbb-4b19-a6fb-1818d545e281
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Backup, Restore, and Recovery of Memory-Optimized Tables
   Topics in this section:  

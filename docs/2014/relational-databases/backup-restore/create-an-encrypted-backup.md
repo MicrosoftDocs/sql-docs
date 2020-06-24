@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create an Encrypted Backup
   This topic describes the steps necessary to create an encrypted backup using Transact-SQL.  

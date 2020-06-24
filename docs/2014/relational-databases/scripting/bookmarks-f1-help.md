@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Bookmarks F1 Help
 

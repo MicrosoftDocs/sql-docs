@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Introduction to DiffGrams in SQLXML 4.0
   This topic provides a brief introduction to DiffGrams.  

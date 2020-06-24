@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0)
   In an XSD schema, the `xsd:type` attribute specifies the XSD data type of an element or attribute. When an XSD schema is used to extract data from the database, the data type specified is used to format the data.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides an integrated platform for solutions that incorporate data mining. You can use either relational or cube data to create business intelligence solutions with predictive analytics.  

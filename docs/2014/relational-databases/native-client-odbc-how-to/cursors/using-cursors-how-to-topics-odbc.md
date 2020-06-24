@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Using Cursors How-to Topics (ODBC)
   To use cursors, you must first set connection and statement attributes that control ODBC cursor behavior. Cursors allow an application to retrieve multiple rows on each fetch and execute UPDATE, INSERT, or DELETE statements at the current location of the cursor.  

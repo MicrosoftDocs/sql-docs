@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # OLEDB Event Category
   The **OLEDB** event category contains general OLEDB events.  

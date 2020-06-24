@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Open Queries (Visual Database Tools)
   You can open an existing query in Query and View Designer by using the **Open** command.  

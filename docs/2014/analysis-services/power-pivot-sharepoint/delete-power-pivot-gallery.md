@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Delete PowerPivot Gallery
   Deleting a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery also deletes all of its items, including the data refresh history for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that are configured for scheduled data refresh.

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # KPI Organizer (KPIs Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **KPI Organizer** pane on the **KPIs** tab in Cube Designer to access and reorder the Key Performance Indicators (KPIs) contained in the specified cube.  

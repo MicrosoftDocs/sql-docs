@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Progress Report Event Category
   The **Progress Report** event category contains the **Progress Report: Online Index Operation** event class.  

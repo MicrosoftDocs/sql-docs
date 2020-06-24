@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select the Case Key (Data Mining Wizard)
   Use the **Select the Case Key** page to select the attribute of the source cube dimension that will be the key of the mining structure. This attribute must be in a hierarchy or have its attribute hierarchy enabled.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Impersonation Information Dialog Box (Table Import Wizard)
   Use the **Impersonation Information** page to specify the credentials that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will use to connect to the data source. For more information about credentials impersonation, see [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  

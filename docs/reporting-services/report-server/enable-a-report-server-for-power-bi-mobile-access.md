@@ -1,5 +1,6 @@
 ---
 title: "Enable a report server for Power BI Mobile access | Microsoft Docs"
+description: Learn how to connect the Power BI Mobile app to Reporting Services to consume Mobile Reports. Mobile Reports are a feature of Native Mode.
 ms.date: 12/17/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

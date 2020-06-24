@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # sql:overflow-field (SQLXML 4.0)
   In a schema, you can identify a column as an overflow column to receive all unconsumed data from the XML document. This column is specified in the schema by using the `sql:overflow-field` annotation. It is possible to have multiple overflow columns.  

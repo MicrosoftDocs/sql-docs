@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # How Online Index Operations Work
   This topic defines the structures that exist during an online index operation and shows the activities associated with these structures.  

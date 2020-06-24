@@ -1,5 +1,6 @@
 ---
 title: "Using DiffGrams to Modify Data in SQLXML 4.0"
+description: View information about using Microsoft .NET Framework DiffGrams in SQLXML 4.0 to modify data in Microsoft SQL Server database tables.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

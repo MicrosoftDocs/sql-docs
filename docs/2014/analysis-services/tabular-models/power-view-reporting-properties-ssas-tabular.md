@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Power View Reporting Properties (SSAS Tabular)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] provides intuitive ad-hoc reporting for business users such as data analysts, business decision makers, and information workers. They can easily create and interact with views of data from tabular models based on PowerPivot workbooks published in a PowerPivot Gallery, or tabular models authored by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and then deployed to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services instances. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] is a browser-based Silverlight application launched from SharePoint Server 2010 or later.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
-manager: craigg
 ---
 # Glossary
 

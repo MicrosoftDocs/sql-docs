@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Cache Transformation Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **Cache Transformation Editor** dialog box to select an existing Cache connection manager or create a new one.  

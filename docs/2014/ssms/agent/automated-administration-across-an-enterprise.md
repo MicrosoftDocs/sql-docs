@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Automated Administration Across an Enterprise
   Automating administration across multiple instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is called *multiserver administration*. Use multiserver administration to do the following:  

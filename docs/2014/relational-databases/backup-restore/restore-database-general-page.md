@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore Database (General Page)
   Use the **General** page to specify information about the target and source databases for a database-restore operation.  

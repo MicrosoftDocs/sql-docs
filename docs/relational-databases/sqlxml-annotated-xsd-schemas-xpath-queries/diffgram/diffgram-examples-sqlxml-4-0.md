@@ -1,5 +1,6 @@
 ---
 title: "DiffGram Examples (SQLXML)"
+description: View examples of diffgrams in SQLXML 4.0 that perform insert, update, and delete operations to a database.
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,5 +1,6 @@
 ---
 title: "Databases | Microsoft Docs"
+description: "Learn about database schemas, tables, filegroups, logins, and roles. See how you can use the SQL Server Management Studio tool to work with databases."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

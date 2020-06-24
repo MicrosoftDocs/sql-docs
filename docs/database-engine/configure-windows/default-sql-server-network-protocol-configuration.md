@@ -1,5 +1,6 @@
 ---
 title: "Default SQL Server Network Protocol Configuration | Microsoft Docs"
+description: View factors that affect whether network protocols are turned on or off during SQL Server installation. See how to configure protocols after installation.
 ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: sql

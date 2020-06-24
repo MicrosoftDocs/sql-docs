@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Partition Processing Destination Editor (Advanced Page)
   Use the **Advanced** page of the **Partition Processing Destination Editor** dialog box to configure error handling.  

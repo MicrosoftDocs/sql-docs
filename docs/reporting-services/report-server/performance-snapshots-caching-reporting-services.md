@@ -1,5 +1,6 @@
 ---
 title: "Performance, Snapshots, Caching (Reporting Services) | Microsoft Docs"
+description: Learn how to get baseline data and run tests to understand performance factors specific to your installation and to produce the results you want.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

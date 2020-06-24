@@ -1,5 +1,6 @@
 ---
 title: "Use XML in Computed Columns | Microsoft Docs"
+description: View examples of how to use XML instances and XML columns with computed columns in SQL.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

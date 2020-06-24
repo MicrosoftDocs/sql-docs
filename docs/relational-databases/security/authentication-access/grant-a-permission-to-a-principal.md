@@ -1,5 +1,6 @@
 ---
 title: "Grant a Permission to a Principal | Microsoft Docs"
+description: Learn how to grant permission to a principal in SQL Server by using SQL Server Management Studio or Transact-SQL, including best practices.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

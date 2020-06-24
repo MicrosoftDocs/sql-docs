@@ -8,7 +8,6 @@ ms.technology: "analysis-services"
 ms.topic: "reference"
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analysis Services Developer's Guide
     

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Using Connection String Keywords with SQL Server Native Client
   Some [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client APIs use connection strings to specify connection attributes. Connection strings are lists of keyword and associated values; each keyword identifies a particular connection attribute.  

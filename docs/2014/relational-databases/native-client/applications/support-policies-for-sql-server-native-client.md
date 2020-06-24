@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Support Policies for SQL Server Native Client
   This topic discusses how various data-access components can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  

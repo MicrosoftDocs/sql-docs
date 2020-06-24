@@ -1,5 +1,6 @@
 ---
 title: Create a Model
+description: Learn how to create a model in Master Data Services to contain model objects. You must have permissions for the System Administration area.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

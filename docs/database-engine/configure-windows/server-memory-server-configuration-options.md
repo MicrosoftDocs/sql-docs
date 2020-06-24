@@ -7,7 +7,7 @@ ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-description: Reconfigure the amount of memory (in megabytes) for a SQL Server process used by an instance of SQL Server with the two server memory options, **min server memory** and **max server memory**.
+description: Learn how to configure the amount of memory the SQL Server Memory Manager allocates to SQL Server processes. View memory management approaches and examples.
 helpviewer_keywords: 
   - "Virtual Memory Manager"
   - "max server memory option"

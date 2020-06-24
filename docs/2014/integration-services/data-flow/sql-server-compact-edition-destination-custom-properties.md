@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Compact Edition Destination Custom Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact destination has both custom properties and the properties common to all data flow components.  

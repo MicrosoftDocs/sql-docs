@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Adding Data Flow Components Programmatically
   When you build a data flow, you start by adding components. Then you configure those components and connect them together to establish the flow of data at run time. This section describes adding a component to the data flow task, creating the design-time instance of the component, and then configuring the component. For information about how to connect components, see [Connecting Data Flow Components Programmatically](../building-packages-programmatically/connecting-data-flow-components-programmatically.md).  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # WITH ROWS is not supported in CREATE STATISTICS statements in the compatibility mode of 90 or later
   Specifying WITH ROWS in CREATE STATISTICS statements is not supported when you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set to the compatibility mode of 90 or later.  

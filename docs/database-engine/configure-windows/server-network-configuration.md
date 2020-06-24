@@ -1,5 +1,6 @@
 ---
 title: "Server Network Configuration | Microsoft Docs"
+description: Become familiar with SQL Server network configuration tasks. View information on enabling protocols, configuring encryption, registering SPNs, and other actions.
 ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: sql

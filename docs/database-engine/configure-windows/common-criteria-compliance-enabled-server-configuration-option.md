@@ -1,5 +1,6 @@
 ---
 title: "Common Criteria Compliance Enabled Configuration | Microsoft Docs"
+description: Learn which criteria the common criteria compliance option enables in SQL Server, and see how to comply with Common Criteria Evaluation Assurance Level 4+.
 ms.custom: ""
 ms.date: "08/21/2018"
 ms.prod: sql

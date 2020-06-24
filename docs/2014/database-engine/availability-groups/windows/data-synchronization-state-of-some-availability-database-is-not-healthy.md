@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Data synchronization state of some availability database is not healthy
     

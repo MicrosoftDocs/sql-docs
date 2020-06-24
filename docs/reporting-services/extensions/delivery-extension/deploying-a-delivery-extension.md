@@ -1,5 +1,6 @@
 ---
 title: "Deploying a Delivery Extension | Microsoft Docs"
+description: Learn how to deploy a delivery extension to a report server. See which entries to add to which configuration files so the report server locates the extension.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

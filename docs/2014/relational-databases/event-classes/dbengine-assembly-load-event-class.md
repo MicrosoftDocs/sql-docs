@@ -10,7 +10,6 @@ topic_type:
   - "apiref"
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
 ---
 # Assembly Load Event Class
   See [assembly-load-event-class](../../database-engine/assembly-load-event-class.md).  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Name Element for Table (DTA)
   Specifies a table name for tuning.  

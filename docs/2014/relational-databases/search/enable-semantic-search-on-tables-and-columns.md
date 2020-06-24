@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Enable Semantic Search on Tables and Columns
   Describes how to enable or disable statistical semantic indexing on selected columns that contain documents or text.  

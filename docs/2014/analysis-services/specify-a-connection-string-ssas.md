@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify a connection string (SSAS)
   This page of the **Table Import Wizard** enables you to specify a connection string to connect to an OLE DB or ODBC data source. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

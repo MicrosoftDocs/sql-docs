@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Add Model to Structure (Data Mining Add-ins for Excel)
   ![Add Model to Structure button](media/dmc-addmodel.gif "Add Model to Structure button")  

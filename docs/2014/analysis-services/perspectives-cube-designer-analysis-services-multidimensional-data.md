@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 85d4f696-b429-409c-a679-2ee867f3a589
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Perspectives (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Perspectives** tab in Cube Designer to create and modify perspectives for the selected cube.  

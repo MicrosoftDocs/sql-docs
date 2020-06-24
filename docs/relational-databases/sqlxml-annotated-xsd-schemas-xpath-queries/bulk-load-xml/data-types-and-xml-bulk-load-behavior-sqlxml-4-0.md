@@ -1,5 +1,6 @@
 ---
 title: "Data Types and XML Bulk Load Behavior (SQLXML)"
+description: Learn about data types and XML Bulk Load behavior in SQLXML 4.0.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Options (SQL Server Object Explorer-Scripting Page)
   Use this page to set scripting options that apply to the following commands on object context menus in **Object Explorer**:  

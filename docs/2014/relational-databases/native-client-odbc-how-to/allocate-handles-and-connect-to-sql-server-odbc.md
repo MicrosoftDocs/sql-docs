@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Allocate Handles and Connect to SQL Server (ODBC)
     

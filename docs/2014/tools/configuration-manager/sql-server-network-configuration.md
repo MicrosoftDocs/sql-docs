@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Network Configuration
   This section contains the F1 Help topics for the **Server Network Configuration** dialog boxes in SQL Server Configuration Manager.  

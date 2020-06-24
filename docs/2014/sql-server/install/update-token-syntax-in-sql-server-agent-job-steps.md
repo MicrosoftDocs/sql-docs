@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c801e6da-0159-4bb0-9144-eb28b5127ff7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Update token syntax in SQL Server Agent job steps
   The syntax that is used tokens in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps has changed.  

@@ -1,5 +1,6 @@
 ---
 title: Connections
+description: To download data to the Master Data Services Add-in for Excel, first create a connection. Each time you start Excel, you must connect to a repository.
 ms.custom: microsoft-excel-add-in
 ms.date: "03/14/2017"
 ms.prod: sql

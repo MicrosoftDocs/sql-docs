@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL:FullTextQuery Event Class
   The SQL:FullTextQuery event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a full text query. Include this event class in traces that are monitoring problems associated with full text catalogs.  

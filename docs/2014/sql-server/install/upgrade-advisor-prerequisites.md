@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade Advisor Prerequisites
   This topic describes the software requirements for Upgrade Advisor.  

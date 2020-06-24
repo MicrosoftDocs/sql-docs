@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Look Up InfoObject
   Use the **Look Up InfoObject** dialog box to look up an InfoObject that is defined in the SAP Netweaver BW system. When the list of available InfoObjects appears, select the InfoObject that you want, and the SAP BW destination will populate the associated options with the required values.  

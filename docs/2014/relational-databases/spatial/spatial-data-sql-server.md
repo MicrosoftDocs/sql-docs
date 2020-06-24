@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 ---
 # Spatial Data (SQL Server)
   Spatial data represents information about the physical location and shape of geometric objects. These objects can be point locations or more complex objects such as countries, roads, or lakes.  

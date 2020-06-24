@@ -1,5 +1,6 @@
 ---
 title: "Create Views over XML Columns | Microsoft Docs"
+description: Learn how to create a view in which the value from an xml type column is retrieved using the value() method of the xml data type.  
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

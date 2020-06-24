@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Using the SQLXMLOLEDB Provider (SQLXML 4.0)
   The topics in this section provide ADO sample applications that illustrate the use of SQLXMLOLEDB Provider-specific properties.  

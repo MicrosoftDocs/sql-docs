@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Use PowerPivot Gallery
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery is a special-purpose SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain PowerPivot data.

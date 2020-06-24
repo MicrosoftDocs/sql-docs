@@ -8,7 +8,7 @@ author: dphansen
 ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # What's new in SQL Server Machine Learning Services

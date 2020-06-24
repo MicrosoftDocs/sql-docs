@@ -2,7 +2,7 @@
 title: Azure Data Studio notebooks (Python, R)
 description: Learn how to run Python and R scripts in a notebook in Azure Data Studio with SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/09/2020
 ms.topic: how-to
 author: dphansen

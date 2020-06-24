@@ -2,7 +2,7 @@
 title: "R tutorial: Build and save model"
 description: Tutorial showing how to build an R language model used for SQL Server in-database analytics.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/26/2018  
 ms.topic: tutorial

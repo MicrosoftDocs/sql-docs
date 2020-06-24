@@ -2,7 +2,7 @@
 title: Install from a command prompt
 description: Run SQL Server command line setup to add R language and Python integration to a SQL Server database engine instance.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/04/2019  
 ms.topic: how-to

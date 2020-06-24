@@ -1,5 +1,6 @@
 ---
 title: "Back Up a Database Master Key | Microsoft Docs"
+description: Learn how to back up a database master key in SQL Server by using Transact-SQL. This essential key encrypts other keys and certificates.
 ms.custom: ""
 ms.date: "01/02/2019"
 ms.prod: sql

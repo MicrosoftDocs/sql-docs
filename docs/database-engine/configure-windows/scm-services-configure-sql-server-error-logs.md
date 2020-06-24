@@ -1,5 +1,6 @@
 ---
 title: "Configure SQL Server Error Logs | Microsoft Docs"
+description: Learn about error log recycling. See how to set a maximum log file size and how to set the number of previous log files that SQL Server backs up and archives.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -48,7 +48,7 @@ ms.author: owend
   
  Communication between the client and the server occurs through specific events. These events make the client aware of the situations that lead to the client's objects being built. The client's environment is dynamically created using two sets of events: session events and cube events.  
   
- Session events are associated with the server object. When a client logs on to a server, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] creates a session and triggers the [Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened](/previous-versions/sql/sql-server-2014/bb630427) event. When a client ends the session on the server, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] triggers the <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> event.  
+ Session events are associated with the server object. When a client logs on to a server, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] creates a session and triggers the [Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened](/previous-versions/sql/sql-server-2014/bb630427) event. When a client ends the session on the server, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] triggers the [Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing](/previous-versions/sql/sql-server-2014/bb630758) event.  
   
  Cube events are associated with the connection object. Connecting to a cube triggers the [Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened](/previous-versions/sql/sql-server-2014/bb630581) event. Closing the connection to a cube, by either closing the cube or by changing to a different cube, triggers a [Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing](/previous-versions/sql/sql-server-2014/bb630371) event.  
   
@@ -75,7 +75,7 @@ ms.author: owend
   
 -   [Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture*](/previous-versions/sql/sql-server-2014/bb677433), a read-only reference to the client culture associated with current session.  
   
--   [Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User*](previous-versions/sql/sql-server-2014/bb630315), a read-only reference to the identity interface representing the current user.  
+-   [Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User*](/previous-versions/sql/sql-server-2014/bb630315), a read-only reference to the identity interface representing the current user.  
   
  **Events**  
   
@@ -91,7 +91,7 @@ ms.author: owend
 -   [Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection*](/previous-versions/sql/sql-server-2014/bb630975), a read-only reference to the new [Microsoft.AnalysisServices.AdomdServer.AdomdConnection](/previous-versions/sql/sql-server-2014/bb678193) object.  
   
 #### New Server class  
- The [Microsoft.AnalysisServices.AdomdServer.Server](previous-versions/sql/sql-server-2014/bb677955) class is new and exposes several personalization extensions through both class properties and events.  
+ The [Microsoft.AnalysisServices.AdomdServer.Server](/previous-versions/sql/sql-server-2014/bb677955) class is new and exposes several personalization extensions through both class properties and events.  
   
  **Properties**  
   

@@ -1,5 +1,6 @@
 ---
 title: "Query processing for memory-optimized tables"
+description: Learn about query processing for both memory-optimized tables and natively compiled stored procedures in In-Memory OLTP in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "05/09/2019"
 ms.prod: sql

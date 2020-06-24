@@ -1,5 +1,6 @@
 ---
 title: "Implementing UPDATE with FROM or Subqueries | Microsoft Docs"
+description: Learn which syntax elements are supported on the Transact-SQL UPDATE statement in a natively compiled T-SQL module.
 ms.custom: ""
 ms.date: "11/17/2016"
 ms.prod: sql

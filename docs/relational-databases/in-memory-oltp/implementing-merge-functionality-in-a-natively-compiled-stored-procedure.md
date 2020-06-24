@@ -1,5 +1,6 @@
 ---
 title: "MERGE function - natively compiled stored procedure"
+description: Use this sample to learn how to simulate the Transact-SQL MERGE statement in a natively compiled module. 
 ms.custom: seo-dt-2019
 ms.date: "11/17/2016"
 ms.prod: sql

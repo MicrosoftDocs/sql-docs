@@ -1,5 +1,6 @@
 ---
 title: "Altering Memory-Optimized Tables | Microsoft Docs"
+description: Learn how to perform ALTER operations on natively compiled stored procedures and natively compiled Transact-SQL modules in SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: "10/22/2018"
 ms.prod: sql

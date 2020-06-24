@@ -1,5 +1,6 @@
 ---
 title: "Create & access tempdb tables from stored procedures"
+description: memory-optimized tables, or table types and table variables.
 ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql

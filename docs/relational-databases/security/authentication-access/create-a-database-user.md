@@ -1,5 +1,6 @@
 ---
 title: "Create a Database User | Microsoft Docs"
+description: Learn how to create the most common types of database users by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql

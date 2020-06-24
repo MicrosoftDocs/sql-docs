@@ -2,7 +2,7 @@
 title: Common issues with Launchpad
 description: This article provides troubleshooting guidance for many issues that prevent the SQL Server Trusted Launchpad service from starting, including configuration problems or changes, or missing network protocols.
 ms.prod: sql
-ms.technology: 
+ms.technology: machine-learning-services
 ms.date: 07/30/2019
 ms.topic: troubleshooting
 author: dphansen

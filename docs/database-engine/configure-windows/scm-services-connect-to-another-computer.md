@@ -1,5 +1,6 @@
 ---
 title: "Connect to Another Computer (SQL Server Configuration Manager) | Microsoft Docs"
+description: "Find out how to manage a remote computer's services. See how to use SQL Server Configuration Manager or SQL Server Management Studio for this task."
 ms.custom: ""
 ms.date: "11/19/2019"
 ms.prod: sql

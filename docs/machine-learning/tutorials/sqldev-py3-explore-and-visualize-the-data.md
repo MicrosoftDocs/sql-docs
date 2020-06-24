@@ -2,7 +2,7 @@
 title: "Python + T-SQL: Explore data"
 description: Tutorial showing how to embed Python in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/01/2018  
 ms.topic: tutorial

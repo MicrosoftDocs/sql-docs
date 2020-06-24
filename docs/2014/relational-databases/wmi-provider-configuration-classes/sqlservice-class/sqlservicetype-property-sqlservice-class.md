@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SqlServiceType Property (SqlService Class)
   Gets the type of the managed service.  

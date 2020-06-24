@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (Security Page) | Microsoft Docs"
+description: Become familiar with server security settings in SQL Server. Learn about options that control server authentication, proxy accounts, and other features.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

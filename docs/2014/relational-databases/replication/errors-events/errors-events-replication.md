@@ -8,7 +8,6 @@ ms.technology: replication
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Errors and Events (Replication)
   For cause and resolution information for a number of errors related to replication, see [Errors and Events Reference (Replication)](../errors-and-events-reference-replication.md).  

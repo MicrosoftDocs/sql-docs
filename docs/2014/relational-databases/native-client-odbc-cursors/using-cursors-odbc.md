@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Using Cursors (ODBC)
   ODBC supports a cursor model that allows:  

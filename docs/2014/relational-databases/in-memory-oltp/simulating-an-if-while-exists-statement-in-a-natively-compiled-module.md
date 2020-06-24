@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Simulating an EXISTS Clause in a Natively Compiled Stored Procedure
   Natively compiled stored procedures do not support the `EXISTS` clause, but there is a workaround:  

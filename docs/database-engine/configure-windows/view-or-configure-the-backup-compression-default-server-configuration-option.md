@@ -1,5 +1,6 @@
 ---
 title: "View or Configure the backup compression default Server Configuration Option | Microsoft Docs"
+description: 'Find out about the "backup compression default" option. See how it determines whether SQL Server creates compressed backups by default, and learn how to set it.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

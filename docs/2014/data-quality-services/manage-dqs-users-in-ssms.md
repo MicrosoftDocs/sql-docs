@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 955af01d-00da-4c51-9311-f3848749df54
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Manage DQS Users in SSMS
   This topic describes how to create additional users in the SQL Server instance using SQL Server Management Studio, and grant them appropriate [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) roles on the DQS_MAIN database.  

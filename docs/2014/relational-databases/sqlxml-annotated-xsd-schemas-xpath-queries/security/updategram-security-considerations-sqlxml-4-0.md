@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Updategram Security Considerations (SQLXML 4.0)
   The following are security guidelines for using updategrams:  

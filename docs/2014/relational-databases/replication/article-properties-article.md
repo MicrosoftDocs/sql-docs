@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Article Properties - &lt;Article&gt;
   The **Article Properties** dialog box is available from the New Publication Wizard and the **Publication Properties** dialog box. It allows you to view and set properties for all types of articles. Some properties can be set only when the publication is created, and others can be set only if the publication has no active subscriptions. Properties that cannot be set are displayed as read-only.  

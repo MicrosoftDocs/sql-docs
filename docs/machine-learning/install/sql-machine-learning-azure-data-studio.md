@@ -4,7 +4,7 @@ description: Learn how to run Python and R scripts in a notebook in Azure Data S
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"

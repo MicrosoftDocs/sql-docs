@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Query Criteria (Usage-Based Optimization Wizard)
   Use the **Specify Query Criteria** page to choose one or more filter options in order to identify queries to optimize.  

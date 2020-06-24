@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 51f33f3b-6b7f-41bf-a620-97fd5189e633
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Translations (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Translations** tab in Cube Designer to create and modify perspectives for the selected cube.  

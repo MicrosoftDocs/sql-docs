@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Banner Element (ssbdiagnose)
   Identifies which utility generated the **ssbdiagnose** output XML file.  

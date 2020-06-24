@@ -40,7 +40,6 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Publish Data and Database Objects
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  

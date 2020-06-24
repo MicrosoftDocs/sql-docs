@@ -5,6 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod_service: backup-restore
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 

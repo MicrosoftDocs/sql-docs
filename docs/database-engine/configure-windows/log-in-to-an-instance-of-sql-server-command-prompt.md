@@ -1,5 +1,6 @@
 ---
 title: "Log In to an Instance of SQL Server (Command Prompt) | Microsoft Docs"
+description: 'Learn about the "sqlcmd" utility. See how to use it in a command prompt to test connectivity to an instance of SQL Server.'
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

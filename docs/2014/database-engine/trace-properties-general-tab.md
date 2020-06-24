@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Trace Properties (General Tab)
   Use the **General** tab of the **Trace Properties** dialog box to view or specify properties of a trace.  

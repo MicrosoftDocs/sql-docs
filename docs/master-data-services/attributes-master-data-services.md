@@ -1,5 +1,6 @@
 ---
 title: Attributes
+description: Learn about attributes, which are objects in Master Data Services entities. Attribute values describe the members of the entity.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

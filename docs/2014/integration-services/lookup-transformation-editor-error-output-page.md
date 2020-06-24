@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lookup Transformation Editor (Error Output Page)
   Use the **Error Output** page of the **Lookup Transformation Editor** dialog box to specify error handling options.  

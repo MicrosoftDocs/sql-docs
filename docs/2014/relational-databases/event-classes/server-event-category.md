@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Server Event Category
   The **Server** event category contains general server events.  

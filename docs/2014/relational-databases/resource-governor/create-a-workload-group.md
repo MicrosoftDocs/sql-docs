@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create a Workload Group
   You can create a workload group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

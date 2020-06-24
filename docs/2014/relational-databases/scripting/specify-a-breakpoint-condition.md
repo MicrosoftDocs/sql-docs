@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Specify a Breakpoint Condition
   A breakpoint condition is a [!INCLUDE[tsql](../../includes/tsql-md.md)] expression that is evaluated by the debugger when the breakpoint is reached. If the condition is satisfied and any specified hit count reached, the debugger either breaks or performs the action specified for the breakpoint.  

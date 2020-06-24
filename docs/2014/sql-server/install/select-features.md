@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0badc544-c187-40f9-b0cc-14d6ebec345e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Select Features
   Use the Feature Selection page to select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components and features to update.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # DAY (SSIS Expression)
   Returns an integer that represents the day datepart of a date.  

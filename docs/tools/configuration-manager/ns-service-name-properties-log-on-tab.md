@@ -1,5 +1,6 @@
 ---
 title: "NS$&lt;service name&gt; Properties (Log On Tab)"
+description: Learn about the Log On tab of the Notification Services Properties dialog box in SQL Server. See how to specify an account and start or stop the service.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

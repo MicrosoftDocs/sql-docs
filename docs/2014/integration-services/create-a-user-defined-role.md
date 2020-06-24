@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create a User-Defined Role
     

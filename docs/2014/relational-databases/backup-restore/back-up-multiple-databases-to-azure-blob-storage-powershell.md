@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Use PowerShell to Backup Multiple Databases to Azure Blob Storage Service
   This topic provides sample scripts that can be used to automate backups to Azure Blob storage service using PowerShell cmdlets.  

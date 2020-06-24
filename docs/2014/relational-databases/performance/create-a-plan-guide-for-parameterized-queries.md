@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create a Plan Guide for Parameterized Queries
   A TEMPLATE plan guide matches stand-alone queries that parameterize to a specified form.  

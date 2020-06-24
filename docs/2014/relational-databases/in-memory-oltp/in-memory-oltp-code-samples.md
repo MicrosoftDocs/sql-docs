@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e3ad4cad-d9eb-4824-802c-90f747b32507
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # In-Memory OLTP Code Samples
   This section contains code samples that demonstrate In-Memory OLTP:  

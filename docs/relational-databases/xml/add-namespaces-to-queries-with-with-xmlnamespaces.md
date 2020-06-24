@@ -1,5 +1,6 @@
 ---
 title: "Add Namespaces to Queries with WITH XMLNAMESPACES | Microsoft Docs"
+description: Learn how to add namespaces to queries using the WITH XMLNAMESPACES clause.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

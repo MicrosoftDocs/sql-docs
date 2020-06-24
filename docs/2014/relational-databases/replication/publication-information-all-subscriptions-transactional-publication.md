@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Publication Information, All Subscriptions (Transactional Publication)
   The **All Subscriptions** tab displays information on all subscriptions to the selected transactional publication.  

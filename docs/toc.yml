@@ -105,10 +105,14 @@
           href: big-data-cluster/deploy-on-aks.md
         - name: Kubeadm
           href: big-data-cluster/deploy-with-kubeadm.md
+        - name: OpenShift
+          href: big-data-cluster/deploy-openshift.md
       - name: Deployment scripts
         items:
         - name: AKS python script
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+        - name: ARO python script
+          href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
         - name: Single node kubeadm script
           href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks
@@ -131,7 +135,7 @@
       href: big-data-cluster/concept-security.md
   - name: How-to guides
     items:
-    - name: Configuration
+    - name: Configure
       items:
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
@@ -181,7 +185,6 @@
       items:
       - name: Use Machine Learning Services (Python, R)
         href: big-data-cluster/machine-learning-services.md
-
       - name: Machine learning quickstarts
         items:
         - name: Python
@@ -291,12 +294,20 @@
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
-      - name: Security
-        items:
-        - name: Update AZDATA_PASSWORD
-          href: big-data-cluster/change-azdata-password.md
-        - name: Manage user access
-          href: big-data-cluster/manage-user-access.md
+    - name: Secure
+      items:
+      - name: Kubernetes RBAC for BDC
+        href: big-data-cluster/kubernetes-rbac.md
+      - name: Update AZDATA_PASSWORD
+        href: big-data-cluster/change-azdata-password.md
+      - name: Manage user access
+        href: big-data-cluster/manage-user-access.md
+      - name: Non root containers
+        href: big-data-cluster/non-root-containers.md
+      - name: Multiple BDCs in the same AD domain
+        href: big-data-cluster/active-directory-deployment-background.md
+      - name: Auto-generated AD objects
+        href: big-data-cluster/active-directory-objects.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -315,9 +326,9 @@
         href: big-data-cluster/troubleshoot-pyspark-notebook.md
       - name: Active directory domain group scope
         href: big-data-cluster/troubleshoot-active-directory.md
-      - name: Active directory DNS
+      - name: Active Directory DNS
         href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-      - name: Active directory login fails
+      - name: Active Directory login fails
         href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
       - name: HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
@@ -2660,7 +2671,7 @@
       - name: Java to SQL data types
         href: language-extensions/how-to/java-to-sql-data-types.md
       - name: Create a Java jar file
-        href: language-extensions/how-to/call-java-from-sql.md
+        href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
     - name: Reference
       items:
       - name: Extensibility Framework API

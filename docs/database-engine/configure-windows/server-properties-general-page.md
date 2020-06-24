@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (General Page) - SQL Server Management Studio | Microsoft Docs"
+description: Become familiar with read-only properties in SQL Server. Examples include the server name, the operating system, the collation, and the SQL Server version.
 ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql

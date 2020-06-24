@@ -1,5 +1,6 @@
 ---
 title: Add a User
+description: Learn how to add a user to the Users list in Master Data Manager. You must add a user to begin the process of assigning permission to the web application.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Name Element for Column (DTA)
   Specifies the name for an index column in a user-specified configuration.  

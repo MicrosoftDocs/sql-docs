@@ -1,5 +1,6 @@
 ---
 title: "Header and Library Files"
+description: Learn how to use the SQL Server Native Client header and library files to develop an application. Copy required files to your development environment. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

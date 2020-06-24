@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Perform Basic Operations with Queries (Visual Database Tools)
   The following fundamental operations apply to most or all queries.  

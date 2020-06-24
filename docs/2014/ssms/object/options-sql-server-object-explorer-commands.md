@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Options (SQL Server Object Explorer-Commands)
   When you right-click a table or view in Object Explorer, the following two options for displaying rows in the table are presented:  

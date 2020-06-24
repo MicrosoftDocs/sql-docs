@@ -1,5 +1,6 @@
 ---
 title: "Database Identifiers | Microsoft Docs"
+description: "Get acquainted with database identifiers. Learn about their collation, various classes, delimiting requirements, and naming rules."
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 ---
 # CurvePolygon
   A `CurvePolygon` is a topologically closed surface defined by an exterior bounding ring and zero or more interior rings  

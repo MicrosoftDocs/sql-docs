@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Audit Records | Microsoft Docs"
+description: SQL Server audits consist of audit action items, which are recorded to an audit target. Check this summary for the records that can be sent to a target.
 ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql

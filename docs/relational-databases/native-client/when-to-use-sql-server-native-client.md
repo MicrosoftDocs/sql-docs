@@ -1,5 +1,6 @@
 ---
 title: "When to Use"
+description: Decide whether to use SQL Server Native Client, which is one of several technologies that you can use to access data in a SQL Server database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

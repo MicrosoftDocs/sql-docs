@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Comparing Disk-Based Table Storage to Memory-Optimized Table Storage
   

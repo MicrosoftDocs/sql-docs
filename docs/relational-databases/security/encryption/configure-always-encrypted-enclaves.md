@@ -1,5 +1,6 @@
 ---
 title: "Configure and use Always Encrypted with secure enclaves| Microsoft Docs"
+description: Learn how to configure and use Always Encrypted with secure enclaves in SQL Server, which enables richer functionality on sensitive data.
 ms.custom: ""
 ms.date: 10/18/2019
 ms.prod: sql

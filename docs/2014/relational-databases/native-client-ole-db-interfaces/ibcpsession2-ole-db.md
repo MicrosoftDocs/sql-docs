@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # IBCPSession2 (OLE DB)
   The IBCPSession2 interface is an extension to IBCPSession that provides a member function that is an alternative to calling IBCPSession::BCPColFmt for each column.  IBCPSession2 inherits from IBCPSession and adds one new method: [IBCPSession2::BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md).  

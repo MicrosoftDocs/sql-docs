@@ -1,5 +1,6 @@
 ---
 title: "Configure Health Policies (SQL Server Utility) | Microsoft Docs"
+description: Find out how to configure health policies involving processor utilization and file space for data-tier applications and managed instances of SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

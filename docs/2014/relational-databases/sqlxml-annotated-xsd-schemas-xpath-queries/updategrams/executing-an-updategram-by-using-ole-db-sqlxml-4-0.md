@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Executing an Updategram by Using OLE DB (SQLXML 4.0)
   This topic provides a working sample of usingOLE DB to execute an updategram.  

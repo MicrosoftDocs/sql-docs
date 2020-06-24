@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Cache Connection Manager Editor
   The Cache connection manager reads a reference dataset from the Cache transform or from a cache file (.caw), and can save the data to a cache file. The data is always stored in memory.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Initialization and Authorization Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider interprets OLE DB initialization and authorization properties as follows:  

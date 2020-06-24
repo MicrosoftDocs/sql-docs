@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Command Window
   Use the **CommandWindow** to run commands, such as debug and edit commands, against the code in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Query Editor window that is currently being debugged. You must be in debug mode to use the **Command Window**. The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger supports many of the commands that are also supported in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. For more information, see [Visual Studio Command Window](https://go.microsoft.com/fwlink/?LinkId=112007).  

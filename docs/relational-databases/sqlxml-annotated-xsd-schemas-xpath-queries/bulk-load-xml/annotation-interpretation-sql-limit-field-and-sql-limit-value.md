@@ -1,5 +1,6 @@
 ---
 title: "sql:limit-field and sql:limit-value (SQLXML)"
+description: Learn how to use the SQLXML annotations sql:limit-field and sql:limit-value to filter data when using XML Bulk Load.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

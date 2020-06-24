@@ -4,7 +4,7 @@ description: Use dynamic management views (DMVs) to monitor Python and R externa
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019

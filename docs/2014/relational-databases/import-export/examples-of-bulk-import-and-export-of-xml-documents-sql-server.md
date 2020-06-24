@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Examples of Bulk Import and Export of XML Documents (SQL Server)
     

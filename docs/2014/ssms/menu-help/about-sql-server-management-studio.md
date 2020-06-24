@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # About SQL Server Management Studio
   Use this dialog box to view or copy information about your installation of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Evaluation editions list the number of days remaining until the product expires.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Retrieve and Query XML Data
   This topic describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that are not preserved when they are stored in databases.  

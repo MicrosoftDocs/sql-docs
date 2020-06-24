@@ -1,5 +1,6 @@
 ---
 title: "Identify Bottlenecks | Microsoft Docs"
+description: Learn about the causes of bottlenecks, such as insufficient resources and malfunctioning/incorrectly configured resources in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Create a Plan Guide for Parameterized Queries | Microsoft Docs"
+description: Learn how to create a plan guide that matches any query that parameterizes to a specified form and directs SQL Server to force parameterization of the query.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

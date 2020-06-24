@@ -1,5 +1,6 @@
 ---
 title: "Scalability | Microsoft Docs"
+description: Learn about enhancements to scalability to on-disk storage for memory-optimized tables in SQL Server, such as using multiple threads to persist tables.
 ms.custom: ""
 ms.date: "08/27/2015"
 ms.prod: sql

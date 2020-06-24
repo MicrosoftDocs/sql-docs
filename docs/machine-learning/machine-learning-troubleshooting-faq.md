@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Provides a starting point for working through known issues.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 05/31/2018  
 ms.topic: troubleshooting

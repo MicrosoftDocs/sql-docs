@@ -61,7 +61,7 @@ The following example lists all default settings for supported configurable item
     "hdfs-site.dfs.datanode.provided.volume.readthrough": "true",
     "hdfs-site.dfs.provided.overreplication.factor": "1",
     "hdfs-site.dfs.provided.cache.capacity.fraction": "0.01",
-    "dfs.provided.cache.capacity.mount": "true",
+    "hdfs-site.dfs.provided.cache.capacity.mount": "true",
 
     "hdfs-env.HDFS_NAMENODE_OPTS": "-Dhadoop.security.logger=INFO,RFAS -Xmx2g",
     "hdfs-env.HDFS_DATANODE_OPTS": "-Dhadoop.security.logger=ERROR,RFAS -Xmx2g",
@@ -140,7 +140,7 @@ The following example lists all default settings for supported configurable item
   },
   "gateway": {
     "gateway-site.gateway.httpclient.socketTimeout": "90s",
-    "gateway-site.sun.security.krb5.debug": "true",
+    "gateway-site.sun.security.krb5.debug": "false",
     "knox-env.KNOX_GATEWAY_MEM_OPTS": "-Xmx2g"
   }
 }

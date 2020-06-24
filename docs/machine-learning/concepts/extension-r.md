@@ -2,7 +2,7 @@
 title: R language extension
 description: Learn about R code execution and built-in R libraries in SQL Server R Services or SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/04/2019
 ms.topic: conceptual

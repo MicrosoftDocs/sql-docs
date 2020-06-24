@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (Misc Server Settings Page) | Microsoft Docs"
+description: Become familiar with server settings in SQL Server. Learn about options that control the default language for new users, query timeouts, and other behavior.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

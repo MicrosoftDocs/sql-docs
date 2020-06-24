@@ -3,7 +3,7 @@ title: Install SQL Server 2016 R Services
 titleSuffix: 
 description: Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/03/2020
 ms.topic: how-to
 author: dphansen

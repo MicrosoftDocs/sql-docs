@@ -2,7 +2,7 @@
 title: Move data with XDF file
 description: "RevoScaleR tutorial 13: How to move data using XDF and the R language on SQL Server."
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial

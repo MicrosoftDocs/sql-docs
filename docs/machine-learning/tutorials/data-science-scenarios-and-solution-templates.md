@@ -2,7 +2,7 @@
 title: Data science solution templates
 description: This article describes industry-specific templates that demonstrate best practices and provide building blocks to help you implement a machine learning solution.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/29/2019
 ms.topic: tutorial

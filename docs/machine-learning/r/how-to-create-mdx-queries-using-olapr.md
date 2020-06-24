@@ -2,7 +2,7 @@
 title: Create MDX queries in R using olapR
 description: Use the olapR package library in SQL Server to write MDX queries in R language script.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 05/22/2019
 ms.topic: how-to

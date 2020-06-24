@@ -2,7 +2,7 @@
 title: "R tutorial: Deploy model"
 description: Tutorial showing how to deploy an R model on SQL Server for in-database analytics.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/26/2018  
 ms.topic: tutorial

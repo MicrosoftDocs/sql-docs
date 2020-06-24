@@ -1,5 +1,6 @@
 ---
 title: "Choose an Encryption Algorithm | Microsoft Docs"
+description: Use this guidance to choose an encryption algorithm to help secure an instance of SQL Server, which supports several common algorithms.
 ms.custom: ""
 ms.date: "08/14/2018"
 ms.prod: sql

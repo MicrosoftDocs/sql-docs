@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.afppigtask.f1"
   - "sql11.dts.designer.afppigtask.f1"
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Azure HDInsight Pig Task
 Use the **Azure HDInsight Pig Task** to run Pig script on an Azure HDInsight cluster.

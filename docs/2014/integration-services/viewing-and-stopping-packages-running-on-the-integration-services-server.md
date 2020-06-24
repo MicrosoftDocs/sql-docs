@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "packages [Integration Services], running"
   - "running package [Integration Services], managing"
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Viewing and Stopping Packages Running on the Integration Services Server
   The `SSISDB` database stores execution history in internal tables that are not visible to users. However it exposes the information that you need through public views that you can query. It also provides stored procedures that you can call to perform common tasks related to packages.  

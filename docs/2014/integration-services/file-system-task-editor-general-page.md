@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "File System Task Editor"
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # File System Task Editor (General Page)
   Use the **General** page of the **File System Task Editor** dialog to configure the file system operation that the task performs.  

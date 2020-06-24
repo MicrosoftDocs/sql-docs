@@ -402,7 +402,7 @@ Sets Transact-SQL and query processing behaviors to be compatible with the speci
 
 |Compatibility Level    |   Comments|  
 |-----------------------|--------------|
-|**AUTO**| Default.  Its value is equal to the latest supported compatibility level.|
+|**AUTO**| Default.  Its value is automatically updated by Synapse Analytics engine.  The current value is 20.|
 |**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
 |**20**| 1st compatibility level that includes gated Transact-SQL and query processing behaviors. |
 

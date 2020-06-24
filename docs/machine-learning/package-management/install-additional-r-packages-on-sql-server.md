@@ -4,7 +4,7 @@ description: Learn how to use sqlmlutils to install new R packages to an instanc
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph

@@ -1,5 +1,6 @@
 ---
 title: "TRUSTWORTHY Database Property | Microsoft Docs"
+description: Learn about the TRUSTWORTHY database property, which indicates whether the instance of SQL Server trusts the database and its contents. The default is OFF.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

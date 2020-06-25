@@ -68,7 +68,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
   
 -   Delete database  
 
-The information in this view is retained for 1 hour. Please use the [Azure Activity Log](../../../azure/azure-monitor/platform/activity-log) to view details of operations in the last 90 days. For retention more than 90 days, consider [sending Activity Log](../../../azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) entries to a Log Analytics workspace.
+The information in this view is retained for approximately 1 hour. Please use the [Azure Activity Log](../../../azure/azure-monitor/platform/activity-log) to view details of operations in the last 90 days. For retention more than 90 days, consider [sending Activity Log](../../../azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) entries to a Log Analytics workspace.
 
 ## Example  
  Show most recent geo-replication operations associated with database 'mydb'.  

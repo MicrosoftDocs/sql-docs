@@ -118,7 +118,7 @@ To make a loopback connection in Windows use the example shown below:
 jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
 ``` 
 
-To make a loopback connection in Linux the JDBC driver adds three connection properties defined in the Certificate shown below:
+To make a loopback connection in Linux the JDBC driver requires three connection properties defined in the Certificate shown below:
 
 [Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 

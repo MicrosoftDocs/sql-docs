@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to call Java classes from a SQL Server stored procedures using SQL Server Language Extensions.
 author: dphansen
 ms.author: davidph 
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -122,7 +122,7 @@ To make a loopback connection in Linux the JDBC driver requires three connection
 
 [Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 
-For more information see [mssql-jdbc releases](https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0)
+For more information see, [mssql-jdbc releases].(https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0)
 
 ## Next steps
 

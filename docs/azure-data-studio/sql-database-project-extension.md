@@ -51,5 +51,5 @@ The existing project is opened and its contents are visible in the **Projects** 
 
 In the **Project** viewlet, click the **Import Project from Database** button and connect to a SQL Server.  Once the connection is established, select a database from the list available databases and set the name of the project.
 
-Finally, select a target structure of the extraction.  The new project is opened and contains the Data Definition Language (DDL) contents of the selected database.
+Finally, select a target structure of the extraction.  The new project is opened and contains SQL scripts for the contents of the selected database.
 

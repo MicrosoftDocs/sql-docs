@@ -112,13 +112,13 @@ For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/s
 ## Loopback connection to SQL Server
 
 A loopback connection is a network connection between an application and a database server.
-To make a loopback connection in Windows use the example shown below:
+To make a loopback connection in Windows use the following example:
 
 ```
 jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
 ``` 
 
-To make a loopback connection in Linux the JDBC driver requires three connection properties defined in the Certificate shown below:
+To make a loopback connection in Linux the JDBC driver requires three connection properties defined in the Certificate use the following example:
 
 [Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 

@@ -6,4 +6,4 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-**APPLIES TO:** 
+**APPLIES TO**:

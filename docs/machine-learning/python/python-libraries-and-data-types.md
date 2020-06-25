@@ -4,8 +4,8 @@ description: Review the implicit and explicit data type conversions between Pyth
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 12/10/2018  
-ms.topic: how-to
+ms.date: 06/25/2020 
+ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
@@ -28,8 +28,8 @@ Python supports a limited number of data types in comparison to SQL Server. As a
 
 This table lists the implicit conversions that are provided. Other data types are not supported.
 
-|SQLtype|Python type|
-|-------|-----------|
+|SQLtype|Python type|Description
+|-------|-----------|---------------------------------------------------------------------------------------------|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
 |**bit**|`bool`|
@@ -42,6 +42,7 @@ This table lists the implicit conversions that are provided. Other data types ar
 |**real**|`float32`|
 |**smallint**|`int16`|
 |**tinyint**|`uint8`|
+|**spees**|`DATETIME`|supported with CU6 and above(with numpy arrays of type datetime.datetime or pandas) SPEES now supports DATETIME types with fractional seconds|
 |**varbinary**|`bytes`|
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|

@@ -1,5 +1,6 @@
 ---
 title: "Hardware for SQL In-Memory OLTP | Microsoft Docs"
+description: Learn about hardware considerations for In-Memory OLTP performance in SQL Server. In-Memory OLTP uses memory and disk in different ways than disk-based tables.
 ms.custom: ""
 ms.date: "03/28/2019"
 ms.prod: sql

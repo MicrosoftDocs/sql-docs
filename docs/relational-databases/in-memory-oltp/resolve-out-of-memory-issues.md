@@ -1,6 +1,6 @@
 ---
 title: "Resolve Out Of Memory Issues | Microsoft Docs"
-description: Learn about out of memory situations in SQL Server In-Memory OLTP, how to restore and resolve impacts, resolve page allocation failures, and best practices.
+description: Learn about out-of-memory situations in SQL Server In-Memory OLTP, how to restore and resolve impacts, resolve page allocation failures, and best practices.
 ms.custom: ""
 ms.date: "12/21/2017"
 ms.prod: sql

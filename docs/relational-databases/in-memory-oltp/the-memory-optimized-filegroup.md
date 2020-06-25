@@ -1,6 +1,6 @@
 ---
 title: "The Memory Optimized Filegroup | Microsoft Docs"
-description: Learn how to create a memory-optimized file group, which has containers for data files and delta files before you create memory-optimized tables in SQL Server.
+description: Learn how to create a memory-optimized file group, which has containers for data files and delta files, before you create memory-optimized tables in SQL Server.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

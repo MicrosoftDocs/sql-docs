@@ -109,7 +109,7 @@ with result sets ((column1 int))
 
 For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
-## Java loopback for SQL Server
+## Loopback connection to SQL Server
 
 The Java loopback connection applies to both Windows & Linux - external script connecting back to SQL Server. In Windows for loopback to work you can use integratedSecurity=true in the connection string. 
 

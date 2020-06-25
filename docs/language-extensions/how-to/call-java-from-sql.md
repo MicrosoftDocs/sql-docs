@@ -116,7 +116,7 @@ The Java loopback connection applies to both Windows & Linux - external script c
 Example of a string using a jdbc driver to connect to a named database on a remote server:
 
 ```java
-jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;integratedSecurity=true;
+jdbc:sqlserver://localhost:1433;databaseName=YourDatabaseName;integratedSecurity=true;
 ``` 
 In SQL Server 2019 for Linux the certificate details have to be specified based on the following JDBC docs:
 

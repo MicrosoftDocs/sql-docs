@@ -62,7 +62,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ### A. Example with a message number  
  The following example uses a replication message `20009` stored in sys.messages as, "The article '%s' could not be added to the publication '%s'." FORMATMESSAGE substitutes the values `First Variable` and `Second Variable` for the parameter placeholders. The resulting string, "The article 'First Variable' could not be added to the publication 'Second Variable'.", is stored in the local variable `@var1`.  
   
-```  
+```sql
 SELECT text FROM sys.messages WHERE message_id = 20009 AND language_id = 1033;  
 DECLARE @var1 VARCHAR(200);   
 SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');   
@@ -75,7 +75,7 @@ SELECT @var1;
   
  The following example takes a string as an input.  
   
-```  
+```sql
 SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'second variable') AS Result;  
 ```  
   
@@ -84,7 +84,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
 ### C. Additional message string formatting examples  
  The following examples show a variety of formatting options.  
   
-```  
+```sql
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);
 SELECT FORMATMESSAGE('Signed int with up to 3 leading zeros %03i', 5);  
 SELECT FORMATMESSAGE('Signed int with up to 20 leading zeros %020i', 5);  

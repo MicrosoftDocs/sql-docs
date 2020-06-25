@@ -1,5 +1,6 @@
 ---
 title: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures
+description: Learn how to use SQL Server Object Explorer to create a SQL Server unit test from a database function, trigger, or stored procedure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

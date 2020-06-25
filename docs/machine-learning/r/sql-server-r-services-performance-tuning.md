@@ -2,7 +2,7 @@
 title: Performance tuning for R
 description: This article describes performance optimization for R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 04/15/2018  
 ms.topic: how-to

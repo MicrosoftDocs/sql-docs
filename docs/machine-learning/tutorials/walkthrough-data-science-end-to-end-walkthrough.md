@@ -2,7 +2,7 @@
 title: "R tutorial: Develop model in SQL"
 description: Tutorial showing how to create an end-to-end R solution for in-database analytics.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 10/11/2019  
 ms.topic: tutorial

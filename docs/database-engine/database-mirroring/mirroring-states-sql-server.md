@@ -1,5 +1,6 @@
 ---
 title: "Mirroring States (SQL Server) | Microsoft Docs"
+description: Learn about the database states in a database mirroring session in SQL Server. The state reflects communication status, data flow, and the difference in data.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

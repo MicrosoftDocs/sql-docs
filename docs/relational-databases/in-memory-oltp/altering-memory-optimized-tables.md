@@ -1,5 +1,6 @@
 ---
 title: "Altering Memory-Optimized Tables | Microsoft Docs"
+description: Learn how the ALTER TABLE statement performs schema and index changes on memory-optimized tables. Combine ADD, DROP, and ALTER operations in a single statement.
 ms.custom: ""
 ms.date: "10/22/2018"
 ms.prod: sql

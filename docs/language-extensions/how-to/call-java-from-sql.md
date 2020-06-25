@@ -111,14 +111,12 @@ For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/s
 
 ## Loopback connection to SQL Server
 
-The Java loopback connection applies to both Windows & Linux - external script connecting back to SQL Server. In Windows for loopback to work you can use integratedSecurity=true in the connection string. 
+To make a loopback connection, you need to use a correct connection string. The loopback connection to SQL Server applies to both Windows and Linux. In Windows for loopback to work you can use the example shown below:
 
-Example of a string using a jdbc driver to connect to a named database on a remote server:
-
-```java
-jdbc:sqlserver://localhost:1433;databaseName=YourDatabaseName;integratedSecurity=true;
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
 ``` 
-In SQL Server 2019 for Linux the certificate details have to be specified based on the following JDBC docs:
+To use a loopback connection for Linux the JDBC driver adds three connection properties for this feature defined in Certificate shown below:
 
 https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios
 

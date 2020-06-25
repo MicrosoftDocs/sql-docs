@@ -111,12 +111,14 @@ For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/s
 
 ## Loopback connection to SQL Server
 
-To make a loopback connection, you need to use the correct connection string. The loopback connection to SQL Server applies to both Windows and Linux. In Windows for the loopback to work use the example shown below:
+A loopback connection is a network connection between an application and a database server.
+To make a loopback connection in Windows use the example shown below:
 
 ```
 jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
 ``` 
-To use a loopback connection for Linux the JDBC driver adds three connection properties for this feature defined in Certificate shown below:
+
+To make a loopback connection in Linux the JDBC driver adds three connection properties for this feature defined in the Certificate shown below:
 
 [Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 

@@ -2,7 +2,7 @@
 title: "Python + T-SQL: Data features"
 description: Tutorial showing how to add calculations to stored procedures for use in Python machine learning models.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/01/2018  
 ms.topic: tutorial

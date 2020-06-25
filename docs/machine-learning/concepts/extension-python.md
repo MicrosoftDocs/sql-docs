@@ -2,7 +2,7 @@
 title: Python language extension
 description: Learn about Python code execution and built-in Python libraries in SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/04/2019
 ms.topic: conceptual

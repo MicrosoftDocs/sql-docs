@@ -1,5 +1,6 @@
 ---
 title: "Replication XPs Server Configuration Option | Microsoft Docs"
+description: 'View information on the "XPs Server" configuration option. This option is only available for internal use in SQL Server.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Altering Natively Compiled T-SQL Modules | Microsoft Docs"
+description: Learn how to perform ALTER operations on natively compiled stored procedures and natively compiled Transact-SQL modules in SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

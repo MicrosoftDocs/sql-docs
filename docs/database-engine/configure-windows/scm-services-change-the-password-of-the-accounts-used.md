@@ -1,5 +1,6 @@
 ---
 title: "SCM Services - Change the Password of the Accounts Used | Microsoft Docs"
+description: Find out how to change the password of the accounts that the Database Engine and the SQL Server Agent use. Learn when it is important to change the password.
 ms.custom: ""
 ms.date: "01/06/2016"
 ms.prod: sql

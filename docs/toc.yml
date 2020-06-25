@@ -10109,14 +10109,10 @@
   items:
   - name: Database samples
     items:
-    - name: Samples Overview
+    - name: Overview
       href: samples/sql-samples-where-are.md
-    - name: All GitHub Samples >>
-      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
     - name: AdventureWorks
-      items:
-      - name: Install & configure
-        href: samples/adventureworks-install-configure.md
+      href: samples/adventureworks-install-configure.md
     - name: Wide World Importers
       items:
       - name: Overview
@@ -10141,6 +10137,8 @@
         href: samples/wide-world-importers-generate-data.md
       - name: ETL workflow
         href: samples/wide-world-importers-perform-etl.md
+    - name: All GitHub Samples >>
+      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
   - name: Errors & events
     href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
     items:

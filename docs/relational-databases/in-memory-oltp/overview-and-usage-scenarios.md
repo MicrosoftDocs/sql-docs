@@ -1,6 +1,6 @@
 ---
 title: "Overview and Usage Scenarios | Microsoft Docs"
-description: Learn about In-Memory OLTP, technology in SQL Server and Azure SQL Database for optimized transaction processing. Review examples and additional resources.
+description: Learn about In-Memory OLTP, a technology in SQL Server and Azure SQL Database for optimized transaction processing. Review examples and additional resources.
 ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: sql

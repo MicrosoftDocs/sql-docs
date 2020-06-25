@@ -1,5 +1,6 @@
 ---
 title: "Monitor Memory Usage | Microsoft Docs"
+description: "Monitor a SQL Server instance to confirm that memory usage is within typical ranges. Use the Memory: Available Bytes and Memory: Pages/sec counters."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -122,7 +122,7 @@ To make a loopback connection in Linux the JDBC driver requires three connection
 
 [Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 
-[mssql-jdbc releases](https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0)
+For more information see [mssql-jdbc releases](https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0)
 
 ## Next steps
 

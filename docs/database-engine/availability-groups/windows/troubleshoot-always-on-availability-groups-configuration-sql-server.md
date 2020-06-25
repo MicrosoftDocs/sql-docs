@@ -1,6 +1,6 @@
 ---
 title: "Common issues & resolutions with availability groups"
-description: Learn how to identify and resolve common issues with Always On availability groups on SQL Server. 
+description: Troubleshoot typical problems with configuring server instances for Always On availability groups in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql

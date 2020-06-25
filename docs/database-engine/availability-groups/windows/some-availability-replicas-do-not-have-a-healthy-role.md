@@ -1,5 +1,6 @@
 ---
 title: "Some availability replicas do not have a healthy role | Microsoft Docs"
+description: Availability Replicas Role State checks if there are any availability replicas that are not in a healthy role. 
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql

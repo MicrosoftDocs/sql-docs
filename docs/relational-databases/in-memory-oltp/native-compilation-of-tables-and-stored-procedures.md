@@ -1,6 +1,6 @@
 ---
 title: "Native compilation of tables & stored procedures"
-description: Learn how In-Memory OLTP can compile stored procedures that access memory-optimized tables and memory-optimized tables into native code to enhance performance.
+description: Learn how In-Memory OLTP can compile memory-optimized tables and stored procedures that access memory-optimized tables into native code to enhance performance.
 ms.custom: seo-dt-2019
 ms.date: "04/20/2017"
 ms.prod: sql

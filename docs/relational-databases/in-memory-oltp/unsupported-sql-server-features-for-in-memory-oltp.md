@@ -1,6 +1,6 @@
 ---
 title: "Features not supported - in-memory OLTP"
-description: Learn about SQL Server features that are not supported for memory-optimized objects and features for In-Memory OLTP that have become supported.
+description: Learn about SQL Server features that are not supported for memory-optimized objects. View features for In-Memory OLTP that have become supported.
 ms.custom: ""
 ms.date: 02/21/2020
 ms.prod: sql

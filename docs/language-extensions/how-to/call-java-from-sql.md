@@ -118,9 +118,9 @@ jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=t
 ``` 
 To use a loopback connection for Linux the JDBC driver adds three connection properties for this feature defined in Certificate shown below:
 
-https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 
-https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0
+[mssql-jdbc releases](https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0)
 
 ## Next steps
 

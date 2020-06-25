@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # datetime2 (Transact-SQL)
 <!--[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]-->
-[!INCLUDE [](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [](../../includes/applies-to-version/sql-server.md)] [!INCLUDE [](../../includes/applies-to-version/asdb.md)] [!INCLUDE [](../../includes/applies-to-version/asdw.md)] 
+[!INCLUDE [](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [](../../includes/applies-to-version/sqlserver.md)] [!INCLUDE [](../../includes/applies-to-version/asdb.md)] [!INCLUDE [](../../includes/applies-to-version/asdw.md)] 
 
 Defines a date that is combined with a time of day that is based on 24-hour clock. **datetime2** can be considered as an extension of the existing **datetime** type that has a larger date range, a larger default fractional precision, and optional user-specified precision.
   

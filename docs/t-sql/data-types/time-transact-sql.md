@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # time (Transact-SQL)
 <!--[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]-->
-[!INCLUDE [](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [](../../includes/applies-to-version/sql-server.md)] [!INCLUDE [](../../includes/applies-to-version/asdb.md)] [!INCLUDE [](../../includes/applies-to-version/asdw.md)] [!INCLUDE [](../../includes/applies-to-version/pdw.md)]
+[!INCLUDE [](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [](../../includes/applies-to-version/sqlserver.md)] [!INCLUDE [](../../includes/applies-to-version/asdb.md)] [!INCLUDE [](../../includes/applies-to-version/asdw.md)] [!INCLUDE [](../../includes/applies-to-version/pdw.md)]
 
   Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.  
   

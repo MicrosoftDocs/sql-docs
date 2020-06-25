@@ -35,7 +35,7 @@ In the **Publish Database** dialog that appears, specify a server connection and
 
 ## More information
 
-- [SQL Database Projects extension for Azure Data Studio](sql-database-projects-extension.md)
+- [SQL Database Projects extension for Azure Data Studio](sql-database-project-extension.md)
 - [Data Tier Applications](../relational-databases/data-tier-applications/data-tier-applications.md)
 
 

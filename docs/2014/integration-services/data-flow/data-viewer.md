@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Viewer dialog box"
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Viewer
   If a path is configured to use a data viewer, the Data Viewer displays the data buffer by buffer as data moves between two data flow components.  

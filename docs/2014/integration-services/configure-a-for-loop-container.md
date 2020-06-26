@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "containers [Integration Services], For Loop"
   - "For Loop containers"
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Configure a For Loop Container
   This procedure describes how to configure a For Loop container by using the **For Loop Editor** dialog box.  

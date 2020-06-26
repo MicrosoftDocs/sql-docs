@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.afpstorageconn.f1"
   - "sql11.dts.designer.afpstorageconn.f1"
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Storage Connection Manager
   The Azure Storage connection manager enables an SSIS package to connect to an Azure Storage account by using the values you specify for the properties: Storage Account Name and Account Key.  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "datasets [Integration Services], extending"
   - "joining datasets [Integration Services]"
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Extend a Dataset by Using the Merge Join Transformation
   To add and configure a Merge Join transformation, the package must already include at least one Data Flow task and two data flow components that provide inputs to the Merge Join transformation.  

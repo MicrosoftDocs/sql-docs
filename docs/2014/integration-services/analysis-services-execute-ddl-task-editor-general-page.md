@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Analysis Services Execute DDL Task Editor"
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Analysis Services Execute DDL Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Execute DDL task.  

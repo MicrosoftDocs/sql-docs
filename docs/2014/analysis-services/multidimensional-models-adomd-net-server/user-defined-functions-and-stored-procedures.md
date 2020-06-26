@@ -22,7 +22,7 @@ ms.author: owend
 ## UDF Examples  
  A UDF is a method that can be called in the context of an MDX or DMX statement, can take any number of parameters, and can return any type of data.  
   
- A UDF created using MDX is similar to one created for DMX. The main difference is that certain properties of the [Microsoft.AnalysisServices.AdomdServer.Context](/previous-versions/sql/sql-server-2014/ms143353) object, such as the [Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube*](/previous-versions/sql/sql-server-2014/ms137081) and [Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel*](/previous-versions/sql/sql-server-2014/ms137178) properties, are available only for one scripting language or the other.  
+ A UDF created using MDX is similar to one created for DMX. The main difference is that certain properties of the [Microsoft.AnalysisServices.AdomdServer.Context](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) object, such as the [Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube*](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) and [Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel*](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120)) properties, are available only for one scripting language or the other.  
   
  The following examples show how to use a UDF to return a node description, filter tuples, and apply a filter to a tuple.  
   

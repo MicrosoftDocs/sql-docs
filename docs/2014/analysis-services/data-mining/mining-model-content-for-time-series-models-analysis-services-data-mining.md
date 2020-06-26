@@ -417,7 +417,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  The value for *difference order* indicates how many times the series are compared, or differenced.  
   
- For an enumeration of the possible value types, see [Microsoft.AnalysisServices.AdomdServer.MiningValueType](/previous-versions/sql/sql-server-2014/ms144375).  
+ For an enumeration of the possible value types, see [Microsoft.AnalysisServices.AdomdServer.MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### Using the ARIMA Tree Information  
  If you use predictions that are based on the ARIMA algorithm in a business solution, you might want to paste the equation into a report to demonstrate the method that was used to create the prediction. You can use the caption to present the formulas in short format, or the description to present the formulas in long format.  

@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.forloopcontainer.f1"
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # For Loop Editor
   Use the **For Loop** page of the **For Loop Editor** dialog box to configure a loop that repeats a workflow until a specified condition evaluates to false.  

@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Schema Restrictions dialog box"
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Schema Restrictions Dialog Box
   Use the **Schema Restrictions** dialog box to set the schema restrictions to apply to the Foreach ADO.NET Schema Rowset enumerator.  

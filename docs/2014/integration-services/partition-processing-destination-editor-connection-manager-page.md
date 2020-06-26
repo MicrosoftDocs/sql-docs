@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Partition Processing Destination Editor"
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Partition Processing Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **Partition Processing Destination Editor** dialog box to specify a connection to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

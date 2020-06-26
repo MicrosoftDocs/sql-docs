@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "custom user interface [Integration Services]"
   - "custom objects [Integration Services]"
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Developing Custom Objects for Integration Services
   When the control flow and data flow objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not completely meet your requirements, you can develop many types of custom objects on your own including:

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "validation [Integration Services], design-time tasks"
   - "SSIS custom tasks, validating"
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Coding a Custom Task
   After you have created a class that inherits from the [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) base class, and applied the <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> attribute to the class, you must override the implementation of the properties and methods of the base class to provide your custom functionality.

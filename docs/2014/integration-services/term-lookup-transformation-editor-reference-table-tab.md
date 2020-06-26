@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Term Lookup Transformation Editor"
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Term Lookup Transformation Editor (Reference Table Tab)
   Use the **Reference Table** tab of the **Term Lookup Transformation Editor** dialog box to specify the connection to the reference (lookup) table.  

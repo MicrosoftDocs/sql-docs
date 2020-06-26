@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure ODBC Connection Manager dialog box"
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Connection Manager UI Reference
   Use the **Configure ODBC Connection Manager** dialog box to add a connection to an ODBC data source.  

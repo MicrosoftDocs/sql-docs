@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data flow [Integration Services]"
   - "errors [Integration Services], data flow outputs"
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Flow
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, transformations, and destinations. Sources extract data from data stores such as tables and views in relational databases, files, and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases. Transformations modify, summarize, and clean data. Destinations load data into data stores or create in-memory datasets.  

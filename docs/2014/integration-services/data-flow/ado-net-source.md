@@ -15,8 +15,8 @@ helpviewer_keywords:
   - ".NET Framework [Integration Services]"
   - "DataReader source"
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ADO NET Source
   The ADO NET source consumes data from a .NET provider and makes the data available to the data flow.  

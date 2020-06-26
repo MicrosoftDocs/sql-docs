@@ -25,7 +25,7 @@ Native scoring uses libraries that can read model in ONNX or predefined binary f
 
 To use native scoring, call the `PREDICT` T-SQL function and pass the following required inputs:
 
-+ A compatible model based on a supported algorithm.
++ A compatible model based on a supported model and algorithm.
 + Input data, typically defined as a T-SQL query.
 
 The function returns predictions for the input data, together with any columns of source data that you want to pass through.
@@ -63,7 +63,7 @@ The model must be in an [Open Neural Network Exchange (ONNX)](https://onnx.ai/ge
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
 ### RevoScale models
 
-The model must be trained in advance using one of the supported **rx** algorithms listed below using the RevoScaleR or revoscalepy package.
+The model must be trained in advance using one of the supported **rx** algorithms listed below using the [RevoScaleR](../r/ref-r-revoscaler.md) or [revoscalepy](../python/ref-py-revoscalepy.md) package.
 
 Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
@@ -144,7 +144,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 
 In this example, you create a model, and then call the real-time prediction function from T-SQL.
 
-### Step 1. Prepare and save the model
+#### Step 1. Prepare and save the model
 
 Run the following code to create the sample database and required tables.
 
@@ -213,7 +213,7 @@ SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### Step 2. Run PREDICT on the model
+#### Step 2. Run PREDICT on the model
 
 The following simple PREDICT statement gets a classification from the decision tree model using the **native scoring** function. It predicts the iris species based on attributes you provide, petal length and width.
 

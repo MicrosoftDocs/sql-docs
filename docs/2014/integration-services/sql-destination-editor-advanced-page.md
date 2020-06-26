@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL Server Destination Editor"
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SQL Destination Editor (Advanced Page)
   Use the **Advanced** page of the **SQL Destination Editor** dialog box to specify advanced bulk insert options.  

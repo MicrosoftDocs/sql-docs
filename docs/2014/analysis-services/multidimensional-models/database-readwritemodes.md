@@ -40,7 +40,7 @@ ms.author: owend
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.AnalysisServices.Database.Detach*](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
  [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   

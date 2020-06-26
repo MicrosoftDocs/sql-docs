@@ -38,8 +38,8 @@ The function returns predictions for the input data, together with any columns o
 
 `PREDICT` model format support depends on the SQL platform you perform native scoring on. See the table below for which model formats are supported on which platform.
 
-|-|-|-|
 | Platform | ONNX model format | Models trained using the RevoScaleR/revoscalepy packages |
+|-|-|-|
 | SQL Server | No | Yes |
 | Azure SQL Managed Instance | Yes | Yes |
 | Azure SQL Database | No | Yes |
@@ -89,7 +89,7 @@ Unsupported model types include the following types:
 + Models created using other open-source or third-party libraries
 ::: moniker-end
 
-### Examples
+## Examples
 ::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
 ### PREDICT with an ONNX model
 
@@ -125,6 +125,8 @@ SELECT predict_input.id
 FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1 FLOAT) AS p;
 ```
 
+> [!NOTE]
+> Because the columns and values returned by **PREDICT** can vary by model type, you must define the schema of the returned data by using a **WITH** clause.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"

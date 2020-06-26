@@ -32,7 +32,7 @@ Returns a row for each active worker account that is running an external script.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**unique identifier**|ID of the process that sent the external script request. This corresponds to the process ID as received by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].|  
+|external_script_request_id|**unique identifier**|ID of the process that sent the external script request. This corresponds to the process ID as received the SQL instance.|  
 |language|**nvarchar**|Keyword that represents a supported script language. |  
 |degree_of_parallelism|**int**|Number indicating the number of parallel processes that were created. This value might be different from the number of parallel processes that were requested.|  
 |external_user_name|**nvarchar**|The Windows worker account under which the script was executed.|  
@@ -50,7 +50,7 @@ This view can be filtered using the script language identifier.
 
 The view also returns the worker account under which the script is being run. For information about worker accounts used by the external scripts, see the Identities used in processing (SQLRUserGroup) section in [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../machine-learning/concepts/security.md#sqlrusergroup).
 
-The GUID that is returned in the **external_script_request_id** field also represents the file name of the secured directory where temporary files are stored. Each worker account such as MSSQLSERVER01 represents a single SQL login or Windows user, and might be used to run multiple script requests. By default, these temporary files are cleaned up after completion of the requested script.
+The GUID that is returned in the **external_script_request_id** field also represents the file name of the secured directory where temporary files are stored. Each worker account, such as MSSQLSERVER01, represents a single SQL login or Windows user, and might be used to run multiple script requests. By default, these temporary files are cleaned up after completion of the requested script.
 
 This DMV monitors only active processes and cannot report on scripts that have already completed. If you need to track the duration of scripts, we recommend that you add timing information into your script and capture that as part of script execution.
 

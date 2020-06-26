@@ -1,6 +1,6 @@
 ---
 title: DAC Framework Compatibility
-description: "Understand the error message that can appear when you attempt an action in SQL Server Data Tools (SSDT) that uses an incompatible version of the DAC Framework."
+description: "Understand the error message that can appear when you attempt actions in SQL Server Data Tools (SSDT) that use incompatible versions of the DAC Framework."
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

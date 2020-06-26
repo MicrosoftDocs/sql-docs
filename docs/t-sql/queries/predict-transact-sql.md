@@ -55,15 +55,15 @@ MODEL = @model | model_literal
 The `MODEL` parameter is used to specify the model used for scoring or prediction. The model is specified as a variable or a literal or a scalar expression.
 
 ::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
-The model object can be created by using R or Python or another tool.
+`PREDICT` supports models trained using the [RevoScaleR](../r/ref-r-revoscaler.md) and [revoscalepy](../python/ref-py-revoscalepy.md) packages.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-The model object can be created by using R or Python or another tool. [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) is also a supported model format for Azure SQL Managed Instance.
+In Azure SQL Managed Instance, `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../r/ref-r-revoscaler.md) and [revoscalepy](../python/ref-py-revoscalepy.md) packages.
 ::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
-[Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) is the supported model format for Azure Synapse.
+In Azure Synapse Analytics, `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format.
 ::: moniker-end
 
 **DATA**
@@ -100,14 +100,18 @@ The `PREDICT` function is supported in all editions of SQL Server 2017 or later,
 
 ### Supported algorithms
 
+In Azure SQL Managed Instance, `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../r/ref-r-revoscaler.md) and [revoscalepy](../python/ref-py-revoscalepy.md) packages.
+
+
+
 ::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
-The model that you use must have been created using one of the supported algorithms from the RevoScaleR package. For a list of currently supported models, see [Real-time scoring](../../machine-learning/real-time-scoring.md).
+The model that you use must have been created using one of the supported algorithms from the [RevoScaleR](../r/ref-r-revoscaler.md) or [revoscalepy](../python/ref-py-revoscalepy.md) packages. For a list of currently supported models, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 Algorithms that can be converted to [ONNX](https://onnx.ai/) model format are supported.
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-Algorithms that can be converted to [ONNX](https://onnx.ai/) model format and models that you have been created using one of the supported algorithms from the RevoScaleR package are supported.
+Algorithms that can be converted to [ONNX](https://onnx.ai/) model format and models that you have created using one of the supported algorithms from the from the [RevoScaleR](../r/ref-r-revoscaler.md) or [revoscalepy](../python/ref-py-revoscalepy.md) packages are supported. For a list of currently supported algorithms in RevoScaleR and revoscalepy, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 ::: moniker-end
 
 ### Permissions

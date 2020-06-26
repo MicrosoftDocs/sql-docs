@@ -1,6 +1,6 @@
 ---
 title: "Suspend an availability database"
-description: Learn about suspending the data movement for a database within an Always On availability group using SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) or PowerShell. 
+description: Learn about suspending the data movement for a database within an Always On availability group using SQL Server Management Studio, Transact-SQL or PowerShell.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql

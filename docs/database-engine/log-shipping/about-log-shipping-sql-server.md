@@ -1,5 +1,6 @@
 ---
 title: "About Log Shipping (SQL Server) | Microsoft Docs"
+description: Learn about SQL Server log shipping, which sends transaction log backups from a primary database on a primary server instance to secondary databases.
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql

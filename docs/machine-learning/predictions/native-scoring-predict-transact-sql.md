@@ -73,7 +73,7 @@ Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learn
 
 The following algorithms are supported in revoscalepy and RevoScaleR.
 
-+ revoscalepy models
++ revoscalepy algorithms
 
   + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
   + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
@@ -81,7 +81,7 @@ The following algorithms are supported in revoscalepy and RevoScaleR.
   + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
   + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
-+ RevoScaleR models
++ RevoScaleR algorithms
 
   + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
@@ -89,7 +89,7 @@ The following algorithms are supported in revoscalepy and RevoScaleR.
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-If you need to use models from MicrosoftML or microsoftml, use [real-time scoring with sp_rxPredict](../real-time-scoring.md).
+If you need to use an algorithms from MicrosoftML or microsoftml, use [real-time scoring with sp_rxPredict](../real-time-scoring.md).
 
 Unsupported model types include the following types:
 
@@ -142,7 +142,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 ::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ### PREDICT with RevoScale model
 
-In this example, you create a model, and then call the real-time prediction function from T-SQL.
+In this example, you create a model using **RevoScaleR** in R, and then call the real-time prediction function from T-SQL.
 
 #### Step 1. Prepare and save the model
 

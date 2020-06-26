@@ -100,10 +100,6 @@ The `PREDICT` function is supported in all editions of SQL Server 2017 or later,
 
 ### Supported algorithms
 
-In Azure SQL Managed Instance, `PREDICT` supports models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../r/ref-r-revoscaler.md) and [revoscalepy](../python/ref-py-revoscalepy.md) packages.
-
-
-
 ::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 The model that you use must have been created using one of the supported algorithms from the [RevoScaleR](../r/ref-r-revoscaler.md) or [revoscalepy](../python/ref-py-revoscalepy.md) packages. For a list of currently supported models, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 ::: moniker-end

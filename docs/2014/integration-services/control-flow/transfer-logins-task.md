@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Logins task [Integration Services]"
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Logins Task
   The Transfer Logins task transfers one or more logins between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Step 4: Adding a Data Flow Task to the Package
   After you have created the connection managers for the source and destination data, the next task is to add a Data Flow task to your package. The Data Flow task encapsulates the data flow engine that moves data between sources and destinations, and provides the functionality for transforming, cleaning, and modifying data as it is moved. The Data Flow task is where most of the work of an extract, transform, and load (ETL) process occurs.  

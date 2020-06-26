@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Unpivot Transformation Editor"
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Unpivot Transformation Editor
   Use the **Unpivot Transformation Editor** dialog box to select the columns to pivot into rows, and to specify the data column and the new pivot value output column.  

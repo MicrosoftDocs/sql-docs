@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1"
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Select Objects to Transfer
   Use this dialog box to select objects to transfer from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another by using an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] transfer task.  

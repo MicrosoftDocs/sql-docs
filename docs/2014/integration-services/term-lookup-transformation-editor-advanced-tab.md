@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Term Lookup Transformation Editor"
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Term Lookup Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Lookup Transformation Editor** dialog box to specify whether lookup should be case-sensitive.  

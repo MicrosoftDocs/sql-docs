@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Extract Change Data Using the CDC Source
   To add and configure a CDC source, the package must already include at least one Data Flow task and a CDC Control task.  

@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "OLE DB Source Editor"
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # OLE DB Source Editor (Columns Page)
   Use the **Columns** page of the **OLE DB Source Editor** dialog box to map an output column to each external (source) column.  

@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.selectsourcelocation.f1"
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Select Source Location (SSIS Package Upgrade Wizard)
   Use the **Select Source Location** page to specify the source from which to upgrade packages.  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "security [Integration Services],protection levels"
   - "protection level for packages [Integration Services]"
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Set or Change the Protection Level of Packages
   To control access to the contents of packages and to the sensitive values that they contain, such as passwords, set the value of the `ProtectionLevel` property. The packages contained in a project need to have the same protection level as the project, to build the project. If you change the `ProtectionLevel` property setting on the project, you need to manually update the property setting for the packages.  

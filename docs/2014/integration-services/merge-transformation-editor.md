@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Merge Transformation Editor"
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Merge Transformation Editor
   Use the **Merge Transformation Editor** to specify columns from two sorted sets of data to be merged.  

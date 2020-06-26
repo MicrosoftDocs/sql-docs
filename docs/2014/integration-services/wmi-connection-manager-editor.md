@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "WMI Connection Manager Editor"
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # WMI Connection Manager Editor
   Use the **WMI Connection Manager** dialog box to specify a Microsoft Windows Management Instrumentation (WMI) connection to a server.  

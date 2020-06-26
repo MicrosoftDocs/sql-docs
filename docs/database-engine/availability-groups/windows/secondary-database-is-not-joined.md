@@ -1,5 +1,6 @@
 ---
 title: "Secondary database is not joined | Microsoft Docs"
+description: Availability Database Join State checks the join state of the secondary database as part of policy based management for Always On availability groups.
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql

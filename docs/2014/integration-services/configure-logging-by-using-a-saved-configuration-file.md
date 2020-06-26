@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "containers [Integration Services], logs"
   - "logs [Integration Services], containers"
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Logging by Using a Saved Configuration File
   This procedure describes how to configure logging for new containers in a package by loading a previously saved logging configuration file.  

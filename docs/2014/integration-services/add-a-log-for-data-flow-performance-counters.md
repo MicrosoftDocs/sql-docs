@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "counters [Integration Services]"
   - "logs [Integration Services], data flow counters"
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Add a Log for Data Flow Performance Counters
   This procedure describes how to add a log for the performance counters that the data flow engine provides.  

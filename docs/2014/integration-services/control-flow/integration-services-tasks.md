@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "data preparation tasks [Integration Services]"
   - "directory operations [Integration Services]"
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Tasks
   Tasks are control flow elements that define units of work that are performed in a package control flow. An [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package is made up of one or more tasks. If the package contains more than one task, they are connected and sequenced in the control flow by precedence constraints.  

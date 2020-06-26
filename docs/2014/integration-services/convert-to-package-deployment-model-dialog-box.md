@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.bids.converttolegacydeployment.f1"
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Convert to Package Deployment Model Dialog Box
   The **Convert to Package Deployment Model** command allows you to convert a package to the package deployment model after checking the project and each package in the project for compatibility with that model. If a package uses features unique to the project deployment model, such as parameters, then the package cannot be converted.  

@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Script Transformation Editor"
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Script Transformation Editor (Inputs and Outputs Page)
   Use the **Inputs and Outputs** page of the **Script Transformation Editor** dialog box to add, remove, and configure inputs and outputs for the Script Transformation.  

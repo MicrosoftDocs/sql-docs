@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Source Custom Properties
   The following table describes the custom properties of the ODBC source. All properties can be set from SSIS property expressions.  

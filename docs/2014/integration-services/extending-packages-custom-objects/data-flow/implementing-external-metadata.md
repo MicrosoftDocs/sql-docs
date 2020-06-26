@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "custom data flow components [Integration Services], external metadata"
   - "external metadata [Integration Services]"
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Implementing External Metadata
   When a component is disconnected from its data source, you can validate the columns in the input and output column collections against the columns at its external data source by using the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> interface. This interface lets you maintain a snapshot of the columns at the external data source and map these columns to the columns in the input and output column collection of the component.  

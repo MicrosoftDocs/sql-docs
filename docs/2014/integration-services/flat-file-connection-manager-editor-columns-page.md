@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Flat File Connection Manager Editor"
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Connection Manager Editor (Columns Page)
   Use the **Columns** page of the **Flat File Connection Manager Editor** dialog box to specify the row and column information, and to preview the file.  

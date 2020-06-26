@@ -2,7 +2,7 @@
 title: "PREDICT (Transact-SQL)"
 titleSuffix: SQL machine learning
 ms.custom: ""
-ms.date: "06/16/2020"
+ms.date: "06/26/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -22,11 +22,7 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md.md)]
 
-Generates a predicted value or scores based on a stored model.
-
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
-For more information, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/sql-native-scoring.md).
-::: moniker-end
+Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 
 ## Syntax
 
@@ -159,9 +155,7 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
 
 ## Next steps
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
-- [Native scoring using the PREDICT T-SQL function](../../machine-learning/sql-native-scoring.md)
-::: moniker-end
+- [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)
 ::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current||=sqlallproducts-allversions"
 -	[Learn more about ONNX models](/azure/machine-learning/concept-onnx#get-onnx-models)
 ::: moniker-end

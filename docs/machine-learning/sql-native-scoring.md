@@ -3,16 +3,16 @@ title: Native scoring with T-SQL PREDICT
 titleSuffix: SQL machine learning
 description: Learn how to use native scoring with the PREDICT T-SQL function to generate prediction values for new data inputs in near-real-time. 
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
-# Native scoring with the PREDICT T-SQL function with SQL machine learning
+# Native scoring using the PREDICT T-SQL function with SQL machine learning
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md](../includes/tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md.md)]
 
 Learn how to use native scoring with the [PREDICT T-SQL function](../t-sql/queries/predict-transact-sql.md) to generate prediction values for new data inputs in near-real-time. Native scoring requires that you have an already trained model.

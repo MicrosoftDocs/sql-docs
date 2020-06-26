@@ -1,5 +1,6 @@
 ---
 title: "SQLDriverConnect | Microsoft Docs"
+description: Learn about SQLDriverConnect connection attributes and support for high availability/disaster recovery and SPNs in the SQL Server Native Client ODBC driver.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -11,8 +12,8 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLDriverConnect function"
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLDriverConnect

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "undocumented [SQL Server]"
   - "documentation policy [SQL Server]"
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Legal Notice for Documentation
   This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.  

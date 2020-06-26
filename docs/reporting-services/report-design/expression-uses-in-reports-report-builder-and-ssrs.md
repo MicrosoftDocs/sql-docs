@@ -1,5 +1,6 @@
 ---
 title: "Expression Uses in Reports (Report Builder) | Microsoft Docs"
+description: Specify or calculate values with expressions for parameters, queries, filters, and text box properties in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

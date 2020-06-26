@@ -44,7 +44,7 @@ You can construct your **INSERT** statement when you have visible **PERIOD** col
          ) ;
    ```
 
-- If you do specify the**PERIOD** columns in the column list in your **INSERT** statement, then you need to specify **DEFAULT** as their value.
+- If you do specify the **PERIOD** columns in the column list in your **INSERT** statement, then you need to specify **DEFAULT** as their value.
 
   ```sql
   INSERT INTO [dbo].[Department]
@@ -144,7 +144,7 @@ If you try to perform PARTITION SWITCH from a table without period definition yo
 
 ## Updating data
 
-You update data in the current table with a regular **UPDATE** statement. You can update data in the current table from the history table to for the "oops" scenario. However, you cannot update **PERIOD** columns and you cannot directly updated data in the history table while **SYSTEM_VERSIONING = ON**.
+You update data in the current table with a regular **UPDATE** statement. You can update data in the current table from the history table for the "oops" scenario. However, you cannot update **PERIOD** columns and you cannot directly update data in the history table while **SYSTEM_VERSIONING = ON**.
 
 Set **SYSTEM_VERSIONING = OFF** and update rows from current and history table but keep in mind that way system will not preserve history of changes.
 

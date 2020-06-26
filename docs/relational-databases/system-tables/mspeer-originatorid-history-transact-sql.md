@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_originatorid_history"
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

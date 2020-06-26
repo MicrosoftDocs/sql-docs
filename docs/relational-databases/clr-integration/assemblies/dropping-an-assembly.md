@@ -1,5 +1,6 @@
 ---
 title: "Dropping an Assembly | Microsoft Docs"
+description: You can delete, or drop, an assembly in SQL Server when it’s no longer needed. Use DROP ASSEMBLY to remove an assembly and its associated files.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting SQL Server Managed  Backup to Azure | Microsoft Docs"
+description: This article describes the tasks and tools you can use to troubleshoot errors that may occur during SQL Server Managed Backup to Microsoft Azure operations.
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
@@ -9,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Troubleshooting SQL Server Managed  Backup to Azure
   This topic describes the tasks and tools you can use to troubleshoot errors that may occur during [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] operations.  

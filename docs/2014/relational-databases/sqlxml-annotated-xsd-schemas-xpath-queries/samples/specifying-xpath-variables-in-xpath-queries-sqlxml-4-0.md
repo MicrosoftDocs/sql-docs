@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], XPath variables"
   - "XPath variables [SQLXML]"
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specifying XPath Variables in XPath Queries (SQLXML 4.0)
   The following examples show how XPath variables are passed in XPath queries. The XPath queries in these examples are specified against the mapping schema contained in SampleSchema1.xml. For information about this sample schema, see [Sample Annotated XSD Schema for XPath Examples &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  

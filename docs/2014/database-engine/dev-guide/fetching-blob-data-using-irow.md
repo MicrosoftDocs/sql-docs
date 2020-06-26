@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: badbd6ac-20aa-4891-a14f-48d38e7f30de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Fetching BLOB Data Using IRow
   A BLOB column in a row object can be retrieved by using **IRow::GetColumns**, or **IRow::Open** and **ISequentialStream**.  

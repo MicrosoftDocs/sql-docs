@@ -1,5 +1,6 @@
 ---
 title: "Defining UDT Tables and Columns | Microsoft Docs"
+description: After you register the assembly that contains a UDT definition, you can use it in a column definition.
 ms.custom: ""
 ms.date: "12/05/2019"
 ms.prod: sql

@@ -50,7 +50,7 @@ A Materialized View persists the data returned from the view definition query an
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
     WITH (  
       <distribution_option>

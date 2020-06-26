@@ -1,5 +1,6 @@
 ---
 title: "Query columns using Always Encrypted with SQL Server Management Studio | Microsoft Docs"
+description: Learn how to query columns in Always Encrypted using SQL Server Management Studio. Retrieve ciphertext or text values stored in encrypted columns.
 ms.custom: ""
 ms.date: 10/31/2019
 ms.prod: sql
@@ -166,7 +167,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 For an attempted parameterization to succeed:   
 - The type of the literal used for the initialization of the variable to be parametrized, must match the type in the variable declaration.   
-- If the declared type of the variable is a date type or a time type, the variable must be initialized using a string using one of the following ISO 8601-compliant formats.   
+- If the declared type of the variable is a date type or a time type, the variable must be initialized using a string using one of the following [ISO 8601-compliant formats](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles).    
 
 Here are the examples of Transact-SQL variable declarations that will result in parameterization errors:   
 ```sql

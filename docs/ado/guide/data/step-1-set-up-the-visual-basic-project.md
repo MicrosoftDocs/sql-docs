@@ -8,8 +8,8 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Step 1: Set Up the Visual Basic Project
 In this scenario, it is assumed that you have Microsoft Visual Basic 6.0, ADO 2.5 or later, and the Microsoft OLE DB Provider for Internet Publishing installed on your system. You will first create a new project, and then add some controls to the default form in the project.  

@@ -69,7 +69,7 @@ The **Error List** provides the following functionality:
 > [!NOTE]  
 >  The **Error List** only displays errors from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor; it does not display errors from the MDX, DMX, or XML/A Editors. All MDX, DMX, and XML/A errors are displayed in the **Messages** tab in those editors.  
   
-## UIElement List  
+## UI element list  
  When the **Error List** is open, the information is displayed in the following columns:  
   
  **Default Order**  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data conversions from SQL to C types [ODBC], examples"
   - "converting data from SQL to C types [ODBC], examples"
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL to C Data Conversion Examples
 

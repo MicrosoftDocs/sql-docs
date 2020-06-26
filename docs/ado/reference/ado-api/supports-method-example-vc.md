@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Supports method [ADO], VC++ example"
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Supports Method Example (VC++)
 This example uses the [Supports](../../../ado/reference/ado-api/supports-method.md) method to display the options supported by a recordset opened with different cursor types. The DisplaySupport function is required for this example to run.  

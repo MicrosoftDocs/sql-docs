@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Working with Members, Tuples, and Sets (MDX)
   MDX provides numerous functions that return one or more members, tuples, or sets; or that act upon a member, tuple, or set.  

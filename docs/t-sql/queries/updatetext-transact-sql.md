@@ -33,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }  
   { NULL | insert_offset }  

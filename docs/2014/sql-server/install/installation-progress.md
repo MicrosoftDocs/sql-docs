@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 326f675a-bead-48d3-9088-539e9f9c3fc9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Installation Progress
   Use the **Installation Progress** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to monitor the status of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  

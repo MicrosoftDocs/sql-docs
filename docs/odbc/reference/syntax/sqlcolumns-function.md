@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLColumns function [ODBC]"
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumns Function
 **Conformance**  

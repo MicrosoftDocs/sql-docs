@@ -1,5 +1,6 @@
 ---
 title: "Generate an Inline XDR Schema | Microsoft Docs"
+description: View information about generating an inline XDR schema and about the deprecation of the XMLDATA directive in the FOR XML clause.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

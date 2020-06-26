@@ -11,8 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "ExecuteOptions property [ADO], VBScript example"
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ExecuteOptions Property (RDS)
 Indicates whether asynchronous execution is enabled.  

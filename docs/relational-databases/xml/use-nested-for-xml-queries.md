@@ -1,5 +1,6 @@
 ---
 title: "Use Nested FOR XML Queries | Microsoft Docs"
+description: Learn how to use nested FOR XML queries.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

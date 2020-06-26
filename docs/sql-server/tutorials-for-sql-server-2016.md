@@ -1,20 +1,18 @@
 ---
 title: "Tutorials for SQL Server | Microsoft Docs"
-ms.custom: ""
 ms.date: "11/01/2017"
 ms.prod: sql
-ms.reviewer: ""
-ms.technology: performance
+ms.technology:
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 ---
 # Tutorials for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] provides tutorials to help you learn new technologies and features. Tutorials for earlier versions can usually be used with more recent versions. When tutorials address a newer feature, they will indicate the minimum version to complete the tutorial.  
      
--   If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).    
 -   Download a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] reports to use with [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] tutorials, go to [Power View Samples for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734).  
 - Check out the new [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) sample available on the [sql-server-samples](https://github.com/Microsoft/sql-server-samples) GitHub repository. 
 

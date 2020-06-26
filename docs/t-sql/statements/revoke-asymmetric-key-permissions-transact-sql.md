@@ -26,7 +26,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   

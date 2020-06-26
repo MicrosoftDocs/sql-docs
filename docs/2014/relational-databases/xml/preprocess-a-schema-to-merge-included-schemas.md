@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "preprocessor tool [XML schemas]"
   - "XML schemas [SQL Server]"
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Preprocess a Schema to Merge Included Schemas
   The W3C XSD **include** element provides support for schema modularity in which an XML schema can be partitioned into more than one physical file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently does not support this element. XML schemas that include this element will be rejected by the server.  

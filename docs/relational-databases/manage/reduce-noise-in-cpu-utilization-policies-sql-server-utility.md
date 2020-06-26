@@ -1,5 +1,6 @@
 ---
 title: "Reduce Noise in CPU Utilization Policies (SQL Server Utility) | Microsoft Docs"
+description: View strategies for reducing noise and unwanted violations in SQL Server Utility results. See which policy options affect processor utilization reports.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

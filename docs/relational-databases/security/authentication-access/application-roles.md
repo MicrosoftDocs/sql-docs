@@ -1,5 +1,6 @@
 ---
 title: "Application Roles | Microsoft Docs"
+description: Use application roles to enable access to data only for those users who connect through a specific application in SQL Server. 
 ms.custom: ""
 ms.date: "08/06/2019"
 ms.prod: sql
@@ -46,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the only way for a user to reacquire its original security context after starting an application role is to disconnect and reconnect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], **sp_setapprole** has an option that creates a cookie. The cookie contains context information before the application role is enabled. The cookie can be used by **sp_unsetapprole** to revert the session to its original context. For information about this new option and an example, see [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 > [!IMPORTANT]  
->  The ODBC **encrypt** option is not supported by **SqlClient**. When you are transmitting confidential information over a network, use Secure Sockets Layer (SSL) or IPsec to encrypt the channel. If you must persist credentials in the client application, encrypt the credentials by using the crypto API functions. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions, the parameter *password* is stored as a one-way hash.  
+>  The ODBC **encrypt** option is not supported by **SqlClient**. When you are transmitting confidential information over a network, use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), or IPsec to encrypt the channel. If you must persist credentials in the client application, encrypt the credentials by using the crypto API functions. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions, the parameter *password* is stored as a one-way hash.  
   
 ## Related Tasks  
   

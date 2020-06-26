@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP SERVER AUDIT audit_name  
     [ ; ]  

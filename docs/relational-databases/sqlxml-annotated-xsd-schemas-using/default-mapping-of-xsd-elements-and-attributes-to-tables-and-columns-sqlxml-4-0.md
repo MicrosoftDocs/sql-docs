@@ -1,5 +1,6 @@
 ---
 title: "Default XSD mapping to tables/columns (SQLXML)"
+description: Learn how elements and attributes in an XSD schema are mapped by default to tables and columns in SQLXML 4.0.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

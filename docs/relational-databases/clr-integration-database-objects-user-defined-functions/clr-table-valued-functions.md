@@ -1,5 +1,6 @@
 ---
 title: "CLR Table-Valued Functions | Microsoft Docs"
+description: A table-valued function returns a table. In SQL Server CLR integration, you can write table-valued functions in managed code.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

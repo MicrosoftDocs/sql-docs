@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, client-side XML formatting"
   - "ClientSideXml property"
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)
   This example illustrates the use of the ClientSideXml property. The application executes a stored procedure on the server. The result of the stored procedure (a two-column rowset) is processed on the client side to produce an XML document.  

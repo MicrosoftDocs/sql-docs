@@ -1,6 +1,6 @@
 ---
 title: "Configure HealthCheckTimeout for availability group"
-description: "Configure HealthCheckTimeout for an Always On availability group, which is used to specify the time that the SQL Server resource DLL should wait before reporting unresponsiveness."
+description: Configure HealthCheckTimeout for an Always On availability group, which specifies how long the SQL Server resource DLL waits before reporting unresponsiveness.
 ms.custom: "seo-lt-2019"
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -55,7 +55,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### Related Content (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Failover Clustering and Network Load Balancing Team Blog)  
   
 -   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   

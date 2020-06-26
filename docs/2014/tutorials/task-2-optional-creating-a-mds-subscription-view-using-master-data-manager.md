@@ -9,12 +9,11 @@ ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 2 (Optional): Creating a MDS Subscription View using Master Data Manager
   In this task, you create a subscription view to expose the **Supplier** entity in the **Suppliers** model to other applications. You do not consume this view in the current version of the tutorial.  
   
-1.  Switch to the main page of **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)) by clicking **SQL Server 2012 Master Data Services** at the top.  
+1.  Switch to the main page of **Master Data Manager** (`http://localhost/MDS`) by clicking **SQL Server 2012 Master Data Services** at the top.  
   
 2.  Click **Integration Management**.  
   

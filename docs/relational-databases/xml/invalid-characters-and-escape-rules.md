@@ -1,5 +1,6 @@
 ---
 title: "Invalid Characters and Escape Rules | Microsoft Docs"
+description: Learn how invalid XML characters are handled by the FOR XML clause, and learn the escape rules for characters that are invalid in XML names.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

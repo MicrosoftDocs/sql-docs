@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Strategies for Backing Up and Restoring Merge Replication
   For merge replication, back up the following databases regularly:  

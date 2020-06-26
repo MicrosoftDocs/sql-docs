@@ -2,7 +2,6 @@
 title: Create or Edit a Server Group
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -15,8 +14,7 @@ helpviewer_keywords:
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
-ms.reviewer: ""
+ms.reviewer: "mikeray"
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ---

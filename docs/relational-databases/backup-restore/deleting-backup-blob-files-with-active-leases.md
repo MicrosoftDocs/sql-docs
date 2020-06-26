@@ -1,5 +1,6 @@
 ---
 title: "Deleting Backup Blob Files with Active Leases | Microsoft Docs"
+description: If a SQL Server backup or restore fails, a blob in Azure Storage can become orphaned. Learn how to delete an orphaned blob.
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.prod: sql

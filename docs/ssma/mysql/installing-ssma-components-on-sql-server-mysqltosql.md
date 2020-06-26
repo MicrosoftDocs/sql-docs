@@ -1,5 +1,6 @@
 ---
 title: "Installing SSMA Components on SQL Server (MySQLToSql) | Microsoft Docs"
+description: Install components on the server that runs SQL Server to support MySQL database conversion with SSMA, including the SSMA extension pack and MySQL providers.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

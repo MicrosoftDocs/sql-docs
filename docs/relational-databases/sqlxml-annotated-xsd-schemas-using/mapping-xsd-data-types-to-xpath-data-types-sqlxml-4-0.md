@@ -1,5 +1,6 @@
 ---
 title: "Mapping XSD Data Types to XPath Data Types (SQLXML)"
+description: Learn how to map XSD data types to XPath data types when performing an XPath query in SQLXML 4.0.
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

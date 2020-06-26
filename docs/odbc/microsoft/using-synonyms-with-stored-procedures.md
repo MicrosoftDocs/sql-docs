@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "stored procedures [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], stored procedures"
 ms.assetid: 8620b039-a086-4534-8710-cc8b1787dc80
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Synonyms with Stored Procedures
 > [!IMPORTANT]  

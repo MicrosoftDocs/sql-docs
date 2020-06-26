@@ -1,5 +1,6 @@
 ---
 title: "InScope Function (Report Builder) | Microsoft Docs"
+description: The InScope function indicates whether the current instance of an item is in the specified scope in Report Builder.
 ms.date: 03/08/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

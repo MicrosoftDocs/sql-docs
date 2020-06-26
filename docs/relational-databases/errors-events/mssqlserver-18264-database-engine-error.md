@@ -17,8 +17,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|Microsoft SQL Server|  
 |Event ID|18264|  
 |Event Source|MSSQLENGINE|  

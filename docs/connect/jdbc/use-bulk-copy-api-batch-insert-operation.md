@@ -1,5 +1,6 @@
 ---
-title: "Using bulk copy API for batch insert operation for MSSQL JDBC Driver | Microsoft Docs"
+title: "Bulk copy API for batch insert in JDBC"
+description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy API for batch insert operations against Azure Data Warehouse."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -136,4 +137,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## See also
 
-[Improving performance and reliability with the JDBC driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Back Up Database (General Page)
   Use the **General** page of the **Back Up Database** dialog box to view or modify settings for a database back up operation.  

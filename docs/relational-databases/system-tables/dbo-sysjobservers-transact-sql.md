@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobservers system table"
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

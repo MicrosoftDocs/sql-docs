@@ -1,8 +1,8 @@
 ---
-title: "Information in Error Interfaces | Microsoft Docs"
-description: "Information in error interfaces"
+title: "Information in Error Interfaces"
+description: "The OLE DB Driver for SQL Server reports some error and status information in the OLE DB-defined error interfaces IErrorInfo, IErrorRecords, and ISQLErrorInfo."
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1"
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Full-Text Catalog Properties (Population Schedule Page)
   Use this dialog box to add or modify schedules that determine when the full-text catalog will be populated or repopulated.  

@@ -1,5 +1,6 @@
 ---
 title: "Use FOR XML Results in Application Code | Microsoft Docs"
+description: Learn how to use the results of an SQL query with FOR XML clauses in an application.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

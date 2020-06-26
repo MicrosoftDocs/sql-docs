@@ -1,5 +1,6 @@
 ---
 title: "Configure the scan for startup procs Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "scan for startup procs" option. See how it specifies whether SQL Server scans for and runs all automatically run stored procedures at startup.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "scan for startup procs option"
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the scan for startup procs Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

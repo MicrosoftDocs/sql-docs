@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -36,7 +35,7 @@ The following procedure compares the schema of a database project with a connect
   
 ### To compare database definitions  
   
-1.  On the **SQL** menu, select **Schema Compare**, and then click **New Schema Comparison**.  
+1.  On the **Tools** menu, select **SQL Server**, and then click **New Schema Comparison**.  
   
     Alternatively, right-click the **TradeDev** project in **Solution Explorer**, and select **Schema Compare**.  
   

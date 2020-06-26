@@ -33,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE APPLICATION ROLE application_role_name   
     WITH PASSWORD = 'password' [ , DEFAULT_SCHEMA = schema_name ]  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication Programming Concepts
   Before developing an application that uses replication functionalities, you should follow the following general planning steps:  

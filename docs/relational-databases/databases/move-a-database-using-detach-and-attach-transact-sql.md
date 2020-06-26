@@ -1,7 +1,6 @@
 ---
 title: "Move Database using detach & attach (Transact-SQL)"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -46,7 +45,7 @@ ms.custom: seo-dt-2019
   
 1.  Detach the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     EXEC sp_detach_db @dbname = N'AdventureWorks2012';  
@@ -62,7 +61,7 @@ ms.custom: seo-dt-2019
   
 3.  Attach the moved database and, optionally, its log by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     CREATE DATABASE MyAdventureWorks   

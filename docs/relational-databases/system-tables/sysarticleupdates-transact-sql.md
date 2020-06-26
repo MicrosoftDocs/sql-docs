@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysarticleupdates system table"
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

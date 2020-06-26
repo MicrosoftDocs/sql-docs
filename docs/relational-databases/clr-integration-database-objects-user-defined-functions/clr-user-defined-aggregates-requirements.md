@@ -1,5 +1,6 @@
 ---
 title: "Requirements for CLR User-Defined Aggregates | Microsoft Docs"
+description: SQL Server CLR integration allows you to create custom aggregate functions in managed code. They must implement the required aggregation contract.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

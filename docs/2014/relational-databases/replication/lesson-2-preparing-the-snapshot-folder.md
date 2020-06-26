@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Lesson 2: Preparing the Snapshot Folder
   In this lesson, you will learn to configure the snapshot folder that is used to create and store the publication snapshot.  

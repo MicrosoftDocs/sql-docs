@@ -1,5 +1,6 @@
 ---
 title: "Metadata Visibility Configuration | Microsoft Docs"
+description: Learn how to configure metadata visibility for securables that a user owns or has been granted permission to in SQL Server.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

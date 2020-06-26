@@ -1,5 +1,6 @@
 ---
-title: "Configuring the client for encryption | Microsoft Docs"
+title: "Configuring the client for encryption"
+description: "Learn about client side encryption and certificate trust to ensure the security of clients using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: sql

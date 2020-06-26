@@ -1,7 +1,8 @@
 ---
 title: "SQL Server 2012 Release Notes | Microsoft Docs"
+description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ""
 ms.date: "02/01/2017"
 ms.reviewer: ""
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Release Notes, SQL Server"
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Release Notes
@@ -336,7 +337,7 @@ There are problems with the AS Processing Task when you work with tabular models
 ### 4.5 Controls Do Not Scale Properly On Large Font Sizes  
 **Issue:** If you change the size of text to "Larger - 150%" (in Windows Server 2008 or Windows 7), or change the Custom DPI setting to 200% (in Windows 7), the **Cancel** and **Create** buttons on the **New Knowledge Base** page are not accessible.  
   
-**Workaround:**To resolve the issue, set the font to a smaller size.  
+**Workaround:** To resolve the issue, set the font to a smaller size.  
   
 ### 4.6 Screen Resolution of 800x600 Is Not Supported  
 **Issue:** The Data Quality Client application does not display correctly if the screen resolution is set to 800x600.  

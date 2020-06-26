@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "INSERT [ODBC]"
   - "data updates [ODBC], about data updates"
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # UPDATE, DELETE, and INSERT Statements
 SQL-based applications make changes to tables by executing the **UPDATE**, **DELETE**, and **INSERT** statements. These statements are part of the Minimum SQL grammar conformance level and must be supported by all drivers and data sources.  

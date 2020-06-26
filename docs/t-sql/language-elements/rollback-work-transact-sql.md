@@ -33,7 +33,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ROLLBACK [ WORK ]  
 [ ; ]  

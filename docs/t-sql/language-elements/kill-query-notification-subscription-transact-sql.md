@@ -32,7 +32,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 KILL QUERY NOTIFICATION SUBSCRIPTION   
    { ALL | subscription_id }  

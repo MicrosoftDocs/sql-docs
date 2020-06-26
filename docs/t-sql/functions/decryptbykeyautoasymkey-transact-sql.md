@@ -27,7 +27,7 @@ This function decrypts encrypted data. To do this, it first decrypts a symmetric
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByKeyAutoAsymKey ( akey_ID , akey_password   
     , { 'ciphertext' | @ciphertext }  

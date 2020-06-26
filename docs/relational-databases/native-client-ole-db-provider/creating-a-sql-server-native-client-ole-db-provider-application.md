@@ -1,5 +1,5 @@
 ---
-title: "SQL Native Client OLE DB provider app"
+title: "Create an OLE DB App"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "applications [SQL Server Native Client]"
   - "OLE DB, creating applications"
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a SQL Server Native Client OLE DB Provider Application

@@ -1,5 +1,6 @@
 ---
-title: "When to Use SQL Server Native Client | Microsoft Docs"
+title: "When to Use"
+description: Decide whether to use SQL Server Native Client, which is one of several technologies that you can use to access data in a SQL Server database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "SQLNCLI, about SQL Server Native Client"
   - "data access [SQL Server Native Client], about SQL Server Native Client"
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # When to Use SQL Server Native Client

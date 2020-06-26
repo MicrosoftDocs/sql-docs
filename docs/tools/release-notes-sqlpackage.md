@@ -28,6 +28,66 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## 18.5.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2134206)|June 24, 2020|18.5.1|15.0.4826.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134312)|June 24, 2020| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134311)|June 24, 2020| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134310)|June 24, 2020| 18.5.1|15.0.4826.1|
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Fixed a regression that was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise | 
+
+## 18.5 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2128142)|April 28, 2020|18.5|15.0.4769.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128145)|April 28, 2020| 18.5|15.0.4769.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128144)|April 28, 2020| 18.5|15.0.4769.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128143)|April 28, 2020| 18.5|15.0.4769.1|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Data Sensitivity classification now supported for SQL Server 2008 and up, Azure SQL Database, and Azure SQL Data Warehouse |
+| Deployment | Add Azure SQL Data Warehouse support for table constraints |
+| Deployment | Add Azure SQL Data Warehouse support for ordered clustered column store index |
+| Deployment | Add support for External Data Source (for Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
+| Deployment | Add SQL Database Edge Instance as supported edition |
+| Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
+| Deployment | Add support for copy command in Azure SQL Data Warehouse |
+| Deployment | Add deployment option 'IgnoreTablePartitionOptions' during Publish to avoid table recreation when there is change in partition function on table for Azure SQL Data Warehouse |
+| .NET Core | Add support for Microsoft.Data.SqlClient in .NET Core version of sqlpackage |
+| &nbsp; | &nbsp; |
+
+### Fixes
+| Fix | Details |
+| :-- | :------ |
+| Deployment | Fix parsing json path as expression |
+| Deployment | Fix generating GRANT statements for AlterAnyDatabaseScopedConfiguration and AlterAnySensitivityClassification permissions |
+| Deployment | Fix External Script permission not being recognized |
+| Deployment | Fix for inline property - the implicit addition of the property should not show in difference but explicit mention should show through script |
+| Deployment | Resolved an issue where changing a Table referenced by a Materialized View (MV) causes Alter View statements to be generated which is not supported for MVs for Azure SQL Data Warehouse |
+| Deployment | Fix publish failing when adding column to a table with data for Azure SQL Data Warehouse |
+| Deployment | Fix update script should move data to a new table when changing the distribution column type (data loss scenario) for Azure SQL Data Warehouse |
+| ScriptDom | Fix ScriptDom bug where it couldn't recognize inline constraints defined after an inline index |
+| ScriptDom | Fix ScriptDom SYSTEM_TIME missing closing parenthesis when in a batch statement |
+| Always Encrypted | Fix #tmpErrors table failing to drop if sqlpackage reconnects and the temp table is already gone because the temporary table goes away when the connection dies |
+| &nbsp; | &nbsp; |
+
+### Known Issues
+| Feature | Details |
+| :------ | :------ |
+| Deployment |  A regression was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| .NET Core | Importing bacpacs with Sensitivity Classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next sqlpackage release. |
+| &nbsp; | &nbsp; |
+
 ## 18.4.1 sqlpackage
 
 |Platform|Download|Release date|Version|Build

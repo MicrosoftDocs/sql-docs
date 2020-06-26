@@ -43,7 +43,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 <join_hint> ::=   
      { LOOP | HASH | MERGE | REMOTE }  

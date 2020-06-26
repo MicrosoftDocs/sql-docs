@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CursorLocationEnum enumeration [ADO]"
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CursorLocationEnum
 Specifies the location of the cursor service.  

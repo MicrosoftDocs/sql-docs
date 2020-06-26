@@ -1,5 +1,6 @@
 ---
-title: "Installing the Driver Manager (ODBC Driver for SQL Server) | Microsoft Docs"
+title: "Installing the Driver Manager"
+description: "This article contains instructions to install the unixODBC Driver Manager for use with all versions of Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
 ms.date: "02/15/2018"
 ms.prod: sql

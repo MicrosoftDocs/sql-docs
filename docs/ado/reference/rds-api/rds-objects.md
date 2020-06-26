@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "objects [ADO], RDS"
   - "RDS objects [ADO]"
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Objects
 > [!IMPORTANT]

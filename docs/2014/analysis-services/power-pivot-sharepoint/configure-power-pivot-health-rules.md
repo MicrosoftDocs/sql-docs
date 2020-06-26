@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # PowerPivot Health Rules - Configure
   PowerPivot for SharePoint includes SharePoint health rules that help you monitor and remedy server availability and configuration problems. Health rules that apply to PowerPivot for SharePoint appear in the Review rule definitions page.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Creation Method (Cube Wizard)
   Use the **Select Creation Method** page to specify how to create the cube.  

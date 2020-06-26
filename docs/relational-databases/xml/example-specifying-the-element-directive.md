@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the ELEMENT Directive | Microsoft Docs"
+description: View an example of how to specify the ELEMENT directive in an SQL query to generate element-centric XML.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

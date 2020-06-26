@@ -30,7 +30,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   

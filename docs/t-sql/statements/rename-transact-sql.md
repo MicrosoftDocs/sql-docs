@@ -20,7 +20,7 @@ Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. R
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse
 
 -- Rename a table.
@@ -29,7 +29,7 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 
 ```
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 -- Rename a table

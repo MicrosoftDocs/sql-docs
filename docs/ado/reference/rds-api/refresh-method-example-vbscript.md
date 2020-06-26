@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Refresh method [ADO], VBScript example"
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Refresh Method Example (VBScript)
 > [!IMPORTANT]

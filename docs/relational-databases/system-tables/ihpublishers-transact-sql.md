@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublishers system table"
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # IHpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: "Performing Asynchronous Operations | Microsoft Docs"
+description: Allow applications to perform asynchronous database operations with the SQL Server Native Client OLD DB provider.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "SQLNCLI, asynchronous operations"
   - "SQL Server Native Client, asynchronous operations"
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Asynchronous Operations

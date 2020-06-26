@@ -36,7 +36,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  

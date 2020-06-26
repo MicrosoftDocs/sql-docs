@@ -1,5 +1,6 @@
 ---
-title: "Support Policies for SQL Server Native Client | Microsoft Docs"
+title: "Support Policies"
+description: Learn about SQL Server Native Client supported SQL Server versions, operating systems, and support policies for ADO, BCP, ODBC, and OLE DB.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -7,8 +8,8 @@ ms.custom: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Support Policies for SQL Server Native Client

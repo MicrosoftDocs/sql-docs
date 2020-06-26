@@ -1,5 +1,6 @@
 ---
 title: "number Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function number() that returns the numeric value of a specified argument.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

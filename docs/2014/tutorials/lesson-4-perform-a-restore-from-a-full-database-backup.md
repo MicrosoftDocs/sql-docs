@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Lesson 4: Perform a Restore From a Full Database Backup
   This lesson demonstrates the use of a tsql statement to perform a restore from a full database backup created in the previous lesson.  

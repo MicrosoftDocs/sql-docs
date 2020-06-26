@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLConnect function"
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLConnect

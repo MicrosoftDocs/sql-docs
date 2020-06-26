@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_polybase_leave_group"
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: rothja
-ms.author: jroth
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

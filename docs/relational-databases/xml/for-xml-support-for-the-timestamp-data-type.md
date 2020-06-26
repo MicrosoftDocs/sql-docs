@@ -1,5 +1,6 @@
 ---
 title: "FOR XML Support for the timestamp Data Type | Microsoft Docs"
+description: Learn about support for the timestamp data type when using the FOR XML clause in a SQL query.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

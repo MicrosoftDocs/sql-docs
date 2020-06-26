@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "minimum SQL syntax supported [ODBC]"
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Elements Used in SQL Statements
 The following elements are used in the SQL statements listed previously.  

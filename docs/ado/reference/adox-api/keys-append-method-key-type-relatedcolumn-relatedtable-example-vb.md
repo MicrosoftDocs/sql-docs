@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "UpdateRule property [ADOX], Visual Basic example"
   - "RelatedColumn property [ADOX], Visual Basic example"
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)
 The following code demonstrates how to create a new foreign key relationship between two existing tables named **Customers** and **Orders**.  

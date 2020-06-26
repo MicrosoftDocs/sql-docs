@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "commit modes [ODBC]"
   - "transactions [ODBC], rolling back"
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Manual-Commit Mode
 *In manual-commit mode,* applications must explicitly complete transactions by calling **SQLEndTran** to commit them or roll them back. This is the normal transaction mode for most relational databases.  

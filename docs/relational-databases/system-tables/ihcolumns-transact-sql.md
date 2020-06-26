@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHcolumns system table"
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

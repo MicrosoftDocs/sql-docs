@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLGetTypeInfo function [ODBC], dBASE Driver"
   - "DBase driver [ODBC], SQLGetTypeInfo"
 ms.assetid: 6e9ce02b-97c7-4c1a-91e0-829df7459c84
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetTypeInfo (dBASE Driver)
 > [!NOTE]  

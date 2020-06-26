@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetStmtOption function [ODBC]"
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetStmtOption Function
 **Conformance**  

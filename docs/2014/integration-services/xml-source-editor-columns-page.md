@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # XML Source Editor (Columns Page)
   Use the **Columns** node of the **XML Source Editor** dialog box to map an output column to an external (source) column.  

@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_17132 | Microsoft Docs"
+description: The SQL Server computer was unable to process the client login packet. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -17,8 +18,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|17132|  
 |Event Source|MSSQLSERVER|  

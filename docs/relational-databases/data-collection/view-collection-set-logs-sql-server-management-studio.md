@@ -1,7 +1,6 @@
 ---
 title: "View collection set logs (SSMS)"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability

@@ -1,5 +1,6 @@
 ---
 title: "Use Boolean functions in XPath Queries (SQLXML)"
+description: Learn how the SQLXML 4.0 Boolean functions true(), false(), and not(), are specified in XPath queries.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,5 +1,6 @@
 ---
 title: "Sequence Expressions (XQuery) | Microsoft Docs"
+description: Learn about XQuery sequence expressions that construct, filter, and combine a sequence of items.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql

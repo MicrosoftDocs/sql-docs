@@ -1,6 +1,6 @@
 ---
 title: "View list of databases on SQL Server"
-ms.custom: ""
+description: Learn how to view a list of databases on an instance of SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

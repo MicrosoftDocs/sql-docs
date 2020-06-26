@@ -2,7 +2,7 @@
 title: "R + T-SQL tutorial: Explore data"
 description: Tutorial showing how to explore and visualize SQL Server data using R functions.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen
@@ -61,11 +61,11 @@ In the original public dataset, the taxi identifiers and trip records were provi
 > From SQL Server 2019, the isolation mechanism has changed. Therefore you need to give appropriate permissions to the directory where the plot file is stored. For more information on how to set these permissions, see [the File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotRxHistogram**.
+To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **RxPlotHistogram**.
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **NYCTaxi_Sample** database and select **New Query**.
 
-2. Paste in the following script to create a stored procedure that plots the histogram. This example is named **RPlotRxHistogram*.
+2. Paste in the following script to create a stored procedure that plots the histogram. This example is named **RxPlotHistogram**.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
@@ -73,7 +73,7 @@ To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learnin
     BEGIN
       SET NOCOUNT ON;
       DECLARE @query nvarchar(max) =  
-      N'SELECT tipped FROM nyctaxi_sample'  
+      N'SELECT tipped FROM [dbo].[nyctaxi_sample]'  
       EXECUTE sp_execute_external_script @language = N'R',  
                                          @script = N'  
        image_file = tempfile();  

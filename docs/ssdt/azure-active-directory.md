@@ -3,9 +3,8 @@ title: Azure Active Directory in SSDT
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: jroth
+author: markingmyname
+ms.author: maghan
 reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019

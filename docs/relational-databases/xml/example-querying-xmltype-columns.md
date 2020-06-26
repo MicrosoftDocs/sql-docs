@@ -1,5 +1,6 @@
 ---
 title: "Example: Querying XMLType Columns | Microsoft Docs"
+description: View an example of how to query columns of the xml data type.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

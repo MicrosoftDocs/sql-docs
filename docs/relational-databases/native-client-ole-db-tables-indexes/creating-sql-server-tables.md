@@ -1,5 +1,6 @@
 ---
 title: "Creating SQL Server Tables | Microsoft Docs"
+description: Learn how the SQL Server Native Client OLE DB provider exposes the functions that allow consumers to create SQL Server tables. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "adding tables"
   - "CreateTable function"
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating SQL Server Tables

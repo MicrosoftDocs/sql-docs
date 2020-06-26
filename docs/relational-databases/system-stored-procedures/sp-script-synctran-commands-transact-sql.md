@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_script_synctran_commands"
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: R language extension
 description: Learn about R code execution and built-in R libraries in SQL Server R Services or SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/04/2019
 ms.topic: conceptual
@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 The R extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds an R execution environment, base R distribution with standard libraries and tools, and the Microsoft R libraries: [RevoScaleR](../r/ref-r-revoscaler.md) for analytics at scale, [MicrosoftML](../r/ref-r-microsoftml.md) for machine learning algorithms, and other libraries for accessing data or R code in SQL Server.
 
-R integration is available in [SQL Server R Services](../r/sql-server-r-services.md) and [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+R integration is available in [SQL Server R Services](../r/sql-server-r-services.md) and [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 ## R components
 

@@ -1,5 +1,6 @@
 ---
 title: Business Rules
+description: Learn about business rules in Master Data Services, which can update data, send email, or start a business process or workflow.
 ms.custom: ""
 ms.date: "03/18/2017"
 ms.prod: sql

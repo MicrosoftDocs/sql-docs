@@ -1,5 +1,6 @@
 ---
 title: "Configure the nested triggers Server Configuration Option | Microsoft Docs"
+description: Learn about the nested triggers option. See how to use it to set the number of levels of AFTER triggers that can cascade in SQL Server.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "nested triggers option"
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the nested triggers Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

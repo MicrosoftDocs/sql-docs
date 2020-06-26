@@ -31,7 +31,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   

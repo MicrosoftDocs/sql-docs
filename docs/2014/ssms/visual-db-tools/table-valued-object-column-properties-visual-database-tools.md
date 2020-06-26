@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Table-Valued Object (Column) Properties (Visual Database Tools)
   These properties appear when you select a column in a table-valued object in the **Diagram** pane of Query and View Designer.  

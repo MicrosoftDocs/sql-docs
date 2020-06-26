@@ -31,7 +31,7 @@ Evaluates the arguments in order and returns the current value of the first expr
   
 ## Syntax  
   
-```  
+```syntaxsql
 COALESCE ( expression [ ,...n ] )   
 ```  
   

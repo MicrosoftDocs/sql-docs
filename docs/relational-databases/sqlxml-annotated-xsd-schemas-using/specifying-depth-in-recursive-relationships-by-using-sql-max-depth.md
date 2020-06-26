@@ -1,5 +1,6 @@
 ---
 title: "Set recursive depth relationships with sql:max-depth"
+description: Learn how to specify depth when querying tables that have a recursive relationship by using the sql:max-depth annotation in an XQuery.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

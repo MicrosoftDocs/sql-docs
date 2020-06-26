@@ -38,7 +38,7 @@ Controls the locking and row versioning behavior of [!INCLUDE[tsql](../../includ
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET TRANSACTION ISOLATION LEVEL
@@ -50,11 +50,12 @@ SET TRANSACTION ISOLATION LEVEL
     }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+
 >[!NOTE]
 > SQL Data Warehouse implements ACID transactions. The isolation level of the transactional support is default to READ UNCOMMITTED.  You can change it to READ COMMITTED SNAPSHOT ISOLATION by turning ON the READ_COMMITTED_SNAPSHOT database option for a user database when connected to the master database.  Once enabled, all transactions in this database are executed under READ COMMITTED SNAPSHOT ISOLATION and the setting READ UNCOMMITTED on session level will not be honored. Check [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) for details.  
 
@@ -164,7 +165,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ## Examples  
  The following example sets the `TRANSACTION ISOLATION LEVEL` for the session. For each [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that follows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] holds all of the shared locks until the end of the transaction.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  

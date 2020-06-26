@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_10060 | Microsoft Docs"
+description: The SQL Server client cannot connect to the server. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -19,8 +20,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10060|  
 |Event Source|MSSQLSERVER|  

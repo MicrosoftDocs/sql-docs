@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Query Editor [Database Engine], SQLCMD scripts"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Edit SQLCMD Scripts with Query Editor
   By using the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] you can write and edit queries as SQLCMD scripts. You use SQLCMD scripts when you have to process Windows System commands and [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the same script.  

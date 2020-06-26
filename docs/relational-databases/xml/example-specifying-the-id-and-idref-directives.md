@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the ID and IDREF Directives | Microsoft Docs"
+description: View an example of how to specify the ID and IDREF directives in an SQL query. 
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

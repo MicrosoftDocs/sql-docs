@@ -1,5 +1,6 @@
 ---
 title: "Transactions in ODBC | Microsoft Docs"
+description: ODBC manages transactions at the connection level, committing or rolling back all work completed, either in autocommit or manual-commit mode.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "transactions [ODBC]"
   - "ODBC, transactions"
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Transactions in ODBC

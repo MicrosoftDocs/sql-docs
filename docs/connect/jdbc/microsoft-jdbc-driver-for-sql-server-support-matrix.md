@@ -1,5 +1,6 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server support matrix"
+description: "This page contains the support matrix and support life cycle policy for the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "03/24/2020"
 ms.prod: sql

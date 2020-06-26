@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ] ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]  
     [ WITH GRANT OPTION ]  

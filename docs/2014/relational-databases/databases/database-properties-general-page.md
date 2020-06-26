@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Properties (General Page)
   Use this page to view or modify properties for the selected database.  

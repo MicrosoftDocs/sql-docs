@@ -1,5 +1,6 @@
 ---
 title: "Estimate the Size of a Nonclustered Index | Microsoft Docs"
+description: Use this procedure to estimate the amount of space that is required to store a nonclustered index in SQL Server.
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql  

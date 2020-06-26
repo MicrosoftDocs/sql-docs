@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: abf71f7b-8bd7-49d2-92f7-9ddf72924d8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Winsock Proxy configuration not supported
   The Winsock proxy cannot be configured by using [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools.  

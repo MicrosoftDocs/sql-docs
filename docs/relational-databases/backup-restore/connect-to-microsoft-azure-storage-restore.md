@@ -1,5 +1,6 @@
 ---
 title: "Connect to Microsoft Azure Storage (Restore) | Microsoft Docs"
+description: In SQL Server, the Azure Storage Account dialog box lets you specify a connection to Azure storage account information to get files storage in an Azure account.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

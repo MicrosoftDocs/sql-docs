@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Permissions and Visual Database Tools (Visual Database Tools)
   Permissions, which allow users access to data source objects, are granted in the data source, not in Visual Database Tools. The access permissions granted on data source objects is controlled by your installation's security policy. If you do not have permission to access certain database objects, you should contact your database administrator.  

@@ -3,9 +3,9 @@ title: What is SQL Server 2016 R Services?
 titleSuffix: 
 description: R Services is a feature in SQL Server 2016 that gives the ability to run R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/12/2019 
-ms.topic: overview
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
@@ -16,7 +16,7 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 R Services is a feature in SQL Server 2016 that gives the ability to run R scripts with relational data. You can use open-source packages and frameworks, and the [Microsoft R packages](#packages) for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server R Services.
 
 > [!Note]
-> R Services was renamed to [Machine Learning Services](../what-is-sql-server-machine-learning.md) in SQL Server 2017 and later, and supports both Python and R.
+> R Services was renamed to [Machine Learning Services](../sql-server-machine-learning-services.md) in SQL Server 2017 and later, and supports both Python and R.
 
 ## What is R Services?
 
@@ -54,7 +54,7 @@ There are two ways to execute R scripts in R Services:
 
 ## R version
 
-R version 3.2.2 is included in SQL Server 2016 R Services. For newer versions of R, use [Machine Learning Services for SQL Server 2017 and later](../what-is-sql-server-machine-learning.md).
+R version 3.2.2 is included in SQL Server 2016 R Services. For newer versions of R, use [Machine Learning Services for SQL Server 2017 and later](../sql-server-machine-learning-services.md).
 
 <a name="packages"></a>
 

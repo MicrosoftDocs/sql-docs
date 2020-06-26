@@ -2,10 +2,10 @@
 title: Performance tuning for results
 description: This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/29/2019 
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
@@ -347,7 +347,7 @@ The following are links to information, tools, and scripts used in the developme
 
 + Article describing the resume-matching solution: [Optimization tip and tricks for SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Scripts used in SQL optimization for resume-matching solution: [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Scripts used in SQL optimization for resume-matching solution: [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)
 
 ### Learn about Windows server management
 

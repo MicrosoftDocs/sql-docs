@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: eb7ddb23-12d0-4c81-9609-4046ccaca7d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Complete - Installation
   Click **Close** to finish the installation.  

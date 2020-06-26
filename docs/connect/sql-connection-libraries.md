@@ -3,15 +3,15 @@ title: "Connection libraries for Microsoft SQL Databases | Microsoft Docs"
 description: "Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
 author: David-Engel
 ms.prod: sql
-ms.technology: 
+ms.technology: connectivity
 ms.custom: ""
 ms.topic: article
-ms.date: 03/05/2020
+ms.date: 03/06/2020
 ms.author: v-daenge
 ---
 # Connection modules for Microsoft SQL databases
 
-This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
+This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
 
 - Linux
 - macOS
@@ -34,27 +34,27 @@ The present article devotes separate sections to these two kinds of connection d
 | C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
-    Node.js | [Node.js driver, install instructions](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
-    PHP | [PHP](./php/download-drivers-php-sql-server.md) |
-      Python | [pyodbc, install instructions](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Download ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
-      Ruby | [Ruby driver, install instructions](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
-         nbsp; | <br/> |
-            
-            ame="anchor-40-drivers-orm-access" />
-            
-            rivers for ORM access
-            
-          following table lists examples of Object Relational Mapping (ORM) frameworks that client applications use to connect to Microsoft SQL databases.
-            
-            nguage | ORM driver download |
+| Node.js | [Node.js driver, install instructions](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
+| PHP | [PHP](./php/download-drivers-php-sql-server.md) |
+| Python | [pyodbc, install instructions](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Download ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Ruby driver, install instructions](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
+| &nbsp; | &nbsp; |
+
+<a name="anchor-40-drivers-orm-access" />
+
+## Drivers for ORM access
+
+The following table lists examples of Object Relational Mapping (ORM) frameworks that client applications use to connect to Microsoft SQL databases.
+
+| Language | ORM driver download |
 | :------- | :------------------ |
-             | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x or later)](https://docs.microsoft.com/ef/) |
-            va | [Hibernate ORM](https://hibernate.org/orm)|
-         HP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
-      Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
-    Python | [Django](https://www.djangoproject.com/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x or later)](https://docs.microsoft.com/ef/) |
+| Java | [Hibernate ORM](https://hibernate.org/orm)|
+| PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
+| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 

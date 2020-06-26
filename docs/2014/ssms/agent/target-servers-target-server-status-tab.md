@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Target Servers (Target Server Status Tab)
   Use this page to view the status of the target servers for this master server.  

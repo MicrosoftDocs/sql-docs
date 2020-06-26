@@ -26,7 +26,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON  
     FULLTEXT   

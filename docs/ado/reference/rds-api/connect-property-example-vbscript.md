@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Connect property [ADO], VBScript example"
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connect Property Example (VBScript)
 > [!IMPORTANT]

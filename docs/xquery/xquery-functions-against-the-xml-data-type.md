@@ -1,5 +1,6 @@
 ---
 title: "XQuery Functions against the xml Data Type | Microsoft Docs"
+description: Learn about the XQuery functions that are supported for use against the xml data type.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

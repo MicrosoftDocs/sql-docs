@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "docs/relational-databases/polybase/data-virtualization-csv.md",
+      "redirect_url": "/sql/big-data-cluster/data-virtualization-csv",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/sql-server/sql-server-help-installation.md",
+      "redirect_url": "/sql/sql-server/sql-server-offline-documentation",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/database-engine/sql-server-database-engine-backward-compatibility.md",
       "redirect_url": "/sql/database-engine/discontinued-database-engine-functionality-in-sql-server",
       "redirect_document_id": false
@@ -1378,6 +1388,21 @@
     {
       "source_path": "docs/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md",
       "redirect_url": "/sql/machine-learning/what-s-new-in-sql-server-machine-learning-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sql-server-python-tutorials.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-tutorials",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sql-server-r-tutorials.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-tutorials",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/what-is-sql-server-machine-learning.md",
+      "redirect_url": "/sql/machine-learning/sql-server-machine-learning-services",
       "redirect_document_id": true
     },
     {
@@ -3592,7 +3617,7 @@
     },
     {
       "source_path": "docs/relational-databases/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md",
-      "redirect_url": "/sql/relational-databases/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy",
+      "redirect_url": "/sql/relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy",
       "redirect_document_id": false
     },
     {
@@ -4562,7 +4587,7 @@
     },
     {
       "source_path": "docs/ssms/f1-help/connection-properties-dialog-box.md",
-      "redirect_url": "/sql/database-engine/configure-windows/view-or-change-server-properties-sql-server",
+      "redirect_url": "/sql/ssms/f1-help/connect-to-server-connection-properties-page-database-engine",
       "redirect_document_id": false
     },
     {
@@ -15616,11 +15641,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/azure-data-studio/index.md",
-      "redirect_url": "/sql/azure-data-studio/what-is",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/connect/ado-net/index.md",
       "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
       "redirect_document_id": false
@@ -17273,6 +17293,21 @@
     {
       "source_path": "docs/database-engine/deprecated-database-engine-features-in-sql-server-2019.md",
       "redirect_url": "/sql/database-engine/deprecated-database-engine-features-in-sql-server-version-15",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md",
+      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-connect-with-windows-auth",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integration-services/lift-shift/ssis-azure-files-file-shares.md",
+      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-files-file-shares",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/toc/previous-versions-sql-server.md",
+      "redirect_url": "/sql/sql-server/previous-versions-sql-server",
       "redirect_document_id": true
     }
   ]

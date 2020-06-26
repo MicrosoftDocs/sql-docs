@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_browsemergesnapshotfolder"
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

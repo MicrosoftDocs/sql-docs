@@ -57,7 +57,7 @@ This article also discusses the following keywords that can be used on the FROM 
 
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ FROM { <table_source> } [ ,...n ] ]   
@@ -130,7 +130,7 @@ This article also discusses the following keywords that can be used on the FROM 
         <date_time_literal> | @date_time_variable  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  

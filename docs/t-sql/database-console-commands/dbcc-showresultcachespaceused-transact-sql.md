@@ -23,7 +23,7 @@ Shows the storage space used result set caching for an Azure [!INCLUDE[ssSDW](..
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  

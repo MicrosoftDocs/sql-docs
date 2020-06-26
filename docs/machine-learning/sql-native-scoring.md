@@ -2,10 +2,10 @@
 title: Native scoring using T-SQL PREDICT
 description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pre-trained model written in R or Python on SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 08/15/2018  
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 Native scoring uses [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) and the native C++ extension capabilities in SQL Server 2017 to generate prediction values or *scores* for new data inputs in near-real-time. This methodology offers the fastest possible processing speed of forecasting and prediction workloads, but comes with platform and library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
 
-Native scoring requires that you have an already trained model. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can call the PREDICT function in Transact-SQL to invoke native scoring against new data that you provide as an input parameter. The PREDICT function returns scores over data inputs you provide.
+Native scoring requires that you have an already trained model. In SQL Server 2017 Windows or Linux you can call the PREDICT function in Transact-SQL to invoke native scoring against new data that you provide as an input parameter. The PREDICT function returns scores over data inputs you provide.
 
 ## How native scoring works
 
@@ -32,7 +32,7 @@ The function returns predictions for the input data, together with any columns o
 
 ## Prerequisites
 
-PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux), or Azure SQL Database. You do not need to install R, Python, or enable additional features.
+PREDICT is available on all editions of SQL Server 2017 and later database engine and enabled by default, including SQL Server Machine Learning Services on Windows, SQL Server 2017 and later on Windows and Linux. You do not need to install R, Python, or enable additional features.
 
 + The model must be trained in advance using one of the supported **rx** algorithms listed below.
 

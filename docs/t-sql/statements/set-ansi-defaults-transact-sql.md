@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/04/2017"
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
@@ -31,13 +31,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 SET ANSI_DEFAULTS { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse and Parallel Data Warehouse
 
 SET ANSI_DEFAULTS ON
@@ -55,6 +55,7 @@ When enabled (ON), this option enables the following ISO settings:
 |SET ANSI_NULL_DFLT_ON|SET IMPLICIT_TRANSACTIONS|  
 |SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
 |SET ANSI_WARNINGS||  
+|||
   
 Together, these ISO standard SET options define the query processing environment for the duration of the work session of the user, a running trigger, or a stored procedure. However, these SET options do not include all the options required to comply with the ISO standard.  
   

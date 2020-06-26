@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Distribution Database
   The distribution database stores metadata and history data for all types of replication, and transactions for transactional replication.  

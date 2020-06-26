@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 VALUES ( <row value expression list> ) [ ,...n ]   
   

@@ -30,7 +30,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER VIEW [ schema_name . ] view_name [ ( column [ ,...n ] ) ]   
 [ WITH <view_attribute> [ ,...n ] ]   
 AS select_statement   
@@ -44,7 +44,7 @@ AS select_statement
 }   
 ```
 
-```  
+```syntaxsql
 -- Syntax for Azure Synapse Analytics (SQL DW) and Parallel Data Warehouse  
   
 ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   

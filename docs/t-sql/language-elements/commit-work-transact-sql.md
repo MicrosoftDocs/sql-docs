@@ -32,7 +32,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 COMMIT [ WORK ]  
 [ ; ]  

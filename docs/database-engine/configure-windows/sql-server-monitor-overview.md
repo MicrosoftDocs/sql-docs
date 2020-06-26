@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Monitor Overview | Microsoft Docs"
+description: Learn about SQL Server Monitor. See how to use its Replication Monitor and Database Mirroring Monitor modules. View permissions that are required for its use.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -12,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL Server Monitor [SQL Server]"
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Monitor Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

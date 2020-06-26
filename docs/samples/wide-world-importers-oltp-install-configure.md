@@ -30,7 +30,7 @@ Download the sample WideWorldImporters database backup/bacpac that corresponds t
 
 Source code to recreate the sample database is available from the following location. Note that recreating the sample will result in slight differences in the data, since there is a random factor in the data generation:
 
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## Install
 

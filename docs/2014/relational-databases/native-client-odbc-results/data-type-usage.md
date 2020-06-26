@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data types"
   - "data types [ODBC], about data types"
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Data Type Usage
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose the following use of data types.  

@@ -44,7 +44,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  

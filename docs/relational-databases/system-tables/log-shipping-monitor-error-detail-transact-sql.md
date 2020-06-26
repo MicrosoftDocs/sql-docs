@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_error_detail system table"
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

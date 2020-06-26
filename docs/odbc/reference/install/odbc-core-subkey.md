@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "registry entries for components [ODBC], core subkey"
   - "core subkey [ODBC]"
 ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Core Subkey
 The value under the ODBC Core subkey gives the usage count for the core components (Driver Manager, cursor library, installer DLL, and so on). The format of this value is shown in the following table.  

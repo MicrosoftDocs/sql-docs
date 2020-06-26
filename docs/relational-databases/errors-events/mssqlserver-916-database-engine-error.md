@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_916 | Microsoft Docs"
+description: The login does not have sufficient permissions to connect to the named SQL Server database. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -17,8 +18,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|916|  
 |Event Source|MSSQLSERVER|  

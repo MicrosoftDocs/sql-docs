@@ -1,5 +1,6 @@
 ---
 title: "Use XML Data in Applications | Microsoft Docs"
+description: Learn about the options that are available for working with the xml data type in your applications.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Always On Policies for Operational Issues with Always On Availability Groups (SQL Server)
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] health model evaluates a set of predefined policy based management (PBM) policies. You can use theses for viewing the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -81,7 +80,7 @@ manager: craigg
   
  A user-defined policy can use any of the available PBM facets, including those used by the AlwaysOn predefined policies (see [Predefined Policies and Issues](#AlwaysOnPBM), earlier in this topic). The Server facet provides the following properties for monitoring [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] health: (`IsHadrEnabled` and `HadrManagerStatus`). The Server facet also provides properties the following policies for monitoring the WSFC cluster configuration: `ClusterQuorumType`, and `ClusterQuorumState`.  
   
- For more information, see [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (a SQL Server AlwaysOn Team blog).  
+ For more information, see [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (a SQL Server AlwaysOn Team blog).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -99,9 +98,9 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
 -   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

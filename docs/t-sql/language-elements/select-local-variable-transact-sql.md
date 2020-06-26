@@ -37,7 +37,7 @@ monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest|
   
 ## Syntax  
   
-```  
+```syntaxsql
 SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression } 
     [ ,...n ] [ ; ]  
 ```  

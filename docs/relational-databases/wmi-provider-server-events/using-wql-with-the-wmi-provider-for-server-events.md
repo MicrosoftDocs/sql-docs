@@ -1,5 +1,6 @@
 ---
 title: "Using WQL with the WMI Provider for Server Events"
+description: Learn how management applications access SQL Server events using the WMI Provider for Server Events by issuing WMI Query Language statements.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

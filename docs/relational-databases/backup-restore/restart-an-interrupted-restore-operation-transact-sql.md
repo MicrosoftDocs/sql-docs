@@ -1,5 +1,6 @@
 ---
 title: "Restart interrupted restore (Transact-SQL)"
+description: This example shows you how to restart an interrupted restore operation in SQL Server using Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

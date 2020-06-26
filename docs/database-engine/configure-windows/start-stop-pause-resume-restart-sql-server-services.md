@@ -1,5 +1,6 @@
 ---
 title: Start, stop, pause, resume, restart SQL Server services
+description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 ms.custom: ""
 ms.date: "03/05/2020"
 ms.prod: sql
@@ -37,8 +38,8 @@ helpviewer_keywords:
   - "administering SQL Server, starting and stopping services"
   - "Management Studio [SQL Server], starting or stopping services"
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ""
 ---
 
@@ -333,6 +334,10 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
     # Display the state of the service.
     $DfltInstance
     ```  
+  
+##  <a name="ServiceController"></a> Using Service Controller Class
+
+You can use ServiceController class to control SQL server service or any other Windows service. For an example on how to do this, see [ServiceController Class](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
 
 ## Manage the SQL Server service on Linux
 

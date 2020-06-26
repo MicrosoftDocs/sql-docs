@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "product specifications [SQL Server]"
   - "configuration options [SQL Server], product specifications"
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQL Server 2014 Product Specifications
   The topics in the following table provide product specification details for this release:  

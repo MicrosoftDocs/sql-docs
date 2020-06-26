@@ -28,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
         TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  

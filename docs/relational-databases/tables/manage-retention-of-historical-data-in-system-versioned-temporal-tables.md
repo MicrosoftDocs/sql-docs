@@ -252,7 +252,7 @@ BEGIN TRANSACTION
             DATA_COMPRESSION = PAGE
         )
 /*(2) Create index on the same filegroups as the partition that will be switched out*/
-    CREATE CLUSTERED INDEX [ox_staging_DepartmentHistory_September_2015]
+    CREATE CLUSTERED INDEX [ix_staging_DepartmentHistory_September_2015]
         ON [dbo].[staging_DepartmentHistory_September_2015]
         (
             [SysEndTime] ASC

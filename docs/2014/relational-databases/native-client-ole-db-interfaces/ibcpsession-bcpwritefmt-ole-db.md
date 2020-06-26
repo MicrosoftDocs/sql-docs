@@ -13,9 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "BCPWriteFmt method"
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # IBCPSession::BCPWriteFmt (OLE DB)
   Writes format information for each column to the format file.  

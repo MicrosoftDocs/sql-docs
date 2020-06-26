@@ -1,5 +1,6 @@
 ---
 title: Users and Groups
+description: Find out how to grant access to the Master Data Manager web application. A user must have a suitable account.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

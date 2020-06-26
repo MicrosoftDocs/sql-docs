@@ -11,8 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "DataSpace object [RDS]"
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DataSpace Object (RDS)
 > [!IMPORTANT]

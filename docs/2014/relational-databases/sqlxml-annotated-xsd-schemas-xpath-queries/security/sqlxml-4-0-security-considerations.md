@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "SQLXML, security"
   - "security [SQLXML]"
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQLXML 4.0 Security Considerations
   This section provides information about security-related considerations for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML.  

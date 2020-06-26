@@ -1,5 +1,6 @@
 ---
-title: "sqlsrv_query | Microsoft Docs"
+title: "sqlsrv_query"
+description: "The sqlsrv_query function provides a method to execute a query with a minimum amount of code and can be used to execute parameterized queries."
 ms.custom: ""
 ms.date: "04/11/2019"
 ms.prod: sql

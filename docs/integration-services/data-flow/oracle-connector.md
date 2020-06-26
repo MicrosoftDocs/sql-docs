@@ -14,14 +14,15 @@ ms.author: chugu
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-Microsoft Connector for Oracle enables to export data from and load data into Oracle data source in an SSIS package.
+Microsoft Connector for Oracle enables the ability to export data from and load data into Oracle data source in an SSIS package.
 
 ## Version support
 
 The following Microsoft SQL Server products are supported by Microsoft Connector for Oracle:
 
-- Since SQL Server 2019
-- SQL Server Data Tools (SSDT) since version 15.9.3
+- Since SQL Server 2019 CU1
+- SQL Server Data Tools (SSDT) 15.9.3 or later for Visual Studio 2017
+- Microsoft SQL Server Data Tools (SSDT) for Visual Studio 2019
 
 The following Oracle database versions of data source are supported:
 

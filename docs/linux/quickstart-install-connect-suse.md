@@ -3,7 +3,7 @@ title: "SUSE: Install SQL Server on Linux"
 description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -178,7 +178,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Install **mssql-tools** with the unixODBC developer package.
+1. Install **mssql-tools** with the unixODBC developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

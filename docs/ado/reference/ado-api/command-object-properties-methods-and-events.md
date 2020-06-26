@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Command object [ADO], members"
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command Object Properties, Methods, and Events
 ## Properties/Collections  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # RPC:Starting Event Class
   The RPC:Starting event class indicates that a remote procedure call has started.  

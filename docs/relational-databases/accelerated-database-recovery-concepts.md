@@ -1,6 +1,6 @@
 ---
 title: "Accelerated database recovery | Microsoft Docs"
-ms.date: "08/12/2019"
+ms.date: "05/20/2020"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -129,7 +129,9 @@ The following types of customers should consider enabling ADR:
 - Customers that have seen cases where active transactions are causing the transaction log to grow significantly.  
 - Customers that have experienced long periods of database unavailability due to SQL Server long running recovery (such as unexpected SQL Server restart or manual transaction rollback).
 
+>[!IMPORTANT]
+>ADR is not supported for databases enrolled in database mirroring.
 
 ## See Also  
 
-  
+[Manage accelerated database recovery](accelerated-database-recovery-management.md)

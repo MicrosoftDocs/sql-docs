@@ -83,6 +83,8 @@ Update **core-site.xml**, add the three properties below. Set the values accordi
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> The value for `polybase.kerberos.realm` property needs to be all upper case.
 
 The other XMLs will later need to be updated as well if pushdown operations are desired, but with just this file configured, the HDFS file system should at least be able to be accessed.
 

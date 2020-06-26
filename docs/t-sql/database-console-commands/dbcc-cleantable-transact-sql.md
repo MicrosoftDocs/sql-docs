@@ -34,7 +34,7 @@ Reclaims space from dropped variable-length columns in tables or indexed views.
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 DBCC CLEANTABLE  
 (  

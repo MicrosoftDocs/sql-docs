@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_transactions_snapshot dynamic management view"
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647 
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_transactions_snapshot (Transact-SQL)
@@ -51,13 +51,6 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
  The output shows that snapshot transaction XSN-59 starts while two active transactions, XSN-57 and XSN-58, are running. If XSN-57 or XSN-58 makes data modifications, XSN-59 ignores the changes and uses row versioning to maintain a transactionally consistent view of the database.  
   
  Snapshot transaction XSN-60 ignores data modifications made by XSN-57 and XSN-58 and also XSN 59.  
-  
-## Syntax  
-  
-```  
-  
-dm_tran_transactions_snapshot  
-```  
   
 ## Table Returned  
   

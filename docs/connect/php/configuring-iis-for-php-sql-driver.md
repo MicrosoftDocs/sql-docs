@@ -1,5 +1,6 @@
 ---
-title: "Configuring IIS for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+title: "Configuring IIS for the Drivers for PHP"
+description: "Learn how to configure IIS to host PHP applications that use the Drivers for PHP for SQL Server. The resources listed here are specific to using FastCGI with IIS."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql

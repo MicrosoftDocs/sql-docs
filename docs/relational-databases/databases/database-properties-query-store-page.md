@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (Query Store Page) | Microsoft Docs"
+description: "Learn how to use the Query Store tab in the Database Properties dialog box to configure query store modes, intervals, thresholds, and other properties."
 ms.custom: ""
 ms.date: "11/09/2015"
 ms.prod: sql

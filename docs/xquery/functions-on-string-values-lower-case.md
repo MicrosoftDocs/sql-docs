@@ -1,5 +1,6 @@
 ---
 title: "lower-case  Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function lower-case() that converts each character in a specified string to its lower case equivalent.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

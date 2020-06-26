@@ -34,7 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  

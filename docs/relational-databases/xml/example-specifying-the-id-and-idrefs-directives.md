@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the ID and IDREFS Directives | Microsoft Docs"
+description: Learn how specifying the ID and IDREFS directives in an SQL query can enable intra-document links.
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql

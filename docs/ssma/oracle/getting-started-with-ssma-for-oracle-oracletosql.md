@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with SSMA for Oracle (OracleToSQL) | Microsoft Docs"
+description: Learn about the SQL Server Migration Assistant (SSMA) for Oracle installation process, and familiarize yourself with the SSMA user interface.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

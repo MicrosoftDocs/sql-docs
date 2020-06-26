@@ -9,16 +9,15 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.fulltextindexproperties.columns.f1"
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Full-Text Index Properties (Columns Page)
   **To view or change the properties of a full-text index**  
   
 -   [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
-## UIElement List  
+## UI element list  
  **Unique index**  
  Select an index from the drop down list. The index must be a single-key-column, unique, non-nullable index.  
   

@@ -42,7 +42,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 BEGIN CONVERSATION TIMER ( conversation_handle )  
    TIMEOUT = timeout   

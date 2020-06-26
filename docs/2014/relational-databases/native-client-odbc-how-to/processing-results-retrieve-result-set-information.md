@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "result sets [ODBC]"
   - "result sets [ODBC], fetching"
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Retrieve Result Set Information (ODBC)
     

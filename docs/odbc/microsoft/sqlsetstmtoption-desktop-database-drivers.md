@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetStmtOption function [ODBC], Desktop Database Drivers"
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetStmtOption (Desktop Database Drivers)
 

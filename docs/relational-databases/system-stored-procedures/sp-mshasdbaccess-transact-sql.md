@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_MShasdbaccess"
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_MShasdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

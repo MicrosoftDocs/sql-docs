@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ProtocolDisplayName Property (ClientNetLibInfo Class)
   Gets or sets the name used to display the protocol.  

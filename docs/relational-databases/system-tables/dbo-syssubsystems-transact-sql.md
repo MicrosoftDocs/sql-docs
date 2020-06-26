@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syssubsystems system table"
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.syssubsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

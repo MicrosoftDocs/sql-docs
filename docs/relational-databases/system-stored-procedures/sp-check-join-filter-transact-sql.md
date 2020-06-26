@@ -19,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_check_join_filter"
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_check_join_filter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

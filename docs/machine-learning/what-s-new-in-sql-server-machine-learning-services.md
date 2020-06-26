@@ -3,12 +3,12 @@ title: What's new in SQL Server Machine Learning Services?
 titleSuffix: 
 description: New feature announcements for each release of SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: overview
 author: dphansen
 ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # What's new in SQL Server Machine Learning Services
@@ -25,19 +25,21 @@ This release adds the top-requested features for Python and R machine learning o
 > [!NOTE]
 > For the what's new documentation on Java in SQL Server 2019, see the [What's new in SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
-Below are the new features for SQL Server Machine Learning Services:
+Below are the new features for SQL Server Machine Learning Services, available on both **Windows** and **Linux**:
 
-- [Loopback connection to SQL Server from a Python or R script](connect/loopback-connection.md) is now supported for both Windows and Linux. 
-- On Windows and Linux, support for [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for R and Python.
-- Linux platform support for R and Python machine learning. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- Linux platform support was added in Machine Learning Services for Python and R. Get started with [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- [Loopback connection to SQL Server from a Python or R script](connect/loopback-connection.md). 
+- [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for Python and R.
 - The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduces two new parameters that enable you to easily generate multiple models from partitioned data. Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md).
-- Failover cluster support is now supported on Windows and Linux, assuming SQL Server Launchpad service is started on all nodes. For more information, see [SQL Server failover cluster installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md).
+- Failover cluster support is available for the Launchpad service, assuming SQL Server Launchpad service is started on all nodes. For more information, see [SQL Server failover cluster installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md).
+- Isolation mechanism changes for Machine Learning Services. For more information, see [SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](install/sql-server-machine-learning-services-2019.md).
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## New in SQL Server 2017
 
-This release adds [Python support and industry-leading machine learning algorithms](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), with language support for both Python and R. 
+This release adds [Python support and industry-leading machine learning algorithms](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](sql-server-machine-learning-services.md), with language support for both Python and R. 
 
 For feature announcements all-up, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
@@ -106,12 +108,6 @@ SQL Server 2019 adds Linux support for R and Python when you install the machine
 
 On Linux, SQL Server 2017 does not have R or Python integration, but you can use [Native scoring](sql-native-scoring.md) on Linux because that functionality is available through T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), which runs on Linux. Native scoring enables high-performance scoring from a pretrained model, without calling or even requiring an R runtime.
 ::: moniker-end
-
-<a name="azure-sql-database-roadmap"></a>
-
-## Machine Learning Services in Azure SQL Database
-
-Machine Learning Services in Azure SQL Database is in public preview. For more information, see [Azure SQL Database Machine Learning Services (preview)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview).
 
 ## Next steps
 

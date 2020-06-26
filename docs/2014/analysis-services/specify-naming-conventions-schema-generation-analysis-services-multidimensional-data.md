@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Naming Conventions (Schema Generation Wizard) (Analysis Services - Multidimensional Data)
   Use the **Specify Naming Conventions** page to define the naming conventions that the Schema Generation Wizard uses when creating schema objects.  

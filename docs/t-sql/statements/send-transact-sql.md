@@ -34,7 +34,7 @@ Sends a message, using one or more existing conversations.
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 SEND  
    ON CONVERSATION [(]conversation_handle [,.. @conversation_handle_n][)]  

@@ -11,12 +11,11 @@ f1_keywords:
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Parameterize Dialog Box
   The **Parameterize** dialog box enables you to associate a new or an existing parameter with a property of a task. You open the dialog box by right-clicking a task or the Control Flow tab in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and then by clicking **Parameterize**. The following list describes UI elements in the dialog box. For more information about parameters, see [Integration Services &#40;SSIS&#41; Parameters](integration-services-ssis-package-and-project-parameters.md).  
   
-## UIElement List  
+## UI element list  
  **Property**  
  Select the property of the task that you want to associate with a parameter. This list is populated with all the properties that can be parameterized.  
   
@@ -47,5 +46,5 @@ manager: craigg
  **Required**  
  Specify whether the parameter requires that a value, other than the design default, is specified before the package can execute.  
   
-## UIElement List  
+## UI element list  
   

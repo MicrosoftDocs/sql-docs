@@ -3,8 +3,6 @@ title: "Azure Data Lake Store Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 

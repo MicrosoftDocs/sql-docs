@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Choose Name Dialog Box (Visual Database Tools)
   This dialog box appears when you choose **Save \<TableName**> , **Save \<DiagramName>**, or **Save \<ViewName>** from the **File** menu.  

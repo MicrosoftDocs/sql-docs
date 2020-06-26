@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Annotated XSD Schemas (SQLXML)"
+description: Learn about creating XML views of relational data using the XML Schema Definition (XSD) language (SQLXML 4.0).
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

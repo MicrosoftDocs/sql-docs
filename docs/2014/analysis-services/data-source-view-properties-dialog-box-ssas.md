@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Source View Properties Dialog Box (SSAS)
   Use the **Data Source View Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of a data source view in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Data Source View Properties** dialog box by right-clicking a data source view in **Object Explorer** and selecting **Properties**.  

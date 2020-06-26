@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetScrollOptions function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetScrollOptions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
 title: "Stopping System-Versioning on a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2016"
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -33,6 +33,7 @@ Stop system-versioning if you want to perform specific maintenance operations on
 - When you set **SYSTEM_VERSIONING = OFF** and do not remove drop the **SYSTEM_TIME** period, the system will continue to update the period columns for every insert and update operation. Deletes on current table will be permanent.
 - Drop the **SYSTEM_TIME** period to remove the period columns completely.
 - When you set **SYSTEM_VERSIONING = OFF**, all users that have sufficient permissions will be able to modify schema and content of history table or even to permanently delete the history table.
+- You cannot set **SYSTEM_VERSIONING = OFF** if you have other objects created with SCHEMABINDING using temporal query extensions - such as referencing **SYSTEM_TIME**. This restriction prevents these objects from failing if you set **SYSTEM_VERSIONING = OFF**.
 
 ### Permanently remove SYSTEM_VERSIONING
 

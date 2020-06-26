@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server]"
   - "schema collections [SQL Server], about XML schema collections"
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # XML Schema Collections (SQL Server)
   As described in the topic, [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server provides native storage of XML data through the `xml` data type. You can optionally associate XSD schemas with a variable or a column of `xml` type through an XML schema collection. The XML schema collection stores the imported XML schemas and is then used to do the following:  

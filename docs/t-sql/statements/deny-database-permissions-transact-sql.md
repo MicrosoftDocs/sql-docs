@@ -29,7 +29,7 @@ Denies permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 ## Syntax
 
-```
+```syntaxsql
 DENY <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ CASCADE ]
     [ AS <database_principal> ]

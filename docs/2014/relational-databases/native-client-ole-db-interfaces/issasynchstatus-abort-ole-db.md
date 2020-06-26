@@ -13,9 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "Abort method"
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ISSAsynchStatus::Abort (OLE DB)
   Cancels an asynchronously executing operation.  

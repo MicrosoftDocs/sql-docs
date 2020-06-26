@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "executing updategrams [SQLXML]"
   - "implicit schema mapping"
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Introduction to Updategrams (SQLXML 4.0)
   You can modify (insert, update, or delete) a database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from an existing XML document by using an updategram or the OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] function.  

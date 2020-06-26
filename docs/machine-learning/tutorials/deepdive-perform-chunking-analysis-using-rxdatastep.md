@@ -2,7 +2,7 @@
 title: Chunking analysis in RevoScaleR
 description: "RevoScaleR tutorial 12: How to chunk data for distributed analysis using the R language on SQL Server."
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # View Events for the Integration Services Service
   There are two tools in which you can view events for the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service:  

@@ -1,5 +1,6 @@
 ---
 title: "General XQuery Use Cases | Microsoft Docs"
+description: View several examples of general XQuery use including searching, retrieving, and listing specific data from a product catalog.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

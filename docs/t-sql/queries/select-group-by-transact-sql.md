@@ -42,7 +42,7 @@ A SELECT statement clause that divides the query result into groups of rows, usu
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database   
 -- ISO-Compliant Syntax  
   
@@ -78,7 +78,7 @@ GROUP BY
 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
@@ -89,7 +89,7 @@ GROUP BY {
 
 ```
 
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 GROUP BY {

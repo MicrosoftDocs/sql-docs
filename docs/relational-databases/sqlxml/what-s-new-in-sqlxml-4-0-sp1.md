@@ -1,5 +1,6 @@
 ---
 title: "What&#39;s New in SQLXML 4.0 SP1"
+description: View a summary of the updates and enhancements in SQLXML 4.0 SP1 with links to more detailed information.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

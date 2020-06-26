@@ -1,5 +1,6 @@
 ---
 title: "Deny Permissions on an XML Schema Collection | Microsoft Docs"
+description: Learn how to deny permissions to either create a new XML schema collection or use an existing one. 
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

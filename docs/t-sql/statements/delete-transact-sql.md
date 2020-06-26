@@ -1,7 +1,7 @@
 ---
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/30/2019"
+ms.date: "05/19/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -73,8 +73,28 @@ DELETE
 }  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+
+[ WITH <common_table_expression> [ ,...n ] ] 
+DELETE [database_name . [ schema ] . | schema. ] table_name  
+FROM [database_name . [ schema ] . | schema. ] table_name 
+JOIN {<join_table_source>}[ ,...n ]  
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( <query_options> [ ,...n ]  ) ]  
+[; ]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse  
   
 DELETE 
     [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
@@ -125,7 +145,7 @@ DELETE
  Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
- Returns deleted rows, or expressions based on them, as part of the DELETE operation. The OUTPUT clause is not supported in any DML statements targeting views or remote tables. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Returns deleted rows, or expressions based on them, as part of the DELETE operation. The OUTPUT clause is not supported in any DML statements targeting views or remote tables. For more information about the arguments and behavior of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM *table_source*  
  Specifies an additional FROM clause. This [!INCLUDE[tsql](../../includes/tsql-md.md)] extension to DELETE allows specifying data from \<table_source> and deleting the corresponding rows from the table in the first FROM clause.  
@@ -434,7 +454,8 @@ GO
 DELETE FROM Table1;  
 ```  
   
-### L. DELETE a set of rows from a table  
+### L. DELETE a set of rows from a table
+
  The following example deletes all rows from the  `Table1` table that have a value greater than 1000.00 in the  `StandardCost` column.  
   
 ```sql
@@ -442,7 +463,8 @@ DELETE FROM Table1
 WHERE StandardCost > 1000.00;  
 ```  
   
-### M. Using LABEL with a DELETE statement  
+### M. Using LABEL with a DELETE statement
+
  The following example uses a label with the DELETE statement.  
   
 ```sql
@@ -451,7 +473,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### N. Using a label and a query hint with the DELETE statement  
+### N. Using a label and a query hint with the DELETE statement
+
  This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION Clause (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
@@ -475,8 +498,32 @@ DELETE tableA WHERE EXISTS (
 SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 )
 ```
-  
-## See Also  
+
+### P. Delete based on the result of joining with another table
+
+This example shows how to delete from a table based on the result from joining wiht another table.
+
+```sql
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+
+CREATE TABLE dbo.Table2   
+    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+
+DELETE dbo.Table2   
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA)
+    WHERE dboTable2.ColA = 1;  
+```
+
+## See Also
+
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

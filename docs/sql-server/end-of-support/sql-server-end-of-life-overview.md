@@ -5,8 +5,8 @@ ms.date: "12/18/2019"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: "=sql-server-previousversions||>=sql-server-2014||=sqlallproducts-allversions"
 ---

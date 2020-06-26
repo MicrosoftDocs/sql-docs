@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
@@ -21,7 +20,7 @@ If a table has an associated partition scheme, you can use this dialog box to ch
   
 For more information on partition schemes and functions see SQL Server Books Online.  
   
-## UIElement List  
+## UI element list  
 Data Type  
 Shows the data types of the columns defined in the partition scheme.  
   

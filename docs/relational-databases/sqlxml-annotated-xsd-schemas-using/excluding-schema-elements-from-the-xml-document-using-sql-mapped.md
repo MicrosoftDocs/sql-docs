@@ -1,5 +1,6 @@
 ---
 title: "Exclude schema elements from XML Doc with sql:mapped"
+description: Learn how to use the sql:mapped annotation to create an element in the XSD schema that does not map to a database table (view) or column.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

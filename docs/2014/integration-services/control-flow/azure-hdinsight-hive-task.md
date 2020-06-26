@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure HDInsight Hive Task
 Use the **Azure HDInsight Hive Task** to run Hive script on an Azure HDInsight cluster.

@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.custom: ""
 ms.date: 09/17/2017    
 ms.prod: sql
-ms.technology:
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---

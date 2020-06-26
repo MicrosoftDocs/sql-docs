@@ -1,5 +1,6 @@
 ---
 title: "View and Modify Publication Properties | Microsoft Docs"
+description: Learn how to view and modify publication properties in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

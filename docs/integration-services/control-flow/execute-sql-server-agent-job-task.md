@@ -1,9 +1,7 @@
 ---
 title: "Execute SQL Server Agent Job Task"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual

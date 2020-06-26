@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data sources"
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Connecting to a Data Source (ODBC)
   After allocating environment and connection handles and setting any connection attributes, the application connects to the data source or driver. There are three functions you can use to connect:  

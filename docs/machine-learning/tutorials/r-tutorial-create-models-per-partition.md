@@ -2,9 +2,9 @@
 title: Create partition-based models in R
 description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
   
-ms.date: 11/06/2019
+ms.date: 04/30/2020
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
@@ -40,6 +40,8 @@ To complete this tutorial, you must have the following:
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which you can [download and restore](demo-data-nyctaxi-in-sql.md) to your local database engine instance. File size is approximately 90 MB.
 
 + SQL Server 2019 database engine instance, with Machine Learning Services and R integration.
+
++ The tutorial uses [loopback connection to SQL Server from an R script over ODBC](../connect/loopback-connection.md). Therefore, you need to [create a login for SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool.
 

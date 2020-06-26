@@ -1,5 +1,6 @@
 ---
 title: "Configure Managed Backup (SQL Server Management Studio) | Microsoft Docs"
+description: Use the Managed Backup dialog box to configure SQL Server Managed Backup to Azure default setting. Learn about the options you need to consider.
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: "sql-server-2014"
@@ -11,7 +12,6 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Configure Managed Backup (SQL Server Management Studio)
   The **Managed Backup** dialog allows you to configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] defaults for the instance. This topic describes how to use this dialog to configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] default settings for the instance and options you must consider when doing so. When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is configured for the instance, the settings are applied to any new database created thereafter.  

@@ -1,5 +1,6 @@
 ---
 title: "Mapping MySQL Databases to SQL Server Schemas (MySQLToSQL) | Microsoft Docs"
+description: Learn to customize SSMA for MySQL mappings between MySQL schemas and SQL Server or Azure SQL Database or accept the default.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

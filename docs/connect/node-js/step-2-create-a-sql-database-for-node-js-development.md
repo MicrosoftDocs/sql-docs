@@ -1,5 +1,6 @@
 ---
-title: "Step 2: Create a SQL database for Node.js development | Microsoft Docs"
+title: "Step 2: Create a SQL database for Node.js"
+description: "The samples in this section only work with the AdventureWorks schema, on either Microsoft SQL Server or Azure SQL Database."
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: sql

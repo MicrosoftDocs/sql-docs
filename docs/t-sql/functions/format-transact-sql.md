@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FORMAT function"
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest"
 ---
 # FORMAT (Transact-SQL)
@@ -29,7 +29,7 @@ Returns a value formatted with the specified format and optional culture. Use th
   
 ## Syntax  
   
-```sql
+```syntaxsql
 FORMAT ( value, format [, culture ] )  
 ```  
   

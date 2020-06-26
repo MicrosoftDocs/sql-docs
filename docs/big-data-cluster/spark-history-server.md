@@ -1,12 +1,12 @@
 ---
 title: Debug & diagnose Spark applications
 titleSuffix: SQL Server Big Data Clusters
-description: Use Spark History Server to debug and diagnose Spark applications running on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Use Spark History Server to debug and diagnose Spark applications running on SQL Server 2019 big data cluster.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -23,7 +23,7 @@ This article provides guidance on how to use extended Spark History Server to de
 The Spark history server user experience from open source is enhanced with information, which includes job-specific data and interactive visualization of job graph and data flows for big data cluster. 
 
 ### Open the Spark History Server Web UI by URL
-Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. Note that in a basic authentication (username/password) big data cluster setup, you must provide user **root** when prompted to login to gateway (Knox) endpoints. More information can be referred to: [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md)
+Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. On clusters deployed prior to SQL Server 2019 CU 5, with basic authentication (username/password) big data cluster setup, you must provide user **root** when prompted to login to gateway (Knox) endpoints. See [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md). [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -188,7 +188,13 @@ The Executor Usage Graph visualizes the Spark job actual executor allocation and
 + Click the color icon to select or unselect the corresponding content in all drafts.
 
     ![Select chart](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## Spark / Yarn Logs
+In addition to the Spark History Server, you can find the logs for Spark and Yarn here, respectively:
+* Spark Event logs: hdfs:///system/spark-events
+* Yarn logs: hdfs:///tmp/logs/root/logs-tfile
 
+Note: Both of these logs have a default retention period of 7 days. If you want to change retention period, see the [Configure Apache Spark and Apache Hadoop](configure-spark-hdfs.md) page. Location **cannot** be changed.
 
 ## Known issues
 The Spark History Server has the following known issues:

@@ -1,5 +1,6 @@
 ---
 title: "Transaction Log Backups (SQL Server) | Microsoft Docs"
+description: Independent of the database backups, you can back up the SQL Server transaction log frequently. The sequence of transaction log backups is a log chain.
 ms.custom: ""
 ms.date: "01/05/2018"
 ms.prod: sql

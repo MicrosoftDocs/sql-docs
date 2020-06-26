@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "number of group items"
   - "COUNT_BIG function"
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COUNT_BIG (Transact-SQL)
@@ -32,7 +32,7 @@ This function returns the number of items found in a group. `COUNT_BIG` operates
   
 ## Syntax  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  

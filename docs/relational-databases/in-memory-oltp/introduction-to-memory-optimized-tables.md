@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Memory-Optimized Tables | Microsoft Docs"
+description: Learn about memory-optimized tables, which are durable and support transactions that are atomic, consistent, isolated, and durable.
 ms.custom: ""
 ms.date: "12/02/2016"
 ms.prod: sql

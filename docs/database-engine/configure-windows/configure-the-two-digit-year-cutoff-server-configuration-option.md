@@ -1,5 +1,6 @@
 ---
-title: "Configure the two digit year cutoff Server Configuration Option | Microsoft Docs"
+title: "Configure the two-digit year cutoff Server Configuration Option | Microsoft Docs"
+description: 'Get acquainted with the "two digit year cutoff" option. Understand how it determines how SQL Server translates two-digit years into four-digit years.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "two digit year cutoff option"
   - "four-digit years [SQL Server]"
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the two digit year cutoff Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

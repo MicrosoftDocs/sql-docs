@@ -1,7 +1,8 @@
 ---
 title: "SQL Data Developer | Microsoft Docs"
+description: "Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud."
 ms.custom: ""
-ms.date: "03/28/2017"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -26,20 +27,17 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 
 ## SQL Data access
 * [SQL Client Drivers](sql-connection-libraries.md):  Use SQL drivers to connect, query, update, insert, or delete data from a SQL database.
-* [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx): Use the  Entity Framework to easily access databases using LINQ, with direct access to SQL Server and the option to control the mapping between an Entity Data Model (EDM) and raw relational structures. 
-* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): Use  Data Services for a near-turnkey solution to easily create and consume OData services on both the web and intranet
-* [Sync Framework](https://msdn.microsoft.com/library/jj839436.aspx): Use the  Sync Framework to enable offline access to any data type, any data store, any transfer protocol, and any network topology.
-* [Reactive Extensions](https://msdn.microsoft.com/library/hh242985.aspx): Use the  Reactive Extensions (Rx) to perform event stream programming and simplify asynchronous programming using observable sequences and LINQ-style query operators.  Use the  Reactive Extensions for JavaScript (RxJS) to simplify asynchronous callback-based and event-driven programming on the web using observable sequences.
+* [Entity Framework](/ef/): Use the  Entity Framework to easily access databases using LINQ, with direct access to SQL Server and the option to control the mapping between an Entity Data Model (EDM) and raw relational structures. 
+* [Windows Communication Foundation (WCF)](/dotnet/framework/wcf/): Use  Data Services for a near-turnkey solution to easily create and consume OData services on both the web and intranet
+* [Sync Framework](/previous-versions/sql/synchronization/mt490616(v=msdn.10)): Use the  Sync Framework to enable offline access to any data type, any data store, any transfer protocol, and any network topology.
+* [Reactive Extensions](https://github.com/dotnet/reactive): Use the  Reactive Extensions (Rx) to perform event stream programming and simplify asynchronous programming using observable sequences and LINQ-style query operators.  Use the  Reactive Extensions for JavaScript (RxJS) to simplify asynchronous callback-based and event-driven programming on the web using observable sequences.
 * [CLR Integration](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md):  Use CLR Integration to write stored procedures, triggers, user-defined types, user-defined functions, user-defined aggregates, and streaming table-valued functions, using any .NET Framework language, including Microsoft Visual Basic .NET and Microsoft Visual C#. 
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): Use SQLXML 4.0 to export relational data to XML.
 
 ## Data collection, processing, and visualization
-* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
+* [Analysis Services](/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
 * [Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
 * [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
-
-
- 

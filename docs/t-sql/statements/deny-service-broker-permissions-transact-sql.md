@@ -33,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON  
     {    
        [ CONTRACT :: contract_name ]   

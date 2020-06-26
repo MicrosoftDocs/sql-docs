@@ -1,5 +1,6 @@
 ---
 title: "Building the connection URL | Microsoft Docs"
+description: "Learn the format of the connection string used by the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/29/2020"
 ms.prod: sql

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ParameterAttributesEnum enumeration [ADO]"
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ParameterAttributesEnum
 Specifies the attributes of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

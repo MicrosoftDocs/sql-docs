@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be integrated with a Microsoft SharePoint farm to enable Business Intelligence (BI) features in SharePoint. The features include [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is used for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access in a SharePoint farm. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is the data engine for workbooks created in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel and accessed from a SharePoint library. Once you save a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook to SharePoint, you can use it as a data source for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports.
@@ -86,7 +85,7 @@ manager: craigg
 
      The SQL Server installation wizard installs two [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configurations tools. One of the configuration tools supports SharePoint 2013 and the other tool supports SharePoint 2010.
 
-     ![two powerpivot configuratoin tools](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")
+     ![two powerpivot configuratoin tools](../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")
 
 5.  Configure Excel Services in SharePoint Server 2013 to use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. For more information, see the section "Configure Basic Analysis Services SharePoint Integration" in [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).and [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).
 

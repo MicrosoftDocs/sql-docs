@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot Kubernetes
 titleSuffix: SQL Server big data clusters
-description: This article provides useful commands for monitoring and troubleshooting a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: This article provides useful commands for monitoring and troubleshooting a SQL Server 2019 big data cluster.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -113,8 +113,10 @@ The following services support external connections to the big data cluster:
 |---|---|
 | **master-svc-external** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
 | **controller-svc-external** | Supports tools and clients that manage the cluster. |
-| **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+| **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the `<AZDATA_USERNAME>` user)<sup>1</sup>|
 | **appproxy-svc-external** | Support application deployment scenarios. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > This is a way of viewing the services with **kubectl**, but it is also possible to use `azdata bdc endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).

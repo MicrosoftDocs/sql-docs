@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ADOStreamConstruction interface [ADO]"
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADOStreamConstruction Interface
 The **ADOStreamConstruction** interface is used to construct an ADO **Stream** object from an OLE DB **IStream** object in a C/C++ application.  

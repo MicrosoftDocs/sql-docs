@@ -1,5 +1,6 @@
 ---
-title: "How to: Connect Using SQL Server Authentication | Microsoft Docs"
+title: "How to: Connect Using SQL Server Authentication"
+description: "Learn important considerations when using SQL Server Authentication to connect to your database."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql

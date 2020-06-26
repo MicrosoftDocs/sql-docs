@@ -1,5 +1,6 @@
 ---
-title: "Data source sample | Microsoft Docs"
+title: "Data source sample"
+description: "This sample demonstrates how to connect to SQL Server and retrieve data by using a stored procedure."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

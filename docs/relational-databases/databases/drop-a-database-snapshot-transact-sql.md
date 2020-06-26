@@ -1,5 +1,6 @@
 ---
 title: "Drop a Database Snapshot (Transact-SQL) | Microsoft Docs"
+description: Learn how to drop a database snapshot by using Transact-SQL, which deletes the snapshot from SQL Server and the sparse files that are used by the snapshot.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_browsereplcmds"
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

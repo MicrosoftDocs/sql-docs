@@ -1,5 +1,6 @@
 ---
 title: "Configure the default full-text language Server Configuration Option | Microsoft Docs"
+description: Learn about the default full-text language option. See how to configure it to specify the default language that SQL Server uses for full-text indexes.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "languages [full-text search]"
   - "default full-text language option"
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the default full-text language Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

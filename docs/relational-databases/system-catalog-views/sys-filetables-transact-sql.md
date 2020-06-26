@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.filetables catalog view"
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.filetables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

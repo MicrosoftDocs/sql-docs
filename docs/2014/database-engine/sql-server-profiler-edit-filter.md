@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Profiler - Edit Filter
   Use the **Edit Filter** dialog box to create and modify data column filters in a trace. Click a data column name in the list and the filter criteria that is available for that data column displays in the adjacent pane. Enter the filter criteria and click **OK** to apply it to the selected data column. If a filter icon appears to the left of the data column name in the list, that column already has a filter configured for it.  

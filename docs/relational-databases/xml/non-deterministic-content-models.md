@@ -1,5 +1,6 @@
 ---
 title: "Non-Deterministic Content Models | Microsoft Docs"
+description: View an example of using an XML schema with a non-deterministic content model. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
+description: Learn about checkpoints, known good points from which the SQL Server Database Engine can start applying changes contained in the log during recovery.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

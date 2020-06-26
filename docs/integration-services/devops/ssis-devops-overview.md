@@ -10,7 +10,7 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ---
-# SQL Server Integration Services (SSIS) DevOps Tools (Preview)
+# SQL Server Integration Services (SSIS) DevOps Tools
 
 [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
 
@@ -338,6 +338,26 @@ The configuration JSON schema has three layers:
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
+
+### Version 1.0.2
+
+Release Date: May 26, 2020
+
+- Fixed an issue that SSIS Catalog Configuration task may fail in some case after configuration work is done.
+
+### Version 1.0.1
+
+Release Date: May 9, 2020
+
+- Fixed an issue that SSIS Build task always build the whole solution even if only single dtproj file is specified as project path.
+
+### Version 1.0.0
+
+Release Date: May 8, 2020
+
+- General Availability (GA) release.
+- Added a restriction of minimum .NET framework version on agent. Currently the minimum .NET framework version is 4.6.2.
+- Refined description of SSIS Build task and SSIS Deploy task.
 
 ### Version 0.2.0 Preview
 

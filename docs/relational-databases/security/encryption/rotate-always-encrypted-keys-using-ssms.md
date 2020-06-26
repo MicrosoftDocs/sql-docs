@@ -1,12 +1,12 @@
 ---
 title: "Rotate Always Encrypted keys using SQL Server Management Studio | Microsoft Docs"
+description: Learn about rotating Always Encrypted column master keys and column encryption keys with SQL Server Management Studio.
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
-f1_keywords: 
 f1_keywords: 
   - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
   - "sql13.SWB.COLUMNMASTERKEY.CLEANUP.F1"

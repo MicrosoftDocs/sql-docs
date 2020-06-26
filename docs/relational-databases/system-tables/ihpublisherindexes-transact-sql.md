@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublisherindexes system table"
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

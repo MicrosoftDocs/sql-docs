@@ -28,7 +28,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  

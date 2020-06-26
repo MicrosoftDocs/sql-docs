@@ -1,5 +1,6 @@
 ---
 title: "Custom Attributes for CLR Routines | Microsoft Docs"
+description: Custom attributes can be applied to CLR routines, user-defined types, and user-defined aggregates that are registered in Microsoft SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

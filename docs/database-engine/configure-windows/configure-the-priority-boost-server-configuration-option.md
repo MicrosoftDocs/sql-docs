@@ -1,5 +1,6 @@
 ---
 title: "Configure the priority boost Server Configuration Option | Microsoft Docs"
+description: Learn about the priority boost option. See how to use it to set the priority base for SQL Server in the Windows 2008 or Windows Server 2008 R2 scheduler.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "priority boost option"
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the priority boost Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6727cb7d-ac01-4972-a730-dbb7cdc29705
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Log shipping will not run after upgrading
   Upgrade Advisor has detected that you are using log shipping. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] log shipping is incompatible with log shipping in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and cannot be upgraded directly. After upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], reconfigure log shipping using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or stored procedures.  

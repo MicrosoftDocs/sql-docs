@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
+```syntaxsql
 MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=

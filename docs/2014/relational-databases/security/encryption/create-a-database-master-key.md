@@ -3,7 +3,6 @@ title: "Create a Database Master Key | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,7 +10,6 @@ helpviewer_keywords:
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 ms.reviewer: carlrab
 ---
 # Create a Database Master Key

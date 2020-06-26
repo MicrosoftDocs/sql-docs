@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Record collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Record (ADO for Visual C++ Syntax)
 ## Methods  

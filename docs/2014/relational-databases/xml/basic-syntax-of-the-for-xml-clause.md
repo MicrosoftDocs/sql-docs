@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "FOR XML clause, syntax"
   - "FOR XML clause, ROOT directive"
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Basic Syntax of the FOR XML Clause
   The FOR XML mode can be RAW, AUTO, EXPLICIT, or PATH. It determines the shape of the resulting XML.  

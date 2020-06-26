@@ -1,5 +1,6 @@
 ---
 title: "Change Server Authentication Mode | Microsoft Docs"
+description: Learn how to change the server authentication mode in SQL Server. You can use either SQL Server Management Studio or Transact-SQL for this task.
 ms.custom: ""
 ms.date: "02/18/2020"
 ms.prod: sql
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "server authentication mode [SQL Server]"
   - "modifying server authentication mode"
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 
 # Change server authentication mode

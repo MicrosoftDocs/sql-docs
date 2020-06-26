@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, data updates"
   - "data updates [SQL Server], OLE DB"
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating Data in Rowsets

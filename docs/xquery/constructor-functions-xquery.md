@@ -1,5 +1,6 @@
 ---
 title: "Constructor Functions (XQuery) | Microsoft Docs"
+description: Learn about the constructor functions in XQuery that allow you to create instances of the XSD built-in or user-defined atomic types.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "interoperability [ODBC], database features"
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Considering Database Features to Use
 After the basic level of interoperability is known, the database features used by the application must be considered. For example, what SQL statements will the application execute? Will the application use scrollable cursors? Transactions? Procedures? Long data? For ideas about what features might not be supported by all DBMSs, see the [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), and [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) function descriptions, and [Appendix C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). The features required by an application might eliminate some DBMSs from the list of target DBMSs. They might also show that the application can easily target many DBMSs.  

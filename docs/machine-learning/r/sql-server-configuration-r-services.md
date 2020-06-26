@@ -2,10 +2,10 @@
 title: Configuration for use with R
 description: This article provides guidance about the hardware and network configuration of the computer used to run SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
@@ -188,7 +188,7 @@ One of the benefits of SQL Server is its ability to handle a large volume of row
 
 You can also send the input data as a single query, and SQL Server then analyzes the query. If a parallel query plan can be created for the input data, it automatically partitions data assigned to the nodes and performs required joins and aggregations in parallel as well.
 
-If you are interested in the details of how to define a stored procedure for use in scoring, see the sample project on [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) and look for the file "step5_score_for_matching.sql". The sample script also tracks query start and end times and writes the time to the SQL console so that you can assess performance.
+If you are interested in the details of how to define a stored procedure for use in scoring, see the sample project on [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR) and look for the file "step5_score_for_matching.sql". The sample script also tracks query start and end times and writes the time to the SQL console so that you can assess performance.
 
 ### Concurrent scoring using resource groups
 
@@ -210,7 +210,7 @@ In the resume-matching scenario, concurrency was designed as follows:
 
 - Each workload group must handle two scoring tasks. As soon as one task finished reading data and starts scoring, the other task can start reading data from the database.
 
-To see the PowerShell scripts for this scenario, open the file experiment.ps1 in the [Github project](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips).
+To see the PowerShell scripts for this scenario, open the file experiment.ps1 in the [Github project](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching).
 
 ### Storing models for prediction
 

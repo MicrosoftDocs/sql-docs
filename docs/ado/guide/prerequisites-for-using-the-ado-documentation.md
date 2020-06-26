@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, prerequisites"
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Prerequisites for Using the ADO Documentation
 To use this documentation, you should have, at a minimum, some experience developing applications with Microsoft Visual Basic, because most of the examples in the guide are written in this language. There are also some examples written in Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript), and Microsoft JScript.  

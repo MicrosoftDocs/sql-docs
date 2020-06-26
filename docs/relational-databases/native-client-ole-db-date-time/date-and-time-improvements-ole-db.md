@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "date/time [OLE DB]"
   - "OLE DB, date/time improvements"
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

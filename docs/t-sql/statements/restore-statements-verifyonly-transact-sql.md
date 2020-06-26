@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RESTORE VERIFYONLY  
 FROM <backup_device> [ ,...n ]  

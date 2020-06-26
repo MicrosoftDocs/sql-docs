@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Version Property (ClientNetLibInfo Class)
   Gets the version of the client network library file.  

@@ -33,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  

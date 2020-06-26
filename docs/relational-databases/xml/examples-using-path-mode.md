@@ -1,5 +1,6 @@
 ---
 title: "Examples: Using PATH Mode | Microsoft Docs"
+description: View examples of using PATH mode to generate XML from a SELECT query.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

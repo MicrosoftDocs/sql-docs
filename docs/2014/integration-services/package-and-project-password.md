@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Package and Project Password
   Use the **Package Password** dialog box to provide the package password for a package that is encrypted with a password. You must provide a password if the package uses the **Encrypt sensitive with passwor**d or **Encrypt all with password** protection level.  

@@ -1,5 +1,6 @@
 ---
-title: "What&#39;s New in CLR Integration | Microsoft Docs"
+title: "What's New in CLR Integration | Microsoft Docs"
+description: Microsoft SQL Server hosting CLR is called CLR integration. This article describes new features in CLR integration in SQL Server 2012.
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""

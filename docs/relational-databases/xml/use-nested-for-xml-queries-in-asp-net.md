@@ -1,5 +1,6 @@
 ---
 title: "Use Nested FOR XML Queries in ASP.NET | Microsoft Docs"
+description: Learn how to use nested FOR XML queries in an ASP.NET application to generate element-centric XML.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

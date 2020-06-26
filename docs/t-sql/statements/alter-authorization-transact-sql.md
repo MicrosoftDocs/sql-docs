@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 ## Syntax    
     
-```    
+```syntaxsql
 -- Syntax for SQL Server  
 ALTER AUTHORIZATION    
    ON [ <class_type>:: ] entity_name    
@@ -54,7 +54,7 @@ ALTER AUTHORIZATION
     }    
 ```    
 
-```
+```syntaxsql
 -- Syntax for SQL Database  
   
 ALTER AUTHORIZATION    
@@ -73,7 +73,7 @@ ALTER AUTHORIZATION
 ```    
 
     
-```    
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
   
 ALTER AUTHORIZATION ON    
@@ -93,7 +93,7 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-```    
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER AUTHORIZATION ON    

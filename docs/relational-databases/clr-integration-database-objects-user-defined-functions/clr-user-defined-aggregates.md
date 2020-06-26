@@ -1,5 +1,6 @@
 ---
 title: "CLR User-Defined Aggregates | Microsoft Docs"
+description: SQL Server CLR integration allows you to create custom aggregate functions in managed code, which perform a calculation on a set of values and return a value.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

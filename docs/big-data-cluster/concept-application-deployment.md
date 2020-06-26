@@ -1,24 +1,24 @@
 ---
-title: What is Application Deployment?
+title: What is application deployment?
 titleSuffix: SQL Server Big Data Clusters
 description: This article describes application deployment on a Big Data Clusters for SQL Server 2019.
-author: jeroenterheerdt 
-ms.author: jterh
+author: cloudmelon 
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# What is Application Deployment on a Big Data Cluster?
+# What is application deployment on a Big Data Cluster?
 
-Application Deployment enables the deployment of applications on the big data cluster by providing interfaces to create, manage, and run applications. Applications deployed on the big data cluster benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on SQL Server Big Data Clusters are R, Python, SSIS, MLeap.
+Application deployment enables the deployment of applications on the big data cluster by providing interfaces to create, manage, and run applications. Applications deployed on the big data cluster benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on SQL Server Big Data Clusters are R, Python, SSIS, MLeap.
 
-The following sections describe the architecture and functionality of Application Deployment.
+The following sections describe the architecture and functionality of application deployment.
 
-## Application Deployment architecture
+## Application deployment architecture
 
 Application deployment consists of a controller and app runtime handlers. When creating an application, a specification file (`spec.yaml`) is provided. This `spec.yaml` file contains everything the controller needs to know to successfully deploy the application. The following is a sample of the contents for `spec.yaml`:
 
@@ -48,9 +48,31 @@ After the ReplicaSet has been created and the pods have started, a cron job is c
 
 When an application is executed, the Kubernetes service for the application proxies the requests to a replica and returns the results.
 
+## <a id="app-deploy-security"></a> Security considerations for applications deployments on OpenShift
+
+SQL Server 2019 CU5 enables support for Big Data Clusters deployment on Red Hat OpenShift as well as an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5.
+
+At the time of the CU5 release, the setup step of the applications deployed with [app deploy](concept-application-deployment.md) interfaces will still run as *root* user. This is required since during setup  additional packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
+
+In addition, **CAP_AUDIT_WRITE** capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the additional capability.  Alternatively, the application can be triggered on demand with *azdata app run* through a web service call, which does not require the CAP_AUDIT_WRITE capability. 
+
+> [!NOTE]
+> The custom SCC in the [OpenShift deployment article](deploy-openshift.md) does not include this capability since it is not required by a default deployment of big data cluster. To enable this capability, you must first update the custom SCC yaml file to include CAP_AUDIT_WRITE in the 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
+
 ## How to work with Application Deployment
 
-The two main interfaces for Application Deployment are: 
+The two main interfaces for application deployment are: 
 - [Command line interface `azdata`](big-data-cluster-create-apps.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 

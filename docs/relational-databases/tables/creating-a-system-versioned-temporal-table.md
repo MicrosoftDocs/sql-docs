@@ -128,7 +128,7 @@ For example, you may have a set of tables where versioning is implemented with t
 - Better DML performance
 - Minimal maintenance costs
 
- When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns (the datetime2 columns **SysStartTime** and **SysEndTime**) to avoid impacting existing applications that are not designed to handle new columns.
+ When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns (the datetime2 columns **SysStartTime** and **SysEndTime**) to avoid impacting existing applications that do not explicitly specify column names (e.g. SELECT * or INSERT without column list) are not designed to handle new columns.
 
 ### Adding versioning to non-temporal tables
 

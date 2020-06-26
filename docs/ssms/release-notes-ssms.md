@@ -6,12 +6,11 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-author: markingmyname
-ms.author: maghan
-ms.manager: jroth
-ms.reviewer: dnethi
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 04/07/2020
+ms.date: 06/09/2020
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -38,9 +37,59 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
+## 18.5.1
+
+- Download: [Download SSMS 18.5.1](download-sql-server-management-studio-ssms.md)
+
+- Release number: 18.5.1
+- Build number: 15.0.18333.0
+- Release date: June 09, 2020
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40a)
+
+SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+18.5.1 is an update to 18.5 with the following bug fixes.
+
+### Bug fixes in 18.5.1
+
+| New Item | Details |
+|----------|---------|
+| Analysis Services | Improved performance when expanding the list of databases while connected to AS Azure or PowerBI servers. |
+| Analysis Services | Fixed an issue where an error would occur trying to open the Synchronize Database Wizard of an Analysis Services server. |
+| Analysis Services | Fixed an issue preventing users from querying SSAS 2017 and earlier versions with cell data permissions. |
+| General SSMS | [Table Designer - Fixed beep when trying to TAB in a Table Designer grid](https://feedback.azure.com/forums/908035/suggestions/40318435) |
+
+### Known issues (18.5.1)
+
+| New Item | Details | Workaround |
+|----------|---------||-----------|
+| General SSMS | There is a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, and then later try to open it with 17.9.1. See [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
+| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
+| SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|-------------------|
+| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
+| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
+
 ## 18.5
 
-- Download: [Download SSMS 18.5](download-sql-server-management-studio-ssms.md)
+![download](media/download-icon.png) [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
+- Release number: 18.5
 - Build number: 15.0.18330.0
 - Release date: April 07, 2020
 
@@ -82,11 +131,11 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 | Always On | Fixed an issue where an error was displayed when trying to display the dashboard when connected to a Big Data Cluster endpoint. |
 | Auditing | Fixed an issue where the Audit logs merges window crashes when there's a folder with an empty name in the root folder of the storage account. |
 | Auditing | Fixed an issue where the Audit logs merge window doesn't show all servers when there are too many items in the root of the container. |
-| Data Clarification | Fixed an issue where the *Data Classification* wizard won't open for databases with large number of tables. |
-| Data Clarification | We are now enforcing different GUIDs for every label/infoType and GUID's structure in the validation process. |
-| Data Clarification | Remove classification process in SqlServer2019. |
-| Data Clarification | Correcting the previous validation tests (adding rank, removing the illegal property *InformationTypes*) and adding new ones for the first two points. |
-| Data Clarification | The button just above the classified columns table now minimizes the recommendations panel, as it says. |
+| Data Classification | Fixed an issue where the *Data Classification* wizard won't open for databases with large number of tables. |
+| Data Classification | We are now enforcing different GUIDs for every label/infoType and GUID's structure in the validation process. |
+| Data Classification | Remove classification process in SqlServer2019. |
+| Data Classification | Correcting the previous validation tests (adding rank, removing the illegal property *InformationTypes*) and adding new ones for the first two points. |
+| Data Classification | The button just above the classified columns table now minimizes the recommendations panel, as it says. |
 | General SSMS | Updating the version of MSODBC and MSOLEDB drivers. |
 | General SSMS | Addressed at least two common sources hangs and crashes in SSMS. |
 | General SSMS | Addressed one more case where *Restore dialog* hangs when selecting the Browse button. |
@@ -135,23 +184,9 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 
 - New Server Audit Specification dialog may cause SSMS to crash with an access violation error.
 
-- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on Nuget.org right after SSMS 18.5 is released)
+- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on Nuget.org right after SSMS 18.5 is released).
 
-You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-|--------------|--------------|-------------------|
-| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
+- [Error when connecting to SSAS via msmdpump.dll in SSMS](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696-error-when-connecting-to-ssas-via-msmdpump-dll-in).
 
 ### 18.4
 
@@ -588,7 +623,7 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 |Object Explorer|Fixed an issue where SSMS was throwing an "Object cannot be cast from DBNull to other types" exception when trying to expand "Management" node in OE (misconfigured DataCollector).|
 |Object Explorer|Fixed an issue where OE wasn't escaping quotes before invoking the "Edit Top N..." causing the designer to get confused.|
 |Object Explorer|Fixed an issue where the "Import Data-Tier application" wizard was failing to launch from the Azure Storage tree.|
-|Object Explorer|Fixed an issue in "Database Mail Configuration" where the status of the SSL checkbox wasn't persisted. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
+|Object Explorer|Fixed an issue in "Database Mail Configuration" where the status of the TLS/SSL checkbox wasn't persisted. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
 |Object Explorer|Fixed an issue where SSMS grayed out option to close existing connections when trying to restore database with is_auto_update_stats_async_on.|
 |Object Explorer|Fixed an issue where right-clicking on nodes in OE the (for example "Tables" and wanting to perform an action such as filtering tables by going to Filter > Filter Settings, the filter settings form can appear on the other screen than where SSMS is currently active). For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106). |
 |Object Explorer|Fixed a long outstanding issue where the DELETE key wasn't working in OE while trying to rename an object. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510), [https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) and other duplicates.|

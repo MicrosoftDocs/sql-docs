@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "CDATA directive"
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Example: Specifying the CDATA Directive
   If the directive is set to **CDATA**, the contained data is not entity encoded, but is put in the CDATA section. The **CDATA** attributes must be nameless.  

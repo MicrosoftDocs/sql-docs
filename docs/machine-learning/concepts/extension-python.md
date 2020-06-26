@@ -2,7 +2,7 @@
 title: Python language extension
 description: Learn about Python code execution and built-in Python libraries in SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/04/2019
 ms.topic: conceptual
@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 The Python extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds a Python execution environment, Anaconda distribution with the Python 3.5 runtime and interpreter, standard libraries and tools, and the Microsoft product libraries for Python: [revoscalepy](../python/ref-py-revoscalepy.md) for analytics at scale and [microsoftml](../python/ref-py-microsoftml.md) for machine learning algorithms. 
 
-Python integration is installed as [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+Python integration is installed as [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 Installation of the Python 3.5 runtime and interpreter ensures near-complete compatibility with standard Python solutions. Python runs in a separate process from SQL Server, to guarantee that database operations are not compromised.
 

@@ -59,7 +59,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 CONTAINS (   
      {   
         column_name | ( column_list )   

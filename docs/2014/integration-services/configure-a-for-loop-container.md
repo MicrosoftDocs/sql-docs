@@ -12,12 +12,9 @@ helpviewer_keywords:
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Configure a For Loop Container
   This procedure describes how to configure a For Loop container by using the **For Loop Editor** dialog box.  
-  
- For an example of the For Loop container, see [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295) on bimonkey.com.  
   
 ### To configure the For Loop container  
   

@@ -1,5 +1,6 @@
 ---
 title: "Guest Permissions on User Databases | Microsoft Docs"
+description: Determine whether the guest user has permission to access user databases in SQL Server. Revoke the guest user permission if it is not required.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

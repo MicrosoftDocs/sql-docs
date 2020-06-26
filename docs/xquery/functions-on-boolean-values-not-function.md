@@ -1,5 +1,6 @@
 ---
 title: "not Function (XQuery) | Microsoft Docs"
+description: Learn how the XQuery not() function is used with Boolean values.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

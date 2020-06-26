@@ -1,5 +1,6 @@
 ---
 title: "Set sql:inverse attribute on sql:relationship (SQLXML)"
+description: Learn how to use the sql:inverse attribute on the sql:relationship element to specify relationships between database columns in an updategram operation.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

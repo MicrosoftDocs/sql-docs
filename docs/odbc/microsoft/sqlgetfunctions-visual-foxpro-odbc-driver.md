@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetFunctions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

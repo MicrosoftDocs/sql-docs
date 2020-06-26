@@ -28,9 +28,9 @@ One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbig
 ## Link SQL Server big data cluster
 1. Open the IntelliJ IDEA tool.
 
-2. If you are using self-signed certificate, disable SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
+2. If you are using self-signed certificate, disable TLS/SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
 
-    ![link SQL Server big data cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![link SQL Server big data cluster - disable TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Open Azure Explorer from **View** menu, select **Tool Windows**, and then select **Azure Explorer**.
 4. Right click on **SQL Server big data cluster**, select **Link SQL Server big data cluster**. Enter the **Server**, **User Name**, and **Password**, then click **OK**.

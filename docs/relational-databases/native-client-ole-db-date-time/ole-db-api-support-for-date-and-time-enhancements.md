@@ -9,8 +9,8 @@ ms.technology:
 
 ms.topic: "reference"
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE DB API Support for Date and Time Enhancements

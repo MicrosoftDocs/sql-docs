@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d7d5db55-36c3-45f6-ade3-29aa516589c1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Dimension Key and Type (Dimension Wizard)
   Use the **Specify Dimension Key and Type** page to define the key attribute of the dimension and to indicate whether the dimension is a slowly changing dimension (SCD).  

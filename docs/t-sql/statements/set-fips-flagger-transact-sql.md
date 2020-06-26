@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 SET FIPS_FLAGGER ( 'level' |  OFF )  
 ```  
   

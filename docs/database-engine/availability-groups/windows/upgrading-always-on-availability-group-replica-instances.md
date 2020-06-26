@@ -1,6 +1,6 @@
 ---
 title: "Upgrade availability group replicas"
-dsecription: "Describes how to upgrade replicas that are participating in an Always On availability group."
+description: Learn how to reduce downtime for the primary replica during SQL Server upgrades by performing a rolling upgrade.
 ms.custom: "seo-lt-2019"
 ms.date: "01/10/2018"
 ms.prod: sql

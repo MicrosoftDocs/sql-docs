@@ -1,6 +1,6 @@
 ---
 title: "Failover Cluster Instance administration & maintenance"
-description: Learn about the administration and maintenance of SQL Server failover cluster instances. 
+description: Learn about maintenance and administration of SQL Server failover cluster instances with the SQL Server Setup program or the Failover Cluster Manager snap-in.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||
 
 Learn how to use native scoring with the [PREDICT T-SQL function](../../t-sql/queries/predict-transact-sql.md) to generate prediction values for new data inputs in near-real-time. Native scoring requires that you have an already trained model.
 
-The `PREDICT` function uses the native C++ extension capabilities in SQL machine learning. This methodology offers the fastest possible processing speed of forecasting and prediction workloads and support models in ONNX format or models trained using the RevoScaleR/revoscalepy packages.
+The `PREDICT` function uses the native C++ extension capabilities in [SQL machine learning](../index.yml). This methodology offers the fastest possible processing speed of forecasting and prediction workloads and support models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../r/ref-r-revoscaler.md) and [revoscalepy](../python/ref-py-revoscalepy.md) packages.
 
 ## How native scoring works
 

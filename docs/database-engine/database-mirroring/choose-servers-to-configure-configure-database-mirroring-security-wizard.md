@@ -1,6 +1,6 @@
 ---
 title: "Configure Security Wizard: Choose Servers"
-descriptoin: "Describes the properties found on the the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'." 
+description: "Describes the properties found on the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'." 
 ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql

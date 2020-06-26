@@ -1,5 +1,6 @@
 ---
 title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
+description: Learn how an index on a memory-optimized table differs from a traditional index on a disk-based table in SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: "09/16/2019"
 ms.prod: sql

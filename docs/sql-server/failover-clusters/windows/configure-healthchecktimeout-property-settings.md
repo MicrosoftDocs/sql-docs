@@ -1,6 +1,6 @@
 ---
 title: "Configure HealthCheckTimeout for availability group"
-description: "Configure HealthCheckTimeout for an Always On availability group, which is used to specify the time that the SQL Server resource DLL should wait before reporting unresponsiveness."
+description: Configure HealthCheckTimeout for an Always On availability group, which specifies how long the SQL Server resource DLL waits before reporting unresponsiveness.
 ms.custom: "seo-lt-2019"
 ms.date: "03/09/2017"
 ms.prod: sql

@@ -262,7 +262,7 @@
     - name: Real-time scoring with sp_rxPredict
       href: ../machine-learning/real-time-scoring.md
     - name: Native scoring with PREDICT T-SQL
-      href: ../machine-learning/sql-native-scoring.md
+      href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
   - name: Package management
     items:
     - name: Install new Python packages

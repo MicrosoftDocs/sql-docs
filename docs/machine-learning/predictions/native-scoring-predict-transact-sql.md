@@ -38,7 +38,7 @@ The function returns predictions for the input data, together with any columns o
 
 `PREDICT` model format support depends on the SQL platform you perform native scoring on. See the table below for which model formats are supported on which platform.
 
-| Platform | ONNX model format | Models trained using the RevoScaleR/revoscalepy packages |
+| Platform | ONNX model format | RevoScale model format |
 |-|-|-|
 | SQL Server | No | Yes |
 | Azure SQL Managed Instance | Yes | Yes |
@@ -55,13 +55,15 @@ The model must be in an [Open Neural Network Exchange (ONNX)](https://onnx.ai/ge
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
 ### RevoScale models
 
-+ The model must be trained in advance using one of the supported **rx** algorithms listed below.
+The model must be trained in advance using one of the supported **rx** algorithms listed below using the RevoScaleR or revoscalepy package.
 
-+ Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
+Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
 <a name="bkmk_native_supported_algos"></a> 
 
 #### Supported RevoScale algorithms
+
+The following algorithms are supported in revoscalepy and RevoScaleR.
 
 + revoscalepy models
 
@@ -228,3 +230,4 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 ## Next steps
 
 + [PREDICT T-SQL function](../t-sql/queries/predict-transact-sql.md)
++ [SQL machine learning documentation](../index.yml)

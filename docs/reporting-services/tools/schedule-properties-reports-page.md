@@ -1,5 +1,6 @@
 ---
 title: "Schedule Properties (Reports Page) | Microsoft Docs"
+description: 
 ms.date: 06/30/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

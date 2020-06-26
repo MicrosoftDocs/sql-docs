@@ -1,5 +1,6 @@
 ---
 title: View Data Differences
+description: Find out how to view the differences in database objects after you compare two databases. See how to view records within objects and how to filter the view.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

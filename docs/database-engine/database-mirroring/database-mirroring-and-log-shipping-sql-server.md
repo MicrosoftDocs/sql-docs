@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring and Log Shipping (SQL Server) | Microsoft Docs"
+description: Learn about the considerations for combining log shipping and database mirroring in SQL Server, including how many destination servers you need.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

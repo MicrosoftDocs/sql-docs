@@ -1,5 +1,6 @@
 ---
 title: "Possible Failures During Database Mirroring | Microsoft Docs"
+description: Learn about failures in database mirroring sessions caused by physical, operating system, or SQL Server problems, and how to respond to errors.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

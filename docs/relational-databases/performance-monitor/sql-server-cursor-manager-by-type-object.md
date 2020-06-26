@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Cursor Manager by Type Object | Microsoft Docs"
+description: Learn about the SQLServer:Cursor Manager by Type object, which provides counters to monitor cursors, grouped by type.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Catalog Metadata Object | Microsoft Docs"
+description: Learn about the SQLServer:Catalog Metadata performance object, which provides counters for catalog metadata for SQL Server.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

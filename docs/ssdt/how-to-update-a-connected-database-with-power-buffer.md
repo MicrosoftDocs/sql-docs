@@ -1,5 +1,6 @@
 ---
 title: Update a Connected Database with Power Buffer
+description: Learn how to use Power Buffer to update a connected database. See how to verify changes before you apply them or save them in a script for later deployment.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

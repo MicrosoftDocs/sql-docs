@@ -44,7 +44,7 @@ MATCH (<graph_search_pattern>)
       LAST_NODE(<node_alias>) | <node_alias>   { 
           { <-( <edge_alias> )- } 
         | { -( <edge_alias> )-> }
-        <node_alias> | LAST(<node_alias>)
+        <node_alias> | LAST_NODE(<node_alias>)
         } 
   }
   [ { AND } { ( <simple_match_pattern> ) } ]

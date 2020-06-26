@@ -2,7 +2,7 @@
 title: Convert R code for SQL
 description: Migrate R code to a SQL Server stored procedure for solution deployment and data access to relational data on SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 04/15/2018  
 ms.topic: how-to

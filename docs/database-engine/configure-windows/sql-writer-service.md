@@ -1,5 +1,6 @@
 ---
 title: "SQL Writer Service | Microsoft Docs"
+description: Learn about the SQL Writer Service. See how it provides added backup and restore functionality in SQL Server through the Volume Shadow Copy Service framework.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

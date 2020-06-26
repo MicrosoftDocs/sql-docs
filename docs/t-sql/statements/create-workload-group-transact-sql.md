@@ -30,7 +30,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 |||||
 |---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 ||||
 
 &nbsp;
@@ -44,7 +44,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 ||||
 |---|---|---|
-|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+|[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 ||||
 
 &nbsp;

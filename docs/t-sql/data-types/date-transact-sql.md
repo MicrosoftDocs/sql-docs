@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # date (Transact-SQL)
 <!--[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]-->
-[!INCLUDE [](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [](../../includes/applies-to-version/sqlserver2008.md)] [!INCLUDE [](../../includes/applies-to-version/asdb.md)] [!INCLUDE [](../../includes/applies-to-version/asdw.md)] [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
+[!INCLUDE [tsql-appliesto](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [sqlserver2008](../../includes/applies-to-version/sqlserver2008.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)] [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
 Defines a date in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

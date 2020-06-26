@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sql
 
 <!--[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]-->
 
-[!INCLUDE [](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [](../../includes/applies-to-version/sqlserver-v14.md)] [!INCLUDE [](../../includes/applies-to-version/asdb.md)] [!INCLUDE [](../../includes/applies-to-version/asdw.md)] 
+[!INCLUDE [tsql-appliesto](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [sqlserver-v14](../../includes/applies-to-version/sqlserver-v14.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)] 
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. 
  

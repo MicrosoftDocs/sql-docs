@@ -21,18 +21,26 @@ The `PREDICT` function uses the native C++ extension capabilities in [SQL machin
 
 ## How native scoring works
 
-Native scoring uses libraries that can read model in ONNX or predefined binary format and generate scores for new data inputs that you provide. Because the model is trained, deployed, and stored, it can be used for scoring without having to call the R or Python interpreter. As such, the overhead of multiple process interactions is reduced, resulting in much faster prediction performance in enterprise production scenarios.
+Native scoring uses libraries that can read model in ONNX or predefined binary format, and generate scores for new data inputs that you provide. Because the model is trained, deployed, and stored, it can be used for scoring without having to call the R or Python interpreter. As such, the overhead of multiple process interactions is reduced, resulting in faster prediction performance.
 
 To use native scoring, call the `PREDICT` T-SQL function and pass the following required inputs:
 
 + A compatible model based on a supported algorithm.
-+ Input data, typically defined as a SQL query.
++ Input data, typically defined as a T-SQL query.
 
 The function returns predictions for the input data, together with any columns of source data that you want to pass through.
 
 ## Prerequisites
 
-`PREDICT` is available on all editions of SQL Server 2017 and later on Windows and Linux, Azure SQL Managed Instance, Azure SQL Database, Azure SQL Edge, and Azure Synapse Analytics, and is enabled by default. You do not need to install R, Python, or enable additional features.
+`PREDICT` is available on:
+
++ All editions of SQL Server 2017 and later on Windows and Linux
++ Azure SQL Managed Instance
++ Azure SQL Database
++ Azure SQL Edge
++ Azure Synapse Analytics
+
+The function is enabled by default. You do not need to install R, Python, or enable additional features.
 
 ## Supported models
 
@@ -231,3 +239,5 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 
 + [PREDICT T-SQL function](../../t-sql/queries/predict-transact-sql.md)
 + [SQL machine learning documentation](../index.yml)
++ [Machine learning and AI with ONNX in SQL Edge](/azure/azure-sql-edge/onnx-overview)
++ [Deploy and make predictions with an ONNX model in Azure SQL Edge](/azure/azure-sql-edge/deploy-onnx)

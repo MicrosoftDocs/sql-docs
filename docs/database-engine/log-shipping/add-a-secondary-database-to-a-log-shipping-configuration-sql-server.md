@@ -1,6 +1,6 @@
 ---
 title: "Add log shipping secondary"
-description: Describes how to add a secondary database to an existing log shipping configuration. 
+description: Describes how to add a secondary database to an existing log shipping configuration by using SQL Server Management Studio or Transact-SQL in SQL Server.
 ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql

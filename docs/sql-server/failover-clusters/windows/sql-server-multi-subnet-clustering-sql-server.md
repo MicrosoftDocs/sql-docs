@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Multi-Subnet Clustering"
-description: Learn about configuring a SQL Server failover cluster instance in a multi-subnet environment. 
+description: Learn about configuring a SQL Server failover cluster instance in a multi-subnet environment, which provides disaster recovery in addition to high availability.
 ms.custom: seo-lt-2019
 ms.date: "09/01/2016"
 ms.prod: sql

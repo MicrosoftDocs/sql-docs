@@ -32,13 +32,14 @@ Returns a row for each active worker account that is running an external script.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**unique identifier**|ID of the process that sent the external script request. This corresponds to the process ID as received by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**unique identifier**|ID of the process that sent the external script request. This corresponds to the process ID as received by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].|  
 |language|**nvarchar**|Keyword that represents a supported script language. |  
 |degree_of_parallelism|**int**|Number indicating the number of parallel processes that were created. This value might be different from the number of parallel processes that were requested.|  
 |external_user_name|**nvarchar**|The Windows worker account under which the script was executed.|  
   
 ## Permissions
- Requires VIEW SERVER STATE permission on server.  
+
+ Requires `VIEW SERVER STATE` permission on server.  
   
 > [!NOTE]
 > Users who run external scripts must have the additional permission `EXECUTE ANY EXTERNAL SCRIPT`, however, this DMV can be used by administrators without this permission. 
@@ -74,7 +75,8 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
 ## See also
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
- [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
- [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
+
++ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
++ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
++ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  

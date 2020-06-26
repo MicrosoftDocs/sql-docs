@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Encryption | Microsoft Docs"
+description: Use these resources to understand how SQL Server uses encryption to enhance security for your databases.
 ms.custom: ""
 ms.date: "05/15/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
+description: Get acquainted with the service accounts that are used to start and run services in SQL Server. See how to configure them and assign appropriate permissions.
 ms.custom: contperfq4
 ms.date: "03/17/2020"
 ms.prod: sql

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Database Engine Features and Tasks
   Find information that anyone-designer, developer, analyst, or administrator-requires to build [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases.  

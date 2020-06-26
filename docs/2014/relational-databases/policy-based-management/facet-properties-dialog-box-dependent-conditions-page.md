@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Facet Properties Dialog Box, Dependent Conditions Page
   Use this dialog box to display a list of conditions that currently reference this Policy-Based Management facet.  

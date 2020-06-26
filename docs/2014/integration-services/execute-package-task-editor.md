@@ -11,9 +11,8 @@ f1_keywords:
   - "sql12.dts.designer.executepackagetask.package.f1"
   - "sql12.dts.designer.executepackagetask.general.f1"
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Execute Package Task Editor
   Use the Execute Package Task Editor to configure the Execute Package Task. The Execute Package task extends the enterprise capabilities of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.  

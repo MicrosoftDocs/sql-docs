@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Stored Procedure Properties (General Page)
   Displays information about a stored procedure. All information is read-only.  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Publication Information, All Subscriptions (Snapshot Publication)
   The **All Subscriptions** tab displays information on all subscriptions to the selected snapshot publication.  

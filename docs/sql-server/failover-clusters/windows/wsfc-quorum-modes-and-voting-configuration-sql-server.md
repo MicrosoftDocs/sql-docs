@@ -1,6 +1,6 @@
 ---
 title: "WSFC quorum modes & voting configuration"
-descriptoin: "A description of the quroum modes and voting configuration used by the Windows Server Failover Cluster with a SQL Server failover cluster instance, or an Always On availability group. "
+description: Learn about quorum modes and voting used by the Windows Server Failover Cluster with a SQL Server failover cluster instance or an Always On availability group.
 ms.custom: "seo-lt-2019"
 ms.date: "10/03/2016"
 ms.prod: sql

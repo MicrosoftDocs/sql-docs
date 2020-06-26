@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Warnings (Database Designer) (Analysis Services - Multidimensional Data)
   Use the **Warnings** tab to view and dismiss rules globally, and to view and re-enable specific instances of dismissed warnings. The **Warnings** tab displays two grids: **Design Warning Rules** and **Dismissed Warnings**.  

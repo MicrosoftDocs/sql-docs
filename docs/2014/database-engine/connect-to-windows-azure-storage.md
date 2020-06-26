@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Connect to Azure Storage
   Use the **Azure Storage Connection** dialog to specify a storage account and validate your connection to Azure.  

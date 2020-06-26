@@ -4,7 +4,12 @@ titleSuffix: SQL machine learning
 description: Learn how to use native scoring with the PREDICT T-SQL function to generate prediction values for new data inputs in near-real-time. 
 ms.prod: sql
 ms.technology: machine-learning-services
+<<<<<<< HEAD
 ms.date: 06/16/2020
+=======
+
+ms.date: 08/15/2018  
+>>>>>>> 55b75ea5999631964c09234481861ccf069a41e0
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

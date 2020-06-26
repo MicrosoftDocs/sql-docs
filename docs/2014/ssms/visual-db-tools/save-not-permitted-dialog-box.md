@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Save (Not Permitted) Dialog Box
   The **Save** (Not Permitted) dialog box warns you that saving changes is not permitted because the changes you have made require the listed tables to be dropped and re-created.  

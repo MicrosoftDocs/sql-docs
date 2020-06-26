@@ -1,5 +1,6 @@
 ---
 title: "Client Network Configuration | Microsoft Docs"
+description: Find out how client computers connect to an instance of SQL Server on a network. Learn about the tools that you can use to manage clients.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

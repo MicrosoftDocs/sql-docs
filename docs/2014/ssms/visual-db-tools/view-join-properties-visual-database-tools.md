@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # View Join Properties (Visual Database Tools)
   You can see a collection of properties for a view in the Properties window.  

@@ -1,5 +1,6 @@
 ---
 title: "Configure the user connections Server Configuration Option | Microsoft Docs"
+description: 'Find out about the "user connections" option. See how it can help you avoid overloading an instance of SQL Server with too many concurrent connections.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

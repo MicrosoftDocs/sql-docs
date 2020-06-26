@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Replication Subscription Properties 
 This section provides information on the **Subscription Properties** dialog box. 

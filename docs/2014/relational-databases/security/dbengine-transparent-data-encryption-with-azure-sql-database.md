@@ -8,7 +8,6 @@ ms.technology: security
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Transparent Data Encryption with Azure SQL Database
 See [Transparent Data Encryption with Azure SQL Database](../../database-engine/transparent-data-encryption-with-azure-sql-database.md).

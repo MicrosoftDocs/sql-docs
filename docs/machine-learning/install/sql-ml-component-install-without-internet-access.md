@@ -2,10 +2,10 @@
 title: Install without internet access
 description: Install SQL Server machine learning R and Python on computers isolated behind a network firewall.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
   
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019

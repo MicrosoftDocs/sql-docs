@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Lesson 3: Write a Full Database Backup to the Azure Blob Storage Service
   This lesson demonstrates the use of tsql statement to perform a full database backup to Azure Blob storage service.  

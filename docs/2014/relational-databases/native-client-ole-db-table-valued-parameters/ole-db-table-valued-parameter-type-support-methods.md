@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # OLE DB Table-Valued Parameter Type Support (Methods)
   The following standard OLE DB methods support table-valued parameters:  

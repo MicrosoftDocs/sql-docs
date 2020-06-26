@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # PropertyName Property (ClientNetworkProtocolProperty Class)
   Gets the name of the current property referenced by the [PropertyIdx Property (ClientNetworkProtocolProperty Class)](clientnetworkprotocolproperty-class.md) property value.  

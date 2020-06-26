@@ -1,5 +1,6 @@
 ---
 title: Validation Stored Procedure
+description: Learn how to use the mdm.udpValidateModel stored procedure to apply business rules to all members in the model version in Master Data Services.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

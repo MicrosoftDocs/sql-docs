@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Annotation Interpretation (SQLXML 4.0)
   The topics in this section describe how XML Bulk Load interprets annotations in the XSD schema. The behavior described here also applies to the annotations in the XDR schema.  

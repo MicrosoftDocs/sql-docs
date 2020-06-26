@@ -2,7 +2,7 @@
 title: "R + T-SQL tutorial: Train model"
 description: Tutorial showing how to train, serialize, and save an R model using SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/16/2018  
 ms.topic: tutorial

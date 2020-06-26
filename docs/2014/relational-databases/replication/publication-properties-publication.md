@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Replication Publication Properties 
   This section provides information on all pages of the **Publication Properties** dialog box. 

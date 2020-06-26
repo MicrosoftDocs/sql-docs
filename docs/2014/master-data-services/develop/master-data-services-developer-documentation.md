@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Developer&#39;s Guide (Master Data Services)
   Find information about how to write code to customize the way you and your users interact with [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Learn how to:  

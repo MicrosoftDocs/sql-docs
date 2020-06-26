@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "viewing packages"
   - "connections [Integration Services], packages"
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # View Integration Services Packages in SQL Server Management Studio (SSIS Service)
     

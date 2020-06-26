@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Schema Rowset Support (OLE DB)
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider also supports returning schema information from a linked server when processing [!INCLUDE[tsql](../../../includes/tsql-md.md)] distributed queries.  

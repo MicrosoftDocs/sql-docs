@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Change Font Color, Size, and Style
   You can customize the way the text appears in the Editor as well as other places in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

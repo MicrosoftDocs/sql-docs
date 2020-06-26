@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Install SQL Server PowerShell
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will stop if it detects that you have selected [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that include PowerShell components, but Windows PowerShell 2.0 is not installed. You must install PowerShell by using the Windows Management Framework, and then rerun Setup.  

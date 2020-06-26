@@ -1,5 +1,6 @@
 ---
 title: "Use RAW Mode with FOR XML | Microsoft Docs"
+description: Learn how using RAW mode with the FOR XML clause in an SQL query transforms the resulting XML data.
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Script Task Editor"
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Script Task Editor (General Page)
   Use the **General** page of the **Script Task Editor** dialog box to name and describe the Script task.  

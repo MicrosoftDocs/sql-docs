@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfiledestinationcolumns.f1"
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Raw File Destination Editor (Columns Page)
   Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  

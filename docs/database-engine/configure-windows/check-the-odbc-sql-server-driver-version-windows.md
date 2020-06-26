@@ -1,5 +1,6 @@
 ---
 title: "Check the ODBC SQL Server Driver Version (Windows) | Microsoft Docs"
+description: Discover how to use the Windows ODBC Data Source Administrator to check the version of the ODBC drivers that are installed on your computer.
 ms.custom: ""
 ms.date: "11/07/2016"
 ms.prod: sql

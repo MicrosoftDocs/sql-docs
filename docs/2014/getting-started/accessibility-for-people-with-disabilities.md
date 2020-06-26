@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Accessibility for People with Disabilities
   [!INCLUDE[msCoName](../includes/msconame-md.md)] is committed to making its products and services easier for everyone to use. This topic provides information about the following features, products, and services that make products in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server family more accessible for people with disabilities.  

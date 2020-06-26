@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
   Use this dialog box to view and change the backup preferences of the selected availability group.  

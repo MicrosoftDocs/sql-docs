@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "discontinued functionality [Integration Services]"
   - "Integration Services, backward compatibility"
 ms.assetid: 5ee40ceb-37b9-47a9-b90d-ce1de74b10f7
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Discontinued Integration Services Functionality in SQL Server 2014
   This topic describes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are no longer available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

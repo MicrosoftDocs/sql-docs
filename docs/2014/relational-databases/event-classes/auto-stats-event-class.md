@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Auto Stats Event Class
   The **Auto Stats** event class indicates that an automatic updating of index and column statistics has occurred.  

@@ -1,5 +1,6 @@
 ---
 title: "XQuery Expressions | Microsoft Docs"
+description: View information about XQuery expressions that includes descriptions of each type of expression and how to use them.
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql

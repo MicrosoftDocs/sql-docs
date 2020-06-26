@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Flat File Connection Manager Editor"
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Connection Manager Editor (Advanced Page)
   Use the **Advanced** page of the **Flat File Connection Manager Editor** dialog box to set properties that specify how Integration Services reads and writes data in flat files. You can change the names of columns in the flat file, and set properties that include data type and delimiters for each column in the file.  

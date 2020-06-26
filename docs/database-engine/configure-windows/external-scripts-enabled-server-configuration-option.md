@@ -1,5 +1,6 @@
 ---
 title: "External Scripts Enabled server configuration option | Microsoft Docs"
+description: Learn about the external scripts enabled option in SQL Server. After turning it on, you can execute external scripts in supported languages such as R or Python.
 ms.date: "05/27/2020"
 ms.prod: sql
 ms.technology: machine-learning

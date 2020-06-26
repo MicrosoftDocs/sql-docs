@@ -1,5 +1,6 @@
 ---
 title: "Using ADO"
+description: To use new features introduced in SQL Server 2005, existing applications that use ADO should use the SQL Server Native Client OLE DB provider.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

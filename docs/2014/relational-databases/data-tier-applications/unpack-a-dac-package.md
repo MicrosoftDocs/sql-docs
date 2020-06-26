@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Unpack a DAC Package
   Use the Unpack Data-tier Application dialog box to unzip the scripts and files from a data-tier application (DAC) package. The scripts and files are placed in a folder where they can be reviewed before the package is used to deploy the DAC into a production system. The contents of one DAC can also be compared with the contents of another package unpacked to another folder.  

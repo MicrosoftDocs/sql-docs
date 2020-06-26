@@ -1,5 +1,6 @@
 ---
 title: "Atomization (XQuery) | Microsoft Docs"
+description: Learn about the process of atomization in XQuery in which the typed values of an item are extracted.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

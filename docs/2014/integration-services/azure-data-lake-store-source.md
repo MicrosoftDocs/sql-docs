@@ -11,8 +11,7 @@ f1_keywords:
   - "SQL11.DTS.DESIGNER.AFPADLSSRC.F1"
 ms.assetid: 7d9e8457-62aa-4aea-98ee-7d1121dfae4f
 author: yualan
-ms.author: janinez
-manager: craigg
+ms.author: chugu
 ---
 # Azure Data Lake Store Source
   The **Azure Data Lake Store Source** component enables an SSIS package to read data from an Azure Data Lake Store. The supported file formats are: Text and Avro.

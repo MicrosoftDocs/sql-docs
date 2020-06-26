@@ -1,5 +1,6 @@
 ---
 title: "Cross-Database Queries | Microsoft Docs"
+description: Learn how to use memory-optimized table variables in cross-database queries to move data from one database to memory-optimized tables in another in SQL Server.
 ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: sql

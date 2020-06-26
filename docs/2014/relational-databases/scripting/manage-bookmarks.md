@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Manage Bookmarks
   While you are working in a code editor, the **Bookmarks** window allows you to create links to specific lines of code within your document. You can display this window from the **View** menu.  

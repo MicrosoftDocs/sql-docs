@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLFetch
   SQLFetch supports enhanced date and time features.  

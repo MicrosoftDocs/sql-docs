@@ -8,7 +8,6 @@ ms.technology: "database-engine"
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
 ---
 # sqlcmd How-to Topics
 

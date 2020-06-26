@@ -1,5 +1,6 @@
 ---
 title: "set working set size Server Configuration Option | Microsoft Docs"
+description: 'View information on the "set working set size" configuration option. This setting has no effect because its functionality is no longer available in SQL Server.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

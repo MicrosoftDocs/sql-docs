@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Import Policies Dialog Box
   Use this dialog box to import one or more policies (and their referenced condition) that are saved as XML files, into the current [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance.  

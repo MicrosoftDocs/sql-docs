@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a5f353fa-1bb4-495c-bf86-77cfa5bc6c78
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Verify Uninstall Options
   Verify your selection, and then click **Next** to continue.  

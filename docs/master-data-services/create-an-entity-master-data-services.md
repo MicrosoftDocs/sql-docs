@@ -1,5 +1,6 @@
 ---
 title: Create an Entity
+description: Learn how to create an entity in Master Data Services to contain members and their attributes. You must have permissions for the System Administration area.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Changes to behavior in syslockinfo and sp_lock
   **syslockinfo** and **sp_lock** may return unexpected values. They may also return additional rows, whereas previous versions of **syslockinfo** and **sp_lock** returned a maximum of two rows per lock resource.  

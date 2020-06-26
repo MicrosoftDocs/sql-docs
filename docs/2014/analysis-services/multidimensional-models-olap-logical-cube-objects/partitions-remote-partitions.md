@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "backing up remote partitions [Analysis Services]"
   - "partitions [Analysis Services], storage"
   - "storing data [Analysis Services], partitions"
-  - "MasterDataSourceID property"
   - "remote partitions [Analysis Services]"
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan

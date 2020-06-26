@@ -2,7 +2,7 @@
 title: "Scalar UDF Inlining in Microsoft SQL Server | Microsoft Docs"
 description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019)."
 ms.custom: ""
-ms.date: 05/20/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -155,6 +155,9 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 -	The UDF does not reference XML methods (restriction added in Microsoft SQL Server 2019 CU4).
 -	The UDF does not contain a SELECT with ORDER BY without a "TOP 1" (restriction added in Microsoft SQL Server 2019 CU4).
 -	The UDF does not contain a SELECT query that performs an assignment in conjunction with the ORDER BY clause (e.g. SELECT @x = @x +1 FROM table ORDER BY column_name, restriction added in Microsoft SQL Server 2019 CU4).
+- The UDF does not contain multiple RETURN statements (restriction added in SQL Server 2019 CU5).
+- The UDF is not called from a RETURN statement (restriction added in SQL Server 2019 CU5).
+- The UDF does not reference the STRING_AGG function (restriction added in SQL Server 2019 CU5). 
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) is not supported for inlining.
 

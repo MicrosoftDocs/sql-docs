@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Running Stored Procedures
   A stored procedure is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports:  

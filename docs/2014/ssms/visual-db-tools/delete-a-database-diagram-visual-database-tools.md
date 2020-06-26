@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Delete a Database Diagram (Visual Database Tools)
   When you no longer need a database diagram, you can delete it.  

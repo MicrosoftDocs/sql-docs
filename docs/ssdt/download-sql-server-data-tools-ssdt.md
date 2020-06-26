@@ -8,7 +8,6 @@ keywords: "install ssdt, download ssdt, latest ssdt"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: dzsquared
 ms.author: drskwier
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
@@ -74,10 +73,10 @@ The installer lists available Visual Studio instances to add SSDT tools. If Visu
 
 ## SSDT for VS 2017 (standalone installer)
 
-**[![icon](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.5)](https://go.microsoft.com/fwlink/?linkid=2131035)**
+**[Download SSDT for Visual Studio 2017 (15.9.5)](https://go.microsoft.com/fwlink/?linkid=2131035)**
 
 > [!IMPORTANT]
-> * Before installing SSDT for Visual Studio 2017 (15.9.5), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
+> * Before installing SSDT for Visual Studio 2017 (15.9.5), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances. 
 > * Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=100619).
 > * To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL Server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
 >    * [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -97,17 +96,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](https://docs.micr
 
 This release of **SSDT for VS 2017** can be installed in the following languages:
 
-* [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [French]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [German]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [Italian]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [Japanese]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [Korean]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [Russian]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [Spanish]( https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
+* [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
+* [English (United States)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
+* [French](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
+* [German](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
+* [Italian](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
+* [Japanese](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
+* [Korean](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
+* [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
+* [Russian](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
+* [Spanish](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
 
 ### Considerations and limitations
 
@@ -134,7 +133,7 @@ After completing the previous steps, the following steps below can be done **off
 1. Run `vs_setup.exe --NoWeb` to install the VS2017 Shell and SQL Server Data Project.
 
 2. From the layouts folder, run `SSDT-Setup-ENU.exe /install` and select SSIS/SSRS/SSAS.
-   * For an unattended installation, run `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`.
+   a. For an unattended installation, run `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`.
 
 For available options, run `SSDT-Setup-ENU.exe /help`
 
@@ -157,6 +156,16 @@ SSDT for Visual Studio 2015 and 2017 both use DacFx 17.4.1: [Download Data-Tier 
 
 To download and install SSDT for Visual Studio 2015, or an older version of SSDT, see [Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md).
 
+## See Also
+
+* [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
+
+* [SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)
+
+* [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)
+
+* [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+
 ## Next steps
 
 After installing SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT.
@@ -170,13 +179,3 @@ After installing SSDT, work through these tutorials to learn how to create datab
 * [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-## See Also
-
-* [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
-
-* [SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)
-
-* [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)
-
-* [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

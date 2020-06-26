@@ -1,5 +1,6 @@
 ---
 title: "View or Change Server Properties (SQL Server) | Microsoft Docs"
+description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL Server Configuration Manager to view or change the properties of an instance of SQL Server.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability

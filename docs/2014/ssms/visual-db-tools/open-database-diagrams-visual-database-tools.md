@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Open Database Diagrams (Visual Database Tools)
   You can open database diagrams to view or edit the diagram's structure.  

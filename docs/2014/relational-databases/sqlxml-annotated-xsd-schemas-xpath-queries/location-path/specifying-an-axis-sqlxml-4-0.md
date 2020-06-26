@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Specifying an Axis (SQLXML 4.0)
     

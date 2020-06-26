@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "For Each Item Columns dialog box"
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # For Each Item Columns Dialog Box UI Reference
   Use the **For Each Item Columns** dialog box to define the columns in the items that the Foreach Item enumerator enumerates.  

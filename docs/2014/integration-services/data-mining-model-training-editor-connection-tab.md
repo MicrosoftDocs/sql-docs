@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Mining Model Training Editor"
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Model Training Editor (Connection Tab)
   Use the **Connection** page of the **Data Mining Model Training Editor** dialog box to select a mining model to train.  

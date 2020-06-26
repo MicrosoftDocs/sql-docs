@@ -1,5 +1,6 @@
 ---
 title: "Generate an Inline XSD Schema | Microsoft Docs"
+description: Learn how to generate an inline XSD schema by using the XMLSCHEMA option in the FOR XML clause of an SQL query.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

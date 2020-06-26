@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "date data types"
   - "date and time formats for fast parse"
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Date and Time Formats
   Fast parse provides a fast, simple set of routines for parsing data. Fast parse supports the following formats for date and time data types.  

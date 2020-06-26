@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)
   When used with Microsoft SQL Server 2005, the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  

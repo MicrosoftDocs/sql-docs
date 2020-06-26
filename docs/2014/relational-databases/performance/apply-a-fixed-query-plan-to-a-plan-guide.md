@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Apply a Fixed Query Plan to a Plan Guide
   You can apply a fixed query plan to a plan guide of type OBJECT or SQL. Plan guides that apply a fixed query plan are useful when you know about an existing execution plan that performs better than the one selected by the optimizer for a particular query.  

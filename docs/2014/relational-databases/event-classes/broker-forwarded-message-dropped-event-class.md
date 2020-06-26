@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Broker:Forwarded Message Dropped Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a Broker:Forwarded Message Dropped event when Service Broker drops a message that was intended to be forwarded.  

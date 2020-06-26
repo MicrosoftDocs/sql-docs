@@ -1,5 +1,6 @@
 ---
 title: "Handling Errors and Messages | Microsoft Docs"
+description: Learn about what diagnostic information is returned when an application calls an ODBC function, including success or failure and detailed information.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

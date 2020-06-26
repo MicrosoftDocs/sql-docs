@@ -1,5 +1,6 @@
 ---
 title: "Connect to a SQL Server Utility | Microsoft Docs"
+description: Learn how to connect to a SQL Server Utility so that you can manage SQL Server resource health. You can connect through SQL Server Management Studio (SSMS).
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

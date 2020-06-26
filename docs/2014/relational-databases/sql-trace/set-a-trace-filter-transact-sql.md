@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SetBoolValue Method (SqlServiceAdvancedProperty Class)
   Sets the Boolean value of a property.  

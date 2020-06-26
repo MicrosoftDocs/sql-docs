@@ -1,5 +1,6 @@
 ---
 title: "Additional Sample XQueries Against the xml Data Type | Microsoft Docs"
+description: View samples that show how to use XQuery queries against the xml data type.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

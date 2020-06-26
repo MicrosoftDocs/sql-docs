@@ -1,5 +1,6 @@
 ---
 title: "Log Shipping Tables and Stored Procedures | Microsoft Docs"
+description: Review all the tables and stored procedures associated with a log shipping configuration. Each server stores log shipping tables in msdb.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

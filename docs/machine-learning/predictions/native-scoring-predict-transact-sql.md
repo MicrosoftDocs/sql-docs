@@ -15,13 +15,13 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||
 # Native scoring using the PREDICT T-SQL function with SQL machine learning
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md.md)]
 
-Learn how to use native scoring with the [PREDICT T-SQL function](../../t-sql/queries/predict-transact-sql.md) to generate prediction values for new data inputs in near-real-time. Native scoring requires that you have an already trained model.
+Learn how to use native scoring with the [PREDICT T-SQL function](../../t-sql/queries/predict-transact-sql.md) to generate prediction values for new data inputs in near-real-time. Native scoring requires that you have an already-trained model.
 
 The `PREDICT` function uses the native C++ extension capabilities in [SQL machine learning](../index.yml). This methodology offers the fastest possible processing speed of forecasting and prediction workloads and support models in [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) format or models trained using the [RevoScaleR](../r/ref-r-revoscaler.md) and [revoscalepy](../python/ref-py-revoscalepy.md) packages.
 
 ## How native scoring works
 
-Native scoring uses libraries that can read model in ONNX or predefined binary format, and generate scores for new data inputs that you provide. Because the model is trained, deployed, and stored, it can be used for scoring without having to call the R or Python interpreter. As such, the overhead of multiple process interactions is reduced, resulting in faster prediction performance.
+Native scoring uses libraries that can read models in ONNX or a predefined binary format, and generate scores for new data inputs that you provide. Because the model is trained, deployed, and stored, it can be used for scoring without having to call the R or Python interpreter. This means that the overhead of multiple process interactions is reduced, resulting in faster prediction performance.
 
 To use native scoring, call the `PREDICT` T-SQL function and pass the following required inputs:
 
@@ -40,11 +40,11 @@ The function returns predictions for the input data, together with any columns o
 + Azure SQL Edge
 + Azure Synapse Analytics
 
-The function is enabled by default. You do not need to install R, Python, or enable additional features.
+The function is enabled by default. You do not need to install R or Python, or enable additional features.
 
 ## Supported models
 
-`PREDICT` model format support depends on the SQL platform you perform native scoring on. See the table below for which model formats are supported on which platform.
+The model formats supported by the `PREDICT` function depends on the SQL platform on which you perform native scoring. See the table below to see which model formats are supported on which platform.
 
 | Platform | ONNX model format | RevoScale model format |
 |-|-|-|
@@ -156,7 +156,7 @@ GO
 DROP TABLE IF EXISTS iris_rx_data;
 GO
 CREATE TABLE iris_rx_data (
-  "Sepal.Length" float not null, "Sepal.Width" float not null
+    "Sepal.Length" float not null, "Sepal.Width" float not null
   , "Petal.Length" float not null, "Petal.Width" float not null
   , "Species" varchar(100) null
 );

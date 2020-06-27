@@ -45,7 +45,7 @@ Products whose data or object models can be represented in a hierarchy use Windo
 |`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Policy-based management objects, such as policies and facets.|  
 |`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Registered server objects, such as server groups and registered servers.|  
 |`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|Utility objects, such as managed instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
-|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|Data-tier application objects such as DAC packages, and operations such as deploying a DAC.|  
+|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|Data-tier application objects such as DAC packages, and operations such as deploying a DAC.|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|Data collector objects, such as collection sets and configuration stores.|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objects such as projects, packages, and environments.|  
 |`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|SQL Server Extended Events|

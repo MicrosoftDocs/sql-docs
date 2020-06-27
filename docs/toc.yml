@@ -19,6 +19,8 @@
       href: sql-server/what-s-new-in-sql-server-2016.md
   - name: Applies to demo
     items:
+      - name: Example a
+        href: appliesto-demo/example-a.md
       - name: Example g
         href: appliesto-demo/example-g.md
       - name: Example 7

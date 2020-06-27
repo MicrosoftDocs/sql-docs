@@ -34,7 +34,7 @@ ms.author: sstein
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Policy-based management objects, such as policies and facets.|  
 |SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Registered server objects, such as server groups and registered servers.|  
 |SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|Utility objects, such as managed instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|Data-tier application objects such as DAC packages, and operations such as deploying a DAC.|  
+|SQLSERVER:\DAC|[Microsoft.SqlServer.Management.DAC](/dotnet/api/microsoft.sqlserver.management.utility.deployeddac)|Data-tier application objects such as DAC packages, and operations such as deploying a DAC.|  
 |SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|Data collector objects, such as collection sets and configuration stores.|  
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objects such as projects, packages, and environments.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects such as cubes, aggregations, and dimensions.|  

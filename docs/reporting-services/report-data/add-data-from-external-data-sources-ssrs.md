@@ -1,5 +1,6 @@
 ---
 title: "Add Data from External Data Sources | Microsoft Docs"
+description: Use this information to learn about adding data to reports from external data sources and how reports work with data access technologies.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data

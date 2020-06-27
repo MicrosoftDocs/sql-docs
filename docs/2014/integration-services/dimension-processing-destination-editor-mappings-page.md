@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Dimension Processing Destination Editor"
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Dimension Processing Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Dimension Processing Destination Editor** dialog box to map input columns to dimension columns.  

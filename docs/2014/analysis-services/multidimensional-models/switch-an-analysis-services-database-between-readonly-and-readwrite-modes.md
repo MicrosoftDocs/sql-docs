@@ -161,7 +161,7 @@ ms.author: owend
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.AnalysisServices.Database.Detach*](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](database-storage-location.md)   
  [Database ReadWriteModes](database-readwritemodes.md)   

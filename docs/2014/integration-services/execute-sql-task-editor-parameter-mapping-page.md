@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Execute SQL Task Editor"
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Execute SQL Task Editor (Parameter Mapping Page)
   Use the **Parameter Mapping** page of the **Execute SQL Task Editor** dialog box to map variables to parameters in the SQL statement.  

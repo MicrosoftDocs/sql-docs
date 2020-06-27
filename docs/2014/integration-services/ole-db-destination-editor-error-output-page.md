@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "OLE DB Destination Editor"
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # OLE DB Destination Editor (Error Output Page)
   Use the **Error Output** page of the **OLE DB Destination Editor** dialog box to specify error handling options.  

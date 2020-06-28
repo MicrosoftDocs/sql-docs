@@ -42,7 +42,7 @@ This table lists the implicit conversions that are provided. Other data types ar
 |**real**|`float32`|
 |**smallint**|`int16`|
 |**tinyint**|`uint8`|
-|**DATETIME**|`DATETIME`|Supported with CU6 and above (with **NumPy** arrays of type ```datetime.datetime``` or **Pandas**) The sp_execute_external_script now supports ```DATETIME``` types with fractional seconds.|
+|**DATETIME**|`DATETIME`|Supported with SQL Server 2017 CU6 and above (with **NumPy** arrays of type ```datetime.datetime``` or ```pandas.Timestamp```) The sp_execute_external_script now supports ```DATETIME``` types with fractional seconds.|
 |**varbinary**|`bytes`|
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|

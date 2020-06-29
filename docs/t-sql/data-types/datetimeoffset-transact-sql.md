@@ -25,11 +25,11 @@ ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetimeoffset (Transact-SQL)
-<!--[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]-->
-[!INCLUDE [tsql-appliesto](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [sqlserver2008](../../includes/applies-to-version/sqlserver2008.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)] [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
+
+[!INCLUDE [sql-asdb-asmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asmi-asdw-pdw.md)]
 
 Defines a date that is combined with a time of a day that has time zone awareness and is based on a 24-hour clock.
-  
+
 ## datetimeoffset description
   
 |Property|Value|  

@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sql
 
 <!--[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]-->
 
-[!INCLUDE [sql14-asdb-asdw](../../includes/applies-to-version/sqlv14-asdb-asdw.md)]
+[!INCLUDE [sqlserver2017-asdb-asmi-asdw](../../includes/applies-to-version/sqlserver2017-asdb-asmi-asdw.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. 
  

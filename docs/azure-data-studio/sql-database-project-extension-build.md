@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ---
-# Build and Publish a Project
+# Build and Publish a project
 
 The build process in the SQL Database Projects extension for Azure Data Studio allows for *dacpac* creation in Windows, macOS, and Linux environments. The project can be deployed to a local or cloud environment with the publish process.
 
@@ -33,7 +33,7 @@ After a project is successfully compiled through the build process, the database
 
 In the **Publish Database** dialog that appears, specify a server connection and the database name to be created.
 
-## More information
+## Next steps
 
 - [SQL Database Projects extension for Azure Data Studio](sql-database-project-extension.md)
 - [Data Tier Applications](../relational-databases/data-tier-applications/data-tier-applications.md)

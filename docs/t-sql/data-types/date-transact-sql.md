@@ -23,11 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # date (Transact-SQL)
-[!INCLUDE [tsql-appliesto](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [sqlserver2008](../../includes/applies-to-version/sqlserver2008.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)] [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
+
+[!INCLUDE [sql-asdb-asmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asmi-asdw-pdw.md)]
 
 Defines a date in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
+
 ## date description
   
 |Property|Value|  
@@ -208,7 +210,9 @@ SELECT
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
-  
+
+First introduced in SQL Server 2008.
+
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

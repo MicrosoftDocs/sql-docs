@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services projects, creating"
   - "SSIS projects, creating"
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Create a New Integration Services Project
   This procedure creates a new project and a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solution.  

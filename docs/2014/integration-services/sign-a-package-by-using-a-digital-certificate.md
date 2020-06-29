@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "signing packages [Integration Services]"
   - "signatures [Integration Services]"
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Sign a Package by Using a Digital Certificate
   This topic describes how to sign an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package with a digital certificate. You can use a digital signature, together with other settings, to prevent a package that is not valid from loading and running.  

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "roles [Integration Services]"
   - "db_ssisltduser role"
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Roles (SSIS Service)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the three fixed database-level roles, `db_ssisadmin`, **db_ssisltduser**, and **db_ssisoperator**, for controlling access to packages. Roles can be implemented only on packages that are saved to the `msdb` database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You assign roles to a package using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The role assignments are saved to the `msdb` database.  

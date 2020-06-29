@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure OLE DB Connection Manager dialog box"
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Configure OLE DB Connection Manager
   Use the **Configure OLE DB Connection Manager** dialog box to add a connection to a data source, which can be either a new connection or a copy of an existing connection.  

@@ -22,7 +22,7 @@ Key actions include:
 ## Install the SQL Server Agent extension
 
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
-2. Select an available extension to view it's details.
+2. Select an available extension to view its details.
 
    ![Install agent](media/extensions/sql-server-agent-extension/install-sql-agent.png)
 

@@ -17,11 +17,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asmi-asdw-pdw.md)]
+[!INCLUDE [sqlserver2019-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asdw.md)]
 
 This function returns the approximate number of unique non-null values in a group. 
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elem[!INCLUDE [sql-asdb-asdbmi-asdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]ents/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

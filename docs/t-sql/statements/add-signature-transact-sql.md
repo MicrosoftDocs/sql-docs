@@ -6,7 +6,6 @@ ms.topic: "language-reference"
 f1_keywords: 
   - "ADD SIGNATURE"
   - "ADD_SIGNATURE_TSQL"
-dev_langs: "TSQL"
 helpviewer_keywords: 
   - "ADD SIGNATURE statement"
   - "adding digital signatures"
@@ -17,7 +16,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 06/05/2020
+ms.date: 06/10/2020
 ---
 
 # ADD SIGNATURE (Transact-SQL)
@@ -57,7 +56,7 @@ Is the class of the module to which the signature is added. The default for sche
  Is the name of a certificate with which to sign or countersign the stored procedure, function, assembly, or trigger.  
   
  WITH PASSWORD ='*password*'  
- Is the password that is required to decrypt the private key of the certificate or asymmetric key. This clause is only required if the private key is not protected by the database master key.  
+ Is the password that is required to decrypt the private key of the certificate or asymmetric key. This clause is only required if the private key isn't protected by the database master key.  
   
  SIGNATURE =*signed_blob*  
  Specifies the signed, binary large object (BLOB) of the module. This clause is useful if you want to ship a module without shipping the private key. When you use this clause, only the module, signature, and public key are required to add the signed binary large object to a database. *signed_blob* is the blob itself in hexadecimal format.  
@@ -86,13 +85,13 @@ The module being signed or countersigned and the certificate or asymmetric key u
 >  When recreating a procedure for signature, all the statements in the original batch must match recreation batch. If any portion of the batch differs, even in spaces or comments, the resultant signature will be different.  
   
 ## Countersignatures  
- When executing a signed module, the signatures will be temporarily added to the SQL token, but the signatures are lost if the module executes another module or if the module terminates execution. A countersignature is a special form of signature. By itself, a countersignature does not grant any permissions, however, it allows signatures made by the same certificate or asymmetric key to be kept for the duration of the call made to the countersigned object.  
+ When executing a signed module, the signatures will be temporarily added to the SQL token, but the signatures are lost if the module executes another module or if the module terminates execution. A countersignature is a special form of signature. By itself, a countersignature doesn't grant any permissions, however, it allows signatures made by the same certificate or asymmetric key to be kept for the duration of the call made to the countersigned object.  
   
- For example, presume that user Alice calls procedure ProcSelectT1ForAlice, which calls procedure procSelectT1, which selects from table T1. Alice has EXECUTE permission on ProcSelectT1ForAlice and procSelectT1, but she does not have SELECT permission on T1, and no ownership chaining is involved in this entire chain. Alice cannot access table T1, either directly, or through the use of ProcSelectT1ForAlice and procSelectT1. Since we want Alice to always use ProcSelectT1ForAlice for access, we don't want to grant her permission to execute procSelectT1. How can we accomplish this?  
+ For example, presume that user Alice calls procedure ProcSelectT1ForAlice, which calls procedure procSelectT1, which selects from table T1. Alice has EXECUTE permission on ProcSelectT1ForAlice and procSelectT1, but she doesn't have SELECT permission on T1, and no ownership chaining is involved in this entire chain. Alice cannot access table T1, either directly, or through the use of ProcSelectT1ForAlice and procSelectT1. Since we want Alice to always use ProcSelectT1ForAlice for access, we don't want to grant her permission to execute procSelectT1. How can we accomplish this?  
   
 -   If we sign procSelectT1, such that procSelectT1 can access T1, then Alice can invoke procSelectT1 directly and she doesn't have to call ProcSelectT1ForAlice.  
   
--   We could deny EXECUTE permission on procSelectT1 to Alice, but then Alice would not be able to call procSelectT1 through ProcSelectT1ForAlice either.  
+-   We could deny EXECUTE permission on procSelectT1 to Alice, but then Alice would not be able to call procSelectT1 through ProcSelectT1ForAlice.
   
 -   Signing ProcSelectT1ForAlice would not work by itself, because the signature would be lost in the call to procSelectT1.  
   

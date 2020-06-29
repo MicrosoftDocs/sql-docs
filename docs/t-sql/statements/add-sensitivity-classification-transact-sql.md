@@ -3,13 +3,12 @@ title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
-ms.custom: ""
-ms.author: datrigan
 author: DavidTrigano
+ms.author: datrigan
+ms.reviewer: vanto
 f1_keywords:
   - "ADD SENSITIVITY CLASSIFICATION"
   - "ADD_SENSITIVITY_CLASSIFICATION"
-dev_langs: "TSQL"
 helpviewer_keywords:
   - "ADD SENSITIVITY CLASSIFICATION statement"
   - "add labels"
@@ -20,10 +19,8 @@ helpviewer_keywords:
   - "information types"
   - "data classification"
   - "rank"
-ms.author: giladm
-author: giladmit
 ms.custom: ""
-ms.date: 03/25/2019
+ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ---
 

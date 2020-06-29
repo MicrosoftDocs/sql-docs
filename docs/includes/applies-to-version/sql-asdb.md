@@ -8,4 +8,4 @@ ms.author: mikeray
 
 <!--sql-asdb-->
 
-[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [_asdb](../../includes/applies-to-version/_asdb.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE Azure SQL Database](../../includes/applies-to-version/_asdb.md)]

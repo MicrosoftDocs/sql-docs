@@ -8,4 +8,4 @@ ms.author: mikeray
 
 <!--sql-asdb-asmi-asdw-pdw-->
 
-[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [tsql-appliesto](../../includes/ssnoversion-md.md)] [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)]  [!INCLUDE [pdw](pdw.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)] [!INCLUDE [Azure Synapse Analytics (SQL DW)](../../includes/applies-to-version/_asdw.md)] [!INCLUDE [Parallel Data Warehouse](../../includes/applies-to-version/_pdw.md)]

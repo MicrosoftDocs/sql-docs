@@ -1,6 +1,6 @@
 ---
 title: "Upgrade a failover cluster instance"
-description: "Steps to upgrade a Always On failover cluster instance using the installation media." 
+description: "Steps to upgrade a SQL Server Always On failover cluster instance using the installation media." 
 ms.custom: "seo-lt-2019"
 ms.date: "11/21/2019"
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.author: mathoma
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports upgrading an Always On [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance  to a new version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows Server service pack or cumulative update separately on all nodes, with downtime limited to a single manual failover (or two manual failovers if failing back to the original primary).  
   
- Upgrading the Windows Sevrer operating system of a node containing a failover cluster instance is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a Windows Server failover cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] or above, see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
+ Upgrading the Windows Server operating system of a node containing a failover cluster instance is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a Windows Server failover cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] or above, see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
   
  Support details are as follows:  
   
@@ -113,7 +113,7 @@ Follow these steps to upgrade your Always On failover cluster instance in a mult
   
 1.  Follow the steps above to upgrade your failover cluster instance.  
   
-2.  To Add a new node on a different subnet using the AddNode Setup action and confirm the IP address resource dependency to OR on the **Cluster Network Configuration** page. For more information, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-an-Always-On-failover-cluster-instance-setup.md).  
+2.  To add a new node on a different subnet using the AddNode Setup action and confirm the IP address resource dependency to OR on the **Cluster Network Configuration** page. For more information, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-an-Always-On-failover-cluster-instance-setup.md).  
   
 ### To upgrade a multi-subnet failover cluster instance currently using Stretch VLAN to use multi-subnet.  
   

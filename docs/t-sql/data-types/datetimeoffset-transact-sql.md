@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # datetimeoffset (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Defines a date that is combined with a time of a day that has time zone awareness and is based on a 24-hour clock.
 

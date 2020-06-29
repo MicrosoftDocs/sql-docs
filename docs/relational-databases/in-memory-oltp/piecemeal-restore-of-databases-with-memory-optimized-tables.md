@@ -1,5 +1,6 @@
 ---
 title: "Piecemeal restore of databases - memory-optimized tables"
+description: Databases with memory-optimized tables support piecemeal restore in SQL Server. Learn about key scenarios for piecemeal backup and restore.
 ms.custom: seo-dt-2019
 ms.date: "03/06/2017"
 ms.prod: sql

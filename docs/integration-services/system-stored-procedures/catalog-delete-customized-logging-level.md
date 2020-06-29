@@ -23,8 +23,7 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-delete_customized_logging_level [ @level_name = ] level_name  
-  
+catalog.delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## Arguments  

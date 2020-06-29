@@ -4,8 +4,8 @@ description: Use Azure Data Studio with Azure SQL managed instance
 ms.custom: "seodec18"
 ms.date: "10/07/2019"
 ms.reviewer: alanyu, maghan, sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop

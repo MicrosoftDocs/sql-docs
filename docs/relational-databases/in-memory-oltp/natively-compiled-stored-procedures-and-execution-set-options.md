@@ -1,5 +1,6 @@
 ---
 title: "Natively compiled stored procedures & set options"
+description: The SET options of a session do not affect a stored procedure execution, except that certain SET options cause stored procedures to not run.
 ms.custom: seo-dt-2019
 ms.date: "10/26/2017"
 ms.prod: sql

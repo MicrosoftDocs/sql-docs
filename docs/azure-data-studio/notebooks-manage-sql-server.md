@@ -6,8 +6,8 @@ ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.custom: ""
 ms.date: 04/27/2020
 ---

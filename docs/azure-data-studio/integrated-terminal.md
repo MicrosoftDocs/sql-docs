@@ -3,8 +3,8 @@ title: Integrated terminal
 description: Learn about the Integrated terminal in Azure Data Studio.
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
 author: "yualan"

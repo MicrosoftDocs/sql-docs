@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Script an Extended Event Session
   This topic describes how to script an event session. You can export, alter, or drop the event session, or drop and create the event session to the following:  

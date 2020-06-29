@@ -31,7 +31,6 @@ helpviewer_keywords:
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # CLR User-Defined Types
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gives you the ability to create database objects that are programmed against an assembly created in the.NET Framework common language runtime (CLR). Database objects that can take advantage of the rich programming model provided by the CLR include triggers, stored procedures, functions, aggregate functions, and types.  

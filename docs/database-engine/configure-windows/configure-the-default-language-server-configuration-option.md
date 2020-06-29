@@ -1,5 +1,6 @@
 ---
 title: "Configure the default language Server Configuration Option | Microsoft Docs"
+description: Find out about the default language option. See how to configure it to specify the default language that SQL Server uses for all newly created logins.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

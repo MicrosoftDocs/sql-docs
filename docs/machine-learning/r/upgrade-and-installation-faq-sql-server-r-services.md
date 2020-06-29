@@ -2,10 +2,10 @@
 title: Upgrade and installation FAQ
 description: Answers to some common questions about installation of machine learning features in SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
   
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019

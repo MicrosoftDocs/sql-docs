@@ -1,5 +1,6 @@
 ---
 title: "SCM Services - Prevent Automatic Startup of an Instance | Microsoft Docs"
+description: Find out how to prevent an instance of SQL Server from starting automatically. See how to set the start mode to manual to accomplish this task.
 ms.custom: ""
 ms.date: "01/06/2016"
 ms.prod: sql

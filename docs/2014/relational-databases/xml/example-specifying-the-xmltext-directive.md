@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Example: Specifying the XMLTEXT Directive
   This example illustrates how data in the overflow column is addressed by using the `XMLTEXT` directive in a `SELECT` statement using EXPLICIT mode.  

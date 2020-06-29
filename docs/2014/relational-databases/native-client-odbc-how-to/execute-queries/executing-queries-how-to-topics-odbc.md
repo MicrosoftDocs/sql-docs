@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Executing Queries How-to Topics (ODBC)
   Executing an SQL statement in an ODBC application requires allocating a statement handle, setting statement attributes, and preparing and executing the SQL statement.  

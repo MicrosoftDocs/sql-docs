@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Remove Tables from Database Diagrams (Visual Database Tools)
   You can remove a table from your database diagram. Removing a table does not alter your database. The table and its relationships to other tables continue to exist in the database.  

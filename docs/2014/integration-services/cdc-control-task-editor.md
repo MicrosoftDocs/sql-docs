@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdccontroltask.config.f1"
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Control Task Editor
   Use the **CDC Control Task Editor** dialog box to configure the CDC Control task. The CDC Control task configuration includes defining a connection to the CDC database, the CDC task operation and the state management information.  

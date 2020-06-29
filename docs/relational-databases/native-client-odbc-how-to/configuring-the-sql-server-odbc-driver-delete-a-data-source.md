@@ -1,5 +1,6 @@
 ---
 title: "Delete a Data Source (ODBC) | Microsoft Docs"
+description: Learn how to delete a data source by using ODBC Administrator, programmatically, or using a file, before using ODBC applications with SQL Server 2005 or later.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

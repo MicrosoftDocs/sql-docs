@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "Sql12.dts.designer.odatasource.erroroutput.f1"
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # OData Source Editor (Error Output Page)
   Use the **Error Output** page of the **OData Source Editor** dialog box to select error handling options and to set properties on error output columns.  

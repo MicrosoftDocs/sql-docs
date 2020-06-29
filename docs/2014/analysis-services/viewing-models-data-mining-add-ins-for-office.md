@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Viewing Models (Data Mining Add-ins for Office)
   The Data Mining Add-ins for Excel provides the following ways to explore the analytical models that you have created:  

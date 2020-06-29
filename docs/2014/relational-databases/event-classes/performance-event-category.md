@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Performance Event Category
   Use the **Performance** event category to monitor **Showplan** event classes and event classes that are produced from the execution of SQL data manipulation language (DML) operators.  

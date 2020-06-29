@@ -2,10 +2,10 @@
 title: Generate forecasts and predictions
 description: Use rxPredict, or sp_rxPredict for real-time scoring, or PREDICT T-SQL for native scoring for predictions and forecasting in R and Python in SQL Server Machine Learning.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/30/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019

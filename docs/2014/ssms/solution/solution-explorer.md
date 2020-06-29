@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Solution Explorer
   The Solution Explorer pane in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides containers called projects for managing items such as database scripts, queries, data connections, and files. One or more projects that are related to each other can be combined in a container called a solution.  

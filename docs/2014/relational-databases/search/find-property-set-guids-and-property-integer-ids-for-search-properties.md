@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Find Property Set GUIDs and Property Integer IDs for Search Properties
   This topic discusses how to obtain the values that are required before you can add a property to a search property list and make it searchable by full-text search. These values include the property set GUID and property integer identifier of a document property.  

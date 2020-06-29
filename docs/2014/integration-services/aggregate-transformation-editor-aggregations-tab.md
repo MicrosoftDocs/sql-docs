@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Aggregate Transformation Editor"
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Aggregate Transformation Editor (Aggregations Tab)
   Use the **Aggregations** tab of the **Aggregate Transformation Editor** dialog box to specify columns for aggregation and aggregation properties. You can apply multiple aggregations. This transformation does not generate an error output.  

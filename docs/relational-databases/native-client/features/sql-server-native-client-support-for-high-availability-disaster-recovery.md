@@ -1,5 +1,6 @@
 ---
 title: "High Availability, Recovery"
+description: Learn about SQL Server Native Client support for Always On availability groups, which was added in SQL Server 2012.
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: sql

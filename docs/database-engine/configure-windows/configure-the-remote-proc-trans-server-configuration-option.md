@@ -1,5 +1,6 @@
 ---
 title: "Configure the remote proc trans Server Configuration Option | Microsoft Docs"
+description: 'Find out about the "remote proc trans" option. See how it helps protect the actions of a server-to-server procedure through an MS DTC transaction.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

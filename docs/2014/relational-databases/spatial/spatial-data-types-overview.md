@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 ---
 # Spatial Data Types Overview
   There are two types of spatial data. The `geometry` data type supports planar, or Euclidean (flat-earth), data. The `geometry` data type both conforms to the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 and is compliant with SQL MM (ISO standard).

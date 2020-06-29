@@ -1,5 +1,6 @@
 ---
 title: "Understanding the WMI Provider for Server Events"
+description: Learn how the WMI Provider for Server Events uses Windows Management Instrumentation to monitor events by turning SQL Server into a managed WMI object.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

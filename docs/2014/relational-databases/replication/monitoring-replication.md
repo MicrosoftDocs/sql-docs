@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Monitoring (Replication)
   Monitoring a replication topology is an important aspect of deploying replication. Because replication activity is distributed, it is essential to track activity and status across all computers involved in replication. The following tools can be used to monitor replication:  

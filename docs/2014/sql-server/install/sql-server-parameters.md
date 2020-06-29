@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Parameters
   On this page, set parameters that the analyzer will use for [!INCLUDE[ssDE](../../includes/ssde-md.md)] analysis. You can analyze one, several, or all databases, analyze trace files that were created by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], and analyze SQL batch files.  

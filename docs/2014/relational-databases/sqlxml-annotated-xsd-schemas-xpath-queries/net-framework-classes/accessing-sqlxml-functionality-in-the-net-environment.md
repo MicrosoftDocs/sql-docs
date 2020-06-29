@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Accessing SQLXML Functionality in the .NET Environment
   This example shows:  

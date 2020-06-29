@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQL Server Extended Events Engine
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events engine is a collection of services and objects that:  

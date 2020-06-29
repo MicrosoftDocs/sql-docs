@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 58e15293-94e2-4163-a0f2-758d1440b82c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Missing Dimension Keys (Cube Wizard)
   Use the **Select Missing Dimension Keys** page to select the key columns to use when a new dimension has no key defined for its primary table.  

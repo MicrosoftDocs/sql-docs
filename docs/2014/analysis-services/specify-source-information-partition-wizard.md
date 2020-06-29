@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Source Information (Partition Wizard)
   Use the **Specify Source Information** page to select the measure group in which to create the partition, and also the data source view and filter tables for your partition.  

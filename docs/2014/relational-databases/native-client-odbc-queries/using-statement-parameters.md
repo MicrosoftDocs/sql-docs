@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Using Statement Parameters
   A parameter is a variable in an SQL statement that can enable an ODBC application to:  

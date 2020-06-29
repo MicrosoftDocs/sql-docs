@@ -1,6 +1,6 @@
 ---
 title: Configure usage and diagnostic data collection for SQL Server (CEIP) | Microsoft Docs
-description: 
+description: Learn about the information that SQL Server collects from users to improve products. See how to configure SQL Server not to send this information.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/27/2019

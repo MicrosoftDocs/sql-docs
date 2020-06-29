@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Set the Startup Options
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can be configured to open the design surface to the configuration you prefer when [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] is started. Configuring [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to open in your preferred configuration can save you time.  

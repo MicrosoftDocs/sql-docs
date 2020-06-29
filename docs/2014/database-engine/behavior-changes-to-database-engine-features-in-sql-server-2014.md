@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Behavior Changes to Database Engine Features in SQL Server 2014
   This topic describes behavior changes in the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

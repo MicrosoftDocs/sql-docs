@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # FT:Crawl Stopped Event Class
   The **:Crawl Stopped** event class indicates that a full-text crawl (population) has stopped. The stop can be due to a successfully completed crawl or a fatal error.  

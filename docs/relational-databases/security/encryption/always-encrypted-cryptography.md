@@ -1,5 +1,6 @@
 ---
 title: "Always Encrypted cryptography | Microsoft Docs"
+description: Learn about encryption algorithms and mechanisms that derive cryptographic material in the Always Encrypted feature in SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: 10/30/2019
 ms.prod: sql

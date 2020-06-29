@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # ODBC API Support for Enhanced Date and Time Features
   The following ODBC APIs support enhanced date and time functionality:  

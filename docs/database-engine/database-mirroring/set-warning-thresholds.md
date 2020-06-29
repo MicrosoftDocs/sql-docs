@@ -1,5 +1,6 @@
 ---
 title: "Set Warning Thresholds | Microsoft Docs"
+description: Learn how to use the Set Warning Thresholds dialog box to enable and configure warning thresholds for selected mirrored databases in SQL Server.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

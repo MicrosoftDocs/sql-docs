@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Delete a Data-tier Application
   You can delete a data-tier application by using either the Delete Data-tier Application wizard or a Windows PowerShell script. You can specify whether the associated database is retained, detached, or dropped.  

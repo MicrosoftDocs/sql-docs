@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # ISSCommandWithParameters::GetParameterProperties (OLE DB)
   Returns an array of SSPARAMPROPS property set structures, one SSPARAMPROPS property set for each UDT or XML parameter.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Management Studio Replication Dialog Boxes
   This section includes information on a number of replication dialog boxes that are available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  

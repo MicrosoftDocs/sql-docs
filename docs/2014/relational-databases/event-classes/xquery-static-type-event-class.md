@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # XQuery Static Type Event Class
   The XQuery Static Type event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an XQuery expression. This event class provides the static type of the XQuery expression.  

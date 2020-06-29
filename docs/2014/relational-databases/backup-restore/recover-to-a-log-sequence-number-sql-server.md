@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Recover to a Log Sequence Number (SQL Server)
   This topic is relevant only for databases that are using the full or bulk-logged recovery models.  

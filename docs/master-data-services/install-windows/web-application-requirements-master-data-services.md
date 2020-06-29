@@ -1,5 +1,6 @@
 ---
 title: Web Application Requirements
+description: Find out about the requirements to install and run the Master Data Services web application hosted by Internet Information Services.
 ms.custom: ""
 ms.date: "02/13/2017"
 ms.prod: sql

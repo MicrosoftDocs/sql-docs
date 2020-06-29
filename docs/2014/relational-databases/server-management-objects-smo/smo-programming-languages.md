@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Programming Languages
   This section describes how to program [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .NET, and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  

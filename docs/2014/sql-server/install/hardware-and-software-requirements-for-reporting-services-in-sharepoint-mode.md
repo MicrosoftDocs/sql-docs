@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Hardware and Software Requirements for Reporting Services in SharePoint Mode
 

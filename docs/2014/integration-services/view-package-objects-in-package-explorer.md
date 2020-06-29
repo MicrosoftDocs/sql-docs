@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [Integration Services]"
 ms.assetid: 3da1ee6e-489d-4436-9fcb-bb0a57f9ae9a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # View Package Objects in Package Explorer
   This procedure describes how to view the objects within a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package by using the Package Explorer.  

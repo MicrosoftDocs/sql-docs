@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm
   If you anticipate a high volume of requests for PowerPivot query processing in a SharePoint farm, you can add an extra PowerPivot for SharePoint instance to seamlessly add new query and data processing support.  

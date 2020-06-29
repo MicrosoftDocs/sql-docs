@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Server Principal Impersonation Event Class
   The **Audit Server Principal Impersonation** event class occurs when there is an impersonation within server scope, such as EXECUTE AS \<*login*>.  

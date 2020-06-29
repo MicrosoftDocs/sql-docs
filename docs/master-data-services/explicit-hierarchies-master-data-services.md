@@ -1,5 +1,6 @@
 ---
 title: Explicit Hierarchies
+description: Use an explicit hierarchy to organize members from a Master Data Services entity any way you want, instead of based on domain-based attribute relationships.
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

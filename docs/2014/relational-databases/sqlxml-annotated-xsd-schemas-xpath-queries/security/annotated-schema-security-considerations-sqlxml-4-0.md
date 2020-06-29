@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Annotated Schema Security Considerations (SQLXML 4.0)
   The following are security guidelines for using annotated schemas:  

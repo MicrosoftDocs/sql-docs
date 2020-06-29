@@ -1,5 +1,6 @@
 ---
 title: "Specify a root element for use with FOR XML | Microsoft Docs"
+description: View an example query that specifies the ROOT option of the FOR XML clause to request a single top-level element in the resulting XML.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

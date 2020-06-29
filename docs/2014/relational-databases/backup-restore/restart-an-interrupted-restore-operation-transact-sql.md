@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restart an Interrupted Restore Operation (Transact-SQL)
   This topic explains how to restart an interrupted restore operation.  

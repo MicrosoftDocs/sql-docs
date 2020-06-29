@@ -1,5 +1,6 @@
 ---
 title: "Change Proxy Account for Utility Collection on Managed SQL Server | Microsoft Docs"
+description: Learn how to use SQL Server Management Studio to change the proxy account for the Utility Collection Set on a managed instance of SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

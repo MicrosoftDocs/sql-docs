@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
+description: Review some basic security concepts in SQL Server and learn about a typical implementation of Database Engine permissions.
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: sql

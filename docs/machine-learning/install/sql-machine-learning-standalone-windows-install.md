@@ -2,9 +2,9 @@
 title: Install Machine Learning Server (Standalone)
 description: Setup a standalone machine learning server for Python and R. A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of Microsoft Machine Learning Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019

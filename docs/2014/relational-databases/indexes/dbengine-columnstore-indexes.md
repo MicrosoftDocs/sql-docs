@@ -8,7 +8,6 @@ ms.technology: table-view-index
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
 ---
 # Columnstore Indexes 
 See [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md) and [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).

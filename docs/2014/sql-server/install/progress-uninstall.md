@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ee19dbb2-6fd7-4b9b-9ea6-36c6faeedf10
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Progress (Uninstall)
   Use the Progress (Uninstall) page to monitor the Setup progess.  

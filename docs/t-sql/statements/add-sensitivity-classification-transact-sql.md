@@ -3,7 +3,9 @@ title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
-ms.reviewer: ""
+ms.custom: ""
+ms.author: datrigan
+author: DavidTrigano
 f1_keywords:
   - "ADD SENSITIVITY CLASSIFICATION"
   - "ADD_SENSITIVITY_CLASSIFICATION"
@@ -18,7 +20,6 @@ helpviewer_keywords:
   - "information types"
   - "data classification"
   - "rank"
-ms.manager: craigg
 ms.author: giladm
 author: giladmit
 ms.custom: ""
@@ -36,9 +37,9 @@ For SQL Server, this was introduced in SQL Server 2019.
 
 Classifying sensitive data in your database environment helps achieve extended visibility and better protection. Additional information can be found in [Getting started with SQL Information Protection](https://aka.ms/sqlip)
 
-## Syntax  
+## Syntax
 
-```sql
+```syntaxsql
     ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
     WITH ( <sensitivity_option> [, ...n ] )

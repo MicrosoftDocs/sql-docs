@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # bcp_sendrow
   Sends a row of data from program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

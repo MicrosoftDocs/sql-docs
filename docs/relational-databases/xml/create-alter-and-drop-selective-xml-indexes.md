@@ -1,5 +1,6 @@
 ---
 title: "Create, Alter, and Drop Selective XML Indexes | Microsoft Docs"
+description: Learn how to create a new selective XML index, or alter or drop an existing selective XML index.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

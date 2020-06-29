@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # ft crawl bandwidth Server Configuration Option
   Use the **ft crawl bandwidth** option to specify the size to which the pool of large memory buffers can grow. Large memory buffers are 4 megabytes (MB) in size. The **max** parameter value specifies the maximum number of buffers that the full-text memory manager should maintain in a large buffer pool. If the **max** value is zero, then there is no upper limit to the number of buffers that can be in a large buffer pool.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Executing Templates That Contain SQL Queries (SQLXMLOLEDB Provider)
   This example illustrates the use of the SQLXMLOLEDB Provider-specific property ClientSideXML. In this client-side ADO sample application, an XML template that consists of an SQL query is executed on the server.  

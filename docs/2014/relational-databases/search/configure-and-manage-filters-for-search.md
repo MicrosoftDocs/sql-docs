@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure and Manage Filters for Search
   Indexing documents in an `varbinary`, `varbinary(max)`, `image`, or `xml` data type column requires extra processing. This processing must be performed by a filter. The filter extracts the textual information from the document (removing the formatting). The filter then sends the text to the word-breaker component for the language associated with the table column.  

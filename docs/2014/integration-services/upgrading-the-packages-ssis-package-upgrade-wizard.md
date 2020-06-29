@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.upgradingpackage.f1"
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Upgrading the Packages (SSIS Package Upgrade Wizard)
   Use the **Upgrading the Packages** page to view the progress of package upgrade and to interrupt the upgrade process. The [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Upgrade Wizard upgrades the selected packages one by one.  

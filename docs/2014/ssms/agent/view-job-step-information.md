@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # View Job Step Information
   This topic describes how to view job step details in the Job Step Properties dialog. It also includes information about viewing job step output.  

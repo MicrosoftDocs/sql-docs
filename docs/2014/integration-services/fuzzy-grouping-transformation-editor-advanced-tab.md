@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Fuzzy Grouping Transformation Editor"
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Fuzzy Grouping Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Fuzzy Grouping Transformation Editor** dialog box to specify input and output columns, set similarity thresholds, and define delimiters.  

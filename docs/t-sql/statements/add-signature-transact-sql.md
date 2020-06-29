@@ -27,12 +27,12 @@ ms.date: 06/05/2020
 Adds a digital signature to a stored procedure, function, assembly, or trigger. Also adds a countersignature to a stored procedure, function, assembly, or trigger.  
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
 ## Syntax
-  
-```sql
+
+```syntaxsql
 ADD [ COUNTER ] SIGNATURE TO module_class::module_name
-    BY <crypto_list> [ ,...n ]  
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  

@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "data integration [Integration Services]"
   - "Data Transformation Services"
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SQL Server Integration Services
   

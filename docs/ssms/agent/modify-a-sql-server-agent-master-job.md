@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

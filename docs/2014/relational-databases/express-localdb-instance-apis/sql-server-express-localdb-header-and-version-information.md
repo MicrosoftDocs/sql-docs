@@ -11,7 +11,6 @@ api_location:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SQL Server Express LocalDB Header and Version Information
   There is no separate header file for the SQL Server Express LocalDB instance API; the LocalDB function signatures and error codes are defined in the SQL Server Native Client header file (sqlncli.h). To use the LocalDB instance API, you must include the sqlncli.h header file in your project.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # set working set size Server Configuration Option
   This option is still present in the **sp_configure** stored procedure, but its functionality is unavailable in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (The setting has no effect.)  

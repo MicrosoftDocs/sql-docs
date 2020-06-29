@@ -1,5 +1,6 @@
 ---
 title: "Overview of key management for Always Encrypted | Microsoft Docs"
+description: "Learn how to manage the two types of cryptographic keys Always Encrypted uses to protect your data in SQL Server: column encryption key and column master key."
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql

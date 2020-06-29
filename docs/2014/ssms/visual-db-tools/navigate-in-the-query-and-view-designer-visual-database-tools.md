@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Navigate in the Query and View Designer (Visual Database Tools)
   You can work in the Query and View Designer using the keyboard or the mouse. Refer to the following tables for specific methods.  

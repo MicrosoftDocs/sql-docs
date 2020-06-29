@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLSetDescField
   SQLSetDescField can be used to set descriptor fields for table-valued parameters and table-valued parameter columns. For information about the available fields, see [Table-Valued Parameter Descriptor Fields](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) and [Descriptor Fields for Table-Valued Parameter Constituent Columns](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md).  

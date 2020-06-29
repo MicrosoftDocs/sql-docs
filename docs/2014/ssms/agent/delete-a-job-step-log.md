@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Delete a Job Step Log
   This topic describes how to delete a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step log.  

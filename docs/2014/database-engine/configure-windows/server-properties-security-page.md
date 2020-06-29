@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Server Properties (Security Page)
   Use this page to view or modify your server security options.  

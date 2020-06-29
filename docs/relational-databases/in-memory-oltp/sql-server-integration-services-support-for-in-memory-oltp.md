@@ -1,5 +1,6 @@
 ---
 title: "SSIS support for in-memory OLTP"
+description: Learn about using natively compiled stored procedures as source and destination components in a SQL Server Integration Services package.
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

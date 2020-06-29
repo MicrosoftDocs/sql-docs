@@ -8,4 +8,4 @@ ms.author: mikeray
 
 <!--sql-asdb-asmi-asdw-->
 
-[!INCLUDE [tsql-appliesto](../../includes/applies-to-version/tsql-appliesto.md)] [!INCLUDE [sqlserver-v15](../../includes/applies-to-version/sqlserver-v15.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [smi](../../includes/applies-to-version/smi.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)]
+[!INCLUDE [tsql-appliesto](../../includes/applies-md.md)] [!INCLUDE [sqlserver-v15](../../includes/applies-to-version/sqlserver-v15.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [smi](../../includes/applies-to-version/smi.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)]

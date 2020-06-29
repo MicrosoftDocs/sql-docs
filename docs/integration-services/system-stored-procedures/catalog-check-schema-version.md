@@ -27,7 +27,7 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-catalog.check_schema_version [@use32bitruntime = ] use32bitruntime  
+catalog.check_schema_version [ @use32bitruntime = ] use32bitruntime  
 ```  
   
 ## Arguments  

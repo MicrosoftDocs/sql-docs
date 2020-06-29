@@ -1,5 +1,6 @@
 ---
 title: Extend Database Project Deployment to Analyze the Deployment Plan
+description: Create a deployment contributor of type DeploymentPlanExecutor that generates a report about the actions that are performed when you deploy a database project.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

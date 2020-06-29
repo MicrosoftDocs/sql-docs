@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "NEW keyword [ADO]"
   - "aggregate functions [ADO]"
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Aggregate Functions, the CALC Function, and the NEW Keyword
 Data shaping supports the following functions. The name assigned to the chapter containing the column to be operated on is the *chapter-alias*.  

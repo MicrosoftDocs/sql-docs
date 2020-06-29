@@ -1,5 +1,6 @@
 ---
 title: "SqlXmlCommand Object (SQLXML)"
+description: Learn about the methods and properties of the SqlXmlCommand object. 
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

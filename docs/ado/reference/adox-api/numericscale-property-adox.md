@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "NumericScale property [ADOX]"
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # NumericScale Property (ADOX)
 Indicates the scale of a numeric value in the column.  

@@ -1,5 +1,6 @@
 ---
 title: "Debugging CLR Database Objects | Microsoft Docs"
+description: SQL Server provides support for debugging Transact-SQL and CLR objects in the database integrating SQL Server debugger with Microsoft Visual Studio debugger.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

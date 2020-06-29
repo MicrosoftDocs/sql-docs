@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define a Default Member
   The default member of an attribute hierarchy is used to evaluate expressions when an attribute hierarchy is not included in a query. The default member is ignored whenever a query includes an attribute hierarchy or user hierarchy that contains the attribute that sources the attribute hierarchy. This is because the member specified in the query is used.  

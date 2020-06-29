@@ -1,5 +1,6 @@
 ---
 title: "Context Connection | Microsoft Docs"
+description: In Microsoft SQL Server, the context connection lets you run Transact-SQL statements in the same context where your code was invoked.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

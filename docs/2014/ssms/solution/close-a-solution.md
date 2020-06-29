@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Close a Solution
   You can close a solution and remove it from Solution Explorer. Closing a solution makes it unavailable for use by Solution Explorer.  

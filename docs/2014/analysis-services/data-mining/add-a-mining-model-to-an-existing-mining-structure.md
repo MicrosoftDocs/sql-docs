@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Add a Mining Model to an Existing Mining Structure
   You can add more mining models to a mining structure, after you add the initial model. Each model must contain columns that exist in the structure, but you can define the usage of the columns differently for each mining model. For more information about how to define mining models columns, see [Mining Model Columns](mining-model-columns.md).  

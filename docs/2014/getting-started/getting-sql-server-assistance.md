@@ -38,9 +38,8 @@ helpviewer_keywords:
   - "SQL Server assistance"
   - "SQL Server Solution Center"
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Getting SQL Server Assistance
   There are three principal sources of information from [!INCLUDE[msCoName](../includes/msconame-md.md)] about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

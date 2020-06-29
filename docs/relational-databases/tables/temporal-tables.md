@@ -34,7 +34,7 @@ SQL Server 2016 introduced support for temporal tables (also known as system-ver
   - [Working with Memory-Optimized System-Versioned Temporal Tables](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)
   - [Modifying Data in a System-Versioned Temporal Table](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
   - [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
-  - **Download Adventure Works sample database:** To get started with Temporal Tables download [AdventureWorks database for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) with script samples and follow the instructions in the folder 'Temporal'
+  - **Download Adventure Works sample database:** To get started with Temporal Tables download [AdventureWorks database for SQL Server](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak) with script samples and follow the instructions in the folder 'Temporal'
 
 - **Syntax:**
 

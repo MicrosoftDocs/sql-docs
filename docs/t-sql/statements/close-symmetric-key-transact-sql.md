@@ -32,7 +32,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }  
 ```  
   

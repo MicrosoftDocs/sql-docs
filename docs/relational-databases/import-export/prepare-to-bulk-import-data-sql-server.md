@@ -1,5 +1,6 @@
 ---
 title: "Prepare to Bulk Import Data (SQL Server) | Microsoft Docs"
+description: You can use the bcp command, BULK INSERT statement, or OPENROWSET(BULK) function to bulk import data from a data file only.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

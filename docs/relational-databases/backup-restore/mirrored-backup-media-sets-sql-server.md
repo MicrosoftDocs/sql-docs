@@ -1,5 +1,6 @@
 ---
 title: "Mirrored Backup Media Sets (SQL Server) | Microsoft Docs"
+description: SQL Server supports mirroring of media sets, which increases backup reliability by reducing the impact of backup-device malfunctions.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Executing an Updategram by Using OLE DB (SQLXML)"
+description: Learn how to use OLE DB in SQLXML 4.0 to execute an updategram. 
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

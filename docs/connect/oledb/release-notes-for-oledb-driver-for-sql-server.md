@@ -1,6 +1,7 @@
 ---
-title: "Release notes (OLE DB Driver for SQL Server) | Microsoft Docs"
-ms.date: "02/27/2020"
+title: "Release notes for OLE DB Driver"
+description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
+ms.date: "05/25/2020"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -12,8 +13,6 @@ ms.author: v-makmie
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
-
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 
 <!--
@@ -23,10 +22,41 @@ See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
 
+## 18.4.0
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+Released: May 2020
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| Support for Transparent Network IP Resolution (TNIR) |[Transparent Network IP Resolution (TNIR)](features/using-transparent-network-ip-resolution.md)|
+| Support for UTF-8 client encoding | [UTF-8 Support in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed various bugs in the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface | A few bugs affecting multibyte code pages resulted in the interface prematurely reporting the end of the stream during the read operation.|
+| Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface when the `SSPROP_IRowsetFastLoad` property was enabled. |
+| Fixed a bug in scenarios involving a `sql_variant` data type and non-ASCII strings. | Executing certain scenarios involving a `sql_variant` data type and non-ASCII strings may result in data corruption. For details, see: [Known issues](ole-db-data-types/ssvariant-structure.md#known-issues). |
+| Fixed issues with the *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) | The *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) now honors initialization properties set in the *All* tab. |
+| Fixed the `SSPROP_INIT_PACKETSIZE` property default value handling | Fixed an unexpected error when the `SSPROP_INIT_PACKETSIZE` property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Fixed buffer overflow issues in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Fixed buffer overflow issues when using malformed data files. |
+| Fixed accessibility issues | Fixed accessibility issues in the installer UI and the [SQL Server Login dialog](help-topics/sql-server-login-dialog.md) (reading content, tab stops). |
+
+## Previous Releases
+
 ## 18.3.0
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2117515)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2117517)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2117517)  
 
 Released: October 2019
 
@@ -39,7 +69,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | Azure Active Directory authentication support (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Using Azure Active Directory](features/using-azure-active-directory.md). |
-| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, this will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
+| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the OLE DB installer will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 | &nbsp; | &nbsp; |
 
 ### Bugs fixed
@@ -49,14 +79,12 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Fixed drop index logic in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Previous versions of the OLE DB driver can't drop a primary key index when the schema ID and the user ID of the owner of the index aren't equal. |
 | &nbsp; | &nbsp; |
 
-## Previous Releases
-
 Download previous OLE DB Driver versions by clicking the download links in the following sections:
 
 ## 18.2.3
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2119554)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2119738)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
 Released: June 2019
 
@@ -64,7 +92,7 @@ If you need to download the installer in a language other than the one detected 
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
 For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
-### Features added
+### Features added in 18.2.3
 
 | Feature added | Details |
 | :------------ | :------ |
@@ -73,8 +101,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.2.2
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118512)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118415)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
 Released: May 2019
 
@@ -82,7 +110,7 @@ If you need to download the installer in a language other than the one detected 
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
 For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
-### Bugs fixed
+### Bugs fixed in 18.2.2
 
 | Bug fixed | Details |
 | :-------- | :------ |
@@ -91,8 +119,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.2.1
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118511)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118278)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
 Released: February 2019
 
@@ -100,7 +128,7 @@ If you need to download the installer in a language other than the one detected 
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
 For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
-### Features added
+### Features added in 18.2.1
 
 | Feature added | Details |
 | :------------ | :------ |
@@ -110,8 +138,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.1.0
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118506)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118509)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
 Released: July 2018
 
@@ -119,14 +147,14 @@ If you need to download the installer in a language other than the one detected 
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
 For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
-### Features added
+### Features added in 18.1.0
 
 | Feature added | Details |
 | :------------ | :------ |
 | Support for the `UseFMTONLY` connection string keyword, and for the `SSPROP_INIT_USEFMTONLY` initialization property. | `UseFMTONLY` controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and newer.<br/><br/>For more information, see: [Using Connection String Keywords with OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### Bugs fixed
+### Bugs fixed in 18.1.0
 
 | Bug fixed | Details |
 | :-------- | :------ |
@@ -135,8 +163,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.0.2
 
-![download](../../ssdt/media/download.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118504)  
-![download](../../ssdt/media/download.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118277)  
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118277)  
 
 Released: March 2018
 
@@ -144,7 +172,7 @@ If you need to download the installer in a language other than the one detected 
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
 For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
-### Features added
+### Features added in 18.0.2
 
 | Feature added | Details |
 | :------------ | :------ |

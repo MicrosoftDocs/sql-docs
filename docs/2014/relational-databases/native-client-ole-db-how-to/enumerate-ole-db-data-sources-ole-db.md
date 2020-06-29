@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "data sources [OLE DB]"
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Enumerate OLE DB Data Sources (OLE DB)
   This sample shows how to use the enumerator object to list the data sources available.  

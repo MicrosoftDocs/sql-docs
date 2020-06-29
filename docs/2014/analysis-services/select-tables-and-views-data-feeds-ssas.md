@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Tables and Views (Data Feeds) (SSAS)
   This page of the **Table Import Wizard** enables you to select the tables and views that you want to import data from. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -20,7 +19,7 @@ manager: craigg
   
  For data sources using Windows authentication, the credentials of the current user are used to fetch the tables and views in the Select Tables and Views dialog. For other data sources, the credentials supplied in the connection string are used to fetch the data.  
   
-## UIElement List  
+## UI element list  
  **Data feed URL**  
  Displays the URL for the data feed that you selected.  
   

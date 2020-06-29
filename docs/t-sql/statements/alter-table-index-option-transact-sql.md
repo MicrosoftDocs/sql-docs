@@ -24,7 +24,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 {   
     PAD_INDEX = { ON | OFF }  
   | FILLFACTOR = fillfactor  

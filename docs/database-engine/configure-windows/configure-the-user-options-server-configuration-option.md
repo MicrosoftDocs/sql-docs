@@ -1,5 +1,6 @@
 ---
 title: "Configure the user options Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "user options" option. See how it changes the default values of the query processing options that SQL Server establishes for user work sessions.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "users [SQL Server], global defaults"
   - "user options option [SQL Server]"
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the user options Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -26,7 +26,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  

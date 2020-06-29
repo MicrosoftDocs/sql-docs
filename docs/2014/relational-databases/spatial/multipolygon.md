@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 ---
 # MultiPolygon
   A `MultiPolygon` instance is a collection of zero or more `Polygon` instances.

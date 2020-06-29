@@ -42,12 +42,6 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_themes.MSDN.Modern",
-      "url": "https://github.com/Microsoft/templates.msdn.msft",
-      "branch": "master",
-      "branch_mapping": {}
-    },
-    {
       "path_to_root": "samples",
       "url": "https://github.com/dotnet/samples",
       "branch": "master",

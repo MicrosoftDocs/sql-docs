@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.spl.newsearchpropertylist.f1"
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # New Search Property List
   Use this dialog box to create a search property list.  

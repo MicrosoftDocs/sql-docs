@@ -30,7 +30,7 @@ Returns the current output buffer in hexadecimal and ASCII format for the specif
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-```sql
+```syntaxsql
 DBCC OUTPUTBUFFER ( session_id [ , request_id ])  
 [ WITH NO_INFOMSGS ]  
 ```  

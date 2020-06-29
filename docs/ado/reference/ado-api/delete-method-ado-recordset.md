@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete method [ADO]"
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Delete Method (ADO Recordset)
 Deletes the current record or a group of records.  

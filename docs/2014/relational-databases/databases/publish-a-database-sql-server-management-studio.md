@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Publish a Database (SQL Server Management Studio)
   You can use the **Generate and Publish Scripts Wizard** to publish an entire database or individual database objects to a Web hosting provider.  

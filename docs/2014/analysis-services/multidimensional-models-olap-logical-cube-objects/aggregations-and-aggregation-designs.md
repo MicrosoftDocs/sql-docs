@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Aggregations and Aggregation Designs
   An <xref:Microsoft.AnalysisServices.AggregationDesign> object defines a set of aggregation definitions that can be shared across multiple partitions.  

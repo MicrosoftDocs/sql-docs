@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_showpendingchanges"
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

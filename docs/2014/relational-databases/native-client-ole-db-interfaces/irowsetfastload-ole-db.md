@@ -11,9 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "IRowsetFastLoad interface"
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # IRowsetFastLoad (OLE DB)
   The `IRowsetFastLoad` interface exposes support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory-based bulk-copy operations. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumers use the interface to rapidly add data to an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  

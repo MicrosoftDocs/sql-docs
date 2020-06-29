@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client OLE DB provider, BLOBs"
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Streaming Support for BLOB Output Parameters
   This topic contains a sample that shows streaming support for BLOB output parameters, which binds BLOB output parameters as ISequentialStreams.  

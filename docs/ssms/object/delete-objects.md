@@ -19,7 +19,7 @@ ms.author: "maghan"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use this dialog box to delete a database or database object.  
   
-## UIElement List  
+## UI element list  
 **Object to be deleted**  
 Displays the names, types, owners, and status of the objects that are about to be deleted, as well as any messages about errors during execution.  
   

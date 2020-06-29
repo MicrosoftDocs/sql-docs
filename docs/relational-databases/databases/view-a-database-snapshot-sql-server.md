@@ -1,5 +1,6 @@
 ---
 title: "View a Database Snapshot (SQL Server) | Microsoft Docs"
+description: Learn how to view a SQL Server database snapshot using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Create a Database Master Key | Microsoft Docs"
+description: Create a database master key in SQL Server by using Transact-SQL. Be sure you have the required permissions.
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: sql
@@ -36,7 +37,7 @@ Requires CONTROL permission on the database.
 
    ```sql
      -- Creates the master key.
-     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
+     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe".  
      CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
 
    ```

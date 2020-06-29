@@ -1,6 +1,6 @@
 ---
 title: "WITH common_table_expression (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for how to use common table expressions (CTE) in queries."
 ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -37,7 +37,7 @@ Specifies a temporary named result set, known as a common table expression (CTE)
   
 ## Syntax  
   
-```  
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
   
 <common_table_expression>::=  

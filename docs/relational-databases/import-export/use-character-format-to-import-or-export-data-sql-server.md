@@ -1,5 +1,6 @@
 ---
 title: "Use character format to import & export data"
+description: Character format uses character data format for all columns. This is useful working with other programs or copying to an instance from another database vendor.
 ms.date: "09/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

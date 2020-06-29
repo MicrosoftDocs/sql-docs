@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rowset Properties and Behaviors

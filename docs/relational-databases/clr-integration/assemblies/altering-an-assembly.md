@@ -1,5 +1,6 @@
 ---
 title: "Altering an Assembly | Microsoft Docs"
+description: Use ALTER ASSEMBLY to update assemblies registered in SQL Server. You can also change the permission set and add source code or other files for an assembly.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

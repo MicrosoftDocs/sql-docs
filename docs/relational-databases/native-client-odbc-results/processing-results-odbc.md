@@ -1,5 +1,6 @@
 ---
 title: "Processing Results (ODBC) | Microsoft Docs"
+description: Find out about processing data that SQL Server returns when an ODBC application submits an SQL statement.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "result sets [ODBC]"
   - "COMPUTE BY clause"
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results (ODBC)

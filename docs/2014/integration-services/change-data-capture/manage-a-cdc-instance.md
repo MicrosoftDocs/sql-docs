@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "manIns"
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Manage a CDC Instance
   You can use the CDC Designer Console to view information about the instances that you create and to manage the operation of the instances.  

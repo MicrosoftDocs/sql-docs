@@ -1,5 +1,6 @@
 ---
 title: "Specify Field and Row Terminators (SQL Server) | Microsoft Docs"
+description: Field terminators and row terminators indicate to programs that read the data file where one field or row ends and another field or row begins.
 ms.custom: ""
 ms.date: "07/26/2018"
 ms.prod: sql

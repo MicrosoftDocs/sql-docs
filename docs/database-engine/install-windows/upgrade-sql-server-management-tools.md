@@ -1,5 +1,6 @@
 ---
 title: "Upgrade SQL Server Management Tools | Microsoft Docs"
+description: This article describes support for upgrading SQL Server Management Tools and management components, such as SQL Server Agent.
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql

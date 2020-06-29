@@ -1,6 +1,6 @@
 ---
 title: "STRING_SPLIT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
 ms.date: "11/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STRING_SPLIT function"
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions" 
 ---
 # STRING_SPLIT (Transact-SQL)

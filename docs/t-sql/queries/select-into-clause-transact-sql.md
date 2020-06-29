@@ -93,7 +93,9 @@ The `SELECT...INTO` statement operates in two parts - the new table is created, 
  When a computed column is included in the select list, the corresponding column in the new table is not a computed column. The values in the new column are the values that were computed at the time `SELECT...INTO` was executed.  
   
 ## Logging Behavior  
- The amount of logging for `SELECT...INTO` depends on the recovery model in effect for the database. Under the simple recovery model or bulk-logged recovery model, bulk operations are minimally logged. With minimal logging, using the `SELECT...INTO` statement can be more efficient than creating a table and then populating the table with an INSERT statement. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ The amount of logging for `SELECT...INTO` depends on the recovery model in effect for the database. Under the simple recovery model or bulk-logged recovery model, bulk operations are minimally logged. With minimal logging, using the `SELECT...INTO` statement can be more efficient than creating a table and then populating the table with an INSERT statement. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
+ 
+`SELECT...INTO` statements that contain user-defined functions (UDFs) are fully logged operations. If the user-defined functions that are used in the `SELECT...INTO` statement don't perform any data access operations, you can specify the SCHEMABINDING clause for the user-defined functions, which will set the derived UserDataAccess property for those user-defined functions to 0. After this change, `SELECT...INTO` statements will be minimally logged. If the `SELECT...INTO` statement still references at least one user-defined function that has this property set to 1, the operation is fully logged.
   
 ## Permissions  
  Requires CREATE TABLE permission in the destination database.  

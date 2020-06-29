@@ -1,6 +1,7 @@
 ---
 title: Find a Value or Data Column While Tracing
 titleSuffix: SQL Server Profiler
+description: Discover how to use SQL Server Profiler to search for a specific value or data column in trace output while the trace is running.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

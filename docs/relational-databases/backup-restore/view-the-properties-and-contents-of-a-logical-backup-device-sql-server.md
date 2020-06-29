@@ -1,5 +1,6 @@
 ---
 title: "View logical backup device contents"
+description: Learn how to view the properties and contents of a logical backup device in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

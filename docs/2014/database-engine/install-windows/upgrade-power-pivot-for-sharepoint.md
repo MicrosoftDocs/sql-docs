@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Upgrade PowerPivot for SharePoint
   This topic summarizes the steps required to upgrade a deployment of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] to [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. The specific steps depend on the version of SharePoint your environment is currently running and include the PowerPivot for SharePoint Add-in (**spPowerPivot.msi**).  
@@ -74,7 +73,7 @@ manager: craigg
   
     1.  From the Windows Start page, type **PowerPivot** and in the search results, click **PowerPivot for SharePoint 2013 Configuration**. Note the search may return both versions of the configuration tool.  
   
-         ![two powerpivot configuratoin tools](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
+         ![two powerpivot configuratoin tools](../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
          Or  
   

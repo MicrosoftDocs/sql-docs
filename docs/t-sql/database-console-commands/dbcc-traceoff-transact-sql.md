@@ -31,7 +31,7 @@ Disables the specified trace flags.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   

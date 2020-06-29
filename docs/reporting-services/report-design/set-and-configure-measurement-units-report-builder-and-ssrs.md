@@ -1,5 +1,6 @@
 ---
 title: "Set and Configure Measurement Units (Report Builder) | Microsoft Docs"
+description: Learn how to set and configure measurement units in a paginated report using expressions in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

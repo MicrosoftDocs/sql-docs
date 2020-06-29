@@ -36,7 +36,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  

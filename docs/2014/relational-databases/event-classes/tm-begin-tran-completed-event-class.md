@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # TM: Begin Tran Completed Event Class
   The TM: Begin Tran Completed event class indicates that a BEGIN TRANSACTION request has been completed. The request was sent from the client through the transaction management interface.  

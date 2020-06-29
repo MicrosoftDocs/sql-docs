@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Mining Query Task Editor"
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Query Task Editor (Query Tab)
   Use the **Query** tab of the **Data Mining Query Task** dialog box to create prediction queries based on a mining model. In this dialog box you can also bind parameters and result sets to variables.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Full-Text Search DDL, Functions, Stored Procedures, and Views
   Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that support full-text search, including the property search feature.  

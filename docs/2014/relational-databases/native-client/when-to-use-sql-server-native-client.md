@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SQLNCLI, about SQL Server Native Client"
   - "data access [SQL Server Native Client], about SQL Server Native Client"
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # When to Use SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is one technology that you can use to access data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  For a discussion of the different data-access technologies, see [Data Access Technologies Road Map](https://go.microsoft.com/fwlink/?LinkID=179186)  

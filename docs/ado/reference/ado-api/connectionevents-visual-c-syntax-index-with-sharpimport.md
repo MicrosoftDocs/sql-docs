@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ConnectionEvents collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ConnectionEvents (Visual C++ Syntax Index with #import)
 ## Events  

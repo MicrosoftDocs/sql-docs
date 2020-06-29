@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Work with Database Diagrams (Visual Database Tools)
   You can create a visual diagram of your database using the Database Designer. The following topics cover the basics of using the designer to work with database diagrams.  

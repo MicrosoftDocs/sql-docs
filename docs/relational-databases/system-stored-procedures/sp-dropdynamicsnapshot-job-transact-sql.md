@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropdynamicsnapshot_job"
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

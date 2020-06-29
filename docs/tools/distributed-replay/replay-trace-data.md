@@ -1,6 +1,7 @@
 ---
 title: Replay trace data
 titleSuffix: SQL Server Distributed Replay
+description: With the SQL Server Distributed Replay feature, use the administration tool replay option to initiate the event replay stage of the distributed replay.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

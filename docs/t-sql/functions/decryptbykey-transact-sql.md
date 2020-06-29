@@ -30,7 +30,7 @@ This function uses a symmetric key to decrypt data.
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 DecryptByKey ( { 'ciphertext' | @ciphertext }   
     [ , add_authenticator, { authenticator | @authenticator } ] )  

@@ -1,5 +1,6 @@
 ---
 title: "Tune compression for availability group | Microsoft Docs"
+description: Learn how SQL Server compresses data streams for availability groups, which reduces network traffic, increases CPU load, and may induce latency.
 ms.custom: ""
 ms.date: "06/22/2016"
 ms.prod: sql
@@ -18,6 +19,7 @@ By default, SQL Server compresses data streams where appropriate for availabilit
 | Synchronous-commit replica | Not compressed
 | Asynchronous- commit replicas | Compressed
 | During automatic seeding | Not compressed
+| TDE enabled in database  | Not compressed
 
 ## Trace flags for availability group compression 
 

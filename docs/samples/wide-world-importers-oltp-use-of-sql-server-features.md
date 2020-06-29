@@ -1,5 +1,6 @@
 ---
 title: "Use of SQL Server features and capabilities | Microsoft Docs"
+description: Learn about SQL Server features and capabilities, and their use in the WideWorldImporters sample database.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "API reference [ODBC]"
   - "ODBC [ODBC], API reference"
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Reference
 The following topics contain syntax and semantic information for all ODBC functions.  

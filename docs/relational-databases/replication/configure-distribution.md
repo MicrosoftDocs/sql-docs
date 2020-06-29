@@ -1,5 +1,6 @@
 ---
 title: "Configure Distribution | Microsoft Docs"
+description: The SQL Server Distributor hosts the distribution database, which stores metadata and history for replication and transactions for transactional replication.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

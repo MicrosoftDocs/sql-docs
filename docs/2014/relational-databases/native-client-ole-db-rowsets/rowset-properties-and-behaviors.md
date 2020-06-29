@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Rowset Properties and Behaviors
   These are the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider rowset properties.  

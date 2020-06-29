@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Monitor and Troubleshoot Memory Usage
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consumes memory in different patterns than disk-based tables. You can monitor the amount of memory allocated and used by memory-optimized tables and indexes in your database using the DMVs or performance counters provided for memory and the garbage collection subsystem.  This gives you visibility at both the system and database level and lets you prevent problems due to memory exhaustion.
@@ -107,7 +106,7 @@ manager: craigg
 ##  Monitoring Memory Usage
 
 ###  Using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer as described [here](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer. You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.
 
 #### Consumption at the database level
  You can monitor memory use at the database level as follows.

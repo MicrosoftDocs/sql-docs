@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -103,7 +102,9 @@ You can specify an alert to occur in response to a particular performance condit
     > [!NOTE]  
     > An Event log variable that stores the server name is limited to 32 characters. Therefore if the combined size of your host name and instance name is greater than 32 characters, you may get the following error:
     
-    Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+   ``` 
+   Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+   ```
   
   
 ## Selecting a WMI Event  

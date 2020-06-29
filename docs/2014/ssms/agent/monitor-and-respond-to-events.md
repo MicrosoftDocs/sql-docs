@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Monitor and Respond to Events
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can monitor and automatically respond to *events*, such as messages from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specific performance conditions, and Windows Management Instrumentation (WMI) events.  

@@ -1,5 +1,6 @@
 ---
 title: "Start SQL Server in Single-User Mode | Microsoft Docs"
+description: 'Learn about single-user mode in SQL Server. See when it is useful and how to use the startup option "-m" to start an instance of SQL Server in this mode.'
 ms.custom: ""
 ms.date: "09/20/2017"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "starting SQL Server, single-user mode"
   - "single-user mode [SQL Server]"
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Start SQL Server in Single-User Mode
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

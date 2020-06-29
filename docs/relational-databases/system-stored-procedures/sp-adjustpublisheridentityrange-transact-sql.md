@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_adjustpublisheridentityrange"
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: "Updating UDT Columns with DataAdapters | Microsoft Docs"
+description: UDTs in a SQL Server database are supported by using System.Data.DataSet and System.Data.SqlClient.SqlDataAdapter to retrieve and modify data.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

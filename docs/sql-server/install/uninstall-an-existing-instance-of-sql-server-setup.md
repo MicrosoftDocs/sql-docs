@@ -1,5 +1,6 @@
 ---
-title: "Uninstall existing instanceInstance"
+title: "Uninstall existing instance"
+description: This article describes how to uninstall a stand-alone instance of SQL Server, which also prepares the system so that you can reinstall SQL Server.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "instances of SQL Server, uninstalling"
   - "uninstalling SQL Server"
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

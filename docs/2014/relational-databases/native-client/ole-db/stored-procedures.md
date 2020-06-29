@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, stored procedures"
   - "stored procedures [OLE DB], about OLE DB stored procedures"
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Stored Procedures
   A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../stored-procedures/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports:  

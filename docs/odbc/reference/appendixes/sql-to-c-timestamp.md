@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "converting data from SQL to C types [ODBC], timestamp"
   - "data conversions from SQL to C types [ODBC], timestamp"
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL to C: Timestamp
 

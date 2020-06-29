@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create a Project
   You can create one or more projects within an existing solution.  

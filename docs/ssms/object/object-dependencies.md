@@ -21,7 +21,7 @@ The **Object Dependencies (Advanced Page)** for the current object lists the [!I
   
 Use this dialog box to understand the dependencies before changing or deleting the selected object.  
   
-## UIElement List  
+## UI element list  
 **Objects that depend on** _\<selected object>_  
 Clicking this button displays a list of those objects that are dependency-tracked and that depend on the selected object.  
   

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Browser Properties (Log On Tab)"
+description: Learn about the Log On tab of the SQL Server Browser Properties dialog box. See how to use this tab to specify an account and to start or stop the service.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

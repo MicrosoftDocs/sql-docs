@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "WillExecute event [ADO]"
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # WillExecute Event (ADO)
 The **WillExecute** event is called just before a pending command executes on a connection.  

@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Service Startup Options | Microsoft Docs"
+description: Become familiar with SQL Server Database Engine startup options. View tips on how to use them, and learn about the purpose of each option.
 ms.custom: ""
 ms.date: "08/01/2019"
 ms.prod: sql
@@ -23,8 +24,8 @@ helpviewer_keywords:
   - "startup parameters [SQL Server]"
   - "starting SQL Server, parameters"
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 
 # Database Engine Service Startup Options

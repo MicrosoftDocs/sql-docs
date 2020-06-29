@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot connecting to the SQL Server Database Engine | Microsoft Docs"
+description: Find out how to troubleshoot connection problems. View steps to take when you cannot use TCP/IP to connect to a SQL Server Database Engine on a single server.
 ms.custom: sqlfreshmay19
 ms.date: "11/25/2019"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "troubleshooting, connecting to Database Engine"
   - "connecting to Database Engine, troubleshooting"
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot connecting to the SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +160,7 @@ Connecting to SQL Server by using TCP/IP requires that Windows can establish the
 1. If `ping` to the IP address succeeds, but `ping` to the computer returns `Destination host unreachable` or `Request timed out` you might have old (stale) name resolution information cached on the client computer. Type `ipconfig /flushdns` to clear the DNS (Dynamic Name Resolution) cache. Then ping the computer by name again. With the DNS cache empty, the client computer will check for the newest information about the IP address for the server computer. 
 1. If your network is properly configured, `ping` returns `Reply from <IP address>` followed by some additional information. If you can successfully ping the server computer by IP address but receive an error such as `Destination host unreachable.` or `Request timed out.` when pinging by computer name, then name resolution is not correctly configured. (For more information, see the 2006 article previously referenced, [How to Troubleshoot Basic TCP/IP Problems](https://support.microsoft.com/kb/169790).) Successful name resolution is not required to connect to SQL Server, but if the computer name cannot be resolved to an IP address, then connections must be made specifying the IP address. Name resolution can be fixed later.
 
-## <a name = "openport"></a>Open a port in the firewall
+## Open a port in the firewall
 
 By default, the Windows firewall is turned on and will block connections from another computer. To connect using TCP/IP from another computer, on the SQL Server computer you must configure the firewall to allow connections to the TCP port used by the Database Engine. The default instance is listening on TCP port 1433, by default. If you have named instances or if you changed the default instance port, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP port may be listening on another port. See [Get the SQL Server instance TCP port](#getTCP).
 

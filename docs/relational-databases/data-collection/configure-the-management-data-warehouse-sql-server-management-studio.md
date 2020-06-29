@@ -1,5 +1,6 @@
 ---
 title: "Configure the Management Data Warehouse (SSMS)"
+description: Learn how to configure the management data warehouse to support data storage on one or more instances of SQL Server that are using the data collector. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

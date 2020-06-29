@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create statistics on an external table  
@@ -82,7 +82,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ PAGECOUNT = numeric_contant ] 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
@@ -239,6 +239,7 @@ MAXDOP = *max_degree_of_parallelism*
 * You can list up to 64 columns per statistics object.
 * The MAXDOP option is not compatible with STATS_STREAM, ROWCOUNT and PAGECOUNT options.
 * The MAXDOP option is limited by the Resource Governor workload group MAX_DOP setting, if used.
+* CREATE and DROP STATISTICS on external tables are not supported in Azure SQL Database.
   
 ## Examples  
 
@@ -274,7 +275,7 @@ GO
 ```  
   
 ### D. Create statistics on an external table  
- The only decision you need to make when you create statistics on an external table, besides providing the list of columns, is whether to create the statistics by sampling the rows or by scanning all of the rows.  
+ The only decision you need to make when you create statistics on an external table, besides providing the list of columns, is whether to create the statistics by sampling the rows or by scanning all of the rows. CREATE and DROP STATISTICS on external tables are not supported in Azure SQL Database.
   
  Since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports data from the external table into a temporary table to create statistics, the full scan option will take much longer. For a large table, the default sampling method is usually sufficient.  
   

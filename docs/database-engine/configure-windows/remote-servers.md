@@ -1,5 +1,6 @@
 ---
 title: "Remote Servers | Microsoft Docs"
+description: Learn about remote servers, which have been replaced with linked servers in SQL Server. View information on functionality, configuration, and security.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "servers [SQL Server], remote"
   - "remote access option"
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Remote Servers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

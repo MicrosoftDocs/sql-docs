@@ -1,5 +1,6 @@
 ---
 title: "SCM Services - Change the Service Startup Account | Microsoft Docs"
+description: Learn how to change the service accounts that SQL Server and many of its services use. View limitations and restrictions on changes in service accounts.
 ms.custom: ""
 ms.date: "01/06/2016"
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "startup accounts [SQL Server]"
   - "changing startup accounts for services"
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # SCM Services - Change the Service Startup Account
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

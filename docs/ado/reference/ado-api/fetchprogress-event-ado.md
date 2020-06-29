@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "FetchProgress event [ADO]"
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FetchProgress Event (ADO)
 The **FetchProgress**event is called periodically during a lengthy asynchronous operation to report how many more rows have currently been retrieved into the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -1,5 +1,6 @@
 ---
 title: "Hide an Instance of SQL Server Database Engine | Microsoft Docs"
+description: "Find out how to hide an instance of the SQL Server Database Engine. Client computers can't use the SQL Server Browser service to locate hidden instances."
 ms.custom: ""
 ms.date: "08/19/2015"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], hiding instances"
   - "hiding instances of Database Engine"
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Hide an Instance of SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

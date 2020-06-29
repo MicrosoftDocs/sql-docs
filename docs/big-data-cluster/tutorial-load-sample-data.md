@@ -121,4 +121,4 @@ Data ingestion:
 
 Notebooks:
 
-- [Tutorial: Run a sample notebook on a SQL Server 2019 big data cluster](tutorial-notebook-spark.md)
+- [Tutorial: Run a sample notebook on a SQL Server 2019 big data cluster](notebooks-tutorial-spark.md)

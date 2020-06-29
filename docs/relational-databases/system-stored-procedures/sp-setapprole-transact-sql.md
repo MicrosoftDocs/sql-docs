@@ -48,7 +48,7 @@ sp_setapprole [ @rolename = ] 'role',
  The encrypt option is not supported on connections that are using **SqlClient**.  
   
 > [!IMPORTANT]  
-> The ODBC **encrypt** function does not provide encryption. You should not rely on this function to protect passwords that are transmitted over a network. If this information will be transmitted across a network, use SSL or IPSec.
+> The ODBC **encrypt** function does not provide encryption. You should not rely on this function to protect passwords that are transmitted over a network. If this information will be transmitted across a network, use TLS or IPSec.
   
  **@encrypt = 'none'**  
  Specifies that no obfuscation be used. The password is passed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as plain text. This is the default.  

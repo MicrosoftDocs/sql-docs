@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.tables catalog view"
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.tables (Transact-SQL)

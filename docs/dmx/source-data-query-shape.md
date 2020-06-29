@@ -4,7 +4,7 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
@@ -20,30 +20,30 @@ author: minewiskan
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
 ```  
   
 ## Arguments  
- *master query*  
+ *primary query*  
  The query returning the parent table.  
   
  *child table query*  
  The query returning the nested table.  
   
- *master column*  
+ *primary column*  
  The column in the parent table to identify child rows from the result of a child table query.  
   
  *child column*  
- The column in the child table to identify the parent row from the result of a master query.  
+ The column in the child table to identify the parent row from the result of a primary query.  
   
  *column table name*  
  The newly appended column name in the parent table for the nested table.  

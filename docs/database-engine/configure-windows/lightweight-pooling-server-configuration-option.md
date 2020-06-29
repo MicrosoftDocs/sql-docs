@@ -1,5 +1,6 @@
 ---
 title: "lightweight pooling Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "lightweight pooling" option. See how it can provide better throughput in symmetric multiprocessing environments with excessive context switching.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "reducing overhead"
   - "overhead [SQL Server]"
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # lightweight pooling Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

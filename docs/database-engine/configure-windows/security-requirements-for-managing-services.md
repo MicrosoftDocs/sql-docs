@@ -1,5 +1,6 @@
 ---
 title: "Security Requirements for Managing Services | Microsoft Docs"
+description: Learn about security measures that apply to managing SQL Server services. See what roles, group memberships, and permissions you need for configuration access.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "security [SQL Server], services"
   - "services [SQL Server], WMI"
 ms.assetid: 1874a317-ddb2-425d-98d9-b53e1be6fc6a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Security Requirements for Managing Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

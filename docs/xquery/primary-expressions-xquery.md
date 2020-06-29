@@ -1,5 +1,6 @@
 ---
 title: "Primary Expressions (XQuery) | Microsoft Docs"
+description: Learn about XQuery primary expressions that include literals, variable references, context item expressions, constructors, and function calls.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Run template files with the CommandText property"
+description: View an example of how to use the SQLXML CommandText property to specify the name of a template file containing SQL or XPath queries.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -20,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Executing Template Files by Using the CommandText Property
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  This example illustrates how template files that consist of SQL or XPath queries can be specified by using the CommandTextproperty. Instead of specifying the SQL or XPath query as the value of CommandText, you can specify a file name as the value. In the following example, the CommandType property is specified as SqlXmlCommandType.TemplateFile.  
+  This example illustrates how template files that consist of SQL or XPath queries can be specified by using the CommandText property. Instead of specifying the SQL or XPath query as the value of CommandText, you can specify a file name as the value. In the following example, the CommandType property is specified as SqlXmlCommandType.TemplateFile.  
   
  The sample application executes this template:  
   

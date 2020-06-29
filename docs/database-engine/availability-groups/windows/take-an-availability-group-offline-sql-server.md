@@ -1,5 +1,6 @@
 ---
 title: "Take an Availability Group Offline (SQL Server) | Microsoft Docs"
+description: Learn how to take an Always On availability group from the ONLINE state to the OFFLINE state by using Transact-SQL in SQL Server.
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -20,7 +21,7 @@ ms.author: mathoma
   
   
 > [!CAUTION]  
->  Use the OFFLINE option only for a cross-cluster migration of availability group resources.  
+>  Use the OFFLINE option for a cross-cluster migration of availability group resources or for failing over a read-scale availability group.
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

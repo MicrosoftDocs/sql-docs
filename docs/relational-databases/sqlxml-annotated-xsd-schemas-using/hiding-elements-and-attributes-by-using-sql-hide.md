@@ -1,5 +1,6 @@
 ---
 title: "Hiding Elements and Attributes by Using sql:hide"
+description: Learn how to use the sql:hide annotation to hide elements and attributes when executing an XPath query against an XSD schema.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

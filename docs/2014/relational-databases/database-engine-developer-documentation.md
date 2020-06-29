@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "developer's guide [SQL Server Database Engine]"
   - "Database Engine [SQL Server], development"
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Developer&#39;s Guide (Database Engine)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a rich set of tools for developing, administering, and controlling database applications.  

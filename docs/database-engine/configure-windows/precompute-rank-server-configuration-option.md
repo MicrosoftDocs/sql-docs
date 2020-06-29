@@ -1,5 +1,6 @@
 ---
 title: "precompute rank Server Configuration Option | Microsoft Docs"
+description: 'Learn about the obsolete SQL Server option "precompute rank." Find out how applications that use this option are affected, and see what action to take with them.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "precompute rank option"
   - "FREETEXTTABLE function (Transact-SQL)"
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # precompute rank Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

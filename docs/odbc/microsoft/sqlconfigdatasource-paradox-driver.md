@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLConfigDataSource function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLConfigDataSource"
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLConfigDataSource (Paradox Driver)
 > [!NOTE]  

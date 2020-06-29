@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP QUEUE <object>  
 [ ; ]  

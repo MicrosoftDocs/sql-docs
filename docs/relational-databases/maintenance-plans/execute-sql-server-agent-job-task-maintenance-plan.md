@@ -21,7 +21,7 @@ ms.author: mikeray
   
  This task uses the **.sp_start_job** statement.  
   
-## UIElement List  
+## UI element list  
  **Connection**  
  Select the server connection to use when performing this task.  
   

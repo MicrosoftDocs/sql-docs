@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Extended Events Packages"
+description: A package is a container for SQL Server Extended Events objects. This article describes the objects a package can contain.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

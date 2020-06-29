@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL statements [ODBC], embedded SQL"
   - "embedded SQL [ODBC]"
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Embedded SQL Example
 The following code is a simple embedded SQL program, written in C. The program illustrates many, but not all, of the embedded SQL techniques. The program prompts the user for an order number, retrieves the customer number, salesperson, and status of the order, and displays the retrieved information on the screen.  

@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetFind comparability [ODBC]"
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Generate an Inline XSD Schema | Microsoft Docs"
+description: Learn how to generate an inline XSD schema by using the XMLSCHEMA option in the FOR XML clause of an SQL query.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Generate an Inline XSD Schema
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In a FOR XML clause, you can request that your query return an inline schema together with the query results. If you want an XDR schema, you use the XMLDATA keyword in the FOR XML clause. If you want an XSD schema, you use the XMLSCHEMA keyword.  
   
  This topic describes the XMLSCHEMA keyword and explains the structure of the resulting inline XSD schema. Following are the limitations when you are requesting inline schemas:  

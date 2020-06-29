@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, indexes"
   - "indexes [OLE DB]"
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Tables and Indexes
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **IIndexDefinition** and **ITableDefinition** interfaces, allowing consumers to create, alter, and drop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables and indexes. Valid table and index definitions depend on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

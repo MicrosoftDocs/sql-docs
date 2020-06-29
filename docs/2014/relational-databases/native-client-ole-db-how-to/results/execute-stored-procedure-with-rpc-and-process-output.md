@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "RPC syntax"
   - "stored procedures [SQL Server], RPC syntax"
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Execute a Stored Procedure (Using RPC Syntax) and Process Return Codes and Output Parameters (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are therefore not available to the application until the rowset is completely released. If the command returns multiple results, output parameter data is available when `IMultipleResults::GetResult` returns DB_S_NORESULT, or when the `IMultipleResults` interface is completely released, whichever occurs first.  

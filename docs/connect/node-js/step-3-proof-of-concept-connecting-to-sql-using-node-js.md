@@ -1,5 +1,6 @@
 ---
-title: "Step 3: Proof of concept connecting to SQL using Node.js | Microsoft Docs"
+title: "Step 3: Connecting to SQL using Node.js"
+description: "This example should be considered a proof of concept showing how to connect to SQL using node.js and is simplified for clarity."
 ms.custom: ""
 ms.date: "07/23/2019"
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft. Other examples which use the same crucial functions are available on Github:
+This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft. Other examples, which use the same crucial functions are available on GitHub:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
@@ -107,7 +108,7 @@ All SQL statements are executed using the **new Request()** function. If the sta
   
 ## Step 3: Insert a row  
   
-In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
+In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, passing parameters, which protect your application from [SQL injection](../../relational-databases/security/sql-injection.md) values.    
   
   
 ```javascript  

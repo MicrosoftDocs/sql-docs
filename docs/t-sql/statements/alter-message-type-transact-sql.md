@@ -29,7 +29,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  

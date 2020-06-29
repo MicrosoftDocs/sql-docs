@@ -15,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_colptr function"
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # bcp_colptr
   Sets the program variable data address for the current copy into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

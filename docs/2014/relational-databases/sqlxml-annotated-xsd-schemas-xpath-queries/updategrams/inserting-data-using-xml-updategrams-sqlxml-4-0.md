@@ -30,9 +30,8 @@ helpviewer_keywords:
   - "at-identity attribute"
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Inserting Data Using XML Updategrams (SQLXML 4.0)
   An updategram indicates an insert operation when a record instance appears in the **\<after>** block but not in the corresponding **\<before>** block. In this case, the updategram inserts the record in the **\<after>** block into the database.  
@@ -205,7 +204,7 @@ manager: craigg
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], table names can include a space, such as the Order Details table in the Northwind database. However, this is not valid in XML characters that are valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifiers but not valid XML identifiers can be encoded using '__xHHHH\_\_' as the encoding value, where HHHH stands for the four-digit hexadecimal UCS-2 code for the character in the most significant bit-first order.  
   
 > [!NOTE]  
->  This example uses the Northwind database. You can install the Northwind database by using an SQL script available for download from this [Microsoft Web site](https://www.microsoft.com/download/details.aspx?id=23654).  
+>  This example uses the Northwind database. You can install the Northwind database by using an SQL script available for download from this [Microsoft Web site](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Also, the element name must be enclosed within brackets ([ ]). Because the characters [and] are not valid in XML, you must encode them as _x005B\_ and _x005D\_, respectively. (If you use a mapping schema, you can provide element names that do not contain characters that are not valid, such as white spaces. The mapping schema does the necessary mapping; therefore, you do not need to encode for these characters).  
   

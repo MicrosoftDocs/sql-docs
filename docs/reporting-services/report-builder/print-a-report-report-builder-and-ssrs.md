@@ -1,5 +1,6 @@
 ---
 title: "Print a Report (Report Builder) | Microsoft Docs"
+description: You can view and print a report from a browser, the Reporting Services web portal, or any application that you use to view an exported report.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

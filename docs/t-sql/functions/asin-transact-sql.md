@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sine"
   - "arcsine"
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ASIN (Transact-SQL)
@@ -30,7 +30,7 @@ A function that returns the angle, in radians, whose sine is the specified **flo
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASIN ( float_expression )  
 ```  
   

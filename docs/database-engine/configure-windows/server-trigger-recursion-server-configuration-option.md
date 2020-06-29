@@ -1,5 +1,6 @@
 ---
 title: "server trigger recursion Server Configuration Option | Microsoft Docs"
+description: 'Learn how the "server trigger recursion" option affects recursion in SQL Server server-level triggers. See how to turn direct and indirect recursion on and off.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "triggers [SQL Server], recursive"
   - "server trigger recursion option"
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # server trigger recursion Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

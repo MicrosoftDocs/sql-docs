@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLNativeSql function [ODBC], Cursor Library"
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLNativeSql (Cursor Library)
 > [!IMPORTANT]  

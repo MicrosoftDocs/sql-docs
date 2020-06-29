@@ -28,7 +28,7 @@ Creates a Resource Governor resource pool in [!INCLUDE[ssNoVersion](../../includ
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
-```  
+```syntaxsql
 CREATE RESOURCE POOL pool_name  
 [ WITH  
     (  

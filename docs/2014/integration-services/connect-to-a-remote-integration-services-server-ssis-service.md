@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "Integration Services service, remote instance"
   - "service [Integration Services], connecting"
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Connect to a Remote Integration Services Server (SSIS Service)
     

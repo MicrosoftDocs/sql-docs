@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "EditModeEnum enumeration [ADO]"
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # EditModeEnum
 Specifies the editing status of a record.  

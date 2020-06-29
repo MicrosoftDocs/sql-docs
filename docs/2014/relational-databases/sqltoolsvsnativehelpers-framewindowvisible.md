@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # FrameWindowVisible
   Property that specifies whether a given window frame is visible. The helper method is used from managed code.  

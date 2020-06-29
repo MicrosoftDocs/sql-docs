@@ -1,5 +1,6 @@
 ---
 title: "transform noise words Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "transform noise words" option. See how it can be useful in some SQL Server full-text queries that include noise words (stopwords).'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # transform noise words Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

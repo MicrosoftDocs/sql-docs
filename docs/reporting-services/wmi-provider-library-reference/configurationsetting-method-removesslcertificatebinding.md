@@ -14,7 +14,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # ConfigurationSetting Method - RemoveSSLCertificateBinding
-  Removes an SSL Certificate binding.  
+  Removes a TLS/SSL Certificate binding.  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ public void RemoveSSLCertificateBindings(string Application,
  The IP address for the application.  
   
  *Port*  
- The SSL port associated with the binding.  
+ The TLS port associated with the binding.  
   
  *lcid*  
  The locale to use for the error messages that are returned.  

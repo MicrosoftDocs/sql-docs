@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "base-10 logarithms"
   - "LOG function"
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # LOG (SSIS Expression)
   Returns the base-10 logarithm of a numeric expression.  

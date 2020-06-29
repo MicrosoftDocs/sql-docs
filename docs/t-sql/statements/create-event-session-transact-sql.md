@@ -33,7 +33,7 @@ Creates an Extended Events session that identifies the source of the events, the
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EVENT SESSION event_session_name
 ON { SERVER | DATABASE }
 {  

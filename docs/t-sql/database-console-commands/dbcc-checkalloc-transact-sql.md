@@ -36,7 +36,7 @@ Checks the consistency of disk space allocation structures for a specified datab
   
 ## Syntax  
   
-```
+```syntaxsql
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   

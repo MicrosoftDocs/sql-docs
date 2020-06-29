@@ -1,5 +1,5 @@
 ---
-title: "GO (Transact-SQL) | Microsoft Docs"
+title: "SQL Server Utilities Statements - GO | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
 ms.prod: sql

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 10: Configuring Composite Domain to Use Reference Data Service
   In this task, you configure the **Address Validation** composite domain to use the **Melissa Data - Address Check** service. At runtime, during cleansing activity, DQS passes the values of domains in the Address Validation domain to the service for cleansing. See [Map Domain/Composite Domain to Reference Data](https://msdn.microsoft.com/library/hh213030.aspx) for more details.  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "connecting to driver [ODBC], driver manager"
   - "ODBC driver manager [ODBC]"
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Driver Manager&#39;s Role in the Connection Process
 Remember that applications do not call driver functions directly. Instead, they call Driver Manager functions with the same name and the Driver Manager calls the driver functions. Usually, this happens almost immediately. For example, the application calls **SQLExecute** in the Driver Manager and after a few error checks, the Driver Manager calls **SQLExecute** in the driver.  

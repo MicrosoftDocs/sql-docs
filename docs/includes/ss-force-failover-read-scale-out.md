@@ -71,19 +71,26 @@ To manually fail over without data loss:
    ```
 
    This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary replica. 
-
-4. Demote the primary replica to a secondary replica. After the primary replica is demoted, it's read-only. To update the role to `SECONDARY`, run the following command on the SQL Server instance that hosts the primary replica:
-
+   >[!NOTE]
+   >This setting is not specific to failover and should be set based on the requirements of the environment.
+   
+4. Offline the primary replica in preparation for role changes.
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] 
-        SET (ROLE = SECONDARY); 
+   ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
 5. Promote the target secondary replica to primary. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-   ```  
+   ``` 
+
+6. Update the role of the old primary to `SECONDARY`, run the following command on the SQL Server instance that hosts the primary replica:
+
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
+   ```
 
    > [!NOTE] 
    > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group that's created with cluster type NONE or EXTERNAL, execute the command on all replicas that are part of the availability group.

@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "xsd:simpleType declarations"
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Values for &lt;xsd:simpleType&gt; Declarations
   The following table outlines the restrictions that are applied, based on all recognized XSD simple type enumerations.  

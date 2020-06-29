@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Managed Backup to Azure: Interoperability and Coexistence | Microsoft Docs"
+description: This article describes SQL Server Managed Backup to Microsoft Azure interoperability and coexistence with several features in SQL Server 2014.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
@@ -9,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Managed Backup to Azure: Interoperability and Coexistence
   This topic describes [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] interoperability and coexistence with several features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features include the following: AlwaysOn Availability Groups, Database Mirroring, Backup Maintenance Plans, Log Shipping, Ad hoc backups, Detach Database, and Drop Database.  

@@ -1,5 +1,6 @@
 ---
 title: "Define logical backup device - tape"
+description: This article shows you how to define a logical backup device for a tape drive in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

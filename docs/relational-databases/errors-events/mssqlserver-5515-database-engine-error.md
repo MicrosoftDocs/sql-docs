@@ -18,8 +18,8 @@ robots: noindex,nofollow
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|MSSQLSERVER|  
 |Event ID|5515|  
 |Event Source|MSSQLSERVER|  

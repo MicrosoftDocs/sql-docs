@@ -47,7 +47,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path>\\\*** - Collect all audit files in the specified location.  
   
-    -   **\<path>\LoginsAudit_{GUID}** - Collect all audit files that have the specified name and GUID pair.  
+    -   **\<path>\LoginsAudit_{GUID}*** - Collect all audit files that have the specified name and GUID pair.  
   
     -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   

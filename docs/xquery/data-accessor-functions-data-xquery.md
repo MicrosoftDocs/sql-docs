@@ -1,5 +1,6 @@
 ---
 title: "data Function (XQuery) | Microsoft Docs"
+description: Learn how to use the XQuery function data() to return the typed value for each item in a specified sequence of items.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

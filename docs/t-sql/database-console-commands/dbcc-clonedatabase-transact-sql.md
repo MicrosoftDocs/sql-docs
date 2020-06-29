@@ -47,7 +47,7 @@ Generates a schema-only clone of a database by using DBCC CLONEDATABASE in order
   
 ## Syntax  
   
-```
+```syntaxsql
 DBCC CLONEDATABASE   
 (  
     source_database_name

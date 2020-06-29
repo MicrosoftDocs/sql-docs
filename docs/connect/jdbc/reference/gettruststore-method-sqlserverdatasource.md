@@ -13,8 +13,8 @@ apilocation:
   - "getTrustStore Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getTrustStore Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -31,7 +31,7 @@ Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../.
 ## INSERT Into Node Table Syntax 
 The syntax for inserting into a Node table is the same as for a regular table. 
 
-```sql
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

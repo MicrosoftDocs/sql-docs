@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sp_syscollector_enable_collector"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_syscollector_enable_collector (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

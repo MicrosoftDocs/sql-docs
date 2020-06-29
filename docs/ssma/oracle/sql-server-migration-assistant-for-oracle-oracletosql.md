@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Migration Assistant for Oracle (OracleToSQL) | Microsoft Docs"
+description: Learn about SSMA for Oracle and follow step-by-step instructions for migrating Oracle databases to SQL Server.
 ms.prod: sql
 ms.custom: ""
 ms.date: "10/10/2019"

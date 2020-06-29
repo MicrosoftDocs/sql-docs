@@ -29,7 +29,7 @@ Sets the specified local variable, previously created by using the DECLARE @*loc
 ## Syntax  
 Syntax for SQL Server and Azure SQL Database:
 
-```sql    
+```syntaxsql
 SET   
 { @local_variable  
     [ . { property_name | field_name } ] = { expression | udt_name { . | :: } method_name }  
@@ -55,7 +55,7 @@ SET
 }   
 ```  
 Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:  
-```sql  
+```syntaxsql
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   

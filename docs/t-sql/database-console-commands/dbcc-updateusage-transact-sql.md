@@ -43,7 +43,7 @@ Reports and corrects pages and row count inaccuracies in the catalog views. Thes
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC UPDATEUSAGE   
 (   { database_name | database_id | 0 }   
     [ , { table_name | table_id | view_name | view_id }   

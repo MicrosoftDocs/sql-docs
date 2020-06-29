@@ -33,7 +33,7 @@ Checks the allocation and structural integrity of all tables and indexed views i
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 DBCC CHECKFILEGROUP   
 [  

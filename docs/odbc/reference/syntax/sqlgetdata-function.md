@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetData function [ODBC]"
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetData Function
 **Conformance**  

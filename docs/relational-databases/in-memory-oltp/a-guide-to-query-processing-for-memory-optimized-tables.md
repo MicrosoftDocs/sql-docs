@@ -1,5 +1,6 @@
 ---
 title: "Query processing for memory-optimized tables"
+description: Learn about query processing for both memory-optimized tables and natively compiled stored procedures in In-Memory OLTP in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "05/09/2019"
 ms.prod: sql
@@ -57,7 +58,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- For constructing the query plans shown in this article, the two tables were populated with sample data from the Northwind sample database, which you can download from [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
+ For constructing the query plans shown in this article, the two tables were populated with sample data from the Northwind sample database, which you can download from [Northwind and pubs Sample Databases for SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Consider the following query, which joins the tables Customer and Order and returns the ID of the order and the associated customer information:  
   

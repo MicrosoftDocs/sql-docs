@@ -45,7 +45,7 @@ Consider that you have `Product` and `Customer` nodes in your graph and you use 
 Creating an edge constraint does not automatically create a corresponding index on `$from_id` and `$to_id` columns in the edge table. Manually creating an index on a `$from_id`, `$to_id` pair is recommended if you have point lookup queries or OLTP workload.
 
 ### ON DELETE referential actions on edge constraints
-Cascading actions on an edge constraint let users define the acations that the database engine takes when a user deletes the node(s), which the given edge connects. The following referential actions can be defined:  
+Cascading actions on an edge constraint let users define the actions that the database engine takes when a user deletes the node(s), which the given edge connects. The following referential actions can be defined:  
 *NO ACTION*   
 The database engine raises an error when you try to delete a node that has connecting edge(s).  
 

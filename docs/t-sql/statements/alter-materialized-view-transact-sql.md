@@ -31,7 +31,7 @@ Modifies a previously created materialized view. ALTER VIEW does not affect depe
   
 ## Syntax  
   
-```
+```syntaxsql
 ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 {
       REBUILD | DISABLE

@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_207 | Microsoft Docs"
+description: A query error in SQL Server regarding an invalid column name. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -17,8 +18,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|207|  
 |Event Source|MSSQLSERVER|  

@@ -34,7 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 IDENTITY (data_type [ , seed , increment ] ) AS column_name  
 ```  

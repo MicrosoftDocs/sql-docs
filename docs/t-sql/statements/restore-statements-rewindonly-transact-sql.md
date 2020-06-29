@@ -32,7 +32,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RESTORE REWINDONLY   
 FROM <backup_device> [ ,...n ]  

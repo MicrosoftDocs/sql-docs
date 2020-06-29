@@ -1,5 +1,6 @@
 ---
 title: "SQLSetConnectAttr | Microsoft Docs"
+description: Learn about connection attributes in SQLSetConnectAttr, including when they are set and possible values in the SQL Server Native Client ODBC driver.
 ms.custom: ""
 ms.date: 01/09/2019
 ms.prod: sql
@@ -11,8 +12,8 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLSetConnectAttr function"
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSetConnectAttr

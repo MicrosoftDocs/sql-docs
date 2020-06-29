@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], refreshing metadata"
   - "user-defined functions [SQL Server], refreshing metadata"
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refreshsqlmodule (Transact-SQL)

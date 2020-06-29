@@ -1,5 +1,6 @@
 ---
 title: "Overview of CLR Integration | Microsoft Docs"
+description: Microsoft SQL Server hosting CLR is called CLR integration. Authoring in managed code can improve performance. SQL Server uses CAS to help secure managed code.
 ms.custom: ""
 ms.date: "04/19/2017"
 ms.prod: sql

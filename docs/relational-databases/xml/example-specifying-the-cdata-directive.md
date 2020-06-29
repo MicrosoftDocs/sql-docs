@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the CDATA Directive | Microsoft Docs"
+description: View an example of how to specify the CDATA directive to wrap the specified data in a CDATA section.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Specifying the CDATA Directive
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   If the directive is set to **CDATA**, the contained data is not entity encoded, but is put in the CDATA section. The **CDATA** attributes must be nameless.  
   
  The following query wraps the product model summary description in a CDATA section.  

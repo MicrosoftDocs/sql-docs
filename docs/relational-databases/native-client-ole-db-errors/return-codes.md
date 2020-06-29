@@ -1,5 +1,6 @@
 ---
 title: "Return Codes | Microsoft Docs"
+description: Learn about return codes supported for SQL Server Native Client OLE DB, including the commonly encountered DB_S_ERRORSOCCURRED HRESULT value.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -20,8 +21,8 @@ helpviewer_keywords:
   - "FAILED macro"
   - "errors [OLE DB], return codes"
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Return Codes

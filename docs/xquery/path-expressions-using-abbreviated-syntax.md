@@ -1,5 +1,6 @@
 ---
 title: "Using Abbreviated Syntax in a Path Expression | Microsoft Docs"
+description: Learn how to use abbreviated syntax in XQuery path expressions.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

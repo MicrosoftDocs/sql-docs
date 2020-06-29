@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], authentication"
   - "authentication [ODBC]"
 ms.assetid: 613daef7-3171-42d0-b7e3-3879280f864d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Operating System Authentication
 > [!IMPORTANT]  

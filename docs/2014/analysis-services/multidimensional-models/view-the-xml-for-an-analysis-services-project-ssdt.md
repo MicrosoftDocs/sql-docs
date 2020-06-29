@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: dd1a4bc6-57b5-47df-8619-09f921aa6351
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # View the XML for an Analysis Services Project (SSDT)
   When you are working with an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database in project mode, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] creates an XML definition for each object within the project folder. You can view the contents of the XML file for each object within [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You can also edit the XML file directly; however, this is not recommended in most circumstances as you may make changes that make the XML unreadable by [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

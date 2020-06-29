@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "language references [SQL Server]"
   - "IntelliSense [SQL Server], Parameter Info option"
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Parameter Info (IntelliSense)
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **Parameter Info** option opens a parameters list that provides information about the number, names, and types of the parameters that are required by a function or stored procedure. The parameter in bold indicates the next parameter that is required as you type a function or stored procedure.  

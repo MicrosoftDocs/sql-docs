@@ -2,11 +2,12 @@
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
 ms.date: "08/13/2018"
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ""
 ms.custom: ""
 ms.topic: conceptual
-author: "rothja"
-ms.author: "jroth"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 

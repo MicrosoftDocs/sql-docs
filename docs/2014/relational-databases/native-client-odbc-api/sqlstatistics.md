@@ -11,9 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLStatistics function"
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQLStatistics
   **SQLStatistics** can be executed on a static cursor. An attempt to execute **SQLStatistics** on an updatable (keyset-driven or dynamic) returns SQL_SUCCESS_WITH_INFO indicating the cursor type is changed.  

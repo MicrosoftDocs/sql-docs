@@ -1,5 +1,6 @@
 ---
 title: "Best Practices for Replication Administration | Microsoft Docs"
+description: After you configure replication, use these best practices to administer your replication topology in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

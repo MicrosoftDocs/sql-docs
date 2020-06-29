@@ -1,5 +1,6 @@
 ---
 title: "local-name Function (XQuery) | Microsoft Docs"
+description: Learn how to use the XQuery function local-name() to return the local-name part of a node.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

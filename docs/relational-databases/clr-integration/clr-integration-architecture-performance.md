@@ -1,5 +1,6 @@
 ---
 title: "Performance of CLR Integration | Microsoft Docs"
+description: This article discusses design choices for Microsoft SQL Server integration with the .NET Framework CLR, including the compilation process and performance.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

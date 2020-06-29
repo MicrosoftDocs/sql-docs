@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetdest.erroroutput.f1"
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ADO NET Destination Editor (Error Output Page)
   Use the **Error Output** page of the **ADO NET Destination Editor** dialog box to specify error handling options.  

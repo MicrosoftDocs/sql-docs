@@ -1,9 +1,11 @@
 ---
 title: "Media sets, media families, & backup sets"
+description: This article gives you an overview of media sets, media families, and backup sets that SQL Server uses in backup and recovery.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod_service: backup-restore
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 

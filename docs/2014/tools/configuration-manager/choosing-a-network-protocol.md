@@ -1,5 +1,6 @@
 ---
 title: "Choosing a Network Protocol | Microsoft Docs"
+description: Compare and contrast network protocols that are available for connecting to SQL Server Database Engine, such as shared memory, TCP/IP, and named pipes.
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -20,9 +21,8 @@ helpviewer_keywords:
   - "Banyan VINES"
   - "protocols [SQL Server], client configuration"
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Choosing a Network Protocol
   To connect to [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] you must have a network protocol enabled. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can service requests on several protocols at the same time. Clients connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a single protocol. If the client program does not know which protocol [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is listening on, configure the client to sequentially try multiple protocols. Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to enable, disable, and configure network protocols.  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Scenario
 > [!IMPORTANT]

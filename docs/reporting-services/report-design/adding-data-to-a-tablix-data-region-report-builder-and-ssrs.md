@@ -1,5 +1,6 @@
 ---
 title: "Adding Data to a Tablix Data Region (Report Builder) | Microsoft Docs"
+description: Learn how to display detailed or grouped data, from a report dataset in a table or matrix, to a Tablix Data Region. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

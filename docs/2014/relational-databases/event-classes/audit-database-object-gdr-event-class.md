@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Database Object GDR Event Class
   The **Audit Database Object GDR** event class occurs when a GRANT, REVOKE, or DENY has been issued for database objects, such as assemblies and schemas.  

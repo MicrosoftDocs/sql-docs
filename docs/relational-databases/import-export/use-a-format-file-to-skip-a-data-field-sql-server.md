@@ -1,5 +1,6 @@
 ---
 title: "Use a format file to skip a data field"
+description: You can use a format file with a data file that has more fields than table columns. It maps table columns to corresponding data fields and ignores extra fields.
 ms.date: "09/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

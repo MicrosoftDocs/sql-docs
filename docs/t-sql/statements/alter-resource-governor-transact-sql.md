@@ -40,7 +40,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER RESOURCE GOVERNOR   
       { DISABLE | RECONFIGURE }  
     | WITH ( CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } )  

@@ -6,7 +6,6 @@ ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""
-ms.manager: craigg
 ms.author: giladm
 author: giladmit
 f1_keywords:
@@ -33,7 +32,7 @@ Drops sensitivity classification metadata from one or more database columns.
 
 ## Syntax
 
-```sql
+```syntaxsql
 DROP SENSITIVITY CLASSIFICATION FROM
     <object_name> [, ...n ]
 

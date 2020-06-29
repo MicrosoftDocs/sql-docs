@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_CONVERT function"
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest"
 ---
 # TRY_CONVERT (Transact-SQL)
@@ -28,7 +28,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-20
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  

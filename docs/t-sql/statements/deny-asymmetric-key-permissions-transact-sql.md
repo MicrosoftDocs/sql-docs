@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   

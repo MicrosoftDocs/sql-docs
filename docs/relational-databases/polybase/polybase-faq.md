@@ -1,5 +1,6 @@
 ---
 title: "Frequently Asked Questions in PolyBase | Microsoft Docs"
+description: Compare PolyBase and linked servers and compare PolyBase in big data clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase

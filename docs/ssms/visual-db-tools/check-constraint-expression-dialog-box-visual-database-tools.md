@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
@@ -19,7 +18,7 @@ ms.reviewer:
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 When you attach a check constraint to a table or column, you must include an SQL expression. Type the check constraint expression in the box provided.  
   
-## UIElement List  
+## UI element list  
 Expression  
 Enter the expression  
   

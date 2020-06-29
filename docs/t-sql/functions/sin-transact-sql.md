@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SIN function"
   - "sine"
 ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SIN (Transact-SQL)
@@ -36,7 +36,7 @@ SIN ( float_expression )
 
 ## Arguments  
  *float_expression*  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to float.  
+ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to float, in radians.
   
 ## Return Types  
  **float**  

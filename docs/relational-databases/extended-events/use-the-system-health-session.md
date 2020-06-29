@@ -1,5 +1,6 @@
 ---
 title: "Use the system_health Session"
+description: The system_health Extended Events session is included with SQL Server. This session collects system data to troubleshoot performance for the Database Engine.
 ms.date: "11/27/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

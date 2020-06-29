@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 71bae511-956d-4f23-bfa8-bfcc563b3e11
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Ready to Complete Image
   The **Ready to Complete Image** page provides a summary of configuration settings that are applied to the configuration of the prepared instance.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade to SQL Server 2014
   You can upgrade instances of, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Before running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], check out the [SQL Server 2014 Upgrade Technical Guide](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (PDF download), review the topics about the upgrade process in this section, and read the [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
@@ -52,8 +51,8 @@ manager: craigg
  [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Upgrade Master Data Services](upgrade-master-data-services.md)   
- [SQL Server 2005 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=23864)   
- [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [SQL Server 2012 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=29302)   
+ [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=436)   
  [Backward Compatibility](../../../2014/getting-started/backward-compatibility.md)  
   
   

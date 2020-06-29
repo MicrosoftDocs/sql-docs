@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 12900d49-db88-48bb-a5f4-0a9a172bc126
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Prediction Query Builder (Data Mining)
   Use the **Mining Model Prediction** view to create predictions based on mining models that a mining structure contains.  

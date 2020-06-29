@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "address book application scenario [ADO], command buttons"
   - "RDS scenarios [ADO], command buttons"
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Address Book Command Buttons
 The Address Book application includes the following command buttons:  

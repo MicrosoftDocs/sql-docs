@@ -33,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  

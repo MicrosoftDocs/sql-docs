@@ -1,6 +1,6 @@
 ---
 title: Develop using REST APIs
-ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
+description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: e2c62d4b-27d9-4ee0-9d90-a6dd4ca2906d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect To Database Dialog Box
   Use the **Connect To Database** dialog box to connect to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  

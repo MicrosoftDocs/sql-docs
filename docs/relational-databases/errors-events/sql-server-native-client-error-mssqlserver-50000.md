@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_50000 | Microsoft Docs"
+description: An error from an attempt was made to install or update SQL Server Native Client. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -20,8 +21,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Product Version|11.0|  
 |Event ID|50000|  

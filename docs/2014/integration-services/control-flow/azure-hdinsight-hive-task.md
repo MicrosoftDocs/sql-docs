@@ -10,9 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.afphivetask.f1"
   - "sql11.dts.designer.afphivetask.f1"
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Azure HDInsight Hive Task
 Use the **Azure HDInsight Hive Task** to run Hive script on an Azure HDInsight cluster.

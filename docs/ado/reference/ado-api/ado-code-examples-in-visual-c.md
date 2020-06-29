@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ADO code examples, Visual C++"
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Code Examples in Visual C++
 Use the following code examples to learn how to use the ADO methods, properties, and events when writing in Microsoft Visual C++.  

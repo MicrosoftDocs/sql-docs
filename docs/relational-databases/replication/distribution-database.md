@@ -1,5 +1,6 @@
 ---
 title: "Distribution Database | Microsoft Docs"
+description: In SQL Server, the distribution database stores metadata and history data for all types of replication, and transactions for transactional replication.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -2,7 +2,7 @@
 title: "tempdb Database | Microsoft Docs"
 description: This topic provides details regarding the configuration and use of the tempdb database in SQL Server and Azure SQL Database
 ms.custom: "P360"
-ms.date: 08/21/2019
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
@@ -105,26 +105,26 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 |SLO|Max TempDB Data File Size (GBs)|# of TempDB data files|Max TempDB data size (GB)|
 |---|---:|---:|---:|
-|Basic|13|1|13|
-|S0|13|1|13|
-|S1|13|1|13|
-|S2|13|1|13|
+|Basic|13.9|1|13.9|
+|S0|13.9|1|13.9|
+|S1|13.9|1|13.9|
+|S2|13.9|1|13.9|
 |S3|32|1|32
 |S4|32|2|64|
 |S6|32|3|96|
 |S7|32|6|192|
 |S9|32|12|384|
 |S12|32|12|384|
-|P1|13|12|156|
-|P2|13|12|156|
-|P4|13|12|156|
-|P6|13|12|156|
-|P11|13|12|156|
-|P15|13|12|156|
-|Premium Elastic Pools (all DTU configurations)|13|12|156|
-|Standard Elastic Pools (S0-S2)|13|12|156|
+|P1|13.9|12|166.7|
+|P2|13.9|12|166.7|
+|P4|13.9|12|166.7|
+|P6|13.9|12|166.7|
+|P11|13.9|12|166.7|
+|P15|13.9|12|166.7|
+|Premium Elastic Pools (all DTU configurations)|13.9|12|166.7|
+|Standard Elastic Pools (S0-S2)|13.9|12|166.7|
 |Standard Elastic Pools (S3 and above) |32|12|384|
-|Basic Elastic Pools (all DTU configurations)|13|12|156|
+|Basic Elastic Pools (all DTU configurations)|13.9|12|166.7|
 ||||
 
 ### TempDB sizes for vCore-based service tiers

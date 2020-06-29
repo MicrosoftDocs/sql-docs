@@ -1,5 +1,6 @@
 ---
 title: "Configure the remote query timeout Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "remote query timeout" option. See how it determines the number of seconds that a remote operation can take before SQL Server times out.'
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "time limit for remote queries [SQL Server]"
   - "remote query timeout option"
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the remote query timeout Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

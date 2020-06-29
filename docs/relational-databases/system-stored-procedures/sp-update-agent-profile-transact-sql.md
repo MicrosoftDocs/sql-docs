@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_update_agent_profile"
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

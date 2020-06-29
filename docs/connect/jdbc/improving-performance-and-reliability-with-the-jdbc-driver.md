@@ -1,5 +1,6 @@
 ---
-title: "Improving performance and reliability with the JDBC driver | Microsoft Docs"
+title: "Improving performance and reliability with the JDBC driver"
+description: "Learn about various techniques for improving application performance and reliability when using the Microsoft JDBC driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Improving performance and reliability with the JDBC driver

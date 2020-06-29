@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_foreignkeys"
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

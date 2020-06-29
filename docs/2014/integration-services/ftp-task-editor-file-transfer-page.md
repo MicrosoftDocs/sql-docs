@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "File Transfer Protocol Task Editor"
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # FTP Task Editor (File Transfer Page)
   Use the **File Transfer** page of the **FTP Task Editor** dialog box to configure the FTP operation that the task performs.  

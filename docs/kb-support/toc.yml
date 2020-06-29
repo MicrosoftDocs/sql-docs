@@ -1,8 +1,0 @@
-# - name: Knowledge Base support
-#   items:
-
-- name: End of support for SQL Server 2008
-  href: end-support-sql-server-2008.md
-
-- name: Resource Monitor in nonyielding conditions
-  href: resource-monitor-nonyielding-condition.md

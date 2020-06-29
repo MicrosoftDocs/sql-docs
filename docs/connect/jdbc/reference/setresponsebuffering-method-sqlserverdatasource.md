@@ -13,8 +13,8 @@ apilocation:
   - "SQLServerDataSource.setResponseBuffering(String responseBufferingValue)"
 apitype: "Assembly"
 ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setResponseBuffering Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

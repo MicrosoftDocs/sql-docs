@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "ICommand [SQL Server Native Client]"
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ICommand (OLE DB)
   This topic discusses OLE DB behavior that is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

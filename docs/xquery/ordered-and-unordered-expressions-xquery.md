@@ -1,5 +1,6 @@
 ---
 title: "Ordered and Unordered Expressions (XQuery) | Microsoft Docs"
+description: Learn about ordered and unordered expressions in XQuery.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

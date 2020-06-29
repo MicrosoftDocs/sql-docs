@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Query and Filter (Browser Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   This area of the **Browser** tab in Cube Designer contains a query and filter area, to help you choose data from the cube to use in browsing or in queries. You can add as many cube objects as you want, and then view the results in the data area, or export the results to a report using Analyze in Excel to visualize how the data would be viewed by end users.  

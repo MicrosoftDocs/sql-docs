@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER APPLICATION ROLE application_role_name   
     WITH <set_item> [ ,...n ]  

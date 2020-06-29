@@ -32,7 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]  
 [ WITH NO DEPENDENTS ]  
 [ ; ]  

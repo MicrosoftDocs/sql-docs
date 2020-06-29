@@ -28,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP DATABASE AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  

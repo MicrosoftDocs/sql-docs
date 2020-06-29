@@ -9,7 +9,6 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -39,7 +38,7 @@ Remove the selected constraint from the table. To cancel the addition of a check
 Expand to show the **Expression** property field.  
   
 **Expression**  
-Displays the expression for the selected check constraint. For new constraints, you must enter the expression before exiting this box. You can also edit existing check constraints. For more information, see [Working with Constraints(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Displays the expression for the selected check constraint. For new constraints, you must enter the expression before exiting this box. You can also edit existing check constraints. For more information, see [Working with Constraints](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Identity Category**  
 Expand to show properties for **Name** and **Description**.  

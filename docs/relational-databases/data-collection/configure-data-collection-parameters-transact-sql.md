@@ -1,7 +1,6 @@
 ---
 title: "Configure Data Collection Parameters (T-SQL)"
-ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability

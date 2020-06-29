@@ -1,5 +1,6 @@
 ---
 title: "Monitor Replication Agents | Microsoft Docs"
+description: SQL Server Replication Monitor provides a systemic view of replication activity and lets you find information on a specific agent.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

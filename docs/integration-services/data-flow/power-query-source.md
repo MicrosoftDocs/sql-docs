@@ -64,7 +64,7 @@ In **Power Query Connection Manager Editor**, you need to specify **Data Source 
 
 ![PQ Source Connection Manager Editor Kind](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-Some of these sources (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) require additional installations of ADO.NET drivers that can be obtained from [Power Query Prerequisites](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) article. You can use the custom setup interface to install them on your Azure-SSIS IR, see [Customizing Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) article.
+Some of these sources (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) require additional installations of ADO.NET drivers that can be obtained from [Power Query Prerequisites](/power-bi/desktop-data-source-prerequisites) article. You can use the custom setup interface to install them on your Azure-SSIS IR, see [Customizing Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) article.
 
 For **Data Source Path**, you can enter data source-specific properties forming a connection string without the authentication info. For example, the path for **SQL** data source is formed as `<Server>;<Database>`. You can select the **Edit** button to assign values to data source-specific properties forming the path.
 

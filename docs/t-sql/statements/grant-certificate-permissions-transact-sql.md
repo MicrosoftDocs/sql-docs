@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```
+```syntaxsql
 GRANT permission  [ ,...n ]    
     ON CERTIFICATE :: certificate_name   
     TO principal [ ,...n ] [ WITH GRANT OPTION ]   

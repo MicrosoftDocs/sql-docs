@@ -1,5 +1,6 @@
 ---
 title: "Bulk import & export of XML documents"
+description: These examples show bulk import of XML documents into a SQL Server database and bulk export from a SQL Server database.
 ms.description: "Examples of bulk importing and exporting of XML documents with SQL Server"
 ms.date: "10/24/2016"
 ms.prod: sql

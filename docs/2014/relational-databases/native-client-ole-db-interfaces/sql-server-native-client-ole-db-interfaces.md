@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "SQLNCLI, OLE DB"
   - "SQL Server Native Client, OLE DB"
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQL Server Native Client (OLE DB) Reference
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes interfaces to consumers wanting access to data on one or more computers running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider is an OLE DB version 2.0-compliant provider.  

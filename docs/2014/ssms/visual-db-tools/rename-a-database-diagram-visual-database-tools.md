@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Rename a Database Diagram (Visual Database Tools)
   You can rename a database diagram in Object Explorer. Requires ALTER permission on the database.  

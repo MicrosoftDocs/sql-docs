@@ -1,5 +1,6 @@
 ---
 title: "Key features in DW WideWorldImporters database"
+description: Learn how the WideWorldImportersDW database showcases key features of SQL Server that are suitable for data warehousing and analytics. 
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: "samples"

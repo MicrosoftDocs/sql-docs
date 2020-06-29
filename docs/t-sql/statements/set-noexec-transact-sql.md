@@ -32,7 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET NOEXEC { ON | OFF }  
 ```  
@@ -50,7 +50,7 @@ SET NOEXEC { ON | OFF }
 ## Examples  
  The following example uses `NOEXEC` with a valid query, a query with an object name that is not valid, and a query with incorrect syntax.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 PRINT 'Valid query';  

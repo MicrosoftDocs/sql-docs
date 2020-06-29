@@ -67,8 +67,6 @@ ms.author: chugu
 ##  Configure the For Loop container
 This procedure describes how to configure a For Loop container by using the **For Loop Editor** dialog box.  
   
- For an example of the For Loop container, see [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295) on bimonkey.com.  
-  
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-click the For Loop container to open the **For Loop Editor**.  
   
 2.  Optionally, modify the name and description of the For Loop container.  

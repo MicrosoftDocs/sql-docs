@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "DiffGrams [SQLXML], about DiffGrams"
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Guidelines and Limitations of DiffGrams in SQLXML
   Remember the following when using DiffGrams with SQLXML 4.0:  

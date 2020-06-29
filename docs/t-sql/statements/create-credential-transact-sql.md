@@ -38,7 +38,7 @@ Creates a server-level credential. A credential is a record that contains the au
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]

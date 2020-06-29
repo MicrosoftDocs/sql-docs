@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes
   This topic describes how to specify node paths to index and optimization hints for indexing when you create or alter selective XML indexes.  

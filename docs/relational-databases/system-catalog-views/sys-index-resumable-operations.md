@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sys.indexes"
   - "sys.index_resumable_operations"
 ms.assetid: 
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: CarlRabeler
+ms.author: carlrab
 
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

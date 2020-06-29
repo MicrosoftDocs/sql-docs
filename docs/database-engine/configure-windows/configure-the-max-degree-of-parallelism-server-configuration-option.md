@@ -1,6 +1,6 @@
 ---
 title: "Configure the max degree of parallelism Server Configuration Option | Microsoft Docs"
-ms.custom: ""
+description: Learn about the max degree of parallelism (MAXDOP) option. See how to use it to limit the number of processors that SQL Server uses in parallel plan execution.
 ms.date: "02/12/2020"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,8 +14,9 @@ helpviewer_keywords:
   - "max degree of parallelism option"
   - "MaxDop"
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
+ms.custom: contperfq4
 ---
 # Configure the max degree of parallelism Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,10 +120,8 @@ GO
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  
- [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)      
- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/help/2806535)     
- [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)        
+ [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)      
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
@@ -130,3 +129,8 @@ GO
  [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)    
  [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)     
  [Set Index Options](../../relational-databases/indexes/set-index-options.md)     
+
+## Next steps
+
+[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+[Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)

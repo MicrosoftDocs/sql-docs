@@ -1,5 +1,6 @@
 ---
 title: "View and Modify Replication Security Settings | Microsoft Docs"
+description: Learn how to view and modify replication security settings in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Availability replica is disconnected
     

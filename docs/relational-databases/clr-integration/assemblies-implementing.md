@@ -1,5 +1,6 @@
 ---
 title: "Implementing Assemblies | Microsoft Docs"
+description: Learn how to work with assemblies hosted on SQL Server, including how to create/modify assemblies, drop or enable/disable assemblies, and manage versions.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

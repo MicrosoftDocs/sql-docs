@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "MoveFirst method [ADO]"
   - "MovePrevious method [ADO]"
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)
 Moves to the first, last, next, or previous record in a specified [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object and makes that record the current record.  

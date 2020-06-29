@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 [ CONSTRAINT constraint_name ]   
 {   
     [ NULL | NOT NULL ]   

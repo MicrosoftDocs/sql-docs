@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
+```syntaxsql
 MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
@@ -44,7 +44,7 @@ MATCH (<graph_search_pattern>)
       LAST_NODE(<node_alias>) | <node_alias>   { 
           { <-( <edge_alias> )- } 
         | { -( <edge_alias> )-> }
-        <node_alias> | LAST(<node_alias>)
+        <node_alias> | LAST_NODE(<node_alias>)
         } 
   }
   [ { AND } { ( <simple_match_pattern> ) } ]

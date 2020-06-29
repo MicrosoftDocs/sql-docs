@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Extending OLAP through personalizations
   Microsoft  [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] supplies many intrinsic functions for use with the Multidimensional Expressions (MDX) and Data Mining Extensions (DMX) languages. These functions are designed to accomplish everything from standard statistical calculations to traversing members in a hierarchy. However, as with any other complex and robust product, there is always the need to extend the functionality of such a product further.  
@@ -22,7 +21,7 @@ manager: craigg
  Assemblies enable you to extend the business functionality of MDX and DMX. You build the functionality that you want into a library, such as a dynamic link library (DLL), then add the library as an assembly to an instance of Analysis Services or to an Analysis Services database. The public methods in the library are then exposed as user-defined functions to MDX and DMX expressions, procedures, calculations, actions, and client applications.  
   
 ## Personalized Extensions  
- SQL Server Analysis Services personalization extensions are the foundation of the idea of implementing a plug-in architecture. Analysis Services personalization extensions are a simple and elegant modification to the existing managed assembly architecture and are exposed throughout the Analysis Services <xref:Microsoft.AnalysisServices.AdomdServer> object model, Multidimensional Expressions (MDX) syntax, and schema rowsets.  
+ SQL Server Analysis Services personalization extensions are the foundation of the idea of implementing a plug-in architecture. Analysis Services personalization extensions are a simple and elegant modification to the existing managed assembly architecture and are exposed throughout the Analysis Services [Microsoft.AnalysisServices.AdomdServer](/previous-versions/sql/sql-server-2014/ms131779(v=sql.120)) object model, Multidimensional Expressions (MDX) syntax, and schema rowsets.  
   
 ## See Also  
  [Multidimensional Model Assemblies Management](../multidimensional-model-assemblies-management.md)   

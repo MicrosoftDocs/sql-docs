@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Delete a Trace (Transact-SQL)
   This topic describes how to use stored procedures to delete a trace.  

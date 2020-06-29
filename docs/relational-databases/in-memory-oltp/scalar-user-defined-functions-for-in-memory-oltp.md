@@ -1,5 +1,6 @@
 ---
 title: "Scalar User-Defined Functions for In-Memory OLTP | Microsoft Docs"
+description: Learn how to create and drop natively compiled, scalar user-defined functions for In-Memory OLTP in SQL Server. Native compilation improves performance.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -38,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  The [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)stored procedure can be used with the natively compiled, scalar user-defined function. It will result in the function being recompiled using the definition that exists in metadata.  
   
- The following sample shows a scalar UDF from the [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) sample database.  
+ The following sample shows a scalar UDF from the [AdventureWorks2016CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) sample database.  
   
 ```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   

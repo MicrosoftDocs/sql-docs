@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "code [SQL Server], ASCII"
   - "leftmost character of expression"
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ASCII (Transact-SQL)
@@ -31,7 +31,7 @@ Returns the ASCII code value of the leftmost character of a character expression
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASCII ( character_expression )  
 ```  
   

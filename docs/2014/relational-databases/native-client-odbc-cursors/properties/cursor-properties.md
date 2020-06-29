@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "ODBC applications, cursors"
   - "ODBC cursors, cursor behaviors"
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Cursor Properties
   The overall characteristics of a cursor are determined by setting either the ODBC-style cursor type or the SQL-92/ISO cursor behaviors. The following topics describe additional statement and connection attributes that affect the behavior of a cursor.  

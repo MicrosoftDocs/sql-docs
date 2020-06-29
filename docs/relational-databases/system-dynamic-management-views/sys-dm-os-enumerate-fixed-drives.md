@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_enumerate_fixed_drives dynamic management view"
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_os_enumerate_fixed_drives (Transact-SQL)
 

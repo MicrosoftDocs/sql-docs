@@ -35,7 +35,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
    [ FROM <asym_key_source> ]  

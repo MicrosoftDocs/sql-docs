@@ -1,6 +1,6 @@
 ---
 title: "Prepare a database for mirroring"
-description: Learn how to prepare a SQL Server database for database mirroring. 
+description: Learn how to prepare a SQL Server database for database mirroring by using SQL Server Management Studio or Transact-SQL in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "11/10/2017"
 ms.prod: sql

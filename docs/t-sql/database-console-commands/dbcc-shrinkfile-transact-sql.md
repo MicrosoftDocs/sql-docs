@@ -39,7 +39,7 @@ Shrinks the current database's specified data or log file size. You can use it t
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 DBCC SHRINKFILE   
 (  

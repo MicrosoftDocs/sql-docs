@@ -1,5 +1,6 @@
 ---
 title: "Specify an Axis Interval (Report Builder) | Microsoft Docs"
+description: Find out how to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in Report Builder.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -18,7 +19,7 @@ On the value axis (usually the y axis), axis intervals provide a consistent meas
 
 But on the category axis (usually the x axis), sometimes an automatic axis interval results in categories without axis labels. You can specify the number of intervals you want in the axis Interval property. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calculates the number of intervals at run time, based on the data in the result set. For more information about how axis intervals are calculated, see [Formatting Axis Labels on a Chart](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
-To try setting the axis interval with sample data, see [Tutorial: Add a Column Chart to Your Report (Report Builder)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
+To try setting the axis interval with sample data, see [Tutorial: Add a Column Chart to Your Report (Report Builder)](../tutorial-add-a-column-chart-to-your-report-report-builder.md).
   
 > [!NOTE]  
 >  The category axis is usually the horizontal or x-axis. However, for bar charts, the category axis is the vertical or y-axis.  

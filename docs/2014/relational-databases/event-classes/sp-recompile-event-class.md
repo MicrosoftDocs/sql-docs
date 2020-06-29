@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SP:Recompile Event Class
   The SP:Recompile event class indicates that a stored procedure, trigger, or user-defined function has been recompiled. Recompilations reported by this event class occur at the statement level.  

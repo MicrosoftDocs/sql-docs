@@ -28,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY permission  [ ,...n ]   
     ON CERTIFICATE :: certificate_name   

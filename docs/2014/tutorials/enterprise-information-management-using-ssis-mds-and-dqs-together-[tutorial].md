@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Enterprise Information Management using SSIS, MDS, and DQS Together [Tutorial]
   Managing information in an enterprise typically involves integrating data from across the enterprise and beyond, cleansing the data, matching the data to remove any duplicates, standardizing the data, enriching the data, making the data conform to legal and compliance requirements, and then storing the data in a centralized location with all the necessary security settings.  
@@ -48,7 +47,7 @@ manager: craigg
   
 2.  [Configure MDS using Master Data Services Configuration Manager](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     Use the Configuration Manager to create and configure a Master Data Services database. After you create the MDS database, create a web application for MDS in a web site (for example: [http://localhost/MDS](http://localhost/MDS)) and associate the MDS database with the MDS web application. Note that, to create an MDS web application, you should have IIS installed on your computer. See [Web Application Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) and [Database Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) for details about the prerequisites for configuring MDS database and web application.  
+     Use the Configuration Manager to create and configure a Master Data Services database. After you create the MDS database, create a web application for MDS in a web site (for example: `http://localhost/MDS`) and associate the MDS database with the MDS web application. Note that, to create an MDS web application, you should have IIS installed on your computer. See [Web Application Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) and [Database Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) for details about the prerequisites for configuring MDS database and web application.  
   
 3.  [Install and Configure DQS using Data Quality Server Installer](https://msdn.microsoft.com/library/hh231682.aspx). Click **Start**, click **All Programs**, click **Microsoft SQL Server 2014**, click **Data Quality Services**, and then click **Data Quality Server Installer**.  
   

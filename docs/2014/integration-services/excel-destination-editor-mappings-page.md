@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Excel Destination Editor"
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Excel Destination Editor** dialog box to map input columns to destination columns.  

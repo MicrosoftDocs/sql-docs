@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
@@ -48,6 +48,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |CREATE|INSERT|TRUNCATE TABLE|  
 |DELETE|OPEN|UPDATE|  
 |DROP|.|.|  
+||||
   
  When OFF, each of the preceding T-SQL statements is bounded by an unseen BEGIN TRANSACTION and an unseen COMMIT TRANSACTION statement. When OFF, we say the transaction mode is *autocommit*. If your T-SQL code visibly issues a BEGIN TRANSACTION, we say the transaction mode is *explicit*.  
   
@@ -67,7 +68,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  To view the current setting for IMPLICIT_TRANSACTIONS, run the following query.  
   
-```  
+```sql
 DECLARE @IMPLICIT_TRANSACTIONS VARCHAR(3) = 'OFF';  
 IF ( (2 & @@OPTIONS) = 2 ) SET @IMPLICIT_TRANSACTIONS = 'ON';  
 SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;  

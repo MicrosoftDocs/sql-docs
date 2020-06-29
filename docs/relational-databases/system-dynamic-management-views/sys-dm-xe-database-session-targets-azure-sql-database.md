@@ -7,8 +7,8 @@ ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "language-reference"
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---

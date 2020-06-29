@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Lock:Deadlock Chain Event Class
   The Lock:Deadlock Chain event class is produced for each participant in a deadlock.  

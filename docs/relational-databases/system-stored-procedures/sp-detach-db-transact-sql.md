@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sp_detach_db"
   - "detaching databases [SQL Server]"
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: "Project Settings (Conversion) (OracleToSQL) | Microsoft Docs"
+description: Learn how to use the Conversion page of the Project Settings dialog box to customize how SSMA converts Oracle syntax to SQL Server syntax.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

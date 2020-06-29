@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure Replication for Always On Availability Groups (SQL Server)
   Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication and AlwaysOn availability groups involves seven steps. Each step is described in more detail in the following sections.  

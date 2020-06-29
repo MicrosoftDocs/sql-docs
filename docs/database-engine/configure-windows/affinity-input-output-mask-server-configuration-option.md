@@ -1,5 +1,6 @@
 ---
 title: "affinity Input-Output mask Server Configuration Option | Microsoft Docs"
+description: Learn about the affinity I/O mask option. Use it to enhance the performance of SQL Server threads that issue I/Os by binding disk I/O to specified CPUs.
 ms.custom: ""
 ms.date: "07/06/2017"
 ms.prod: sql
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "binding processors [SQL Server]"
   - "CPU affinity mask option"
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # affinity Input-Output mask Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

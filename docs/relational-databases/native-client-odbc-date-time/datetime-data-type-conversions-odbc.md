@@ -1,5 +1,6 @@
 ---
 title: "datetime Data Type Conversions (ODBC) | Microsoft Docs"
+description: Learn about data type conversions in ODBC, which are already defined by ODBC or are consistent extensions of ODBC.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "bindings [ODBC]"
   - "ODBC, bindings and conversions"
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime Data Type Conversions (ODBC)

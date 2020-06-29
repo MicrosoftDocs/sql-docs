@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetCursorName function [ODBC]"
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetCursorName Function
 **Conformance**  

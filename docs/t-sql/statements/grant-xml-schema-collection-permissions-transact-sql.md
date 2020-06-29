@@ -29,7 +29,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission  [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  

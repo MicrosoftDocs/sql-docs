@@ -1,7 +1,7 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2020"
+ms.date: "02/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -445,7 +445,7 @@ WHERE name LIKE '%plans%';
   
      > [!NOTE]
      > In newer versions of the [!INCLUDE[ssde_md](../includes/ssde_md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
-	 
+     
   -  What support objects must be created, such as [worktables](#worktables) or workfiles in tempdb. 
   No user context or runtime information is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism.   
   
@@ -532,8 +532,8 @@ Verify what can be found in the plan cache using the query below:
 
 ```sql
 SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
-	qs.query_plan_hash, qs.query_hash,
-	qs.plan_handle, qs.sql_handle
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
 FROM sys.dm_exec_cached_plans AS cp
 CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
 CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
@@ -545,9 +545,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060    	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -568,9 +568,9 @@ GO
 Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060    	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -594,10 +594,10 @@ GO
 Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address	objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------	-------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060    	Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060    	Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -892,16 +892,16 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute m
 * The application can control when the execution plan is created and when it is reused.
 * The prepare/execute model is portable to other databases, including earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="ParamSniffing"></a> Parameter Sniffing
-"Parameter sniffing" refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
+### <a name="ParamSniffing"></a> Parameter Sensitivity
+Parameter sensitivity, also known as "parameter sniffing", refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
 
 Parameter values are sniffed during compilation or recompilation for the following types of batches:
 
 -  Stored procedures
--  Queries submitted via sp_executesql 
+-  Queries submitted via `sp_executesql` 
 -  Prepared queries
 
-For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems).
+For more information on troubleshooting bad parameter sniffing issues, see [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview).
 
 > [!NOTE]
 > For queries using the `RECOMPILE` hint, both parameter values and current values of local variables are sniffed. The values sniffed (of parameters and local variables) are those that exist at the place in the batch just before the statement with the `RECOMPILE` hint. In particular, for parameters, the values that came along with the batch invocation call are not sniffed.
@@ -928,15 +928,39 @@ Constructs that inhibit parallelism include:
     For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions
 ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
 
--   **Table Valued Functions (TVFs)**        
-    For more information on TVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-   **Multi-statement table-valued functions (MSTVFs)**        
+    For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
 -   **TOP keyword**        
     For more information, see [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
+A query execution plan may contain the **NonParallelPlanReason** attribute in the **QueryPlan** element which describes why parallelism was not used.  Values for this attribute include:
+
+|NonParallelPlanReason Value|Description|
+|----|----|
+|MaxDOPSetToOne|Maximum degree of parallelism set to 1.|
+|EstimatedDOPIsOne|Estimated degree of parallelism is 1.|
+|NoParallelWithRemoteQuery|Parallelism is not supported for remote queries.|
+|NoParallelDynamicCursor|Parallel plans not supported for dynamic cursors.|
+|NoParallelFastForwardCursor|Parallel plans not supported for fast forward cursors.|
+|NoParallelCursorFetchByBookmark|Parallel plans not supported for cursors that fetch by bookmark.|
+|NoParallelCreateIndexInNonEnterpriseEdition|Parallel index creation not supported for non-Enterprise edition.|
+|NoParallelPlansInDesktopOrExpressEdition|Parallel plans not supported for Desktop and Express edition.|
+|NonParallelizableIntrinsicFunction|Query is referencing a non-parallelizable intrinsic function.|
+|CLRUserDefinedFunctionRequiresDataAccess|Parallelism not supported for a CLR UDF that requires data access.|
+|TSQLUserDefinedFunctionsNotParallelizable|Query is referencing a T-SQL User Defined Function that was not parallelizable.|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|Table variable transactions do not support parallel nested transactions.|
+|DMLQueryReturnsOutputToClient|DML query returns output to client and is not parallelizable.|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|Unsupported mix of serial and parallel plans for a single online index build.|
+|CouldNotGenerateValidParallelPlan|Verifying parallel plan failed, failing back to serial.|
+|NoParallelForMemoryOptimizedTables|Parallelism not supported for referenced In-Memory OLTP tables.|
+|NoParallelForDmlOnMemoryOptimizedTable|Parallelism not supported for DML on an In-Memory OLTP table.|
+|NoParallelForNativelyCompiledModule|Parallelism not supported for referenced natively compiled modules.|
+|NoRangesResumableCreate|Range generation failed for a resumable create operation.|
+
 After exchange operators are inserted, the result is a parallel-query execution plan. A parallel-query execution plan can use more than one worker thread. A serial execution plan, used by a non-parallel (serial) query, uses only one worker thread for its execution. The actual number of worker threads used by a parallel query is determined at query plan execution initialization and is determined by the complexity of the plan and the degree of parallelism. 
 
-Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it does not mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). More processors than specififed by the MAXDOP may be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
+Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it does not mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). More processors than specified by the MAXDOP may be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does not use a parallel execution plan for a query if any one of the following conditions is true:
 
@@ -962,7 +986,13 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
  
 At execution time, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determines whether the current system workload and configuration information previously described allow for parallel execution. If parallel execution is warranted, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determines the optimal number of worker threads and spreads the execution of the parallel plan across those worker threads. When a query or index operation starts executing on multiple worker threads for parallel execution, the same number of worker threads is used until the operation is completed. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] re-examines the optimal number of worker thread decisions every time an execution plan is retrieved from the plan cache. For example, one execution of a query can result in the use of a serial plan, a later execution of the same query can result in a parallel plan using three worker threads, and a third execution can result in a parallel plan using four worker threads.
 
-In a parallel query execution plan, the insert, update, and delete operators are executed serially. However, the WHERE clause of an UPDATE or a DELETE statement, or the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database.
+The update and delete operators in a parallel query execution plan are executed serially, but the WHERE clause of an UPDATE or a DELETE statement may be executed in parallel. The actual data changes are then serially applied to the database.
+
+Up to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the insert operator is also executed serially. However, the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database. 
+
+Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and database compatibility level 110, the `SELECT … INTO` statement can be executed in parallel. Other forms of insert operators work the same way as described for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
+
+Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] and database compatibility level 130, the `INSERT … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI), and using the TABLOCK hint. Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint. For more information, see [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Static and keyset-driven cursors can be populated by parallel execution plans. However, the behavior of dynamic cursors can be provided only by serial execution. The Query Optimizer always generates a serial execution plan for a query that is part of a dynamic cursor.
 
@@ -1284,12 +1314,12 @@ Although the above examples suggest a straightforward way to allocate worker thr
 
 To take another example, suppose that the table has four partitions on column A with boundary points (10, 20, 30), an index on column B, and the query has a predicate clause `WHERE B IN (50, 100, 150)`. Because the table partitions are based on the values of A, the values of B can occur in any of the table partitions. Thus, the query processor will seek for each of the three values of B (50, 100, 150) in each of the four table partitions. The query processor will assign worker threads proportionately so that it can execute each of these 12 query scans in parallel.
 
-|Table partitions based on column A	|Seeks for column B in each table partition |
+|Table partitions based on column A    |Seeks for column B in each table partition |
 |----|----|
-|Table Partition 1: A < 10	 |B=50, B=100, B=150 |
-|Table Partition 2: A >= 10 AND A < 20	 |B=50, B=100, B=150 |
-|Table Partition 3: A >= 20 AND A < 30	 |B=50, B=100, B=150 |
-|Table Partition 4: A >= 30	 |B=50, B=100, B=150 |
+|Table Partition 1: A < 10     |B=50, B=100, B=150 |
+|Table Partition 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|Table Partition 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|Table Partition 4: A >= 30     |B=50, B=100, B=150 |
 
 ### Best Practices
 

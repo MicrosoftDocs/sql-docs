@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Call Stack Window [Transact-SQL]"
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Call Stack Window
   The **Call Stack** window displays the modules on the call stack, and the data types and values of any parameters that are passed to the modules. [!INCLUDE[tsql](../../includes/tsql-md.md)] modules include stored procedures, functions, and triggers. To display the call stack, you must be in debug mode.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change an Attribute Name (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of an attribute.  

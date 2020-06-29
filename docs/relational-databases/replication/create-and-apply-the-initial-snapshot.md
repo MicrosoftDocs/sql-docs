@@ -1,5 +1,6 @@
 ---
 title: "Create and Apply the Initial Snapshot | Microsoft Docs"
+description: Learn how to create and apply the initial snapshot in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "11/20/2018"
 ms.prod: sql

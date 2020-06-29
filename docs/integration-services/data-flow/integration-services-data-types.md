@@ -251,7 +251,7 @@ ms.author: chugu
  For information on mapping data types in the data flow, see [Working with Data Types in the Data Flow](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## Related Content  
- Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
+ Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035), on blogs.msdn.com.  
   
 ## See Also  
  [Data in Data Flows](../../integration-services/data-flow/data-in-data-flows.md)  

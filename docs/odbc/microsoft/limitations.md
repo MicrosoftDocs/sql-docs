@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], limitations"
   - "ODBC desktop database drivers [ODBC], limitations"
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Limitations
 This section describes limitations of the ODBC Desktop Database Drivers with regard to the following topics:  

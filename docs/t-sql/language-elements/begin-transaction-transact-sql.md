@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 --Applies to SQL Server and Azure SQL Database
  
 BEGIN { TRAN | TRANSACTION }   
@@ -50,7 +50,7 @@ BEGIN { TRAN | TRANSACTION }
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 --Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   

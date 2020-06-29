@@ -1,5 +1,6 @@
 ---
 title: "Requirements for Using Memory-Optimized Tables | Microsoft Docs"
+description: Learn about the requirements for using In-Memory OLTP, including SQL Database version, memory & storage considerations, and installation.
 ms.custom: ""
 ms.date: "11/24/2017"
 ms.prod: sql

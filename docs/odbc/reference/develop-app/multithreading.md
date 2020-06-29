@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "thread-safe drivers [ODBC]"
   - "multithreaded applications [ODBC]"
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Multithreading
 On multithread operating systems, drivers must be thread-safe. That is, it must be possible for applications to use the same handle on more than one thread. How this is achieved is driver-specific, and it is likely that drivers will serialize any attempts to concurrently use the same handle on two different threads.  

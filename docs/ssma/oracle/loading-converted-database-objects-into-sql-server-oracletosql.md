@@ -1,5 +1,6 @@
 ---
 title: "Loading Converted Database Objects into SQL Server (OracleToSQL) | Microsoft Docs"
+description: Learn how to load the database objects you converted from Oracle into the SQL Server instance using SSMA for Oracle.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"

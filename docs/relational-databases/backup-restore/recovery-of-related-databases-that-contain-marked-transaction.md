@@ -1,5 +1,6 @@
 ---
 title: "Recover related databases with marked transaction"
+description: SQL Server supports named marks in the transaction log to allow recovery to a specific mark. Marks can be tied to specific work.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql

@@ -5,7 +5,7 @@ description: Learn how to customize a big data cluster deployment with configura
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -462,6 +462,8 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
+>[!NOTE]
+> Best practice avoids giving the Kubernetes master any of the above BDC roles. If you plan on assigning these roles to the Kubernetes master node anyway, you'll need to [remove its ``master:NoSchedule`` taint.](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) Be aware that this could overload the master node and inhibit its ability to perform its Kubernetes management duties on larger clusters. It's normal to see some pods scheduled to the master on any deployment: they already tolerate the ``master:NoSchedule`` taint, and they're mostly used to help manage the cluster. 
 
 ## <a id="jsonpatch"></a> Other customizations using JSON patch files
 
@@ -659,6 +661,16 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 > [!IMPORTANT]
 > We recommend as a best practice to manually update the `max_map_count` setting manually on each host in the Kubernetes cluster as per instructions in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
+
+## Turn pods and nodes metrics colelction on/off
+
+SQL Server 2019 CU5 enabled two feature switches to control the collection of pods and nodes metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to *false* in *control.json* deployment configuration file. For OpenShift environments, these settings are set to *false* by default in the built-in deployment profiles, since collecting pod and node metrics requires privileged capabilities.
+Run this command to update the values of these settings in your custom configuration file using *azdata* CLI:
+
+```bash
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowPodMetricsCollection=false"
+ ```
 
 ## Next steps
 

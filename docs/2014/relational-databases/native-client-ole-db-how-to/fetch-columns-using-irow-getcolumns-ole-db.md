@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "IRow interface"
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)
   The `IRow` interface allows direct access to columns of a single row in the result set. Thus, `IRow` is an efficient way to retrieve columns from a result set with one row.  

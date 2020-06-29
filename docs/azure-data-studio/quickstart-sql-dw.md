@@ -1,10 +1,9 @@
 ---
-title: Connect and query an Azure SQL Data Warehouse
-titleSuffix: Azure Data Studio
+title: Connect and query with Azure SQL data warehouse
 description: This quickstart shows how to use Azure Data Studio to connect to an Azure SQL Data Warehouse and run a query
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.prod: azure-data-studio
+ms.technology: 
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -12,14 +11,14 @@ ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ---
 
-# Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data in Azure SQL Data Warehouse
+# Quickstart: Use Azure Data Studio to connect and query data in Azure SQL data warehouse
 
-This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to Azure SQL data warehouse, and then use Transact-SQL statements to create, insert, and select data. 
+This quickstart demonstrates how to use Azure Data Studio to connect to Azure SQL data warehouse, and then use Transact-SQL statements to create, insert, and select data. 
 
 ## Prerequisites
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL data warehouse.
+To complete this quickstart, you need Azure Data Studio, and an Azure SQL data warehouse.
 
-- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Install Azure Data Studio](download.md).
 
 If you don't already have a SQL data warehouse, see [Create a SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
@@ -28,9 +27,9 @@ Remember the server name, and login credentials!
 
 ## Connect to your data warehouse
 
-Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Data Warehouse server.
+Use Azure Data Studio to establish a connection to your Azure SQL Data Warehouse server.
 
-1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If you don't see the **Connection** page, click **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
+1. The first time you run Azure Data Studio the **Connection** page should open. If you don't see the **Connection** page, click **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
    
    ![New Connection Icon](media/quickstart-sql-dw/new-connection-icon.png)
 

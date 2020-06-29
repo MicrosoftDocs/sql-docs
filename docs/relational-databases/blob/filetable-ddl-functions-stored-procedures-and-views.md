@@ -1,5 +1,6 @@
 ---
 title: "FileTable functions, stored procedures, views | Microsoft Docs"
+descriptions: Learn which Transact-SQL statements and which SQL Server functions, stored procedures, and views have been added or changed to support the FileTable feature.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql

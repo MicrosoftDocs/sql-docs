@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Data File Auto Grow Event Class
   The **Data File Auto Grow** event class indicates that the data file grew automatically. This event is not triggered if the data file is grown explicitly by using the ALTER DATABASE statement.  

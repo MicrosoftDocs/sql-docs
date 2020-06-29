@@ -29,7 +29,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name    
 [;]  
 ```  

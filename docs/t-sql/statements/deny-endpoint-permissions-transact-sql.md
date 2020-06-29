@@ -28,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
     TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  

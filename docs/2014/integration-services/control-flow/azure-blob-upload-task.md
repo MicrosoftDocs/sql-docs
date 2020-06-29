@@ -10,9 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.afpblobuptask.f1"
   - "sql11.dts.designer.afpblobuptask.f1"
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Blob Upload Task
   The Azure Blob Upload Task enables an SSIS package to upload files to an Azure blob storage.   

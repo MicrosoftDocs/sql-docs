@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "next fetch position"
   - "rowsets [OLE DB], fetching"
 ms.assetid: 9ef74b3f-c9c0-492f-9b93-d65738a61abd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetching Rows - Next Fetch Position

@@ -1,5 +1,6 @@
 ---
 title: "expanded-QName (XQuery) | Microsoft Docs"
+description: Learn how to use the expanded-QName() function to return the namespace URI and local name part of a QName.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

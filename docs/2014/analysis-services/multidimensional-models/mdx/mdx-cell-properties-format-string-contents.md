@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # FORMAT_STRING Contents (MDX)
   The `FORMAT_STRING` cell property formats the `VALUE` cell property, creating the value for the `FORMATTED_VALUE` cell property. The `FORMAT_STRING` cell property handles both string and numeric raw values, applying a format expression against the value to return a formatted value for the `FORMATTED_VALUE` cell property. The following tables detail the syntax and formatting characters used to handle string and numeric values.  

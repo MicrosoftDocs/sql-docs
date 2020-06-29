@@ -1,6 +1,6 @@
 ---
 title: "Common Language Runtime (CLR) Overview"
-description: SQL Server and Azure SQL Database Managed Instance enable you to implement some of the functionalities using .Net languages using the native common language runtime (CLR) integration as SQL Server server-side modules (procedures, functions and triggers).
+description: CLR integration with SQL Server allows you to implement some functionalities using any .NET Framework language as SQL Server server-side modules.
 ms.custom: "seo-lt-2019"
 ms.date: "06/20/2017"
 ms.prod: sql

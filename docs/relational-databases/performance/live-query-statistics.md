@@ -61,6 +61,8 @@ On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires the serve
 On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database to see the live statistics. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or an **Azure Active Directory admin** account to see the live statistics.
   
 ## See Also  
+ [Execution Plans](../../relational-databases/performance/execution-plans.md)    
+ [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

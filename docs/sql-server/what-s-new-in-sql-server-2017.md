@@ -1,10 +1,11 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
+description: Find out what's new for SQL Server 2017, which brings the power of SQL Server to Linux and Linux-based Docker containers as well as Windows.
 ms.custom: ""
 ms.date: "10/20/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
@@ -107,7 +108,7 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 - **Performance improvements** - The stored procedure `sp_execute_external_script` has been optimized to support batch mode execution for columnstore data.
 
 
-For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+For more information, see [What's new in SQL Server Machine Learning Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## Next steps
 - See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).

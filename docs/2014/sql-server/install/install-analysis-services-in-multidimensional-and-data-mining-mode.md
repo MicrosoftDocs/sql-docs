@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
 ---
 # Install Analysis Services in Multidimensional and Data Mining Mode
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides online analytical processing (OLAP) and data mining functionality for business intelligence applications. In this release, support for OLAP databases and data mining models is available when you install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in *Multidimensional mode*. Multidimensional mode is one of three server modes that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] runs in. It is the default mode. If you install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using default values, you will get an instance that runs multidimensional databases and data mining models.  
@@ -60,7 +59,7 @@ manager: craigg
   
  [Determine the Server Mode of an Analysis Services Instance](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
- [SQL Server Data Mining Add-ins](https://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server Data Mining Add-ins](https://www.microsoft.com/download/details.aspx?id=35578)  
   
  By default, sample databases, sample code, and client application add-ins are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](https://go.microsoft.com/fwlink/?LinkId=87843).  
   

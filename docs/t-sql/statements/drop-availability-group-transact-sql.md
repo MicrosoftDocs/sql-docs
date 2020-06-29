@@ -35,7 +35,7 @@ ms.author: "mikeray"
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP AVAILABILITY GROUP group_name   
 [ ; ]  

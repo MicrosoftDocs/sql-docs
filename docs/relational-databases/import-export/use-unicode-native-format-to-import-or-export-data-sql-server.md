@@ -1,5 +1,6 @@
 ---
 title: "Use Unicode Native Format to Import or Export Data (SQL Server) | Microsoft Docs"
+description: Use Unicode native format for bulk transfer of data between instances of SQL Server, which eliminates conversion of data types to and from character format.
 ms.custom: ""
 ms.date: "09/30/2016"
 ms.prod: sql

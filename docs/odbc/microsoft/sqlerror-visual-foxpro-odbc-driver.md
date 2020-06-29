@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLError function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLError (Visual FoxPro ODBC Driver)
 > [!NOTE]  

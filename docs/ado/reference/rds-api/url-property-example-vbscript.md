@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "URL property [ADO], VBScript example"
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # URL Property Example (VBScript)
 > [!IMPORTANT]

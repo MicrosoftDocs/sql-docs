@@ -1,5 +1,6 @@
 ---
-title: "Using ADO with SQL Server Native Client | Microsoft Docs"
+title: "Using ADO"
+description: To use new features introduced in SQL Server 2005, existing applications that use ADO should use the SQL Server Native Client OLE DB provider.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "ADO [SQL Server Native Client]"
   - "SQLNCLI, ADO"
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using ADO with SQL Server Native Client

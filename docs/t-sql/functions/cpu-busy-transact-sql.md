@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "statistical information [SQL Server], CPU"
   - "CPU [SQL Server], activity"
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

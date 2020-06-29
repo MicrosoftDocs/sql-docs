@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "DISTINCT keyword limitations [ODBC]"
   - "ODBC SQL grammar, DISTINCT keyword limitations"
 ms.assetid: 111e2dd7-d64e-4670-8bf0-2135d0a056b8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # DISTINCT Keyword Limitations
 Not supported for Long Text fields (Microsoft Access) or Memo fields (dBASE).

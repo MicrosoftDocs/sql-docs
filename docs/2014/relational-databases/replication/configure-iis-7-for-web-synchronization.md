@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure IIS 7 for Web Synchronization
   The procedures in this topic will guide you through the process of manually configuring [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) version 7 and higher for use with Web synchronization for merge replication. 
@@ -274,7 +273,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
     4.  If a proxy server is used, click **Use a proxy server for your LAN** and **Bypass proxy server for local addresses**, and then click **OK**.  
   
-2.  At the Subscriber, in Internet Explorer, connect to the server in diagnostic mode by appending `?diag` to the address for the replisapi.dll. For example: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  At the Subscriber, in Internet Explorer, connect to the server in diagnostic mode by appending `?diag` to the address for the replisapi.dll. For example: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
     >  In the example above, **server.domain.com** should be replaced with the exact **Issued To** name listed under the **Server Certificates** section in IIS Manager.  

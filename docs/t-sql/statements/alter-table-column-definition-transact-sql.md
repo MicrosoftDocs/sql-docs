@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 column_name <data_type>  
 [ FILESTREAM ]  
 [ COLLATE collation_name ]   

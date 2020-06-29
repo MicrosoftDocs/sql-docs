@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Size property [ADO Stream]"
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Size Property (ADO Stream)
 Indicates the size of the stream in number of bytes.  

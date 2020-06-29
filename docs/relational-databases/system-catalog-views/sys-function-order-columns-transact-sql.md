@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.function_order_columns catalog view"
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

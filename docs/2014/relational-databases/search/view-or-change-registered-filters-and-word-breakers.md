@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View or Change Registered Filters and Word Breakers
   After any word breakers or filters are installed or uninstalled on a system, the changes do not automatically take effect on server instances. This topic describes how to view the currently registered word breaker or filters and how to register newly installed word breakers and filters on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

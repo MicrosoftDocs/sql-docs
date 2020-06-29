@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.captured_columns"
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # cdc.captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

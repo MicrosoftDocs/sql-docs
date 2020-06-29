@@ -28,7 +28,7 @@ Is a special data type used to store a result set for processing at a later time
   
 ## Syntax  
   
-```sql
+```syntaxsql
 table_type_definition ::=   
     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )   
   
@@ -76,7 +76,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 **table** variables provide the following benefits for small-scale queries that have query plans that don't change and when recompilation concerns are dominant:
--   A **table** variable behaves like a local variable. It has a well-defined scope. This variable is the function, stored procedure, or batch that it's declared in.  
+-   A **table** variable behaves like a local variable. It has a well-defined scope. This variable can be used in the function, stored procedure, or batch in which it's declared.  
      Within its scope, a **table** variable can be used like a regular table. It may be applied anywhere a table or table expression is used in SELECT, INSERT, UPDATE, and DELETE statements. However, **table** can't be used in the following statement:  
   
 ```sql

@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_916 | Microsoft Docs"
+description: The login does not have sufficient permissions to connect to the named SQL Server database. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -17,8 +18,8 @@ ms.author: mathoma
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|916|  
 |Event Source|MSSQLSERVER|  
@@ -41,22 +42,27 @@ Failed to retrieve data for this request. (Microsoft.SqlServer.Management.Sdk.Sf
 You can connect to the database in one of the following ways:  
   
 -   Grant the specific login access to the named database. The following example grants the login `Adventure-Works\Larry` access to the `msdb` database.  
-  
-    USE msdb ;  
-  
-    GO  
-  
-    GRANT CONNECT TO [Adventure-Works\Larry] ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO [Adventure-Works\Larry] ;
+    ```
   
 -   Grant the CONNECT permission to the database named in the error message for the guest user. The following example grants the `CONNECT` permission to the `msdb` database for the user `guest`.  
-  
-    USE msdb ;  
-  
-    GO  
-  
-    GRANT CONNECT TO guest ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO guest ;
+    ```
   
 -   Enable the TRUSTWORTHY property on the database that has authenticated the user.  
-  
-    `ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;`  
-  
+
+    ```sql
+    ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;
+    ```

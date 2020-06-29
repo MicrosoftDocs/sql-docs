@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.query.text.f1"
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Query Options Results (Text Page)
   Use this page to specify the options for displaying a query result set in text format. The settings on this page also apply when **Results to File** is selected.  

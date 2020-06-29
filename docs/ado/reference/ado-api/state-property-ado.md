@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "State property [ADO]"
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # State Property (ADO)
 Indicates for all applicable objects whether the state of the object is open or closed. If the object is executing an asynchronous method, indicates whether the current state of the object is connecting, executing, or retrieving.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tools and Approaches for Processing (Analysis Services)
   Processing is an operation in which Analysis Services queries a relational data source and populates Analysis Services objects using that data.  

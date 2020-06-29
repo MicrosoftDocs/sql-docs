@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "xe"
   - "catalog views [SQL Server], extended events"
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Extended Events Catalog Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

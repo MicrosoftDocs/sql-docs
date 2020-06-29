@@ -1,5 +1,6 @@
 ---
-title: "Asynchronous Execution (Notification Method) Sample | Microsoft Docs"
+title: "Asynchronous Execution (Notification Method) Sample"
+description: "Example code demonstrating how to use asynchronous execution (using the notification method) in the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -8,13 +9,13 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Asynchronous Execution (Notification Method) Sample
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  The code samples in this topic demonstrate how to use the [Asynchronous Execution (Notification Method)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  The code samples in this topic demonstrate how to use the [Asynchronous Execution (Notification Method)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
  This function uses asynchronous notification to open five connections, and executes one query on a statement of each connection.  
   

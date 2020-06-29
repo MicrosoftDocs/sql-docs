@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Microsoft Access Database (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to connect to a Microsoft Access database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -21,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  The credentials of the current user are used when selecting a file in this page. However, import will not succeed if the user specified in the Impersonation Information page does not have sufficient privileges to read from the selected file.  
   
-## UIElement List  
+## UI element list  
  **Friendly connection name**  
  Type a unique name for this data source connection. This is a required field.  
   

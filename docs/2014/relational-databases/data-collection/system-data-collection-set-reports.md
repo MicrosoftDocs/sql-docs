@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # System Data Collection Set Reports
   The data collector provides an historical report for each of the System Data collection sets. Each of the following reports uses data that is stored in the management data warehouse:  

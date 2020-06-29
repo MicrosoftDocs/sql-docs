@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**GRANTOR**|**nvarchar(**128**)**|Privilege grantor.|  
 |**GRANTEE**|**nvarchar(**128**)**|Privilege grantee.|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|Table qualifier.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> <strong>\*\* Important \*\*</strong> Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> <strong>\*\* Important \*\*</strong>  only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**TABLE_NAME**|**sysname**|Table name.|  
 |**PRIVILEGE_TYPE**|**varchar(**10**)**|Type of privilege.|  
 |**IS_GRANTABLE**|**varchar(**3**)**|Specifies whether the grantee can grant permissions to others.|  

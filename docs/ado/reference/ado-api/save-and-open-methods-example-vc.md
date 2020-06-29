@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Save method [ADO], VC++ example"
   - "Open method [ADO]"
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Save and Open Methods Example (VC++)
 These three examples demonstrate how the [Save](../../../ado/reference/ado-api/save-method.md) and **Open** methods can be used together.  

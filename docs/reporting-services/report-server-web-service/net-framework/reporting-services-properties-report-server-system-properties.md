@@ -1,5 +1,6 @@
 ---
 title: "Report Server System Properties | Microsoft Docs"
+description: System properties are global for the report server database. You can read or modify many of these properties using the Web service methods.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

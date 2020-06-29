@@ -1,5 +1,6 @@
 ---
 title: "Change the Configuration Settings for a Database | Microsoft Docs"
+description: "Learn how to change database-level options in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

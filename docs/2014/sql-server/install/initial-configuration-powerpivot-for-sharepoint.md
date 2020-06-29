@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Initial Configuration (PowerPivot for SharePoint)
   Use the steps in this topic to configure an initial installation of PowerPivot for SharePoint. The easiest way to configure an initial installation is to use the PowerPivot Configuration tool. It automates all of the configuration steps that are described below.  
@@ -221,7 +220,7 @@ manager: craigg
   
  Installing the provider will allow workbooks that reference MSOLAP.4 in the data connection string to work as expected on a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot server. Installing the SQL Server 2008 R2 OLE DB provider is an alternative approach to upgrading workbooks that were created in an earlier version of PowerPivot for Excel.  
   
- You can download the provider from [SQL Server 2008 R2 Feature Pack page](https://www.microsoft.com/download/details.aspx?id=16978). Look for **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**, and then download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program.  
+ You can download the provider from [SQL Server 2008 R2 Feature Pack page](https://www.microsoft.com/download/details.aspx?id=44272). Look for **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**, and then download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program.  
   
  For more information about installing the provider, including verification steps, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   

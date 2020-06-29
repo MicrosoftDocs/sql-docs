@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], calling"
   - "SQL Server Native Client OLE DB provider, stored procedures"
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures - Calling

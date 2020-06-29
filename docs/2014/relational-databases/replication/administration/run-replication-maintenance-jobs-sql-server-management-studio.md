@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Run Replication Maintenance Jobs (SQL Server Management Studio)
   Replication uses the following maintenance jobs:  

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Properties (AlwaysOn High Availability Tab) | Microsoft Docs"
+description: Learn how to turn the AlwaysOn Availability Groups feature on or off in SQL Server 2014. View prerequisites the server instance must meet for this feature.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
@@ -9,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Properties (AlwaysOn High Availability Tab)
   Use the **AlwaysOn High Availability** tab of the **SQL Server Properties** dialog box in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to enable or disable the AlwaysOn Availability Groups feature in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Enabling AlwaysOn Availability Groups is a prerequisite for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use availability groups as a high availability and disaster recovery solution.  
@@ -42,7 +42,7 @@ manager: craigg
     > [!TIP]  
     >  After disabling AlwaysOn Availability Groups, you should remove any local availability replicas from the server instance. If you remove the last replica of a given availability group, you should also remove the group.  
   
-## UIElement List  
+## UI element list  
   
 > [!NOTE]  
 >  For more information about follow up after you disable AlwaysOn Availability Groups and for information about how to create and configure availability groups, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online.  

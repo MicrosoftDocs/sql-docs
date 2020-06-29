@@ -64,7 +64,7 @@ ms.author: jrasnick
   
 1.  Login authentication  
   
-2.  LOGON trigger execution  
+2.  LOGON trigger execution (Occurs only if logon triggers exist in the instance.)
   
 3.  Classification  
 

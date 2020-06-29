@@ -1,5 +1,6 @@
 ---
 title: "Passing Parameters to Updategrams (SQLXML)"
+description: Learn how to pass parameters to updategrams in SQLXML 4.0.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

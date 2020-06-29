@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restoring From Backups Stored in Azure
   This topic outlines the considerations when restoring a database using a backup stored in the Azure Blob storage service. This applies to backups created either by using SQL Server Backup to URL backup or by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -32,7 +31,7 @@ manager: craigg
 ### Optimizing Restores  
  To reduce restore write time, Add **perform volume maintenance tasks** user right to the SQL Server user account. For more information, see [Database File Initialization](https://go.microsoft.com/fwlink/?LinkId=271622). If restore is still slow with instant file initialization turned on, look at the size of the log file on the instance where the database was backed up. If the log is very large in size (multiple GBs), it would be expected that restore would be slow. During restore the log file must be zeroed which takes a significant amount of time.  
   
- To reduce restore times it is recommended that you use compressed backups.  For backup sizes exceeding 25 GB, use [AzCopy utility](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) to download to the local drive and then perform the restore. For other backup best practices and recommendations, see [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
+ To reduce restore times it is recommended that you use compressed backups.  For backup sizes exceeding 25 GB, use [AzCopy utility](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) to download to the local drive and then perform the restore. For other backup best practices and recommendations, see [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
  You can also turn on Trace Flag 3051 when doing the restore to generate a detailed log. This log file is placed in the log directory, and is named using the format: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. The log file includes information about each round trip to Azure Storage including timing that can be helpful in diagnosing the issue.  
   

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Model Content for Sequence Clustering Models (Analysis Services - Data Mining)
   This topic describes mining model content that is specific to models that use the Microsoft Sequence Clustering algorithm. For an explanation of general and statistical terminology related to mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

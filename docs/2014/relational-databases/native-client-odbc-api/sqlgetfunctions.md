@@ -11,9 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLGetFunctions function"
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQLGetFunctions
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver interface complies with the three defined compliance levels for ODBC (ISO, Open Group, and ODBC level 2). **SQLGetFunctions** reports that all ODBC functions are supported for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver.  

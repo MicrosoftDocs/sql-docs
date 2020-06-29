@@ -13,8 +13,8 @@ apilocation:
   - "SQLServerCallableStatement.getCharacterStream()"
 apitype: "Assembly"
 ms.assetid: 6207ad4b-56b3-4c66-bad5-6e590591ac2f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getCharacterStream Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

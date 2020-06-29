@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Access driver [ODBC]"
   - "desktop database drivers [ODBC], Access driver"
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft Access Driver Programming Considerations
 This section contains the following topics.  

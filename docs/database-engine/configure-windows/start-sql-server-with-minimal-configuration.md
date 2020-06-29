@@ -1,5 +1,6 @@
 ---
 title: "Start SQL Server with Minimal Configuration | Microsoft Docs"
+description: Become familiar with the minimal configuration startup option in SQL Server. See when and how to use it, and learn about how it limits functionality.
 ms.custom: ""
 ms.date: "01/20/2017"
 ms.prod: sql
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "minimal configuration [SQL Server]"
   - "starting SQL Server, minimal configuration"
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Start SQL Server with Minimal Configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,6 +29,8 @@ ms.author: mikeray
 -   Startup stored procedures do not run.  
 
 -   `tempdb` is configured at the smallest possible size.
+
+-   Audit will be disabled but Audit DDL can still be issued. In practice, **-m** should be sufficient for most cases that require SQL Serve Audit reconfiguration. For more details about security in Auditing configuration, see [Auditing in SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
   
  After the server has been started with minimal configuration, you should change the appropriate server option value or values, stop, and then restart the server.  
   

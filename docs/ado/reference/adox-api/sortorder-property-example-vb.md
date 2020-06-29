@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "SortOrder property [ADOX]"
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SortOrder Property Example (VB)
 This example demonstrates the [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md) that has been appended to the [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) collection of an [Index](../../../ado/reference/adox-api/index-object-adox.md). The code appends an ascending index to the Country column in the **Employees** table, then displays the records. Then the code appends a descending index to the Country column in the **Employees** table and displays the records again. The difference between ascending and descending indexes is shown.  

@@ -80,7 +80,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 ## Syntax
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  [ FROM <backup_device> [ ,...n ] ]
@@ -590,7 +590,7 @@ RESTORE LOG AdventureWorks2012
   FROM AdventureWorksBackups
     WITH FILE = 4,
     RECOVERY,
-    STOPATMARK = 'UPDATE Product list prices';
+    STOPATMARK = ListPriceUpdate;
 ```
 
 [&#91;Top of examples&#93;](#examples)
@@ -746,7 +746,7 @@ For other supported RESTORE commands, see:
 
 ## Syntax
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
@@ -765,7 +765,7 @@ FROM URL
 Specifies one or more backup devices placed on URLs that will be used for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service.
 
 > [!IMPORTANT]
-> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
+> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
 *n*
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.
@@ -879,7 +879,7 @@ Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a da
 
 ## Syntax
 
-```sql
+```syntaxsql
 
 -- Restore the master database
 -- Use the Configuration Manager tool.
@@ -997,7 +997,7 @@ The following example restores a full, and then a differential backup to the Sal
 
 The full backup of the database is restored from the full backup which is stored in the `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` directory. If the restore completes successfully, the differential backup is restored to the SalesInvoices2013 database. The differential backup is stored in the `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` directory.
 
-```sql
+```syntaxsql
 RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
@@ -1009,7 +1009,7 @@ RESTORE DATABASE SalesInvoices2013
 
 This example restores the header information for database backup `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` . The command results in one row of information for the Invoices2013Full backup.
 
-```sql
+```syntaxsql
 RESTORE HEADERONLY
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]

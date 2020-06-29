@@ -1,5 +1,6 @@
 ---
 title: "Configure Publishing and Distribution | Microsoft Docs"
+description: Learn how to configure publishing and distribution in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "09/23/2018"
 ms.prod: sql

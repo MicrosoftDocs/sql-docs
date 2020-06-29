@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Currency Conversions (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensional only  

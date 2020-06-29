@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "MoveRecordOptionsEnum enumeration [ADO]"
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MoveRecordOptionsEnum
 Specifies the behavior of the [Record](../../../ado/reference/ado-api/record-object-ado.md) object [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) method.  

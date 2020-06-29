@@ -29,7 +29,7 @@ This function encrypts data with an asymmetric key.
   
 ## Syntax  
   
-```  
+```syntaxsql
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   

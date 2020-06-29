@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetConnectOption function [ODBC]"
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectOption Function
 **Conformance**  

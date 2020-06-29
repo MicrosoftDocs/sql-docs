@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetPos function [ODBC], Desktop Database Drivers"
 ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetPos (Desktop Database Drivers)
 The bulk-model semantics for **SQLSetPos** calls with the *irow* argument equal to 0 are supported.  

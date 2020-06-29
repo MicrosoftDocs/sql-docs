@@ -18,14 +18,7 @@
     - name: SQL Server 2016
       href: sql-server/what-s-new-in-sql-server-2016.md
   - name: Applies to demo
-    items:
-      - name: Example a
-        href: appliesto-demo/example-a.md
-      - name: Example g
-        href: appliesto-demo/example-g.md
-      - name: Example 7
-        href: appliesto-demo/example-7.md
-  - name: Editions & Features
+- name: Editions & Features
     items:
     - name: SQL Server 2019
       href: sql-server/editions-and-components-of-sql-server-version-15.md

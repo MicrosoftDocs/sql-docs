@@ -1,5 +1,6 @@
 ---
 title: Database Project Settings
+description: Learn about database project settings. See how to use these settings to control aspects of your database, debugging, and build configurations.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

@@ -1,5 +1,6 @@
 ---
 title: Download SQL Server Data Tools (SSDT)
+description: "Learn about SQL Server Data Tools (SSDT). See how to install this database development tool set with Visual Studio 2019 and Visual Studio 2017."
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt

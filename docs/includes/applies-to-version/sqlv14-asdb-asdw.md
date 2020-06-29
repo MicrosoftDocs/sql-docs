@@ -6,4 +6,4 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-[!INCLUDE [tsql-appliesto](../../includes/applies-md.md)] [!INCLUDE [sqlserver-v14](../../includes/applies-to-version/sqlserver-v14.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server 2017](../../includes/sssqlv14.md)] and later [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [Azure Synapse Analytics (SQL DW)](../../includes/applies-to-version/_asdw.md)]

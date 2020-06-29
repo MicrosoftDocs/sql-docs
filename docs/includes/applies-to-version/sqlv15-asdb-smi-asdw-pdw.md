@@ -8,4 +8,4 @@ ms.author: mikeray
 
 <!--sql-asdb-asmi-asdw-pdw-->
 
-[!INCLUDE [tsql-appliesto](../../includes/applies-md.md)] [!INCLUDE [sqlserver-v15](../../includes/applies-to-version/sqlserver-v15.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [smi](../../includes/applies-to-version/smi.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)]  [!INCLUDE [pdw](pdw.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [sqlserver-v15](../../includes/applies-to-version/sqlserver-v15.md)] [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)] [!INCLUDE [asdw](../../includes/applies-to-version/asdw.md)]  [!INCLUDE [pdw](pdw.md)]

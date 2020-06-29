@@ -8,4 +8,4 @@ ms.author: mikeray
 
 <!--sql-asdb-->
 
-[!INCLUDE [tsql-appliesto](../../includes/applies-md.md)] [!INCLUDE [sqlserver-v14](../../includes/applies-to-version/sqlserver-v14.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server 2016](../../includes/sssqlv14.md)] and later  [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)]

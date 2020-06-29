@@ -8,4 +8,4 @@ ms.author: mikeray
 
 <!--sql-asdb-->
 
-[!INCLUDE [tsql-appliesto](../../includes/applies-md.md)] [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)] [!INCLUDE [_asdb](../../includes/applies-to-version/_asdb.md)]

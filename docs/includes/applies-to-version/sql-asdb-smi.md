@@ -8,4 +8,4 @@ ms.author: mikeray
 
 <!--sql-asdb-smi--->
 
-[!INCLUDE [tsql-appliesto](../../includes/applies-md.md)] [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)] [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)] [!INCLUDE [smi](../../includes/applies-to-version/smi.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [tsql-appliesto](../../includes/ssnoversion-md.md)] [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)]

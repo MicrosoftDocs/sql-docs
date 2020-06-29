@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Script component [Integration Services], about Script component"
   - "Script component [Integration Services]"
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Script Component
   The Script component hosts script and enables a package to include and run custom script code. You can use the Script component in packages for the following purposes:  

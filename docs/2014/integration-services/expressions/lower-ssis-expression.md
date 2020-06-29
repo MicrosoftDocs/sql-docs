@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "uppercase characters [Integration Services]"
   - "lowercase characters"
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # LOWER (SSIS Expression)
   Returns a character expression after converting uppercase characters to lowercase characters.  

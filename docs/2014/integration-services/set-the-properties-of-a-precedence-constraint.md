@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Precedence Constraint Editor dialog box"
   - "precedence constraints [Integration Services], properties"
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Set the Properties of a Precedence Constraint
   To set properties on precedence constraints, you can use one of these tools:  

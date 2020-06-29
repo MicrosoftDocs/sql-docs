@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Lookup Transformation Editor"
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lookup Transformation Editor (Connection Page)
   Use the **Connection** page of the **Lookup Transformation Editor** dialog box to select a connection manager. If you select an OLE DB connection manager, you also select a query, table, or view to generate the reference dataset.  

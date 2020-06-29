@@ -3,8 +3,8 @@ title: "Tutorial: Create an extension"
 description: This tutorial demonstrates how to create an extension to add custom functionality to Azure Data Studio.
 ms.custom: "seodec18"
 ms.date: 12/10/2019
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: "tutorial"
 author: rothja

@@ -4,8 +4,8 @@ description: Install and use the SQL Server Profiler extension (preview) for Azu
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu, maghan, sstein"
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"

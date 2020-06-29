@@ -1,8 +1,8 @@
 ---
 title: Release notes
 description: Azure Data Studio release notes
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: yualan
 ms.author: alayu

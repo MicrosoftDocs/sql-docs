@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "dates [SQL Server], MONTH"
   - "MONTH function [SQL Server]"
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MONTH (Transact-SQL)

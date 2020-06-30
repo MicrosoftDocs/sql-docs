@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "input operations [SQL Server]"
   - "time [SQL Server], I/O operations"
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: This article describes how to install the SQL Server Tools on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -179,11 +179,11 @@ A preview of **sqlcmd** and **bcp** is now available on macOS. For more informat
 
 *Install [Homebrew](https://brew.sh) if you don't have it already:*
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 To install the tools for Mac El Capitan and Sierra, use the following commands:
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update

@@ -3,7 +3,7 @@ title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Micros
 ms.custom: ""
 ms.date: "07/24/2019"
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.reviewer: ""
 ms.topic: "language-reference"
 f1_keywords: 

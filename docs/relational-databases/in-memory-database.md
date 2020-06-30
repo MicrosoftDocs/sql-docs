@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: "briancarrig"
 ms.author: "brcarrig"
-manager: "amitban"
 ---
 
 # In-memory database systems and technologies

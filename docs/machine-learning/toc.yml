@@ -259,12 +259,12 @@
       href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: Predictions
     items:
+    - name: Native scoring with PREDICT T-SQL
+      href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
     - name: How to generate predictions
       href: ../machine-learning/r/how-to-do-realtime-scoring.md
     - name: Real-time scoring with sp_rxPredict
       href: ../machine-learning/real-time-scoring.md
-    - name: Native scoring with PREDICT T-SQL
-      href: ../machine-learning/sql-native-scoring.md
   - name: Package management
     items:
     - name: Install new Python packages

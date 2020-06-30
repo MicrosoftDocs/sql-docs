@@ -20,7 +20,7 @@ ms.author: jrasnick
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT_WS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asdw.md)]
 
 This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner. It separates those concatenated string values with the delimiter specified in the first function argument. (`CONCAT_WS` indicates *concatenate with separator*.)
 

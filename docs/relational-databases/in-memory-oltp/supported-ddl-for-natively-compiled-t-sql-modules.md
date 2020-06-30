@@ -1,5 +1,6 @@
 ---
 title: "Supported DDL for Natively Compiled T-SQL modules | Microsoft Docs"
+description: Learn about supported DDL constructs for natively compiled T-SQL modules, such as stored procedures, scalar UDFs, inline TVFs, and triggers.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

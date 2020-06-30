@@ -5,8 +5,8 @@ author: garyericson
 ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.custom: ""
 ms.date: 04/27/2020
 ---

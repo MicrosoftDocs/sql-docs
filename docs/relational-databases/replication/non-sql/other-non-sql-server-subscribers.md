@@ -14,7 +14,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Other Non-SQL Server Subscribers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/_ssnoversion.md)]
   For a list of non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers supported by [!INCLUDE[msCoName](../../../includes/msconame-md.md)], see [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). This topic includes information about requirements for ODBC drivers and OLE DB providers.  
   
 ## ODBC Driver Requirements  

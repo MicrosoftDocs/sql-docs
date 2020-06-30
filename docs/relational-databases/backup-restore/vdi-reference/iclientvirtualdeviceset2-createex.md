@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IClientVirtualDeviceSet2::CreateEx (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/_ssnoversion.md)]
 
 The **CreateEx** function creates the virtual device set.
 

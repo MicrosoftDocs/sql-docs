@@ -24,9 +24,9 @@ ms.author: chugu
   
 ```sql  
 catalog.deploy_project [@folder_name =] folder_name   
-      , [@project_name =] project_name   
-      , [@project_stream =] projectstream   
-    [ , [@operation_id ] = operation_id OUTPUT ]   
+      , [ @project_name = ] project_name   
+      , [ @project_stream = ] projectstream   
+    [ , [ @operation_id = ] operation_id OUTPUT ]   
 ```  
   
 ## Arguments  

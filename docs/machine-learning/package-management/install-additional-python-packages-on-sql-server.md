@@ -3,7 +3,7 @@ title: Install Python packages with sqlmlutils
 description: Learn how to use Python pip to install new Python packages on an instance of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/04/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
@@ -64,9 +64,9 @@ To use **sqlmlutils**, you first need to install it on the client computer that 
 
 ### In Azure Data Studio
 
-If you'll be using **sqlmlutils** in Azure Data Studio, you can install it using the Manage Packages feature.
+If you'll be using **sqlmlutils** in Azure Data Studio, you can install it using the Manage Packages feature in a Python kernel notebook.
 
-1. In Azure Data Studio, click **Manage Packages**.
+1. In a [Python kernel notebook in Azure Data Studio](../../azure-data-studio/notebooks-tutorial-python-kernel.md), click **Manage Packages**.
 1. Click **Add new**.
 1. Enter "sqlmlutils" in the **Search Pip packages** field and click **Search**.
 1. Select the **Package Version** you want to install (the latest version is recommended).

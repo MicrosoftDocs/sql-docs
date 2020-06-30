@@ -111,7 +111,7 @@ For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/s
 
 ## Loopback connection to SQL Server
 
-A loopback connection is a network connection between an application and a database server.
+Use a loopback connection to connect back to SQL Server over JDBC to read or write data from Java executed from `sp_execute_external_script`. You can use this when using the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script` are not possible.
 To make a loopback connection in Windows use the following example:
 
 ```
@@ -122,7 +122,6 @@ To make a loopback connection in Linux the JDBC driver requires three connection
 
 [Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 
-For more information see, [mssql-jdbc releases](https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0).
 
 ## Next steps
 

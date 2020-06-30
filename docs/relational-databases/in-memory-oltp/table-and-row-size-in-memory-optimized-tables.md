@@ -1,5 +1,6 @@
 ---
 title: "Table and Row Size in Memory-Optimized Tables | Microsoft Docs"
+description: Learn about table and row size for memory-optimized tables. You can create a table with multiple large and LOB columns.
 ms.custom: ""
 ms.date: "06/19/2017"
 ms.prod: sql

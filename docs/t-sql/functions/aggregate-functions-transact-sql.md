@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Aggregate Functions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-An aggregate function performs a calculation on a set of values, and returns a single value. Except for `COUNT`, aggregate functions ignore null values. Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
+An aggregate function performs a calculation on a set of values, and returns a single value. Except for `COUNT(*)`, aggregate functions ignore null values. Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
   
 All aggregate functions are deterministic. In other words, aggregate functions return the same value each time that they are called, when called with a specific set of input values. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information about function determinism. The [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md) may follow all aggregate functions, except the STRING_AGG, GROUPING or GROUPING_ID functions.
   

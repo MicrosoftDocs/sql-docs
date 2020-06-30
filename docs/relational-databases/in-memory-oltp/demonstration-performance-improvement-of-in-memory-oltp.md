@@ -1,5 +1,6 @@
 ---
 title: "Performance improvement - in-memory OLTP"
+description: This code sample demonstrates the fast performance of memory-optimized tables with interpreted Transact-SQL and a natively compiled stored procedure.
 ms.custom: seo-dt-2019
 ms.date: "08/19/2016"
 ms.prod: sql

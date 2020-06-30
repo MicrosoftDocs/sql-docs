@@ -23,7 +23,7 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+catalog.add_data_tap_by_guid [ @execution_id = ] execution_id  
 , [ @dataflow_task_guid = ] dataflow_task_guid   
 , [ @dataflow_path_id_string = ] dataflow_path_id_string  
 , [ @data_filename = ] data_filename  

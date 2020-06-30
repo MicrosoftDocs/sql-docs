@@ -1,8 +1,8 @@
 ---
 title: Extensibility APIs
 description: Learn about the extensibility APIs for Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"

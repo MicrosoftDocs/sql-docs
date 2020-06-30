@@ -192,7 +192,7 @@ Backup of a large database to blob storage is subject to the limitations listed 
   
  For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-##  <a name="BackupTaskSSMS"></a> Back up up with SSMS  
+##  <a name="BackupTaskSSMS"></a> Back up with SSMS  
 You can back up a database to URL through the Back Up task in SQL Server Management Studio using a SQL Server Credential.  
   
 > [!NOTE]  

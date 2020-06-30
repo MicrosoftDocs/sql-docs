@@ -23,7 +23,7 @@ Disable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssIS
 ## Syntax
 
 ```sql
-catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
+catalog.disable_worker_agent [ @WorkerAgentId = ] WorkerAgentId
 ```
 ## Arguments
 [@WorkerAgentId =] *WorkerAgentId*

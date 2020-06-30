@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Availability Group Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 
   Denies permissions on an Always On availability group in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

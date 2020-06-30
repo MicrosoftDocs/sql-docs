@@ -19,7 +19,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # CONNECTIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 For a request that comes in to the server, this function returns information about the connection properties of the unique connection which supports that request.
   

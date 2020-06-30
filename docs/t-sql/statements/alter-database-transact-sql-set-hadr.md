@@ -25,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 
   This topic contains the ALTER DATABASE syntax for setting [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options on a secondary database. Only one SET HADR option is permitted per ALTER DATABASE statement. These options are supported only on secondary replicas.  
   

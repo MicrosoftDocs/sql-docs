@@ -29,7 +29,7 @@ ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_builtin_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a description of the built in permissions hierarchy of the server. `sys.fn_builtin_permissions` can only be called on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and it returns all permissions regardless of whether they are supported on the current platform. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on SQL Database. For information about which platforms support each permission, see [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
   

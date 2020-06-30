@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Catalog Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that implement ODBC data dictionary functions and isolate ODBC applications from changes to underlying system tables.  
   

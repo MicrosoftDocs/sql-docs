@@ -22,7 +22,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the current lock time-out setting in milliseconds for the current session.  
   

@@ -16,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Create, Alter, and Drop FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
   Describes how to create a new FileTable, or alter or drop an existing FileTable.  
   
 ##  <a name="BasicsCreate"></a> Creating a FileTable  

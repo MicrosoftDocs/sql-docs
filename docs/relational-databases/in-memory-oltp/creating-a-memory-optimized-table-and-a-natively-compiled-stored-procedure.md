@@ -14,7 +14,7 @@ ms.author: "carlrab"
 ---
 # Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 
 This topic contains a sample that introduces you to the syntax for In-Memory OLTP.  
 

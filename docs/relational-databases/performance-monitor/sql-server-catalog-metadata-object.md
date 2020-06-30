@@ -14,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Catalog Metadata Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 The **SQLServer:Catalog Metadata** performance object provides counters for catalog metadata for SQL Server.
 
 This following table describes the SQL Server **Catalog Metadata** performance objects.

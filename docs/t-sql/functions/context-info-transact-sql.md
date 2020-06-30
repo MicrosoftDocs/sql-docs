@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "MARS [SQL Server]"
   - "session context information [SQL Server]"
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

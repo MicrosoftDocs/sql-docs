@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "status information [SQL Server], FETCH"
   - "@@FETCH_STATUS function"
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

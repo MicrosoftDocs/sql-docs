@@ -1,7 +1,6 @@
 ---
 title: "Offline restore: primary and 1 filegroup"
 description: This example shows an offline restore in SQL Server of a primary and one other filegroup for a database using the full recovery model with multiple filegroups.
-ms.description: "Full recovery model"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

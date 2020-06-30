@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ID for language in use"
   - "local language IDs [SQL Server]"
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

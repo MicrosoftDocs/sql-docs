@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "names [SQL Server], filegroups"
   - "viewing filegroup names"
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "@@MAX_PRECISION function"
   - "data types [SQL Server], precision"
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

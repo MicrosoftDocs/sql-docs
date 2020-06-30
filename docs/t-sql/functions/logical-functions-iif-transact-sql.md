@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IIF function"
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # Logical Functions - IIF (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

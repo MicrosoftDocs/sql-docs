@@ -60,7 +60,7 @@ The Server Core installation option provides a minimal environment for running s
 ## Supported scenarios  
  The following table shows the supported scenario matrix for installing [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a Server Core.  
   
-|||  
+| Installation | Valid target |  
 |-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 64-bit editions |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language|All languages|  
@@ -124,41 +124,41 @@ The Server Core installation option provides a minimal environment for running s
     - Installing [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
     
     The following example shows how to install a new stand-alone instance that includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
-  
-        ```console
-        ; SQL Server Configuration File  
-        [OPTIONS]  
-  
-        ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
-  
-        ACTION="Install"  
-  
-        ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
-  
-        FEATURES=SQLENGINE  
-  
-        ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
-  
-        INSTANCENAME="MSSQLSERVER"  
-  
-        ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
-  
-        INSTANCEID="MSSQLSERVER"  
-  
-        ; Account for ssNoVersion service: Domain\User or system account.   
-  
-        SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
-  
-        ; Windows account(s) to provision as ssNoVersion system administrators.   
-  
-        SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
-  
-        ; Accept the License agreement to continue with Installation  
-  
-        IAcceptSQLServerLicenseTerms="True"  
-  
-        ```  
-  
+
+    ```console
+    ; SQL Server Configuration File  
+    [OPTIONS]  
+    
+    ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
+    
+    ACTION="Install"  
+    
+    ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
+    
+    FEATURES=SQLENGINE  
+    
+    ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
+    
+    INSTANCENAME="MSSQLSERVER"  
+    
+    ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
+    
+    INSTANCEID="MSSQLSERVER"  
+    
+    ; Account for ssNoVersion service: Domain\User or system account.   
+    
+    SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
+    
+    ; Windows account(s) to provision as ssNoVersion system administrators.   
+    
+    SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
+    
+    ; Accept the License agreement to continue with Installation  
+    
+    IAcceptSQLServerLicenseTerms="True"  
+    
+    ```
+
     -   Installing connectivity components. The following example shows how to install the connectivity components:  
   
         ```console

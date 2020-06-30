@@ -43,7 +43,7 @@ In order to use OAuth credentials to mount, you need to follow the below steps:
 1. In right navigation bar, select "App registrations" and create a new registration
 1. Create a "Web Application and follow the wizard. **Remember the name of the app you create here**. You will need to add this name to your ADLS account as an authorized user. Also note the Application client ID in the overview when you select the App.
 1. Once the web application is created, go to "Certificates&secrets" and create a **New client secret** and select a key duration. **Add** the secret.
-1.     Go back to the App Registrations page, and click on the "Endpoints" at the top. **Note down the "OAuth token endpoint (v2)** URL
+1. Go back to the App Registrations page, and click on the "Endpoints" at the top. **Note down the "OAuth token endpoint (v2)** URL
 1. You should now have the following things noted down for OAuth:
 
     - The "Application Client ID" of the Web Application

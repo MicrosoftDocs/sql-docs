@@ -195,10 +195,10 @@ On the gateway computer:
 
 Run the following **Ksetup** commands to add a realm entry.
 
-    ```console
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## See also  
  [Hadoop Hive Task](../../integration-services/control-flow/hadoop-hive-task.md)   

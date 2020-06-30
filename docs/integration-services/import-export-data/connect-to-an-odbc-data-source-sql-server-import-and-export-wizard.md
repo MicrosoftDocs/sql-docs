@@ -87,9 +87,9 @@ If you want to provide your connection information with a connection string, the
 
 This example is going to use the following connection string, which connects to Microsoft SQL Server. The database example that is used is **WideWorldImporters** and we're connecting to the SQL Server on the local machine.
 
-    ```console
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Enter the connection string in the **ConnectionString** field on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.
 
@@ -149,9 +149,9 @@ To build and test the connection string for your ODBC driver on your own compute
 
     After you assemble the necessary values from the sample file DSN, you have the following connection string.
     
-        ```console
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     You don't typically need all the settings in a DSN created by the ODBC Data Source Administrator to create a connection string that works.  
     -   You always have to specify the ODBC driver.

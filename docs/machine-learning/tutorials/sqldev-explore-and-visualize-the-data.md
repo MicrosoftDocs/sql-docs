@@ -2,7 +2,7 @@
 title: "R + T-SQL tutorial: Explore data"
 description: Tutorial showing how to explore and visualize SQL Server data using R functions.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen

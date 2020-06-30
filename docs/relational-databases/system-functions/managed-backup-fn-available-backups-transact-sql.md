@@ -72,7 +72,7 @@ If there are gaps in LSN meaning that there is a break in the log chain, the tab
   
 ```  
 SELECT *   
-FROM managed_backup.fn_available_backups ('MyDB')  
+FROM msdb.managed_backup.fn_available_backups ('MyDB')  
   
 ```  
   

@@ -1,5 +1,6 @@
 ---
 title: "Scalar User-Defined Functions for In-Memory OLTP | Microsoft Docs"
+description: Learn how to create and drop natively compiled, scalar user-defined functions for In-Memory OLTP in SQL Server. Native compilation improves performance.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql

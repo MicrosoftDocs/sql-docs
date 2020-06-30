@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to call Java classes from a SQL Server stored procedures using SQL Server Language Extensions.
 author: dphansen
 ms.author: davidph 
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -108,6 +108,20 @@ with result sets ((column1 int))
 ```
 
 For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## Loopback connection to SQL Server
+
+Use a loopback connection to connect back to SQL Server over JDBC to read or write data from Java executed from `sp_execute_external_script`. You can use this when using the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script` are not possible.
+To make a loopback connection in Windows use the following example:
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+To make a loopback connection in Linux the JDBC driver requires three connection properties defined in the following Certificate:
+
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## Next steps
 

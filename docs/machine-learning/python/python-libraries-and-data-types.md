@@ -2,9 +2,9 @@
 title: Convert Python and SQL data types
 description: Review the implicit and explicit data type conversions between Python and SQL Server in data science and machine learning solutions.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
-ms.date: 12/10/2018  
+ms.date: 06/25/2020 
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -28,8 +28,8 @@ Python supports a limited number of data types in comparison to SQL Server. As a
 
 This table lists the implicit conversions that are provided. Other data types are not supported.
 
-|SQLtype|Python type|
-|-------|-----------|
+|SQLtype|Python type|Description
+|-------|-----------|---------------------------------------------------------------------------------------------|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
 |**bit**|`bool`|
@@ -42,6 +42,7 @@ This table lists the implicit conversions that are provided. Other data types ar
 |**real**|`float32`|
 |**smallint**|`int16`|
 |**tinyint**|`uint8`|
+|**datetime**|`datetime`|Supported with SQL Server 2017 CU6 and above (with **NumPy** arrays of type `datetime.datetime` or **Pandas** `pandas.Timestamp`). `sp_execute_external_script` now supports `datetime` types with fractional seconds.|
 |**varbinary**|`bytes`|
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|

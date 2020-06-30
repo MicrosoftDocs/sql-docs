@@ -1,5 +1,6 @@
 ---
 title: "Monitor performance of natively compiled stored procedures"
+description: Learn how to monitor the performance of natively compiled stored procedures and other natively compiled T-SQL modules.
 ms.custom: seo-dt-2019
 ms.date: "04/03/2018"
 ms.prod: sql

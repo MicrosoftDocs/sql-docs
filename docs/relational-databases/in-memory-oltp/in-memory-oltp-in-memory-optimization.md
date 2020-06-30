@@ -1,5 +1,6 @@
 ---
 title: "In-Memory OLTP (In-Memory Optimization) | Microsoft Docs"
+description: Use these samples and resources for In-Memory OLTP, which can significantly improve performance in SQL Server.
 ms.custom: ""
 ms.date: "11/21/2019"
 ms.prod: sql

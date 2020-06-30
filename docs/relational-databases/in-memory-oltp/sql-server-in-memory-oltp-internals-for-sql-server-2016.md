@@ -1,5 +1,6 @@
 ---
 title: "SQL Server in-memory OLTP internals"
+description: Learn about the implementation of SQL Server In-memory OLTP technology, which declares tables as memory optimized to enable In-Memory OLTP capabilities. 
 ms.custom: seo-dt-2019
 ms.date: "09/14/2016"
 ms.prod: sql

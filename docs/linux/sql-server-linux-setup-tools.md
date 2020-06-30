@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: This article describes how to install the SQL Server Tools on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -30,7 +30,7 @@ Install the tools for your platform:
 
 This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
 
-## <a id="RHEL"><a/>Install tools on RHEL 7
+## <a id="RHEL"><a/>Install tools on RHEL 8
 
 Use the following steps to install the **mssql-tools** on Red Hat Enterprise Linux. 
 
@@ -43,7 +43,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 1. Download the Microsoft Red Hat repository configuration file.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. Exit superuser mode.
@@ -212,7 +212,7 @@ If you [run SQL Server in a Docker container](quickstart-install-connect-docker.
 
    | Linux distribution | ODBC packages location |
    |---|---|
-   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 

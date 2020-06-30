@@ -28,3 +28,6 @@
       tocHref: /sql/reporting-services/
       topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
 
+    - name: Azure Data Studio
+      tocHref: /sql/azure-data-studio/
+      topicHref: /sql/azure-data-studio/

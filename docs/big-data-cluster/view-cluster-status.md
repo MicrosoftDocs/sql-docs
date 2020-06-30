@@ -5,7 +5,7 @@ description: This article explains how to view the status of a big data cluster 
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -48,7 +48,9 @@ The service endpoints table also exposes several dashboards for monitoring:
 - Spark Job Monitoring
 - Spark Resource Management
 
-You can directly click on these links. You will be required to authenticate when accessing these dashboards. For the metrics and logs dashboards, provide controller admin credentials that you set at deployment time using environment variables **AZDATA_USERNAME** and **AZDATA_PASSWORD**. Spark dashboards will use gateway (Knox) credentials: either AD identity in a cluster integrated with AD or user **root** and **AZDATA_PASSWORD** if using basic authentication in your cluster. 
+You can directly click on these links. You will be required to authenticate when accessing these dashboards. For the metrics and logs dashboards, provide controller admin credentials that you set at deployment time using environment variables **AZDATA_USERNAME** and **AZDATA_PASSWORD**. Spark dashboards will use gateway (Knox) credentials: either AD identity in a cluster integrated with AD or **AZDATA_USERNAME** and **AZDATA_PASSWORD** if using basic authentication in your cluster.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a id="notebook"></a> Cluster Status notebook
 

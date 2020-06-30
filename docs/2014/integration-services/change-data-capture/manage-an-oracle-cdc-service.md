@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Manage an Oracle CDC Service
   You can use the CDC Service Configuration Console to manage a specific CDC Service.  

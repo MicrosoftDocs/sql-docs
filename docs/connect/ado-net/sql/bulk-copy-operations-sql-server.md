@@ -1,7 +1,7 @@
 ---
 title: "Bulk copy operations in SQL Server"
 description: "Describes the bulk copy functionality for the .NET Data Provider for SQL Server."
-ms.date: "09/30/2019"
+ms.date: "06/15/2020"
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
@@ -40,6 +40,9 @@ Describes how to do multiple bulk copy operations of data into an instance of SQ
   
 [Transaction and bulk copy operations](transaction-bulk-copy-operations.md)  
 Describes how to perform a bulk copy operation within a transaction, including how to commit or rollback the transaction.  
+
+[Order hints for bulk copy operations](bulk-copy-order-hints.md)  
+Describes how to use order hints to improve bulk copy performance.
   
 ## Next steps
 - [SQL Server and ADO.NET](index.md)

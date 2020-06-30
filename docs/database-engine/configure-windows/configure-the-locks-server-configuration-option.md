@@ -1,5 +1,6 @@
 ---
 title: "Configure the locks Server Configuration Option | Microsoft Docs"
+description: Learn about the locks option. See how to use it to limit the amount of memory that the SQL Server Database Engine uses for locks.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

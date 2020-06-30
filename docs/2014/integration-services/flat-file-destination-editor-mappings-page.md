@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Flat File Destination Editor"
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Flat File Destination Editor** dialog box to map input columns to destination columns.  

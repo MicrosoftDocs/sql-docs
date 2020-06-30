@@ -2,10 +2,10 @@
 title: Configuration for use with R
 description: This article provides guidance about the hardware and network configuration of the computer used to run SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019

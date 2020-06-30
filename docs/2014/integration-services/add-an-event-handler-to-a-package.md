@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "event handlers [Integration Services], creating"
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Add an Event Handler to a Package
   At run time, containers and tasks raise events. You can create custom event handlers that respond to these events by running a workflow when the event is raised. For example, you can create an event handler that sends an e-mail message when a task fails.  

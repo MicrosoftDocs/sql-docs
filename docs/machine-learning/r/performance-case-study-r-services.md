@@ -2,10 +2,10 @@
 title: Performance tuning for results
 description: This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/29/2019 
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019

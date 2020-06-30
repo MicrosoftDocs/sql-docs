@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Fuzzy Lookup Transformation Editor"
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Fuzzy Lookup Transformation Editor (Reference Table Tab)
   Use the **Reference Table** tab of the **Fuzzy Lookup Transformation Editor** dialog box to specify the source table and the index to use for the lookup. The reference data source must be a table in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "packages [Integration Services], configurations"
   - "variables [Integration Services], adding"
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Use the Values of Variables and Parameters in a Child Package
   This procedure describes how to create a package configuration that uses the parent variable configuration type. This configuration type enables a child package that is run from a parent package to access a variable in the parent.  

@@ -1,5 +1,6 @@
 ---
 title: "open objects Server Configuration Option | Microsoft Docs"
+description: 'Learn about the disabled configuration option "open objects." See how SQL Server now manages the number of open database objects.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql

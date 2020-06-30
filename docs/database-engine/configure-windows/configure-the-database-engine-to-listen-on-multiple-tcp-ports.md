@@ -1,5 +1,6 @@
 ---
 title: "Configure the Database Engine to Listen on Multiple TCP Ports | Microsoft Docs"
+description: Get acquainted with tabular data stream (TDS) endpoints. See how to use them to configure the SQL Server Database Engine to listen on multiple TCP ports.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

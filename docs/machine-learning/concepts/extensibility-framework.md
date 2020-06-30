@@ -2,7 +2,7 @@
 title: Extensibility architecture
 description: This article describes the architecture of the extensibility framework for running an external script, such as R or Python, on SQL server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/04/2019
 ms.topic: conceptual

@@ -1,5 +1,6 @@
 ---
 title: "Extensible Key Management (EKM) | Microsoft Docs"
+description: Learn how to configure and use Extensible Key Management and how it fits into the data encryption capabilities for SQL Server.
 ms.custom: ""
 ms.date: "07/25/2019"
 ms.prod: sql

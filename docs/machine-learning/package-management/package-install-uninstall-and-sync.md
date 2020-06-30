@@ -2,10 +2,10 @@
 title: R package synchronization from the file system
 description: Update R libraries on SQL Server with newer versions installed on the file system.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph

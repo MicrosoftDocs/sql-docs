@@ -1,5 +1,6 @@
 ---
 title: "Set the AUTO_CLOSE Database Option to OFF | Microsoft Docs"
+description: Check whether the AUTO_ CLOSE option is OFF. The AUTO_ CLOSE option has implications for performance in SQL Server.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

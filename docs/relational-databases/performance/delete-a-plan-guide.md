@@ -13,7 +13,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Delete a Plan Guide
-[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
   You can delete (drop) a plan guide in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Using [!INCLUDE[tsql](../../includes/tsql-md.md)], you can also delete all of the plan guides in a database.  
   
  **In This Topic**  

@@ -17,7 +17,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Synonyms (Database Engine)
-[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
   A synonym is a database object that serves the following purposes:  
   
 -   Provides an alternative name for another database object, referred to as the base object, that can exist on a local or remote server.  

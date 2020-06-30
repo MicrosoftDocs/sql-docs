@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # FOR XML Query Compared to Nested FOR XML Query
-[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
   This topic compares a single-level FOR XML query to a nested FOR XML query. One of the benefits of using nested FOR XML queries is that you can specify a combination of attribute-centric and element-centric XML for query results. The example demonstrates this.  
   
 ## Example  

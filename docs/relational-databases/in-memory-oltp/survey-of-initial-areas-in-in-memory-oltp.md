@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Survey of Initial Areas in In-Memory OLTP
 
-[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
 
   
 This article is for the developer who is in a hurry to learn the basics of the In-Memory OLTP performance features of Microsoft SQL Server and Azure SQL Database.  

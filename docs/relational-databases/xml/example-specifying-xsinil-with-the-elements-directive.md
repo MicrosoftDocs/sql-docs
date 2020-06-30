@@ -15,7 +15,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive
-[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
   The following query specifies the `ELEMENTS` directive to generate element-centric XML from the query result.  
   
 ## Example  

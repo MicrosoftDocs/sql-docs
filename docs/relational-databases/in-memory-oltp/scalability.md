@@ -14,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scalability
-[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contains scalability enhancements to the on-disk storage for memory-optimized tables. 
 
 ## Multiple threads to persist memory-optimized tables  

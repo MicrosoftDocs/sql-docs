@@ -12,7 +12,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Installation and configuration
-[!INCLUDE[sql-asdb.md](../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)
 Wide World Importers OLTP database installation and configuration instructions.
 
 ## Prerequisites

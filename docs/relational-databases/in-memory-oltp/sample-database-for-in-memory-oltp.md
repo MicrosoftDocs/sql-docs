@@ -14,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Database for In-Memory OLTP
-[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
     
 ## Overview  
  This sample showcases the In-Memory OLTP feature. It shows  memory-optimized tables and natively compiled stored procedures, and can be used to demonstrate performance benefits of In-Memory OLTP.  

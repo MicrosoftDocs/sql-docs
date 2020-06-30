@@ -14,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unsupported SQL Server Features for In-Memory OLTP
-[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
 
 This topic discusses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are not supported for use with memory-optimized objects. Plus, the final section lists features that were unsupported for In-Memory OLTP, but later became supported.
   

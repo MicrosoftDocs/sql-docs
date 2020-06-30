@@ -39,8 +39,6 @@ Data Definition Language (DDL) statements defines data structures. Use these sta
 - RENAME
 - UPDATE STATISTICS
 
-There are other language elements that affect data structures as well.
-
 ## Data Manipulation Language
 
 Data Manipulation Language (DML) affect the information stored in the database. Use these statements to insert, update, and change the rows in the database.

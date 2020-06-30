@@ -17,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # SQL Server Monitor Overview
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server Monitor does not perform monitoring functions, but it hosts modules that do. The SQL Server Monitor modules include Replication Monitor and Database Mirroring Monitor.  
   
  To use one of these modules, select that module on the **Go** menu. The currently selected module owns the content of the navigation and detail panes, user interaction in the detail panes, and the queries for content and status.  

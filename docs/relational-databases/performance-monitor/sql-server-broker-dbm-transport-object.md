@@ -15,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Broker - DBM Transport Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Broker / DBM Transport** performance object contains performance counters that report networking information for Service Broker and database mirroring. The table below lists the counters that this object contains.  
   
 |SQL Server Broker / DBM Transport counter|Description|  

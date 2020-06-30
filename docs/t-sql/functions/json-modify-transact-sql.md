@@ -307,6 +307,6 @@ WHERE EmployeeID=17
   
 ## See Also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

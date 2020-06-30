@@ -19,7 +19,7 @@ ms.author: "sstein"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE Automation Result Sets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
   If an OLE Automation property or method returns data in an array with one or two dimensions, the array is returned to the client as a result set:  
   
 -   A one-dimensional array is returned to the client as a single-row result set with as many columns as there are elements in the array. For example, an array(10) is returned as a single row of 10 columns.  

@@ -20,7 +20,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   There are four main functional extensions to ADO.NET that are specifically for in-process use. The following topics will cover these extensions in detail.  
   
 ## In This Section  

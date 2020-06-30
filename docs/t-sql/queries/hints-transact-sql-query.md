@@ -57,7 +57,7 @@ author: pmasl
 ms.author: vanto
 ---
 # Hints (Transact-SQL) - Query
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Query hints specify that the indicated hints should be used throughout the query. They affect all operators in the statement. If UNION is involved in the main query, only the last query involving a UNION operation can have the OPTION clause. Query hints are specified as part of the [OPTION clause](../../t-sql/queries/option-clause-transact-sql.md). Error 8622 occurs if one or more query hints cause the Query Optimizer not to generate a valid plan.  
   

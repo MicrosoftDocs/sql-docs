@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Errors and Events Reference (Database Engine)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This section contains selected [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages that need further explanation.  
   
 ## In This Section  

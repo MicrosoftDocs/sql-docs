@@ -21,7 +21,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Client Network Configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Client software enables client computers to connect to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a network. A "client" is a front-end application that uses the services provided by a server such as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. The computer that hosts this application is referred to as the *client computer*.  
   
  At the simplest level, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client can reside on the same machine as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Typically, however, a client connects to one or more remote servers over a network. The client/server architecture of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows it to seamlessly manage multiple clients and servers on a network. The default client configurations suffice in most situations.  

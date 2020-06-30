@@ -17,7 +17,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # LocalDBUnshareInstance Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Stops the sharing of the specified SQL Server Express LocalDB instance.  
   
  **Header file:** sqlncli.h  

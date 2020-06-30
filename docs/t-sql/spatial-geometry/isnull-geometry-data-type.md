@@ -18,7 +18,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # IsNull (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The type of a **geometry** instance is null. Returns 0 if the instance isn't null.
   

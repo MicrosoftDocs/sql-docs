@@ -17,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Example: Offline restore of primary and 1 other filegroup (Full Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic is relevant only for databases under the full recovery model that contain multiple filegroups.  
   

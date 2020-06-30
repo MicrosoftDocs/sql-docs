@@ -18,7 +18,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Rebuild Index Task (Maintenance Plan)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Rebuild Index Task** dialog to re-create the indexes on the tables in the database with a new fill factor. The fill factor determines the amount of empty space on each page in the index, to accommodate future expansion. As data is added to the table, the free space fills because the fill factor is not maintained. Reorganizing data and index pages can re-establish the free space.  
   
  The **Rebuild Index Task** uses the ALTER INDEX statement. For more info about the options described on this page, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  

@@ -21,7 +21,7 @@ ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns information about all the waits encountered by threads that executed during operation. You can use this aggregated view to diagnose performance issues with [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and also with specific queries and batches.  
   

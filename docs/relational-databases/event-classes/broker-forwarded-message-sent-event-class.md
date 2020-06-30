@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # Broker:Forwarded Message Sent Event Class
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a Broker:Forwarded Message Sent event when Service Broker forwards a message.  
   

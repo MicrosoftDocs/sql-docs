@@ -15,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # set working set size Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This option is still present in the **sp_configure** stored procedure, but its functionality is unavailable in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (The setting has no effect.)  
   

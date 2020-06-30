@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Retrieve and Query XML Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that are not preserved when they are stored in databases.  
   
 ##  <a name="features"></a> Features of an XML Instance That Are Not Preserved  

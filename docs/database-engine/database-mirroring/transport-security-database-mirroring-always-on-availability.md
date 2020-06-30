@@ -22,7 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Transport Security - Database Mirroring - Always On Availability
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Transport security involves authentication and, optionally, encryption of messages exchanged between the databases. For database mirroring and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], authentication and encryption are configured on the database mirroring endpoint. For an introduction to database mirroring endpoints, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   

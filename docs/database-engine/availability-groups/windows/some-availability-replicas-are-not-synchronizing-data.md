@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Some availability replicas are not synchronizing data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

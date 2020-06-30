@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sessions [SQL Server], application locks"
   - "APPLOCK_MODE function"
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

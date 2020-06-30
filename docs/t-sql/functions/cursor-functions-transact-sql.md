@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "functions [SQL Server], cursors"
   - "cursor functions"
 ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # Cursor Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

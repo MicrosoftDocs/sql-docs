@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Tutorial: Query HDFS in a SQL Server big data cluster
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial demonstrates how to Query HDFS data in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 

@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Configure deployment settings for cluster resources and services
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Starting from a pre-defined set of configuration profiles that are built into the `azdata` management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 

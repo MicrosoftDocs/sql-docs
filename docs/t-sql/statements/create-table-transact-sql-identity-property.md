@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   Creates an identity column in a table. This property is used with the CREATE TABLE and ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
 > [!NOTE]  
->  The IDENTITY property is different from the SQL-DMO **Identity** property that exposes the row identity property of a column.  
+>  The IDENTITY property is different from the SQL-DMO **Identity** property that exposes the row identity property of a column .  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

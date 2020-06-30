@@ -2,7 +2,7 @@
 title: "Connect to an ODBC Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 description: How to configure an ODBC DSN or create an ODBC connection string to use with SQL Server Import and Export Wizard
 ms.custom: ""
-ms.date: "12/31/2019"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: "vanto"
 ms.technology: integration-services
@@ -87,7 +87,7 @@ If you want to provide your connection information with a connection string, the
 
 This example is going to use the following connection string, which connects to Microsoft SQL Server. The database example that is used is **WideWorldImporters** and we're connecting to the SQL Server on the local machine.
 
-    ```
+    ```console
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
     ```
 
@@ -134,7 +134,7 @@ To build and test the connection string for your ODBC driver on your own compute
 
 10. Open the saved file with Notepad or another text editor. Here are the contents of our SQL Server example.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -149,7 +149,7 @@ To build and test the connection string for your ODBC driver on your own compute
 
     After you assemble the necessary values from the sample file DSN, you have the following connection string.
     
-        ```
+        ```console
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
         ```
 

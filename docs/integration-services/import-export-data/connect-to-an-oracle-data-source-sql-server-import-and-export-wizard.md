@@ -1,7 +1,7 @@
 ---
 title: "Connect to an Oracle Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: integration-services
@@ -30,6 +30,7 @@ After you select **.NET Framework Data Provider for Oracle** on the **Choose a D
 |---|---|
 |Server name|**Data Source**|
 |Authentication (login) info|**User ID** and **Password**; or, **Integrated Security**|
+|||
 
 You don't have to enter the connection string in the **ConnectionString** field of the list. After you enter individual values for the Oracle server name (**Data Source**) and login info, the wizard assembles the connection string from the individual properties and their values. 
 
@@ -64,7 +65,7 @@ The user id and password to connect.
 ### Connection string format
 Here's the format of a typical connection string.
 
-    ```
+    ```console
     Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
     ```
 

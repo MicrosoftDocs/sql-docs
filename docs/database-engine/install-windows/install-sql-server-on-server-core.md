@@ -2,7 +2,7 @@
 title: "Install SQL Server on Server Core | Microsoft Docs"
 description: You can install SQL Server on a Server Core installation. The Server Core installation option provides a minimal environment for running specific server roles.
 ms.custom: ""
-ms.date: "09/05/2017"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -113,7 +113,7 @@ The Server Core installation option provides a minimal environment for running s
   
      To install specific features using the command prompt installation option, use the /FEATURES parameter and specify the parent feature or feature values. The following is an example of using the parameters from the command line:  
   
-    ```  
+    ```console
     Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
@@ -125,7 +125,7 @@ The Server Core installation option provides a minimal environment for running s
     
     The following example shows how to install a new stand-alone instance that includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
   
@@ -161,7 +161,7 @@ The Server Core installation option provides a minimal environment for running s
   
     -   Installing connectivity components. The following example shows how to install the connectivity components:  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
   
@@ -183,7 +183,7 @@ The Server Core installation option provides a minimal environment for running s
   
         The following example shows how to install all supported features of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on Server Core:  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
         ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
@@ -237,13 +237,13 @@ The Server Core installation option provides a minimal environment for running s
   
          To specify the configuration file at the command prompt:  
   
-        ```  
+        ```console
         Setup.exe /QS /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
          To specify passwords at the command prompt instead of in the configuration file:  
   
-        ```  
+        ```console
         Setup.exe /QS /SQLSVCPASSWORD="************" /ASSVCPASSWORD="************"  /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
@@ -260,12 +260,12 @@ The Server Core installation option provides a minimal environment for running s
 
 To enable remote connections, use SQLCMD.exe locally and execute the following statements against the Server Core instance:  
 
-   ```Transact-SQL
-   EXEC sys.sp_configure N'remote access', N'1'  
-   GO
-   RECONFIGURE WITH OVERRIDE
-   GO
-   ```  
+```sql
+EXEC sys.sp_configure N'remote access', N'1'  
+GO
+RECONFIGURE WITH OVERRIDE
+GO
+```  
   
 ### Enable and start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  By default, the Browser service is disabled.  If it is disabled on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Server Core, run the following command from the command prompt to enable it:  
@@ -303,7 +303,7 @@ $Tcp
   
  To uninstall an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-```  
+```console
 Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  
 ```  
   

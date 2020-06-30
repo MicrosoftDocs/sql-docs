@@ -36,7 +36,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/_ssnoversion.md)]
 
 This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
 

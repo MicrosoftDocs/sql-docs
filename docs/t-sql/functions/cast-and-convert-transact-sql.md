@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "roundtrip conversions"
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CAST and CONVERT (Transact-SQL)
@@ -296,13 +296,15 @@ When converting data types where the target data type has fewer decimal places t
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message when converting nonnumeric **char**, **nchar**, **nvarchar**, or **varchar** data to **decimal**, **float**, **int**, **numeric**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also returns an error when an empty string (" ") is converted to **numeric** or **decimal**.
   
 ## Certain datetime conversions are nondeterministic
-The following table lists the styles for which the string-to-datetime conversion is nondeterministic.
+
+The styles for which the string-to-datetime conversion is nondeterministic are as follows:
   
-|||  
-|-|-|  
-|All styles below 100<sup>1</sup>|106|  
-|107|109|  
-|113|130|  
+- All styles below 100<sup>1</sup>
+- 106  
+- 107
+- 109
+- 113
+- 130  
   
 <sup>1</sup> With the exception of styles 20 and 21
 

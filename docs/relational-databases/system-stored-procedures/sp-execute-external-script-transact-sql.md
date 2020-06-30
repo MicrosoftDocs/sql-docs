@@ -5,7 +5,7 @@ ms.date: "05/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_execute_external_script_TSQL"

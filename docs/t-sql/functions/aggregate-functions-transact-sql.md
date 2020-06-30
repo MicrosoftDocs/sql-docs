@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "summarizing functions"
   - "aggregate functions [SQL Server]"
 ms.assetid: 0c06ae42-eb0a-4d77-9d74-aa1e7f344009
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Aggregate Functions (Transact-SQL)
@@ -31,17 +31,22 @@ Use aggregate functions as expressions only in the following situations:
 -   A HAVING clause.  
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] provides the following aggregate functions:
-  
-|||
-|-|-|
-|[APPROX_COUNT_DISTINCT](../../t-sql/functions/approx-count-distinct-transact-sql.md)| [MIN](../../t-sql/functions/min-transact-sql.md)|
-|[AVG](../../t-sql/functions/avg-transact-sql.md)|[STDEV](../../t-sql/functions/stdev-transact-sql.md)|
-|[CHECKSUM_AGG](../../t-sql/functions/checksum-agg-transact-sql.md)|[STDEVP](../../t-sql/functions/stdevp-transact-sql.md)|
-|[COUNT](../../t-sql/functions/count-transact-sql.md)|[STRING_AGG](../../t-sql/functions/string-agg-transact-sql.md)|
-|[COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)|[SUM](../../t-sql/functions/sum-transact-sql.md)|
-|[GROUPING](../../t-sql/functions/grouping-transact-sql.md)|[VAR](../../t-sql/functions/var-transact-sql.md)|
-|[GROUPING_ID](../../t-sql/functions/grouping-id-transact-sql.md)|[VARP](../../t-sql/functions/varp-transact-sql.md)|
-|[MAX](../../t-sql/functions/max-transact-sql.md)||
+
+- [APPROX_COUNT_DISTINCT](../../t-sql/functions/approx-count-distinct-transact-sql.md)
+- [AVG](../../t-sql/functions/avg-transact-sql.md)
+- [CHECKSUM_AGG](../../t-sql/functions/checksum-agg-transact-sql.md)
+- [COUNT](../../t-sql/functions/count-transact-sql.md)
+- [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)
+- [GROUPING](../../t-sql/functions/grouping-transact-sql.md)
+- [GROUPING_ID](../../t-sql/functions/grouping-id-transact-sql.md)
+- [MAX](../../t-sql/functions/max-transact-sql.md)
+- [MIN](../../t-sql/functions/min-transact-sql.md)
+- [STDEV](../../t-sql/functions/stdev-transact-sql.md)
+- [STDEVP](../../t-sql/functions/stdevp-transact-sql.md)
+- [STRING_AGG](../../t-sql/functions/string-agg-transact-sql.md)
+- [SUM](../../t-sql/functions/sum-transact-sql.md)
+- [VAR](../../t-sql/functions/var-transact-sql.md)
+- [VARP](../../t-sql/functions/varp-transact-sql.md)
   
 ## See also
 [Built-in Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  

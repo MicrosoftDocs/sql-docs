@@ -1,6 +1,6 @@
 ---
 title: "Changes aren't visible on secondary availability group replica"
-ms.description: Learn how to determine why changes on a primary replica are not reflected on the secondary replica for an Always On availability group.
+description: Learn how to determine why changes on a primary replica are not reflected on the secondary replica for an Always On availability group.
 ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Determine why changes from primary replica are not reflected on secondary replica for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]

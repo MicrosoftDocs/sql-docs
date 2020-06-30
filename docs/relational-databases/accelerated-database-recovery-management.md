@@ -98,6 +98,9 @@ Changing the location of the PVS is a three-step process.
 
 ## Troubleshooting
 
+> [!NOTE]
+> This section also applies to Azure SQL Database.
+
 Query `sys.dm_tran_persistent_version_store_stats` to check PVS sizes.
 
 Check `% of DB` size. Also note the difference from typical size.

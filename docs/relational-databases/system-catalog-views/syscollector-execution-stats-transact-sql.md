@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # syscollector_execution_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
 
   Provides information about task execution for a collection set or package.  
   

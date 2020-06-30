@@ -15,7 +15,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Manage Full-Text Catalogs
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 A full-text catalog is a logical container for a group of full-text indexes. You have to create a full-text catalog before you can create a full-text index.
 
 A full-text catalog is a virtual object that does not belong to any filegroup.

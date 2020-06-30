@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_syspolicy_purge_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
 
   Removes the policy evaluation history according to the history retention interval setting.  
   

@@ -15,7 +15,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Filestream and FileTable Dynamic Management Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
 
   This section describes the dynamic management views related to the FILESTREAM and FileTable features.  
   

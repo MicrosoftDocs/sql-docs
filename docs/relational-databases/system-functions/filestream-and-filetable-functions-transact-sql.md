@@ -16,7 +16,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Filestream and FileTable Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
 
   This section describes the system functions related to the FILESTREAM and FileTable features.  
   

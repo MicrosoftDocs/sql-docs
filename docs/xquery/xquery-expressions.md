@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # XQuery Expressions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/_ssnoversion.md)]
 
   Topics that describe the XQuery expressions.  
   

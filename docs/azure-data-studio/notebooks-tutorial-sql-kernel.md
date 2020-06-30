@@ -13,7 +13,7 @@ ms.date: 03/30/2020
 
 # Create and run a SQL Server notebook
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
 
 This tutorial demonstrates how to create and run a notebook in Azure Data Studio using SQL Server.
 

@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Use a python script to deploy a SQL Server Big Data Cluster on Azure Red Hat OpenShift (ARO)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
 
 In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to [Azure Red Hat OpenShift (ARO)](/azure/virtual-machines/linux/openshift-get-started). This deployment option is supported beginning with SQL Server 2019 CU5.
 

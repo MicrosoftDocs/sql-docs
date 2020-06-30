@@ -23,7 +23,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # INDEXKEY_PROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
 
   Returns information about the index key. Returns NULL for XML indexes.  
   

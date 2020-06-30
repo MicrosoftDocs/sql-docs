@@ -23,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Server Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
 
   Revokes permissions granted or denied on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   

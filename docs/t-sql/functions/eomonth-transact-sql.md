@@ -55,7 +55,8 @@ The `EOMONTH` function can remote to [!INCLUDE[ssSQL11](../../includes/sssql11-m
 DECLARE @date DATETIME = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
-```  
+```
+
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
@@ -74,7 +75,7 @@ SELECT EOMONTH ( @date ) AS Result;
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 Result  
@@ -86,14 +87,7 @@ Result
   
 ### C. EOMONTH with and without the month_to_add parameter  
   
-Note:   the values shown in these result sets reflect an
-        execution date between and including
-        
-        12/01/2011
-        
-        and
-        
-        12/31/2011
+The values shown in these result sets reflect an execution date between and including `12/01/2011` and `12/31/2011`.
 
 ```sql  
 DECLARE @date DATETIME = GETDATE();  
@@ -123,7 +117,4 @@ Last Month
 2011-11-30  
   
 (1 row(s) affected)  
-```  
-  
-  
-
+```

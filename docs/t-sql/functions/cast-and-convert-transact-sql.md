@@ -296,13 +296,15 @@ When converting data types where the target data type has fewer decimal places t
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message when converting nonnumeric **char**, **nchar**, **nvarchar**, or **varchar** data to **decimal**, **float**, **int**, **numeric**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also returns an error when an empty string (" ") is converted to **numeric** or **decimal**.
   
 ## Certain datetime conversions are nondeterministic
-The following table lists the styles for which the string-to-datetime conversion is nondeterministic.
+
+The styles for which the string-to-datetime conversion is nondeterministic are as follows:
   
-|||  
-|-|-|  
-|All styles below 100<sup>1</sup>|106|  
-|107|109|  
-|113|130|  
+- All styles below 100<sup>1</sup>
+- 106  
+- 107
+- 109
+- 113
+- 130  
   
 <sup>1</sup> With the exception of styles 20 and 21
 

@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Audit Add DB User Event Class
 
-[!INCLUDE [sql-asdb](../../includes/applies-to-version/sql-asdb.md)
+[!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
 
   The **Audit Add DB User** event class occurs whenever a login is added or removed as a database user to a database. This event class is used for the **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**, and **sp_dropuser** stored procedures.  
   

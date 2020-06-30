@@ -14,7 +14,7 @@ ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Memory-optimized tables require that sufficient memory exist to keep all of the rows and indexes in memory. Because memory is a finite resource, it is important that you understand and manage memory usage on your system. The topics in this section cover common memory use and management scenarios.
 

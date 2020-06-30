@@ -14,7 +14,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # DAC Support For SQL Server Objects and Versions
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A data-tier application (DAC) supports the most commonly used [!INCLUDE[ssDE](../../includes/ssde-md.md)] objects.  
   
  **In This Topic**  

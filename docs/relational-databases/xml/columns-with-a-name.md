@@ -16,7 +16,7 @@ ms.author: genemi
 ---
 # Columns with a Name
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  
   

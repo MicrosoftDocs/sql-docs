@@ -6,4 +6,4 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](_ssnoversion.md)] and later 
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](_ssnoversion.md)] 

@@ -23,7 +23,7 @@ author: rothja
 ms.author: jroth
 ---
 # GOTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Alters the flow of execution to a label. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements that follow GOTO are skipped and processing continues at the label. GOTO statements and labels can be used anywhere within a procedure, batch, or statement block. GOTO statements can be nested.  
   

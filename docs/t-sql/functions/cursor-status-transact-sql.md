@@ -21,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # CURSOR_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 For a given parameter, `CURSOR_STATUS` shows whether or not a cursor declaration has returned a cursor and result set.
   

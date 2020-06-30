@@ -20,7 +20,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;DBTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the value of the current **timestamp** data type for the current database. The current database will have a guaranteed unique timestamp value.
   

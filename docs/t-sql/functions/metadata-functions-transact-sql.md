@@ -17,7 +17,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Metadata Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 
   The following scalar functions return information about the database and database objects:  
   

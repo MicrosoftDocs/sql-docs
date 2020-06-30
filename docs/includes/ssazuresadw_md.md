@@ -6,4 +6,4 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-(../media/yes-icon.png)Azure Synapse Analytics (SQL DW)
+Azure Synapse Analytics (SQL DW)

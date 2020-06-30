@@ -153,8 +153,11 @@ When transactional replication is enabled, `SELECT INTO` operations are fully lo
         > [!WARNING]
         > The `DBCC DBREINDEX` statement is **deprecated**; Do not use it in new applications.  
   
+        > [!NOTE]
+        > Index build operations use minimial logging but may be delayed when there is a concurrently executing backup. This delay is caused by the synchronization requirements of minimally logged buffer pool pages when using the simple or bulk-logged recovery model. 
+      
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) new heap rebuild (if applicable). Index page deallocation during a `DROP INDEX` operation is **always** fully logged.
-  
+
 ##  <a name="RelatedTasks"></a> Related tasks  
 **Managing the transaction log**  
   

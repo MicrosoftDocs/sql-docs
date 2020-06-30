@@ -1,7 +1,7 @@
 ---
 title: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: integration-services
@@ -92,18 +92,18 @@ Specify **Trusted_Connection=Yes** to connect with Windows integrated authentica
 ### Connection string format
 Here's the format of a connection string that uses Windows integrated authentication.
 
-    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
+`Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Here's the format of a connection string that uses SQL Server authentication instead of Windows integrated authentication.
 
-     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
+`Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### Enter the connection string
 Enter the connection string in the **ConnectionString** field, or enter the DSN name in the **Dsn** field, on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.
 
 The following example uses this connection string.
 
-    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
+`Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 Here's the screen that you see after entering the connection string.
 

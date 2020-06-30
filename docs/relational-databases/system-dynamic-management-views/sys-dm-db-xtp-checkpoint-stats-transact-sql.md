@@ -1,5 +1,6 @@
 ---
 title: "sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs"
+description: Returns statistics about the In-Memory OLTP checkpoint operations in the current database. Learn how this view differs for versions of SQL Server.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql

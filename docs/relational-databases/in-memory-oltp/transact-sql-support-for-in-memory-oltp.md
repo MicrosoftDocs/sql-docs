@@ -1,5 +1,6 @@
 ---
 title: "Transact-SQL Support for In-Memory OLTP | Microsoft Docs"
+description: Learn about Transact-SQL statements that include syntax options to support In-Memory OLTP. Use links to additional references about supported features.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

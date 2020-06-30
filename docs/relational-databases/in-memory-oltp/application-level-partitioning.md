@@ -1,5 +1,6 @@
 ---
 title: "Application-Level Partitioning | Microsoft Docs"
+description: Review this example that processes orders. This application stores recent orders in a memory-optimized table and older ones in a disk-based table.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

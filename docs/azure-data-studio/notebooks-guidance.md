@@ -5,8 +5,8 @@ author: yualan
 ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
 ---

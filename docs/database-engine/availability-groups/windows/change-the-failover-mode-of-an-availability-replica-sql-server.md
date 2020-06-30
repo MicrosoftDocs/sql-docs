@@ -2,7 +2,7 @@
 title: "Change replica failover mode for an availability group"
 description: "Describes how to change the failover mode for a replica within an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
 ms.custom: seo-lt-2019
-ms.date: 06/29/2020
+ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -50,7 +50,7 @@ ms.author: mathoma
   
 2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:
 
-    ```sql
+    ```syntaxsql
     ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
        WITH ( {  
              AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }

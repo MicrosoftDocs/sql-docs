@@ -12,7 +12,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Installation and configuration
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb.md](../includes/applies-to-version/sql-asdb.md]
 Wide World Importers OLTP database installation and configuration instructions.
 
 ## Prerequisites

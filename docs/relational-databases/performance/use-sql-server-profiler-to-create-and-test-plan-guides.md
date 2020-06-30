@@ -25,7 +25,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Use SQL Server Profiler to create and test plan guides
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
   When you are creating a plan guide, you can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to capture the exact query text for use in the *statement_text* argument of the **sp_create_plan_guide** stored procedure. This helps make sure that the plan guide will be matched to the query at compile time. After the plan guide is created, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can also be used to test that the plan guide is, in fact, being matched to the query. Generally, you should test plan guides by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to verify that your query is being matched to your plan guide.  
   
 ## Capturing query text by using SQL Server Profiler  

@@ -14,7 +14,7 @@ ms.author: mathoma
 ---
 # Use of SQL Server features and capabilities
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb.md](../includes/applies-to-version/sql-asdb.md]
 
 WideWorldImporters use of SQL Server features and capabilities in the OLTP database.
 

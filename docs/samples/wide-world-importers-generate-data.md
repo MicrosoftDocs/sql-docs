@@ -13,7 +13,7 @@ ms.custom: "seo-lt-2019"
 ---
 
 # WideWorldImporters data generation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb.md](../includes/applies-to-version/sql-asdb.md]
 The released versions of the WideWorldImporters and WideWorldImportersDW databases have data from January 1, 2013, up to the day that the databases were generated.
 
 When you use these sample databases, you might want to include more recent sample data.

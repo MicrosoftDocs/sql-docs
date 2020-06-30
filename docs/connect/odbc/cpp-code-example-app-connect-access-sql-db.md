@@ -13,7 +13,7 @@ ms.author: v-daenge
 ---
 # C++ ODBC example application accesses a SQL database
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
 
 This C++ sample application demonstrates how to use the ODBC APIs to connect to and access a SQL database.
 

@@ -15,7 +15,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # New Subscription Wizard (UI Reference)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb.md](../../includes/applies-to-version/sql-asdb.md]
 This section provides information on the following pages of the New Subscription Wizard:  
   
 -   [&#60;AgentName&#62; Agent Location](../../relational-databases/replication/agentname-agent-location.md)  

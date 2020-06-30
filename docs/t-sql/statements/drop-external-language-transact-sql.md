@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
 # DROP EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/applies-to-version/_ss2019.md)]
 
 Deletes an existing external language.
 

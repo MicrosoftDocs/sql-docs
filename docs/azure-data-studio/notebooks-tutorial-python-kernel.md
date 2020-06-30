@@ -13,7 +13,7 @@ ms.date: 04/27/2020
 
 # Create and run a Python notebook
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/applies-to-version/_ss2019.md)]
 
 This tutorial demonstrates how to create and run a notebook in Azure Data Studio using the Python kernel.
 

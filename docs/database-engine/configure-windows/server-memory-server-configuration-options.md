@@ -24,7 +24,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Server memory configuration options
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 
 Reconfigure the amount of memory (in megabytes) for a SQL Server process used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  There are two server memory options, **min server memory** and **max server memory**. These options change the amount of memory the SQL Server Memory Manager can allocate to a SQL Server process.
   

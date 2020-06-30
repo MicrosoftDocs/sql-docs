@@ -21,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Create Charts, Alerts, Logs, and Reports
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
   System Monitor lets you create charts, alerts, logs, and reports to monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Charts  

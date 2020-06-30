@@ -15,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Start System Monitor (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
   Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters. You can use counters for server resources, such as processor and memory use. You also can use them for many Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, such as locks and transactions.  
   
 ## Start System Monitor in Windows  

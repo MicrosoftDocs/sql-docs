@@ -13,7 +13,7 @@ author: PijoCoder
 ms.author: mathoma
 ---
 # MSSQLSERVER_17207
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
   
 ## Details  
   

@@ -12,7 +12,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server XTP Garbage Collection
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 
   The SQL Server XTP Garbage Collection performance object contains counters related to the In-Memory OLTP engine's garbage collector.  
   

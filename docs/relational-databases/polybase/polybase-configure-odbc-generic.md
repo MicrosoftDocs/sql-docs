@@ -13,7 +13,7 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproduc
 ---
 # Configure PolyBase to access external data in SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
 
 PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sources through the ODBC connector.
 

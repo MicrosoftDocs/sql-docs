@@ -18,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Data Collector Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
 
   SQL Server supports the following system stored procedures that are used to work with the data collector and the following components: collection sets, collection items, and collection types.  
   

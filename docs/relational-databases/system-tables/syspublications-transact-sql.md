@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # syspublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
 
   Contains one row for each publication defined in the database. This table is stored in the publication database.  
   

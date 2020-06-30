@@ -6,4 +6,4 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-<Token>![Yes](../media/yes-icon.png) Beginning with SQL Server 2019</Token>
+Parallel Data Warehouse

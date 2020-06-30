@@ -6,5 +6,5 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-<Token>![yes](../media/yes-icon.png)Azure Synapse Analytics (SQL DW)</Token>
+<Token>![yes](../media/yes-icon.png)[!INCLUDE [ssazuresadw_md](../ssazuresadw_md.md)]</Token>
 

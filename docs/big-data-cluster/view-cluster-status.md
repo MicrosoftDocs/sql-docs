@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # How to view the status of a big data cluster 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
 
 This article describes how to access the service endpoints and view the status of a SQL Server big data cluster  components. You can use both Azure Data Studio and **azdata**, and this article covers both techniques.
 

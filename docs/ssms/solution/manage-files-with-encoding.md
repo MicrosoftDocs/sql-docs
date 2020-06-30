@@ -16,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Manage Files with Encoding
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 To facilitate the display of your code in a particular language and on a particular platform, you can associate a particular character encoding with a file.  
   
 ## Opening Files  

@@ -25,14 +25,14 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-catalog.create_execution [@folder_name = folder_name  
-     , [@project_name =] project_name  
-     , [@package_name =] package_name  
-  [  , [@reference_id =] reference_id ]  
-  [  , [@use32bitruntime =] use32bitruntime ] 
-  [  , [@runinscaleout =] runinscaleout ]
-  [  , [@useanyworker =] useanyworker ] 
-     , [@execution_id =] execution_id OUTPUT  
+catalog.create_execution [ @folder_name = ] folder_name  
+     , [ @project_name = ] project_name  
+     , [ @package_name = ] package_name  
+  [  , [ @reference_id = ] reference_id ]  
+  [  , [ @use32bitruntime = ] use32bitruntime ] 
+  [  , [ @runinscaleout = ] runinscaleout ]
+  [  , [ @useanyworker = ] useanyworker ] 
+     , [ @execution_id = ] execution_id OUTPUT  
 ```  
   
 ## Arguments  

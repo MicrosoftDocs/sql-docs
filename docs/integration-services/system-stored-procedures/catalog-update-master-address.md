@@ -23,7 +23,7 @@ Update the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale O
 ## Syntax
 
 ```sql
-catalog.update_master_address [@MasterAddress = ] masterAddress
+catalog.update_master_address [ @MasterAddress = ] masterAddress
 ```
 
 ## Arguments

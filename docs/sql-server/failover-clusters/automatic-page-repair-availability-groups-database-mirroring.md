@@ -18,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Automatic Page Repair (Availability Groups: Database Mirroring)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Automatic page repair is supported by database mirroring and by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. After certain types of errors corrupt a page, making it unreadable, a database mirroring partner (principal or mirror) or an availability replica (primary or secondary) attempts to automatically recover the page. The partner/replica that cannot read the page requests a fresh copy of the page from its partner or from another replica. If this request succeeds, the unreadable page is replaced by the readable copy, and this usually resolves the error.  
   
  Generally speaking, database mirroring and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] handle I/O errors in equivalent ways. The few differences are explicitly called out here.  

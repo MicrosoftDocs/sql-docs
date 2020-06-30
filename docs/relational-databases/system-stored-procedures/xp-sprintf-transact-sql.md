@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # xp_sprintf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Formats and stores a series of characters and values in the string output parameter. Each format argument is replaced with the corresponding argument.  
   

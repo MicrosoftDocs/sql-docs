@@ -28,7 +28,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Use XML Data in Applications
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes the options that are available to you for working with the **xml** data type in your application. The topic includes information about the following:  
   
 -   Handling XML from an **xml** type column by using ADO and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  

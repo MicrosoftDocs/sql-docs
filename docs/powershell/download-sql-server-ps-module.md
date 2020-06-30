@@ -12,7 +12,7 @@ ms.date: 06/11/2020
 
 # Install the SQL Server PowerShell module
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 This article provides directions for installing the **SqlServer** PowerShell module.
 

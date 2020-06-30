@@ -22,7 +22,7 @@ ms.author: "sstein"
 ---
 # Database Snapshots (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 A database snapshot is a read-only, static view of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (the *source database*). The database snapshot is transactionally consistent with the source database as of the moment of the snapshot's creation. A database snapshot always resides on the same server instance as its source database. While database snapshots provide a read-only view of the data in the same state as when the snapshot was created, the size of the snapshot file grows as changes are made to the source database. For details, see the [Feature Overview](#FeatureOverview) section below.
   

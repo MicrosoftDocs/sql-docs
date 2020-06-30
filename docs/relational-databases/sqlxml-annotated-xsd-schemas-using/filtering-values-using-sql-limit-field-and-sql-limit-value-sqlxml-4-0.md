@@ -22,7 +22,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can limit rows that are returned from a database query on the basis of some limiting value. The **sql:limit-field** and **sql:limit-value** annotations are used to identify the database column that contains limiting values and to specify a specific limiting value to be used to filter the data returned.  
   
  The **sql:limit-field** annotation is used to identify a column that contains a limiting value; it is allowed on each mapped element or attribute.  

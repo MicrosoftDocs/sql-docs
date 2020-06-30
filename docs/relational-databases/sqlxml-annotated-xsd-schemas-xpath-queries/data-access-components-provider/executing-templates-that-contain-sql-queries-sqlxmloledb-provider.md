@@ -20,7 +20,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Templates That Contain SQL Queries (SQLXMLOLEDB Provider)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates the use of the SQLXMLOLEDB Provider-specific property ClientSideXML. In this client-side ADO sample application, an XML template that consists of an SQL query is executed on the server.  
   
  Because the ClientSideXML property is set to True, the SELECT statement without the FOR XML clause is sent to the server. The server executes the query and returns a rowset to the client. The client then applies the FOR XML transformation to the rowset and produces an XML document.  

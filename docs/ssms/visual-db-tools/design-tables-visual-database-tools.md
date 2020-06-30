@@ -20,7 +20,7 @@ ms.reviewer:
 
 ---
 # Create and update database tables
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 The Table Designer is a visual tool where you design and visualize [database tables](../../relational-databases/tables/tables.md). Use the SQL Server Management Studio (SSMS) Table Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  
 
   

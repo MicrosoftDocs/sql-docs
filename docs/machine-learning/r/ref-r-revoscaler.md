@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 # RevoScaleR (R library in SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **RevoScaleR** is a library of high-performance data science functions from Microsoft. Functions support data import, data transformation, summarization, visualization, and analysis.
 

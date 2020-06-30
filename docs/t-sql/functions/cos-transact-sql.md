@@ -16,12 +16,12 @@ helpviewer_keywords:
   - "cosine"
   - "COS function"
 ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 A mathematical function that returns the trigonometric cosine of the specified angle - measured in radians - in the specified expression.
   

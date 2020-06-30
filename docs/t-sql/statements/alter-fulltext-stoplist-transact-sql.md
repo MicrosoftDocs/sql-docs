@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Inserts or deletes a stop word in the default full-text stoplist of the current database.  
   

@@ -16,7 +16,7 @@ ms.author: chugu
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a data tap to a specific data flow path in a package data flow, for an instance of the execution.  
   

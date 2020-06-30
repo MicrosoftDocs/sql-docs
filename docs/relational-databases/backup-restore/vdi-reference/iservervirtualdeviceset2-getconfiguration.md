@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IServerVirtualDeviceSet2::GetConfiguration (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
 The **GetConfiguration** function obtains the configuration requested by the client.
 

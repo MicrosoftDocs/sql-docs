@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.transmission_queue (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains a row for each message in the transmission queue, as shown in the following table:  
   

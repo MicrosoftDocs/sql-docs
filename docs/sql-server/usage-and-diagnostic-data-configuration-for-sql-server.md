@@ -11,7 +11,7 @@ ms.technology: configuration
 ---
 # Configure usage and diagnostic data collection for SQL Server (CEIP)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 ## Summary
 

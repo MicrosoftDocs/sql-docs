@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # semantickeyphrasetable (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a table with zero, one, or more rows for key phrases associated with the specified columns in the specified table.  
   

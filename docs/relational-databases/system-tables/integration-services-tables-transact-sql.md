@@ -19,7 +19,7 @@ author: lrtoyou1223
 ms.author: lle
 ---
 # Integration Services Tables (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section describe the system tables in the msdb database that store information used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

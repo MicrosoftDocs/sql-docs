@@ -25,7 +25,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Replication Views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   These views contain information that is used by replication in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The views enable easier access to data in [replication system tables](../../relational-databases/system-tables/replication-tables-transact-sql.md). Views are created in a user database when that database is enabled as a publication or subscription database. All replication objects are removed from user databases when the database is removed from a replication topology. The preferred method for accessing replication metadata is by using [Replication Stored Procedures](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   

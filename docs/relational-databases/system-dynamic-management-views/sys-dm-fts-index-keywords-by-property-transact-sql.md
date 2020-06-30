@@ -23,7 +23,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns all property-related content in the full-text index of a given table. This includes all data that belongs to any property registered by the search property list associated with that full-text index.  
   

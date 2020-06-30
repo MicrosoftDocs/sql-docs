@@ -14,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Data Type Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 These scalar functions return information about various data type values.
   

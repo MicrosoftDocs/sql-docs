@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IClientVirtualDeviceSet2::GetConfiguration (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
 The **GetConfiguration** function is used to wait for the server to configure the virtual device set.
 

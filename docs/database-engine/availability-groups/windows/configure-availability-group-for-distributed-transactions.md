@@ -18,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure distributed transactions for an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group. This article explains how to configure an availability group for distributed transactions  
 

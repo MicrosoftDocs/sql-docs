@@ -22,7 +22,7 @@ ms.author: vanto
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  
-[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/_ss2017.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md.md)]
 
 Drops an assembly from the list of trusted assemblies on the server.
 

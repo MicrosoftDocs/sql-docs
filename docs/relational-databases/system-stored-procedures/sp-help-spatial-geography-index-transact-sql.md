@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_help_spatial_geography_index (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the names and values for a specified set of properties about a **geography** spatial index. The result is returned in a table format. You can choose to return a core set of properties or all properties of the index.  
   

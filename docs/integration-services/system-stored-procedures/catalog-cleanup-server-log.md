@@ -16,7 +16,7 @@ ms.author: chugu
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cleans up operation logs to bring the SSISDB database into a state that lets you change the value of the SERVER_OPERATION_ENCRYPTION_LEVEL property.  
   

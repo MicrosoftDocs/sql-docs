@@ -18,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Database Engine Stored Procedures (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used for general maintenance of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

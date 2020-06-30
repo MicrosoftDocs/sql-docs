@@ -18,7 +18,7 @@ ms.author: genemi
 
 # Guidelines for Using xml Data Type Methods
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes guidelines for using the **xml** data type methods.
 

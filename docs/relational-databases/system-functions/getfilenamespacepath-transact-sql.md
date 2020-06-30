@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # GetFileNamespacePath (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the UNC path for a file or directory in a FileTable.  
   

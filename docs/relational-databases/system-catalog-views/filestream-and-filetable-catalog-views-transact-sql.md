@@ -16,7 +16,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Filestream and FileTable Catalog Views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the catalog views related to the FileTable feature.  
   

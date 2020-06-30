@@ -15,7 +15,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_get_redirected_publisher (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used by replication agents to query a distributor to determine whether the original publisher has been redirected.  
   

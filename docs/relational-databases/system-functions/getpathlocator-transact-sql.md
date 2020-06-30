@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # GetPathLocator (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the path locator ID value for the specified file or directory in a FileTable.  
   

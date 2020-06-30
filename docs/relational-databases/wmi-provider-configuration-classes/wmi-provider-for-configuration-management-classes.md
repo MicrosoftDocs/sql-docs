@@ -20,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # WMI Provider for Configuration Management Classes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   The Windows Management Instrumentation (WMI) provider for Configuration Management provides functionality for the following classes:  
   
  [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  

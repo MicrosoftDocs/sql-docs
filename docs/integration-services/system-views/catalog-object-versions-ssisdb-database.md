@@ -16,7 +16,7 @@ ms.author: chugu
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the versions of objects in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog. In this release, only versions of projects are supported in this view.  
   

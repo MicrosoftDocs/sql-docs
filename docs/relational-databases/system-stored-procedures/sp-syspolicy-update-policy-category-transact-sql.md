@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_syspolicy_update_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Updates whether a policy category is set to mandate database subscriptions. If subscription is mandated, the policy category applies to all databases.  
   

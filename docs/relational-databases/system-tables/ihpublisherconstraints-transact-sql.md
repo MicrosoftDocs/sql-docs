@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # IHpublisherconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublisherconstraints** system table contains one row for each constraint replicated from non-SQL Server Publishers using the current Distributor. This table is stored in the distribution database.  
   

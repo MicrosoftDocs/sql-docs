@@ -22,7 +22,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
 # sys.external_language_files (Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 This catalog view provides a list of the external language extension files in the database. **R** and **Python** are reserved names and no external language can be created with those specific names.
 

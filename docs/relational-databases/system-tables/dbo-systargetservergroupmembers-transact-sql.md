@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # dbo.systargetservergroupmembers (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Records which target servers are currently enlisted in this multiserver group.  
   

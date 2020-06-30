@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # I/O Related Dynamic Management Views and Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following dynamic management objects.  
   

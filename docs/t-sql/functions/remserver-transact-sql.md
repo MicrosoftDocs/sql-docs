@@ -21,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;REMSERVER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!IMPORTANT]  

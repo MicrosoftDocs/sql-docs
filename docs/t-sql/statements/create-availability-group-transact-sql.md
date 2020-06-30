@@ -26,7 +26,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new availability group, if the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is enabled for the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature.  
   

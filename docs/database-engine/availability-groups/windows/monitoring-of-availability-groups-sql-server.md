@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # "Tools to monitor Always On availability groups"
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   To monitor the properties and state of an Always On availability group you can use the following tools.  
   
 |Tool|Brief Description|Links|  

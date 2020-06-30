@@ -16,7 +16,7 @@ ms.author: chugu
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retrieves the binary stream of a project that has been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   

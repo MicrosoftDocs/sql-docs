@@ -14,7 +14,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # System Metadata Functions
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following metadata functions.  
   

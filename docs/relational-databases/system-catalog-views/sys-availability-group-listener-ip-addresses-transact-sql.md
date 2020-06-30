@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.availability_group_listener_ip_addresses (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for every IP address that is associated with any Always On availability group listener in the Windows Server Failover Clustering (WSFC) cluster.  
   

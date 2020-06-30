@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Contains information about the execution of scheduled jobs by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
   

@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # syssubscriptions (System View) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   The **syssubscriptions** view exposes subscription information. This view is stored in the distribution database.  
   

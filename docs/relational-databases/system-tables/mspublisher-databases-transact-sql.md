@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSpublisher_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSpublisher_databases** table contains one row for each Publisher/Publisher database pair serviced by the local Distributor. This table is stored in the distribution database.  
   

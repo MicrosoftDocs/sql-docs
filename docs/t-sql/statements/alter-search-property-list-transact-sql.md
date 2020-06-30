@@ -25,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a specified search property to, or drops it from the specified search property list.  
   

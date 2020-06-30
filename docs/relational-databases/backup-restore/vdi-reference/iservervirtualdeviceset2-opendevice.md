@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IServerVirtualDeviceSet2::OpenDevice (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
 The **OpenDevice** function obtains virtual device interfaces from the virtual device set.
 

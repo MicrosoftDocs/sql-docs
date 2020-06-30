@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # FileTableRootPath (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the root-level UNC path for a specific FileTable or for the current database.  
   

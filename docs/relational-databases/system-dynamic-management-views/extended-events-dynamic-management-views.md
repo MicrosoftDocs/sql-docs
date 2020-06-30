@@ -16,7 +16,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Extended Events Dynamic Management Views
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following dynamic management objects for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events.  
   

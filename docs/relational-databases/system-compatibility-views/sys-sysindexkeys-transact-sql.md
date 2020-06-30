@@ -22,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.sysindexkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about the keys or columns in an index of the database.  
   

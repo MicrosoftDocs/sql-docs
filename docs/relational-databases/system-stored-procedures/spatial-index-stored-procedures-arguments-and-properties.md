@@ -16,7 +16,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Spatial Index Stored Procedures - Arguments and Properties
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic documents the arguments and properties for spatial index stored procedures.  
   

@@ -13,7 +13,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Server-Related Dynamic Management Views and Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the dynamic management views that are associated with the SQL Server, Full-text, and SQL Server Agent services that are installed on the host server. You can use these views to return property information for these services. These views also contain configuration, installation, and memory dump file information.  
   

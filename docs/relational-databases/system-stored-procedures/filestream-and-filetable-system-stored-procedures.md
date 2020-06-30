@@ -16,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Filestream and FileTable system stored procedures (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the system stored procedures to the FileTable and Filestream feature.  
 

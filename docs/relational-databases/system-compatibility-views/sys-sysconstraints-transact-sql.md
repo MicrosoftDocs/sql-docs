@@ -22,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.sysconstraints (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains mappings of constraints to the objects that own the constraints within the database.  
   

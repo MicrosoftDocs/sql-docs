@@ -14,7 +14,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Always On Availability Groups Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following Always On Availability Groups functions.  
   

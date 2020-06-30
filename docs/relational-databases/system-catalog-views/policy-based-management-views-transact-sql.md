@@ -16,7 +16,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Policy-Based Management Views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Policy-Based Management has the following views for displaying information about Policy-Based Management policies, conditions, expressions, groups, and filters. These views are in the msdb database and are owned by the dbo schema.  
   

@@ -17,7 +17,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # System Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The following system functions perform operations on and return information about values, objects, and settings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

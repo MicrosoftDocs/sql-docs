@@ -16,7 +16,7 @@ ms.author: "jroth"
 ms.custom: seo-dt-2019
 ---
 # System Functions by category for Transact-SQL
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following groups of system functions.  
   

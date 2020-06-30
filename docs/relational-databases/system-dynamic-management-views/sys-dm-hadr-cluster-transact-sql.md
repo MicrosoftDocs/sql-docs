@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_hadr_cluster (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   If the Windows Server Failover Clustering (WSFC) node that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is enabled for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] has WSFC quorum, **sys.dm_hadr_cluster** returns a row that exposes the cluster name and information about the quorum. If the WSFC node has no quorum, no row is returned.  
  > [!TIP]

@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_filestream_force_garbage_collection (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Forces the FILESTREAM garbage collector to run, deleting any unneeded FILESTREAM files.  
   

@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Publication Information, All Subscriptions (Merge Publication)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **All Subscriptions** tab displays information on all subscriptions to the selected merge publication.  
   
 ## Options  

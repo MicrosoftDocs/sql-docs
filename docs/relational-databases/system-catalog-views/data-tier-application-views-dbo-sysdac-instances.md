@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Data-tier Application Views - dbo.sysdac_instances
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays one row for each data-tier application (DAC) instance deployed to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances belongs to the dbo schema in the msdb database. The following table describes the columns in the sysdac_instances view.  
   

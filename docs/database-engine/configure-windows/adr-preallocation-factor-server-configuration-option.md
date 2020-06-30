@@ -14,7 +14,7 @@ ms.author: mikeray
 ---
 # ADR Preallocation Factor configuration option
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Introduced in SQL Server 2019.
 

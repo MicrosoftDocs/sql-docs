@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Backup and Restore Tables (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section describe the system tables that store information used by database backup and restore operations.  
   

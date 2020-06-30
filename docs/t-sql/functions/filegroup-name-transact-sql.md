@@ -26,7 +26,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # FILEGROUP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the filegroup name for the specified filegroup identification (ID) number.  
   

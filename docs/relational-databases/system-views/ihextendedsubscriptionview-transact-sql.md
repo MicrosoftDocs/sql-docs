@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # IHextendedSubscriptionView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHextendedSubscriptionView** view exposes information on subscription to a non-SQL Server publication. This view is stored in the **distribution** database.  
   

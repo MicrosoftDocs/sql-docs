@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Storage System Input-Output Time-out
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks the system event log for EventId 9. This message indicates that an I/O time-out has occurred in the storage system.  
   
 ## Best Practices Recommendations  

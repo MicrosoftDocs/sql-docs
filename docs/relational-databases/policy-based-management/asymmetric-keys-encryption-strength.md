@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Asymmetric Keys Encryption Strength
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks whether asymmetric keys were created by using 1024-bit or stronger encryption.  
   
 ## Best Practices Recommendations  

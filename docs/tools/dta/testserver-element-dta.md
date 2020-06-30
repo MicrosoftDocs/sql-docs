@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # TestServer Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the test server to use when tuning a production server.  
   

@@ -18,7 +18,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # Full-Text Search and Semantic Search Catalog Views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the catalog views that provide information about full-text indexes and semantic indexes.  
   

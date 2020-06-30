@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Schema Element for Database (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the schema of the database that you want to tune.  
   

@@ -14,7 +14,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Properties
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify properties for the assembly.  
   
 ## Options  

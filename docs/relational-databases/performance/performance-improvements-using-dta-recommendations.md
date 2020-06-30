@@ -13,7 +13,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 ---

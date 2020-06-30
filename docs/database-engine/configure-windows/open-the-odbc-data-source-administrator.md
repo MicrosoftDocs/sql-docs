@@ -16,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Open the ODBC Data Source Administrator
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to open the ODBC Data Source Administrator. The ODBC Data Source Administrator is a Windows component. Use the ODBC Data Source Administrator to create and manage ODBC data sources.  
   

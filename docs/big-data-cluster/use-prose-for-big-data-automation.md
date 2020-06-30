@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Data Wrangling using PROSE Code Accelerator
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 PROSE Code Accelerator generates readable Python code for your data wrangling tasks. You can mix the generated code with your hand-written code in a seamless manner while working in a notebook within Azure Data Studio. This article provides an overview of how you can use the Code Accelerator.
 

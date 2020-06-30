@@ -26,7 +26,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.availability_read_only_routing_lists (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for the read only routing list of each availability replica in an Always On availability group in the WSFC failover cluster.  
   

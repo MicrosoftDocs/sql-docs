@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # DatabaseToConnect Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the first database to which Database Engine Tuning Advisor connects when tuning a workload.  
   

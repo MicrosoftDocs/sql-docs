@@ -12,7 +12,7 @@ ms.technology: machine-learning-bdc
 
 # Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 You can run Python and R scripts on the master instance of [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../machine-learning/index.yml).
 

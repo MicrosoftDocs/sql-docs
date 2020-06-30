@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # Deprecated Database Engine Features in SQL Server 2017
 
-[!INCLUDE[SQL Server 2017](../includes/applies-to-version/_ss2017.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Deprecated features should not be used in new applications.  
   

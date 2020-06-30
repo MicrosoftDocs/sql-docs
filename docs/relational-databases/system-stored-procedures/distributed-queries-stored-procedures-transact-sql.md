@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Distributed Queries Stored Procedures (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to implement and manage Distributed Queries.  
   

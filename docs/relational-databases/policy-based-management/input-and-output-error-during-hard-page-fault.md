@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Input and Output Error During Hard Page Fault
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks the system event log for EventId 51. This error is caused by an error during a hard page fault.  
   
 ## Best Practices Recommendations  

@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Resources deployed with Big Data Cluster
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes the resources a SQL Server Big Data Cluster deploys.
 

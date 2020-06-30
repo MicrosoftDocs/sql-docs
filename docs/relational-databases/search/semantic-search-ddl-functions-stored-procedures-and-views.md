@@ -14,7 +14,7 @@ ms.reviewer: mikeray
 ms.custom: "seo-lt-2019"
 ---
 # Semantic Search DDL, Functions, Stored Procedures, and Views
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lists the Transact-SQL statements and the database objects that support statistical semantic search in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  For the list of statements and database objects that support full-text search, see [Full-Text Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md).  

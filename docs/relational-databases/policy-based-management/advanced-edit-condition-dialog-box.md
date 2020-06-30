@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Advanced Edit (Condition) Dialog Box
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Advanced Edit** dialog box to create complex expressions for Policy-Based Management conditions.  
   
 ## Options  

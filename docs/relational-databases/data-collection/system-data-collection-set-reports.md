@@ -22,7 +22,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # System Data Collection Set Reports
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The data collector provides an historical report for each of the System Data collection sets. Each of the following reports uses data that is stored in the management data warehouse:  
   
 -   [Disk Usage Summary](#Disk)  

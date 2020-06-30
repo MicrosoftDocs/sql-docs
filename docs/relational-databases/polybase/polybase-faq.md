@@ -12,7 +12,7 @@ ms.reviewer: mikeray
 
 # Frequently asked questions
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## PolyBase VS. linked servers
 The following table highlights the differences between PolyBase and linked server features:

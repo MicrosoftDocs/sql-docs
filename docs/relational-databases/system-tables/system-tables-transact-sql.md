@@ -24,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # System Tables (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section describe the system tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

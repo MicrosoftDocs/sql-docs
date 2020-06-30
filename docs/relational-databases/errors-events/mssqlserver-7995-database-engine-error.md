@@ -13,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_7995
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   

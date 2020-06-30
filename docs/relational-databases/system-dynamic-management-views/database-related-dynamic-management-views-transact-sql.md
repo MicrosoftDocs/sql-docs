@@ -16,7 +16,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Database Related Dynamic Management Views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the following dynamic management objects in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and sometimes in SQL Database.  
   

@@ -14,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server XTP Databases
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **SQL Server XTP Databases** performance object provides In-Memory OLTP database-specific counters.
 

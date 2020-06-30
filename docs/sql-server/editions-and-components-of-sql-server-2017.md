@@ -37,7 +37,7 @@ ms.author: "mikeray"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of SQL Server 2017
-[!INCLUDE[SQL Server 2017](../includes/applies-to-version/_ss2017.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 

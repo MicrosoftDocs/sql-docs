@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # xp_sscanf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Reads data from the string into the argument locations specified by each format argument.  
   

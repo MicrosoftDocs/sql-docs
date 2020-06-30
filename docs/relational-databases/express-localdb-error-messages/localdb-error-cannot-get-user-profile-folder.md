@@ -11,7 +11,7 @@ author: stevestein
 ms.author: sstein
 ---
 # LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   

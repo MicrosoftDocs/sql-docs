@@ -24,7 +24,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Alters an existing Always On availability group in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most ALTER AVAILABILITY GROUP arguments are supported only the current primary replica. However the JOIN, FAILOVER, and FORCE_FAILOVER_ALLOW_DATA_LOSS arguments are supported only on secondary replicas.  
   

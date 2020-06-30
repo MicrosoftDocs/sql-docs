@@ -23,7 +23,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Working with the WMI Provider for Server Events
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   This topic provides guidelines you should consider before you program using the WMI Provider for Server Events.  
   
 ## Enabling Service Broker  

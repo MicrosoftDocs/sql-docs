@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SQL Server Agent Tables (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section describe the system tables that store information used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. All tables are in the dbo schema in the msdb database.  
   

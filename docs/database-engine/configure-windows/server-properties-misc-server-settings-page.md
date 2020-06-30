@@ -15,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Server Properties - Misc Server Settings Page
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify your server settings.  
   
 ## Options  

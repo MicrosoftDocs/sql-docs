@@ -21,7 +21,7 @@ ms.author: maghan
 
 # SQL Server Express LocalDB
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft SQL Server Express LocalDB is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) targeted to developers. It is available on SQL Server Express with Advanced Services.
 

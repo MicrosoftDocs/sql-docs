@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Name Element for Schema (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains name of the schema.  
   

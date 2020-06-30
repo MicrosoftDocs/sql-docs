@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # xp_enumgroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Provides a list of local Microsoft Windows groups or a list of global groups that are defined in a specified Windows domain.  
   

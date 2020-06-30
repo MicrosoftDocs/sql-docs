@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # How to deploy an app on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster.
 

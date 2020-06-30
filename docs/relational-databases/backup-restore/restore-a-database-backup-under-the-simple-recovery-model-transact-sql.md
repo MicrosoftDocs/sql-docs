@@ -20,7 +20,7 @@ ms.author: mikeray
 ---
 # Restore a database backup under the simple recovery model (Transact-SQL)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic explains how to restore a full database backup.  
   

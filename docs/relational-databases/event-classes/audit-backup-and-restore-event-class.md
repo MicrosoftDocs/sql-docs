@@ -13,7 +13,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Audit Backup and Restore Event Class
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Audit Backup/Restore** event class occurs whenever a backup or restore command is issued.  
   
 ## Audit Backup/Restore Event Class Data Columns  

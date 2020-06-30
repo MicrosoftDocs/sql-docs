@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Work with Directories and Paths in FileTables
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes the directory structure in which the files are stored in FileTables.  
   
 ##  <a name="HowToDirectories"></a> How To: Work with Directories and Paths in FileTables  

@@ -17,7 +17,7 @@ ms.author: maghan
 ---
 # Database Mail XPs Server Configuration Option
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Use the **DatabaseMail XPs** option to enable Database Mail on this server. The possible values are:  
   

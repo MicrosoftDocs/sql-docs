@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # DTAInput Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains the definition of XML input for Database Engine Tuning Advisor.  
   

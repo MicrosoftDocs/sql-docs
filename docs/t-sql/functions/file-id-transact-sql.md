@@ -24,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # FILE_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 For the given logical name for a component file of the current database, this function returns the file identification (ID) number.  
   

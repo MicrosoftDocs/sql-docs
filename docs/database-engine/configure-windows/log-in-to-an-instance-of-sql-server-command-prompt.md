@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Log In to an Instance of SQL Server (Command Prompt)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to test connectivity to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the **sqlcmd** utility.  
   
 ##  <a name="SSMSProcedure"></a>  

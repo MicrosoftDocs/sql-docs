@@ -26,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new user-defined server role.  
   

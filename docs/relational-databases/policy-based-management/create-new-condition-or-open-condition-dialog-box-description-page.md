@@ -15,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Create New Condition or Open Condition Dialog Box, Description Page
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to add a description to a Policy-Based Management condition.  
   
 ## Options  

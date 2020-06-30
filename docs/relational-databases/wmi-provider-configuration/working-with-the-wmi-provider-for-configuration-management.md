@@ -23,7 +23,7 @@ ms.author: "carlrab"
 ---
 # Working with the WMI Provider for Configuration Management
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 This article provides guidance about how to program with the WMI Provider for Computer Management.
 

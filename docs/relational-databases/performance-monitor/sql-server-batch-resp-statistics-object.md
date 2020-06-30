@@ -14,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Batch Resp Statistics Object
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **SQLServer:Batch Resp Statistics** performance object provides counters to track SQL Server batch response times.
 
 This following table describes the SQL Server **Batch Resp Statistics** performance objects.

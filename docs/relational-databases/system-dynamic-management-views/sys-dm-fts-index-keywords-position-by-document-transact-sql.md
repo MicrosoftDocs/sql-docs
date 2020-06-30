@@ -20,7 +20,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns keyword positional information in the indexed documents.  
   

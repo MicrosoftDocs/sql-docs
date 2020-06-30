@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # IHpublishertables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublishertables** system table represents metadata stored at the publisher. This table contains one row for each source table published from a non-SQL Server Publisher using the current Distributor. This table is stored in the distribution database.  
   

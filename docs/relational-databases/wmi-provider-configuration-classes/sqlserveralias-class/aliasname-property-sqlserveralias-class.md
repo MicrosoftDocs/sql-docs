@@ -18,7 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # AliasName Property (SqlServerAlias Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of the server connection alias.  
   
 ## Syntax  

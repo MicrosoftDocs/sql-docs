@@ -14,7 +14,7 @@ ms.date: 04/27/2020
 
 # How to manage notebooks in Azure Data Studio
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/_ss2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article shows you how to open and save notebook files in Azure Data Studio. It also demonstrates how to change your connection to your SQL Server or Python kernel.
 

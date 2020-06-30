@@ -24,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the file identification (ID) number for the specified logical name of a data, log, or full-text file of the current database. 
   

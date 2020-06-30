@@ -14,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Memory Broker Clerks Object
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **SQLServer:Memory Broker Clerks** performance object provides counters for statistics related to memory broker clerks.
 
 This following table describes the SQL Server **Memory Broker Clerks** performance objects.

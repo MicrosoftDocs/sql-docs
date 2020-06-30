@@ -14,7 +14,7 @@ ms.reviewer: mikeray
 ms.custom: "seo-lt-2019"
 ---
 # Find Key Phrases in Documents with Semantic Search
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to find the key phrases in documents or text columns that are configured for statistical semantic indexing.  
 
 ##  <a name="howtofind"></a> Find the key phrases in documents with SEMANTICKEYPHRASETABLE  

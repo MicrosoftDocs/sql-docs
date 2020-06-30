@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Querying the SQL Server System Catalog FAQ
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains a list of frequently asked questions. The answers to these questions are queries that are based on catalog views.  
   

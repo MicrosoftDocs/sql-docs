@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Log Shipping Stored Procedures (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and later versions support the following system stored procedures that are used to configure, modify, and monitor log shipping configurations.  
   

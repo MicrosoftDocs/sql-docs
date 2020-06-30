@@ -16,7 +16,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Object Hierarchy Syntax (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The *propertyname* parameter of sp_OAGetProperty and sp_OASetProperty and the *methodname* parameter of sp_OAMethod support an object hierarchy syntax that is similar to that of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. When this special syntax is used, these parameters have the following general form.  
   

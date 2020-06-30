@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Database Element for Workload (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the database where the workload trace table is located.  
   

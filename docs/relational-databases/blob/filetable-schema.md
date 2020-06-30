@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # FileTable Schema
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes the pre-defined and fixed schema of a FileTable.  
   
 |File attribute name|type|Size|Default|Description|File system accessibility|  

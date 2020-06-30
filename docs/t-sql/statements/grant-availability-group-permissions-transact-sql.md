@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # GRANT Availability Group Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on an Always On availability group.  
   

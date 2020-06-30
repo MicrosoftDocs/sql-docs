@@ -14,7 +14,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # Install and Configure Semantic Search
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes the prerequisites for statistical semantic search and how to install or check them.  
   
 ## Install Semantic Search  

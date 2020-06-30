@@ -16,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Manage FileTables
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes common administrative tasks for managing FileTables.  
   
 ##  <a name="HowToEnumerate"></a> How To: Get a List of FileTables and Related Objects  

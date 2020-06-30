@@ -14,7 +14,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Log Shipping Monitor Settings
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to configure and to modify the properties of the log shipping monitor server.  
   
  For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  

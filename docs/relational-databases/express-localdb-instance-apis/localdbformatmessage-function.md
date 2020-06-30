@@ -17,7 +17,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # LocalDBFormatMessage Function
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Returns the localized textual description for the specified SQL Server Express LocalDB error.  
   
  **Header file:** sqlncli.h  

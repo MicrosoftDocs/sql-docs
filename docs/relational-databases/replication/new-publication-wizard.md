@@ -42,7 +42,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # New Publication Wizard
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This section provides information on the following pages of the New Publication Wizard:  
   
 -   [Oracle Publisher](../../relational-databases/replication/oracle-publisher.md)  

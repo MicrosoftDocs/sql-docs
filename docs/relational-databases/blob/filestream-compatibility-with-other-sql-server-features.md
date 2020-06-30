@@ -17,7 +17,7 @@ ms.author: mikeray
 ---
 # FILESTREAM compatibility with other SQL Server features
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Because FILESTREAM data is in the file system, this topic provides some considerations, guidelines, and limitations for using FILESTREAM with the following features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  

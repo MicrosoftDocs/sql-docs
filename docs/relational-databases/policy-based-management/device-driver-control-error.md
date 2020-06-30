@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Device Driver Control Error
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks the system event log for EventId 11. This could be caused by a corrupt device driver, a hardware problem, faulty cabling, or connectivity issues.  
   
 ## Best Practices Recommendations  

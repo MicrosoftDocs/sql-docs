@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Include Witness Server (Configure Database Mirroring Security Wizard)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to specify whether you want to include a witness server in this security configuration for database mirroring.  
   
  **To configure database mirroring by using SQL Server Management Studio**  

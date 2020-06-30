@@ -24,7 +24,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Working with User-Defined Types - Defining UDT Tables and Columns
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Once the assembly containing the user-defined type (UDT) definition has been registered in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, it can be used in a column definition. For more information, see [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
 ## Creating Tables with UDTs  

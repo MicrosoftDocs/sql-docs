@@ -13,7 +13,7 @@ ms.author: mikeray
 monikerRange: "= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # SQL Server 2017 Release Notes
-[!INCLUDE[SQL Server 2017](../includes/applies-to-version/_ss2017.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux release notes](../linux/sql-server-linux-release-notes.md)

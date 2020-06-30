@@ -16,7 +16,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Data Spaces (Transact-SQL)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views.  
   

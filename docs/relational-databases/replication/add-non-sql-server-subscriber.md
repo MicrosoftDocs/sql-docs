@@ -14,7 +14,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Add Non-SQL Server Subscriber
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Replication supports creating push subscriptions to snapshot and transactional publications for Oracle and IBM DB2 Subscribers.  
   
 ## Options  

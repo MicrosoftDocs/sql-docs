@@ -20,7 +20,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Schedule Traces
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   There are two ways to schedule tracing in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can:  
   
 -   Enable a trace stop time.  

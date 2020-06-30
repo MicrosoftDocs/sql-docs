@@ -19,7 +19,7 @@ ms.date: 03/09/2017
 
 # Column Element for Index (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the columns on which the index is created for a user-specified configuration.  
   

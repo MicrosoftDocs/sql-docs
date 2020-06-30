@@ -15,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Properties (Query Store Page)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Access this page from the principal database, and use it to configure and to modify the properties of the database query store. These options can also be configure by using the [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md). For information about the query store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ||  

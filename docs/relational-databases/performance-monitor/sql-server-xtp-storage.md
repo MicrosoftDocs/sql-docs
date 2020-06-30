@@ -12,7 +12,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server XTP Storage
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQL Server XTP Storage performance object contains counters related to on-disk storage for In-Memory OLTP in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

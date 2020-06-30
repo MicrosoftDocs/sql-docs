@@ -14,7 +14,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Add or Edit Join
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Add Join** and **Edit Join** dialog boxes allow you to add and edit join filters for merge publications.  
   
 > [!NOTE]  

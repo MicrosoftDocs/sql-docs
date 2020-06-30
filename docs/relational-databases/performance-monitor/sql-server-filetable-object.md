@@ -14,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, FileTable Object
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **SQLServer:FileTable** performance object provides counters for statistics associated with FileTable and non-transacted access.
 
 This following table describes the SQL Server **FileTable** performance objects.

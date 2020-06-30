@@ -18,7 +18,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Open Activity Monitor in SQL Server Management Studio (SSMS)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
    
  Activity Monitor runs queries on the monitored instance to obtain information for the Activity Monitor display panes. When the refresh interval is set to less than 10 seconds, the time that is used to run these queries can affect server performance  
   

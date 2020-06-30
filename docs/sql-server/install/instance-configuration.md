@@ -20,7 +20,7 @@ robots: noindex,nofollow
 
 # Installation Wizard help
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article describes some of the configuration pages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.
 

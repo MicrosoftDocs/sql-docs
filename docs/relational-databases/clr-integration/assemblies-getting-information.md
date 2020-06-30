@@ -15,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Getting Information
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following catalog views and functions can be queried for metadata about assemblies.  
   
  **To get information about individual assemblies**  

@@ -16,7 +16,7 @@ ms.author: mikeray
 
 # Enable SQL Server managed backup to Azure
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with default settings at both the database and instance level. It also describes how to enable email notifications and how to monitor backup activity.  
   
  This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  

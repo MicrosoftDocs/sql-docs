@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration and Transactions
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **System.Transactions** namespace provides a transaction framework that is fully integrated with ADO.NET and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language runtime (CLR) integration. **System.Transactions** and ADO.NET work together to extend and simplify the use of local and distributed transactions in managed applications.  
   
 > [!NOTE]  

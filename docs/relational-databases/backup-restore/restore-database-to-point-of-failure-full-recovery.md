@@ -17,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Restore Database to Point of Failure - Full Recovery
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic explains how to restore to the point of failure. The topic is relevant only for databases that are using the full or bulk-logged recovery models.  
   

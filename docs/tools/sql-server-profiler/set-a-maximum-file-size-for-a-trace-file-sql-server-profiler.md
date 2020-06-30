@@ -16,7 +16,7 @@ ms.date: 03/14/2017
 
 # Set a Maximum File Size for a Trace File (SQL Server Profiler)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the following procedure to set the maximum file size for a trace file.  
   
 ### To set a maximum file size for a trace file  

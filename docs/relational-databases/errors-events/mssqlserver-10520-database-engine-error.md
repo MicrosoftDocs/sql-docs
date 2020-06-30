@@ -13,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_10520
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   

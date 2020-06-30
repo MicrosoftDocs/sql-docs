@@ -12,7 +12,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # SQL Server Express LocalDB Reference - Error Messages
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This section provides reference information about the following SQL Server Express LocalDB error messages:  
   
  [LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED](../../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)  

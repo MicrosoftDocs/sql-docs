@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Run the Transact-SQL Debugger
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you open a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. Then, you can run your [!INCLUDE[tsql](../../includes/tsql-md.md)] code in debug mode until you stop the debugger. You can set options to customize how the debugger runs.
 

@@ -14,7 +14,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Create Client Applications for FILESTREAM Data
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can use Win32 APIs to read and write data to a FILESTREAM BLOB. The following steps are required:  
   
 -   Read the FILESTREAM file path.  

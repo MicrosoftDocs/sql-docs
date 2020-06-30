@@ -13,7 +13,7 @@ monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # R package synchronization for SQL Server
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The version of RevoScaleR included in SQL Server 2017 includes the ability to synchronize collections of R packages between the file system and the instance and database where packages are used.
 

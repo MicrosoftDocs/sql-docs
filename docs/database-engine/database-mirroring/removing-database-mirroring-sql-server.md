@@ -17,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Removing Database Mirroring (SQL Server)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The database owner can manually stop a database mirroring session at any time, at either partner.  
   
 ## Impact of Removing Mirroring  

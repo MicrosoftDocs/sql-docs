@@ -16,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Implement Event Notifications
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   To implement an event notification, you must first create a target service to receive event notifications, and then create the event notification.  
   
 > [!IMPORTANT]  

@@ -19,7 +19,7 @@ ms.date: 03/14/2017
 
 # EventString Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies a [!INCLUDE[tsql](../../includes/tsql-md.md)] script workload directly in the XML input file.  
   

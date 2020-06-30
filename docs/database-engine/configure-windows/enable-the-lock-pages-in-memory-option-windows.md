@@ -15,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Enable the Lock Pages in Memory Option (Windows)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk.  
   
 > [!NOTE]  

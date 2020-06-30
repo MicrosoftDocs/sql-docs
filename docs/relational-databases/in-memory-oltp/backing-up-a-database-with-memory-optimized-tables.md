@@ -13,7 +13,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Backing Up a Database with Memory-Optimized Tables
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Memory-optimized tables are backed up as part of regular database backups. As for disk-based tables, the CHECKSUM of data and delta file pairs is validated as part of the database backup to detect storage corruption.  
   

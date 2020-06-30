@@ -15,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Designing
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes the following factors you should consider when you design assemblies:  
   
 -   Packaging assemblies  

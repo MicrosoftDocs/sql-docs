@@ -13,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # backup checksum default
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the backup checksum default setting to enable or disable backup checksum during backup and restore.  
   

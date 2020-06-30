@@ -20,7 +20,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Restart an Interrupted Restore Operation (Transact-SQL)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic explains how to restart an interrupted restore operation.  
   
 ### To restart an interrupted restore operation  

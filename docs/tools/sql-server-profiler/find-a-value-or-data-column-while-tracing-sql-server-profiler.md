@@ -16,7 +16,7 @@ ms.date: 03/01/2017
 
 # Find a Value or Data Column While Tracing (SQL Server Profiler)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to search for a specific value or data column in the trace output while the trace is running by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

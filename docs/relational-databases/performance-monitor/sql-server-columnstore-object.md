@@ -12,7 +12,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Columnstore Object
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **SQLServer:Columnstore** object provides counters to monitor columnstore index execution in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

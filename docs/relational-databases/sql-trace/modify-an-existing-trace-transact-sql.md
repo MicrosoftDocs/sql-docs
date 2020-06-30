@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Modify an Existing Trace (Transact-SQL)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use stored procedures to modify an existing trace.  
   
 ### To modify an existing trace  

@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Name Element for Index (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies a name for an index in the user-specified configuration.  
   

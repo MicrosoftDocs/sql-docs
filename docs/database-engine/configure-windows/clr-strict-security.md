@@ -21,7 +21,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # CLR strict security   
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Controls the interpretation of the `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` permission in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 

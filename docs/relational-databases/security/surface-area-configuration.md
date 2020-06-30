@@ -20,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Surface Area Configuration
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In the default configuration of new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], many features are not enabled. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and starts only key services and features, to minimize the number of features that can be attacked by a malicious user. A system administrator can change these defaults at installation time and also selectively enable or disable features of a running instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Additionally, some components may not be available when connecting from other computers until protocols are configured.  
   
 > [!NOTE]  

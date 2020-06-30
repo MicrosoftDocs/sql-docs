@@ -14,7 +14,7 @@ ms.author: mikeray
 ms.reviewer: 
 ---
 # Enable the Prerequisites for FileTable
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to enable the prerequisites for creating and using FileTables.  
   
 ##  <a name="EnablePrereq"></a> Enabling the Prerequisites for FileTable  

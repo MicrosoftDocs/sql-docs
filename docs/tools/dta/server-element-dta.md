@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Server Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains the identifying information for the server on which the databases reside that you want to tune.  
   

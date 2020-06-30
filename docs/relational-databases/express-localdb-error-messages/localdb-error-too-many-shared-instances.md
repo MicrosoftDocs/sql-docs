@@ -11,7 +11,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   

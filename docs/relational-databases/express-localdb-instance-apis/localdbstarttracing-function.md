@@ -17,7 +17,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # LocalDBStartTracing Function
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Enables tracing of API calls for all the SQL Server Express LocalDB instances owned by the current Windows user.  
   
  **Header file:** sqlncli.h  

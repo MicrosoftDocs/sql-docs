@@ -16,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # View a Saved Trace (Transact-SQL)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use built-in functions to view a saved trace.  
   
 ### To view a specific trace  

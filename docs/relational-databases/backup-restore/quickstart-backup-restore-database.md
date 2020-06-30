@@ -13,7 +13,7 @@ ms.prod_service: backup-restore
 ms.assetid:
 ---
 # Quickstart: Backup and restore a SQL Server database on-premises
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In this quickstart, you will create a new database, take a simple backup of it, and then restore it. 
 

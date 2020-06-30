@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # TuningOptions Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains the tuning options for a specific tuning session.  
   

@@ -15,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Replication XPs Server Configuration Option
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This option is for internal use only.  
   

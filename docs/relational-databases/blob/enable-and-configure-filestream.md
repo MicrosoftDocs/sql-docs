@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Enable and configure FILESTREAM
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Before you can start to use FILESTREAM, you must enable FILESTREAM on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. This topic describes how to enable FILESTREAM by using SQL Server Configuration Manager.  
   
 ##  <a name="enabling"></a> Enabling FILESTREAM  

@@ -20,7 +20,7 @@ ms.date: 03/01/2017
 # Banner Element (ssbdiagnose)
 
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Identifies which utility generated the **ssbdiagnose** output XML file.  
   

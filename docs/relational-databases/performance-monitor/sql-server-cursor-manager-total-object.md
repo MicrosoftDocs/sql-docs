@@ -15,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Cursor Manager Total Object
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Cursor Manager Total** object provides counters to monitor cursors.  
   
  This table describes the SQL Server **Cursor Manager Total** counters.  

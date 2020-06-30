@@ -17,7 +17,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # LocalDBDeleteInstance Function
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Removes the specified SQL Server Express LocalDB instance.  
   
  **Header file:** sqlncli.h  

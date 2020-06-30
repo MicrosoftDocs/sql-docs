@@ -13,7 +13,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Requirements for Using Memory-Optimized Tables
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   For using In-Memory OLTP in Azure DB see [Get started with In-Memory in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   

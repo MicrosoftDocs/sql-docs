@@ -22,7 +22,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # File Restores (Simple Recovery Model)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic is relevant only for simple-model databases that contain at least one read-only secondary filegroup.  
   

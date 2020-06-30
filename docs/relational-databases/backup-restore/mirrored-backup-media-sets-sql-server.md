@@ -21,7 +21,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Mirrored Backup Media Sets (SQL Server)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  Mirrored backup media sets are supported only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

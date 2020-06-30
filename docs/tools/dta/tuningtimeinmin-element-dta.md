@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # TuningTimeInMin Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the maximum length of a tuning session in minutes.  
   

@@ -13,7 +13,7 @@ monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article explains how to install new R packages on an instance of SQL Server where machine learning is enabled. There are multiple approaches to choose from. Using T-SQL works best for server administrators who are unfamiliar with R.
 

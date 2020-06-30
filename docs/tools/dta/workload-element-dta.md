@@ -19,7 +19,7 @@ ms.date: 03/14/2017
 
 # Workload Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the workload to be used for a tuning session.  
   

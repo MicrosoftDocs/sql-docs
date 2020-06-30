@@ -14,7 +14,7 @@ ms.author: mathoma
 robots: noindex,nofollow
 ---
 # MSSQLSERVER_7911
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   

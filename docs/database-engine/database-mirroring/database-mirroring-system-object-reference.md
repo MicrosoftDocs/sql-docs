@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Database mirroring system object reference
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## System catalog views
 

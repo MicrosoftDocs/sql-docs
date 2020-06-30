@@ -13,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Monitor Instances of SQL Server in the SQL Server Utility
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
   
 |Topic|Information|  

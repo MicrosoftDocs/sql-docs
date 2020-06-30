@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: R data analytics for SQL developers
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In this tutorial for SQL programmers, learn about R integration by building and deploying an R-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. You'll use T-SQL, SQL Server Management Studio, and a database engine instance with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and the R language support
 

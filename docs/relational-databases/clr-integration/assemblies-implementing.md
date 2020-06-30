@@ -14,7 +14,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Implementing
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic provides information about the following areas to help you implement and work with assemblies in the database:  
   
 -   Creating assemblies  

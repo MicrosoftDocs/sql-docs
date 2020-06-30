@@ -13,7 +13,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Create New Policy or Open Policy Dialog Box, Description Page
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to add a description and additional information to a Policy-Based Management policy.  
   
 ## Options  

@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Partitioning Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains the partitioning scheme that you would like Database Engine Tuning Advisor to use during analysis.  
   

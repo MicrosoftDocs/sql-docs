@@ -14,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, LogPool FreePool Object
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **SQLServer:LogPool FreePool** performance object provides counters for statistics for the free pool inside the Log Pool.
 
 This following table describes the SQL Server **LogPool FreePool** performance objects.

@@ -15,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, ExecStatistics Object
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:ExecStatistics** object in Microsoft SQL Server provides counters to monitor various executions.  
   
  This table describes the SQL Server **Exec Statistics** counters.  

@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Filegroup Element for Index (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the filegroup on which the index is to be created for a user-specified configuration.  
   

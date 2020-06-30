@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for every witness role that a server plays in a database mirroring partnership. 
   

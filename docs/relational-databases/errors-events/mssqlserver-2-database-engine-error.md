@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_2
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   

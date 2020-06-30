@@ -15,7 +15,7 @@ ms.date: "03/01/2017"
 
 # Install Distributed Replay - Overview
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Use the following topics to install the Distributed Replay feature.  
   

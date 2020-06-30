@@ -13,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_802 - Database Engine error
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   

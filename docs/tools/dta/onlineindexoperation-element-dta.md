@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # OnlineIndexOperation Element (DTA)
 
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies whether the indexes, indexed views, or partitions that Database Engine Tuning Advisor recommends can be created online.  
   

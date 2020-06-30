@@ -17,7 +17,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # LocalDBStopInstance Function
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Stops the specified SQL Server Express LocalDB instance from running.  
   
  **Header file:** sqlncli.h  

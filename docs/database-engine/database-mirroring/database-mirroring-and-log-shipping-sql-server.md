@@ -16,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring and Log Shipping (SQL Server)
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A given database can be mirrored or log shipped; it can also be simultaneously mirrored and log shipped. To choose what approach to use, consider the following:  
   
 -   How many destination servers do you require?  

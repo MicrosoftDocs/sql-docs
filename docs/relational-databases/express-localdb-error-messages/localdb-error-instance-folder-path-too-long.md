@@ -11,7 +11,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
- [!INCLUDE[SQL Server](../../includes/applies-to-version/_ssnoversion.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   

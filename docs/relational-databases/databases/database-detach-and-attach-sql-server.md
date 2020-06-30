@@ -58,7 +58,7 @@ You cannot detach a database if any of the following are true:
     > [!NOTE]  
     > A database snapshot cannot be detached or attached.  
 
--   The database is part of an Availability Group.  
+-   The database is part of an Always On availability group.  
   
     The database cannot be detached until it is removed from the availability group. For more information, see [Remove a primary database from an Always On availability group](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
   

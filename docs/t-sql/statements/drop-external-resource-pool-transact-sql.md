@@ -5,7 +5,7 @@ ms.date: "08/07/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP EXTERNAL RESOURCE POOL"

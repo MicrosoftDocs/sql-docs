@@ -25,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a new search property list. A search property list is used to specify one or more search properties that you want to include in a full-text index.  
   

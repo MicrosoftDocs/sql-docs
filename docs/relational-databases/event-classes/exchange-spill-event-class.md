@@ -14,7 +14,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Exchange Spill Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Exchange Spill** event class indicates that communication buffers in a parallel query plan have been temporarily written to the **tempdb** database. This occurs rarely and only when a query plan has multiple range scans.  
   
  Normally, the [!INCLUDE[tsql](../../includes/tsql-md.md)] query that generates such range scans has many BETWEEN operators, each of which selects a range of rows from a table or an index. Alternatively, you can obtain multiple ranges using expressions such as (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Additionally, the query plans must require that these ranges be scanned in order either because there is an ORDER BY clause on T.a, or because an iterator within the plan requires that it consume the tuples in sorted order.  

@@ -20,7 +20,7 @@ ms.reviewer:
 
 ---
 # Remove Columns from Query Results (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 If you are using a column in a Select query but do not want to display it in the result set (that is, you do not want it in the query's select list), you can remove it from output. After you remove the column from the query's output, you can still use it in search conditions or as a sorting field.  
   
 > [!NOTE]  

@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring Operating Modes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes the synchronous and asynchronous operating modes for database mirroring sessions.  
   
 > [!NOTE]  

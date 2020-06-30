@@ -18,7 +18,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER TABLE table_constraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies the properties of a PRIMARY KEY, UNIQUE, FOREIGN KEY, a CHECK constraint, or a DEFAULT definition added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   

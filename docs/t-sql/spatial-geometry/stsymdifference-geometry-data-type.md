@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STSymDifference (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an object that represents all points that are either in one **geometry** instance or another **geometry** instance, but not those points that lie in both instances.  
   

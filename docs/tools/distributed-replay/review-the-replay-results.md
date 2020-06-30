@@ -16,7 +16,7 @@ ms.date: 03/14/2017
 
 # Review the Replay Results
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 After the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature completes a distributed replay, the replay activity for each client can be captured and saved in result trace files on each client. In order to capture this activity, you must use the **-o** parameter when you run the administration tool with the **replay** option. For more information about the replay option, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   

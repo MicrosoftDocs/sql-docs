@@ -21,7 +21,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # FULLTEXTCATALOGPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns information about full-text catalog properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -21,7 +21,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-201
 ---
 # STRING_ESCAPE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Escapes special characters in texts and returns text with escaped characters. **STRING_ESCAPE** is a deterministic function, introduced in SQL Server 2016. 
   

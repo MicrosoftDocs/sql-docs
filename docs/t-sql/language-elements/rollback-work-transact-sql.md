@@ -24,7 +24,7 @@ author: rothja
 ms.author: jroth
 ---
 # ROLLBACK WORK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Rolls back a user-specified transaction to the beginning of the transaction.  
   

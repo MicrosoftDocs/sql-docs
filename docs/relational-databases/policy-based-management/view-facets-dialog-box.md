@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # View Facets Dialog Box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to view the properties of a Policy-Based Management facet. The properties of a facet are defined when a facet is created and cannot be changed by using this dialog box.  
   
 ## Options  

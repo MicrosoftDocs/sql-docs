@@ -15,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Server Properties - Processors Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify your processor options. Processor affinity settings are only enabled when more than one processor is installed.  
   
 ## Options  

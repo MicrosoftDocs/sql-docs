@@ -16,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring - Allow Network Access - Windows Authentication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Using Windows Authentication for connecting the database mirroring endpoints of two instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires manual configuration of login accounts under the following conditions:  
   
 -   If the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] run as services under different domain accounts (in the same or trusted domains), the login of each account must be created in **master** on each of the remote server instances and that login must be granted CONNECT permissions on the endpoint.  

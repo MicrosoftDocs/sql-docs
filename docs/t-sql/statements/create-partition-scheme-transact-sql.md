@@ -30,7 +30,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a scheme in the current database that maps the partitions of a partitioned table or index to filegroups. The number and domain of the partitions of a partitioned table or index are determined in a partition function. A partition function must first be created in a [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) statement before creating a partition scheme.  
 

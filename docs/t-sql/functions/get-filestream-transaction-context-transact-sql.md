@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a token that represents the current transaction context of a session. The token is used by an application to bind FILESTREAM file-system streaming operations to the transaction. For a list of FILESTREAM topics, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   

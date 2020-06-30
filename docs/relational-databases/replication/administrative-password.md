@@ -15,7 +15,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Administrative Password
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   If, on the **Distributors** page of this wizard, you selected a remote Distributor for this Publisher, you must enter a password for the connection replication makes between the Publisher and the Distributor using the **distributor_admin** login. The password must match the password specified on the **Distributor Password** page of the Configure Distribution Wizard or the **Publishers** page of the **Distributor Properties** dialog box.  
   
 ## Options  

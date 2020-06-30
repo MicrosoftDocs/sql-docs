@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Database Element for Server (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the database you want to tune on a specific server.  
   

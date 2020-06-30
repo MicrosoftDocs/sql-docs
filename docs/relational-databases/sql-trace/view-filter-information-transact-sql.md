@@ -18,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # View Filter Information (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use built-in functions to view trace filter information.  
   
 ### To view filter information  

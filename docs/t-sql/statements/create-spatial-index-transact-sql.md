@@ -24,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a spatial index on a specified table and column in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. An index can be created before there is data in the table. Indexes can be created on tables or views in another database by specifying a qualified database name. Spatial indexes require the table to have a clustered primary key. Spatial indexes cannot be specified on indexed views. For information about spatial indexes, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
   

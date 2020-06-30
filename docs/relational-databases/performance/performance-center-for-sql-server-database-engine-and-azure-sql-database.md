@@ -21,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This page provides links to help you locate the information that you need about performance in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Legend**  

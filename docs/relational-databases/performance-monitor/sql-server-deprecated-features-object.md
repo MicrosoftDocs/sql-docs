@@ -17,7 +17,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Deprecated Features Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQLServer:Deprecated Features object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a counter to monitor the features designated as deprecated. In each case the counter provides a usage count that lists the number of times the deprecated feature was encountered since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started.  
   

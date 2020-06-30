@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Removes one or more user-defined defaults from the current database.  
   

@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**seed_value**|**sql_variant**|Seed value for this identity column. The data type of the seed value is the same as the data type of the column itself.|  
 |**increment_value**|**sql_variant**|Increment value for this identity column. The data type of the seed value is the same as the data type of the column itself.|  
 |**last_value**|**sql_variant**|Last value generated for this identity column. The data type of the seed value is the same as the data type of the column itself.|  
-|**is_not_for_replication**|**bit**|Identity column is declared NOT FOR REPLICATION. **This column does not apply to Azure Synapse Analytics.**|  
+|**is_not_for_replication**|**bit**|Identity column is declared NOT FOR REPLICATION. **Note:** This column does not apply to Azure Synapse Analytics.|  
   
 > [!NOTE]  
 >  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  

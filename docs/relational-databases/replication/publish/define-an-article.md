@@ -55,17 +55,15 @@ ms.author: "mathoma"
   
 #### To create a publication and define articles  
   
-1.  Connect to the Publisher in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
+1. Connect to the Publisher in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
-2.  Expand the **Replication** folder, and then right-click the **Local Publications** folder.  
+2. Expand the **Replication** folder, and then right-click the **Local Publications** folder.  
   
-3.  Click **New Publication**.   
+3. Click **New Publication**.   
   
-4.  Follow the pages in the New Publication Wizard to:  
+4. Follow the pages in the New Publication Wizard to:  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   -   Specify a Distributor if distribution has not been configured on the server. For more information about configuring distribution, see [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
+   -  Specify a Distributor if distribution has not been configured on the server. For more information about configuring distribution, see [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
        If you specify on the **Distributor** page that the Publisher server will act as its own Distributor (a local Distributor), and the server is not configured as a Distributor, the New Publication Wizard will configure the server. You will specify a default snapshot folder for the Distributor on the **Snapshot Folder** page. The snapshot folder is simply a directory that you have designated as a share; agents that read from and write to this folder must have sufficient permissions to access it. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -96,6 +94,8 @@ ms.author: "mathoma"
    -   Optionally script the publication. For more information, see [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
    -   Specify a name for the publication.  
+   
+   [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  After a publication has been created, articles can be created programmatically using replication stored procedures. The stored procedures used to create an article will depend on the type of publication for which the article is being defined. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  

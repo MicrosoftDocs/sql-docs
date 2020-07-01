@@ -56,13 +56,15 @@ Before installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider t
 ### 1.3 SQL Server Setup might fail while trying to start the SQL Server Browser service  
 **Issue:** SQL Server Setup might fail while trying to start the SQL Server Browser service, with errors similar to the following:  
   
-```The following error has occurred:  
+```
+The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
 ```
   
 or  
   
-```The following error has occurred:  
+```
+The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
 ```
   
@@ -101,7 +103,8 @@ You can install SQL Server on Windows Server 2008 R2 Server Core SP1, with the f
   
 If these tasks are not completed, you will see the following error message when you try to create a semantic index.  
   
-```Msg 41209, Level 16, State 3, Line 1  
+```
+Msg 41209, Level 16, State 3, Line 1  
 A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
 ```
   

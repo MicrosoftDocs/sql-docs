@@ -1,5 +1,6 @@
 ---
 title: "Dataset Properties Dialog Box, Parameters | Microsoft Docs"
+description: Learn to use the Parameters property in the Dataset Properties dialog box to add, change, and delete query parameters.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

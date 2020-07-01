@@ -26,7 +26,6 @@ Entire table-valued parameter columns can be assigned default values by using th
 
 > [!Note]
 > If there are no rows, there are also no columns to bind.
--TVPs do not have a default value that can be set, because SQL_DEFAULT_PARAM indicates no rows.
 
 After binding the table-valued parameter, the application must then bind each table-valued parameter column. To do this, the application first calls SQLSetStmtAttr to set SQL_SOPT_SS_PARAM_FOCUS to the ordinal of a table-valued parameter. The application binds the columns of the table-valued parameter by calls to the following routines: SQLBindParameter, SQLSetDescRec, and SQLSetDescField. Setting SQL_SOPT_SS_PARAM_FOCUS to 0 restores the usual effect of SQLBindParameter, SQLSetDescRec, and SQLSetDescField in operating on regular top-level parameters.
 

@@ -63,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following example creates a table using the **int** data type to store the values and inserts the two values into one row.  
   
 ```  
-CREATE TABLE #bitwise (  
+CREATE TABLE bitwise (  
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL); 
 GO  

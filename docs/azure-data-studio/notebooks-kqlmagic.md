@@ -165,9 +165,12 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 3. Connect and authenticate
 
+First you need to generate an API key for your Application Insights resource. Then use the Application ID and API key to connect to Application Insights from the notebook:
+
    ```python
    %kql appinsights://appid='DEMO_APP';appkey='DEMO_KEY'
    ```
+
 
 ### Query and visualize for Application Insights
 

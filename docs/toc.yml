@@ -297,7 +297,7 @@
     - name: Performance
       items:
         - name: Tuning guide
-          href: big-data-cluster/perf-guidelines-tuned.md
+          href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC

@@ -79,13 +79,13 @@ As described in the this picture, a log shipping session involves the following 
 
 -   Create a file to store your credentials. Use the password you recently set for your mssql Samba account 
 
-```console
-    vim /var/opt/mssql/.tlogcreds
-    #Paste the following in .tlogcreds
-    username=mssql
-    domain=<domain>
-    password=<password>
-```
+    ```console
+        vim /var/opt/mssql/.tlogcreds
+        #Paste the following in .tlogcreds
+        username=mssql
+        domain=<domain>
+        password=<password>
+    ```
 
 -   Run the following commands to create an empty directory for mounting and set permission and ownership correctly
     ```bash   

@@ -41,7 +41,7 @@ It's possible to upgrade the R Server components separately from the SQL Server 
 The easiest way to determine the R version is to get the runtime properties by running a statement such as the following:
 
 ```sql
-exec sp_execute_external_script
+EXECUTE sp_execute_external_script
        @language = N'R'
        , @script = N'
 # Transform R version properties to data.frame
@@ -57,7 +57,6 @@ OutputDataSet <- rbind(OutputDataSet, data.frame(
 )
 '
 WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
-
 ```
 
 > [!TIP]

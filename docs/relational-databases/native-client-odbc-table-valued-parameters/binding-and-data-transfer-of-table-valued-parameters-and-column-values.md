@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-Table-valued parameters, like other parameters, must be bound before they'repassed to the server. The application binds table-valued parameters the same way it binds other parameters: using SQLBindParameter or equivalent calls to SQLSetDescField or SQLSetDescRec. The server data type for a table-valued parameter is SQL_SS_TABLE. The C type can be specified either as SQL_C_DEFAULT or SQL_C_BINARY.  
+Table-valued parameters (TVP), like other parameters, must be bound before they're passed to the server. The application binds table-valued parameters the same way it binds other parameters: using SQLBindParameter or equivalent calls to SQLSetDescField or SQLSetDescRec. The server data type for a table-valued parameter is SQL_SS_TABLE. The C type can be specified either as SQL_C_DEFAULT or SQL_C_BINARY.  
 
 In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later, only input table-valued parameters are supported. Therefore, any attempt to set SQL_DESC_PARAMETER_TYPE to a value other than SQL_PARAM_INPUT returns SQL_ERROR with SQLSTATE = HY105 and the message "Invalid parameter type".  
 

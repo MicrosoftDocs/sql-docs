@@ -367,7 +367,7 @@ A STONITH device provides a fencing agent. [Setting up Pacemaker on Red Hat Ente
    mssqlha  (ocf::mssql:fci): Started sqlfcivm1
    
    PCSD Status:
-    slqfcivm1: Online
+    sqlfcivm1: Online
     sqlfcivm2: Online
    
    Daemon Status:

@@ -89,7 +89,7 @@ By following the procedures in this section, you can grant administrator access 
    GO
    ```
 
-   To find the SID of the user or the group being added, you can use [Get-ADUser](../../powershell/module/addsadministration/get-aduser.md) or  [Get-ADGroup](../../powershell/module/addsadministration/get-adgroup.md) PowerShell commands.
+   To find the SID of the user or the group being added, you can use [Get-ADUser](/powershell/module/addsadministration/get-aduser/) or  [Get-ADGroup](/powershell/module/addsadministration/get-adgroup/) PowerShell commands.
 
 2. Verify that the members of the group that you added have big data cluster administrator permissions by logging in to the controller endpoint and running the following command:
 

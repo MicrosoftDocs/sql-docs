@@ -13,7 +13,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Create, Alter, and Drop Secondary Selective XML Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Describes how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.  
   
 ##  <a name="create"></a> Creating a Secondary Selective XML Index  

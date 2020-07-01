@@ -15,7 +15,7 @@ author: stevestein
 ms.author: sstein
 ---
 # Database Properties (General Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify properties for the selected database.  
   
 ## Options  

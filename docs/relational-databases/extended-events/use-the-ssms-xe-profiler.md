@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # Use the SSMS XEvent Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The XEvent Profiler is a SQL Server Management Studio (SSMS) feature that displays a live viewer window of extended events. This overview describes the reasons for using this profiler, key features, and instructions to get started viewing extended events.
 
 ## Why would I use the XEvent Profiler?

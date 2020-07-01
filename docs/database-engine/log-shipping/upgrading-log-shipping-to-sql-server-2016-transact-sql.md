@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When upgrading from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log shipping configuration to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version, a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service pack, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cumulative update, upgrading your log shipping servers in the appropriate order will preserve your log shipping disaster recovery solution.  
   
 > [!NOTE]  

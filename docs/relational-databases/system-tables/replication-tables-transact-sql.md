@@ -18,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Replication Tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A replication topology is supported by replication system tables. When a user database is configured as a Publisher or a Subscriber, replication adds system tables to the database. These tables are removed when a user database is removed from a replication topology. For general rules regarding using system tables, see [System Tables &#40;Transact-SQL&#41;](system-tables-transact-sql.md).  
   

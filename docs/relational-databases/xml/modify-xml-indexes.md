@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Modify XML Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statement can be used to modify existing XML and non-XML indexes. However, not all the ALTER INDEX options are available to XML indexes. The following options are not valid when modifying XML indexes:  
   
 -   The rebuild and set option IGNORE_DUP_KEY is not valid for XML indexes. The rebuild option ONLINE must be set to OFF for secondary XML indexes. The option DROP_EXISTING is not permitted in the ALTER INDEX statement.  

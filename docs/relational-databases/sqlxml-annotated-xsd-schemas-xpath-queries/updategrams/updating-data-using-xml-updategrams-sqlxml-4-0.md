@@ -30,7 +30,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating Data Using XML Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   When you update existing data, you must specify both the **\<before>** and **\<after>** blocks. The elements specified in the **\<before>** and **\<after>** blocks describe the desired change. The updategram uses the element(s) that are specified in the **\<before>** block to identify the existing record(s) in the database. The corresponding element(s) in the **\<after>** block indicate how the records should look after executing the update operation. From this information, the updategram creates an SQL statement that matches the **\<after>** block. The updategram then uses this statement to update the database.  
   
  This is the updategram format for an update operation:  

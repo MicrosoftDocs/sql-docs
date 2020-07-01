@@ -22,7 +22,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # COLUMNS_UPDATED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns a **varbinary** bit pattern indicating the inserted or updated columns of a table or view. Use `COLUMNS_UPDATED` anywhere inside the body of a [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.
   

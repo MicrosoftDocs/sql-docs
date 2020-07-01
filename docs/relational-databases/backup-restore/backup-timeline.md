@@ -18,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Backup Timeline
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Backup Timeline** dialog box to locate and specify backups to restore a database to a point-in-time. The **Backup Timeline** dialog box is accessed by clicking **Timeline** on the **Restore Database (General Page)** pane. This dialog box allows you to view a timeline of the restore operations performed on the database.  
   
  The Database Recovery Advisor ensures that only backups that are required for restoring to that point in time are selected. These selected backups make up the recommended restore plan for your restore operation. You should use only the selected backups. For information about the Database Recovery Advisor, see [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  

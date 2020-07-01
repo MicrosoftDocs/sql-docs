@@ -17,7 +17,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # msdb Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **msdb** database is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling alerts and jobs and by other features such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] and Database Mail.  
   

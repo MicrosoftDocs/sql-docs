@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ENCRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Encrypt data with a passphrase using the TRIPLE DES algorithm with a 128 key bit length.  
   

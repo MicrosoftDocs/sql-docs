@@ -12,7 +12,7 @@ ms.author: mathoma
 ---
 # SQL samples
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Locations of sample databases and code samples for Microsoft SQL products.
 

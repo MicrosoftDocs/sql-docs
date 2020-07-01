@@ -20,7 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Instant File Initialization
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In this article, you learn about instant file initialization, and how to enable it to speed up growth for your SQL Server database files.  
 
 By default, data and log files are initialized to overwrite any existing data left on the disk from previously deleted files. Data and log files are first initialized by zeroing the files (filling with zeros) when you perform the following operations:  

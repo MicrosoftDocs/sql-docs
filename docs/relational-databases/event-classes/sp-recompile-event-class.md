@@ -14,7 +14,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:Recompile Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The SP:Recompile event class indicates that a stored procedure, trigger, or user-defined function has been recompiled. Recompilations reported by this event class occur at the statement level.  
   
  The preferred way to trace statement-level recompilations is to use the SQL:StmtRecompile event class. The SP:Recompile event class is deprecated. For more information, see [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md).  

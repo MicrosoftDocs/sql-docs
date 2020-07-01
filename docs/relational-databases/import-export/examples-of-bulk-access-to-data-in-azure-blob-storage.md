@@ -20,7 +20,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Examples of bulk access to data in Azure Blob storage
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 The `BULK INSERT` and `OPENROWSET` statements can directly access a file in Azure blob storage. The following examples use data from a CSV (comma separated value) file (named `inv-2017-01-19.csv`), stored in a container (named `Week3`), stored in a storage account (named `newinvoices`). The path to format file can be used, but is not included in these examples.
 

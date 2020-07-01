@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_addsubscriber_schedule (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a schedule for the Distribution Agent and Merge Agent. This stored procedure is executed at the Publisher on any database.  
   

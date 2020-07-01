@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Cryptographic functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 These functions support digital signing, digital signature validation, encryption, and decryption.
   

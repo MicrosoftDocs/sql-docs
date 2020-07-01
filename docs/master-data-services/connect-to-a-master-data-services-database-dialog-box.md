@@ -15,7 +15,7 @@ ms.author: lle
 ---
 # Connect to a Master Data Services Database Dialog Box
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Connect to a Master Data Services Database** dialog box to select a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   

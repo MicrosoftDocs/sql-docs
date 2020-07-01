@@ -95,7 +95,7 @@ ms.author: mikeray
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
 ##  <a name="Restrictions"></a>  Backup operations restrictions 
- Backup can occur while the database is online and being used. However, the following restrictions exist.  
+ Backup can occur while the database is online and being used. However, the following restrictions exist:  
   
 ### Cannot back up offline data  
  Any backup operation that implicitly or explicitly references data that is offline fails. Some typical examples include the following:  
@@ -149,7 +149,7 @@ ms.author: mikeray
  **Create a backup**  
   
 > [!NOTE]  
->  For partial or copy-only backups, you must use the [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) statement with the PARTIAL or COPY_ONLY option, respectively.  
+>  For partial or copy-only backups, you must use the [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement with the PARTIAL or COPY_ONLY option, respectively.  
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

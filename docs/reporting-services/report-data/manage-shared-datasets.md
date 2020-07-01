@@ -1,5 +1,6 @@
 ---
 title: "Manage Shared Datasets | Microsoft Docs"
+description: Learn how to manage shared datasets in Reporting Services so you can share a query to help provide a consistent set of data for multiple reports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -37,8 +38,8 @@ ms.author: maggies
 ### Manage shared dataset item properties  
  The following table lists the item properties that you can change for a shared dataset item.  
   
-|||  
-|-|-|  
+|Property|Description|  
+|--------|-----------|  
 |Edit Name|Change the name of the shared dataset. All references from dependent items will continue to work.|  
 |Edit Description|Change the description of the shared dataset.|  
 |Edit Query execution time out|Set the query execution timeout in seconds. Zero (0) seconds means no time out. Determines the number of seconds before the dataset query times out. To specify no timeout value, use 0. For more information, see [Setting Time-out Values for Report and Shared Dataset Processing &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  

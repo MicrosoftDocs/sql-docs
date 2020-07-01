@@ -3,7 +3,7 @@ title: Configure log shipping for SQL Server on Linux
 description: This tutorial shows a basic example of how to replicate a SQL Server instance on Linux to a secondary instance using log shipping.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 04/19/2017
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -79,11 +79,13 @@ As described in the this picture, a log shipping session involves the following 
 
 -   Create a file to store your credentials. Use the password you recently set for your mssql Samba account 
 
-        vim /var/opt/mssql/.tlogcreds
-        #Paste the following in .tlogcreds
-        username=mssql
-        domain=<domain>
-        password=<password>
+```console
+    vim /var/opt/mssql/.tlogcreds
+    #Paste the following in .tlogcreds
+    username=mssql
+    domain=<domain>
+    password=<password>
+```
 
 -   Run the following commands to create an empty directory for mounting and set permission and ownership correctly
     ```bash   
@@ -96,8 +98,10 @@ As described in the this picture, a log shipping session involves the following 
 
 -   Add the line to etc/fstab to persist the share 
 
-        //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
-        
+```console
+    //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
+```
+
 -   Mount the shares
     ```bash   
     sudo mount -a
@@ -112,6 +116,7 @@ As described in the this picture, a log shipping session involves the following 
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
+
     ```sql
     DECLARE @LS_BackupJobId	AS uniqueidentifier 
     DECLARE @LS_PrimaryId	AS uniqueidentifier 

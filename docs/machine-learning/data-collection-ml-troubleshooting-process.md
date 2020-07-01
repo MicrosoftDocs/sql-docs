@@ -4,7 +4,7 @@ description: Learn data collection methods you should use when attempting to res
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 07/30/2019
+ms.date: 07/01/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
@@ -85,13 +85,15 @@ To get the R version and RevoScaleR versions, open an R command prompt, or open 
 
 The R console displays the version information on startup. For example, the following version represents the default configuration for SQL Server 2017:
 
-    *Microsoft R Open 3.3.3*
+```console
+*Microsoft R Open 3.3.3*
 
-    *The enhanced R distribution from Microsoft*
+*The enhanced R distribution from Microsoft*
 
-    *Microsoft packages Copyright (C) 2017 Microsoft*
+*Microsoft packages Copyright (C) 2017 Microsoft*
 
-    *Loading Microsoft R Server packages, version 9.1.0.*
+*Loading Microsoft R Server packages, version 9.1.0.*
+```
 
 ## Python versions
 

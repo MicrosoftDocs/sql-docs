@@ -2,7 +2,7 @@
 title: "Features for natively compiled T-SQL modules"
 description: Learn about T-SQL surface area and supported features in the body of natively compiled T-SQL modules, like stored procedures and scalar user-defined functions.
 ms.custom: seo-dt-2019
-ms.date: "10/23/2017"
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -61,7 +61,7 @@ SELECT clause:
     - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the DISTINCT operator is supported in natively compiled modules.
 
-              DISTINCT aggregates are not supported.  
+        - DISTINCT aggregates are not supported.  
 
 -   UNION and UNION ALL
     - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -164,7 +164,7 @@ The following DML statements are supported.
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -179,7 +179,7 @@ The following DML statements are supported.
 
 -   Binary operators (*, /, +, -, % (modulo)).  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - The plus operator (+) is supported on both numbers and strings.  
 
 -   Logical operators (AND, OR, NOT).  
 

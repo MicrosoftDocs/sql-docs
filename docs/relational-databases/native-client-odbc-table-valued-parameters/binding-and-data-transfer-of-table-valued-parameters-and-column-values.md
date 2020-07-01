@@ -5,13 +5,12 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.technology: native-client
 ms.topic: "reference"
-helpviewer_keywords: "table-valued parameters (ODBC), binding and data transfer"
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 04/04/2017
+ms.date: 07/01/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

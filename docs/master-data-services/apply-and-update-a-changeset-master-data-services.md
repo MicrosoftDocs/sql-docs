@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Apply and Update a Changeset (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A changeset is a collection of the pending changes on the master data. You can apply the changeset locally to view, add, update and delete the pending changes in the changeset.  
   

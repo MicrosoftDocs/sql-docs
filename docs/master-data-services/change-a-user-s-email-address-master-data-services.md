@@ -15,7 +15,7 @@ ms.author: lle
 ---
 # Change a User&#39;s Email Address (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the email address that notifications are sent to, and the default format of notification emails.  
   

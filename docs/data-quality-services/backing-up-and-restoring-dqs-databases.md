@@ -12,7 +12,7 @@ ms.author: sawinark
 ---
 # Backing Up and Restoring DQS Databases
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This topic describes how to back up and restore the DQS databases.  
   

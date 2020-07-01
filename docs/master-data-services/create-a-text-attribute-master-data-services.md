@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # Create a Text Attribute (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a text attribute when you want users to enter a text string as an attribute value.  
   

@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Create an Index (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Create a custom index on a list of attributes that you query frequently, to improve query performance.  
   

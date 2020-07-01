@@ -14,7 +14,7 @@ ms.author: lle
 ---
 # Create a Model Deployment Package by Using MDSModelDeploy
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to create a package. Depending on the commands you specify, the package can contain either:  
   

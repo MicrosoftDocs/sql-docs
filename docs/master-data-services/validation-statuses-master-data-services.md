@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Validation Statuses (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the **Version Management** functional area, on the **Validate Version** page, the following statuses are possible.  
   

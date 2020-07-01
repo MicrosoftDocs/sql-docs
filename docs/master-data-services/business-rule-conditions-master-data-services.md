@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Business Rule Conditions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], business rule conditions determine the conditions that must be true for one or more actions to be taken.  
   

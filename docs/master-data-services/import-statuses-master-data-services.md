@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Import Statuses (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the **Integration Management** functional area, on the **Staging Batches** page, the following statuses are possible.  
   

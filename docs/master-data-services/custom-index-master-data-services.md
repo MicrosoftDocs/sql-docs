@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Custom Index (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Custom indexes create a nonclustered index on one attribute (single index) or on a list of attributes (composite index), in an entity. Generally indexes improve the performance of querying process. For more information about SQL Server indexes, see [Indexes](../relational-databases/indexes/indexes.md).  
   

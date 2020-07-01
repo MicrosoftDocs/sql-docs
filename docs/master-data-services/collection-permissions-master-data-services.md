@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # Collection Permissions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Collection permissions apply to all collections for an entity. You cannot give permission to a specific collection; permissions apply to all collections.  
   

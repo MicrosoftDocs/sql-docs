@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Filter Operators (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   When filtering a list of members, the following operators are available.  
   

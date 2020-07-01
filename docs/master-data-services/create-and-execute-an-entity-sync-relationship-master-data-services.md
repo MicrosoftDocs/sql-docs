@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Create and Execute an Entity Sync Relationship (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Entity sync is a one-way and repeatable synchronization between entity versions. It provides a way to share entity data between different models.  
   

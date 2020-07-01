@@ -13,7 +13,7 @@ localization_priority: "None"
 ---
 # Data Profiling and Notifications in Data Quality Services (DQS)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) is a data profiling service. DQS analyzes data from a source, and displays statistics about the data in DQS activities.
 

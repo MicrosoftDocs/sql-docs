@@ -18,7 +18,7 @@ ms.author: lle
 ---
 # Overlapping User and Group Permissions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A user's permissions are based on:  
   

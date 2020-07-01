@@ -14,7 +14,7 @@ ms.author: lle
 ---
 # Master Data Services and Data Quality Services Features Support
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 
 ## [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] and Data Quality Services

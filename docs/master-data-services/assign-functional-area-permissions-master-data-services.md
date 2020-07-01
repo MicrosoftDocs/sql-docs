@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # Assign Functional Area Permissions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Assign functional area permission to grant users or groups access to the functional areas of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

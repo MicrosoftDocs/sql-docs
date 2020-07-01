@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # Navigational Access (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Navigational access applies to model object security, which is assigned on the **Models** tab.  
   

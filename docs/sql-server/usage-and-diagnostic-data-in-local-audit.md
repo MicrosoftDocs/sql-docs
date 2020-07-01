@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Local audit for SQL Server usage and diagnostic data collection (CEIP)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ## Introduction
 

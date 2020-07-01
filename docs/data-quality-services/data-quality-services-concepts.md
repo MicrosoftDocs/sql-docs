@@ -12,7 +12,7 @@ ms.author: sawinark
 ---
 # Data Quality Services Concepts
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This topic provides a brief summary of [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) concepts in knowledge management, data quality projects, and data quality administration.  
   

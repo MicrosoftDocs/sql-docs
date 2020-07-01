@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Change the Entity Transaction Log Type (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   You can change the transaction log type of an entity, to attribute, member, or none.  
   

@@ -14,7 +14,7 @@ ms.author: lle
 ---
 # Import Data from Tables (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   You can add data and make data changes to a model in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], in bulk.  
   

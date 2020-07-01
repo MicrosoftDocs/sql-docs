@@ -12,7 +12,7 @@ ms.author: sawinark
 ---
 # Manage DQS Databases
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  
   

@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Sample model packages with data are included when you install [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. The default location for these package files is \<drive>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
   

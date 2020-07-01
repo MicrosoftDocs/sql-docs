@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # Delete a Model (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../../includes/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Delete a model to remove the model and all of its data from [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   

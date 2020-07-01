@@ -7,7 +7,7 @@ ms.reviewer: mikeray
 ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: bdc
+ms.technology: big-data-cluster
 ---
 
 # Performance best practices and configuration guidelines for SQL Server Big Data Clusters

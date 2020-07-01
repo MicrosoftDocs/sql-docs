@@ -14,7 +14,7 @@ ms.author: brcarrig
 manager: amitban
 ---
 # Hybrid Buffer Pool
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Hybrid Buffer Pool enables buffer pool objects to reference data pages in database files residing on persistent memory (PMEM) devices, instead of copies of the data pages cached in volatile DRAM. This feature is introduced in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 

@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STConvexHull (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns an object representing the convex hull of a **geometry** instance.
   

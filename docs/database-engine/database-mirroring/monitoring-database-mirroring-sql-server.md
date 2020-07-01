@@ -16,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Monitoring Database Mirroring (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This section introduces Database Mirroring Monitor and the **sp_dbmmonitor** system stored procedures, explains how database mirroring monitoring works (including the **Database Mirroring Monitor Job)**, and summarizes the information that you can monitor about database mirroring sessions. Additionally, this section introduces how to define warning thresholds for a set of predefined database mirroring events and how to set up alerts on any database mirroring event.  
   
  You can monitor a mirrored database during a mirroring session to verify whether and how well data is flowing. To set up and manage monitoring for one or more of the mirrored databases on a server instance, you can use either Database Mirroring Monitor or the **sp_dbmmonitor** system stored procedures.  

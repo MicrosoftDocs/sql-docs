@@ -14,7 +14,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Timeout (timeout &gt; 0) Event Class
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Lock:Timeout (timeout > 0)** event class indicates that a request for a lock on a resource, such as a page, has timed out because another transaction is holding a blocking lock on the required resource. This event class behaves the same as the **Lock:Timeout** event class, except it does not include any events where the timeout value is 0.  
   
  Include the **Lock:Timeout (timeout > 0)** event class in traces where you are using lock probes or other processes that have timeout values of zero. This allows you to see where actual time-outs are occurring without seeing time-out values of zero.  

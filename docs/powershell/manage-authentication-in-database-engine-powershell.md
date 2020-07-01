@@ -13,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # PowerShell: Manage authentication to SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 By default, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the **-Username** and **-Password** parameters for **Invoke-Sqlcmd**.  
   

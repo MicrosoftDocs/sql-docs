@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "FULLTEXTCATALOGPROPERTY function"
   - "status information [SQL Server], full-text catalogs"
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # FULLTEXTCATALOGPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns information about full-text catalog properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

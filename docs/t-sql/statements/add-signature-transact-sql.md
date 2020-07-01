@@ -21,9 +21,9 @@ ms.date: 06/10/2020
 
 # ADD SIGNATURE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Adds a digital signature to a stored procedure, function, assembly, or trigger. Also adds a countersignature to a stored procedure, function, assembly, or trigger.  
+Adds a digital signature to a stored procedure, function, assembly, or trigger. Also adds a countersignature to a stored procedure, function, assembly, or trigger.
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -74,14 +74,14 @@ The module being signed or countersigned and the certificate or asymmetric key u
   
  If a module contains an EXECUTE AS clause, the security ID (SID) of the principal is also included as a part of the signing process.  
   
-> [!CAUTION]  
->  Module signing should only be used to grant permissions, never to deny or revoke permissions.  
+> [!CAUTION]
+> Module signing should only be used to grant permissions, never to deny or revoke permissions.  
   
  Inline table-valued functions cannot be signed.  
   
  Information about signatures is visible in the sys.crypt_properties catalog view.  
   
-> [!WARNING]  
+> [!WARNING]
 >  When recreating a procedure for signature, all the statements in the original batch must match recreation batch. If any portion of the batch differs, even in spaces or comments, the resultant signature will be different.  
   
 ## Countersignatures  

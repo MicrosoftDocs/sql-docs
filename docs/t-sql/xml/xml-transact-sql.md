@@ -18,7 +18,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   

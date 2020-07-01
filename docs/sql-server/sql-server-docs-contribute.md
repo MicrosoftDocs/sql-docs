@@ -89,7 +89,7 @@ Each SQL Server article contains an **applies-to** include file after the title.
 Consider the following Markdown example that pulls in the **appliesto-ss-asdb-asdw-pdw-md.md** include file.
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 ```
 
 This adds the following text at the top of the article:

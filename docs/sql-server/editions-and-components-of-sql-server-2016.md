@@ -39,7 +39,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # Editions and supported features of SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 This topic provides details of features supported by the SQL Server editions.
 

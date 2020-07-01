@@ -14,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing MERGE Functionality in a Natively Compiled Stored Procedure
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 The Transact-SQL code sample in this section demonstrates how you can simulate the T-SQL MERGE statement in a natively compiled module. The sample uses a table variable with an identity column, iterates over the rows in the table variable, and for each row performs the update if the condition matches, and an insert if the condition does not match.

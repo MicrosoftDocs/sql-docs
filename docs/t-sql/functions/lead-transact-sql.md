@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "LEAD function"
   - "analytic functions, LEAD"
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEAD (Transact-SQL)

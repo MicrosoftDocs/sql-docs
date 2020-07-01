@@ -17,7 +17,7 @@ ms.reviewer:
 
 ---
 # How the Query and View Designer Represents Joins (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 If tables are joined, the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) represents the join graphically in the [Diagram pane](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) and by using SQL syntax in the [SQL pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ## Diagram Pane  

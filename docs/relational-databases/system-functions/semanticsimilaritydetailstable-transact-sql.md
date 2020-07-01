@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # semanticsimilaritydetailstable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a table of zero, one, or more rows of key phrases that are common across two documents (a source document and a matched document) whose content is semantically similar.  
   

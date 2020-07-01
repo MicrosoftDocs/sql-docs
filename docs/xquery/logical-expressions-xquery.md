@@ -21,7 +21,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Logical Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supports the logical **and** and **or** operators.  
   

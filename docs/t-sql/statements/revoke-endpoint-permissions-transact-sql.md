@@ -18,7 +18,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions granted or denied on an endpoint.  
   

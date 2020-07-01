@@ -12,7 +12,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Save Trace Results to a File
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can save trace results to a file. A trace file is a file where the trace results are written. A trace file can be located either in a local directory (such as C:\\*foldername*\\*filename.trc*) or a network directory (such as \\\computername\sharename\filename.trc).  
   
  You can use the trace files to do the following:  

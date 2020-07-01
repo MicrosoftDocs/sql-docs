@@ -16,12 +16,12 @@ helpviewer_keywords:
   - "DEGREES function"
   - "number of degrees"
 ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DEGREES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 This function returns the corresponding angle, in degrees, for an angle specified in radians.  
   

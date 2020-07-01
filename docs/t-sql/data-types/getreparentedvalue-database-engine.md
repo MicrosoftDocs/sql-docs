@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # GetReparentedValue (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a node whose path from the root is the path to _newRoot_, followed by the path from _oldRoot_.
   

@@ -16,7 +16,7 @@ ms.date: "03/01/2017"
 
 # Export a Trace Template (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to export an existing trace template to save as a template file (.tdf) by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. When you export a trace template and save it as a file, you can use the template with another instance of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

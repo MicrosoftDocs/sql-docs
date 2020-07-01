@@ -21,7 +21,7 @@ ms.author: "mathoma"
 ms.custom: "seo-lt-2019"
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 
   
   When the transaction log becomes full, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] issues a **9002 error**. The log can fill when the database is online, or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  

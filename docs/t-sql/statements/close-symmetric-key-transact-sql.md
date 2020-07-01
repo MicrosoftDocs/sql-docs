@@ -23,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CLOSE SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Closes a symmetric key, or closes all symmetric keys open in the current session.  
   

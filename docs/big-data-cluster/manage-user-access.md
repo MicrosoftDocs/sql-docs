@@ -74,9 +74,9 @@ By following the procedures in this section, you can grant administrator access 
    kubectl port-forward controldb-0 1433:1433 --address 0.0.0.0 -n <cluster name>
    ```
 
-1. Use the preceding connection to insert a row in the roles table. Type the *REALM* value in uppercase letters.
+1. Use the preceding connection to insert a row in the *roles* and *active_directory_principals* tables. Type the *REALM* value in uppercase letters.
 
-   If you're granting administrator permissions, use the *bdcAdmin* role in the *\<role name>*. For non-administrator users, use the *bdcUser* role.
+   *active_direcotry_principals* table has one row per user. Roles table can have multiple rows per user. If you want to add new user with *bdcAdmin* role, you need to add one entry to *active_directory_principals* and two entries to *roles* table (one each corresponding to *bdcAdmin* and *bdcUser* roles). If you want to add new user as regular *bdcUser* user, you need to add one entry to *active_directory_principals* and one entry to *roles* table.
 
    ```sql
    USE controller;
@@ -84,15 +84,20 @@ By following the procedures in this section, you can grant administrator access 
 
    INSERT INTO [controller].[auth].[roles] VALUES (N'<user or group name>@<REALM>', N'<role name>')
    GO
+
+   INSERT INTO [controller].[auth].[active_directory_principals] VALUES (N'<user or group name>@<REALM>', N'<SID>')
+   GO
    ```
 
-1. Verify that the members of the group that you added have big data cluster administrator permissions by logging in to the controller endpoint and running the following command:
+   To find the SID of the user or the group being added, you can use [Get-ADUser](/powershell/module/addsadministration/get-aduser/) or  [Get-ADGroup](/powershell/module/addsadministration/get-adgroup/) PowerShell commands.
+
+2. Verify that the members of the group that you added have big data cluster administrator permissions by logging in to the controller endpoint and running the following command:
 
    ```bash
    azdata bdc config show
    ```
 
-1. For non-administrator users, you can verify access by authenticating to the SQL master instance or to the controller by using `azdata login`.
+3. For non-administrator users, you can verify access by authenticating to the SQL master instance or to the controller by using `azdata login`.
 
 ## Next steps
 

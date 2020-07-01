@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 This article provides best practices and recommendations to maximize performance for applications that target services running within a big data cluster.
 
-The following guidelines focus on recommendations for configuring the Linux operating system hosting the Kubernetes worker nodes where BDC will be deployed on. As a best practice, configure the tuning profile before deploying the big data cluster. The settings included in the proposed tunning profile were validated during the case study conducted by Microsoft and Intel. The results of the study are published for download in this [whitepaper](https://aka.ms/sql-bdc-spark-perf/).
+The following guidelines focus on recommendations for configuring the Linux operating system hosting the Kubernetes worker nodes where BDC will be deployed on. As a best practice, configure the tuning profile before deploying the big data cluster. The settings included in the proposed tuning profile were validated during the case study conducted by Microsoft and Intel. The results of the study are published for download in this [whitepaper](https://aka.ms/sql-bdc-spark-perf/).
 
 > [!TIP]
 > For tuning configurations specific to SQL Server on Linux, see [Performance best practices and configuration guidelines for SQL Server on Linux](../linux/sql-server-linux-performance-best-practices.md). Also, other best practices like index design for SQL Server databases, still apply.
@@ -68,9 +68,9 @@ fs.aio-max-nr=1048576
 transparent_hugepages=never
 ```
 
-## Install **tuned** utility on all the Kuberntes worker nodes
+## Install **tuned** utility on all the Kubernetes worker nodes
 
-To install **tuned** execute:
+To install **tuned**, execute:
 
 ```bash
 apt-get -y install tuned
@@ -85,14 +85,14 @@ cd /usr/lib/tuned
 scp -r <sourcePath> ./mssql-bdc
 ```
 
-To enable this **mssql-bdc** tuned profile, save these definitions in a **tuned.conf** file under a `/usr/lib/tuned/mssql-bdc` folder  on all the Kubernetes worker nodes and enable the profile using:
+To enable this **mssql-bdc** tuned profile, save these definitions in a **tuned.conf** file under a `/usr/lib/tuned/mssql-bdc` folder on all the Kubernetes worker nodes and enable the profile using:
 
 ```bash
 chmod +x /usr/lib/tuned/mssql-bdc/tuned.conf
 tuned-adm profile mssql-bdc
 ```
 
-Verify its enabled using this command:
+Verify it's enabled using this command:
 
 ```bash
 tuned-adm active
@@ -153,7 +153,7 @@ done
 
 ## Next steps
 
-For more resources including reference architectures for SQL Server Big Data Clusters see:
+For more resources including reference architectures for SQL Server Big Data Clusters, see:
 
 * [Case Study: SQL Workloads running on Apache Spark in [MS SQL Server 2019 Big Data Cluster](https://aka.ms/sql-bdc-spark-perf/)
 

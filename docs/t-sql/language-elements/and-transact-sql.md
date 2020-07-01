@@ -77,7 +77,7 @@ IF 1 = 1 AND 2 = 2
 BEGIN  
    PRINT 'First Example is TRUE'  
 END  
-ELSE PRINT 'First Example is FALSE';  
+ELSE PRINT 'First Example is FALSE' ;  
 GO  
   
 IF 1 = 1 AND 2 = 17  

@@ -44,7 +44,8 @@ NOT (payment_method = 'credit card') OR
 ## To define a constraint expression  
 In the Check Constraints tab of the property pages, type an expression in the Constraint expression box using the following syntax:  
   
-```{constant | column_name | function | (subquery)}  
+```
+{constant | column_name | function | (subquery)}  
 [{operator | AND | OR | NOT}  
 {constant | column_name | function | (subquery)}...]
 ```

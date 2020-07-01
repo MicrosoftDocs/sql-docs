@@ -75,7 +75,7 @@ WHERE EXISTS
 (SELECT *   
     FROM HumanResources.Employee AS b  
     WHERE a.BusinessEntityID = b.BusinessEntityID  
-    AND a.LastName = 'Johnson');  
+    AND a.LastName = 'Johnson') ;  
 GO  
 ```  
   
@@ -90,7 +90,7 @@ WHERE a.LastName IN
 (SELECT a.LastName  
     FROM HumanResources.Employee AS b  
     WHERE a.BusinessEntityID = b.BusinessEntityID  
-    AND a.LastName = 'Johnson');  
+    AND a.LastName = 'Johnson') ;  
 GO  
 ```  
   
@@ -150,7 +150,7 @@ WHERE EXISTS
     JOIN HumanResources.EmployeeDepartmentHistory AS edh  
        ON d.DepartmentID = edh.DepartmentID  
     WHERE e.BusinessEntityID = edh.BusinessEntityID  
-    AND d.Name LIKE 'P%');  
+    AND d.Name LIKE 'P%') ;  
 GO  
 ```  
   
@@ -167,7 +167,7 @@ JOIN HumanResources.EmployeeDepartmentHistory AS edh
 WHERE edh.DepartmentID IN  
 (SELECT DepartmentID  
    FROM HumanResources.Department  
-   WHERE Name LIKE 'P%');  
+   WHERE Name LIKE 'P%') ;  
 GO  
 ```  
   
@@ -303,7 +303,7 @@ FROM DimCustomer AS a
 WHERE EXISTS  
 (SELECT *   
     FROM dbo.ProspectiveBuyer AS b  
-    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
+    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate)) ;  
 ```  
   
 ### G. Using NOT EXISTS  
@@ -317,7 +317,7 @@ FROM DimCustomer AS a
 WHERE NOT EXISTS  
 (SELECT *   
     FROM dbo.ProspectiveBuyer AS b  
-    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
+    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate)) ;  
 ```  
   
 ## See Also  

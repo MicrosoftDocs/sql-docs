@@ -52,7 +52,8 @@ SELECT referenced_schema_name AS schema_name
 ,referenced_entity_name AS table_name  
 ,referenced_minor_name AS referenced_column  
 FROM sys.dm_sql_referenced_entities ('Production.ApprovedDocuments', 'OBJECT');  
-GO```
+GO
+```
   
 The query returns the following error messages.  
   
@@ -66,7 +67,8 @@ columns. This is either because the entity references an
 object that does not exist or because of an error in one or  
 more statements in the entity. Before rerunning the query,  
 ensure that there are no errors in the entity and that all  
-objects referenced by the entity exist.```
+objects referenced by the entity exist.
+```
   
 The following example corrects the column name in the view.  
   

@@ -150,7 +150,7 @@ Specifies the type of the external data source being configured. This parameter 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.
 
-For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).
+For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage account, see [Create external data source to access data in Azure Storage using the wasb:// interface](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -702,7 +702,8 @@ Specifies the type of the external data source being configured. This parameter 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.
 
-For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Storage](#a-create-external-data-source-to-reference-azure-storage).
+For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#b-create-external-data-source-to-reference-hadoop)
+<!--[Create external data source to reference Azure Storage](#a-create-external-data-source-to-reference-azure-storage).-->
 
 ## Permissions
 
@@ -952,7 +953,7 @@ Specifies the type of the external data source being configured. This parameter 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.
 
-For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Storage](#d-create-external-data-source-to-reference-azure-storage).
+For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#a-create-external-data-source-to-reference-hadoop)<!--[Create external data source to reference Azure Storage](#d-create-external-data-source-to-reference-azure-storage).-->
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 

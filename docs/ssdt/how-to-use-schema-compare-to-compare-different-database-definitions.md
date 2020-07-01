@@ -1,6 +1,6 @@
 ---
 title: Use Schema Compare to Compare Different Database Definitions
-description: Learn how to compare two database definitions with Schema Compare. See how to exclude specific differences and update the target or generate an update script.
+description: Learn how to compare database definitions with Schema Compare. See how to exclude specific differences and either update the target or create an update script.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

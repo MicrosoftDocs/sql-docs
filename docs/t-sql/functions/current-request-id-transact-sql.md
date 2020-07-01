@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # CURRENT_REQUEST_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the ID of the current request within the current session.
   

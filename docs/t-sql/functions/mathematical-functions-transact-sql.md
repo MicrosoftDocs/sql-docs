@@ -18,7 +18,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Mathematical Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 The following scalar functions perform a calculation, usually based on input values that are provided as arguments, and return a numeric value:  
   

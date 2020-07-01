@@ -18,7 +18,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # GRANT System Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on system objects such as system stored procedures, extended stored procedures, functions, and views.  
   

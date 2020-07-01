@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # InstanceOf (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A method that tests if the **geometry** instance is the same as the specified type. Returns 1 if the type of a **geometry** instance is the same as the specified type. This method also returns 1 if the specified type is an ancestor of the instance type. Otherwise, this method returns 0.
   

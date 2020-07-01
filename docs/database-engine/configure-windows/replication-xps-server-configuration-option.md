@@ -15,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Replication XPs Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This option is for internal use only.  
   

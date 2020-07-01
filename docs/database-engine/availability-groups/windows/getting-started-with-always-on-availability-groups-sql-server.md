@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Getting Started with Always On Availability Groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
 This topic introduces the steps for configuring instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and for creating, managing, and monitoring an availability group.  
   

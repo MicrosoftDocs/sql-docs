@@ -18,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Options in the Back Up Database Task for Maintenance Plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Back Up Database Task** dialog to add a backup task to the maintenance plan. Backing up the database is important in case of system or hardware failure (or user errors) that cause the database to be damaged in some way, thus requiring a backed-up copy to be restored. This task allows you to perform full, differential, files and filegroups, and transaction log backups.  
   
  **To create a backup database task**  

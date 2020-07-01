@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # nodes() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The **nodes()** method is useful when you want to shred an **xml** data type instance into relational data. It allows you to identify nodes that will be mapped into a new row.  
   

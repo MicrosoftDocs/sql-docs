@@ -17,7 +17,7 @@ ms.date: 06/12/2020
 
 # xp_cmdshell Server configuration option
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article describes how to enable the **xp_cmdshell** SQL Server configuration option. This option allows system administrators to control whether the [xp_cmdshell extended stored procedure](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md) can be executed on a system. By default, the **xp_cmdshell** option is disabled on new installations.
 

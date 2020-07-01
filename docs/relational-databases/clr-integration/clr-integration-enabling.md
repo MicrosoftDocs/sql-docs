@@ -15,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration - Enabling
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The common language runtime (CLR) integration feature is off by default, and must be enabled in order to use objects that are implemented using CLR integration. To enable CLR integration, use the **clr enabled** option of the **sp_configure** stored procedure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 ```sql  

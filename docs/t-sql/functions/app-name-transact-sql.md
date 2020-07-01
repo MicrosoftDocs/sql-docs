@@ -23,7 +23,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # APP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the application name for the current session, if the application sets that name value.
   

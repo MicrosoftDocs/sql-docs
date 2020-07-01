@@ -24,7 +24,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # ERROR_LINE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the line number of occurrence of an error that caused the CATCH block of a TRY...CATCH construct to execute.  
   

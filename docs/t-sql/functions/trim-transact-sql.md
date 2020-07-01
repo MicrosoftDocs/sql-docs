@@ -21,7 +21,7 @@ monikerRange: "= azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sq
 ---
 # TRIM (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asdw.md)]
 
 Removes the space character `char(32)` or other specified characters from the start and end of a string.  
 

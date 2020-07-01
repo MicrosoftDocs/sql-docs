@@ -16,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Configure replication between a server and mobile clients (merge)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Merge replication is a good solution to the problem of moving data between a central server and mobile clients that are only occasionally connected. By using the replication wizards, you can easily configure and administer a merge replication topology. 
 
 This tutorial shows you how to configure a replication topology for mobile clients. For more information about merge replication, see the [overview of merge replication](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).

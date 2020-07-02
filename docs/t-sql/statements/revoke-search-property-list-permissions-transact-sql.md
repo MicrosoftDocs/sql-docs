@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Search Property List Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on a search property list.  
   

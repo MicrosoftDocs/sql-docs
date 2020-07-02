@@ -213,7 +213,7 @@ ms.author: owend
 #### Example  
  The following query returns the list of names from a table named `ContactType`.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -236,7 +236,7 @@ SELECT Name FROM ContactType
 #### Example  
  The following query calls the a stored procedure named `uspGetWhereUsedProductID`. When the stored procedure has input parameters you must provide parameter values when you run the query.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

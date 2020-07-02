@@ -88,7 +88,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server from the Command Prompt
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Before you run SQL Server Setup, review [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   

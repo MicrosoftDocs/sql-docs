@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Plan and test the database engine upgrade plan
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  To perform a successful [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] upgrade, regardless of approach, appropriate planning is required.  
   

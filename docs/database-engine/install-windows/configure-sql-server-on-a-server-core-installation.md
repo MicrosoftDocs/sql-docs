@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure SQL Server on a Server Core Installation
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 

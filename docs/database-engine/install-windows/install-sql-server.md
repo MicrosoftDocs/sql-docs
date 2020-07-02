@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server installation guide
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article is an index of content that provides guidance for installing SQL Server on Windows.
 

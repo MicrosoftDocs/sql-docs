@@ -21,7 +21,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
 
 - [Azure Data Studio installed](download-azure-data-studio.md)
 
-## New notebook
+## Create a notebook
 
 The following steps show how to create a notebook file in Azure Data Studio:
 
@@ -33,10 +33,30 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Set Kernel":::
 
-1. If you're prompted to configure Python, then in **Configure Python for Notebooks** select either:
+## Change the Python kernel
 
-   - **New Python installation** to install a new copy of Python for Azure Data Studio, or
-   - **Use existing Python installation** to specify the path to an existing Python installation
+The first time you connect to the Python kernel in a notebook, the **Configure Python for Notebooks** page is displayed. You can select either:
+
+- **New Python installation** to install a new copy of Python for Azure Data Studio, or
+- **Use existing Python installation** to specify the path to an existing Python installation for Azure Data Studio to use
+
+To view the location and version of the active Python kernel, create a code cell and run the following Python commands:
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+To connect to a different installation of Python:
+
+1. From the **File** menu, select **Preferences** and then **Settings**.
+1. Scroll to **Notebook configuration** under **Extensions**.
+1. Under **Use Existing Python**, uncheck the option "Local path to a preexisting python installation used by Notebooks."
+1. Restart Azure Data Studio.
+
+When Azure Data Studio starts and you connect to the Python kernel, the **Configure Python for Notebooks** page is displayed, You can choose to create a new Python installation or specify a path to an existing installation.
 
 ## Run a code cell
 

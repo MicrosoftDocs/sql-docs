@@ -117,7 +117,7 @@ Follow these steps to run an R script:
 
 ## Next steps
 
-- [How to use notebooks in Azure Data Studio](notebooks-guidance.md)
+- [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md)
 - [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md)
 - [Quickstart: Run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
 - [Quickstart: Run simple R scripts with SQL Server Machine Learning Services](../tutorials/quickstart-r-create-script.md)

@@ -74,7 +74,7 @@ Still in PowerShell, list the contents of the installation folder to confirm tha
 
 2. Enter `dir *.exe` to list the executables. You should see **python.exe**, **pythonw.exe**, and **uninstall-anaconda.exe**.
 
-  ![List of Python executables](media/powershell-python-exe.png)
+   ![List of Python executables](media/powershell-python-exe.png)
    
 On systems having multiple versions of Python, remember to use this particular Python.exe if you want to load **revoscalepy** and other Microsoft packages.
 
@@ -89,17 +89,17 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 1. At the Powershell prompt, still in the C:\Program Files\Microsoft\PyForMLS directory, open Jupyter Notebooks from the Scripts folder:
 
-  ```powershell
-  .\Scripts\jupyter-notebook
-  ```
+   ```powershell
+   .\Scripts\jupyter-notebook
+   ```
 
-  A notebook should open in your default browser at `https://localhost:8889/tree`.
+   A notebook should open in your default browser at `https://localhost:8889/tree`.
 
-  Another way to start is double-click **jupyter-notebook.exe**. 
+   Another way to start is double-click **jupyter-notebook.exe**. 
 
 2. Click **New** and then click **Python 3**.
 
-  ![jupyter notebook with New Python 3 selection](media/jupyter-notebook-new-p3.png)
+   ![jupyter notebook with New Python 3 selection](media/jupyter-notebook-new-p3.png)
 
 3. Enter `import revoscalepy` and run the command to load one of the Microsoft-specific libraries.
 
@@ -107,17 +107,17 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) over a local data set. Other functions get the location of the sample data and create a data source object for a local .xdf file.
 
-  ```python
-  import os
-  from revoscalepy import rx_summary
-  from revoscalepy import RxXdfData
-  from revoscalepy import RxOptions
-  sample_data_path = RxOptions.get_option("sampleDataDir")
-  print(sample_data_path)
-  ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
-  summary = rx_summary("ArrDelay+DayOfWeek", ds)
-  print(summary)
-  ```
+   ```python
+   import os
+   from revoscalepy import rx_summary
+   from revoscalepy import RxXdfData
+   from revoscalepy import RxOptions
+   sample_data_path = RxOptions.get_option("sampleDataDir")
+   print(sample_data_path)
+   ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+   summary = rx_summary("ArrDelay+DayOfWeek", ds)
+   print(summary)
+   ```
 
 The following screenshot shows the input and a portion of the output, trimmed for brevity.
 

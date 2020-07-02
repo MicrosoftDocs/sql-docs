@@ -14,7 +14,7 @@ helpviewer_keywords:
 ---
 # Active Directory authentication for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides an overview of Active Directory (AD) authentication for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. AD authentication is also known as Integrated authentication in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

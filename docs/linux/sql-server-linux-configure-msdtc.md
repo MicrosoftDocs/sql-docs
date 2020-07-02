@@ -10,7 +10,7 @@ ms.technology: linux
 ---
 # How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux.
 

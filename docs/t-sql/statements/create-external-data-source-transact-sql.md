@@ -699,7 +699,7 @@ Specifies the type of the external data source being configured. This parameter 
 
 - Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen 2.
 
-For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [### B. Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal)
+For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal)
 
 ## Permissions
 

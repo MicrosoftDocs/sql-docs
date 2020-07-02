@@ -78,6 +78,16 @@ To execute SSIS package *targeting SQL Server 2017 and below*, you will need to 
 
 To design SSIS package in SSDT *targeting SQL Server 2017 and below*, you will need to have **Microsoft Connector for Teradata** and install **Microsoft Connector for Teradata by Attunity** with corresponding version.
 
+## Limitations and known issues
+
+- Teradata Source/Destination Editor, **Default database** property does not take effective. As work-around, type database name in dropdown box to filter table or view.
+
+- Teradata Source/Destination Editor, Mapping step does not work when type \<database>.<table/view>. As work-around, type \<database>.<table/view>, then click the drop-down button.
+
+- Teradata Source Editor, view can not be displayed when Data access mode is "Table Name – TPT Export". As work-around, use Advanced Editor of Teradata Source.
+
+- Teradata Destination, attribute ‘PackMaximum’ can not be set to ‘True’. Otherwise, error will occur.
+
 ## Uninstallation
 
 You can run uninstall wizard to remove **Microsoft connector for Teradata**.

@@ -35,27 +35,27 @@ There are multiple ways to create a new notebook. In each case, a new file named
 
   ![New notebook](media/notebooks-guidance/server-new-notebook.png)
 
-- Open the command palette (**Ctrl+Shift+P**)), type "new notebook", and select the **New Notebook** command.
+- Open the command palette (**Ctrl+Shift+P**), type "new notebook", and select the **New Notebook** command.
 
   ![New notebook](media/notebooks-guidance/command-palette-new-notebook.png)
 
 ## Connect to a kernel
 
-Azure Data Studio notebooks support a number of different kernels, including SQL Server, Python, PySpark, and others. Each kernel supports a different language in code cells of your notebook. For example, when connected to the SQL Server kernel, you can enter and run T-SQL statements in a notebook code cell.
+Azure Data Studio notebooks support a number of different kernels, including SQL Server, Python, PySpark, and others. Each kernel supports a different language in the code cells of your notebook. For example, when connected to the SQL Server kernel, you can enter and run T-SQL statements in a notebook code cell.
 
-**Attach to** provides the context for the kernel to attach. If you're using SQL Kernel, then you can attach to any of your SQL Server instances.
-If you're using Python3 Kernel you attach to **localhost**. You can use this kernel for your local Python development.
+**Attach to** provides the context for the kernel. For example, if you're using SQL Kernel, then you can attach to any of your SQL Server instances.
+If you're using Python3 Kernel you attach to **localhost** and you can use this kernel for your local Python development.
 
 SQL Kernel can also be used to connect to PostgreSQL server instances. If you're a PostgreSQL developer and want to connect the notebooks to your PostgreSQL Server, then download the [**PostgreSQL extension**](../azure-data-studio/postgres-extension.md) in the Azure Data Studio extension Marketplace and connect to the PostgreSQL server.
 
-When you're connected to SQL Server 2019 big data cluster, the default **Attach to** is the end point of the cluster. You can submit Python, Scala, and R code using the Spark compute of the cluster.
+If you're connected to SQL Server 2019 big data cluster, the default **Attach to** is the end point of the cluster. You can submit Python, Scala, and R code using the Spark compute of the cluster.
 
-|Kernel|Description
-|:-----|:-----
-| SQL Kernel | Write SQL Code targeted at your relational database.
-|PySpark3 and PySpark Kernel| Write Python code using Spark compute from the cluster.
-|Spark Kernel|Write Scala and R code using Spark compute from the cluster.
-|Python Kernel|Write Python code for local development.
+| Kernel                      | Description                                                  |
+|:----------------------------|:-------------------------------------------------------------|
+| SQL Kernel                  | Write SQL Code targeted at your relational database.         |
+| PySpark3 and PySpark Kernel | Write Python code using Spark compute from the cluster.      |
+| Spark Kernel                | Write Scala and R code using Spark compute from the cluster. |
+| Python Kernel               | Write Python code for local development.                     |
 
 For more information on specific kernels, see:
 
@@ -65,7 +65,7 @@ For more information on specific kernels, see:
 
 ## Add a code cell
 
-Code cells allow you to run code interactively from within the notebook.
+Code cells allow you to run code interactively within the notebook.
 
 Add a new code cell by clicking the **+Cell** command in the toolbar and selecting **Code cell**. A new code cell is added after the currently selected cell.
 
@@ -117,7 +117,7 @@ If you open a notebook from some other source, it opens in **Non-Trusted** mode 
 
 ## Examples
 
-The following examples demonstrate using different kernels to run a simple "Hello World" command. Select the kernel, enter the example code in a cell, and select **Run cell**.
+The following examples demonstrate using different kernels to run a simple "Hello World" command. Select the kernel, enter the example code in a cell, and click **Run cell**.
 
 ### Pyspark kernel
 

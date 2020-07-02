@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "6/2/2020"
+ms.date: "7/2/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,16 @@ ms.author: alexiva
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for Oracle contains the following changes:
+
+* Support for subqueries in `INSERT ... VALUES` statement
+* Improved conversion of `COMMIT` statement
+* Fix bug in `CONNECT BY LEVEL` clause conversion
+* Updated parser error recovery logic to be less greedy
+* Use MSAL.NET library for interactive Azure Active Directory authentication
 
 ## SSMA v8.10
 

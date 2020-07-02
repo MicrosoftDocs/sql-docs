@@ -34,7 +34,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Starts a timer. When the time-out expires, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts a message of type `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` on the local queue for the conversation.  
   

@@ -11,7 +11,7 @@ ms.technology: linux
 
 # SQL Server on Linux Frequently Asked Questions (FAQ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 The following sections provide common questions and answers for SQL Server running on Linux.
 

@@ -1,5 +1,6 @@
 ---
 title: Data Tools Operations Window
+description: Learn how to use the Data Tools Operations window to view the progress of expanding a database, publishing results, and other operations.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

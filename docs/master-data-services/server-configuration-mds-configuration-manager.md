@@ -15,7 +15,7 @@ ms.author: lle
 ---
 # Server Configuration (MDS Configuration Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Server Configuration** page to view configuration information for the local server computer.  
   

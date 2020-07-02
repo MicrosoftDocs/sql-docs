@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcsource.errorhandling.f1"
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Source Editor (Error Output Page)
   Use the **Error Output** page of the **ODBC Source Editor** dialog box to select error handling options.  

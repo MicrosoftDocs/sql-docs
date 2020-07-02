@@ -20,7 +20,7 @@ ms.date: 03/01/2017
 # Banner Element (ssbdiagnose)
 
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Identifies which utility generated the **ssbdiagnose** output XML file.  
   

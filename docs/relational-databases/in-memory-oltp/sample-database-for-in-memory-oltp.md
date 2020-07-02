@@ -1,5 +1,6 @@
 ---
 title: "Sample Database for In-Memory OLTP | Microsoft Docs"
+description: Learn about the In-Memory OLTP feature and its performance benefits. This sample shows memory-optimized tables and natively compiled stored procedures.
 ms.custom: ""
 ms.date: 12/14/2019
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Database for In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
     
 ## Overview  
  This sample showcases the In-Memory OLTP feature. It shows  memory-optimized tables and natively compiled stored procedures, and can be used to demonstrate performance benefits of In-Memory OLTP.  

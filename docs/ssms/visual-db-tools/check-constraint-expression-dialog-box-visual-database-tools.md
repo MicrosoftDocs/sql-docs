@@ -15,7 +15,7 @@ ms.reviewer:
 
 ---
 # Check Constraint Expression Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 When you attach a check constraint to a table or column, you must include an SQL expression. Type the check constraint expression in the box provided.  
   
 ## UI element list  
@@ -44,9 +44,11 @@ NOT (payment_method = 'credit card') OR
 ## To define a constraint expression  
 In the Check Constraints tab of the property pages, type an expression in the Constraint expression box using the following syntax:  
   
-<pre>{constant | column_name | function | (subquery)}  
+```
+{constant | column_name | function | (subquery)}  
 [{operator | AND | OR | NOT}  
-{constant | column_name | function | (subquery)}...]</pre>  
+{constant | column_name | function | (subquery)}...]
+```
   
 The SQL syntax is made up of the following parameters:  
   

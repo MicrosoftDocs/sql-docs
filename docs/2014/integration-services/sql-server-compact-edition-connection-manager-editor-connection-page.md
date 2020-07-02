@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL Server Compact Connection Manager Editor"
 ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SQL Server Compact Edition Connection Manager Editor (Connection Page)
   Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database.  

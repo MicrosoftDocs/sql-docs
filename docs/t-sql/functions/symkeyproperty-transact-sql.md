@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SYMKEYPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the algorithm of a symmetric key created from an EKM module.  
   

@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select SMO Enumeration dialog box"
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Select SMO Enumeration Dialog Box
   Use the **Select SMO Enumeration** dialog box to specify the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) object on the specified instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enumerate, and to select the enumeration type.  

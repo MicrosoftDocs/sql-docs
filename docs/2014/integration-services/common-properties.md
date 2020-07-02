@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "input properties [Integration Services]"
   - "component properties [Integration Services]"
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Common Properties
   The data flow objects in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model have common properties and custom properties at the component, input and output, and input column and output column levels. Many properties have read-only values that are assigned at run time by the data flow engine.  

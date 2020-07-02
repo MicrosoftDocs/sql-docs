@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server Big Data Clusters on Kubernetes.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 A SQL Server big data cluster is deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 
@@ -57,12 +57,14 @@ This section explains platforms that are supported with BDC.
 
 If you already have a Kubernetes cluster that meets the above prerequisites, then you can skip directly to the [deployment step](#deploy). This section assumes a basic understanding of Kubernetes concepts.  For detailed information on Kubernetes, see the [Kubernetes documentation](https://kubernetes.io/docs/home).
 
-You can choose to deploy Kubernetes in any of three ways:
+You can choose to deploy Kubernetes the following ways:
 
 | Deploy Kubernetes on: | Description | Link |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
 | **Single or Multiple machines (`kubeadm`)** | A Kubernetes cluster deployed on physical or virtual machines using `kubeadm` | [Instructions](deploy-with-kubeadm.md) |
+|**Azure Red Hat OpenShift** | A managed offering of OpenShift running in Azure. | [Instructions](deploy-openshift.md)|
+|**Red Hat OpenShift**|A hybrid cloud, enterprise Kubernetes application platform.| [Instructions](deploy-openshift.md)|
 
 > [!TIP]
 > You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](notebooks-deploy.md).
@@ -115,23 +117,18 @@ Run this command to find what are the templates available:
 azdata bdc config list -o table 
 ```
 
-For example, for SQL Server 2019 RTM Servicing Update (GDR1) release, the above returns:
-
-```
-Result
-----------------
-aks-dev-test
-aks-dev-test-ha
-kubeadm-dev-test
-kubeadm-prod
-```
+The following templates are available as of SQL Server 2019 CU5: 
 
 | Deployment profile | Kubernetes environment |
 |---|---|
 | `aks-dev-test` | Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)|
 | `aks-dev-test-ha` | Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS). Mission critical services like SQL Server master and HDFS name node are configured for high availability.|
+| `aro-dev-test`|Deploy SQL Server big data cluster on Azure Red Hat OpenShift for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
+| `aro-dev-test-ha`|Deploy SQL Server big data cluster with high availability on a Red Hat OpenShift cluster for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
 | `kubeadm-dev-test` | Deploy SQL Server big data cluster on a Kubernetes cluster created with kubeadm using a single or multiple physical or virtual machines.|
 | `kubeadm-prod`| Deploy SQL Server big data cluster on a Kubernetes cluster created with kubeadm using a single or multiple physical or virtual machines. Use this template to enable big data cluster services to integrate with Active Directory. Mission critical services like SQL Server master instance and HDFS name node are deployed in a highly available configuration.  |
+| `openshift-dev-test`|Deploy SQL Server big data cluster on a Red Hat OpenShift cluster for development and testing. <br/><br/>Introduced in SQL Server 2019 CU 5.|
+| `openshift-prod`|Deploy SQL Server big data cluster with high availability on a Red Hat OpenShift cluster. <br/><br/>Introduced in SQL Server 2019 CU 5.|
 
 You can deploy a big data cluster by running `azdata bdc create`. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
@@ -192,8 +189,8 @@ The following environment variables are used for security settings that are not 
 
 | Environment variable | Requirement |Description |
 |---|---|---|
-| `AZDATA_USERNAME` | Required |The username for SQL Server big data cluster administrator. A sysadmin login with the same name is created in SQL Server master instance. As a security best practice, `sa` account is disabled. |
-| `AZDATA_PASSWORD` | Required |The password for the user accounts created above. Same password is used for the `root` user, used for securing Knox gateway and HDFS. |
+| `AZDATA_USERNAME` | Required |The username for SQL Server big data cluster administrator. A sysadmin login with the same name is created in SQL Server master instance. As a security best practice, `sa` account is disabled. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_PASSWORD` | Required |The password for the user accounts created above. On clusters deployed prior to SQL Server 2019 CU5, the same password is used for the `root` user, to secure Knox gateway and HDFS. |
 | `ACCEPT_EULA`| Required for first use of `azdata`| Set to "yes". When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula=yes` in the first use of `azdata` command.|
 | `DOCKER_USERNAME` | Optional | The username to access the container images in case they are stored in a private repository. See the [Offline deployments](deploy-offline.md) topic for more details on how to use a private Docker repository for big data cluster deployment.|
 | `DOCKER_PASSWORD` | Optional |The password to access the above private repository. |
@@ -214,9 +211,9 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> You must use `root` user for Knox gateway with the above password. `root` is the only user supported for in this basic authentication (username/password).
+> On clusters deployed prior to SQL Server 2019 CU 5, you must use `root` user for Knox gateway with the above password. `root` is the only user supported for in this basic authentication (username/password).
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 > To connect to SQL Server with basic authentication, use the same values as the AZDATA_USERNAME and AZDATA_PASSWORD [environment variables](#env). 
-
 
 After setting the environment variables, you must run `azdata bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
 

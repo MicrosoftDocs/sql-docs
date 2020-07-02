@@ -16,20 +16,20 @@ ms.author: chugu
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Create an environment variable in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
 ```sql  
-catalog.create_environment_variable [@folder_name =] folder_name  
-    , [@environment_name =] environment_name  
-    , [@variable_name =] variable_name  
-    , [@data_type =] data_type  
-    , [@sensitive =] sensitive  
-    , [@value =] value  
-    , [@description =] description  
+catalog.create_environment_variable [ @folder_name = ] folder_name  
+    , [ @environment_name = ] environment_name  
+    , [ @variable_name = ] variable_name  
+    , [ @data_type = ] data_type  
+    , [ @sensitive = ] sensitive  
+    , [ @value = ] value  
+    , [ @description = ] description  
 ```  
   
 ## Arguments  

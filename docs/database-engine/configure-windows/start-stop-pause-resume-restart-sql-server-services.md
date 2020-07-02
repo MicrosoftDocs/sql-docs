@@ -1,5 +1,6 @@
 ---
 title: Start, stop, pause, resume, restart SQL Server services
+description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 ms.custom: ""
 ms.date: "03/05/2020"
 ms.prod: sql
@@ -44,7 +45,7 @@ ms.reviewer: ""
 
 # Start, stop, pause, resume, restart SQL Server services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to start, stop, pause, resume, or restart the SQL Server Database Engine, the SQL Server Agent, or the SQL Server Browser service by using SQL Server Configuration Manager, SQL Server Management Studio (SSMS), net commands from a command prompt, Transact-SQL, or PowerShell.
 

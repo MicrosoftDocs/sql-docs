@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SSIS projects, adding"
   - "projects [Integration Services], adding"
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Add or Remove an Integration Services Project in a Solution
   The following procedures descibe how to add or remove an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in a solution.  

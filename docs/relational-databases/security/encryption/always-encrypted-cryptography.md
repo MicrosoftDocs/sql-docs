@@ -1,5 +1,6 @@
 ---
 title: "Always Encrypted cryptography | Microsoft Docs"
+description: Learn about encryption algorithms and mechanisms that derive cryptographic material in the Always Encrypted feature in SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: 10/30/2019
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted cryptography
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
   This document describes encryption algorithms and mechanisms to derive cryptographic material used in the [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   

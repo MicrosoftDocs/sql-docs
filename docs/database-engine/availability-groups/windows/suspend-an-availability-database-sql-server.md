@@ -1,6 +1,6 @@
 ---
 title: "Suspend an availability database"
-description: Learn about suspending the data movement for a database within an Always On availability group using SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) or PowerShell. 
+description: Learn about suspending the data movement for a database within an Always On availability group using SQL Server Management Studio, Transact-SQL or PowerShell.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -19,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Suspend an Availability Database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   You can suspend an availability database in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Note that a suspend command needs to be issued on the server instance that hosts the database to be suspended or resumed.  
   
  The effect of a suspend command depends on whether you suspend a secondary database or a primary database, as follows:  

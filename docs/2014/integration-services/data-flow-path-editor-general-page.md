@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Flow Path Editor dialog box"
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Flow Path Editor (General Page)
   Use the **Data Flow Path Editor** dialog box to set path properties, view column metadata, and manage the data viewers attached to the path.  

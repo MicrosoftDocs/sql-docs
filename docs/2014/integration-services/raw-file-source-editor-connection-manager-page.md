@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfilesourceconnectionmanager.f1"
 ms.assetid: ea79c73d-37fc-44fd-bc6e-bcefc23235c9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Raw File Source Editor (Connection Manager Page)
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing. For more information, see [Raw File Source](data-flow/raw-file-source.md).  

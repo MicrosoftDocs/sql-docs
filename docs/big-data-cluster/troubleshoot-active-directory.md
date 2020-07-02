@@ -5,7 +5,7 @@ description: Troubleshoot deployment of a SQL Server Big Data Cluster in an Acti
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Troubleshoot SQL Server Big Data Cluster Active Directory integration
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article explains how to troubleshoot deployment of a SQL Server Big Data Cluster in Active Directory mode.
 
@@ -118,9 +118,9 @@ To identify why deployment quit without creating compute, data, or storage pods,
 
 ## Cause
 
-In the example above, the deployment fails to create a login for the domain user because the domain group is scoped as domain local. Use domain global or domain universal scoped groups. [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md) explains AD group scope requirements.
+In the example above, the deployment fails to create a login for the domain user because the domain group is scoped as domain local. Use global or universal scoped groups. [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md) explains AD group scope requirements.
 
-## Resolution
+## Verify
 
 Check the scope of the domain group (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 

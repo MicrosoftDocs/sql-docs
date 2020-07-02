@@ -18,7 +18,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # System Statistical Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The following scalar functions return statistical information about the system:  
   

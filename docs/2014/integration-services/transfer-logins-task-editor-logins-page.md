@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Logins Task Editor"
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Logins Task Editor (Logins Page)
   Use the **Logins** page of the **Transfer Logins Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Logins Task](control-flow/transfer-logins-task.md).  

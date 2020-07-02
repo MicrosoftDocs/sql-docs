@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.destinationassistant.f1"
   - "SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1"
 ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Add New Destination Dialog Box
   The following table lists the options available on the Add New Destination Dialog Box.  

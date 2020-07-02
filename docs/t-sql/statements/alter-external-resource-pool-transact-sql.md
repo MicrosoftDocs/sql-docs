@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "08/07/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_EXTERNAL_RESOURCE_POOL_TSQL"
@@ -19,7 +19,7 @@ manager: cgronlund
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 

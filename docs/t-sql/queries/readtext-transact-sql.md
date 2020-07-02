@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # READTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Reads **text**, **ntext**, or **image** values from a **text**, **ntext**, or **image** column. Starts reading from a specified offset and reading the specified number of bytes.  
   

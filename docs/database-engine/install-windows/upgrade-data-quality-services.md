@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Upgrade Data Quality Services
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article provides information on how to upgrade your existing installation of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). As part of upgrading your [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, you must also upgrade the DQS databases schema.  
   

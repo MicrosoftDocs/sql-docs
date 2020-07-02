@@ -25,7 +25,7 @@ manager: erikre
 ---
 # Upgrade Analysis Services
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Analysis Services instances can be upgraded to a SQL Server version of the same server mode to take advantage of features introduced in the current release, as described in [What's new in Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services).  
   

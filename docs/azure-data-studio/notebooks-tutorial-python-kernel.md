@@ -33,6 +33,10 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Set Kernel":::
 
+You can save the notebook using the **Save** or **Save as...** command from the **File** menu. 
+
+To open a notebook, you can use the **Open file...** command in the **File** menu, select **Open file** on the **Welcome** page, or use the **File: Open** command from the command palette.
+
 ## Change the Python kernel
 
 The first time you connect to the Python kernel in a notebook, the **Configure Python for Notebooks** page is displayed. You can select either:
@@ -60,7 +64,7 @@ When Azure Data Studio starts and you connect to the Python kernel, the **Config
 
 ## Run a code cell
 
-You can create code cells that you can run in place. The results are shown in the notebook after the cell is finished running.
+You can create cells containing Python code that you can run in place. The results are shown in the notebook after the cell is finished running.
 
 For example:
 
@@ -88,5 +92,3 @@ Learn more about notebooks:
 - [How to use notebooks](notebooks-guidance.md)
 
 - [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md)
-
-- [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md)

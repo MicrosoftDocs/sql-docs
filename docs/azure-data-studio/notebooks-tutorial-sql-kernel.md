@@ -38,9 +38,25 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
    ![Set Kernel and Attach to](media/notebook-tutorial/set-kernel-and-attach-to.png)
 
+You can save the notebook using the **Save** or **Save as...** command from the **File** menu. 
+
+To open a notebook, you can use the **Open file...** command in the **File** menu, select **Open file** on the **Welcome** page, or use the **File: Open** command from the command palette.
+
+## Change the SQL connection
+
+To change the SQL connection for a notebook:
+
+1. Select the **Attach to** menu from the notebook toolbar and then select **Change Connection**.
+
+   ![Click the Attach to menu in the notebook toolbar](./media/notebooks-manage-sql-server/select-attach-to-1.png)
+
+2. Now you can either select a recent connection server or enter new connection details to connect.
+
+   ![Select a server from the Attach to menu](./media/notebooks-manage-sql-server/select-attach-to-2.png)
+
 ## Run a code cell
 
-You can run each notebook cell by pressing the **Run cell** button (the round black arrow) to the left of the cell. The results are shown in the notebook after the cell finishes running.
+You can run each notebook code cell by clicking the **Run cell** button (the round black arrow) to the left of the cell. The results are shown in the notebook after the cell finishes running.
 
 For example:
 
@@ -95,7 +111,5 @@ Learn more about notebooks:
 - [How to use notebooks](notebooks-guidance.md)
 
 - [Create and run a Python notebook](notebooks-tutorial-python-kernel.md)
-
-- [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md)
 
 - [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md)

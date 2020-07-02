@@ -106,8 +106,6 @@
       href: notebooks-tutorial-python-kernel.md
     - name: Kqlmagic extension
       href: notebooks-kqlmagic.md
-    - name: Manage a notebook
-      href: notebooks-manage-sql-server.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets

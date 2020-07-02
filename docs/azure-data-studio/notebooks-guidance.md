@@ -138,8 +138,8 @@ The following examples demonstrate using different kernels to run a simple "Hell
 ## Next steps
 
 - [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md).
-- [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md).
 - [Deploy SQL Server big data cluster with Azure Data Studio notebook](../big-data-cluster/notebooks-deploy.md).
 - [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](../big-data-cluster/notebooks-manage-bdc.md).
 - [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md).
+- [Create and run a Python notebook](notebooks-tutorial-python-kernel.md)
 - [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../machine-learning/install/sql-machine-learning-azure-data-studio.md).

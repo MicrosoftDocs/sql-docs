@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "6/2/2020"
+ms.date: "7/2/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,15 @@ ms.author: alexiva
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for DB2 contains the following changes:
+
+* Support for DB2 for i (v7.1 and above)
+* Translation of `SQLSTATE` and `SQLCODE`
+* Conversion error message for side-effecting operators within a function
+* Use MSAL.NET library for interactive Azure Active Directory authentication
 
 ## SSMA v8.10
 

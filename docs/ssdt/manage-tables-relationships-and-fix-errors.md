@@ -1,5 +1,6 @@
 ---
 title: Manage Tables, Relationships, and Fix Errors
+description: View available resources on how to use the Table Designer to design tables and manage table relationships, and how to fix common syntax or semantic errors.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

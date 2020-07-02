@@ -43,12 +43,12 @@ Microsoft's R packages are available in multiple products and services. On a loc
 
 2. In the installation wizard, accept or change default installation path, accept or change the components list, and accept the Microsoft R Client license terms.
 
-  When installation is finished, a welcome screen introduces you to the product and documentation.
+   When installation is finished, a welcome screen introduces you to the product and documentation.
 
 3. Create an MKL_CBWR system environment variable to ensure consistent output on Intel Math Kernel Library (MKL) calculations.
 
-  + In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
-  + Create a new System variable named **MKL_CBWR**, with a value set to **AUTO**.
+   + In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+   + Create a new System variable named **MKL_CBWR**, with a value set to **AUTO**.
 
 ## 2 - Locate executables
 
@@ -69,7 +69,7 @@ When you install R with SQL Server, you get the same R tools that are standard t
 
 1. Open C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 and double-click **RGui** to start an R session with an R command prompt.
 
-  When you start an R session from a Microsoft program folder, several packages, including RevoScaleR, load automatically. 
+   When you start an R session from a Microsoft program folder, several packages, including RevoScaleR, load automatically. 
 
 2. Enter `print(Revo.version)` at the command prompt to return RevoScaleR package version information. You should have version 9.2.1 or 9.3.0 for RevoScaleR.
 
@@ -98,7 +98,7 @@ If your code requires packages that are not installed by default with SQL Server
 
 ## 5 - Test connections
 
- As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server. SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server) and you must have permissions, including a user login and a database to connect to. 
+As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server. SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server) and you must have permissions, including a user login and a database to connect to. 
 
 The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md), and Windows authentication.
 
@@ -108,36 +108,36 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
 3. Enter demo script that executes on the remote server. You must modify the following sample script to include a valid name for a remote SQL Server instance. This session begins as a local session, but the **rxSummary** function executes on the remote SQL Server instance.
 
-  ```R
-  # Define a connection. Replace server with a valid server name.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Define a connection. Replace server with a valid server name.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
-  # Specify the input data in a SQL query.
-  sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+   # Specify the input data in a SQL query.
+   sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
   
-  # Define a remote compute context based on the remote server.
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Define a remote compute context based on the remote server.
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Execute the function using the remote compute context.
-  rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
-  ```
+   # Execute the function using the remote compute context.
+   rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
+   ```
 
-  **Results:**
+   **Results:**
 
-  This script connects to a database on the remote server, provides a query, creates a compute context `cc` instruction for remote code execution, then provides the RevoScaleR function **rxSummary** to return a statistical summary of the query results.
+   This script connects to a database on the remote server, provides a query, creates a compute context `cc` instruction for remote code execution, then provides the RevoScaleR function **rxSummary** to return a statistical summary of the query results.
 
-  ```R
-    Call:
-  rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
-      connectionString = connStr), computeContext = cc)
+   ```R
+     Call:
+   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
+       connectionString = connStr), computeContext = cc)
 
-  Summary Statistics Results for: ~.
-  Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
-  Number of valid observations: 100 
+   Summary Statistics Results for: ~.
+   Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
+   Number of valid observations: 100 
   
-  Name       Mean   StdDev   Min Max ValidObs MissingObs
-  tip_amount 63.245 31.61087 36  180 100      0     
-  ```
+   Name       Mean   StdDev   Min Max ValidObs MissingObs
+   tip_amount 63.245 31.61087 36  180 100      0     
+   ```
 
 4. Get and set the compute context. Once you set a compute context, it remains in effect for the duration of the session. If you aren't sure whether computation is local or remote, run the following command to find out. Results that specify a connection string indicate a remote compute context.
 

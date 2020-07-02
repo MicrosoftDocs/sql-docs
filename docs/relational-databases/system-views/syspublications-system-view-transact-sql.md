@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # syspublications (System View) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **syspublications** view exposes publication information. This view is stored in the distribution database.  
   

@@ -1,5 +1,6 @@
 ---
 title: Extend Database Project Build to Generate Model Stats
+description: Find out how to create, install, and test a build contributor that outputs statistics from the SQL database model when you build a database project.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

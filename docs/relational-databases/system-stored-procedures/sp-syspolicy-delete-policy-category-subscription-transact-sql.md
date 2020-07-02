@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes a policy category subscription for a specific database.  
   

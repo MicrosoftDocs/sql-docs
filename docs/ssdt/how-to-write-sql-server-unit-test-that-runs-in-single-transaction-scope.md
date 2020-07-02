@@ -1,5 +1,6 @@
 ---
 title: Write a SQL Server Unit Test that Runs a Scope of a Single Transaction
+description: Learn how to start the Distributed Transaction Coordinator service, write a single-transaction SQL Server unit test, and roll back the test changes.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

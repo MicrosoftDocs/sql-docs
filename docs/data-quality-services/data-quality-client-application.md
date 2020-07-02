@@ -12,7 +12,7 @@ ms.author: sawinark
 ---
 # Data Quality Client Application
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   The [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application enables you to perform data quality operations using a standalone tool. This application enables you to create knowledge bases, create and run data quality projects, and perform administrative tasks.  
   

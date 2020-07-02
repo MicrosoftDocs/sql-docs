@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Extended Events Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views for SQL Server Extended Events.  
   

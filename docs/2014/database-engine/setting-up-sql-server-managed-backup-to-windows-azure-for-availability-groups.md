@@ -74,7 +74,7 @@ ms.author: mathoma
   
 6.  **Enable and configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for AGTestDB on Node1:** Start SQL Server Management Studio  and connect to the instance on Node1 where the availability database  is installed. From the query window run the following statement after you modify the values for the database name, storage URL, SQL Credential and retention period per your requirements:  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -86,14 +86,13 @@ ms.author: mathoma
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      For more information on creating a certificate for encryption, see the **Create a Backup Certificate** step in [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
 7.  **Enable and configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for AGTestDB on Node2:** Start SQL Server Management Studio and connect to the instance on Node2 where the availability database  is installed. From the query window run the following statement after you modify the values for the database name, storage URL, SQL Credential and retention period per your requirements:  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -105,15 +104,14 @@ ms.author: mathoma
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is now enabled on the database you specified. It may take up to 15 minutes for the backup operations on the database to start to run. The backup will occur on the preferred backup replica.  
   
 8.  **Review Extended Event Default Configuration:**  Review the Extended Event configuration by running the following transact-SQL statement on the replica that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is using to schedule the backups from. This is usually the preferred backup replica setting for the Availability Group that the database belongs to.  
   
-    ```  
-    SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
+    ```sql  
+    SELECT * FROM smart_admin.fn_get_current_xevent_settings(); 
     ```  
   
      You should see that Admin, Operational  and Analytical channel events are enabled by default and cannot be disabled. This should be sufficient to monitor the events that require manual intervention.  You can enable the debug events, but these channels include informational and debug events that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses to detect issues and solve them. For more information, see [Monitor SQL Server Managed Backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
@@ -126,11 +124,10 @@ ms.author: mathoma
   
     3.  **Enable e-mail notifications to receive backup errors and warnings:** From the query window, run the following Transact-SQL statements:  
   
-        ```  
+        ```sql  
         EXEC msdb.smart_admin.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email>'  
-  
         ```  
   
          For more information and a full sample script see [Monitor SQL Server Managed Backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
@@ -139,7 +136,7 @@ ms.author: mathoma
   
 11. **Monitor the Health Status:**  You can monitor through e-mail notifications you configured previously, or actively monitor the events logged. The following are some example Transact-SQL Statements used to view the events:  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -160,18 +157,16 @@ ms.author: mathoma
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
-             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -181,7 +176,6 @@ ms.author: mathoma
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
     ```  
   
  The steps described in this section are specifically for configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedure **smart_admin.sp_set_db_backup** and provide the new values. For more information, see [SQL Server Managed Backup to Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  

@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # GRANT Service Broker Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on a Service Broker contract, message type, remote binding, route, or service.  
   

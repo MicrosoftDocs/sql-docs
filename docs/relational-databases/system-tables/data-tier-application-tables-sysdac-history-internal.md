@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Data-tier Application Tables - sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about the actions taken to manage data-tier applications (DAC). This table is stored in the **dbo** schema of the **msdb** database.  
   

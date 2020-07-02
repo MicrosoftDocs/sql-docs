@@ -699,11 +699,7 @@ Specifies the type of the external data source being configured. This parameter 
 
 - Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen 2.
 
-> [!IMPORTANT]
-> Do not set `TYPE` if using any other external data source.
-
-For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#b-create-external-data-source-to-reference-hadoop)
-<!--[Create external data source to reference Azure Storage](#a-create-external-data-source-to-reference-azure-storage).-->
+For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal).
 
 ## Permissions
 
@@ -751,7 +747,7 @@ WITH
 
 ### B. Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal
 
-Azure Data lake Store connectivity can be based on your ADLS URI and your Azure Active directory Application's service principal. Documentation for creating this application can be found at [Data lake store authentication using Active Directory][azure_ad[].
+Azure Data Lake Store connectivity can be based on your ADLS URI and your Azure Active directory Application's service principal. Documentation for creating this application can be found at [Data lake store authentication using Active Directory][azure_ad].
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -950,10 +946,7 @@ Specifies the type of the external data source being configured. This parameter 
 
 - Use HADOOP when the external data source is Cloudera, Hortonworks, or Azure Storage.
 
-> [!IMPORTANT]
-> Do not set `TYPE` if using any other external data source.
-
-For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#a-create-external-data-source-to-reference-hadoop)<!--[Create external data source to reference Azure Storage](#d-create-external-data-source-to-reference-azure-storage).-->
+For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#a-create-external-data-source-to-reference-hadoop).
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -1053,6 +1046,7 @@ WITH
 ```
 
 ### D. Create external data source to access data in Azure Storage using the wasb:// interface
+
 In this example, the external data source is an Azure V2 Storage account named `logs`. The container is called `daily`. The Azure Storage external data source is for data transfer only. It doesn't support predicate push-down. Hierarchical namespaces are not supported when accessing data via the the `wasb://` interface.
 
 This example shows how to create the database scoped credential for authentication to Azure storage. Specify the Azure storage account key in the database credential secret. You can specify any string in database scoped credential identity as it isn't used during authentication to Azure storage.

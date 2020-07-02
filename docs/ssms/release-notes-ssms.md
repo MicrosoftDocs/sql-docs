@@ -15,7 +15,7 @@ ms.date: 06/09/2020
 
 # Release notes for SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 

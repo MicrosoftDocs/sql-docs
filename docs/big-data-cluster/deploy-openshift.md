@@ -182,9 +182,9 @@ requiredDropCapabilities:
 runAsUser:
   type: MustRunAsNonRoot
 seLinuxContext:
-  type:MustRunAs
+  type: MustRunAs
 supplementalGroups:
-  type:RunAsAny
+  type: RunAsAny
 volumes:
 - configMap
 - downwardAPI

@@ -1,5 +1,6 @@
 ---
 title: Required Permissions
+description: Learn about the permissions that you need for various tasks in SQL Server Data Tools, such as creating a database, running unit tests, and comparing schemas.
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql

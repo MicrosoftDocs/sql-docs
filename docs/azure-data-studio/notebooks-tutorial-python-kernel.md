@@ -64,7 +64,7 @@ When Azure Data Studio starts and you connect to the Python kernel, the **Config
 
 ## Run a code cell
 
-You can create cells containing Python code that you can run in place. The results are shown in the notebook after the cell is finished running.
+You can create cells containing SQL code that you can run in place by clicking the **Run cell** button (the round black arrow) to the left of the cell. The results are shown in the notebook after the cell finishes running.
 
 For example:
 
@@ -88,7 +88,5 @@ For example:
 Learn more about notebooks:
 
 - [Extend Python with Kqlmagic](notebooks-kqlmagic.md)
-
 - [How to use notebooks](notebooks-guidance.md)
-
 - [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md)

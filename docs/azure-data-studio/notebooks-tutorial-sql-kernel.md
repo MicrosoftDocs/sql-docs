@@ -56,7 +56,7 @@ To change the SQL connection for a notebook:
 
 ## Run a code cell
 
-You can run each notebook code cell by clicking the **Run cell** button (the round black arrow) to the left of the cell. The results are shown in the notebook after the cell finishes running.
+You can create cells containing SQL code that you can run in place by clicking the **Run cell** button (the round black arrow) to the left of the cell. The results are shown in the notebook after the cell finishes running.
 
 For example:
 
@@ -109,7 +109,5 @@ GO
 Learn more about notebooks:
 
 - [How to use notebooks](notebooks-guidance.md)
-
 - [Create and run a Python notebook](notebooks-tutorial-python-kernel.md)
-
 - [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md)

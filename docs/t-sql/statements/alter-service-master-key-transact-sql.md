@@ -26,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the service master key of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

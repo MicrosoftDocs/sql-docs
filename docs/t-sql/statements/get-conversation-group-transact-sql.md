@@ -26,7 +26,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the conversation group identifier for the next message to be received, and locks the conversation group for the conversation that contains the message. The conversation group identifier can be used to retrieve conversation state information before retrieving the message itself.  
   

@@ -13,7 +13,7 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Installation guidance for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server 2019 on Linux.
 

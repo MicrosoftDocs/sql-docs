@@ -25,7 +25,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC INDEXDEFRAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Defragments indexes of the specified table or view.
   

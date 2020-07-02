@@ -49,7 +49,7 @@ A fast volatile cache that fronts a considerably slower but durable media has be
 
 ## Configuring persistent memory support for Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] describes how to configure persistent memory (PMEM) using the `ndctl` utility [persistent memory](../linux/sql-server-linux-configure-pmem.md).
 

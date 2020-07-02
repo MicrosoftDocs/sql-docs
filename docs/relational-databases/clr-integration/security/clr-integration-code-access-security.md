@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration Code Access Security
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The common language runtime (CLR) supports a security model called code access security for managed code. In this model, permissions are granted to assemblies based on the identity of the code. For more information, see the "Code Access Security" section in the .NET Framework software development kit.  
   
  The security policy that determines the permissions granted to assemblies is defined in three different places:  

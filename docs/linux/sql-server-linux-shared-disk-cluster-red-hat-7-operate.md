@@ -13,7 +13,7 @@ ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ---
 # Operate RHEL failover cluster instance (FCI) for SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux.
 

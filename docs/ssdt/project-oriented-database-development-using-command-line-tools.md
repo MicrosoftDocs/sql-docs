@@ -1,5 +1,6 @@
 ---
 title: Project-Oriented Database Development using Command-Line Tools
+description: View available resources on command-line tools that SQL Server Data Tools provides for working with .dacpac files, such as SQLPackage.exe and dbSqlPackage.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

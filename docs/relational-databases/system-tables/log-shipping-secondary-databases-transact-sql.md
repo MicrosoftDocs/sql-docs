@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # log_shipping_secondary_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stores one record per secondary database in a log shipping configuration. This table is stored in the **msdb** database.  
   

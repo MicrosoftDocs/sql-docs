@@ -1,5 +1,6 @@
 ---
 title: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release
+description: Find out how to upgrade a Visual Studio 2010 custom test condition for use in SQL Server Data Tools. See which changes to make and how to install the condition.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

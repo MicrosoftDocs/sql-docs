@@ -34,7 +34,7 @@ ms.author: owend
   
 2.  Type the following query and press F5 to execute:  
   
-    ```  
+    ```sql  
     Select * from $SYSTEM.DBSCHEMA_CATALOGS  
     ```  
   

@@ -19,7 +19,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SetFlag Method (ServerNetworkProtocolProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets the flag of the referenced property.  
   
 ## Syntax  

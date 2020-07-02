@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.destination_data_spaces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each data space destination of a partition scheme.  
   

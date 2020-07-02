@@ -11,7 +11,7 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ---
 # Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

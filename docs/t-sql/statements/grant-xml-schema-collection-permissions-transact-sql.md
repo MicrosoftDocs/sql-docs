@@ -21,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # GRANT XML Schema Collection Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on an XML schema collection.   
   

@@ -19,7 +19,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # InstanceName Property (ServerNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is referenced by the server network protocol.  
   
 ## Syntax  

@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_dbmmonitorchangemonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the value of a database mirroring monitoring parameter.  
   

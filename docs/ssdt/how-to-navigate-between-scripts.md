@@ -1,5 +1,6 @@
 ---
 title: Navigate Between Scripts
+description: Find out how to navigate between scripts in the Transact-SQL Editor. View examples that show how to use tools such as Go To Definition and Find All References.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

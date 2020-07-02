@@ -19,7 +19,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the Boolean property that specifies whether multiple IP addresses are supported by a server network protocol.  
   
 ## Syntax  

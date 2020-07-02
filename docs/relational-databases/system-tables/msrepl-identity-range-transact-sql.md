@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSrepl_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSrepl_identity_range** table provides identity range management support. This table is stored in the publication, distribution and subscription databases  
   

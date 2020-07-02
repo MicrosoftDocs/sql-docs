@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Database Mail Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to perform e-mail operations from within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

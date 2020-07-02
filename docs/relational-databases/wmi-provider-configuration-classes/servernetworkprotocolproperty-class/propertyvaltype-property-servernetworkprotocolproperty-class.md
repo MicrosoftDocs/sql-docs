@@ -19,7 +19,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # PropertyValType Property (ServerNetworkProtocolProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the data type of the value stored in the referenced property.  
   
 ## Syntax  

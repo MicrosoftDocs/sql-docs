@@ -82,8 +82,8 @@ GO
 
  The following example shows the results of loading 1,048,577 rows into a partition. The results show that one COMPRESSED rowgroup in the columnstore (as compressed column segments), and 1 row in the deltastore.
 
-```
-SELECT * FROM sys.column_store_row_groups
+```sql
+SELECT * FROM sys.column_store_row_groups;
 ```
 
  ![Rowgroup and deltastore for a batch load](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup and deltastore for a batch load")

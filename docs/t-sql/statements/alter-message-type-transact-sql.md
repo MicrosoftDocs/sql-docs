@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a message type.  
   

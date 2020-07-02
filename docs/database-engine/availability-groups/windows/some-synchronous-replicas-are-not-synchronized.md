@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Some synchronous replicas are not synchronized
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

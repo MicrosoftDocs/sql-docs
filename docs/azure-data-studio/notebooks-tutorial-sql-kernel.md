@@ -24,7 +24,7 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
   - [Windows](../database-engine/install-windows/install-sql-server.md)
   - [Linux](../linux/sql-server-linux-setup.md)
 
-## New notebook
+## Create a  notebook
 
 The following steps show how to create a notebook file in Azure Data Studio:
 
@@ -34,50 +34,52 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
    ![Open notebook](media/notebook-tutorial/azure-data-studio-open-notebook.png)
 
-3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to **SQL**, and set **Attach to** for your SQL Server (in this case its *localhost*).
+3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to **SQL**, and set **Attach to** for your SQL Server (in this example it's *localhost*).
 
    ![Set Kernel and Attach to](media/notebook-tutorial/set-kernel-and-attach-to.png)
 
-## Run a notebook cell
+## Run a code cell
 
-You can run each notebook cell by pressing the play button to the left of the cell. The results are shown in the notebook after the cell finishes running.
+You can run each notebook cell by pressing the **Run cell** button (the round black arrow) to the left of the cell. The results are shown in the notebook after the cell finishes running.
 
-### Code
+For example:
 
-Add a new code cell by selecting the **+Code** command in the toolbar.
+1. Add a new code cell by selecting the **+Code** command in the toolbar.
 
-![Notebook toolbar](media/notebooks-guidance/notebook-toolbar.png)
+   ![Notebook toolbar](media/notebooks-guidance/notebook-toolbar.png)
 
-This example creates a new database.
+1. Copy and paste the following example into the cell and click **Run cell**. This example creates a new database.
 
-```sql
-USE master
-GO
-
+   ```sql
+   USE master
+   GO
+   
    -- Drop the database if it already exists
-IF  EXISTS (
-        SELECT name
-        FROM sys.databases
-        WHERE name = N'TestNotebookDB'
-   )
-DROP DATABASE TestNotebookDB
-GO
-
--- Create the database
-CREATE DATABASE TestNotebookDB
-GO
-```
+   IF  EXISTS (
+           SELECT name
+           FROM sys.databases
+           WHERE name = N'TestNotebookDB'
+      )
+   DROP DATABASE TestNotebookDB
+   GO
+   
+   -- Create the database
+   CREATE DATABASE TestNotebookDB
+   GO
+   ```
 
    ![Run notebook cell](media/notebook-tutorial/run-notebook-cell.png)
 
-If you run a script that returns a result, you can save that result in different formats.
+## Save the result
+
+If you run a script that returns a result, you can save that result in different formats using the toolbar displayed above the result.
 
 - Save As CSV
 - Save As Excel
 - Save As JSON
 - Save As XML
 
-In this case, we return the result of [PI](../t-sql/functions/pi-transact-sql.md).
+For example, the following code returns the result of [PI](../t-sql/functions/pi-transact-sql.md).
 
 ```sql
 SELECT PI() AS PI;
@@ -85,20 +87,6 @@ GO
 ```
 
 ![Run notebook cell](media/notebook-tutorial/run-notebook-cell-2.png)
-
-### Text
-
-Add a new text cell by selecting the **+Text** command in the toolbar.
-
-![Notebook toolbar](media/notebooks-guidance/notebook-toolbar.png)
-
-The cell changes to edit mode and now type markdown and you can see the preview at the same time
-
-![Markdown cell](media/notebooks-guidance/notebook-markdown-cell.png)
-
-Selecting outside the text cell shows the markdown text.
-
-![Markdown text](media/notebooks-guidance/notebook-markdown-preview.png)
 
 ## Next steps
 

@@ -119,7 +119,7 @@ If you open a notebook from some other source, it opens in **Non-Trusted** mode 
 
 The following examples demonstrate using different kernels to run a simple "Hello World" command. Select the kernel, enter the example code in a cell, and click **Run cell**.
 
-### Pyspark kernel
+### Pyspark
 
 ![Spark application](media/notebooks-guidance/pyspark.png)
 

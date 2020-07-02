@@ -699,7 +699,7 @@ Specifies the type of the external data source being configured. This parameter 
 
 - Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen 2.
 
-For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal)
+For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal).
 
 ## Permissions
 
@@ -747,7 +747,7 @@ WITH
 
 ### B. Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal
 
-Azure Data lake Store connectivity can be based on your ADLS URI and your Azure Active directory Application's service principal. Documentation for creating this application can be found at [Data lake store authentication using Active Directory][azure_ad[].
+Azure Data Lake Store connectivity can be based on your ADLS URI and your Azure Active directory Application's service principal. Documentation for creating this application can be found at [Data lake store authentication using Active Directory][azure_ad].
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -946,7 +946,7 @@ Specifies the type of the external data source being configured. This parameter 
 
 - Use HADOOP when the external data source is Cloudera, Hortonworks, or Azure Storage.
 
-For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#a-create-external-data-source-to-reference-hadoop)
+For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Hadoop](#a-create-external-data-source-to-reference-hadoop).
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 

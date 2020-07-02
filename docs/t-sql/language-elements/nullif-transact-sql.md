@@ -57,9 +57,9 @@ NULLIF ( expression , expression )
 ```sql  
 CREATE TABLE dbo.budgets  
 (  
-   dept            tinyint   IDENTITY,  
-   current_year      decimal   NULL,  
-   previous_year   decimal   NULL  
+   dept            TINYINT   IDENTITY,  
+   current_year    DECIMAL   NULL,  
+   previous_year   DECIMAL   NULL  
 );  
 INSERT budgets VALUES(100000, 150000);  
 INSERT budgets VALUES(NULL, 300000);  
@@ -90,7 +90,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, MakeFlag, FinishedGoodsFlag,   
-   NULLIF(MakeFlag,FinishedGoodsFlag)AS 'Null if Equal'  
+   NULLIF(MakeFlag,FinishedGoodsFlag) AS 'Null if Equal'  
 FROM Production.Product  
 WHERE ProductID < 10;  
 GO  
@@ -110,9 +110,9 @@ GO
   
 ```sql  
 CREATE TABLE budgets (  
-   dept           tinyint,  
-   current_year   decimal(10,2),  
-   previous_year  decimal(10,2)  
+   dept           TINYINT,  
+   current_year   DECIMAL(10,2),  
+   previous_year  DECIMAL(10,2)  
 );  
   
 INSERT INTO budgets VALUES(1, 100000, 150000);  

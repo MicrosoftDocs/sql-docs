@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: 
 ms.custom: ""
-ms.date: 04/27/2020
+ms.date: 07/01/2020
 ---
 
 # Create and run a Python notebook
@@ -88,5 +88,5 @@ For example:
 Learn more about notebooks:
 
 - [Extend Python with Kqlmagic](notebooks-kqlmagic.md)
-- [How to use notebooks](notebooks-guidance.md)
+- [How to use notebooks in Azure Data Studio](notebooks-guidance.md)
 - [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md)

@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: 
 ms.custom: ""
-ms.date: 03/30/2020
+ms.date: 07/01/2020
 ---
 
 # Create and run a SQL Server notebook
@@ -108,6 +108,6 @@ GO
 
 Learn more about notebooks:
 
-- [How to use notebooks](notebooks-guidance.md)
+- [How to use notebooks in Azure Data Studio](notebooks-guidance.md)
 - [Create and run a Python notebook](notebooks-tutorial-python-kernel.md)
 - [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md)

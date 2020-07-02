@@ -46,9 +46,9 @@ An installation script adds three Microsoft-specific libraries to the Python cli
 
 1. Download an installation script.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server instance. 
+   + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server instance. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server instance is [bound to Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
+   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server instance is [bound to Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
 
 2. Open a PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
 

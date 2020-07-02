@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Multi-Lingual and Global Deployments (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] supports deployment of components and tools in all languages supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md).  
   

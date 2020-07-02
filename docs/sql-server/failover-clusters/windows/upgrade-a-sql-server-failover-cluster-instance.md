@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Upgrade a SQL Server Failover Cluster Instance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a new version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update  separately on all failover cluster nodes, with downtime limited to a single manual failover (or two manual failovers if failing back to the original primary).  
   
  Upgrading the Windows operating system of a failover cluster is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] or above, see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  

@@ -22,7 +22,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Declares one or more XML namespaces.  
   

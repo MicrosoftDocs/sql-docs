@@ -10,7 +10,7 @@ ms.author: chadam
 monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Upgrade machine learning (Python and R) components in SQL Server instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Python and R integration in SQL Server includes open-source and Microsoft-proprietary packages.
                                                                                

@@ -2,7 +2,7 @@
 title: "Use a Format File to Skip a Table Column (SQL Server) | Microsoft Docs"
 description: This article describes how to use a format file to skip importing a table column when the data for the skipped column does not exist in the source data file.
 ms.custom: ""
-ms.date: "02/15/2018"
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -40,7 +40,7 @@ GO
   
 The examples in this article also use a sample data file, `myTestSkipCol2.dat`. This data file contains only two fields, although the destination table contains three columns.
 
-```  
+```
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
@@ -215,9 +215,9 @@ GO
 
 To use an XML format file to skip a table column by using `OPENROWSET(BULK...)`, you have to provide an explicit list of columns in the select list and also in the target table, as follows:  
   
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
+```sql
+INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+```
 
 The following example uses the `OPENROWSET` bulk rowset provider and the `myTestSkipCol2.xml` format file. The example bulk imports the `myTestSkipCol2.dat` data file into the `myTestSkipCol` table. The statement contains an explicit list of columns in the select list and also in the target table, as required.  
   

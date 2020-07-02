@@ -31,7 +31,11 @@ EXECUTE [Application].[Configuration_ApplyPolyBase]
 This will create an external table `dbo.CityPopulationStatistics` that references a public data set that contains population data for cities in the United States, hosted in Azure blob storage. You are encouraged to review the code in the stored procedure to understand the configuration process. If you want to host your own data in Azure blob storage and keep it secure from general public access, you will need to undertake additional configuration steps. The following query returns the data from that external data set:
 
 ```sql
-SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
+SELECT
+        CityID, StateProvinceCode, CityName,
+        YearNumber, LatestRecordedPopulation
+    FROM
+        dbo.CityPopulationStatistics;
 ```
 
 To understand which cities might be of interest for further expansion, the following query looks at the growth rate of cities, and returns the top 100 largest cities with significant growth, and where Wide World Importers does not have a sales presence. The query involves a join between the remote table `dbo.CityPopulationStatistics` and the local table `Dimension.City`, and a filter involving the local table `Fact.Sales`.

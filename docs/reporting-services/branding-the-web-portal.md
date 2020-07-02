@@ -33,8 +33,10 @@ The files must have the names listed above. The zip file can be named however yo
 The metadata.xml file allows you to set the name of the brand package, and has a reference entry for both your colors.json and logo.png files.  
   
 To change the name of your brand package, change the **name** attribute of the **SystemResourcePackage** element.  
-  
+
+```xml
     name="Multicolored example brand"  
+```
   
 You can optionally include a logo picture in your brand package. This item would be listed within the Contents element.  
   

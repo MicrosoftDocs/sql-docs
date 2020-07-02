@@ -12,7 +12,7 @@ ms.author: sawinark
 ---
 # Install Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contains the following two components: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** and **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   

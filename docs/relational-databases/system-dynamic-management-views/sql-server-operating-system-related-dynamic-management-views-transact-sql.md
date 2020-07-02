@@ -18,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SQL Server Operating System Related Dynamic Management Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This section documents dynamic management views (DMV) that are associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Operating System (SQLOS). SQLOS is responsible for managing operating system resources that are specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

@@ -12,7 +12,7 @@ ms.technology: linux
 
 # How to use distributed transactions with SQL Server on Docker
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article explains how to set up SQL Server Linux containers on Docker for distributed transactions.
 

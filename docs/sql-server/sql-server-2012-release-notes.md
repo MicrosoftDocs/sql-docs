@@ -56,13 +56,17 @@ Before installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider t
 ### 1.3 SQL Server Setup might fail while trying to start the SQL Server Browser service  
 **Issue:** SQL Server Setup might fail while trying to start the SQL Server Browser service, with errors similar to the following:  
   
-<pre>The following error has occurred:  
-Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
+```
+The following error has occurred:  
+Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
   
 or  
   
-<pre>The following error has occurred:  
-SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
+```
+The following error has occurred:  
+SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
+```
   
 **Workaround:** This can happen when SQL Server Engine or Analysis Services fails to install. To fix this issue, refer the SQL Server Setup logs, and troubleshoot the SQL Server Engine and Analysis Services failures. For more information, see View and Read SQL Server Setup Log Files. For more information, see [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
@@ -99,8 +103,10 @@ You can install SQL Server on Windows Server 2008 R2 Server Core SP1, with the f
   
 If these tasks are not completed, you will see the following error message when you try to create a semantic index.  
   
-<pre>Msg 41209, Level 16, State 3, Line 1  
-A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.</pre>  
+```
+Msg 41209, Level 16, State 3, Line 1  
+A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
+```
   
 ### 1.7 Installation Prerequisite Handling During SQL Server 2012 Setup  
 The following items describe the prerequisite installation behavior during SQL Server 2012 Setup:  
@@ -458,12 +464,12 @@ Let us illustrate this with an example. Consider a user, Domain\user1. The user 
 ### 5.4 An Error Might Occur When Navigating in the Generate Script Wizard  
 **Issue:** After generating a script in the Generate Script Wizard by clicking **Save or Publish Scripts**, then navigating by clicking **Choose Options** or **Set Scripting Options**, clicking **Save or Publish Scripts** again might result in the following error:  
   
-<pre>
+```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
 Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
-</pre>  
+```
   
 **Workaround:** Close and reopen the Generate Scripts Wizard.  
   

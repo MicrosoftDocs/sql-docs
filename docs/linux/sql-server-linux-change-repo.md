@@ -11,7 +11,7 @@ zone_pivot_groups: ld2-linux-distribution
 ---
 # Configure repositories for installing and upgrading SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 ::: zone pivot="ld2-rhel"
 This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux. At the top, your current selection is **Red Hat (RHEL)**.

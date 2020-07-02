@@ -39,7 +39,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a binding that defines the security credentials to use to initiate a conversation with a remote service.  
   

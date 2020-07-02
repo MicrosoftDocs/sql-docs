@@ -56,11 +56,9 @@ expression | expression
  The following example creates a table with **int** data types to show the original values and puts the table into one row.  
   
 ```sql  
-CREATE TABLE bitwise  
-(   
- a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (  
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);  
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

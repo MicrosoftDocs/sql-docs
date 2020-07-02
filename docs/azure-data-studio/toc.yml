@@ -104,7 +104,7 @@
       href: notebooks-tutorial-sql-kernel.md
     - name: Use Python Kernel
       href: notebooks-tutorial-python-kernel.md
-    - name: Kqlmagic
+    - name: Kqlmagic extension
       href: notebooks-kqlmagic.md
     - name: Manage a notebook
       href: notebooks-manage-sql-server.md

@@ -29,7 +29,7 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 1. Select **New Notebook** in the **File** menu.
 
-1. Select **Python 3** for the **Kernel**.
+1. Select **Python 3** for the **Kernel**. **Attach to** is set to "localhost".
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Set Kernel":::
 
@@ -38,47 +38,34 @@ The following steps show how to create a notebook file in Azure Data Studio:
    - **New Python installation** to install a new copy of Python for Azure Data Studio, or
    - **Use existing Python installation** to specify the path to an existing Python installation
 
-## Run a notebook cell
+## Run a code cell
 
-You can create cells containing code or text. You can run a code cell in place and the results are shown in the notebook after the cell is finished running. Text cells allow you to intersperse formatted documentation with your code.
+You can create code cells that you can run in place. The results are shown in the notebook after the cell is finished running.
 
-### Code
+For example:
 
-Add a new Python code cell by selecting the **+Code** command in the toolbar.
+1. Add a new Python code cell by selecting the **+Code** command in the toolbar.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Notebook toolbar":::
+   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Notebook toolbar":::
 
-This example does simple math.
+1. Copy and paste the following example into the cell and click **Run cell**. This example does simple math and the result appears below.
 
-```python
-a = 1
-b = 2
-c = a/b
-print(c)
-```
-Run the cell by clicking the play button to the left of the cell. The results appear below.
+   ```python
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   ```
 
-:::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Run notebook cell":::
-
-### Text
-
-Add a new text cell by selecting the **+Text** command in the toolbar.
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python-text.png" alt-text="Notebook toolbar":::
-
-The cell changes to edit mode and you can now type markdown and see the preview at the same time.
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-cell-python.png" alt-text="Markdown cell":::
-
-Selecting outside the text cell shows just the markdown text.
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-preview-python.png" alt-text="Markdown text":::
+   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Run notebook cell":::
 
 ## Next steps
 
 Learn more about notebooks:
 
-- [How to use notebooks with SQL Server](notebooks-guidance.md)
+- [Extend Python with Kqlmagic](notebooks-kqlmagic.md)
+
+- [How to use notebooks](notebooks-guidance.md)
 
 - [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md)
 

@@ -141,45 +141,45 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
 4. Get and set the compute context. Once you set a compute context, it remains in effect for the duration of the session. If you aren't sure whether computation is local or remote, run the following command to find out. Results that specify a connection string indicate a remote compute context.
 
-  ```R
-  # Return the current compute context.
-  rxGetComputeContext()
+   ```R
+   # Return the current compute context.
+   rxGetComputeContext()
 
-  # Revert to a local compute context.
-  rxSetComputeContext("local")
-  rxGetComputeContext()
+   # Revert to a local compute context.
+   rxSetComputeContext("local")
+   rxGetComputeContext()
 
-  # Switch back to remote.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
-  cc <-RxInSqlServer(connectionString=connStr)
-  rxSetComputeContext(cc)
-  rxGetComputeContext()
-  ```  
+   # Switch back to remote.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   cc <-RxInSqlServer(connectionString=connStr)
+   rxSetComputeContext(cc)
+   rxGetComputeContext()
+   ```  
 
 5. Return information about variables in the data source, including name and type.
 
-  ```R
-  rxGetVarInfo(data = inDataSource)
-  ```
-  Results include 23 variables.
+   ```R
+   rxGetVarInfo(data = inDataSource)
+   ```
+   Results include 23 variables.
 
 
 6. Generate a scatter plot to explore whether there are dependencies between two variables. 
 
-  ```R
-  # Set the connection string. Substitute a valid server name for the placeholder.
-  connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Set the connection string. Substitute a valid server name for the placeholder.
+   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
-  # Specify a query on the nyctaxi_sample table.
-  # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
-  sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Specify a query on the nyctaxi_sample table.
+   # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
+   sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Generate a scatter plot.
-  rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
-  ```
+   # Generate a scatter plot.
+   rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
+   ```
 
-  The following screenshot shows the input and scatter plot output.
+   The following screenshot shows the input and scatter plot output.
 
    ![Scatter plot in RGUI](media/rclient-setup-scatterplot.png "Scatter plot on NYC Taxi demo data")
 
@@ -201,10 +201,10 @@ When using [RStudio](https://www.rstudio.com/), you can configure the environmen
 
 1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. 
 
-  + For an R Client installation, look for C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
-  + For a standalone server, look for C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library or C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+   + For an R Client installation, look for C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+   + For a standalone server, look for C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library or C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
 
-2. Close and then open RStudio.
+1. Close and then open RStudio.
 
 When you reopen RStudio, the R executable from R Client (or standalone server) is the default R engine.
 
@@ -225,16 +225,16 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
 
 2. The left-hand pane contains a list of preinstalled templates. Click **R**, and select **R Project**. In the **Name** box, type `dbtest` and click **OK**. 
 
-  Visual Studio creates a new project folder and a default script file, `Script.R`. 
+   Visual Studio creates a new project folder and a default script file, `Script.R`. 
 
 3. Type `.libPaths()` on the first line of the script file, and then press CTRL + ENTER.
 
-  The current R library path should be displayed in the **R Interactive** window. 
+   The current R library path should be displayed in the **R Interactive** window. 
 
 4. Click the **R Tools** menu and select **Windows** to see a list of other R-specific windows that you can display in your workspace.
  
-  + View help on packages in the current library by pressing CTRL + 3.
-  + See R variables in the **Variable Explorer**, by pressing CTRL + 8.
+   + View help on packages in the current library by pressing CTRL + 3.
+   + See R variables in the **Variable Explorer**, by pressing CTRL + 8.
 
 ## Next steps
 

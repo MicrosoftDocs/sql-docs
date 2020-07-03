@@ -167,7 +167,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  `net start SQLBROWSER`  
   
 ### Create exceptions in Windows Firewall  
- To create exceptions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access in Windows Firewall, follow the steps specified in [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ To create exceptions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access in Windows Firewall, follow the steps specified in [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Alternatively use Windows Admin Center to configure Firewall Options without Powershell. Learn more about [Windows Admin Center](https://docs.microsoft.com/de-de/windows-server/manage/windows-admin-center/overview).  
   
 ### Enable TCP/IP on the Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The TCP/IP protocol can be enabled through Windows PowerShell for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Server Core. Follow these steps:  
@@ -190,7 +190,14 @@ $Tcp.IsEnabled = $true
 $Tcp.Alter()  
 $Tcp  
 ```  
-  
+## Limitations and Considerations
+Enabling TCP/IP may fail, on Server Core 2019 + SQL 2017 or newer, in case that SQL Management Objects and [SQLPS](https://docs.microsoft.com/en-us/sql/tools/sqlps-utility?view=sqlallproducts-allversions) are missing. 
+
+> [!NOTE] 
+> SQLPS is deprecated, yet some commands and environments still using it. There is no equivalent for the above command in the SQLSERVER Powershell Module.
+
+If you are affected by this, please consult the article [SQL Server PowerShell](https://docs.microsoft.com/en-us/sql/powershell/sql-server-powershell?view=sqlallproducts-allversions) how to obtain SQLPS for SQL Server on Server Core.
+
 ##  <a name="BKMK_Profiler"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler  
  On a remote machine, start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and select New Trace from the File menu, the application displays a Connect to Server dialog box where you can specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, residing on the Server Core machine, to which you want to connect. For more information, see [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md).  
   

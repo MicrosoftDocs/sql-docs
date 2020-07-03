@@ -24,7 +24,7 @@ ms.reviewer:
 
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The Query and View Designer can help you create and maintain the data retrieval and data manipulation portions of your application.  
   
 ## In This Section  

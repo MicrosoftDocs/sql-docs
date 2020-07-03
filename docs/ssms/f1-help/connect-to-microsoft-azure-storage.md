@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Connect to Microsoft Azure Storage
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the **Azure Storage Connection** dialog to specify a storage account and validate your connection to Azure.  
   
 ## Options  

@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # Collation and Unicode support
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Collations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types, such as **char** and **varchar**, dictate the code page and corresponding characters that can be represented for that data type. 
 
 Whether you're installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restoring a database backup, or connecting server to client databases, it's important to understand the locale requirements, sorting order, and case and accent sensitivity of the data that you're working with. To list the collations that are available on your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    

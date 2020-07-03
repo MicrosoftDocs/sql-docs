@@ -49,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # CREATE PROCEDURE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse and Parallel Data Warehouse. Stored procedures are similar to procedures in other programming languages in that they can:
 

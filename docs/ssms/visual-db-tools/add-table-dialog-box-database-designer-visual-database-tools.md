@@ -17,7 +17,7 @@ ms.date: 01/19/2017
 
 # Add Table Dialog Box (Database Designer) (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Lets you add tables in Database Designer.  
   
 > [!NOTE]  

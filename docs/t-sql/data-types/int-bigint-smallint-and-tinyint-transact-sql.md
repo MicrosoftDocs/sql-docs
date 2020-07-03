@@ -30,7 +30,7 @@ ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # int, bigint, smallint, and tinyint (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Exact-number data types that use integer data. To save space in the database, use the smallest data type that can reliably contain all possible values. For example, tinyint would be sufficient for a person's age because no one lives to be more than 255 years old. But tinyint would not be sufficient for a building's age because a building can be more than 255 years old.
   

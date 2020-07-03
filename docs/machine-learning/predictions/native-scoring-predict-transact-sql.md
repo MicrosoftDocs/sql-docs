@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||
 ---
 
 # Native scoring using the PREDICT T-SQL function with SQL machine learning
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdbmi-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdbmi-asa-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdbmi-asa-xxx-md.md)]
 
 Learn how to use native scoring with the [PREDICT T-SQL function](../../t-sql/queries/predict-transact-sql.md) to generate prediction values for new data inputs in near-real-time. Native scoring requires that you have an already-trained model.
 

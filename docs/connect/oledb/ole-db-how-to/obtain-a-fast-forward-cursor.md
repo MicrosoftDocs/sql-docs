@@ -14,7 +14,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Obtain a FAST_FORWARD Cursor
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

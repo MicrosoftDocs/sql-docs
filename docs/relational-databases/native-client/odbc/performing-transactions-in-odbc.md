@@ -18,7 +18,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Transactions in ODBC
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Transactions in ODBC are managed at the connection level. When an application completes a transaction, it commits or rolls back all work completed through all statement handles on that connection. To commit or roll back a transaction, applications should call [SQLEndTran](../../../relational-databases/native-client-odbc-api/sqlendtran.md) instead of submitting a COMMIT or ROLLBACK statement.  
   

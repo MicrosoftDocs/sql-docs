@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||
 ---
 # PREDICT (Transact-SQL)
 
-[!INCLUDE [sqlserver2017-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 

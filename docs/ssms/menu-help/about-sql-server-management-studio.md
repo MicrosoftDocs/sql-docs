@@ -16,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # About SQL Server Management Studio
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this dialog box to view or copy information about your installation of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Evaluation editions list the number of days remaining until the product expires.  
   
 ## Options  

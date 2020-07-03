@@ -29,6 +29,30 @@ To install the **SqlServer** module, see [Install SQL Server PowerShell](downloa
 
 To ship SQL PowerShell updates, we had to change the identity of the SQL PowerShell module, and the wrapper known as *SQLPS.exe*. Because of this change, there are now two SQL PowerShell modules, the **SqlServer** module, and the **SQLPS** module.  
 
+## Limitations and Considerations
+### Missing SQLPS 
+
+If you find that SQLPS cannot be imported on your Server, it might be no longer included. SQL Server 2017 or newer may be affected. If you still need the outdated SQLPS for your scripts, or [managing SQL Server protocols](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/enable-or-disable-a-server-network-protocol?view=sql-server-ver15) follow the instructions below how to install SQLPS manually.
+
+### Installing SQLPS manually
+
+> [!NOTE]
+> Don't mind that you need to install SQL Server 2012 components for this task. SQLPS is no longer updated and there are no updated components for SQL Server 2014 or newer.
+Please be advised that the order of the installation of the components is crucial. Otherwise the MSI packages will fail.
+1. [System CLR Types for Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=239644&clcid=0x409) 
+2. [SQL Server 2012 Shared Management Objects](http://go.microsoft.com/fwlink/?LinkID=239659&clcid=0x409)
+3. [PowerShell Extensions for Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=239656&clcid=0x409)
+4. Close all Powershell Windows or logoff before trying to import the module SQLPS.
+
+### Uninstalling SQLPS manually
+
+> [!NOTE]
+>Please be advised that the order of the uninstallation of the components is crucial. Otherwise the MSI packages will fail. If you uninstalled the packages in the wrong oder, reinstall them in the correct order again, eventually using a MSI repair installation.
+1. Close all Powershell Windows or logoff before trying to import the module SQLPS.
+2. PowerShell Extensions for Microsoft SQL Server 2012
+3. SQL Server 2012 Shared Management Objects
+4. System CLR Types for Microsoft SQL Server 2012 
+
 **Update your PowerShell scripts if you import the SQLPS module.**
 
 If you have any PowerShell scripts that run `Import-Module -Name SQLPS`, and you want to take advantage of the new provider functionality and new cmdlets, you must change them to `Import-Module -Name SqlServer`. The new module is installed to `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` folder. As such, you don't have to update the $env:PSModulePath variable. If you have scripts that use a third-party or community version of a module named **SqlServer**, use the Prefix parameter to avoid name collisions.

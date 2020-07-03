@@ -48,11 +48,11 @@ To change the SQL connection for a notebook:
 
 1. Select the **Attach to** menu from the notebook toolbar and then select **Change Connection**.
 
-   ![Click the Attach to menu in the notebook toolbar](./media/notebooks-manage-sql-server/select-attach-to-1.png)
+   ![Click the Attach to menu in the notebook toolbar](./media/notebook-tutorial/select-attach-to-1.png)
 
 2. Now you can either select a recent connection server or enter new connection details to connect.
 
-   ![Select a server from the Attach to menu](./media/notebooks-manage-sql-server/select-attach-to-2.png)
+   ![Select a server from the Attach to menu](./media/notebook-tutorial/select-attach-to-2.png)
 
 ## Run a code cell
 

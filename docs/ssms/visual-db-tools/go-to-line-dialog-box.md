@@ -13,6 +13,6 @@ ms.date: 01/19/2017
 
 # Go To Line Dialog Box
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 To move to a location in the code editor window, type a line number, and then click **OK**.

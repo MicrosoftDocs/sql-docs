@@ -108,7 +108,7 @@ COMMIT;
  The following example shows the effect of rolling back a transaction.  In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.  
   
 ```  
-CREATE TABLE ValueTable (id int);  
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -132,7 +132,7 @@ SET AUTOCOMMIT OFF;
   
 ```  
 SET AUTOCOMMIT OFF;  
-CREATE TABLE ValueTable (id int);  
+CREATE TABLE ValueTable (id INT);  
 INSERT INTO ValueTable VALUES(1);  
 INSERT INTO ValueTable VALUES(2);  
 COMMIT;  

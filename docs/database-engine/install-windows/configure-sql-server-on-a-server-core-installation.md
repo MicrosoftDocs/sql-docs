@@ -191,7 +191,7 @@ $Tcp.Alter()
 $Tcp  
 ```  
 ## Limitations and Considerations
-Enabling TCP/IP may fail, on Server Core 2019 + SQL 2017 or newer, in case that SQL Management Objects and [SQLPS](https://docs.microsoft.com/en-us/sql/tools/sqlps-utility?view=sqlallproducts-allversions) are missing. 
+Enabling TCP/IP may fail, on Windows Server 2019 Core Installations + SQL Server 2017 or later, in case that SQL Management Objects and [SQLPS](https://docs.microsoft.com/en-us/sql/tools/sqlps-utility?view=sqlallproducts-allversions) are missing. 
 
 > [!NOTE] 
 > SQLPS is deprecated, yet some commands and environments still using it. There is no equivalent for the above command in the SQLSERVER Powershell Module.

@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_delete_backup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Deletes all snapshots and the backup file that comprise a snapshot backup set from the specified database. This system stored procedure is the only recommended method for managing snapshot backup sets. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   

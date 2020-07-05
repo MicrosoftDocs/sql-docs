@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "IIS [Reporting Services]"
 ms.assetid: e794185a-0a77-480a-9aea-d09f8760a6b8
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # IIS backward compatibility components were not detected (Upgrade Advisor)
   Upgrade Advisor did not detect IIS components and settings that provide information used by Setup to create new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLS.  

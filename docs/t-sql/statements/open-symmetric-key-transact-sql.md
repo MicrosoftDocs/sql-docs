@@ -20,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Decrypts a symmetric key and makes it available for use.  
   
@@ -28,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   

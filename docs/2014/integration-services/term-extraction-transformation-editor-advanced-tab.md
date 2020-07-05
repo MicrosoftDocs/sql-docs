@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Term Extraction Transformation Editor"
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Term Extraction Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Extraction Transformation Editor** dialog box to specify properties for the extraction such as frequency, length, and whether to extract words or phrases.  

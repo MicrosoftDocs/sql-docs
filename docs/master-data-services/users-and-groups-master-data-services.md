@@ -1,5 +1,6 @@
 ---
-title: "Users and Groups (Master Data Services) | Microsoft Docs"
+title: Users and Groups
+description: Find out how to grant access to the Master Data Manager web application. A user must have a suitable account.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: lle
 ---
 # Users and Groups (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   To access the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application a user must have a Windows domain account or an account on the server computer where [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is installed. To grant access to [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] you can either:  
   

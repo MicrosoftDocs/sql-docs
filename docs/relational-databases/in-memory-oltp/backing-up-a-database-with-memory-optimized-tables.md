@@ -1,6 +1,7 @@
 ---
-title: "Backing Up a Database with Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Database backup with Memory-optimized tables"
+description: Learn how memory-optimized tables are backed up as part of regular database backups. Read about full database backup and differential backups.
+ms.custom: seo-dt-2019
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -12,7 +13,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Backing Up a Database with Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Memory-optimized tables are backed up as part of regular database backups. As for disk-based tables, the CHECKSUM of data and delta file pairs is validated as part of the database backup to detect storage corruption.  
   

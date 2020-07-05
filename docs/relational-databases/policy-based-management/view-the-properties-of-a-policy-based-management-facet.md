@@ -1,6 +1,7 @@
 ---
-title: "View the Properties of a Policy-Based Management Facet | Microsoft Docs"
-ms.custom: ""
+title: "View properties of a Policy-Based Management facet"
+description: Learn to view the properties of a Policy-Based Management facet in SQL Server by using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # View the Properties of a Policy-Based Management Facet
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view the properties of a Policy-Based Management facet in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
@@ -49,6 +50,4 @@ ms.author: vanto
 5.  Right-click the facet whose properties you want to view and select **Properties**. For more information on the available options in the **Facet Properties -**_facet_name_ dialog box, see [Facet Properties Dialog Box, General Page](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [Facet Properties Dialog Box, Dependent Policies Page](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md), and [Facet Properties Dialog Box, Dependent Conditions Page](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  When finished, click **Close**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

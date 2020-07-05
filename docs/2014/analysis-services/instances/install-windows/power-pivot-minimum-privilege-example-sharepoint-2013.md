@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Example of a Minimum-Privilege Configuration for PowerPivot for SharePoint 2013
   This topic describes an example PowerPivot for SharePoint 2013 configuration with minimum privileges. The configuration utilizes a different account for each of the three components and each account has the minimum level of privileges.  
@@ -66,10 +65,7 @@ manager: craigg
   
 2.  Run the following PowerShell code:  
   
-    ```  
+    ```powershell
     $webApp = Get-SPWebApplication "http://<servername>"  
-    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")  
-  
+    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")
     ```  
-  
-  

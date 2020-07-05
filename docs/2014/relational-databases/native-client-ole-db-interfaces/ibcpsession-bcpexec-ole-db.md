@@ -13,9 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "BCPExec method"
 ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # IBCPSession::BCPExec (OLE DB)
   Performs the bulk copy operation.  

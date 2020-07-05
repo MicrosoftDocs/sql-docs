@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpmergepublication"
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   

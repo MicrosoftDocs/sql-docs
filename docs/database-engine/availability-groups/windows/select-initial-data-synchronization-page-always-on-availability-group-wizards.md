@@ -1,6 +1,7 @@
 ---
-title: "Select Initial Data Sync Page-Always On Availability Group Wizard | Microsoft Docs"
-ms.custom: ""
+title: "Select Initial Data Sync Page (Availability Group Wizard)"
+description: A description of the 'Select Initial Data Sync Page' of the Always On Availability Group Wizard in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Select Initial Data Synchronization Page (Always On Availability Group Wizards)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Use the Always On **Select Initial Data Synchronization** page to indicate your preference for initial data synchronization of new secondary databases. This page is shared by three wizards-the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], the [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], and the [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
   

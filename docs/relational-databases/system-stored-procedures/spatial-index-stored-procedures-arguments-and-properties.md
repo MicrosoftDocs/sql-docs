@@ -12,11 +12,11 @@ dev_langs:
 helpviewer_keywords: 
   - "spatial indexes [SQL Server], stored procedures"
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Spatial Index Stored Procedures - Arguments and Properties
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic documents the arguments and properties for spatial index stored procedures.  
   

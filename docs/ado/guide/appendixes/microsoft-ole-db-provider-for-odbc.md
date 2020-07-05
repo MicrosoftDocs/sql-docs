@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "OLE DB provider for ODBC [ADO]"
   - "providers [ADO], OLE DB provider for ODBC"
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft OLE DB Provider for ODBC Overview
 To an ADO or RDS programmer, an ideal world would be one in which every data source exposes an OLE DB interface, so that ADO could call directly into the data source. Although increasingly more database vendors are implementing OLE DB interfaces, some data sources are not yet exposed this way. However, most DBMS systems in use today can be accessed through ODBC.

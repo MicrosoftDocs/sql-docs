@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, system requirements"
   - "SQLNCLI, system requirements"
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # System Requirements for SQL Server Native Client
   To use data access features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] such as MARS, you must have the following software installed:  
@@ -23,7 +22,7 @@ manager: craigg
   
 -   An instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on your server.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requires Windows Installer 3.0. Windows Installer 3.0 is already installed on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating systems. For all other platforms you need to explicitly install it. For more information, see [Windows Installer 3.0 Redistributable](https://go.microsoft.com/fwlink/?LinkId=46459).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requires Windows Installer 3.0. Windows Installer 3.0 is already installed on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating systems. For all other platforms you need to explicitly install it. For more information, see [Windows Installer 3.0 Redistributable](https://www.microsoft.com/download/details.aspx?id=16821).  
   
 > [!NOTE]  
 >  Make sure you log on with administrator privileges before installing this software.  

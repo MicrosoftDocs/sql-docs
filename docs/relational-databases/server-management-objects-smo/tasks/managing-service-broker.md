@@ -1,6 +1,6 @@
 ---
-title: "Managing Service Broker | Microsoft Docs"
-ms.custom: ""
+title: "Managing Service Broker"
+ms.custom: seo-dt-2019
 ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"

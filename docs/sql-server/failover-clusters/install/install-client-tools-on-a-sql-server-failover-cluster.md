@@ -1,17 +1,18 @@
 ---
-title: "Install Client Tools on a SQL Server Failover Cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Install Client Tools: Failover Cluster"
+description: Learn how to install client tools, such as SQL Server Management Studio, on a SQL Server failover instance.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
 ---
 # Install Client Tools on a SQL Server Failover Cluster
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Client tools such as [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] are shared features common across all instances on the same machine. They are backward compatible, with supported [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions that can be installed side by side. Only one version of the client tool exists on a node at a time.  
   
  If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client tools are installed during setup on first node of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster, they are automatically added to any nodes that may be added later to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using Add Node.  
@@ -39,7 +40,7 @@ ms.author: mathoma
   
 1.  To install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client tools and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online, run the following command: Setup.exe/q/Action=Install /Features=Tools  
   
-2.  To install only the basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management tools run the following command: Setup.exe/q/Action=Install Features=SSMS. This will install [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] support for [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], sqlcmd utility, and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Powershell provider.  
+2.  To install only the basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management tools run the following command: Setup.exe/q/Action=Install Features=SSMS. This will install [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] support for [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], sqlcmd utility, and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell provider.  
   
 3.  To install the complete [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management tools, run the following command: Setup.exe/q/Action=Install /Features=ADV_SSMS. For more information about parameter values for the features, see [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   

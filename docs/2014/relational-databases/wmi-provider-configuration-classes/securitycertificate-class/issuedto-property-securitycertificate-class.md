@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # IssuedTo Property (SecurityCertificate Class)
   Gets the object to which the security certificate is issued.  

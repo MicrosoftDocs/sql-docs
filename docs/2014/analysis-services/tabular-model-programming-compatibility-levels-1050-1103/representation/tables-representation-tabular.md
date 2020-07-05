@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tables Representation (Tabular)
   In tabular models, a table is the base representation of the data.  

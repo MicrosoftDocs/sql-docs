@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Actions (Analysis Services - Multidimensional Data)
   Actions can be of different types and they have to be created accordingly. Actions can be:  

@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Modify an Existing Trace (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use stored procedures to modify an existing trace.  
   
 ### To modify an existing trace  
@@ -24,17 +24,15 @@ ms.author: "mathoma"
   
 2.  To modify trace events, execute **sp_trace_setevent** by specifying the changes through the parameters. Listed in order, the parameters are:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    -   **@traceid** (Trace ID)  
+    -   **\@traceid** (Trace ID)  
   
-    -   **@eventid** (Event ID)  
+    -   **\@eventid** (Event ID)  
   
-    -   **@columnid** (Column ID)  
+    -   **\@columnid** (Column ID)  
   
-    -   **@on** (ON)  
+    -   **\@on** (ON)  
   
-     When you modify the **@on** parameter, keep in mind its interaction with the **@columnid** parameter:  
+     When you modify the **\@on** parameter, keep in mind its interaction with the **\@columnid** parameter:  
   
     |ON|Column ID|Result|  
     |--------|---------------|------------|  

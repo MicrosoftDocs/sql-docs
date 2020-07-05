@@ -1,5 +1,5 @@
 ---
-title: "Exclude a Business Rule (Master Data Services) | Microsoft Docs"
+title: Exclude a Business Rule
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,7 +15,7 @@ ms.author: lle
 ---
 # Exclude a Business Rule (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclude a business rule when you do not want to delete the rule permanently, but you do not want to validate data against it.  
   

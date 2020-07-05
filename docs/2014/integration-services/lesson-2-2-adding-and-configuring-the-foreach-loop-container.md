@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Step 2: Adding and Configuring the Foreach Loop Container
   In this task, you will add the ability to loop through a folder of flat files and apply the same data flow transformation used in Lesson 1 to each of those flat files. You do this by adding and configuring a Foreach Loop container to the control flow.  
@@ -59,7 +58,7 @@ manager: craigg
   
     2.  Click the **DOWNLOADS** tab.  
   
-    3.  Click the  HYPERLINK "http://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.  
+    3.  Click the  HYPERLINK "https://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.  
   
 6.  In the **Files** box, type **Currency_\*.txt**.  
   
@@ -88,5 +87,4 @@ manager: craigg
 ## See Also  
  [Configure a Foreach Loop Container](control-flow/foreach-loop-container.md)   
  [Use Variables in Packages](use-variables-in-packages.md)  
-  
   

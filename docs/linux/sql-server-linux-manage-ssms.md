@@ -1,6 +1,6 @@
 ---
 title: Use SSMS to Manage SQL Server on Linux
-description: 
+description: This article introduces SQL Server Management Studio, an integrated environment to access, configure, manage, administer, and develop components of SQL Server.
 author: VanMSFT 
 ms.author: vanto
 ms.date: 05/21/2018
@@ -11,12 +11,12 @@ ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ---
 # Use SQL Server Management Studio on Windows to manage SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article introduces [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) and walks you through a couple of common tasks. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 > [!TIP]
-> If you do not have a Windows machine to run SSMS on, consider the new [Azure Data Studio](../azure-data-studio/index.md). It provides a graphical tool for managing SQL Server and runs on both Linux and Windows.
+> If you do not have a Windows machine to run SSMS on, consider the new [Azure Data Studio](../azure-data-studio/index.yml). It provides a graphical tool for managing SQL Server and runs on both Linux and Windows.
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) is part of a suite of SQL tools that Microsoft offers free of charge for your development and management needs. SSMS is an integrated environment to access, configure, manage, administer, and develop all components of SQL Server. It can connect to SQL Server running on any platform both on-premises, in Docker containers, and in the cloud. It also connects to Azure SQL Database and Azure SQL Data Warehouse. SSMS combines a broad group of graphical tools with a number of rich script editors to provide access to SQL Server to developers and administrators of all skill levels.
 
@@ -52,7 +52,7 @@ Use the following basic steps to get connected:
    | Setting | Description |
    |-----|-----|
    | **Server type** | The default is database engine; do not change this value. |
-   | **Server name** | Enter the name of the target Linux SQL Server machine or its IP address. |
+   | **Server name** | Enter the name of the target Linux SQL Server machine, or its IP address and port in the format `IP,port`. |
    | **Authentication** | For SQL Server on Linux, use **SQL Server Authentication**. |
    | **Login** | Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). |
    | **Password** | Enter the password for the specified user (for the **SA** account, you created this during setup). |

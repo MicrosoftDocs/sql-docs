@@ -23,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the properties of a symmetric key.  
   
@@ -31,7 +31,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SYMMETRIC KEY Key_name <alter_option>  
   

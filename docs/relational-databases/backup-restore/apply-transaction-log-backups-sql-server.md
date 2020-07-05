@@ -1,7 +1,8 @@
 ---
 title: "Apply Transaction Log Backups (SQL Server) | Microsoft Docs"
+description: This article describes applying transaction log backups as part of restoring a SQL Server database in the full recovery model or bulk-logged recovery model.
 ms.custom: ""
-ms.date: "08/14/2016"
+ms.date: "10/23/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -18,12 +19,11 @@ author: mashamsft
 ms.author: mathoma
 ---
 # Apply Transaction Log Backups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The topic is relevant only for the full recovery model or bulk-logged recovery model.  
   
  This topic describes applying transaction log backups as part of restoring a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
  
-  
 ##  <a name="Requirements"></a> Requirements for restoring transaction log backups  
  To apply a transaction log backup, the following requirements must be met:  
   
@@ -33,14 +33,16 @@ ms.author: mathoma
   
 -   **Database not yet recovered:**  The database cannot be recovered until after the final transaction log has been applied. If you recover the database after restoring one of the intermediate transaction log backups, that before the end of the log chain, you cannot restore the database past that point without restarting the complete restore sequence, starting with the full database backup.  
   
-    > **TIP!** A best practice is to restore all the log backups (RESTORE LOG *database_name* WITH NORECOVERY). Then, after restoring the last log backup, recover the database in a separate operation (RESTORE DATABASE *database_name* WITH RECOVERY).  
+    > [!TIP]
+    > A best practice is to restore all the log backups (`RESTORE LOG *database_name* WITH NORECOVERY`). Then, after restoring the last log backup, recover the database in a separate operation (`RESTORE DATABASE *database_name* WITH RECOVERY`).  
   
 ##  <a name="RecoveryAndTlogs"></a> Recovery and transaction logs  
- When you finish the restore operation and recover the database, recovery rolls back all incomplete transactions. This is known as the *undo phase*. Rolling back is required to restore the integrity of the database. After rollback, the database goes online, and no more transaction log backups can be applied to the database.  
+ When you finish the restore operation and recover the database, the recovery process is executed to ensure the integrity of the database. For more information about the recovery process, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+ 
+ After the recovery process completes, the database goes online, and no more transaction log backups can be applied to the database. For example, a series of transaction log backups contain a long-running transaction. The start of the transaction is recorded in the first transaction log backup, but the end of the transaction is recorded in the second transaction log backup. There is no record of a commit or rollback operation in the first transaction log backup. If a recovery operation runs when the first transaction log backup is applied, the long-running transaction is treated as incomplete, and data modifications recorded in the first transaction log backup for the transaction are rolled back. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow for the second transaction log backup to be applied after this point.  
   
- For example, a series of transaction log backups contain a long-running transaction. The start of the transaction is recorded in the first transaction log backup, but the end of the transaction is recorded in the second transaction log backup. There is no record of a commit or rollback operation in the first transaction log backup. If a recovery operation runs when the first transaction log backup is applied, the long-running transaction is treated as incomplete, and data modifications recorded in the first transaction log backup for the transaction are rolled back. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow for the second transaction log backup to be applied after this point.  
-  
-> **NOTE:** In some circumstances, you can explicitly add a file during log restore.  
+> [!NOTE]
+> In some circumstances, you can explicitly add a file during log restore.  
   
 ##  <a name="PITrestore"></a> Use log backups to restore to the failure point  
  Assume the following sequence of events.  
@@ -57,8 +59,6 @@ ms.author: mathoma
 > For an explanation of this example sequence of backups, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  To restore the database to its state at 9:45 P.M. (the point of failure), either of the following alternative procedures can be used:  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **Alternative 1: Restore the database by using the most recent full database backup**  
   
@@ -100,6 +100,6 @@ ms.author: mathoma
 -   [Recover a Database Without Restoring Data &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
 ## See also  
- [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
-  
+ [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

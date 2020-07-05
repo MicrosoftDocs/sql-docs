@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Guidelines for Online Index Operations
   When you perform online index operations, the following guidelines apply:  

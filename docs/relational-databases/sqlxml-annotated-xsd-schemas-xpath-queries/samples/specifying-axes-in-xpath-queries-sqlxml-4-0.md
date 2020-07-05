@@ -1,6 +1,6 @@
 ---
-title: "Specifying Axes in XPath Queries (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Specifying Axes in XPath Queries (SQLXML)"
+description: Learn how to specify axes in SQLXML 4.0 XPath queries.
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,10 +18,11 @@ helpviewer_keywords:
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Axes in XPath Queries (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The following examples show how axes are specified in XPath queries.  
   
  The XPath queries in these examples are specified against the mapping schema contained in SampleSchema1.xml. For information about this sample schema, see [Sample Annotated XSD Schema for XPath Examples &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  

@@ -11,15 +11,15 @@ helpviewer_keywords:
   - "revoke_permission stored procedure [Integration Services]"
   - "catalog.revoke_permission stored procedure [Integration Services]"
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.revoke_permission (SSISDB Database)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes a permission on a securable object in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   

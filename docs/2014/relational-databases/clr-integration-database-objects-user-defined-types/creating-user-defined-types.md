@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Creating a User-Defined Type
   To create a user-defined type (UDT) capable of being installed in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must first create a class in one of the supported .NET Framework programming languages, such as Visual C# or  Visual Basic, which conforms to the specifications for creating UDTs. The class can then be compiled as a dynamic-link library (DLL), which can be loaded in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can also create and deploy UDTs using Visual Studio.  
@@ -36,7 +35,7 @@ Reconfigure
 ## Example  
  The following code listing defines the Point UDT, which is described in detail in [Coding User-Defined Types](creating-user-defined-types-coding.md).  
   
- The complete code listings for the other examples discussed in this section can be obtained by installing the CLR samples. For instructions on installing these samples, see [SQL Server Database Engine Samples](http://msftengprodsamples.codeplex.com/).  
+ The complete code listings for the other examples discussed in this section can be obtained by installing the CLR samples. For instructions on installing these samples, see [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -78,7 +77,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -227,7 +226,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  
@@ -326,5 +325,4 @@ End Structure
   
 ## See Also  
  [CLR User-Defined Types](clr-user-defined-types.md)  
-  
   

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], Oraclesoftware patches"
   - "Oracle software patches [ODBC]"
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Oracle Software Patches
 > [!IMPORTANT]  

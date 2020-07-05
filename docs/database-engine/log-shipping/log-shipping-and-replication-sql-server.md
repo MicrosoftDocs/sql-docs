@@ -1,5 +1,6 @@
 ---
 title: "Log Shipping and Replication (SQL Server) | Microsoft Docs"
+description: Learn how log shipping applies the transaction log from every insertion, update, or deletion made on the primary database to the secondary database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Log Shipping and Replication (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Log shipping involves two copies of a single database that typically reside on different computers. At any given time, only one copy of the database is currently available to clients. This copy is known as the primary database. Updates made by clients to the primary database are propagated by means of log shipping to the other copy of the database, known as the secondary database. Log shipping involves applying the transaction log from every insertion, update, or deletion made on the primary database onto the secondary database.  
   
  Log shipping can be used in conjunction with replication, with the following behavior:  

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC], scalar function calls"
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Scalar Function Calls
 Scalar functions return a value for each row. For example, the absolute value scalar function takes a numeric column as an argument and returns the absolute value of each value in the column. The escape sequence for calling a scalar function is  

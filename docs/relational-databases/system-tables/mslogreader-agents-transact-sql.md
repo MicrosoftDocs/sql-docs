@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSlogreader_agents system table"
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSlogreader_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSlogreader_agents** table contains one row for each Log Reader Agent running at the local Distributor. This table is stored in the distribution database.  
   

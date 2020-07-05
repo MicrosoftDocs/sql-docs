@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.services catalog view"
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.services (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains a row for each service in the database.  
   

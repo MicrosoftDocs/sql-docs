@@ -1,6 +1,6 @@
 ---
-title: "Complete Word (IntelliSense) | Microsoft Docs"
-ms.custom: ""
+title: Complete Word (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "text completion [IntelliSense]"
   - "Complete Word option [IntelliSense]"
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Complete Word (IntelliSense)
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense Complete Word option types the rest of a variable, command, or function name once you have entered enough characters to uniquely identify the term.  

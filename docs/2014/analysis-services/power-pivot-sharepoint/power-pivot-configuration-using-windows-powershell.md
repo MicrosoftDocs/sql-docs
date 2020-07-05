@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # PowerPivot Configuration using Windows PowerShell
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] includes Windows PowerShell cmdlets that you can use to configure an installation of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. To fully configure an installation with PowerShell requires the use of both SharePoint cmdlets and PowerPivot for SharePoint cmdlets. A majority of configuration can be completed using one of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tools. For more information on the tools, see [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
@@ -29,8 +28,8 @@ manager: craigg
   
 2.  Enter the following command:  
   
-    ```  
-    Get-help *powerpivot*  
+    ```powershell
+    Get-Help *powerpivot*  
     ```  
   
      You should see a list of cmdlets that include PowerPivot in the cmdlet name. For example `Get-PowerPivotServiceApplication`. The number of cmdlets available depends on the version of Analysis Services you are using.  
@@ -43,14 +42,14 @@ manager: craigg
   
      All cmdlets have online help. The following example shows how to view the online help for the `New-PowerPivotServiceApplication` cmdlet:  
   
-    ```  
-    Get-help new-powerpivotserviceapplication -full  
+    ```powershell
+    Get-Help new-powerpivotserviceapplication -Full  
     ```  
   
      Alternatively, to view just the examples, use the following syntax:  
   
-    ```  
-    Get-help new-powerpivotserviceapplication -example  
+    ```powershell
+    Get-Help new-powerpivotserviceapplication -Example  
     ```  
   
 ## Enable PowerPivot Cmdlets on a Server  
@@ -60,7 +59,7 @@ manager: craigg
   
 2.  Run the first cmdlet:  
   
-    ```  
+    ```powershell
     Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
@@ -68,7 +67,7 @@ manager: craigg
   
 3.  Run the second cmdlet to deploy the solution:  
   
-    ```  
+    ```powershell
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
@@ -80,5 +79,3 @@ manager: craigg
  [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
  [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
-  
-  

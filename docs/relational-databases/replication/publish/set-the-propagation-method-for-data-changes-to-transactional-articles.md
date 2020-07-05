@@ -1,6 +1,7 @@
 ---
-title: "Set the Propagation Method for Data Changes to Transactional Articles | Microsoft Docs"
-ms.custom: ""
+title: "Set propagation method for changes to articles (Transactional)"
+description: Describes how to est the propagation method for data changes to transactional articles for Transactional Replication using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
+ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Set the Propagation Method for Data Changes to Transactional Articles
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,8 +54,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To generate and use custom stored procedures  
   

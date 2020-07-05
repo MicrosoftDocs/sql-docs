@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Relationship Representation (Tabular)
   A relationship is a connection between two tables of data. The relationship establishes how the data in the two tables should be correlated.  
@@ -44,7 +43,7 @@ private Boolean createRelationship(string PKTableName, string PKColumnName, stri
     //Make sure PKTableName.PKColumnName  is set as PK ==> <attribute>.usage == AMO.AttributeUsage.Key  
     if (tabularDb.Dimensions[PKTableName].Attributes[PKColumnName].Usage != AMO.AttributeUsage.Key)  
     {  
-        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not beeing the PK of the table  
+        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not being the PK of the table  
         setPKColumn(tabularDb, PKTableName, PKColumnName);  
     }  
   

@@ -1,8 +1,8 @@
 ---
-title: "Availability Group Properties: New Availability Group (General Page)"
+title: "General page (New Availability Group & Properties dialog box)"
 titleSuffix: SQL Server
-description: "A description of the various properties found on the 'General' page of the 'New Availability Group' wizard in SQL Server Management Studio."
-ms.custom: "seodec18"
+description: "A description of the various properties found on the 'General' page of the 'New Availability Group' and 'Availability Group Properties' dialog boxes in SQL Server Management Studio (SSMS)."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Availability Group Properties: New Availability Group (General Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic applies to the **General** tab of both the **New Availability Group** dialog box and the **Availability Group Properties** dialog box.  The **New Availability Group** dialog box enables you to create a new availability group without using the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. The **Availability Group Properties** dialog box enables you to view and alter the configuration of an existing availability group.  
   
  **To view availability group properties**  
@@ -24,7 +24,7 @@ ms.author: mathoma
   
 -   [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## UIElement List  
+## UI element list  
  **Availability group name**  
  Name of the availability group. This is a user-specified name that must be unique within the Windows Server Failover Cluster (WSFC).  
   

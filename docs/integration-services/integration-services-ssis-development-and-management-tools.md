@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) Development and Management Tools | Microsoft Docs"
+title: "Development and Management Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services, studio environments"
   - "tools [Integration Services], SQL Server Management Studio"
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) Development and Management Tools
 

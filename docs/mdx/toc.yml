@@ -1,0 +1,492 @@
+- name: Multidimensional Expressions (MDX) Reference
+  href: ../mdx/multidimensional-expressions-mdx-reference.md
+- name: MDX Syntax Elements
+  href: ../mdx/mdx-syntax-elements-mdx.md
+  items:
+  - name: Identifiers
+    href: ../mdx/identifiers-mdx.md
+  - name: Expressions
+    href: ../mdx/expressions-mdx.md
+    items:
+    - name: Using Cube and Subcube Expressions
+      href: ../mdx/using-cube-and-subcube-expressions.md
+    - name: Using Dimension Expressions
+      href: ../mdx/using-dimension-expressions.md
+    - name: Using Member Expressions
+      href: ../mdx/using-member-expressions.md
+    - name: Using Tuple Expressions
+      href: ../mdx/using-tuple-expressions.md
+    - name: Using Set Expressions
+      href: ../mdx/using-set-expressions.md
+    - name: Using Scalar Expressions
+      href: ../mdx/using-scalar-expressions.md
+    - name: Working with Empty Values
+      href: ../mdx/working-with-empty-values.md
+  - name: Operators (MDX Syntax)
+    href: ../mdx/operators-mdx-syntax.md
+    items:
+    - name: Arithmetic Operators
+      href: ../mdx/arithmetic-operators.md
+    - name: Bitwise Operators
+      href: ../mdx/bitwise-operators.md
+    - name: Comparison Operators
+      href: ../mdx/comparison-operators.md
+    - name: Concatenation Operators
+      href: ../mdx/concatenation-operators.md
+    - name: Set Operators
+      href: ../mdx/set-operators.md
+    - name: Unary Operators
+      href: ../mdx/unary-operators.md
+    - name: Assignment Operators
+      href: ../mdx/assignment-operators.md
+  - name: Functions (MDX Syntax)
+    href: ../mdx/functions-mdx-syntax.md
+    items:
+    - name: Using String Functions
+      href: ../mdx/using-string-functions.md
+    - name: Using Mathematical Functions
+      href: ../mdx/using-mathematical-functions.md
+    - name: Using Logical Functions
+      href: ../mdx/using-logical-functions.md
+    - name: Using Member Functions
+      href: ../mdx/using-member-functions.md
+    - name: Using Tuple Functions
+      href: ../mdx/using-tuple-functions.md
+    - name: Using Set Functions
+      href: ../mdx/using-set-functions.md
+    - name: Using Dimension, Hierarchy, and Level Functions
+      href: ../mdx/using-dimension-hierarchy-and-level-functions.md
+    - name: Using Stored Procedures (MDX)
+      href: ../mdx/using-stored-procedures-mdx.md
+  - name: Comments (MDX Syntax)
+    href: ../mdx/comments-mdx-syntax.md
+  - name: Reserved Keywords (MDX Syntax)
+    href: ../mdx/reserved-keywords-mdx-syntax.md
+- name: MDX Language Reference
+  href: ../mdx/mdx-language-reference-mdx.md
+  items:
+  - name: MDX Syntax Conventions
+    href: ../mdx/mdx-syntax-conventions-mdx.md
+  - name: MDX Statement Reference
+    href: ../mdx/mdx-statement-reference-mdx.md
+    items:
+    - name: MDX Data Manipulation - CALL
+      href: ../mdx/mdx-data-manipulation-call.md
+    - name: MDX Data Manipulation - CLEAR CALCULATIONS
+      href: ../mdx/mdx-data-manipulation-clear-calculations.md
+    - name: MDX Data Manipulation - DRILLTHROUGH
+      href: ../mdx/mdx-data-manipulation-drillthrough.md
+    - name: MDX Data Manipulation - SELECT
+      href: ../mdx/mdx-data-manipulation-select.md
+    - name: MDX Data Manipulation - UPDATE CUBE
+      href: ../mdx/mdx-data-manipulation-update-cube.md
+    - name: MDX Data Definition - ALTER CUBE
+      href: ../mdx/mdx-data-definition-alter-cube.md
+    - name: MDX Data Definition - CREATE ACTION
+      href: ../mdx/mdx-data-definition-create-action.md
+    - name: MDX Data Definition - CREATE CELL CALCULATION
+      href: ../mdx/mdx-data-definition-create-cell-calculation.md
+    - name: MDX Data Definition - CREATE GLOBAL CUBE
+      href: ../mdx/mdx-data-definition-create-global-cube.md
+    - name: MDX Data Definition - CREATE KPI
+      href: ../mdx/mdx-data-definition-create-kpi.md
+    - name: MDX Data Definition - CREATE MEASURE
+      href: ../mdx/mdx-data-definition-create-measure.md
+    - name: MDX Data Definition - CREATE MEMBER
+      href: ../mdx/mdx-data-definition-create-member.md
+    - name: MDX Data Definition - CREATE SESSION CUBE
+      href: ../mdx/mdx-data-definition-create-session-cube.md
+    - name: MDX Data Definition - CREATE SET
+      href: ../mdx/mdx-data-definition-create-set.md
+    - name: MDX Data Definition - CREATE SUBCUBE
+      href: ../mdx/mdx-data-definition-create-subcube.md
+    - name: MDX Data Definition - DROP ACTION
+      href: ../mdx/mdx-data-definition-drop-action.md
+    - name: MDX Data Definition - DROP CELL CALCULATION
+      href: ../mdx/mdx-data-definition-drop-cell-calculation.md
+    - name: MDX Data Definition - DROP KPI
+      href: ../mdx/mdx-data-definition-drop-kpi.md
+    - name: MDX Data Definition - DROP MEMBER
+      href: ../mdx/mdx-data-definition-drop-member.md
+    - name: MDX Data Definition - DROP SET
+      href: ../mdx/mdx-data-definition-drop-set.md
+    - name: MDX Data Definition - DROP SUBCUBE
+      href: ../mdx/mdx-data-definition-drop-subcube.md
+    - name: MDX Data Definition - REFRESH CUBE
+      href: ../mdx/mdx-data-definition-refresh-cube.md
+    - name: MDX Data Definition - UPDATE MEMBER
+      href: ../mdx/mdx-data-definition-update-member.md
+    - name: MDX Scripting - CALCULATE
+      href: ../mdx/mdx-scripting-calculate.md
+    - name: MDX Scripting - FREEZE
+      href: ../mdx/mdx-scripting-freeze.md
+    - name: MDX Scripting - IF
+      href: ../mdx/mdx-scripting-if.md
+    - name: MDX Scripting - SCOPE
+      href: ../mdx/mdx-scripting-scope.md
+    - name: MDX Scripting Statements
+      href: ../mdx/mdx-scripting-statements-mdx.md
+    - name: MDX Data Definition Statements
+      href: ../mdx/mdx-data-definition-statements-mdx.md
+    - name: MDX Data Manipulation Statements
+      href: ../mdx/mdx-data-manipulation-statements-mdx.md
+  - name: MDX Operator Reference
+    href: ../mdx/mdx-operator-reference-mdx.md
+    items:
+    - name: "-- (Comment)"
+      href: ../mdx/comment-mdx-operator-reference.md
+    - name: "- (Except)"
+      href: ../mdx/except-mdx-operator.md
+    - name: "- (Negative)"
+      href: ../mdx/negative-mdx.md
+    - name: "- (Subtract)"
+      href: ../mdx/subtract-mdx.md
+    - name: "* (Crossjoin)"
+      href: ../mdx/crossjoin-mdx-operator-reference.md
+    - name: "* (Multiply)"
+      href: ../mdx/multiply-mdx.md
+    - name: (Divide)
+      href: ../mdx/divide-mdx-operator-reference.md
+    - name: "^ (Power) (MDX)"
+      href: ../mdx/power-mdx.md
+    - name: "/*...*/ (Comment)"
+      href: ../mdx/comment-mdx.md
+    - name: "// (Comment)"
+      href: ../mdx/comment-mdx-double-slash.md
+    - name: ": (Range)"
+      href: ../mdx/range-mdx.md
+    - name: + (Add)"
+      href: ../mdx/add-mdx.md
+    - name: "+ (Positive)"
+      href: ../mdx/positive-mdx.md
+    - name: "+ (String Concatenation)"
+      href: ../mdx/string-concatenation-mdx.md
+    - name: "+ (Union)"
+      href: ../mdx/union-mdx-operator-reference.md
+    - name: "< (Less Than)"
+      href: ../mdx/less-than-mdx.md
+    - name: "<= (Less Than or Equal To)"
+      href: ../mdx/less-than-or-equal-to-mdx.md
+    - name: "<> (Not Equal To)"
+      href: ../mdx/not-equal-to-mdx.md
+    - name: "= (Equal To)"
+      href: ../mdx/equal-to-mdx.md
+    - name: "> (Greater Than)"
+      href: ../mdx/greater-than-mdx.md
+    - name: ">= (Greater Than or Equal To)"
+      href: ../mdx/greater-than-or-equal-to-mdx.md
+    - name: AND
+      href: ../mdx/and-mdx.md
+    - name: IS
+      href: ../mdx/is-mdx.md
+    - name: NOT
+      href: ../mdx/not-mdx.md
+    - name: OR
+      href: ../mdx/or-mdx.md
+    - name: XOR
+      href: ../mdx/xor-mdx.md
+  - name: MDX Function Reference
+    href: ../mdx/mdx-function-reference-mdx.md
+    items:
+    - name: AddCalculatedMembers
+      href: ../mdx/addcalculatedmembers-mdx.md
+    - name: Aggregate
+      href: ../mdx/aggregate-mdx.md
+    - name: AllMembers
+      href: ../mdx/allmembers-mdx.md
+    - name: Ancestor
+      href: ../mdx/ancestor-mdx.md
+    - name: Ancestors
+      href: ../mdx/ancestors-mdx.md
+    - name: Ascendants
+      href: ../mdx/ascendants-mdx.md
+    - name: Avg
+      href: ../mdx/avg-mdx.md
+    - name: Axis
+      href: ../mdx/axis-mdx.md
+    - name: BottomCount
+      href: ../mdx/bottomcount-mdx.md
+    - name: BottomPercent
+      href: ../mdx/bottompercent-mdx.md
+    - name: BottomSum
+      href: ../mdx/bottomsum-mdx.md
+    - name: CalculationCurrentPass
+      href: ../mdx/calculationcurrentpass-mdx.md
+    - name: CalculationPassValue
+      href: ../mdx/calculationpassvalue-mdx.md
+    - name: CASE Statement
+      href: ../mdx/case-statement-mdx.md
+    - name: Children
+      href: ../mdx/children-mdx.md
+    - name: ClosingPeriod
+      href: ../mdx/closingperiod-mdx.md
+    - name: CoalesceEmpty
+      href: ../mdx/coalesceempty-mdx.md
+    - name: Correlation
+      href: ../mdx/correlation-mdx.md
+    - name: Count (Dimension)
+      href: ../mdx/count-dimension-mdx.md
+    - name: Count (Hierarchy Levels)
+      href: ../mdx/count-hierarchy-levels-mdx.md
+    - name: Count (Set)
+      href: ../mdx/count-set-mdx.md
+    - name: Count (Tuple)
+      href: ../mdx/count-tuple-mdx.md
+    - name: Cousin
+      href: ../mdx/cousin-mdx.md
+    - name: Covariance
+      href: ../mdx/covariance-mdx.md
+    - name: CovarianceN
+      href: ../mdx/covariancen-mdx.md
+    - name: Crossjoin
+      href: ../mdx/crossjoin-mdx.md
+    - name: Current
+      href: ../mdx/current-mdx.md
+    - name: CurrentMember
+      href: ../mdx/currentmember-mdx.md
+    - name: CurrentOrdinal
+      href: ../mdx/currentordinal-mdx.md
+    - name: CustomData
+      href: ../mdx/customdata-mdx.md
+    - name: DataMember
+      href: ../mdx/datamember-mdx.md
+    - name: DefaultMember
+      href: ../mdx/defaultmember-mdx.md
+    - name: Descendants
+      href: ../mdx/descendants-mdx.md
+    - name: Dimension
+      href: ../mdx/dimension-mdx.md
+    - name: Dimensions
+      href: ../mdx/dimensions-mdx.md
+    - name: Distinct
+      href: ../mdx/distinct-mdx.md
+    - name: DistinctCount
+      href: ../mdx/distinctcount-mdx.md
+    - name: Divide
+      href: ../mdx/divide-mdx.md
+    - name: DrilldownLevel
+      href: ../mdx/drilldownlevel-mdx.md
+    - name: DrilldownLevelBottom
+      href: ../mdx/drilldownlevelbottom-mdx.md
+    - name: DrilldownLevelTop
+      href: ../mdx/drilldownleveltop-mdx.md
+    - name: DrilldownMember
+      href: ../mdx/drilldownmember-mdx.md
+    - name: DrilldownMemberBottom
+      href: ../mdx/drilldownmemberbottom-mdx.md
+    - name: DrilldownMemberTop
+      href: ../mdx/drilldownmembertop-mdx.md
+    - name: DrillupLevel
+      href: ../mdx/drilluplevel-mdx.md
+    - name: DrillupMember
+      href: ../mdx/drillupmember-mdx.md
+    - name: Error
+      href: ../mdx/error-mdx.md
+    - name: Except
+      href: ../mdx/except-mdx-function.md
+    - name: Exists
+      href: ../mdx/exists-mdx.md
+    - name: Extract
+      href: ../mdx/extract-mdx.md
+    - name: Filter
+      href: ../mdx/filter-mdx.md
+    - name: FirstChild
+      href: ../mdx/firstchild-mdx.md
+    - name: FirstSibling
+      href: ../mdx/firstsibling-mdx.md
+    - name: Generate
+      href: ../mdx/generate-mdx.md
+    - name: Head
+      href: ../mdx/head-mdx.md
+    - name: Hierarchize
+      href: ../mdx/hierarchize-mdx.md
+    - name: Hierarchy
+      href: ../mdx/hierarchy-mdx.md
+    - name: IIf
+      href: ../mdx/iif-mdx.md
+    - name: Instr
+      href: ../mdx/instr-mdx.md
+    - name: Intersect
+      href: ../mdx/intersect-mdx.md
+    - name: IsAncestor
+      href: ../mdx/isancestor-mdx.md
+    - name: IsEmpty
+      href: ../mdx/isempty-mdx.md
+    - name: IsGeneration
+      href: ../mdx/isgeneration-mdx.md
+    - name: IsLeaf
+      href: ../mdx/isleaf-mdx.md
+    - name: IsSibling
+      href: ../mdx/issibling-mdx.md
+    - name: Item (Member)
+      href: ../mdx/item-member-mdx.md
+    - name: Item (Tuple)
+      href: ../mdx/item-tuple-mdx.md
+    - name: KPIGoal
+      href: ../mdx/kpigoal-mdx.md
+    - name: KPIStatus
+      href: ../mdx/kpistatus-mdx.md
+    - name: KPITrend
+      href: ../mdx/kpitrend-mdx.md
+    - name: KPIWeight
+      href: ../mdx/kpiweight-mdx.md
+    - name: KPICurrentTimeMember
+      href: ../mdx/kpicurrenttimemember-mdx.md
+    - name: KPIValue
+      href: ../mdx/kpivalue-mdx.md
+    - name: Lag
+      href: ../mdx/lag-mdx.md
+    - name: LastChild
+      href: ../mdx/lastchild-mdx.md
+    - name: LastPeriods
+      href: ../mdx/lastperiods-mdx.md
+    - name: LastSibling
+      href: ../mdx/lastsibling-mdx.md
+    - name: Lead
+      href: ../mdx/lead-mdx.md
+    - name: Leaves
+      href: ../mdx/leaves-mdx.md
+    - name: Level
+      href: ../mdx/level-mdx.md
+    - name: Levels
+      href: ../mdx/levels-mdx.md
+    - name: LinkMember
+      href: ../mdx/linkmember-mdx.md
+    - name: LinRegIntercept
+      href: ../mdx/linregintercept-mdx.md
+    - name: LinRegPoint
+      href: ../mdx/linregpoint-mdx.md
+    - name: LinRegR2
+      href: ../mdx/linregr2-mdx.md
+    - name: LinRegSlope
+      href: ../mdx/linregslope-mdx.md
+    - name: LinRegVariance
+      href: ../mdx/linregvariance-mdx.md
+    - name: LookupCube
+      href: ../mdx/lookupcube-mdx.md
+    - name: Max
+      href: ../mdx/max-mdx.md
+    - name: MeasureGroupMeasures
+      href: ../mdx/measuregroupmeasures-mdx.md
+    - name: Median
+      href: ../mdx/median-mdx.md
+    - name: Members (Set)
+      href: ../mdx/members-set-mdx.md
+    - name: Members (String)
+      href: ../mdx/members-string-mdx.md
+    - name: MemberToStr
+      href: ../mdx/membertostr-mdx.md
+    - name: MemberValue
+      href: ../mdx/membervalue-mdx.md
+    - name: Min
+      href: ../mdx/min-mdx.md
+    - name: Mtd
+      href: ../mdx/mtd-mdx.md
+    - name: Name
+      href: ../mdx/name-mdx.md
+    - name: NameToSet
+      href: ../mdx/nametoset-mdx.md
+    - name: NextMember
+      href: ../mdx/nextmember-mdx.md
+    - name: NonEmpty
+      href: ../mdx/nonempty-mdx.md
+    - name: NonEmptyCrossjoin
+      href: ../mdx/nonemptycrossjoin-mdx.md
+    - name: OpeningPeriod
+      href: ../mdx/openingperiod-mdx.md
+    - name: Order
+      href: ../mdx/order-mdx.md
+    - name: Ordinal
+      href: ../mdx/ordinal-mdx.md
+    - name: ParallelPeriod
+      href: ../mdx/parallelperiod-mdx.md
+    - name: Parent
+      href: ../mdx/parent-mdx.md
+    - name: PeriodsToDate
+      href: ../mdx/periodstodate-mdx.md
+    - name: Predict
+      href: ../mdx/predict-mdx.md
+    - name: PrevMember
+      href: ../mdx/prevmember-mdx.md
+    - name: Properties
+      href: ../mdx/properties-mdx.md
+    - name: Qtd
+      href: ../mdx/qtd-mdx.md
+    - name: Rank
+      href: ../mdx/rank-mdx.md
+    - name: RollupChildren
+      href: ../mdx/rollupchildren-mdx.md
+    - name: Root
+      href: ../mdx/root-mdx.md
+    - name: SetToArray
+      href: ../mdx/settoarray-mdx.md
+    - name: SetToStr
+      href: ../mdx/settostr-mdx.md
+    - name: Siblings
+      href: ../mdx/siblings-mdx.md
+    - name: Stddev
+      href: ../mdx/stddev-mdx.md
+    - name: StddevP
+      href: ../mdx/stddevp-mdx.md
+    - name: Stdev
+      href: ../mdx/stdev-mdx.md
+    - name: StdevP
+      href: ../mdx/stdevp-mdx.md
+    - name: StripCalculatedMembers
+      href: ../mdx/stripcalculatedmembers-mdx.md
+    - name: StrToMember
+      href: ../mdx/strtomember-mdx.md
+    - name: StrToSet
+      href: ../mdx/strtoset-mdx.md
+    - name: StrToTuple
+      href: ../mdx/strtotuple-mdx.md
+    - name: StrToValue
+      href: ../mdx/strtovalue-mdx.md
+    - name: Subset
+      href: ../mdx/subset-mdx.md
+    - name: Sum
+      href: ../mdx/sum-mdx.md
+    - name: Tail
+      href: ../mdx/tail-mdx.md
+    - name: This
+      href: ../mdx/this-mdx.md
+    - name: ToggleDrillState
+      href: ../mdx/toggledrillstate-mdx.md
+    - name: TopCount
+      href: ../mdx/topcount-mdx.md
+    - name: TopPercent
+      href: ../mdx/toppercent-mdx.md
+    - name: TopSum
+      href: ../mdx/topsum-mdx.md
+    - name: TupleToStr
+      href: ../mdx/tupletostr-mdx.md
+    - name: Union
+      href: ../mdx/union-mdx.md
+    - name: UniqueName
+      href: ../mdx/uniquename-mdx.md
+    - name: UnknownMember
+      href: ../mdx/unknownmember-mdx.md
+    - name: Unorder
+      href: ../mdx/unorder-mdx.md
+    - name: UserName
+      href: ../mdx/username-mdx.md
+    - name: ValidMeasure
+      href: ../mdx/validmeasure-mdx.md
+    - name: Value
+      href: ../mdx/value-mdx.md
+    - name: Var
+      href: ../mdx/var-mdx.md
+    - name: Variance
+      href: ../mdx/variance-mdx.md
+    - name: VarianceP
+      href: ../mdx/variancep-mdx.md
+    - name: VarP
+      href: ../mdx/varp-mdx.md
+    - name: VisualTotals
+      href: ../mdx/visualtotals-mdx.md
+    - name: Wtd
+      href: ../mdx/wtd-mdx.md
+    - name: Ytd
+      href: ../mdx/ytd-mdx.md
+  - name: MDX Reserved Words
+    href: ../mdx/mdx-reserved-words.md

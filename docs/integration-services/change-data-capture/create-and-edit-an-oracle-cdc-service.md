@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Create and Edit an Oracle CDC Service
 

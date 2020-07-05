@@ -1,6 +1,7 @@
 ---
-title: "Evaluate a Policy-Based Management Policy from an Object | Microsoft Docs"
-ms.custom: ""
+title: "Evaluate Policy-Based Management policy from an object"
+description: Learn how to evaluate a policy from a SQL Server instance, database, or database object using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Evaluate a Policy-Based Management Policy from an Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to evaluate a policy from a server instance, database, or database object in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  

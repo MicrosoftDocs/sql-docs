@@ -1,6 +1,6 @@
 ---
-title: "Specify Paths and Optimization Hints for Selective XML Indexes | Microsoft Docs"
-ms.custom: ""
+title: "Paths & optimization hints for selective XML Indexes | Microsoft Docs"
+description: Learn how to specify node paths and optimization hints when you create or alter selective XML indexes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -10,9 +10,10 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to specify node paths to index and optimization hints for indexing when you create or alter selective XML indexes.  
   
  You specify node paths and optimization hints at the same time in one of the following statements:  
@@ -229,8 +230,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   Node `b`, because a predicate is applied over node`b` in the XQuery expression.  
   
 2.  **Principle 2**: For best performance, index all nodes that are required to evaluate a given XQuery expression. If you index only some of the nodes, then the selective XML index improves the evaluation of sub-expressions that include only indexed nodes.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  To improve the performance of the SELECT statement shown above, you can create the following selective XML index:  
   

@@ -1,5 +1,6 @@
 ---
 title: "Install PolyBase on Windows | Microsoft Docs"
+description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ helpviewer_keywords:
    - "PolyBase, installation"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Install PolyBase on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 To install a trial version of SQL Server, go to [SQL Server evaluations](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
@@ -22,8 +23,6 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 - 64-bit SQL Server Evaluation edition.  
    
 - Microsoft .NET Framework 4.5.  
-
-- Oracle Java SE Runtime Environment (JRE). Versions 7 (starting from 7.51) and 8 are supported. [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) and [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) both work. Go to [Java SE downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html). If JRE isn't present, the installer fails. JRE9 and JRE10 aren't supported.
 
 - Minimum memory: 4 GB. 
    
@@ -87,8 +86,6 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
    
 6. On the PolyBase Configuration page, specify a port range with at least six ports. SQL Server setup  allocates the first six available ports from the range.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    >[!IMPORTANT]
    > After installation, you must [enable the PolyBase feature](#enable).
 
@@ -151,14 +148,13 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> Enable PolyBase
 
-After installation, PolyBase must be enabled to access its features. To connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation. Use the following Transact-SQL command.
+After installation, PolyBase must be enabled to access its features. Use the following Transact-SQL command. SQL 2019 instances deployed during Big Data Cluster installation have this setting enabled by default.
 
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE [ WITH OVERRIDE ]  ;
+RECONFIGURE;
 ```
-The instance then must be restarted.
 
 
 ## Post-installation notes  

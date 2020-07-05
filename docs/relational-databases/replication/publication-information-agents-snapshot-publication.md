@@ -1,6 +1,7 @@
 ---
-title: "Publication Information, Agents (Snapshot Publication) | Microsoft Docs"
-ms.custom: ""
+title: "Agents (Snapshot - SSMS)"
+description: Describes the 'Agents' tab on the Snapshot Agent page in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,10 +13,10 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publication Information, Agents (Snapshot Publication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Agents** tab displays summary information on the Snapshot Agent for the selected publication.  
   
 ## Options  

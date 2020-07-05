@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Execute Process task [Integration Services]"
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Execute Process Task
 

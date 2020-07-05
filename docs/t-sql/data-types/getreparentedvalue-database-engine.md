@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # GetReparentedValue (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a node whose path from the root is the path to _newRoot_, followed by the path from _oldRoot_.
   
@@ -53,7 +53,7 @@ Used to modify the tree by moving nodes from _oldRoot_ to _newRoot_. GetReparent
 ## Examples  
   
 ### A. Comparing two node locations  
-The following example shows the current hierarchyid of a node. It also shows what the **hierarchyid** of the node would be if you move the node to become a descendant of the **@NewParent** node. It uses the `ToString()` method to show the hierarchical relationships.
+The following example shows the current hierarchyid of a node. It also shows what the **hierarchyid** of the node would be if you move the node to become a descendant of the **\@NewParent** node. It uses the `ToString()` method to show the hierarchical relationships.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

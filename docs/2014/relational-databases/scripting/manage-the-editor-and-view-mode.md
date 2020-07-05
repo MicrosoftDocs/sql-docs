@@ -1,6 +1,6 @@
 ---
-title: "Manage the Editor and View Mode | Microsoft Docs"
-ms.custom: ""
+title: Manage the Editor and View Mode
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "displaying line numbers"
   - "view modes [SQL Server Management Studio]"
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Manage the Editor and View Mode
   The Editor gives you a number of ways to control the view of your code.  

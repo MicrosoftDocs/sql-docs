@@ -48,7 +48,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Number of connection errors when the program connects to the Windows Azure storage account.|  
+|number_of_storage_connectivity_errors|int|Number of connection errors when the program connects to the Azure storage account.|  
 |number_of_sql_errors|int|Number of errors returned when the program connects to SQL Server Engine.|  
 |number_of_invalid_credential_errors|int|Number of errors returned when the program tries to authenticate using SQL Credentials.|  
 |number_of_other_errors|int|Number of errors in other categories besides connectivity, SQL, or credential.|  

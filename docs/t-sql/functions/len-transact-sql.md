@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "number of characters"
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
-ms.author: mikeray
+ms.author: pelopes
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns the number of characters of the specified string expression, excluding trailing spaces.  
   
@@ -33,7 +33,7 @@ Returns the number of characters of the specified string expression, excluding t
   
 ## Syntax  
   
-```  
+```syntaxsql
 LEN ( string_expression )  
 ```  
   

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Rename logins matching fixed server role names
   Upgrade Advisor detected one or more user-defined login names that match the names of fixed server roles. Fixed server role names are reserved. Rename the login before you upgrade.  
@@ -54,7 +53,7 @@ manager: craigg
   
 2.  Drop the logins.  
   
-3.  Use the **sp_addlogin** system procedure to create new logins. Specify the SID returned in step 1 in the **@sid** parameter for each corresponding login.  
+3.  Use the **sp_addlogin** system procedure to create new logins. Specify the SID returned in step 1 in the **\@sid** parameter for each corresponding login.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

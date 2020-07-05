@@ -1,11 +1,8 @@
 ---
-title: "Transact-SQL Editor Options | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Transact-SQL Editor Options
+description: Become familiar with Transact-SQL Editor options. Learn about query execution properties and query results properties, and see how to adjust the values.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID"
@@ -25,10 +22,15 @@ f1_keywords:
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED"
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Transact-SQL Editor Options
+
 This topic contains information about some of the options of the Transact-SQL Editor. To set these options, navigate to the **Option** dialog through the **Tools\Options** menu.  
   
 [Query Execution](#QueryExecution)  
@@ -75,7 +77,7 @@ This topic contains information about some of the options of the Transact-SQL Ed
 |**Maximum Characters Retrieved**|Non XML data:<br /><br />Enter a number from 1 through 65535 to specify the maximum number of characters that will be displayed in each cell. **Note:** Specifying a large number of characters may cause data in the result set to appear truncated. The maximum number of characters displayed in each cell is dependent on the font size. When large result sets are returned, a high value in this box can cause SQL Server Management Studio to run low on memory and hinder system performance.<br /><br />XML data:<br /><br />Select 1 MB, 2 MB, or 5 MB. Select Unlimited to retrieve all characters.|  
 |**Output format**|By default the output is displayed in columns created by padding the results with spaces. Other options are using commas, tabs, or spaces to separate columns. Select the **Custom delimiter** check box to specify a different delimiting character in the **Custom delimiter** box.|  
 |**Custom delimiter**|Specify the character of your choice to separate columns. This option is available only if the **Custom delimiter** check box is selected in the **Output format** box.|  
-|**Include column headers in the result set**|Clear this check box if you do not want each column labeled with a column title.|  
+|**Include column headers in the result set**|Clear this check box if you do not want each column labeled with a column title:.|  
 |**Scroll as results are received**|Select this check box to keep the display focus on the most recently returned records at the bottom. Clear this check box to keep the display focus on the first rows received.|  
 |**Right align numeric values**|Select this check box to align numeric values to the right of the column. This option can make it easier to review numbers with a fixed number of decimal places.|  
 |**Discard result after query executes**|Frees memory by discarding the query results after the screen display has received them.|  

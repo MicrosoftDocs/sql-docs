@@ -1,5 +1,5 @@
 ---
-title: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
+title: "Availability Group Properties: Backup Preferences Page"
 description: "A description of the various properties found on the 'Backup preference' page of the 'New Availability Group' wizard in SQL Server Management Studio."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to view and change the backup preferences of the selected availability group.  
   
  **To view availability group properties**  

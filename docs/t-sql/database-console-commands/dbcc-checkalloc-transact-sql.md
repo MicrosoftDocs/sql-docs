@@ -28,7 +28,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Checks the consistency of disk space allocation structures for a specified database.
   
@@ -36,7 +36,7 @@ Checks the consistency of disk space allocation structures for a specified datab
   
 ## Syntax  
   
-```
+```syntaxsql
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -88,7 +88,7 @@ DBCC CHECKALLOC
  TABLOCK  
  Causes the DBCC command to obtain an exclusive database lock.
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  Displays the estimated amount of tempdb space that is required to run DBCC CHECKALLOC when all the other options are specified.
   
 ## Remarks  

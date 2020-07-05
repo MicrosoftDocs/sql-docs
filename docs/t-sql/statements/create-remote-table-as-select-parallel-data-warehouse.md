@@ -1,10 +1,9 @@
 ---
-title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
@@ -23,7 +22,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  

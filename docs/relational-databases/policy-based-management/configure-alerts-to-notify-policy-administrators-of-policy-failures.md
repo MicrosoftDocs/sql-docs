@@ -1,6 +1,7 @@
 ---
-title: "Configure Alerts to Notify Policy Administrators of Policy Failures | Microsoft Docs"
-ms.custom: ""
+title: "Configure alerts to notify admins of policy failures"
+description: Learn how to configure alerts to notify policy administrators when a SQL Server fails a policy evaluation.
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Configure Alerts to Notify Policy Administrators of Policy Failures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When Policy-Based Management policies are executed in one of the three automated evaluation modes, if a policy violation occurs, a message is written to the event log. To be notified when this message is written to the event log, you can create an alert to detect the message and perform an action. The alert should detect the messages as shown in the following table.  
   
 |Execution mode|Message number|  

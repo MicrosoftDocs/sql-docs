@@ -1,5 +1,6 @@
 ---
 title: "Reporting Services Extension Library | Microsoft Docs"
+description: Learn about the Reporting Services extension library, a set of classes, interfaces, and value types that provide access to system functionality.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,6 +1,7 @@
 ---
-title: "Lesson 2: Create and Apply a Naming Standards Policy | Microsoft Docs"
-ms.custom: ""
+title: "Lesson 2: Create & apply naming standards policy"
+description: This tutorial teaches you to create and apply a naming standards policy for Policy-Based Management in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: security
@@ -12,7 +13,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Some types of Policy-Based Management policies can create triggers to enforce future compliance with the policy. In this lesson, you create a policy that enforces a naming standard for tables. Then, you test the policy by trying to create a table that violates the policy.  
 
 
@@ -33,8 +34,6 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
   
 2.  In Object Explorer, click **Databases**, and then press F5 to refresh the list of databases.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Create the Finance tables condition 
 
 1.  In Object Explorer, expand **Management**, expand **Policy Management**, right-click **Conditions**, and then click **New Condition**. 
@@ -43,7 +42,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
   
 2.  In the **Create New Condition** dialog box, in the **Name** box, type **Finance Tables**.  
     1. In the **Facet** list, select **Multipart Name**. 
-    1. In the **Expression** area, in the **Field** box, select **@Name**; in the **Operator** box, select **Like**; and in the **Value** box, type ```'fintbl%'``` to force all table names to start with the letters **fintbl**.
+    1. In the **Expression** area, in the **Field** box, select **\@Name**; in the **Operator** box, select **Like**; and in the **Value** box, type ```'fintbl%'``` to force all table names to start with the letters **fintbl**.
     1. On the **Description** page, type **Finance table names must begin with fintbl**, and then click **OK** to create the condition.  
 
     ![Finance tables condition](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "logmarkhistory system table"
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # logmarkhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each marked transaction that has been committed. This table is stored in the **msdb** database.  
   

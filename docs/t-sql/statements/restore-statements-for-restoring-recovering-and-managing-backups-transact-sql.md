@@ -1,6 +1,7 @@
 ---
-title: "RESTORE Statements for Restoring, Recovering, Managing Backups (T-SQL) | Microsoft Docs"
-ms.custom: ""
+title: Restoring, recovering, and managing backups
+description: Transact-SQL RESTORE statements for restoring, recovering, and managing backups.
+ms.custom: "seo-lt-2019​"
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"

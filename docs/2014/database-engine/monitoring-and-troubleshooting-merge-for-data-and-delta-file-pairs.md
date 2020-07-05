@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Monitoring and Troubleshooting Merge for Data and Delta File Pairs
   In-Memory OLTP uses a merge policy to merge adjacent data and delta file pairs automatically. You cannot disable merge activity.  
@@ -41,9 +40,8 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  Assume that the three data and delta file pairs each had 15,836 rows and 5,279 deleted rows. After the merge, the new data file has 31,872 rows and 0 deleted rows. The size of the new data file can be much larger than the initially allocated size of 128MB. This is because manual merge overrides the merge policy and forces the merge of the requested files.  
   
- The blog [State Transition of Checkpoint Files in Databases with Memory-Optimized Tables](http://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) describes state transition of data and delta file pairs from inception to garbage collection.  
+ The blog [State Transition of Checkpoint Files in Databases with Memory-Optimized Tables](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/) describes state transition of data and delta file pairs from inception to garbage collection.  
   
 ## See Also  
  [Creating and Managing Storage for Memory-Optimized Objects](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   

@@ -1,5 +1,6 @@
 ---
-title: "View the Properties and Contents of a Logical Backup Device (SQL Server) | Microsoft Docs"
+title: "View logical backup device contents"
+description: Learn how to view the properties and contents of a logical backup device in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -22,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # View the Properties and Contents of a Logical Backup Device (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to view the properties and contents of a logical backup device in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

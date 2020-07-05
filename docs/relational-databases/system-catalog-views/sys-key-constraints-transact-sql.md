@@ -17,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.key_constraints catalog view"
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.key_constraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains a row for each object that is a primary key or unique constraint. Includes **sys.objects.type** PK and UQ.  
   

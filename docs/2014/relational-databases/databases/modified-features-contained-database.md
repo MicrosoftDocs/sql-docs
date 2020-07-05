@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Modified Features (Contained Database)
   The following features have been modified to be supported by a partially contained database. Features are usually modified so they do not cross the database boundary.  

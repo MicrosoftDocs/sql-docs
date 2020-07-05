@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "sp_dbmmonitordropmonitoring"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dbmmonitordropmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stops and deletes the mirroring monitor job for all the databases on the server instance.  
   

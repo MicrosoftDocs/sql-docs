@@ -1,5 +1,6 @@
 ---
-title: "Text Boxes (Report Builder and SSRS) | Microsoft Docs"
+title: "Text Boxes (Report Builder) | Microsoft Docs"
+description: Find out about cells in a table or matrix that also contain a text box, which you can format the same way as stand-alone text boxes in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

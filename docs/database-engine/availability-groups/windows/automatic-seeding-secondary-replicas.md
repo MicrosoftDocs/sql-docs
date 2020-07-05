@@ -1,8 +1,7 @@
 ---
-title: "Use automatic seeding to initialize a secondary replica for an availability group"
-description: "Use automatic seeding to initialize secondary replicas as part of an Always On availability group with SQL 2016 and greater."
-services: data-lake-analytics
-ms.custom: "seodec18"
+title: "Automatic seeding for secondary replicas"
+description: "Learn about how automatic seeding can initialize secondary replicas as part of an Always On availability group with SQL 2016 and greater."
+ms.custom: seo-lt-2019 
 ms.date: "11/27/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +14,7 @@ author: "MashaMSFT"
 ms.author: mathoma
 ---
 # Use automatic seeding to initialize a secondary replica for an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a SQL Server Always On availability group is to use backup, copy, and restore. SQL Server 2016 introduces a new feature to initialize a secondary replica - *automatic seeding*. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This new feature can be used either during the initial creation of an availability group or when a database is added to one. Automatic seeding is in all editions of SQL Server that support Always On availability groups, and can be used with both traditional availability groups and [distributed availability groups](distributed-availability-groups.md).
 

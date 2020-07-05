@@ -1,5 +1,6 @@
 ---
 title: "Create Identical Symmetric Keys on Two Servers | Microsoft Docs"
+description: Learn how to create identical symmetric keys on two servers in SQL Server by using Transact-SQL. This supports encryption in separate databases or servers.
 ms.custom: ""
 ms.date: "05/30/2019"
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "symmetric keys [SQL Server], creating"
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Identical Symmetric Keys on Two Servers
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to create identical symmetric keys on two different servers in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. In order to decrypt ciphertext, you need the key that was used to encrypt it. When both encryption and decryption occur in a single database, the key is stored in the database and it is available, depending on permissions, for both encryption and decryption. But when encryption and decryption occur in separate databases or on separate servers, the key stored in one database is not available for use on the second database.
   
 ## Before You Begin  
@@ -91,7 +92,7 @@ SQL Server 2016 uses the SHA1 hashing algorithm for its encryption work. Startin
 - Ensure your SQL Server 2017 is updated to at least Cumulative Update 2 (CU2).
   - See [Cumulative Update 2 (CU2) for SQL Server 2017](https://support.microsoft.com/help/4052574) for important details.
 - After you install CU2, turn on trace flag 4631 in SQL Server 2017: `DBCC TRACEON(4631, -1);`
-  - Trace flag 4631 is new in SQL Sewrver 2017. Trace flag 4631 needs to be `ON` globally before you create the master key, certificate, or symmetrical key in SQL Server 2017. This enables these created items to interoperate with SQL Server 2016 and earlier versions.
+  - Trace flag 4631 is new in SQL Server 2017. Trace flag 4631 needs to be `ON` globally before you create the master key, certificate, or symmetrical key in SQL Server 2017. This enables these created items to interoperate with SQL Server 2016 and earlier versions.
 
 For more guidance, see:
 

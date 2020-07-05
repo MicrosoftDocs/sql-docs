@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "events [Integration Services], raising"
   - "predefined events [Integration Services]"
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Raising and Defining Events in a Data Flow Component
 

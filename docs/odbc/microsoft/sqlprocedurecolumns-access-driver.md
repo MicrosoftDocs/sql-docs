@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLProcedureColumns"
   - "SQLProcedureColumns function [ODBC], Access Driver"
 ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLProcedureColumns (Access Driver)
 > [!NOTE]  

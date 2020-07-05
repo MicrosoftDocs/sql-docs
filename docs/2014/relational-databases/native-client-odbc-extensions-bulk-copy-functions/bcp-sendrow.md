@@ -15,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_sendrow function"
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # bcp_sendrow
   Sends a row of data from program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

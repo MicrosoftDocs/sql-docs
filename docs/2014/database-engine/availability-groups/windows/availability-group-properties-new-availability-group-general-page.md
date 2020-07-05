@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Availability Group Properties and New Availability Group (General Page)
   This topic applies to the **General** tab of both the **New Availability Group** dialog box and the **Availability Group Properties** dialog box.  The **New Availability Group** dialog box enables you to create a new availability group without using the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. The **Availability Group Properties** dialog box enables you to view and alter the configuration of an existing availability group.  
@@ -22,7 +21,7 @@ manager: craigg
   
 -   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## UIElement List  
+## UI element list  
  **Availability group name**  
  Name of the availability group. This is a user-specified name that must be unique within the Windows Server Failover Cluster (WSFC).  
   

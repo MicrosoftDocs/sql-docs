@@ -1,6 +1,6 @@
 ---
-title: "Clustered Property (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+title: "Clustered Property (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -18,7 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Clustered Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the Boolean property value that specifies whether the service is part of a clustered instance.  
   
 ## Syntax  

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "output columns [Integration Services]"
   - "data flow components [Integration Services], transformation components"
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a Custom Transformation Component with Synchronous Outputs
 

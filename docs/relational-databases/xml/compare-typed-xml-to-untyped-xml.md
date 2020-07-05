@@ -1,5 +1,6 @@
 ---
 title: "Compare Typed XML to Untyped XML | Microsoft Docs"
+description: Learn about the differences between typed and untyped XML.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -27,7 +28,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Compare Typed XML to Untyped XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can create variables, parameters, and columns of the **xml** type. You can optionally associate a collection of XML schemas with a variable, parameter, or column of **xml** type. In this case, the **xml** data type instance is called *typed*. Otherwise, the XML instance is called *untyped*.  
   
 ## Well-formed XML and the xml Data Type  
@@ -147,8 +148,6 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  Any **xs:date** or **xs:dateTime** values that are smaller than January 1st of year 1 will lead to a runtime error when the index gets rebuild or an XQuery or XML-DML statements gets executed against the XML data type containing that value.  
   
 2.  Any negative years in **xs:date** or **xs:dateTime** facets or default values in an XML Schema collection will automatically be updated to the smallest value allowed by the base **xs:date** or **xs:dateTime** type (e.g., 0001-01-01T00:00:00.0000000Z for **xs:dateTime**).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Note that you can still use a simple SQL select statement to retrieve the whole XML data type, even if it contains negative years. It is recommended that you replace negative years with a year within the newly supported range or change the type of the element or attribute to **xs:string**.  
   

@@ -23,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Service Broker Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on a [!INCLUDE[ssSB](../../includes/sssb-md.md)] contract, message type, remote service binding, route, or service.  
   
@@ -31,7 +31,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON  
     {   

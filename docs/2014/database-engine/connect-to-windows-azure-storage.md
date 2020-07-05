@@ -1,5 +1,5 @@
 ---
-title: "Connect to Windows Azure Storage | Microsoft Docs"
+title: "Connect to Azure Storage | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
-# Connect to Windows Azure Storage
-  Use the **Windows Azure Storage Connection** dialog to specify a storage account and validate your connection to Windows Azure.  
+# Connect to Azure Storage
+  Use the **Azure Storage Connection** dialog to specify a storage account and validate your connection to Azure.  
   
 ## Options  
- Specify the following information about your Windows Azure account, and then click **Next** to continue.  
+ Specify the following information about your Azure account, and then click **Next** to continue.  
   
 1.  **Storage Account** - Specify the storage account name.  
   

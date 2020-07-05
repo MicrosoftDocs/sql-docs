@@ -1,19 +1,24 @@
 ---
-title: "Review the Replay Results | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Review the replay results
+titleSuffix: SQL Server Distributed Replay
+description: After the SQL Server Distributed Replay feature completes a distributed replay, replay activity for each client can be saved in trace files on each client.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Review the Replay Results
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  After the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature completes a distributed replay, the replay activity for each client can be captured and saved in result trace files on each client. In order to capture this activity, you must use the **-o** parameter when you run the administration tool with the **replay** option. For more information about the replay option, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+After the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature completes a distributed replay, the replay activity for each client can be captured and saved in result trace files on each client. In order to capture this activity, you must use the **-o** parameter when you run the administration tool with the **replay** option. For more information about the replay option, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  The location of where the result trace files are stored is specified by the `<ResultDirectory>` XML element in the client configuration file, `DReplayClient.xml`, located on each client. The trace files in the client result directory are overwritten on each replay.  
   
@@ -59,7 +64,7 @@ ms.author: maghan
 |TextData|**ntext**|The content of TextData depends on the EventClass.<br /><br /> For Audit Login and ExistingConnection, this is the set options for the connection.<br /><br /> For SQL:BatchStarting, this is the body of the batch request.<br /><br /> For RPC:Starting, this is the stored procedure that was called.<br /><br /> For Replay Settings Event, this column contains the settings that are defined in the replay configuration file.<br /><br /> For Replay Statistics Event, this contains the following information:<br /><br /> -The replay target SQL server<br /><br /> -Total number of replayable events<br /><br /> -The number of provider errors<br /><br /> -The number of internal errors<br /><br /> -Internal warnings<br /><br /> -Total number of errors<br /><br /> -Overall pass rate<br /><br /> -The replay time (HH:MM:SS:MMM)<br /><br /> For Replay Result Set Event, this shows the list of return result column headers.<br /><br /> For Replay Result Row Event, this shows the return value of all columns for that row.<br /><br /> For Replay Internal Warning and Replay Provider Error, this column contains the provider warnings or errors.|4|  
 |Attention|**bigint**|The attention duration (in microseconds) for the event. This is calculated from the Attention event from the capture trace. If there was no query time-out specified for the event, this column is not populated (null).|5|  
 |SubmitTime|**datetime**|The time when the event was submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|6|  
-|IsSuccessful|**int**|A Boolean flag that indicates whether a particular event was successfully executed, and that result sets were returned to the client-side.<br /><br /> An event that generates a warning (such as when an event is cancelled because of Attention or a user-specified time-out) is considered successful.<br /><br /> IsSuccessful can be one of the following:<br /><br /> 1 = successful<br /><br /> 0 = failed|7|  
+|IsSuccessful|**int**|A Boolean flag that indicates whether a particular event was successfully executed, and that result sets were returned to the client-side.<br /><br /> An event that generates a warning (such as when an event is canceled because of Attention or a user-specified time-out) is considered successful.<br /><br /> IsSuccessful can be one of the following:<br /><br /> 1 = successful<br /><br /> 0 = failed|7|  
 |Duration [microsec]|**bigint**|Response time duration (in microseconds) for the event. The measurement starts when the logon/log off/RPC/Language event was submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> If the event succeeds, the measurement ends when the complete result set has been consumed.<br /><br /> If the event does not succeed, the measurement ends at the time of event failure or cancellation.|8|  
 |RowCount|**bigint**|Populated depending on the value of `<RecordRowCount>` in the replay configuration file:<br /><br /> If `<RecordRowCount>` equals Yes, this cell contains the number of rows in the result set that are returned by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> If `<RecordRowCount>` equals No, this cell is not populated (null).|9|  
 |CaptureSPID|**int**|The ID of the capture session for the event.|10|  

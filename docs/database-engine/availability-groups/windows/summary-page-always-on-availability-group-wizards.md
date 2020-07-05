@@ -1,6 +1,7 @@
 ---
-title: "Summary Page (Always On Availability Group Wizards) | Microsoft Docs"
-ms.custom: ""
+title: "Availability group wizard: Summary Page"
+description: "Describes the options of the 'Summary' page of the Always On Availability Group Wizard in SQL Server Management Studio."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Summary Page (Always On Availability Group Wizards)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 <a name="Top"></a>  
   
@@ -33,7 +34,7 @@ ms.author: mathoma
  Once you are satisfied with your choices, click to make the wizard proceed with creating the availability group.  
   
  **Cancel**  
- Click to cancel the wizard. On the **Summary** page, cancelling the wizard causes it to exit without performing any actions.  
+ Click to cancel the wizard. On the **Summary** page, canceling the wizard causes it to exit without performing any actions.  
   
  ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
   

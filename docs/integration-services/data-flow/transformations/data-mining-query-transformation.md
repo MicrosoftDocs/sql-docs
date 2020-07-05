@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Data Mining Query transformation"
   - "prediction queries [Integration Services]"
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Query Transformation
 

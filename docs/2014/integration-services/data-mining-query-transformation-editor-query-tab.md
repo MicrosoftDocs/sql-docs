@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Mining Query Transformation Editor"
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Query Transformation Editor (Query Tab)
   Use the **Query** tab of the **Data Mining Query Transformation Editor** dialog box to create a prediction query.  

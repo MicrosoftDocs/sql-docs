@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Features Supported by the Editions of SQL Server 2014
 
@@ -166,8 +165,8 @@ manager: craigg
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Yes|Yes|Yes|Yes||||  
 |Microsoft System Center Operations Manager Management Pack|Yes|Yes|Yes|Yes||||  
 |Database Tuning Advisor (DTA)|Yes|Yes|Yes<sup>3</sup>|Yes<sup>3</sup>||||  
-|Deploy a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database to a Windows Azure VM Wizard|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Files in Windows Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Deploy a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database to an Azure VM Wizard|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Files in Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
   
  <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools, and [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services can be profiled using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise editions.  
   

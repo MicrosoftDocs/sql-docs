@@ -14,7 +14,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB DataRead Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The OLEDB DataRead event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calls an OLE DB provider for distributed queries and remote stored procedures. Include this event class in traces that monitor when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes a data request call to the OLE DB provider.  
   
  When the OLEDB DataRead class is included in a trace, the amount of overhead incurred will be high. It is recommended that you limit the use of this event class to traces that monitor specific problems for brief periods of time.  

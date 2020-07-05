@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom objects [Integration Services], persisting"
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Persisting Custom Objects
 

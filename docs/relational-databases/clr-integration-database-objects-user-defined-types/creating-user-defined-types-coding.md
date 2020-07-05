@@ -1,5 +1,6 @@
 ---
 title: "Coding User-Defined Types | Microsoft Docs"
+description: This example shows how to implement a UDT to use in a SQL Server database. It implements the UDT as a structure. 
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -32,7 +33,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Creating User-Defined Types - Coding
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When coding your user-defined type (UDT) definition, you must implement various features, depending on whether you are implementing the UDT as a class or a structure, as well as on the format and serialization options you have chosen.  
   
  The example in this section illustrates implementing a **Point** UDT as a **struct** (or **Structure** in Visual Basic). The **Point** UDT consists of X and Y coordinates implemented as property procedures.  
@@ -86,7 +87,7 @@ public struct Point : INullable
   
  You must create a property named **IsNull**, which is needed to determine whether a value is null from within CLR code. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finds a null instance of a UDT, the UDT is persisted using normal null-handling methods. The server does not waste time serializing or deserializing the UDT if it does not have to, and it does not waste space to store a null UDT. This check for nulls is performed every time a UDT is brought over from the CLR, which means that using the [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL construct to check for null UDTs should always work. The **IsNull** property is also used by the server to test whether an instance is null. Once the server determines that the UDT is null, it can use its native null handling.  
   
- The **get()** method of **IsNull** is not special-cased in any way. If a **Point** variable **@p** is **Null**, then **@p.IsNull** will, by default, evaluate to "NULL", not "1". This is because the **SqlMethod(OnNullCall)** attribute of the **IsNull get()** method defaults to false. Because the object is **Null**, when the property is requested the object is not deserialized, the method is not called, and a default value of "NULL" is returned.  
+ The **get()** method of **IsNull** is not special-cased in any way. If a **Point** variable **\@p** is **Null**, then **\@p.IsNull** will, by default, evaluate to "NULL", not "1". This is because the **SqlMethod(OnNullCall)** attribute of the **IsNull get()** method defaults to false. Because the object is **Null**, when the property is requested the object is not deserialized, the method is not called, and a default value of "NULL" is returned.  
   
 ### Example  
  In the following example, the `is_Null` variable is private and holds the state of null for the instance of the UDT. Your code must maintain an appropriate value for `is_Null`. The UDT must also have a static property named **Null** that returns a null value instance of the UDT. This allows the UDT to return a null value if the instance is indeed null in the database.  
@@ -607,8 +608,6 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Use the **Write** method for the **Currency** UDT to determine how the UDT is persisted on disk and therefore how UDT values are compared and ordered for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations.  
   
 3.  Save the **Currency** UDT using the following binary format:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Save the culture as a UTF-16 encoded string for bytes 0-19 with padding to the right with null characters.  
   

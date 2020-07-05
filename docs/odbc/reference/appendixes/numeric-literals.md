@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "numeric literals [ODBC]"
   - "literals [ODBC], numeric"
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Numeric Literals
 Numeric literals are used when numeric data values are stored in character strings. For conversion of numeric SQL data to an SQL_C_CHAR string, or conversion of numeric C data to an SQL_CHAR or SQL_VARCHAR string, numeric literal syntax is used to specify what is stored in the target. For conversion of a numeric stored as a SQL_C_CHAR string to numeric SQL data, or a numeric stored as a SQL_CHAR string to numeric C data, this syntax is used to validate what is stored in the source.  

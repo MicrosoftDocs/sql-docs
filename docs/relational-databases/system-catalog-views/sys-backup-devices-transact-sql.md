@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "backup devices [SQL Server], viewing information"
   - "sys.backup_devices catalog view"
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.backup_devices (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each backup-device registered by using **sp_addumpdevice** or created in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

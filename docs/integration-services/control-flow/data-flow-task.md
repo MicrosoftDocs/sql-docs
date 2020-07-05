@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], Data Flow task"
   - "Integration Services, performance"
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Flow Task
 

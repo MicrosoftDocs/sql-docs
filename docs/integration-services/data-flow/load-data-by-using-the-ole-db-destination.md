@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB destination [Integration Services]"
   - "destinations [Integration Services], OLE DB"
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Load Data by Using the OLE DB Destination
 

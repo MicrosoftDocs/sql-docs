@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "XML source [Integration Services]"
   - "XML Source Editor"
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # XML Source
   The XML source reads an XML data file and populates the columns in the source output with the data.  

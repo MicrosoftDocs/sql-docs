@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLAllocConnect function [ODBC]"
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLAllocConnect Function
 **Conformance**  

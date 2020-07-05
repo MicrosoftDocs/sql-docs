@@ -1,5 +1,5 @@
 ---
-title: "SqlErrorLogFile Class | Microsoft Docs"
+title: "SqlErrorLogFile Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SqlErrorLogFile Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Provides properties for viewing information about a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file.  
   
 ## Syntax  

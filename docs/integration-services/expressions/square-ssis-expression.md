@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQUARE"
   - "square values"
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SQUARE (SSIS Expression)
 

@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Extended Events Engine | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Extended Events Engine"
+description: The SQL Server Extended Events engine enables the definition of events and processing of event data, manages Extended Events, and maintains a list of sessions.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # SQL Server Extended Events Engine
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events engine is a collection of services and objects that:  
   

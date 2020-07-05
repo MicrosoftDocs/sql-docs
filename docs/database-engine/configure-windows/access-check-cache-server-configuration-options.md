@@ -1,5 +1,6 @@
 ---
 title: "access check cache Server Configuration Options | Microsoft Docs"
+description: "Learn about the access check result cache and the options that control the cache's behavior. See when to change these options in SQL Server."
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "access check cache option"
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # access check cache Server Configuration Options
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   When database objects are accessed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the access check is cached in an internal structure called the **access check result cache**. The **access check cache quota** and **access check cache bucket count** options control the number of entries and number of hash buckets used for **access check result cache**. In rare circumstances, performance can be improved by changing these options.  
   

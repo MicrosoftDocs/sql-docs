@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Table-Valued Object Properties (Visual Database Tools)
   These properties appear in the Properties window when you select a table-valued object in **Query and View Designer**. The table-valued object could be a view, synonym, derived table, or table-valued function. Unless otherwise noted, these properties are read-only in the **Properties** window.  

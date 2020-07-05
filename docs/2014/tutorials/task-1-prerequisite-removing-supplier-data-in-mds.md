@@ -9,12 +9,11 @@ ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 1 (Prerequisite): Removing Supplier Data in MDS
   In this task, you remove the supplier data stored in MDS. You uploaded the data manually using **MDS Excel Add-in** in the previous lesson. The SSIS package you create in this lesson will automatically upload the data to MDS for you. Therefore, before testing the SSIS package, you need to remove the supplier data from MDS, remove the derived hierarchy, remove supplier and state entities, and create the supplier entity with no data.  
   
-1.  Launch **Master Data Manager** by navigating to **http://localhost/MDS** or the website and application you specified when configuring MDS. If you kept the **Master Data Manager** open, click **SQL Server 2012 Master Data Services** at the top to switch to the **home page**.  
+1.  Launch **Master Data Manager** by navigating to `http://localhost/MDS` or the website and application you specified when configuring MDS. If you kept the **Master Data Manager** open, click **SQL Server 2012 Master Data Services** at the top to switch to the **home page**.  
   
 2.  Click **System Administration** in the **Administrative Tasks** section.  
   
@@ -44,9 +43,9 @@ manager: craigg
   
     1.  Select **Create a new connection**, and click **New** button.  
   
-    2.  In the Add New Connection dialog box, type **Local MDS Server** for **Description** and **http://localhost/MDS** for **MDS server address**, and click **OK** to close the dialog box.  
+    2.  In the Add New Connection dialog box, type **Local MDS Server** for **Description** and **http:\//localhost/MDS** for **MDS server address**, and click **OK** to close the dialog box.  
   
-15. In **Manage Connections** dialog box, select **Local MDS Server** (http://localhost/MDS), click **Test** to test the connection. Click **OK** on the message box.  
+15. In **Manage Connections** dialog box, select **Local MDS Server** (`http://localhost/MDS`), click **Test** to test the connection. Click **OK** on the message box.  
   
 16. Click **Connect** to make a connection to the MDS server.  
   

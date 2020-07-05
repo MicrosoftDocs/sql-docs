@@ -3,7 +3,7 @@ title:  SQL Server on Linux FAQ
 description: This article provides answers to frequently asked questions about SQL Server running on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -11,7 +11,7 @@ ms.technology: linux
 
 # SQL Server on Linux Frequently Asked Questions (FAQ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 The following sections provide common questions and answers for SQL Server running on Linux.
 
@@ -27,7 +27,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Is SQL Server on Linux the same as on Windows?**
 
-   The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-release-notes.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
+   The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-editions-and-components-2019.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
 
 1. **What is the support policy for SQL Server?**
 

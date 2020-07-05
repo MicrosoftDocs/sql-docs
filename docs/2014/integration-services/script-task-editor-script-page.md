@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Script Task Editor"
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Script Task Editor (Script Page)
   Use the **Script** page of the **Script Task Editor** dialog box to set script properties and specify variables that can be accessed by the script.  

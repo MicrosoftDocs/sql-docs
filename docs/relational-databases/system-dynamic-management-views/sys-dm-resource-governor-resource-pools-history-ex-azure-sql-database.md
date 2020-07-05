@@ -3,7 +3,6 @@ title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Micr
 ms.custom: ""
 ms.date: "03/27/2019"
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ""
 ms.technology: system-objects
@@ -26,7 +25,7 @@ monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Returns snapshot at 15 seconds interval for last 30 minutes of resource pools stats for an Azure SQL Database.  
+Returns snapshot at 20 seconds interval for last 32 minutes (128 recs in total) of resource pools stats for an Azure SQL Database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -79,7 +78,7 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 |**max_vcores**|decimal(5,2)|The current configuration for the maximum average CPU bandwidth allowed for all requests in the resource pool when there is CPU contention.  In unit of vCores|
 |**cap_vcores**|decimal(5,2)|Hard cap on the CPU bandwidth that all requests in the resource pool will receive.  In unit on vCores|
 |**instance_cpu_count**|int|Number of CPU configured for the instance|
-|**instance_cpu_percent|decimal(5,2)|CPU percent configured for the instance|
+|**instance_cpu_percent**|decimal(5,2)|CPU percent configured for the instance|
 |**instance_vcores**|decimal(5,2)|Number of vCores configured for the instance|
 |**delta_log_bytes_used**|decimal(5,2)|Total log generation (in bytes) at pool level since last snapshot|
 |**avg_login_rate_percent**|decimal(5,2)|Number of Logins since last snapshot, compared against Login Limit|

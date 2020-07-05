@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.hash_indexes catalog view"
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.hash_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Shows the current hash indexes and the hash index properties. Hash indexes are supported only on [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   

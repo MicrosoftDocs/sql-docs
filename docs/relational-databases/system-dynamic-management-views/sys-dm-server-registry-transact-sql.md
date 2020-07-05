@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_server_registry dynamic management view"
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_server_registry (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns configuration and installation information that is stored in the Windows registry for the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Returns one row per registry key. Use this dynamic management view to return information such as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services that are available on the host machine or network configuration values for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -61,7 +61,7 @@ WHERE registry_key LIKE N'%SQLAgent%';
 ```  
 SELECT registry_key, value_name, value_data  
 FROM sys.dm_server_registry  
-WHERE registry_key = N'CurrentVersion';  
+WHERE value_name = N'CurrentVersion';  
 ```  
   
 ### D. Display the parameters passed to the instance of SQL Server during startup  

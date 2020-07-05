@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "breakpoints [Integration Services]"
   - "tasks [Integration Services], breakpoints"
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Debug a Package by Setting Breakpoints on a Task or a Container
   This procedure describes how to set breakpoints in a package, a task, a For Loop container, a Foreach Loop container, or a Sequence container.  

@@ -19,7 +19,7 @@ ms.author: "pelopes"
 manager: amitban
 ---
 # sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Returns the equivalent of the last known actual execution plan for a previously cached query plan.
 
@@ -61,6 +61,10 @@ This system function is available starting with [!INCLUDE[sql-server-2019](../..
 This is an opt-in feature and requires [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, to accomplish this at the database level, see the LAST_QUERY_PLAN_STATS option in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 This system function works under the **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
+
+The Showplan output by sys.dm_exec_query_plan_stats contains the following information:
+-  All the compile-time information found in the cached plan
+-  Runtime information such as the actual number of rows per operator, the total query CPU time and execution time, spill warnings, actual DOP, the maximum used memory and granted memory
 
 Under the following conditions, a Showplan output **equivalent to an actual execution plan** is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
 

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "package [Integration Services], events"
   - "events [Integration Services], package"
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Events Logged by an Integration Services Package
 

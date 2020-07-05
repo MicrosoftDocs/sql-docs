@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "combining datasets"
   - "datasets [Integration Services], merging"
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Merge Transformation
 

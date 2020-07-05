@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "functions [ODBC], string parameters"
   - "string parameters [ODBC]"
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Functions Accepting String Parameters
 All functions that take string parameters will be converted to Unicode. (The "W" form of the function will be exported.) Count of bytes is converted to count of characters for those applicable ODBC APIs. This applies to the following functions:  

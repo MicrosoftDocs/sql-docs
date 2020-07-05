@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "LockTypeEnum enumeration [ADO]"
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # LockTypeEnum
 Specifies the type of lock placed on records during editing.  

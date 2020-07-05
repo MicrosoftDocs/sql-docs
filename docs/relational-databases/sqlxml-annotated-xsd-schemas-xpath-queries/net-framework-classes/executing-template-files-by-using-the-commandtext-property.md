@@ -1,6 +1,6 @@
 ---
-title: "Executing Template Files by Using the CommandText Property | Microsoft Docs"
-ms.custom: ""
+title: "Run template files with the CommandText property"
+description: View an example of how to use the SQLXML CommandText property to specify the name of a template file containing SQL or XPath queries.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandText Property
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  This example illustrates how template files that consist of SQL or XPath queries can be specified by using the CommandTextproperty. Instead of specifying the SQL or XPath query as the value of CommandText, you can specify a file name as the value. In the following example, the CommandType property is specified as SqlXmlCommandType.TemplateFile.  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  This example illustrates how template files that consist of SQL or XPath queries can be specified by using the CommandText property. Instead of specifying the SQL or XPath query as the value of CommandText, you can specify a file name as the value. In the following example, the CommandType property is specified as SqlXmlCommandType.TemplateFile.  
   
  The sample application executes this template:  
   
@@ -86,8 +87,6 @@ class Test
      This creates an executable (DocSample.exe).  
   
 5.  At the command prompt, execute DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  If you pass a parameter to a template, the parameter name must begin with at sign (@); for example, p.Name="\@ContactID", where p is a SqlXmlParameter object.  
   

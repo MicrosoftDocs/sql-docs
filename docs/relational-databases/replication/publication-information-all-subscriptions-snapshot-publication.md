@@ -1,6 +1,7 @@
 ---
-title: "Publication Information, All Subscriptions (Snapshot Publication) | Microsoft Docs"
-ms.custom: ""
+title: "All Subscriptions (Snapshot - SSMS)"
+description: Describes the 'All Subscriptions' tab for a selected Snapshot Publication in SQL Server Management Studio (SSMS). 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,10 +13,10 @@ f1_keywords:
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publication Information, All Subscriptions (Snapshot Publication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **All Subscriptions** tab displays information on all subscriptions to the selected snapshot publication.  
   
 ## Options  

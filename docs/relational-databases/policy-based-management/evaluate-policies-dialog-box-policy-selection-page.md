@@ -1,6 +1,7 @@
 ---
-title: "Evaluate Policies Dialog Box, Policy Selection Page | Microsoft Docs"
-ms.custom: ""
+title: "'Policy Selection' page of the 'Evaluate Policies' dialog box"
+description: Describes the 'Policy Selection' page of the 'Evaluate Policies' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Evaluate Policies Dialog Box, Policy Selection Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to evaluate Policy-Based Management policies. By selecting the **Evaluation Results** page, you can apply policies to the items in a target set that do not comply with the policies.  
   
 ## Options  

@@ -27,7 +27,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFIRST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sets the first day of the week to a number from 1 through 7.  
   
@@ -37,13 +37,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 SET DATEFIRST { number | @number_var }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET DATEFIRST 7 ;  
@@ -76,7 +76,7 @@ SET DATEFIRST 7 ;
 ## Examples  
  The following example displays the day of the week for a date value and shows the effects of changing the `DATEFIRST` setting.  
   
-```  
+```sql
 -- SET DATEFIRST to U.S. English default value of 7.  
 SET DATEFIRST 7;  
   

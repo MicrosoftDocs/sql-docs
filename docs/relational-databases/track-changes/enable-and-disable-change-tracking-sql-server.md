@@ -1,5 +1,6 @@
 ---
-title: "Enable and Disable Change Tracking (SQL Server) | Microsoft Docs"
+title: "Enable and Disable Change Tracking"
+ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,7 +20,7 @@ ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enable and Disable Change Tracking (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic describes how to enable and disable change tracking for a database and a table.  
   

@@ -1,19 +1,21 @@
 ---
-title: "Using Test Conditions in SQL Server Unit Tests | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Using Test Conditions in SQL Server Unit Tests
+description: Learn about test conditions in SQL Server unit tests. See how to use predefined conditions and negative testing, and view information on custom conditions.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.testconditions"
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Using Test Conditions in SQL Server Unit Tests
+
 In a SQL Server unit test, one or more Transact\-SQL test scripts are executed. The results can be evaluated within the Transact\-SQL script and THROW or RAISERROR used to return an error and fail the test, or test conditions can be defined in the test to evaluate the results. The test returns an instance of the [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) class. The instance of this class contains one or more DataSets, the execution time, and the rows affected by the script. All of this information is collected during execution of the script. These results can be evaluated by using test conditions. SQL Server Data Tools provides a set of predefined test conditions. You can also create and use custom conditions; see [Custom Test Conditions  for SQL Server Unit Tests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 ## Predefined Test Conditions  

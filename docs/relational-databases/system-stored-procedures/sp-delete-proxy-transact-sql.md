@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "sp_delete_proxy"
   - "DROP PROXY statement"
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the specified proxy.  
   
@@ -47,7 +47,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  None  
   
 ## Remarks  
- Either **@proxy_name** or **@proxy_id** must be specified. If both arguments are specified, the arguments must both refer to the same proxy or the stored procedure fails.  
+ Either **\@proxy_name** or **\@proxy_id** must be specified. If both arguments are specified, the arguments must both refer to the same proxy or the stored procedure fails.  
   
  If a job step refers to the proxy specified, the proxy cannot be deleted and the stored procedure fails.  
   

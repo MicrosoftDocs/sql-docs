@@ -1,5 +1,6 @@
 ---
-title: "Sort Data in a Data Region (Report Builder and SSRS) | Microsoft Docs"
+title: "Sort Data in a Data Region (Report Builder) | Microsoft Docs"
+description: Learn how to change the sort order of data in a data region when a report first runs in Report Builder.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

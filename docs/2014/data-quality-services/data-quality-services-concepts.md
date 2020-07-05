@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Data Quality Services Concepts
   This topic provides a brief summary of [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) concepts in knowledge management, data quality projects, and data quality administration.  
@@ -31,7 +30,7 @@ manager: craigg
   
  **Reference Data Services**  
   
- You can use reference data to validate, correct, and enrich your data, leveraging the services of companies who guarantee the quality of their reference data. You can use the services of Windows Azure Marketplace to connect to reference data providers, or you can use a direct connection to a provider. For more information, see [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ You can use reference data to validate, correct, and enrich your data, leveraging the services of companies who guarantee the quality of their reference data. You can use the services of Azure Marketplace to connect to reference data providers, or you can use a direct connection to a provider. For more information, see [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  For more information about knowledge management in DQS, see [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   

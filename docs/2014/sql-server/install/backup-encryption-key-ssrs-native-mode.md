@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.backupencryptionkey.F1"
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Backup Encryption Key (SSRS Native Mode)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses an encryption key to secure sensitive data that is stored in the report server database. Having a backup of this key is essential for ensuring continued access to encrypted connection strings and credentials. You must have a backup copy of this key if you move the report server database to another computer or if you change the user name or password of the Report Server service account. Both operations require that you restore the key from a backup copy that you previously created.  

@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # UDT Utilities
   The UDT Utilities sample contains a number of utility functions. These include functions to expose assembly metadata to Transact-SQL, sample streaming table-valued functions to return the types in an assembly as a table, and functions to return the fields, methods, and properties in a user-defined data type. Technologies that are demonstrated include streaming table-valued functions, .NET Framework reflection APIs, and invocation of table-valued functions from Transact-SQL.  
@@ -17,7 +16,7 @@ manager: craigg
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   The [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database that is available at the Codeplex [Web site](https://go.microsoft.com/fwlink/?linkid=62796)  
   

@@ -1,6 +1,7 @@
 ---
-title: "Display Percentage Values on a Pie Chart (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 03/01/2017
+title: "Display Percentage Values on Pie Chart (Report Builder) | Microsoft Docs"
+description: Learn how to display percentage values on a pie chart, in the legend or in the pie slices in Report Builder.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -16,7 +17,7 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated re
 
 ![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
- The [Tutorial: Add a Pie Chart to Your Report (Report Builder)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) walks you through adding percentages to pie slices, if you'd like to try this with sample data first.
+ The [Tutorial: Add a Pie Chart to Your Report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) walks you through adding percentages to pie slices, if you'd like to try this with sample data first.
  
   
 ## To display percentage values as labels on a pie chart  
@@ -38,7 +39,7 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated re
 2.  In **Legend**, type **#PERCENT** for the **Custom legend text** property.  
   
 ## See Also  
-* [Tutorial: Add a Pie Chart to Your Report (Report Builder)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [Tutorial: Add a Pie Chart to Your Report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

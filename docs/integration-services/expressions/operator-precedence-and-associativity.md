@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "associativity [Integration Services]"
   - "precedence [Integration Services]"
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Operator Precedence and Associativity
 

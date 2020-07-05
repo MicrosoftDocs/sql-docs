@@ -1,5 +1,7 @@
 ---
-title: "SQL Server Always On availability group deployment patterns"
+title: "Availability group deployment patterns - SQL Server on Linux"
+description: Learn supported deployment configurations for SQL Server Always on availability groups on Linux servers. 
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -11,7 +13,7 @@ ms.reviewer: vanto
 ---
 # High availability and data protection for availability group configurations
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article presents supported deployment configurations for SQL Server Always On availability groups on Linux servers. An availability group supports high availability and data protection. Automatic failure detection, automatic failover, and transparent reconnection after failover provide high availability. Synchronized replicas provide data protection. 
 

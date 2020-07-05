@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure Distribution
   The Distributor is a server that contains the distribution database, which stores metadata and history data for all types of replication and transactions for transactional replication. To set up replication, you must configure a Distributor. Each Publisher can be assigned to only a single Distributor instance, but multiple publishers can share a Distributor. The Distributor uses these additional resources on the server where it is located:  

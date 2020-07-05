@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Edit an Existing Data Source Connection (SSAS Tabular)
   This topic describes how to edit the properties of an existing data source connection in a tabular model.  

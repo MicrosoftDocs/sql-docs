@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "restarting packages"
   - "starting packages"
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Checkpoints for Restarting a Failed Package
   You configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages to restart from a point of failure, instead of rerunning the entire package, by setting the properties that apply to checkpoints.  

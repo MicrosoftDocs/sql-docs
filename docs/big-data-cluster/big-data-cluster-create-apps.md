@@ -1,11 +1,12 @@
 ---
-title: Deploy applications using azdata
-titleSuffix: SQL Server big data clusters
-description: Deploy a Python or R script as an application on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+title: Deploy applications with azdata
+titleSuffix: SQL Server Big Data Clusters
+description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster.
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +14,7 @@ ms.technology: big-data-cluster
 
 # How to deploy an app on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster.
 
@@ -21,7 +22,7 @@ This article describes how to deploy and manage R and Python script as an applic
 
 - A single command-line utility to manage cluster and app.
 - Simplified app deployment while providing granular control through spec files.
-- Support hosting additional application types - SSIS and MLeap (new in CTP 2.3).
+- Support hosting additional application types - SSIS and MLeap.
 - [Visual Studio Code Extension](app-deployment-extension.md) to manage application deployment.
 
 Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
@@ -38,7 +39,7 @@ The following types of apps are supported:
 
 ## Capabilities
 
-In SQL Server 2019 (preview) you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **azdata**.
+In SQL Server 2019 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **azdata**.
 
 |Command |Description |
 |:---|:---|
@@ -76,9 +77,9 @@ If you are using AKS, you need to run the following command to get the IP addres
 kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
-## Kubeadm or Minikube
+## Kubernetes clusters created with kubeadm
 
-If you are using Kubeadm or Minikube run the following command to get the IP address to sign in in to the cluster
+Run the following command to get the IP address to sign in in to the cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -242,10 +243,8 @@ Here is a sample output from the init command that you will see in the folder
 
 ```
 hello.py
-README.md
 run-spec.yaml
 spec.yaml
-
 ```
 
 ## Describe an app

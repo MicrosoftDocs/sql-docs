@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Choose a Language When Creating a Full-Text Index
   When creating a full-text index, you need to specify a column-level language for the indexed column. The [word breaker and stemmers](configure-and-manage-word-breakers-and-stemmers-for-search.md) of the specified language will be used by full-text queries on the column. There are a couple of things to consider when choosing the column language when creating a full-text index. These considerations relate to how your text is tokenized and then indexed by Full-Text Engine.  

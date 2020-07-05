@@ -30,7 +30,7 @@ ms.author: umajay
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Shrinks the size of the data and log files in the specified database.
   
@@ -38,7 +38,7 @@ Shrinks the size of the data and log files in the specified database.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC SHRINKDATABASE   
 ( database_name | database_id | 0   
      [ , target_percent ]   
@@ -124,7 +124,7 @@ A log file can only be shrunk to a virtual log file boundary. That's why shrinki
   
 ## Best Practices  
 Consider the following information when you plan to shrink a database:
--   A shrink operation is most effective after an operation. This operation creates unused space, such as a truncate table or a drop table operation.  
+-   A shrink operation is most effective after an operation that creates unused space, such as a truncate table or a drop table operation.
 -   Most databases require some free space to be available for regular day-to-day operations. You might shrink a database repeatedly and notice that the database size grows again. This growth indicates that the shrunken space is required for regular operations. In these cases, repeatedly shrinking the database is a wasted operation.  
 -   A shrink operation doesn't preserve the fragmentation state of indexes in the database, and generally increases fragmentation to a degree. This result is another reason not to repeatedly shrink the database.  
 -   Unless you have a specific requirement, don't set the AUTO_SHRINK database option to ON.  

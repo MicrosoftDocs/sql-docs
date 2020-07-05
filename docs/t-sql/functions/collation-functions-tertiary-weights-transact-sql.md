@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "SQL tertiary collations"
   - "TERTIARY_WEIGHTS function"
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation Functions - TERTIARY_WEIGHTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 For each character in a non-Unicode string expression - defined with a SQL tertiary collation - this function returns a binary string of weights.
   
@@ -30,7 +30,7 @@ For each character in a non-Unicode string expression - defined with a SQL terti
   
 ## Syntax  
   
-```sql
+```syntaxsql
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   

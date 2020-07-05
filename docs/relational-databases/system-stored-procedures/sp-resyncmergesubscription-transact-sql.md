@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_resyncmergesubscription"
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_resyncmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Resynchronizes a merge subscription to a known validation state that you specify. This allows you to force convergence or synchronize the subscription database to a specific point in time, such as the last time there was a successful validation, or to a specified date. The snapshot is not reapplied when resynchronizing a subscription using this method. This stored procedure is not used for snapshot replication subscriptions or transactional replication subscriptions. This stored procedure is executed at the Publisher, on the publication database, or at the Subscriber, on the subscription database.  
   

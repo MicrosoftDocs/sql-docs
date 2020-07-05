@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Native Client 11.0 Configuration
   This section contains the F1 Help topics for the **SQL Server Native Client Configuration** dialogs in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is the network library that client computers use to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

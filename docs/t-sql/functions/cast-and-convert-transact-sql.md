@@ -1,6 +1,6 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another."
 ms.date: "08/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -32,12 +32,12 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "roundtrip conversions"
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CAST and CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 These functions convert an expression of one data type to another.  
 
@@ -116,7 +116,7 @@ For a date or time data type *expression*,  *style* can have one of the values s
 
 <sup>6</sup> Only supported when casting from character data to **datetime** or **smalldatetime**. When casting character data representing only date or only time components to the **datetime** or **smalldatetime** data types, the unspecified time component is set to 00:00:00.000, and the unspecified date component is set to 1900-01-01.
   
-<sup>7</sup>Use the optional time zone indicator **Z** to make it easier to map XML **datetime** values that have time zone information to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** values that have no time zone. Z indicates time zone UTC-0. The HH:MM offset, in the + or - direction, indicates other time zones. For example: `2006-12-12T23:45:12-08:00`.
+<sup>7</sup> Use the optional time zone indicator **Z** to make it easier to map XML **datetime** values that have time zone information to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** values that have no time zone. Z indicates time zone UTC-0. The HH:MM offset, in the + or - direction, indicates other time zones. For example: `2006-12-12T23:45:12-08:00`.
   
 When converting **smalldatetime** to character data, the styles that include seconds or milliseconds show zeros in these positions. When converting from **datetime** or **smalldatetime** values, use an appropriate **char** or **varchar** data type length to truncate unwanted date parts.
   
@@ -159,13 +159,13 @@ For a **binary(n)**, **char(n)**, **varbinary(n)**, or **varchar(n)** *expressio
 |Value|Output|  
 |---|---|
 |**0** (default)|Translates ASCII characters to binary bytes, or binary bytes to ASCII characters. Each character or byte is converted 1:1.<br /><br /> For a binary *data_type*, the characters 0x are added to the left of the result.|  
-|**1**, **2**|For a binary *data_type*, the expression must be a character expression. The *expression* must have an **even** number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1, the must have 0x as the first two characters. If the expression contains an odd number of characters, or if any of the characters is invalid, an error is raised.<br /><br /> If the length of the converted expression exceeds the length of the *data_type*, the result is right truncated.<br /><br /> Fixed length *data_type*s larger than the converted result have zeros added to the right of the result.<br /><br /> A *data_type* of type character requires a binary expression. Each binary character is converted into two hexadecimal characters. If the length of the converted expression exceeds the length of the *data_type*, it will be right truncated.<br /><br /> For a fixed size character type *data_type*, if the length of the converted result is less than its length of the *data_type*, spaces are added to the right of the converted expression, to maintain an even number of hexadecimal digits.<br /><br /> The characters 0x will be added to the left of the converted result for *style* 1.|  
+|**1**, **2**|For a binary *data_type*, the expression must be a character expression. The *expression* must have an **even** number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1, the expression must have 0x as the first two characters. If the expression contains an odd number of characters, or if any of the characters is invalid, an error is raised.<br /><br /> If the length of the converted expression exceeds the length of the *data_type*, the result is right truncated.<br /><br /> Fixed length *data_type*s larger than the converted result have zeros added to the right of the result.<br /><br /> A *data_type* of type character requires a binary expression. Each binary character is converted into two hexadecimal characters. If the length of the converted expression exceeds the length of the *data_type*, it will be right truncated.<br /><br /> For a fixed size character type *data_type*, if the length of the converted result is less than its length of the *data_type*, spaces are added to the right of the converted expression, to maintain an even number of hexadecimal digits.<br /><br /> The characters 0x will be added to the left of the converted result for *style* 2.|  
   
 ## Implicit conversions
 Implicit conversions do not require specification of either the CAST function or the CONVERT function. Explicit conversions require specification of the CAST function or the CONVERT function. The following illustration shows all explicit and implicit data type conversions allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **bigint**, and **sql_variant**, and **xml**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.
   
 > [!TIP]  
-> The [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) has this chart available for download as a PDF file.  
+> The [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) has this chart available for download as a PNG file.  
   
 ![Data type conversion table](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
   
@@ -296,13 +296,15 @@ When converting data types where the target data type has fewer decimal places t
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message when converting nonnumeric **char**, **nchar**, **nvarchar**, or **varchar** data to **decimal**, **float**, **int**, **numeric**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also returns an error when an empty string (" ") is converted to **numeric** or **decimal**.
   
 ## Certain datetime conversions are nondeterministic
-The following table lists the styles for which the string-to-datetime conversion is nondeterministic.
+
+The styles for which the string-to-datetime conversion is nondeterministic are as follows:
   
-|||  
-|-|-|  
-|All styles below 100<sup>1</sup>|106|  
-|107|109|  
-|113|130|  
+- All styles below 100<sup>1</sup>
+- 106  
+- 107
+- 109
+- 113
+- 130  
   
 <sup>1</sup> With the exception of styles 20 and 21
 
@@ -321,9 +323,9 @@ When using SC collations, the behavior of `CONVERT`, is analogous to that of `CA
 ## Compatibility support
 In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default style for CAST and CONVERT operations on **time** and **datetime2** data types is 121, except when either type is used in a computed column expression. For computed columns, the default style is 0. This behavior impacts computed columns when they are created, used in queries involving auto-parameterization, or used in constraint definitions.
   
-Under [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) 110 and higher, the CAST and CONVERT operations on the **time** and **datetime2** data types always have 121 as the default style. If a query relies on the old behavior, use a compatibility level less than 110, or explicitly specify the 0 style in the affected query.
+Under [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) 110 and higher, the CAST and CONVERT operations on the **time** and **datetime2** data types always have 121 as the default style. If a query relies on the old behavior, use a compatibility level less than 110, or explicitly specify the 0 style in the affected query.
 
-|[Compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) value|Default style for CAST and CONVERT<sup>1</sup>|Default style for computed column|  
+|[Compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) value|Default style for CAST and CONVERT<sup>1</sup>|Default style for computed column|  
 |------------|------------|------------|
 |< **110**|121|0|  
 |> = **110**|121|121|  
@@ -843,12 +845,12 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
 
 ## See also
-[Data type precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md) 
+[Data type precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)       
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)     
 [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      
 [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)     
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)      
-[System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)      
+[System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)      
 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
 [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)       
   

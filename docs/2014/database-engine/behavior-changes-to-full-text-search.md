@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "behavior changes [full-text search]"
   - "full-text indexes [SQL Server], breaking changes"
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Behavior Changes to Full-Text Search
   This topic describes behavior changes in full-text search. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

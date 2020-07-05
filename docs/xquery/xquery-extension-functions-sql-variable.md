@@ -1,5 +1,6 @@
 ---
 title: "sql:variable() Function (XQuery) | Microsoft Docs"
+description: Learn how to use the XQuery Extension function sql:variable() to expose a variable that contains a SQL relational value inside an XQuery expression.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # XQuery Extension Functions - sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Exposes a variable that contains a SQL relational value inside an XQuery expression.  
   

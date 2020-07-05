@@ -1,5 +1,6 @@
 ---
 title: "Impersonation and Credentials for Connections | Microsoft Docs"
+description: In SQL Server CLR integration, you may want to impersonate the caller in Windows Authentication by using the SqlContext.WindowsIdentity property.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Impersonation and Credentials for Connections
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] common language runtime (CLR) integration, using Windows Authentication is complex, but is more secure than using SQL Server Authentication. When using Windows Authentication, keep in mind the following considerations.  
   
  By default, a SQL Server process that connects out to Windows acquires the security context of the SQL Server Windows service account. But it is possible to map a CLR function to a proxy identity, so that its outbound connections have a different security context than that of the Windows service account.  

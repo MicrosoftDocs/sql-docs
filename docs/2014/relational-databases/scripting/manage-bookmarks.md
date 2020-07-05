@@ -1,6 +1,6 @@
 ---
-title: "Manage Bookmarks | Microsoft Docs"
-ms.custom: ""
+title: Manage Bookmarks
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "bookmarks [SQL Server Management Studio]"
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Manage Bookmarks
   While you are working in a code editor, the **Bookmarks** window allows you to create links to specific lines of code within your document. You can display this window from the **View** menu.  

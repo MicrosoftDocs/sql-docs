@@ -1,5 +1,5 @@
 ---
-title: "Connect to Data Sources with the SQL Server Import and Export Wizard | Microsoft Docs"
+title: "Connect to Data Sources (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.prod: sql
@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Connect to Data Sources with the SQL Server Import and Export Wizard
 

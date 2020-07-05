@@ -1,10 +1,14 @@
 ---
-title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
-ms.custom: sqlfreshmay19
-ms.date: "05/29/2019"
+title: "Editions and supported features"
+titleSuffix: SQL Server 2016
+description: This article describes features supported by the various editions of SQL Server 2016, which accommodate different performance, runtime, and price requirements.
+ms.custom: 
+   - seo-lt-2019
+   - sqlfreshmay19
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
@@ -35,10 +39,16 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # Editions and supported features of SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-This topic provides details of features supported by the SQL Server editions. At this time, there are no changes to features supported by editions for SQL Server 2017.  
-  
+This topic provides details of features supported by the SQL Server editions.
+
+For information about other versions, see:
+
+* [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
+* [SQL Server 2017](editions-and-components-of-sql-server-2017.md).  
+* [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
+
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 The SQL Server Evaluation edition is available for a 180-day trial period.  
@@ -53,7 +63,7 @@ For the latest release notes and what's new information, see the following:
     
 > [![Download from Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
-> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)**   
+> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**   
   
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -148,7 +158,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|  
+|Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|  
   
  <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -191,8 +201,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Row-level security|Yes|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|  
 |Always Encrypted|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
 |Dynamic data masking|Yes|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|   
-|Basic auditing|Yes|Yes|Yes|Yes|Yes| 
-|Fine grained auditing|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
+|Server audit|Yes|Yes|Yes|Yes|Yes| 
+|Database audit|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
 |Transparent database encryption|Yes|No|No|No|No|   
 |Extensible key management|Yes|No|No|No|No| 
 |User-defined roles|Yes|Yes|Yes|Yes|Yes| 
@@ -376,7 +386,7 @@ For information about the Business Intelligence Client features supported by the
 > [![Download SSMS](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## See Also  
- [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Install SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   
   

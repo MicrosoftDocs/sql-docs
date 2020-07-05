@@ -1,5 +1,6 @@
 ---
 title: "Installing SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
+description: Learn about installation prerequisites for SQL Server Migration Assistant (SSMA) for Access and how to install, license, upgrade, and uninstall.
 ms.prod: sql
 ms.custom: ""
 ms.date: "08/15/2017"
@@ -39,7 +40,7 @@ Before you install SSMA, make sure that your system meets the following requirem
   
 -   Microsoft Data Access Object (DAO) provider version 12.0 or 14.0. You can install DAO provider from Microsoft Office 2010/2007 product or download it from Microsoft web site.  
   
--   The SQL Server Native Access Client (SNAC) version 10.5 and above for migration to SQL Azure. You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940)  
+-   The SQL Server Native Access Client (SNAC) version 10.5 and above for migration to SQL Azure. You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)  
   
 -   4 GB RAM (recommended).  
   

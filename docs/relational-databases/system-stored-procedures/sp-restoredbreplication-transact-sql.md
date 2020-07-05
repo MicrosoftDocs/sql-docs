@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_restoredbreplication"
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_restoredbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes replication settings if restoring a database to the non-originating server, database, or system that is otherwise not capable of running replication processes. When restoring a replicated database to a server or database other than the one where the backup was taken, replication settings cannot be preserved. On the restore, the server calls **sp_restoredbreplication** directly to automatically remove replication metadata from the restored database.  
   
@@ -34,16 +34,16 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## Arguments  
-`[ @srv_orig = ] 'original_server_name'`
+`[ @srv_orig = ] 'original_server_name'`  
  The name of the server where the back up was created. *original_server_name* is **sysname**, with no default.  
   
-`[ @db_orig = ] 'original_database_name'`
+`[ @db_orig = ] 'original_database_name'`  
  The name of the database that was backed up. *original_database_name* is **sysname**, with no default.  
   
-`[ @keep_replication = ] keep_replication`
+`[ @keep_replication = ] keep_replication`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @perform_upgrade = ] perform_upgrade`
+`[ @perform_upgrade = ] perform_upgrade`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

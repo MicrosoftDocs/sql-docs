@@ -1,6 +1,7 @@
 ---
-title: "Master Data Services and Data Quality Services Features Support | Microsoft Docs"
-ms.custom: ""
+title: Data Quality Services Features Support
+description: This article summarizes Master Data Services and Data Quality Services features support for the different editions of SQL Server.
+ms.custom: "seo-lt-2019"
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "mds"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Master Data Services and Data Quality Services Features Support
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 
 ## [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] and Data Quality Services

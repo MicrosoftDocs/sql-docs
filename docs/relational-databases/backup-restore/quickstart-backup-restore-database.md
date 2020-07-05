@@ -1,19 +1,19 @@
 ---
-title: "Quickstart: Backup and restore a SQL Server database on-premises"
+title: "Quickstart: Back up & restore database"
 titleSuffix: SQL Server
-description: This quickstart shows how to run SQL Server on Linux in the cloud of your choice.
+description: In this article, learn how to create a new database, take a backup of the database, and restore the backup in SQL Server.
 author: MashaMSFT 
 ms.author: mathoma 
-ms.date: 05/25/2019
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.topic: conceptual
-ms.prod: sql  
-ms.custom: 
+ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid:
 ---
 # Quickstart: Backup and restore a SQL Server database on-premises
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In this quickstart, you will create a new database, take a simple backup of it, and then restore it. 
 
@@ -22,7 +22,7 @@ For a more detailed how-to, see [Create a full database backup](create-a-full-da
 ## Prerequisites
 To complete this quickstart, you will need the following: 
 
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 ## Create a test database 

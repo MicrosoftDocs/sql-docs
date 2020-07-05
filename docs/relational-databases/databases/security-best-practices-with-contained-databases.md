@@ -1,5 +1,6 @@
 ---
 title: "Security Best Practices with Contained Databases | Microsoft Docs"
+description: Understand and mitigate the unique threats to contained databases, including those related to the USER WITH PASSWORD authentication process in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2016"
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
+ms.reviewer: jaszymas
 ---
 # Security Best Practices with Contained Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contained databases have some unique threats that should be understood and mitigated by [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] administrators. Most of the threats are related to the **USER WITH PASSWORD** authentication process, which moves the authentication boundary from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] level to the database level.  
   
 ## Threats Related to Users  
- Users in a contained database that have the **ALTER ANY USER** permission, such as members of the **db_owner** and **db_securityadmin** fixed database roles, can grant access to the database without the knowledge or permission or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. Granting users access to a contained database increases the potential attack surface area against the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Administrators should understand this delegation of access control, and be very careful about granting users in the contained database the **ALTER ANY USER** permission. All database owners have the **ALTER ANY USER** permission. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators should periodically audit the users in a contained database.  
+ Users in a contained database that have the **ALTER ANY USER** permission, such as members of the **db_owner** and **db_accessadmin** fixed database roles, can grant access to the database without the knowledge or permission or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. Granting users access to a contained database increases the potential attack surface area against the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Administrators should understand this delegation of access control, and be very careful about granting users in the contained database the **ALTER ANY USER** permission. All database owners have the **ALTER ANY USER** permission. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators should periodically audit the users in a contained database.  
   
 ### Accessing Other Databases Using the guest Account  
  Database owners and database users with the **ALTER ANY USER** permission can create contained database users. After connecting to a contained database on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a contained database user can access other databases on the [!INCLUDE[ssDE](../../includes/ssde-md.md)], if the other databases have enabled the **guest** account.  

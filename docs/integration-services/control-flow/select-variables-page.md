@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Select variables"
   - "Variable selection"
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Select Variables Page
 

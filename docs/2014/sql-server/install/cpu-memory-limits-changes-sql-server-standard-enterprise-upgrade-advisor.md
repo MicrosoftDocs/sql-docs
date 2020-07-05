@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Changes to CPU and memory limits for SQL Server Standard and Enterprise (Upgrade Advisor)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard and Enterprise supports a maximum of 64 gigabytes of system memory.  

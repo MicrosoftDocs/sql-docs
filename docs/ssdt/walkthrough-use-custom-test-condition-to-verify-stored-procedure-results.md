@@ -1,17 +1,19 @@
 ---
-title: "Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Custom Test Condition to Verify the Results of a Stored Procedure
+description: Walk through the steps of setting up a custom test condition that checks whether a stored procedure returns the correct number of columns.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure
+
 In this feature extension walkthrough, you will create a test condition, and you will verify its functionality by creating a SQL Server unit test. The process includes creating a class library project for the test condition, and signing and installing it. If you already have a test condition that you want to update, see [How to: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release to SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 This walkthrough illustrates the following tasks:  

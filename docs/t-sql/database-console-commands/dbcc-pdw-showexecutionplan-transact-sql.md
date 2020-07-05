@@ -25,13 +25,13 @@ Once query performance problems are understood for SMP [!INCLUDE[ssNoVersion](..
 ## Syntax  
 Syntax for Azure SQL Data Warehouse:
 
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
 [;]  
 ```  
 Syntax Azure Parallel Data Warehouse:
   
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [;]  
 ```  

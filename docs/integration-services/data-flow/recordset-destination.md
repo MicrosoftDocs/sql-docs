@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], Recordset"
   - "in-memory ADO recordsets [Integration Services]"
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Recordset Destination
 

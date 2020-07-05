@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes an existing service.  
   
@@ -30,7 +30,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   

@@ -15,7 +15,7 @@ ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiLineString
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A **MultiLineString** is a collection of zero or more **geometry** or **geographyLineString** instances.  
   
 ## MultiLineString instances  
@@ -59,8 +59,6 @@ For a **MultiLineString** instance to be valid it must meet the following criter
 1.  All instances comprising the **MultiLineString** instance must be valid **LineString** instances.  
   
 2.  No two **LineString** instances comprising the **MultiLineString** instance may overlap over an interval. The **LineString** instances can only intersect or touch themselves or other **LineString** instances at a finite number of points.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 The following example shows three valid **MultiLineString** instances and one **MultiLineString** instance that is not valid.  
   

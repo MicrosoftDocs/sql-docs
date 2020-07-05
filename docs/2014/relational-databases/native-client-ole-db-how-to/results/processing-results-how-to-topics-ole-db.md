@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, processing results"
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Processing Results How-to Topics (OLE DB)
   Processing results in an OLE DB application involves first determining the characteristics of the result set, and then retrieving the data into program variables. If the command executes a stored procedure, you also must know how to process return codes and output parameters from the stored procedures.  

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ObjectTypeEnum enumeration [ADOX]"
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ObjectTypeEnum
 Specifies the type of database object for which to set permissions or ownership.  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "add operator (+)"
   - "adding expressions"
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # + (Add) (SSIS)
 

@@ -1,8 +1,7 @@
 ---
-title: "Migrate on-premises SQL Server or SQL Server on Azure VMs to Azure SQL Database using the Data Migration Assistant | Microsoft Docs"
+title: "Migrate SQL Server to Azure SQL Database using the Data Migration Assistant"
 description: Learn how to use Data Migration Assistant to migrate an on-premises SQL Server to Azure SQL Database
-ms.custom: ""
-ms.date: "07/15/2019"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,8 +11,9 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, on-premises SQL Server"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
+ms.custom: "seo-lt-2019"
 ---
 
 # Migrate on-premises SQL Server or SQL Server on Azure VMs to Azure SQL Database using the Data Migration Assistant
@@ -70,7 +70,7 @@ This article provides step-by-step instructions for migrating SQL Server on-prem
 4. Select a single target database to which to migrate.
 
    > [!NOTE]
-   > If you intend to migrate Windows users, in the **Target external user domain name** text box, make sure that the tartget external user domain name is specified correctly.
+   > If you intend to migrate Windows users, in the **Target external user domain name** text box, make sure that the target external user domain name is specified correctly.
 
     ![Select target database](../dma/media/select-target-database.png)
 
@@ -82,8 +82,8 @@ This article provides step-by-step instructions for migrating SQL Server on-prem
 
     ![Select schema objects](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
 
     ![Suggested fix](../dma/media/suggested-fix.png)
 

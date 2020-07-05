@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create Calculated Members
   You can create customized measures or dimension members, called calculated members, by combining cube data, arithmetic operators, numbers, and functions. For example, you can create a calculated member named Euros that converts dollars to euros by multiplying an existing dollar measure by a conversion rate. Euros can then be displayed to end users in a separate row or column.  

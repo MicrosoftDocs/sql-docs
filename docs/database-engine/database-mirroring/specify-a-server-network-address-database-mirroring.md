@@ -1,6 +1,7 @@
 ---
-title: "Specify a Server Network Address (Database Mirroring) | Microsoft Docs"
-ms.custom: ""
+title: "Specify a server network address (database mirroring)"
+description: Learn how to specify a server network address for a database mirroring endpoint. A database mirroring session requires an address for each server instance.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Specify a Server Network Address (Database Mirroring)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Setting up a database mirroring session requires a server network address for each of the server instances. The server network address of a server instance must unambiguously identify the instance by providing a system address and the number of the port on which the instance is listening.  
   
  Before you can specify a port in a server network address, the database mirroring endpoint must exist on the server instance. For more information, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  

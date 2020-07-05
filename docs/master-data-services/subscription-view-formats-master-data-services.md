@@ -1,5 +1,5 @@
 ---
-title: "Subscription View Formats (Master Data Services) | Microsoft Docs"
+title: Subscription View Formats
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Subscription View Formats (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Based on the entity or derived hierarchy you select, the following formats are available for your subscription view.  
   

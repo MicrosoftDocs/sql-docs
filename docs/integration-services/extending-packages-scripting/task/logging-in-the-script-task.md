@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], logs"
   - "packages [Integration Services], logs"
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Logging in the Script Task
 
@@ -89,10 +89,6 @@ public class ScriptMain
 ```  
   
  }  
-  
-## External Resources  
-  
--   Blog entry, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644), on dougbert.com  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Logging](../../../integration-services/performance/integration-services-ssis-logging.md)  

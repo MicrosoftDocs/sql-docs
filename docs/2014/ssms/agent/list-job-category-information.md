@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # List Job Category Information
   How to list job category information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
@@ -29,7 +28,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- returns information about jobs that are administered locally  
     USE msdb ;  
     GO  
@@ -46,6 +45,3 @@ manager: craigg
  **To list job category information**  
   
  Use the `JobCategory` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.. For more information, see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
-  
-  
-  

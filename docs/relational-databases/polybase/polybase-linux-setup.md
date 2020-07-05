@@ -2,8 +2,8 @@
 title: Install PolyBase on Linux
 titlesuffix: SQL Server
 description: This article describes how to install SQL Server PolyBase on Linux.
-author: aboke 
-ms.author: aboke 
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 7/22/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -95,7 +95,7 @@ After installation, PolyBase must be enabled to access its features. Connect to 
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE [WITH OVERRIDE];
+RECONFIGURE WITH OVERRIDE;
 ```
 
 ## Update PolyBase

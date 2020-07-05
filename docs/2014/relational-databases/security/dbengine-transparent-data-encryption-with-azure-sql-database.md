@@ -6,9 +6,8 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Transparent Data Encryption with Azure SQL Database
 See [Transparent Data Encryption with Azure SQL Database](../../database-engine/transparent-data-encryption-with-azure-sql-database.md).

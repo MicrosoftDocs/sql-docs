@@ -1,5 +1,6 @@
 ---
-title: "Add, Change, or Delete a Report Parameter (Report Builder and SSRS) | Microsoft Docs"
+title: "Add, Change, or Delete a Report Parameter (Report Builder) | Microsoft Docs"
+description: Choose report data, connect related reports, and vary the report presentation with the addition of report parameters in a paginated report in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

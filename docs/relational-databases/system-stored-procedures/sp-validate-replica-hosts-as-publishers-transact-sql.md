@@ -1,6 +1,7 @@
 ---
-title: "sp_validate_replica_hosts_as_publishers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sp_validate_replica_hosts_as_publishers (T-SQL)"
+description: Describes the sp_validate_replica_hosts_as_publishers stored procedure which allows all secondary replicas to be validated. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_validate_replica_hosts_as_publishers** is an extension of **sp_validate_redirected_publisher** that allows all secondary replicas to be validated, rather than just the current primary replica. **sp_validate_replicat_hosts_as_publisher** validates an entire Always On replication topology. **sp_validate_replica_hosts_as_publishers** must be executed directly on the distributor by using a remote desktop session to avoid a double-hop security error (21892).  
   
@@ -50,7 +51,7 @@ sp_validate_replica_hosts_as_publishers
  None.  
   
 ## Remarks  
- If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null for the output parameter *@redirected_publisher*. Otherwise, the associated redirected publisher is returned, both on success and failure.  
+ If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null for the output parameter *\@redirected_publisher*. Otherwise, the associated redirected publisher is returned, both on success and failure.  
   
  If the validation succeeds, **sp_validate_redirected_publisher** returns a success indication.  
   

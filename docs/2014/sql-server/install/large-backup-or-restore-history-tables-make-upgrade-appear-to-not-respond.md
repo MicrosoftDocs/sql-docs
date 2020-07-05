@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Large backup or restore history tables make upgrade appear to not respond
   In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], new columns were added to some of the backup and restore history tables. Upgrading these tables requires altering them to add the new columns. If one or more of these tables contains a large number of rows, the upgrade will stall for a substantial amount of time on the ALTER TABLE statement that adds columns to that table.  
@@ -21,7 +20,7 @@ manager: craigg
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
- Upgrade can appear to hang if any of the following backup or restore history tables contains a large number of rows:  
+ Upgrade can appear to stop responding if any of the following backup or restore history tables contains a large number of rows:  
   
 -   **backupfile**  
   

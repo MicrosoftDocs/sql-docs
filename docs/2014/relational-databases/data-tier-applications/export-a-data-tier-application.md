@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Export a Data-tier Application
   Exporting a deployed data-tier application (DAC) or database creates an export file that includes both the definitions of the objects in the database and all of the data contained in the tables. The export file can then be imported to another instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. The export-import operations can be combined to migrate a DAC between instances, to create a logical backup, or to create an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -87,7 +86,7 @@ manager: craigg
   
 -   **Save to local disk** - Creates a BACPAC file in a directory on the local computer. Click **Browse...** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
   
--   **Save to Windows Azure** - Creates a BACPAC file in a Windows Azure container. You must connect to a Windows Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. Note that the temporary file will be created at the specified location and will remain there after the operation completes.  
+-   **Save to Azure** - Creates a BACPAC file in an Azure container. You must connect to an Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. Note that the temporary file will be created at the specified location and will remain there after the operation completes.  
   
  To specify a subset of tables to export, use the **Advanced** option.  
   

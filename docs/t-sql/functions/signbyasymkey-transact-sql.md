@@ -25,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SIGNBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Signs plaintext with an asymmetric key  
   
@@ -33,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  
@@ -42,7 +42,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *Asym_Key_ID*  
  Is the ID of an asymmetric key in the current database. *Asym_Key_ID* is**int**.  
   
- **@plaintext**  
+ **\@plaintext**  
  Is a variable of type **nvarchar**, **char**, **varchar**, or **nchar** containing data that will be signed with the asymmetric key.  
   
  *password*  

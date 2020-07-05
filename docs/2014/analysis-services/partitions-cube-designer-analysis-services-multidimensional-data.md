@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: ac3ce774-eebf-4915-9307-90d0ac11c271
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Partitions (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Partitions** tab in Cube Designer to create and modify partitions, including storage, proactive caching, and writeback settings, for each measure group in the cube.  

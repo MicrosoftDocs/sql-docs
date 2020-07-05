@@ -31,7 +31,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Shrinks the current database's specified data or log file size. You can use it to move data from one file to other files in the same filegroup, which empties the file and allows for its database removal. You can shrink a file to less than its size at creation, resetting the minimum file size to the new value.
   
@@ -39,7 +39,7 @@ Shrinks the current database's specified data or log file size. You can use it t
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 DBCC SHRINKFILE   
 (  

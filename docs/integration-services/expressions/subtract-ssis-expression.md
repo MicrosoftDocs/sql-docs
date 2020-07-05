@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "- (subtract)"
   - "subtract operator (-)"
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # - (Subtract) (SSIS Expression)
 

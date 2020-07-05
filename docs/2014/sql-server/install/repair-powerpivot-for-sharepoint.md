@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 9c346ae8-87fa-44e5-b88a-47e804fedf20
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Repair PowerPivot for SharePoint
   You can use the PowerPivot Configuration Tool to repair an existing installation of PowerPivot for SharePoint. The tool reads the configuration settings for a local PowerPivot for SharePoint instance and provides actions for re-configuring a setting that is inconsistent with a PowerPivot for SharePoint installation. For example, if you stop a service or retract a solution, the tool will offer actions to start the service and deploy the solution.  

@@ -1,7 +1,7 @@
 ---
 title: "Accessibility for People with Disabilities | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.topic: conceptual
@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "SQL Server Books Online, accessibility features"
   - "customer service [SQL Server]"
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Accessibility for People with Disabilities
   [!INCLUDE[msCoName](../includes/msconame-md.md)] is committed to making its products and services easier for everyone to use. This topic provides information about the following features, products, and services that make products in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server family more accessible for people with disabilities.  
@@ -70,7 +69,7 @@ manager: craigg
  [!INCLUDE[msCoName](../includes/msconame-md.md)] product documentation is available in alternative formats to help our customers with accessibility needs.  
   
 ### Obtaining Documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- The documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available online. For more information, see [Use Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ The documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available online. For more information, see [Use Product Documentation for SQL Server](../2014-toc/index.yml).  
   
 ## Obtaining Documentation for Additional [!INCLUDE[msCoName](../includes/msconame-md.md)] Products  
  You can obtain accessible documentation for [!INCLUDE[msCoName](../includes/msconame-md.md)] products from the [Microsoft Accessibility Web Site](https://go.microsoft.com/fwlink/?LinkID=67164).  
@@ -105,7 +104,7 @@ manager: craigg
  A free monthly electronic newsletter is available to help you keep up to date with accessibility topics about [!INCLUDE[msCoName](../includes/msconame-md.md)] products. To subscribe, see the [Microsoft Accessibility Web Site](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
 ## See Also  
- [Get Started with Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md)   
+ [Get Started with Product Documentation for SQL Server](../2014-toc/index.yml)   
  [Getting SQL Server Assistance](getting-sql-server-assistance.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: "Publication Information, All Subscriptions (Merge Publication) | Microsoft Docs"
-ms.custom: ""
+title: "All Subscriptions (Merge - SSMS)"
+description: Desribes the 'All Subscriptions' tab of the selected Merge Publication in SQL Server Management Studio (SSMS). 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Publication Information, All Subscriptions (Merge Publication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **All Subscriptions** tab displays information on all subscriptions to the selected merge publication.  
   
 ## Options  
@@ -64,7 +65,7 @@ ms.author: "mathoma"
  The name of each subscription, in the form:*SubscriberName: SubscriptionDatabaseName*.  
   
  **Friendly Name**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The description of each subscription. The description is entered in the **Subscription Properties** dialog box or specified with the **@description** parameter of [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) or [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Users often use the description as a "friendly name" or nickname for the subscription.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The description of each subscription. The description is entered in the **Subscription Properties** dialog box or specified with the `@description` parameter of [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) or [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Users often use the description as a "friendly name" or nickname for the subscription.  
   
  **Performance**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The performance rating for each subscription, based on the most recent measurements of delivery rate taken by Replication Monitor. The rating is determined by comparing individual subscription performance to the average historical performance of subscriptions to the publication that have the same connection type (dial-up or LAN). Replication Monitor displays a value after five synchronizations have occurred with 50 or more changes each over the same type of connection. If there have been less than five synchronizations with 50 or more changes or the most recent synchronization has less than 50 changes, this column is blank.  

@@ -26,7 +26,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SEND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Sends a message, using one or more existing conversations.  
   
@@ -34,7 +34,7 @@ Sends a message, using one or more existing conversations.
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 SEND  
    ON CONVERSATION [(]conversation_handle [,.. @conversation_handle_n][)]  

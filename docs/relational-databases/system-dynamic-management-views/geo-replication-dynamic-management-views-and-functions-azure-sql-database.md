@@ -13,12 +13,12 @@ helpviewer_keywords:
   - "dynamic management views"
   - "geo-replication [Azure SQL Database]"
 ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   This section contains the following catalog views that display information about geo-replication.  
   

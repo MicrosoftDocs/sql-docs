@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure HealthCheckTimeout Property Settings
   The HealthCheckTimeout setting is used to specify the length of time, in milliseconds, that the SQL Server resource DLL should wait for information returned by the [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) stored procedure before reporting the AlwaysOn Failover Cluster Instance (FCI) as unresponsive. Changes that are made to the timeout settings are effective immediately and do not require a restart of the SQL Server resource.  
@@ -30,7 +29,7 @@ manager: craigg
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
   
-##### To configure HealthCheckTimeout settings  
+### To configure HealthCheckTimeout settings  
   
 1.  Start an elevated Windows PowerShell via **Run as Administrator**.  
   
@@ -40,8 +39,7 @@ manager: craigg
   
 > [!TIP]  
 >  Every time you open a new PowerShell window, you need to import the `FailoverClusters` module.  
-  
-### Example (PowerShell)  
+
  The following example changes the HealthCheckTimeout setting on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource "`SQL Server (INST1)`" to 60000 milliseconds.  
   
 ```powershell  
@@ -49,12 +47,11 @@ Import-Module FailoverClusters
   
 $fci = "SQL Server (INST1)"  
 Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000  
-  
 ```  
   
 ### Related Content (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Failover Clustering and Network Load Balancing Team Blog)  
   
 -   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -77,12 +74,10 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example sets the HealthCheckTimeout option to 15,000 milliseconds (15 seconds).  
   
-```  
+```sql
 ALTER SERVER CONFIGURATION   
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
 ## See Also  
  [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
-  
-  

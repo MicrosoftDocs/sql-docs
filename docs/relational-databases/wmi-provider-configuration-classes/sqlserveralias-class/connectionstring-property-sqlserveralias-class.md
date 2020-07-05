@@ -1,6 +1,6 @@
 ---
-title: "ConnectionString Property (SqlServerAlias Class) | Microsoft Docs"
-ms.custom: ""
+title: "ConnectionString Property (SqlServerAlias)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -18,7 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # ConnectionString Property (SqlServerAlias Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the connection string that is used to establish the connection for the server connection alias.  
   
 ## Syntax  

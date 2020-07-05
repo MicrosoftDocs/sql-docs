@@ -1,5 +1,6 @@
 ---
 title: "Delete a Publication | Microsoft Docs"
+description: Learn how to delete a publication in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Delete a Publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +55,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
     -   To delete a single publication, execute [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) at the Publisher on the publication database.  
   
-    -   To delete all publications in and remove all replication objects from a published database, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) at the Publisher. Specify a value of **tran** for **@type**. (Optional) If the Distributor cannot be accessed or if the status of the database is suspect or offline, specify a value of **1** for **@force**. (Optional) Specify the name of the database for **@dbname** if [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) is not executed on the publication database.  
+    -   To delete all publications in and remove all replication objects from a published database, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) at the Publisher. Specify a value of **tran** for **\@type**. (Optional) If the Distributor cannot be accessed or if the status of the database is suspect or offline, specify a value of **1** for **\@force**. (Optional) Specify the name of the database for **\@dbname** if [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) is not executed on the publication database.  
   
         > [!NOTE]  
-        >  Specifying a value of **1** for **@force** may leave replication-related publishing objects in the database.  
+        >  Specifying a value of **1** for **\@force** may leave replication-related publishing objects in the database.  
   
 2.  (Optional) If this database has no other publications, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) to disable publication of the current database using snapshot or transactional replication.  
   
@@ -69,10 +70,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
     -   To delete a single publication, execute [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) at the Publisher on the publication database.  
   
-    -   To delete all publications in and remove all replication objects from a published database, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) at the Publisher. Specify a value of **merge** for **@type**. (Optional) If the Distributor cannot be accessed or if the status of the database is suspect or offline, specify a value of **1** for **@force**. (Optional) Specify the name of the database for **@dbname** if [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) is not executed on the publication database.  
+    -   To delete all publications in and remove all replication objects from a published database, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) at the Publisher. Specify a value of **merge** for **\@type**. (Optional) If the Distributor cannot be accessed or if the status of the database is suspect or offline, specify a value of **1** for **\@force**. (Optional) Specify the name of the database for **\@dbname** if [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) is not executed on the publication database.  
   
         > [!NOTE]  
-        >  Specifying a value of **1** for **@force** may leave replication-related publishing objects in the database.  
+        >  Specifying a value of **1** for **\@force** may leave replication-related publishing objects in the database.  
   
 2.  (Optional) If this database has no other publications, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) to disable publication of the current database using merge replication.  
   

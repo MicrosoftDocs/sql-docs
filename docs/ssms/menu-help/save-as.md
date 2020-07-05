@@ -1,6 +1,6 @@
 ---
-title: "Save As | Microsoft Docs"
-ms.custom: ""
+title: "Save As"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -16,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Save As
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Used to save an instance of the current item at a specified location in a specified file format. Click **Save** *<file>* **As** on the **File** menu (where *<file>* is the name of the current item), or press ALT+F, A in the Code Editor.  
   
 ## Central Panel  

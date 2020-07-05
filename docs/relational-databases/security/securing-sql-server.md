@@ -1,5 +1,6 @@
 ---
 title: "Securing SQL Server | Microsoft Docs"
+description: Use these articles to create and implement an effective security plan in SQL Server. Learn about the platform, authentication, objects, and applications.
 ms.custom: ""
 ms.date: "06/21/2019"
 ms.prod: sql
@@ -21,7 +22,7 @@ ms.author: vanto
 ---
 # Securing SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed as a series of steps, involving four areas: the platform, authentication, objects (including data), and applications that access the system. The following topics will guide you through creating and implementing an effective security plan.  
   

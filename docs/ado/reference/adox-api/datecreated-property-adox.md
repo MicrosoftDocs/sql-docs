@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DateCreated property [ADOX]"
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DateCreated Property (ADOX)
 Indicates the date the object was created.  

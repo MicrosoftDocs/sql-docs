@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "report servers [Reporting Services], configuring"
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Connect to a Native Mode Report Server
   Use this dialog box to connect to a local or remote [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server instance. You cannot use this tool to connect to earlier versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers. You can only connect to one instance at a time.  

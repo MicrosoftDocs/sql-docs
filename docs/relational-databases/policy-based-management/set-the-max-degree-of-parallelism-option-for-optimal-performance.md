@@ -1,6 +1,7 @@
 ---
-title: "Set the Max Degree of Parallelism Option for Optimal Performance | Microsoft Docs"
-ms.custom: ""
+title: "Max degree of parallelism & Policy-Based Management"
+description: Describes configuring a policy to verify the value of max degree of parallelism for Policy-Based Management for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,17 +15,16 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Set the Max Degree of Parallelism Option for Optimal Performance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule determines whether the max degree of parallelism (MAXDOP) option for a value greater than 8. Setting this option to a larger value often causes unwanted resource consumption and performance degradation.  
   
-## Best Practices Recommendations  
- Set the max degree of parallelism option to 8 or less by using sp_configure.  
+## Best practice recommendations  
+ The max degree of parallelism (MAXDOP) configuration option controls the number of processors that are used for the execution of a query in a parallel plan. This option determines the number of threads that are used for the query plan operators that perform the work in parallel. Depending on whether SQL Server is set up on a symmetric multiprocessing (SMP) computer, a non-uniform memory access (NUMA) computer, or hyperthreading-enabled processors, you have to configure the max degree of parallelism option appropriately. 
+ 
+ Recommendations to configure MAXDOP depend on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being used. For version specific guidelines, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines), and configure the policy to verify the value of max degree of parallelism accordingly.     
   
-## For More Information  
- [Recommendations and guidelines for the max degree of parallelism configuration option in SQL Server](https://go.microsoft.com/fwlink/?linkid=117786)  
-  
- [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
-  
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
+## For more information  
+ [Recommendations and guidelines for the max degree of parallelism configuration option in SQL Server](https://go.microsoft.com/fwlink/?linkid=117786)    
+ [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)     
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)     
   

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Result Pane (Mining Model Prediction View)
   The **Results** pane displays the results of the data mining predictions query designed in the **Design** view of Prediction Query Builder. You can copy a selection of the grid or the entire results grid to the Clipboard.  

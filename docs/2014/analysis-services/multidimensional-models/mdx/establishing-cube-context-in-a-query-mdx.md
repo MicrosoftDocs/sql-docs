@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Establishing Cube Context in a Query (MDX)
   Every MDX query runs within a specified cube context. This context defines the members that are evaluated by the expressions within the query.  

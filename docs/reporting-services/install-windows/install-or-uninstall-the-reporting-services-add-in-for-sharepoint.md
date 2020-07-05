@@ -1,8 +1,10 @@
 ---
 title: "Install or Uninstall the Reporting Services Add-in for SharePoint | Microsoft Docs"
-ms.date: 08/17/2017
+description: "Learn how to run the installation package Microsoft SQL Server Reporting Services Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers, to enable Reporting Services features within a SharePoint deployment."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
@@ -11,7 +13,7 @@ ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 
-# Install or Uninstall the Reporting Services Add-in for SharePoint
+# Install or Uninstall the Reporting Services Add-in for SharePoint (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 

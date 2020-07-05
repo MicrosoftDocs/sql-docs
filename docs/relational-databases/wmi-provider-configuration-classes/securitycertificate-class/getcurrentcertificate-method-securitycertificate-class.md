@@ -1,6 +1,6 @@
 ---
-title: "GetCurrentCertificate Method (SecurityCertificate Class) | Microsoft Docs"
-ms.custom: ""
+title: "GetCurrentCertificate Method (SecurityCertificate)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -19,7 +19,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # GetCurrentCertificate Method (SecurityCertificate Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the current security certificate.  
   
 ## Syntax  

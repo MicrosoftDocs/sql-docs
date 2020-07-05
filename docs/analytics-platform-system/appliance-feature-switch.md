@@ -1,5 +1,5 @@
 ---
-title: "Feature Switch (Analytics Platform System)"
+title: "Feature Switch"
 description: "Displays information about the two feature switches that are introduced in Analytics Platform System AU7."
 author: "mzaman1"
 ms.prod: "sql"

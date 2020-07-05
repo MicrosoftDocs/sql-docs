@@ -1,5 +1,6 @@
 ---
 title: "Creating an Assembly | Microsoft Docs"
+description: Use CREATE ASSEMBLY to register an assembly in SQL Server and specify its security settings. Register an assembly to use its functionality.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Creating an Assembly
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Managed database objects, such as stored procedures or triggers, are compiled and then deployed in units called an assembly. Managed DLL assemblies must be registered in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] before the functionality the assembly provides can be used. To register an assembly in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, use the CREATE ASSEMBLY statement. This topic discusses how to register an assembly in a database using the CREATE ASSEMBLY statement, and how to specify the security settings for the assembly.  
   
 ## The CREATE ASSEMBLY Statement  
@@ -73,8 +74,6 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  The assembly is strong name signed or Authenticode signed with a certificate. This strong name (or certificate) is created inside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as an asymmetric key (or certificate), and has a corresponding login with **EXTERNAL ACCESS ASSEMBLY** permission (for external access assemblies) or **UNSAFE ASSEMBLY** permission (for unsafe assemblies).  
   
 2.  The database owner (DBO) has **EXTERNAL ACCESS ASSEMBLY** (for **EXTERNAL ACCESS** assemblies) or **UNSAFE ASSEMBLY** (for **UNSAFE** assemblies) permission, and the database has the [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) set to **ON**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  The two conditions listed above are also checked at assembly load time (which includes execution). At least one of the conditions must be met in order to load the assembly.  
   

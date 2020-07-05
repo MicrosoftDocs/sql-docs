@@ -1,5 +1,5 @@
 ---
-title: "Overlapping Model and Member Permissions (Master Data Services) | Microsoft Docs"
+title: Overlapping Model and Member Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -17,7 +17,7 @@ ms.author: lle
 ---
 # Overlapping Model and Member Permissions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Permission assigned to a member can overlap with permission assigned to a model object. When overlaps occur, the more restrictive permission takes effect.  
   

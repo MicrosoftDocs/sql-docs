@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specifying the Contents of a Query Axis (MDX)
   Query axes specify the edges of a cellset returned by a Multidimensional Expressions (MDX) SELECT statement. Specifying the edges of a cellset lets you restrict the returned data that is visible to the client.  

@@ -1,6 +1,7 @@
 ---
-title: "View the Policy-Based Management Facets on a SQL Server Object | Microsoft Docs"
-ms.custom: ""
+title: "View Policy-Based Management facets on an object"
+description: Describes how to view all of the Policy-Based Management facts applied to a specific SQL Server object in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,8 +14,8 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 ---
-# View the Policy-Based Management Facets on a SQL Server Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# View Policy-Based Management facets on a SQL Server Object
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view all of the Policy-Based Management facets applied to a specific SQL Server object in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  

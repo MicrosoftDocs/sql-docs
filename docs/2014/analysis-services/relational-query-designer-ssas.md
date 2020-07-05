@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Relational Query Designer (SSAS)
   The relational query designer helps you create a query that specifies the data to retrieve from [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] relational databases and [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use the graphical query designer to explore the metadata, interactively build the query, and view the results of your query.  Use the text-based query designer to view the query that was built by the graphical query designer or to modify a query. You can also import an existing query from a file or report.  
@@ -214,7 +213,7 @@ manager: craigg
 #### Example  
  The following query returns the list of names from a table named `ContactType`.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -237,7 +236,7 @@ SELECT Name FROM ContactType
 #### Example  
  The following query calls the a stored procedure named `uspGetWhereUsedProductID`. When the stored procedure has input parameters you must provide parameter values when you run the query.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   
@@ -245,8 +244,8 @@ uspGetWhereUsedProductID
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
 #### Command Type TableDirect  
  When you select **Command typeTableDirect**, the text-based query designer presents two panes: the Query pane and the Result pane. When you enter a table and click the **Run** button, all the columns for that table are returned.  

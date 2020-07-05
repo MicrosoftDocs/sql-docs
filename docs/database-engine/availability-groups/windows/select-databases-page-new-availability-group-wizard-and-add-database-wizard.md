@@ -1,6 +1,7 @@
 ---
-title: "Select Databases Page (New Availability Group Wizard and Add Database Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Select Databases Page (New Availability Group & Add Database Wizard)"
+description: Describes the "Select Databases" page for both the New Availability Group and Add Database Wizards found in SQL Server Management Studio GUI. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Select Databases Page (New Availability Group Wizard and Add Database Wizard)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This help topic describes the options of the **Specify Databases** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="PageOptions"></a> Select Databases Options  

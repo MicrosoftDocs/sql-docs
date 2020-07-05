@@ -1,10 +1,8 @@
 ---
-title: "SQL Command Prompt Utilities (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: SQL Command Prompt Utilities (Database Engine)
+description: Command prompt utilities enable you to script SQL Server operations. This article lists many command prompt utilities that ship with SQL Server.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,15 +14,20 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
+
 # SQL Command Prompt Utilities (Database Engine)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of many command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of many command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 For information on the *main* SQL gui and command-line tools, see [SQL Tools Overview](overview-sql-tools.md).
 
-  
 |**Utility**|**Description**|**Installed in**|  
 |-----------------|---------------------|----------------------|  
 |[bcp Utility](../tools/bcp-utility.md)|Used to copy data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.|\<*drive*:>\Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
@@ -41,7 +44,7 @@ For information on the *main* SQL gui and command-line tools, see [SQL Tools Ove
 |[sqlcmd Utility](../tools/sqlcmd-utility.md)|Allows you to enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt.|\<*drive*:>\Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
 |[SQLdiag Utility](../tools/sqldiag-utility.md)|Used to collect diagnostic information for [!INCLUDE[msCoName](../includes/msconame-md.md)] Customer Service and Support.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqllogship Application](../tools/sqllogship-application.md)|Used by applications to perform backup, copy, and restore operations and associated clean-up tasks for a log shipping configuration without running the backup, copy, and restore jobs.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[SqlLocalDB Utility](../tools/sqllocaldb-utility.md)|An execution mode of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] targeted to program developers.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\|  
+|[SqlLocalDB Utility](../tools/sqllocaldb-utility.md)|An execution mode of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] targeted to program developers.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlmaint Utility](../tools/sqlmaint-utility.md)|Used to execute database maintenance plans created in previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|\<drive>:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn|  
 |[sqlps Utility](../tools/sqlps-utility.md)|Used to run PowerShell commands and scripts. Loads and registers the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider and cmdlets.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlservr Application](../tools/sqlservr-application.md)|Used to start and stop an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] from the command prompt for troubleshooting.|\<drive>:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn|  
@@ -56,12 +59,11 @@ For information on the *main* SQL gui and command-line tools, see [SQL Tools Ove
 |`monospace`|Sample commands and program code.|  
 |*italic*|User-supplied parameters.|  
 |**bold**|Commands, parameters, and other syntax that must be typed exactly as shown.|  
-  
-## See Also  
- [Replication Distribution Agent](../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Replication Log Reader Agent](../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Replication Merge Agent](../relational-databases/replication/agents/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
-  
-  
+
+## See Also
+
+* [Replication Distribution Agent](../relational-databases/replication/agents/replication-distribution-agent.md)
+* [Replication Log Reader Agent](../relational-databases/replication/agents/replication-log-reader-agent.md)
+* [Replication Merge Agent](../relational-databases/replication/agents/replication-merge-agent.md)
+* [Replication Queue Reader Agent](../relational-databases/replication/agents/replication-queue-reader-agent.md)
+* [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "+ (concatenate operator)"
   - "concatenate operator (+)"
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # + (Concatenate) (SSIS Expression)
 

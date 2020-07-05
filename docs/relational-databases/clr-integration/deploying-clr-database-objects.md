@@ -1,5 +1,6 @@
 ---
 title: "Deploying CLR Database Objects | Microsoft Docs"
+description: Using Microsoft Visual Studio, you can develop CLR database objects for SQL Server, deploy them to a test server, and distribute them to production servers.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Deploying CLR Database Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Deployment is the process by which you distribute a finished application or module to be installed and run on another computer. Using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, you can develop common language runtime (CLR) database objects and deploy them to a test server. Alternatively, the managed database objects can also be compiled with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework redistribution files, instead of Visual Studio. Once compiled, the assemblies containing the CLR database objects can then be deployed to a test server using Visual Studio or [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Note that Visual Studio .NET 2003 cannot be used for CLR integration programming or deployment. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the .NET Framework pre-installed, and Visual Studio .NET 2003 cannot use the .NET Framework 2.0 assemblies.  
   
  Once the CLR methods have been tested and verified on the test server, they can be distributed to production servers using a deployment script. The deployment script can be generated manually, or by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (see the procedure later in this topic).  
@@ -38,8 +39,6 @@ ms.author: "jroth"
 2.  Resolve all build errors and warnings before deploying the assembly to the test server.  
   
 3.  Select **Deploy** from the **Build** menu. The assembly will then be registered in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and database specified when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] project was first created in Visual Studio.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To deploy the assembly using Transact-SQL  
   

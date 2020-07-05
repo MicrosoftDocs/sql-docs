@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Establish a Database Mirroring Session Using Windows Authentication (SQL Server Management Studio)
     

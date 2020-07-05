@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "InternetTimeout property [ADO], Visual Basic example"
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # InternetTimeout Property Example (VB)
 > [!IMPORTANT]

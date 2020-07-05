@@ -1,5 +1,6 @@
 ---
 title: "Using Reporting Services SOAP Headers | Microsoft Docs"
+description: Use Reporting Services SOAP headers to batch operations into a single transaction, manage session state, and retrieve properties based on the path or ID of an item.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

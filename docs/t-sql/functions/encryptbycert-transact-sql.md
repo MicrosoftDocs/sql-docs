@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ENCRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Encrypts data with the public key of a certificate.  
   
@@ -29,7 +29,7 @@ Encrypts data with the public key of a certificate.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  
@@ -41,7 +41,7 @@ The ID of a certificate in the database. **int**.
 _cleartext_  
 A string of data that will be encrypted with the certificate.  
   
-**@cleartext**  
+**\@cleartext**  
 A variable of one of the following types that contains data that will be encrypted with the public key of the certificate:
 
 * **nvarchar** 

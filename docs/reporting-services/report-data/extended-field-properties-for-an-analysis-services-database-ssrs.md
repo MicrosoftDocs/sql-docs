@@ -1,5 +1,5 @@
 ---
-title: "Extended Field Properties for an Analysis Services Database (SSRS) | Microsoft Docs"
+title: "Extended Field Properties for an Analysis Services Database | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

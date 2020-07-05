@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # DROP INDEX (Selective XML Indexes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Drops an existing selective XML index or secondary selective XML index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -24,7 +24,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP INDEX index_name ON <object>  
     [ WITH ( <drop_index_option> [ ,...n ] ) ]  
   

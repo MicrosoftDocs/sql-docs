@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobschedule"
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the scheduling of jobs used by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to perform automated activities.  
  

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Management Studio (SSMS) Support Policy| Microsoft Docs"
+title: "SQL Server Management Studio (SSMS) Support Policy"
 ms.date: "11/13/2018"
 ms.prod: sql
 ms.technology: ssms

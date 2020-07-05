@@ -25,7 +25,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC INDEXDEFRAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Defragments indexes of the specified table or view.
   
@@ -38,7 +38,7 @@ Defragments indexes of the specified table or view.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   

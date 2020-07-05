@@ -1,5 +1,6 @@
 ---
 title: "In-Memory OUTER JOIN | Microsoft Docs"
+description: Learn about LEFT and RIGHT OUTER JOIN. Natively compiled T-SQL modules support LEFT and RIGHT OUTER JOIN in SQL Server.
 ms.custom: ""
 ms.date: "06/01/2019"
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Implementing an Outer Join
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   LEFT and RIGHT OUTER JOIN is supported in natively compiled T-SQL modules starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   

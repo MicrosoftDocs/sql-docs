@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ENCRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function encrypts data with an asymmetric key.  
   
@@ -29,7 +29,7 @@ This function encrypts data with an asymmetric key.
   
 ## Syntax  
   
-```  
+```syntaxsql
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
@@ -52,8 +52,8 @@ or
  
 data type.  
   
-**@plaintext**  
-A variable holding a value that `ENCRYPTBYASYMKEY` will encrypt with the asymmetric key. **@plaintext** can have a
+**\@plaintext**  
+A variable holding a value that `ENCRYPTBYASYMKEY` will encrypt with the asymmetric key. **\@plaintext** can have a
   
 + **binary**
 + **char**

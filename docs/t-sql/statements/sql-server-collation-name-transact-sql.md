@@ -20,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SQL Server Collation Name (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Is a single string that specifies the collation name for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation.
 
@@ -30,7 +30,7 @@ Is a single string that specifies the collation name for a [!INCLUDE[ssNoVersion
 
 ## Syntax
 
-```
+```syntaxsql
 <SQL_collation_name> :: =
 SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>
 

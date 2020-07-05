@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Implementing LOB Columns in a Memory-Optimized Table
   Memory-optimized tables do not have off-row or large object (LOB) storage (this limitation has been removed in SQL Server 2016 and above - see [Supported Data Types for In-Memory OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), and the row size limit is 8060 bytes. Storing large binary or character string values can be done in two ways:  
@@ -20,7 +19,7 @@ manager: craigg
   
  The following example splits a binary LOB value into multiple rows and inserts the rows into a memory-optimized table:  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -70,7 +69,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  Alternatively, you can define a disk-based table for the LOB column(s). Each row in the memory-optimized table would have a corresponding row in the disk-based table with all the LOB values for that row. In the following example, data about employees is stored in a memory-optimized table, while the photo of each employee is stored in a disk-based table.  
   

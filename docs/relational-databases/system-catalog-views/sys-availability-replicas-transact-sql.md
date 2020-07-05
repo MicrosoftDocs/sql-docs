@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_replicas catalog view"
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.availability_replicas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Returns a row for each of the availability replicas that belong to any Always On availability group in the WSFC failover cluster.  
   

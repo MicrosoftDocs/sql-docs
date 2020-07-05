@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "bcp_setbulkmode function"
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # bcp_setbulkmode
   bcp_setbulkmode lets you specify the column format in a bulk copy operation, setting all the column attributes in a single function call.  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # View Collation Information
     

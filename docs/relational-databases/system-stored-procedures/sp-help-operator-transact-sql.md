@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_operator"
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports information about the operators defined for the server.  
   

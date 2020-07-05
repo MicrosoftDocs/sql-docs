@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (General Page) | Microsoft Docs"
+description: "Learn how to use the General tab in the Database Properties dialog box to view or modify the properties of a database."
 ms.custom: ""
 ms.date: "10/27/2015"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: stevestein
 ms.author: sstein
 ---
 # Database Properties (General Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify properties for the selected database.  
   
 ## Options  

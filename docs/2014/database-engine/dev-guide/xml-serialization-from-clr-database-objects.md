@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # XML Serialization from CLR Database Objects
   XML serialization is required for two scenarios:  

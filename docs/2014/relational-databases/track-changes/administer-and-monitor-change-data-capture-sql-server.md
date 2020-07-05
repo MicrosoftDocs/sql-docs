@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
   This topic describes how to administer and monitor change data capture.  
@@ -30,7 +29,7 @@ manager: craigg
 #### maxscans Parameter  
  The *maxscans* parameter specifies the maximum number of scan cycles that are attempted to drain the log before either returning (continuous = 0) or executing a waitfor (continuous = 1).  
   
-#### continous Parameter  
+#### continuous Parameter  
  The *continuous* parameter controls whether `sp_cdc_scan` relinquishes control in after either draining the log or executing the maximum number of scan cycles (one shot mode). It also controles whether `sp_cdc_scan` continues to run until explicitly stopped (continuous mode).  
   
 ##### One Shot Mode  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # QN:Dynamics Event Class
   The QN:Dynamics event class reports information about the background activity that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] performs to support query notifications. Within the [!INCLUDE[ssDE](../../includes/ssde-md.md)], a background thread monitors subscription time-outs, pending subscriptions to be fired, and parameter table destruction.  

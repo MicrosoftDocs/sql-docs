@@ -1,5 +1,6 @@
 ---
 title: "E-Mail Delivery in Reporting Services | Microsoft Docs"
+description: In this article, learn to use the e-mail delivery extension, which provides a way to e-mail a report to individual users or groups.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -18,7 +19,7 @@ ms.author: maggies
 # E-Mail Delivery in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension that provides a way to e-mail a report to individual users or groups. To distribute a report by e-mail, you 1) configure the report server for e-mail delivery and 2) define either a standard subscription or a data-driven subscription. A single subscription cannot deliver multiple reports in a single e-mail message. However you can create multiple subscriptions.  
   
- The report server connects with an e-mail server through a standard connection. It does not use communication that has been encrypted using Secure Sockets Layer (SSL). The e-mail server must be a remote or local Simple Mail Transport Protocol (SMTP) server on the same network as the report server.  
+ The report server connects with an e-mail server through a standard connection. It does not use communication that has been encrypted using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). The e-mail server must be a remote or local Simple Mail Transport Protocol (SMTP) server on the same network as the report server.  
   
  For detailed steps that walk you through creating a subscription, see the following:  
   
@@ -37,9 +38,9 @@ ms.author: maggies
   
 -   Send a notification in the Subject: line of an e-mail message. By default, the Subject: line in the subscription definition includes the following variables that are replaced by report-specific information when the subscription is processed:  
   
-     **@ReportName** specifies the name of the report.  
+     **\@ReportName** specifies the name of the report.  
   
-     **@ExecutionTime** specifies when the report was executed.  
+     **\@ExecutionTime** specifies when the report was executed.  
   
      You can combine these variables with static text or modify the text in the Subject: line for each subscription.  
   

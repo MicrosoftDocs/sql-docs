@@ -57,8 +57,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Right-click the view of which you want to view the properties and select **Properties**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      The following properties show in the **View Properties** dialog box.  
   
      **Database**  

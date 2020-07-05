@@ -1,6 +1,7 @@
 ---
-title: "Monitoring Performance of Natively Compiled Stored Procedures | Microsoft Docs"
-ms.custom: ""
+title: "Monitor performance of natively compiled stored procedures"
+description: Learn how to monitor the performance of natively compiled stored procedures and other natively compiled T-SQL modules.
+ms.custom: seo-dt-2019
 ms.date: "04/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This article discusses how you can monitor the performance of natively compiled stored procedures and other natively compiled T-SQL modules.  
   
 ## Using Extended Events  
@@ -100,7 +101,7 @@ The following query returns the query text as well as execution statistics for a
 SELECT
         st.objectid,
         object_name(st.objectid) as 'object name',
-        SUBSTRING()
+        SUBSTRING(
             st.text,
             (qs.statement_start_offset/2) + 1,
             ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1

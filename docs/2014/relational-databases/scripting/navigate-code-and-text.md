@@ -1,6 +1,6 @@
 ---
-title: "Navigate Code and Text | Microsoft Docs"
-ms.custom: ""
+title: Navigate Code and Text
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "navigating code"
   - "Go To command"
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Navigate Code and Text
   You can move through text by using:  

@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "data cleaning [Integration Services]"
   - "duplicate data [Integration Services]"
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Fuzzy Grouping Transformation
 

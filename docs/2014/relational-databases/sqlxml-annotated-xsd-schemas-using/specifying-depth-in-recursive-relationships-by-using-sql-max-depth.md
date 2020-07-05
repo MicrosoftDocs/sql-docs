@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "sql:max-depth"
   - "recursive joins [SQLXML]"
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth
   In relational databases, when a table is involved in a relationship with itself, it is called a recursive relationship. For example, in a supervisor-supervisee relationship, a table storing employee records is involved in a relationship with itself. In this case, the employees table plays a role of supervisor on one side of the relationship, and the same table plays a role of supervisee on the other side.  

@@ -1,20 +1,22 @@
 ---
-title: "Project-Oriented Offline Database Development | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Project-Oriented Offline Database Development
+description: View available resources on project-oriented offline database development tasks, such as importing objects into a database and using sequence objects.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.dbprojectwizard.general"
   - "sql.data.tools.dbprojectwizard.summary"
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Project-Oriented Offline Database Development
+
 This section describes features provided by SQL Server Data Tools (SSDT) for authoring, building, debugging and publishing a database project.  
   
 Using SSDT, you can create an offline database project and implement schema changes by adding, modifying or deleting the definitions of objects (represented by scripts) in the project, without a connection to a server instance. These can all be accomplished by using the table designer, or the Transact\-SQL Editor. You can also write and debug Transact\-SQL and CLR objects in the same project. You can use Schema Compare to ensure that your project stays in sync with the production database, and create snapshots for your project in each stage of the development cycle for comparison purposes. While you are working on your database projects in a team-based environment, you can employ version control for all the files. After your database project has been developed, tested and debugged, you can hand off your project to authorized personnel to be published to a production environment.  
@@ -43,6 +45,6 @@ Using SSDT, you can create an offline database project and implement schema chan
 |[How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Convert existing SQL Server Database, CLR objects, and Data-Tier Application projects created in Visual Studio 2010 to the SQL Server Data Tools Database project.|  
 |[How to: Specify Predeployment or Postdeployment Scripts](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Discusses how to use scripts that you want to run before or after the deployment of your database.|  
   
-## Related Sections  
-[Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)  
-  
+## Related Sections
+
+[Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)

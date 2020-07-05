@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Create a Trace (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use stored procedures to create a trace.  
   
 ### To create a trace  
@@ -25,8 +25,6 @@ ms.author: "mathoma"
 2.  Execute **sp_trace_setevent** with the required parameters to select the events and columns to trace.  
   
 3.  Optionally, execute **sp_trace_setfilter** to set any or a combination of filters.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
      **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
   

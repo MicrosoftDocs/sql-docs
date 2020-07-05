@@ -1,5 +1,6 @@
 ---
 title: "Shared Dataset Design View (Report Builder) | Microsoft Docs"
+description: In Report Builder, use the Shared Dataset Design window to create datasets to share. Publish your shared datasets on a report server to use in multiple reports.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -27,7 +28,7 @@ ms.author: maggies
 > [!NOTE]  
 >  A shared dataset must be based on a shared data source. If the data source you need isn't available, you need to create one on the report server. For more information, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ For more information, see [Create data connection strings - Report Builder & SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ### Dataset  
  Use the **Set Options** button to set shared dataset properties. These include the following:  

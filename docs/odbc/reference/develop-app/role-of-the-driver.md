@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "driver error checking [ODBC]"
   - "diagnostic information [ODBC], driver error checking"
 ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Role of the Driver
 The driver checks for all errors and warnings not checked by the Driver Manager and orders status records that it generates. (An ODBC 2.*x* driver does not order status records.) This includes errors and warnings in data truncation, data conversion, syntax, and some state transitions. The driver might also check errors and warnings partially checked by the Driver Manager. For example, although the Driver Manager checks whether the value of *Operation* in **SQLSetPos** is legal, the driver must check whether it is supported.  

@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Creating and Accessing Tables in TempDB from Natively Compiled Stored Procedures
   Creating and accessing tables in TempDB from natively compiled stored procedures is not supported. Instead, use table types and table variables. For example:  

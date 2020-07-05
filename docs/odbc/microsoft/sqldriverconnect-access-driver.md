@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLDriverConnect"
   - "SQLDriverConnect function [ODBC], Access Driver"
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDriverConnect (Access Driver)
 > [!NOTE]  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "events [ADO], RDS"
   - "RDS events [ADO]"
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Events
 > [!IMPORTANT]

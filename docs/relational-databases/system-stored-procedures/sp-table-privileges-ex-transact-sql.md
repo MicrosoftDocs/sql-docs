@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_table_privileges_ex"
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_table_privileges_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns privilege information about the specified table from the specified linked server.  
   

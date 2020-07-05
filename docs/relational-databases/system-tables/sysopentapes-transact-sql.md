@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "backup media [SQL Server], sysopentapes system table"
   - "sysopentapes system table"
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysopentapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each currently open tape device. This view is stored in the **master** database.  
   

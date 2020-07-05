@@ -1,5 +1,6 @@
 ---
 title: "General XQuery Use Cases | Microsoft Docs"
+description: View several examples of general XQuery use including searching, retrieving, and listing specific data from a product catalog.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # General XQuery Use Cases
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides general examples of XQuery use.  
   

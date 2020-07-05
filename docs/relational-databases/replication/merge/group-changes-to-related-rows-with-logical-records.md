@@ -1,6 +1,7 @@
 ---
-title: "Group Changes to Related Rows with Logical Records | Microsoft Docs"
-ms.custom: ""
+title: "Group changes to related rows with logical records"
+description: Learn how to make changes to related rows as a unit with Merge Replication in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Group Changes to Related Rows with Logical Records
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  

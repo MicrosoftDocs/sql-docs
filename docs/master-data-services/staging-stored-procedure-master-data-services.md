@@ -1,5 +1,6 @@
 ---
-title: "Staging Stored Procedure (Master Data Services) | Microsoft Docs"
+title: Staging Stored Procedure
+description: Use one of three stored procedures to initiate the staging process from SQL Server Management Studio in Master Data Services.
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Staging Stored Procedure (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   When initiating the staging process from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you use one of three stored procedures.  
   

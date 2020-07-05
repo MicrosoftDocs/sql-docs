@@ -1,6 +1,7 @@
 ---
-title: "View and Resolve Data Conflicts for Merge Publications | Microsoft Docs"
-ms.custom: ""
+title: "View & resolve data conflicts (Merge)"
+description: Learn how to view and resolve data conflicts for a Merge Publication for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,14 +17,14 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Conflict resolution for Merge Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Conflicts in merge replication are resolved based on the resolver specified for each article. By default, conflicts are resolved without the need for user intervention. But conflicts can be viewed, and the outcome of the resolution can be changed, in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Replication Conflict Viewer.  
   
  Conflict data is available in the Replication Conflict Viewer for the amount of time specified for the conflict retention period (with a default of 14 days). To set the conflict retention period, either:  
   
--   Specify a retention value for the **@conflict_retention** parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+-   Specify a retention value for the `@conflict_retention` parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
--   Specify a value of **conflict_retention** for the **@property** parameter and a retention value for the **@value** parameter of [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
+-   Specify a value of **conflict_retention** for the `@property` parameter and a retention value for the `@value` parameter of [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
  By default, conflict information is stored:    
 -   At the Publisher and Subscriber if the publication compatibility level is 90RTM or higher.   
@@ -67,8 +68,6 @@ ms.author: "mathoma"
   
 6.  Close the Replication Conflict Viewer.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## View conflict information
 When a conflict is resolved in merge replication, the data from the losing row is written to a conflict table. This conflict data can be viewed programmatically by using replication stored procedures. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
@@ -79,9 +78,9 @@ When a conflict is resolved in merge replication, the data from the losing row i
     -   **decentralized_conflicts** - 1 indicates that conflict rows are stored at the Subscriber, and 0 indicates that conflict rows are not stored at the Subscriber.  
   
         > [!NOTE]  
-        >  The conflict logging behavior of a merge publication is set by using the **@conflict_logging** parameter of [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Use of the **@centralized_conflicts** parameter has been deprecated.  
+        >  The conflict logging behavior of a merge publication is set by using the `@conflict_logging` parameter of [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Use of the `@centralized_conflicts` parameter has been deprecated.  
   
-     The following table describes the values of these columns based on the value specified for **@conflict_logging**.  
+     The following table describes the values of these columns based on the value specified for `@conflict_logging`.  
   
     |@conflict_logging value|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -89,13 +88,13 @@ When a conflict is resolved in merge replication, the data from the losing row i
     |**subscriber**|0|1|  
     |**both**|1|1|  
   
-2.  At either the Publisher on the publication database or at the Subscriber on the subscription database, execute [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Specify a value for **@publication** to only return conflict information for articles that belong to a specific publication. This returns conflict table information for articles with conflicts. Note the value of **conflict_table** for any articles of interest. If the value of **conflict_table** for an article is NULL, only delete conflicts have occurred in this article.  
+2.  At either the Publisher on the publication database or at the Subscriber on the subscription database, execute [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Specify a value for `@publication` to only return conflict information for articles that belong to a specific publication. This returns conflict table information for articles with conflicts. Note the value of **conflict_table** for any articles of interest. If the value of **conflict_table** for an article is NULL, only delete conflicts have occurred in this article.  
   
 3.  (Optional) Review conflict rows for articles of interest. Depending on the values of **centralized_conflicts** and **decentralized_conflicts** from step 1, do one of the following:  
   
-    -   At the Publisher on the publication database, execute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Specify a conflict table for the article (from step 1) for **@conflict_table**. (Optional) Specify a value of **@publication** to restrict returned conflict information to a specific publication. This returns row data and other information for the losing row.  
+    -   At the Publisher on the publication database, execute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Specify a conflict table for the article (from step 1) for `@conflict_table`. (Optional) Specify a value of `@publication` to restrict returned conflict information to a specific publication. This returns row data and other information for the losing row.  
   
-    -   At the Subscriber on the subscription database, execute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Specify a conflict table for the article (from step 1) for **@conflict_table**. This returns row data and other information for the losing row.  
+    -   At the Subscriber on the subscription database, execute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Specify a conflict table for the article (from step 1) for `@conflict_table`. This returns row data and other information for the losing row.  
   
 ## Conflict where delete failed   
   
@@ -106,15 +105,15 @@ When a conflict is resolved in merge replication, the data from the losing row i
     -   **decentralized_conflicts** - 1 indicates that conflict rows are stored at the Subscriber, and 0 indicates that conflict rows are not stored at the Subscriber.  
   
         > [!NOTE]  
-        >  The conflict logging behavior of a merge publication is set using the **@conflict_logging** parameter of [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Use of the **@centralized_conflicts** parameter has been deprecated.  
+        >  The conflict logging behavior of a merge publication is set using the `@conflict_logging` parameter of [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Use of the `@centralized_conflicts` parameter has been deprecated.  
   
-2.  At either the Publisher on the publication database or at the Subscriber on the subscription database, execute [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Specify a value for **@publication** to only return conflict table information for articles that belong to a specific publication. This returns conflict table information for articles with conflicts. Note the value of **source_object** for any articles of interest. If the value of **conflict_table** for an article is NULL, only delete conflicts have occurred in this article.  
+2.  At either the Publisher on the publication database or at the Subscriber on the subscription database, execute [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Specify a value for `@publication` to only return conflict table information for articles that belong to a specific publication. This returns conflict table information for articles with conflicts. Note the value of **source_object** for any articles of interest. If the value of **conflict_table** for an article is NULL, only delete conflicts have occurred in this article.  
   
 3.  (Optional) Review conflict information for delete conflicts. Depending on the values of **centralized_conflicts** and **decentralized_conflicts** from step 1, do one of the following:  
   
-    -   At the Publisher on the publication database, execute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specify the name of the source table (from step 1) on which the conflict occurred for **@source_object**. (Optional) Specify a value of **@publication** to restrict returned conflict information to a specific publication. This returns delete conflict information stored at the Publisher.  
+    -   At the Publisher on the publication database, execute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specify the name of the source table (from step 1) on which the conflict occurred for `@source_object`. (Optional) Specify a value of `@publication` to restrict returned conflict information to a specific publication. This returns delete conflict information stored at the Publisher.  
   
-    -   At the Subscriber on the subscription database, execute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specify the name of the source table (from step 1) on which the conflict occurred for **@source_object**. (Optional) Specify a value of **@publication** to restrict returned conflict information to a specific publication. This returns delete conflict information stored at the Subscriber.  
+    -   At the Subscriber on the subscription database, execute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specify the name of the source table (from step 1) on which the conflict occurred for `@source_object`. (Optional) Specify a value of `@publication` to restrict returned conflict information to a specific publication. This returns delete conflict information stored at the Subscriber.  
   
 ## See Also  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

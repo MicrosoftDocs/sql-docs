@@ -1,6 +1,7 @@
 ---
-title: "View Availability Group Properties (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "View availability group properties"
+description: "View the properties of an Always On availability group with either SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. "
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # View Availability Group Properties (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view the properties of an availability group for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  

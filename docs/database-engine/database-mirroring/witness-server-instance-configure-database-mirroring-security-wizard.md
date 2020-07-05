@@ -1,6 +1,7 @@
 ---
-title: "Witness Server Instance (Configure Database Mirroring Security Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Configure Security Wizard: Witness Server Instance"
+description: "Describes the 'Witness Server Instance' page of the 'Configure Database Mirroring Security Wizard'. "
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to specify information about the server instance that is to serve as the witness for the session.  
   
 > [!NOTE]

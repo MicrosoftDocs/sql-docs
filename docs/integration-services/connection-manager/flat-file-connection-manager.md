@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "flat files"
   - "flat file connections [Integration Services]"
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Connection Manager
 

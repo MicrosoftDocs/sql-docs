@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "mirTab"
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Generate Mirror Tables and CDC Capture Instances
 

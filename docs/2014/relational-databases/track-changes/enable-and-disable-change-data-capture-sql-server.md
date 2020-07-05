@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Enable and Disable Change Data Capture (SQL Server)
   This topic describes how to enable and disable change data capture for a database and a table.  

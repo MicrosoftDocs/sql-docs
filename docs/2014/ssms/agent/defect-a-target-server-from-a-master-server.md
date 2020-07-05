@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Defect a Target Server from a Master Server
   This topic describes how to defect a target server from a master server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO). Run this procedure from the target server.  
@@ -61,7 +60,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-```  
+```sql
 sp_msx_defect ;  
 ```  
   
@@ -74,5 +73,3 @@ sp_msx_defect ;
  [Create a Multiserver Environment](create-a-multiserver-environment.md)   
  [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)   
  [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
-  
-  

@@ -5,7 +5,7 @@ description: Connect to big data cluster using sparklyr from RStudio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Use sparklyr in SQL Server big data cluster
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for R developers to use Spark. This article describes how to use sparklyr in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using RStudio.
 
@@ -44,7 +44,11 @@ You can use sparklyr to connect from a client to the big data cluster using Livy
 In RStudio, create an R script and connect to Spark as in the following example:
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on [connecting to a big data cluster](connect-to-big-data-cluster.md).
+> For the `<AZDATA_USERNAME>` and `<AZDATA_PASSWORD>` values, use the username and password you set during the big data cluster deployment.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+
+For the `<IP>` and `<PORT>` values, see the documentation on [connecting to a big data cluster](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)
@@ -52,7 +56,7 @@ library(dplyr)
 library(DBI)
 
 #Specify the Knox username and password
-config <- livy_config(user = "<username>", password = "<password>")
+config <- livy_config(user = "<AZDATA_USERNAME>", password = "<AZDATA_PASSWORD>")
 
 httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 

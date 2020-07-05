@@ -14,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Activity Monitor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Activity Monitor displays information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes and how these processes affect the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Activity Monitor is a tabbed document window with the following expandable and collapsible panes: **Overview**, **Processes**, **Resource Waits**, **Data File I/O**, **Recent Expensive Queries**, and **Active Expensive Queries**. When any pane is expanded, Activity Monitor queries the instance for information. When a pane is collapsed, all querying activity stops for that pane. You can  expand one or more panes at the same time to view different kinds of activity on the instance.  
@@ -27,8 +27,6 @@ For columns included in the **Processes**, **Resource Waits**, **Data File I/O**
 2.  To sort a column, click the column name.  
   
 3.  To filter on one or more columns, click the drop-down arrow in the column heading, and then select a value.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## More information  
    

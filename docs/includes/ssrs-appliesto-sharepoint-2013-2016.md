@@ -9,4 +9,4 @@
  ms.author: maggies
  ms.custom: include file
 ---
- ![yes](media/yes.png)SharePoint
+ ![Yes](media/yes-icon.png)SharePoint

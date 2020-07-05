@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5a45dfa7-51fc-420c-96f6-ce2a1f61b684
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Exception Event Class
   The Exception event class indicates that an exception has occurred in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

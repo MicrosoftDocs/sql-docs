@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Databases
   A database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is made up of a collection of tables that stores a specific set of structured data. A table contains a collection of rows, also referred to as records or tuples, and columns, also referred to as attributes. Each column in the table is designed to store a certain type of information, for example, dates, names, dollar amounts, and numbers.  
@@ -36,7 +35,7 @@ manager: craigg
 |-|-|  
 |[System Databases](system-databases.md)|[Delete Data or Log Files from a Database](delete-data-or-log-files-from-a-database.md)|  
 |[Contained Databases](contained-databases.md)|[Display Data and Log Space Information for a Database](display-data-and-log-space-information-for-a-database.md)|  
-|[SQL Server Data Files in Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Increase the Size of a Database](increase-the-size-of-a-database.md)|  
+|[SQL Server Data Files in Azure](sql-server-data-files-in-microsoft-azure.md)|[Increase the Size of a Database](increase-the-size-of-a-database.md)|  
 |[Database Files and Filegroups](database-files-and-filegroups.md)|[Rename a Database](rename-a-database.md)|  
 |[Database States](database-states.md)|[Set a Database to Single-user Mode](set-a-database-to-single-user-mode.md)|  
 |[File States](file-states.md)|[Shrink a Database](shrink-a-database.md)|  

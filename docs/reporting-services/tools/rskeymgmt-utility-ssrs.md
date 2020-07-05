@@ -1,5 +1,5 @@
 ---
-title: "rskeymgmt Utility (SSRS) | Microsoft Docs"
+title: "rskeymgmt Utility | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

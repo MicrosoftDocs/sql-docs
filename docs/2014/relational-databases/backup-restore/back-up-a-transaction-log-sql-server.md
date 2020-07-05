@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Back Up a Transaction Log (SQL Server)
   This topic describes how to back up a transaction log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
@@ -174,18 +173,15 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
   
-1.  Use the `Backup-SqlDatabase` cmdlet and specify `Log` for the value of the `-BackupAction` parameter.  
+Use the `Backup-SqlDatabase` cmdlet and specify `Log` for the value of the `-BackupAction` parameter.  
   
-     The following example creates a log backup of the `MyDB` database to the default backup location of the server instance `Computer\Instance`.  
+The following example creates a log backup of the `MyDB` database to the default backup location of the server instance `Computer\Instance`.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Log  
     ```  
   
- **To set up and use the SQL Server PowerShell provider**  
-  
--   [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
+To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -200,5 +196,3 @@ GO
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Maintenance Plans](../maintenance-plans/maintenance-plans.md)   
  [Full File Backups &#40;SQL Server&#41;](full-file-backups-sql-server.md)  
-  
-  

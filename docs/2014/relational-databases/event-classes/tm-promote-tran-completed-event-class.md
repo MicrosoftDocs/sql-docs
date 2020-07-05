@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # TM: Promote Tran Completed Event Class
   The TM: Promote Tran Completed event class indicates that a PROMOTE TRANSACTION request has completed. The request is sent from the client through the transaction management interface.  

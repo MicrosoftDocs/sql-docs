@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Copy Column Transformation Editor"
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Copy Column Transformation Editor
   Use the **Copy Column Transformation Editor** dialog box to select columns to copy and to assign names for the new output columns.  

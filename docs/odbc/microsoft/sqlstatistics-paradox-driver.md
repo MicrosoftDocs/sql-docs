@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Paradox driver [ODBC], SQLStatistics"
   - "SQLStatistics function [ODBC], Paradox Driver"
 ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLStatistics (Paradox Driver)
 > [!NOTE]  

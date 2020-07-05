@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) in a Cluster
 
@@ -122,7 +122,7 @@ For those customers who conclude that the advantages of configuring the [!INCLUD
   
 4.  Change the value of the **StorePath** element to the fully-qualified path of the **Packages** folder created on the shared disk in a previous step.  
   
-5.  Update the value of **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** in the Registry to the fully-qualified path and file name of the service configuration file on the shared disk.  
+5.  On each node, update the value of **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** in the Registry to the fully-qualified path and file name of the service configuration file on the shared disk.  
   
 ### To bring the Integration Services service online  
   

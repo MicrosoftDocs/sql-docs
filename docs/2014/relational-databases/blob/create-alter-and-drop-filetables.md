@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create, Alter, and Drop FileTables
   Describes how to create a new FileTable, or alter or drop an existing FileTable.  
@@ -169,7 +168,7 @@ GO
 |Check constraints|The system-defined check constraints enforce the following requirements:<br /><br /> Valid filenames.<br /><br /> Valid file attributes.<br /><br /> Parent object must be a directory.<br /><br /> Namespace hierarchy is locked during file manipulation.|  
   
  **Naming convention for the system-defined constraints**  
- The system-defined constaints described above are named in the format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** where:  
+ The system-defined constraints described above are named in the format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** where:  
   
 -   *<constraint_type>* is CK (check constraint), DF (default constraint), FK (foreign key), PK (primary key), or UQ (unique constraint).  
   

@@ -1,5 +1,5 @@
 ---
-title: "Collection Permissions (Master Data Services) | Microsoft Docs"
+title: Collection Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # Collection Permissions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Collection permissions apply to all collections for an entity. You cannot give permission to a specific collection; permissions apply to all collections.  
   

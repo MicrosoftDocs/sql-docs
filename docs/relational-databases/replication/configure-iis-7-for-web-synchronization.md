@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Configure IIS 7 for Web Synchronization
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The procedures in this topic will guide you through the process of manually configuring [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) version 7 and higher for use with Web synchronization for merge replication. 
   
@@ -30,7 +30,7 @@ ms.author: "mathoma"
   
 1.  Install and configure the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener on the computer that is running IIS.  
   
-2.  Configure Secure Sockets Layer (SSL). SSL is required for communication between IIS and all subscribers.  
+2.  Configure Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). TLS is required for communication between IIS and all subscribers.  
   
 3.  Configure IIS authentication.  
   
@@ -91,9 +91,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
 ## Configuring IIS Authentication  
  When subscriber computers connect to IIS, IIS must authenticate the subscribers before they can access resources and processes. Authentication can be applied to the whole Web site or to the virtual directory that you created.  
   
- We recommend that you use Basic Authentication with SSL. SSL is required, regardless of the type of authentication that is used.  
-  
- We recommend that you use Basic Authentication with SSL. SSL is required, regardless of the type of authentication that is used.  
+ We recommend that you use Basic Authentication with TLS. TLS is required, regardless of the type of authentication that is used.
   
 #### To Configure IIS Authentication  
   
@@ -106,7 +104,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
 4.  Right-click Basic Authentication, and then choose Enable.  
   
 ## Configuring Secure Sockets Layer  
- To configure SSL, specify a certificate to be used by the computer running IIS. Web synchronization for merge replication supports using server certificates, but not client certificates. To configure IIS for deployment, you must first obtain a certificate from a certification authority (CA). For more information about certificates, see the IIS documentation.  
+ To configure TLS, specify a certificate to be used by the computer running IIS. Web synchronization for merge replication supports using server certificates, but not client certificates. To configure IIS for deployment, you must first obtain a certificate from a certification authority (CA). For more information about certificates, see the IIS documentation.  
   
  After you install the certificate, you must associate the certificate with the Web site that is used by Web synchronization. For development and testing, you can specify a self-signed certificate. IIS 7 can create a certificate for you and register it on your computer.  
   
@@ -115,9 +113,9 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
 > [!IMPORTANT]  
 >  A self-signed certificate is not recommended for a production installation. Self-signed certificates are not secure. Use self-signed certificates for development and testing only.  
   
- To configure SSL, you will perform the following steps:  
+ To configure TLS, you will perform the following steps:  
   
-1.  Configure the Web site to require SSL and ignore client certificates.  
+1.  Configure the Web site to require TLS and ignore client certificates.  
   
 2.  Obtain a certificate from a CA or create a self-signed certificate.  
   
@@ -262,7 +260,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
     5.  Click **OK** again to close Advanced Settings.  
   
 ## Testing the Connection to replisapi.dll  
- Run Web synchronization in diagnostic mode to test the connection to the computer running IIS and to make sure that the Secure Sockets Layer (SSL) certificate is properly installed. To run Web synchronization in diagnostic mode, you must be an administrator on the computer running IIS.  
+ Run Web synchronization in diagnostic mode to test the connection to the computer running IIS and to make sure that the TLS/SSL certificate is properly installed. To run Web synchronization in diagnostic mode, you must be an administrator on the computer running IIS.  
   
 #### To test the connection to replisapi.dll  
   

@@ -14,7 +14,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Configure an Oracle Publisher
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Publications from Oracle Publishers are created in the same way typical snapshot and transactional publications are created, but prior to creating a publication from an Oracle Publisher, you must complete the following steps (steps one, three, and four are described in detail in this topic.):  
   
 1.  Create a replication administrative user within the Oracle database using the supplied script.  
@@ -24,8 +24,6 @@ ms.author: "mathoma"
 3.  Install the Oracle client software and OLE DB provider on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and then stop and restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If the Distributor is running on a 64-bit platform, you must use the 64-bit version of the Oracle OLE DB provider.  
   
 4.  Configure the Oracle database as a Publisher at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the following heterogeneous scenarios for transactional and snapshot replication:  
   

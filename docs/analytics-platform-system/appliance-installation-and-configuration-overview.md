@@ -1,5 +1,5 @@
 ---
-title: Appliance install and configure - Analytics Platform System | Microsoft Docs
+title: Appliance install and configure
 description: Walks Analytics Platform System (APS) appliance administrators through the initial steps to set up and get started using your new appliance. 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Appliance installation and configuration for Analytics Platform System

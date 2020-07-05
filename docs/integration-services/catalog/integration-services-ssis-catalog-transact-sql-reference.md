@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) Catalog Transact-SQL Reference | Microsoft Docs"
+title: "Integration Services Catalog Transact-SQL Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) Catalog Transact-SQL Reference
 

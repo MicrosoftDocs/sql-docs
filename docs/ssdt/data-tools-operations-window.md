@@ -1,19 +1,21 @@
 ---
-title: "Data Tools Operations Window | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Data Tools Operations Window
+description: Learn how to use the Data Tools Operations window to view the progress of expanding a database, publishing results, and other operations.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datatoolsoperations"
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Data Tools Operations Window
+
 The **Data Tools Operations**  window shows the progress of some operations discussed in this topic, and notifies you of any errors.  
   
 > [!WARNING]  

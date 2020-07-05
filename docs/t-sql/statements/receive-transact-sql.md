@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retrieves one or more messages from a queue. Depending on the retention setting for the queue, either removes the message from the queue or updates the status of the message in the queue.  
   
@@ -31,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   

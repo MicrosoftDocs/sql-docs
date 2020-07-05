@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "Policy-Based Management, stored procedures"
   - "stored procedures [Policy-Based Management]"
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Policy-Based Management Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used for Policy-Based Management.  
   

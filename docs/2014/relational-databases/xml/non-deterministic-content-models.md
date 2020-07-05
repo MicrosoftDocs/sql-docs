@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "non-deterministic content models"
   - "content models [XML in SQL Server]"
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Non-Deterministic Content Models
   Before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 (SP1), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejected XML schemas that had non-deterministic content models.  

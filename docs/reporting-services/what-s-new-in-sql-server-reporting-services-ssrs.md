@@ -1,5 +1,5 @@
 ---
-title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
+title: "What's new in Reporting Services | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -8,34 +8,62 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 05/08/2019
+ms.date: 12/05/2019
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This article covers the major feature areas and is updated as new items are released.
-
-For the current release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). 
+Learn about what's new in the different versions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This article covers the major feature areas and is updated as new items are released.
 
 For information about Power BI Report Server, see [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## SQL Server 2019 preview Reporting Services
+## SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] preview Reporting Services is available and can be downloaded from the **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=100122)**.
+**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) is available for download from the Microsoft Download Center.
+
+### Azure SQL Managed Instance support
+
+You can now host a database catalog used for SQL Server Reporting Services (SSRS) in an Azure SQL Managed Instance (MI) that's hosted either in a VM or in your data center. Support is limited to using database credentials for the connection to SQL MI.
+
+### Power BI Premium dataset support
+
+You can connect to Power BI datasets using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then you can publish those reports to SSRS 2019 using SQL Server Analysis Services connectivity. Users need to use a stored Windows user name and password to enable the scenario.
+
+### AltText (alternative text) support for report elements
+
+When authoring reports, you can use tooltips to specify text for each element on the report. Screen reader technology identifies these tooltips properly.
+
+### Azure Active Directory Application Proxy support
+
+With Azure Active Directory Application Proxy, you no longer need to manage your own web application proxy in order to allow secure access via the web or mobile apps.
+
+### Custom headers
+
+Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#customheaders) in the **Server Properties Advanced Page** article for details.
+
+### Transparent Database Encryption
+
+SQL Server 2019 now supports Transparent Database Encryption for the SSRS catalog database for Enterprise and Standard editions. 
+
+### Microsoft Report Builder update
+
+The newly released version of Report Builder is fully compatible with the 2016, 2017, and 2019 versions of Reporting Services. It's also compatible with all released and supported versions of Power BI Report Server.
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## SSRS 2017
+## SQL Server 2017 Reporting Services
+
+**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+
+To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
 ### Comments on reports
 
@@ -51,7 +79,7 @@ In the latest releases of Report Builder and SQL Server Data Tools, you can crea
 
 ### REST API support
 
-To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ### Query designer support for DAX now in Report Builder and SQL Server Data Tools
 
@@ -62,7 +90,8 @@ Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlr
 * Download [SQL Server Report Builder](https://go.microsoft.com/fwlink/?LinkId=734968).
 * Download [SQL Server Data Tools - Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Note**: You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
+> [!NOTE]
+> You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
 ::: moniker-end
 
 ## SSRS 2016

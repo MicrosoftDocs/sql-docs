@@ -1,6 +1,7 @@
 ---
-title: "Building Database Objects with Common Language Runtime (CLR) Integration | Microsoft Docs"
-ms.custom: ""
+title: "Common Language Runtime (CLR) build database objects"
+description: Build database objects using the SQL Server integration with the .NET Framework common language runtime (CLR).
+ms.custom: "seo-lt-2019"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Building Database Objects with Common Language Runtime (CLR) Integration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   You can build database objects using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR). Managed code that runs inside of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is referred to as a "CLR routine." These routines include:  
   
 -   Scalar-valued user-defined functions (scalar UDFs)  

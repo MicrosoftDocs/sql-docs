@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A data type for variables or stored procedure OUTPUT parameters that contain a reference to a cursor.
   
 ## Remarks  
 The operations that can reference variables and parameters having a **cursor** data type are:
--   The DECLARE *@local_variable* and SET *@local_variable* statements.  
+-   The DECLARE *\@local_variable* and SET *\@local_variable* statements.  
 -   The OPEN, FETCH, CLOSE, and DEALLOCATE cursor statements.  
 -   Stored procedure output parameters.  
 -   The CURSOR_STATUS function.  

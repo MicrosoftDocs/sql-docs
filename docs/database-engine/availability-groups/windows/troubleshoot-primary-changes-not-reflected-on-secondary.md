@@ -1,18 +1,18 @@
 ---
-title: "Determine why changes aren't visible on secondary replica for an availability group - SQL Server"
-ms.description: "Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group." 
-ms.custom: ag-guide,seodec18 
+title: "Changes aren't visible on secondary availability group replica"
+description: Learn how to determine why changes on a primary replica are not reflected on the secondary replica for an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Determine why changes from primary replica are not reflected on secondary replica for an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The client application completes an update on the primary replica successfully, but querying the secondary replica shows that the change is not reflected. This case assumes that your availability has a healthy synchronization state. In most cases, this behavior resolves itself after a few minutes.  
   
  If changes are still not reflected on the secondary replica after a few minutes, there may be a bottleneck in the synchronization work flow. The location of the bottleneck depends on whether the secondary replica is set to synchronous commit or asynchronous commit.  
@@ -121,6 +121,6 @@ from sys.dm_hadr_database_replica_states
  If the redo thread is indeed falling behind, you need to investigate the root cause of the performance degradation on the secondary replica. If there is an I/O contention with the reporting workload, you can use [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) to control CPU cycles that are used by the reporting workload to indirectly control the I/O cycles taken, to some extent. For example, if your reporting workload is consuming 10 percent of CPU but the workload is I/O bound, you can use Resource Governor to limit CPU resource usage to 5 percent to throttle read workload, which minimizes the impact on I/O.  
   
 ## Next steps  
- [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
+ [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
   
   

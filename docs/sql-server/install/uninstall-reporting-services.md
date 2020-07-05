@@ -1,5 +1,6 @@
 ---
 title: "Uninstall Reporting Services | Microsoft Docs"
+description: This article describes how to uninstall Reporting Services, which does not remove content you created or configuration you have modified. 
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -7,12 +8,12 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-author: "markingmyname"
-ms.author: "maghan"
+author: maggiesMSFT 
+ms.author: maggies
 manager: kfile
 ---
 # Uninstall Reporting Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Uninstalling [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not remove the content you have created or configuration you have modified. However, if there is content you need after the uninstall is complete, it is recommended you make copies of content before you begin the uninstallation process.  
   

@@ -1,7 +1,7 @@
 ---
 title: Join SQL Server on Linux to Active Directory
 titleSuffix: SQL Server
-description: 
+description: This article provides guidance joining a SQL Server Linux host machine to an AD domain. You can use a built-in SSSD package or use third-party AD providers.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -12,7 +12,7 @@ ms.technology: linux
 ---
 # Join SQL Server on a Linux host to an Active Directory domain
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides general guidance on how to join a SQL Server Linux host machine to an Active Directory (AD) domain. There are two methods: use a built-in SSSD package or use third-party Active Directory providers. Examples of third-party domain join products are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your Active Directory configuration. However, it is not intended to provide instructions on how to join a machine to a domain when using third-party utilities.
 
@@ -21,7 +21,7 @@ This article provides general guidance on how to join a SQL Server Linux host ma
 Before you configure Active Directory authentication, you need to set up an Active Directory domain controller, Windows, on your network. Then join your SQL Server on Linux host to an Active Directory domain.
 
 > [!IMPORTANT]
-> The sample steps described in this article are for guidance only. Actual steps may slightly differ in your environment depending on how your overall environment is configured. Engage your system and domain administrators for your environment for specific configuration, customization, and any required troubleshooting.
+> The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x and SUSE Enterprise Linux (SLES) 12 operating systems. Actual steps may slightly differ in your environment depending on how your overall environment is configured and operating system version. For example, Ubuntu 18.04 uses netplan while Red Hat Enterprise Linux (RHEL) 8.x uses nmcli among other tools to manage and configure network. It is recommended to engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
 
 ## Check the connection to a domain controller
 
@@ -37,7 +37,7 @@ ping contoso.com
 
 If either of these name checks fail, update your domain search list. The following sections provide instructions for Ubuntu, Red Hat Enterprise Linux (RHEL), and SUSE Linux Enterprise Server (SLES) respectively.
 
-### Ubuntu
+### Ubuntu 16.04
 
 1. Edit the **/etc/network/interfaces** file, so that your Active Directory domain is in the domain search list:
 
@@ -65,7 +65,7 @@ If either of these name checks fail, update your domain search list. The followi
    nameserver **<AD domain controller IP address>**
    ```
 
-### RHEL
+### RHEL 7.x
 
 1. Edit the **/etc/sysconfig/network-scripts/ifcfg-eth0** file, so that your Active Directory domain is in the domain search list. Or edit another interface config file as appropriate:
 
@@ -94,7 +94,7 @@ If either of these name checks fail, update your domain search list. The followi
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### SLES
+### SLES 12
 
 1. Edit the **/etc/sysconfig/network/config** file, so that your Active Directory domain controller IP is used for DNS queries and your Active Directory domain is in the domain search list:
 
@@ -191,9 +191,9 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    ```
 
    > [!NOTE]
-   > - If **id user@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - If **id user\@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - If **kinit user@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
+   > - If **kinit user\@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
 
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 

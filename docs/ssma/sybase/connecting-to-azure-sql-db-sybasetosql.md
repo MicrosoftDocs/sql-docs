@@ -24,7 +24,7 @@ The account that is used to connect to Azure SQL DB requires different permissio
   
 2.  To load database objects into Azure SQL DB, the minimum permission requirement is membership in the  **db_owner** database role in the target database.  
   
-## Establishing a Azure SQL DB Connection  
+## Establishing an Azure SQL DB Connection  
 Before you convert Sybase database objects to Azure SQL DB syntax, you must establish a connection to the instance of Azure SQL DB where you want to migrate the Sybase database or databases.  
   
 When you define the connection properties, you also specify the database where objects and data will be migrated. You can customize this mapping at the Sybase schema level after you connect to Azure SQL DB. For more information, see [Mapping Sybase ASE Schemas to SQL Server Schemas &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  

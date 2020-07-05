@@ -1,5 +1,6 @@
 ---
 title: "Restore a Database Master Key | Microsoft Docs"
+description: Learn how to restore the database master key in SQL Server by using SQL Server Management Studio with Transact-SQL.
 ms.custom: ""
 ms.date: "01/02/2019"
 ms.prod: sql
@@ -9,11 +10,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "database master key [SQL Server], importing"
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # Restore a Database Master Key
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to restore the database master key in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ## Before You Begin  
@@ -44,8 +45,6 @@ Requires CONTROL permission on the database.
 3. On the Standard bar, click **New Query**.  
   
 4. Copy and paste the following example into the query window and click **Execute**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  

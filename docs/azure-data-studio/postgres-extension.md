@@ -1,12 +1,11 @@
 ---
 title: PostgreSQL extension (preview)
-titleSuffix: Azure Data Studio
 description: PostgreSQL extension (preview) for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "03/19/2019"
-ms.reviewer: "alayu; sstein"
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: "alayu, maghan, sstein"
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: "rachel-msft"
 ms.author: "raagyema"

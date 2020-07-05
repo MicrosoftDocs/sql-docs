@@ -1,6 +1,7 @@
 ---
-title: "Controlling Row and Column Headings (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 05/24/2018
+title: "Control Row & Column Headings (Report Builder & SSRS) | Microsoft Docs"
+description: Learn how to use a table, matrix, or list data region in a paginated report, which lets you to span multiple pages horizontally or vertically in Report Builder. 
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -11,8 +12,8 @@ ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Controlling Row and Column Headings (Report Builder and SSRS)
-  A table, matrix, or list data region can span multiple pages horizontally or vertically. You can specify whether to repeat row or column headings on each page. In an interactive renderer such as the web portal or report preview, you can also specify whether to freeze row or column headings to keep them in view when you scroll across or down a report. In a table or matrix, the first row usually contains column headings that label data in each column; the first column usually contains row headings that label the data in each row. For nested groups, you might want to repeat the initial set of row and column headings that contain group labels. By default, a list data region does not include headings.  
+# Control Row & Column Headings (Report Builder & SSRS)
+  A table, matrix, or list data region in a paginated report can span multiple pages horizontally or vertically. You can specify whether to repeat row or column headings on each page. In an interactive renderer such as the web portal or report preview, you can also specify whether to freeze row or column headings to keep them in view when you scroll across or down a report. In a table or matrix, the first row usually contains column headings that label data in each column; the first column usually contains row headings that label the data in each row. For nested groups, you might want to repeat the initial set of row and column headings that contain group labels. By default, a list data region does not include headings.  
   
  How you control whether headings repeat or freeze depends on the following:  
   

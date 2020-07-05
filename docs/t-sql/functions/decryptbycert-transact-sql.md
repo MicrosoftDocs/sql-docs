@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function uses the private key of a certificate to decrypt encrypted data.  
   
@@ -29,7 +29,7 @@ This function uses the private key of a certificate to decrypt encrypted data.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
@@ -49,7 +49,7 @@ A variable of type **varbinary** containing data encrypted with the certificate.
 The password used to encrypt the private key of the certificate. *cert_password* must have a Unicode data format.  
   
  @cert_password  
-A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *@cert_password* must have a Unicode data format.  
+A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *\@cert_password* must have a Unicode data format.  
 
 ## Return Types  
 **varbinary**, with a maximum size of 8,000 bytes.  

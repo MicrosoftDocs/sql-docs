@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SETUSER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Allows a member of the **sysadmin** fixed server role or the owner of a database to impersonate another user.  
   
@@ -33,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
@@ -61,7 +61,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## Examples  
  The following example shows how the database owner can adopt the identity of another user. User `mary` has created a table called `computer_types`. By using SETUSER, the database owner impersonates `mary` to grant user `joe` access to the `computer_types` table, and then resets his or her own identity.  
   
-```  
+```sql
 SETUSER 'mary';  
 GO  
 GRANT SELECT ON computer_types TO joe;  

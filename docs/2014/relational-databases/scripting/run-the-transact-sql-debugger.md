@@ -1,6 +1,6 @@
 ---
-title: "Run the Transact-SQL Debugger | Microsoft Docs"
-ms.custom: ""
+title: Run the Transact-SQL Debugger
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, keyboard shortcuts"
   - "Transact-SQL debugger, starting"
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Run the Transact-SQL Debugger
   You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you open a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. Then, you can run your [!INCLUDE[tsql](../../includes/tsql-md.md)] code in debug mode until you stop the debugger. You can set options to customize how the debugger runs.  

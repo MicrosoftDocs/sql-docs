@@ -1,6 +1,7 @@
 ---
 title: "Reporting Services Report Server (Native Mode) | Microsoft Docs"
-ms.date: 06/06/2019
+description: Learn about Report Server configured for native mode, including managing content, managing a resource, and referencing an image resource from a report.
+ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -46,9 +47,13 @@ ms.author: maggies
 -   Membership in the local Administrator group on the report server computer. If your installation includes server features that run on remote computers, you must have administrator permissions on those computers if you want to manage those servers over a remote connection.  
   
 -   Database administrator permissions for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the database.  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 -   If you are installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a domain controller, you must be a domain administrator.  
-  
+
+::: moniker-end
+
 ##  <a name="bkmk_managecontent"></a> Managing content  
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content management refers to the management of reports, models, folders, resources, and shared data sources. All these items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs.  
   

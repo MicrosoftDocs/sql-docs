@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.is.upgradewizard.completewizard.f1"
   - "sql13.is.upgradewizard.upgradingpackage.f1"
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SSIS Package Upgrade Wizard F1 Help
 

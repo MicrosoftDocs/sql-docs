@@ -1,15 +1,16 @@
 ---
-title: "WideWorldImporters OLAP sample database - install and configure - SQL | Microsoft Docs"
+title: "Install & configure DW WideWorldImporters sample database"
+description: Follow these instructions to download, install, and configure the WideWorldImportersDW sample database with SQL Server Management Studio.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.custom: ""
 ms.date: "08/04/2018"
 ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # WideWorldImportersDW Installation and configuration
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ Download the sample WideWorldImportersDW database backup/bacpac that corresponds
 
 Source code to recreate the sample database is available from the following location. Note that data population is based on ETL from the OLTP database (WideWorldImporters):
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## Install
 

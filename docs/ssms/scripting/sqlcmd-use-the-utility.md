@@ -1,6 +1,6 @@
 ---
-title: "Use the sqlcmd Utility | Microsoft Docs"
-ms.custom: ""
+title: "Use the sqlcmd Utility"
+ms.custom: seo-lt-2019
 ms.date: "06/06/2017"
 ms.prod: sql
 ms.technology: scripting
@@ -19,7 +19,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Use the utility
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The **sqlcmd** utility is a command-line utility for ad hoc, interactive execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and scripts and for automating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripting tasks. To use **sqlcmd** interactively, or to build script files to be run using **sqlcmd**, users must understand [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **sqlcmd** utility is typically used in the following ways:  
   
 -   Users enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, enter "cmd" in the Windows search box and click **Command Prompt** to open. At the command prompt, type **sqlcmd** followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
@@ -243,13 +243,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  `C:\>sqlcmd -S ServerName -A`  
   
- `1> SELECT blocked FROM sys.dm_exec_requests WHERE blocked <> 0;`  
+ `1> SELECT session_id, blocking_session_id FROM sys.dm_exec_requests WHERE blocking_session_id <> 0;`  
   
  `2> GO`  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `spid   blocked`  
+ `session_id   blocking_session_id`  
   
  `------ -------`  
   
@@ -306,7 +306,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  `1> :Setvar LastName Achong`  
   
- `1> EXEC dbo.ContactEmailAddress $(Gustavo),$(Achong)`  
+ `1> EXEC dbo.ContactEmailAddress $(FirstName),$(LastName)`  
   
  `2> GO`  
   
@@ -404,28 +404,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     ```  
     :exit(select 100)  
-    @echo off  
-    C:\windowsscript.bat  
-    @echo off  
-  
-    echo Running badscript.sql  
-    sqlcmd -i badscript.sql -b -o out.log  
-    if not errorlevel 1 goto next1  
-    echo == An error occurred   
-  
-    :next1  
-  
-    echo Running goodscript.sql  
-    sqlcmd -i goodscript.sql -b -o out.log  
-    if not errorlevel 1 goto next2  
-    echo == An error occurred   
-  
-    :next2  
-    echo Running returnvalue.sql  
-    sqlcmd -i returnvalue.sql -o out.log  
-    echo SQLCMD returned %errorlevel% to the command shell  
-  
-    :exit  
     ```  
   
 -   C:\windowsscript.bat  
@@ -467,7 +445,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  `SQLCMD returned 100 to the command shell`  
   
-### G. Using sqlcmd to set encryption on Windows Azure SQL Database  
+### G. Using sqlcmd to set encryption on Azure SQL Database  
  A **sqlcmd**can be executed on a connection to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] data on to specify encryption and certificate trust. Two **sqlcmd**``options are available:  
   
 -   The -N switch is used by the client to request an encrypted connection. This option is equivalent to the ADO.net option `ENCRYPT = true`.  

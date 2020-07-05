@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetData function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetData (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: "Deny Permissions on an XML Schema Collection | Microsoft Docs"
+description: Learn how to deny permissions to either create a new XML schema collection or use an existing one. 
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Deny Permissions on an XML Schema Collection
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Permission can be denied to either create a new XML schema collection or use an existing one.  
   
 ## Denying Permission to Create an XML Schema Collection  

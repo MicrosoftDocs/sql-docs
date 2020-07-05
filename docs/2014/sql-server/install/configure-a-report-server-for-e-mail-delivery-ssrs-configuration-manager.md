@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "mail [Reporting Services]"
   - "local SMTP service [Reporting Services]"
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)
 

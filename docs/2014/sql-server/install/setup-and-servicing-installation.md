@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 6df72a78-6b36-4bc1-948e-04b4ebe46094
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Setup and Servicing Installation
   This section contains the following content:  

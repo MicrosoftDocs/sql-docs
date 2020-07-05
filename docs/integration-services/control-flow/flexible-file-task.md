@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPEXTFILETASK.F1"
   - "SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1"
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flexible File Task
 
@@ -29,19 +29,28 @@ The Flexible File Task is a component of the [SQL Server Integration Services (S
 To add a Flexible File Task to a package, drag it from SSIS Toolbox to the designer canvas. Then double-click the task, or right-click the task and select **Edit**, to open the **Flexible File Task Editor** dialog box.
 
 The **Operation** property specifies the file operation to perform.
-Only **Copy** operation is currently supported.
+Currently supported operations are:
+- **Copy** Operation
+- **Delete** Operation
 
 For **Copy** operation, following properties are available.
 
 - **SourceConnectionType:** Specifies the source connection manager type.
 - **SourceConnection:** Specifies the source connection manager.
 - **SourceFolderPath:** Specifies the source folder path.
-- **SourceFileName:** Specifies the source file name. If left blank, the source folder will be copied.
+- **SourceFileName:** Specifies the source file name. If left blank, the source folder will be copied. Following wildcards are allowed in source file name: `*` (matches zero or more characters), `?` (matches zero or single character) and `^` (escape character).
 - **SearchRecursively:** Specifies whether to recursively copy subfolders.
 - **DestinationConnectionType:** Specifies the destination connection manager type.
 - **DestinationConnection:** Specifies the destination connection manager.
 - **DestinationFolderPath:** Specifies the destination folder path.
-- **DestinationFileName:** Specifies the destination file name.
+- **DestinationFileName:** Specifies the destination file name. If left blank, the source file names will be used.
+
+For **Delete** operation, following properties are available.
+- **ConnectionType:** Specifies the connection manager type.
+- **Connection:** Specifies the connection manager.
+- **FolderPath:** Specifies the folder path.
+- **FileName:** Specifies the file name. If left blank, the folder will be deleted. For Azure Blob Storage, delete folder is not supported. Following wildcards are allowed in file name: `*` (matches zero or more characters), `?` (matches zero or single character) and `^` (escape character).
+- **DeleteRecursively:** Specifies whether to recusively delete files.
 
 ***Notes on Service Principal Permission Configuration***
 

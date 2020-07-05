@@ -1,10 +1,11 @@
 ---
 title: "Before Installing Failover Clustering | Microsoft Docs"
+description: This article describes planning considerations preparing to install a SQL Server failover cluster, including hardware, operating system, and configuration.
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [SQL Server], preinstallation checklist"
@@ -15,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Before Installing Failover Clustering
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Before you install a SQL Server failover cluster, you must select the hardware and the operating system on which SQL Server will run. You must also configure Windows Server Failover Clustering (WSFC), and review network, security, and considerations for other software that will run on your failover cluster.  
   
- If a Windows cluster has a local disk drive and the same drive letter is also used on one or more cluster nodes as a shared drive, you cannot install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that drive.  
+ If a Windows cluster has a local disk drive and the same drive letter is also used on one or more cluster nodes as a shared drive, you cannot install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that drive. This restriction applies to both SQL Server failover cluster instances and standalone instances on a server that is part of a Windows Failover Cluster Instance.
   
  You may also want to review the following topics to learn more about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering concepts, features and tasks.  
   

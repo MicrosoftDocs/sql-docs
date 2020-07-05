@@ -1,5 +1,6 @@
 ---
-title: "Using Connection String Keywords with SQL Server Native Client | Microsoft Docs"
+title: "Using Connection String Keywords"
+description: Some SQL Server Native Client APIs use connection strings to specify connection attributes. Connection strings are keyword/value pairs.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
@@ -14,13 +15,12 @@ helpviewer_keywords:
   - "connection strings [SQL Server Native Client]"
   - "SQL Server Native Client, connection string keywords"
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Connection String Keywords with SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Some [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client APIs use connection strings to specify connection attributes. Connection strings are lists of keyword and associated values; each keyword identifies a particular connection attribute.  
 
@@ -149,7 +149,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**Encrypt**|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "yes" and "no". The default value is "no".|  
 |**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|The name of the failover server used for database mirroring.|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|The SPN for the failover partner. The default value is an empty string. An empty string causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
-|**Language**|SSPROPT_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language.|  
+|**Language**|SSPROP_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language.|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Enables or disables multiple active result sets (MARS) on the connection if the server is [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later. Possible values are "yes" and "no". The default value is "no".|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|Synonym for "Network".|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|The network library used to establish a connection to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the organization.|  
@@ -193,11 +193,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Keyword|Initialization property|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Application Name**|SSPROP_INIT_APPNAME|The string identifying the application.|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Synonym for "ApplicationIntent".|
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are "true" and "false".|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  
-|**Current Language**|SSPROPT_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language name.|  
+|**Current Language**|SSPROP_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language name.|  
 |**Data Source**|DBPROP_INIT_DATASOURCE|The name of an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the organization.<br /><br /> When not specified, a connection is made to the default instance on the local computer.<br /><br /> For more information about valid address syntax, see the description of the **Server** ODBC keyword, later in this topic.|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|Specifies the mode of data type handling to use. Recognized values are "0" for provider data types and "80" for [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] data types.|  
 |**Failover Partner**|SSPROP_INIT_FAILOVERPARTNER|The name of the failover server used for database mirroring.|  
@@ -243,12 +244,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |Keyword|Initialization property|Description|  
 |-------------|-----------------------------|-----------------|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Synonym for "ApplicationIntent".|
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br /> The default is **ReadWrite**. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |**Application Name**|SSPROP_INIT_APPNAME|The string identifying the application.|  
 |**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|Synonym for "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configures OEM/ANSI character translation. Recognized values are "true" and "false".|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|The amount of time (in seconds) to wait for data source initialization to complete.|  
-|**Current Language**|SSPROPT_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language name.|  
+|**Current Language**|SSPROP_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language name.|  
 |**Data Source**|DBPROP_INIT_DATASOURCE|The name of an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the organization.<br /><br /> When not specified, a connection is made to the default instance on the local computer.<br /><br /> For more information about valid address syntax, see the description of the **Server** ODBC keyword, in this topic.|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|Specifies the mode of data type handling that will be used. Recognized values are "0" for provider data types and "80" for SQL Server 2000 data types.|  
 |**Failover Partner**|SSPROP_INIT_FAILOVERPARTNER|The name of the failover server used for database mirroring.|  

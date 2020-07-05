@@ -1,6 +1,6 @@
 ---
-title: "Drag and Drop Text | Microsoft Docs"
-ms.custom: ""
+title: Drag and Drop Text
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "dragging and dropping text"
   - "Query Editor [SQL Server Management Studio], dragging and dropping text"
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Drag and Drop Text
   You can select text and then drag and drop it in another location. You can drag and drop text:  

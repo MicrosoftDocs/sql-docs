@@ -1,25 +1,24 @@
 ---
-title: "View Filter Information (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: View Filter Information
+titleSuffix: SQL Server Profiler
+description: Find out how to view the filters that SQL Server Profiler is currently applying to data columns to limit the events that are traced.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "displaying filter information"
-  - "filters [SQL Server], viewing"
-  - "filters [SQL Server], traces"
-  - "traces [SQL Server], filters"
-  - "viewing filter information"
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # View Filter Information (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to view filters on data columns for event classes by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+This topic describes how to view filters on data columns for event classes by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### To view filter information  
   

@@ -24,7 +24,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Hints (Transact-SQL) - Join
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Join hints specify that the query optimizer enforce a join strategy between two tables in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For general information about joins and join syntax, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
@@ -43,7 +43,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 <join_hint> ::=   
      { LOOP | HASH | MERGE | REMOTE }  
@@ -51,7 +51,7 @@ ms.author: vanto
   
 ## Arguments  
  LOOP | HASH | MERGE  
- Specifies that the join in the query should use looping, hashing, or merging. Using LOOP |HASH | MERGE JOIN enforces a particular join between two tables. LOOP cannot be specified together with RIGHT or FULL as a join type.  
+ Specifies that the join in the query should use looping, hashing, or merging. Using LOOP |HASH | MERGE JOIN enforces a particular join between two tables. LOOP cannot be specified together with RIGHT or FULL as a join type. For more information, see [Joins](../../relational-databases/performance/joins.md).
   
  REMOTE  
  Specifies that the join operation is performed on the site of the right table. This is useful when the left table is a local table and the right table is a remote table. REMOTE should be used only when the left table has fewer rows than the right table.  

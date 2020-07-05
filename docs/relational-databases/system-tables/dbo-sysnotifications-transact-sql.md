@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysnotifications system table"
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.sysnotifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each notification.  
   

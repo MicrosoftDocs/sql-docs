@@ -1,6 +1,7 @@
 ---
-title: "Regenerate Custom Transactional Procedures to Reflect Schema Changes | Microsoft Docs"
-ms.custom: ""
+title: "Regenerate custom procedures for schema changes (Transactional)"
+description: Regenerate custom transactional stored procedures to reflect schema changes for Transactional Replication. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Transactional Articles - Regenerate to Reflect Schema Changes
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -24,17 +25,17 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   The first option is to use a custom scripting procedure to replace the defaults used by replication:  
   
-    1.  When executing [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), ensure the **@schema_option** 0x02 bit is to **true**.  
+    1.  When executing [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), ensure the `@schema_option` 0x02 bit is to **true**.  
   
-    2.  Execute [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) and specify a value of 'insert', 'update', or 'delete' for the parameter **@type** and the name of the custom scripting procedure for the parameter **@value**.  
+    2.  Execute [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) and specify a value of 'insert', 'update', or 'delete' for the parameter `@type` and the name of the custom scripting procedure for the parameter `@value`.  
   
      The next time a schema change is made, replication calls this stored procedure to script out the definition for the new user defined custom stored procedure, and then propagates the procedure to each Subscriber.  
   
 -   The second option is to use a script that contains a new custom procedure definition:  
   
-    1.  When executing [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), set the **@schema_option** 0x02 bit to **false** so replication does not automatically generate custom procedures at the Subscriber.  
+    1.  When executing [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), set the `@schema_option` 0x02 bit to **false** so replication does not automatically generate custom procedures at the Subscriber.  
   
-    2.  Before each schema change, create a new script file and register the script with replication by executing [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Specify a value of 'custom_script' for the parameter **@type** and the path to the script on the Publisher for the parameter **@value**.  
+    2.  Before each schema change, create a new script file and register the script with replication by executing [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Specify a value of 'custom_script' for the parameter `@type` and the path to the script on the Publisher for the parameter `@value`.  
   
      The next time a relevant schema change is made, this script executes on each Subscriber within the same transaction as the DDL command. After the schema change is made, the script is unregistered. You must re-register the script to have it executed after a subsequent schema change.  
   

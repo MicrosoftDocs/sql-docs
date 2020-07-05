@@ -14,7 +14,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # CREATE XML INDEX (Selective XML Indexes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a new secondary selective XML index on a single path that is already indexed by an existing selective XML index. You can also create primary selective XML indexes. For information, see [Create, Alter, and Drop Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
@@ -22,7 +22,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE XML INDEX index_name  
     ON <table_object> ( xml_column_name )  

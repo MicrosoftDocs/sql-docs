@@ -1,5 +1,5 @@
 ---
-title: "Explorer Functional Area (Master Data Manager) | Microsoft Docs"
+title: Explorer Functional Area
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Explorer Functional Area (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the Explorer functional area, you can update data and work with hierarchies and collections.  
   

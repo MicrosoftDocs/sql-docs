@@ -1,7 +1,7 @@
 ---
-title: "Using ADO to Execute SQLXML 4.0 Queries | Microsoft Docs"
+title: "Using ADO to Execute SQLXML 4.0 Queries"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 12/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: xml
@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "queries [SQLXML], ADO"
   - "SQLXML, ADO"
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Using ADO to Execute SQLXML 4.0 Queries
   In previous versions of SQLXML, HTTP-based query execution was supported using SQLXML IIS virtual directories and the SQLXML ISAPI filter. In SQLXML 4.0, these components have been removed as similar and overlapping functionality is provided with native XML Web services beginning in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -29,9 +28,9 @@ manager: craigg
   
 #### To create the SQLXML 4.0 query tester using ADO (VBScript).  
   
-1.  Copy the code below and paste it into a text file. Save the file as Sqlxml4test.vbs.  
+1.  Copy the VBScript code below, and paste it into a text file. Save the file as Sqlxml4test.vbs.  
   
-    ```  
+    ```vb
     WScript.Echo "Query process may take a few seconds to complete. Please be patient."  
   
     ' Note that for SQL Server Native Client to be used as the data provider,  
@@ -115,7 +114,7 @@ manager: craigg
         > [!NOTE]  
         >  If you need to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Verify that the version of MDAC installed for the client computer is 2.6 or later. If you need to verify MDAC version information, you can use the MDAC Component Checker tool, which is provided as free download from the Microsoft Web site (www.microsoft.com). Fore more information, search on "MDAC Component Checker" on the Microsoft Web site.  
+2.  Verify that the version of MDAC installed for the client computer is 2.6 or later. If you need to verify MDAC version information, you can use the MDAC Component Checker tool, which is provided as free download from the Microsoft Web site [https://www.microsoft.com/](https://www.microsoft.com/). For more information, search on "MDAC Component Checker" on the Microsoft Web site.  
   
 3.  Execute the script.  
   

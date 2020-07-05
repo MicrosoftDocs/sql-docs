@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Data Quality Client Home Screen
   Use this screen to gain access to the user interfaces for each the three major [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) groups of tasks: knowledge base management, data quality projects, and administration.  
@@ -51,7 +50,7 @@ manager: craigg
  Display a view of the status of all activities (both current and historical) that are related to the connected [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. The types of activities monitored include Knowledge Management, Data Quality Project, and SSIS-based data correction.  
   
  **Configuration**  
- Display the configuration properties for reference data service accounts (both through Windows Azure Marketplace and directly to reference data services), general settings (interactive cleansing, matching, and profiling) and log severity settings.  
+ Display the configuration properties for reference data service accounts (both through Azure Marketplace and directly to reference data services), general settings (interactive cleansing, matching, and profiling) and log severity settings.  
   
 ## See Also  
  [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

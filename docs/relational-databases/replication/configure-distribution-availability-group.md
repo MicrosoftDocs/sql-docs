@@ -1,6 +1,7 @@
 ---
-title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
-ms.custom: ""
+title: "Configure distribution database in availability group"
+description: Configure the distribution database for SQL Server replication with an Always On availability group. 
+ms.custom: seo-lt-2019
 ms.date: "01/16/2019"
 ms.prod: sql
 ms.reviewer: ""
@@ -21,7 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Set up replication distribution database in Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 
@@ -111,8 +112,6 @@ This example configures a new distributor and publisher and puts the distributio
    The value of `@working_directory` should be a network path independent of DIST1, DIST2, and DIST3.
 
 1. On DIST2 and DIST3, run:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
@@ -367,7 +366,7 @@ WITH IP
 ((N'10.0.0.8', N'255.255.255.0')) , PORT=1500);
 GO
 
--- STEP 5 - Enable SQLNode1 also as a Distributor
+-- STEP 5 - Enable SQLNode2 also as a Distributor
 :CONNECT SQLNODE2
 EXEC sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
 GO

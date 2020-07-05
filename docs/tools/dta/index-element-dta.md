@@ -1,10 +1,8 @@
 ---
-title: "Index Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Index Element (DTA)"
+description: In the dta utility, the Index element contains information about an index that you want to create or drop for a user-specified configuration.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -14,10 +12,16 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Index Element (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contains information about an index that you want to create or drop for a user-specified configuration.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Contains information about an index that you want to create or drop for a user-specified configuration.  
   
 ## Syntax  
   

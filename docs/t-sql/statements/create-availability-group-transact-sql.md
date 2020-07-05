@@ -26,7 +26,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new availability group, if the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is enabled for the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature.  
   
@@ -37,7 +37,7 @@ ms.author: "mikeray"
   
 ## Syntax  
   
-```SQL  
+```syntaxsql
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -215,7 +215,7 @@ CREATE AVAILABILITY GROUP group_name
  Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster. Use this if the server instance participates as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover partner. Executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) on an FCI server instance returns its entire '*FCI_network_name*[\\*instance_name*]'  string (which is the full replica name).  
   
  *instance_name*  
- Is the name of an instance of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is hosted by *system_name* or *FCI_network_name* and that has HADR service is enabled. For a default server instance, *instance_name* is optional. The instance name is case insensitive. On a stand-alone server instance, this value name is the same as the value returned by executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
+ Is the name of an instance of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is hosted by *system_name* or *FCI_network_name* and that has HADR service is enabled. For a default server instance, *instance_name* is optional. The instance name is case insensitive. On a named instance, this value name is the same as the value returned by executing `select ServerProperty(N'InstanceName');`.  
   
  \  
  Is a separator used only when specifying *instance_name*, in order to separate it from *system_name* or *FCI_network_name*.  
@@ -316,7 +316,7 @@ CREATE AVAILABILITY GROUP group_name
   
  For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   
- For more information about calculating the read-only routing URL for a replica, see [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx).  
+ For more information about calculating the read-only routing URL for a replica, see [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
 > [!NOTE]  
 >  For a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Transact-SQL listener should be configured to use a specific port. For more information, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -353,7 +353,16 @@ CREATE AVAILABILITY GROUP group_name
   
  NONE  
  Specifies that when this availability replica is the primary replica, read-only routing is not supported. This is the default behavior.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('**\<server_instance>**')** }  
+ Applies to: SQL Server (Starting with SQL Server 2019 (15.x)) 
+
+ Specifies server instances that host availability replicas for this availability group that meet the following requirements when running under the primary role:
+-   The replica spec PRIMARY_ROLE includes READ_WRITE_ROUTING_URL.
+-   The connection string is ReadWrite either by defining ApplicationIntent as ReadWrite or by not setting ApplicationIntent and letting the default (ReadWrite) take effect.
+
+For more information, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+
  SESSION_TIMEOUT **=** *integer*  
  Specifies the session-timeout period in seconds. If you do not specify this option, by default, the time period is 10 seconds. The minimum value is 5 seconds.  
   

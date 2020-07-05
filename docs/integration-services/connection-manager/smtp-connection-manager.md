@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SMTP connection manager [Integration Services]"
   - "connection managers [Integration Services], SMTP"
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SMTP Connection Manager
 
@@ -40,7 +40,8 @@ ms.author: janinez
     > [!IMPORTANT]  
     >  The SMTP connection manager supports only anonymous authentication and Windows Authentication. It does not support basic authentication.  
   
--   Specify whether to encrypt communication using Secure Sockets Layer (SSL) when sending e-mail messages.  
+-   Specify whether to encrypt communication using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL),
+ when sending e-mail messages.  
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
@@ -73,5 +74,5 @@ ms.author: janinez
 >  When using Microsoft Exchange as the SMTP server, you may need to set **Use Windows Authentication** to **True**. Exchange servers may be configured to disallow unauthenticated SMTP connections.  
   
  **Enable Secure Sockets Layer (SSL)**  
- Select to encrypt communication using Secure Sockets Layer (SSL) when sending e-mail messages.  
+ Select to encrypt communication using TLS/SSL when sending e-mail messages.  
   

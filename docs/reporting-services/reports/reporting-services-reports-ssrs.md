@@ -1,5 +1,6 @@
 ---
-title: "Reporting Services Reports (SSRS) | Microsoft Docs"
+title: "Reporting Services Reports | Microsoft Docs"
+description: Learn details about Reporting Services reports, including the benefits of the reports, how to create paginated reports, and how to view reports.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -69,7 +70,7 @@ ms.author: maggies
   
 -   For each report:  
   
-    -   **Identify sources of data.** Define report data sources, one for each source of data. For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    -   **Identify sources of data.** Define report data sources, one for each source of data. For more information, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
     -   **Choose which data to use from each source.** For each data source, define report datasets. Each dataset includes a query to specify which data to use. If you have report parameters, define a dataset to populate the available values list for each parameter. For more information, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) and [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   

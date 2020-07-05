@@ -1,6 +1,7 @@
 ---
-title: "Measure Latency and Validate Connections for Transactional Replication | Microsoft Docs"
-ms.custom: ""
+title: "Measure latency & validate connections (Transactional)"
+description: Learn how to measure the latency and validate connections for a Transaction Publication in SQL Server using Replication Monitor in SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or Replication Management Objects (RMO).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Measure Latency and Validate Connections for Transactional Replication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -121,7 +122,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 1.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **\@publication**. This returns a list of all tracer tokens posted to the publication. Note the **tracer_id** for the tracer token to delete in the result set.  
   
-2.  At the Publisher on the publication database, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), specifying **\@publication** and the ID of the tracer to delete from step 2 for **@tracer_id**.  
+2.  At the Publisher on the publication database, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), specifying **\@publication** and the ID of the tracer to delete from step 2 for `@tracer_id`.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example posts a tracer token record and uses the returned ID of the posted tracer token to view latency information.  

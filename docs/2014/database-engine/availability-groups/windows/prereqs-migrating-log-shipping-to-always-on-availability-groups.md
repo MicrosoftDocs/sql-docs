@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups (SQL Server)
   This topic describes the prerequisites for converting a log shipping primary database along with one or more of its secondary databases to an AlwaysOn primary database and secondary database(s).  
@@ -87,11 +86,11 @@ manager: craigg
   
 -   **Blogs:**  
   
-     [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Converting a logshipping configuration to Availability Group](https://docs.microsoft.com/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)  
   
-     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](https://docs.microsoft.com/archive/blogs/sqlalwayson/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group)  
   
-     [SQL Server AlwaysOn Team Blogs: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn Team Blogs: The official SQL Server AlwaysOn Team Blog](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
   

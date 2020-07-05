@@ -1,6 +1,6 @@
 ---
-title: "Complete Transact-SQL Snippets | Microsoft Docs"
-ms.custom: ""
+title: Complete Transact-SQL Snippets
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "snippets [Transact-SQL], completing"
   - "Transact-SQL snippets, completing"
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Complete Transact-SQL Snippets
   Once a [!INCLUDE[tsql](../../includes/tsql-md.md)] code snippet has been inserted into a script, you edit the contents of the snippet to build a complete [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  

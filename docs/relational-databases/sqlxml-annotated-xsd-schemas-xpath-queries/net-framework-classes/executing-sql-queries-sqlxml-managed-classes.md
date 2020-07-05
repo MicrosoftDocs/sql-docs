@@ -1,6 +1,6 @@
 ---
-title: "Executing SQL Queries (SQLXML Managed Classes) | Microsoft Docs"
-ms.custom: ""
+title: "Executing SQL Queries (SQLXML)"
+description: Learn how to execute SQL queries using SQLXML Managed Classes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,10 +16,11 @@ helpviewer_keywords:
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries (SQLXML Managed Classes)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This example demonstrates:  
   
 -   Creating parameters (SqlXmlParameter objects).  
@@ -92,8 +93,6 @@ public static int Main(String[] args)
      This creates an executable (DocSample.exe).  
   
 3.  At the command prompt, execute DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  To test this example, you must have the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework installed on your computer.  
   

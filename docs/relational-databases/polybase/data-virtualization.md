@@ -1,19 +1,25 @@
 ---
-title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: Virtualize external data
 description: This page details the steps for using the Create external table wizard for relational Data sources
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+ms.metadata: seo-lt-2019
 ---
 
 # Use the External Table Wizard with relational data sources
 
-One of the key scenarios for SQL Server 2019 CTP 2.0 is the ability to virtualize data. This process allows the data to stay in its original location. You can *virtualize* the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This process minimizes the need for ETL processes. This process is possible with the use of PolyBase connectors. For more information on data virtualization, see [Get started with PolyBase](polybase-guide.md).
+One of the key scenarios for SQL Server 2019 is the ability to virtualize data. This process allows the data to stay in its original location. You can *virtualize* the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This process minimizes the need for ETL processes. This process is possible with the use of PolyBase connectors. For more information on data virtualization, see [Get started with PolyBase](polybase-guide.md).
+
+This video provides an introduction into data virtualization:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## Start the External Table wizard
 
@@ -39,10 +45,7 @@ In this step, you create a database master key. Creating a master key is require
 ![Create a database master key](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> If you already have a database master key, the input fields are restricted and you can bypass this step. Select **Next** to proceed.
-
-> [!NOTE]
-> If you don't choose a strong password, the wizard does so in the last step. This is a known issue.
+> If you already have a database master key, this step will be automatically bypassed.
 
 ## Enter external data source credentials
 
@@ -56,7 +59,7 @@ The next step is to configure a credential. Enter a name for the credential. Thi
 
 On the next page, select the tables for which you want to create external views. When you select parent databases, the child tables are included, too. After you select tables, a mapping table appears on the right. Here, you can make changes to types. You also can change the name of the selected external table itself.
 
-![External data source credentials](media/data-virtualization/data-table-mapping.png)
+![External data source credentials](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >To change the mapping view, double-click another selected table.

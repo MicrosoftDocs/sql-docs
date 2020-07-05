@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Service Principal Name (SPN) Support in Client Connections
   Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], support for service principal names (SPNs) has been extended to enable mutual authentication across all protocols. In previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SPNs were only supported for Kerberos over TCP when the default SPN for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance was registered with Active Directory.  
@@ -103,9 +102,8 @@ manager: craigg
   
 -   [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programmability Samples](http://msftdpprodsamples.codeplex.com/).  
+ For information about sample applications that demonstrate this feature, see [SQL Server Data Programmability Samples](https://msftdpprodsamples.codeplex.com/).  
   
 ## See Also  
  [SQL Server Native Client Features](sql-server-native-client-features.md)  
-  
   

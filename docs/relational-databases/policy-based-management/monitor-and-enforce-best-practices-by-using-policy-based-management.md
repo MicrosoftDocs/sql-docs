@@ -1,6 +1,7 @@
 ---
-title: "Monitor and Enforce Best Practices by Using Policy-Based Management | Microsoft Docs"
-ms.custom: ""
+title: "Monitor & enforce best practices using Policy-Based Management"
+description: Policy-based management provides a set of policy files you can import as best practice policies and then  evaluate the policies against a target set that includes instances, objects, databases, or database objects. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Monitor and Enforce Best Practices by Using Policy-Based Management
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Policy-Based Management allows you to monitor best practices for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a set of policy files you can import as best practice policies, and then evaluate the policies against a target set that includes instances, instance objects, databases, or database objects. Evaluate policies manually, set policies to evaluate a target set according to a schedule, or set policies to evaluate a target set according to an event. For more information about Policy-Based Management, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## Policy and Rules for Database Engine  

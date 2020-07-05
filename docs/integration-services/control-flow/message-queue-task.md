@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "messages [Integration Services]"
   - "sending messages"
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Message Queue Task
 

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.enable_worker_agent (SSISDB Database)
 
@@ -23,7 +23,7 @@ Enable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISn
 ## Syntax
 
 ```sql
-catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
+catalog.enable_worker_agent [ @WorkerAgentId = ] WorkerAgentId
 ```
 ## Arguments
 [@WorkerAgentId =] *WorkerAgentId*

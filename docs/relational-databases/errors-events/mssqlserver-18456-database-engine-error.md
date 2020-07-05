@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_18456 | Microsoft Docs"
+description: A connection attempt is rejected due to a failure with a bad password or username in SQL Server. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "06/09/2017"
 ms.prod: sql
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_18456
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|18456|  
 |Event Source|MSSQLSERVER|  
@@ -67,6 +68,7 @@ To increase security, the error message that is returned to the client deliberat
 |12|Login is valid login, but server access failed.|  
 |18|Password must be changed.|  
 |38, 46|Could not find database requested by user.|
+|58| When SQL Server is set to use Windows Authentication only, and a client attempts to log in using SQL authentication. Another cause is when SIDs do not match.|
 |102 - 111|AAD failure.|
 |122 - 124|Failure due to empty user name or password.|
 |126|Database requested by user does not exist.|

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "adding annotations"
   - "annotations [Integration Services]"
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Use Annotations in Packages
 

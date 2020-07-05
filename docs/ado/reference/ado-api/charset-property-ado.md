@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Charset property [ADO]"
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Charset Property (ADO)
 Indicates the character set into which the contents of a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) should be translated for storage in the internal buffer of the **Stream** object.  

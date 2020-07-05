@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Name Element for Schema (DTA)
   Contains name of the schema.  

@@ -20,7 +20,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row of status information about the population of the document similarity index for each similarity index in each table that has an associated semantic index.  
   

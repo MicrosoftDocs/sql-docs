@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "catalog views [SQL Server], server-wide configuration"
   - "server-wide configuration catalog views [SQL Server]"
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Server-wide Configuration Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views.  
   

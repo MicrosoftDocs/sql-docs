@@ -1,6 +1,7 @@
 ---
-title: "Publication Information, All Subscriptions (Transactional Publication) | Microsoft Docs"
-ms.custom: ""
+title: "All Subscriptions (Transactional - SSMS)"
+description: Describes the 'All Subscriptions' tab for the selected Transactional Publication in SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,10 +13,10 @@ f1_keywords:
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publication Information, All Subscriptions (Transactional Publication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **All Subscriptions** tab displays information on all subscriptions to the selected transactional publication.  
   
 ## Options  

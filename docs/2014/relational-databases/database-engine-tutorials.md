@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Database Engine Tutorials
   This section contains tutorials for [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -41,11 +40,11 @@ manager: craigg
  [Tutorial: Evaluating Best Practices by Using Policy-Based Management](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  This tutorial teaches how to create policies that can be used to analyze instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] for known issues.  
   
- [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- This tutorial illustrates how to do a SQL Server backup and restore to the Windows Azure Blob Storage Service.  
+ [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ This tutorial illustrates how to do a SQL Server backup and restore to the Azure Blob Storage Service.  
   
- [Tutorial: SQL Server Data Files in Windows Azure Storage service](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- This tutorial helps you understand how to store SQL Server data files in the Windows Azure Blob storage service directly.  
+ [Tutorial: SQL Server Data Files in Azure Storage service](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ This tutorial helps you understand how to store SQL Server data files in the Azure Blob storage service directly.  
   
 ## See Also  
  [Tutorials for SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   

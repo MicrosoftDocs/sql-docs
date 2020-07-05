@@ -1,5 +1,5 @@
 ---
-title: "URL Access (SSRS) | Microsoft Docs"
+title: "URL Access | Microsoft Docs"
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

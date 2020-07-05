@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "LineSeparator property [ADO]"
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # LineSeparator Property (ADO)
 Indicates the binary character to be used as the line separator in text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects.  

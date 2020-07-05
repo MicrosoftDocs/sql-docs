@@ -1,6 +1,7 @@
 ---
-title: "Pause or Resume a Database Mirroring Session (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Pause & resume a database mirroring session"
+description: Learn how to pause and resume a SQL Server database mirroring session using SQL Server Management Studio or Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -18,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Pause or Resume a Database Mirroring Session (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to pause or resume database mirroring in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  

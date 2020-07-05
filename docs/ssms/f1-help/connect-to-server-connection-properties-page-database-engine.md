@@ -1,6 +1,6 @@
 ---
-title: "Connect to Server (Connection Properties Page) Database Engine | Microsoft Docs"
-ms.custom: ""
+title: Connect to Server (Connection Properties Page) Database Engine
+ms.custom: seo-lt-2019
 ms.date: "08/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Connect to Server (Connection Properties Page) Database Engine
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this tab to view or specify options when connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] or registering [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Connect to database**  

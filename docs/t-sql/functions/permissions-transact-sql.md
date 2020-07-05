@@ -26,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # PERMISSIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a value containing a bitmap that indicates the statement, object, or column permissions of the current user.  
   
@@ -36,7 +36,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
@@ -142,6 +142,6 @@ ELSE
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

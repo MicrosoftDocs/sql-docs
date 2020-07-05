@@ -1,6 +1,6 @@
 ---
-title: "Run Transact-SQL Script Files Using sqlcmd | Microsoft Docs"
-ms.custom: ""
+title: Run Transact-SQL Script Files Using sqlcmd
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transact sql scripts"
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Run Transact-SQL Script Files Using sqlcmd
   You can use `sqlcmd` to run a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file. A [!INCLUDE[tsql](../../includes/tsql-md.md)] script file is a text file that can contain a combination of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, `sqlcmd` commands, and scripting variables.  

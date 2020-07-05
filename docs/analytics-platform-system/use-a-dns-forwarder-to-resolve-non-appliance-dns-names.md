@@ -1,5 +1,5 @@
 ---
-title: Use a DNS forwarder in Analytics Platform System | Microsoft Docs"
+title: Use a DNS forwarder
 description: Use a DNS forwarder to resolve non-appliance DNS names in Analytics Platform System.
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Use a DNS Forwarder to Resolve Non-Appliance DNS Names in Analytics Platform System

@@ -1,10 +1,12 @@
 ---
-title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/28/2019"
+title: "Editions and supported features"
+titleSuffix: SQL Server 2017
+description: This article describes features supported by the various editions of SQL Server 2017, which accommodate different performance, runtime, and price requirements.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
@@ -35,15 +37,13 @@ ms.author: "mikeray"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs hub page!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
-For information about older versions, see:
+For information about other versions, see:
 
+* [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
 * [SQL Server 2014](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
@@ -56,7 +56,7 @@ For the latest release notes and what's new information, see the following:
 - [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
 - [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 
-### Try SQL Server!    
+### Try SQL Server    
     
 > [![Download from Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
@@ -64,13 +64,13 @@ For the latest release notes and what's new information, see the following:
 > ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
 --->
 
-## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions  
+## SQL Server editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Definition|  
 |---------------------------------------|----------------|  
 |Enterprise|The premium offering, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance, unlimited virtualization<sup>1</sup> , and end-to-end business intelligence - enabling high service levels for mission-critical workloads and end user access to data insights.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premise and cloud - enabling effective database management with minimal IT resources.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premises and cloud - enabling effective database management with minimal IT resources.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large scale Web properties.|  
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build and test applications.|  
 |Express editions|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB is a lightweight version of Express that has all of its programmability features, runs in user mode and has a fast, zero-configuration installation and a short list of prerequisites.|  
@@ -160,10 +160,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
-|Read-scale availability group|Yes|Yes|No|No|No|No|
-|Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
-  
+|Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
+|Read-scale availability group<sup>3,4</sup>|Yes|Yes|No|No|No|No|
 
 <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -214,8 +212,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Row-level security|Yes|Yes|Yes|Yes|Yes|  
 |Always Encrypted|Yes|Yes|Yes|Yes|Yes| 
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|   
-|Basic auditing|Yes|Yes|Yes|Yes|Yes| 
-|Fine grained auditing|Yes|Yes|Yes|Yes|Yes| 
+|Server Audit|Yes|Yes|Yes|Yes|Yes| 
+|Database Audit|Yes|Yes|Yes|Yes|Yes| 
 |Transparent database encryption|Yes|No|No|No|No|   
 |Extensible key management|Yes|No|No|No|No| 
 |User-defined roles|Yes|Yes|Yes|Yes|Yes| 

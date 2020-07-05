@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Views Append Method Example (VB)
 The following code demonstrates how to use a [Command](../../../ado/reference/ado-api/command-object-ado.md) object and the [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-views.md) method to create a new view in the underlying data source.  

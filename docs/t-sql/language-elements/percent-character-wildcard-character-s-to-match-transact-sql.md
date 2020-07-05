@@ -1,6 +1,6 @@
 ---
-title: "Percent character (Wildcard - Character(s) to Match) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Wildcard search (%)"
+ms.custom: "seo-lt-2019"
 ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -24,7 +24,7 @@ author: rothja
 ms.author: jroth
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.  
   

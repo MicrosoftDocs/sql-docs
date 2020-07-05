@@ -1,7 +1,8 @@
 ---
-title: Configure Ubuntu Cluster for SQL Server Availability Group
-titleSuffix: SQL Server
-description: Learn about creating availability group clusters for Ubuntu
+title: Configure Ubuntu cluster for availability group
+titleSuffix: SQL Server on Linux
+description: Learn to create a three-node cluster on Ubuntu and add a previously created availability group resource to the cluster. 
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -13,7 +14,7 @@ ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ---
 # Configure Ubuntu Cluster and Availability Group Resource
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This document explains how to create a three-node cluster on Ubuntu and add a previously created availability group as a resource in the cluster. 
 For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
@@ -37,8 +38,10 @@ The steps to create an availability group on Linux servers for high availability
 
    >[!IMPORTANT]
    >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
-   
+   >
    >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
+   >
+   >Fencing is normally implemented at the operating system and is dependent on the environment. Find instructions for fencing in the operating system distributor documentation.
 
 5.  [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
 
@@ -141,7 +144,7 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that at this point there are no fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. 
+>Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Contact the operating system vendor for information about fencing agents for any specific distribution. 
 
 ## Set cluster property cluster-recheck-interval
 
@@ -183,10 +186,10 @@ sudo apt-get install mssql-server-ha
 
 ## Create availability group resource
 
-To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` master/slave type resource for availability group with name `ag1`. 
+To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` master/subordinate type resource for availability group with name `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true
 
 ```
 

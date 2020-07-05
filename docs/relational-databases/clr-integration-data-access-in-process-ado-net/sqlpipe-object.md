@@ -1,5 +1,6 @@
 ---
 title: "SqlPipe Object | Microsoft Docs"
+description: For CLR database objects running in SQL Server, you can send results to the connected pipe using the Send methods of the SqlPipe object.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # SqlPipe Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it is very common to write a stored procedure (or an extended stored procedure) that sends results or output parameters to the calling client.  
   
  In a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, any **SELECT** statement that returns zero or more rows sends the results to the connected caller's "pipe."  

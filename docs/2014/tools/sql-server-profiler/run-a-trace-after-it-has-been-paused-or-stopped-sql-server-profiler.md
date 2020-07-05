@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler)
   This topic describes how to start a trace again after it has been paused or stopped by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

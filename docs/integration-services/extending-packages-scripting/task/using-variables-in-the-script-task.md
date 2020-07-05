@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SSIS Script task, variables"
   - "variables [Integration Services], Script task"
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Using Variables in the Script Task
 

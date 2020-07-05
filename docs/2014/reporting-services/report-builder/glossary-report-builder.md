@@ -87,7 +87,7 @@ manager: kfile
 |data mining|The process of analyzing data to identify patterns or relationships.|  
 |data point|The smallest individual entity in a chart.|  
 |data processing extension|A component in Reporting Services that is used to retrieve report data from an external data source.|  
-|data provider|The layer of sofware that handles communication between data extensions and customized software specific to each type of external data source. Depending on the specific data source, multiple data providers are available from Microsoft and from third-party vendors.|  
+|data provider|The layer of software that handles communication between data extensions and customized software specific to each type of external data source. Depending on the specific data source, multiple data providers are available from Microsoft and from third-party vendors.|  
 |data region|A report item that displays repeated rows of data from an underlying dataset in a table, matrix, list, or chart.|  
 |data source|1. In ADO and OLE DB, the location of a source of data exposed by an OLE DB provider. 2. The source of data for an object such as a cube or dimension. It is also the specification of the information necessary to access source data. It sometimes refers to object of ClassType clsDataSource. <br />3. In Reporting Services, a specified data source type, connection string, and credentials, which can be saved separately to a report server and shared among report projects or embedded in a report definition (.rdl) file.|  
 |data source name|In a report, the name of the data source object.|  

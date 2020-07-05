@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services Features and Tasks (SSRS) | Microsoft Docs"
+title: "Reporting Services Features and Tasks | Microsoft Docs"
 ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,5 +1,5 @@
 ---
-title: Obtain information from IHV - Analytics Platform System | Microsoft Docs
+title: Obtain information from IHV
 description: Information to obtain from your IHV about the Analytics Platform System appliance. 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 

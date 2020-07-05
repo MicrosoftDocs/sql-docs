@@ -1,7 +1,8 @@
 ---
 title: "Recover to a Log Sequence Number (SQL Server) | Microsoft Docs"
+description: In SQL Server, you can use the log sequence number (LSN) to recover to a certain point. This feature is intended for tools vendors.
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "10/23/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -23,23 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Recover to a Log Sequence Number (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic is relevant only for databases that are using the full or bulk-logged recovery models.  
   
  You can use a log sequence number (LSN) to define the recovery point for a restore operation. However, this is a specialized feature that is intended for tools vendors and is unlikely to be generally useful.  
   
 ##  <a name="LSNs"></a> Overview of Log Sequence Numbers  
- LSNs are used internally during a RESTORE sequence to track the point in time to which data has been restored. When a backup is restored, the data is restored to the LSN corresponding to the point in time at which the backup was taken. Differential and log backups advance the restored database to a later time, which corresponds to a higher LSN.  
-  
- Every record in the transaction log is uniquely identified by a log sequence number (LSN). LSNs are ordered such that if LSN2 is greater than LSN1, the change described by the log record referred to by LSN2 occurred after the change described by the log record LSN.  
-  
- The LSN of a log record at which a significant event occurred can be useful for constructing correct restore sequences. Because LSNs are ordered, they can be compared for equality and inequality (that is, **\<**, **>**, **=**, **\<=**, **>=**). Such comparisons are useful when constructing restore sequences.  
+ LSNs are used internally during a RESTORE sequence to track the point in time to which data has been restored. When a backup is restored, the data is restored to the LSN corresponding to the point in time at which the backup was taken. Differential and log backups advance the restored database to a later time, which corresponds to a higher LSN. For more information about LSNs, see the [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).  
   
 > [!NOTE]  
->  LSNs are values of data type **numeric**(25,0). Arithmetic operations (for example, addition or subtraction) are not meaningful and must not be used with LSNs.  
-  
-  
-## Viewing LSNs Used by Backup and Restore  
+> LSNs are values of data type **numeric(25,0)**. Arithmetic operations (for example, addition or subtraction) are not meaningful and must not be used with LSNs.  
+ 
+## Viewing LSNs used by Backup and Restore  
  The LSN of a log record at which a given backup and restore event occurred is viewable using one or more of the following:  
   
 -   [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)  
@@ -53,9 +49,9 @@ ms.author: mikeray
 -   [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 > [!NOTE]  
->  LSNs also appear in some message texts.  
+>  LSNs also appear in some messages in the error log.  
   
-## Transact-SQL Syntax for Restoring to an LSN  
+## Transact-SQL Syntax for restoring to an LSN  
  By using a [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, you can stop at or immediately before the LSN, as follows:  
   
 -   Use the WITH STOPATMARK **='**lsn:_<lsn_number>_**'** clause, where lsn:*\<lsnNumber>* is a string that specifies that the log record that contains the specified LSN is the recovery point.  
@@ -71,7 +67,7 @@ ms.author: mikeray
 ## Examples  
  The following example assumes that the `AdventureWorks` database has been changed to use the full recovery model.  
   
-```  
+```sql  
 RESTORE LOG AdventureWorks FROM DISK = 'c:\adventureworks_log.bak'   
 WITH STOPATMARK = 'lsn:15000000040000037'  
 GO  
@@ -93,7 +89,8 @@ GO
   
 ## See Also  
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
+ [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)       
+ [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

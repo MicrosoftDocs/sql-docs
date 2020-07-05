@@ -1,5 +1,6 @@
 ---
 title: "View Resource Health Policy Results (SQL Server Utility) | Microsoft Docs"
+description: Learn how to use SQL Server Management Studio to view SQL Server Utility resource health policy results for instances of SQL Server and data-tier applications.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # View Resource Health Policy Results (SQL Server Utility)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the Utility dashboard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource parameters for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and data-tier applications. For more information, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ##  <a name="SSMSProcedure"></a>  
@@ -28,8 +29,6 @@ ms.author: mikeray
 4.  Click the **Managed Instances** node to view list view data for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (right-click to refresh). List view data is displayed in the content pane.  
   
 5.  Click the **Deployed Data-tier Applications** node to view list view data for data-tier applications (right-click to refresh). List view data is displayed in the content pane.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

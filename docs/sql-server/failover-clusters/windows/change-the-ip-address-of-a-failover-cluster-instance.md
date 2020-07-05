@@ -1,6 +1,7 @@
 ---
-title: "Change the IP Address of a Failover Cluster Instance | Microsoft Docs"
-ms.custom: ""
+title: "Change IP Address of a Failover Cluster Instance"
+description: Learn how to change the IP address of a SQL Server failover cluster instance using the Failover Cluster Manager. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Change the IP Address of a Failover Cluster Instance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to change the IP address resource in an Always On Failover Cluster Instance (FCI) by using the Failover Cluster Manager snap-in. The Failover Cluster Manager snap-in is the cluster management application for the Windows Server Failover Clustering (WSFC) service.  
   
 -   **Before you begin:**  [Security](#Security)  

@@ -1,5 +1,6 @@
 ---
 title: "Process Return Codes and Output Parameters (ODBC) | Microsoft Docs"
+description: Learn about SQLSTATE, which provides detailed information about the cause of a warning or error in the SQL Server Native Client ODBC driver.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "return codes [ODBC]"
   - "output parameters [ODBC]"
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Running Stored Procedures - Process Return Codes and Output Parameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver supports executing stored procedures as remote stored procedures. Executing a stored procedure as a remote stored procedure allows the driver and the server to optimize the performance of executing the procedure.  
   
@@ -35,8 +35,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Execute the statement with **SQLExecDirect**.  
   
 4.  Process result sets until **SQLFetch** or **SQLFetchScroll** returns SQL_NO_DATA while processing the last result set or until **SQLMoreResults** returns SQL_NO_DATA. At this point, the variables bound to the return code and output parameters are filled with returned data values.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Example  
  This sample shows processing a return code and output parameter. This sample is not supported on IA64. This sample was developed for ODBC version 3.0 or later.  

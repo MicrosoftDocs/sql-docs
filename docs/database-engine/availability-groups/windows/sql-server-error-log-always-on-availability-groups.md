@@ -1,6 +1,7 @@
 ---
-title: "SQL Server error log (Always On Availability Groups) (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "SQL Server error log (availability groups)"
+description: Learn about the SQL Server error log events that affect an Always On availability group and which symptoms should lead to review of the error log.
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: rothja
 ms.author: jroth
 ---
 # SQL Server error log (Always On Availability Groups)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The SQL Server error log reports events affecting Always On Availability Groups, such as:  
   
 -   Communication with the Windows Server Failover Clustering (WSFC) cluster    

@@ -1,7 +1,8 @@
 ---
-title: "Connecting with sqlcmd | Microsoft Docs"
+title: "Connecting with sqlcmd"
+description: "Learn how to use the sqlcmd utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "sqlcmd"
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting with sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+The [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
   
 The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, respectively:
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -45,7 +46,11 @@ In the current release, the following options are available:
   
 - -e Write input scripts to the standard output device (stdout).
 
-- -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+- -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](using-integrated-authentication.md).
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
+Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Linux code page.
+(available since 17.5.1.1)
 
 - -h *number_of_rows*  Specify the number of rows to print between the column headings.  
   
@@ -58,7 +63,7 @@ In the current release, the following options are available:
 - -k  Remove or replace control characters.  
   
 - **-K**_application\_intent_  
-Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, `sqlcmd` does not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, `sqlcmd` does not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-K** is not supported in the CTP for SUSE Linux. You can, however, specify the **ApplicationIntent=ReadOnly** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
@@ -68,7 +73,7 @@ Declares the application workload type when connecting to a server. The only cur
 - -m *error_level* Control which error messages are sent to stdout.  
   
 - **-M**_multisubnet\_failover_  
-Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** is not supported in the CTP for SUSE Linux. You can, however, specify the **MultiSubnetFailover=Yes** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
@@ -152,9 +157,7 @@ In the current release, the following commands are available:
 ## Unavailable Options
 In the current release, the following options are not available:  
 
-- -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
-  
-- -f *code_page* Specify the input and output code pages.  
+- -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](programming-guidelines.md).  
   
 - -L  List the locally configured server computers, and the names of the server computers that are broadcasting on the network.  
   
@@ -162,22 +165,30 @@ In the current release, the following options are not available:
   
 You can use the following alternative method: Put the parameters inside one file, which you can then append to another file. This will help you use a parameter file to replace the values. For example, create a file called `a.sql` (the parameter file) with the following content:
   
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+```
   
 Then create a file called `b.sql`, with the parameters for replacement:  
   
+```sql
     select $(ColumnName) from $(TableName)  
+```
 
 At the command line, combine `a.sql` and `b.sql` into `c.sql` using the following commands:  
   
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+```
   
 Run `sqlcmd` and use `c.sql` as input file:  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+```
 
 - -z *password* Change password.  
   
@@ -220,5 +231,5 @@ If the same option is specified in both the DSN and the `sqlcmd` or `bcp` comman
 Existing scripts that invoke `isql` can be modified to use `sqlcmd` by defining the following alias: `alias isql="sqlcmd -D"`.  
 
 ## See Also  
-[Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[Connecting with **bcp**](connecting-with-bcp.md)  
  

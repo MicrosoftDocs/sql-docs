@@ -1,9 +1,9 @@
 ---
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/16/2017"
+ms.date: "02/19/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: "rothja"
 ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
 
   Returns information from an audit file created by a server audit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -47,7 +47,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path>\\\*** - Collect all audit files in the specified location.  
   
-    -   **\<path>\LoginsAudit_{GUID}** - Collect all audit files that have the specified name and GUID pair.  
+    -   **\<path>\LoginsAudit_{GUID}*** - Collect all audit files that have the specified name and GUID pair.  
   
     -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   
@@ -83,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 | additional_information | **nvarchar(4000)** | Unique information that only applies to a single event is returned as XML. A small number of auditable actions contain this kind of information.<br /><br /> One level of TSQL stack will be displayed in XML format for actions that have TSQL stack associated with them. The XML format will be:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indicates the current nesting level of the frame. The Module name is represented in three part format (database_name, schema_name and object_name).  The module name will be parsed to escape invalid xml characters like `'\<'`, `'>'`, `'/'`, `'_x'`. They will be escaped as `_xHHHH\_`. The HHHH stands for the four-digit hexadecimal UCS-2 code for the character<br /><br /> Is nullable. Returns NULL when there is no additional information reported by the event. |
 | affected_rows | **bigint** | **Applies to**: Azure SQL DB only<br /><br /> Number of rows affected by the executed statement. |  
 | application_name | **nvarchar(128)** | **Applies to**: Azure SQL DB + SQL Server (starting with 2017)<br /><br /> Name of client application which executed the statement that caused the audit event |  
-| audit_file_offset | **bigint** | **Aplies to**: SQL Server only<br /><br /> The buffer offset in the file that contains the audit record. Is not nullable. |  
+| audit_file_offset | **bigint** | **Applies to**: SQL Server only<br /><br /> The buffer offset in the file that contains the audit record. Is not nullable. |  
 | audit_schema_version | **int** | Always 1 |  
 | class_type | **varchar(2)** | The type of auditable entity that the audit occurs on. Is not nullable. |  
 | client_ip | **nvarchar(128)** | **Applies to**: Azure SQL DB + SQL Server (starting with 2017)<br /><br /> 	Source IP of the client application |  
@@ -117,8 +117,8 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | Target login of action. Is nullable. Returns NULL if not applicable. |  
 | target_server_principal_sid | **varbinary** | SID of target login. Is nullable. Returns NULL if not applicable. |  
 | transaction_id | **bigint** | **Applies to**: SQL Server only (starting with 2016)<br /><br /> Unique identifier to identify multiple audit events in one transaction |  
-| user_defined_event_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Azure SQL DB and Managed instance<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
-| user_defined_information | **nvarchar(4000)** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Azure SQL DB and Managed instance<br /><br /> Used to record any extra information the user wants to record in audit log by using the **sp_audit_write** stored procedure. |  
+| user_defined_event_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL DB and Managed instance<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| user_defined_information | **nvarchar(4000)** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL DB and Managed instance<br /><br /> Used to record any extra information the user wants to record in audit log by using the **sp_audit_write** stored procedure. |  
 
   
 ## Remarks  

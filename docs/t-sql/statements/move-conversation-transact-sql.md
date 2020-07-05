@@ -25,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MOVE CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Moves a conversation to a different conversation group.  
   
@@ -33,7 +33,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 MOVE CONVERSATION conversation_handle  
    TO conversation_group_id  

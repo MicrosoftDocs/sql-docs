@@ -1,6 +1,6 @@
 ---
-title: Restore master database - Analytics Platform System | Microsoft Docs
-description: Restore the master database in Analytics Platform System.
+title: Restore master database
+description: Restore the master database in Analytics Platform System (APS).
 author: mzaman1 
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,9 +8,10 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
-# Restore the master database in Analytics Platform System
+# Restore the master database in Analytics Platform System (APS)
 The **Restore Master** page of the SQL Server PDW Configuration Manager enables you to restore the master database from a backup.  
   
 ## Before You Begin  

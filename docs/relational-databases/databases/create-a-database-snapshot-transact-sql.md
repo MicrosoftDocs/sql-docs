@@ -1,5 +1,6 @@
 ---
 title: "Create a Database Snapshot (Transact-SQL) | Microsoft Docs"
+description: "Find out how to create a SQL Server database snapshot by using Transact-SQL. Learn about prerequisites and best practices for creating snapshots."
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Create a Database Snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The only way to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not support the creation of database snapshots.  
   
   
@@ -93,8 +94,6 @@ AdventureWorks_snapshot_evening
   
 2.  Issue a CREATE DATABASE statement on the files using the AS SNAPSHOT OF clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -125,14 +124,14 @@ AdventureWorks_snapshot_evening
   
 -   A. [Creating a snapshot on the AdventureWorks database](#Creating_on_AW)  
   
--   B. [Creating a snapshot on the Sales database](#Creating_on_Sales)  
+-   B. [Creating a snapshot on the Sales database](#Creating_on_Sales)
   
 ####  <a name="Creating_on_AW"></a> A. Creating a snapshot on the AdventureWorks database  
  This example creates a database snapshot on the `AdventureWorks` database. The snapshot name, `AdventureWorks_dbss_1800`, and the file name of its sparse file, `AdventureWorks_data_1800.ss`, indicate the creation time, 6 P.M (1800 hours).  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
-( NAME = AdventureWorks_Data, FILENAME =   
+( NAME = AdventureWorks, FILENAME =   
 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks_data_1800.ss' )  
 AS SNAPSHOT OF AdventureWorks;  
 GO  

@@ -1,77 +1,81 @@
 ---
-title: "Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
+description: Find out how to create SQL Server Code Analysis rules. Set up a rule to avoid WAITFOR DELAY statements in stored procedures, triggers, and functions.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
+
 This walkthrough demonstrates the steps used to create a SQL Server Code Analysis rule. The rule created in this walkthrough is used to avoid WAITFOR DELAY statements in stored procedures, triggers, and functions.  
   
 In this walkthrough, you will create a custom rule for Transact\-SQL static code analysis by using the following processes:  
   
-1.  Create a class library, enable signing for that project, and add the necessary references.  
+1. Create a class library, enable signing for that project, and add the necessary references.  
   
-2.  Create a Visual C\# custom rule class.  
+2. Create a Visual C\# custom rule class.  
   
-3.  Create two helper Visual C\# classes.  
+3. Create two helper Visual C\# classes.  
   
-4.  Copy the resulting DLL that you create into the Extensions directory in order to install it.  
+4. Copy the resulting DLL that you create into the Extensions directory in order to install it.  
   
-5.  Verify that the new code analysis rule is in place.  
+5. Verify that the new code analysis rule is in place.  
   
-**Prerequisites**  
+**Prerequisites**
   
 You need the following components to complete this walkthrough:  
   
--   You must have installed a version of Visual Studio that includes SQL Server Data Tools and supports Visual C\# or Visual Basic development.  
+- You must have installed a version of Visual Studio that includes SQL Server Data Tools and supports Visual C\# or Visual Basic development.  
   
--   You must have a SQL Server project that contains SQL Server objects.  
+- You must have a SQL Server project that contains SQL Server objects.  
   
--   An instance of SQL Server to which you can deploy a database project.  
+- An instance of SQL Server to which you can deploy a database project.  
   
 > [!NOTE]  
 > This walkthrough is intended for users who are already familiar with the SQL Server features of SQL Server Data Tools. You are also expected to be familiar with Visual Studio concepts, such as how to create a class library and how to use the code editor to add code to a class.  
   
 ## Creating a Custom Code Analysis Rule for SQL Server  
+
 First create a class library. To create a class library project:  
   
-1.  Create a Visual C\# or Visual Basic class library project named SampleRules.  
+1. Create a Visual C\# or Visual Basic class library project named SampleRules.  
   
-2.  Rename the file Class1.cs to AvoidWaitForDelayRule.cs.  
+2. Rename the file Class1.cs to AvoidWaitForDelayRule.cs.  
   
-3.  In Solution Explorer, right-click the project node and then click **Add Reference**.  
+3. In Solution Explorer, right-click the project node and then click **Add Reference**.  
   
-4.  Select System.ComponentModel.Composition on the Frameworks tab.  
+4. Select System.ComponentModel.Composition on the Frameworks tab.  
   
-5.  Click **Browse** and navigate to the C:\Program Files (x86)\\MicrosoftSQL Server\120\SDK\Assemblies directory, select Microsoft.SqlServer.TransactSql.ScriptDom.dll, and the click OK.  
+5. Click **Browse** and navigate to the C:\Program Files (x86)\\MicrosoftSQL Server\120\SDK\Assemblies directory, select Microsoft.SqlServer.TransactSql.ScriptDom.dll, and the click OK.  
   
-6.  Next install the required DACFx references. Click **Browse** and navigate to the <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 directory. Choose the Microsoft.SqlServer.Dac.dll, Microsoft.SqlServer.Dac.Extensions.dll, and Microsoft.Data.Tools.Schema.Sql.dll entries and click **Add**, then click **OK**.  
+6. Next install the required DACFx references. Click **Browse** and navigate to the <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 directory. Choose the Microsoft.SqlServer.Dac.dll, Microsoft.SqlServer.Dac.Extensions.dll, and Microsoft.Data.Tools.Schema.Sql.dll entries and click **Add**, then click **OK**.  
   
     DACFx binaries are now installed inside your Visual Studio install directory. For Visual Studio 2012 the <Visual Studio Install Dir> will usually be C:\Program Files (x86)\\MicrosoftVisual Studio 11.0. For Visual Studio 2013 this will usually be C:\Program Files (x86)\\MicrosoftVisual Studio 12.0.  
   
 Next you will add supporting classes that will be used by the rule.  
   
-## Creating the Custom Code Analysis Rule Supporting Classes  
+## Creating the Custom Code Analysis Rule Supporting Classes
+
 Before you create the class for the rule itself, you will add a visitor class and an attribute class to the project. These classes might be useful for creating additional custom rules.  
   
-The first class that you must define is the WaitForDelayVisitor class, derived from [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx). This class provides access to the WAITFOR DELAY statements in the model. Visitor classes make use of the [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) APIs provided by SQL Server. In this API, Transact\-SQL code is represented as an abstract syntax tree (AST) and visitor classes can be useful when you wish to find specific syntax objects such as WAITFORDELAY statements. These might be difficult to find using the object model since they're not associated to a specific object property or relationship, but it's easy to find them using the visitor pattern and the [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API.  
+The first class that you must define is the WaitForDelayVisitor class, derived from [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). This class provides access to the WAITFOR DELAY statements in the model. Visitor classes make use of the [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) APIs provided by SQL Server. In this API, Transact\-SQL code is represented as an abstract syntax tree (AST) and visitor classes can be useful when you wish to find specific syntax objects such as WAITFORDELAY statements. These might be difficult to find using the object model since they're not associated to a specific object property or relationship, but it's easy to find them using the visitor pattern and the [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API.  
   
 ### Defining the WaitForDelayVisitor Class  
   
-1.  In **Solution Explorer**, select the SampleRules project.  
+1. In **Solution Explorer**, select the SampleRules project.  
   
-2.  On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
   
-3.  In the **Name** text box, type WaitForDelayVisitor.cs and then click the **Add** button. The WaitForDelayVisitor.cs file is added to the project in **Solution Explorer**.  
+3. In the **Name** text box, type WaitForDelayVisitor.cs and then click the **Add** button. The WaitForDelayVisitor.cs file is added to the project in **Solution Explorer**.  
   
-4.  Open the WaitForDelayVisitor.cs file and update the contents to match the following code:  
+4. Open the WaitForDelayVisitor.cs file and update the contents to match the following code:  
   
     ```  
     using System.Collections.Generic;  
@@ -81,19 +85,19 @@ The first class that you must define is the WaitForDelayVisitor class, derived f
     }  
     ```  
   
-5.  In the class declaration, change the access modifier to internal and derive the class from TSqlConcreteFragmentVisitor:  
+5. In the class declaration, change the access modifier to internal and derive the class from TSqlConcreteFragmentVisitor:  
   
     ```  
     internal class WaitForDelayVisitor : TSqlConcreteFragmentVisitor {}  
     ```  
   
-6.  Add the following code to define the List member variable:  
+6. Add the following code to define the List member variable:  
   
     ```  
     public IList<WaitForStatement> WaitForDelayStatements { get; private set; }  
     ```  
   
-7.  Define the class constructor by adding the following code:  
+7. Define the class constructor by adding the following code:  
   
     ```  
     public WaitForDelayVisitor() {  
@@ -101,7 +105,7 @@ The first class that you must define is the WaitForDelayVisitor class, derived f
     }  
     ```  
   
-8.  Override the ExplicitVisit method by adding the following code:  
+8. Override the ExplicitVisit method by adding the following code:  
   
     ```  
     public override void ExplicitVisit(WaitForStatement node) {  
@@ -119,13 +123,13 @@ The second class is LocalizedExportCodeAnalysisRuleAttribute.cs. This is an exte
   
 ### Defining the LocalizedExportCodeAnalysisRuleAttribute Class  
   
-1.  In **Solution Explorer**, select the SampleRules project.  
+1. In **Solution Explorer**, select the SampleRules project.  
   
-2.  On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
   
-3.  In the **Name** text box, type LocalizedExportCodeAnalysisRuleAttribute.cs and then click the **Add** button. The file is added to the project in **Solution Explorer**.  
+3. In the **Name** text box, type LocalizedExportCodeAnalysisRuleAttribute.cs and then click the **Add** button. The file is added to the project in **Solution Explorer**.  
   
-4.  Open the file and update the contents to match the following code:  
+4. Open the file and update the contents to match the following code:  
   
     ```  
     using Microsoft.SqlServer.Dac.CodeAnalysis;  
@@ -231,17 +235,17 @@ Next, you add a resource file that will define the rule name, rule description, 
   
 ### To Add a Resource File and Three Resource Strings  
   
-1.  In **Solution Explorer**, select the SampleRules project.  
+1. In **Solution Explorer**, select the SampleRules project.  
   
-2.  On the **Project** menu, select **Add New Item**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add New Item**. The **Add New Item** dialog box appears.  
   
-3.  In the list of **Installed Templates**, click **General**.  
+3. In the list of **Installed Templates**, click **General**.  
   
-4.  In the details pane, click **Resources File**.  
+4. In the details pane, click **Resources File**.  
   
-5.  In **Name**, type RuleResources.resx. The resource editor appears, with no resources defined.  
+5. In **Name**, type RuleResources.resx. The resource editor appears, with no resources defined.  
   
-6.  Define four resource strings as follows:  
+6. Define four resource strings as follows:  
   
     |Name|Value|  
     |--------|---------|  
@@ -250,19 +254,19 @@ Next, you add a resource file that will define the rule name, rule description, 
     |CategorySamples|SamplesCategory|  
     |CannotCreateResourceManager|Can't create ResourceManager for {0} from {1}.|  
   
-7.  On the **File** menu, click **Save RuleResources.resx**.  
+7. On the **File** menu, click **Save RuleResources.resx**.  
   
 Next, define a class that references the resources in the resource file that are used by Visual Studio to display information about your rule in the user interface.  
   
 ### Defining the SampleConstants Class  
   
-1.  In **Solution Explorer**, select the SampleRules project.  
+1. In **Solution Explorer**, select the SampleRules project.  
   
-2.  On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
   
-3.  In the **Name** text box, type SampleRuleConstants.cs and click the **Add** button. The SampleRuleConstants.cs file is added to the project in **Solution Explorer**.  
+3. In the **Name** text box, type SampleRuleConstants.cs and click the **Add** button. The SampleRuleConstants.cs file is added to the project in **Solution Explorer**.  
   
-4.  Open the SampleRuleConstants.cs file and add the following using statements to the file:  
+4. Open the SampleRuleConstants.cs file and add the following using statements to the file:  
   
     ```  
     namespace SampleRules  
@@ -296,20 +300,21 @@ Next, define a class that references the resources in the resource file that are
     }  
     ```  
   
-5.  Click **File** > **Save**.  
+5. Click **File** > **Save**.  
   
-## Creating the Custom Code Analysis Rule Class  
+## Creating the Custom Code Analysis Rule Class
+
 Now that you have added the helper classes that the custom Code Analysis rule will use, you will create a custom rule class and name it AvoidWaitForDelayRule. The AvoidWaitForDelayRule custom rule will be used to help database developers avoid WAITFOR DELAY statements in stored procedures, triggers, and functions.  
   
 ### Creating the AvoidWaitForDelayRule Class  
   
-1.  In **Solution Explorer**, select the SampleRules project.  
+1. In **Solution Explorer**, select the SampleRules project.  
   
-2.  On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
+2. On the **Project** menu, select **Add Class**. The **Add New Item** dialog box appears.  
   
-3.  In the **Name** text box, type AvoidWaitForDelayRule.cs and then click **Add**. The AvoidWaitForDelayRule.cs file is added to the project in **Solution Explorer**.  
+3. In the **Name** text box, type AvoidWaitForDelayRule.cs and then click **Add**. The AvoidWaitForDelayRule.cs file is added to the project in **Solution Explorer**.  
   
-4.  Open the AvoidWaitForDelayRule.cs file and add the following using statements to the file:  
+4. Open the AvoidWaitForDelayRule.cs file and add the following using statements to the file:  
   
     ```  
     using Microsoft.SqlServer.Dac.CodeAnalysis;  
@@ -323,7 +328,7 @@ Now that you have added the helper classes that the custom Code Analysis rule wi
     }  
     ```  
   
-5.  In the AvoidWaitForDelayRule class declaration, change the access modifier to public:  
+5. In the AvoidWaitForDelayRule class declaration, change the access modifier to public:  
   
     ```  
     /// <summary>  
@@ -334,13 +339,13 @@ Now that you have added the helper classes that the custom Code Analysis rule wi
     public sealed class AvoidWaitForDelayRule  
     ```  
   
-6.  Derive the AvoidWaitForDelayRule class from the Microsoft.SqlServer.Dac.CodeAnalysis.SqlCodeAnalysisRule base class:  
+6. Derive the AvoidWaitForDelayRule class from the Microsoft.SqlServer.Dac.CodeAnalysis.SqlCodeAnalysisRule base class:  
   
     ```  
     public sealed class AvoidWaitForDelayRule : SqlCodeAnalysisRule  
     ```  
   
-7.  Add the LocalizedExportCodeAnalysisRuleAttribute to your class.  
+7. Add the LocalizedExportCodeAnalysisRuleAttribute to your class.  
   
     LocalizedExportCodeAnalysisRuleAttribute allows the code analysis service to discover custom code analysis rules. Only classes marked with an ExportCodeAnalysisRuleAttribute (or an attribute that inherits from this) can be used in code analysis.  
   
@@ -367,7 +372,7 @@ Now that you have added the helper classes that the custom Code Analysis rule wi
   
     The RuleScope property should be Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleScope.Element as this rule will analyze specific elements. The rule will be called once for each matching element in the model. If you wish to analyze an entire model then Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleScope.Model can be used instead.  
   
-8.  Add a constructor that sets up the Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.SupportedElementTypes. This is required for element-scoped rules. It defines the types of elements to which this rule will be applied. In this case, the rule will be applied to stored procedures, triggers, and functions. Note that the Microsoft.SqlServer.Dac.Model.ModelSchema class lists all available element types that can be analyzed.  
+8. Add a constructor that sets up the Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.SupportedElementTypes. This is required for element-scoped rules. It defines the types of elements to which this rule will be applied. In this case, the rule will be applied to stored procedures, triggers, and functions. Note that the Microsoft.SqlServer.Dac.Model.ModelSchema class lists all available element types that can be analyzed.  
   
     ```  
     public AvoidWaitForDelayRule()  
@@ -482,30 +487,32 @@ Now that you have added the helper classes that the custom Code Analysis rule wi
   
 ### Building the Class Library  
   
-1.  On the **Project** menu, click **SampleRules Properties**.  
+1. On the **Project** menu, click **SampleRules Properties**.  
   
-2.  Click the **Signing** tab.  
+2. Click the **Signing** tab.  
   
-3.  Click **Sign the assembly**.  
+3. Click **Sign the assembly**.  
   
-4.  In **Choose a strong name key file**, click **<New>**.  
+4. In **Choose a strong name key file**, click **<New>**.  
   
-5.  In the **Create Strong Name Key** dialog box, in **Key file name**, type MyRefKey.  
+5. In the **Create Strong Name Key** dialog box, in **Key file name**, type MyRefKey.  
   
-6.  (optional) You can specify a password for your strong name key file.  
+6. (optional) You can specify a password for your strong name key file.  
   
-7.  Click **OK**.  
+7. Click **OK**.  
   
-8.  On the **File** menu, click **Save All**.  
+8. On the **File** menu, click **Save All**.  
   
 9. On the **Build** menu, click **Build Solution**.  
   
 Next, you must install the assembly so that it will be loaded when you build and deploy SQL Server projects.  
   
-## Install a Static Code Analysis Rule  
+## Install a Static Code Analysis Rule
+
 To install a rule, you must copy the assembly and associated .pdb file to the Extensions folder.  
   
-### To Install the SampleRules Assembly  
+### To Install the SampleRules Assembly
+
 Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120\Extensions directory and subdirectories, and make them available for use.  
   
 For Visual Studio 2012 the <Visual Studio Install Dir> will usually be C:\Program Files (x86)\\MicrosoftVisual Studio 11.0. For Visual Studio 2013 this will usually be C:\Program Files (x86)\\MicrosoftVisual Studio 12.0.  
@@ -516,24 +523,24 @@ Your rule should now be installed and will appear once you restart Visual Studio
   
 ### Starting a New Visual Studio Session and Creating a Database Project  
   
-1.  Start a second session of Visual Studio.  
+1. Start a second session of Visual Studio.  
   
-2.  Click **File** > **New** > **Project**.  
+2. Click **File** > **New** > **Project**.  
   
-3.  In the **New Project** dialog box, in the list of **Installed Templates**, expand the **SQL Server** node, and then click **SQL Server Database Project**.  
+3. In the **New Project** dialog box, in the list of **Installed Templates**, expand the **SQL Server** node, and then click **SQL Server Database Project**.  
   
-4.  In the **Name** text box, type SampleRulesDB and click **OK**.  
+4. In the **Name** text box, type SampleRulesDB and click **OK**.  
   
 Finally, you will see the new rule displaying in the SQL Server project. To view the new AvoidWaitForRule Code Analysis rule:  
   
-1.  In **Solution Explorer**, select the SampleRulesDB project.  
+1. In **Solution Explorer**, select the SampleRulesDB project.  
   
-2.  On the **Project** menu, click **Properties**. The SampleRulesDB properties page is displayed.  
+2. On the **Project** menu, click **Properties**. The SampleRulesDB properties page is displayed.  
   
-3.  Click **Code Analysis**. You should see a new category named RuleSamples.CategorySamples.  
+3. Click **Code Analysis**. You should see a new category named RuleSamples.CategorySamples.  
   
-4.  Expand RuleSamples .CategorySamples. You should see SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions.  
+4. Expand RuleSamples .CategorySamples. You should see SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions.  
   
-## See Also  
-[Overview of Extensibility for Database Code Analysis Rules](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
-  
+## See Also
+
+[Overview of Extensibility for Database Code Analysis Rules](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Append Method (ADOX Columns)
 Adds a new [Column](../../../ado/reference/adox-api/column-object-adox.md) object to the [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) collection.  

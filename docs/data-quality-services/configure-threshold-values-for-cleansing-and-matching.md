@@ -1,6 +1,7 @@
 ---
-title: "Configure Threshold Values for Cleansing and Matching | Microsoft Docs"
-ms.custom: ""
+title: "Configure threshold values for cleansing and matching"
+description: Learn how to configure threshold values that will be used during the computer-assisted cleansing and matching activities in SQL Server Data Quality Services (DQS). 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "cleansing threshold values"
   - "matching,threshold value"
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
-# Configure Threshold Values for Cleansing and Matching
+# Configure threshold values for cleansing and matching - Data Quality Services (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure threshold values that will be used during the computer-assisted cleansing and matching activities in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   

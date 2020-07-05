@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Use the Database Engine cmdlets
   Windows PowerShell cmdlets are single-function commands that typically have a verb-noun naming convention, such as **Get-Help** or **Set-MachineName**. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell supplies cmdlets specific to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -37,7 +36,7 @@ manager: craigg
 ### Partial Parameter Names  
  You do not have to specify the entire name of a cmdlet parameter. You only have to specify enough of the name to uniquely separate it from the other parameters that are supported by the cmdlet. For example, these examples show three ways of specifying the **Invoke-Sqlcmd -QueryTimeout** parameter:  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTimeout 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTime 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3  

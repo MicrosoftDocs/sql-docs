@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Enterprise Information Management using SSIS, MDS, and DQS Together [Tutorial]
   Managing information in an enterprise typically involves integrating data from across the enterprise and beyond, cleansing the data, matching the data to remove any duplicates, standardizing the data, enriching the data, making the data conform to legal and compliance requirements, and then storing the data in a centralized location with all the necessary security settings.  
@@ -30,7 +29,7 @@ manager: craigg
   
  See [Cleansing and Matching Master Data using EIM Technologies](https://msdn.microsoft.com/library/hh403491.aspx) whitepapers for a comprehensive guidance on implementing an EIM solution using these Microsoft EIM technologies together and watch [Enterprise Information Management (EIM): Bringing together SSIS, DQS, and MDS](https://go.microsoft.com/fwlink/?LinkId=258672) video for a cool demonstration of an EIM scenario.  
   
- In this tutorial, you learn how to use SSIS, MDS, and DQS together to implement a sample Enterprise Information Management (EIM) solution. First, you use DQS to create a knowledgebase that contains knowledge about the data (metadata), cleanse the data in an Excel file by using the knowledge base, and match the data to identify and remove duplicates in the data. Next, you use the MDS Add-in for Excel to upload the cleansed and matched data to MDS. Then, you automate the whole process by using an SSIS solution. The SSIS solution in this tutorial reads the input data from an Excel file, but you can extend it to read from various sources such as Oracle, Teradata, DB2, and Windows Azure SQL Database.  
+ In this tutorial, you learn how to use SSIS, MDS, and DQS together to implement a sample Enterprise Information Management (EIM) solution. First, you use DQS to create a knowledgebase that contains knowledge about the data (metadata), cleanse the data in an Excel file by using the knowledge base, and match the data to identify and remove duplicates in the data. Next, you use the MDS Add-in for Excel to upload the cleansed and matched data to MDS. Then, you automate the whole process by using an SSIS solution. The SSIS solution in this tutorial reads the input data from an Excel file, but you can extend it to read from various sources such as Oracle, Teradata, DB2, and Azure SQL Database.  
   
 ## Prerequisites  
   
@@ -48,7 +47,7 @@ manager: craigg
   
 2.  [Configure MDS using Master Data Services Configuration Manager](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     Use the Configuration Manager to create and configure a Master Data Services database. After you create the MDS database, create a web application for MDS in a web site (for example: [http://localhost/MDS](http://localhost/MDS)) and associate the MDS database with the MDS web application. Note that, to create an MDS web application, you should have IIS installed on your computer. See [Web Application Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) and [Database Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) for details about the prerequisites for configuring MDS database and web application.  
+     Use the Configuration Manager to create and configure a Master Data Services database. After you create the MDS database, create a web application for MDS in a web site (for example: `http://localhost/MDS`) and associate the MDS database with the MDS web application. Note that, to create an MDS web application, you should have IIS installed on your computer. See [Web Application Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) and [Database Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) for details about the prerequisites for configuring MDS database and web application.  
   
 3.  [Install and Configure DQS using Data Quality Server Installer](https://msdn.microsoft.com/library/hh231682.aspx). Click **Start**, click **All Programs**, click **Microsoft SQL Server 2014**, click **Data Quality Services**, and then click **Data Quality Server Installer**.  
   
@@ -56,7 +55,7 @@ manager: craigg
   
 5.  Install **Master Data Services Add-in for Excel** (32-bit or 64-bit based on the version of Excel you have on your computer) from [here](https://www.microsoft.com/download/details.aspx?id=29064). To find the version of Excel installed on your computer, run **Excel**, click **File** on menu bar and click **Help** to see the version in the right pane. Note that you need to install Visual Studio 2010 Tools for Office Runtime before installing the Excel Add-in.  
   
-6.  (Optional) Create an account with [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). One of the tasks in the tutorial requires you to have an **Azure Marketplace** (originally named **Data Market**) account. You can skip this task if you want and proceed with the next task.  
+6.  (Optional) Create an account with [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). One of the tasks in the tutorial requires you to have an **Azure Marketplace** (originally named **Data Market**) account. You can skip this task if you want and proceed with the next task.  
   
 7.  Download the Suppliers.xls file from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426).  
   

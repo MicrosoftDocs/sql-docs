@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services in SQL Server Management Studio (SSRS) | Microsoft Docs"
+title: "Reporting Services in SQL Server Management Studio | Microsoft Docs"
 ms.date: 06/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

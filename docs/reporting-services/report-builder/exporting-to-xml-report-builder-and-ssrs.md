@@ -1,5 +1,6 @@
 ---
-title: "Exporting to XML (Report Builder and SSRS) | Microsoft Docs"
+title: "Exporting to XML (Report Builder) | Microsoft Docs"
+description: In Report Builder, the XML rendering extension renders a paginated report to XML format. Import XML into a database, use as a message, or send to applications.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

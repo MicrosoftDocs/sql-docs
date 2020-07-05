@@ -1,5 +1,6 @@
 ---
 title: "View a Stored XML Schema Collection | Microsoft Docs"
+description: Learn how to view a stored XML schema collection by using the XQuery function xml_schema_namespace().
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # View a Stored XML Schema Collection
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   After you import an XML schema collection by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), the schema components are stored in the metadata. You can use the [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)intrinsic function to reconstruct the XML schema collection. This function returns an **xml** data type instance.  
   
  For example, the following query retrieves an XML schema collection (`ProductDescriptionSchemaCollection`) from the production relational schema in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  

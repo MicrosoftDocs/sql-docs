@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SortOrderEnum enumeration [ADOX]"
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SortOrderEnum
 Specifies the sort sequence for an indexed column.  

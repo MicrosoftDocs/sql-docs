@@ -1,15 +1,14 @@
 ---
 title: "Getting Started (SQL Server 2014) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Getting Started (SQL Server 2014)
   Find sources of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] information, system requirements, installation instructions, and more.  
@@ -22,7 +21,7 @@ manager: craigg
   
  [Quick-Start Installation of SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
- [Get Started with Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
+ [Get Started with Product Documentation for SQL Server](../2014-toc/index.yml)  
   
  [Getting Assistance &#40;SQL Server 2014&#41;](getting-assistance-sql-server-2014.md)  
   

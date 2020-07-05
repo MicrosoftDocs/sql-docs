@@ -13,9 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "SetParameterProperties method"
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Sets the parameter properties on a per parameter basis by ordinal, or sets bulk parameter properties by specifying an array of SSPARAMPROPS structures.  

@@ -1,5 +1,6 @@
 ---
 title: "File Restores (Full Recovery Model) | Microsoft Docs"
+description: A file restore in SQL Server is a single restore sequence that copies, rolls forward, and recovers one or more data files without restoring the whole database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # File Restores (Full Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic is relevant only for databases that contain multiple files or filegroups under the full or bulk-load recovery model.  
   
@@ -69,8 +70,6 @@ ms.author: mathoma
      You must restore the transaction log backups that were created after the file backups to bring the database to a consistent state. The transaction log backups can be rolled forward quickly, because only the changes that apply to the restored files are applied. Restoring individual files can be better than restoring the whole database, because undamaged files are not copied and then rolled forward. However, the whole chain of log backups still has to be read.  
   
 5.  Recover the database.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  File backups can be used to restore the database to an earlier point in time. To do this, you must restore a complete set of file backups, and then restore transaction log backups in sequence to reach a target point that is after the end of the most recent restored file backup. For more information about point-in-time recovery, see [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  

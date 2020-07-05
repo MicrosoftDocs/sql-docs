@@ -22,7 +22,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Declares one or more XML namespaces.  
   
@@ -31,7 +31,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 WITH XMLNAMESPACES ( <XML namespace declaration item>  
 [ { , <XML namespace declaration item> }...] )   
@@ -42,12 +42,12 @@ WITH XMLNAMESPACES ( <XML namespace declaration item>
 <xml_namespace_uri> ::= <character string literal>  
 ```  
   
-```  
+```syntaxsql
   
 <xml_namespace_prefix> ::= <identifier>  
 ```  
   
-```  
+```syntaxsql
   
 <XML default namespace declaration item> ::=  
 DEFAULT <xml_namespace_uri>  
@@ -80,7 +80,7 @@ DEFAULT <xml_namespace_uri>
   
 -   The XML namespace prefix `xsi` cannot be redeclared when the ELEMENTS XSINIL directive is being used on the query.  
 
--   It is not necesary to declare the 'http://www.w3.org/2001/XMLSchema-instance' to use xsi standard namespace. It is implicitly added by the XML/XPATH processor if not specified and xpath expressions can use the xsi prefix as long as the 'http://www.w3.org/2001/XMLSchema-instance' schema is properly declared in the xml document.
+-   It is not necessary to declare the 'http://www.w3.org/2001/XMLSchema-instance' to use xsi standard namespace. It is implicitly added by the XML/XPATH processor if not specified and xpath expressions can use the xsi prefix as long as the 'http://www.w3.org/2001/XMLSchema-instance' schema is properly declared in the xml document.
 
 -   URI string values are encoded according to the current database collation code page and are internally translated to Unicode.  
   

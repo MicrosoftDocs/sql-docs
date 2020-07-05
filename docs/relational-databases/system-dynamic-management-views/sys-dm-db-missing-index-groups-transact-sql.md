@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "sys.dm_db_missing_index_groups dynamic management view"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_groups dynamic management view"
 ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This DMV returns information about indexes that are missing in a specific index group, except for spatial indexes. 
   

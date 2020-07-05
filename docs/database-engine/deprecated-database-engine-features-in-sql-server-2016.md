@@ -1,7 +1,9 @@
 ---
-title: "Deprecated Database Engine Features in SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/09/2018"
+title: "Deprecated Database Engine Features | Microsoft Docs"
+titleSuffix: "SQL Server 2016"
+description: Find out about deprecated database engine features that are still available in SQL Server 2016 (13.x), but shouldn't be used in new applications.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -16,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Deprecated Database Engine Features in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Deprecated features should not be used in new applications.  
   

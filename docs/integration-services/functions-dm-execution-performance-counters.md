@@ -8,15 +8,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Functions - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Returns the performance statistics for an execution that is running on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   
@@ -48,7 +45,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Flat buffers in use|Number of flat buffers that the data flow engine uses. All flat buffers are private buffers.|  
 |Private buffer memory|Amount of memory in use by all private buffers. A private buffer is a buffer that a transformation uses for temporary work.<br /><br /> A buffer is not private if the data flow engine creates the buffer to support the data flow.|  
 |Private buffers in use|Number of buffers that the transformations use for temporary work.|  
-|Rows read|Total number of rows ready the execution.|  
+|Rows read|Total number of rows read by the execution.|  
 |Rows written|Total number of rows written by the execution.|  
   
 ## Return  

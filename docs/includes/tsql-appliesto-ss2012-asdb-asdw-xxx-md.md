@@ -1,2 +1,10 @@
-<Token>**APPLIES TO:** ![yes](media/yes.png)SQL Server ![yes](media/yes.png)Azure SQL Database ![yes](media/yes.png)Azure SQL Data Warehouse ![no](media/no.png)Parallel Data Warehouse </Token>
+---
+author: MikeRayMSFT
+ms.service: sql
+ms.topic: include
+ms.date: 01/13/2020
+ms.author: mikeray
+---
+
+<Token>**APPLIES TO:** ![Yes](media/yes-icon.png)SQL Server ![Yes](media/yes-icon.png)Azure SQL Database ![Yes](media/yes-icon.png)Azure Synapse Analytics (SQL DW) ![No](media/no-icon.png)Parallel Data Warehouse </Token>
 

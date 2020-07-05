@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Open a Trace Table (SQL Server Profiler)
   This topic describes how to open an existing trace table by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

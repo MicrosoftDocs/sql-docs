@@ -28,7 +28,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # CREATE FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a full-text catalog for a database. One full-text catalog can have several full-text indexes, but a full-text index can only be part of one full-text catalog. Each database can contain zero or more full-text catalogs.  
   
@@ -41,7 +41,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE FULLTEXT CATALOG catalog_name  
      [ON FILEGROUP filegroup ]  
@@ -100,7 +100,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## Examples  
  The following example creates a full-text catalog and also a full-text index.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

@@ -1,5 +1,5 @@
 ---
-title: Migrate a SQL Server database from Windows to Linux
+title: Migrate SQL Server database from Windows to Linux
 description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,7 +12,7 @@ ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server on Linux. In this tutorial, you will walk through the steps required to move a database to Linux with backup and restore techniques.
 

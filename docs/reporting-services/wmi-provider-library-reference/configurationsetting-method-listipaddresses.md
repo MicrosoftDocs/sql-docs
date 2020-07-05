@@ -52,7 +52,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## Remarks  
  *IPVersion* strings are V4, V6.  
   
- If *IsDhcpEnabled* is **True**, the *IPAddress* is dynamic. It should not be used for SSL bindings.  
+ If *IsDhcpEnabled* is **True**, the *IPAddress* is dynamic. It should not be used for TLS bindings.  
   
 ## Requirements  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

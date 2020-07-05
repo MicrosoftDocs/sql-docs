@@ -21,7 +21,7 @@ ms.author: jrasnick
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns CPU usage and storage data for an Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is a change in resource consumption. The data returned includes CPU usage, storage size change, and database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
   
@@ -37,7 +37,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |sku|**nvarchar(128)**|Service Tier of the database. The following are the possible values:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|Maximum storage size in megabytes for the time period, including database data, indexes, stored procedures, and metadata.|  
 |avg_cpu_percent|**decimal(5,2)**|Average compute utilization in percentage of the limit of the service tier.|  
-|avg_data_io_percent|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the service tier.|  
+|avg_data_io_percent|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the service tier. For Hyperscale databases, see [Data IO in resource utilization statistics](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal(5,2)**|Average write resource utilization in percentage of the limit of the service tier.|  
 |max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
 |max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  

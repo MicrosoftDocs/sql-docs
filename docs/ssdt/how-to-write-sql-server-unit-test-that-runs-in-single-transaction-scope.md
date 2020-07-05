@@ -1,17 +1,19 @@
 ---
-title: "How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Write a SQL Server Unit Test that Runs a Scope of a Single Transaction
+description: Learn how to start the Distributed Transaction Coordinator service, write a single-transaction SQL Server unit test, and roll back the test changes.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction
+
 You can modify unit tests to run within the scope of a single transaction. If you take this approach, you can roll back any changes that the test enacted after the test ends. The following procedures explain how to:  
   
 -   Create a transaction in your Transact\-SQL test script that uses **BEGIN TRANSACTION** and **ROLLBACK TRANSACTION**.  

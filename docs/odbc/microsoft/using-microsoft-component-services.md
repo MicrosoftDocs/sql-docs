@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], component services"
   - "component services [ODBC]"
 ms.assetid: 06450562-d8f3-4987-b7bd-4a70223ff937
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Microsoft Component Services
 > [!IMPORTANT]  

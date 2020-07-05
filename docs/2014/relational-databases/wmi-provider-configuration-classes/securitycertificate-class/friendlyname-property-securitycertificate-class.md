@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # FriendlyName Property (SecurityCertificate Class)
   Gets or sets an alternative friendly name for the security certificate.  

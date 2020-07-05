@@ -1,15 +1,14 @@
 ---
-title: "IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: IntelliSense
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # IntelliSense (SQL Server Management Studio)
   The editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] support [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options that reduce typing, provide quick access to syntax information, or make it easier to view the delimiters of complex expressions.  

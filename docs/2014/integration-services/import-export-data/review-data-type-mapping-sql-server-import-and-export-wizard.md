@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.reviewissues.f1"
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Review Data Type Mapping (SQL Server Import and Export Wizard)
   Use the **Review Data Type Mapping** page to review detailed information about data type conversions that the wizard has to perform to make the source data compatible with the destination. This information includes visual cues to distinguish conversions that are expected to succeed from conversions that might cause errors or truncations. For each conversion, you can decide whether to accept the conversion that the wizard suggests, and you can specify how to handle any errors that occur.  

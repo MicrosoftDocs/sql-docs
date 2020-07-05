@@ -1,7 +1,7 @@
 ---
-title: "Dynamic management views and system catalog views for availability groups"
-description: "A collection of dynamic management and catalog views that can  help  you monitor and diagnose the health of an Always On availability group."
-ms.custom: "ag-guide, seodec18"
+title: "DMVs and system catalog views for availability groups"
+description: "A collection of dynamic management and catalog views that can help you monitor and diagnose the health of an Always On availability group."
+ms.custom: "seo-lt-2019"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: rothja
 ms.author: jroth
 ---
 # Dynamic management views and system catalog views (Always On Availability Groups)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic shows you some of the common queries on the Always On dynamic management views (DMV) that you can use to monitor and troubleshoot availability groups.  
   
 > [!TIP]  

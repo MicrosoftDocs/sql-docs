@@ -1,5 +1,6 @@
 ---
 title: "Transaction Log Backups (SQL Server) | Microsoft Docs"
+description: Independent of the database backups, you can back up the SQL Server transaction log frequently. The sequence of transaction log backups is a log chain.
 ms.custom: ""
 ms.date: "01/05/2018"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Transaction Log Backups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models. This topic discusses backing up the transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
  Minimally, you must have created at least one full backup before you can create any log backups. After that, the transaction log can be backed up at any time unless the log is already being backed up. 

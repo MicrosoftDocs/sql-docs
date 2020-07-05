@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # CLR Integration and Transactions
   The `System.Transactions` namespace provides a transaction framework that is fully integrated with ADO.NET and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language runtime (CLR) integration. `System.Transactions` and ADO.NET work together to extend and simplify the use of local and distributed transactions in managed applications.  

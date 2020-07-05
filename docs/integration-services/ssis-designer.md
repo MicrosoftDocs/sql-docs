@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "SSIS Designer, about SSIS Designer"
   - "Integration Services, SSIS Designer"
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SSIS Designer
 

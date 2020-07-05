@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Creating Session-Scoped Calculated Cells
     

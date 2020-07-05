@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GetString method [ADO], Visual Basic example"
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # GetString Method Example (VB)
 This example demonstrates the [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) method.  

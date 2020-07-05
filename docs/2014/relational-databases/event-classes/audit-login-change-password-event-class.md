@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Login Change Password Event Class
   The **Audit Login Change Password** event class occurs whenever a user changes their [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login password.  

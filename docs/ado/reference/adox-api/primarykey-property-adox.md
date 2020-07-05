@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "PrimaryKey property [ADOX]"
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # PrimaryKey Property (ADOX)
 Indicates whether the index represents the primary key on the table.  

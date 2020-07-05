@@ -1,6 +1,6 @@
 ---
-title: "Guidelines and Limitations of XML Updategrams (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Guidelines and limitations of Updategrams (SQLXML)"
+description: Learn about the guidelines and limitations of using XML updategrams in SQLXML 4.0.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -12,10 +12,11 @@ helpviewer_keywords:
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines and Limitations of XML Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Remember the following when using XML updategrams:  
   
 -   If you are using an updategram for an insert operation with only a single pair of **\<before>** and **\<after>** blocks, the **\<before>** block can be omitted. Conversely, in case of a delete operation, the **\<after>** block can be omitted.  

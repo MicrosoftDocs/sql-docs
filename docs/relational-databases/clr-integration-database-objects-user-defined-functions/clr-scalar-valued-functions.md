@@ -1,5 +1,6 @@
 ---
 title: "CLR Scalar-Valued Functions | Microsoft Docs"
+description: A scalar-valued function returns a single value. In SQL Server CLR integration, you can write scalar-valued user-defined functions in managed code.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -18,8 +19,8 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Scalar-Valued Functions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  A scalar-valued function (SVF) returns a single value, such as a string, integer, or bit value.You can create scalar-valued user-defined functions in managed code using any .NET Framework programming language. These functions are accessible to [!INCLUDE[tsql](../../includes/tsql-md.md)] or other managed code. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Overview of CLR Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  A scalar-valued function (SVF) returns a single value, such as a string, integer, or bit value. You can create scalar-valued user-defined functions in managed code using any .NET Framework programming language. These functions are accessible to [!INCLUDE[tsql](../../includes/tsql-md.md)] or other managed code. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Overview of CLR Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## Requirements for CLR Scalar-Valued Functions  
  .NET Framework SVFs are implemented as methods on a class in a .NET Framework assembly. The input parameters and the type returned from a SVF can be any of the scalar data types supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except **varchar**, **char**, **rowversion**, **text**, **ntext**, **image**, **timestamp**, **table**, or **cursor**. SVFs must ensure a match between the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type and the return data type of the implementation method. For more information about type conversions, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
@@ -84,7 +85,7 @@ End Class
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -96,7 +97,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -129,7 +130,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
   
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] query and a sample invocation to register the assembly and UDF are:  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

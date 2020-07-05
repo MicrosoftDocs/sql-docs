@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9a0cc475-e6ee-430c-975c-73716d81d563
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Scan:Started Event Class
   The Scan:Started event class occurs when a table or index scan is started.  

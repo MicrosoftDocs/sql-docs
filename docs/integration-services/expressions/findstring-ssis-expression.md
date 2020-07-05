@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FINDSTRING function"
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # FINDSTRING (SSIS Expression)
 

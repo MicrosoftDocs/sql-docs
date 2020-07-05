@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server Replication | Microsoft Docs"
+description: Install replication components by using the SQL Server Installation Wizard or in a Command Prompt window.
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server replication
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Replication components can be installed by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard or at a command prompt. Install replication when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or when you modify an existing instance.  
   

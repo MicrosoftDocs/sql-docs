@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SetNumericalValue Method (ServerNetworkProtocolProperty Class)
   Sets the numeric value of the referenced property.  

@@ -1,5 +1,5 @@
 ---
-title: "Manage and troubleshoot Stretch Database | Microsoft Docs"
+title: "Manage and troubleshoot"
 ms.date: "06/27/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -12,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
+ms.custom: seo-dt-2019
 ---
 # Manage and troubleshoot Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

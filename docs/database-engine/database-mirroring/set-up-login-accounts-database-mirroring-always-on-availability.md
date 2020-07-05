@@ -1,6 +1,7 @@
 ---
-title: "Set Up Login Accounts - Database Mirroring Always On Availability | Microsoft Docs"
-ms.custom: ""
+title: "Set up login accounts (mirroring & availability groups)"
+description: Configure login accounts to access the database mirroring endpoint of a database mirror or an Always On availability group. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Set Up Login Accounts - Database Mirroring Always On Availability
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   For two server instances to connect to each other's [database mirroring endpoint](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) point, the login account of each instance requires access to the other instance. Also, each login account requires connect permission to the Database Mirroring endpoint of the other instance.  
   

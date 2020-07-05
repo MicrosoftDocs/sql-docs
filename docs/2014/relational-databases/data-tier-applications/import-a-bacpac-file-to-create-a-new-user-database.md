@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Import a BACPAC File to Create a New User Database
   Import a data-tier application (DAC) file - a .bacpac file - to create a copy of the original database, with the data, on a new instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Export-import operations can be combined to migrate a DAC or database between instances, or to create a logical backup, such as creating an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -95,9 +94,9 @@ manager: craigg
   
 -   **Import from local disk** - Click **Browse...** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
   
--   **Import from Windows Azure** - Imports a BACPAC file from a Windows Azure container. You must connect to a Windows Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.  
+-   **Import from Azure** - Imports a BACPAC file from an Azure container. You must connect to an Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.  
   
-     When browsing Windows Azure, you will be able to switch between containers within a single account. You must specify a single .bacpac file to continue the import operation. Note that you can sort columns by **Name**, **Size**, or **Date Modified**.  
+     When browsing Azure, you will be able to switch between containers within a single account. You must specify a single .bacpac file to continue the import operation. Note that you can sort columns by **Name**, **Size**, or **Date Modified**.  
   
      To continue, specify the .bacpac file to import, and then click **Open**.  
   
@@ -118,7 +117,7 @@ manager: craigg
   
 -   **New database name** - Provide a name for the imported database.  
   
--   **Edition of [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - Specify [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. For more information about editions of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see this [SQL Database](http://www.windowsazure.com/home/tour/database/) web site.  
+-   **Edition of [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - Specify [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. For more information about editions of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see this [SQL Database](https://www.windowsazure.com/home/tour/database/) web site.  
   
 -   **Maximum database size (GB)** - Use the drop-down menu to specify the maximum size for your database.  
   
@@ -145,5 +144,4 @@ manager: craigg
 ## See Also  
  [Data-tier Applications](data-tier-applications.md)   
  [Export a Data-tier Application](export-a-data-tier-application.md)  
-  
   

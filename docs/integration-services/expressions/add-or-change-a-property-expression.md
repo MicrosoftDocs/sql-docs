@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], creating"
   - "expressions [Integration Services], property expressions"
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Add or Change a Property Expression
 

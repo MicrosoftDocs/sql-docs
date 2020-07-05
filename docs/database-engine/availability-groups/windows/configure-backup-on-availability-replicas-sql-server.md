@@ -20,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure backups on secondary replicas of an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to configure backup on secondary replicas for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
@@ -28,6 +28,9 @@ ms.author: mathoma
   
 ##  <a name="Prerequisites"></a> Prerequisites  
  You must be connected to the server instance that hosts the primary replica.  
+ 
+   > [!NOTE]
+   > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`. 
   
   
 ##  <a name="Permissions"></a> Permissions  
@@ -156,11 +159,11 @@ ms.author: mathoma
 ##  <a name="FollowUp"></a> Follow Up: After Configuring Backup on Secondary Replicas  
  To take the automated backup preference into account for a given availability group, on each server instance that hosts an availability replica whose backup priority is greater than zero (>0), you need to script backup jobs for the databases in the availability group. To determine whether the current replica is the preferred backup replica, use the [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) function in your backup script. If the availability replica that is hosted by the current server instance is the preferred replica for backups, this function returns 1. If not, the function returns 0. By running a simple script on each availability replica that queries this function, you can determine which replica should run a given backup job. For example, a typical snippet of a backup-job script would look like:  
   
-```  
+```sql  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
       Select 'This is not the preferred replica, exiting with success';  
-      RETURN 0 - This is a normal, expected condition, so the script returns success  
+      RETURN 0 -- This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  

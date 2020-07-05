@@ -1,12 +1,14 @@
 ---
-title: "Delete and Re-create Encryption Keys  (SSRS Configuration Manager) | Microsoft Docs"
-ms.date: 05/31/2016
+title: "Delete and Recreate Encryption Keys (Configuration Manager) | Microsoft Docs"
+description: "Deleting and recreating encryption keys are activities that fall outside of routine encryption key maintenance."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "re-creating encryption keys"
+  - "recreating encryption keys"
   - "encryption keys [Reporting Services]"
   - "deleting encryption keys"
   - "symmetric keys [Reporting Services]"
@@ -16,21 +18,21 @@ ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
 ---
-# SSRS Encryption Keys - Delete and Re-create Encryption Keys
-  Deleting and re-creating encryption keys are activities that fall outside of routine encryption key maintenance. You perform these tasks in response to a specific threat to your report server, or as a last resort when you can no longer access a report server database.  
+# Delete and Recreate Encryption Keys (SSRS Configuration Manager)
+  Deleting and recreating encryption keys are activities that fall outside of routine encryption key maintenance. You perform these tasks in response to a specific threat to your report server, or as a last resort when you can no longer access a report server database.  
   
--   Re-create the symmetric key when you believe the existing symmetric key is compromised. You can also re-create the key on a regular basis as a security best practice.  
+-   Recreate the symmetric key when you believe the existing symmetric key is compromised. You can also recreate the key on a regular basis as a security best practice.  
   
 -   Delete existing encryption keys and unusable encrypted content when you cannot restore the symmetric key.  
   
-## Re-creating Encryption Keys  
- If you have evidence that the symmetric key is known to unauthorized users, or if your report server has been under attack and you want to reset the symmetric key as a precaution, you can re-create the symmetric key. When you re-create the symmetric key, all encrypted values will be re-encrypted using the new value. If you are running multiple report servers in a scale-out deployment, all copies of the symmetric key will be updated to the new value. The report server uses the public keys available to it to update the symmetric key for each server in the deployment.  
+## Recreating Encryption Keys  
+ If you have evidence that the symmetric key is known to unauthorized users, or if your report server has been under attack and you want to reset the symmetric key as a precaution, you can recreate the symmetric key. When you recreate the symmetric key, all encrypted values will be re-encrypted using the new value. If you are running multiple report servers in a scale-out deployment, all copies of the symmetric key will be updated to the new value. The report server uses the public keys available to it to update the symmetric key for each server in the deployment.  
   
- You can only re-create the symmetric key when the report server is in a working state. Re-creating the encryption keys and re-encrypting content disrupts server operations. You must take the server offline while re-encryption is underway. There should be no requests made to the report server during re-encryption.  
+ You can only recreate the symmetric key when the report server is in a working state. Recreating the encryption keys and re-encrypting content disrupts server operations. You must take the server offline while re-encryption is underway. There should be no requests made to the report server during re-encryption.  
   
  You can use the Reporting Services Configuration tool or the **rskeymgmt** utility to reset the symmetric key and encrypted data. For more information about how the symmetric key is created, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-### How to re-create encryption keys (Reporting Services Configuration Tool)  
+### How to recreate encryption keys (Reporting Services Configuration Tool)  
   
 1.  Disable the Report Server Web service and HTTP access by modifying the **IsWebServiceEnabled** property in the rsreportserver.config file. This step temporarily stops authentication requests from being sent to the report server without completely shutting down the server. You must have minimal service so that you can recreate the keys.  
   
@@ -50,7 +52,7 @@ ms.author: maggies
   
 5.  Re-enable the Web service and HTTP access by modifying the **IsWebServiceEnabled** property in the rsreportserver.config file. Do this for all instances if you are working with a scale out deployment.  
   
-### How to re-create encryption keys (rskeymgmt)  
+### How to recreate encryption keys (rskeymgmt)  
   
 1.  Disable the Report Server Web service and HTTP access. Use the instructions in the previous procedure to stop Web service operations.  
   
@@ -101,7 +103,7 @@ ms.author: maggies
   
 1.  For each shared data source, you must retype the connection string.  
   
-2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 3.  For each data-driven subscription, open each subscription and retype the credentials to the subscription database.  
   

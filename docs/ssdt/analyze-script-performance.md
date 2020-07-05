@@ -1,19 +1,19 @@
 ---
-title: "Analyze Script Performance | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Analyze Script Performance
+description: Find out how client statistics, execution plans, and Code Analysis in SQL Server Data Tools can help improve query, stored procedure, and script performance.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "sql.data.tools.codeanalysis.configuring"
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Analyze Script Performance
+
 You can use the tools provided by SQL Server Data Tools to determine whether you can improve the performance of your query, stored procedures, or scripts. For example, by monitoring client statistics such as the response times for frequently used queries, you can determine whether changes to the query or indexes on the tables are required. Such statistics can include client execution time, query profile, and packets/bytes sent and received.  
   
 In addition, certain performance problems are better addressed by analyzing the application queries and updates that the application submits to the database, and how these queries and updates interact with the data contained in the database and the database schema. Execution plans graphically display the data retrieval methods chosen by the SQL Server query optimizer, and show the execution cost of specific statements and queries. Thus they can help you understand how SQL Server will be processing your SQL query, and to determine what is causing performance slowdown.  

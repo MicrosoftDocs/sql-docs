@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 9: Adding Union All Transform to Combine Correct and Corrected Records
   In this task, you add the Union All Transform to the data flow. The Union All transformation combines multiple inputs into one output. In your scenario, it combine both Correct and Corrected records into one stream.  

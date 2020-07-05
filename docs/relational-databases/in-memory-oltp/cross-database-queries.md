@@ -1,5 +1,6 @@
 ---
 title: "Cross-Database Queries | Microsoft Docs"
+description: Learn how to use memory-optimized table variables in cross-database queries to move data from one database to memory-optimized tables in another in SQL Server.
 ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Cross-Database Queries
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], memory-optimized tables do not support cross-database transactions. You cannot access another database from the same transaction or the same query that also accesses a memory-optimized table. You cannot easily copy data from a table in one database, to a memory-optimized table in another database.  
   

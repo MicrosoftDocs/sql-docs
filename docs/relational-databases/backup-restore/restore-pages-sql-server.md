@@ -1,5 +1,6 @@
 ---
 title: "Restore Pages (SQL Server) | Microsoft Docs"
+description: Learn how to restore pages in SQL Server by using SQL Server Management Studio or Transact-SQL. Restore damaged pages without restoring the whole database. 
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # Restore Pages (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to restore pages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The goal of a page restore is to restore one or more damaged pages without restoring the whole database. Typically, pages that are candidates for restore have been marked as "suspect" because of an error that is encountered when accessing the page. Suspect pages are identified in the [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) table in the **msdb** database.  
   
@@ -158,8 +159,6 @@ ms.author: mathoma
      **Pages**  
   
 7.  To restore the pages listed in the pages grid, click **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  To specify a page in a RESTORE DATABASE statement, you need the file ID of the file containing the page and the page ID of the page. The required syntax is as follows:  

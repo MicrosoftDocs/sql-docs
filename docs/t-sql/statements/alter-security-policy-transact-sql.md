@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Alters a security policy.  
   
@@ -29,7 +29,7 @@ Alters a security policy.
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -40,7 +40,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  
-    )    [ WITH ( STATE = { ON | OFF } ]  
+    )    [ WITH ( STATE = { ON | OFF } ) ]  
     [ NOT FOR REPLICATION ]  
 [;]  
   

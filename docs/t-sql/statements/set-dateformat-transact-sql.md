@@ -29,7 +29,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sets the order of the month, day, and year date parts for interpreting date character strings. These strings are of type **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset**.  
   
@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SET DATEFORMAT { format | @format_var }   
 ```  
   
@@ -64,7 +64,7 @@ SET DATEFORMAT { format | @format_var }
 ## Examples  
  The following example uses different date strings as inputs in sessions with the same `DATEFORMAT` setting.  
   
-```  
+```sql
 -- Set date format to day/month/year.  
 SET DATEFORMAT dmy;  
 GO  

@@ -1,17 +1,19 @@
 ---
-title: "How to: Open a SQL Server Unit Test to Edit | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Open a SQL Server Unit Test to Edit
+description: "Learn how to edit a SQL Server unit test so that you can add functionality or customize conditions. See different ways of opening the test's source code file."
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Open a SQL Server Unit Test to Edit
+
 After you create a SQL Server unit test, you use the **SQL Server Unit Test Designer** to add Transact\-SQL statements and test conditions. The tests created by using the designer generate Visual C# or Visual Basic code. This code is what executes when your test runs.  
   
 If you are satisfied with your test, you can run it as it is. If you want to add more functionality to this unit test, you can edit its code. This code resides in a .cs or .vb file in your test project. For more information, see [SQL Server Unit Test Files](../ssdt/sql-server-unit-test-files.md). You can also customize your tests by creating new test conditions. For more information, see [How to: Create Test Conditions for the Database Unit Test Designer (Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx).  

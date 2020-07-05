@@ -1,6 +1,6 @@
 ---
-title: "Large XML Schema Collections and Out-of-Memory Conditions | Microsoft Docs"
-ms.custom: ""
+title: "Out-of-memory with large XML schema collections | Microsoft Docs"
+description: Learn about solutions for handling out-of-memory conditions when loading or dropping a large XML schema collection.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,9 +13,10 @@ helpviewer_keywords:
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Large XML Schema Collections and Out-of-Memory Conditions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   During a call to the built-in XML_SCHEMA_NAMESPACE() function on a large XML schema collection, or when you try to drop large XML schema collections, an out-of-memory condition may occur. The following are solutions you can use to handle this:  
   
 -   When the system load is light, use the DROP_XML_SCHEMA_COLLECTION command. If this fails, put the database in single-user mode by using the ALTER DATABASE statement and trying DROP XML SCHEMA COLLECTION again. If the XML schema collection exists in **master**, **model**, or **tempdb**, a server restart is required for single-user mode.  

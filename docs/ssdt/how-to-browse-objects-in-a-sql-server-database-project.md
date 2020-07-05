@@ -1,17 +1,19 @@
 ---
-title: "How to: Browse Objects in a SQL Server Database Project | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Browse Objects in a SQL Server Database Project
+description: Learn how to view objects in a SQL Server Database project. See how to use the Projects node in SQL Server Object Explorer in Visual Studio for this task.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Browse Objects in a SQL Server Database Project
+
 The SQL Server Object Explorer in Visual Studio now contains a dedicated Projects node, under which all SQL Server database projects in your solution are grouped in an SQL Server Management Studio-like hierarchy.  
   
 ## To browse objects in a project instance  

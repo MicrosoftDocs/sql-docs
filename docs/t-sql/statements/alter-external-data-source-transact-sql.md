@@ -20,18 +20,18 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASBS) for SQL SERVER and Azure blob storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for Azure SQL Data Warehouse. 
 
 ## Syntax  
 
-```  
+```syntaxsql
 -- Modify an external data source
--- Applies to: SQL Server (2016 or later)
+-- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
-        LOCATION = 'server_name_or_IP' [,] |
+        LOCATION = '<prefix>://<path>[:<port>]' [,] |
         RESOURCE_MANAGER_LOCATION = <'IP address;Port'> [,] |
         CREDENTIAL = credential_name
     }  
@@ -56,8 +56,8 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  data_source_name
  Specifies the user-defined name for the data source. The name must be unique.
 
- LOCATION = 'server_name_or_IP'
- Provides the connectivity protocol and path to the external data source.
+ LOCATION = '<prefix>://<path>[:<port>]'
+ Provides the connectivity protocol, path, and port to the external data source. See [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport) for valid location options.
 
  RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Does not apply to Azure SQL Data Warehouse)
  Specifies the Hadoop Resource Manager location. When specified, the query optimizer might choose to pre-process data for a PolyBase query by using Hadoop's computation capabilities. This is a cost-based decision. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.

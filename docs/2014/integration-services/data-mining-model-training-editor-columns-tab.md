@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Mining Model Training Editor"
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Model Training Editor (Columns Tab)
   Use the **Columns** page of the **Data Mining Model Training Editor** dialog box to map input columns to columns in the mining structure.  

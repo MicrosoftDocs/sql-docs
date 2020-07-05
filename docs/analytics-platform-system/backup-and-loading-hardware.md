@@ -1,5 +1,5 @@
 ---
-title: Backup and loading hardware - Parallel Data Warehouse
+title: Backup & loading hardware
 description: To deploy your end-to-end data warehousing solution on Analytics Platform System (APS) with Parallel Data Warehouse (PDW), you need to create a plan for backing up the data warehouse and loading data. Use this guidance to acquire and configure backup and loading servers that will meet your business requirements.  
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Backup and loading hardware overview - Parallel Data Warehouse

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "restarting packages"
   - "starting packages"
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Restart Packages by Using Checkpoints
 

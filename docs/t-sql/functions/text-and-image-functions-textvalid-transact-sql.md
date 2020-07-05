@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "text-pointer values"
   - "verifying text pointers"
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A **text**, **ntext**, or **image** function that checks whether a specific text pointer is valid.  
   

@@ -1,7 +1,8 @@
 ---
 title: "Enabling CLR Integration | Microsoft Docs"
+description: Microsoft SQL Server hosting CLR is called CLR integration, which is disabled by default. Use the sp_configure stored procedure to enable CLR integration.
 ms.custom: ""
-ms.date: "08/01/2016"
+ms.date: "09/17/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: clr
@@ -14,22 +15,16 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration - Enabling
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The common language runtime (CLR) integration feature is off by default, and must be enabled in order to use objects that are implemented using CLR integration. To enable CLR integration, use the **clr enabled** option of the **sp_configure** stored procedure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 ```sql  
-  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'clr enabled', 1;  
-GO  
+EXEC sp_configure 'clr enabled', 1;  
 RECONFIGURE;  
 GO  
 ```  
   
- You can disable CLR integration by setting the **clr enabled** option to 0. When you disable CLR integration, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stops executing all CLR routines and unloads all application domains.  
+ You can disable CLR integration by setting the **clr enabled** option to 0. When you disable CLR integration, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stops executing all user-defined CLR routines and unloads all application domains. Features that rely upon the CLR, such as the **hierarchyid** data type, the `FORMAT` function, replication, and Policy-Based Management, are not affected by this setting and will continue to function.
   
 > [!NOTE]  
 >  To enable CLR integration, you must have ALTER SETTINGS server level permission, which is implicitly held by members of the **sysadmin** and **serveradmin** fixed server roles.  

@@ -30,7 +30,7 @@ manager: kfile
   
     -   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). The topics explains how to use the sample script you can download from CodePlex.  
   
-    -   The sample rss script on CodePlex, [Reporting Services RS.exe script that migrates content from one report server to another](http://azuresql.codeplex.com/releases/view/115207)  
+    -   The sample rss script on CodePlex, [Reporting Services RS.exe script that migrates content from one report server to another](https://azuresql.codeplex.com/releases/view/115207)  
   
     -   [Scripting and PowerShell with Reporting Services](../tools/scripting-and-powershell-with-reporting-services.md)  
   
@@ -47,5 +47,4 @@ manager: kfile
 |Subscriptions|yes|See the List Subscriptions method [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) and the ChangeSubscriptionOwner method <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |Snapshots|||  
 ||||  
-  
   

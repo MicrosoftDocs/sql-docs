@@ -1,5 +1,5 @@
 ---
-title: Software servicing - Analytics Platform System | Microsoft Docs
+title: Software servicing
 description: Software servicing in Analytics Platform System (APS).
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Software servicing in Analytics Platform System

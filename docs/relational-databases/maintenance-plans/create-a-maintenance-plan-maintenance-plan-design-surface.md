@@ -1,6 +1,6 @@
 ---
-title: "Create a Maintenance Plan (Maintenance Plan Design Surface) | Microsoft Docs"
-ms.custom: ""
+title: "Create a Maintenance Plan with the Design Surface"
+description: Learn how to create a single server or multiserver maintenance plan by using the Maintenance Plan Design Surface in SQL Server.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,9 +12,10 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
+ms.custom: "seo-lt-2019"
 ---
 # Create a Maintenance Plan (Maintenance Plan Design Surface)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to create a single server or multiserver maintenance plan using the Maintenance Plan Design Surface in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. While the **Maintenance Plan Wizard** is best for creating basic maintenance plans, creating a plan using the design surface allows you to utilize enhanced workflow.  
   
  **In This Topic**  
@@ -224,8 +225,6 @@ ms.author: mikeray
     5.  In the **Reporting and Logging** dialog box, click **OK**.  
   
 12. To view the results in the log file viewer, in **Object Explorer**, right-click either the **Maintenance Plans** folder or the specific maintenance plan and select **View History**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
      The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   

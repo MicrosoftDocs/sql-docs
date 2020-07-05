@@ -1,7 +1,7 @@
 ---
 title: Restore a database
 titleSuffix: SQL Server big data clusters
-description: This article shows how to restore a database into the master instance of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: This article shows how to restore a database into the master instance of a SQL Server 2019 big data cluster.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab 
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Restore a database into the SQL Server big data cluster master instance
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to restore an existing database into the master instance of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The recommended method is to use a backup, copy, and restore approach.
 
@@ -24,20 +24,20 @@ First, backup your existing SQL Server database from either SQL Server on Window
 This article shows how to restore the AdventureWorks database, but you can use any database backup. 
 
 > [!TIP]
-> You can download the AdventureWorks backup [here](https://www.microsoft.com/download/details.aspx?id=49502).
+> Download the [AdventureWorks backup](../samples/adventureworks-install-configure.md).
 
 ## Copy the backup file
 
 Copy the backup file to the SQL Server container in the master instance pod of the Kubernetes cluster.
 
 ```bash
-kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
+kubectl cp <path to .bak file> master-0:/var/tmp/<.bak filename> -c mssql-server -n <name of your big data cluster>
 ```
 
 Example:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/var/tmp/AdventureWorks2016CTP3.bak -c mssql-server -n clustertest
 ```
 
 Then, verify that the backup file was copied to the pod container.
@@ -53,6 +53,7 @@ Example:
 
 ```bash
 kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
+cd /var/
 ls /tmp
 exit
 ```

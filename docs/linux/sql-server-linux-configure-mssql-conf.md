@@ -11,12 +11,12 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-**mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It modifies the [**mssql.conf file**](#mssql-conf-format) where configuration values are stored. You can use **mssql-conf** utility to set the following parameters:
 
 |||
 |---|---|
@@ -504,7 +504,7 @@ There are several other settings for mssql-conf that you can use to monitor and 
 | mssql-conf setting | Description |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configure secure only RPC calls for distributed transactions |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed |transactions
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed transactions |
 | distributedtransaction.maxlogsize | DTC transaction log file size in MB. Default is 64MB |
 | distributedtransaction.memorybuffersize | Circular buffer size in which traces are stored. This size is in MB and default is 10MB |
 | distributedtransaction.servertcpport | MSDTC rpc server port |

@@ -1,6 +1,6 @@
 ---
-title: "sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_nodes_pdw_physical_databases (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.technology: data-warehouse

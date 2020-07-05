@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "copying columns"
   - "Copy Column transformation"
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Copy Column Transformation
 

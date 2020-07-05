@@ -1,6 +1,7 @@
 ---
-title: "Microsoft Replication Conflict Viewer (Merge Replication) | Microsoft Docs"
-ms.custom: ""
+title: "Replication Conflict Viewer (Merge)"
+description: Describes the Replication Conflict Viewer used for Merge Replication in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Microsoft Replication Conflict Viewer (Merge Replication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The Replication Conflict Viewer allows you to view any conflicts that have occurred during replication synchronization. Conflicts occur when the same data is modified at two separate servers, for example, at a Publisher and Subscriber, or at two different Subscribers. Replication automatically resolves conflicts using the conflict resolver you selected when the article was created. However, the Replication Conflict Viewer allows you to choose a different resolution for the conflict when necessary. The following conflicts can occur:  
   
 -   Update conflicts. Update conflicts occur when the same data is changed at two locations. One change wins, and the other one loses. You have the option to keep the existing data (the data that won), overwrite the existing data with the data that conflicted with it (the losing data), or merge the winning and losing data and update the existing data.  

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Troubleshooting Tools for Package Execution
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  
@@ -48,7 +47,7 @@ manager: craigg
   
      **Add the description of the error**. It is easy to look up the error description by using a Script component. For more information, see [Enhancing an Error Output for the Script Component](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Add the name of the error column**. Looking up the column name that corresponds to the column ID saved by the error output cannot easily be done in the Script component and requires additional steps. Each column ID in a data flow is unique within that Data Flow task, and is persisted in the package at design time. The following approach is one suggestion for adding the column name to the error output. For an example of how to use this approach, see [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546) on dougbert.com.  
+     **Add the name of the error column**. Looking up the column name that corresponds to the column ID saved by the error output cannot easily be done in the Script component and requires additional steps. Each column ID in a data flow is unique within that Data Flow task, and is persisted in the package at design time. The following approach is one suggestion for adding the column name to the error output. 
   
     1.  **Create a lookup table of column names**. Create a separate application that uses the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API to iterate over each saved package, each data flow in the package, each object in the data flow, and each input and output in the data flow object. The application should persist the column ID and name of each column to a lookup table, along with the ID of the parent Data Flow task and the ID of the package.  
   
@@ -79,7 +78,7 @@ manager: craigg
   
     3.  **Consider capturing row count data**. Consider creating a separate table for row count information, where each instance of package execution is identified by its ExecutionID. Use the Row Count transformation to save the row count into a series of variables at critical points in the data flow. After the data flow ends, use an Execute SQL task to insert the series of values into a row in the table for later analysis and reporting.  
   
-     For more information about this approach, see the section, "ETL Auditing and Logging," in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     For more information about this approach, see the section, "ETL Auditing and Logging," in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] white paper, [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ## Troubleshoot Package Execution by Using Debug Dump Files  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. For more information, see [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  
@@ -105,8 +104,5 @@ manager: craigg
   
 ## Related Tasks  
  [Configure an Error Output in a Data Flow Component](../configure-an-error-output-in-a-data-flow-component.md)  
-  
-## Related Content  
- Blog entry, [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546), on dougbert.com.  
   
   

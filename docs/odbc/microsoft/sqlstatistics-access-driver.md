@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLStatistics"
   - "SQLStatistics function [ODBC], Access Driver"
 ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLStatistics (Access Driver)
 > [!NOTE]  

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [ODBC], about transactions"
 ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Transactions in ODBC ODBC
 Transactions in ODBC are completed at the connection level; that is, when an application completes a transaction, it commits or rolls back all work done through all statement handles on that connection.  

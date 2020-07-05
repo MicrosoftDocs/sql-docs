@@ -1,6 +1,7 @@
 ---
-title: "SQL Server In-Process Specific Extensions to ADO.NET | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server In-Process Extensions to ADO.NET"
+description: Links to articles about the four main functional extensions to ADO.NET that are specifically for in-process use.
+ms.custom: "seo-lt-2019"
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -19,7 +20,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   There are four main functional extensions to ADO.NET that are specifically for in-process use. The following topics will cover these extensions in detail.  
   
 ## In This Section  

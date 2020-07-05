@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "Execute T-SQL Statement task [Integration Services]"
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Execute T-SQL Statement Task
 

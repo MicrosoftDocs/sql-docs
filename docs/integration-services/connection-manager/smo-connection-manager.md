@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SMO connection manager"
   - "connection managers [Integration Services], SMO"
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SMO Connection Manager
 

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursor"
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Requests positioned updates. This procedure performs operations on one or more rows within a cursor's fetch buffer. sp_cursor is invoked by specifying ID = 1 in a tabular data stream (TDS) packet.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: SQL Server Management Studio components and configuration"
+title: SSMS components and configuration"
 description: A tutorial that describes the components and basic configuration options for your SQL Server Management Studio environment. 
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT

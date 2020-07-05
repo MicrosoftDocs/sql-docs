@@ -15,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_init function"
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # bcp_init
   Initializes the bulk copy operation.  

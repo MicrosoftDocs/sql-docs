@@ -1,5 +1,6 @@
 ---
 title: "Report Server Namespace Management Methods | Microsoft Docs"
+description: The Report Server Management Web service contains methods that you can use to manage reports, folders, and resources in the report server database.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -24,7 +25,7 @@ ms.author: maggies
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Cancels execution of a job.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Adds a folder to the report server database or SharePoint library.|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Adds a new item to a report server database or SharePoint library. This method applies to the **Report**, **Model**, **Dataset**, **Component**, **Resource**, and **DataSource** item types.|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|Creates a new report edit session.|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String, System.String,System.Byte[],ReportService2010.Warning[]@)|Creates a new report edit session.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Removes an item from the report server database or SharePoint library.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Returns the items in the report server database or SharePoint library that match the specified search criteria.|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|Triggers an event based on the supplied parameters.|  

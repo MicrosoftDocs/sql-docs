@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Globalization scenarios for Analysis Services Multiidimensional
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stores and manipulates multilingual data and metadata in both tabular and multidimensional data models. Data storage is Unicode (UTF-16), in character sets that use Unicode encoding. If you load ANSI data into a data model, characters are stored using Unicode equivalent code points.  
@@ -71,7 +70,6 @@ manager: craigg
 ## See Also  
  [Internationalization for Windows Applications](/windows/desktop/Intl/international-support)   
  [Microsoft Globalization Documentation](/globalization/)   
- [Writing Windows Store apps with locale-based adaptive design](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Developing Universal Windows Apps with C# and XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
-  
+ [Writing Windows Store apps with locale-based adaptive design](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Developing Universal Windows Apps with C# and XAML](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

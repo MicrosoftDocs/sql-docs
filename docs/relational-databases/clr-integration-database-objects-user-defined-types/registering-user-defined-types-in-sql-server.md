@@ -1,5 +1,6 @@
 ---
 title: "Registering User-Defined Types in SQL Server | Microsoft Docs"
+description: You must register a UDT before you install it in SQL Server. You must register the assembly and create the type in the database where you wish to use it.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -34,7 +35,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Registering User-Defined Types in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In order to use a user-defined type (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must register it. Registering a UDT involves registering the assembly and creating the type in the database in which you wish to use it. UDTs are scoped to a single database, and cannot be used in multiple databases unless the identical assembly and UDT are registered with each database. Once the UDT assembly is registered and the type created, you can use the UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] and in client code. For more information, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## Using Visual Studio to Deploy UDTs  
@@ -51,8 +52,6 @@ ms.author: "jroth"
 4.  Write code to implement the UDT.  
   
 5.  From the **Build** menu, select **Deploy**. This registers the assembly and creates the type in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Using Transact-SQL to Deploy UDTs  
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY syntax is used to register the assembly in the database in which you wish to use the UDT. It is stored internally in database system tables, not externally in the file system. If the UDT is dependent on external assemblies, they too must be loaded into the database. The CREATE TYPE statement is used to create the UDT in the database in which it is to be used. For more information, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md) and [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  

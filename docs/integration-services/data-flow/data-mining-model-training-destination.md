@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "mining models [Analysis Services], training"
   - "training mining models"
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Model Training Destination
 

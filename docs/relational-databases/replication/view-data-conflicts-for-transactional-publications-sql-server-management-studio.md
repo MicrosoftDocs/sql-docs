@@ -1,6 +1,7 @@
 ---
-title: "View Data Conflicts for Transactional Publications (SSMS) | Microsoft Docs"
-ms.custom: ""
+title: "View data conflicts (Transactional) - SSMS"
+description: View data conflicts for Transactional Replication using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can view conflicts for peer-to-peer transactional replication and transactional replication with queued updating subscriptions in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Replication Conflict Viewer. For information about how conflicts are detected and resolved, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) and [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
  The availability of conflict data depends on the type of replication and the conflict retention period:  

@@ -1,7 +1,7 @@
 ---
 title: "Quick-Start Installation of SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: database-engine
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "installation [SQL Server]"
   - "installing SQL Server, quick start installations"
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Quick-Start Installation of SQL Server 2014
     
@@ -146,7 +145,7 @@ manager: craigg
   
 ## See Also  
  [Product Specifications for SQL Server 2014](sql-server-2014-product-specifications.md)   
- [Get Started with Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md) 
+ [Get Started with Product Documentation for SQL Server](../2014-toc/index.yml) 
  [Backward Compatibility](backward-compatibility.md)  
   
   

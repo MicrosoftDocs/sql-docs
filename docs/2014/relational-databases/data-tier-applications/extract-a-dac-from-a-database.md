@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Extract a DAC From a Database
   Use either the **Extract Data-tier Application Wizard** or a Windows PowerShell script to extract a data-tier application (DAC) package from an existing SQL Server database. The extraction process creates a DAC package file that contains definitions of the database objects and their related instance-level elements. For example, a DAC package file contains the database tables, stored procedures, views, and users, along with the logins that map to the database users.  
@@ -133,10 +132,10 @@ manager: craigg
 ### Example (PowerShell)  
  The following example extracts a DAC named MyApplication from a database named MyDB.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to extract to a DAC.  
 $dbname = "MyDB"  
@@ -157,5 +156,3 @@ $extractionunit.Extract($dacpacPath)
   
 ## See Also  
  [Data-tier Applications](data-tier-applications.md)  
-  
-  

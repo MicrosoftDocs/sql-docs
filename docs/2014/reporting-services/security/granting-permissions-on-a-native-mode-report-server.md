@@ -47,10 +47,8 @@ manager: kfile
 >  If you configured a report server to run in SharePoint integrated mode, you must set permissions on the SharePoint site to grant access to report server items. For more information, see [Granting Permissions on Report Server Items on a SharePoint Site](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## Who Sets Permissions  
- Initially, only users who are members of the local administrators group can access a report server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed with two default role assignments that grant item-level and system-level access to members of the local administrators group. These built-in role assignments local Administrators to grant report server access to other users and manage report server items. The built-in role assignments cannot be deleted. A local administrator always has permission to fully manage a report server instance.  
-  
- Because full permissions on a report server include item-level and system-level permissions, a local administrator is assigned to the following roles:  
-  
+ Initially, only users who are members of the local administrators group can access a report server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed with two default role assignments that grant item-level and system-level access to members of the local administrators group. Local Administrators can use these built-in role assignments to grant report server access to other users and manage report server items. The built-in role assignments cannot be deleted. A local administrator always has permission to fully manage a report server instance.  
+ 
  Additional configuration is required before you can administer a report server instance on a local computer that runs Windows Vista or Windows Server 2008. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## How Permissions are Stored  

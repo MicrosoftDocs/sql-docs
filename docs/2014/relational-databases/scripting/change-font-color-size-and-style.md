@@ -1,6 +1,6 @@
 ---
-title: "Change Font Color, Size, and Style | Microsoft Docs"
-ms.custom: ""
+title: Change Font Color, Size, and Style
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], managing fonts"
   - "text fonts [SQL Server Management Studio]"
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Change Font Color, Size, and Style
   You can customize the way the text appears in the Editor as well as other places in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)
   You can save a specific table or a set of tables if you do not want to save all the changes you made in a database diagram.  

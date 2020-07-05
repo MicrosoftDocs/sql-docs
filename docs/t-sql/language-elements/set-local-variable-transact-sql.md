@@ -20,7 +20,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Sets the specified local variable, previously created by using the DECLARE @*local_variable* statement, to the specified value.  
   
@@ -29,7 +29,7 @@ Sets the specified local variable, previously created by using the DECLARE @*loc
 ## Syntax  
 Syntax for SQL Server and Azure SQL Database:
 
-```sql    
+```syntaxsql
 SET   
 { @local_variable  
     [ . { property_name | field_name } ] = { expression | udt_name { . | :: } method_name }  
@@ -55,7 +55,7 @@ SET
 }   
 ```  
 Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:  
-```sql  
+```syntaxsql
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   

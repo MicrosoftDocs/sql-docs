@@ -1,5 +1,6 @@
 ---
-title: "Display Headers and Footers with a Group (Report Builder and SSRS) | Microsoft Docs"
+title: "Display Headers and Footers with a Group (Report Builder) | Microsoft Docs"
+description: Find out how to set properties to render headers and footers with dynamic rows that are associated with a group in a tablix data region.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,6 +1,7 @@
 ---
-title: "Some availability replicas are not synchronizing data | Microsoft Docs"
-ms.custom: ""
+title: "Availability replicas not synchronizing data"
+description: "Possible causes and resolutions for when one or more availability replicas in an Always On availability group are not synchronizing data with the primary replica."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Some availability replicas are not synchronizing data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

@@ -1,5 +1,5 @@
 ---
-title: "Edit and Delete an Index (Master Data Services) | Microsoft Docs"
+title: Edit and Delete an Index
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.author: lle
 ---
 # Edit and Delete an Index (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   You can edit and delete an index that you've created on attributes.  
   

@@ -1,6 +1,6 @@
 ---
-title: "Columns with a Name Specified as a Wildcard Character | Microsoft Docs"
-ms.custom: "fresh2019may"
+title: "Specify a column with a wildcard character (SQLXML) | Microsoft Docs"
+description: Learn how column names that are specified as a wildcard character affect the results of an XQuery.
 ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,10 +12,11 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Columns with a Name Specified as a Wildcard Character
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 If the column name specified is a wildcard character (\*), the content of that column is inserted as if there is no column name specified. If this column is a non-**xml** type column, the column content is inserted as a text node, as shown in the following example:  
   

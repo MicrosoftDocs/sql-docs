@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ADO MD, properties"
   - "properties [ADO MD]"
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO MD Properties
 

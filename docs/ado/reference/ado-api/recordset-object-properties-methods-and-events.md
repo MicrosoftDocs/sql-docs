@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset object [ADO], members"
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Recordset Object Properties, Methods, and Events
 ## Properties/Collections  

@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Bulk Copy Without a Format File (ODBC)
   This sample shows how to use bulk copy functions to create a native mode data file, without a format file. This sample was developed for ODBC version 3.0 or later.  

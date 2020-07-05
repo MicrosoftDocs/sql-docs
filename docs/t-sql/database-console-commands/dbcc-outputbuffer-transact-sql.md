@@ -23,14 +23,14 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC OUTPUTBUFFER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Returns the current output buffer in hexadecimal and ASCII format for the specified *session_id*.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-```sql
+```syntaxsql
 DBCC OUTPUTBUFFER ( session_id [ , request_id ])  
 [ WITH NO_INFOMSGS ]  
 ```  

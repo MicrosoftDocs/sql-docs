@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addqreader_agent"
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addqreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a Queue Reader agent for a given Distributor. This stored procedure is executed at the Distributor on the distribution database or at the Publisher on the publication database.  
   

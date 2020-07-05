@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobserver"
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_jobserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the server for a given job.  
   

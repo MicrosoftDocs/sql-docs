@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Source Editor (Error Output Page)
   Use the **Error Output** page of the **Excel Source Editor** dialog box to select error handling options and to set properties on error output columns.  

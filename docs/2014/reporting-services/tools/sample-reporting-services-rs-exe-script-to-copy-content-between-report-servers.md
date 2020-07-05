@@ -42,9 +42,9 @@ manager: kfile
   
     -   [SharePoint Mode to SharePoint Mode -'bi' site collection](#bkmk_sharepoint_2_sharepoint)  
   
-    -   [Native Mode to Native Mode - Windows Azure Virtual Machine](#bkmk_native_to_native_Azure_vm)  
+    -   [Native Mode to Native Mode - Azure Virtual Machine](#bkmk_native_to_native_Azure_vm)  
   
-    -   [SharePoint Mode -'bi' site collection to a Native Mode Server on Windows Azure Virtual Machine](#bkmk_sharepoint_site_to_native_Azure_vm)  
+    -   [SharePoint Mode -'bi' site collection to a Native Mode Server on Azure Virtual Machine](#bkmk_sharepoint_site_to_native_Azure_vm)  
   
 -   [Verification](#bkmk_verification)  
   
@@ -139,7 +139,9 @@ manager: kfile
   
  The following example migrates content from the native mode **Sourceserver** to the native mode **Targetserver**.  
   
- `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
+ ```cmd
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"
+```
   
  **Usage notes:**  
   
@@ -251,13 +253,13 @@ manager: kfile
 ###  <a name="bkmk_native_2_native"></a> Native Mode Report Server to Native Mode Report Server  
  The following example migrates content from the native mode **Sourceserver** to the native mode **Targetserver**.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
 ```  
   
  The following example adds the security switch:  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
@@ -266,14 +268,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
  ![ssrs_rss_migrate_root_site](../media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_with_site"></a> Native mode to SharePoint Mode -'bi' site collection  
  The following example migrates content from a native mode server to a SharePoint server that contains a site collection of "sites/bi" and a shared documents library. The script creates folders in document the destination library. For example, the script will create a "Reports" and "Data Sources" folders in the target document library.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
@@ -284,32 +286,32 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
 -   To a **TargetServer** SharePoint server that contains a site collection of "sites/bi" and a shared documents library.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Native Mode to Native Mode - Windows Azure Virtual Machine  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Native Mode to Native Mode - Azure Virtual Machine  
  The following example migrates content:  
   
 -   From a Native mode report server **SourceServer**.  
   
--   To a **TargetServer** Native mode report server running on a Windows Azure virtual machine. The **TargetServer** is not joined to the domain of the **SourceServer** and the **User2** is an administrator on the Windows Azure virtual machine **TargetServer**.  
+-   To a **TargetServer** Native mode report server running on an Azure virtual machine. The **TargetServer** is not joined to the domain of the **SourceServer** and the **User2** is an administrator on the Azure virtual machine **TargetServer**.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
->  For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/dn449661.aspx).  
+>  For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report servers on Azure virtual machines, see [Use PowerShell to Create an Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/dn449661.aspx).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint Mode -'bi' site collection to a Native Mode Server on Windows Azure Virtual Machine  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint Mode -'bi' site collection to a Native Mode Server on Azure Virtual Machine  
  The following example migrates content:  
   
 -   From a SharePoint mode report server **SourceServer** that contains a site collection of "sites/bi" and a shared documents library.  
   
--   To a **TargetServer** Native mode report server running on a Windows Azure virtual machine. The **TargetServer** is not joined to the domain of the **SourceServer** and the **User2** is an administrator on the Windows Azure virtual machine **TargetServer**.  
+-   To a **TargetServer** Native mode report server running on an Azure virtual machine. The **TargetServer** is not joined to the domain of the **SourceServer** and the **User2** is an administrator on the Azure virtual machine **TargetServer**.  
   
-```  
+```cmd
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
 ```  
   
@@ -354,5 +356,3 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ## See Also  
  [RS.exe Utility &#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
-  
-  

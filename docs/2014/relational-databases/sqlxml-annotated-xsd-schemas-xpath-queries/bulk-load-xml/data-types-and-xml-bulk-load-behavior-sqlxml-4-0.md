@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "data types [SQLXML], XML Bulk Load"
   - "XML Bulk Load [SQLXML], data types"
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Data Types and XML Bulk Load Behavior (SQLXML 4.0)
   The data types that are specified in the mapping schema (XSD or XDR type and `sql:datatype`) are generally ignored, except in the following cases:  

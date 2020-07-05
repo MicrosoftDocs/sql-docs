@@ -1,6 +1,7 @@
 ---
-title: "Enable Coordinated Backups for Transactional Replication | Microsoft Docs"
-ms.custom: ""
+title: "Enable coordinated backups (Transactional)"
+description: Learn to enable coordinated backups on the distribution database so that the transaction log for the Transactional Replication publication database is not truncated until transactions that have been propagated to the Distributor have been backed up. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -20,7 +21,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Enable Coordinated Backups for Transactional Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   When enabling a database for transactional replication, you can specify that all transactions must be backed up before being delivered to the distribution database. You can also enable coordinated backup on the distribution database so that the transaction log for the publication database is not truncated until transactions that have been propagated to the Distributor have been backed up. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
 ### To enable coordinated backups for a database published with transactional replication  

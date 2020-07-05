@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining Designers and Dialog Boxes
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides design tools that you can use to create, view, test, and create predictions from data mining models.  

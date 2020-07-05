@@ -6,8 +6,8 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.custom: ""
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy an SSIS project from Visual Studio Code with Transact-SQL
 
@@ -43,6 +43,10 @@ To enable `mssql` commands and T-SQL IntelliSense, set the language mode to **SQ
 2. Click **Plain Text** in the lower right-hand corner of the status bar.
  
 3. In the **Select language mode** drop-down menu that opens, select or enter **SQL**, and then press **ENTER** to set the language mode to SQL. 
+
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## Connect to the SSIS Catalog database
 

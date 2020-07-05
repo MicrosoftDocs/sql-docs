@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "connection attributes [ODBC]"
   - "connecting to driver [ODBC], connection attributes"
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connection Attributes
 Connection attributes are characteristics of the connection. For example, because transactions occur at the connection level, the transaction isolation level is a connection attribute. Similarly, the login timeout, or number of seconds to wait while trying to connect before timing out, is a connection attribute.  

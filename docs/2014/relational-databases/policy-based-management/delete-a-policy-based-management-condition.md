@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Delete a Policy-Based Management Condition
   This topic describes how to delete a Policy-based Management condition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

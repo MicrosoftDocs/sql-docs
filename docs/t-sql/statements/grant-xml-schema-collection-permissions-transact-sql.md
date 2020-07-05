@@ -1,6 +1,8 @@
 ---
-title: "GRANT XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT XML Schema Collection Permissions"
+description: Grants permissions on an XML schema collection.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # GRANT XML Schema Collection Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on an XML schema collection.   
   
@@ -27,7 +29,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission  [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  

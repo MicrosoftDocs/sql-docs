@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "variables [Integration Services], updating"
   - "counting rows"
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Row Count Transformation
 

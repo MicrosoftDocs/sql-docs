@@ -23,7 +23,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # DROP EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an event notification trigger from the current database.  
   
@@ -31,7 +31,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP EVENT NOTIFICATION notification_name [ ,...n ]  
 ON { SERVER | DATABASE | QUEUE queue_name }  

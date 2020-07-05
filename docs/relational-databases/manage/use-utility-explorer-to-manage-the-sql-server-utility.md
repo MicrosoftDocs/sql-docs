@@ -1,5 +1,6 @@
 ---
 title: "Use Utility Explorer to Manage the SQL Server Utility | Microsoft Docs"
+description: See various ways of using Utility Explorer to manage SQL Server instances, such as adjusting policy definitions and viewing CPU and storage volume utilization.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Use Utility Explorer to Manage the SQL Server Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utility Explorer, a component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connects to [!INCLUDE[ssDE](../../includes/ssde-md.md)] instances to provide a tree view of all the objects in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. The Utility Explorer content pane provides several ways to view summary and detailed data about the health state of managed instances of SQL Server. Utility Explorer also provides a user interface to view and manage policy definitions. The capabilities of Utility Explorer vary slightly depending on the objects in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, but generally include objects, data, and policies managed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. For more information, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## Create Utility Control Point  
@@ -55,9 +56,9 @@ ms.author: mikeray
  When a node contains a large number of objects, it may be difficult to find the object you are looking for. In such cases, use the filter feature of Utility Explorer to reduce the list to a smaller size. For example, you may want to find a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or only computers with underutilized file space. Right-click on the folder that you want to filter, click the filter button, then click on **Filter Settings** to open the Utility Explorer Filter Settings dialog box. You can filter the list by name, computer CPU, instance CPU, file space, volume space, policy override settings, or last reported time. The **Operator** and **Value** columns provide additional filtering operators in a drop-down list.  
   
 ### Starting PowerShell  
- You can start a PowerShell session by right-clicking most folders and objects in the Object Explorer tree and selecting **Start Powershell**. This starts a Powershell session that has the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell support enabled, and the path set to the object you right-clicked in Object Explorer. You can then enter Powershell commands in an interactive Powershell environment. For more information, see [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
+ You can start a PowerShell session by right-clicking most folders and objects in the Object Explorer tree and selecting **Start PowerShell**. This starts a PowerShell session that has the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell support enabled, and the path set to the object you right-clicked in Object Explorer. You can then enter PowerShell commands in an interactive PowerShell environment. For more information, see [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
   
- Powershell does not have F1 help, but it does include a **Get-Help** cmdlet that provides information about using Powershell. For more information about using Get-Help, see [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+PowerShell does not have F1 help, but it does include a **Get-Help** cmdlet that provides information about using PowerShell. For more information about using Get-Help, see [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

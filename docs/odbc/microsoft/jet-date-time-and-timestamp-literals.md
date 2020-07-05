@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "timestamp literals [ODBC]"
   - "time literals [ODBC]"
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Jet: Date, Time, and Timestamp Literals
 For maximum interoperability, applications should pass date literals in the ODBC canonical format using escape-clause syntax:  

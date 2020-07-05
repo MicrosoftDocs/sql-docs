@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "literals [Integration Services]"
   - "mapping literals [Integration Services]"
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Numeric, string, and Boolean literals
 

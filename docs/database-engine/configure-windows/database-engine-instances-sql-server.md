@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Instances (SQL Server) | Microsoft Docs"
+description: Find out about Database Engine instances. View information on tasks you can perform on instances, such as configuring properties and enabling protocols.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Database Engine Instances (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is a copy of the **sqlservr.exe** executable that runs as an operating system service. Each instance manages several system databases and one or more user databases. Each computer can run multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Applications connect to the instance in order to perform work in a database managed by the instance.  
   
 ## Instances  

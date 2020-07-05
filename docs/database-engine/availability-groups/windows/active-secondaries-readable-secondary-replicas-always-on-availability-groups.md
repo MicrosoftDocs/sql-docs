@@ -1,7 +1,7 @@
 ---
-title: "Offload read-only workload to secondary replica of an availability group"
+title: "Offload workload to secondary availability group replica"
 description: "Learn about offloading read-only queries and reports to a secondary replica of an Always On availability group on SQL Server."
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "06/06/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -19,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Offload read-only workload to secondary replica of an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for read-only access to one or more secondary replicas (*readable secondary replicas*). A readable secondary replica can be in either synchronous-commit availability mode, or asynchronous-commit availability mode. A readable secondary replica allows read-only access to all its secondary databases. However, readable secondary databases are not set to read-only. They are dynamic. A given secondary database changes as changes on the corresponding primary database are applied to the secondary database. For a typical secondary replica, the data, including durable memory optimized tables, in the secondary databases is in near real time. Furthermore, full-text indexes are synchronized with the secondary databases. In many circumstances, data latency between a primary database and the corresponding secondary database is only a few seconds.  
   
@@ -54,9 +54,13 @@ ms.author: mathoma
      The database administrator needs to configure one or more replicas so that, when running under the secondary role, they allow either all connections (just for read-only access) or only read-intent connections.  
   
     > [!NOTE]  
-    >  Optionally, the database administrator can configure any of the availability replicas to exclude read-only connections when running under the primary role.  
+    >  Optionally, the database administrator can configure any of the availability replicas to exclude read-only connections when running under the primary role.
   
      For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+  
+    >[!WARNING]
+    >  Only replicas that are on the same major build of SQL Server will be readable. See [Rolling upgrade basics](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags) for more information.
+  
   
 -   **Availability group listener**  
   
@@ -98,7 +102,7 @@ ms.author: mathoma
   
 -   The DBCC SHRINKFILE operation on files containing disk-based tables might fail on the primary replica if the file contains ghost records that are still needed on a secondary replica.  
   
--   Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], readable secondary replicas can remain online even when the primary replica is offline due to user action or a failure. However, read-only routing does not work in this situation because the availability group listener is offline as well. Clients must connect directly to the read-only secondary replicas for read-only workloads.  
+-   Beginning in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], readable secondary replicas can remain online even when the primary replica is offline due to user action or a failure, for example, synchronization was suspended due to a user command or a failure, or a replica is resolving status due to the WSFC being offline. However, read-only routing does not work in this situation because the availability group listener is offline as well. Clients must connect directly to the read-only secondary replicas for read-only workloads.  
   
 > [!NOTE]  
 >  If you query the [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management view on a server instance that is hosting a readable secondary replica, you might encounter a REDO blocking issue. This is because this dynamic management view acquires an IS lock on the specified user table or view that can block requests by a REDO thread for an X lock on that user table or view.  

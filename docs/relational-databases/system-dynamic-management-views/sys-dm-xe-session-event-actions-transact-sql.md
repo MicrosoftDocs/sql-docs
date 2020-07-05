@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
   - "sys.dm_xe_session_event_actions dynamic management view"
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_xe_session_event_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about event session actions. Actions are executed when events are fired.  
   

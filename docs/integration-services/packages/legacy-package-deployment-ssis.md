@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "packages [Integration Services], deploying"
   - "SSIS packages, deploying"
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Legacy Package Deployment (SSIS)
 

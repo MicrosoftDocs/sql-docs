@@ -1,5 +1,5 @@
 ---
-title: System views - Analytics Platform System Parallel Data Warehouse | Microsoft Docs
+title: System views
 description: System views for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # System views for Analytics Platform System Parallel Data Warehouse

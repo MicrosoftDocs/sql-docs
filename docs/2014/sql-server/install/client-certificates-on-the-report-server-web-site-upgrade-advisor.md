@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Client certificates on the report server web site (Upgrade Advisor)
   Upgrade Advisor detected one or more client certificates on the IIS Web site that hosts the report server or Report Manager virtual directories.  

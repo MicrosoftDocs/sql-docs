@@ -13,9 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "GetStatus method"
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ISSAsynchStatus::GetStatus (OLE DB)
   Returns the status of an asynchronously executing operation.  

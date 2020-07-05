@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLExecDirect function"
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQLExecDirect
   If the statement attribute SQL_SOPT_SS_PARAM_FOCUS is not 0, SQLExecDirect will return SQL_ERROR and generate a diagnostic record with SQLSTATE=HY024 and the message "Invalid attribute value, SQL_SOPT_SS_PARAM_FOCUS (must be zero at execution time)". For more information about SQL_SOPT_SS_PARAM_FOCUS, see [SQLSetStmtAttr](sqlsetstmtattr.md).  

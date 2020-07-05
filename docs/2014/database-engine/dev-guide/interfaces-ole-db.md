@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Interfaces (OLE DB)
   In addition to the core OLE DB interfaces provided by the Microsoft Data Access Components (MDAC), the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider implements the following additional OLE DB interfaces:  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], transactions"
   - "transactions [Integration Services]"
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Transactions
 

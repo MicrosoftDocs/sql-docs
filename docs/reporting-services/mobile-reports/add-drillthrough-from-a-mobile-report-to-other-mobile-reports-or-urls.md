@@ -1,5 +1,6 @@
 ---
 title: "Add drillthrough from a mobile report to other mobile reports or URLs | Microsoft Docs"
+description: You can add drillthrough from any gauge, chart, or data grid in a Reporting Services mobile report to another mobile report or custom URL.
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

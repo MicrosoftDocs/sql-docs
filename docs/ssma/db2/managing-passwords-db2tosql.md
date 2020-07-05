@@ -2,7 +2,7 @@
 title: "Managing Passwords (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 07/05/2020
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -82,45 +82,48 @@ Specify a valid password using one of the following three methods:
     > 2.  When no password exists in the server section of the server connection file or the script file or if it has not been secured on the local machine, the console prompts you to enter the password.  
   
 ## Exporting or Importing Encrypted Passwords  
-The SSMA Console application allows you to export encrypted database passwords present in a file on the local machine to a secured file and vice-versa. It helps in making the encrypted passwords machine independent. Export functionality reads the server id and password from the local protected storage and saves the information in an encrypted file. The user is prompted to enter the password for the secured file. Make sure the password entered is 8 character length or more. This secured file is portable across different machines. Import functionality reads the server id and password information from the secured file. The user is prompted to enter the password for the secured file and appends the information to the local protected storage.  
-  
-Example:  
+The SSMA Console application allows you to export encrypted database passwords present in a file on the local machine to a secured file and vice-versa. It helps in making the encrypted passwords machine independent.
 
-    Export password
-    
-    Enter password for protecting the exported file
-    
-    C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
-Example:  
+_Export functionality_ reads the server id and password from the local protected storage. The system then saves the id and password in an encrypted file. The user is prompted to enter the password for the secured file. Make sure the password entered is 8 or more characters in length. This secured file is portable across different machines.
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file
-    
-    C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
+_Import functionality_ reads the server id and password information from the secured file. The user is prompted to enter the password for the secured file, and appends the information to the local protected storage.  
 
-  
+### Export example
+
+1. Export the password.
+
+2. Enter the password for protecting the exported file.
+
+3. Run: &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
+
+4. Enter the password for protecting the exported file: xxxxxxxx
+
+5. Confirm the password: xxxxxxxx
+
+6. Run: &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
+
+7. Enter the password for protecting the exported file: xxxxxxxx
+
+8. Confirm the password: xxxxxxxx  
+
+### Import example
+
+1. Import an encrypted password.
+
+2. Enter the password for protecting the imported file.
+
+3. Run: &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
+
+4. Enter the password to import the servers from encrypted file: xxxxxxxx
+
+5. Confirm the password: xxxxxxxx
+
+6. Run: &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
+
+7. Enter the password to import the servers from encrypted file: xxxxxxxx
+
+8. Confirm password: xxxxxxxx
+
 ## See Also  
 [Executing the SSMA Console](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

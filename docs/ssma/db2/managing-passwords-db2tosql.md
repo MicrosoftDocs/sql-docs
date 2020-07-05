@@ -64,19 +64,22 @@ Specify a valid password using one of the following three methods:
         Execute the `SSMAforDB2Console.exe` with the`-securepassword` and `-remove` switch at command line passing the server ids, to remove the encrypted passwords from the protected storage file present on the local machine.  
   
         Example:  
-        
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"  
-  
+
+        ```console
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"
+        ```
+
     -   **Listing Server Ids whose passwords are encrypted**  
   
         Execute the `SSMAforDB2Console.exe` with the `-securepassword` and `-list` switch at command line to list all the server ids whose passwords have been encrypted.  
   
         Example:  
-        
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -list  
 
-  
+        ```console
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -list
+        ```
+
     > [!NOTE]  
     > 1.  The password in clear text mentioned in script or server connection file takes precedence over the encrypted password in secured file.  
     > 2.  When no password exists in the server section of the server connection file or the script file or if it has not been secured on the local machine, the console prompts you to enter the password.  

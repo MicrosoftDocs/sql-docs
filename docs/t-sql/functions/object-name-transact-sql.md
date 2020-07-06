@@ -89,7 +89,7 @@ GO
 ```  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyID int;  
+DECLARE @MyID INT;  
 SET @MyID = (SELECT OBJECT_ID('AdventureWorks2012.Production.Product',  
     'U'));  
 SELECT name, object_id, type_desc  
@@ -122,7 +122,7 @@ SELECT QUOTENAME(DB_NAME(database_id))
     + N'.'   
     + QUOTENAME(OBJECT_NAME(object_id, database_id))  
     , *   
-FROM sys.dm_db_index_operational_stats(null, null, null, null);  
+FROM sys.dm_db_index_operational_stats(NULL, NULL, NULL, NULL);  
 GO  
 ```  
   

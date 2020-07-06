@@ -25,7 +25,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISNUMERIC (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determines whether an expression is a valid numeric type.  
   
@@ -65,7 +65,7 @@ USE AdventureWorks2012;
 GO  
 SELECT City, PostalCode  
 FROM Person.Address   
-WHERE ISNUMERIC(PostalCode)<> 1;  
+WHERE ISNUMERIC(PostalCode) <> 1;  
 GO  
 ```  
   
@@ -75,7 +75,7 @@ GO
 ```sql
 USE master;  
 GO  
-SELECT name, isnumeric(name) AS IsNameANumber, database_id, isnumeric(database_id) AS IsIdANumber   
+SELECT name, ISNUMERIC(name) AS IsNameANumber, database_id, ISNUMERIC(database_id) AS IsIdANumber   
 FROM sys.databases;  
 GO  
 ```  
@@ -83,5 +83,5 @@ GO
 ## See also
 
 - [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)
-- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/- system-functions-category-transact-sql.md)
+- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

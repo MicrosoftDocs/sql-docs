@@ -15,7 +15,7 @@ ms.reviewer:
 
 ---
 # Index Columns Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this dialog box to select the columns for an index and set their sort orders. An index can use one or more columns, and each column can be sorted either in ascending or descending order. To access this dialog box, in the **Indexes/Keys** dialog, click the ellipsis button for the **Columns** row in the **General** section.  
   
 ## Options  

@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # CURRENT_TRANSACTION_ID (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 This function returns the transaction ID of the current transaction in the current session.
   

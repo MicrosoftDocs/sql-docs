@@ -14,7 +14,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # Configure usage and diagnostic data collection for SQL Server tools (CEIP)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft identify ways to make our software better.  You can configure tools to opt in or out at any time.  
   

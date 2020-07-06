@@ -23,7 +23,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LOG10 (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the base-10 logarithm of the specified **float** expression.  
   
@@ -51,9 +51,9 @@ LOG10 ( float_expression )
  The following example calculates the `LOG10` of the specified variable.  
   
 ```  
-DECLARE @var float;  
+DECLARE @var FLOAT;  
 SET @var = 145.175643;  
-SELECT 'The LOG10 of the variable is: ' + CONVERT(varchar,LOG10(@var));  
+SELECT 'The LOG10 of the variable is: ' + CONVERT(VARCHAR,LOG10(@var));  
 GO  
 ```  
   

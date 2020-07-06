@@ -15,7 +15,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

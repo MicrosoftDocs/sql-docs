@@ -19,7 +19,7 @@ ms.reviewer:
 
 ---
 # Types of Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The Query and View Designer provides built-in features for some query types--Select, Insert Results, Insert Values, Update, Delete, and Make Table--and also supports UNION, Full-text search, and CASE expression queries.  
   
 ## In This Section  

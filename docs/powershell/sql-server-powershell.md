@@ -13,7 +13,7 @@ ms.date: 06/11/2020
 
 # SQL Server PowerShell
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 **[Install SQL Server PowerShell](download-sql-server-ps-module.md)**
 

@@ -14,11 +14,15 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 
 # Change the default language runtime version
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sqlserver2016-md](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article describes how to change the default version of R used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md)).
 
-If you have installed one or more CUs, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
+Cumulative Update (CU) 15 and later for SQL Server 2016 SP2 include R version **3.5**. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+
+## Change runtime version
+
+If you have installed Cumulative Update (CU) 15 or later for SQL Server 2016 SP2, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
 
 For example, if you install a CU containing R 3.5, a new `R_SERVICES` folder is created:
 

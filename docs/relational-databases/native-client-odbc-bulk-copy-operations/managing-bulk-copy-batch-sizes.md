@@ -19,7 +19,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Bulk Copy Batch Sizes
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The primary purpose of a batch in bulk copy operations is to define the scope of a transaction. If a batch size is not set, then bulk copy functions consider an entire bulk copy to be one transaction. If a batch size is set, then each batch constitutes a transaction that is committed when the batch finishes.  
   

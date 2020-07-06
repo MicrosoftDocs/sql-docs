@@ -22,7 +22,7 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # DROP COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Drops a column encryption key from a database.  
   

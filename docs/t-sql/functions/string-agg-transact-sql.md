@@ -19,9 +19,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sql
 ---
 # STRING_AGG (Transact-SQL)
 
-<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asdw.md)]-->
+<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
 
-[!INCLUDE [sqlserver2017-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. 
  

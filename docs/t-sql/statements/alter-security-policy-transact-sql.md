@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Alters a security policy.  
   

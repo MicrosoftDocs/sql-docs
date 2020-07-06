@@ -23,7 +23,7 @@ ms.author: "jroth"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.syscharsets (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains one row for each character set and sort order defined for use by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. One of the sort orders is marked in **sysconfigures** as the default sort order. This is the only one actually being used.  
   

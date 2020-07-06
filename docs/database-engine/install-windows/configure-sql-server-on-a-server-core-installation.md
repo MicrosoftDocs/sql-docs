@@ -190,13 +190,14 @@ $Tcp.IsEnabled = $true
 $Tcp.Alter()  
 $Tcp  
 ```  
-## Limitations and Considerations
-Enabling TCP/IP may fail, on Windows Server 2019 Core Installations + SQL Server 2017 or later, in case that SQL Management Objects and [SQLPS](https://docs.microsoft.com/en-us/sql/tools/sqlps-utility?view=sqlallproducts-allversions) are missing. 
+
+## Limitations and considerations
+Enabling TCP/IP may fail on Windows Server 2019 core installations with SQL Server 2017 or later if the SQL Management Objects and/or [SQLPS](../../tools/sqlps-utility.md) are mising. 
+
+For more information on obtaining SQLPS for SQL Server on Windows Server Core, see [SQL Server PowerShell](../../powershell/sql-server-powershell.md).
 
 > [!NOTE] 
 > SQLPS is deprecated, yet some commands and environments still using it. There is no equivalent for the above command in the SQLSERVER Powershell Module.
-
-If you are affected by this, please consult the article [SQL Server PowerShell](https://docs.microsoft.com/en-us/sql/powershell/sql-server-powershell?view=sqlallproducts-allversions) how to obtain SQLPS for SQL Server on Server Core.
 
 ##  <a name="BKMK_Profiler"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler  
  On a remote machine, start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and select New Trace from the File menu, the application displays a Connect to Server dialog box where you can specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, residing on the Server Core machine, to which you want to connect. For more information, see [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md).  

@@ -51,9 +51,9 @@ LOG10 ( float_expression )
  The following example calculates the `LOG10` of the specified variable.  
   
 ```  
-DECLARE @var float;  
+DECLARE @var FLOAT;  
 SET @var = 145.175643;  
-SELECT 'The LOG10 of the variable is: ' + CONVERT(varchar,LOG10(@var));  
+SELECT 'The LOG10 of the variable is: ' + CONVERT(VARCHAR,LOG10(@var));  
 GO  
 ```  
   

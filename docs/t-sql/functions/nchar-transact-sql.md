@@ -48,7 +48,7 @@ NCHAR ( integer_expression )
   
 ```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
-DECLARE @d nvarchar(10) = N'𣅿';
+DECLARE @d NVARCHAR(10) = N'𣅿';
 -- Old style method.  
 SELECT NCHAR(0xD84C) + NCHAR(0xDD7F);   
   
@@ -65,7 +65,7 @@ SELECT NCHAR(UNICODE(@d));
  The following example uses the `UNICODE` and `NCHAR` functions to print the `UNICODE` value and the `NCHAR` (Unicode character) of the second character of the `København` character string, and to print the actual second character, `ø`.  
   
 ```sql  
-DECLARE @nstring nchar(8);  
+DECLARE @nstring NCHAR(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
    NCHAR(UNICODE(SUBSTRING(@nstring, 2, 1)));  
@@ -87,7 +87,7 @@ GO
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(9);  
+DECLARE @position INT, @nstring NCHAR(9);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  

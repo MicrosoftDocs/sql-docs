@@ -656,6 +656,18 @@ If the **Enable Always On support** option on the context menu appears to be dis
 4.  Follow the instructions in [Step 2: Add SSISDB to an Always On Availability Group](#Step2) to add the SSISDB back to an availability group.  
   
 5.  Follow the instructions in [Step 3: Enable SSIS support for Always On](#Step3).  
+
+
+## By default the SSISDB Catalog does not support delegation for double-hop scenario
+
+By default, the remote invocation of SSIS packages stored under SSISDB catalog does not support the delegation of credentials, or what is sometimes referred to as a double-hop. 
+
+Imagine a scenario where a user logs into a client machine A and launches SQL Server Management Studio(SSMS). From within SSMS the user connects to a SQL Server hosted on second machine B that has the SSISDB catalog. The SSIS package is stored under this SSISDB catalog and the package in-turn connects to a SQL Server service that is running on a third machine C (the package could be accessing any other services as well). When user invokes the execution of SSIS package from machine A, SSMS first successfully passes user credentials from machine A to machine B (where SSIS runtime process is executing the package). The SSIS execution runtime process (ISServerExec.exe) is now required to delegate the user credentials from the machine B to machine C for the execution to complete successfully. However, delegation of credentials is not enabled by default.
+
+A user can enable delegation of credentials by granting the "Trust this user for delegation to any service (Kerberos Only)" right to the SQL Server service account(on machine B), which launches ISServerExec.exe as a child process. This is referred to as setting up unconstrained delegation or open delegation for SQL Server service account. Before you grant this right, consider whether it meets the security requirements of your organization.
+
+SSISDB doesn't support constrained delegation. In a double-hop environment, if the service account of the SQL Server that hosts the SSISDB catalog (machine B in above example) is setup for constrained delegation, ISServerExec.exe will not be able to delegate the credentials to the third machine (machine C). This is applicable to scenarios where Windows Credential Guard is enabled which mandatorily requires constrained delegation to be setup.
+
   
 ##  <a name="RelatedContent"></a> Related Content  
   

@@ -15,9 +15,6 @@ ms.author: chugu
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
-
 Displays the information for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker.
 
 |Column name|Data type|Description|  

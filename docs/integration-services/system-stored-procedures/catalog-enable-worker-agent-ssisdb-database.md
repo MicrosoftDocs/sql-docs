@@ -15,9 +15,6 @@ ms.author: chugu
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
-
 Enable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.
 
 ## Syntax

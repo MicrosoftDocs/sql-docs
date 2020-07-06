@@ -15,9 +15,6 @@ ms.author: chugu
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
-
   Changes the description of an existing customized logging level. For more info about customized logging levels, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## Syntax  

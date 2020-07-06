@@ -18,7 +18,7 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 
 This article describes how to change the default version of R used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
-The default R runtime in SQL Server 2016 R Services is version 3.2.2. Cumulative Update (CU) 15 and later for SQL Server 2016 SP2 include R version 3.5. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+Cumulative Update (CU) 15 and later for SQL Server 2016 SP2 include R version 3.5. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md). The default R runtime in SQL Server 2016 R Services is version 3.2.2.
 
 ## Change runtime version
 

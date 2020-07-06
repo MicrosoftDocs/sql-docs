@@ -67,8 +67,8 @@ LOG ( float_expression )
  The following example calculates the `LOG` for the specified **float** expression.  
   
 ```  
-DECLARE @var float = 10;  
-SELECT 'The LOG of the variable is: ' + CONVERT(varchar, LOG(@var));  
+DECLARE @var FLOAT = 10;  
+SELECT 'The LOG of the variable is: ' + CONVERT(VARCHAR, LOG(@var));  
 GO  
 ```  
   

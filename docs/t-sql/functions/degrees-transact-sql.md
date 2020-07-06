@@ -45,7 +45,7 @@ This example returns the number of degrees in an angle of PI/2 radians.
   
 ```  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
-CONVERT(varchar, DEGREES((PI()/2)));  
+CONVERT(VARCHAR, DEGREES((PI()/2)));  
 GO  
 ```  
   

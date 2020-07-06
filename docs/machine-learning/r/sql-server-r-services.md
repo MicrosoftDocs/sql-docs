@@ -58,7 +58,7 @@ The following lists the versions of Python and R that are included in SQL Server
 
 SQL Server Version | Default R versions |
 |-|-|
-| SQL Server 2016 RTM to SP2 CU14 | 3.2.2 |
+| SQL Server 2016 RTM - SP2 CU14 | 3.2.2 |
 | SQL Server 2016 SP2 CU15 and later | 3.2.2 (default) and 3.5 |
 
 For newer versions of R, use [Machine Learning Services for SQL Server 2017 and later](../sql-server-machine-learning-services.md).

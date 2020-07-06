@@ -4,9 +4,8 @@ description: Learn how to change the default version of the R runtime used by a 
 ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 06/18/2020
-ms.topic: conceptual
+ms.date: 07/06/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph

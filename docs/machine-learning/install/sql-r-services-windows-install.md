@@ -4,7 +4,7 @@ titleSuffix:
 description: Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -17,7 +17,7 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 
 > [!NOTE]
-> In SQL Server 2017 and later, R is included in [Machine Learning Services](../sql-server-machine-learning-services.md) along with Python. If you want R  and have SQL Server 2017 or later, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature.
+> In SQL Server 2017 and later, R is included in [Machine Learning Services](../sql-server-machine-learning-services.md) along with Python. If you want R and have SQL Server 2017 or later, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature.
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -181,6 +181,9 @@ On disconnected servers, extra steps are required. For more information, see [In
 1. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including R Services. Setup downloads the CAB files necessary to update all features.
 
 1. Continue through the wizard, accepting the licensing terms for the R distribution.
+
+> [!NOTE]
+> Cumulative Update (CU) 15 and later for SQL Server 2016 SP2 include R version 3.5. For more information, see [Change the default language runtime version](change-default-language-runtime-version.md).
 
 <a name="bkmk_FollowUp"></a> 
 

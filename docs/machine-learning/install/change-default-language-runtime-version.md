@@ -16,9 +16,9 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE[sqlserver2016-md](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article describes how to change the default version of R used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md)).
+This article describes how to change the default version of R used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
-Cumulative Update (CU) 15 and later for SQL Server 2016 SP2 include R version **3.5**. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+The default R runtime in SQL Server 2016 R Services is version 3.2.2. Cumulative Update (CU) 15 and later for SQL Server 2016 SP2 include R version 3.5. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 ## Change runtime version
 
@@ -55,7 +55,7 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER01\R_SERVICES.3.5\l
 
 In this example, you don't need to include the `/rhome` argument since you're specifying the same folder where **RegisterRExt.exe** is located.
 
-## Remove a language version
+## Remove a runtime version
 
 To remove a version of R, use **RegisterRExt.exe** with the `/cleanup` command-line argument, using the same `/rhome` and `/instance` arguments described previously.
 

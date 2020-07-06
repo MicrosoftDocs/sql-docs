@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Navigate in the Query and View Designer (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can work in the Query and View Designer using the keyboard or the mouse. Refer to the following tables for specific methods.  
   
 ## Any Pane  

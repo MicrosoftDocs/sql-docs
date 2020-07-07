@@ -49,7 +49,7 @@ ms.author: mathoma
      For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    SQL Server Service Broker is not MultiSubnet aware. Set `RegisterAllProvidersIP` to 0 and verify that the cluster has required permission in DNS to use static IP addresses. See [configure availability group listener](create-or-configure-an-availability-group-listener-sql-server.md) to learn more. 
+    SQL Server Service Broker is not MultiSubnet aware. Set `RegisterAllProvidersIP` to 0 and verify that the cluster has required permission in DNS to use static IP addresses. See [configure availability group listener](create-or-configure-an-availability-group-listener-sql-server.md) to learn more. Service Broker may delay message with status "CONVERSING" trying to use a disabled IP address.
 
 3.  **Grant CONNECT permission on the endpoint.**  
   

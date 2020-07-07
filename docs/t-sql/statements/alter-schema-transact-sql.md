@@ -77,6 +77,8 @@ ALTER SCHEMA schema_name
  Moving an object such as a table or synonym will not automatically update references to that object. You must modify any objects that reference the transferred object manually. For example, if you move a table and that table is referenced in a trigger, you must modify the trigger to reflect the new schema name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before moving it.  
 
  To change the schema of a table by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click on the table and then click **Design**. Press **F4** to open the Properties window. In the **Schema** box, select a new schema.  
+ 
+ ALTER SCHEMA uses a schema level lock.
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

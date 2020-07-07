@@ -53,21 +53,6 @@ Additional files can be found directly on GitHub:
 
 You can use the `.bak` file to restore your sample database to your SQL Server instance. You can do so using the [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) command, or using the graphical interface (GUI) in [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
-# [Transact-SQL (T-SQL)](#tab/tsql)
-
-You can restore your sample database using Transact-SQL (T-SQL). An example to restore AdventureWorks2019 is provided below, but the database name and installation file path may vary depending on your environment. 
-
-To restore AdventureWorks2019, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
-
-```sql
-USE [master]
-RESTORE DATABASE [AdventureWorks2019] 
-FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
-WITH  FILE = 1,  NOUNLOAD,  STATS = 5
-GO
-
-```
-
 # [SQL Server Management Studio (SSMS)](#tab/ssms)
 
 If you're not familiar using SQL Server Management Studio (SSMS), you can see [connect & query](../ssms/tutorials/connect-query-sql-server.md) to get started. 
@@ -94,6 +79,21 @@ To restore your database in SQL Server Management Studio, follow these steps:
    :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
 
 For more information on restoring a SQL Server database, see [Restore a database backup using SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
+
+# [Transact-SQL (T-SQL)](#tab/tsql)
+
+You can restore your sample database using Transact-SQL (T-SQL). An example to restore AdventureWorks2019 is provided below, but the database name and installation file path may vary depending on your environment. 
+
+To restore AdventureWorks2019, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
+
+```sql
+USE [master]
+RESTORE DATABASE [AdventureWorks2019] 
+FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
+WITH  FILE = 1,  NOUNLOAD,  STATS = 5
+GO
+
+```
 
 # [Azure Data Studio](#tab/data-studio)
 

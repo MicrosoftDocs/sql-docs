@@ -2,7 +2,7 @@
 title: "Managing Passwords (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 07/06/2020
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -14,11 +14,7 @@ author: "Shamikg"
 ms.author: "Shamikg"
 ---
 # Managing Passwords (MySQLToSQL)
-This section is about securing database passwords and the procedure to import or export them across servers:  
-  
-1.  Securing Password  
-  
-2.  Exporting or Importing Encrypted Password  
+This article is about securing database passwords and the procedure to import or export them across servers.
   
 ## Securing Password  
 SSMA allows you to secure your password of a database.  
@@ -41,27 +37,27 @@ Specify a valid password using one of the following three methods:
   
             The server definition ids and its corresponding encrypted passwords are stored in a file on the local machine  
             
-            Example 1:
+            **Example 1:**
             
-                Specify password
-                
-                C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml"
-                
-                Enter password for server_id 'XXX_1': xxxxxxx
-                
-                Re-enter password for server_id 'XXX_1': xxxxxxx
+            1. Specify password
             
-            Example 2:
+            2. `C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml"`
             
-                C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml" -o
-                
-                Enter password for server_id 'source_1': xxxxxxx
-                
-                Re-enter password for server_id 'source_1': xxxxxxx
-                
-                Enter password for server_id 'target_1': xxxxxxx
-                
-                Re-enter password for server_id 'target _1': xxxxxxx
+            3. Enter password for server_id 'XXX_1': xxxxxxx
+            
+            4. Re-enter password for server_id 'XXX_1': xxxxxxx
+            
+            **Example 2:**
+            
+            1. `C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml" -o`
+            
+            2. Enter password for server_id 'source_1': xxxxxxx
+            
+            3. Re-enter password for server_id 'source_1': xxxxxxx
+            
+            4. Enter password for server_id 'target_1': xxxxxxx
+            
+            5. Re-enter password for server_id 'target _1': xxxxxxx
             
     -   **Removing Encrypted Passwords**  
   
@@ -69,8 +65,10 @@ Specify a valid password using one of the following three methods:
   
         Example:  
 
-            C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
-            C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove "source_1,target_1"  
+        ```console
+        C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
+        C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove "source_1,target_1"  
+        ```
   
     -   **Listing Server Ids whose passwords are encrypted**  
   
@@ -78,50 +76,56 @@ Specify a valid password using one of the following three methods:
   
         Example:  
         
-            C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  
+        ```console
+        C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  
+        ```
   
     > [!NOTE]  
     > 1.  The password in clear text mentioned in script or server connection file takes precedence over the encrypted password in secured file.  
     > 2.  When no password exists in the server section of the server connection file or the script file or if it has not been secured on the local machine, the console prompts you to enter the password.  
   
 ## Exporting or Importing Encrypted Passwords  
-The SSMA Console application allows you to export encrypted database passwords present in a file on the local machine to a secured file and vice-versa. It helps in making the encrypted passwords machine independent. Export functionality reads the server id and password from the local protected storage and saves the information in an encrypted file. The user is prompted to enter the password for the secured file. Make sure the password entered is 8 character length or more. This secured file is portable across different machines. Import functionality reads the server id and password information from the secured file. The user is prompted to enter the password for the secured file and appends the information to the local protected storage.  
-  
-Example:  
+The SSMA Console application allows you to export encrypted database passwords present in a file on the local machine to a secured file and vice-versa. It helps in making the encrypted passwords machine independent.
 
-    Export password
-    
-    Enter password for protecting the exported file
-    
-    C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforMySQLConsole.EXE -p -e "MySQLDB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
-Example:  
+Export functionality reads the server id and password from the local protected storage and saves the information in an encrypted file. The user is prompted to enter the password for the secured file. Make sure the password entered is 8 character length or more. This secured file is portable across different machines.
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file
-    
-    C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforMySQLConsole.EXE -p -i "MySQLDB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
+Import functionality reads the server id and password information from the secured file. The user is prompted to enter the password for the secured file and appends the information to the local protected storage.  
+  
+### Export example:  
+
+1. Export password
+
+2. Enter password for protecting the exported file
+
+3. C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -export all "machine1passwords.file"
+
+4. Enter password for protecting the exported file: xxxxxxxx
+
+5. Please confirm password: xxxxxxxx
+
+6. C:\SSMA\SSMAforMySQLConsole.EXE -p -e "MySQLDB_1_1,Sql_1" "machine2passwords.file"
+
+7. Enter password for protecting the exported file: xxxxxxxx
+
+8. Please confirm password: xxxxxxxx  
+  
+### Import example:  
+
+1. Import an encrypted password
+
+2. Enter password for protecting the imported file
+
+3. C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -import all "machine1passwords.file"
+
+4. Enter password to import the servers from encrypted file: xxxxxxxx
+
+5. Please confirm password: xxxxxxxx
+
+6. C:\SSMA\SSMAforMySQLConsole.EXE -p -i "MySQLDB_1,Sql_1" "machine2passwords.file"
+
+7. Enter password to import the servers from encrypted file: xxxxxxxx
+
+8. Please confirm password: xxxxxxxx  
   
 ## See Also  
 [Executing the SSMA Console (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  

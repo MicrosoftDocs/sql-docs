@@ -54,12 +54,12 @@ There are two ways to execute R scripts in R Services:
 
 ## R versions
 
-The following lists the versions of the R runtime that are included in SQL Server 2016 R Services. For more information, see [Change the default language runtime version](../install/change-default-language-runtime-version.md).
+The following lists the versions of the R runtime that are included in SQL Server 2016 R Services. For more information, see [Change the default language runtime version](../install/change-default-language-runtime-version.md). Cumulative Update (CU) 16 for SQL Server 2016 Service Pack (SP) 2 and later include newer R runtimes.
 
-SQL Server Version | Default R runtime versions |
+SQL Server version | Default R runtime versions |
 |-|-|
-| SQL Server 2016 RTM - SP2 CU14 | 3.2.2 |
-| SQL Server 2016 SP2 CU15 and later | 3.2.2 and 3.5.2 |
+| SQL Server 2016 RTM - SP2 CU15 | 3.2.2 |
+| SQL Server 2016 SP2 CU16 and later | 3.2.2 and 3.5.2 |
 
 For other versions of R, or to run Python, use [Machine Learning Services for SQL Server 2017 and later](../sql-server-machine-learning-services.md).
 

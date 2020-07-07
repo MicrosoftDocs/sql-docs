@@ -85,9 +85,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Suppresses all informational messages that have severity levels from 0 through 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]
  Specifying one or more of these options limits the result sets returned by the statement to the specified option or options. If no options are specified, all statistics information is returned.  
-  
+
  STATS_STREAM is [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Result Sets

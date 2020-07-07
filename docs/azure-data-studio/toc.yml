@@ -126,8 +126,6 @@
   items:
   - name: SQL tools
     href: ../tools/overview-sql-tools.md
-  - name: SQL tools
-    href: ../tools/overview-sql-tools.md
   - name: Azure Developer tools
     href: https://docs.microsoft.com/azure/?product=developer-tools
 - name: Resources

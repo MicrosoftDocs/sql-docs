@@ -631,9 +631,8 @@ SQL Server 2012 includes StreamInsight 2.0. StreamInsight 2.0 requires a Microso
 ## <a name="UA"></a>10.0 Upgrade Advisor  
   
 ### 10.1 Link to Install Upgrade Advisor Is Not Enabled on Chinese (HK) Operating Systems  
-Issue: When you try to install Upgrade Advisor on any supported Windows version in Chinese (Hong Kong) operating systems (OS), you might find that the link to install Upgrade Advisor is not enabled.  
+Issue: When you try to install Upgrade Advisor on any supported Windows version in Chinese (Hong Kong SAR) operating systems (OS), you might find that the link to install Upgrade Advisor is not enabled.  
   
 **Workaround**: Locate the **SQLUA.msi** file on your SQL Server 2012 media at `\1028_CHT_LP\x64\redist\Upgrade Advisor` or at `\1028_CHT_LP\x86\redist\Upgrade Advisor`, depending on your operating system architecture.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  

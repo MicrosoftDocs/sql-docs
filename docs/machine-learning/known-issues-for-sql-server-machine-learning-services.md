@@ -511,7 +511,7 @@ Don't run the library install in parallel to the long-running query. Or rerun th
 
 **Applies to:** SQL Server 2019 on Linux & Big Data Clusters only.
 
-### 22. Hang when executing R scripts containing parallel execution
+### 22. SQL Server stops responding when executing R scripts containing parallel execution
 
 SQL Server 2019 contains a regression that effects R scripts that use parallel execution. Examples include using `rxExec` with `RxLocalPar` compute context and scripts that use the parallel package. This problem is caused by errors the parallel package encounters when writing to the null device while executing in SQL Server.
 

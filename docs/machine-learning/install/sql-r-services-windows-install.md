@@ -4,7 +4,7 @@ titleSuffix:
 description: Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/06/2020
+ms.date: 07/07/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -183,9 +183,9 @@ On disconnected servers, extra steps are required. For more information, see [In
 1. Continue through the wizard, accepting the licensing terms for the R distribution.
 
 > [!NOTE]
-> Cumulative Update (CU) 15 and later for SQL Server 2016 SP2 include R version 3.5. For more information, see [Change the default language runtime version](change-default-language-runtime-version.md).
+> Cumulative Update (CU) 16 and later for SQL Server 2016 SP2 include a newer version of the R runtime. For more information, see [Change the default language runtime version](change-default-language-runtime-version.md).
 
-<a name="bkmk_FollowUp"></a> 
+<a name="bkmk_FollowUp"></a>
 
 ## Additional configuration
 

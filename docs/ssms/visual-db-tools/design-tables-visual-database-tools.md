@@ -23,29 +23,29 @@ ms.date: 08/25/2017
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-The Table Designer is a visual tool where you design and visualize [database tables](../../relational-databases/tables/tables.md). Use the SQL Server Management Studio (SSMS) Table Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  
+The Table Designer is a visual tool where you design and visualizes [database tables](../../relational-databases/tables/tables.md). Use the SQL Server Management Studio (SSMS) Table Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  
 
-## Create a table  
-  
-1. Right-click the **Tables** node in your database and select  **New** > **Table**:  
-  
+## Create a table
+
+1. Right-click the **Tables** node in your database and select  **New** > **Table**:
+
     ![New table](../media/design-tables/new-table.png)
-  
+
 2. Add [columns](column-properties-visual-database-tools.md) to your table:
-  
+
     ![design table](../media/design-tables/new-table2.png)
 
 3. Close the designer and save your changes.
-  
-## Update a table  
-  
-1. Right-click the table under the **Tables** node of your database and select **Design**:  
-  
-   ![Update table](../media/design-tables/update-table.png)
+
+## Update a table
+
+1. Right-click the table under the **Tables** node of your database and select **Design**:
+
+    ![Update table](../media/design-tables/update-table.png)
 
 2. Update the desired table settings:
 
-   ![Create a table](../media/design-tables/update-table2.png)
+    ![Create a table](../media/design-tables/update-table2.png)
 
 3. Close the designer and save your changes.
 

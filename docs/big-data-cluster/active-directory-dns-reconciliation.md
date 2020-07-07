@@ -82,4 +82,4 @@ Once BDC is deleted, there is no additional dynamic work to delete DNS entries w
 
 - [Deploy SQL Server Big Data Clusters in Active Directory mode](deploy-active-directory.md)
 - [Manage big data cluster access in Active Directory mode](active-directory-objects.md)
-- [Deploy multiple SQL Server Big Data Clusters in the same Active Directory domain](active-directory-deployment-background)
+- [Deploy multiple SQL Server Big Data Clusters in the same Active Directory domain](active-directory-deployment-background.md)

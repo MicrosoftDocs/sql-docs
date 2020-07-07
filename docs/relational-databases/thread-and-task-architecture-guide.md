@@ -2,7 +2,7 @@
 title: "Thread and Task Architecture Guide | Microsoft Docs"
 description: Learn about thread and task architecture in SQL Server, including task scheduling, hot add CPU, and best practices for using computers with more than 64 CPUs.
 ms.custom: ""
-ms.date: "10/11/2019"
+ms.date: "07/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -63,7 +63,7 @@ While there are 3 branches in the execution plan, at any point during execution 
 1.  The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderHeaderBulk` (build input of the join) executed concurrently with the branch where a *Clustered Index Scan* was used on the `Sales.SalesOrderDetailBulk` (probe input of the join). For more details on what is a ***Grace Hash Join***, see [Joins (SQL Server)](../relational-databases/performance/joins.md#grace_hash).
 2. The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderDetailBulk` (probe input of the join) executes concurrently with the branch where the *Bitmap* was created and currently the *Hash Match* is executing.
 
-The Showplan XML shows that 16 worker threads were reserved and used on NUMA nodes 0 and 1. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. For this plan, each of branche is limited to a number of worker threads that's equal to MaxDOP (8).
+The Showplan XML shows that 16 worker threads were reserved and used on NUMA nodes 0 and 1. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. For this plan, each branch is limited to a number of worker threads that's equal to MaxDOP (8).
 
 ```xml
 <ThreadStat Branches="2" UsedThreads="16">
@@ -200,7 +200,7 @@ Microsoft Windows uses a numeric priority system that ranges from 1 through 31 t
 
 By default, each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is a priority of 7, which is referred to as the normal priority. This default gives [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] threads a high enough priority to obtain sufficient CPU resources without adversely affecting other applications. 
 
-The [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) configuration option can be used to increase the priority of the threads from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to 13. This is referred to as high priority. This setting gives [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] threads a higher priority than most other applications. Thus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] threads will generally be dispatched whenever they are ready to run and will not be pre-empted by threads from other applications. This can improve performance when a server is running only instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and no other applications. However, if a memory-intensive operation occurs in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], however, other applications are not likely to have a high-enough priority to pre-empt the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] thread. 
+The [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) configuration option can be used to increase the priority of the threads from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to 13. This is referred to as high priority. This setting gives [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] threads a higher priority than most other applications. Thus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] threads will generally be dispatched whenever they are ready to run and will not be preempted by threads from other applications. This can improve performance when a server is running only instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and no other applications. However, if a memory-intensive operation occurs in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], however, other applications are not likely to have a high-enough priority to preempt the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] thread. 
 
 If you are running multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a computer, and turn on priority boost for only some of the instances, the performance of any instances running at normal priority can be adversely affected. Also, the performance of other applications and components on the server can decline if priority boost is turned on. Therefore, it should only be used under tightly controlled conditions.
 

@@ -232,7 +232,7 @@ GO
   
 -   **Missing and double reads caused by row updates**  
   
-    -   Missing a updated row or seeing an updated row multiple times  
+    -   Missing an updated row or seeing an updated row multiple times  
   
          Transactions that are running at the `READ UNCOMMITTED` level do not issue shared locks to prevent other transactions from modifying data read by the current transaction. Transactions that are running at the READ COMMITTED level do issue shared locks, but the row or page locks are released after the row is read. In either case, when you are scanning an index, if another user changes the index key column of the row during your read, the row might appear again if the key change moved the row to a position ahead of your scan. Similarly, the row might not appear if the key change moved the row to a position in the index that you had already read. To avoid this, use the `SERIALIZABLE` or `HOLDLOCK` hint, or row versioning. For more information, see [Table Hints &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
   

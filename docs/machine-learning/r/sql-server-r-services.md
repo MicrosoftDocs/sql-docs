@@ -54,7 +54,9 @@ There are two ways to execute R scripts in R Services:
 
 ## R versions
 
-The following lists the versions of the R runtime that are included in SQL Server 2016 R Services. For more information, see [Change the default language runtime version](../install/change-default-language-runtime-version.md). Cumulative Update (CU) 16 for SQL Server 2016 Service Pack (SP) 2 and later include newer R runtimes.
+Cumulative Update (CU) 16 for SQL Server 2016 Service Pack (SP) 2 and later include newer R runtimes.For more information, see [Change the default language runtime version](../install/change-default-language-runtime-version.md).
+
+The following lists the versions of the R runtime that are included in SQL Server 2016 R Services.
 
 SQL Server version | Default R runtime versions |
 |-|-|

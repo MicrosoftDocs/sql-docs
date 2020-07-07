@@ -27,12 +27,12 @@ The **access check cache quota** option controls the number of entries that are 
   
 The default values of 0 indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is managing these options. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the default values translate to the following internal configurations:
 -   For access check cache bucket count, the value 0 sets a default value of 256 buckets.
--   For access check cache quota, the value 0 sets a default value of 1024 entries.
+-   For access check cache quota, the value 0 sets a default value of 1,024 entries.
 
 In rare circumstances, performance can be improved by changing these options. For example, you may want to reduce the size of the access check result cache if too much memory is used. Or, you may want to increase the size of the access check result cache if you experience high CPU usage when permissions are recalculated.
  
 > [!IMPORTANT]
-> Microsoft recommends only changing these options when directed by Microsoft Customer Support Services. If you have to change the "access check cache bucket count" and "access check cache quota" values, use a ratio of 1:4. For example, if you change the "access check cache bucket count" value to 512, you should change the "access check cache quota" value to 2048. 
+> Microsoft recommends only changing these options when directed by Microsoft Customer Support Services. If you have to change the "access check cache bucket count" and "access check cache quota" values, use a ratio of 1:4. For example, if you change the "access check cache bucket count" value to 512, you should change the "access check cache quota" value to 2,048. 
   
 ## See Also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

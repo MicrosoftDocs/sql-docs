@@ -33,7 +33,7 @@ The following sections provide an overview of these features.
 
 ## Data virtualization and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-Businesses today often preside over vast data estates consisting of a wide array of ever-growing data sets that are hosted in siloed data sources across the company. Gain near real-time insights from all your data with SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], which provide a complete environment for working with large sets of data, including machine learning and AI capabilities.
+Businesses today often preside over vast data estates consisting of a wide array of ever-growing data sets that are hosted in siloed data sources across the company. Gain near real-time insights from all your data with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], which provide a complete environment for working with large sets of data, including machine learning and AI capabilities.
 
 | New feature or update | Details |
 |:---|:---|

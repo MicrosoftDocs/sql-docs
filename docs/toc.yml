@@ -312,6 +312,8 @@
         href: big-data-cluster/active-directory-deployment-background.md
       - name: Auto-generated AD objects
         href: big-data-cluster/active-directory-objects.md
+      - name: AD DNS reconciliation
+        href: big-data-cluster/active-directory-dns-reconciliation.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio

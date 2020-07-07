@@ -153,5 +153,5 @@ ms.author: owend
     ```  
   
 ## See Also  
- [Globalization scenarios for Analysis Services Multiidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Globalization scenarios for Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Write International Transact-SQL Statements](../relational-databases/collations/write-international-transact-sql-statements.md)  

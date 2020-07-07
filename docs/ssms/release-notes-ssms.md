@@ -55,7 +55,7 @@ SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need
 
 | New Item | Details |
 |----------|---------|
-| Analysis Services | Improved performance when expanding the list of databases while connected to AS Azure or PowerBI servers. |
+| Analysis Services | Improved performance when expanding the list of databases while connected to AS Azure or Power BI servers. |
 | Analysis Services | Fixed an issue where an error would occur trying to open the Synchronize Database Wizard of an Analysis Services server. |
 | Analysis Services | Fixed an issue preventing users from querying SSAS 2017 and earlier versions with cell data permissions. |
 | General SSMS | [Table Designer - Fixed beep when trying to TAB in a Table Designer grid](https://feedback.azure.com/forums/908035/suggestions/40318435) |
@@ -284,7 +284,7 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 | General SSMS | Fixed the hard to see the dialog for *Query Options* (when the user right-clicks on the T-SQL editor window) by making it resizable.|
 | General SSMS | The *Completion time* message visible in the Result Grid/File (introduced in SSMS 18.2) is now configurable under Tools > Options >  Query Execution > SQL Server > Advanced > Show completion time. |
 | General SSMS | In the connection dialog, replaced *Active Directory - Password* and *Active Directory - Integrated* with *Azure Active Directory - Password* and *Azure Active Directory - Integrated*, respectively. |
-| General SSMS | Fixed an issue that prevents users from being able to use SSMS to configure auditing on SQL Azure-Managed Instances when located in a TZ with negative UTC offset. |
+| General SSMS | Fixed an issue that prevents users from being able to use SSMS to configure auditing on SQL Azure managed Instances when located in a TZ with negative UTC offset. |
 | General SSMS | Fixing an issue in XEvent UI where hovering over the grid was causing rows to be selected. </br></br> See UserVoice item for more details: [SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124). |
 | Import flat file | Fixed the issue where Import Flat File wasn't importing all data by letting the user choose between a simple or rich data type detection.</br></br> See UserVoice item for more details: [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989). |
 | Integration Services | Add new operation type *StartNonCatalogExecution* for SSIS Operation report.|

@@ -246,7 +246,7 @@ You can perform one of the following workarounds:
 
 **Applies to:** SQL Server 2019 on Linux
 
-### 15. Error when FIPS is enabled
+### 15. Installation or upgrade error on FIPS enabled servers
 
 If you install SQL Server 2019 with the feature **Machine Learning Services and Language Extensions** or upgrade the SQL Server instance on a [Federal Information Processing Standard (FIPS)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) enabled server, you will receive the following error:
 

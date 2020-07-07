@@ -29,9 +29,11 @@ Threads allow complex applications to make more effective use of a processor (CP
 ## SQL Server task scheduling
 In the scope of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a **request** is the logical representation of a query or batch. A request also represents operations required by system threads, such as checkpoint or log writer. Requests exist in various states throughout their lifetime and can accumulate waits when resources required to execute the request are not available, such as [locks](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) or [latches](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). For more information about request states, see [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 
-A **task** represents the unit of work that needs to be completed to fulfill the request. One or more tasks can be assigned to a single request. Parallel requests will have several active tasks that are executed concurrently instead of serially. A request that executes serially will only have one active task at any given point in time. Tasks exist in various states throughout their lifetime. For more information about task states, see [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tasks in SUSPENDED state are waiting on resources required to execute the task to become available. For more information about waiting task, see [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
+A **task** represents the unit of work that needs to be completed to fulfill the request. One or more tasks can be assigned to a single request. Parallel requests will have several active tasks that are executed concurrently instead of serially, with one **parent task** (or coordinating task) and multiple **child tasks**. A request that executes serially will only have one active task at any given point in time.     
+Tasks exist in various states throughout their lifetime. For more information about task states, see [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tasks in SUSPENDED state are waiting on resources required to execute the task to become available. For more information about waiting tasks, see [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker thread**, also known as worker or thread, is a logical representation of an operating system thread. When executing serial requests, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will spawn a worker to execute the active task (1:1). When executing parallel requests in [row mode](../relational-databases/query-processing-architecture-guide.md#execution-modes), the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a worker to coordinate the child workers responsible for completing tasks assigned to them (also 1:1). The number of worker threads spawned for each task depends on:
+A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker thread**, also known as worker or thread, is a logical representation of an operating system thread. When executing serial requests, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will spawn a worker to execute the active task (1:1). When executing parallel requests in [row mode](../relational-databases/query-processing-architecture-guide.md#execution-modes), the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a worker to coordinate the child workers responsible for completing tasks assigned to them (also 1:1), called the **parent thread**. The parent thread has a parent task associated with it.     
+The number of worker threads spawned for each task depends on:
 -	Whether the request was eligible for parallelism as determined by the Query Optimizer.
 -	What is the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) in the system based on current load. This may differ from estimated DOP which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. 
 
@@ -40,11 +42,135 @@ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker thread**, also
 
 A **scheduler**, also known as SOS scheduler, manages worker threads that require processing time to carry out work on behalf of tasks. Each scheduler is mapped to an individual processor (CPU). The time a worker can remain active in a scheduler is called the OS quantum, with a maximum of 4 ms. After its quantum time expires, a worker yields its time to other workers that need to access CPU resources, and changes its state. This cooperation between workers to maximize access to CPU resources is called **cooperative scheduling**, also known as non-preemptive scheduling. In turn, the change in worker state is propagated to the task associated with that worker, and to the request associated with the task. For more information about worker states, see [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). For more information about schedulers, see [sys.dm_os_schedulers ](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
-> [!NOTE]
-> Imagine an application sends a query (request) to a [!INCLUDE[ssde_md](../includes/ssde_md.md)] that's configured with MAXDOP 8, and CPU Affinity is configured for 32 CPUs (schedulers). The query plan has a join between two tables, with a total of 3 query plan operators. Each of the operators is executed in parallel, and spawns 8 tasks (the MAXDOP limit) plus a coordinating task.    
-> At any given time, the request has at least 27 tasks. Each task will be assigned to a worker, and when a worker assigned to a task gets active scheduler time (its quantum time), the task will be in the RUNNING state.   
-> Because there are 32 schedulers, up to 27 workers can be active at any given point for this request. A worker can only remain active for the duration of its quantum (4ms) and must yield its scheduler after that quantum has elapsed, so that a worker assigned to another task may become active. When a worker's quantum expires and is no longer active, the respective task is placed in a FIFO queue in a RUNNABLE state, until it moves to a RUNNING state again (assuming the task won't require access to resources that are not available at the moment, such as a latch or lock, in which case the task would be placed in a SUSPENDED state instead of RUNNABLE, until such time those resources are available).
-> This means that during a parallel query execution, a single request can spawn multiple tasks, and each task is assigned to a worker, up to the MAXDOP limit. 
+### Scheduling a parallel query
+Imagine a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configured with MaxDOP 8, and CPU Affinity is configured for 24 CPUs (schedulers) across NUMA nodes 0 and 1. Schedulers 0 through 11 belong to NUMA node 0, schedulers 12 through 23 belong to NUMA node 1. An application sends the following query (request) to the [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
+
+```sql
+SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
+FROM Sales.SalesOrderHeaderBulk AS h 
+INNER JOIN Sales.SalesOrderDetailBulk AS d ON h.SalesOrderID = d.SalesOrderID 
+WHERE (h.OrderDate >= '2014-3-28 00:00:00');
+```
+
+> [!TIP]
+> The example query can be executed using the [AdventureWorks2016_EXT sample database](../samples/adventureworks-install-configure.md) database. The tables `Sales.SalesOrderHeader` and `Sales.SalesOrderDetail` were enlarged 50 times and renamed to `Sales.SalesOrderHeaderBulk` and `Sales.SalesOrderDetailBulk`.
+
+The execution plan shows a [Hash Join](../relational-databases/performance/joins.md#hash) between two tables, and each of the operators executed in parallel, as indicated by the yellow circle with two arrows. Each Parallelism operator is a different branch in the plan. Therefore, there are three branches in the execution plan below. For more information about plan operators, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md). 
+
+![Parallel Query Plan](../relational-databases/media/ScheduleParallelQry_Plan.png)
+
+While there are 3 branches in the execution plan, at any point during execution only 2 branches can execute concurrently in this execution plan:
+1.  The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderHeaderBulk` (build input of the join) executed concurrently with the branch where a *Clustered Index Scan* was used on the `Sales.SalesOrderDetailBulk` (probe input of the join). For more details on what is a ***Grace Hash Join***, see [Joins (SQL Server)](../relational-databases/performance/joins.md#grace_hash).
+2. The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderDetailBulk` (probe input of the join) executes concurrently with the branch where the *Bitmap* was created and currently the *Hash Match* is executing.
+
+The Showplan XML shows that 16 worker threads were reserved and used on NUMA nodes 0 and 1. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. For this plan, each of branche is limited to a number of worker threads that's equal to MaxDOP (8).
+
+```xml
+<ThreadStat Branches="2" UsedThreads="16">
+  <ThreadReservation NodeId="0" ReservedThreads="8" />
+  <ThreadReservation NodeId="1" ReservedThreads="8" />
+</ThreadStat>
+```
+
+For reference, observe the live execution plan from [Live Query Statistics](../relational-databases/performance/live-query-statistics.md), where one branch has completed and two branches are executing concurrently.
+
+![Live Parallel Query Plan](../relational-databases/media/ScheduleParallelQry_LivePlan.png)
+
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will spawn a worker thread to execute an active task (1:1), which can be observed during query execution by querying the [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) DMV, as seen in the following example. Notice there are a total of 17 active tasks for the branches that are currently executing: 16 child tasks corresponding to the reserved threads, plus the parent task, or coordinating task.
+
+```sql
+SELECT parent_task_address, task_address, 
+       task_state, scheduler_id, worker_address
+FROM sys.dm_os_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY parent_task_address, scheduler_id;
+```
+
+> [!TIP]
+> The column `parent_task_address` is always NULL for the parent task. 
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+|parent_task_address|task_address|task_state|scheduler_id|worker_address|
+|--------|--------|--------|--------|--------|
+|NULL|**0x000001EF4758ACA8**|SUSPENDED|3|0x000001EFE6CB6160|
+|0x000001EF4758ACA8|0x000001EFE43F3468|SUSPENDED|0|0x000001EF6DB70160|
+|0x000001EF4758ACA8|0x000001EEB243A4E8|SUSPENDED|0|0x000001EF6DB7A160|
+|0x000001EF4758ACA8|0x000001EC86251468|SUSPENDED|5|0x000001EEC05E8160|
+|0x000001EF4758ACA8|0x000001EFE3023468|SUSPENDED|5|0x000001EF6B46A160|
+|0x000001EF4758ACA8|0x000001EFE3AF1468|SUSPENDED|6|0x000001EF6BD38160|
+|0x000001EF4758ACA8|0x000001EFE4AFCCA8|SUSPENDED|6|0x000001EF6ACB4160|
+|0x000001EF4758ACA8|0x000001EFDE043848|SUSPENDED|7|0x000001EEA18C2160|
+|0x000001EF4758ACA8|0x000001EF69038108|SUSPENDED|7|0x000001EF6AEBA160|
+|0x000001EF4758ACA8|0x000001EFCFDD8CA8|SUSPENDED|8|0x000001EFCB6F0160|
+|0x000001EF4758ACA8|0x000001EFCFDD88C8|SUSPENDED|8|0x000001EF6DC46160|
+|0x000001EF4758ACA8|0x000001EFBCC54108|SUSPENDED|9|0x000001EFCB886160|
+|0x000001EF4758ACA8|0x000001EC86279468|SUSPENDED|9|0x000001EF6DE08160|
+|0x000001EF4758ACA8|0x000001EFDE901848|SUSPENDED|10|0x000001EFF56E0160|
+|0x000001EF4758ACA8|0x000001EF6DB32108|SUSPENDED|10|0x000001EFCC3D0160|
+|0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
+|0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
+
+> [!TIP]
+> On a very busy [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], it's possible to see a number of active tasks that's over the limit set by reserved threads. These tasks can belong to a branch that is not being used anymore and are in a transient state, waiting for cleanup. 
+
+Observe that each of the 16 child tasks has a different worker thread assigned (seen in the `worker_address` column), but all the workers are assigned to the same pool of 8 schedulers (0,5,6,7,8,9,10,11). 
+
+> [!IMPORTANT]
+> Once the first set of parallel tasks on a given branch is scheduled, the [!INCLUDE[ssde_md](../includes/ssde_md.md)] will use that same pool of schedulers for any additional tasks on other branches. This means the same set of CPUs (schedulers) will be used for all the parallel tasks in the entire execution plan, only limited by MaxDOP.      
+> The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will always try to assign schedulers from the same NUMA node for task execution. However, the worker thread assigned to the parent task may be placed in a different NUMA node ffrom child tasks.
+
+A worker thread can only remain active for the duration of its quantum (4ms) and must yield its scheduler after that quantum has elapsed, so that a worker thread assigned to another task may become active. When a worker's quantum expires and is no longer active, the respective task is placed in a FIFO queue in a RUNNABLE state, until it moves to a RUNNING state again, assuming the task won't require access to resources that are not available at the moment, such as a latch or lock, in which case the task would be placed in a SUSPENDED state instead of RUNNABLE, until such time those resources are available.  
+
+Note that for the output of the DMV seen above, all active tasks are in SUSPENDED state. More detail on waiting tasks is available by querying the [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV, as seen in the following example. 
+
+```sql
+SELECT blocking_task_address, blocking_session_id, 
+       waiting_task_address, session_id, wait_type, wait_duration_ms
+FROM sys.dm_os_waiting_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY blocking_task_address, waiting_task_address;
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+|blocking_task_address|blocking_session_id|waiting_task_address|session_id|wait_type|wait_duration_ms|
+|--------|--------|--------|--------|--------|--------|
+|NULL|NULL|**0x000001EF4758ACA8**|57|ASYNC_NETWORK_IO|1|
+|0x000001EC86251468|57|**0x000001EC86279468**|57|CXPACKET|171|
+|0x000001EC86251468|57|**0x000001EEB243A4E8**|57|CXPACKET|170|
+|0x000001EC86251468|57|**0x000001EF69038108**|57|CXPACKET|171|
+|0x000001EC86251468|57|**0x000001EF6DB32108**|57|CXPACKET|141|
+|0x000001EC86251468|57|**0x000001EFBD3A1C28**|57|CXPACKET|171|
+|0x000001EC86251468|57|**0x000001EFCFDD88C8**|57|CXPACKET|171|
+|0x000001EC86251468|57|**0x000001EFE3023468**|57|CXPACKET|171|
+|0x000001EC86251468|57|**0x000001EFE4AFCCA8**|57|CXPACKET|171|
+|0x000001EC86279468|57|**0x000001EC8628D468**|57|CXCONSUMER|269|
+|0x000001EC86279468|57|**0x000001EFDE901848**|57|CXCONSUMER|251|
+|0x000001EEB243A4E8|57|0x000001EC8628D468|57|CXCONSUMER|269|
+|0x000001EEB243A4E8|57|0x000001EFDE901848|57|CXCONSUMER|251|
+|0x000001EF4758ACA8|57|**0x000001EC86251468**|57|CXPACKET|1|
+|0x000001EF4758ACA8|57|**0x000001EFBCC54108**|57|CXPACKET|1|
+|0x000001EF4758ACA8|57|**0x000001EFCFDD8CA8**|57|CXPACKET|1|
+|0x000001EF4758ACA8|57|**0x000001EFDE043848**|57|CXPACKET|1|
+|0x000001EF4758ACA8|57|**0x000001EFE3AF1468**|57|CXPACKET|1|
+|0x000001EF4758ACA8|57|**0x000001EFE43F3468**|57|CXPACKET|0|
+|0x000001EF69038108|57|0x000001EC8628D468|57|CXCONSUMER|269|
+|0x000001EF69038108|57|0x000001EFDE901848|57|CXCONSUMER|251|
+|0x000001EF6DB32108|57|0x000001EC8628D468|57|CXCONSUMER|269|
+|0x000001EF6DB32108|57|0x000001EFDE901848|57|CXCONSUMER|251|
+|0x000001EFBD3A1C28|57|0x000001EC8628D468|57|CXCONSUMER|269|
+|0x000001EFBD3A1C28|57|0x000001EFDE901848|57|CXCONSUMER|251|
+|0x000001EFCFDD88C8|57|0x000001EC8628D468|57|CXCONSUMER|269|
+|0x000001EFCFDD88C8|57|0x000001EFDE901848|57|CXCONSUMER|251|
+|0x000001EFE3023468|57|0x000001EC8628D468|57|CXCONSUMER|269|
+|0x000001EFE3023468|57|0x000001EFDE901848|57|CXCONSUMER|251|
+|0x000001EFE4AFCCA8|57|0x000001EC8628D468|57|CXCONSUMER|269|
+|0x000001EFE4AFCCA8|57|0x000001EFDE901848|57|CXCONSUMER|251|
+
+Note there are 17 distinct waiting tasks (seen in bold), and the child tasks are waiting on CXPACKET and CXCONSUMER. For more details on these waits, see [sys.dm_os_wait_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#cxconsumer).
+
+In summary, a single request can spawn multiple tasks up to the limit set by reserved worker threads. The threads reserved per branch are limited by MaxDOP. Because each task is assigned to a worker thread for execution, the number of tasks that can be running concurrently is therefore limited by MaxDOP.
 
 ### Allocating threads to a CPU
 By default, each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts each thread, and the operating system distributes threads from instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] among the processors (CPUs) on a computer, based on load. If process affinity has been enabled at the operating system level, then the operating system assigns each thread to a specific CPU. In contrast, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker threads** to **schedulers** that distribute the threads evenly among the CPUs.

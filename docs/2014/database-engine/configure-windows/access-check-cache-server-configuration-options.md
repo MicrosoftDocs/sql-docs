@@ -26,6 +26,9 @@ The default values of 0 indicates that [!INCLUDE[ssNoVersion](../../includes/ssn
 -   For access check cache quota, the value 0 sets a default value of 1,024 entries for x86 architecture, and 28,192,048 buckets for x64 and IA-64 architectures.
 
 In rare circumstances, performance can be improved by changing these options. For example, you may want to reduce the size of the access check result cache if too much memory is used. Or, you may want to increase the size of the access check result cache if you experience high CPU usage when permissions are recalculated.
+
+> [!IMPORTANT]
+> Microsoft recommends only changing these options when directed by Microsoft Customer Support Services.
   
 ## See Also  
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

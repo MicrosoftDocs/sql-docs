@@ -94,13 +94,13 @@ The SSMA Console application allows you to export encrypted database passwords p
     
 2. Enter password for protecting the exported file
     
-3. C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -export all "machine1passwords.file"
+3. `C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -export all "machine1passwords.file"`
     
 4. Enter password for protecting the exported file: xxxxxxxx
     
 5. Please confirm password: xxxxxxxx
     
-6. C:\SSMA\SSMAforSybaseConsole.EXE -p -e "SybaseDB_1_1,Sql_1" "machine2passwords.file"
+6. `C:\SSMA\SSMAforSybaseConsole.EXE -p -e "SybaseDB_1_1,Sql_1" "machine2passwords.file"`
     
 7. Enter password for protecting the exported file: xxxxxxxx
     
@@ -112,13 +112,13 @@ The SSMA Console application allows you to export encrypted database passwords p
     
 2. Enter password for protecting the imported file
     
-3. C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -import all "machine1passwords.file"
+3. `C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -import all "machine1passwords.file"`
     
 4. Enter password to import the servers from encrypted file: xxxxxxxx
     
 5. Please confirm password: xxxxxxxx
     
-6. C:\SSMA\SSMAforSybaseConsole.EXE -p -i "SybaseDB_1,Sql_1" "machine2passwords.file"
+6. `C:\SSMA\SSMAforSybaseConsole.EXE -p -i "SybaseDB_1,Sql_1" "machine2passwords.file"`
     
 7. Enter password to import the servers from encrypted file: xxxxxxxx
     

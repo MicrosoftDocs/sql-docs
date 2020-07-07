@@ -92,33 +92,37 @@ The SSMA Console application allows you to export encrypted database passwords p
 
 1. Export password
 
-2. Enter password for protecting the exported file C:\SSMA\SSMAforOracleConsole.EXE -securepassword -export all "machine1passwords.file"
+2. Enter password for protecting the exported file
 
-3. Enter password for protecting the exported file: xxxxxxxx
+3. `C:\SSMA\SSMAforOracleConsole.EXE -securepassword -export all "machine1passwords.file"`
 
-4. Please confirm password: xxxxxxxx
+4. Enter password for protecting the exported file: xxxxxxxx
 
-5. C:\SSMA\SSMAforOracleConsole.EXE -p -e "OracleDB_1_1,Sql_1" "machine2passwords.file"
+5. Please confirm password: xxxxxxxx
 
-6. Enter password for protecting the exported file: xxxxxxxx
+6. `C:\SSMA\SSMAforOracleConsole.EXE -p -e "OracleDB_1_1,Sql_1" "machine2passwords.file"`
 
-7. Please confirm password: xxxxxxxx  
+7. Enter password for protecting the exported file: xxxxxxxx
+
+8. Please confirm password: xxxxxxxx  
 
 ### Import example:  
 
 1. Import an encrypted password
 
-2. Enter password for protecting the imported file C:\SSMA\SSMAforOracleConsole.EXE -securepassword -import all "machine1passwords.file"
+2. Enter password for protecting the imported file
 
-3. Enter password to import the servers from encrypted file: xxxxxxxx
+3. `C:\SSMA\SSMAforOracleConsole.EXE -securepassword -import all "machine1passwords.file"`
 
-4. Please confirm password: xxxxxxxx
+4. Enter password to import the servers from encrypted file: xxxxxxxx
 
-5. C:\SSMA\SSMAforOracleConsole.EXE -p -i "OracleDB_1,Sql_1" "machine2passwords.file"
+5. Please confirm password: xxxxxxxx
 
-6. Enter password to import the servers from encrypted file: xxxxxxxx
+6. `C:\SSMA\SSMAforOracleConsole.EXE -p -i "OracleDB_1,Sql_1" "machine2passwords.file"`
 
-7. Please confirm password: xxxxxxxx  
+7. Enter password to import the servers from encrypted file: xxxxxxxx
+
+8. Please confirm password: xxxxxxxx  
 
 ## See Also  
 [Executing the SSMA Console (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  

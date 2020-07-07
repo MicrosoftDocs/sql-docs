@@ -177,7 +177,7 @@ A related counter, **ActualEndOfScans**, is available only when Showplan output 
  This section contains descriptions of the logical and physical operators.  
 
  > [!TIP]
- > Whenever a given graphical execution plan icon has a yellow circle with two right-to-left arrows, it means the operator executed in parallel. For more information about parallelism, see the (Thread and Task Architecture Guide)[../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling].
+ > Whenever a given graphical execution plan icon has a yellow circle with two right-to-left arrows, it means the operator executed in parallel. For more information about parallelism, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling).
   
 |Graphical Execution Plan Icon|Showplan Operator|Description|  
 |-----------------------------------|-----------------------|-----------------|  

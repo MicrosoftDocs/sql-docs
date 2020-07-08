@@ -19,7 +19,7 @@ This article describes how to change the default version of R used by a SQL inst
 
 The following lists the versions of the R runtime that are included in SQL Server 2016 R Services.
 
-| SQL Server Version | Default R runtime versions |
+| SQL Server version | Default R runtime versions |
 |-|-|
 | SQL Server 2016 RTM - SP2 CU15 | 3.2.2 |
 | SQL Server 2016 SP2 CU16 and later | 3.2.2 and 3.5.2 |

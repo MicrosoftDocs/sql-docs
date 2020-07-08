@@ -3,7 +3,7 @@ title: Known issues for Python and R
 description: This article describes known problems or limitations with the Python and R components that are provided in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 07/07/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
@@ -202,7 +202,6 @@ If you encounter resource limitations, check the current default. If 20 percent 
 
 **Applies to:** SQL Server 2016 R Services, Enterprise Edition
 
-
 ### 14. Error when using `sp_execute_external_script` without `libc++.so` on Linux
 
 On a clean Linux machine that does not have `libc++.so` installed, running a `sp_execute_external_script` (SPEES) query with Java or an external language fails because `commonlauncher.so` fails to load `libc++.so`.
@@ -246,6 +245,18 @@ You can perform one of the following workarounds:
    ```
 
 **Applies to:** SQL Server 2019 on Linux
+
+### 15. Installation or upgrade error on FIPS enabled servers
+
+If you install SQL Server 2019 with the feature **Machine Learning Services and Language Extensions** or upgrade the SQL Server instance on a [Federal Information Processing Standard (FIPS)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) enabled server, you will receive the following error:
+
+> *An error occurred while installing extensibility feature with error message: AppContainer Creation Failed with error message NONE, state This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms.*
+
+**Workaround**
+
+Disable FIPS before the installation of SQL Server 2019 with the feature **Machine Learning Services and Language Extensions** or upgrade of the SQL Server instance. Once the installation or upgrade is complete, you can reenable FIPS.
+
+**Applies to:** SQL Server 2019
 
 ## R script execution issues
 
@@ -511,7 +522,7 @@ Don't run the library install in parallel to the long-running query. Or rerun th
 
 **Applies to:** SQL Server 2019 on Linux & Big Data Clusters only.
 
-### 22. Hang when executing R scripts containing parallel execution
+### 22. SQL Server stops responding when executing R scripts containing parallel execution
 
 SQL Server 2019 contains a regression that effects R scripts that use parallel execution. Examples include using `rxExec` with `RxLocalPar` compute context and scripts that use the parallel package. This problem is caused by errors the parallel package encounters when writing to the null device while executing in SQL Server.
 

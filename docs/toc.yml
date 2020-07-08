@@ -312,6 +312,8 @@
         href: big-data-cluster/active-directory-deployment-background.md
       - name: Auto-generated AD objects
         href: big-data-cluster/active-directory-objects.md
+      - name: AD DNS reconciliation
+        href: big-data-cluster/active-directory-dns-reconciliation.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -2224,8 +2226,6 @@
   - name: Data tier applications
     href: relational-databases/data-tier-applications/data-tier-applications.md
     items:
-    - name: DAC Support For SQL Server Objects & Versions
-      href: relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
     - name: Delete
       href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
     - name: Deploy

@@ -69,16 +69,15 @@ While there are three branches in the execution plan, at any point during execut
 1.  The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderHeaderBulk` (build input of the join) executed concurrently with the branch where a *Clustered Index Scan* was used on the `Sales.SalesOrderDetailBulk` (probe input of the join).
 2. The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderDetailBulk` (probe input of the join) executes concurrently with the branch where the *Bitmap* was created and currently the *Hash Match* is executing.
 
-The Showplan XML shows that 16 worker threads were reserved and used on NUMA nodes 0 and 1:
+The Showplan XML shows that 16 worker threads were reserved and used on NUMA node 0:
 
 ```xml
 <ThreadStat Branches="2" UsedThreads="16">
-  <ThreadReservation NodeId="0" ReservedThreads="8" />
-  <ThreadReservation NodeId="1" ReservedThreads="8" />
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
 </ThreadStat>
 ```
 
-Thread reservation ensures the [!INCLUDE[ssde_md](../includes/ssde_md.md)] has enough worker threads to carry out all the tasks that will be needed for the request. Threads can be reserved across all NUMA nodes, or be reserved in just one NUMA node. Thread reservation is done at runtime before execution starts, and is dependent on scheduler load. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. Each branch is limited to a number of worker threads that's equal to MaxDOP. In this example there are two concurrent branches and MaxDOP is set to 8, therefore **2 * 8 = 16**.
+Thread reservation ensures the [!INCLUDE[ssde_md](../includes/ssde_md.md)] has enough worker threads to carry out all the tasks that will be needed for the request. Threads can be reserved across several NUMA nodes, or be reserved in just one NUMA node. Thread reservation is done at runtime before execution starts, and is dependent on scheduler load. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. Each branch is limited to a number of worker threads that's equal to MaxDOP. In this example there are two concurrent branches and MaxDOP is set to 8, therefore **2 * 8 = 16**.
 
 For reference, observe the live execution plan from [Live Query Statistics](../relational-databases/performance/live-query-statistics.md), where one branch has completed and two branches are executing concurrently.
 

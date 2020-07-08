@@ -32,7 +32,7 @@ This function returns the severity value of the error where an error occurs, if 
   
 ## Syntax  
   
-```  
+```sqlsyntax  
 ERROR_SEVERITY ( )  
 ```  
   

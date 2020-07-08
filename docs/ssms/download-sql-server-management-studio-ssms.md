@@ -39,7 +39,7 @@ SSMS is free!
 
 ## Download SSMS
 
-**[Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.5.1 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.5.1 upgrades it to 18.5.1.
 

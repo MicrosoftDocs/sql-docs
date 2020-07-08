@@ -26,30 +26,16 @@ A Big Data Cluster has four configuration categories:
 
 For example, all configurations in service `hdfs` belong to category `hdfs`. Note that all Hadoop (core-site), HDFS and Zookeeper configurations belong to category `hdfs`; all Livy, Spark, Yarn, Hive, Metastore configurations belong to category `spark`. 
 
-[Supported configurations](reference-config-spark-hadoop.md#supported-configurations) lists properties that you can configure when you deploy a SQL Server big data cluster.
+[Supported configurations](reference-config-spark-hadoop.md#supported-configurations) lists Apache Spark & Hadoop properties that you can configure when you deploy a SQL Server Big Data Cluster.
 
-The following sections list properties that you can't modify in a cluster:
+The following sections list properties that you **can't** modify in a cluster:
 
 - [Unsupported `spark` configurations](reference-config-spark-hadoop.md#unsupported-spark-configurations)
 - [Unsupported `hdfs` configurations](reference-config-spark-hadoop.md#unsupported-hdfs-configurations)
 - [Unsupported `gateway` configurations](reference-config-spark-hadoop.md#unsupported-gateway-configurations)
 
-You can find all possible configurations for each at the associated Apache documentation site:
 
-- Apache Spark: https://spark.apache.org/docs/latest/configuration.html
-- Apache Hadoop:
-  - HDFS HDFS-Site: https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
-  - HDFS Core-Site: https://hadoop.apache.org/docs/r2.8.0/hadoop-project-dist/hadoop-common/core-default.xml  
-  - Yarn: https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/ResourceModel.html
-- Hive: https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
-- Livy: https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
-- Apache Knox Gateway: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
-
-In addition to these configurations, we also offer the ability to configure whether or not Spark jobs can run in the Storage pool. 
-
-This boolean value, `includeSpark`, is in the `bdc.json` configuration file at `spec.resources.storage-0.spec.settings.spark`.
-
-## Configurations via cluster Profile
+## Configurations via Cluster Profile
 
 In the cluster profile there are resources and services. At deployment time, we can specify configurations in one of two ways: 
 
@@ -85,14 +71,14 @@ In the cluster profile there are resources and services. At deployment time, we 
 
 * Second, at the service level. Assign multiple resources to a service, and specify configurations to the service.
 
-   The following is an example of the patch file for the profile: 
+The following is an example of the patch file for the profile for setting HDFS block size: 
 
    ```json
    { 
          "op": "add", 
          "path": "spec.services.hdfs.settings", 
          "value": { 
-           “core-site.hadoop.proxyuser.xyz.users”: “*” 
+           “hdfs-site.dfs.block.size”: “*” 
            … 
         } 
    } 
@@ -112,7 +98,7 @@ The service `hdfs` is defined as:
           "sparkhead" 
         ], 
         "settings":{ 
-          "hdfs-site.dfs.replication": "3" 
+          "hdfs-site.dfs.block.size": "268435456" 
         } 
       } 
     } 
@@ -122,6 +108,30 @@ The service `hdfs` is defined as:
  
 > [!NOTE]
 > Resource level configurations override service level configurations. One resource can be assigned to multiple services.
+
+## Enable Spark in the Storage Pool
+In addition to the supported Apache configurations, we also offer the ability to configure whether or not Spark jobs can run in the Storage pool. This boolean value, `includeSpark`, is in the `bdc.json` configuration file at `spec.resources.storage-0.spec.settings.spark`.
+
+An example storage pool definition in bdc.json may look like this:
+```json
+...
+"storage-0": {
+                "metadata": {
+                    "kind": "Pool",
+                    "name": "default"
+                },
+                "spec": {
+                    "type": "Storage",
+                    "replicas": 2,
+                    "settings": {
+                        "spark": {
+                            "includeSpark": "true"
+                        }
+                    }
+                }
+            }
+```
+
 
 ## Limitations
 

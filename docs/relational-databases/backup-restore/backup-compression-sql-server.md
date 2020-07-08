@@ -78,7 +78,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   Whether the data is encrypted  
   
-     Encrypted data compresses significantly less than equivalent unencrypted data. For example, if data is encrypted at the column-level, with Always Encrypted, or with other application-level encryption, compressing backups might not reduce the size significantly.
+     Encrypted data compresses significantly less than equivalent unencrypted data. For example, if data is encrypted at the column level with Always Encrypted, or with other application-level encryption, compressing backups might not reduce the size significantly.
 
      For more information related to compressing databases encrypted with Transparent Data Encryption (TDE), see [Backup compression with TDE](#backup-compression-with-TDE).
 

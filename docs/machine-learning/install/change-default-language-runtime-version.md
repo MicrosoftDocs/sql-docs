@@ -26,7 +26,10 @@ SQL Server Version | Default R runtime versions |
 
 ## Prerequisites
 
-You need to install Cumulative Update (CU) 16 or later for SQL Server 2016 SP2 to change the default R runtime. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+You need to install Cumulative Update (CU) 16 or later for SQL Server 2016 Services Pack (SP) 2 to change the default R runtime. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+
+> [!NOTE]
+> If you slipstream CU16 or later with a new installation of SQL Server 2016 SP2, only the newest version of the R runtime will be installed.
 
 ## Change runtime version
 

@@ -2,7 +2,7 @@
 title: "Backup Compression (SQL Server) | Microsoft Docs"
 description: Learn about compression of SQL Server backups, including restrictions, performance trade-offs, Configuring backup compression, and the compression ratio.
 ms.custom: ""
-ms.date: "08/08/2016"
+ms.date: "07/08/2020"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -80,7 +80,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
      Encrypted data compresses significantly less than equivalent unencrypted data. For example, if data is encrypted at the column-level, with Always Encrypted, or with other application-level encryption, compressing backups might not reduce the size significantly.
 
-     For more information related to compressing databases encrypted with Transparent Data Encryption (TDE), see [Backup compression with TDE](#backup-compression-with-TDE).
+     For more information related to compressing databases encrypted with Transparent Data Encryption (TDE), see [Backup compression with TDE](#backup-compression-with-tde).
 
 -   Whether the database is compressed.  
   

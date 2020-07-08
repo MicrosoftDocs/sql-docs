@@ -78,6 +78,8 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   Whether the data is encrypted.  
   
+     Encrypted data compresses significantly less than equivalent unencrypted data. If transparent data encryption is used to encrypt an entire database, compressing backups might not reduce their size by much, if at all.
+
      Prior to SQL Server 2016 - specifying `WITH COMPRESSION` had no effect on backup size. However, starting with SQL Server 2016, backup compression can be utilized for TDE enabled databases provided `MAXTRANSFERSIZE` > 65536 bytes (64 KB) is specified along with compression. Beginning with SQL Server 2019 CU5, if you specify `WITH COMPRESSION` in a backup command - `MAXTRANSFERSIZE` is not required.
   
 -   Whether the database is compressed.  

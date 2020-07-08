@@ -33,7 +33,7 @@ This function returns the database identification (ID) number of a specified dat
   
 ## Syntax  
   
-```sqlsyntax
+```syntaxsql
 DB_ID ( [ 'database_name' ] )   
 ```  
   

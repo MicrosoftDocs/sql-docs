@@ -78,8 +78,7 @@ The following is an example of the patch file for the profile for setting HDFS b
          "op": "add", 
          "path": "spec.services.hdfs.settings", 
          "value": { 
-           “hdfs-site.dfs.block.size”: “*” 
-           … 
+           "hdfs-site.dfs.block.size": "268435456" 
         } 
    } 
    ```

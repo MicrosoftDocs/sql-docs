@@ -120,7 +120,7 @@ ms.author: mikeray
  List view  
  The list view in the top pane displays data about individual data-tier applications. Health state icons provide summary status for each data-tier application by utilization category:  
   
--   Green check - ![green check](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - :::image type="icon" source="media/well-utilized.png" border="false"::: - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
   
 -   Green down arrow - ![down arrow](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   

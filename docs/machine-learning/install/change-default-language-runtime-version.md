@@ -11,10 +11,9 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
-
 # Change the default language runtime version
 
-[!INCLUDE[sqlserver2016-md](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 This article describes how to change the default version of R used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 

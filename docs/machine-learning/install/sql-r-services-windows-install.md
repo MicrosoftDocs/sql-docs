@@ -12,14 +12,15 @@ ms.custom: contperfq4
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server 2016 R Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 
 > [!NOTE]
 > In SQL Server 2017 and later, R is included in [Machine Learning Services](../sql-server-machine-learning-services.md) along with Python. If you want R and have SQL Server 2017 or later, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature.
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## Pre-install checklist
 

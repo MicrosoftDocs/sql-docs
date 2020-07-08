@@ -68,7 +68,7 @@ After a distribution database in the AG is configured based on the steps describ
    >[!NOTE]
    >Before executing any of replication stored procedures (for example - `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb`, `sp_adddistpublisher`) on secondary replica, make sure the replica is fully synchronized.
 
-- All secondary replicas in a distribution database AG should be readable. If a secondary replica is not readable, distributor properties in SQL Server Management Studio on the particular secondary replica can not be accessed.
+- All secondary replicas in a distribution database AG should be readable. If a secondary replica is not readable, distributor properties in SQL Server Management Studio on the particular secondary replica can not be accessed, however replication will continue to work correctly. 
 - All the nodes in the distribution database AG need to use the same domain account to run SQL Server Agent, and this domain account needs to have the same privilege on each node.
 - If any replication agents run under a proxy account, the proxy account needs to exist in every node in the distribution database AG and have the same privilege on each node.
 - Make changes to distributor or distribution database properties in all replicas participating in distribution database AG.

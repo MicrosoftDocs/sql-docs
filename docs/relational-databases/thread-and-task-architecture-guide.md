@@ -66,7 +66,7 @@ The execution plan shows a [Hash Join](../relational-databases/performance/joins
 > If you think of an execution plan as a tree, a **branch** is an area of the plan that groups one or more operators between Parallelism operators, also called Exchange Iterators. For more information about plan operators, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md). 
 
 While there are three branches in the execution plan, at any point during execution only two branches can execute concurrently in this execution plan:
-1.  The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderHeaderBulk` (build input of the join) executed concurrently with the branch where a *Clustered Index Scan* was used on the `Sales.SalesOrderDetailBulk` (probe input of the join).
+1.  The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderHeaderBulk` (build input of the join) executes. Once done, the branch where a *Clustered Index Scan* was used on the `Sales.SalesOrderDetailBulk` (probe input of the join) can start.
 2. The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderDetailBulk` (probe input of the join) executes concurrently with the branch where the *Bitmap* was created and currently the *Hash Match* is executing.
 
 The Showplan XML shows that 16 worker threads were reserved and used on NUMA node 0:

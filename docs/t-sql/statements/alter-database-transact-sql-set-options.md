@@ -730,11 +730,11 @@ Controls whether the Query Store is enabled in this database, and also controls 
 ON     
 Enables the Query Store.
 
-OFF [ FORCED ]     
-Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes Query Store to shut down as fast as possible. Effectively turns off Query Store immediately. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 introduces FORCED.
+OFF      
+Disables the Query Store. OFF is the default value. 
 
 > [!NOTE]  
-> Query Store cannot be disabled in Azure SQL Database single database and elastic pool. Executing ALTER DATABASE [database] SET QUERY_STORE = OFF will return the warning “'QUERY_STORE=OFF' is not supported in this version of SQL Server.” 
+> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Remove the contents of the Query Store.

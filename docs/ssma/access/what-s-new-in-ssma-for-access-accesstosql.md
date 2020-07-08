@@ -209,7 +209,7 @@ The March 2016 preview release of SSMA for Access adds support for migration to 
 The January 2016 maintenance release of SSMA for Access contains the following changes:
 
 * Fixed invalid function for default of a GUID field (RFC 3894811).
-* Fixed hang on importing records to SQL Database (Azure) (RFC 4919573).
+* Fixed issue where system stops responding when importing records to SQL Database (Azure) (RFC 4919573).
 * Added View Log Menu Item to SSMA (RFC 5706203).
 * Added Telemetry.
 

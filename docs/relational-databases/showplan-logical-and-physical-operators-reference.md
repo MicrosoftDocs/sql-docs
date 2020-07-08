@@ -158,9 +158,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   **Close()**: The **Close()** method causes a physical operator to perform some clean-up operations and shut itself down. A physical operator only receives one **Close()** call.  
   
-The **GetNext()** method returns one row of data, and the number of times it is called appears as **ActualRows** in the Showplan output that is produced by using SET STATISTICS PROFILE ON or SET STATISTICS XML ON. For more information about these SET options, see [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) and [SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md).  
+The **GetNext()** method returns one row of data, and the number of times it is called appears as **ActualRows** in the Showplan output that is produced by using `SET STATISTICS PROFILE ON` or `SET STATISTICS XML ON`. For more information about these SET options, see [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) and [SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md).  
   
-The **ActualRebinds** and **ActualRewinds** counts that appear in Showplan output refer to the number of times that the **Init()** method is called. Unless an operator is on the inner side of a loop join, **ActualRebinds** equals one and **ActualRewinds** equals zero. If an operator is on the inner side of a loop join, the sum of the number of rebinds and rewinds should equal the number of rows processed on the outer side of the join. A rebind means that one or more of the correlated parameters of the join changed and the inner side must be reevaluated. A rewind means that none of the correlated parameters changed and the prior inner result set may be reused.  
+The **ActualRebinds** and **ActualRewinds** counts that appear in Showplan output refer to the number of times that the **Init()** method is called. Unless an operator is on the inner side of a nested loops join, **ActualRebinds** equals one and **ActualRewinds** equals zero. If an operator is on the inner side of a loop join, the sum of the number of rebinds and rewinds should equal the number of rows processed on the outer side of the join. A rebind means that one or more of the correlated parameters of the join changed and the inner side must be reevaluated. A rewind means that none of the correlated parameters changed and the prior inner result set may be reused.  
   
 **ActualRebinds** and **ActualRewinds** are present in XML Showplan output produced by using SET STATISTICS XML ON. They are only populated for the **Nonclustered Index Spool**, **Remote Query**, **Row Count Spool**, **Sort**, **Table Spool**, and **Table-valued Function** operators. **ActualRebinds** and **ActualRewinds** may also be populated for the **Assert** and **Filter** operators when the **StartupExpression** attribute is set to TRUE.  
   
@@ -169,12 +169,15 @@ When **ActualRebinds** and **ActualRewinds** are present in an XML Showplan, the
 A related counter, **ActualEndOfScans**, is available only when Showplan output is produced by using SET STATISTICS XML ON. Whenever a physical operator reaches the end of its data stream, this counter is incremented by one. A physical operator can reach the end of its data stream zero, one, or multiple times. As with rebinds and rewinds, the number of end of scans can be more than one only if the operator is on the inner side of a loop join. The number of end of scans should be less than or equal to the sum of the number of rebinds and rewinds.  
   
 ## Mapping Physical and Logical Operators  
- The query optimizer creates a query plan as a tree consisting of logical operators. After the query optimizer creates the plan, the query optimizer chooses the most efficient physical operator for each logical operator. The query optimizer uses a cost-based approach to determine which physical operator will implement a logical operator.  
+ The Query Optimizer creates a query plan as a tree consisting of logical operators. After the query optimizer creates the plan, the Query Optimizer chooses the most efficient physical operator for each logical operator. The query optimizer uses a cost-based approach to determine which physical operator will implement a logical operator.  
   
  Usually, a logical operation can be implemented by multiple physical operators. However, in rare cases, a physical operator can implement multiple logical operations as well.  
   
 ## Operator Descriptions  
  This section contains descriptions of the logical and physical operators.  
+
+ > [!TIP]
+ > Whenever a given graphical execution plan icon has a yellow circle with two right-to-left arrows, it means the operator executed in parallel. For more information about parallelism, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling).
   
 |Graphical Execution Plan Icon|Showplan Operator|Description|  
 |-----------------------------------|-----------------------|-----------------|  

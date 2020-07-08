@@ -60,7 +60,7 @@ LEFT ( character_expression , integer_expression )
 ### A. Using LEFT with a column  
  The following example returns the five leftmost characters of each product name in the `Product` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT LEFT(Name, 5)   
 FROM Production.Product  
 ORDER BY ProductID;  
@@ -70,7 +70,7 @@ GO
 ### B. Using LEFT with a character string  
  The following example uses `LEFT` to return the two leftmost characters of the character string `abcdefg`.  
   
-```  
+```sql  
 SELECT LEFT('abcdefg',2);  
 GO  
 ```  
@@ -89,7 +89,7 @@ ab
 ### C. Using LEFT with a column  
  The following example returns the five leftmost characters of each product name.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LEFT(EnglishProductName, 5)   
@@ -100,7 +100,7 @@ ORDER BY ProductKey;
 ### D. Using LEFT with a character string  
  The following example uses `LEFT` to return the two leftmost characters of the character string `abcdefg`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;  

@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```sqlsyntax  
 HAS_DBACCESS ( 'database_name' )  
 ```  
   
@@ -59,7 +59,7 @@ HAS_DBACCESS ( 'database_name' )
 ## Examples  
  The following example tests whether current user has access to the `AdventureWorks2012` database.  
   
-```  
+```sql  
 SELECT HAS_DBACCESS('AdventureWorks2012');  
 GO  
 ```  
@@ -67,7 +67,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example tests whether current user has access to the `AdventureWorksPDW2012` database.  
   
-```  
+```sql  
 SELECT HAS_DBACCESS('AdventureWorksPDW2012');  
 GO  
 ```  

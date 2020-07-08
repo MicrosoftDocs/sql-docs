@@ -45,7 +45,6 @@ ms.author: carlrab
 |**cluster_type_desc**|**nvarchar(60)**|Text description of cluster type|
 |**required_synchronized_secondaries_to_commit**|**int**| The number of secondary replicas that must be in a synchronized state for a commit  to complete|
 |**sequence_number**|**bigint**|Internal|
-|**is_contained**|**bit**|Internal|
   
 ## Failure condition level  values  
  The following table describes the possible failure condition levels for the **failure_condition_level** column.  

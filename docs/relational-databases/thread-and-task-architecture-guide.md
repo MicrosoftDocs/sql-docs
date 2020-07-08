@@ -38,7 +38,8 @@ A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker thread**, also
 -  Coordinate a parallel scan.
 -  Start child parallel workers.
 -  Collect rows from parallel threads and send to the client.
--  Perform local and global aggregations.
+-  Perform local and global aggregations.    
+
 The number of worker threads spawned for each task depends on:
 -	Whether the request was eligible for parallelism as determined by the Query Optimizer.
 -	What is the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) in the system based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. 

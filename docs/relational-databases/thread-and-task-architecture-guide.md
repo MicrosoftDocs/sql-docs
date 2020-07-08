@@ -69,7 +69,7 @@ While there are three branches in the execution plan, at any point during execut
 1.  The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderHeaderBulk` (build input of the join) executed concurrently with the branch where a *Clustered Index Scan* was used on the `Sales.SalesOrderDetailBulk` (probe input of the join).
 2. The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderDetailBulk` (probe input of the join) executes concurrently with the branch where the *Bitmap* was created and currently the *Hash Match* is executing.
 
-The Showplan XML shows that 16 worker threads were reserved and used on NUMA nodes 0:
+The Showplan XML shows that 16 worker threads were reserved and used on NUMA node 0:
 
 ```xml
 <ThreadStat Branches="2" UsedThreads="16">

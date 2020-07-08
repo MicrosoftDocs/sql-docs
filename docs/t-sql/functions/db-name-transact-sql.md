@@ -32,7 +32,7 @@ This function returns the name of a specified database.
   
 ## Syntax  
   
-```sqlsyntax
+```syntaxsql
 DB_NAME ( [ database_id ] )  
 ```  
   

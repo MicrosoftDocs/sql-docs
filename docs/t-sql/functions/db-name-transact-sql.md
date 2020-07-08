@@ -32,7 +32,7 @@ This function returns the name of a specified database.
   
 ## Syntax  
   
-```sql
+```sqlsyntax
 DB_NAME ( [ database_id ] )  
 ```  
   
@@ -67,7 +67,7 @@ This example returns the database name for database ID `3`.
 ```sql
 USE master;  
 GO  
-SELECT DB_NAME(3)AS [Database Name];  
+SELECT DB_NAME(3) AS [Database Name];  
 GO  
 ```  
   

@@ -50,6 +50,9 @@ Describes SqlClient support for LocalDB databases.
 [SqlClient support for Always Encrypted](sqlclient-support-always-encrypted.md)  
 Describes SqlClient support for the Always Encrypted feature.
 
+[SqlClient support for Data Discovery and Classification](data-classification.md)  
+Describes how to access Data Discovery and Classification information through SqlClient.
+
 ## Next steps
 - [SQL Server data operations in ADO.NET](sql-server-data-operations.md)
 - [SQL Server and ADO.NET](index.md)

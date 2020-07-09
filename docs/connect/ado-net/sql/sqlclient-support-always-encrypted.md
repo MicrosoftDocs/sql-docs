@@ -1,7 +1,7 @@
 ---
 title: "Using Always Encrypted with SqlClient"
 description: "Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure."
-ms.date: "05/06/2020"
+ms.date: 07/09/2020
 ms.assetid: 
 ms.prod: sql
 ms.prod_service: connectivity

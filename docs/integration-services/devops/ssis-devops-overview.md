@@ -307,9 +307,9 @@ The configuration JSON schema has three layers:
 
 |Property  |Description  |Notes  |
 |---------|---------|---------|
-|name|Name of the parameter.|The parameter can be *project parameter* or *package parameter*. <br> The parameter will be skipped if it does not exist in the parent project.|
-|container|Container of the parameter.|<li>If the parameter is a project parameter, the *container* should be the project name. <li>If it's a package parameter, the *container* should be the package name with **.dtsx** extension. <li> If the parameter is a connection manager property, the name should be in such format: **CM.\<Connection Manager Name>.\<Property Name>**.|
-|value|Value of the parameter.|<li>When *valueType* is *referenced*: The value is a reference to an environment variable in  *string* type. <li> When *valueType* is *literal*: This attribute supports any valid *boolean*, *number*, and *string* JSON values. <br> The value will be converted to the target parameter type. Error will occur if it cannot be converted.<li> The value of *null* is invalid. The task will skip this parameter object, and give a warning.|
+|name|Name of the parameter.|<li>The parameter can be a project parameter or a package parameter. <li>The parameter is skipped if it doesn't exist. <li>If the parameter is a connection manager property, the name should be in the format **CM.\<Connection Manager Name>.\<Property Name>**. |
+|container|Container of the parameter.|<li>If the parameter is a project parameter, the *container* should be the project name. <li>If it's a package parameter, the *container* should be the package name with **.dtsx** extension.|
+|value|Value of the parameter.|<li>When *valueType* is *referenced*: The value is a reference to an environment variable in  *string* type. <li> When *valueType* is *literal*: This attribute supports any valid *boolean*, *number*, and *string* JSON values. <li> The value will be converted to the target parameter type. Error will occur if it cannot be converted.<li> The value of *null* is invalid. The task will skip this parameter object, and give a warning.|
 |valueType|Type of the parameter value.|Valid types are: <br> *literal*: The *value* attribute represents a literal value. <br> *referenced*: The *value* attribute represents a reference to an environment variable.|
 
 ##### Reference Attributes

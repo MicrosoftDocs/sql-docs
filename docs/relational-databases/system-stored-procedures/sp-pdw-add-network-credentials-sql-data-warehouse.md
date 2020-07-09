@@ -14,7 +14,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ms.custom: seo-dt-2019
 ---
 # sp_pdw_add_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   This stores network credentials in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and associates them with a server. For example, use this stored procedure to give [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appropriate read/write permissions to perform database backup and restore operations on a target server, or to create a backup of a certificate used for TDE.  
   

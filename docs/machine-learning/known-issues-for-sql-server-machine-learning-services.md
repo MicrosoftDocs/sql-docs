@@ -706,8 +706,6 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 The [sqlmlutils package](package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
 
-This issue only applies to the **tensorflow** Python package.
-
 **Workaround**
 
 Using a command prompt in administrator mode, run the following command, replacing "MSSQLSERVER" with the name of your SQL instance:

@@ -45,7 +45,7 @@ ms.author: carlrab
 |**cluster_type_desc**|**nvarchar(60)**|Text description of cluster type|
 |**required_synchronized_secondaries_to_commit**|**int**| The number of secondary replicas that must be in a synchronized state for a commit  to complete|
 |**sequence_number**|**bigint**|Identifies the availability group configuration sequence. Incrementally increases every time the availability group primary replica updates the configuration of the group.|
-|**is_contained**|**bit**|1: Big data cluster master instance configured for high-availability. <br/><br/> 1: all other.|
+|**is_contained**|**bit**|1: Big data cluster master instance configured for high-availability. <br/><br/> 0: all other.|
   
 ## Failure condition level  values  
  The following table describes the possible failure condition levels for the **failure_condition_level** column.  

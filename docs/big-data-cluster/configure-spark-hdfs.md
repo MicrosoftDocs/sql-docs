@@ -35,7 +35,7 @@ The following sections list properties that you **can't** modify in a cluster:
 - [Unsupported `gateway` configurations](reference-config-spark-hadoop.md#unsupported-gateway-configurations)
 
 
-## Configurations via Cluster Profile
+## Configurations via cluster profile
 
 In the cluster profile there are resources and services. At deployment time, we can specify configurations in one of two ways: 
 

@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 
 In order to configure Apache Spark and Apache Hadoop in Big Data Clusters, you need to modify the cluster profile (bdc.json) at deployment time.
 
-## Supported Configurations
+## Supported configurations
 Big Data Clusters uses the same default configuration values as the respective open source project.
 You can find all possible configurations and the defaults for each at the associated Apache documentation site:
 - Apache Spark: https://spark.apache.org/docs/latest/configuration.html
@@ -36,7 +36,7 @@ You can find all possible configurations and the defaults for each at the associ
 > To include Spark in the Storage pool, set the boolean value `includeSpark` in the `bdc.json` configuration file at `spec.resources.storage-0.spec.settings.spark`. See [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md) for instructions.
 
 
-###  Big Data Clusters Specific Default Configurations
+###  Big Data Clusters specific default configurations
 The settings listed in the JSON are the BDC-specific defaults. They can be modified at deployment time if needed. They are listed here as they are different from their respective project default configurations.
 
 ```json

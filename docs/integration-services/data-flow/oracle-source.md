@@ -1,5 +1,5 @@
 ---
-title: "Oracle source | Microsoft Docs"
+title: Oracle source
 ms.custom: ""
 ms.date: "08/14/2019"
 ms.prod: sql
@@ -10,6 +10,7 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ---
+
 # Oracle source
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
@@ -64,7 +65,7 @@ For more information, see one of the following sections:
 - [Oracle Source Editor (Columns Page)](#oracle-source-editor-columns-page)
 - [Oracle Source Editor (Error Output Page)](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Oracle source](media/oracle-source.png)
 
 The **Advanced Editor dialog box** contains the properties that can be set programmatically.
 

@@ -118,7 +118,7 @@ The parameters associated with the dmaDataCollector function are described in th
 |---------|---------|
 |**getServerListFrom** | Your inventory. Possible values are **SqlServer** and **CSV**.<br/>For more info, see [Create an inventory of SQL Servers](#create-inventory). |
 |**serverName** | The SQL Server instance name of the inventory when using **SqlServer** in the **getServerListFrom** parameter. |
-|**databaseName** | The database hosting the inventory table. |
+|**databaseName** | The database hosting the DatabaseInventory and InstanceInventory tables. |
 |**useInstancesOnly** | Bit flag to specify whether to use a list of Instances for assessment or not.  If set to 0, then the DatabaseInventory table will be used to build the assessment target list. |
 |**AssessmentName** | The name of the DMA assessment. |
 |**TargetPlatform** | The assessment target type that you want to perform.  Possible values are **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, and **SQLServerWindows2017**. |

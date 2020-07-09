@@ -44,7 +44,7 @@ ms.author: carlrab
 |**cluster_type**|**tinyint**|0: Windows Server failover cluster <br/><br/>1: External cluster (for example, Linux Pacemaker)<br/><br/>2: None|
 |**cluster_type_desc**|**nvarchar(60)**|Text description of cluster type|
 |**required_synchronized_secondaries_to_commit**|**int**| The number of secondary replicas that must be in a synchronized state for a commit  to complete|
-|**sequence_number**|**bigint**|Internal|
+|**sequence_number**|**bigint**|Identifies the availability group configuration sequence. Incrementally increases every time the availability group primary replica updates the configuration of the group.|
   
 ## Failure condition level  values  
  The following table describes the possible failure condition levels for the **failure_condition_level** column.  

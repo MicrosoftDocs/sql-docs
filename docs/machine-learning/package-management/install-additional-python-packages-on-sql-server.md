@@ -159,14 +159,19 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
-> [NOTE]
-> The package **tensorflow** cannot be installed using sqlmlutils. The package depends on a specific version of **numpy** that's different from the version installed in SQL Server. The workaround is to manually install **tensorflow** from a command prompt. Use the following commands, replacing `<SQL instance>` with the name of your SQL instance. Use sqlmlutils for any other Python packages.
+> [!NOTE]
+> The package **tensorflow** cannot be installed using sqlmlutils. Use the following commands, replacing "MSSQLSERVER" with the name of your SQL instance.
 >
- ```cmd
- cd "C:\Program Files\Microsoft SQL Server\<SQL instance>\PYTHON_SERVICES"
- .\python.exe -m pip install --upgrade numpy
- .\python.exe -m pip install --upgrade tensorflow
- ```
+  ```cmd
+  cd "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES"
+  .\python.exe -m pip install --upgrade numpy
+  .\python.exe -m pip install --upgrade tensorflow
+  ```
+
+  ```cmd
+  "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\python.exe" -m pip install --upgrade numpy
+  "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\python.exe" -m pip install --upgrade tensorflow
+  ```
 
 ## Use the package
 

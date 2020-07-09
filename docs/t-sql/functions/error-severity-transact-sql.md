@@ -32,7 +32,7 @@ This function returns the severity value of the error where an error occurs, if 
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ERROR_SEVERITY ( )  
 ```  
   
@@ -55,6 +55,7 @@ When called in a CATCH block where an error occurs, `ERROR_SEVERITY` returns the
   
 ### A. Using ERROR_SEVERITY in a CATCH block  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_SEVERITY` returns the severity value of that error.  
+
 ```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  

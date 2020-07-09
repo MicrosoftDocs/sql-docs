@@ -1,5 +1,5 @@
 ---
-title: "Statistics | Microsoft Docs"
+title: Statistics
 ms.custom: ""
 ms.date: "06/03/2020"
 ms.prod: sql
@@ -24,7 +24,9 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Statistics
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The Query Optimizer uses statistics to create query plans that improve query performance. For most queries, the Query Optimizer already generates the necessary statistics for a high quality query plan; in some cases, you need to create additional statistics or modify the query design for best results. This topic discusses statistics concepts and provides guidelines for using query optimization statistics effectively.  
   
@@ -53,7 +55,7 @@ In more detail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] create
 
 The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
+![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 For each histogram step above:
 -   Bold line represents the upper boundary value (*range_high_key*) and the number of times it occurs (*equal_rows*)  

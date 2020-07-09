@@ -59,7 +59,7 @@ For more information about package location and installation paths, see [Get Pyt
     + Packages used for web development or other tasks that don't benefit by running inside SQL Server
 
   > [!NOTE]
-  > The package **tensorflow** cannot be installed using sqlmlutils. Use the following commands, replacing "MSSQLSERVER" with the name of your SQL instance.
+  > The package **tensorflow** cannot be installed using sqlmlutils. Use the following commands from a command prompt, replacing "MSSQLSERVER" with the name of your SQL instance.
   > ```cmd
   > "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\python.exe" -m pip install --upgrade numpy
   > "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\python.exe" -m pip install --upgrade tensorflow

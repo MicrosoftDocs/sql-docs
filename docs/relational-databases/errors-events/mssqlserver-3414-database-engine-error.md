@@ -52,7 +52,7 @@ There are a wide range of errors that could cause database recovery to fail. Whi
 ## User Action  
  
 For information about the cause of this occurrence of error 3414, examine the Windows Event Log or ERRORLOG for a previous error that indicates the specific failure. The appropriate user action depends on whether the information in the Windows Event Log indicates that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error was caused by a transient condition or a permanent failure. 
-The error message states to "diagnose recovery errors and fix them, or restore from a known good backup". Therefore, you can attempt to correct the error that you encounter to allow recovery to complete (see [Correctable Errors , Deferred Transactions](#correctable-errors--deferred-transactions))
+The error message states to "diagnose recovery errors and fix them, or restore from a known good backup". Therefore, you can attempt to correct the error that you encounter to allow recovery to complete (see [Correctable Errors and Deferred Transactions](#correctable-errors-and-deferred-transactions))
 
 If the errors cannot be corrected, the first and best option to resolve this problem is to restore from a good backup. However, if you cannot recover from a backup, you have two additional options, which do not guarantee full data recovery: use emergency repair with [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) or attempt to copy out as much data as possible to another database. 
 

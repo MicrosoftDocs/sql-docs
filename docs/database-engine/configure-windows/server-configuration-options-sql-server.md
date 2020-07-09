@@ -66,7 +66,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
 - SC = Self-configuring options.
 
 | Configuration option | Minimum value | Maximum value | Default |
-|--|--|--|--|--|
+|--|--|--|--|
 | [access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A) | 0 | 16384 | 0 |
 | [access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A) | 0 | 2147483647 | 0 |
 | [ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (A) | 0 | 1 | 0 |

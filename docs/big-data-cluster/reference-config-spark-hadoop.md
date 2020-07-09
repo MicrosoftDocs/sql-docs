@@ -15,9 +15,29 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-## Supported configurations
+In order to configure Apache Spark and Apache Hadoop in Big Data Clusters, you need to modify the cluster profile (bdc.json) at deployment time.
 
-The following example lists all default settings for supported configurable items.
+## Supported Configurations
+Big Data Clusters uses the same default configuration values as the respective open source project.
+You can find all possible configurations and the defaults for each at the associated Apache documentation site:
+- Apache Spark: https://spark.apache.org/docs/latest/configuration.html
+- Apache Hadoop:
+  - HDFS HDFS-Site: https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
+  - HDFS Core-Site: https://hadoop.apache.org/docs/r2.8.0/hadoop-project-dist/hadoop-common/core-default.xml  
+  - Yarn: https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/ResourceModel.html
+- Hive: https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
+- Livy: https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
+- Apache Knox Gateway: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+
+> [!NOTE]
+> There are some configuration settings that we change the default for. The JSON below lists these settings and their defaults. These settings can still be changed. For settings not listed in the JSON please refer to the links above.
+
+> [!NOTE]
+> To include Spark in the Storage pool, set the boolean value `includeSpark` in the `bdc.json` configuration file at `spec.resources.storage-0.spec.settings.spark`. See [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md) for instructions.
+
+
+###  Big Data Clusters Specific Default Configurations
+The settings listed in the JSON are the BDC-specific defaults. They can be modified at deployment time if needed. They are listed here as they are different from their respective project default configurations.
 
 ```json
 {
@@ -120,7 +140,7 @@ The following example lists all default settings for supported configurable item
 }
 ```
 
-The following sections list unsupported configurations.
+The following sections list the unsupported configurations.
 
 ## Unsupported `spark` configurations
 

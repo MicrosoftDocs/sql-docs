@@ -4,8 +4,8 @@ description: Install and use the PowerShell for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "04/19/2019"
 ms.reviewer: "alayu, maghan, sstein"
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: "SQLvariant"
 ms.author: "aanelson"

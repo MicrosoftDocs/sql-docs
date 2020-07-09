@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # User Assistance in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 User assistance is available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] through the Help menu and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. The Help menu in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offers several different routes to information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also provides access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] community and MSDN Online resources not previously available from within the Help environment. In addition, the Help environment is now configurable to launch either within the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment or in an associated external window of its own.  
   
 ## The Help Interface  

@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Script Transformation Editor"
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Script Transformation Editor (Input Columns Page)
   Use the **Input Columns** page of the **Script Transformation Editor** dialog box to set properties on input columns.  

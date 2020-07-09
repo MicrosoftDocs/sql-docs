@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 50633373-83f6-4ed9-99b9-71f92479a14f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Length of full-text catalog names restricted to 120 characters
   The length of full-text catalog names is restricted to 120 characters, reduced from the 128 character restriction in previous releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

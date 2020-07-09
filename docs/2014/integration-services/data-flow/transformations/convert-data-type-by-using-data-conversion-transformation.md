@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "Data Conversion transformation"
   - "data types [Integration Services], converting"
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Convert Data to a Different Data Type by Using the Data Conversion Transformation
   To add and configure a Data Conversion transformation, the package must already include at least one Data Flow task and one source.  

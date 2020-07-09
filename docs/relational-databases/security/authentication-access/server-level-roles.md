@@ -1,5 +1,6 @@
 ---
 title: "Server-Level Roles | Microsoft Docs"
+description: SQL Server provides server-level roles. These security principals group other principals to manage the server-wide permissions.
 ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: sql

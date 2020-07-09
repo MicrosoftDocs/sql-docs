@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "equal operator (==)"
   - "== (equal operator)"
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # == (Equal) (SSIS Expression)
   Performs a comparison to determine if two expressions are equal. The expression evaluator automatically converts many data types before it performs the comparison. For more information, see [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  

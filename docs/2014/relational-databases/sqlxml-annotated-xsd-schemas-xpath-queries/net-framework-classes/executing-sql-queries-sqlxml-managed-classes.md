@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Executing SQL Queries (SQLXML Managed Classes)
   This example demonstrates:  

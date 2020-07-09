@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (Database Settings Page) | Microsoft Docs"
+description: Become familiar with database settings in SQL Server. Learn about options that control backup behavior, fill factors, file locations, and other properties.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -16,7 +17,7 @@ ms.date: 05/23/2019
 
 # Server Properties - Database Settings Page
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify your database settings.  
   
 ## Options

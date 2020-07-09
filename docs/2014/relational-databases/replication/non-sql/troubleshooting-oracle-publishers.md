@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Troubleshooting Oracle Publishers
   This topic lists a number of issues that might arise when configuring and using an Oracle Publisher.  

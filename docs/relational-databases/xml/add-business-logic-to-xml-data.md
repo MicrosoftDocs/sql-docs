@@ -1,5 +1,6 @@
 ---
 title: "Add Business Logic to XML Data | Microsoft Docs"
+description: Learn how you can add business logic to XML data by applying XSL transformations, using domain-specific constraints on data, or by triggering validation rules.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 ---
 # Add Business Logic to XML Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Your business logic can be added to XML data in several ways:  
   
 -   You can write row or column constraints to enforce domain-specific constraints during insertion and modification of XML data.  
   
 -   You can write a trigger on the XML column that fires when you insert or update values in the column. The trigger can contain domain-specific validation rules or populate property tables.  
   
--   The Database Engine includes the ability execute managed code. You can use this common language runtime (CLR) integration to write functions in managed code to which you pass XML values, and use XML processing capabilities provided by the System.Xml namespace. An example is to apply XSL transformation to XML data. Alternatively, you can deserialize the XML into one or more managed classes and operate on them by using managed code.  
+-   The Database Engine includes the ability to execute managed code. You can use this common language runtime (CLR) integration to write functions in managed code to which you pass XML values, and use XML processing capabilities provided by the System.Xml namespace. An example is to apply XSL transformation to XML data. Alternatively, you can deserialize the XML into one or more managed classes and operate on them by using managed code.  
   
 -   You can write Transact-SQL stored procedures and functions that start the processing on the XML column for your business needs.  
   

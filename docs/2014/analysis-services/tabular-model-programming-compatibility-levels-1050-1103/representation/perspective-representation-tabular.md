@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Perspective Representation (Tabular)
   A perspective is a mechanism to simplify or focus the model into a smaller portion of it for the client application.  

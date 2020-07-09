@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Detect Failed Input Output Request
   This rule checks the system event log for EventId 50. This error is caused by a failed I/O request.  

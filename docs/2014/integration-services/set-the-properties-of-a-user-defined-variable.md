@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "modifying variables"
   - "variables [Integration Services], properties"
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Set the Properties of a User-Defined Variable
   To set the properties of a user-defined variable in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], you can use one of the following features:  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # bcp_writefmt
   Creates a format file containing a description of the format of the current bulk copy data file.  

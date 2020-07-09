@@ -16,7 +16,7 @@ ms.date: 03/14/2017
 
 # Complete the Post-Installation Steps
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 After you install Distributed Replay you must modify the Distributed Replay controller and client services accounts.  
   

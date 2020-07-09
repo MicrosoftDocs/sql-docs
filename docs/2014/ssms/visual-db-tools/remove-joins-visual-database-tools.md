@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Remove Joins (Visual Database Tools)
   If you do not want tables to be joined via an inner join or an outer join, you can remove the join between them. For example, you might remove a join that the [Query and View Designer](visual-database-tools.md) has been created automatically between two tables.  

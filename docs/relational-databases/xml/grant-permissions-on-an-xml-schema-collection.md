@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Grant Permissions on an XML Schema Collection
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can grant permissions to create an XML schema collection and also grant permissions on an XML schema collection object.  
   
 ## Granting Permission to Create an XML Schema Collection  

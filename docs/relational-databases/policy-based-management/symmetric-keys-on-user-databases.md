@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Symmetric Keys on User Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks whether keys that have a length of less than 128 bytes do not use the RC2 or RC4 encryption algorithm.  
   
 ## Best Practices Recommendations  

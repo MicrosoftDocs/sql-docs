@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "items [Integration Services]"
   - "SSIS projects, items"
 ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Add an Item to an Integration Services Project
   This procedure describes how to add new and existing items to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  

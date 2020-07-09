@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Modify a Stored Procedure
     

@@ -16,7 +16,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Extended Static Geometry Methods
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports several extensions to the static geometry methods of the Open Geospatial Consortium (OGC).  
   

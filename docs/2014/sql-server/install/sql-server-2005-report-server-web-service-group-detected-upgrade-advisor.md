@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 699d24eb-7756-4b41-9294-ef1a94b2f267
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # SQL Server 2005 Report Server Web Service group detected (Upgrade Advisor)
   Upgrade Advisor detected that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is associated with a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Report Server Web service group.  

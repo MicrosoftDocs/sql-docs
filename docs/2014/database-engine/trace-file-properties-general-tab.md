@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Trace File Properties (General Tab)
   Use the **General** tab of the **Trace File Properties** dialog box to view the properties of a trace file.  

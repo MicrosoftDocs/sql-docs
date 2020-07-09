@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Create, Alter, and Drop Selective XML Indexes
   Describes how to create a new selective XML index, or alter or drop an existing selective XML index.  

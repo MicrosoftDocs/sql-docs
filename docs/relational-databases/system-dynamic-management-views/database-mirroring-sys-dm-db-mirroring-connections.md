@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Database Mirroring - sys.dm_db_mirroring_connections
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each connection established for database mirroring.  
   

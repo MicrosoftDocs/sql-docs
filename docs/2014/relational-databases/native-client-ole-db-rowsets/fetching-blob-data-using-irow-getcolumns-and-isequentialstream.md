@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
   The following function uses **IRow::GetColumns** and **ISequentialStream** to fetch large data:  

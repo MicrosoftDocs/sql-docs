@@ -1,6 +1,6 @@
 ---
 title: "Fail over an availability group"
-description: "Describes how to perform a planned or forced manual failover of an Always On availability group with SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell."
+description: Describes how to perform a planned/forced manual failover of an Always On availability group with SQL Server Management Studio, Transact-SQL, or SQL PowerShell.
 ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -22,7 +22,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to perform a planned manual failover or forced manual failover (forced failover) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. If you fail over to a secondary replica in the SYNCHRONIZED state, the wizard performs a planned manual failover (without data loss). If you fail over to a secondary replica in the UNSYNCHRONIZED or NOT SYNCHRONIZING state, the wizard performs a forced manual failover-also known as a *forced failover* (with possible data loss). Both forms of manual failover transition the secondary replica to which you are connected to the primary role. A planned manual failover currently transitions the former primary replica to the secondary role. After a forced failover, when the former primary replica comes online, it transitions to the secondary role.  
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

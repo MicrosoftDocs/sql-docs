@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Troubleshoot Full-Text Indexing
      

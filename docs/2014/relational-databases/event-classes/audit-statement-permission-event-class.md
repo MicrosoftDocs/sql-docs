@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Statement Permission Event Class
   The **Audit Statement Permission** event class occurs whenever a statement permission (such as CREATE TABLE) is used.  

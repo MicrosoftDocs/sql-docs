@@ -1,6 +1,6 @@
 ---
 title: "Example: Database mirroring with certificates (T-SQL)"
-description: An example of configuring SQL Server database mirroring with certificates using Transact-SQL.
+description: This article contains an example of configuring SQL Server database mirroring with certificate-based authentication by using Transact-SQL in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -18,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This example shows all the stages required to create a database mirroring session using certificate-based authentication. The examples in this topic use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Unless you can guarantee that your network is secure, we recommend that you use encryption for database mirroring connections.  
   
  When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  

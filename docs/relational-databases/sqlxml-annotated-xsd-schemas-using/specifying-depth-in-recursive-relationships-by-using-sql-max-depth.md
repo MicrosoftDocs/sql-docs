@@ -1,5 +1,6 @@
 ---
 title: "Set recursive depth relationships with sql:max-depth"
+description: Learn how to specify depth when querying tables that have a recursive relationship by using the sql:max-depth annotation in an XQuery.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -24,7 +25,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In relational databases, when a table is involved in a relationship with itself, it is called a recursive relationship. For example, in a supervisor-supervisee relationship, a table storing employee records is involved in a relationship with itself. In this case, the employees table plays a role of supervisor on one side of the relationship, and the same table plays a role of supervisee on the other side.  
   
  Mapping schemas can include recursive relationships where an element and its ancestor are of the same type.  

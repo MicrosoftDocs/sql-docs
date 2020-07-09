@@ -1,5 +1,6 @@
 ---
 title: "Configure the recovery interval Server Configuration Option | Microsoft Docs"
+description: Learn about the recovery interval option. See how its value affects how often SQL Server issues automatic checkpoints on a database.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the recovery interval Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **recovery interval** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **recovery interval** option defines an upper limit on the time recovering a database should take. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses the value specified for this option to determine approximately how often to issue [automatic checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md) on a given database.  
   

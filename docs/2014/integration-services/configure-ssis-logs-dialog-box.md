@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure SSIS Logs dialog box"
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure SSIS Logs Dialog Box
   Use the **Configure SSIS Logs** dialog box to define logging options for a package.  

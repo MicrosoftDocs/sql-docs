@@ -15,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Context Connections and Regular Connections - Restrictions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic discusses the restrictions associated with code executing in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process through context and regular connections.  
   
 ## Restrictions on Context Connections  

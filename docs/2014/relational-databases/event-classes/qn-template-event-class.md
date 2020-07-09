@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # QN:Template Event Class
   The QN:Template event reports information on the internal use of query templates. Query templates are the mechanism that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses to share definitions of a query for notification. These templates are created along with parameter tables. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates an event of this type when a query template is created, used, or destroyed.  

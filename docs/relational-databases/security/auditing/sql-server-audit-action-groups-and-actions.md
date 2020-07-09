@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Audit Action Groups and Actions | Microsoft Docs"
+description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit. 
 ms.custom: ""
 ms.date: "10/19/2016"
 ms.prod: sql
@@ -23,7 +24,7 @@ author: DavidTrigano
 ms.author: datrigan
 ---
 # SQL Server Audit Action Groups and Actions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and individual events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audits consist of zero or more audit action items. These audit action items can be either a group of actions, such as Server_Object_Change_Group, or individual actions such as SELECT operations on a table.  

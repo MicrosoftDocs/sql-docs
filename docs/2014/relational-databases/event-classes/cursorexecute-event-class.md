@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # CursorExecute Event Class
   The **CursorExecute** event class describes cursor execute events that occur in application programming interface (API) cursors. Cursor execute events occur when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and populates a cursor from the execution plan created by a cursor prepare event.  

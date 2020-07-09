@@ -19,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # xp_logevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Logs a user-defined message in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file and in the Windows Event Viewer. xp_logevent can be used to send an alert without sending a message to the client.  
   

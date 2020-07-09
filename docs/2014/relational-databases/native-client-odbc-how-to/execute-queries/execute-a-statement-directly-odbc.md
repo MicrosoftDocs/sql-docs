@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Execute a Statement Directly (ODBC)
     

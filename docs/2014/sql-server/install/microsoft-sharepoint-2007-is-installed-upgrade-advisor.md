@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Microsoft SharePoint 2007 is Installed (Upgrade Advisor)
   Upgrade Advisor detected an unsupported version of a SharePoint product or technology.  

@@ -20,7 +20,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   An updategram indicates a delete operation when a record instance appears in the **\<before>** block with no corresponding records in the **\<after>** block. In this case, the updategram deletes the record in the **\<before>** block from the database.  
   
  This is the updategram format for a delete operation:  

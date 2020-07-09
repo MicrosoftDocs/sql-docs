@@ -13,7 +13,7 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 
 # PolyBase configuration and security for Hadoop
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article provides a reference for various configuration settings that affect PolyBase connectivity to Hadoop. For a walkthrough on how to use PolyBase with Hadoop, see [Configure PolyBase to access external data in Hadoop](polybase-configure-hadoop.md).
 

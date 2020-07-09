@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)
   This example illustrates the use of the following SQLXMLOLEDB Provider-specific properties:  

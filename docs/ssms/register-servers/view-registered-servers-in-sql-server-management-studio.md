@@ -7,7 +7,6 @@ ms.topic: conceptual
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -15,7 +14,7 @@ ms.date: 03/01/2017
 
 # View Registered Servers in SQL Server Management Studio
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to view registered servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 

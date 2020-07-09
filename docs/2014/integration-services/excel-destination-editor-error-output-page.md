@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Excel Destination Editor"
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Destination Editor (Error Output Page)
   Use the **Advanced** page of the **Excel Destination Editor** dialog box to specify options for error handling.  

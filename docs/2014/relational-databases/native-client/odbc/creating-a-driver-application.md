@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Creating a SQL Server Native Client ODBC Driver Application
   ODBC architecture has four components that perform the following functions.  

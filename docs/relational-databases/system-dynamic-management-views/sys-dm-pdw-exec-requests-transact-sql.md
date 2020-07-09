@@ -15,7 +15,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds information about all requests currently or recently active in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It lists one row per request/query.  
   
@@ -28,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |start_time|**datetime**|Time at which the request execution was started.|NULL for queued requests; otherwise, valid **datetime** smaller or equal to current time.|  
 |end_compile_time|**datetime**|Time at which the engine completed compiling the request.|NULL for requests that haven't been compiled yet; otherwise a valid **datetime** less than start_time and less than or equal to the current time.|
 |end_time|**datetime**|Time at which the request execution completed, failed, or was canceled.|Null for queued or active requests; otherwise, a valid **datetime** smaller or equal to current time.|  
-|total_elapsed_time|**int**|Time elapsed in execution since the request was started, in milliseconds.|Between 0 and the difference between start_time and end_time.</br></br> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded."</br></br> The maximum value in milliseconds is the same as 24.8 days.|  
+|total_elapsed_time|**int**|Time elapsed in execution since the request was started, in milliseconds.|Between 0 and the difference between submit_time and end_time.</br></br> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded."</br></br> The maximum value in milliseconds is the same as 24.8 days.|  
 |label|**nvarchar(255)**|Optional label string associated with some SELECT query statements.|Any string containing 'a-z','A-Z','0-9','_'.|  
 |error_id|**nvarchar(36)**|Unique ID of the error associated with the request, if any.|See [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); set to NULL if no error occurred.|  
 |database_id|**int**|Identifier of database used by explicit context (for example, USE DB_X).|See ID in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
@@ -38,7 +38,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |group_name|**sysname** |For requests utilizing resources, group_name is the name of the workload group the request is running under.  If the request does not utilize resources, group_name is null.</br>Applies to: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|For requests utilizing resources, The name of the classifier used for assigning resources and importance.||
 |resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure SQL Data Warehouse|
-|result_cache_hit|**hexadecimal**|Details whether a completed query used result set cache.  </br>Applies to: Azure SQL Data Warehouse| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative values = Reasons why result set caching was not used.  See remarks section for details.|
+|result_cache_hit|**decimal**|Details whether a completed query used result set cache.  </br>Applies to: Azure SQL Data Warehouse| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative values = Reasons why result set caching was not used.  See remarks section for details.|
 ||||
   
 ## Remarks 
@@ -46,18 +46,18 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 
  The result_cache_hit is a bitmask of a query's use of result set cache.  This column can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values:  
   
-|Value|Description|  
+|Value Hex (Decimal)|Description|  
 |-----------|-----------------|  
 |**1**|Result set cache hit|  
-|-**0x00**|Result set cache miss|  
-|-**0x01**|Result set caching is disabled on the database.|  
-|-**0x02**|Result set caching is disabled on the session. | 
-|-**0x04**|Result set caching is disabled due to no data sources for the query.|  
-|-**0x08**|Result set caching is disabled due to row level security predicates.|  
-|-**0x10**|Result set caching is disabled due to the use of system table, temporary table, or external table in the query.|  
-|-**0x20**|Result set caching is disabled because the query contains runtime constants, user-defined functions, or non-deterministic functions.|  
-|-**0x40**|Result set caching is disabled due to estimated result set size is >10GB.|  
-|-**0x80**|Result set caching is disabled because the result set contains rows with large size (>64kb).|  
+|**0x00** (**0**)|Result set cache miss|  
+|-**0x01** (**-1**)|Result set caching is disabled on the database.|  
+|-**0x02** (**-2**)|Result set caching is disabled on the session. | 
+|-**0x04** (**-4**)|Result set caching is disabled due to no data sources for the query.|  
+|-**0x08** (**-8**)|Result set caching is disabled due to row level security predicates.|  
+|-**0x10** (**-16**)|Result set caching is disabled due to the use of system table, temporary table, or external table in the query.|  
+|-**0x20** (**-32**)|Result set caching is disabled because the query contains runtime constants, user-defined functions, or non-deterministic functions.|  
+|-**0x40** (**-64**)|Result set caching is disabled due to estimated result set size is >10GB.|  
+|-**0x80** (**-128**)|Result set caching is disabled because the result set contains rows with large size (>64kb).|  
   
 ## Permissions
 

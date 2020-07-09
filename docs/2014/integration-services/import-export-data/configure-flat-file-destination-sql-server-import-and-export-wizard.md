@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.configureflatfiledest.f1"
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Flat File Destination (SQL Server Import and Export Wizard)
   Use the **Configure Flat File Destination** page to specify formatting options for the destination flat file, and to preview results before continuing.  

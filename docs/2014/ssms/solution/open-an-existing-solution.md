@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Open an Existing Solution
   You can have only one solution at a time open in Solution Explorer.  

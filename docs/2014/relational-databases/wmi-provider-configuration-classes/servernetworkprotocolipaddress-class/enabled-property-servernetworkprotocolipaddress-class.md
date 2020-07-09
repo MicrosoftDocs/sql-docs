@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Enabled Property (ServerNetworkProtocolIpAddress Class)
   Gets the Boolean property that specifies whether an IP address is enabled.  

@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Developer&#39;s Guide (Master Data Services)
   Find information about how to write code to customize the way you and your users interact with [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Learn how to:  
@@ -33,7 +32,7 @@ manager: craigg
  A categorized list of the web service operations of the <xref:Microsoft.MasterDataServices.ServiceClient> class.  
   
 ## Custom Workflows  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] uses business rules to create basic workflow solutions. You can automatically update and validate data and have e-mail notifications sent based on conditions you specify. Business rules in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] are intended to manage the most common workflow scenarios. If your workflow requires more complex event processing, such as multi-tiered approvals or complex decision trees, you can configure [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to send data to a custom assembly that you create. To handle custom workflows, you must configure and start SQL Server MDS Workflow Integration Service on the web application computer, and create an assembly that implements the <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> interface.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] uses business rules to create basic workflow solutions. You can automatically update and validate data and have e-mail notifications sent based on conditions you specify. Business rules in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] are intended to manage the most common workflow scenarios. If your workflow requires more complex event processing, such as multi-tiered approvals or complex decision trees, you can configure [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to send data to a custom assembly that you create. To handle custom workflows, you must configure and start SQL Server MDS Workflow Integration Service on the web application computer, and create an assembly that implements the [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) interface.  
   
 ### Custom Workflow Content  
  [Create a Custom Workflow &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
@@ -44,7 +43,7 @@ manager: craigg
   
 |Namespace|Description|  
 |---------------|-----------------|  
-|<xref:Microsoft.MasterDataServices.Deployment>|Contains classes that can be used to create a deployment package from a model and to deploy a package into a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|  
+|[Microsoft.MasterDataServices.Deployment](/previous-versions/sql/sql-server-2016/ff487448(v=sql.130))|Contains classes that can be used to create a deployment package from a model and to deploy a package into a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|  
 |<xref:Microsoft.MasterDataServices.Services>|Contains a class that receives and processes web service operations made to the web server computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application.|  
 |<xref:Microsoft.MasterDataServices.Services.DataContracts>|Contains classes that define how data is passed from the client computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to the web server computer.|  
 |<xref:Microsoft.MasterDataServices.Services.MessageContracts>|Contains classes that define how requests and responses are passed from the client computer through the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to the web server computer.|  

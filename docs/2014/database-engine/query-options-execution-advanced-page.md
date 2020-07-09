@@ -8,7 +8,6 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "09/03/2019"

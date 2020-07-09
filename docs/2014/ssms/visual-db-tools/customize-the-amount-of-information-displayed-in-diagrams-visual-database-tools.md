@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)
   When you add a table to a database diagram it appears with a set number of properties showing. You can choose from a menu of variations on how much information shows or you can create a custom set of properties.  

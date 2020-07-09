@@ -30,6 +30,7 @@ The following Oracle database versions of data source are supported:
 - Oracle 11.x
 - Oracle 12c
 - Oracle 18c (without Windows Authentication support)
+- Oracle 19c (without Windows Authentication support)
 
 The Oracle database is supported on all operating systems and platforms.
 > [!NOTE]

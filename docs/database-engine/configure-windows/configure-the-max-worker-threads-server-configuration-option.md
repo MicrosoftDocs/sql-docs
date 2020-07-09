@@ -1,5 +1,6 @@
 ---
 title: "Configure the max worker threads Server Configuration Option | Microsoft Docs"
+description: Find out how to use the max worker threads option to configure the number of worker threads that are available to SQL Server to process certain requests.
 ms.custom: "contperfq4"
 ms.date: "04/14/2020"
 ms.prod: sql
@@ -15,9 +16,9 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the max worker threads Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to configure the **max worker threads** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **max worker threads** option configures the number of worker threads that are available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes.
+This topic describes how to configure the **max worker threads** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **max worker threads** option configures the number of worker threads that are available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-wide to process query requests, login, logout, and similar application requests.
 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the native thread services of the operating systems to ensure the following conditions:
@@ -34,9 +35,9 @@ The default value for **max worker threads** is 0. This enables [!INCLUDE[ssNoVe
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When the actual number of query requests is less than the amount set in **max worker threads**, one thread handles each query request. However, if the actual number of query requests exceeds the amount set in **max worker threads**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pools the worker threads so that the next available worker thread can handle the request.
+-   The actual number of query requests can exceed the value set in **max worker threads** in which case  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pools the worker threads so that the next available worker thread can handle the request. A worker thread is assigned only to active requests and is released once the request is serviced. This happens even if the user session/connection on which the request was made remains open. 
 
--   The **max worker threads** server configuration option does not limit all threads that may be spawned in the system. Threads required for tasks such as Availability Groups, Service Broker, Lock Manager, or others are spawned outside this limit. If the number of threads configured is being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
+-   The **max worker threads** server configuration option does not limit all threads that may be spawned inside the engine. System threads required for tasks such as LazyWriter, Checkpoint, Log Writer, Service Broker, Lock Manager, or others are spawned outside this limit. Availability Groups use some of the worker threads from within the **max worker thread limit** but also use system threads (see [Thread Usage by Availability Groups](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage) ) If the number of threads configured is being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -56,11 +57,11 @@ The default value for **max worker threads** is 0. This enables [!INCLUDE[ssNoVe
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional. If you suspect that there is a performance problem, it is probably not the availability of worker threads. The cause is more likely something like I/O that is causing the worker threads to wait. It is best to find the root cause of a performance issue before you change the max worker threads setting. For more information on assessing performance, see [Monitor and tune for performance](../../relational-databases/performance/monitor-and-tune-for-performance.md).
+-   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional. If you suspect that there is a performance problem, it is probably not the availability of worker threads. The cause is more likely related to activies that occupy the worker threads and do not release them. Examples include long-running queries or bottlenecks on the system (I/O, blocking, latch waits, network waits) that cause long-waiting queries. It is best to find the root cause of a performance issue before you change the max worker threads setting. For more information on assessing performance, see [Monitor and tune for performance](../../relational-databases/performance/monitor-and-tune-for-performance.md).
   
 -   Thread pooling helps optimize performance when a large number of clients connect to the server. Usually, a separate operating system thread is created for each query request. However, with hundreds of connections to the server, using one thread per query request can consume large amounts of system resources. The **max worker threads** option enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to create a pool of worker threads to service a larger number of query requests, which improves performance.  
   
--   The following table shows the automatically configured number of max worker threads for various combinations of CPUs, computer architecture, and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], using the formula: ***Default Max Workers* + ((*logical CPUs* - 4) * *Workers per CPU*)**.  
+-   The following table shows the automatically configured number of max worker threads (when value is set to 0) based on various combinations of CPUs, computer architecture, and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], using the formula: ***Default Max Workers* + ((*logical CPUs* - 4) * *Workers per CPU*)**.  
   
     |Number of CPUs|32-bit computer (up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64-bit computer (up to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|64-bit computer (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  

@@ -1,5 +1,6 @@
 ---
 title: "Plan adoption of in-memory OLTP "
+description: Learn how the adoption of In-Memory OLTP features in SQL Server affects other aspects of your business system.
 ms.custom: seo-dt-2019
 ms.date: "01/28/2019"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 This article describes the ways in which the adoption of In-Memory features affects other aspects of your business system.

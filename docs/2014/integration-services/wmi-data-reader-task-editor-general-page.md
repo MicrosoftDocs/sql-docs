@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "WMI Data Reader Task Editor"
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # WMI Data Reader Task Editor (General Page)
   Use the **General** page of the **WMI Data Reader Task Editor** dialog box to name and describe the WMI Data Reader task.  

@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Fuzzy Grouping Transformation Editor"
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Fuzzy Grouping Transformation Editor (Connection Manager Tab)
   Use the **Connection Manager** tab of the **Fuzzy Grouping Transformation Editor** dialog box to select an existing connection or create a new one.  

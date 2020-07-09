@@ -1,12 +1,12 @@
 ---
 title: Extensibility for Database Code Analysis Rules
+description: Become familiar with the various components of database code analysis rules and how they interact in SQL Server Data Tools. Learn about creating custom rules.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

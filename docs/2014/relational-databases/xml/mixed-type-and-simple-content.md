@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Mixed Type and Simple Content
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support restricting a mixed type to a simple content.  

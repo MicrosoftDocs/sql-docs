@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "greater than operator (>)"
   - "> (greater than operator)"
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # &gt; (Greater Than) (SSIS Expression)
   Performs a comparison to determine if the first expression is greater than the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

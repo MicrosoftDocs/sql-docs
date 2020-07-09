@@ -1,5 +1,6 @@
 ---
-title: "Tables (Report Builder  and SSRS) | Microsoft Docs"
+title: "Tables (Report Builder and SSRS) | Microsoft Docs"
+description: Display detail data or grouped data by using a single field or multiple fields, or by writing your own expression in a paginated report in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

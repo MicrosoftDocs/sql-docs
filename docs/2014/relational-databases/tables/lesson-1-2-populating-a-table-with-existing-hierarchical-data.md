@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Populating a Table with Existing Hierarchical Data
   This task creates a new table and populates it with the data in the **EmployeeDemo** table. This task has the following steps:  

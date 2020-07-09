@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Canonical Forms and Pattern Restrictions
   The XSD pattern facet allows for the restriction of the lexical space of simple types. When a pattern restriction is put on a type for which there is more than one possible lexical representation, some values could cause unexpected behavior upon validation.  

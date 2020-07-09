@@ -47,7 +47,7 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server 2019: Hardware and software requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2019 on the Windows operating system.
 

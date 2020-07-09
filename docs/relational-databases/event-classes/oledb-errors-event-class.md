@@ -14,7 +14,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Errors Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The OLEDB Errors event class occurs in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when a call to an OLE DB provider returns an error. Include this event class in traces to view a failed HRESULT from an OLE DB provider.  
   
  When the OLEDB Errors event class is included in a trace, the amount of overhead depends on how frequently OLE DB provider errors occur against the database during the trace. If such errors occur frequently, the trace might significantly impede performance.  

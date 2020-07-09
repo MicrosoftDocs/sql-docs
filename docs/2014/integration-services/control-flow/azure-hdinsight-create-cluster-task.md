@@ -10,9 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.afpcreatecltask.f1"
   - "sql11.dts.designer.afpcreatecltask.f1"
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Azure HDInsight Create Cluster Task
 The **Azure HDInsight Create Cluster Task** enables an SSIS package to create an Azure HDInsight cluster in the specified Azure subscription and resource group.

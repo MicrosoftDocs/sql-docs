@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SetStringValue Method (SqlServiceAdvancedProperty Class )
   Sets the string value of a property.  

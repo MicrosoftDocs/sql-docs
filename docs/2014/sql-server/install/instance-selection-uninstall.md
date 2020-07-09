@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e61297fc-a418-4553-b85e-40a3062606f1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Instance Selection (Uninstall)
   On the Instance Selection - Uninstall page, use the drop-down box to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to uninstall.  

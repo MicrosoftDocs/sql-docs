@@ -19,8 +19,6 @@ You can configure properties for the SQL Server master instance, the Apache Spar
 
 After deployment, Big Data Clusters does not support modifying the configuration properties.
 
-## Next steps
-
 For specific information about configuration, see the appropriate articles:
 
 How to: 

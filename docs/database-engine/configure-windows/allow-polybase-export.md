@@ -1,6 +1,6 @@
 ---
 title: "Allow PolyBase export configuration option | Microsoft Docs"
-description: Set allow polybase export configuration option in SQL Server settings
+description: Set `allow polybase export` configuration option in SQL Server settings
 ms.custom: ""
 ms.date: "07/10/2020"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 
-# Set allow polybase export configuration option
+# Set `allow polybase export` configuration option
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -47,4 +47,4 @@ GO
 
 ## Next steps
 
- [Exporting data](../../relational-databases/polybase/polybase-configure-hadoop.md#exporting-data).
+ [Exporting data](../../relational-databases/polybase/polybase-configure-hadoop.md#exporting-data)

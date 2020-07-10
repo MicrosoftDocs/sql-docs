@@ -1058,7 +1058,7 @@
     {
       "source_path": "docs/advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md",
       "redirect_url": "/sql/machine-learning/r/upgrade-and-installation-faq-sql-server-r-services",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/sql/machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md",

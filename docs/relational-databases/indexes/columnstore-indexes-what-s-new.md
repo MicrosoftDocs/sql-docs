@@ -43,6 +43,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Columnstore index can have a non-persisted computed column||||yes|||   
   
  <sup>1</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.  
+ 
+> [!NOTE]
+> The degree of parallelism (DOP) for [batch mode](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) operations is limited to 2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition and 1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] adds these new features.
@@ -79,22 +82,26 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The `ALTER INDEX ... REORGANIZE` statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
   
--   Columnstore indexes can be access on an AlwaysOn readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an AlwaysOn secondary replica.  
+-   Columnstore indexes can be access on an AlwaysOn readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an Always On secondary replica.  
   
--   To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computes the aggregate functions `MIN`, `MAX`, `SUM`, `COUNT`, and `AVG` during table scans when the data type uses no more than 8 bytes, and is not of a string type. Aggregate pushdown is supported with or  without Group By clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
+-   To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computes the aggregate functions `MIN`, `MAX`, `SUM`, `COUNT`, and `AVG` during table scans when the data type uses no more than 8 bytes, and is not of a string type. Aggregate pushdown is supported with or without `GROUP BY` clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
   
--   Predicate pushdown speeds up queries that compare strings of type [v]archar or n[v]archar. This applies to the common comparison operators and includes operators such as LIKE that use bitmap filters. This works with all collations that SQL Server supports.  
+-   Predicate pushdown speeds up queries that compare strings of type [v]archar or n[v]archar. This applies to the common comparison operators and includes operators such as `LIKE` that use bitmap filters. This works with all collations that SQL Server supports.  
   
 ### Performance for database compatibility level 130  
   
 -   New batch mode execution support for queries using any of these operations:  
-    -   SORT  
-    -   Aggregates with multiple distinct functions. Some examples: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`.  
-    -   Window aggregate functions: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX`, and `CLR`.  
-    -   Window user-defined aggregates: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP`, and `GROUPING`.  
-    -   Window aggregate analytic functions:  `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST`, and `PERCENT_RANK`.  
+    -   `SORT`  
+    -   Aggregates with multiple distinct functions. Some examples: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`  
+    -   Window aggregate functions: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX`, and `CLR`  
+    -   Window user-defined aggregates: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP`, and `GROUPING`  
+    -   Window aggregate analytic functions:  `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST`, and `PERCENT_RANK`  
+
 -   Single-threaded queries running under `MAXDOP 1` or with a serial query plan execute in batch mode. Previously-only multi-threaded queries ran with batch execution.  
--   Memory optimized table queries can have parallel plans in SQL InterOp mode both when accessing data in rowstore or in columnstore index  
+
+-   Memory optimized table queries can have parallel plans in SQL InterOp mode both when accessing data in rowstore or in columnstore index.
+
+-   Enhancements for batch mode operations by leveraging vector based hardware capabilities. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects the level of CPU support for AVX 2 (Advanced Vector Extensions) and SSE 4 (Streaming SIMD Extensions 4) hardware extensions, and uses them if supported.
   
 ### Supportability  
 These system views are new for columnstore:  

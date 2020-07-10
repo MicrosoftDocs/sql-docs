@@ -2,17 +2,17 @@
 title: Install pre-trained models
 description: Add pre-trained models for sentiment analysis and image featurization to SQL Server Machine Learning Services (R or Python) or SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 07/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install pre-trained machine learning models on SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article explains how to use Powershell to add free pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use, added to an instance as a post-install task. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
 

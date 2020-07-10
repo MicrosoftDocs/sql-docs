@@ -1,5 +1,6 @@
 ---
 title: "Configure the max worker threads Server Configuration Option | Microsoft Docs"
+description: Find out how to use the max worker threads option to configure the number of worker threads that are available to SQL Server to process certain requests.
 ms.custom: "contperfq4"
 ms.date: "04/14/2020"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the max worker threads Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to configure the **max worker threads** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **max worker threads** option configures the number of worker threads that are available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-wide to process query requests, login, logout, and similar application requests.
 

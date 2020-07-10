@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use Nested FOR XML Queries
   The `xml` data type and the [TYPE directive in FOR XML queries](type-directive-in-for-xml-queries.md) enable the XML returned by the FOR XML queries to be processed on the server as well as on the client.  

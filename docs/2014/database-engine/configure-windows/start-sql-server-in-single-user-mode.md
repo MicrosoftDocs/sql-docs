@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Start SQL Server in Single-User Mode
   Under certain circumstances, you may have to start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode by using the **startup option -m.** For example, you may want to change server configuration options or recover a damaged master database or other system database. Both actions require starting an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.  

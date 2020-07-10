@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Logins Task Edito"
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Logins Task Editor (General Page)
   Use the **General** page of the **Transfer Logins Task Editor** dialog box to name and describe the Transfer Logins task. For more information about this task, see [Transfer Logins Task](control-flow/transfer-logins-task.md).  

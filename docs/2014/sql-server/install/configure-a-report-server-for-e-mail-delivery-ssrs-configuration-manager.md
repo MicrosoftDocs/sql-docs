@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)
 

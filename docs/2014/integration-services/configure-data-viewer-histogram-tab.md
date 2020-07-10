@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Data Viewer (Histogram Tab)
   Use the **Histogram** tab of the **Configure Data Viewer** dialog box to specify the column to display. A histogram displays data values from one numeric column as a distribution of the values. The chart reflects the contents of one buffer only.  

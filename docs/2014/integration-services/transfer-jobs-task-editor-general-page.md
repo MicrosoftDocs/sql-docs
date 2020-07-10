@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Jobs Task Editor"
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Jobs Task Editor (General Page)
   Use the **General** page of the **Transfer Jobs Task Editor** dialog box to name and describe the Transfer Jobs task. For more information about the Transfer Jobs task, see [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  

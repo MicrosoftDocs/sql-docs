@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Ring Buffer Target
   The ring buffer target briefly holds event data in memory. This target can manage events in one of two modes.  

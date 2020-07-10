@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Print Dialog Box
   You can specify how you want to print a document by selecting options in the **Print** dialog box.  

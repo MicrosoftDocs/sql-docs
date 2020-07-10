@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # ad hoc distributed queries Server Configuration Option
   By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow ad hoc distributed queries using OPENROWSET and OPENDATASOURCE. When this option is set to 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows ad hoc access. When this option is not set or is set to 0, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow ad hoc access.  

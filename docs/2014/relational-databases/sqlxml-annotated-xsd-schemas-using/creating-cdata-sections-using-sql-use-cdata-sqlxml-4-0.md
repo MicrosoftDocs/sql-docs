@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)
   In XML, CDATA sections are used to escape blocks of text that contain characters that would otherwise be recognized as markup characters.  

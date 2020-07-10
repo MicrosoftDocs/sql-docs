@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 3: Adding Logging
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible, and can be enabled at the package level or on individual tasks and containers within the package. You can select which events you want to log, and create multiple logs against a single package.  

@@ -1,5 +1,6 @@
 ---
 title: "Generate an Inline XDR Schema | Microsoft Docs"
+description: View information about generating an inline XDR schema and about the deprecation of the XMLDATA directive in the FOR XML clause.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Generate an Inline XDR Schema
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The **XMLDATA** directive in FOR XML returns an inline XDR schema together with the query result. However, the XDR schema does not support all the new data types and other enhancements introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. Instead, you can request an inline XSD schema by using [the XMLSCHEMA directive](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
   
 > [!IMPORTANT]  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 418af5b3-b8d8-45ba-9219-24ac2a348c29
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Uninstall an Existing Instance of Distributed Replay
   Uninstalling a Distributed Replay component (controller or client) will remove the following:  

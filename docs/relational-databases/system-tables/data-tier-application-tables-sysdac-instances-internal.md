@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Data-tier Application Tables - sysdac_instances_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays one row for each data-tier application (DAC) instance deployed to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. This table is stored in the dbo schema in the msdb database.  
   

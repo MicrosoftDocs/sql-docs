@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Develop a .NET application using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,6 +19,9 @@ ms.author: v-jizho2
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
 This tutorial teaches you how to develop a simple application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+> [!NOTE]
+> Always Encrypted with secure enclaves is only supported on Windows.
 
 ## Prerequisites
 

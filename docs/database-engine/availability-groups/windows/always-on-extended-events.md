@@ -12,7 +12,7 @@ author: rothja
 ms.author: jroth
 ---
 # Configure extended events for Always On availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   SQL Server defines extended events that are specific to Always On availability groups. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group. You can view the availability group extended events using the following query:  
   
 ```sql  

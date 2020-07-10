@@ -5,7 +5,7 @@ description: Learn how to customize a big data cluster deployment with configura
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Configure deployment settings for cluster resources and services
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Starting from a pre-defined set of configuration profiles that are built into the `azdata` management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 
@@ -661,6 +661,16 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 > [!IMPORTANT]
 > We recommend as a best practice to manually update the `max_map_count` setting manually on each host in the Kubernetes cluster as per instructions in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
+
+## Turn pods and nodes metrics colelction on/off
+
+SQL Server 2019 CU5 enabled two feature switches to control the collection of pods and nodes metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to *false* in *control.json* deployment configuration file. For OpenShift environments, these settings are set to *false* by default in the built-in deployment profiles, since collecting pod and node metrics requires privileged capabilities.
+Run this command to update the values of these settings in your custom configuration file using *azdata* CLI:
+
+```bash
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowPodMetricsCollection=false"
+ ```
 
 ## Next steps
 

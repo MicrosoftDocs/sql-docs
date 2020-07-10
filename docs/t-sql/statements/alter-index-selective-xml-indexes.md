@@ -14,7 +14,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER INDEX (Selective XML Indexes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifies an existing selective XML index. The ALTER INDEX statement changes one or more of the following items:  
   

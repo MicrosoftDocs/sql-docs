@@ -2,9 +2,9 @@
 title: Download updates for offline install
 description: Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # CAB downloads for cumulative updates of SQL Server Machine Learning Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
@@ -44,6 +44,11 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release | Component | Download link | Issues addressed |
 |------- | --------- | ------------- | ---------------- |
+|**[SQL Server 2019 CU5](https://support.microsoft.com/help/4552255)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
+| | R Server              | [SRS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2122004)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python Server         | [SPS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2121809)  |  |
 |**[SQL Server 2019 CU3](https://support.microsoft.com/help/4538853)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
 | | R Server              | [SRS_9.4.7.717_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118177)  |  |

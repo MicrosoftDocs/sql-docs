@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Guidelines and Limitations of XML Updategrams (SQLXML 4.0)
   Remember the following when using XML updategrams:  

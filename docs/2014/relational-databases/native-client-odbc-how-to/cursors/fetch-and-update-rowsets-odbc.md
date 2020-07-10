@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Fetch and Update Rowsets (ODBC)
     

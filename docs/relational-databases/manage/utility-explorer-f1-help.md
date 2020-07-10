@@ -1,5 +1,6 @@
 ---
-title: "Utility Explorer F1 Help | Microsoft Docs"
+title: Utility Explorer F1 Help
+description: Get acquainted with functionality that is offered in various areas of the SQL Server Utility. Learn about views, the dashboard, and the Utility Administration tabs.
 ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
@@ -20,8 +21,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # Utility Explorer F1 Help
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following sections document [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility functionality and associated operations.  
   
   ## Utility Dashboard (SQL Server Utility)
@@ -117,11 +120,11 @@ ms.author: mikeray
  List view  
  The list view in the top pane displays data about individual data-tier applications. Health state icons provide summary status for each data-tier application by utilization category:  
   
--   Green check - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - :::image type="icon" source="media/well-utilized.png" border="false"::: - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
   
--   Green down arrow - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
+-   Green down arrow - ![down arrow](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   
--   Red up arrow - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
+-   Red up arrow - ![up arrow](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   
@@ -259,11 +262,11 @@ ms.author: mikeray
   
  Health state icons provide summary status for each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by utilization category:  
   
--   Green check - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - ![green check](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which are not violating resource utilization policies. Resources are well-utilized.  
   
--   Green down arrow - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
+-   Green down arrow - ![down arrow](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   
--   Red up arrow - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
+-   Red up arrow - ![up arrow](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   

@@ -15,7 +15,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Article Issues
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Article Issues** page lists conditions that have been found for articles and any changes required as a result of these conditions. The following table lists possible issues and the actions required to ensure replication and existing applications function properly.  
   
 |Article issue|Details|Action required|  

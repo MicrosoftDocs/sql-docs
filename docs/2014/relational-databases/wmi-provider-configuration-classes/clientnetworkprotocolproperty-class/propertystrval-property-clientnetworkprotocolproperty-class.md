@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # PropertyStrVal Property (ClientNetworkProtocolProperty Class)
   Gets the string value of the current property referenced by the [PropertyIdx Property (ClientNetworkProtocolProperty Class)](clientnetworkprotocolproperty-class.md) value.  

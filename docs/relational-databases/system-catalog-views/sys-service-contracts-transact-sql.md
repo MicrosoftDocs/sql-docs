@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.service_contracts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains a row for each contract in the database.  
   

@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scriptcomponent.f1"
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Select Script Component Type
   Use the **Select Script Component Type** dialog box to specify whether to create a Script Transformation that is preconfigured for use as a source, a transformation, or a destination.  

@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Web Service task [Integration Services]"
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Web Service Task
   The Web Service task executes a Web service method. You can use the Web Service task for the following purposes:  

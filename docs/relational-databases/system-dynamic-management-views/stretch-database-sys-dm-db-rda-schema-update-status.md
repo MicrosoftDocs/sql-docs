@@ -18,7 +18,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Stretch Database - sys.dm_db_rda_schema_update_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Contains one row for each schema update task for the remote data archive of each Stretch-enabled table in the current database. Tasks are identified by their task ids.  
   

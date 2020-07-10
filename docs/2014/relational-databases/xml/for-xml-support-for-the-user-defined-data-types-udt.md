@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)
   FOR XML does not support common language runtime (CLR) user-defined data types (UDTs).  

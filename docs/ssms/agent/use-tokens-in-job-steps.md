@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use Tokens in Job Steps
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
@@ -118,18 +117,22 @@ For example, consider the following job step, which uses the `A-MSG` token and h
   
 After running the update script, an `ESCAPE_NONE` macro is inserted with the token. However, in this case, you would have to rewrite the script without using nesting as follows and insert the `ESCAPE_SQUOTE` macro to properly escape delimiters that may be passed in the token replacement string:  
   
-<pre>DECLARE @msgString nvarchar(max)  
-SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))'  
-SET @msgString = QUOTENAME(@msgString,'''')  
-PRINT N'Print ' + @msgString ;</pre>  
+```sql
+DECLARE @msgString nvarchar(max);
+SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))';
+SET @msgString = QUOTENAME(@msgString,'''');
+PRINT N'Print ' + @msgString;
+```
   
 Note also in this example that the QUOTENAME function sets the quote character.  
   
 ### C. Using tokens with the ESCAPE_NONE macro  
 The following example is part of a script that retrieves the `job_id` from the `sysjobs` table and uses the `JOBID` token to populate the `@JobID` variable, which was declared earlier in the script as a binary data type. Note that because no delimiters are required for binary data types, the `ESCAPE_NONE` macro is used with the `JOBID` token. You would not need to update this job step after running the update script.  
   
-<pre>SELECT * FROM msdb.dbo.sysjobs  
-WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
+```sql
+SELECT * FROM msdb.dbo.sysjobs  
+WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
+```
   
 ## See Also  
 [Implement Jobs](../../ssms/agent/implement-jobs.md)  

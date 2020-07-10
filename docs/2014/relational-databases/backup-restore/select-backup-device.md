@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Select Backup Device
   Use the **Select Backup Device** dialog box to select a logical backup device for the restore operation.  

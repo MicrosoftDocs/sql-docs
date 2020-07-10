@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)
     

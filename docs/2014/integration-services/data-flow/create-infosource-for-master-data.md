@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Create InfoSource for Master Data
   Use the **Create InfoSource for Master Data** dialog box to create a new InfoSource for master data in the SAP Netweaver BW system.  

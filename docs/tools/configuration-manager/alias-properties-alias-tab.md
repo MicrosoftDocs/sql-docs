@@ -1,5 +1,6 @@
 ---
 title: Alias Properties (Alias Tab)
+description: Use the Alias tab of the Properties dialog box to configure an alias so that you can use an alternate name when connecting to an instance of SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -15,7 +16,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 # &lt;Alias&gt; Properties (Alias Tab)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 An alias is an alternate name that can be used to make a connection. The alias encapsulates the required elements of a connection string, and exposes them with a name chosen by the user. Use the **Alias** page on the **\<**Alias name**> Properties** dialog box to view or specify the elements of connection string of an Alias.
 

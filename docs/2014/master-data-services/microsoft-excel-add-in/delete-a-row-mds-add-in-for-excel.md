@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Row (MDS Add-in for Excel)
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], delete a row of data (a member) from the MDS repository when you no longer want it to be available to users.  

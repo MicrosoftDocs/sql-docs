@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # How to Manage a CDC Service from the CDC Designer Console
   This procedure describes how to use the CDC Designer Console to manage a CDC service.  

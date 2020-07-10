@@ -11,12 +11,12 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-**mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It modifies the [**mssql.conf file**](#mssql-conf-format) where configuration values are stored. You can use **mssql-conf** utility to set the following parameters:
 
 |||
 |---|---|

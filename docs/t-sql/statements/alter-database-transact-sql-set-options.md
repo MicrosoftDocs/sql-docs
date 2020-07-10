@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 05/27/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -730,8 +730,11 @@ Controls whether the Query Store is enabled in this database, and also controls 
 ON     
 Enables the Query Store.
 
-OFF     
-Disables the Query Store. OFF is the default value.
+OFF      
+Disables the Query Store. OFF is the default value. 
+
+> [!NOTE]  
+> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Remove the contents of the Query Store.

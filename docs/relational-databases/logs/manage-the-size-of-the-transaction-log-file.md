@@ -17,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Manage the size of the transaction log file
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This topic covers how to monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log size, shrink the transaction log, add to or enlarge a transaction log file, optimize the **tempdb** transaction log growth rate, and control the growth of a transaction log file.  
 
 ##  <a name="MonitorSpaceUse"></a>Monitor log space use  

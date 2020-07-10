@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use the AlwaysOn Dashboard (SQL Server Management Studio)
   Database administrators use the AlwaysOn Dashboard to obtains an at-a-glance view the health of an AlwaysOn availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Some of the typical uses for the AlwaysOn Dashboard are:  

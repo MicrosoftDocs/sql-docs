@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Data Compression
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports row and page compression for rowstore tables and indexes, and supports columnstore and columnstore archival compression for columnstore tables and indexes.  

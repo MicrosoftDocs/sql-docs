@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Manage big data clusters for SQL Server controller dashboard
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In addition to **azdata** and the cluster status notebook, there is another way to view the status of a SQL Server Big Data Cluster. You can now add the SQL Server Big Data Cluster controller through the **Connections** viewlet. This enables you to have a dashboard to view the cluster health.
 

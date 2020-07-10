@@ -1,5 +1,6 @@
 ---
 title: "Log In to an Instance of SQL Server (Command Prompt) | Microsoft Docs"
+description: 'Learn about the "sqlcmd" utility. See how to use it in a command prompt to test connectivity to an instance of SQL Server.'
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Log In to an Instance of SQL Server (Command Prompt)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to test connectivity to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the **sqlcmd** utility.  
   
 ##  <a name="SSMSProcedure"></a>  

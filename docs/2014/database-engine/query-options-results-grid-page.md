@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Query Options Results (Grid Page)
   Use this page to specify the options for displaying a query result set in grid format.  

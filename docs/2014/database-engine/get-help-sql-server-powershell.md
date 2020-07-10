@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Get Help SQL Server PowerShell
   There are several sources of information about using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell and cmdlets. This includes the help that is available in the Windows PowerShell environment.  

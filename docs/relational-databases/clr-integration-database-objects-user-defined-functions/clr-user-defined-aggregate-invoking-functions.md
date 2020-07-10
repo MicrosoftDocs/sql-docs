@@ -20,7 +20,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR User-Defined Aggregate - Invoking Functions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statements, you can invoke common language runtime (CLR) user-defined aggregates, subject to all the rules that apply to system aggregate functions.  
   
  The following additional rules apply:  

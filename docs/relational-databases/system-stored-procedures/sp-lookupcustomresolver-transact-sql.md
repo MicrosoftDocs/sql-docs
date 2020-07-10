@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_lookupcustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the information on a business logic handler or the class identifier (CLSID) value of a COM-based custom resolver component that is registered at the Distributor. This stored procedure is executed at the Publisher on the publication database.  
   

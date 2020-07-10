@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Defect Multiple Target Servers from a Master Server
   This topic describes how to defect multiple target servers from a multiserver administration configuration in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Run this procedure from the master server.  

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 5c5ae453-cc5b-4898-95c7-ad34157b1f60
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Modify connections that use Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk, or NWLink IPX SPX network protocols
   The Upgrade Advisor has detected client server connectivity protocols that are not supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Client applications that use Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol (RPC), AppleTalk, or NWLink IPX/SPX network protocols must connect using a supported protocol.  

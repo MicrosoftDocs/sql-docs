@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_changesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a snapshot or transactional push subscription or a pull subscription involved in queued updating transactional replication. To change properties of all other types of pull subscriptions, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** is executed at the Publisher on the publication database.  
   

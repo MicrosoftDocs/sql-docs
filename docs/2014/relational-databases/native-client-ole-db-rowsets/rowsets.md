@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Rowsets
   A rowset is a set of rows that contain columns of data. Rowsets are central objects that enable all OLE DB data providers to expose result set data in tabular form.  

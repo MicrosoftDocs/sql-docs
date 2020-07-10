@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Load Data from MDS into Excel
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you must load data from the MDS repository in order to work with it.  

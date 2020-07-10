@@ -2,7 +2,7 @@
 title: "Connecting using Azure Active Directory authentication"
 description: "Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "01/29/2020"
+ms.date: "06/17/2020"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -62,7 +62,7 @@ Replace the server/database name with your server/database name in the following
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
 ```
 
 The example to use ActiveDirectoryMSI authentication mode:

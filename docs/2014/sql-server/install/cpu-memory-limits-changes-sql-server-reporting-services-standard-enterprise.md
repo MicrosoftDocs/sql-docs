@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: dd553715-2b95-4119-8f58-d01de388d9ab
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Changes to CPU and memory limits for SQL Server Reporting Services Standard and Enterprise
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services Standard and Enterprise supports a maximum of 64 gigabytes of system memory.  

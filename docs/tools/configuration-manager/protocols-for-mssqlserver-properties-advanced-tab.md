@@ -1,5 +1,6 @@
 ---
 title: "Protocols for MSSQLSERVER Properties (Advanced Tab)"
+description: Learn about the benefits and requirements of the Extended Protection for Authentication for the SQL Server Database Engine. See how to enable and configure it.
 ms.custom: seo-lt-2019
 ms.date: 01/24/2019
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Protocols for MSSQLSERVER Properties (Advanced Tab)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Use the **Advanced** tab on the **Protocols for MSSQLSERVER Properties** dialog box to configure **Extended Protection for Authentication** for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Extended Protection** is a feature of the network components implemented by the operating system. **Extended Protection** is available in Windows 7 and Windows Server 2008 R2, and is included in service packs for older operating systems. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**. Some benefits of **Extended Protection** require **Force Encryption** to be selected on the **Flags** tab.
 

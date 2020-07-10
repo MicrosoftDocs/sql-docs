@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Table Element for Schema (DTA)
   Specifies the table for tuning.  

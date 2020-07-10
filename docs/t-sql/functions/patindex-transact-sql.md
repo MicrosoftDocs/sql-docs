@@ -24,7 +24,7 @@ ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PATINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the starting position of the first occurrence of a pattern in a specified expression, or zeros if the pattern is not found, on all valid text and character data types.  
   
@@ -152,7 +152,7 @@ position
 The following example uses a variable to pass a value to the *pattern* parameter. This example uses the  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
-DECLARE @MyValue varchar(10) = 'safety';   
+DECLARE @MyValue VARCHAR(10) = 'safety';   
 SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  

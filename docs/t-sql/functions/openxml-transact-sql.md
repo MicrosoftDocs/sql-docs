@@ -21,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OPENXML provides a rowset view over an XML document. Because OPENXML is a rowset provider, OPENXML can be used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in which rowset providers such as a table, view, or the OPENROWSET function can appear.  
   

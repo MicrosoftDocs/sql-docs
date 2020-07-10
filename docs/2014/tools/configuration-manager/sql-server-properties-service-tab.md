@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Properties (Service Tab)
   Use the **Service**tab on the **MSSQLSERVER Properties** dialog box to view or specify the following options.  

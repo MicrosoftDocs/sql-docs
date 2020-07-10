@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer SQL Server Objects Task Editor"
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer SQL Server Objects Task Editor (Objects Page)
   Use the **Objects** page of the **Transfer SQL Server Objects Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. Tables, views, stored procedures, and user-defined functions are a few examples of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects that you can copy. For more information about this task, see [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  

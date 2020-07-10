@@ -1,5 +1,6 @@
 ---
 title: "Introduction to DiffGrams in SQLXML 4.0"
+description: Learn about the format, annotations, and processing logic of DiffGrams in SQLXML 4.0.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to DiffGrams in SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This topic provides a brief introduction to DiffGrams.  
   
 ## DiffGram Format  

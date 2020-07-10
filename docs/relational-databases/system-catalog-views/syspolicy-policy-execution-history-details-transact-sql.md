@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the condition expressions that were executed, the targets of the expressions, the result of each execution, and details about errors if any occurred. The following table describes the columns in the syspolicy_execution_history_details view.  
   

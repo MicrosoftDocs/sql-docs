@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # View a Collection Set Report (SQL Server Management Studio)
   After you have configured the management data warehouse, you can view a collection set report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Reports are provided for the System Data collection sets that are installed during Setup. The reports include the following:  

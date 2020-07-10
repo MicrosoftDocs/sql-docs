@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Add an encrypted database to an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains information about the using currently encrypted or recently decrypted databases with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

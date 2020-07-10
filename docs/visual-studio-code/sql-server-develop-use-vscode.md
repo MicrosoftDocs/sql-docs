@@ -12,7 +12,7 @@ ms.date: 10/28/2019
 
 # Use Visual Studio Code to create and run Transact-SQL scripts
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article shows how to use the **mssql** extension for Visual Studio Code to develop SQL Server databases. Because Visual Studio Code is cross-platform, you can use **mssql** extension on Linux, macOS, and Windows.
 

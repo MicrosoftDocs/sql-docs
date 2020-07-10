@@ -10,9 +10,8 @@ f1_keywords:
   - "sql12.ssis.ssms.ispackageprop.general.f1"
   - "sql12.ssis.ssms.packageproperties.f1"
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Package Properties Dialog Box
   Use the **Package Properties** dialog box to view properties for packages that are stored on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  

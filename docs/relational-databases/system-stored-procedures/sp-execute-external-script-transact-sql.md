@@ -5,7 +5,7 @@ ms.date: "05/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_execute_external_script_TSQL"
@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 ---
 # sp_execute_external_script (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) and [Language Extensions](../../language-extensions/language-extensions-overview.md). 

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Command Parameters
   Parameters are marked in command text with the question mark character. For example, the following SQL statement is marked for a single input parameter:  

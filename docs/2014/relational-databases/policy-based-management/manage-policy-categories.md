@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Manage Policy Categories
   This topic describes how to apply any or all available policies in a category to the whole instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

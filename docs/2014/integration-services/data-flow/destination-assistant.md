@@ -10,9 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.destinationassistant.f1"
   - "SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1"
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Destination Assistant
   The Destination Assistant component helps create a destination component and connection manager. The component is located in the **Favorites** section of the SSIS Toolbox.  

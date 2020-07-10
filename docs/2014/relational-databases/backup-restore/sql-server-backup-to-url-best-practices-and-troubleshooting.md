@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Backup to URL Best Practices and Troubleshooting
   This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Azure Blob service.  

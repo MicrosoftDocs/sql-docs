@@ -1,5 +1,6 @@
 ---
 title: "ft crawl bandwidth Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "ft crawl bandwidth" option. See how it affects the number of buffers that SQL Server maintains in the pool of large memory buffers.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # ft crawl bandwidth Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **ft crawl bandwidth** option to specify the size to which the pool of large memory buffers can grow. Large memory buffers are 4 megabytes (MB) in size. The **max** parameter value specifies the maximum number of buffers that the full-text memory manager should maintain in a large buffer pool. If the **max** value is zero, then there is no upper limit to the number of buffers that can be in a large buffer pool.  
   

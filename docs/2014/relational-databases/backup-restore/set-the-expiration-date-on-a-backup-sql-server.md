@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Set the Expiration Date on a Backup (SQL Server)
   This topic describes how to set the expiration date on a backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

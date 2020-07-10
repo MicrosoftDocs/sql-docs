@@ -17,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # RESTORE Statements - Arguments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic documents the arguments that are described in the Syntax sections of the RESTORE {DATABASE|LOG} statement and of the associated set of auxiliary statements: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY, and RESTORE VERIFYONLY. Most of the arguments are supported by only a subset of these six statements. The support for each argument is indicated in the description of the argument.  
   

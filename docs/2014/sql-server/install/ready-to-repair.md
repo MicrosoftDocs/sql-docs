@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Ready to Repair
   The Ready to Repair page provides a summary of the repair process by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  

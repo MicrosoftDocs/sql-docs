@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_dropmessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a specified user-defined error message from an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. User-defined messages can be viewed using the **sys.messages** catalog view.  
   

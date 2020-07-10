@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STSrid (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **STSrid** is an integer representing the spatial reference identifier (SRID) of the instance.  
   

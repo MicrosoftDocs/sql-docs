@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Set Source Control Options
   Before you take advantage of the source control features built into [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you should configure your source control options for the various environments in which you work.  

@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Service Startup Options | Microsoft Docs"
+description: Become familiar with SQL Server Database Engine startup options. View tips on how to use them, and learn about the purpose of each option.
 ms.custom: ""
 ms.date: "08/01/2019"
 ms.prod: sql
@@ -29,7 +30,7 @@ ms.author: maghan
 
 # Database Engine Service Startup Options
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Startup options designate certain file locations needed during startup, and specify some server wide conditions. Most users do not need to specify startup options unless you are troubleshooting the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or you have an unusual problem and are directed to use a startup option by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Customer Support.  
   

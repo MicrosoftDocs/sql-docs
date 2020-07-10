@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Specify a Merge Subscription Type and Conflict Resolution Priority (SQL Server Management Studio)
   Specify a merge subscription type and conflict resolution priority on the **Subscription Type** page of the New Subscription Wizard. For more information about using this wizard, see [Create a Pull Subscription](create-a-pull-subscription.md) and [Create a Push Subscription](create-a-push-subscription.md).  

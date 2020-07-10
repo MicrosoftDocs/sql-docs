@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # OLEDB Errors Event Class
   The OLEDB Errors event class occurs in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when a call to an OLE DB provider returns an error. Include this event class in traces to view a failed HRESULT from an OLE DB provider.  

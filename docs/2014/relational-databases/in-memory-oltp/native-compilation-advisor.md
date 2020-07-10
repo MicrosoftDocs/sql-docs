@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Native Compilation Advisor
   Transaction performance reports tool (see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informs you about which interpreted stored procedures in your database will benefit if ported to use native compilation. After you identify a stored procedure that you would like to port to use native compilation, you can use the native compilation advisor to help you migrate the interpreted stored procedure to native compilation. For more information about natively compiled stored procedures, see [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  

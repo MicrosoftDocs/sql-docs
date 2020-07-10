@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_syspolicy_delete_policy_execution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes execution history for policies in Policy-Based Management. You can use this stored procedure to delete execution history for a specific policy or for all policies, and to delete execution history before a specific date.  
   

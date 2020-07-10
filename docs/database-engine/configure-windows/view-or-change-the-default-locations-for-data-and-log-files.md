@@ -1,5 +1,6 @@
 ---
 title: "View or Change the Default Locations for Data and Log Files | Microsoft Docs"
+description: 'Find out how to view or change the default locations for SQL Server data files and log files. See how to protect the files with access control lists (ACLs).'
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # View or Change the Default Locations for Data and Log Files
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
  The best practice for protecting your data files and log files is to ensure that they are protected by access control lists (ACLs). Set the ACLs on the directory root under which the files are created.  
  

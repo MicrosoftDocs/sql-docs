@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "MERGE statement [SQL Server]"
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # MERGE in Integration Services Packages
   In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the SQL statement in an Execute SQL task can contain a MERGE statement. This MERGE statement enables you to accomplish multiple INSERT, UPDATE, and DELETE operations in a single statement.  

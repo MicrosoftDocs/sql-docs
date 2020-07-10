@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -20,7 +19,7 @@ ms.date: 03/01/2017
 
 # Table Element for Schema (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the table for tuning.  
   

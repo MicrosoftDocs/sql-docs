@@ -1,5 +1,6 @@
 ---
 title: "Extensible Key Management (EKM) | Microsoft Docs"
+description: Learn how to configure and use Extensible Key Management and how it fits into the data encryption capabilities for SQL Server.
 ms.custom: ""
 ms.date: "07/25/2019"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # Extensible Key Management (EKM)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides data encryption capabilities together with *Extensible Key Management* (EKM), using the *Microsoft Cryptographic API* (MSCAPI) provider for encryption and key generation. Encryption keys for data and key encryption are created in transient key containers, and they must be exported from a provider before they are stored in the database. This approach enables key management that includes an encryption key hierarchy and key backup, to be handled by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  With the growing demand for regulatory compliance and concern for data privacy, organizations are taking advantage of encryption as a way to provide a "defense in depth" solution. This approach is often impractical using only database encryption management tools. Hardware vendors provide products that address enterprise key management by using *Hardware Security Modules* (HSM). HSM devices store encryption keys on hardware or software modules. This is a more secure solution because the encryption keys do not reside with encryption data.  
@@ -84,7 +85,7 @@ GO
 #### EKM Device-Specific Basic Authentication Using username/password  
  For those EKM modules that support Basic authentication using a *username/password* pair, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides transparent authentication using credentials. For more information about credentials, see [Credentials &#40;Database Engine&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- A credential can be created for an EKM provider and mapped to a login (both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] accounts) to access an EKM module on per-login basis. The *Identify* field of the credential contains the username; the *secret* field contains a password to connect to an EKM module.  
+ A credential can be created for an EKM provider and mapped to a login (both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] accounts) to access an EKM module on per-login basis. The *identity* field of the credential contains the username; the *secret* field contains a password to connect to an EKM module.  
   
  If there is no login mapped credential for the EKM provider, the credential mapped to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account is used.  
   

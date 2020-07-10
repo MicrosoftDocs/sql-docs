@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # PropertyType Property (ServerNetworkProtocolProperty Class)
   Gets the type of property.  

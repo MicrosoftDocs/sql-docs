@@ -14,12 +14,11 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Select Rows That Do Not Match a Value (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 To find rows that do not match a value, use the NOT operator.  
   
 ### To find rows that do not match a value  

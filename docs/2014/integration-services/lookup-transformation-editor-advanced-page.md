@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Lookup Transformation Editor"
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lookup Transformation Editor (Advanced Page)
   Use the **Advanced** page of the **Lookup Transformation Editor** dialog box to configure partial caching and to modify the SQL statement for the Lookup transformation.  

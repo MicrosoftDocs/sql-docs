@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Set the Expiration Period for Subscriptions
   This topic describes how to set the expiration period for subscriptions in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The expiration period for subscriptions determines the period of time before a subscription expires and is removed. For more information, see [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  

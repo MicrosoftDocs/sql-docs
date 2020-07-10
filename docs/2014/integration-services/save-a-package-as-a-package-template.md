@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "reusing packages"
   - "templates [Integration Services]"
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Save a Package as a Package Template
   This topic describes how to designate and use custom packages as templates when you create new Integration Services packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. By default, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] uses a package template that creates an empty package when you add a new package to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. You cannot replace this default template, but you can add new templates.  

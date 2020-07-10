@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Replay a Single Event at a Time (SQL Server Profiler)
   This topic describes how to replay one event at a time in a replay trace file or table by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

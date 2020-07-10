@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Subscription, Distributor to Subscriber History (Snapshot Subscription)
   The **Distributor to Subscriber History** tab displays detailed information on the Distribution Agent, including status, history, informational messages, and any error messages.  

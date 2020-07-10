@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Rename Views
   You can rename a view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

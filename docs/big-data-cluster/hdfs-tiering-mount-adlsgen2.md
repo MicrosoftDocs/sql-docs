@@ -5,7 +5,7 @@ description: This article explains how to configure HDFS tiering to mount an ext
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -43,7 +43,7 @@ In order to use OAuth credentials to mount, you need to follow the below steps:
 1. In right navigation bar, select "App registrations" and create a new registration
 1. Create a "Web Application and follow the wizard. **Remember the name of the app you create here**. You will need to add this name to your ADLS account as an authorized user. Also note the Application client ID in the overview when you select the App.
 1. Once the web application is created, go to "Certificates&secrets" and create a **New client secret** and select a key duration. **Add** the secret.
-1.     Go back to the App Registrations page, and click on the "Endpoints" at the top. **Note down the "OAuth token endpoint (v2)** URL
+1. Go back to the App Registrations page, and click on the "Endpoints" at the top. **Note down the "OAuth token endpoint (v2)** URL
 1. You should now have the following things noted down for OAuth:
 
     - The "Application Client ID" of the Web Application
@@ -66,13 +66,13 @@ Open a command-prompt on a client machine that can access your big data cluster.
 
 **Note** that you need to remove any line breaks or space between the commas "," when you provide the credentials. The below formatting is just to make it easier to read.
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## Use Access keys to mount
 
@@ -89,10 +89,10 @@ You can also mount using access keys which you can get for your ADLS account on 
 
 **Note** that you need to remove any line breaks or space between the commas "," when you provide the credentials. The below formatting is just to make it easier to read.
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a id="mount"></a> Mount the remote HDFS storage
 

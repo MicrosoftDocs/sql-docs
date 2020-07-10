@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Disconnecting from a Data Source
   When an application has finished using a data source, it calls **SQLDisconnect**. **SQLDisconnect** frees any statements that are allocated on the connection and disconnects the driver from the data source. After disconnecting, the application can call [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) to free the connection handle. Before exiting, an application also calls **SQLFreeHandle** to free the environment handle.  

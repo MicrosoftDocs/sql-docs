@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select a Package dialog box"
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Select a Package
   Use the **Select a Package** dialog box to specify the package from which the Message Queue task can receive messages.  

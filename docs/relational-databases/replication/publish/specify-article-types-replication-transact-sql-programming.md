@@ -20,7 +20,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Specify Article Types (Replication Transact-SQL Programming)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The default article types for replication are table articles, but you can publish other database objects as articles, including views, stored procedures, user-defined functions, and stored procedure execution. You can use replication stored procedures to specify an article type programmatically when you define an article. The procedures that you use depend on the type of replication and article type.  
   
 > [!NOTE]  

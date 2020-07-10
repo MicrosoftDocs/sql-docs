@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use Data-at-Execution Columns (ODBC)
     

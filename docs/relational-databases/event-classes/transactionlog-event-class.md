@@ -14,7 +14,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TransactionLog Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Use the TransactionLog event class to monitor activity in the transaction logs in an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ## TransactionLog Event Class Data Columns  

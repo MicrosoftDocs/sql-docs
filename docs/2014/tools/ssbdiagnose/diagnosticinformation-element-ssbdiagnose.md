@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # DiagnosticInformation Element (ssbdiagnose)
   The **DiagnosticInformation** element contains all elements that report the diagnostic information found by the utility. **DiagnosticInformation** is the root element of a **ssbdiagnostic** XML output file.  

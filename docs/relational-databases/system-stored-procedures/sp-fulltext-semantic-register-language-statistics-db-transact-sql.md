@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Registers a pre-populated Semantic Language Statistics database in the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

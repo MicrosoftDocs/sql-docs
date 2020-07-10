@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Security Architecture for Web Synchronization
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enables fine-grained control over the configuration of Web synchronization security. This topic provides a comprehensive list of all the components that can be included in a Web synchronization configuration and information about the connections that are made between components. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  

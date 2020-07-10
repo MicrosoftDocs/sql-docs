@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Fetching a Single Row with IRow
   The **IRow** interface implementation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider is simplified to increase performance. **IRow** allows direct access to columns of a single row object. If you know beforehand that the result of a command execution will produce exactly one row, **IRow** will retrieve the columns of that row. If the result set includes multiple rows, **IRow** will expose only the first row.  

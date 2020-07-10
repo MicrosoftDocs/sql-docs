@@ -12,7 +12,7 @@ ms.date: 06/11/2020
 
 # Install the SQL Server PowerShell module
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article provides directions for installing the **SqlServer** PowerShell module.
 
@@ -22,7 +22,7 @@ There are two SQL Server PowerShell modules:
 
 - **SqlServer**: The SqlServer module includes new cmdlets to support the latest SQL features. The module also contains updated versions of the cmdlets in **SQLPS**. To download the SqlServer module, go to [SqlServer module in the PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
-- **SQLPS**: The SQLPS is the module used by SQL Agent to run agent jobs in agent job steps using the PowerShell subsystem.
+- **SQLPS**: The SQLPS is the module used by [SQL Agent](sql-server-powershell.md#sql-server-agent) to run agent jobs in agent job steps using the PowerShell subsystem.
 
 > [!NOTE]
 > The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater.

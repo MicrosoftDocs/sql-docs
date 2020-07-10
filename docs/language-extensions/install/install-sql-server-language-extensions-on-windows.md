@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Language Extensions on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Learn how to install the Language Extensions component on SQL Server by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # System Databases
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following system databases.  

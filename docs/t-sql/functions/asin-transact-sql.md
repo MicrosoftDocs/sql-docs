@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "sine"
   - "arcsine"
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ASIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A function that returns the angle, in radians, whose sine is the specified **float** expression. This is also called **arcsine**.
   

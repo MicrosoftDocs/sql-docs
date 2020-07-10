@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 author: maggiesMSFT 
 ms.author: maggies
-manager: craigg
 ---
 # Report server database is not configured (Upgrade Advisor)
   Upgrade is blocked due to an incomplete report server configuration. The report server database is not configured.  

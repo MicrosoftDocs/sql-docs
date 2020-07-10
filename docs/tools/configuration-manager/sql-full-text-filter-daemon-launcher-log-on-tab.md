@@ -1,5 +1,6 @@
 ---
 title: "SQL Full-text Filter Daemon Launcher (Log On Tab)"
+description: Find out about the SQL Full-text Filter Daemon Launcher, which SQL Server full-text search uses. Learn about the Log On tab of its Properties dialog box.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Full-text Filter Daemon Launcher (Log On Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the SQL Full-text Filter Daemon Launcher (FDHOST Launcher) service is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search. This service must be running if you use full-text search. For information about the filter daemon host processes, see "Full-Text Search Architecture" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
  Use the **Log On** tab of the **SQL Full-text Filter Daemon Launcher  Properties** dialog box to specify the account used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text service, to change the password of an account, and to start and stop the service. Changing the password of an account takes affect after restarting the service.  

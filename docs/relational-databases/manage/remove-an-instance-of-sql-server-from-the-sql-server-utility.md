@@ -1,5 +1,6 @@
 ---
 title: "Remove an Instance of SQL Server from the SQL Server Utility | Microsoft Docs"
+description: Learn how to remove an instance of SQL Server from the SQL Server Utility. You can run a PowerShell script or use SQL Server Management Studio for this task.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Remove an Instance of SQL Server from the SQL Server Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the following steps to remove a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. This procedure removes the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the UCP list view and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility data collection stops. The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not uninstalled.  
   
 > [!IMPORTANT]  

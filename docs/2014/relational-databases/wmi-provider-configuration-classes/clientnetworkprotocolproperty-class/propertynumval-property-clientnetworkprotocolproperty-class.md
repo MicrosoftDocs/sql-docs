@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # PropertyNumVal Property (ClientNetworkProtocolProperty Class)
   Gets the numeric value of the current property referenced by the [PropertyIdx Property (ClientNetworkProtocolProperty Class)](clientnetworkprotocolproperty-class.md) value.  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Display and Save Execution Plans
   This section explains how to display execution plans and how to save execution plans to a file in XML format by using Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_filestream_file_io_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the file handles that the Namespace Owner (NSO) knows about. Filestream handles that a client got using **OpenSqlFilestream** are displayed by this view.  
   

@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_scriptpublicationcustomprocs (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Scripts the custom INSERT, UPDATE, and DELETE procedures for all table articles in a publication in which the auto-generate custom procedure schema option is enabled. **sp_scriptpublicationcustomprocs** is particularly useful for setting up subscriptions for which the snapshot is applied manually.  
   

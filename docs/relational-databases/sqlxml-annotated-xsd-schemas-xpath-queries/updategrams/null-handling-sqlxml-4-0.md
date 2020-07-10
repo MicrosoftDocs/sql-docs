@@ -1,5 +1,6 @@
 ---
 title: "NULL Handling (SQLXML)"
+description: Learn how NULL attributes or elements can be specified in an SQLXML 4.0 updategram by using the updg:nullvalue attribute.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,7 +19,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NULL Handling (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML syntax denotes NULL as an absence. (For example, if an attribute or element value is NULL, that attribute or element is absent from the XML document.) In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, the **updg:nullvalue** attribute enables specifying NULL for an element or attribute value.  
   
  For example, the following updategram ensures that the **Title** value for a contact with **ContactID** of 64 is NULL, and then updates the **Title** value to "Mr." for this contact.  

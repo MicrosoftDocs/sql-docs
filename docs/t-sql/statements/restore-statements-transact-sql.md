@@ -320,7 +320,7 @@ Rollback is controlled by the RESTORE statement through the [ RECOVERY | NORECOV
 Backups of **master**, **model** and **msdb** that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
-> No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup be restored to an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than the version on which the backup was created.
+> No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup can be restored to an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than the version on which the backup was created.
 
 Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a different default path than earlier versions. Therefore, to restore a database that was created in the default location for earlier version backups, you must use the MOVE option. For information about the new default path, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 

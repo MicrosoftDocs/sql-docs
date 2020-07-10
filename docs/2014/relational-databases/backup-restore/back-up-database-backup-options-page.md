@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Back Up Database (Backup Options Page)
   Use the  **Backup Options** page of the **Back Up Database** dialog box to view or modify database backup options.  

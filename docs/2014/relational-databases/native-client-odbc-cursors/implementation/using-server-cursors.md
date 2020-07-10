@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Using Server Cursors
   If an ODBC application sets any of the ODBC cursor attributes to anything other than the defaults, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver requests the server to implement an API server cursor of the same type. Using API server cursors frees memory on the client and can significantly reduce network traffic between the client and server.  

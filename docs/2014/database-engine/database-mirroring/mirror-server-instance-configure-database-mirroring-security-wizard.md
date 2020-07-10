@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Mirror Server Instance (Configure Database Mirroring Security Wizard)
   Use this page to specify information about the server instance with the mirror database.  

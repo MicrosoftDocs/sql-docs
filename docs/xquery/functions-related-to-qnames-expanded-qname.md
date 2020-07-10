@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions Related to QNames - expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns a value of the xs:QName type with the namespace URI specified in the *$paramURI* and the local name specified in the *$paramLocal*. If *$paramURI* is the empty string or the empty sequence, it represents no namespace.  
   

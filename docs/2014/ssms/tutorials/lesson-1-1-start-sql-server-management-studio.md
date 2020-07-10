@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Start SQL Server Management Studio
   To begin this tutorial, let's take a look at [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

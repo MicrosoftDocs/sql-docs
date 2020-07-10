@@ -1,6 +1,6 @@
 ---
 title: "Suspend an availability database"
-description: Learn about suspending the data movement for a database within an Always On availability group using SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) or PowerShell. 
+description: Learn about suspending the data movement for a database within an Always On availability group using SQL Server Management Studio, Transact-SQL or PowerShell.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Suspend an Availability Database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   You can suspend an availability database in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Note that a suspend command needs to be issued on the server instance that hosts the database to be suspended or resumed.  
   
  The effect of a suspend command depends on whether you suspend a secondary database or a primary database, as follows:  
   
 |Suspended Database|Effect of Suspend Command|  
 |------------------------|-------------------------------|  
-|Secondary database|Only the local secondary database is suspended and its synchronization state becomes NOT SYNCHRONIZING. Other secondary databases are not affected. The suspended database stops receiving and applying data (log records) and begins to fall behind the primary database. Existing connections on the readable secondary remain usable. New connections to the suspended database on the readable secondary are not allowed until data movement is resumed.<br /><br /> The primary database remains available. If you suspend each of the corresponding secondary databases, the primary database runs exposed.<br /><br /> **\*\* Important \*\*** While a secondary database is suspended, the send queue of the corresponding primary database will accumulate unsent transaction log records. Connections to the secondary replica return data that was available at the time the data movement was suspended.|  
+|Secondary database|Only the local secondary database is suspended and its synchronization state becomes NOT SYNCHRONIZING. Other secondary databases are not affected. The suspended database stops receiving and applying data (log records) and begins to fall behind the primary database. Existing connections on the readable secondary remain usable. New connections to the suspended database on the readable secondary are not allowed until data movement is resumed. This behavior only applies when connections are opened using listener and read-only routing.<br /><br /> The primary database remains available. If you suspend each of the corresponding secondary databases, the primary database runs exposed.<br /><br /> **\*\* Important \*\*** While a secondary database is suspended, the send queue of the corresponding primary database will accumulate unsent transaction log records. Connections to the secondary replica return data that was available at the time the data movement was suspended.|  
 |Primary database|The primary database stops data movement to every connected secondary database. The primary database continues running, in an exposed mode. The primary database remains available to clients, and existing connections on a readable secondary remain usable and new connections can be made.|  
   
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: "transform noise words Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "transform noise words" option. See how it can be useful in some SQL Server full-text queries that include noise words (stopwords).'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # transform noise words Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **transform noise words** server configuration option to suppress an error message if noise words, that is [stopwords](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), cause a Boolean operation on a full-text query to return zero rows. This option is useful for full-text queries that use the CONTAINS predicate in which Boolean operations or NEAR operations include noise words. The possible values are described in the following table.  
   

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Properties (Advanced Tab)
   The following properties appear on the **Advanced** tab by default. If custom properties are defined, they also appear on this tab, with their values.  

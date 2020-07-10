@@ -19,7 +19,7 @@ ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Heaps (Tables without Clustered Indexes)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   A heap is a table without a clustered index. One or more nonclustered indexes can be created on tables stored as a heap. Data is stored in the heap without specifying an order. Usually data is initially stored in the order in which is the rows are inserted into the table, but the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can move data around in the heap to store the rows efficiently; so the data order cannot be predicted. To guarantee the order of rows returned from a heap, you must use the `ORDER BY` clause. To specify a permanent logical order for storing the rows, create a clustered index on the table, so that the table is not a heap.  
   
@@ -27,8 +27,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 > There are sometimes good reasons to leave a table as a heap instead of creating a clustered index, but using heaps effectively is an advanced skill. Most tables should have a carefully chosen clustered index unless a good reason exists for leaving the table as a heap.  
   
 ## When to Use a Heap  
-When a table is stored as a heap, individual rows are identified by reference to an 8-byte row identifier (RID) consisting of the file number, data page number, and slot on the page (FileID:PageID:SlotID). The row ID is a small and efficient structure. Sometimes data professionals use heaps when data is always accessed through nonclustered indexes and the RID is smaller than a clustered index key. Heaps are also used for   
- 
+When a table is stored as a heap, individual rows are identified by reference to an 8-byte row identifier (RID) consisting of the file number, data page number, and slot on the page (FileID:PageID:SlotID). The row ID is a small and efficient structure. 
+
+Heaps can be used as staging tables for large, unordered insert operations. Because data is inserted without enforcing a strict order, the insert operation is usually faster than the equivalent insert into a clustered index. If the heap's data will be read and processed into a final destination, it may be useful to create a narrow nonclustered index that covers the search predicate used by the read query. 
+
+> [!NOTE]  
+> Data is retrieved from a heap in order of data pages, but not necessarily the order in which data was inserted. 
+
+Sometimes data professionals also use heaps when data is always accessed through nonclustered indexes, and the RID is smaller than a clustered index key. 
+
 If a table is a heap and does not have any nonclustered indexes, then the entire table must be read (a table scan) to find any row. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot seek a RID directly on the heap. This can be acceptable when the table is small.  
   
 ## When Not to Use a Heap  

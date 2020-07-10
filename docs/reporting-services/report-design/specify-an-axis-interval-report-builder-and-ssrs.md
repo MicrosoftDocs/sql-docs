@@ -1,5 +1,6 @@
 ---
 title: "Specify an Axis Interval (Report Builder) | Microsoft Docs"
+description: Find out how to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in Report Builder.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

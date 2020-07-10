@@ -1,5 +1,6 @@
 ---
 title: "Define the Serialization of XML Data | Microsoft Docs"
+description: Learn about the rules used when serializing xml data in SQL Server.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Define the Serialization of XML Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   When casting the xml data type explicitly or implicitly to a SQL string or binary type, the content of the xml data type will be serialized according to the rules outlined in this topic.  
   
 ## Serialization Encoding  

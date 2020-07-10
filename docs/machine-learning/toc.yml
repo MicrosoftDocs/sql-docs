@@ -372,7 +372,7 @@
   - name: Troubleshooting
     items:
     - name: Troubleshooting overview
-      href: ../machine-learning/machine-learning-troubleshooting-faq.md
+      href: ../machine-learning/machine-learning-troubleshooting-overview.md
     - name: Known issues
       href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
     - name: Collect data for troubleshooting

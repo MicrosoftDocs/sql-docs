@@ -871,6 +871,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/sql/machine-learning/machine-learning-troubleshooting-faq.md",
+      "redirect_url": "/sql/machine-learning/machine-learning-troubleshooting-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md",
       "redirect_url": "/sql/machine-learning/package-management/create-a-local-package-repository-using-minicran",
       "redirect_document_id": true

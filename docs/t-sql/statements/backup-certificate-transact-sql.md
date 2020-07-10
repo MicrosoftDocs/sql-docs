@@ -52,7 +52,7 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
 ```  
   
 > [!Note]
-> [!INCLUDE[Synapse preview note](../../includes/synapse-preview-note)]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note)]
    
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  

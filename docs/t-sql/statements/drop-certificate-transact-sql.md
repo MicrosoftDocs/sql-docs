@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   
 > [!Note]
-> [!INCLUDE[Synapse preview note](../../includes/synapse-preview-note)]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note)]
   
 ## Syntax  
   

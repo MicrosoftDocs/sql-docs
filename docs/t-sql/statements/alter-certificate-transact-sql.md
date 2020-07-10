@@ -55,7 +55,7 @@ ALTER CERTIFICATE certificate_name
 ``` 
  
 > [!Note]
-> [!INCLUDE[Synapse preview note](../../includes/synapse-preview-note)]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note)]
  
 ```syntaxsql  
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  

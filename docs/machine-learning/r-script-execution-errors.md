@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Common R scripting errors in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-This article documents several common scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages, and errors can vary between versions of the same package. 
+This article documents several common scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages and errors can vary between versions of the same package.
 
 If you encounter script errors not covered here, post them on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). This forum supports the machine learning components used in various SQL machine learning products.
 

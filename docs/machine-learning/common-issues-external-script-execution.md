@@ -235,6 +235,6 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 
-[Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
+[Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Troubleshoot database engine connections](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

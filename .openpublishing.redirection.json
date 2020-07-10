@@ -868,7 +868,7 @@
     {
       "source_path": "docs/advanced-analytics/machine-learning-troubleshooting-faq.md",
       "redirect_url": "/sql/machine-learning/machine-learning-troubleshooting-faq",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/sql/machine-learning/machine-learning-troubleshooting-faq.md",

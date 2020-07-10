@@ -130,7 +130,6 @@ For details, see [General Remarks](https://msdn.microsoft.com/library/mt203953/#
 <a name="limitations-bk"></a>
 
 ## Limitations and Restrictions  
-Azure SQL Data Warehouse does not yet support auto create or auto update statistics.  In order to get the best performance from your queries, it's important to create statistics on all columns of all tables after you run CTAS and after any substantial changes occur in the data. For more information, see [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
 An ordered clustered columnstore index can be created on columns of any data types supported in Azure SQL Data Warehouse except for string columns.  
 

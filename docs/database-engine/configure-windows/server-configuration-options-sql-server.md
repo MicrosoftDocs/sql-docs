@@ -124,7 +124,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
 | [open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsolete) | 0 | 2147483647 | 0 |
 | [optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A) | 0 | 1 | 0 |
 | [PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A) | 1 | 3600 | 60 |
-| [polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]) | 0 | 1 | 0 |
+| [polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) <br/><br/>[!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]| 0 | 1 | 0 |
 | [polybase network encryption](../../relational-databases/polybase/polybase-installation.md#enable) | 0 | 1 | 1 |
 | [precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A) | 0 | 1 | 0 |
 | [priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |

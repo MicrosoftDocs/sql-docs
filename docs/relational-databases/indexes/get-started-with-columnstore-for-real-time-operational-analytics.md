@@ -189,7 +189,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  Here are the recommended best practices:  
   
--   **Insert/Query workload:**If your workload is primarily inserting data and querying it, the default COMPRESSION_DELAY of 0 is the recommended option. The newly inserted rows will get compressed once 1 million rows have been inserted into a single delta rowgroup.  
+-   **Insert/Query workload:** If your workload is primarily inserting data and querying it, the default COMPRESSION_DELAY of 0 is the recommended option. The newly inserted rows will get compressed once 1 million rows have been inserted into a single delta rowgroup.  
     Some examples of such workload are (a) traditional DW workload (b) click-stream analysis when you need to analyze the click pattern in a web application.  
   
 -   **OLTP workload:** If the workload is DML heavy (that is, heavy mix of Update, Delete and Insert), you may see columnstore index fragmentation by examining the DMV sys. dm_db_column_store_row_group_physical_stats. If you see that > 10% rows are marked deleted in recently compressed rowgroups, you can use COMPRESSION_DELAY option to add time delay when rows become eligible for compression. For example, if for your workload, the newly inserted stays 'hot' (that is, gets updated multiple times) for say 60 minutes, you should choose COMPRESSION_DELAY to be 60.  

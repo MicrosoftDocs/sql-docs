@@ -82,11 +82,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The `ALTER INDEX ... REORGANIZE` statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
   
--   Columnstore indexes can be access on an AlwaysOn readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an Always On secondary replica.  
+-   Columnstore indexes can be access on an Always On readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an Always On secondary replica.  
   
--   To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computes the aggregate functions `MIN`, `MAX`, `SUM`, `COUNT`, and `AVG` during table scans when the data type uses no more than 8 bytes, and is not of a string type. Aggregate pushdown is supported with or without `GROUP BY` clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
+-   Aggregate Pushdown computes the aggregate functions `MIN`, `MAX`, `SUM`, `COUNT`, and `AVG` during table scans when the data type uses no more than 8 bytes, and is not a string data type. Aggregate pushdown is supported with or without `GROUP BY` clause for both clustered columnstore indexes and nonclustered columnstore indexes. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition.
   
--   Predicate pushdown speeds up queries that compare strings of type [v]archar or n[v]archar. This applies to the common comparison operators and includes operators such as `LIKE` that use bitmap filters. This works with all collations that SQL Server supports.  
+-   String Predicate pushdown speeds up queries that compare strings of type VARCHAR/CHAR or NVARCHAR/NCHAR. This applies to the common comparison operators and includes operators such as `LIKE` that use bitmap filters. This works with all supported collations. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition. 
+
+-   Enhancements for batch mode operations by leveraging vector based hardware capabilities. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects the level of CPU support for AVX 2 (Advanced Vector Extensions) and SSE 4 (Streaming SIMD Extensions 4) hardware extensions, and uses them if supported. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition.
   
 ### Performance for database compatibility level 130  
   
@@ -100,8 +102,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Single-threaded queries running under `MAXDOP 1` or with a serial query plan execute in batch mode. Previously-only multi-threaded queries ran with batch execution.  
 
 -   Memory optimized table queries can have parallel plans in SQL InterOp mode both when accessing data in rowstore or in columnstore index.
-
--   Enhancements for batch mode operations by leveraging vector based hardware capabilities. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects the level of CPU support for AVX 2 (Advanced Vector Extensions) and SSE 4 (Streaming SIMD Extensions 4) hardware extensions, and uses them if supported.
   
 ### Supportability  
 These system views are new for columnstore:  

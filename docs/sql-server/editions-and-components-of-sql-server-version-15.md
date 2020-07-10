@@ -202,12 +202,12 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Multiple filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA aware and large page memory and buffer array allocation|Yes|No|No|No|No|
 |Buffer pool extension|Yes|Yes|No|No|No|
-|IO resource governance|Yes|No|No|No|No|
+|I/O resource governance|Yes|No|No|No|No|
 |Read-ahead|Yes|No|No|No|No|
 |Advanced scanning|Yes|No|No|No|No|
 |Delayed durability|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: automatic tuning|Yes|No|No|No|No|
-|Intelligent Database: batch mode for row store|Yes|No|No|No|No|
+|Intelligent Database: batch mode for row store <sup>1</sup>|Yes|No|No|No|No|
 |Intelligent Database: row mode memory grant feedback|Yes|No|No|No|No|
 |Intelligent Database: approximate count distinct|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: table variable deferred compilation|Yes|Yes|Yes|Yes|Yes|
@@ -217,7 +217,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Interleaved execution for multi-statement table valued functions|Yes|Yes|Yes|Yes|Yes|
 |Bulk insert improvements|Yes|Yes|Yes|Yes|Yes|
 
-<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
+<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the [Scale Limits](#Cross-BoxScaleLimits) section. The degree of parallelism (DOP) for [batch mode](../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) operations is limited to 2 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition and 1 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
 <sup>2</sup> This feature is not included in the LocalDB installation option.
 

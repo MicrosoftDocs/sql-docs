@@ -361,8 +361,14 @@
       href: ../machine-learning/r/ref-r-sqlrutils.md
 - name: Resources
   items:
-  - name: Release notes >
+  - name: Release notes 2019 >
+    href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+  - name: Release notes 2017 >
     href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+  - name: Release notes 2016 >
+    href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
+  - name: Release notes 2014 >
+    href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:
     - name: Troubleshooting overview

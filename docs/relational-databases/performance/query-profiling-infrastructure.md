@@ -190,6 +190,9 @@ For more information on the performance overhead of query profiling, see the blo
 > [!NOTE]
 > Extended Events that leverage lightweight profiling will use information from standard profiling in case the standard profiling infrastructure is already enabled. For example, an extended event session using `query_post_execution_showplan` is running, and another session using `query_post_execution_plan_profile` is started. The second session will still use information from standard profiling.
 
+> [!NOTE]
+> On [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Lightweight Profiling is off by default but is activated when an XEvent trace relying on `query_post_execution_plan_profile` is started, and is then deactivated again when the trace is stopped. As a consequence, if Xevent traces based on `query_post_execution_plan_profile` are frequently started and stopped on a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] instance, it is strongly advised to activate Lightweight Profiling at global level with traceflag 7412 to avoid the repeated activation/deactivation overhead. 
+
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     

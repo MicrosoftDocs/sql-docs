@@ -14,7 +14,7 @@ ms.author: mikeray
 
 # Set allow polybase export configuration option
 
-[!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlsersver2019.md)]
+[!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 `allow polybase export` server configuration option  allows `INSERT` into a Hadoop external table. 
 

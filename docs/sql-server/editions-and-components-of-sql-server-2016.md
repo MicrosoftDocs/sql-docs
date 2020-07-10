@@ -189,7 +189,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a Common Programmability Surface Area (CPSA) across editions.  
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a Common Programmability Surface Area (CPSA) across editions. Aggregate Pushdown, String Predicate Pushdown, and SIMD Optimizations are [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition scalability enhancements. For more detail, see [Columnstore indexes - what's new](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
 

@@ -270,7 +270,7 @@ sudo zypper install mssql-mlservices-packages-r
 
 Additional configuration is primarily through the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
-1. Add the mssql user account used to run the SQL Server service.
+1. After the package installation finishes, run mssql-conf setup and follow the prompts to set the SA password and choose your edition. Perform this step only if you have not configured SQL Server on Linux yet. 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup

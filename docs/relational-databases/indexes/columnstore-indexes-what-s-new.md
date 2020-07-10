@@ -86,7 +86,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computes the aggregate functions `MIN`, `MAX`, `SUM`, `COUNT`, and `AVG` during table scans when the data type uses no more than 8 bytes, and is not of a string type. Aggregate pushdown is supported with or without `GROUP BY` clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
   
--   Predicate pushdown speeds up queries that compare strings of type [v]archar or n[v]archar. This applies to the common comparison operators and includes operators such as `LIKE` that use bitmap filters. This works with all collations that SQL Server supports.  
+-   Predicate pushdown speeds up queries that compare strings of type VARCHAR/CHAR or NVARCHAR/NCHAR. This applies to the common comparison operators and includes operators such as `LIKE` that use bitmap filters. This works with all supported collations.  
   
 ### Performance for database compatibility level 130  
   
@@ -102,6 +102,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Memory optimized table queries can have parallel plans in SQL InterOp mode both when accessing data in rowstore or in columnstore index.
 
 -   Enhancements for batch mode operations by leveraging vector based hardware capabilities. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects the level of CPU support for AVX 2 (Advanced Vector Extensions) and SSE 4 (Streaming SIMD Extensions 4) hardware extensions, and uses them if supported.
+
+-   String Predicate Pushdown can improve performance of analytics queries using predicate(s) on string columns by pushing these predicates to SCAN node.
+
+-   Aggregate Pushdown typically provides 2-4x performance gains by pushing qualifying aggregates to the SCAN node.
   
 ### Supportability  
 These system views are new for columnstore:  

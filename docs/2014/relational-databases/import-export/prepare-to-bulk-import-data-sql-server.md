@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Prepare to Bulk Import Data (SQL Server)
   You can use the **bcp** command, BULK INSERT statement, or OPENROWSET(BULK) function to bulk import data from a data file only.  

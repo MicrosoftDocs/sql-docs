@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQL Server Transaction Locking and Row Versioning Guide
 
@@ -226,7 +225,7 @@ GO
   
      A phantom read is a situation that occurs when two identical queries are executed and the collection of rows returned by the second query is different. The example below shows how this may occur. Assume the two transactions below are executing at the same time. The two SELECT statements in the first transaction may return different results because the INSERT statement in the second transaction changes the data used by both.  
   
-    ```  
+    ```sql  
     --Transaction 1  
     BEGIN TRAN;  
     SELECT ID FROM dbo.employee  
@@ -235,10 +234,9 @@ GO
     SELECT ID FROM dbo.employee  
     WHERE ID > 5 and ID < 10;  
     COMMIT;  
-  
     ```  
   
-    ```  
+    ```sql  
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
@@ -567,7 +565,7 @@ GO
 
  To ensure a range scan query is serializable, the same query should return the same results each time it is executed within the same transaction. New rows must not be inserted within the range scan query by other transactions; otherwise, these become phantom inserts. For example, the following query uses the table and index in the previous illustration:  
   
-```  
+```sql  
 SELECT name  
     FROM mytable  
     WHERE name BETWEEN 'A' AND 'C';  
@@ -582,7 +580,7 @@ SELECT name
 
  If a query within a transaction attempts to select a row that does not exist, issuing the query at a later point within the same transaction has to return the same result. No other transaction can be allowed to insert that nonexistent row. For example, given this query:  
   
-```  
+```sql 
 SELECT name  
     FROM mytable  
     WHERE name = 'Bill';  
@@ -594,7 +592,7 @@ SELECT name
 
  When deleting a value within a transaction, the range the value falls into does not have to be locked for the duration of the transaction performing the delete operation. Locking the deleted key value until the end of the transaction is sufficient to maintain serializability. For example, given this DELETE statement:  
   
-```  
+```sql  
 DELETE mytable  
     WHERE name = 'Bob';  
 ```  
@@ -607,7 +605,7 @@ DELETE mytable
 
  When inserting a value within a transaction, the range the value falls into does not have to be locked for the duration of the transaction performing the insert operation. Locking the inserted key value until the end of the transaction is sufficient to maintain serializability. For example, given this INSERT statement:  
   
-```  
+```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
@@ -971,7 +969,7 @@ deadlock-list
   
  These [!INCLUDE[tsql](../includes/tsql-md.md)] statements create test objects that are used in the examples that follow.  
   
-```  
+```sql  
 -- Create a test table.  
 CREATE TABLE TestTable  
     (col1        int);  
@@ -993,7 +991,7 @@ GO
   
  A `SELECT` statement is executed under a transaction. Because of the `HOLDLOCK` lock hint, this statement will acquire and retain an Intent shared (IS) lock on the table (for this illustration, row and page locks are ignored). The IS lock will be acquired only on the partition assigned to the transaction. For this example, it is assumed that the IS lock is acquired on partition ID 7.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1006,7 +1004,7 @@ BEGIN TRANSACTION
   
  A transaction is started, and the `SELECT` statement running under this transaction will acquire and retain a shared (S) lock on the table. The S lock will be acquired on all partitions which results in multiple table locks, one for each partition. For example, on a 16-cpu system, 16 S locks will be issued across lock partition IDs 0-15. Because the S lock is compatible with the IS lock being held on partition ID 7 by the transaction in session 1, there is no blocking between transactions.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1017,7 +1015,7 @@ BEGIN TRANSACTION
   
  The following `SELECT` statement is executed under the transaction that is still active under session 1. Because of the exclusive (X) table lock hint, the transaction will attempt to acquire an X lock on the table. However, the S lock that is being held by the transaction in session 2 will block the X lock at partition ID 0.  
   
-```  
+```sql  
 SELECT col1  
     FROM TestTable  
     WITH (TABLOCKX);  
@@ -1029,7 +1027,7 @@ SELECT col1
   
  A `SELECT` statement is executed under a transaction. Because of the `HOLDLOCK` lock hint, this statement will acquire and retain an Intent shared (IS) lock on the table (for this illustration, row and page locks are ignored). The IS lock will be acquired only on the partition assigned to the transaction. For this example, it is assumed that the IS lock is acquired on partition ID 6.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1044,7 +1042,7 @@ BEGIN TRANSACTION
   
  On partition IDs 7-15 that the X lock has not yet reached, other transactions can continue to acquire locks.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1309,7 +1307,7 @@ BEGIN TRANSACTION
   
  On session 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or the 2008 or 2008R2 version of the AdventureWorks database.  
 GO  
   
@@ -1332,7 +1330,7 @@ BEGIN TRANSACTION;
   
  On session 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1354,7 +1352,7 @@ BEGIN TRANSACTION;
   
  On session 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this shows  
     -- the employee having 48 vacation hours.  The  
     -- snapshot transaction is still reading data from  
@@ -1366,7 +1364,7 @@ BEGIN TRANSACTION;
   
  On session 2:  
   
-```  
+```sql  
 -- Commit the transaction; this commits the data  
 -- modification.  
 COMMIT TRANSACTION;  
@@ -1375,7 +1373,7 @@ GO
   
  On session 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still   
     -- shows the employee having 48 vacation hours  
     -- even after the other transaction has committed  
@@ -1410,7 +1408,7 @@ GO
   
  On session 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
@@ -1437,7 +1435,7 @@ BEGIN TRANSACTION;
   
  On session 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1460,7 +1458,7 @@ BEGIN TRANSACTION;
   
  On session 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still shows  
     -- the employee having 48 vacation hours.  The  
     -- read-committed transaction is still reading data   
@@ -1474,7 +1472,7 @@ BEGIN TRANSACTION;
   
  On session 2:  
   
-```  
+```sql  
 -- Commit the transaction.  
 COMMIT TRANSACTION;  
 GO  
@@ -1483,7 +1481,7 @@ GO
   
  On session 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement which now shows the   
     -- employee having 40 vacation hours.  Being   
     -- read-committed, this transaction is reading the   
@@ -1513,7 +1511,7 @@ GO
   
  The following [!INCLUDE[tsql](../includes/tsql-md.md)] statement enables READ_COMMITTED_SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
@@ -1522,7 +1520,7 @@ ALTER DATABASE AdventureWorks2012
   
  The following [!INCLUDE[tsql](../includes/tsql-md.md)] statement will enable ALLOW_SNAPSHOT_ISOLATION:  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
@@ -1552,7 +1550,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   Read-committed that uses row versioning by setting the `READ_COMMITTED_SNAPSHOT` database option to `ON` as shown in the following code example:  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
@@ -1561,14 +1559,14 @@ ALTER DATABASE AdventureWorks2012
   
 -   Snapshot isolation by setting the `ALLOW_SNAPSHOT_ISOLATION` database option to `ON` as shown in the following code example:  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
      A transaction running under snapshot isolation can access tables in the database that have been enabled for snapshot. To access tables that have not been enabled for snapshot, the isolation level must be changed. For example, the following code example shows a `SELECT` statement that joins two tables while running under a snapshot transaction. One table belongs to a database in which snapshot isolation is not enabled. When the `SELECT` statement runs under snapshot isolation, it fails to execute successfully.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1579,7 +1577,7 @@ ALTER DATABASE AdventureWorks2012
   
      The following code example shows the same `SELECT` statement that has been modified to change the transaction isolation level to read-committed. Because of this change, the `SELECT` statement executes successfully.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1613,7 +1611,7 @@ ALTER DATABASE AdventureWorks2012
   
      For example, a database administrator executes the following `ALTER INDEX` statement.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
@@ -1643,7 +1641,7 @@ ALTER DATABASE AdventureWorks2012
   
  To determine the current LOCK_TIMEOUT setting, execute the @@LOCK_TIMEOUT function:  
   
-```  
+```sql  
 SELECT @@lock_timeout;  
 GO  
 ```  
@@ -1666,7 +1664,7 @@ GO
   
  The following example sets the `SERIALIZABLE` isolation level:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1683,7 +1681,7 @@ GO
   
  To determine the transaction isolation level currently set, use the `DBCC USEROPTIONS` statement as shown in the following example. The result set may vary from the result set on your system.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
@@ -1731,7 +1729,7 @@ GO
   
  As shown in the following example, if the transaction isolation level is set to `SERIALIZABLE`, and the table-level locking hint `NOLOCK` is used with the `SELECT` statement, key-range locks typically used to maintain serializable transactions are not taken.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1788,7 +1786,7 @@ GO
   
  The following example shows the intended use of nested transactions. The procedure `TransProc` enforces its transaction regardless of the transaction mode of any process that executes it. If `TransProc` is called when a transaction is active, the nested transaction in `TransProc` is largely ignored, and its INSERT statements are committed or rolled back based on the final action taken for the outer transaction. If `TransProc` is executed by a process that does not have an outstanding transaction, the COMMIT TRANSACTION at the end of the procedure effectively commits the INSERT statements.  
   
-```  
+```sql  
 SET QUOTED_IDENTIFIER OFF;  
 GO  
 SET NOCOUNT OFF;  

@@ -15,15 +15,12 @@ ms.author: chugu
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
 Disable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.
 
 ## Syntax
 
 ```sql
-catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
+catalog.disable_worker_agent [ @WorkerAgentId = ] WorkerAgentId
 ```
 ## Arguments
 [@WorkerAgentId =] *WorkerAgentId*

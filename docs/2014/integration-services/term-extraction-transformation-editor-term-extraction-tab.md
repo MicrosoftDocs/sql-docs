@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Term Extraction Transformation Editor"
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Term Extraction Transformation Editor (Term Extraction Tab)
   Use the **Term Extraction** tab of the **Term Extraction Transformation Editor** dialog box to specify a text column that contains text to be extracted.  

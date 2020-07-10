@@ -1,5 +1,6 @@
 ---
 title: "Example: Retrieving Employee Information | Microsoft Docs"
+description: View an example of how to retrieve employee information from a database as XML using a query with FOR XML EXPLICIT.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Retrieving Employee Information
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This example retrieves an employee ID and employee name for each employee. In the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the employeeID can be obtained from the BusinessEntityID column in the Employee table. Employee names can be obtained from the Person table. The BusinessEntityID column can be used to join the tables.  
   
  Assume that you want FOR XML EXPLICIT transformation to generate XML as shown in the following:  

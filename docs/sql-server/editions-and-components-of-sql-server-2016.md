@@ -1,13 +1,14 @@
 ---
 title: "Editions and supported features"
 titleSuffix: SQL Server 2016
+description: This article describes features supported by the various editions of SQL Server 2016, which accommodate different performance, runtime, and price requirements.
 ms.custom: 
    - seo-lt-2019
    - sqlfreshmay19
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
@@ -38,7 +39,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # Editions and supported features of SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 This topic provides details of features supported by the SQL Server editions.
 

@@ -1,13 +1,12 @@
 ---
 title: What is Azure Data Studio
-titleSuffix: Azure Data Studio
 description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. 
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: "overview"
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.custom: "seodec18, sqlfreshmay19"
 ms.date: "01/15/2020"
 ---
@@ -20,17 +19,17 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 
 The source code for Azure Data Studio and its data providers is available on GitHub under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. For more information, see [Azure Data Studio FAQ](faq.md).
 
-**[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
+**[Download and Install Azure Data Studio](download.md)**
 
 ## SQL code editor with IntelliSense
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] offers a modern, keyboard-focused SQL coding experience that makes your everyday tasks easier with built-in features, such as multiple tab windows, a rich SQL editor, IntelliSense, keyword completion, code snippets, code navigation, and source control integration (Git). Run on-demand SQL queries, view and save results as text, JSON, or Excel. Edit data, organize your favorite database connections, and browse database objects in a familiar object browsing experience. To learn how to use the SQL editor, see [Use the SQL editor to create database objects](tutorial-sql-editor.md).
+Azure Data Studio offers a modern, keyboard-focused SQL coding experience that makes your everyday tasks easier with built-in features, such as multiple tab windows, a rich SQL editor, IntelliSense, keyword completion, code snippets, code navigation, and source control integration (Git). Run on-demand SQL queries, view and save results as text, JSON, or Excel. Edit data, organize your favorite database connections, and browse database objects in a familiar object browsing experience. To learn how to use the SQL editor, see [Use the SQL editor to create database objects](tutorial-sql-editor.md).
 
 ## Smart SQL code snippets
 
 SQL code snippets generate the proper SQL syntax to create databases, tables, views, stored procedures, users, logins, roles, and to update existing database objects. Use smart snippets to quickly create copies of your database for development or testing purposes, and to generate and execute CREATE and INSERT scripts.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] also provides functionality to create custom SQL code snippets. To learn more, see [Create and use code snippets](code-snippets.md).
+Azure Data Studio also provides functionality to create custom SQL code snippets. To learn more, see [Create and use code snippets](code-snippets.md).
 
 ## Customizable Server and Database Dashboards
 
@@ -42,13 +41,13 @@ Server groups provide a way to organize connection information for the servers a
 
 ## Integrated Terminal
 
-Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, and ssh) in the Integrated Terminal window right within the [!INCLUDE[name-sos](../includes/name-sos-short.md)] user interface. To learn about the integrated terminal, see [Integrated terminal](integrated-terminal.md).
+Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, and ssh) in the Integrated Terminal window right within the Azure Data Studio user interface. To learn about the integrated terminal, see [Integrated terminal](integrated-terminal.md).
 
 ## Extensibility and extension authoring
 
-Enhance the [!INCLUDE[name-sos](../includes/name-sos-short.md)] experience by extending the functionality of the base installation. [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides extensibility points for data management activities, and support for extension authoring.
+Enhance the Azure Data Studio experience by extending the functionality of the base installation. Azure Data Studio provides extensibility points for data management activities, and support for extension authoring.
 
-To learn about extensibility in [!INCLUDE[name-sos](../includes/name-sos-short.md)], see [Extensibility](extensibility.md).
+To learn about extensibility in Azure Data Studio, see [Extensibility](extensibility.md).
 To learn about authoring extensions, see [Extension authoring](extension-authoring.md).
 
 ## Feature comparison with SQL Server Management Studio (SSMS)
@@ -161,7 +160,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 
 ## Next steps
 
-- [Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Download and Install Azure Data Studio](download.md)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
 

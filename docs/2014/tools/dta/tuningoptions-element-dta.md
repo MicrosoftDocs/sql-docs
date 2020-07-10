@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # TuningOptions Element (DTA)
   Contains the tuning options for a specific tuning session.  

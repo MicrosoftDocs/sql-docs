@@ -23,7 +23,7 @@ ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NTILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Distributes the rows in an ordered partition into a specified number of groups. The groups are numbered, starting at one. For each row, NTILE returns the number of the group to which the row belongs.  
   
@@ -63,7 +63,7 @@ USE AdventureWorks2012;
 GO  
 SELECT p.FirstName, p.LastName  
     ,NTILE(4) OVER(ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     , a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -109,7 +109,7 @@ DECLARE @NTILE_Var int = 4;
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     ,a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -153,7 +153,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   
     ON e.EmployeeKey = sq.EmployeeKey  
@@ -193,7 +193,7 @@ Tsoflias          4          867,000.00
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
    ,st.SalesTerritoryCountry  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   

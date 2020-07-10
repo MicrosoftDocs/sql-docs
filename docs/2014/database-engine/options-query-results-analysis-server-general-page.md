@@ -11,12 +11,11 @@ f1_keywords:
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 author: heidisteen
 ms.author: heidist
-manager: craigg
 ---
 # Options (Query Results-Analysis Server-General Page)
   Use this page to determine the default behavior of the query result window for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] queries. To display these settings, select **Options** from the **Tools** menu. Within the **Query Results** folder expand the **Analysis Server** subfolder, and then choose **General**.  
   
-## UIElement List  
+## UI element list  
  **Show grids in separate tabs**  
  Multiple result sets appear as separated documents, accessed by the tabs of the document window, instead of sequentially in the results pane.  
   

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Adding Indentation
   Query Editor allows you to indent large sections of code with a single step, and you can change the amount of the indentation.  

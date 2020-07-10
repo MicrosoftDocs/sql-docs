@@ -1,5 +1,6 @@
 ---
 title: Web Application Requirements
+description: Find out about the requirements to install and run the Master Data Services web application hosted by Internet Information Services.
 ms.custom: ""
 ms.date: "02/13/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: lle
 ---
 # Web Application Requirements (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] is a web application hosted by Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] works only in Internet Explorer (IE) 9 or later. IE 8  and earlier versions, Microsoft Edge and Chrome are not supported.  
 

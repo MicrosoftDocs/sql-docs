@@ -1,17 +1,18 @@
 ---
 title: "Install Failover Cluster Instance"
+description: Learn to install a SQL Server failover cluster. Create and configure a failover cluster instance by running SQL Server Setup.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 ---
 # SQL Server Failover Cluster Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   To install a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must create and configure a failover cluster instance by running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup.  
   
 ## Installing a Failover Cluster  
@@ -33,7 +34,7 @@ ms.author: mathoma
   
     -   All nodes in a failover cluster must be of the same platform, either 32-bit or 64-bit, and must run the same operating system edition and version. Also, 64-bit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] editions must be installed on 64-bit hardware running the 64-bit versions of Windows operating systems. There is no WOW64 support for failover clustering in this release.  
   
-3.  Specify multiple IP addresses for each failover cluster instance. You can specify mutiple IP addresses for each subnet. If the mutiple IP addresses are on the same subnet, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup sets the dependency to AND. If you are clustering nodes across multiple subnets, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup sets the dependency to OR.  
+3.  Specify multiple IP addresses for each failover cluster instance. You can specify multiple IP addresses for each subnet. If the multiple IP addresses are on the same subnet, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup sets the dependency to AND. If you are clustering nodes across multiple subnets, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup sets the dependency to OR.  
 
 4.  SQL Server failover cluster instance (FCI) requires the cluster nodes to be domain joined. The following configurations are **not supported**:
     - SQL FCI on workgroup clusters. 

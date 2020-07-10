@@ -1,5 +1,6 @@
 ---
 title: "FILESTREAM, functions, stored procedures, views | Microsoft Docs"
+description: FILESTREAM works with specific Transact-SQL statements, APIs, functions, stored procedures, and views. Learn which statements and objects support FILESTREAM.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # FILESTREAM, functions, stored procedures, and views
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that support FILESTREAM.  
   
  For the list of database objects that support the FileTable feature, see [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md).  

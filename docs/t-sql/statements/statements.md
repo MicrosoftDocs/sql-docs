@@ -28,7 +28,7 @@ The backup and restore statements provide ways to create backups and restore fro
 
 ## Data Definition Language
 
-Data Definition Language (DDL) statements defines data structures. Use these statements to create, alter, or drop data structures in a database.
+Data Definition Language (DDL) statements defines data structures. Use these statements to create, alter, or drop data structures in a database. These statements include:
 
 - ALTER
 - Collations
@@ -46,6 +46,7 @@ Data Manipulation Language (DML) affect the information stored in the database. 
 - BULK INSERT
 - DELETE
 - INSERT
+- SELECT
 - UPDATE
 - MERGE
 - TRUNCATE TABLE

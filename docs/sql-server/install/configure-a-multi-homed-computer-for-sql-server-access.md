@@ -1,5 +1,6 @@
 ---
 title: "Configure multi-homed computer for access"
+description: Learn how to configure SQL Server and Windows Firewall to provide for network connections to an instance of SQL Server in a multi-homed environment.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "multi-homed computer [SQL Server] configuring ports"
   - "firewall systems [Database Engine], multi-homed computer"
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Configure a Multi-Homed Computer for SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   When a server must provide a connection to two or more networks or network subnets, a typical scenario uses a multi-homed computer. Frequently this computer is located in a perimeter network (also known as DMZ, demilitarized zone, or screened subnet). This article describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.  
   

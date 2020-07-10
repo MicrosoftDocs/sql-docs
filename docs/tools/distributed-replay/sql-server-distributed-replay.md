@@ -1,6 +1,7 @@
 ---
 title: SQL Server Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: The SQL Server Distributed Replay feature helps you assess the impact of future upgrades to SQL Server, hardware, and operating system, and SQL Server tuning.
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
@@ -14,7 +15,7 @@ ms.date: 03/14/2017
 
 # SQL Server Distributed Replay
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature helps you assess the impact of future [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrades. You can also use it to help assess the impact of hardware and operating system upgrades, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tuning.
 

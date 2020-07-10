@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains catalog views and functions that are related to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   

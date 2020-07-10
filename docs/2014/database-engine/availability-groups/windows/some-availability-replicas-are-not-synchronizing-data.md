@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Some availability replicas are not synchronizing data
     

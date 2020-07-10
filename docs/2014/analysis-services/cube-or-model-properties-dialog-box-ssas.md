@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cube or Model Properties Dialog Box (SSAS)
   Use the **Database Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of a cube or model database. You can display the dialog box by right-clicking a cube or model in **Object Explorer** and selecting **Properties**.  

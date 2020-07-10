@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 134355cb-69a7-4b16-8076-82ede43ce940
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browse Data Source Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Browse Data Source** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to view the first 1,000 records of the selected table.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Validate Specific Members against Business Rules (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], apply business rules selectively when you want to update or validate subsets of members against business rules.  

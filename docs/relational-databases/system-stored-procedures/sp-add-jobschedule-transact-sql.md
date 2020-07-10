@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_add_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a schedule for a SQL Agent job.  
   
@@ -44,7 +44,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
      [ , [ @active_end_date = ] active_end_date ]  
      [ , [ @active_start_time = ] active_start_time ]  
      [ , [ @active_end_time = ] active_end_time ]  
-     [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+     [ , [ @schedule_id = ] schedule_id OUTPUT ]
+     [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
 ```  
   
 ## Arguments  

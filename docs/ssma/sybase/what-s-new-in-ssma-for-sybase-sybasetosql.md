@@ -1,19 +1,30 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
-authors: "HJToland3;nahk-ivanov"
-
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for Sybase (SybaseToSQL) for each release.
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ""
-ms.date: "4/27/2020"
+ms.date: "7/2/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for SAP ASE contains the following changes:
+
+* Fix conversion of temporary tables
+* Use MSAL.NET library for interactive Azure Active Directory authentication
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for SAP ASE contains minor performance improvements and bug fixes.
 
 ## SSMA v8.9
 

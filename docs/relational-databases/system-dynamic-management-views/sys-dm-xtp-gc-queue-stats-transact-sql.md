@@ -22,7 +22,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 ---
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Outputs information about each garbage collection worker queue on the server, and various statistics about each. There is one queue per logical CPU.  
   

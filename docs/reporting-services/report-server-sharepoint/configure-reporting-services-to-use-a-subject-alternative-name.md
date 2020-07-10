@@ -1,5 +1,6 @@
 ---
 title: "Configure Reporting Services to use a subject alternative name | Microsoft Docs"
+description: Learn how to configure SQL Server Reporting Services to use an SAN by modifying the rsreportserver.config file and using the Netsh.exe tool.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

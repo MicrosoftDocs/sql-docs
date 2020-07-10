@@ -1,5 +1,6 @@
 ---
 title: "Report Server Service Trace Log"
+description: Learn about report server trace logs in Reporting Services, which contain detailed information for Report Server service operations.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server

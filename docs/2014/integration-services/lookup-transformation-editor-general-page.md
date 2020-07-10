@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptransformation.general.f1"
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lookup Transformation Editor (General Page)
   Use the **General** page of the Lookup Transformation Editor dialog box to select the cache mode, select the connection type, and specify how to handle rows with no matching entries.  

@@ -1,5 +1,6 @@
 ---
 title: "Configure the remote proc trans Server Configuration Option | Microsoft Docs"
+description: 'Find out about the "remote proc trans" option. See how it helps protect the actions of a server-to-server procedure through an MS DTC transaction.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "remote proc trans option"
   - "distributed transactions [SQL Server], enforcing"
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the remote proc trans Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **remote proc trans** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **remote proc trans** option helps protect the actions of a server-to-server procedure through a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) transaction.  
   

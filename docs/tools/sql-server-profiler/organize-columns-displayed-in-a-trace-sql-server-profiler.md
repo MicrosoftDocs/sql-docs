@@ -1,6 +1,7 @@
 ---
 title: Organize Columns Displayed in a Trace
 titleSuffix: SQL Server Profiler
+description: Make it easier to analyze SQL Server Profiler trace output by grouping and aggregating events when you define or view a trace.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.date: 03/01/2017
 
 # Organize Columns Displayed in a Trace (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 You can group data columns in a trace by selecting **Organize Columns** in the trace table or **Trace File Properties** dialog box, or when you define a trace. Grouping the data columns enables you to better analyze [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace output. For more information, see [View and Analyze Traces with SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   

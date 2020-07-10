@@ -1,5 +1,6 @@
 ---
 title: "Database Lifecycle Management | Microsoft Docs"
+description: Learn how to use database lifecycle management in SQL Server to manage databases and data assets for performance, protection, availability, and cost.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -33,7 +34,7 @@ ms.author: mathoma
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Lifecycle Management
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Database lifecycle management (DLM) is a policy-based approach to managing databases and data assets. DLM is not a product but a comprehensive approach to managing the database schema, data, and metadata for a database application. A thoughtful and proactive approach to DLM enables an organization to manage data resources according to appropriate levels of performance, protection, availability, and cost.  
   
  DLM begins with discussion of project design and intent, continues with database develop, test, build, deploy, maintain, monitor, and backup activities, and ends with data archive. This topic provides an overview of the stages of DLM that begin with database development and progress through build, deploy, and monitor actions. Also included are data management activities, and data portability operations like import/export, backup, migrate, and sync.  

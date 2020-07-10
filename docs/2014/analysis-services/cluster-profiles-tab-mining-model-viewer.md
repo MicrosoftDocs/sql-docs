@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cluster Profiles Tab (Mining Model Viewer)
   Use the **Cluster Profiles** tab for an overall view of the clusters that the algorithm discovered within a clustering model. The tab displays each attribute, together with the distribution of the attribute in each cluster.  

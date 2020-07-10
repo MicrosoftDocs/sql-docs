@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the HIDE Directive | Microsoft Docs"
+description: View an example of using the HIDE directive in an SQL query.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Specifying the HIDE Directive
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates the use of the **HIDE** directive. This directive is useful when you want the query to return an attribute for ordering the rows in the universal table that is returned by the query, but you do not want that attribute in the final resulting XML document.  
   
  This query constructs this XML:  

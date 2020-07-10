@@ -1,5 +1,6 @@
 ---
 title: "Set the PAGE_VERIFY Database Option to CHECKSUM | Microsoft Docs"
+description: Check whether PAGE_VERIFY option is CHECKSUM, which controls whether the SQL Server Database Engine calculates a checksum to help provide data-file integrity.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Set the PAGE_VERIFY Database Option to CHECKSUM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks whether PAGE_VERIFY database option is set to CHECKSUM. When CHECKSUM is enabled for the PAGE_VERIFY database option, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] calculates a checksum over the contents of the whole page, and stores the value in the page header when a page is written to disk. When the page is read from disk, the checksum is recomputed and compared to the checksum value that is stored in the page header. This helps provide a high level of data-file integrity.  
   
 ## Best Practices Recommendations  

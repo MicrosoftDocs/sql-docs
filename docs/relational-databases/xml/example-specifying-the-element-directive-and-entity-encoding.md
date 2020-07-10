@@ -1,5 +1,6 @@
 ---
-title: "Specify the ELEMENT eirective and entity encoding | Microsoft Docs"
+title: "Specify the ELEMENT directive and entity encoding | Microsoft Docs"
+description: Learn how to specify the ELEMENT directive in an SQL query so that the query result is entity encoded.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +16,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Example: Specifying the ELEMENT Directive and Entity Encoding
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates the difference between the **ELEMENT** and **XML** directives. The **ELEMENT** directive entitizes the data, but the **XML** directive does not. The \<Summary> element is assigned XML, `<Summary>This is summary description</Summary>`, in the query.  
   
  Consider this query:  

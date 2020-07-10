@@ -18,7 +18,7 @@ ms.author: pelopes
 manager: amitban
 ---
 # Execution Plans
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 To be able to execute queries, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] must analyze the statement to determine the most efficient way to access the required data. This analysis is handled by a component called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan, or execution plan.   
 
@@ -39,7 +39,7 @@ A query execution plan is a definition of the following:
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has three options to display execution plans:        
-> -  The ***[Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** is the compiled plan, as produced by the Query Optimizer based on estimations. This is the query plan that is store in the plan cache.        
+> -  The ***[Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** is the compiled plan, as produced by the Query Optimizer based on estimations. This is the query plan that is stored in the plan cache.        
 > -  The ***[Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md)*** is the compiled plan plus its [execution context](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). It becomes available **after the query execution has completed**. This includes actual runtime information such as execution warnings, or in newer versions of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], the elapsed and CPU time used during execution.         
 > -  The ***[Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)*** is the compiled plan plus its execution context. It is available for **in-flight query executions**, and updated every second. This includes runtime information such as the actual number of rows flowing through the [operators](../../relational-databases/showplan-logical-and-physical-operators-reference.md), elapsed time, and the estimated query progress.
 

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Database Engine Error Severities
   When an error is raised by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], the severity of the error indicates the type of problem encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

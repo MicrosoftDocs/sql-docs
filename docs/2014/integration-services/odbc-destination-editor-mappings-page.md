@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcdest.columns.f1"
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Destination Editor (Mappings Page)
   Use the **Mappings** page of the **ODBC Destination Editor** dialog box to map input columns to destination columns.  

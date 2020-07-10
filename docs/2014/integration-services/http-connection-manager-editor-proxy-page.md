@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "HTTP Connection Manager Editor"
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # HTTP Connection Manager Editor (Proxy Page)
   Use the **Proxy** tab of the **HTTP Connection Manager Editor** dialog box to configure the HTTP Connection Manager to use a proxy server. An HTTP connection enables a package to access a Web server by using HTTP to send or receive files.  

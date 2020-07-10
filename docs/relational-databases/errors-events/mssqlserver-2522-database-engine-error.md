@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_2522
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|2522|  
 |Event Source|MSSQLSERVER|  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Updating Cells (XMLA)
   You can use the [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) command to change the value of one or more cells in a cube enabled for cube writeback. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stores the updated information in a separate writeback table for each partition that contains cells to be updated.  

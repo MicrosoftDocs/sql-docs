@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analysis Services Tutorials (SSAS)
   This section contains tutorials for [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  

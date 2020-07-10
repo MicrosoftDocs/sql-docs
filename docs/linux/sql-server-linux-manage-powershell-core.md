@@ -198,7 +198,7 @@ The following command will show you all of the cmdlets available on the version 
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
-SORT -Property Noun |
+Sort-Object -Property Noun |
 SELECT Name
 ```
 

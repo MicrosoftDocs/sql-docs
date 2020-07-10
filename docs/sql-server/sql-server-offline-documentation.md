@@ -1,5 +1,5 @@
 ---
-title: Install previous versions of SQL Server documentation offline
+title: Install SQL Server documentation to view offline
 description: Learn how to install offline documentation for SQL Server 2019, 2017, 2016, 2014, and 2012. Use SQL Server Management Studio (SSMS) to view the offline content. 
 ms.prod: sql
 ms.technology: install
@@ -8,12 +8,13 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/05/2020
+ms.date: 05/08/2020
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || sql-server-2014 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
-# Install previous versions of SQL Server documentation to view offline in SSMS
+# Install SQL Server documentation to view offline in SSMS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). Offline content enables you to access the documentation without an internet connection (although an internet connection is initially required to download it).
 
@@ -29,7 +30,7 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
-   ![Help Viewer Add Remove Content](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![Add and Remove Help Content](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    The Help Viewer opens to the Manage Content tab.
 
@@ -53,11 +54,14 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 
 ## SQL Server 2014 offline content
 
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL content is only available offline.
+
 The following steps explain how to load offline content for SQL Server 2014.
 
 1. Download the [Product Documentation for Microsoft SQL Server 2014 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=42557) content from the download center and save it to a folder.
 
-2. Unzip the file to view the.msha file.
+2. Unzip the file to view the *.msha* file.
 
    ![SQL Server 2014 Help documentation setup file](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -98,7 +102,7 @@ The following steps explain how to load offline content for SQL Server 2012
 
 1. Download the [Product Documentation for Microsoft SQL Server 2012 for firewall and proxy restricted environments](https://www.microsoft.com/download/details.aspx?id=35750) content from the download center and save it to a folder.
 
-2. Unzip the file to view the.msha file.
+2. Unzip the file to view the *.msha* file.
 
    ![SQL Server 2012 Help content setup file](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -145,7 +149,7 @@ To view the installed help in SSMS, select **Launch in Help Viewer** from the He
 
 Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. select articles in the table of contents to display them in the right pane.
 
-> [!TIP]
+> [!Important]
 > If the contents pane is not visible, select Contents on the left margin. select the pushpin icon to keep the contents pane open.  
 
    ![Help Viewer with content](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -162,7 +166,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 To learn more about archived content and Help viewer, reference the links below.
 
-- [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/)
-- [Microsoft Help Viewer - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)
-- [SQL Server Documentation, start](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 online documentation](../2014/2014-toc/index.yml?view=sql-server-2014)
+- [Previous versions of SQL Server online documentation](previous-versions-sql-server.md)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

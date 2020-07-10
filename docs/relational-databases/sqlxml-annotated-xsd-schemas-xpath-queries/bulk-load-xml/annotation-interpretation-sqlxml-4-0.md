@@ -1,5 +1,6 @@
 ---
 title: "Annotation Interpretation (SQLXML)"
+description: Learn how XML Bulk Load in SQLXML 4.0 interprets annotations in the XSD and XDR schemas.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,7 +20,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The topics in this section describe how XML Bulk Load interprets annotations in the XSD schema. The behavior described here also applies to the annotations in the XDR schema.  
   
 > [!NOTE]  

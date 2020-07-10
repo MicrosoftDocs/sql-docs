@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Load XML Data
   You can transfer XML data into [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in several ways. For example:  

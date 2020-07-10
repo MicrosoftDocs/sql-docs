@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Account Intelligence (Dimension) (Business Intelligence Wizard)
   Use this page to select the dimension to which account intelligence, including dimension and attribute type settings, definition of semi-additive measures, and other features, will be applied.  

@@ -1,5 +1,6 @@
 ---
 title: "Uninstall and Remove Master Data Services | Microsoft Docs"
+description: This uninstall process removes Master Data Services folders and files, and uninstalls Master Data Services Configuration Manager from the local computer.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -7,11 +8,11 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Uninstall and Remove Master Data Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   To uninstall the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] feature from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], follow the steps in [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) and specify [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] as a feature to remove on the **Select Features** page. The uninstall process removes [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] folders and files, and uninstalls [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] from the local computer.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Verifying a Report Run | Microsoft Docs"
+description: Learn how to use log files or refer to status information that is displayed with a report to verify a report run in Report Manager.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

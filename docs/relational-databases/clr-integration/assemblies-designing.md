@@ -15,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Designing
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes the following factors you should consider when you design assemblies:  
   
 -   Packaging assemblies  

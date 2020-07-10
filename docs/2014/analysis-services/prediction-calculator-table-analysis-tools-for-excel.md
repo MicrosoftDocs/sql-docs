@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Prediction Calculator (Table Analysis Tools for Excel)
   ![Prediction Calculator tool](media/tat-predcal.gif "Prediction Calculator tool")  

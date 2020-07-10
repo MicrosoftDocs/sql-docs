@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a full-text catalog from a database. You must drop all full-text indexes associated with the catalog before you drop the catalog.  
   

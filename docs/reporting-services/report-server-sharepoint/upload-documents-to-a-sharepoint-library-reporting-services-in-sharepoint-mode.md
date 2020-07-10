@@ -1,5 +1,6 @@
 ---
 title: "Upload documents to a SharePoint library (Reporting Services in SharePoint mode) | Microsoft Docs"
+description: In SQL Server Reporting Services in SharePoint mode, you can upload report definitions and report models to a SharePoint library.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

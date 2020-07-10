@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Navigational Access (Master Data Services)
   Navigational access applies to model object security, which is assigned on the **Models** tab.  

@@ -1,5 +1,6 @@
 ---
 title: "Subscribe to Publications | Microsoft Docs"
+description: Learn about the types of subscriptions in SQL Server replication, how to choose the type you need, and how to create a subscription.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -27,7 +28,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Subscribe to Publications
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   A subscription is a request for a copy of the data and database objects in a publication. A subscription defines which publication will be received, and where and when it will be received. When planning for subscriptions, consider where you want agent processing to occur. The type of subscription you choose controls where the agent runs. With a push subscription, the Merge Agent or Distribution Agent runs at the Distributor, whereas with a pull subscription, agents run at the Subscribers. After a subscription is created, it cannot be changed from one type to another.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]

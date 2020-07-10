@@ -6,17 +6,16 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-author: markingmyname
-ms.author: maghan
-ms.manager: jroth
-ms.reviewer: dnethi
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 04/07/2020
+ms.date: 06/09/2020
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 
@@ -38,9 +37,59 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
+## 18.5.1
+
+- Download: [Download SSMS 18.5.1](download-sql-server-management-studio-ssms.md)
+
+- Release number: 18.5.1
+- Build number: 15.0.18333.0
+- Release date: June 09, 2020
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40a)
+
+SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+18.5.1 is an update to 18.5 with the following bug fixes.
+
+### Bug fixes in 18.5.1
+
+| New Item | Details |
+|----------|---------|
+| Analysis Services | Improved performance when expanding the list of databases while connected to AS Azure or Power BI servers. |
+| Analysis Services | Fixed an issue where an error would occur trying to open the Synchronize Database Wizard of an Analysis Services server. |
+| Analysis Services | Fixed an issue preventing users from querying SSAS 2017 and earlier versions with cell data permissions. |
+| General SSMS | [Table Designer - Fixed beep when trying to TAB in a Table Designer grid](https://feedback.azure.com/forums/908035/suggestions/40318435) |
+
+### Known issues (18.5.1)
+
+| New Item | Details | Workaround |
+|----------|---------||-----------|
+| General SSMS | There is a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, and then later try to open it with 17.9.1. See [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
+| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
+| SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|-------------------|
+| [18.5](#185) | 15.0.18330.0 | April 07, 2020 |
+| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
+| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
+| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
+| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
+
 ## 18.5
 
-- Download: [Download SSMS 18.5](download-sql-server-management-studio-ssms.md)
+![download](media/download-icon.png) [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
+- Release number: 18.5
 - Build number: 15.0.18330.0
 - Release date: April 07, 2020
 
@@ -135,23 +184,9 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 
 - New Server Audit Specification dialog may cause SSMS to crash with an access violation error.
 
-- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on Nuget.org right after SSMS 18.5 is released)
+- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on Nuget.org right after SSMS 18.5 is released).
 
-You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-|--------------|--------------|-------------------|
-| [18.4](#184) | 15.0.18206.0 | November 04, 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | October 02, 2019 |
-| [18.2](#182) | 15.0.18142.0 | July 25, 2019 |
-| [18.1](#181) | 15.0.18131.0 | June 11, 2019 |
-| [18.0](#180) | 15.0.18118.0 | April 24, 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | November 21, 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | January 30, 2017 |
+- [Error when connecting to SSAS via msmdpump.dll in SSMS](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696-error-when-connecting-to-ssas-via-msmdpump-dll-in).
 
 ### 18.4
 
@@ -244,12 +279,12 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 | Analysis Services | Fixed an issue in XEvent UI that prevents the users from being able to create a new session. |
 | Database Deployment to SQL Azure | Fixed an issue (in DacFx) which was causing this feature not to work.|
 | General SSMS | Fixed an issue, which was causing SSMS to crash when using the sorting feature in the XEvent viewer. |
-| General SSMS | Fixed long outstanding issues where SSMS Restore database may hang indefinitely. </br></br> See UserVoice items for more details: </br> [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/).  </br> [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/). </br> [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/).  </br> [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/).  |
+| General SSMS | Fixed long outstanding issues where SSMS Restore database may stop responding indefinitely. </br></br> See UserVoice items for more details: </br> [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/).  </br> [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/). </br> [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/).  </br> [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/).  |
 | General SSMS | Fixed an issue where the default language for all logins was shown as Arabic. </br></br> See UserVoice item for more details: [SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363). |
 | General SSMS | Fixed the hard to see the dialog for *Query Options* (when the user right-clicks on the T-SQL editor window) by making it resizable.|
 | General SSMS | The *Completion time* message visible in the Result Grid/File (introduced in SSMS 18.2) is now configurable under Tools > Options >  Query Execution > SQL Server > Advanced > Show completion time. |
 | General SSMS | In the connection dialog, replaced *Active Directory - Password* and *Active Directory - Integrated* with *Azure Active Directory - Password* and *Azure Active Directory - Integrated*, respectively. |
-| General SSMS | Fixed an issue that prevents users from being able to use SSMS to configure auditing on SQL Azure-Managed Instances when located in a TZ with negative UTC offset. |
+| General SSMS | Fixed an issue that prevents users from being able to use SSMS to configure auditing on SQL Azure managed Instances when located in a TZ with negative UTC offset. |
 | General SSMS | Fixing an issue in XEvent UI where hovering over the grid was causing rows to be selected. </br></br> See UserVoice item for more details: [SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124). |
 | Import flat file | Fixed the issue where Import Flat File wasn't importing all data by letting the user choose between a simple or rich data type detection.</br></br> See UserVoice item for more details: [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989). |
 | Integration Services | Add new operation type *StartNonCatalogExecution* for SSIS Operation report.|
@@ -514,13 +549,13 @@ You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-serve
 | :-------| :------|
 |Crashes and freezes|Fixed a source of common SSMS crashes related to GDI objects.|
 |Crashes and freezes|Fixed a common source of hangs and poor performance when selecting "Script as Create/Update/Drop" (removed unnecessary fetches of SMO objects).|
-|Crashes and freezes|Fixed a hang when connecting to an Azure SQL DB using MFA while ADAL traces are enabled.|
-|Crashes and freezes|Fixed a hang (or perceived hang) in Live Query Statistics when invoked from Activity Monitor (the issue manifested when using SQL Server authentication with no "Persist Security Info" set).|
-|Crashes and freezes|Fixed a hang when selecting "Reports" in Object Explorer, which could manifest on high latency connections or temporary non-accessibility of the resources.|
+|Crashes and freezes|Fixed an issue where system stops responding when connecting to an Azure SQL DB using MFA while ADAL traces are enabled.|
+|Crashes and freezes|Fixed a issue where system stops responding (or perceived hang) in Live Query Statistics when invoked from Activity Monitor (the issue manifested when using SQL Server authentication with no "Persist Security Info" set).|
+|Crashes and freezes|Fixed a issue where system stops responding when selecting "Reports" in Object Explorer, which could manifest on high latency connections or temporary non-accessibility of the resources.|
 |Crashes and freezes|Fixed a crash in SSMS when trying to use Central Management Server and Azure SQL servers. For details, see [SMSS 17.5 application error and crash when using Central Management Server](https://feedback.azure.com/forums/908035/suggestions/33374884).|
-|Crashes and freezes|Fixed a hang in Object Explorer by optimizing the way IsFullTextEnabled  property is retrieved.|
-|Crashes and freezes|Fixed a hang in "Copy Database Wizard" by avoiding to build unnecessary queries to retrieve Database properties.|
-|Crashes and freezes|Fixed an issue that was causing SSMS to hang/crash while editing T-SQL.|
+|Crashes and freezes|Fixed a issue where system stops responding in Object Explorer by optimizing the way IsFullTextEnabled  property is retrieved.|
+|Crashes and freezes|Fixed a issue where system stops responding in "Copy Database Wizard" by avoiding to build unnecessary queries to retrieve Database properties.|
+|Crashes and freezes|Fixed an issue that was causing SSMS to stop responding/crash while editing T-SQL.|
 |Crashes and freezes|Mitigated an issue where SSMS was becoming unresponsive when editing large T-SQL scripts.|
 |Crashes and freezes|Fixed an issue that was causing SSMS to run out of memory when handling the large datasets returned by queries.|
 |General SSMS|Fixed an issue there the "ApplicationIntent" wasn't passed along in connections in "Registered Servers".|
@@ -758,7 +793,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 * Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* Context menu for tables momentarily hangs
+* Context menu for tables momentarily stops responding
 
 * SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 

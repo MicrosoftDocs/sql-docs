@@ -1,5 +1,6 @@
 ---
 title: "Use XML in Computed Columns | Microsoft Docs"
+description: View examples of how to use XML instances and XML columns with computed columns in SQL.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Use XML in Computed Columns
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML instances can appear as a source for a computed column, or as a type of computed column. The examples in this topic show how to use XML with computed columns.  
   
 ## Creating Computed Columns from XML Columns  

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: c534a0e2-5c35-46c2-a7e8-b1964850bd0e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Analysis Services Query Execution Options (General Page)
   Use this page to specify the options for displaying the results of a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] query.  

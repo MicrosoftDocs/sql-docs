@@ -1,5 +1,6 @@
 ---
 title: "Replication Merge Agent | Microsoft Docs"
+description: The Replication Merge Agent applies the initial snapshot held in database tables to the Subscribers, merges incremental data changes, and reconciles conflicts.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The Replication Merge Agent is a utility executable that applies the initial snapshot held in the database tables to the Subscribers. It also merges incremental data changes that occurred at the Publisher after the initial snapshot was created, and reconciles conflicts either according to the rules you configure or using a custom resolver you create.  
   
 > [!NOTE]  

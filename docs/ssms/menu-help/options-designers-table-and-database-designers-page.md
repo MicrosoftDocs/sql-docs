@@ -14,10 +14,10 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Designers - Table and Database Designers Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this page to determine the default behavior of the designer. To access the settings, on the **Tools** menu, click **Options**, expand the **Designers** folder, and click **Table Designer**.  
   
-## UIElement List  
+## UI element list  
 **Override connection string time-out value for table designer updates**  
 Permits a new time-out value to be set for the actions of the table designer. This can be useful when the table designer affects a large table and requires extra time to complete the table modification.  
   

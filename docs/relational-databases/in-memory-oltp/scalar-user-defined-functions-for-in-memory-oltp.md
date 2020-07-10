@@ -1,5 +1,6 @@
 ---
 title: "Scalar User-Defined Functions for In-Memory OLTP | Microsoft Docs"
+description: Learn how to create and drop natively compiled, scalar user-defined functions for In-Memory OLTP in SQL Server. Native compilation improves performance.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scalar User-Defined Functions for In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create and drop natively compiled, scalar user-defined functions. You can also alter these user-defined functions. Native compilation improves performance of the evaluation of user-defined functions in Transact-SQL.  
   

@@ -27,7 +27,7 @@ The Linux and macOS drivers SQL version compatibility is the same as the [Window
 
 ## Operating system support
 
-Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported for the 64-bit versions of the following operating systems:
+Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x64 architecture of the following operating systems:
 
 |Supported Operating System     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|

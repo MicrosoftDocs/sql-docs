@@ -1,5 +1,6 @@
 ---
 title: "Create Invoices and Forms with Lists (Report Builder) | Microsoft Docs"
+description: Find out how to define and use lists to create free-form reports or forms and how to use lists in conjunction with other data regions in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

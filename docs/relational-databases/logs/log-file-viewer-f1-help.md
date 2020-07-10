@@ -1,5 +1,6 @@
 ---
 title: "Log File Viewer F1 Help | Microsoft Docs"
+description: Get guidance from F1 Help for frequently displayed columns, permissions, and other options for Log File Viewer in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Log File Viewer F1 Help
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Log File Viewer displays log information from many different components. When Log File Viewer is open, use the **Select logs** pane to select the logs you want to display. Each log displays columns appropriate to that kind of log.  
   
  The logs that are available depend on how Log File Viewer is opened. For more information, see [Open Log File Viewer](../../relational-databases/logs/open-log-file-viewer.md).  

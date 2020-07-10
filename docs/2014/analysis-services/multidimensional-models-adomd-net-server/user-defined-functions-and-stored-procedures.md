@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # User Defined Functions and Stored Procedures
   With ADOMD.NET server objects, you can create user defined function (UDF) or stored procedures for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that interact with metadata and data from the server. These in-process methods are called through Multidimensional Expressions (MDX) or Data Mining Extensions (DMX) statements to provide added functionality without the latencies associated with network communications.  
@@ -23,7 +22,7 @@ manager: craigg
 ## UDF Examples  
  A UDF is a method that can be called in the context of an MDX or DMX statement, can take any number of parameters, and can return any type of data.  
   
- A UDF created using MDX is similar to one created for DMX. The main difference is that certain properties of the <xref:Microsoft.AnalysisServices.AdomdServer.Context> object, such as the <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> and <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A> properties, are available only for one scripting language or the other.  
+ A UDF created using MDX is similar to one created for DMX. The main difference is that certain properties of the [Microsoft.AnalysisServices.AdomdServer.Context](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) object, such as the [Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube*](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) and [Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel*](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120)) properties, are available only for one scripting language or the other.  
   
  The following examples show how to use a UDF to return a node description, filter tuples, and apply a filter to a tuple.  
   

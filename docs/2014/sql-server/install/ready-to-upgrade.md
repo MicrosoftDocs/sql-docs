@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 282f261e-cb00-4c31-af4b-faeee0445ee4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Ready to Upgrade
   Use the **Ready to Upgrade** page to view the specified options for this upgrade.  

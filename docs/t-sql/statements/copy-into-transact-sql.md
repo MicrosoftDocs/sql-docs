@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (preview) 
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -38,28 +38,34 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 > [!NOTE]  
 > The COPY statement is currently in public preview.
 
+Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
+
+- [Quickstart: Bulk load data using the COPY statement](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Quickstart: Examples using the COPY statement and its supported authentication methods](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI (Workspace preview)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+
 ## Syntax  
 
 ```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
-FROM ‘<external_location>’ [,...n]
+FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
  [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]	
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [,MAXERRORS = max_errors ] 
- [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
- [,FIELDQUOTE = ‘string_delimiter’] 
- [,FIELDTERMINATOR =  ‘field_terminator’]  
- [,ROWTERMINATOR = ‘row_terminator’]
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'| 'Snappy'}] 
+ [,FIELDQUOTE = 'string_delimiter'] 
+ [,FIELDTERMINATOR =  'field_terminator']  
+ [,ROWTERMINATOR = 'row_terminator']
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘date_format’] 
+ [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 
@@ -109,7 +115,7 @@ Wildcards cards can be included in the path where
 
 Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
 
-- ‘https://<account>.blob.core.windows.net/<container>/<path>’, ​‘https://<account>.blob.core.windows.net/<container>/<path>’…
+- ‘https://<account>.blob.core.windows.net/<container>/<path>’, ‘https://<account>.blob.core.windows.net/<container>/<path>’…
 
 *FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
 *FILE_TYPE* specifies the format of the external data.
@@ -119,7 +125,7 @@ Multiple file locations can only be specified from the same storage account and 
 - ORC: Specifies an Optimized Row Columnar (ORC) format.
 
 >[!NOTE]  
-> The file type 'Delimited Text' in Polybase is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
+>The file type 'Delimited Text' in Polybase is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
 
 *FILE_FORMAT = external_file_format_name*</br>
 *FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest).
@@ -316,7 +322,7 @@ WITH (
     ENCODING = 'UTF8',
     DATEFORMAT = 'ymd',
 	MAXERRORS = 10,
-	ERRORFILE = '/errorsfolder/',--path starting from the storage container
+	ERRORFILE = '/errorsfolder',--path starting from the storage container
 	IDENTITY_INSERT = 'ON'
 )
 ```
@@ -350,7 +356,7 @@ WITH (
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_FORMAT = myFileFormat
+    FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```
@@ -363,7 +369,7 @@ FROM
 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
 	'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
-	FILE_TYPE = 'CSV'
+	FILE_TYPE = 'CSV',
 	CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
 	FIELDTERMINATOR = '|'
 )
@@ -371,27 +377,17 @@ WITH (
 
 ### F. Load using MSI credentials
 
-Set the Synapse SQL to use “-AssignIdentity”
-
-Set-AzSqlServer -ResourceGroupName $resourcegroupname -ServerName $servername -AssignIdentity
-
 ```sql
 COPY INTO dbo.myCOPYDemoTable
-
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt'
-
 WITH (
-
     FILE_TYPE = 'CSV',
-
     CREDENTIAL = (IDENTITY = 'Managed Identity'),
-
     FIELDQUOTE = '"',
-
     FIELDTERMINATOR=','
-
 )
 ```
+
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?

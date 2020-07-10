@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Conversion Transformation Editor"
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Conversion Transformation Editor
   Use the **Data Conversion Transformation Editor** dialog box to select the columns to convert, select the data type to which the column is converted, and set conversion attributes.  

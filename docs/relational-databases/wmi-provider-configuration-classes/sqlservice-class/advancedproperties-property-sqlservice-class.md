@@ -18,7 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # AdvancedProperties Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets an array of object references that contain the advanced properties for the **SqlService** object.  
   
 ## Syntax  

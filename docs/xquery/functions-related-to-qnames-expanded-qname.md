@@ -1,5 +1,6 @@
 ---
 title: "expanded-QName (XQuery) | Microsoft Docs"
+description: Learn how to use the expanded-QName() function to return the namespace URI and local name part of a QName.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions Related to QNames - expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns a value of the xs:QName type with the namespace URI specified in the *$paramURI* and the local name specified in the *$paramLocal*. If *$paramURI* is the empty string or the empty sequence, it represents no namespace.  
   

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Process Partitions in the Workspace Database (SSAS Tabular)
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. The tasks in this topic describe how to process partitions in the model workspace database by using the **Process Partitions** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

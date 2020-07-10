@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Inserting Data into Table-Valued Parameters
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider supports two models for the consumer to specify data for table valued parameter rows: a push model and a pull model. A sample that demonstrates the pull model is available; see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  

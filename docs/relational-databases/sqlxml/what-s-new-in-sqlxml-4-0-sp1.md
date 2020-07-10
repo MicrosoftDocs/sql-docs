@@ -1,5 +1,6 @@
 ---
 title: "What&#39;s New in SQLXML 4.0 SP1"
+description: View a summary of the updates and enhancements in SQLXML 4.0 SP1 with links to more detailed information.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -22,7 +23,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # What&#39;s New in SQLXML 4.0 SP1
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 includes various updates and enhancements. This topic summarizes the updates and provides links to more detailed information, where available. SQLXML 4.0 SP1 provides additional enhancements to support the new data types introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. This topic includes the following subjects:  
   
 -   Installing SQLXML 4.0 SP1  

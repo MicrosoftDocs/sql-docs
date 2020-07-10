@@ -1,5 +1,6 @@
 ---
 title: "Register a Service Principal Name for Kerberos Connections | Microsoft Docs"
+description: "Find out how to register a Service Principal Name (SPN) with Active Directory. This registration is required for using Kerberos authentication with SQL Server."
 ms.custom: ""
 ms.date: "08/06/2019"
 ms.prod: sql
@@ -14,11 +15,11 @@ helpviewer_keywords:
   - "Server Principal Names"
   - "SPNs [SQL Server]"
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Register a Service Principal Name for Kerberos Connections
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   To use Kerberos authentication with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires both the following conditions to be true:  
   
 -   The client and server computers must be part of the same Windows domain, or in trusted domains.  

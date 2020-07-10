@@ -1,6 +1,6 @@
 ---
 title: "Change target recovery time of a database"
-ms.custom: ""
+description: Learn how to set or change the target recovery time of a SQL Server database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,8 +13,8 @@ ms.author: "mathoma"
 ms.custom: "seo-lt-2019"
 ---
 # Change the Target Recovery Time of a Database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to set the change the target recovery time of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By default, the target recovery time is 60 seconds, and the database uses *indirect checkpoints*. The target recovery time establishes an upper-bound on recovery time for this database.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to set or change the target recovery time of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By default, the target recovery time is 60 seconds, and the database uses *indirect checkpoints*. The target recovery time establishes an upper-bound on recovery time for this database.  
   
 > [!NOTE]  
 >  The upper-bound that is specified for a given database by its target recovery time setting could be exceeded if a long-running transaction causes excessive UNDO times.  

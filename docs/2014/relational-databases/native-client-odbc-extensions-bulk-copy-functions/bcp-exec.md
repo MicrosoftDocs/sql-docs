@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # bcp_exec
   Executes a complete bulk copy of data between a database table and a user file.  

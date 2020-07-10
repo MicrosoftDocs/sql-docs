@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Broker:Connection Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Connection** event to report the status of a transport connection managed by Service Broker.  

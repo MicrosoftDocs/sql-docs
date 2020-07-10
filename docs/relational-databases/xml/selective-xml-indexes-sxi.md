@@ -1,5 +1,6 @@
 ---
 title: "Selective XML Indexes (SXI) | Microsoft Docs"
+description: Learn how to use selective XML indexes (SXI) to improve query performance, support faster indexing, and reduce the storage costs of XML indexes.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Selective XML Indexes (SXI)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Selective XML indexes are another type of XML index that is available to you in addition to ordinary XML indexes. The goals of the selective XML index feature are the following:  
   
 -   To improve the performance of queries over XML data stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

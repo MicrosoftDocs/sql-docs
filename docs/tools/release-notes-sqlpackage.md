@@ -28,6 +28,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## 18.5.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2134206)|June 24, 2020|18.5.1|15.0.4826.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134312)|June 24, 2020| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134311)|June 24, 2020| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134310)|June 24, 2020| 18.5.1|15.0.4826.1|
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Fixed a regression that was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise | 
+
 ## 18.5 sqlpackage
 
 |Platform|Download|Release date|Version|Build
@@ -54,7 +69,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### Fixes
 | Fix | Details |
 | :-- | :------ |
-| Deployment | Fix publishing dacpac of a database which contains an external user which used to throw an error “Object reference not set to an instance of an object.” |
 | Deployment | Fix parsing json path as expression |
 | Deployment | Fix generating GRANT statements for AlterAnyDatabaseScopedConfiguration and AlterAnySensitivityClassification permissions |
 | Deployment | Fix External Script permission not being recognized |
@@ -65,6 +79,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | Fix ScriptDom bug where it couldn't recognize inline constraints defined after an inline index |
 | ScriptDom | Fix ScriptDom SYSTEM_TIME missing closing parenthesis when in a batch statement |
 | Always Encrypted | Fix #tmpErrors table failing to drop if sqlpackage reconnects and the temp table is already gone because the temporary table goes away when the connection dies |
+| &nbsp; | &nbsp; |
+
+### Known Issues
+| Feature | Details |
+| :------ | :------ |
+| Deployment |  A regression was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| .NET Core | Importing bacpacs with Sensitivity Classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next sqlpackage release. |
 | &nbsp; | &nbsp; |
 
 ## 18.4.1 sqlpackage

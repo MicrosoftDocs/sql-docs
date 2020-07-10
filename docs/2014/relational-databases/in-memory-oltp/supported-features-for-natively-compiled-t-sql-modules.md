@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Supported Constructs in Natively Compiled Stored Procedures
   This topic contains a list of supported features for natively compiled stored procedures ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  

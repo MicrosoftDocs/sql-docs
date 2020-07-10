@@ -1,5 +1,6 @@
 ---
 title: "Database engine events and errors"
+description: Consult this MSSQL error code list to find explanations for error messages for SQL Server database engine events.
 ms.custom: ""
 ms.date: 01/28/2020
 ms.prod: sql

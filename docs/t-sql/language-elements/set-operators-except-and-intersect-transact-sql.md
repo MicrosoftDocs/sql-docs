@@ -25,7 +25,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Operators - EXCEPT and INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns distinct rows by comparing the results of two queries.  
   
@@ -95,7 +95,7 @@ When an EXCEPT operation is displayed by using the Graphical Showplan feature in
 ## Examples  
 The following examples show using the `INTERSECT` and `EXCEPT` operators. The first query returns all values from the `Production.Product` table for comparison to the results with `INTERSECT` and `EXCEPT`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -105,7 +105,7 @@ FROM Production.Product ;
   
 The following query returns any distinct values that are returned by both the query on the left and right sides of the `INTERSECT` operator.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -118,7 +118,7 @@ FROM Production.WorkOrder ;
   
 The following query returns any distinct values from the query left of the `EXCEPT` operator that aren't also found on the right query.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -131,7 +131,7 @@ FROM Production.WorkOrder ;
   
 The following query returns any distinct values from the query left of the `EXCEPT` operator that aren't also found on the right query. The tables are reversed from the previous example.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -145,7 +145,7 @@ FROM Production.Product ;
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 The following examples show how to use the `INTERSECT` and `EXCEPT` operators. The first query returns all values from the `FactInternetSales` table for comparison to the results with `INTERSECT` and `EXCEPT`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -155,7 +155,7 @@ FROM FactInternetSales;
   
 The following query returns any distinct values that are returned by both the query on the left and right sides of the `INTERSECT` operator.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -170,7 +170,7 @@ ORDER BY CustomerKey;
   
 The following query returns any distinct values from the query left of the `EXCEPT` operator that aren't also found on the right query.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   

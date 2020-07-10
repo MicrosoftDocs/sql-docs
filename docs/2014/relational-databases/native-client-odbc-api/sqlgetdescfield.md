@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLGetDescField
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver exposes driver-specific descriptor fields for the implementation row descriptor (IRD) only. Within the IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descriptor fields are referenced through driver-specific column attributes. For information about a complete list of available driver-specific descriptor fields, see [SQLColAttribute](sqlcolattribute.md).  

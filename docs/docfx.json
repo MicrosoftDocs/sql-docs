@@ -141,6 +141,7 @@
 
     
         "machine-learning/**/*.md": "SQL Server Machine Learning Services",
+        "machine-learning/index.yml": "",
         "analysis-services/**/*.md": "",
         "analytics-platform-system/**/*.md": "Parallel Data Warehouse",
         "azure-data-studio/**/*.md": "Azure Data Studio",
@@ -159,7 +160,6 @@
         "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in",
         "ssdt/**/*.md": "SQL Server Data Tools (SSDT)",
         "ssms/**/*.md": "SQL Server Management Studio (SSMS)",
-        "azure-data-studio/**/*.md": "Azure Data Studio",        
         "ssms/agent/**/*.md": "SQL Server Agent",
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
@@ -185,7 +185,7 @@
         "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "dma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
-        "sql-operations-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "azure-data-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
 
         "machine-learning/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
@@ -194,7 +194,7 @@
         "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "dmx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions",
+        "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "mdx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
@@ -233,7 +233,6 @@
     },
 
     "xref":[
-      "mref/sql130.zip",
       "mref/System.Reflection.Assembly.Load.yml",
       "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml",
 

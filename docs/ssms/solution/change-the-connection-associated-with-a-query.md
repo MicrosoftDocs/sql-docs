@@ -17,7 +17,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Change the Connection Associated with a Query
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A query can be executed against several different servers or databases by changing the connection used by the query.  
   
 ### To change the connection associated with a query  

@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "dates [Integration Services]"
   - "DATEADD function"
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # DATEADD (SSIS Expression)
   Returns a new DT_DBTIMESTAMP value after adding a number that represents a date or time interval to the specified datepart in a date. The number parameter must evaluate to an integer, and the date parameter must evaluate to a valid date.  

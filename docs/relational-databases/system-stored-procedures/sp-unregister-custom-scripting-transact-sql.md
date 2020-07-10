@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_unregister_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure removes a user-defined custom stored procedure or [!INCLUDE[tsql](../../includes/tsql-md.md)] script file that was registered by executing [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). This stored procedure is executed at the Publisher on the publication database.  
   

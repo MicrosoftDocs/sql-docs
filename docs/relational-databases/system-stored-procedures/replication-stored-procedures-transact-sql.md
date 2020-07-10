@@ -1,5 +1,6 @@
 ---
 title: "Replication Stored Procedures (Transact-SQL) | Microsoft Docs"
+description: In SQL Server, replication system stored procedures can accomplish one-time tasks, such as implementing replication, or used in batch files and scripts.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Replication Stored Procedures (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   Replication system stored procedures are documented and available as a method for accomplishing one-time tasks, such as implementing replication, and for using in batch files and scripts.  
   

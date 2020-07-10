@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Access WMI Provider for Configuration Management using WQL
   This section describes how to execute [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation Query Language (WQL) statements against the WMI Provider for Computer Management.  

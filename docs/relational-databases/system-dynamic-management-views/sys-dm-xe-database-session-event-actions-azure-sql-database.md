@@ -1,7 +1,6 @@
 ---
 title: "sys.dm_xe_database_session_event_actions"
 titleSuffix: Azure SQL Database
-ms.custom: ""
 ms.date: "06/10/2016"
 ms.service: sql-database
 ms.prod_service: "sql-database"
@@ -14,7 +13,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-lt-2019
 ---
 # sys.dm_xe_database_session_event_actions (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns information about event session actions. Actions are executed when events are fired. This management view aggregates statistics about the number of times an action has run, and the total run time of the action.  
   

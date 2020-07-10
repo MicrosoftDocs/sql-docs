@@ -1,7 +1,7 @@
 ---
 title: Configure Kubernetes with kubeadm
 titleSuffix: SQL Server Big Data Clusters
-description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
+description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for SQL Server 2019 big data cluster deployments.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Configure Kubernetes on multiple machines for SQL Server big data cluster deployments
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article provides an example of how to use **kubeadm** to configure Kubernetes on multiple machines for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments. In this example, multiple Ubuntu 16.04 or 18.04 LTS machines (physical or virtual) are the target. If you are deploying to a different Linux platform, you must alter some of the commands to match your system.  
 
@@ -84,7 +84,7 @@ After running the previous commands on each machine, choose one of the machines 
 
    ```bash
    cat <<EOF > rbac.yaml
-   apiVersion: rbac.authorization.k8s.io/v1beta1
+   apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRoleBinding
    metadata:
      name: default-rbac

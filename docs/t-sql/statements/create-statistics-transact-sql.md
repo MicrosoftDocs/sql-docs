@@ -28,7 +28,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Creates query optimization statistics on one or more columns of a table, an indexed view, or an external table. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics with CREATE STATISTICS or modify the query design to improve query performance.  
   
@@ -239,6 +239,7 @@ MAXDOP = *max_degree_of_parallelism*
 * You can list up to 64 columns per statistics object.
 * The MAXDOP option is not compatible with STATS_STREAM, ROWCOUNT and PAGECOUNT options.
 * The MAXDOP option is limited by the Resource Governor workload group MAX_DOP setting, if used.
+* CREATE and DROP STATISTICS on external tables are not supported in Azure SQL Database.
   
 ## Examples  
 
@@ -274,7 +275,7 @@ GO
 ```  
   
 ### D. Create statistics on an external table  
- The only decision you need to make when you create statistics on an external table, besides providing the list of columns, is whether to create the statistics by sampling the rows or by scanning all of the rows.  
+ The only decision you need to make when you create statistics on an external table, besides providing the list of columns, is whether to create the statistics by sampling the rows or by scanning all of the rows. CREATE and DROP STATISTICS on external tables are not supported in Azure SQL Database.
   
  Since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports data from the external table into a temporary table to create statistics, the full scan option will take much longer. For a large table, the default sampling method is usually sufficient.  
   

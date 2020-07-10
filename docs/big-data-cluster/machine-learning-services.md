@@ -7,12 +7,12 @@ ms.author: davidph
 ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-bdc
 ---
 
 # Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 You can run Python and R scripts on the master instance of [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../machine-learning/index.yml).
 
@@ -114,7 +114,7 @@ Each load balancer is a master replica endpoint.
 
 The following image demonstrates this process.
 
-[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+[![Demo](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
 
 You are now ready to run Python and R scripts on the master instance of Big Data Clusters. See the quickstarts under [Next steps](#next-steps) to run your first script.
 
@@ -136,7 +136,7 @@ kubectl delete svc mymaster-2 -n mssql-cluster
 
 ## Next steps
 
-+ [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-create-script.md)
-+ [Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-train-score-model.md)
-+ [Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Quickstart: Create and score a predictive model in R with SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-r-train-score-model.md)
++ [Run simple Python scripts](../machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json)
++ [Train and score a predictive model in Python](../machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json)
++ [Run simple R scripts](../machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json)
++ [Train and score a predictive model in R](../machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json)

@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Metadata Discovery
   The metadata discovery improvement in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] allows [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applications to ensure that column or parameter metadata returned from the execution of a query is identical to or compatible with the metadata format you specified before you executed the query. You will receive an error if the metadata returned after query execution is not compatible with the metadata format you specified before query execution.  

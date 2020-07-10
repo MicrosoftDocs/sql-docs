@@ -1,6 +1,7 @@
 ---
 title: Configure distributed replay
 titleSuffix: SQL Server Distributed Replay
+description: This article describes product requirements to consider before you use the Distributed Replay feature of SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -14,7 +15,7 @@ ms.date: 03/14/2017
 ---
 
 # Configure Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay configuration details are specified in XML files on the Distributed Replay controller, clients, and where the administration tool is installed. These files include the following:  
   
 -   [Controller configuration file](#DReplayController)  

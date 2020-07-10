@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/05/2020
+ms.date: 05/27/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "CREATE WORKLOAD GROUP statement"
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
@@ -31,7 +30,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 |||||
 |---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 ||||
 
 &nbsp;
@@ -45,7 +44,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 ||||
 |---|---|---|
-|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+|[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 ||||
 
 &nbsp;
@@ -72,9 +71,9 @@ Creates a workload group. Workload groups are containers for a set of requests a
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name
  WITH
- (  [ MIN_PERCENTAGE_RESOURCE = value ]
-  [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
-  [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
+ (   MIN_PERCENTAGE_RESOURCE = value 
+   , CAP_PERCENTAGE_RESOURCE = value 
+   , REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
   [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]
   [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } ]
   [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )
@@ -175,7 +174,8 @@ Requires `CONTROL DATABASE` permission
 
 ## See also
 
-- [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
+- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](alter-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
 - [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
 - [Quickstart: Configure workload isolation using T-SQL](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)

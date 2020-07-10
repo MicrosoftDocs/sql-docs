@@ -1,5 +1,6 @@
 ---
 title: "Configure the query governor cost limit Server Configuration Option | Microsoft Docs"
+description: Learn about the query governor cost limit option. See how to use it to limit execution to queries that SQL Server estimates will complete within a certain time.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -12,11 +13,11 @@ helpviewer_keywords:
   - "query governor cost limit option [SQL Server]"
   - "time [SQL Server], query run time"
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the query governor cost limit Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **query governor cost limit** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The query governor cost limit option specifies an upper limit on the time period in which a query can run. Query cost refers to the estimated elapsed time, in seconds, that is required to complete a query on a specific hardware configuration. The default value for this option is 0, which sets the query governor to off. This allows all queries to run without any time limitation. If you specify a nonzero, nonnegative value, the query governor disallows execution of any query that has an estimated cost that exceeds that value.  
   

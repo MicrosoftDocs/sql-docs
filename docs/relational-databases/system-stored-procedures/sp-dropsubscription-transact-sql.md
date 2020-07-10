@@ -1,5 +1,6 @@
 ---
 title: "sp_dropsubscription (Transact-SQL) | Microsoft Docs"
+description: Drops subscriptions to an article, publication, or subscriptions on the Publisher. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_dropsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops subscriptions to a particular article, publication, or set of subscriptions on the Publisher. This stored procedure is executed at the Publisher on the publication database.  
   

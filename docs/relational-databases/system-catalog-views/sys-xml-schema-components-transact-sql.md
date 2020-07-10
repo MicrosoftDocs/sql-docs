@@ -21,7 +21,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # sys.xml_schema_components (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per component of an XML schema. The pair (**collection_id**, **namespace_id**) is a compound foreign key to the containing namespace. For named components, the values for **symbol_space**, **name**, **scoping_xml_component_id**, **is_qualified**, **xml_namespace_id**, **xml_collection_id** are unique.  
   

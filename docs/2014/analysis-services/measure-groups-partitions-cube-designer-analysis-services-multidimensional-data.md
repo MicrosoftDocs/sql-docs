@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Measure Groups (Partitions Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Measure Groups** pane on the **Partitions** tab in Cube Designer to manage the partitions associated with each measure group in the cube.  

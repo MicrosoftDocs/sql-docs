@@ -1,6 +1,6 @@
 ---
 title: "Create a Maintenance Plan with the Design Surface"
-ms.custom: ""
+description: Learn how to create a single server or multiserver maintenance plan by using the Maintenance Plan Design Surface in SQL Server.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +15,7 @@ ms.author: mikeray
 ms.custom: "seo-lt-2019"
 ---
 # Create a Maintenance Plan (Maintenance Plan Design Surface)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to create a single server or multiserver maintenance plan using the Maintenance Plan Design Surface in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. While the **Maintenance Plan Wizard** is best for creating basic maintenance plans, creating a plan using the design surface allows you to utilize enhanced workflow.  
   
  **In This Topic**  

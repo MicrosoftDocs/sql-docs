@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Attribute Data Translation Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Attribute Data Translation** dialog box to set the column that contains the translation caption data, as well as the collation and sort order to be used with the translated data. You can display the **Attribute Data Translation** dialog box by:  

@@ -1,5 +1,6 @@
 ---
 title: "View or Change the Properties of a Database | Microsoft Docs"
+description: Learn how to view or change the properties of a database in SQL Server by using SQL Server Management Studio or Transact-SQL. 
 ms.custom: ""
 ms.date: "01/05/2018"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or Change the Properties of a Database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic describes how to view or change the properties of a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. After you change a database property, the modification takes effect immediately.  
   

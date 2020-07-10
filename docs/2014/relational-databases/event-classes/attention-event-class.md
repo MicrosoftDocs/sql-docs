@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Attention Event Class
   The **Attention** event class indicates that an attention event, such as cancel, client-interrupt requests, or broken client connections, has occurred. Cancel operations can also be seen as part of implementing data access driver time-outs.  

@@ -1,6 +1,6 @@
 ---
 title: "Some synchronous replicas are not synchronized"
-description: Describes some possible causes and solutions for when a synchronous replica is not synchronized for an Always On availability group
+description: Describes some possible causes and solutions for when a synchronous replica is not synchronized for an Always On availability group.
 ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Some synchronous replicas are not synchronized
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

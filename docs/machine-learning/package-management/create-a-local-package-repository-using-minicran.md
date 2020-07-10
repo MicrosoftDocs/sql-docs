@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Create a local R package repository using miniCRAN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This article describes how to install R packages offline by using [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) to create a local repository of packages and dependencies. **miniCRAN** identifies and downloads packages and dependencies into a single folder that you copy to other computers for offline R package installation.
 
@@ -107,7 +107,7 @@ pdb[, c("Package", "Version", "License")]
 
 After you have a local repository with the packages you need, move the package repository to the SQL Server computer. The following procedure describes how to install the packages using R tools.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
 > The recommended method for installing packages is using **sqlmlutils**. See [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end

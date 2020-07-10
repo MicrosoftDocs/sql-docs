@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # SQLGetDiagField
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver specifies the following additional diagnostics fields for `SQLGetDiagField`. These fields support rich error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications and are available in all diagnostics records generated on connected ODBC connection handles and ODBC statement handles. The fields are defined in sqlncli.h.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Recommendation Element (DTA)
   Contains information about the hypothetical indexes that are part of a user-specified configuration.  

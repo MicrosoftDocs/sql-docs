@@ -22,7 +22,7 @@ ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REPLICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Repeats a string value a specified number of times.  
   
@@ -31,15 +31,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
-REPLICATE ( string_expression ,integer_expression )   
+REPLICATE ( string_expression , integer_expression )   
 ```  
   
 ## Arguments  
  *string_expression*  
- Is an expression of a character string or binary data type. *string_expression* can be either character or binary data.  
+ Is an expression of a character string or binary data type.  
   
 > [!NOTE]  
->  If *string_expression* is not of type **varchar(max)** or **nvarchar(max)**, REPLICATE truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to the appropriate large-value data type.  
+> If *string_expression* is of type **binary**, REPLICATE will perform an implicit conversion to **varchar**, and therefore will not preserve the binary input.  
+
+> [!NOTE]  
+> If *string_expression* input is of type **varchar(max)** or **nvarchar(max)**, REPLICATE truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to the appropriate large-value data type.  
   
  *integer_expression*  
  Is an expression of any integer type, including **bigint**. If *integer_expression* is negative, NULL is returned.  

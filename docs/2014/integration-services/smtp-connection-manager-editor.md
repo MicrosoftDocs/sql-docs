@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SMTP Connection Manager Editor"
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SMTP Connection Manager Editor
   Use the **SMTP Connection Manager Editor** dialog box to specify a Simple Mail Transfer Protocol (SMTP) server.  

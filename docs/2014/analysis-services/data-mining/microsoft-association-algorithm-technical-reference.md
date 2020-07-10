@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Association Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm is a straightforward implementation of the well-known Apriori algorithm.  

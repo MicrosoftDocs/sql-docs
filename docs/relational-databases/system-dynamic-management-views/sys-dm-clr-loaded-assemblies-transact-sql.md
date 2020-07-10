@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_clr_loaded_assemblies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each managed user assembly loaded into the server address space. Use this view to understand and troubleshoot CLR integration managed database objects that are executing in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

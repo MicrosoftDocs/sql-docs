@@ -1,10 +1,8 @@
 ---
 title: "JSON_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/21/2019"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: genemi
+ms.reviewer: jroth
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON_VALUE (Transact-SQL)
@@ -32,7 +30,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
   
 ## Syntax  
   
-```
+```syntaxsql
 JSON_VALUE ( expression , path )  
 ```  
   
@@ -135,7 +133,7 @@ CREATE TABLE dbo.Store
  (
   StoreID INT IDENTITY(1,1) NOT NULL,
   Address VARCHAR(500),
-  jsonContent NVARCHAR(8000),
+  jsonContent NVARCHAR(4000),
   Longitude AS JSON_VALUE(jsonContent, '$.address[0].longitude'),
   Latitude AS JSON_VALUE(jsonContent, '$.address[0].latitude')
  )

@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services 
 ms.topic: "reference"
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Building Packages Programmatically
   If you need to create packages dynamically, or to manage and execute [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. In this approach, you have a continuous range of options:

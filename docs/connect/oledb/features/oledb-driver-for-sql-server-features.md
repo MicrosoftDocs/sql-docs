@@ -16,7 +16,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # OLE DB Driver for SQL Server Features
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -94,6 +94,9 @@ Discusses new authentication methods introduced in OLE DB driver 18.2.1 that hav
   
  [OLE DB Driver for SQL Server Support for LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Discusses OLE DB Driver for SQL Server support for the LocalDB feature.  
+  
+ [Using Transparent Network IP Resolution](../../oledb/features/using-transparent-network-ip-resolution.md)  
+ Discusses how OLE DB Driver for SQL Server supports transparent network IP resolution in a failover cluster.  
   
 ## See Also  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      

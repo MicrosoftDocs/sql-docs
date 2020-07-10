@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Detect SCSI Host Adapter Issues
   This rule checks the system event log for EventId 1066. This error is caused SCSI host adapter configuration issues or device malfunctioning.  

@@ -21,7 +21,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PARAMETERS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns one row for each parameter of a user-defined function or stored procedure that can be accessed by the current user in the current database. For functions, this view also returns one row with return value information.  
   
@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar(**128**)**|Catalog name of the routine for which this is a parameter.|  
-|**SPECIFIC_SCHEMA**|**nvarchar(**128**)**|Name of the schema of the routine for which this is a parameter.<br /><br /> <strong>\*\* Important \*\*</strong> Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**SPECIFIC_SCHEMA**|**nvarchar(**128**)**|Name of the schema of the routine for which this is a parameter.<br /><br /> <strong>\*\* Important \*\*</strong> Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**SPECIFIC_NAME**|**nvarchar(**128**)**|Name of the routine for which this is a parameter.|  
 |**ORDINAL_POSITION**|**int**|Ordinal position of the parameter starting at 1. For the return value of a function, this is a 0.|  
 |**PARAMETER_MODE**|**nvarchar(**10**)**|Returns IN if an input parameter, OUT if an output parameter, and INOUT if an input/output parameter.|  

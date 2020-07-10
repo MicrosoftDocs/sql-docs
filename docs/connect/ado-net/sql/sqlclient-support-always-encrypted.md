@@ -1,7 +1,7 @@
 ---
 title: "Using Always Encrypted with SqlClient"
 description: "Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure."
-ms.date: "05/06/2020"
+ms.date: 07/09/2020
 ms.assetid: 
 ms.prod: sql
 ms.prod_service: connectivity
@@ -69,6 +69,9 @@ To configure your application:
 3. Provide the attestation protocol to be used by setting the `Attestation Protocol` keyword in the connection string. The value of this keyword should be set to "HGS".
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
+
+> [!NOTE]
+> Always Encrypted with secure enclaves is only supported on Windows.
 
 ## Retrieving and modifying data in encrypted columns
 
@@ -283,13 +286,13 @@ The process to obtain a column encryption key:
 
 ### Using built-in column master key store providers
 
-The **Microsoft .NET Data Provider for SQL Server** comes with the following built-in column master key store providers, which are pre-registered with the specific provider names (used to look up the provider).
+The **Microsoft .NET Data Provider for SQL Server** comes with the following built-in column master key store providers, which are pre-registered with the specific provider names (used to look up the provider). These built-in key store providers are supported only on Windows.
 
-| Class | Description | Provider (lookup) name |
-|:---|:---|:---|
-|[SqlColumnEncryptionCertificateStoreProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | A provider for the Windows Certificate Store. | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | A provider for a key store that supports [Microsoft Cryptography API: Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Typically, a store of this type is a hardware security module - a physical device that safeguards and manages digital keys and provides crypto-processing. | MSSQL_CNG_STORE |
-| [SqlColumnEncryptionCspProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | A provider for a key store that supports [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers). Typically, a store of this type is a hardware security module - a physical device that safeguards and manages digital keys and provides crypto-processing. | MSSQL_CSP_PROVIDER |
+| Class | Description | Provider (lookup) name | Platform |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionCertificateStoreProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | A provider for the Windows Certificate Store. | MSSQL_CERTIFICATE_STORE | Windows |
+|[SqlColumnEncryptionCngProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | A provider for a key store that supports [Microsoft Cryptography API: Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Typically, a store of this type is a hardware security module - a physical device that safeguards and manages digital keys and provides crypto-processing. | MSSQL_CNG_STORE | Windows |
+| [SqlColumnEncryptionCspProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | A provider for a key store that supports [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers). Typically, a store of this type is a hardware security module - a physical device that safeguards and manages digital keys and provides crypto-processing. | MSSQL_CSP_PROVIDER | Windows |
 
 You do not need to make any application code changes to use these providers, but note the following:
 
@@ -298,7 +301,11 @@ You do not need to make any application code changes to use these providers, but
 
 ### Using the Azure Key Vault provider
 
-Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The **Microsoft .NET Data Provider for SQL Server** does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package  that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The **Microsoft .NET Data Provider for SQL Server** does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package ([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider)) that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+
+| Class | Description | Provider (lookup) name | Platform |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionAzureKeyVaultProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Provider for Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
 For examples demonstrating performing encryption/decryption with Azure Key Vault, see [Azure Key Vault working with Always Encrypted](azure-key-vault-example.md) and [Azure Key Vault working with Always Encrypted with Secure Enclaves](azure-key-vault-enclave-example.md).
 
@@ -504,7 +511,8 @@ With SqlBulkCopy, you can copy data, which is already encrypted and stored in on
 - Configure both database connections to the source table and to the target table without Always Encrypted enabled.
 - Set the `AllowEncryptedValueModifications` option (see [SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)).
 
-Note: Use caution when specifying `AllowEncryptedValueModifications` as this may lead to corrupting the database because the **Microsoft .NET Data Provider for SQL Server** does not check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
+> [!NOTE]
+> Use caution when specifying `AllowEncryptedValueModifications` as this may lead to corrupting the database because the **Microsoft .NET Data Provider for SQL Server** does not check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
 
 Here is an example that copies data from one table to another. The SSN and BirthDate columns are assumed to be encrypted.
 

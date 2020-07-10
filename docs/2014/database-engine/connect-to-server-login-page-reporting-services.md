@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Connect to Server (Login Page) Reporting Services
   Use this tab to view or specify the following options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

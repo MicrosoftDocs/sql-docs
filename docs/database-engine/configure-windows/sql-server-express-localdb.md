@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Express LocalDB | Microsoft Docs"
+description: Become familiar with SQL Server Express LocalDB. Developers can use this lightweight Database Engine for writing and testing Transact-SQL code.
 ms.custom: ""
 ms.date: "04/17/2019"
 ms.prod: sql
@@ -14,13 +15,13 @@ helpviewer_keywords:
 - "file database"
 - "LocalDB"
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 
 # SQL Server Express LocalDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft SQL Server Express LocalDB is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) targeted to developers. It is available on SQL Server Express with Advanced Services.
 

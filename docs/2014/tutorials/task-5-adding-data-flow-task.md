@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 5: Adding Data Flow Task
   In this task, you add a Data Flow Task to the control flow of SSIS package.  

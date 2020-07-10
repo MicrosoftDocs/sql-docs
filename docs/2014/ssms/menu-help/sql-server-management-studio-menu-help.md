@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SQL Server Management Studio Menu Help
   This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

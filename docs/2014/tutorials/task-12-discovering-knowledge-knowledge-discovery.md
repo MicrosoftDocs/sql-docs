@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 12: Discovering Knowledge (Knowledge Discovery)
   In this task, you perform the **Knowledge Discovery** activity on **Supplier ID** and **Supplier Name** domains. In this scenario, the knowledge discovery process mainly imports values for these two domains.  

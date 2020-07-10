@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "custom user interface [Integration Services], custom foreach enumerators"
   - "custom foreach enumerators [Integration Services], developing custom user interface"
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a User Interface for a Custom ForEach Enumerator
   After you have overridden the implementation of the properties and methods of the base class to provide your custom functionality, you may want to create a custom user interface for your Foreach enumerator. If you do not create a custom user interface, users can only configure the new custom Foreach enumerator by using the Properties window.  

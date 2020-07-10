@@ -2,9 +2,9 @@
 title: Install on Windows
 description: Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 02/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 
@@ -206,7 +206,7 @@ This step requires a server restart. If you are about to enable script execution
 
 ## Restart the service
 
-When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
+When the installation is complete, restart the database engine.
 
 Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 

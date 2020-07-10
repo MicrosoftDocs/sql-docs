@@ -1,16 +1,14 @@
 ---
 title: "JSON_MODIFY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/02/2020"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: genemi
+ms.reviewer: jroth
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON_MODIFY (Transact-SQL)
@@ -23,7 +21,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -92,7 +90,7 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
   
  **Query**
   
-```syntaxsql
+```sql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -151,7 +149,7 @@ PRINT @info
   
  **Query**
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -245,7 +243,7 @@ PRINT @stats
   
  **Query**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -273,7 +271,7 @@ PRINT @info
   
  **Query**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -303,13 +301,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
- 
 ```  
   
 ## See Also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

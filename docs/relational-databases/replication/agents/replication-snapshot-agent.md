@@ -1,5 +1,6 @@
 ---
 title: "Replication Snapshot Agent | Microsoft Docs"
+description: In SQL Server, the Replication Snapshot Agent prepares snapshot files, stores them in a folder, and records synchronization jobs in the distribution database.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication Snapshot Agent
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   The Replication Snapshot Agent is an executable file that prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database.  
   
 > [!NOTE]  

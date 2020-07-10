@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "sequence execution options [Integration Services]"
   - "containers [Integration Services], precedence constraints"
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Precedence Constraints
   Precedence constraints link executables, containers, and tasks in packages in a control flow, and specify conditions that determine whether executables run. An executable can be a For Loop, Foreach Loop, or Sequence container; a task; or an event handler. Event handlers also use precedence constraints to link their executables into a control flow.

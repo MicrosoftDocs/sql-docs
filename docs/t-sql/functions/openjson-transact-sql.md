@@ -1,10 +1,8 @@
 ---
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2020"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: genemi
+ms.reviewer: jroth
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # OPENJSON (Transact-SQL)
@@ -399,8 +397,8 @@ CROSS APPLY OPENJSON ( root.value) AS TheValues
 
 ## See also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
- [Use OPENJSON with the Default Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
- [Use OPENJSON with an Explicit Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
+- [Use OPENJSON with the Default Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
+- [Use OPENJSON with an Explicit Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
   

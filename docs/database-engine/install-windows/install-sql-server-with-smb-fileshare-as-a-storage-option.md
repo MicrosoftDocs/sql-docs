@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server with SMB fileshare storage | Microsoft Docs"
+description: In SQL Server, system databases and Database Engine user databases can be installed with Server Message Block (SMB) file server as a storage option.
 ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server with SMB fileshare storage
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system databases (Master, Model, MSDB, and TempDB), and [!INCLUDE[ssDE](../../includes/ssde-md.md)] user databases can be installed with Server Message Block (SMB) file server as a storage option. This applies to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installations (FCI).  
   

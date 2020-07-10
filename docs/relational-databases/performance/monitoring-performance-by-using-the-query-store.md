@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Monitoring performance by using the Query Store
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
@@ -147,38 +147,11 @@ Here are some examples how you can get more insights into your workload before a
 
 ## <a name="Options"></a> Configuration Options
 
-The following options are available to configure Query Store parameters.
-
-*OPERATION_MODE*
-Can be **READ_WRITE** (default) or READ_ONLY.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)*
-Configure the `STALE_QUERY_THRESHOLD_DAYS` argument to specify the number of days to retain data in the Query Store. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
-
-*DATA_FLUSH_INTERVAL_SECONDS*
-Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the query store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured via `DATA_FLUSH_INTERVAL_SECONDS`. The default value is **900** (15 min).
-
-*MAX_STORAGE_SIZE_MB*
-Configures the maximum size of the Query Store. If the data in the Query Store hits the `MAX_STORAGE_SIZE_MB` limit, the Query Store automatically changes the state from read-write to read-only and stops collecting new data. The default value is **100 MB** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is **1 GB**. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium edition, default is **1 GB** and for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **10 MB**.
-
-*INTERVAL_LENGTH_MINUTES*
-Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the Runtime Stats Store are aggregated over a fixed time window. This fixed time window is configured via `INTERVAL_LENGTH_MINUTES`. The default value is **60**.
-
-*SIZE_BASED_CLEANUP_MODE*
-Controls whether the cleanup process will be automatically activated when total amount of data gets close to maximum size. Can be **AUTO** (default) or OFF.
-
-*QUERY_CAPTURE_MODE*
-Designates if the Query Store captures all queries, or relevant queries based on execution count and resource consumption, or stops adding new queries and just tracks current queries. Can be **ALL** (capture all queries), AUTO (ignore infrequent and queries with insignificant compile and execution duration), CUSTOM (user defined capture policy), or NONE (stop capturing new queries). The default value is **ALL** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is **AUTO**. The default value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is **AUTO**.
-
-*MAX_PLANS_PER_QUERY*
-An integer representing the maximum number of plans maintained for each query. The default value is **200**.
-
-*WAIT_STATS_CAPTURE_MODE*
-Controls if Query Store captures wait statistics information. Can be OFF or **ON** (default).
+For the available options to configure Query Store parameters, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 Query the **sys.database_query_store_options** view to determine the current options of the Query Store. For more information about the values, see [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-For more information about setting options by using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Option Management](#OptionMgmt).
+For examples about setting configuration options using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Option Management](#OptionMgmt).
 
 ## <a name="Related"></a> Related Views, Functions, and Procedures
 

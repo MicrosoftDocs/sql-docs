@@ -59,8 +59,7 @@ dividend % divisor
  The following example divides the number 38 by 5. This results in 7 as the integer portion of the result and demonstrates how modulo returns the remainder of 3.  
   
 ```  
-SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
-  
+SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### B. Example using columns in a table  

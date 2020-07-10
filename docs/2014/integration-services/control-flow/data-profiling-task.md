@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "data profiling"
   - "profiling data"
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Profiling Task
   The Data Profiling task computes various profiles that help you become familiar with a data source and identify problems in the data that have to be fixed.  

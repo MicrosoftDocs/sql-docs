@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Export As Policy Dialog Box
   Use this dialog box to save a set of Policy-Based Management facet properties as a policy. Policies can be saved in an XML file, or saved directly to the current instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

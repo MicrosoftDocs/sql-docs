@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Resources deployed with Big Data Cluster
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes the resources a SQL Server Big Data Cluster deploys.
 
@@ -25,7 +25,7 @@ This article describes the pods deployed with `aks-dev-test-ha` profile and incl
 kubectl get pods -n <namespace>
 ```
 
-Replace `<namespace>` with the Kubernetes namespace of your big data cluster. 
+Replace `<namespace>` with the name of your big data cluster. 
 
 For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
 

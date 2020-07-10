@@ -1,11 +1,12 @@
 ---
 title: "Editions and supported features"
 titleSuffix: SQL Server 2017
+description: This article describes features supported by the various editions of SQL Server 2017, which accommodate different performance, runtime, and price requirements.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
@@ -36,7 +37,7 @@ ms.author: "mikeray"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 

@@ -15,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server Agent, Statistics Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The SQL Server Agent **Statistics** performance object contains performance counters that report information about SQL Server Agent.  
   
  The table below lists the **SQLAgent:Statistics** counters.  

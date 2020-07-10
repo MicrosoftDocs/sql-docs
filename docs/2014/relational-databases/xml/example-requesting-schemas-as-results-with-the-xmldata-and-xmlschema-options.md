@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options
   The following query returns the XML-DATA schema that describes the document structure.  

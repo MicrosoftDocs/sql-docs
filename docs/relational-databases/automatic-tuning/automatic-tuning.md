@@ -16,7 +16,7 @@ ms.author: "jovanpop"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Automatic tuning
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems.
 
@@ -60,7 +60,7 @@ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can automatically switch to t
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically detects any potential plan choice regression, including the plan that should be used instead of the wrong plan. When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies the last known good plan, it automatically monitors the performance of the forced plan. If the forced plan is not better than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan. If the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifies that the forced plan is better than the regressed plan, the forced plan will be retained. It will be retained until a recompile occurs (for example, on the next statistics update or schema change).
 
 > [!NOTE]
-> Any execution plans auto forced are not persisted between restarts of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+> If the SQL Server instance is restarted before a plan forcing action is verified, that plan will be automatically unforced. Otherwise, plan forcing is persisted on SQL Server restarts.
 
 ### Enabling automatic plan choice correction
 

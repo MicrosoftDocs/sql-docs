@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "SSIS packages, logs"
   - "custom messages for logging [Integration Services]"
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Custom Messages for Logging
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a rich set of custom events for writing log entries for packages and many tasks. You can use these entries to save detailed information about execution progress, results, and problems by recording predefined events or user-defined messages for later analysis. For example, you can record when a bulk insert begins and ends to identify performance issues when the package runs.  

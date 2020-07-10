@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # IHsyscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHsyscolumns** view exposes column information for articles published from a non-SQL Server Publisher. This view is stored in the distributiondatabase.  
   

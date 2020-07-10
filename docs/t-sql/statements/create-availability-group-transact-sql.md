@@ -26,7 +26,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new availability group, if the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is enabled for the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature.  
   
@@ -156,7 +156,7 @@ CREATE AVAILABILITY GROUP group_name
  The FAILURE_CONDITION_LEVEL and HEALTH_CHECK_TIMEOUT values, define a *flexible failover policy* for a given group. This flexible failover policy provides you with granular control over what conditions must cause an automatic failover. For more information, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Specifies the wait time (in milliseconds) for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information before the WSFC cluster assumes that the server instance is slow or hung. HEALTH_CHECK_TIMEOUT is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode with automatic failover (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Furthermore, a health-check timeout can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
+ Specifies the wait time (in milliseconds) for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information before the WSFC cluster assumes that the server instance is slow or not responding. HEALTH_CHECK_TIMEOUT is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode with automatic failover (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Furthermore, a health-check timeout can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
   
  The default HEALTH_CHECK_TIMEOUT value is 30000 milliseconds (30 seconds). The minimum value is 15000 milliseconds (15 seconds), and the maximum value is 4294967295 milliseconds.  
   
@@ -353,7 +353,16 @@ CREATE AVAILABILITY GROUP group_name
   
  NONE  
  Specifies that when this availability replica is the primary replica, read-only routing is not supported. This is the default behavior.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('**\<server_instance>**')** }  
+ Applies to: SQL Server (Starting with SQL Server 2019 (15.x)) 
+
+ Specifies server instances that host availability replicas for this availability group that meet the following requirements when running under the primary role:
+-   The replica spec PRIMARY_ROLE includes READ_WRITE_ROUTING_URL.
+-   The connection string is ReadWrite either by defining ApplicationIntent as ReadWrite or by not setting ApplicationIntent and letting the default (ReadWrite) take effect.
+
+For more information, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+
  SESSION_TIMEOUT **=** *integer*  
  Specifies the session-timeout period in seconds. If you do not specify this option, by default, the time period is 10 seconds. The minimum value is 5 seconds.  
   
@@ -488,7 +497,7 @@ CREATE AVAILABILITY GROUP group_name
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|This automated backup preference indicates that backups should occur on a secondary replica except when the primary replica is the only replica online (this is the default behavior). For the AUTOMATED_BACKUP_PREFERENCE setting to have any effect, you need to script backup jobs on the availability databases to take the automated backup preference into account.|  
 |FAILURE_CONDITION_LEVEL|3|This failure condition level setting specifies that an automatic failover should be initiated on critical SQL Server internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.|  
-|HEALTH_CHECK_TIMEOUT|600000|This health check timeout value, 60 seconds, specifies that the WSFC cluster waits 60000 milliseconds for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information about a server instance that is hosting a synchronous-commit replica with automatic before the cluster assumes that the host server instance is slow or hung. (The default value is 30000 milliseconds).|  
+|HEALTH_CHECK_TIMEOUT|600000|This health check timeout value, 60 seconds, specifies that the WSFC cluster waits 60000 milliseconds for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information about a server instance that is hosting a synchronous-commit replica with automatic before the cluster assumes that the host server instance is slow or not responding. (The default value is 30000 milliseconds).|  
   
  Three availability replicas are to be hosted by the default server instances on computers named `COMPUTER01`, `COMPUTER02`, and `COMPUTER03`. The following table summarizes the values specified for the replica options of each replica.  
   
@@ -576,6 +585,3 @@ GO
  [Troubleshoot Always On Availability Groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # XTP Phantom Processor
   The XTP Phantom Processor performance object contains counters related to the XTP engine's phantom processing subsystem. This component is responsible for detecting phantom rows in transactions running at the SERIALIZABLE isolation level.  

@@ -11,12 +11,11 @@ f1_keywords:
 ms.assetid: c1089021-20d9-4d73-820f-819a0bfd66fc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Source Credentials (SSAS)
   This page of the **Table Import Wizard** enables you to enter the user name and password for the existing data source connection that you selected. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
-## UIElement List  
+## UI element list  
  **User name**  
  Enter the user name for the data source connection.  
   

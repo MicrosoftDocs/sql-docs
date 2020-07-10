@@ -6,13 +6,13 @@ ms.date: "12/09/2019"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # What are Extended Security Updates for SQL Server?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article provides information for using the SQL Server registry service to receive Extended Security Updates for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. For more information about other options, see [End of support options](sql-server-end-of-life-overview.md). 
 

@@ -1,7 +1,7 @@
 ---
 title: "sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2018"
+ms.date: "06/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_addpushsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a new scheduled agent job used to synchronize a push subscription to a transactional publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -68,7 +68,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is a availability group. *subscriber* is **sysname**, with a default of NULL. 
-  
+
+> [!NOTE]
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
+
 `[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL. For a non-SQL Server Subscriber, specify a value of **(default destination)** for *subscriber_db*.  
   

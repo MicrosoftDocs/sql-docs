@@ -1,5 +1,6 @@
 ---
 title: "Monitor performance of natively compiled stored procedures"
+description: Learn how to monitor the performance of natively compiled stored procedures and other natively compiled T-SQL modules.
 ms.custom: seo-dt-2019
 ms.date: "04/03/2018"
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This article discusses how you can monitor the performance of natively compiled stored procedures and other natively compiled T-SQL modules.  
   
 ## Using Extended Events  

@@ -1,5 +1,6 @@
 ---
 title: "Memory Management Architecture Guide | Microsoft Docs"
+description: Learn about memory management architecture in SQL Server, including changes to memory management in previous versions.
 ms.custom: ""
 ms.date: 01/09/2019
 ms.prod: sql
@@ -17,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Memory Management Architecture Guide
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 ## Windows Virtual Memory Manager  
 The committed regions of address space are mapped to the available physical memory by the Windows Virtual Memory Manager (VMM).  

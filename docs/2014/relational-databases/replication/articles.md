@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Articles
   On the **Articles** page, you specify which database objects to include as articles in the publication. If you are publishing a database object that depends on one or more other database objects, you must publish all referenced objects. For example, if you publish a view that depends on a table, you must publish the table also.  

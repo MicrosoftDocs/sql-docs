@@ -1,5 +1,6 @@
 ---
 title: "Diagnostic Connection for Database Administrators | Microsoft Docs"
+description: "Find out about the dedicated administrator connection (DAC). View its restrictions, instructions on how to establish it, and examples demonstrating its use."
 ms.custom: ""
 ms.date: "02/27/2019"
 ms.prod: sql
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "ports [SQL Server]"
   - "dedicated administrator connections [SQL Server]"
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Diagnostic Connection for Database Administrators
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a special diagnostic connection for administrators when standard connections to the server are not possible. This diagnostic connection allows an administrator to access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute diagnostic queries and troubleshoot problems even when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not responding to standard connection requests.  
   
  This dedicated administrator connection (DAC) supports encryption and other security features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The DAC only allows changing the user context to another admin user.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes
   This topic will focus on troubleshooting and working around common issues with hash indexes.  

@@ -1,6 +1,6 @@
 ---
 title: "View or Change Server Properties (SQL Server) | Microsoft Docs"
-ms.custom: ""
+description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL Server Configuration Manager to view or change the properties of an instance of SQL Server.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,34 +16,20 @@ helpviewer_keywords:
   - "servers [SQL Server], viewing"
   - "Connection Properties dialog box"
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
+ms.custom: contperfq4
 ---
 # View or Change Server Properties (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view or change the properties of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Configuration Manager.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To view or change server properties, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [SQL Server Configuration Manager](#PowerShellProcedure)  
-  
--   **Follow Up:**  [After you change server properties](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+
+Steps depend on the tool:
++ [SQL Server Management Studio](#SSMSProcedure)  
++ [Transact-SQL](#TsqlProcedure)  
++ [SQL Server Configuration Manager](#PowerShellProcedure)  
+    
+## <a name="Restrictions"></a> Limitations and restrictions  
   
 -   When using sp_configure, you must run either RECONFIGURE or RECONFIGURE WITH OVERRIDE after setting a configuration option. The RECONFIGURE WITH OVERRIDE statement is usually reserved for configuration options that should be used with extreme caution. However, RECONFIGURE WITH OVERRIDE works for all configuration options, and you can use it in place of RECONFIGURE.  
   
@@ -52,14 +38,13 @@ ms.author: mikeray
   
 -   Some property pages present information obtained via Windows Management Instrumentation (WMI). To display those pages, WMI must be installed on the computer running [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Security"></a> Security  
+## <a name="Security"></a> Server-Level roles  
   
-####  <a name="Permissions"></a> Permissions  
- For more information, see [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).  
+For more information, see [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
+Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+## <a name="SSMSProcedure"></a>SQL Server Management Studio  
   
 #### To view or change server properties  
   
@@ -67,9 +52,9 @@ ms.author: mikeray
   
 2.  In the **Server Properties** dialog box, click a page to view or change server information about that page. Some properties are read-only.  
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+##  <a name="TsqlProcedure"></a>Transact-SQL  
   
-#### To view server properties by using the SERVERPROPERTY built-in function  
+### To view server properties by using the SERVERPROPERTY built-in function  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -82,7 +67,7 @@ ms.author: mikeray
     GO  
     ```  
   
-#### To view server properties by using the sys.servers catalog view  
+### To view server properties by using the sys.servers catalog view  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,7 +84,7 @@ ms.author: mikeray
   
     ```  
   
-#### To view server properties by using the sys.configurations catalog view  
+### To view server properties by using the sys.configurations catalog view  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -116,7 +101,7 @@ ms.author: mikeray
   
     ```  
   
-#### To change a server property by using sp_configure  
+### To change a server property by using sp_configure  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -139,10 +124,10 @@ GO
   
  For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Using SQL Server Configuration Manager  
+## <a name="PowerShellProcedure"></a>SQL Server Configuration Manager  
  Some server properties can be viewed or changed by using SQL Server Configuration Manager. For example, you can view the version and edition of the instance of SQL Server, or change the location where error log files are stored. These properties can also be viewed by querying the [Server-Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md).  
   
-#### To view or change server properties  
+### To view or change server properties  
   
 1.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
   
@@ -152,10 +137,11 @@ GO
   
 4.  In the **SQL Server (\<**_instancename_**>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
   
-##  <a name="FollowUp"></a> Follow Up: After you change server properties  
- For some properties, the server might have to be restarted before the change can take effect.  
+## <a name="FollowUp"></a>Restart after changes
+
+For some properties, you may need to restart the server before the change can take effect.  
   
-## See Also  
+## Next steps  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   

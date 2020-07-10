@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections (Transact-SQL)
   This topic describes the steps for configuring server instances to use certificates to authenticate inbound connections for database mirroring. Before you can set up inbound connections, you must configure outbound connections on each server instance. For more information, see [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -40,7 +39,7 @@ manager: craigg
   
      The following example creates a login for the system, HOST_B, in the **master** database of the server instance on HOST_A; in this example, the login is named `HOST_B_login`. Substitute a password of your own for the sample password.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE LOGIN HOST_B_login   
        WITH PASSWORD = '1Sample_Strong_Password!@#';  
@@ -51,8 +50,8 @@ manager: craigg
   
      To view the logins on this server instance, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
-    ```  
-    SELECT * FROM sys.server_principals  
+    ```sql  
+    SELECT * FROM sys.server_principals;  
     ```  
   
      For more information, see [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql).  
@@ -61,7 +60,7 @@ manager: craigg
   
      The following example creates a user, `HOST_B_user`, for the login created in the preceding step.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE USER HOST_B_user FOR LOGIN HOST_B_login;  
     GO  
@@ -71,7 +70,7 @@ manager: craigg
   
      To view the users on this server instance, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.sysusers;  
     ```  
   
@@ -87,7 +86,7 @@ manager: craigg
   
      The following example, associates the certificate of HOST_B with its user on HOST_A.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE CERTIFICATE HOST_B_cert  
        AUTHORIZATION HOST_B_user  
@@ -99,8 +98,8 @@ manager: craigg
   
      To view the certificates on this server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
-    ```  
-    SELECT * FROM sys.certificates  
+    ```sql  
+    SELECT * FROM sys.certificates;  
     ```  
   
      For more information, see [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql).  
@@ -109,7 +108,7 @@ manager: craigg
   
      For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login-that is, to connect to `HOST_B_login`-use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-    ```  
+    ```sql  
     USE master;  
     GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO [HOST_B_login];  
     GO  
@@ -127,13 +126,13 @@ manager: craigg
 > [!NOTE]  
 >  This example uses a certificate file containing the HOST_A certificate that is created by a code snippet in [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
   
-```  
+```sql  
 USE master;  
 --On HOST_B, create a login for HOST_A.  
 CREATE LOGIN HOST_A_login WITH PASSWORD = 'AStrongPassword!@#';  
 GO  
 --Create a user, HOST_A_user, for that login.  
-CREATE USER HOST_A_user FOR LOGIN HOST_A_login  
+CREATE USER HOST_A_user FOR LOGIN HOST_A_login;  
 GO  
 --Obtain HOST_A certificate. (See the note   
 --   preceding this example.)  
@@ -143,7 +142,7 @@ CREATE CERTIFICATE HOST_A_cert
    FROM FILE = 'C:\HOST_A_cert.cer';  
 GO  
 --Grant CONNECT permission for the server instance on HOST_A.  
-GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login  
+GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login;  
 GO  
 ```  
   

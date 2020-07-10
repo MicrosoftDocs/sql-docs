@@ -1,5 +1,6 @@
 ---
 title: "Specify Metaproperties in OPENXML | Microsoft Docs"
+description: Learn how to specify metaproperty attributes in an OPENXML statement to extract information from XML nodes.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Specify Metaproperties in OPENXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Metaproperty attributes in an XML document are attributes that describe the properties of an XML item, such as element, attribute, or any other DOM node. These attributes do not physically exist in the XML document text. However, OPENXML provides these metaproperties for all the XML items. These metaproperties allow you to extract information, such as local positioning and namespace information, of XML nodes. This information provides you with more details than are apparent in the textual representation.  
   
  You can map these metaproperties to the rowset columns in an OPENXML statement by using the *ColPattern* parameter. The columns will contain the values of the metaproperties to which they are mapped. For more information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  

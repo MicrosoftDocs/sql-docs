@@ -1406,6 +1406,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/sql-native-scoring.md",
+      "redirect_url": "/sql/machine-learning/predictions/native-scoring-predict-transact-sql",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
       "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
       "redirect_document_id": false
@@ -3617,7 +3622,7 @@
     },
     {
       "source_path": "docs/relational-databases/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md",
-      "redirect_url": "/sql/relational-databases/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy",
+      "redirect_url": "/sql/relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy",
       "redirect_document_id": false
     },
     {
@@ -4587,7 +4592,7 @@
     },
     {
       "source_path": "docs/ssms/f1-help/connection-properties-dialog-box.md",
-      "redirect_url": "/sql/database-engine/configure-windows/view-or-change-server-properties-sql-server",
+      "redirect_url": "/sql/ssms/f1-help/connect-to-server-connection-properties-page-database-engine",
       "redirect_document_id": false
     },
     {
@@ -15641,11 +15646,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/azure-data-studio/index.md",
-      "redirect_url": "/sql/azure-data-studio/what-is",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/big-data-cluster/index.md",
       "redirect_url": "/sql/big-data-cluster/big-data-cluster-overview",
       "redirect_document_id": false
@@ -17313,6 +17313,16 @@
     {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-files-file-shares.md",
       "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-files-file-shares",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/toc/previous-versions-sql-server.md",
+      "redirect_url": "/sql/sql-server/previous-versions-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md",
+      "redirect_url": "https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)",
       "redirect_document_id": false
     }
   ]

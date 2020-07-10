@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot connecting to the SQL Server Database Engine | Microsoft Docs"
+description: Find out how to troubleshoot connection problems. View steps to take when you cannot use TCP/IP to connect to a SQL Server Database Engine on a single server.
 ms.custom: sqlfreshmay19
 ms.date: "11/25/2019"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "troubleshooting, connecting to Database Engine"
   - "connecting to Database Engine, troubleshooting"
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot connecting to the SQL Server Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article lists troubleshooting techniques to use when you cannot connect to an instance of the SQL Server Database Engine on a single server.
 

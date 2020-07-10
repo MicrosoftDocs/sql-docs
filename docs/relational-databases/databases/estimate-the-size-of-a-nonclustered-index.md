@@ -1,5 +1,6 @@
 ---
 title: "Estimate the Size of a Nonclustered Index | Microsoft Docs"
+description: Use this procedure to estimate the amount of space that is required to store a nonclustered index in SQL Server.
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql  
@@ -23,7 +24,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ---
 # Estimate the Size of a Nonclustered Index
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Follow these steps to estimate the amount of space that is required to store a nonclustered index:  
   

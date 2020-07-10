@@ -1,5 +1,6 @@
 ---
 title: "Soft-NUMA (SQL Server) | Microsoft Docs"
+description: Learn about soft-NUMA in SQL Server 2014 SP2 and newer versions. See how to use automatic soft-NUMA and how to manually configure SQL Server to use soft-NUMA.
 ms.custom: ""
 ms.date: "02/13/2018"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Soft-NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Modern processors have multiple cores per socket. Each socket is represented, usually, as a single NUMA node. The SQL Server database engine partitions various internal structures and partitions service threads per NUMA node.  With processors containing 10 or more cores per socket, using software NUMA to split hardware NUMA nodes generally increases scalability and performance. Prior to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, software-based NUMA (soft-NUMA) required you to edit the registry to add a node configuration affinity mask, and was configured at the host level, rather than per instance. Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], soft-NUMA is configured automatically at the database-instance level when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service starts.  
   

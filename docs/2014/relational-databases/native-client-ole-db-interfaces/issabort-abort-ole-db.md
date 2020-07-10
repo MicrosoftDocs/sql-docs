@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # ISSAbort::Abort (OLE DB)
   Cancels the current rowset plus any batched commands associated with the current command.  

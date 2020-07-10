@@ -2,16 +2,16 @@
 title: revoscalepy Python package
 description: Introduction to the revoscalepy module in SQL Server Machine Learning Services with Python.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/06/2019  
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # revoscalepy (Python module in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **revoscalepy** is a Python35-compatible module from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. It is based on the **RevoScaleR** package for R (distributed with Microsoft R Server and SQL Server R Services), offering similar functionality:
 

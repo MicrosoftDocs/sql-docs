@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Guidelines and Limitations of DiffGrams in SQLXML
   Remember the following when using DiffGrams with SQLXML 4.0:  

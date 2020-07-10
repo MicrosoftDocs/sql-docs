@@ -19,7 +19,7 @@ ms.author: pelopes
 manager: amitban
 ---
 # Query Profiling Infrastructure
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides the ability to access runtime information on query execution plans. One of the most important actions when a performance issue occurs, is to get precise understanding on the workload that is executing and how resource usage is being driven. For this, access to the [actual execution plan](../../relational-databases/performance/display-an-actual-execution-plan.md) is important.
 

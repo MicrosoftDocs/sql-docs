@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_os_memory_cache_entries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about all entries in caches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this view to trace cache entries to their associated objects. You can also use this view to obtain statistics on cache entries.  
   

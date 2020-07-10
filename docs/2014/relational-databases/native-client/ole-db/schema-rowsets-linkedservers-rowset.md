@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # LINKEDSERVERS Rowset (OLE DB)
   The **LINKEDSERVERS** rowset enumerates organization data sources that can participate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distributed queries.  

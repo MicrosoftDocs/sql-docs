@@ -1,5 +1,6 @@
 ---
 title: "FOR XML Support for the timestamp Data Type | Microsoft Docs"
+description: Learn about support for the timestamp data type when using the FOR XML clause in a SQL query.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # FOR XML Support for the timestamp Data Type
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In the FOR XML transformation, **timestamp** type values are treated as **varbinary(8)** data and will always be base 64 encoded. The XSD or XDR schema, if requested, reflects this type.  
   
 ```  

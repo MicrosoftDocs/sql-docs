@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Export Column Transformation Editor"
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Export Column Transformation Editor (Columns Page)
   Use the **Columns** page of the **Export Column Transformation Editor** dialog box to specify columns in the data flow to extract to files. You can specify whether the Export Column transformation appends data to a file or overwrites an existing file.  

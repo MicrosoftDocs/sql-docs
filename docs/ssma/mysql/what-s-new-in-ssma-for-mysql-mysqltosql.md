@@ -1,19 +1,30 @@
 ---
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
-authors: "HJToland3;nahk-ivanov"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for MySQL (MySQLToSQL) for each release.
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "4/27/2020"
+ms.date: "7/2/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for MySQL contains the following changes:
+
+* Use MSAL.NET library for interactive Azure Active Directory authentication
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for MySQL contains minor performance improvements and bug fixes.
 
 ## SSMA v8.9
 

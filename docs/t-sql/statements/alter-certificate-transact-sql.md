@@ -52,10 +52,13 @@ ALTER CERTIFICATE certificate_name
          [ DECRYPTION BY PASSWORD = 'current_password' ]  
          [ [ , ] ENCRYPTION BY PASSWORD = 'new_password' ]  
       }  
-```  
-  
+``` 
+ 
+> [!Note]
+> [!INCLUDE[Synapse preview note](../../includes/synapse-preview-note)]
+ 
 ```syntaxsql  
--- Syntax for Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  

@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting R scripts
-description: This article documents several scripting errors when running R code in SQL Server.
+title: Common R scripting errors
+description: This article documents several common scripting errors you might encounter when running R code in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 
@@ -11,10 +11,12 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# R scripting errors in SQL Server
+# Common R scripting errors in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-This article documents several scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages, and errors can vary between versions of the same package. We recommend posting script errors on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR), which supports the machine learning components used in R Services (In-Database), Microsoft R Client, and Microsoft R Server.
+This article documents several common scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages and errors can vary between versions of the same package.
+
+If you encounter script errors not covered here, post them on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). This forum supports the machine learning components used in various SQL machine learning products.
 
 ## Valid script fails in T-SQL or in stored procedures
 
@@ -89,7 +91,7 @@ If there are multiple variables to delete, we suggest that you save the names of
 
 ## Next steps
 
-[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-faq.md)
+[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-overview.md)
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 

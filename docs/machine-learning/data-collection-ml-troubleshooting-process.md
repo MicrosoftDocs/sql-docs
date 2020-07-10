@@ -298,4 +298,4 @@ Because it might not be possible to exclude all folders that are needed by the S
 
 ## See also
 
-[Troubleshoot machine learning in SQL Server](machine-learning-troubleshooting-faq.md)
+[Troubleshoot machine learning in SQL Server](machine-learning-troubleshooting-overview.md)

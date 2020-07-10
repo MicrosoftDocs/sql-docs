@@ -231,7 +231,7 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 ## Next steps
 
-[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-faq.md)
+[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-overview.md)
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 

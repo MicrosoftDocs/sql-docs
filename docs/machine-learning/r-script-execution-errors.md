@@ -91,7 +91,7 @@ If there are multiple variables to delete, we suggest that you save the names of
 
 ## Next steps
 
-[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-faq.md)
+[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-overview.md)
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 

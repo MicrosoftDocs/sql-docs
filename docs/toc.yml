@@ -4520,6 +4520,8 @@
         href: database-engine/configure-windows/affinity64-mask-server-configuration-option.md
       - name: Agent XPs
         href: database-engine/configure-windows/agent-xps-server-configuration-option.md
+      - name: allow polybase export
+        href: database-engine/configure-windows/allow-polybase-export.md
       - name: allow updates
         href: database-engine/configure-windows/allow-updates-server-configuration-option.md
       - name: backup checksum default

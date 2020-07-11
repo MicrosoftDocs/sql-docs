@@ -740,4 +740,4 @@ Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisio
 
 ## Next steps
 
-[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-faq.md)
+[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-overview.md)

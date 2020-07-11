@@ -66,7 +66,7 @@ SQLRETURN SQLGetInfo(
   
  For all other types of data, the value of *BufferLength* is ignored and the driver assumes the size of \**InfoValuePtr* is SQLUSMALLINT or SQLUINTEGER, depending on the *InfoType*.  
   
-## Return Value  
+## Returns  
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
   

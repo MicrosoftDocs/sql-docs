@@ -32,6 +32,10 @@ However, when Active Directory mode is enabled, a new domain comes into the pict
 
 To get around aforementioned challenges, the solution implemented in BDC involves a new internal CoreDNS service that is managed inside BDC namespace. This  is the only DNS service the pods in the BDC namespace will reach out to for name resolutions. The complexity of multiple domains is hidden behind the new CoreDNS service.
 
+For example, in the following diagram the pods use the BDC CoreDNS server to resolve names. The pods do not interact directly with the Kubernetes CoreDNS server or the AD DNS Server. 
+
+:::image type="content" source="media/active-directory-dns-reconciliation/bdc-ad-dns-reconciliation.png" alt-text="Pods connect to CoreDNS server in their own namespace":::
+
 Here are some of the implementation details that clarify how this design works in BDC:
 
 ### Centralized management of multiple domains

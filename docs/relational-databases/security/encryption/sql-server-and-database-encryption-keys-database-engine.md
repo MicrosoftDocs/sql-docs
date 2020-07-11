@@ -24,7 +24,7 @@ ms.author: jaszymas
 
 ### Service master key
   
- The Service Master Key is the root of the SQL Server encryption hierarchy. The SMK is automatically generated the first time the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is started and is used to encrypt a linked server password, credentials, and the database master key. The SMK is encrypted by using the local machine key using the Windows Data Protection API (DPAPI). The DPAPI uses a key that is derived from the Windows credentials of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account and the computer's credentials. The service master key can only be decrypted by the service account under which it was created or by a principal that has access to the machine's credentials.
+ The Service Master Key is the root of the SQL Server encryption hierarchy. The SMK is automatically generated the first time the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is started and is used to encrypt a linked server password, credentials, and the database master key in each database. The SMK is encrypted by using the local machine key using the Windows Data Protection API (DPAPI). The DPAPI uses a key that is derived from the Windows credentials of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account and the computer's credentials. The service master key can only be decrypted by the service account under which it was created or by a principal that has access to the machine's credentials.
 
 The Service Master Key can only be opened by the Windows service account under which it was created or by a principal with access to both the service account name and its password.
 

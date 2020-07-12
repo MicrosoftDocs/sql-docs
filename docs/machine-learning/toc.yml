@@ -231,6 +231,15 @@
         href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
   - name: Data exploration and modeling
     items:
+    - name: Python
+      items:
+      - name: Plot Histogram in Python
+        href: ../machine-learning/data-exploration/python-plot-histogram.md 
+      - name: Import data into Pandas dataframe
+        href: ../machine-learning/data-exploration/python-dataframe-pandas.md 
+      - name: Insert dataframe into SQL
+        href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
+    items:
     - name: R
       items:
       - name: Load R objects using ODBC
@@ -361,25 +370,19 @@
       href: ../machine-learning/r/ref-r-sqlrutils.md
 - name: Resources
   items:
-  - name: Release notes 2019 >
-    href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
-  - name: Release notes 2017 >
+  - name: Release notes >
     href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
-  - name: Release notes 2016 >
-    href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
-  - name: Release notes 2014 >
-    href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:
     - name: Troubleshooting overview
-      href: ../machine-learning/machine-learning-troubleshooting-overview.md
+      href: ../machine-learning/machine-learning-troubleshooting-faq.md
     - name: Known issues
       href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
-    - name: Collect data for troubleshooting
+    - name: Data collection
       href: ../machine-learning/data-collection-ml-troubleshooting-process.md
-    - name: Installation and upgrade FAQ
+    - name: Install and upgrade errors
       href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
     - name: Launchpad and external script execution errors
       href: ../machine-learning/common-issues-external-script-execution.md
-    - name: Common R scripting errors
+    - name: R scripting errors
       href: ../machine-learning/r-script-execution-errors.md

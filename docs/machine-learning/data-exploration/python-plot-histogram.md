@@ -105,4 +105,4 @@ The display shows the age distribution of customers in the FactInternetSales tab
 
 To learn how insert SQL data into a pandas dataframe using Python see:
 
-
+[Import SQL data into dataframe](docs/machine-learning/data-exploration/python-dataframe-pandas.md)

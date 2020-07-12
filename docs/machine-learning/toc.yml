@@ -239,7 +239,6 @@
         href: ../machine-learning/data-exploration/python-dataframe-pandas.md 
       - name: Insert dataframe into SQL
         href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
-    items:
     - name: R
       items:
       - name: Load R objects using ODBC

@@ -100,6 +100,7 @@ df.hist(bins=10)
 ```
 
 The display shows the age distribution of customers in the FactInternetSales table.
+
 ![Matplotlib Histogram](./media/python-histogram.png)
 
 

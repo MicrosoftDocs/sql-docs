@@ -102,8 +102,4 @@ df.hist(bins=10)
 The display shows the age distribution of customers in the FactInternetSales table.
 ![Matplotlib Histogram](./media/python-histogram.png)
 
-## Next steps
 
-To learn how insert SQL data into a pandas dataframe using Python see:
-
-[Import SQL data into dataframe](docs/machine-learning/data-exploration/python-dataframe-pandas.md)

@@ -48,7 +48,7 @@ The sample database used in this article has been saved to a **.bak** database b
   * Import from the **AdventureWorks.bak** file you downloaded
   * Name the target database "AdventureWorks"
   
-You can verify that the restored database exists by querying the **HumanResources.Department** table:
+3. You can verify that the restored database exists by querying the **HumanResources.Department** table:
 
 ```sql
 USE AdventureWorks;

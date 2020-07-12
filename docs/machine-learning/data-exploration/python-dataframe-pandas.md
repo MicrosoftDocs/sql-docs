@@ -47,7 +47,7 @@ The sample database used in this article has been saved to a **.bak** database b
   * Import from the **AdventureWorks.bak** file you downloaded
   * Name the target database "AdventureWorks"
 
-2. You can verify that the restored database exists by querying the **Person.CountryRegion** table:
+3. You can verify that the restored database exists by querying the **Person.CountryRegion** table:
 
 ```sql
 USE AdventureWorks;

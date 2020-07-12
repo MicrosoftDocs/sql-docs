@@ -131,8 +131,4 @@ CountryRegionCode                 Name
 25                BO              Bolivia
 ```
 
-## Next steps
 
-To learn how to insert data from a dataframe into a SQL database, see:
-
-[Insert dataframe into SQL Server](../machine-learning/data-exploration/python-dataframe-sql-server.md)

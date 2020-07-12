@@ -45,8 +45,9 @@ The sample database used in this article has been saved to a **.bak** database b
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
 ::: moniker-end 
 
-    * Import from the **AdventureWorks.bak** file you downloaded
-    * Name the target database "AdventureWorks"
+  * Import from the **AdventureWorks.bak** file you downloaded
+  * Name the target database "AdventureWorks"
+  
 You can verify that the restored database exists by querying the **HumanResources.Department** table:
 
 ```sql

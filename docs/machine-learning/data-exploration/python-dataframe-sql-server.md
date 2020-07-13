@@ -113,7 +113,13 @@ DepartmentID,Name,GroupName,
  
 ## Load dataframe from CSV file
 
-1. Use the Python `pandas` package to create a dataframe and load the CS file. Connect to SQL Server to load dataframe into the new SQL table, HumanResources.DepartmentTest.
+Use the Python `pandas` package to create a dataframe and load the CSV file. Connect to SQL Server to load dataframe into the new SQL table, HumanResources.DepartmentTest.
+Edit the connection string variables 'server', 'database', 'username', and 'password' to connect to SQL Server.
+
+To create a new notebook:
+1. In Azure Data Studio, select **File**, select **New Notebook**.
+2. In the notebook, select kernel **Python3**, select the **+code**.
+3. Paste code in notebook, select **Run All**.
 
  ```Python
 import pyodbc 
@@ -138,13 +144,6 @@ for index, row in df.iterrows():
 cnxn.commit()
 cursor.close()
 ```
-
-2. Copy the python script into **Azure Data Studio**.
-   
-To create a new notebook:
-1. In Azure Data Studio, select **File**, select **New Notebook**.
-2. In the notebook, select kernel **Python3**, select the **+code**.
-3. Paste code in notebook, select **Run All**.
 
 ## Confirm row count in SQL
 

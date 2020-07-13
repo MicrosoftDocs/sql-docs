@@ -46,13 +46,13 @@ KILL ends a normal connection, which internally stops the transactions that are 
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 KILL { session ID | UOW } [ WITH STATUSONLY ]   
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 KILL 'session_id'  

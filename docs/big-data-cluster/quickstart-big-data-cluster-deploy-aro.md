@@ -220,10 +220,10 @@ allowHostPorts: false
 allowPrivilegeEscalation: true
 allowPrivilegedContainer: false
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
-- SYS_PTRACE
+  - SETUID
+  - SETGID
+  - CHOWN
+  - SYS_PTRACE
 apiVersion: security.openshift.io/v1
 defaultAddCapabilities: null
 fsGroup:
@@ -236,8 +236,8 @@ metadata:
   name: bdc-scc
 readOnlyRootFilesystem: false
 requiredDropCapabilities:
-- KILL
-- MKNOD
+  - KILL
+  - MKNOD
 runAsUser:
   type: MustRunAsNonRoot
 seLinuxContext:
@@ -245,12 +245,12 @@ seLinuxContext:
 supplementalGroups:
   type: RunAsAny
 volumes:
-- configMap
-- downwardAPI
-- emptyDir
-- persistentVolumeClaim
-- projected
-- secret
+  - configMap
+  - downwardAPI
+  - emptyDir
+  - persistentVolumeClaim
+  - projected
+  - secret
 ```
 
 ## Next steps
